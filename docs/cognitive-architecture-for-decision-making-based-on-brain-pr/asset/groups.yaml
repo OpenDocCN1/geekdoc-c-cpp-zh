@@ -1,0 +1,1879 @@
+- raw:
+  - '[PAGE 0]
+
+
+    Available online at www.sciencedirect.com
+
+
+    # # ScienceDirect
+
+
+    Procedia Computer Science 213 (2022) 180–189
+
+
+    2022 Annual International Conference on Brain-Inspired Cognitive Architectures
+    for Artificial Intelligence: The 13th Annual Meeting of the BICA Society
+
+
+    # # Cognitive Architecture for Decision-Making Based on Brain Principles Programming
+
+
+    Anton Koloninᵃ,¹, Andrey Kurlatovᵃᵇ, Artem Molchanovᵇ, Gennadiady Aeryanovovᵇ
+
+
+    ^Novosibirsk State University, 2 Novosibirsk, 630090, Russia
+
+    ^Sberbank of Russia, Neuroscience Lab, Vavilov 19, Moscow, 117312, Russia
+
+
+    #  Abstract
+
+
+    We describe a cognitive architecture intended to solve a wide range of problems
+    based on the identified principles of brain activity, their implementation in
+    three subsystems: logical-probabilistic inference, probabilistic formal concepts,
+    and functional systems. Building an architecture involves the implementation of
+    a task-driven approach that allows defining the target functions of applications
+    as tasks formulated in the operating environment corresponding to the task, expressed
+    in the ontology. We provide a basic ontology for a number of practical applications
+    as well as for the subject ontologies built upon it, describe the proposed architecture,
+    and give possible examples of the execution of these architectures in practice.
+
+
+    © 2022 The Authors. Published by Elsevier B.V.
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+    Peer-review under responsibility of the scientific committee of the 2022 Annual
+    International Conference on Brain-Inspired Cognitive Architectures for Artificial
+    Intelligence: The 13th Annual Meeting of the BICA Society.
+
+
+    *Keywords:* brain programming; cognitive architecture; formal concept; functional
+    system theory; probabilistic logic; subject domain ontology; task-driven approach
+
+
+    # 1. The concept of the cognitive kernel – five principles, one approach, three
+    components
+
+
+    We propose to build a universal decision-making system based on the 5 principles
+    of brain activity according to “Principles Programming” (BPP) [1,2] within the
+    framework of a task-driven approach (TDA) [3,4,5]. The principles are implemented
+    in a cognitive architecture defined for an arbitrarily given environment [6],
+    operating on the basis of logical-probabilistic inference (LPI) [7], probabilistic
+    formal concepts (PFT) [8] and for the functional systems (TFS) [3,4,5].
+
+
+    * Corresponding author. Tel. +71939250058.
+
+    E-mail: akolmann@gmail.com
+
+
+    1877-0069 © 2022 The Authors. Published by Elsevier B.V.
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+    Peer-review under responsibility of the scientific committee of the 2022 Annual
+    International Conference on Brain-Inspired Cognitive Architectures for Artificial
+    Intelligence: The 13th Annual Meeting of the BICA Society.
+
+    10.1016/j.pro.2022.11.054'
+  - '[PAGE 1]
+
+
+    # 1.1. Five principles of brain activity
+
+
+    The five principles of brain activity formulated in [1,2] suggest the simultaneous
+    involvement of all of them in most cognitive processes. That is, when making a
+    decision in any new situation, the following is happening: 1) the principle of
+    “complexity generation” leads to the generation of a hypotheses over the extended
+    context of the situation for a limited number of stimuli or perceptions in various
+    modalities; 2) the principle of “relationship” makes it possible to correlate
+    different stimuli and hypotheses with each other, magnifying and dismissing others;
+    3) the principle of “approximation to the essence” makes it possible to connect
+    partial mediations mediated by stimuli and phenomena from past experiences; 4)
+    the principle of “locality-distribution” ensures the “assembly” of full-fledged
+    integrated contexts based on a set of particular stimuli and concepts of one or
+    different modalities; 5 the principle of “heaviness” demands the dominant context
+    corresponding to the most likely hypothesis.
+
+
+    For instance, the scenario of a round object in the subject, with eyes being closed,
+    allows for the generation of a number of hypotheses. The unknown object, due to
+    the principle of “complexity generation”, is endowed with various properties,
+    those that are not met, are confirmed with a series of hypotheses like that orange,
+    a billiard ball, a red apple, a green apple). The “relationship” principle allows
+    us to correlate these hypotheses with those are actually perceived, allowing the
+    subject to judge that the softness of an orange does not correspond to the hardness
+    of the perceived object, just the heaviness of a hypothetical billiard ball does
+    not however, coincides with the actual perceptions. The smoothness and lightness
+    of an apple, allows the principle of “locality-distribution” allows the subject
+    to create a single image from multiple modalities: the feeling of a smooth and
+    hard surface comes from the forearm and elbow, the apple smell - from the olfactory
+    organs, however about being in a story (and not in a billiard club) - from short-term
+    memory. Due to the “heaviness” principle, the “apple” becomes dominant, suppressing
+    the “orange” and “billiard ball” hypotheses. Finally, the principle of approximation
+    to essence crystallizes the image of a tangible stereotype in the subject’s thoughts,
+    allowing the subject to give the correct answer “this is an apple!”
+
+
+    # 1.2. Task-driven approach
+
+
+    The task-driven approach (TDA) to the problem of artificial intelligence, formulated
+    in [3,4,5] on the basis of the Theory of Functional Systems (TFS) by P.K. Anokh,
+    suggests the possibility of solving a wide of cognitive tasks. A necessary condition
+    for this formalization of these tasks in the appropriate operational space in
+    terms of the ontology of a particular subject. The specified here should allow
+    for the possibility of describing in these terms both the problem to be solved
+    and the image of an achievable result, taking into account the criteria for achieving
+    the result. The task can be done by introducing the function of “success” (of
+    problem solving) or “utility” (of the subject solving the task) or the cognitive
+    model it uses for operating the environment, both the initial conditions for solving
+    the problem (including fixed initial and final stages) and the steps for solving
+    it (business processes, executable scripts, and decision making rules) should
+    also be expressed in terms of subject ontology. Early study [6] shows the fundamental
+    possibility of solving the task through the possibility of experiential learning
+    to the representation of the environment. That is, the same problem can be successfully
+    solved via various learning algorithms, based on agent’s own action experience,
+    having the problem and subject domain represented by different ontological schemas.
+    In this work, we assume the possibility of solving a wide range of problems using
+    a cognitive architecture designed for an arbitrary operating environment, established
+    by a ontological subject domain model. With regard to the classes of tasks associated
+    with business process management andotherapeutic practice [9], we propose the
+    use of a base process-oriented (or “activity”) ontology [10] as a base for describing
+    so-called “intelligent objects” and “intelligent functions” in terms of earlier
+    work [2]. The main classes of intelligent objects are considered “invariants”
+    and “instances” (“precedents)-'
+  - '[PAGE 2]
+
+
+    # 1.3. Logical-probabilistic inference
+
+
+    the former are stable, expressed in space and time, representations of the latter,
+    while the latter are the “evidence bases” for identifying the former. In turn,
+    “intelligent functions” are represented by several classes of cognitive operations
+    performed over “intelligent objects”, as described further.
+
+
+    The implementation of the task-driven (TDA) approach based on the basis of the
+    previously listed five principles is supposed to be fixed on three computational
+    methods – logical-probabilistic inference (LPI) [7], probabilistic formal concepts
+    (PFC) [8] and the theory of functional systems (TFS) [3,4,5] as presented below.
+
+
+    The method of logical-probabilistic inference (LPI) [7,11], along with the Nonatomic
+    Reasoning System (NARS) and Probabilistic Logic Networks (PLN) [13], allows for
+    solving cognitive problems with learning, recognition, and prediction. These methods
+    are traditionally associated with machine learning methods based on regression
+    models, including those based on artificial neural networks (ANNs). The supposed
+    advantage of such methods is the fundamental explainability of their predictions,
+    as well as the interpretability of the models themselves, discovered in course,
+    insofar they are all based on ontology, that is, semantic representation of information,
+    differing only in the mathematical model used to calculate probabilities. An additional
+    advantage of the LPI is that this method, unlike the listed methods, even with
+    ANNs, allows for the modeling of the function of human brain neurons [14], as
+    well as providing comparability with other methods (PFC and TFS), as described
+    further.
+
+
+    The LPI method, with NARS and PLN, is based on basic operations for calculating
+    probabilities such as “revision” (accounting for accumulated experience for the
+    formation of linking causes and effects), “deduction” (predictions based on gained
+    experience, as well as deriving new rules on existing experience), “induction”
+    (predictions under uncertainty and the generation of hypotheses about possible
+    consequences based on existing causes) and “abduction” (the generation of hypotheses
+    about possible consequences due to effects).
+
+
+    For example, the accumulation of information allows for the association of malnutrition
+    with a weakened immune system, which provides a basis for assessing the probability
+    of a rule connecting the two conditions due to “revision” operation. Further,
+    the presence of a weakened immune system leads to an increased risk of “deduction”
+    of the risk of hypothermia. The establishment of a rule connecting poor nutrition
+    with an increase (“induction”) of an increase in the risk of hypothermia allows
+    us to construct a hypothesis about the relationship of the weakening of the immune
+    system through the “induction” operation. Finally, an induction due to hypothermia,
+    in the presence of information about a decrease in immunity, allows us to pose
+    a hypothesis about the connection of the latter with hypothermia through “abduction”.
+
+
+    # 1.4. Probabilistic formal concepts
+
+
+    The method of probabilistic formal concepts (PFC) [8,15] is an extension of the
+    well-known method of formal concept analysis (Formal Concept Analysis) based on
+    the LPI described above. This method makes it possible to identify significant
+    combinations of features and contexts as interrelated causal associations, which
+    can be interpreted as “fixed points” or “attractors” in terms of the neural network
+    dynamics of Hopfield networks, based on observed or perceived instances (including
+    time-bound precedents). These invariants can be considered as classes of objects
+    or phenomena to given periods in the space of significant features identified
+    in the process of applying this method. In addition, the method also allows for
+    building hierarchies of such concepts as systems of concepts, as well as hierarchies
+    of the features themselves that define these concepts, including the values defined
+    in scopes of domains of these categories.
+
+
+    At its core, the PFC is designated to solve the problem of clustering, which is
+    widespread in the field of machine learning. It is supposed to do that within
+    the framework of a transparent interpretable paradigm that allows the verification
+    of the semantic structure of the identified hierarchies as well as the association
+    of each identified invariant with the rules that it defines, as well as the verification
+    of these rules themselves.'
+  md: '
+
+    Available online at www.sciencedirect.com
+
+
+    # ScienceDirect
+
+
+    Procedia Computer Science 213 (2022) 180–189
+
+
+    2022 Annual International Conference on Brain-Inspired Cognitive Architectures
+    for Artificial Intelligence: The 13th Annual Meeting of the BICA Society
+
+
+    # Cognitive Architecture for Decision-Making Based on Brain Principles Programming
+
+
+    Anton Koloninᵃ¹, Andrey Kurlatovᵃᵇ, Artem Molchanovᵇ, Gennadiady Aeryanovovᵇ
+
+
+    ^Novosibirsk State University, 2 Novosibirsk, 630090, Russia
+
+    ^Sberbank of Russia, Neuroscience Lab, Vavilov 19, Moscow, 117312, Russia
+
+
+    ## Abstract
+
+
+    We describe a cognitive architecture intended to solve a wide range of problems
+    based on the identified principles of brain activity, their implementation in
+    three subsystems: logical-probabilistic inference, probabilistic formal concepts,
+    and functional systems. Building an architecture involves the implementation of
+    a task-driven approach that allows defining the target functions of applications
+    as tasks formulated in the operating environment corresponding to the task, expressed
+    in the ontology. We provide a basic ontology for a number of practical applications
+    as well as for the subject ontologies built upon it, describe the proposed architecture,
+    and give possible examples of the execution of these architectures in practice.
+
+
+    © 2022 The Authors. Published by Elsevier B.V.
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+    Peer-review under responsibility of the scientific committee of the 2022 Annual
+    International Conference on Brain-Inspired Cognitive Architectures for Artificial
+    Intelligence: The 13th Annual Meeting of the BICA Society.
+
+
+    *Keywords:* brain programming; cognitive architecture; formal concept; functional
+    system theory; probabilistic logic; subject domain ontology; task-driven approach
+
+
+    # 1. The concept of the cognitive kernel – five principles, one approach, three
+    components
+
+
+    We propose to build a universal decision-making system based on the 5 principles
+    of brain activity according to “Principles Programming” (BPP) [1,2] within the
+    framework of a task-driven approach (TDA) [3,4,5]. The principles are implemented
+    in a cognitive architecture defined for an arbitrarily given environment [6],
+    operating on the basis of logical-probabilistic inference (LPI) [7], probabilistic
+    formal concepts (PFT) [8] and for the functional systems (TFS) [3,4,5].
+
+
+    * Corresponding author. Tel. +71939250058.
+
+    E-mail: akolmann@gmail.com
+
+
+    1877-0069 © 2022 The Authors. Published by Elsevier B.V.
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+    Peer-review under responsibility of the scientific committee of the 2022 Annual
+    International Conference on Brain-Inspired Cognitive Architectures for Artificial
+    Intelligence: The 13th Annual Meeting of the BICA Society.
+
+    10.1016/j.pro.2022.11.054
+
+
+    ## 1.1. Five principles of brain activity
+
+
+    The five principles of brain activity formulated in [1,2] suggest the simultaneous
+    involvement of all of them in most cognitive processes. That is, when making a
+    decision in any new situation, the following is happening: 1) the principle of
+    “complexity generation” leads to the generation of a hypotheses over the extended
+    context of the situation for a limited number of stimuli or perceptions in various
+    modalities; 2) the principle of “relationship” makes it possible to correlate
+    different stimuli and hypotheses with each other, magnifying and dismissing others;
+    3) the principle of “approximation to the essence” makes it possible to connect
+    partial mediations mediated by stimuli and phenomena from past experiences; 4)
+    the principle of “locality-distribution” ensures the “assembly” of full-fledged
+    integrated contexts based on a set of particular stimuli and concepts of one or
+    different modalities; 5) the principle of “heaviness” demands the dominant context
+    corresponding to the most likely hypothesis.
+
+
+    For instance, the scenario of a round object in the subject, with eyes being closed,
+    allows for the generation of a number of hypotheses. The unknown object, due to
+    the principle of “complexity generation”, is endowed with various properties,
+    those that are not met, are confirmed with a series of hypotheses like that orange,
+    a billiard ball, a red apple, a green apple). The “relationship” principle allows
+    us to correlate different stimuli and hypotheses with each other, magnifying and
+    dismissing others; The “relationship” principle allows us to correlate different
+    stimuli and hypotheses with each other, magnifying and dismissing others; The
+    “relationship” principle allows us to correlate different stimuli and hypotheses
+    with each other, magnifying and dismissing others; the softness of orange does
+    not correspond to the hardness of the perceived object, just the heaviness of
+    billiard ball does not however, coincides with the actual perceptions. The smoothness
+    and lightness of apple allows the principle of “locality-distribution” allows
+    the subject to create a single image from multiple modalities: the feeling of
+    a smooth and hard surface comes from forearm, the smell - from olfactory organs,
+    however being in story (and not in billiard club) - from short-term memory. Due
+    to “heaviness” principle, the “apple” becomes dominant, suppressing the “orange”
+    and “billiard ball” hypotheses. Finally, the principle of approximation to essence
+    crystallizes the image of a tangible stereotype in the subject’s thoughts, allowing
+    the subject to give the correct answer.
+
+
+    ## 1.2. Task-driven approach
+
+
+    The task-driven approach (TDA) to the problem of artificial intelligence, formulated
+    in [3,4,5] on the basis of Functional Systems (TFS), suggests the possibility
+    of solving a wide range of tasks. A necessary condition for this formalization
+    of these tasks in the appropriate space in terms of the ontology, should allow
+    for the possibility of describing both the problem and the image of achievable
+    result, taking into account criteria for achieving the result. The task can be
+    done by introducing the function of “success” (of problem solving) or “utility”
+    (of task solving) using the environment, both the initial and final stages and
+    steps for solving it (business processes, decision making rules) should also be
+    expressed in terms of ontology. Early study [6] shows the fundamental possibility
+    of solving the task through the possibility of experiential learning. That is,
+    the same problem can be successfully solved via various algorithms, having the
+    problem domain represented by different ontological schemas. With regard to classes
+    of tasks associated with business process management and practice, we propose
+    the use of task-oriented (or “activity”) ontology as a base for describing socalled
+    “intelligent objects” and “intelligent functions”. The main classes of intelligent
+    objects are considered “invariants” and “instances”.
+
+
+    ## 1.3. Logical-probabilistic inference
+
+
+    The former are stable, expressed in space and time, representations of the latter,
+    while the latter are the “evidence bases” for identifying the former. In turn,
+    “intelligent functions” are represented by several classes of cognitive operations
+    performed over “intelligent objects”, as described further.
+
+
+    The implementation of the task-driven (TDA) approach based on the basis of the
+    previously listed principles is supposed to be fixed on three computational methods
+    – logical-probabilistic inference (LPI) [7], probabilistic formal concepts (PFC)
+    [8] and the theory of functional systems (TFS) [3,4,5] as presented below.
+
+
+    The method of logical-probabilistic inference (LPI) [7,11], along with the Atomic
+    Reasoning System (NARS) and Probabilistic Logic Networks (PLN) [13], allows for
+    solving cognitive problems with learning, recognition, and prediction. These methods
+    are traditionally associated with machine learning methods based on regression
+    models, including those based on neural networks (ANNs). The supposed advantage
+    of such methods is the fundamental explainability of their predictions, as well
+    as the interpretability of the models themselves, insofar they are all based on
+    ontology, that is, semantic representation of information, differing only in the
+    mathematical model used to calculate probabilities. An additional advantage of
+    the LPI is that this method, unlike the listed methods, even with ANNs, allows
+    for the modeling the function of human brain neurons [14], as well as providing
+    comparability with other methods (PFC and TFS), as described further.
+
+
+    The LPI method, with NARS and PLN, is based on basic operations for calculating
+    probabilities such as “revision” (accounting for accumulated experience for the
+    formation of linking causes and effects), “deduction” (predictions based on gained
+    experience, as well as deriving new rules on existing experience), “induction”
+    (predictions under uncertainty and the generation of hypotheses about possible
+    consequences based on existing causes) and “abduction” (the generation of hypotheses
+    about possible consequences due to effects).
+
+
+    For example, the accumulation of information allows for the association of malnutrition
+    with a weakened immune system, which provides a basis for assessing the probability
+    of a rule connecting the two conditions due to “revision” operation. Further,
+    the presence of a weakened immune system leads to an increased risk of “deduction”
+    of the risk of hypothermia. The establishment of a rule connecting poor nutrition
+    with an increase (“induction”) of an increase in the risk of hypothermia allows
+    us to construct a hypothesis about the relationship of the weakening of the immune
+    system through the “induction” operation. Finally, an induction due to hypothermia,
+    in the presence of information about a decrease in immunity, allows us to pose
+    a hypothesis about the connection of the latter with hypothermia through “abduction”.
+
+
+    ## 1.4. Probabilistic formal concepts
+
+
+    The method of probabilistic formal concepts (PFC) [8,15] is an extension of the
+    well-known method of formal concept analysis (Formal Concept Analysis) based on
+    the LPI described above. This method makes it possible to identify significant
+    combinations of features and contexts as interrelated causal associations, which
+    can be interpreted as “fixed points” or “attractors” in terms of the neural network
+    dynamics of Hopfield networks, based on observed or perceived instances (including
+    time-bound precedents). These invariants can be considered as classes of objects
+    or phenomena to given periods in the space of significant features identified
+    in the process of applying this method. In addition, the method also allows for
+    building hierarchies of such concepts as systems of concepts, as well as hierarchies
+    of the features themselves that define these concepts, including the values defined
+    in scopes of domains of these categories.
+
+    '
+  mdcn: '
+
+
+    在线访问地址：www.sciencedirect.com
+
+
+    # ScienceDirect（科学直接）
+
+
+    Procedia Computer Science 213 (2022) 180–189
+
+
+    2022 年人工智能脑启发认知架构年度国际会议：BICA 协会第 13 届年度会议
+
+
+    # 基于脑原理编程的决策认知架构
+
+
+    Anton Koloninᵃ¹, Andrey Kurlatovᵃᵇ, Artem Molchanovᵇ, Gennadiady Aeryanovovᵇ
+
+
+    ^俄罗斯，诺沃西伯尔克州立大学，Novosibirsk 2, 630090
+
+    ^俄罗斯，俄罗斯联邦储银行，神经科学实验室，Vavilov 19, 莫斯科, 117312
+
+
+    ## 摘要
+
+
+    我们描述了一种旨在根据已知的脑活动原理解决广泛问题的认知架构，这些原理在三个子系统中得到了实现：逻辑概率推理、概率形式概念和功能系统。构建架构涉及一种任务驱动方法（TDA）的实现，该方法允许将应用程序的目标函数定义为在相应任务的操作环境中形成的任务，并由本体论进行表示。我们为若干实际应用以及基于其构建的主题本体提供了基础本体，描述了所提出的架构，并这些这些架构在实践中执行的可能示例。
+
+
+    © 2022 作者。由 Elsevier B.V 发布
+
+    这是一篇基于 CC BY-NC-ND 许可的开放文章（https://creativecommons.org/licenses/by-nc-nd/4.0）
+
+    同行评审由 2022 年人工智能脑启发认知架构年度国际会议：BICA 协会第 13 届年度会议科学委员会负责。
+
+
+    *关键词：* 脑编程；认知架构；形式概念；功能系统理论；概率逻辑；主题领域本体；任务驱动方法
+
+
+    # 1. 认知内核的概念——五大原理，一种方法，三个组件
+
+
+    我们提议在任务驱动方法（TDA）[3,4,5]的框架内，根据“原理编程”（BPP）[1,2]的脑活动 5 大原理，构建一个通用的决策系统。这些原理实现在针对任意给定环境定义的认知架构[6]中，该架构基于逻辑概率推理（LPI）[7]、概率形式概念（PFT）[8]以及功能系统（TFS）[3,4,5]运行。
+
+
+    * 通讯作者。电话：+71939250058。
+
+    电子邮箱：akolmann@gmail.com
+
+
+    1877-0069 © 2022 作者。由 Elsevier B.V 发布
+
+    这是一篇基于 CC BY-NC-ND 许可的开放文章（https://creativecommons.org/licenses/by-nc-nd/4.0）
+
+    同行评审由 2022 年人工智能脑启发认知架构年度国际会议：BICA 协会第 13 届年度会议科学委员会负责。
+
+    10.1016/j.pro.2022.11.054
+
+
+    ## 1.1. 脑活动的五大原理
+
+
+    [1,2]中阐明的脑活动五大原理表明，在大多数认知过程中，所有原理都是同时参与的。也就是说，在任何新情况下做出决策时，会发生以下情况：1）“复杂性生成”原理导致根据情境的扩展上下文，针对各种模态的有限数量刺激或感知生成假设；2）“关系”原理使得不同的刺激和假设能够相互关联，同时放大某些并排除其他的；3）“接近本质”原理使得能够连接过去经验中由刺激和现象介导的部分中介；4）“局部-分布”原理确保了基于一组一种或多种模态的特定刺激和概念“组装”成完整的集成上下文；5）“重量”原理要求产生与最可能假设相对应的主导上下文。
+
+
+    例如，主体在闭眼的情况下关于一个圆体物体的情景，允许产生多个假设。由于“复杂性生成”原理，该未知物体被赋予了各种属性，那些未满足的属性通过一系列假设得到确认（如：那个橙子、一个台球、一个红苹果、一个绿苹果）。“关系”原理允许我们让不同的刺激和假设相互关联，放大某些并排除其他的；橙子的柔软与感知到的物体的硬度不对应，然而，仅仅是台球的重量并不与实际感知相符。苹果的光滑和轻便使得“局部-分布”原理允许主体从多个模态中创建一个单一图像：光滑坚硬表面的感觉来自前臂，气味来自嗅觉器官，然而由于处在故事中（而不是在台球俱乐部）——来自短期记忆。由于“重量”原理，“苹果”成为主导，抑制了“橙子”和“台球”假设。最后，“接近本质”原理在主体的思想中结晶出一个实体刻板印象的形象，允许主体给出正确答案。
+
+
+    ## 1.2. 任务驱动方法
+
+
+    [3,4,5]基于功能系统（TFS）形成的人工智能问题任务驱动方法（TDA），暗示了解决广泛任务的可能性。在本体论的适当空间对这些任务进行形式化的必要条件，应当允许描述问题以及可实现结果的图像，并考虑到实现结果的标准。通过使用环境引入“成功”函数（问题解决）或“效用”函数（任务解决）来完成任务，解决它的初始和最终阶段步骤（业务流程、决策规则）也应该用本体来表示。早期研究[6]显示了通过经验学习的可能性解决任务的根本可能性。关于任务驱动方法，我们建议通过任务导向（或“活动”）本体来表示后者，前者是逻辑概率推理表示的“智能对象”和“实例”。
+
+
+    ## 1.3. 逻辑概率推理
+
+
+    前者是稳定的，在空间和时间上表示，而后者是识别前者的“证据”，另一方面，“智能函数”是这样表示的。
+
+
+    基于前述原理的任务驱动（TDA）方法的实现，被固定在三种计算方法上：逻辑概率推理（LPI）[7]、概率形式概念（PFT）[8]以及功能系统理论（TFS）[3,4,5]。
+
+
+    逻辑概率推理方法（LPI）[7] 结合原子推理系统（NARS）和概率逻辑网络（PLN），允许解决学习、识别和预测认知问题。这些方法传统上与回归模型（包括神经网络）相关。此类方法的预期优势是其预测的可解释性，以及模型本身的可解释性，因为它们都是基于本体的，即信息的语义表示。LPI
+    的额外优势是，该方法与神经网络不同，允许对脑神经元的功能进行建模，并与其它方法（PFC 和 TFS）具有可比性。
+
+
+    LPI 方法结合 NARS 和 PLN 基于计算概率的基本操作，例如“修订”（考虑累积的经验以形成因果）、“演绎”（基于获得的经验进行预测，以及基于现有经验推导出新规则）、“归纳”（在不确定性下的预测以及基于现有原因对可能结果的假设生成）以及“溯因”（由于结果对可能结果的假设生成）。
+
+
+    例如，信息的累积允许将营养不良与免疫系统虚弱联系起来，这为通过“修订”操作连接这两个状态的概率提供了基础。此外，免疫系统虚弱的存在会导致“演绎”出低温症风险的增加。建立将营养不良与低温症风险增加（“归纳”）起来的规则，允许我们构建关于免疫系统减弱关系的假设。最后，由于低温症引发的“归纳”，在存在免疫力下降信息的情况下，允许我们通过“溯因”提出关于后者与低温症联系的假设。
+
+
+    ## 1.4. 概率形式概念
+
+
+    概率形式概念方法（PFC）[8,15]是上述著名的形式概念分析（Formal Concept Analysis）方法的扩展。该方法使得可以将特征和上下文的重要组合识别为相互关联的因果关系，这些关联在霍夫尔德网络的神经网络动力学方面可以解释为“固定点”或“吸引子”，基于观测到的或感知的实例（包括时间限制的先例）。这些不变性可以被视为在应用该方法识别出的显著特征空间内给定时期的物体或现象类别。此外，该方法还允许构建此类概念作为概念系统的层次结构，以及定义这些概念的特征本身的层次结构，包括在这些类别领域范围内定义的值。'
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    Anton Kolomin et al. Procedia Computer Science 213 (2022) 180-189
+
+
+    In the example of the fruit recognition problem, manually sorting and examining
+    all the fruits on the counter with the processing of perception data will reveal
+    high-level invariants such as fruits and berries, where fruits can include invariants
+    of oranges, apples and pears, while apples can be split into invariants of green,
+    yellow and red apples. At the same time, the significant features in this system
+    will be weight, size, hardness and smoothness as well as color, as the areas of
+    possible color values will be different for different top-level invariants (for
+    example, citrus fruits can only be green, orange or yellow, but not blue).
+
+
+    # 1.5. Theory of functional systems
+
+
+    The applied development of the method based on the theory of functional systems
+    (TFS) [3,4,5] is aimed at solving the generation of the so-called “reinforcement
+    learning (RL) in machine learning. Traditionally, RL involves learning based on
+    positive or negative feedback from the environment or of positive reinforcement
+    over solving certain problems, failing to solve them. Most of the currently RL
+    models are not explainable and, more importantly, interpretable. At the same time,
+    TFS extending the class of problems where external reinforcement rarely appears
+    explicitly, or does not exist at all and self-supervised learning is necessary.
+    In TFS, this is achieved through the basic mechanism of reinforcing the system
+    for achieving the expected result of the task, created at the beginning of the
+    task and confirmed when it is evaluated by the acceptor of the task. This corresponds
+    to “experimental learning” (EL) [6] which includes both learning by trial, and
+    learning based on explicit positive or negative reinforcements from the environment/or
+    the task.
+
+
+    For the example of self-learning to play ping-pong in the well-known formulation
+    of the RL problem interpreted in terms of EL [6], the first stage of learning
+    might include the ability to distinguish moving objects (ball and rocket) from
+    stationary ones (by the PFC method), the second stage is to learn how to control
+    the rocket, linking the use of functions with the re-arrangements of moving objects,
+    the third stage is to hit the ball, changing in its trajectory with the spatial
+    configuration of the rocket relative to the ball, the fourth, and final stage
+    is learning the actual rules of the game necessary to obtain the final reinforcement
+    upon winning.
+
+
+    # 2. Unified activity ontology
+
+
+    # 2.1. Upper (foundation) ontology
+
+
+    In order to ensure the possibility of building a line of applications based on
+    the cognitive architecture using the methods described above, we assert the presence
+    of a simple upper (foundation) ontology [10] focused on practical activity, which
+    allows us to describe metadata for the entire line of applied applications, describing
+    three of them below. As a basis for the metadata structure, following OWL (https://www.w3.org/2002/07/owl-schema.org/),
+    we accept the basic concepts of Thing and Process. The further hierarchy of classes
+    underneath them is asserted for our concept, taking into account our understanding
+    of an intelligent object (IO) as a universal Thing that has a set of Properties.
+    In understanding, following the concept of an activity or process-oriented ontology
+    [10], IO-s can be unique Instances or Abstracts each of the set of unique instances.
+
+
+    Instances can be specific values (numbers, dates, types, physical or social objects)
+    or Presents of individual Events fixed in time, uniting the moments of Coincidences,
+    as well as time-stretched processes interconnected in time – uniting Events of
+    different times and their Coincidences. Values can be represented by complex Entities
+    that are in the domain space (for example, a well-known physical object or a specific
+    Client of a particular bank), specific atomic Categories (for example, the color
+    red or the male gender) used to identify and describe Entities, or – arbitrary
+    relations uniquely fixed in the subject area, uniting various entities (for example,
+    kinship relations between specific Clients). Events can be subdivided into States
+    that are fixed at specified points in time (for example, the balance of the Account
+    or the age of the Client) or Actions that change'
+  - '[PAGE 4]
+
+
+    these states (such as a financial transaction or a pizza delivery for a birthday).
+    Invariants, in turn, are also divided into abstract Properties that are invariant
+    their Values and timeless invariants of Events, Coincidences and Processes. We
+    call Event Appearances, Process Invariants - Scenarios, and Coincidence invariants
+    can be seen many times together. For, as conjunctive sets, use the Appearances
+    corresponding to the Events that coincide many times. For, as disjunctive sets,
+    use alternative Appearances corresponding to different Events that are possible
+    at the same stage of the same scenario, recorded in different Processes (for example,
+    card payment when buying goods in store). At a lower level, the Invariants of
+    the Category values are the Classifiers (for example, the Color Property Classifier
+    defines a domain with the domain values Red, Yellow, and Green), and the invariants
+    of specific Entities are their abstract Images.
+
+
+    # 2.2. Cognitive behavioral therapy model
+
+
+    In a particular case of solving the problem of diagnosis within the framework
+    of cognitive behavioral therapy (CBT) in the context of [9], from the point of
+    view of the TDA, consider the task of making a Diagnosis, which is an invariant
+    that connects the values of a number of Classifiers as Emotion, Emotion, Psycho-type,
+    Social Situation and Cognitive Distortion [16], with the corresponding domain
+    values – Categories, defined according to a psychotherapeutic school or practice.
+    The task is solved within the framework of a psychotherapeutic session, recorded
+    by the Session Precedent (Process subclass), while many Sessions may be conducted
+    according to one Protocol (Session subclass). The solution of the task is carried
+    out in a dialogue between the Client and the Therapist (subclasses of Instance)
+    – by performing Actions in the context of the Session. The Therapist can perform
+    Diagnostic or Treatment Actions, and the Client can respond to them through Reactions.
+    All of these actions with certain Classifiers listed above. characterized by Patterns
+    e.g., Cognitive patterns [16]; In this model, in the case of session interaction,
+    the therapist performs initial Actions, stimulating the Client to Reactions, which
+    makes it possible to identify certain Categories, the topology of which, according
+    to all Classifiers, makes it possible to identify the Diagnosis invariant in case
+    of session success, or not to identify any, in case of failure. It should be noted
+    that the formal failure of the session in this formation can mean different things:
+    a) the failure of the Therapist to identify a real problem with the Client; b)
+    the Client does not have a real problem; c) the success of identifying the Client’s
+    problem during the Session interaction. In both cases, the TDA allows not only
+    making a Diagnosis (in the case of formal success), but also to maximize the healing
+    effect, ensuring the removal of all possible diagnoses in case of and then verifying
+    the absence of.
+
+
+    # 2.3. Enterprise customer relationship management model
+
+
+    In the particular case of the formation of Offers to the Client of the Enterprise
+    as Customer Relationship Management (CRM), from the point of view of the TDA,
+    is the formation of an Offer, to which the Client will, with high probability,
+    respond positively, which will be recorded as a Subscription to the offered Product.
+    Both the Offer and the Subscription are Actions in the proposed ontology, as in
+    case of CBT, in the context of some-term interaction (the Client’s contact with
+    the Enterprise or a call to the Client from the Enterprise). An interaction can
+    be part of an Episode of Client interaction (like using a certain line of services
+    in a certain office for a long time), and an Episode can be part of a long-term
+    Client history (including all Episodes during the time the Client uses the Enterprise’s
+    services). The individual Clients themselves, as in the case of CBT, can be defined
+    in the multidimensional space of a large number of Classifiers, such as Gender,
+    Income, Social Status, Marital Status and many others, and can have link to Enterprise
+    Products through the Current Subscription relationship. At the same time the stable
+    combinations of Categories – the values of Classifiers, coupled with Current Subscriptions,
+    can form such Invariants as the Client Image (for example, a young man using a
+    mortgage).
+
+
+    Both the Enterprise and the Product are subclasses of the Instance Entity, and
+    the Offered Products that have Current Subscriptions are characterized by a Product
+    Type. Episodes and Interactions are subclasses'
+  md: '
+
+    Anton Kolomin et al. Procedia Computer Science 213 (2022) 180-189
+
+
+    In the example of the fruit recognition problem, manually sorting and examining
+    all the fruits on the counter with the processing of perception data will reveal
+    high-level invariants such as fruits and berries, where fruits can include invariants
+    of oranges, apples and pears, while apples can be split into invariants of green,
+    yellow and red apples. At the same time, the significant features in this system
+    will be weight, size, hardness and smoothness as well as color, as the areas of
+    possible color values will be different for different top-level invariants (for
+    example, citrus fruits can only be green, orange or yellow, but not blue).
+
+
+    ## 1.5. Theory of functional systems
+
+
+    The applied development of the method based on the theory of functional systems
+    (TFS) [3,4,5] is aimed at solving the generation of the so-called “reinforcement
+    learning (RL) in machine learning. Traditionally, RL involves learning based on
+    positive or negative feedback from the environment or of positive reinforcement
+    over solving certain problems, failing to solve them. Most of the currently RL
+    models are not explainable and, more importantly, interpretable. At the same time,
+    TFS extending the class of problems where external reinforcement rarely appears
+    explicitly, or does not exist at all and self-supervised learning is necessary.
+    In TFS, this is achieved through the basic mechanism of reinforcing the system
+    for achieving the expected result of the task, created at the beginning of the
+    task and confirmed when it is evaluated by the acceptor of the task. This corresponds
+    to “experimental learning” (EL) [6] which includes both learning by trial, and
+    learning based on explicit positive or negative reinforcements from the environment/or
+    the task.
+
+
+    For the example of self-learning to play ping-pong in the well-known formulation
+    of the RL problem interpreted in terms of EL [6], the first stage of learning
+    might include the ability to distinguish moving objects (ball and rocket) from
+    stationary ones (by the PFC method), the second stage is to learn how to control
+    the rocket, linking the use of functions with the re-arrangements of moving objects,
+    the third stage is to hit the ball, changing in its trajectory with the spatial
+    configuration of the rocket relative to the ball, the fourth, and final stage
+    is learning the actual rules of the game necessary to obtain the final reinforcement
+    upon winning.
+
+
+    ## 2. Unified activity ontology
+
+
+    ### 2.1. Upper (foundation) ontology
+
+
+    In order to ensure the possibility of building a line of applications based on
+    the cognitive architecture using the methods described above, we assert the presence
+    of a simple upper (foundation) ontology [10] focused on practical activity, which
+    allows us to describe metadata for the entire line of applied applications, describing
+    three of them below. As a basis for the metadata structure, following OWL (https://www.w3.org/2002/07/owl-schema.org/),
+    we accept the basic concepts of Thing and Process. The further hierarchy of classes
+    underneath them is asserted for our concept, taking into account our understanding
+    of an intelligent object (IO) as a universal Thing that has a set of Properties.
+    In understanding, following the concept of an activity or process-oriented ontology
+    [10], IO-s can be unique Instances or Abstracts each of the set of unique instances.
+
+
+    Instances can be specific values (numbers, dates, types, physical or social objects)
+    or Presents of individual Events fixed in time, uniting the moments of Coincidences,
+    as well as time-stretched processes interconnected in time – uniting Events of
+    different times and their Coincidences. Values can be represented by complex Entities
+    that are in the domain space (for example, a well-known physical object or a specific
+    Client of a particular bank), specific atomic Categories (for example, the color
+    red or the male gender) used to identify and describe Entities, or – arbitrary
+    relations uniquely fixed in the subject area, uniting various entities (for example,
+    kinship relations between specific Clients). Events can be subdivided into States
+    that are fixed at specified points in time (for example, the balance of the Account
+    or the age of the Client) or Actions that change these states (such as a financial
+    transaction or a pizza delivery for a birthday). Invariants, in turn, are also
+    divided into abstract Properties that are invariant their Values and timeless
+    invariants of Events, Coincidences and Processes. We call Event Appearances, Process
+    Invariants - Scenarios, and Coincidence invariants can be seen many times together.
+    For, as conjunctive sets, use the Appearances corresponding to the Events that
+    coincide many times. For, as disjunctive sets, use alternative Appearances corresponding
+    to different Events that are possible at the same stage of the same scenario,
+    recorded in different Processes (for example, card payment when buying goods in
+    store). At a lower level, the Invariants of the Category values are the Classifiers
+    (for example, the Color Property Classifier defines a domain with the domain values
+    Red, Yellow, and Green), and the invariants of specific Entities are their abstract
+    Images.
+
+
+    ### 2.2. Cognitive behavioral therapy model
+
+
+    In a particular case of solving the problem of diagnosis within the framework
+    of cognitive behavioral therapy (CBT) in the context of [9], from the point of
+    view of the TDA, consider the task of making a Diagnosis, which is an invariant
+    that connects the values of a number of Classifiers as Emotion, Emotion, Psycho-type,
+    Social Situation and Cognitive Distortion [16], with the corresponding domain
+    values – Categories, defined according to a psychotherapeutic school or practice.
+    The task is solved within the framework of a psychotherapeutic session, recorded
+    by the Session Precedent (Process subclass), while many Sessions may be conducted
+    according to one Protocol (Session subclass). The solution of the task is carried
+    out in a dialogue between the Client and the Therapist (subclasses of Instance)
+    – by performing Actions in the context of the Session. The Therapist can perform
+    Diagnostic or Treatment Actions, and the Client can respond to them through Reactions.
+    All of these actions with certain Classifiers listed above are characterized by
+    Patterns [16]; In this model, in the case of session interaction, the therapist
+    performs initial Actions, stimulating the Client to Reactions, which makes it
+    possible to identify the Diagnosis invariant in case of success. It should be
+    noted that the formal failure of the session in this formation can mean different
+    things: a) the failure of the Therapist to identify a real problem with the Client;
+    b) the Client does not have a real problem; c) the success of identifying the
+    Client’s problem. In both cases, the TDA allows not only making a Diagnosis (in
+    case of formal success), but also to maximize the healing effect, ensuring the
+    removal of all possible diagnoses in case of and then verifying the absence.
+
+
+    ### 2.3. Enterprise customer relationship management model
+
+
+    In the particular case of the formation of Offers to the Client of the Enterprise
+    as Customer Relationship Management (CRM), from the point of view of the TDA,
+    is the formation of an Offer, to which the Client will, with high probability,
+    respond positively, which will be recorded as a Subscription to the offered Product.
+    Both the Offer and the Subscription are Actions in the proposed ontology, as in
+    case of CBT, in the context of some-term interaction (the Client’s contact with
+    the Enterprise or a call to the Client from the Enterprise). An interaction can
+    be part of an Episode of Client interaction (like using a certain line of services
+    in a certain office for a long time), and an Episode can be part of a long-term
+    Client history (including all Episodes during the time the Client uses the Enterprise’s
+    services). The individual Clients themselves, as in the case of CBT, can be defined
+    in the multidimensional space of a large number of Classifiers, such as Gender,
+    Income, Social Status, Marital Status and many others, and can have link to Enterprise
+    Products through the Current Subscription. At the same time the stable combinations
+    of Categories – the values of Classifiers, coupled with Current Subscriptions,
+    can form such Invariants as the Client Image (for example, a young man using a
+    mortgage). Both the Enterprise and the Product are subclasses of the Instance
+    Entity, and the Offered Products that have Current Subscriptions are characterized
+    by a Product Type. Episodes and Interactions are subclasses.
+
+    '
+  mdcn: '
+
+    Anton Kolomin 等人 Procedia Computer Science 213 (2022) 180-189
+
+
+    在水果识别问题的示例中，通过对感知数据处理并对台上所有的水果进行手动分类和检查，将揭示高层不变性，例如水果和浆果；其中水果可以包括橙子、苹果和梨的不变性，而苹果可以进一步分为绿色、黄色苹果和红色苹果的不变性。同时，该系统的显著特征将是重量、大小、硬度和光滑度以及颜色，因为不同的顶层不变性的可能颜色值区域也不同（例如，柑橘类只能是绿色、橙色或黄色，而不能蓝色）。
+
+
+    ## 1.5. 功能系统理论
+
+
+    基于功能系统理论（TFS）[3,4,5]的开发开发旨在解决机器学习中所谓的“强化学习（RL）”生成问题。传统上，RL 涉及基于环境提供的正反馈或负反馈，在解决某些问题失败时的正向强化进行学习。目前大多数
+    RL 模型不具有可解释性，更重要的是缺乏可解释性。同时，TFS 扩展了外部强化很少显式出现或完全不存在且需要自监督学习的问题类别。在 TFS 中，这是通过基本机制实现的，即强化系统以实现任务预期结果，该结果在任务开始时创建，并在由任务接受者评估时确认。这对应于“实验学习”（EL）[6]，它包含了通过尝试学习以及基于环境/或任务提供的显式正负强化而进行学习。
+
+
+    以 EL [6] 解释的 RL 问题著名公式中自学打乒乓球的为例，学习的第一阶段可能包括区分运动物体（球和球拍）与静态物体的能力（通过 PFC 方法）；第二阶段是学习如何控制球拍，将函数的使用与运动对象的重新排列联系起来；第三阶段是击球，根据球拍相对于球的空间配置改变球的轨迹；第四阶段也是最后一个阶段，是学习游戏所需的实际规则，以便在获胜时获得最终强化。
+
+
+    ## 2. 统一活动本体论
+
+
+    ### 2.1. 上层（基础）本体论
+
+
+    为了确保能够基于上述方法构建一系列基于认知架构的应用程序，我们断定存在一个关注实际活动的简单上层（基础）本体论 [10]，它允许我们描述整个系列应用程序的的元数据，下面描述了其中的三个。作为元数据结构的基础，遵循
+    OWL (https://www.w3.org/2002/07/owl-schema.org/)，我们接受了实体（Thing）和过程（Process）的基本概念。我们的概念在其下方断言了类的层次结构，考虑到了我们对智能对象（IO）理解为拥有一组属性的通用实体。在理解上，遵循活动或过程为导向的本体论
+    [10] 的概念，IO 可以是唯一实例集的唯一实例或每个唯一实例的抽象。
+
+
+    实例可以是特定的值（数字、日期、类型、物理或社会对象），也可以固定在时间的单个事件（Events）的呈现，统一巧合（Coincidences）时刻以及在时间上相互连接的延伸过程——连接不同时间的事件及其巧合。值可以由领域空间内的复杂实体（Entities）表示（例如，著名的物理对象或特定银行的特定客户），用于识别和描述实体的特定原子类别（例如，红色或男性），或者是在主体领域内唯一固定的任意关系，用于连接各种实体（例如，特定客户之间的亲属关系）。事件可以进一步细分为在特定时间点固的状态（States，例如账户余额或客户年龄）或改变这些状态的动作（Actions，如财务交易或生日比萨外送）。反之，不变性也分为其值不变的抽象属性（Properties）以及事件、巧合和过程的永恒不变性。我们称事件出现为“呈现”（Appearances），过程不变性为“场景”（Scenarios），而巧合不变性可以多次一起出现。因此，作为合集，使用对应于多次巧合事件的“呈现”。因此，作为析集，使用对应于同一场景不同阶段可能的不同事件的备选“呈现”，这些事件记录在不同的过程中（例如，在商店购买商品时的刷卡支付）。在较低层级上，类别值的不变性是分类器（Classifiers）（例如，颜色属性分类器定义了一个具有红、黄、绿域值的域），而特定实体的不变性是它们的抽象图像（Images）。
+
+
+    ### 2.2. 认知行为治疗模型
+
+
+    在 [9] 背景下，在认知行为疗法（CBT）框架内解决诊断问题的特定案例中，从 TDA 的角度考虑做出诊断（Diagnosis）的任务，这是一种不变性，它将多个分类器的值——如情绪（Emotion）、情绪（Psycho-type）、社会情境（Social
+    Situation）和认知扭曲（Cognitive Distortion）[16]——与相应的域值连接类别根据心理治疗学派或实践定义。任务在心理治疗会话框架内解决，由会话记录（Session
+    Precedent，过程子类）记录，而许多会话可以根据一个方案（Protocol，会话子类）进行。任务的解决方案在客户（Client）和治疗师（实例子类）之间的对话中执行——通过在会话环境中执行动作（Actions）。治疗师可以执行诊断或治疗动作，客户可以通过反应（Reactions）对其做出响应。所有具有上述某些分类器的动作都具有模式（Patterns）[16]的特征；在此模型中，在会话交互的情况下，治疗师执行初始动作，刺激客户做出反应，使得在成功的情况下能够识别出诊断不变性。需要注意的是，这种格式中会话的形式失败可能意味着不同的含义：a）治疗师未能识别出客户的真实问题；b）客户没有真实问题；c）成功识别了客户的问题。在这两种情况下，TDA
+    不仅允许做出诊断（在形式成功的情况下），还能最大化疗愈效果，确保在可能的情况下移除所有可能的诊断，然后验证其缺失。
+
+
+    ### 2.3. 企业客户关系管理模型
+
+
+    在企业作为客户关系管理（CRM）向客户形成报价（Offers）的特定案例中，从 TDA 的角度来看，是形成一个报价，客户将很有概率对其做出积极响应，这将记录为对所提产品的订阅（Subscription）。报价和订阅在所提的本体论中都是动作（Actions），就像
+    CBT案例中一样，处于某些长期交互的上下文中（客户与企业的接触或企业给客户的电话）。一次交互可以是客户互动片段（Episode）的一部分（例如长时间在某个办公室使用某条服务），而一个片段可以是长期客户历史的一部分（包括客户使用企业服务期间的所有片段）。客户本身，正如
+    CBT 中一样，可以在大量分类器的多维空间中定义，例如性别、收入、社会地位、婚姻状况等，并可以通过当前订阅与企业产品建立联系。'
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    Of Processes that accumulate historical records about Offers made to the Client
+    and Subscriptions made by the Client in the context of their Current Subscriptions,
+    which can be recorded as Client Stories. The aggregation of this information makes
+    possible to identify Typical Histories, Typical Episodes and Typical Actions as
+    Scenarios - Invariants, characterizing each Client Images.
+
+
+    Based on the information available, the task in terms of the TDA can be specified
+    as generating Offers for such specific Products and Product Types, in the context
+    of any given Customer, in order to maximize the likelihood of a Subscription to
+    the offered Product, confirmed by the "action result acceptor" [3] by evaluating
+    the results of delivering the Offer to the Client.
+
+
+    # 3. Cognitive architecture for decision making
+
+
+    Cognitive architectures based on ontological models and probabilistic logic prune
+    the Non-Axiomatic Reasoning Search (NARS) [12] and OpenCog [17]. In these systems,
+    there are algorithmic capabilities similar LPI in the form of non-axiomatic logic
+    [11] and Probabilistic Logic Networks (PLN) [13]. However, they do not fully provide
+    the properties offered by us in the form of the TDA, PFC, and TFS, as shown in
+    our previous works [3,6]. Within the framework of the architecture that we propose,
+    it is assumed that all specific applications use a "cognitive kernel" (CK) that
+    is executed on the base of private ontologies the relevant domains and will provide
+    top-level applications with the capabilities of the LPL, PFC and TFS within the
+    framework of the TDA based on the "cognitive database" (CDB).
+
+
+    The CDB itself, as shown in Fig. 1 is intended for storing data and metadata based
+    on the top-level ontology described and can be specified for other subject areas,
+    providing an appropriate programming interface (API) for the cognitive functions
+    of the CK - LPL, PFC, TFS and TDA.
+
+    The approximate composition of the CK can be described as a set of services described
+    below that provide API functions to each other and to "external" applications.
+    Thus, it is possible to implement the system within the framework of a so-called
+    "micro-service" architecture based on the services of the LPL, PFC, TFS and TDA
+    based on a single CDB.
+
+
+    # 3.1. Cognitive database
+
+
+    The Cognitive Database (CDB) includes the following three components shown in
+    Fig. 1 on the right side.
+
+    The Meta-data Base (MDB) is designed to store ontological schemas of Instances
+    and Invariants (by describing their Types and Attributes), as well as domain Values
+    of Classifiers. The full or partial caching of the MDB in an memory database or
+    a specialized caching system for quick access at the application layer is used
+    to: a) obtaining stores for instances and invariants and their attributes; b)
+    obtaining values of data objects (most importantly the domain Values of Classifiers),
+    as Meta - Types and Attributes for visual operations over the user interface side.
+
+
+    The Data Object Base (DOB) is designed to maintain, within the structure described
+    in the MDB above, information about instances and their relationships with each
+    other as recorded by applications, and their derived projections, providing functionality
+    such as a) initial retrieving the projections in relational normalization projections
+    corresponding to the structure of the tasks solved; c) retrieving and storing
+    the invariants in the relational normalization projections to the structure of
+    the tasks solved;
+
+
+    The Rule Base (RB) is used for storing connections between the conjunctive-disjunctive
+    rules of conditions and the probabilistic estimates of the onset of post-conditions
+    inferred by LPI, in relation to both precedents and invariants discovered by PFC,
+    while ensuring a) preservation of the identified rules retrieval of relevant rules
+    on the given criteria for pre-conditions and post-conditions.
+
+
+    As follows from Figure 3, Types with Attributes in MDB describe the structure
+    of Objects (Instances and Invariants) of the DOB, including the Relationships
+    between them and Composite Classifiers, which can be created based on supervisions
+    of the values of the original raw Classifiers, derived on the basis of the identified'
+  - '[PAGE 6]
+
+
+    Invariants by means of PFC, and the RB Rules can be associated with the Invariants
+    for which they are revealed according to the LPI inference.
+
+
+    ![](img/e66e00c99cdfd3c24698cc35c8fa2b2e_6_0.png)
+
+
+    # 3.2. Logical-probabilistic inference (LPI) service
+
+
+    The LPI service implemented according to [7,11] provides for the following functionality:
+    a) the formation of rules based on the Instances (and Precedents) in the DOB and
+    saving them in the RB; b) building forecasts and issuing recommendations based
+    on the presented presents, using both the rules in the RB and the corresponding
+    invariants c) with the PFC of the possibility of ranking the forecasts by "probability"
+    (in terms of [7,11]) and by "statistical significance" (Fisher''s criterion),
+    as well as a combination of both. The provided forecasts can be transferred to
+    an external system for practical use and to the TFS service to correct the model
+    of cognitive behavior contained in the form of RB rules upon feedback. The service
+    can be controlled by both explicit (ad-hoc) requests from external applications
+    and background tasks designed to periodically update the RB. In this case, both
+    explicit requests and background tasks can be accompanied by additional contextual
+    information that refines the request.
+
+
+    # 3.3. Probabilistic formal concepts (PFC) service
+
+
+    The PFC service implemented according to [8,15] is intended for: a) identifying
+    significant Invariants based on the data of Instances (and Precedents) in the
+    DOB; b) preservation of the identified Invariants in the DOB. The operation of
+    the service can be managed as background tasks designed to periodically update
+    the DOB Invariants and the associated BP Rules. At the same time, background tasks
+    can be accompanied by additional contextual
+
+
+    Fig. 1. Scheme of the cognitive kernel (CK), which includes the services of the
+    LPI, PFC, TFS and TDA based on the CDB.'
+  - '[PAGE 7]
+
+
+    # Anton Kolonin et al. / Procedia Computer Science 213 (2022) 180–189
+
+
+    information specifying the search area for Invariants. Also, it is possible to
+    use the service via (ad-hoc) requests from the LPI or application requests to
+    identify Invariants in a required application context.
+
+
+    # 3.4. Theory of functional system (TFS) service
+
+
+    The TFS service implemented according to [2,3,4,5] provides the functionality:
+    a) receiving LPI forecasts and comparing them with actually recorded precedents
+    in the DOB with possible explicit feedback from the external environment (simultaneously
+    giving the feedback in the DOB) in response to the issued LPI forecasts; b) adjusting
+    the relevant rules in the RB, depending on the results of comparing forecasts
+    with their success. The action of TFS is in sense similar to the "global feedback"
+    [6] of active cognitive processes in the context of episodic memory in the case
+    of perception of "successful" results. The functioning of the service ensures
+    the perception of both "external reactions" from the application system, based
+    on the implementation of the recommendations of the LPI service, and "internal
+    incentives" generated by the TDA.
+
+
+    # 3.5. Task-driven application (TDA) service
+
+
+    The TDA service [3,4,5] is to be implemented as a specialized "Oracle", in relation
+    to a specific subject area, which provides "external" (in relation to the rest
+    of the architecture) reinforcement in accordance with the "goals". Goals can be
+    considered as "from above" for a specific area through the definition of a "success
+    function" calculated according to the goals and the criteria for their achievement
+    based on data recorded by the entire system in the context of its operation. Evaluations
+    of the "success" of "solving problems" ("achieving goals") are transferred to
+    the TFS as "internal" reinforcements that mediate external signals and the system''s
+    reactions to them in the context of the. The functioning of the service can be
+    controlled by certain events (such as the completion of Tasks or Projects), and
+    by background tasks designed to periodically reinforce current activities through
+    the TFS service.
+
+
+    # 4. Application examples
+
+
+    # 4.1. Session diagnostics in cognitive behavioral therapy (CBT)
+
+
+    Let''s consider an example of an application – the "Psychotherapist" chatbot,
+    designed to make a preliminary diagnosis of a Client who turned to a real psychotherapist
+    for help, as shown in Fig. 2. The application has an part that provides the following:
+    a) the actual functionality of the chatbot, with instant messengers such as Telegram
+    and Slack; b) for detecting confirmations ("yes", "exactly", etc.), denials ("no",
+    "by no means", etc.) and speech patterns (based on pattern detection technology
+    [18]) to identify Speech Patterns in the Client''s Reactions; c) the cognitive
+    (CN) itself based on the cognitive architecture above to obtain the recommended
+    Speech Patterns for Cognitive Influence made by the Psychotherapist in response
+    to the Speech Patterns received from the Client, from their Reactions; d) a module
+    for generating interactive Dialog Fluences based on the patterns recognized by
+    CK (using pre-trained language models based on "transformers" [20]); e) the current
+    Client model, which tracks the history of the session, all recorded actions (including
+    repetitions) and stores the current context, including the excluded and confirmed
+    classifiers.
+
+
+    As seen from Fig. 2, the dialogue begins with a formal greeting of the Psychotherapist.
+    The first reaction of the Client making a preliminary diagnosis in the space of
+    two Classifiers - "personalization" [16] (Cognitive Distortion) over "being fired"
+    (Social Situation). The Psychotherapist confirms the hypothesis regarding the
+    Social Situation and carries out an Influence to clarify the Client''s Feelings.
+    The Client''s response allows the Feeling of "anxiety" to be identified, while
+    the Therapist confirms the partial diagnosis of "anxiety" in connection with "being
+    fired" and proceeds to clarify the Cognitive Distortion. The Client''s next reaction
+    confirms the preliminary diagnosis ("personalization"), but an attempt to explicitly
+    changes the diagnosis to'
+  md: '
+
+    Of Processes that accumulate historical records about Offers made to the Client
+    and Subscriptions made by the Client in the context of their Current Subscriptions,
+    which can be recorded as Client Stories. The aggregation of this information makes
+    possible to identify Typical Histories, Typical Episodes and Typical Actions as
+    Scenarios - Invariants, characterizing each Client Images.
+
+
+    Based on the information available, the task in terms of the TDA can be specified
+    as generating Offers for such specific Products and Product Types, in the context
+    of any given Customer, in order to maximize the likelihood of a Subscription to
+    the offered Product, confirmed by the "action result acceptor" [3] by evaluating
+    the results of delivering the Offer to the Client.
+
+
+    ## 3. Cognitive architecture for decision making
+
+
+    Cognitive architectures based on ontological models and probabilistic logic prune
+    the Non-Axiomatic Reasoning Search (NARS) [12] and OpenCog [17]. In these systems,
+    there are algorithmic capabilities similar to LPI in the form of non-axiomatic
+    logic [11] and Probabilistic Logic Networks (PLN) [13]. However, they do not fully
+    provide the properties offered by us in the form of the TDA, PFC, and TFS, as
+    shown in our previous works [3,6]. Within the framework of the architecture that
+    we propose, it is assumed that all specific applications use a "cognitive kernel"
+    (CK) that is executed on the base of private ontologies of the relevant domains
+    and will provide top-level applications with the capabilities of the LPL, PFC
+    and TFS within the framework of the TDA based on the "cognitive database" (CDB).
+
+
+    The CDB itself, as shown in Fig. 1, is intended for storing data and metadata
+    based on the top-level ontology described and can be specified for other subject
+    areas, providing an appropriate programming interface (API) for the cognitive
+    functions of the CK - LPL, PFC, TFS and TDA.
+
+
+    The approximate composition of the CK can be described as a set of services described
+    below that provide API functions to each other and to "external" applications.
+    Thus, it is possible to implement the system within the framework of a so-called
+    "micro-service" architecture based on the services of the LPL, PFC, TFS and TDA
+    based on a single CDB.
+
+
+    ### 3.1. Cognitive database
+
+
+    The Cognitive Database (CDB) includes the following three components shown in
+    Fig. 1 on the right side.
+
+
+    The Meta-data Base (MDB) is designed to store ontological schemas of Instances
+    and Invariants (by describing their Types and Attributes), as well as domain Values
+    of Classifiers. The full or partial caching of the MDB in an memory database or
+    a specialized caching system for quick access at the application layer is used
+    to:
+
+    - a) obtaining stores for instances and invariants and their attributes;
+
+    - b) obtaining values of data objects (most importantly the domain Values of Classifiers),
+    as Meta-Types and Attributes for visual operations over the user interface side.
+
+
+    The Data Object Base (DOB) is designed to maintain, within the structure described
+    in the MDB above, information about instances and their relationships with each
+    other as recorded by applications, and their derived projections, providing functionality
+    such as:
+
+    - a) initial retrieving the projections in relational normalization projections
+    corresponding to the structure of the tasks solved;
+
+    - c) retrieving and storing the invariants in the relational normalization projections
+    to the structure of the tasks solved;
+
+
+    The Rule Base (RB) is used for storing connections between the conjunctive-disjunctive
+    rules of conditions and the probabilistic estimates of the onset of post-conditions
+    inferred by LPI, in relation to both precedents and invariants discovered by PFC,
+    while ensuring a:
+
+    - preservation of the identified rules retrieval of relevant rules on the given
+    criteria for pre-conditions and post-conditions.
+
+
+    As follows from Figure 3, Types with Attributes in MDB describe the structure
+    of Objects (Instances and Invariants) of the DOB, including the Relationships
+    between them and Composite Classifiers, which can be created based on supervisions
+    of the values of the original raw Classifiers, derived on the basis of the identified
+    Invariants by means of PFC, and the RB Rules can be associated with the Invariants
+    for which they are revealed according to the LPI inference.
+
+
+    ![](img/e66e00c99cdfd3c24698cc35c8fa2b2e_6_0.png)
+
+
+    ### 3.2. Logical-probabilistic inference (LPI) service
+
+
+    The LPI service implemented according to [7,11] provides for the following functionality:
+
+    - a) the formation of rules based on the Instances (and Precedents) in the DOB
+    and saving them in the RB;
+
+    - b) building forecasts and issuing recommendations based on the presented presents,
+    using both the rules in the RB and the corresponding invariants;
+
+    - c) with the PFC of the possibility of ranking the forecasts by "probability"
+    (in terms of [7,11]) and by "statistical significance" (Fisher''s criterion),
+    as well as a combination of both. The provided forecasts can be transferred to
+    an external system for practical use and to the TFS service to correct the model
+    of cognitive behavior contained in the form of RB rules upon feedback. The service
+    can be controlled by both explicit (ad-hoc) requests from external applications
+    and background tasks designed to periodically update the RB. In this case, both
+    explicit requests and background tasks can be accompanied by additional contextual
+    information that refines the request.
+
+
+    ### 3.3. Probabilistic formal concepts (PFC) service
+
+
+    The PFC service implemented according to [8,15] is intended for:
+
+    - a) identifying significant Invariants based on the data of Instances (and Precedents)
+    in the DOB;
+
+    - b) preservation of the identified Invariants in the DOB.
+
+
+    The operation of the service can be managed as background tasks designed to periodically
+    update the DOB Invariants and the associated BP Rules. At the same time, background
+    tasks can be accompanied by additional contextual.
+
+
+    Fig. 1. Scheme of the cognitive kernel (CK), which includes the services of the
+    LPI, PFC, TFS and TDA.
+
+
+    ### 3.4. Theory of functional (TFS) service
+
+
+    The TFS service implemented according to [7,11] provides for the following functionality:
+    a) identifying the significant Invariants based on the data of Instances (and
+    Precedents) in the DOB and saving them in the RB; b) ... to the TFS service to
+    correct the model of cognitive behavior contained in the form of RB rules upon
+    feedback. The service can be controlled by both explicit (ad-hoc) requests from
+    external applications and background tasks designed to periodically update the
+    RB. In this case, both explicit requests and background tasks can be accompanied
+    by additional contextual information.
+
+
+    ### 3.5. Task-driven application (TDA) service
+
+
+    The TDA service implemented according to [3,4,5] is to be implemented as a "cognitive
+    kernel" (CK) that is executed on the base of private ontologies of the relevant
+    domains and will provide top-level applications with the capabilities of the LPL,
+    PFC and TFS within the framework of the TDA based on the "cognitive database"
+    (CDB).
+
+
+    ## 4. Application examples
+
+
+    ### 4.1. Session diagnostics in cognitive behavioral therapy (CBT)
+
+
+    Let''s consider an example of an application – the "Psychotherapist" chatbot,
+    designed to make a preliminary diagnosis of a Client who turned to a real therapist
+    for help, as shown in Fig. 2. The application has a part that provides the following:
+
+    - a) the actual functionality of the chatbot, with instant messengers such as
+    Telegram and Slack;
+
+    - b) for detecting confirmations ("yes", "exactly", etc.), denials ("no", "by
+    means", etc.) and speech patterns (based on pattern detection technology [18])
+    to identify Speech Patterns in the DOB;
+
+    - c) the cognitive (CN) itself based on the cognitive architecture above to obtain
+    the recommended Speech Patterns for Cognitive Influence made by the Psychotherapist
+    in response to the Speech Patterns received from the Client;
+
+    - d) a module for generating interactive Fluences based on the patterns recognized
+    by CK (using pre-trained language models based on "transformers" [20]);
+
+    - e) the current Client model, which tracks the history of the session, all recorded
+    actions (including repetitions) and stores the current context, including the
+    excluded and confirmed classifiers.
+
+
+    As seen from Fig. 2, the dialogue begins with a formal greeting of the Psychotherapist.
+    The first reaction of the Client making a preliminary diagnosis in the space of
+    two Classifiers - "personalization" [16] (Cognitive Distortion) over "being fired"
+    (Social Situation). The Psychotherapist confirms the hypothesis regarding the
+    Social Situation and carries out an Influence to clarify the Client''s Feelings.
+    The Client''s response allows the Feeling of "anxiety" to be identified, while
+    the Therapist confirms the partial diagnosis of "anxiety" in connection with "being
+    fired". The Client''s next reaction confirms the preliminary diagnosis ("personalization"),
+    but an attempt to explicitly changes the diagnosis to
+
+    '
+  mdcn: '
+
+    关于积累向客户提供的报价（Offers）以及客户在当前订阅背景下进行的订阅（Subscriptions）的历史记录过程，这些记录可以存储为客户故事（Client
+    Stories）。这些信息的聚合使得将典型历史、典型片段和典型行为识别为情景-不变性（Scenarios - Invariants）成为可能从而描述每个客户画像（Client
+    Images）。
+
+
+    根据可用信息，从任务驱动架构（TDA）的角度来看，任务可以规范为：针对任何给定的客户生成特定产品及产品类型的报价，以最大化对所提产品的订阅概率，并通过评估向客户交付报价的结果，由“行为结果接受者”[3]
+    确认。
+
+
+    ## 3. 用于于决策的认知架构
+
+
+    基于本体论模型和概率逻辑的认知架构剪枝了非公理推理搜索（NARS）[12] 和 OpenCog [17]。在这些系统中，存在以非公理逻辑 [11] 和概率逻辑网络（PLN）[13]
+    形式存在的与 LPI 相似的算法能力。然而，它们并没有完全提供我们在之前的工作中通过 TDA、PFC 和 TFS 提供的属性，如我们先前的工作所示 [3,6]。在我们提出的架构框架内，假设所有特定应用都使用一个“认知内核”（CK），该内核在相关领域的私有本体的基础上执行，并在基于“认知数据库”（CDB）的
+    TDA 框架内为顶层应用提供 LPL、PFC 和 TFS 的能力。
+
+
+    CDB 本身如图 1 所示，用于根据所述的高层本体存储数据和元数据，并可以指定其他主题领域，为 CK 的认知功能 - LPL、PFC、TFS 和 TDA 提供适当编程接口（API）。
+
+
+    CK 的近似组成可以描述为下述的一系列服务，这些服务相互以及向“外部”应用程序提供 API 函数。因此，可以在基于单个 CDB 的 LPL、PFC、TFS
+    和 TDA 服务，在所谓的“微服务”架构范围内实现该系统。
+
+
+    ### 3.1. 认知数据库
+
+
+    认知数据库（CDB）包括图 1 右侧所示的以下三个组件。
+
+
+    元数据基础（MDB）旨在存储实例（Instances）和不变性（Invariants）的本体模式（通过描述它们的类型和属性），以及分类器的领域值。在内存数据库或专门的缓存系统中对
+    MDB 进行完全或部分缓存，以便在应用层快速访问，其用于：
+
+    - a) 获取实例、不变性及其属性的存储；
+
+    - b) 获取数据对象的值（最重要的是分类器的领域值），作为用户界面侧视觉操作的元类型（Meta-Types）和属性。
+
+
+    数据对象基础（DOB）旨在根据上述 MDB 中描述的结构，维护由应用程序记录的实例及其相互关系的信息，以及它们的派生投影（projections），提供如下功能：
+
+    - a) 初始检索与已解决任务结构对应的关系关系归一化投影；
+
+    - c) 在对应于已解决任务结构的关系关系归一化投影中检索并存储不变性；
+
+
+    规则基础（RB）用于存储条件的合取-析取规则与由 LPI 推断的后置条件发生的概率估计之间的连接，这种推断与 PFC 发现的前驱项（precedents）和不变性有关，同时确保：
+
+    - 保持已识别规则的检索，根据给定的前置条件和后置条件准则检索相关规则。
+
+
+    如图 3 所示，MDB 中带有属性的类型描述了 DOB 中对象（实例和不变性）的结构，包括它们之间的关系以及复合分类器（Composite Classifiers），这些分类器可以基于对原始原始分类器值的监督创建（基于
+    PFC 识别的不不变性派生），且 RB 规则可以与根据 LPI 推断显现的不不变性相关联。
+
+
+    ![](img/e66e00c99cdfd3c24698cc35c8fa2b2e_6_0.png)
+
+
+    ### 3.2. 逻辑-概率推理 (LPI) 服务
+
+
+    根据 [7,11] 实现的 LPI 服务提供以下功能：
+
+    - a) 根据 DOB 中的实例（和前驱项）形成规则并将其保存到 RB 中；
+
+    - b) 基于呈现的现状，结合使用 RB 中的规则和相应的不变性，构建预测并发布建议；
+
+    - c) 结合 PFC，实现按“概率”（从 [7,11] 的角度来看）和“统计显著性”（费希尔准则）对预测进行排名的可能性的，以及两者的结合。所提供的预测可以传输到外部系统供实际使用，并传输到
+    TFS 服务以根据反馈纠正以 RB 规则形式包含的认知行为模型。该服务既可以通过外部应用程序的显式（随时的）请求控制，也可以通过定期更新 RB 的后台任务控制。在这种情况下，显式请求和后台任务都可以带有完善请求的额外上下文信息。
+
+
+    ### 3.3. 概率形式概念 (PFC) 服务
+
+
+    根据 [8,15] 实现的 PFC 服务用于：
+
+    - a) 根据 DOB 中实例（和前驱项）的数据识别显著的不不变性；
+
+    - b) 在 DOB 中保留已识别的不不变性。
+
+
+    该服务的操作可以作为后台任务进行管理，用于定期更新 DOB 不变性以及相关的 BP 规则。同时，后台任务可以带有额外的上下文。
+
+
+    图 1. 认知内核（CK）方案，包含 LPI、PFC、TFS 和 TDA 服务。
+
+
+    ### 3.4. 功能理论 (TFS) 服务
+
+
+    根据 [7,11] 实现的 TFS 服务提供以下功能：a) 根据 DOB 中实例（和前驱项）的数据识别显著的不不变性并将其保存到 RB 中；b) ... 传输到
+    TFS 服务以根据反馈纠正以 RB 规则形式包含的认知行为模型。该服务既可以通过外部应用程序的显式（随时的）请求控制，也可以通过定期更新 RB 的后台任务控制。在这种情况下，显式请求和后台任务都可以带有额外的上下文信息。
+
+
+    ### 3.5. 任务驱动应用 (TDA) 服务
+
+
+    根据 [3,4,5] 实现的 TDA 服务旨在实现为一个“认知内核”（CK），该内核在相关领域的私有本体的基础上执行，并在基于“认知数据库”（CDB）的 TDA
+    框架内为顶层应用提供 LPL、PFC 和 TFS 的能力。
+
+
+    ## 4. 示例
+
+
+    ### 4.1. 认知行为疗法 (CBT) 中的话诊断
+
+
+    让我们考虑一个应用程序示例——“心理医生”聊天机器人，它用于对寻求帮助的客户进行初步诊断，如图 2 所示。该应用程序包含以下功能部分：
+
+    - a) 聊天机器人的实际功能，支持 Telegram 和 Slack 等即时通讯工具；
+
+    - b) 检测确认（“是的”、“没错”等）、否定（“不”、“由于”等）以及模式（基于模式检测技术 [18]），以识别 DOB 中的语言模式；
+
+    - c) 基于上述认知架构的认知（CN）本身，用于获取心理医生响应客户语言模式时所建议的认知影响语言模式；
+
+    - d) 一个基于 CK 识别的模式生成交互式流的模块（使用基于“转换器” [20] 的预训练语言模型）；
+
+    - e) 当前客户模型，用于跟踪会话历史、所有记录的操作（包括重复）并存储当前上下文，包括排除和确认的分类器。
+
+
+    从图 2 可以看出，对话从心理医生的正式问候开始。客户在两个分类器空间内做出初步诊断的首次反应是“个人化”[16]（认知扭曲）关于“被解雇”（社会情境）。客户的后续反应确认了初步诊断，但一次显式的尝试将诊断改为
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 8]
+
+
+    "catastrophizing". At the end of the dialogue, the Psychotherapist completes the
+    final diagnosis of "anxiety" in connection with the "catastrophizing" of being
+    fired and the client confirms this, giving a clue for correcting the subsequent
+    thoughts through healthy interventions
+
+
+    P: Hi! How are you?
+
+
+    B: Bad. They kicked out the #beer! (tentatively diagnosing #being fired and #personalization)
+
+    P: How did that happen? Who did that? (clarifying social situation)
+
+    P: It was my job. I am fired so that (confirming #being fired)
+
+    P: Does it make you anxious or me angry? (clarifying emotion - #anxiety or #anger)
+
+    P: Anxious, I have to pay the mortgage. (confirming #anxiety, #responsibility)
+
+    P: You have been fired from your job and you are afraid, that won''t be able to
+    pay right (#being fired, #anxiety)
+
+    P: Yes (confirming in regard to social situation and emotion)
+
+    P: What do you think about the reason?
+
+    P: I was he has left the company. (diagnosing #personalization)
+
+    B: That was fear I just like my life is ruined (change to #catastrophizing)
+
+    P: You are anxious, that after being fired you won''t be able to find a new job
+    (#anxiety, #being fired, #catastrophizing)
+
+    P: Exactly In fact I am an experienced professional. (confirming in regard to
+    emotion, social situation and cognitive distress moving on correction with healthy
+    interventions)
+
+
+    Fig. 2. An example of an protocol for automatic session for CBT. P: Psychotherapist
+    replies, C: client replies. Explanations of the actions of the designed system
+    are given in parentheses. The hash tag denotes the values (Categories) of such
+    Classifiers as Emotion, Social Situation and Cognitive Distortion.
+
+
+    # 4.2. Formation of proposals in customer relationship management (CRM)
+
+
+    An example of the proposed cognitive architecture in the area of customer relationship
+    management (CRM) is the segmentation of the client audience. This can be done
+    by predicting the qualities of the Clients, as described in [2], for the purpose
+    of the formation of Offers for them of the Enterprise.
+
+    The appendix to [2] shows the PFC-based statistical approximation algorithm can
+    reveal expressive social concerns towards the Invariants of individual Clients
+    on 2784 respondents (users) of the social network was studied in the context of
+    36 client users, where each characteristic corresponds to a Classifier as Gender,
+    Race, Place of Birth, Values and Attribute to Bad Habits. As a result of the statistical
+    approximation algorithm based on the PFC, 21 Invariants were identified, which
+    are distinguishable representatives of the client audience. The most of them were
+    the 8th and 9th Invariants. The 8th invariant can be characterized as such: unmarried
+    men living in their homes, where the priority is family and children, value kindness
+    and honesty in people, with negative attitude towards alcohol and smoking, with
+    priority related to number of video and audio files. The 9th invariant, by instance,
+    can be characterized as such: unmarried men, perhaps teenagers, who also value
+    kindness and honesty in people, have their main priority self-improvement, with
+    neutral stances on smoking and alcohol.
+
+    The segmentation of the client audience involves a number of Client Images, coupled
+    with the recorded logs of the formation of Precedents of Offers for Client Subscriptions
+    made for the same products, may allow the LPI to make predictions about the acceptance
+    or rejection of Offers for certain products by other Clients, taking into account
+    the proximity of the Client to a particular Client Image and the probability of
+    them accepting the Offer for each of the Products for this Client Image.'
+  - '[PAGE 9]
+
+
+    We have shown that the five principles of brain architecture (BPP) can be implemented
+    within the framework of a task-driven approach (TDA) in a cognitive architecture
+    built on the methods of probabilistic inference (LPI), probabilistic concepts
+    (FC), and functional systems (TFS). We demonstrated the fundamental applicability
+    of the probabilistic architecture for a number of applied tasks formulated in
+    the corresponding subject domain ontologies based on a basic activity ontology.
+    In our future work, we plan to develop the probabilistic architecture and fully
+    test it on real problems.
+
+
+    # References
+
+
+    +   [1] Vedyakinin A., et al. (2021) “Artificial intelligence. On the way to the
+    superwind”, M.: Intellectual Literature, ISBN 978-5-907394-18-6, 22 p.
+
+
+    +   [2] Evgeniy Aitov, Antonin, Andrey Kurepat, Artem Molchanov. (2022) “Brain
+    Principles Programming”, arXiv:2202.12710 [q-bio] https://arxiv.org/pdf/2202.12710
+
+
+    +   [3] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “Probabilistic Biologically
+    Inspired Cognitive Architecture”, In: Goertzel, B., Patoev, A., Yampolskii, R.
+    (eds) Artificial General Intelligence. AGO 2020 Notes in Computer Science, vol
+    12177. Springer, Cham., pp 385–399.
+
+
+    +   [4] Vitaly. E., Goncharov S., Svirdikov D. (2019) “On the task-driven approach
+    in artificial intelligence”, Siberian Journal of Policy, vol. 17, no. 4, p. 5–25
+    (in Russian). DOI: 10.22052/2541-7717-2019-17-1-5
+
+
+    +   [5] Evgeniy. E. (2015) “Purposefulness as a Principle of Brain Activity”,
+    In: Anticipation: Learning from the Past, (ed J. M. Nadin Cognitive Systems Monographs,
+    Chapter No. 13. Springer, 2015, pp. 231–254.
+
+
+    +   [6] Kolonin, A., Neumart K. (2019) “Neuro-Cognitive Framework for Experimental
+    Learning in Discrete and Functional Environments”, In: Goertzel, B., Blé, M.,
+    Patoev, A. (eds) Artificial General Intelligence. AGO 2021 Notes in Computer Science,
+    vol 9782. Springer, Cham., pp 31154. doi: 10.1007/978-3-030-93758-4
+
+
+    +   [7] Evgeniy (2006) “The logic of decision”, In: Proceedings of the 9th Artificial
+    Logic Conference (16–19, Novosibirsk, Russia), World Scientific Publishers, 2006,
+    pp. 25–30
+
+
+    +   [8] Vitaly. E. E. V., V. V. (2015) “Probabilistic Formal Concepts with Negation”,
+    In: A. Voronin, I. Virstibakite (eds.): 9th International Enhanced Informatics
+    Conference on Perspectives of Information Systems, 2014 LNCS 8974, 2015
+
+
+    +   [9] Kupratov Andrey Vladirovich, Evgeniy Gennady Gennadovich. (2021) “Psychotherapy.
+    Behavioral Systems Approaches”, Capital, ISBN: 978-8-64272-0-0
+
+
+    +   [10] Kolonin, A. G. (2018) “Representing scenarios for process evaluation
+    management”, arXiv:1807.02062 [cs.AI], doi:10.48550/arXiv.1807.02062
+
+
+    +   [11] Vitaly. E. E. (2017) “Semantic probabilistic inference of predictions”,
+    News of IRKUTSK State University “Mathematics”, 2017. Volume 21, p. 33–50.
+
+
+    +   [12] Hammer, P., Lobshed, T., Wang, J. (2016) “The OpenNAS Framework for the
+    Non-Associative Learning System”, In: Steenburg, B., Wang, G., Blé, M., Patoev,
+    A. (eds) Artificial General Intelligence. AGO 2016 Notes in Computer Science,
+    vol 9782. Springer, Cham., doi: 10.1007/978-3-030-91649-6_16
+
+
+    +   [13] Kolonin, A. G., Goertzel, M., Heljajah, A. (2009) “Probabilistic Logic
+    Networks”, Springer, 2009, doi:10.1007/978-3-064-76872-7
+
+
+    +   [14] Vitaly, E. E. (2013) “A Formal Model of Neuron for Process evaluation”,
+    In: Cheilla, A., Pirone, R., Sorbello, J., Holholtz, D. (eds) Cognitively Bi Inspired
+    Cognitive Architecture. Advances in Intelligent Systems and Computing, vol 196.
+    doi:10.1007/978-3-642-34725-5
+
+
+    +   [15] Vitaly, E., Neumart, V. V. (2017) “Probabilistic formal concepts with
+    negation” Siberian Journal of Probabilistic and Applied Mathematics, Vol. 17,
+    No. 14, p. 27–38.
+
+
+    +   [16] Bollin, J., Thi, M., Feijhart, F., Barron, A., Rutter, L., Lorenzo-Lucez,
+    S., Schefer, M. (2021) “Historical language records reveal a shift of divergent
+    tectonic trends in decision data”, PNAS, 118(32)e2106112118 doi:10.1073/pnas.2106112118/10.1073/pnas.210611218
+
+
+    +   [17] Goertzel, B., Pennachim, C., Geisweiler, N. (2014) “Engineering General
+    Intelligence, Part 1”, Atlantic Thinking Machines, 5, 2014th edition.
+
+
+    +   [18] Kolonin, A. (2015) “Automatic text classification and property extraction
+    applications in medicine”, 2015 International Conference on Biomedical Engineering
+    and Computational Technologies (SIBICON), pp. 133–137, doi:10.1109/SIBICON.2015.7356168
+
+    [19] Ramesh, V., Kolonin, A. (2022) “Unsupervised Context-Driven Question Answering
+    Based on Link Grammar”, A”, In: Goertzel, B., Blé, M., Patoev, A. (eds) Artificial
+    General Intelligence. AGO 2021 Notes in Computer Science, vol 13154. Springer,
+    Cham., https://doi.org/10.1007/978-3-030-93758-4_2
+
+
+    +   [20] Majid Ghorbanivand, Vladimir Karpukhin, Ali Celilikayak. (2021) “Discourse-Aware
+    Prompt Design for Text Generation”, arXiv:2112.05717 [cs.CL], https://arxiv.org/abs/2112.05717'
+  md: '
+
+    "catastrophizing". At the end of the dialogue, the Psychotherapist completes the
+    final diagnosis of "anxiety" in connection with the "catastrophizing" of being
+    fired and the client confirms this, giving a clue for correcting the subsequent
+    thoughts through healthy interventions
+
+
+    P: Hi! How are you?
+
+
+    B: Bad. They kicked out the #beer! (tentatively diagnosing #being fired and #personalization)
+
+    P: How did that happen? Who did that? (clarifying social situation)
+
+    P: It was my job. I am fired so that (confirming #being fired)
+
+    P: Does it make you anxious or me angry? (clarifying emotion - #anxiety or #anger)
+
+    P: Anxious, I have to pay the mortgage. (confirming #anxiety, #responsibility)
+
+    P: You have been fired from your job and you are afraid, that won''t be able to
+    pay right (#being fired, #anxiety)
+
+    P: Yes (confirming in regard to social situation and emotion)
+
+    P: What do you think about the reason?
+
+    P: I was he has left the company. (diagnosing #personalization)
+
+    B: That was fear I just like my life is ruined (change to #catastrophizing)
+
+    P: You are anxious, that after being fired you won''t be able to find a new job
+    (#anxiety, #being fired, #catastrophizing)
+
+    P: Exactly In fact I am an experienced professional. (confirming in regard to
+    emotion, social situation and cognitive distress moving on correction with healthy
+    interventions)
+
+
+    Fig. 2. An example of an protocol for automatic session for CBT. P: Psychotherapist
+    replies, C: client replies. Explanations of the actions of the designed system
+    are given in parentheses. The hash tag denotes the values (Categories) of such
+    Classifiers as Emotion, Social Situation and Cognitive Distortion.
+
+
+    ## 4.2. Formation of proposals in customer relationship management (CRM)
+
+
+    An example of the proposed cognitive architecture in the area of customer relationship
+    management (CRM) is the segmentation of the client audience. This can be done
+    by predicting the qualities of the Clients, as described in [2], for the purpose
+    of the formation of Offers for them of the Enterprise.
+
+
+    The appendix to [2] shows the PFC-based statistical approximation algorithm can
+    reveal expressive social concerns towards the Invariants of individual Clients
+    on 2784 respondents (users) of the social network was studied in the context of
+    36 client users, where each characteristic corresponds to a Classifier as Gender,
+    Race, Place of Birth, Values and Attribute to Bad Habits. As a result of the statistical
+    approximation algorithm based on the PFC, 21 Invariants were identified, which
+    are distinguishable representatives of the client audience. The most of them were
+    the 8th and 9th Invariants. The 8th invariant can be characterized as such: unmarried
+    men living in their homes, where the priority is family and children, value kindness
+    and honesty in people, with negative attitude towards alcohol and smoking, with
+    priority related to number of video and audio files. The 9th invariant, by instance,
+    can be characterized as such: unmarried men, perhaps teenagers, who also value
+    kindness and honesty in people, have their main priority self-improvement, with
+    neutral stances on smoking and alcohol.
+
+
+    The segmentation of the client audience involves a number of Client Images, coupled
+    with the recorded logs of the formation of Precedents of Offers for Client Subscriptions
+    made for the same products, may allow the LPI to make predictions about the acceptance
+    or rejection of Offers for certain products by other Clients, taking into account
+    the proximity of the Client to a particular Client Image and the probability of
+    them accepting the Offer for each of the Products for this Client Image.
+
+
+    We have shown that the five principles of brain architecture (BPP) can be implemented
+    within the framework of a task-driven approach (TDA) in a cognitive architecture
+    built on the methods of probabilistic inference (LPI), probabilistic concepts
+    (FC), and functional systems (TFS). We demonstrated the fundamental applicability
+    of the probabilistic architecture for a number of applied tasks formulated in
+    the corresponding subject domain ontologies based on a basic activity ontology.
+    In our future work, we plan to develop the probabilistic architecture and fully
+    test it on real problems.
+
+
+    ## References
+
+
+    - [1] Vedyakinin A., et al. (2021) “Artificial intelligence. On the way to the
+    superwind”, M.: Intellectual Literature, ISBN 978-5-907394-18-6, 22 p.
+
+    - [2] Evgeniy Aitov, Antonin, Andrey Kurepat, Artem Molchanov. (2022) “Brain Principles”,
+    arXiv:2202.12710 [bio] https://arxiv.org/pdf/2202.12710
+
+    - [3] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “Biologically Inspired
+    Cognitive Architecture”, In: Goertzel, B., Patoev, A., Yampolskii, R. (eds) Artificial
+    General Intelligence. AGO 2020 Notes in Computer Science, vol. 717. Springer,
+    Cham., pp. 385–399.
+
+    - [4] Vitaly. E., Goncharov S., Svirdikov D. (2019) “On the task-driven approach
+    in artificial intelligence”, Siberian Journal of Policy, vol. 17, no. 4, p. 2–5
+    (in Russian). DOI: 10.2205/2541-7717-2019-17-5
+
+    - [5] Evgeniy. E. (2015) “Purpose as a Principle of Brain Activity”, In: Anticipation:
+    Learning from the Past, ed J. M. Nadin Cognitive Systems, No. 13. Springer, pp.
+    231–254.
+
+    - [6] Kolonin, A., Neumart K. (2019) “Neuro-Cognitive Framework for Experimental
+    Learning in Discrete and Functional Environments”, In: Goertzel, B., Blé, M.,
+    Patoev, A. (eds) Artificial General Intelligence. AGO 2021 Notes in Computer Science,
+    vol 782. Springer, Cham., pp. 31–54. doi: 10.1007/978-3-030-93758-4
+
+    - [7] Evgeniy (2006) “The logic of decision”, In: Proceedings of 9th Artificial
+    Logic Conference (16–19, Novosibirsk, Russia), World Scientific Publishers, pp.
+    25–30.
+
+    - [8] Vitaly. E. V. (2015) “Probabilistic Formal Concepts with Negation”, In:
+    9th International Informatics Conference on Perspectives of Information, LNCS
+    8974.
+
+    - [9] Kupratov Andrey Vladirovich, Evgeniy Gennady Gennadovich. (2021) “Psychotherapy.
+    Behavioral Systems Approaches”, Capital, ISBN: 978-8-64272-0.
+
+    - [10] Kolonin, A. G. (2018) “Representing scenarios for process management”,
+    arXiv:1807.02062 [cs.AI], doi: 10.48550/arXiv.1807.02062
+
+    - [11] Vitaly. E. E. (2017) “Semantic probabilistic inference of predictions”,
+    News of IRKUTSK State University “Mathematics”, 2017. Volume 21, p. 33–50.
+
+    - [12] Hammer, P., Lobshed, T., Wang, J. (2016) “The OpenNAS Framework for the
+    Non-Associative Learning System”, In: Steenburg, B., Wang, G., Blé, M., Patoev,
+    A. (eds) Artificial General Intelligence. AGO 2016 Notes in Computer Science,
+    vol 782. Springer, Cham., doi: 10.1007/978-3-030-91649-6_16
+
+    - [13] Kolonin, A. G., Goertzel, M., Heljajah, A. (2009) “Probabilistic Logic
+    Networks”, Springer, 2009, doi: 10.1007/978-3-064-76872-7
+
+    - [14] Vitaly, E. E. (2013) “A Formal Model of Neuron for Process evaluation”,
+    In: Cheilla, A., Pirone, R., Sorbello, J., Holholtz, D. (eds) Cognitively Bi Inspired
+    Cognitive Architecture. Advances in Intelligent Systems and Computing, vol 196.
+    doi: 10.1007/978-3-642-34725-5
+
+    - [15] Vitaly, E., Neumart, V. V. (2017) “Probabilistic formal concepts with negation”
+    Siberian Journal of Probabilistic and Applied Mathematics, Vol. 17, No. 14, p.
+    27–38.
+
+    - [16] Bollin, J., Thi, M., Feijhart, F., Barron, A., Rutter, L., Lorenzo-Lucez,
+    S., Schefer, M. (2021) “Historical language records reveal a shift of divergent
+    tectonic trends in decision data”, PNAS, 118(32)e2106112118 doi: 10.1073/pnas.2106112118/10.1073/pnas.210611218
+
+    - [17] Goertzel, B., Pennachim, C., Geisweiler, N. (2014) “Engineering General
+    Intelligence, Part 1”, Atlantic Thinking Machines, 5, 204th edition.
+
+    - [18] Kolonin, A. (2015) “Automatic text classification and property extraction
+    applications in medicine”, 2015 International Conference on Biomedical Engineering
+    and Computational Technologies (SIBICON), pp. 133–137, doi: 10.1109/SIBICON.2015.7356168
+
+    - [19] Ramesh, V., Kolonin, A. (2022) “Unsupervised Context-Driven Question Answering
+    Based on Link Grammar, A”, In: Goertzel, B., Blé, M., Patoev, A. (eds) Artificial
+    General Intelligence. AGO 2021 Notes in Computer Science, vol 13154. Springer,
+    Cham., doi: 10.1007/978-3-030-93758-4_2
+
+    - [20] Majid Ghorbanivand, Vladimir Karpukhin, Ali Celilikayak. (2021) “Discourse-Aware
+    Prompt Design for Text Generation”, arXiv:2112.05717 [cs.CL], https://arxiv.org/abs/2112.05717
+
+    '
+  mdcn: '
+
+
+    “灾难化思维”。在对话结束时，心理治疗师针对“被解雇”的“灾难化”思维完成了对“焦虑”的最终诊断，客户也确认了这一点，这为通过健康的干预来纠正后续思维提供了线索。
+
+
+    P: 嗨！你好吗？
+
+
+    B: 糟糕了。他们把 #啤酒 赶出去了！（初步诊断为 #被解雇 和 #个人化）
+
+    P: 那是怎么搞的？是谁干的？（澄清社交情境）
+
+    B: 是因为我的工作问题。我被解雇了，因为（确认 #被解雇）
+
+    P: 这让你感到焦虑，还是让我感到生气？（澄清情绪 - #焦虑 或 #愤怒）
+
+    B: 焦虑，我得付房贷。（确认 #焦虑, #责任）
+
+    P: 你从工作岗位被解雇了，你担心将无法付账单（#被解雇, #焦虑）
+
+    B: 是的（就社交情境和情绪进行确认）
+
+    P: 你认为原因是什么？
+
+    B: 我觉得是因为他离开了公司。（诊断为 #个人化）
+
+    B: 那是恐惧，我感觉我的生活全毁了（转变为 #灾难化思维）
+
+    P: 你很焦虑，担心被解雇后找不到新工作（#焦虑, #被解雇, #灾难化）
+
+    B: 确实如此。事实上我是一个经验丰富的专业人士。（就情绪、社交情境和认知痛苦进行确认，并转向健康的干预进行纠正）
+
+
+    图 2. 认知行为疗法（CBT）自动会话方案的一个示例。P：心理治疗师回答，C：客户回答。括号中给出了设计系统行为的解释。井号表示此类分类器（如情绪、社交情境和认知扭曲）的取值（类别）。
+
+
+    ## 4.2. 客户关系管理 (CRM) 中方案的形成
+
+
+    在客户关系管理（CRM）领域，所提认知架构的一个示例是客户群的细分。这可以通过预测客户特征（如 [2] 中所述）来实现，目的是为企业生成相应的优惠方案（Offers）。
+
+
+    [2] 的附录显示，基于 PFC 的统计近似算法可以揭示 2784 名社交网络受访者（用户）对个体客户不变特征（Invariants）的表达性关注；该研究是在
+    36 个客户用户的背景下进行的，每个特征都对应一个分类器，如性别、种族、出生地、价值观和坏习惯属性。基于 PFC 的统计近似算法识别出 21 个不变特征，它们是客户群可区分的代表性特征。其中大多数是第
+    8 和第 9 个不变特征。第 8 个不变特征可以描述为：住在家里的未婚男性，家庭和孩子优先，看重人的善良和诚实，对酒精和吸烟持负面态度，优先考虑视频和音频文件的数量。例如，第
+    9 个不变特征可以描述为：未婚男性，可能是青少年，他们也看重人的善良和诚实，首要任务是自我提升，对吸烟和酒精持中立。
+
+
+    客户群的细分涉及多个客户画像（Client Images），结合针对相同产品生成的客户订阅优惠方案形成日志，可能允许 LPI 对其他客户是否会接受或拒绝特定产品的优惠做出预测，同时考虑了客户与特定客户画像之间的接近程度，以及他们接受该画像下每个产品优惠的概率。
+
+
+    我们已经证明，大脑架构原理（BPP）可以在任务驱动方法（TDA）的框架内实现，该框架构建在概率推理（LPI）、概率概念（FC）和功能系统（TFS）方法的认知架构之上。我们证明了概率架构在基于基础活动本体的相应学科领域本体中表述的许多应用任务中具有基础适用性。在未来的工作中，我们计划开发该概率架构并在实际问题上对其进行全面测试。
+
+
+    ## 参考文献
+
+
+    - [1] Vedyakinin A., 等人. (2021) “人工智能：通往超级风口之路”, M.: Intellectual Literature,
+    ISBN 978-5-907394-18-6, 22 页.
+
+    - [2] Evgeniy Aitov, Antonin, Andrey Kurepat, Artem Molchanov. (2022) “大脑原理”,
+    arXiv:2202.12710 [bio] https://arxiv.org/pdf/2202.12710
+
+    - [3] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [4] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [5] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [6] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [7] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [8] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [9] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [10] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [11] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [12] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [13] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [14] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [15] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [16] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    - [17] Vitaly. E., Demenko, A. V., Kolonin, A. V. (2020) “生物启发式认知架构”, In: Goertzel,
+    B., Patoev, A., Yampolskii, R. (eds) 人工通用智能. AGO 2020 Notes in Computer Science,
+    第 717 . Springer, Cham., pp. 385–399.
+
+    '
+  merge: 1
