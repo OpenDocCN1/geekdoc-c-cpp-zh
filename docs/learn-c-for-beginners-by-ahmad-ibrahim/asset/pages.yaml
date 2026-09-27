@@ -1,0 +1,3863 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+
+
+    لا غالبَ إلّا الله
+
+
+    “There is no victorious but Allah"'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# FOR BEGINNERS
+
+
+    # LEARN C++
+
+
+    Learn one of the most powerful programming languages in the world and become a
+    Rockstar developer.
+
+
+    BY AHMAD IBRAHIM'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Author
+
+
+    # Book title
+
+
+    Ahmad Ibrahim
+
+
+    Learn C++ (For Beginners)
+
+
+    (MisoMido)
+
+
+    Copyright © 2021 by Ahmad Ibrahim
+
+    First Edition 2021
+
+    ISBN: 9798409536565
+
+    Independently-published
+
+    Email: shah.zahmad17@gmail.com,
+
+    Twitter: @Ahmadlbrahim_pk,
+
+    Instagram: @do.mi6705
+
+
+    All rights reserved.
+
+    No part of this publication may be reproduced, stored in a retrieval system, stored
+    in a database and/or in any form or by any means, electronic, mechanical, photocopying,
+    recording or otherwise, without the prior written permission of the publisher.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Contents
+
+
+    +   1. Preface 8
+
+    2. Introduction to C++ (Hello World) 10
+
+    3. Hello World 12
+
+    4. Variables 28
+
+    5. Basic Data Types 38
+
+    6. Conditionals & Logic 42
+
+    7. Loops 47
+
+    8. QUIZ (FizzBuzz) 53
+
+    9. Errors 55
+
+    10. Vector 60
+
+    11. Arrays 68
+
+    12. Functions 70
+
+    13. FUNCTIONS: Scope & Flexibility 79
+
+    14. Classes and Objects 87
+
+    15. Why Object-Oriented Programming? 96
+
+    16. References and Pointers 97
+
+    17. Memory Allocation 104
+
+    18. About the author 106'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: This book is dedicated to my Soulmate, Miso.
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Preface
+
+
+    # Why Learn C++?
+
+
+    40 years ago, a PhD student by the name of Bjarne Stroustrup tinkered around the
+    C programming language, which was and still is a language well-respected for its
+    flexibility and low-level functionality. Little did he know, he created a new
+    language that can now be found in:
+
+
+    +   - Operating systems
+
+    - Web browsers
+
+    - Microcontrollers
+
+    - Video games
+
+    - And elsewhere!
+
+
+    # Take-Away Skills
+
+
+    This course will start with the fundamental programming concepts before digging
+    deeper into the more advanced C++ topics. You will build everything from a Harry
+    Potter Sorting Hat to a program that can censor text!'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Introduction to C++
+
+
+    C++ (pronounced C plus plus) was developed by Bjarne Stroustrup at Bell Labs as
+    an extension to C, starting in 1979. C++ adds many new features to the C language
+    and is perhaps best thought of as a superset of C, though this is not strictly
+    true (as C99 introduced a few features that do not exist in C++). C++''s claim
+    to fame object-oriented programming primarily from the fact that it is an object-oriented
+    language. As the name implies, C++ was derived from the C language; Bjarne''s
+    goal was to add object-oriented programming into C, a language well-respected
+    for its portability and low-level functionality. As for what an object is and
+    how it differs from traditional programming methods, well, we''ll cover that in
+    chapter 8 (Basic object-oriented programming).
+
+
+    ![](img/a6303f820ae398dbe366f0ffbaec1dcd_10_0.png)
+
+
+    C++ was standardized in 1998 by the ISO committee (this means the ISO committee
+    ratified a document describing the C++ language, to help ensure all'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'compilers adhered to the same set of standards). A minor update was released
+    in 2003 (called C++03).
+
+
+    Three major updates to the C++ language (C++11, C++14, and C++17, ratified in
+    2011, 2014, and 2017 accordingly) have been made since then, each adding additional
+    functionality. C++11, in particular, added a huge number of new capabilities,
+    and at this point is widely considered the new baseline. As of the time of writing,
+    C++20 is in the works, bringing even more new capabilities. Future upgrades to
+    the language are expected every three or so years.
+
+
+    Each new formal release of the language is called a language standard (or language
+    specification). Standards are named after the year they are released in. For example,
+    there is no C++15, because there was no new standard in 2015.
+
+
+    Why learn C++? Among many other things:
+
+
+    +   - It is fast and flexible.
+
+    - It is well-supported.
+
+    - It forces you to think in new and creative ways.
+
+
+    In this lesson, we''ll start learning some basic concepts, and you''ll write your
+    very first C++ program.
+
+
+    Note: Don''t worry if some words don''t make much sense right now. We''ll learn
+    about them in a bit!'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# HELLO WORLD!
+
+
+    A C++ program has a very specific structure in terms of how the code is written.
+    Let''s take a closer look at the Hello World program — line by line!
+
+
+    C++ programs have a very specific structure in terms of how the code is written.
+    There are some key elements that you use in all your C++ programs.
+
+
+    Here, we have a program called hello.cpp. It is a classic first program!
+
+
+    ```
+
+    // This program outputs the message "Hello World!" to the monitor
+
+
+    #include <iostream>
+
+
+    int main() {
+
+
+    std::cout << "Hello World!\n";n
+
+    return 0;
+
+
+    }
+
+    ```
+
+
+    This program writes the phrase “Hello, World!” to your terminal.
+
+
+    C++ is a case sensitive language. Case sensitivity means that your keywords and
+    variable declarations must match the case. For example, the C++ keyword for outputting
+    is cout. If you were to type Cout or COUT, the compiler would not know that you
+    intended to use the keyword count.
+
+
+    Note: Don''t be intimidated by all the new information. You''ll learn all of these
+    things (and a whole lot more)!'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "Let's go over this hello.cpp program line by line:\n\n+   - This is a single-line\
+    \ comment that documents this code. The compiler will ignore everything after\
+    \ // to the end of the line. Sometimes, you will find this comment to include\
+    \ the author's name or document what the code does.\n\n```\n// This program outputs\
+    \ the message \"Hello World!\" to the monitor\n```\n\n+   - This is known as a\
+    \ pre-processor directive. It instructs the compiler to locate the file that contains\
+    \ code for a library known as iostream. This library contains code that allows\
+    \ for input and output, such as displaying data in the terminal window or reading\
+    \ input from your keyboard.\n\n```\n#include <iostream>\n```\n\n+   - Every C++\
+    \ program must have a function called main(). A function is a sequence of instructions\
+    \ for the computer to execute. This main() function houses all of our instructions\
+    \ for our program. This is where we will be writing our code.\n\n```\nint main()\
+    \ {\n  // Statements\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '+   This code uses a method known as cout (pronounced "see out") to send the
+    text "Hello World!" to the terminal for output.
+
+
+    ```
+
+    std::cout << "Hello World!\n";
+
+    ```
+
+
+    +   The return statement is used to end a function. If the program reaches this
+    statement, returning a value of 0 is an indication to the operating system that
+    the code was executed successfully. This line of code is optional.
+
+
+    ```
+
+    return 0;
+
+    ```
+
+
+    C++ programs permit judicious use of white space (tabs, spaces, newlines) to create
+    code that is easier to read. The compiler completely ignores the white space,
+    with a small exception concerning if statements that will be covered later. It
+    is highly recommended that you make use of white space to indent and separate
+    lines of code to aid in the readability of your source code files.
+
+
+    # 1) Hello World!
+
+
+    Take a look at the hello.cpp file in the code editor that is placed in the middle
+    of the screen. It''s a C++ program!'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "```\n```cpp\n#include <iostream>\n\nint main() {\n    std::cout << \"Hello\
+    \ World!\\n\";\n}\n```\n```\n\n(a)\n\nIn our code editor, the file name is displayed\
+    \ at the top:\n\n![](img/a6303f820ae398dbe366f0ffbaec1dcd_15_0.png)\n\nC++ programs\
+    \ are stored in files that usually have the file extension .cpp, which simply\
+    \ stands for “C Plus Plus”.\n\nThe code inside our C++ file is a classic first\
+    \ step all new programmers take — they greet the world through the terminal!\n\
+    \nThe terminal is the black panel as shown in Figure (b). It should be blank right\
+    \ now. The code in the text editor will print text out onto the terminal. More\
+    \ specifically, it will print the phrase Hello World!"
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '![](img/a6303f820ae398dbe366f0ffbaec1dcd_16_0.png)
+
+
+    (b)
+
+
+    Before we explain what all that mumbo jumbo is, let''s run the program to see
+    what happens.
+
+
+    ![](img/a6303f820ae398dbe366f0ffbaec1dcd_16_1.png)
+
+
+    (c)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# 1.1) Output
+
+
+    High five! We just got your first program to run.
+
+
+    C++, like most programming languages, runs line by line, from top to bottom.\nHere
+    is the structure of a C++ program:
+
+
+    ![](img/a6303f820ae398dbe366f0ffbaec1dcd_17_0.png)
+
+
+    In between the curly braces is what we are going to focus on now.\nnstd::cout
+    << "Hello World\n";
+
+
+    +   * **std::cout** is the "character output stream". It is pronounced "see-out".
+
+    * **<<** is an operator that comes right after it.
+
+    * **"Hello World\n"** is what''s being outputted here. You need double quotes
+    around the text. The \n is a special character that indicates a new line.\n* ;
+    is punctuation that tells the computer that you are at the end of a statement.
+    It is similar to a period in a sentence.
+
+
+    # 1.2) Pattern
+
+
+    We learned how to output a line of text with the following code:'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "```\nstd::cout << \"Hello\\n\";\n```\n\nIt will output:\n\nWe can also output\
+    \ multiple lines by adding more std::cout statements:\n\n```\nstd::cout << \"\
+    Hello\\n\";nstd::cout << \"Goodbye\\n\";\n```\n\nThis will output:\n\nHello\n\
+    Goodbye\n\nNow let's use what we learned so far to complete a coding challenge!\n\
+    \n```\n```cpp\n#include <iostream>\nint main() {\n    std::cout << \"Hello\\n\"\
+    ;\n    std::cout << \"Goodbye\\n\";\n}\n```\n```\n\n+   1. Instead of displaying\
+    \ those two lines in the output, edit the code so that we output the following\
+    \ pattern in the terminal:"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "Exactly how it is.\n\n```\n```cpp\n#include <iostream>\n\nint main() {\nn \
+    \   std::cout << \"1\\n\";\n    std::cout << \"2 3\\n\";\n    std::cout << \"\
+    4 5 6\\n\";\n    std::cout << \"7 8 9 10\\n\";\n}\n```\n```\n\n# # Review\n\n\
+    In this lesson, you have learned:\n\n+   - C++ is a general-purpose coding language.\n\
+    - C++ runs line by line, from top to bottom.\n- std::cout is how your output to\
+    \ the terminal.\n\nstd::cout << \"Good luck!\\n\";"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# 1.3) COMPILE & EXECUTE
+
+
+    Code → Save → Compile → Execute
+
+
+    C++ is a compiled language. That means that to get a C++ program to run, you must
+    first translate it from a human-readable form to something a machine “understand.”
+    That translation is done by a program called a compiler.
+
+
+    When you program in C++, you mainly go through 4 phases during development:
+
+
+    +   1. Code — writing the program
+
+    2. Save — saving the program
+
+    3. Compile — compiling via the terminal
+
+    4. Execute — executing via the terminal
+
+
+    ![](img/a6303f820ae398dbe366f0ffbaec1dcd_20_0.png)
+
+
+    And repeat (debug the errors if needed).'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'Note: Up until now, we''ve been doing the magic for you; Steps 2, 3, and 4
+    were all done by simply pressing the Run button.
+
+
+    Let''s try compiling and executing using the terminal.
+
+
+    # 1.3.1) Compile and Execute
+
+
+    **Compile:** A computer can only understand machine code. A **compiler** can translate
+    the C++ programs that we write into machine code. To compile a file, you need
+    to type **g++** followed by the file name in the terminal.
+
+
+    ```
+
+    g++ hello.cpp
+
+    ```
+
+
+    The compiler will then translate the C++ program hello.cpp and create a machine
+    code file called a.out.
+
+
+    **Execute:** To execute the new machine code file, all you need to do is type
+    ./ and the machine code file name in the terminal:
+
+
+    ```
+
+    ./a.out
+
+    ```
+
+
+    The executable file will then be loaded to computer memory and the computer''s
+    CPU (Central Processing Unit) executes the program one instruction at a time.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/a6303f820ae398dbe366f0ffbaec1dcd_22_0.png)
+
+
+    # 1.3.2) Compile and Execute (Naming Executables)
+
+
+    **Compile:** Sometimes when we compile, we want to give the output executable
+    file a specific name. To do so, the compile command is slightly different. We
+    still need to write **g++** and the file name in the terminal. After that, there
+    should be **-o** and then the name that you want to give to the executable file:
+
+
+    ```
+
+    g++ hello.cpp -o hello
+
+    ```
+
+
+    The compiler will then translate the C++ program hello.cpp and create a machine
+    code file called hello.
+
+
+    **Execute:** To execute the new machine code file, all you need to do is type
+    √ and the machine code file name in the terminal:
+
+
+    ```
+
+    ./hello
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "The executable file will then be loaded to computer memory and the computer's\
+    \ CPU will execute the program one instruction at a time.\n\n```\nhello.cpp\n\
+    #include <iostream>\n\nint main() \n{\n    std::cout << \"Hello World!\\n\";\n\
+    }\nbash\n$ g++ hello.cpp -o hello\n$ ./hello\nHello World!\n$\n```\n\n# # 1.4)\
+    \ Comments\n\nProgramming is often highly collaborative. Also, our code can quickly\
+    \ become difficult to understand when we return to it — sometimes only a few hours\
+    \ later! For these reasons, it's often useful to leave notes in our code for ourselves\
+    \ or other developers.\n\nAs we write a C++ program, we can write comments in\
+    \ the code that the compiler will ignore as our program runs. These comments exist\
+    \ just for human readers.\n\nComments can explain what the code is doing, leave\
+    \ instructions for developers using the code, or add any other useful annotations."
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'There are two types of code comments in C++:
+
+
+    +   - A single line comment will comment out a single line and is denoted with
+    two forward slashes // preceding it:
+
+
+    ```
+
+    // Prints "hi!" to the terminal
+
+    std::cout << "hi";
+
+    ```
+
+
+    You can also use a single line comment after a line of code:
+
+
+    ```
+
+    std::cout << "hi"; // Prints "hi!"
+
+    ```
+
+
+    +   - A multi-line comment will comment out multiple lines and is denoted with
+    /* to begin the comment, and \*/ to end the comment:
+
+
+    ```
+
+    /* This is all commented.
+
+    std::cout << "hi";
+
+    None of this is going to run! */
+
+    ```
+
+
+    # Review
+
+
+    Congratulations!
+
+
+    In this lesson, you have learned:
+
+
+    +   - Compilation and execution using the terminal.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '```
+
+    g++ hello.cpp -o hello
+
+    ```
+
+
+    ```
+
+    ./hello
+
+    ```
+
+
+    +   - Single line comments can be created using //.
+
+    - Multi-line comments can be created using /* */."
+
+
+    # 1.5) The Process
+
+
+    C++ is a compiled language. That means that to get a program to run, you must
+    first translate it from the human-readable form to something a machine can “understand.”
+    That translation is done by a program called a compiler.
+
+
+    What you read and write is called source code (usually it''s in an English-like
+    language like C++), and what the computer executes is called executable, object
+    code, or machine code (a machine language).
+
+
+    Typically C++ source code files are given the suffix:
+
+
+    +   - .cpp (ex: hello.cpp) or
+
+    - .h (ex: std_lib_facilities.h).'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '![](img/a6303f820ae398dbe366f0ffbaec1dcd_26_0.png)
+
+
+    # Compile:
+
+
+    ```
+
+    g++ hello.cpp -o hello
+
+    ```
+
+
+    A compiler translates the C++ program into machine language code which it stores
+    on the disk as a file with the extension .o (e.g. hello.o). A linker then links
+    the object code with standard library routines that the program may use and creates
+    an executable image which is also saved on disk, usually as a file with the file
+    name without any extension (e.g. hello)'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Execute:
+
+
+    ```
+
+    ./hello
+
+    ```
+
+
+    The executable is loaded from the disk to memory and the computer''s CPU (Central
+    Processing Unit) executes the program one instruction at a time.
+
+
+    # Running Hello World Locally:
+
+
+    On the Mac, it''s called the Terminal. On Windows, it''s called the Command Prompt.
+
+
+    ![](img/a6303f820ae398dbe366f0ffbaec1dcd_27_0.png)
+
+
+    ![](img/a6303f820ae398dbe366f0ffbaec1dcd_27_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # 2) Variables
+
+
+    # ## 2.1 Introduction to Variables:
+
+
+    The "Hello World!" program simply writes to the screen. It does not read anything,
+    calculate anything, or allow for user input. That''s no fun!
+
+
+    Real programs tend to produce results based on some input that the user of the
+    program gives, rather than just outputting the same thing every time.
+
+
+    To read something from the keyboard, we first need somewhere in the computer''s
+    memory to store data. That is where variables come in.
+
+
+    A variable is simply a name that represents a particular piece of your computer''s
+    memory that has been set aside for you to store, retrieve, and use data.
+
+
+    In this lesson, we will learn about some the basic data types:
+
+
+    +   - int: integer numbers
+
+    - double: floating-point numbers
+
+    - char: individual characters
+
+    - string: a sequence of characters
+
+    - bool: true/false values
+
+
+    Every variable has a type, which represents the kind of information you can store
+    inside of it. It tells your compiler how much memory to set aside for the variable,
+    and it defines what you can do with the variable.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# 2.1.1) Step 1: Declare a Variable
+
+
+    Every variable in C++ must be declared before it can be used!
+
+
+    Suppose we are building a game and we want to keep track of a player’s score that
+    goes from 0 to 10. We need a variable!
+
+
+    Before we can use a variable, we must declare, or create, it. To declare a variable,
+    we need to provide two things:
+
+
+    +   1. A type for the variable.
+
+    2. A name for the variable.
+
+
+    So to declare an integer variable called score, we need to write:
+
+
+    | Type | Usage | Examples |
+
+    |---|---|---|
+
+    | int | integer numbers | 0, 420 |
+
+    | double | floating-point numbers | 3.14, 200.0 |
+
+    | char | characters | ''a'' |
+
+    | string | sequence of characters | "Hello World!" "Codeacademy" |
+
+    | bool | truth values | true, false |'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '```
+
+    int score;
+
+    ```
+
+
+    +   - The **int** is the type of the variable.
+
+    - The **score** is the name of the variable.
+
+    - The;; is how we end a statement.
+
+
+    In C++, variable names consist only of upper/lower case letters, digits, and/or
+    underscores.
+
+
+    Note: C++ is known as a **strongly typed** language. If you try to give an integer
+    value a decimal number, you are going to get unexpected results, warnings, or
+    errors.
+
+
+    # ## 2.1.2) Step 2: Initialize a Variable
+
+
+    After we declare a variable, we can give it a value!
+
+
+    Suppose that we have declared an **int** variable called **score**, to set it
+    to 0, we can simply write:
+
+
+    ```
+
+    score = 0;
+
+    ```
+
+
+    +   - The **score** is the name of the variable.
+
+    - The == indicates assignment.
+
+    - The **0** is the value you want to store inside the variable.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'Note: In C++, a single equal sign = does not mean “equal”. It means “assign”.
+
+    in the code above, we are assigning the score variable to a value of 0.
+
+
+    # 2.1.3) Combining Step 1 and Step 2
+
+
+    We can both declare and assign a value to a variable in a single Initialization
+
+    statement.
+
+
+    Suppose we have these two lines:
+
+
+    ```
+
+    // Declare a variable
+
+    int score;
+
+    // Initialize a variable
+
+    score = 0;
+
+    ```
+
+
+    We can combine these two lines into a single line of code:
+
+
+    ```
+
+    int score = 0;
+
+    ```
+
+
+    This means we are declaring an integer called score and setting it equal
+
+    to 0.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "```\nint score = 0;\ndeclaration\n  initialization\n```\n\nNote: We only need\
+    \ to declare a variable one time! And it is highly suggested to initialize a variable\
+    \ before using it later.\n\n# 2.2) Arithmetic Operators\n\nComputers are incredible\
+    \ at doing calculations. Now that we have declared variables, let's use them with\
+    \ arithmetic operators to calculate things!\n\nHere are some arithmetic operators:\n\
+    \n+   * addition\n* subtraction\n* multiplication\n* division\n* modulo (divides\
+    \ and gives the remainder)\n\nFor example:"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '```
+
+    int score = 0;
+
+    // score is 0
+
+
+    score = 4 + 2;
+
+    // it is now 6
+
+
+    score = 4 - 2;
+
+    // it is now 2
+
+
+    score = 4 * 2;
+
+    // it is now 8
+
+
+    score = 4 / 2;
+
+    // and now 2
+
+
+    score = 5 % 2;
+
+    // and now 1
+
+    ```
+
+
+    Note: The order of operations can be specified using parentheses. For example,
+    the use of parentheses in score = 5 * (4 + 3) sets score equal to 5 * 7 rather
+    than 20 + 3.
+
+
+    # 2.3) Chaining
+
+
+    Now that we have outputted a variable and have also output things using multiple
+    cout(s). Let''s take a closer look at cout again.
+
+
+    If we have the code below:'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '```
+
+    int age = 28;
+
+
+    std::cout << "Hello, I am ";
+
+    std::cout << age;
+
+    std::cout << " years old\n";
+
+    ```
+
+
+    It will output:
+
+
+    Hello, I am 28 years old
+
+
+    Notice how we use quotes around the characters in "Hello, I am " but not in age.
+
+
+    +   - We use quotes when we want a literal string.
+
+    - We don''t use quotes when we refer to the value of something with a name (like
+    a variable).
+
+
+    So now, is it possible to write the cout statements within a single line?
+
+
+    Yep! You can use multiple << operators to chain the things you want to output.
+
+
+    For the same code above, you can also do this:
+
+
+    ```
+
+    int age = 28;
+
+
+    std::cout << "Hello, I am " << age << " years old\n";
+
+    ```
+
+
+    This is called chaining.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# 2.4) User Input
+
+
+    Like we mentioned in the introduction, another way to assign a value to a variable
+    is through user input. A lot of times, we want the user of the program to enter
+    information for the program.
+
+
+    We have cout for output, and there is something called cin that''s used for the
+    input!
+
+
+    ```
+
+    std::cout << "Enter your password: ";
+
+    std::cin >> password;
+
+    ```
+
+
+    The name cin refers to the standard input stream (pronounced “see-in”), for character
+    input. The second operand of the >> operator (“get from from”) specifies where
+    that input goes. To see how it works, we have to try it with a program.
+
+
+    ![](img/a6303f820ae398dbe366f0ffbaec1dcd_35_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "# 2.5) Challenge: Temperature\n\nNow that we've learned about the basics of\
+    \ variables and cin, let's write a program!\n\nThe mad scientist Kelvin has mastered\
+    \ predicting the weather in his mountain-side meteorology lab.\n\nRecently, Kelvin\
+    \ began publishing his weather forecasts on his website, however, there's a problem:\
+    \ All of his forecasts describe the temperature in Fahrenheit degrees.\n\nLet's\
+    \ convert a temperature from Fahrenheit (F) to Celsius (C).\n\nThe formula is\
+    \ the following:\n\n```\nC = (F - 32) / 1.8\nC=(F-32)/1.8\n```\n\n# Program:\n\
+    \n```\n#include <iostream>\nint main()\n{\n    //Declare Variable for Temperature\
+    \ in Fahrenheit\n    double tempf = 0 ;\n\n//Declare Variable for Temperature\
+    \ in Celsius\n```"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\ndouble tempc = 0;\n\nstd::cout << \"Enter the temperature in Fahrenheit\
+    \ = \\n\";\n\nstd::cin >> tempf;\n\n//Calculate temperature to Celsius.\n\ntempc\
+    \ = (tempf - 32)/ 1.8;\nstd::cout << \"The temp is \"<< tempc<<\" degrees Celsius.\\\
+    n\";\n}\n```\n\n# Solution:\n\n```\n$ ./temperature\nEnter the temperature in\
+    \ Fahrenheit = 72\nThe temp is 22.2222 degrees Celsius.\n$ \n```"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "# Review\n\nYou made it to the end of the lesson! High five. \U0001F590\n\n\
+    Here is a review of the lesson:\n\n+   - A variable represents a particular piece\
+    \ of your computer's memory that has been set aside for you to use to store, retrieve,\
+    \ and manipulate data.\n- C++ basic data types include:\n  - int: integers\n \
+    \ - double: floating-point numbers\n  - char: individual characters\n  - string:\
+    \ the sequence of characters\n  - bool: true/false\n- Single equal sign = indicates\
+    \ assignment, not equality in the mathematical sense.\n- cin is how to receive\
+    \ input from the user."
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# 3) Basic Data Types
+
+
+    C++ is a strongly typed language.
+
+
+    C++ provides a rather large number of types. However, you can write perfectly
+    good programs using only five of those:
+
+
+    | Type | Usage | Examples |
+
+    | --- | --- | --- |
+
+    | int | integer numbers | 0 420 |
+
+    | double | floating-point numbers | 3.14 -200.0 |
+
+    | char | characters | ''a'' ''@'' |
+
+    | string | sequence of characters | "Hello World!" "Codeacademy" |
+
+    | bool | truth values | true false |
+
+
+    Here are some examples of declaring and initializing variables:'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '```
+
+    int age = 28;
+
+    double price = 8.99;
+
+    char grade = ''A'';
+
+    std::string message = "Game Over";
+
+    bool late_to_work = true;
+
+    ```
+
+
+    # 3.1) Datatype Modifiers:
+
+
+    As the name implies, datatype modifiers are used with built-in data types to modify
+    the length of data that a particular data type can hold. Data type modifiers in
+    C++ are:
+
+
+    +   - signed
+
+    - unsigned
+
+    - short
+
+    - long
+
+
+    We will learn about these in a bit!
+
+
+    # 3.2) Const:
+
+
+    const (constant) variables cannot be changed by your program during execution.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'Simply add the keyword **const** before the data type during declaration to
+    make the variable not modifiable.
+
+
+    # 3.3) Type Conversion:
+
+
+    A typecast is a conversion from one type to another.
+
+
+    The notation **(type) value** means “convert a **value** to **type**”. So for
+    example:
+
+
+    ```
+
+    double weight1;
+
+    int weight2;
+
+
+    weight1 = 154.49;
+
+    weight2 = (int) weight1;
+
+
+    // weight2 is now 154
+
+    ```
+
+
+    **Note:** Going from a **double** to an **int** simply removes the decimal. There’s
+    no rounding involved.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "# # 4) Conditionals & Logic\n\n# ## 4.1) Introduction to Conditionals & Logic\n\
+    \nEvery program we've seen so far had one possible path of execution — they all\
+    \ execute line by line, from top to bottom. And every time you run one of those\
+    \ programs, it gives you the same result. But it's the twenty-first century, and\
+    \ we like options!\n\nIn this lesson, we will explore how programs make decisions\
+    \ by evaluating conditions and introduce logic into our code!\n\nWe'll be covering\
+    \ the following concepts:\n\n+   * if, else if, and else statements\n* switch\
+    \ statements\n* Relational operators\n* Logical operators\n\nSo... if you've already\
+    \ learned these concepts in another language, go to the next lesson — else, prepare\
+    \ yourself and let's get started!\n\n# ## 4.2) If statement\n\nAn if statement\
+    \ is used to test an expression for truth.\n\n+   * If the condition evaluates\
+    \ to true, then the code within the block is executed; otherwise, it will be skipped.\n\
+    \n```\nif (a == 10) {\n    // Code goes here\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# 4.3) Relational Operators\n\nRelational operators are used to comparing two\
+    \ values and return true or false depending on the comparison:\n\n+   * == equal\
+    \ to\n* != not equal to\n* > greater than\n* < less than\n* >= greater than or\
+    \ equal to\n* <= less than or equal to\n\n```\nif (a > 10) {\n  // means greater\n\
+    than\n}\n```\n\n# 4.4) else Clause\n\nAn else clause can be added to an if statement.\n\
+    \n+   * If the condition evaluates to true, code in the if part is executed.\n\
+    * If the condition evaluates to false, code in the else part is executed.\n\n\
+    ```\nif (year == 1991) {\n  // This runs if it is true\n} else {\n  // This runs\
+    \ if it is false\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "# 4.5) switch Statement\n\nA switch statement provides a means of checking\
+    \ an expression against various cases. If there is a match, the code within starts\
+    \ to execute. The break keyword can be used to terminate a case. default is executed\
+    \ else no case matches.\n\n```\nswitch (grade)\n  case 9:\n    std::cout << \"\
+    Freshman\\n\"\n    break;\n  case 10:\n    std::cout << \"Sophomore\\n\"\n   \
+    \ break;\n  case 11:\n    std::cout << \"Junior\\n\"\n    break;\n  case 12:\n\
+    \    std::cout << \"Senior\\n\"\n    break;\ndefault:\n    std::cout << \"Invalid\\\
+    n\"\n    break;\n```\n\n# 4.6) else ifStatement\n\nOne or more else if statements\
+    \ can be added in between\n\n```\nif (apple > 8) {\n  // Some code here\n}\nelse\
+    \ if (apple > 6) {\n  // Some code here\n}\nelse {\n  // Some code here\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "the if and else to provide additional condition(s) to check.\n\n# 4.7) Logical\
+    \ Operators\n\nLogical operators can be used to combine two different conditions.\n\
+    \n+   - && requires both to be true (and)\n- || requires either to be true (or)\n\
+    - ! negates the result (not)\n\n```\nif (coffee > 0 && donut > 1) {\n  // Code\
+    \ runs if both\n  are true\n}\nif (coffee > 0 || donut > 1) {\n  // Code runs\
+    \ if either\n  is true\n}\nif (! tired) {\n  // Code runs if tired\n  is false\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Review
+
+
+    Congratulations! 👏
+
+
+    Here are some of the major concepts:
+
+
+    +   - An if statement checks a condition and will execute a task if that condition
+    evaluates to true.
+
+    - if / else statements make binary decisions and execute different code blocks
+    based on a provided condition.
+
+    - We can add more conditions using else if statements.
+
+    - Relational operators, including <, >, <=, >=, ==, and != can compare two values.
+
+    - A switch statement can be used to simplify the process of writing multiple else
+    if statements. The break keyword stops the remaining cases from being checked
+    and executed in a switch statement.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# 5) Loops
+
+
+    # 5.1) whileLoop statement
+
+
+    +   * A whileloop repeatedly executes the code block within as long as the condition
+    is true. The moment the condition becomes false, the program will exit the loop.
+
+    * Note that the while loop might not ever run. If the condition is false initially,
+    the code block will be skipped.
+
+    * The while loop looks very similar to an if statement. And just like an if statement,
+    it executes the code inside of it if the condition is true. However, the difference
+    is that the while loop will continue to execute the code inside of it, over and
+    over again, as long as the condition is true.
+
+
+    Here is what a while loop looks like:
+
+
+    ```
+
+    while (condition) {
+
+
+    statements
+
+    }
+
+    ```
+
+
+    +   * In other words, instead of executing if something is true, it executes while
+    that thing is true.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '```
+
+    while (guess != 8) {
+
+
+    std::cout << "Wrong guess, try again";
+
+    std::cin >> guess;
+
+
+    }
+
+    ```
+
+
+    +   - In this example, while guess is not equal to 8, the program will keep asking
+    the user to input a new number. It will exit the while loop once the user types
+    in 8 and then the program will continue.
+
+
+    # Example:
+
+
+    +   - Inside guess.cpp, we have a program that asks the user to guess a number
+    between 1-10 and the answer is 8
+
+    - Now instead of just asking for the user to answer once, let''s add a while loop
+    so that they answer up to 50 times!
+
+
+    ```
+
+    while (guess != 8 && tries < 50) {
+
+
+    std::cout << "Wrong guess, try again";
+
+    std::cin >> guess;
+
+
+    tries++;
+
+    }
+
+    ```
+
+
+    +   - The && symbol means and and it combines two conditions into one.
+
+    - In this while loop, while guess does not equal to 8 and the number of tries
+    is less than 50, we are asking the user to type a number once again. And then
+    we add 1 to tries using the ++ operator.
+
+    - The last one we held your hand, so let''s try one on your own.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: 'As an example of iteration, we have the first program ever to run on a stored-program
+    computer (the EDSAC). It was written and run by David Wheeler in the computer
+    laboratory at Cambridge University, England, on May 6th, 1948, to calculate and
+    print a simple list of squares like the following:
+
+
+    +   * 0 0
+
+    * 1 1
+
+    * 2 4
+
+    * 3 9
+
+    * 4 16
+
+    * 5 25
+
+    * 6 36
+
+    * 7 49
+
+    * 8 64
+
+    * 9 81
+
+
+    On the left, there are numbers from 0 to 9. On the right are their squares. For
+    example, for the number 9, 9 * 9 = 81.
+
+
+    # Program:
+
+
+    ```
+
+    #include <iostream>
+
+
+    int main() {
+
+
+    int i = 0;
+
+
+    int square = 0;
+
+
+    // Write a while loop here:
+
+    while (i < 11)
+
+    {
+
+    square = i * i;
+
+
+    std::cout << i << " " " << square << "\n";
+
+
+    i++;
+
+    n}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "# 5.2) For Loop\n\n+   - Iterating over a sequence of numbers is so common\
+    \ that C++, like other programming languages, has a special syntax for it.\n-\
+    \ When we know exactly how many times we want to iterate (or when we are counting),\
+    \ we can use a for loop instead of a while loop:\n\n```\nfor (int i = 0; i < 20;\
+    \ i++)\n{\n    std::cout << \"I will not throw airplanes in class.\\n\";\n}\n\
+    ```\n\nLet's take a look at the first line:\n\n```\nfor (int i = 0; i < 20; i++)\n\
+    ```\n\nThere are three separate parts to this separated by ; :\n\n+   - The initialization\
+    \ of a counter: int i = 0\n- The continue condition: i < 20\n- The change in the\
+    \ counter (in this case an increment): i++\n\nSo here we are creating a variable\
+    \ i starts from 0. We will repeat the code inside over and over again when i is\
+    \ less than 20. At the end of the loop, we are adding 1 to i using the ++ operator.\n\
+    \n# 99 Bottles\n\nIn the last exercise, we saw an example of an incrementing for\
+    \ for loop here we we are going to show you how to write a loop where the counter\
+    \ goes down. When we know exactly how many times we want to iterate (or when we\
+    \ are counting), we can use a for loop instead of a while loop:\n\nIncrementing\
+    \ for loop:\n\n```\nfor (int i = 0; i < 20; i++)\n{\n    // Statements\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# Decrementing for loop:\n\n```\nfor (int i = 20; i > 0; i--)\n{\n// Statements\n\
+    }\n```\n\n```\n#include <iostream>\nint main()\n{\n// Write a for loop here:\n\
+    \    for (int i = 99; i > 0; i--)\n{\n        std::cout << i << \"bottles of pop\
+    \ on the wall.\\n\";\n        std::cout << \"Take one down and pass it around.\\\
+    n\";\n        std::cout << i - 1 << \"bottles of pop on the wall.\\n\";\n    }\n\
+    \    std::cout << \"No bottles of pop on the wall.\\n\";\n    std::cout << \"\
+    No bottles of pop.\\n\";\n    std::cout << \"Go to the store and buy some more.\\\
+    n\";\n    std::cout << \"99 bottles of pop on the wall.\\n\";\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Review
+
+
+    Great job!
+
+
+    Key concepts covered in this lesson:
+
+
+    +   - Loops perform repetitive actions so we don''t have to code those actions
+    manually every time.
+
+    - How to write while loops with a continued condition.
+
+    - How to write for loops with a counter that increments or decrements.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# 6) QUIZ: Fizz Buzz
+
+
+    Fizz Buzz is a classic developer interview question that is asked or referred
+    to so often for so long, it is almost a cliché!
+
+
+    Though this challenge will appear very simplistic to those with some coding experience,
+    it is designed to weed out 99.5% of programming job candidates who cannot creatively
+    use their coding knowledge to solve simple problems.
+
+
+    Want to give it a shot?
+
+
+    Write a fizzbuzz.cpp program that outputs numbers from 1 to 100.
+
+
+    But for multiples of 3, print Fizz instead of the number and the multiples of
+    5, print Buzz. For numbers that are multiples of both 3 and 5 print, FizzBuzz.
+
+
+    | 1 |
+
+    | 2 |
+
+    | Fizz |
+
+    | 4 |
+
+    | Buzz |
+
+    | Fizz |
+
+    | 7 |
+
+    | Fizz |
+
+    | Buzz |
+
+    | 11 |
+
+    | Fizz |
+
+    | 13 |
+
+    | 14 |
+
+    | FizzBuzz |
+
+    | 16 |
+
+    | 17 |
+
+    | Fizz |
+
+    | 19 |
+
+    | Buzz |
+
+    | ... |
+
+    | 97 |
+
+    | 98 |
+
+    | Fizz |
+
+    | Buzz |'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'Happy coding!
+
+
+    # Tasks
+
+
+    **What we are building in the project:**
+
+
+    As the inventor of this challenge, Imran Ghory, states:
+
+
+    > "After a fair bit of trial and error, I''ve come to discover that people who
+    struggle to code don''t just struggle on big problems, or even smallish problems
+    (i.e. write an implementation of a linked list). They struggle with tiny problems.
+
+    So I set out to develop questions that can identify this kind of developer and
+    came up with a class of questions I call "FizzBuzz Questions" named after game
+    children often play (or are made to play) in schools in the UK." Stuck? Follow
+    the code link below:
+
+
+    *https://codeshubbyahmad.blogspot.com/2020/09/fizzbuzzcpp.html*'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# 7) Errors
+
+
+    # 7.1 Introduction to Bugs
+
+
+    "First actual case of bug being found."
+
+
+    The story goes that on September 9th, 1947, computer scientist Grace Hopper found
+    a moth in the Harvard Mark II computer''s logbook and reported the world''s first
+    literal computer bug. However, the term "bug", in the sense of technical error,
+    dates back at least to 1878 and with Thomas Edison.
+
+
+    On your programming journey, you are destined to encounter innumerable red errors.
+    Some even say that debugging is over 75% of the development time. But what makes
+    a programmer successful isn''t avoiding errors, it''s knowing how to find the
+    solution.
+
+
+    In C++, there are many different ways of classifying errors, but they can be boiled
+    down to four categories:
+
+
+    +   * Compile-time errors: Errors found by the compiler.
+
+    * Link-time errors: Errors found by the linker when it is trying to combine object
+    files into an executable program.
+
+    * Run-time errors: Errors found by checks in a running program.
+
+    * Logic errors: Errors found by the programmer looking for the causes of erroneous
+    results.
+
+
+    # 7.2 Compile-time Errors
+
+
+    When we are writing C++ programs, the compiler is our first line of defence against
+    errors.
+
+
+    There are two types of compile-time errors:'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '+   - Syntax errors: Errors that occur when we violate the rules of C++ syntax.
+
+    - Type errors: Errors that occur when there are mismatch between the types declared.
+
+
+    Some common syntax errors are:
+
+
+    +   - Missing semicolon;
+
+    - Missing closing parenthesis ), square bracket ], or curly brace
+
+
+    Some common type errors are:
+
+
+    +   - Forgetting to declare a variable
+
+    - Storing a value into the wrong type
+
+
+    Here''s an example of a compile-time error message:
+
+
+    ```
+
+    $ g++ example.cpp
+
+    example.cpp: In function ''int main()''
+
+    example.cpp:5:11: error: invalid conversion from ''const char *
+
+    * '' to ''int'' [-fpermissive]
+
+    int x = "hello";
+
+    ~~~~
+
+    ```
+
+
+    The compiler will tell us where (line number) it got into trouble and its best
+    guess as what is wrong.
+
+
+    # 7.3) Link-time Errors
+
+
+    Sometimes the code compiles fine, but there is still a message because the program
+    needs some function or library that it can''t find. This is known as a link-time
+    error.
+
+
+    As our program gets bigger, it is good practice to divide the program into separate
+    files. After compiling them, the linker takes those separate object files'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'and combines them into a single executable file. Link-time errors are found
+    by the linker when it is trying to combine object files into an executable file.
+
+
+    Some common link-time errors:
+
+
+    +   - Using a function that was never defined (more on this later)
+
+    - Writing Main() instead of main()
+
+
+    Here''s an example of a link-time error message:
+
+
+    ```
+
+    $ g++ example.cpp
+
+    /usr/lib/gcc/x86_64-linux-gnu/7/...../../x86_64-linux
+
+    Scrt1.o: In function `start`
+
+    (.text+0x20): undefined reference to `main`
+
+    collect2: error: ld returned 1 exit status
+
+    ```
+
+
+    These errors are harder to find, but remember, Google is your friend! Here, a
+    good Google search would be: “C%20%20 undefined reference to main”.
+
+
+    # 7.4) Run-time Errors
+
+
+    If our program has no compile-time errors and no link-time errors, it''ll run.
+    This is where the fun starts.
+
+
+    Errors that happen during program execution (run-time) after successful compilation
+    are called run-time errors. Run-time errors occur when a program with no compile-time
+    errors and link-time errors asks the computer to do something that the computer
+    is unable to reliably do.
+
+
+    It happens after we give the ./ to execute the command:
+
+
+    ./a.out
+
+    Some common run-time errors:'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '+   - Division by zero is also known as division error. These types of errors
+    are hard to find as the compiler doesn''t point to the line at which the error
+    occurs.
+
+    - Trying to open a file that doesn''t exist
+
+
+    There is no way for the compiler to know about these kinds of errors when the
+    program is compiled.
+
+
+    Here''s an example of a run-time error message:
+
+
+    ```
+
+    $ g++ example.cpp
+
+    $ ./a.out
+
+    Floating point exception (core dumped)
+
+    ```
+
+
+    # 7.5) Logic Errors
+
+
+    Once we have removed the compile-time errors, link-time errors, and run-time errors,
+    the program runs successfully. But sometimes, the program doesn''t do what we
+    want it to do or no output is produced. H...
+
+
+    These types of errors that provide incorrect output, but appears to be error-free,
+    are called logical errors. These are some of the most common errors that happen
+    to beginners and are also usually the most difficult to find and eliminate.
+
+
+    Logical errors solely depend on the logical thinking of the programmer. Your job
+    now is to figure out why the program didn''t do what you wanted it to do.
+
+
+    Some common logic errors:
+
+
+    +   - Program logic is flawed
+
+    - Some "silly" mistake in an statement or a for/while loop
+
+
+    Note: Logic errors don''t have error messages. Sometimes, programmers use a process
+    called test-driven development (TDD), a way to give logic errors messages and
+    save yourself a lot of headaches!'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# Review
+
+
+    Finding bugs is a huge part of a programmer''s life. Don''t be intimidated by
+    them... embrace them. Errors in your code mean you''re trying to do something
+    cool!
+
+
+    In this lesson, we have learned about the four types of C++ errors:
+
+
+    +   - **Compile-time errors**: Errors found by the compiler.
+
+    - **Link-time errors**: Errors found by the linker when it is trying to combine
+    object files into an executable program.
+
+    - **Run-time errors**: Errors found by checks in a running program.
+
+    - **Logic errors**: Errors found by the programmer looking for the causes of erroneous
+    results.
+
+
+    Remember, Google and Stack Overflow are a programmer''s best friends. We wish
+    you the best of luck in your bug-squashing journey.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# 8) VECTORS
+
+
+    # 8.1) Introduction to Vectors
+
+
+    To do just about anything of interest in a program, we need a group of data to
+    work with.
+
+
+    For example, our program might need:
+
+
+    +   - A list of Twitter''s trending tags
+
+    - A set of payment options for a car
+
+    - A catalogue of eBooks read over the last year
+
+
+    The need for storing a collection of data is endless.
+
+
+    We are familiar with data types like int and double, but how do we store a group
+    of ints or a group of doubles?
+
+
+    In this lesson, we will start with one of the simplest, and arguably the most
+    useful, ways of storing data in C++: a vector.
+
+
+    A vector is a sequence of elements that you can access by index.
+
+
+    ![](img/a6303f820ae398dbe366f0ffbaec1dcd_60_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "# 8.2) Creating a Vector\n\nThe std::vector lives in the <vector> header. So\
+    \ first, we need to add this line of code at the top of the program:\n\n```\n\
+    #include <vector>\nFor review, #include is a preprocessor directive that tells\
+    \ the compiler to\n whatever library that follows. In our case that is the\nstandard\
+    \ vector library.\n```\n\nAnd the syntax to create a vector looks like this:\n\
+    \n```\nstd::vector<type> name;\nTo define a vector of ints calories_today:\n```\n\
+    \n```\nstd::vector<int> calories today;\nInside the angle brackets is the data\
+    \ type of the vector. After the angle brackets\nare the name of the vector.\n\
+    ```\n\n**Note:** The type of the vector (i.e., what data type is stored inside)\
+    \ cannot be\nchanged after the declaration.\n\n# 8.3) Initializing a Vector\n\n\
+    Now we know how to create a vector, we can also initialize a vector, giving it\n\
+    values, as we are creating it in the same line.\n\nFor example, instead of creating\
+    \ a double vector named location:\n\n```\nstd::vector<double> location;\nWe can\
+    \ create and initialize location with specific values:\n```\n\n```\nstd::vector<double>\
+    \ location = {42.651443, -73.7493902};\nHere, we are storing latitude and longitude.\n\
+    ```\n\nSo it would look something like this:"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '| 42.651443 | -73.749302 |
+
+
+    Another way we can initialize our vector is by resizing or setting the size.
+
+    nSuppose we want to create and initialize a vector with two elements. However,
+    we don''t know what values we want to add yet:
+
+
+    ```
+
+    std::vector<double> location(2);
+
+    ```
+
+
+    Here, we are creating a double vector and setting the initial size to two using
+    parentheses.
+
+    nIt would look something like this:
+
+
+    | 0.0 | 0.0 |
+
+
+    Because 0.0 is the default value for double.
+
+
+    #  8.4) Index
+
+
+    Now that we have a vector, how do we access an individual element? This is where
+    the index comes into play.
+
+    nAn index refers to an element''s position within an ordered list. Vectors are
+    0-indexed, meaning the first element has index 0, the second index 1, and so on.
+
+    nFor example, suppose we have a char vector with all the vowels:
+
+
+    ```
+
+    std::vector<char> vowels = {''a'', ''e'', ''i'', ''o''};
+
+    ```
+
+
+    It should look something like this:
+
+
+    | a | e | i | o | u |
+
+    | 0 | 1 | 2 | 3 | 4 |'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '+   - The character at index 0 is ''a''.
+
+    - The character at index 1 is ''e''.
+
+    - The character at index 2 is ''i''.
+
+    - The character at index 3 is ''o''.
+
+    - The character at index 4 is ''u''.
+
+
+    To output each of the elements, we can do:
+
+
+    ```
+
+    std::cout << vowels[0] << "a";
+
+    std::cout << vowels[1] << "e";
+
+    std::cout << vowels[2] << "i";
+
+    std::cout << vowels[3] << "o";
+
+    std::cout << vowels[4] << "u";
+
+    ```
+
+
+    Using the notation vector[index] with square brackets after the vector name and
+    the element''s number inside.
+
+
+    This will output:
+
+
+    | a |
+
+    | e |
+
+    | o |
+
+    | u |
+
+
+    # 8.5) Adding and Removing Elements
+
+
+    Often, we start with a vector that''s either empty or a certain length. As we
+    read or compute the data we want, we can grow the vector as needed.
+
+
+    ```
+
+    .push_back()
+
+    ```
+
+
+    To add a new element to the "back", or end of the vector, we can use the .push_back()
+    function.
+
+
+    For example, suppose we have a vector dna with three letter codes of nucleotides
+
+
+    ```
+
+    std::vector<std::string> dna = {"ATG", "ACG"};
+
+    ```
+
+
+    It would look like:'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '| ATG | ACG |
+
+    | 0 | 1 |
+
+
+    We can add elements using .push_back():
+
+
+    ```
+
+    dna.push_back("ATG");
+
+    dna.push_back("CTG");
+
+    ```
+
+
+    So now dna would look like:
+
+
+    | ATG | ACG | GTG | CTG |
+
+    | 0 | 1 | 2 | 3 |
+
+
+    .pop_back()
+
+    You can also remove elements from the "back" of the vector
+
+    using .pop_back().
+
+
+    ```
+
+    dna.pop_back();
+
+    ```
+
+
+    Notice how nothing goes inside the parentheses.
+
+
+    The vector would now look like:
+
+
+    | ATG | ACG | GTG |
+
+    | 0 | 1 | 2 |
+
+
+    because CTG is removed!
+
+
+    Note: If you have programmed in other languages, be aware
+
+    that .pop_back() has no return value in C++.
+
+
+    # 8.6) .size
+
+
+    <std::vector> not only stores the elements; it also stores the size of the
+
+    vector:'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '![](img/a6303f820ae398dbe366f0ffbaec1dcd_65_0.png)
+
+
+    The .size() function returns the number of elements in the vector.
+
+
+    For example, suppose we have a std::string vector with Sonny''s grocery list:
+
+    ngrocery = {"Hot Pepper Jam", "Dragon Fruit", "Brussel Sprouts"};
+
+    It should look something like this:
+
+
+    | Hot Pepper Jam | Dragon Fruit | Brussel Sprouts |
+
+    |---|---|---|
+
+    | 0 | 1 | 2 |
+
+
+    +   - The string at index 0 is "Hot Pepper Jam"
+
+    - The string at index 1 is "Dragon Fruit"
+
+    - The string at index 2 is "Brussel Sprouts"
+
+
+    ```
+
+    std::cout << grocery.size() << "\n";nwill return
+
+    ```
+
+
+    3nNotice how nothing goes in the parentheses.'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# 8.7) Operations
+
+
+    So what happens when you want to change each of the values within a vector?
+
+
+    You can use a for loop!
+
+
+    For example, suppose we have an int vector that looks like this:
+
+
+    | 10 | 20 | 30 |
+
+    |---|---|---|
+
+    | 0 | 1 | 2 |
+
+
+    You can write a for loop that iterates from 0 to vector.size(). And here''s the
+    cool part: you can use the counter of the for loop as the index! Woah.
+
+
+    ```
+
+    for (int i = 0; i < vector.size(); i++) {
+
+    vector[i] = vector[i] + 10;
+
+    }
+
+    ```
+
+
+    This will change the vector to:
+
+
+    | 20 | 30 | 40 |
+
+    |---|---|---|
+
+    | 0 | 1 | 2 |
+
+
+    Here, we incremented i from 0 to vector.size(), which is 3. During iteration,
+    we are adding 10 to the element at position i:
+
+
+    +   - When i = 0, we added 10 to vector[0]
+
+    - When i = 1, we added 10 to vector[1]
+
+    - When i = 2, we added 10 to vector[2]'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "# Review\n\nCongratulations! You have learned about how to store groups of\
+    \ data into vectors in C++. \U0001F381\n\nHere are some of the things that we\
+    \ learned:\n\n+   - Vectors are a sequence of elements that you can access by\
+    \ an index.\n- `std::vector<int> even = {2, 4, 6, 8, 10};`\n- The first index\
+    \ in a vector is 0.\n- Some of the functions that come with vectors:\n    - `.push_back()`\n\
+    \    - `.pop_back()`\n    - `.size()`\n- We can use a for loop to iterate through\
+    \ a vector."
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# 9) Arrays
+
+
+    Like vectors, the array is a data structure used in C++ to store a sequential
+    collection of elements. Unlike vectors, its size cannot be changed.
+
+
+    Being able to store multiple pieces of related information in the same structure
+    is very useful when writing C++ programs. One way we can do that is by using vectors:
+
+
+    ```
+
+    std::vector<int> favoriteNums = {7, 9, 15, 16};
+
+    std::cout << favoriteNums[2]; // Prints: 15
+
+    ```
+
+
+    Vectors are a modern approach to handling information. But C++ also inherits a
+    more low-level means of doing this from its parent language, C, called arrays.
+
+
+    Arrays in C++ are similar to vectors in that they allow us to store groups of
+    information. However, arrays are ultimately lower-level constructs and require
+    some more work on the part of the user.
+
+
+    # 9.1) Arrays vs. Vectors
+
+
+    If you''ve used C++ vectors in the past, you may be wondering what exactly the
+    difference is between them and arrays, and when you should use which.
+
+
+    As mentioned earlier, arrays are inherited from C, C++''s parent language. They
+    are a low-level data structure and are incredibly rigid. With arrays, you can''t
+    add or remove elements; you can only modify existing elements.
+
+
+    Vectors are originated from arrays. In the early creation of C++, the language
+    developers took these basic arrays and wrote code to enhance them and make them
+    more flexible and powerful. Therefore you can think of vectors as super arrays!
+
+
+    Vectors don''t require a static size. It''s possible to add and remove elements
+    from them, as well as access their current size at any time.
+
+
+    # 9.2) Creating an Array
+
+
+    When creating an array, you have to keep two pieces of information in mind:'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '+   1. The type of data you want to store inside of it.
+
+    2. How many items do you want it to be able to hold (its size)?
+
+
+    We can create an array a lot like we create normal variables, by specifying the
+    data type, giving it a descriptive name, and also specifying its size:
+
+
+    ```
+
+    int favoriteNums[4];
+
+    In the above code example, we''ve created an array with a size of 4, meaning it
+    can hold four integers (all four elements will initially have the default int
+    value of 0).
+
+    ```
+
+
+    In many cases, you won''t know what data needs to go in the array after you''ve
+    created it, but if you do happen to know the contents of the array ahead of time,
+    you can initialize it with custom values upfront:
+
+
+    ```
+
+    int favoriteNums[] = [7, 9, 15, 19];
+
+    This array would also have a size of 4, but we don''t need to explicitly specify
+    that we initialize it in this
+
+    ```
+
+
+    # 9.3 Array Indices
+
+
+    Like vectors, each element in an array is assigned a specific index starting at
+    zero. To access or modify an element in the array you may simply refer to it by
+    its index and operate on it accordingly.
+
+
+    ```
+
+    char vowels[] = {''a'', ''e'', ''i'', ''o'', ''u''};
+
+    // indexes: 0 1 2 3 4
+
+    nstd::cout << vowels[0]; // Prints: a
+
+    vowels[0] = ''r'';
+
+    std::cout << vowels[0]; // Prints: r
+
+    ```
+
+
+    In the case we initialized an array of char with all of the vowels and then printed
+    out the first element in the array at index 0. We then modified the element at
+    index 0 by assigning it a new value of r, which got printed out below.
+
+
+    Arrays in C++ have a set size, meaning you can''t add or remove elements once
+    the array has been created. You may only modify existing elements without changing
+    the total size or shape of the structure.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# # 10) Functions
+
+
+    # ## 10.1 The Function of Functions
+
+
+    As a programmer, you will find yourself reusing the same blocks of code over and
+    over throughout your program. In times like these, you can turn to functions.
+
+
+    Also known as a method or procedure, a *function* is a named group of code statements
+    that accomplish something together, a bit like a factory machine.
+
+
+    ```
+
+    make_sandwich()
+
+    ```
+
+
+    There are some great reasons to use functions in your code:
+
+
+    +   - A single line can make all that code fire off instead of a whole bunch of
+    lines.
+
+    - You can build DRY (Don''t Repeat Yourself) code, reusing the code you already
+    wrote.
+
+    - Functions help make your code flexible and *modular*, meaning you can group
+    your code more easily by task.
+
+
+    Well, as it happens, main() is a function that you''ve already used! And you''ll
+    understand it a bit more as you learn how functions work.'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# 10.2) Built-in Functions
+
+
+    Before we learn how to create functions, let''s go over some built-in functions...
+
+
+    C++ comes chock-full of functions that are already created as part of the standard
+    library. But how do we access this hidden hoard of helpful functions? We gain
+    access to various functions by including headers like <cmath>.
+
+
+    You may already have used a couple of functions without even knowing it! With
+    the following header:
+
+
+    ```
+
+    #include <cmath>
+
+    We gain the power to call sqrt() to find the square root of any number.
+
+    ```
+
+
+    Wait, "call" sqrt()?
+
+
+    Calling a function is how we get a function to take action. To call a basic function,
+    we just need the function name followed by a pair of parentheses like sqrt(9).
+    For example:
+
+
+    ```
+
+    std::cout << sqrt(9) << "\n";
+
+    // This would output 3
+
+    ```
+
+
+    # 10.3) Declare & Define
+
+
+    Often, built-in functions aren''t enough to tackle the wide array of programming
+    challenges out there. But never fear: you can write your functions too!
+
+
+    A C++ function is comprised of two distinct parts:
+
+
+    +   - Declaration: this includes the function''s name, what the return type is,
+    and any parameters (if the function will accept input values, known as arguments).'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "Definition: also known as the body of the function, this contains the instructions\
+    \ for what the function is supposed to do.\n\nThis is the overall structure:\n\
+    \n```\nreturn_type function_name(any, parameters, you, have) {\n  // Code block\
+    \ here\n  return output_if_there_is_any;\n}\n```\n\nThis is what it might look\
+    \ like with real code:\n\n```\nvoid make_sandwich() {\n  std::cout << \"bread\"\
+    ;\n  std::cout << \"egg\";\n  std::cout << \"cheese\";\n  std::cout << \"avocado\"\
+    ;\n  std::cout << \"bread\";\n}\n```\n\n![](img/a6303f820ae398dbe366f0ffbaec1dcd_72_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# #include <iostream>
+
+
+    Declaration { void make_sandwich() { opening curly brace
+
+
+    ```
+
+    std::cout << "bread";
+
+    std::cout << "avocado";
+
+    std::cout << "egg";
+
+    std::cout << "cheese";
+
+    std::cout << "bread";
+
+    ```
+
+
+    Definition
+
+
+    } losing curly brace
+
+
+    int main() {
+
+
+    ```
+
+    make_sandwich();
+
+    ```
+
+
+    # #include <iostream>
+
+
+    Declaration { void make_sandwich() {
+
+
+    ```
+
+    std::cout << "bread";
+
+    std::cout << "avocado";
+
+    std::cout << "egg";
+
+    std::cout << "cheese";
+
+    std::cout << "bread";
+
+    ```
+
+
+    Definition
+
+
+    int main() {
+
+
+    ```
+
+    make_sandwich(); // Call
+
+    ```
+
+
+    arguments
+
+
+    # #include <iostream>
+
+
+    void make_sandwich() { Output:
+
+
+    ```
+
+    std::cout << "bread";
+
+    std::cout << "avocado";
+
+    std::cout << "egg";
+
+    std::cout << "cheese";
+
+    std::cout << "bread";
+
+    ```
+
+
+    int main() {
+
+
+    ```
+
+    make_sandwich();
+
+    ```
+
+
+    # #include <iostream>
+
+
+    void make_sandwich() { Output:
+
+
+    bread
+
+
+    ```
+
+    std::cout << "bread";
+
+    std::cout << "avocado";
+
+    std::cout << "egg";
+
+    std::cout << "cheese";
+
+    std::cout << "bread";
+
+    ```
+
+
+    int main() {
+
+
+    ```
+
+    make_sandwich();
+
+    ```
+
+
+    # #include <iostream>
+
+
+    void make_sandwich() { Output:
+
+
+    bread avocado
+
+
+    ```
+
+    std::cout << "bread";
+
+    std::cout << "avocado";
+
+    std::cout << "egg";
+
+    std::cout << "cheese";
+
+    std::cout << "bread";
+
+    ```
+
+
+    int main() {
+
+
+    ```
+
+    make_sandwich();
+
+    ```
+
+
+    # #include <iostream>
+
+
+    void make_sandwich() { Output:
+
+
+    bread avocado egg
+
+
+    ```
+
+    std::cout << "bread";
+
+    std::cout << "avocado";
+
+    std::cout << "egg";
+
+    std::cout << "cheese";
+
+    std::cout << "bread";
+
+    ```
+
+
+    int main() {
+
+
+    ```
+
+    make_sandwich();
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "# 10.4) Void — The Point of No Return\n\nLet's build a simple function with\
+    \ no input and no output. We can do that?\n\nThe void specifier, which is added\
+    \ in the function declaration before the function name. A void function, also\
+    \ known as a subroutine, has no return value, making it ideally suited for situations\
+    \ where you just want to print something to the terminal.\n\nFor example:\n\n\
+    ```\n#include <iostream>\n\nvoid make_sandwich() {\n    std::cout << \"bread\\\
+    n\";\n    std::cout << \"avocado\\n\";\n    std::cout << \"egg\\n\";\n    std::cout\
+    \ << \"cheese\\n\";\n    std::cout << \"bread\\n\";\n}\n\nint main() {\n    make_sandwich();\n\
+    }\n```\n\n```\nvoid animal_chat() {\n    std::string fav;\n    std::cout << \"\
+    What's your favorite animal?\\\\n\";\n    std::cin >> fav;\n    std::cout << \"\
+    Do you have a \" << fav << \" as a pet?\\\\n\";\n    std::cin >> fav;\n\n    if\
+    \ (fav == \"yes\") {\n        std::cout << \"How lucky you have a \" << fav <<\
+    \ \" as a pet!\\n\";\n    } else {\n        std::cout << \"That's too bad.\\\\\
+    n\";\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '```
+
+    }
+
+
+    The above chat program is built to capture user responses and print them to
+
+    the terminal without returning any values.
+
+    ```
+
+
+    # ## 10.5) Return Types — Beyond the Void
+
+
+    When you want your function to return something and pass information
+
+    back to the rest of your program, C++ has got you covered. Just like there are
+
+    many variable types, there are many different return types for functions.
+
+
+    A function can return most data types we''ve covered,
+
+    including double, int, char, std::string, and std::vector.
+
+
+    ```
+
+    std::string always_blue() {
+
+    return "bluefn";n}
+
+    ```
+
+
+    Note: The return statement is the last line of code that a function will execute.
+
+    For example:
+
+
+    ```
+
+    std::string always_blue() {
+
+    return "bluefn";nstd::cout << "Returned blue!";n}
+
+    ```
+
+
+    The final line will not execute because a value has already been returned.
+
+    So "Returned blue!" won''t be printed to the terminal.
+
+
+    # ## 10.6 How Return Values Work
+
+
+    When functions have a return type other than void, the function has two new
+
+    requirements:
+
+
+    +   - There must be a value returned from the function.
+
+    - The return value must be the same type as the function''s return type.
+
+
+    But where does the return value get returned to?'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "It gets returned to the place where the function is called. For example, if\
+    \ you have the following function:\n\n```\nstd::string feed_the_cat() {\n  return\
+    \ \"Cat is fed\";\n}\n```\n\nAnd then print the function call inside of main():\n\
+    \n```\nint main() {\n  std::string message = feed_the_cat();\n  std::cout << cat_message;\n\
+    }\n```\n\nThe return value of the function is what gets printed to the terminal.\n\
+    \n# 10.7 Parameters & Arguments\n\nReturning data is all well and good, but let's\
+    \ say you're visiting NYC and you've been told that New Yorkers usually add a\
+    \ 20% tip for restaurants and taxis. It would be convenient if you could build\
+    \ a function that accepted different prices as input and figured out how much\
+    \ you should tip.\n\nAs it happens, you can do that with parameters. Parameters\
+    \ (sometimes called formal parameters) are variables used in a function's definition.\
+    \ They act as placeholders for the input values you'll use during your function.\n\
+    \nIn the function below, price is the function's parameter and it's a double.\
+    \ It is declared between the parentheses and then used in the body of the function.\n\
+    \n```\ndouble get_tip(double price) {\n  return price * 0.2;\n}\n```\n\nThen,\
+    \ when you're ready to use your function, the value you pass to the function is\
+    \ called an argument (also known as an actual parameter). In this case, 15.75\
+    \ is the argument that is passed to the function:\n\n```\ndouble tip = get_tip(15.75);\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "```\n// tip would be 3.15\n```\n\n# 10.8) Tackling Multiple Arguments\n\nHang\
+    \ on, you may be thinking, are you limited to one parameter per function? Not\
+    \ at all! You can add as many as you like, but you will have to remember their\
+    \ order when you call the function.\n\n```\ndouble get_tip(double price, double\
+    \ tip, bool total_included) {\nif (total_included) {\n    return price * tip +\
+    \ price;\n} else {\n    return price * tip;\n}\n```\n\nSo here we have three parameters:\n\
+    \n+   - double price\n- double tip\n- double total_included\n\nWhen calling get_tip(),\
+    \ it's important to call it with first price, tip second, and return_total last:\n\
+    \n```\nget_tip(0.25, true, 45.50);\n// this code will not work\nget_tip(45.50,\
+    \ 0.25, true);\n// this code results in 56.875, which you could round up to 56.88\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# 10.9) How Parameters & Arguments Work
+
+
+    A function with parameters has a couple of requirements:
+
+
+    +   - The function must call include the same number of arguments as there are
+    parameters.
+
+    - The corresponding arguments must be passed in the same order.
+
+
+    By calling a function with arguments, you are telling a function, “Hey function,
+    when you execute, use these values where you have parameters in your definition.
+
+
+    While it executes, anywhere where the function comes across a parameter, it replaces
+    the parameter with the corresponding argument you gave.
+
+
+    # Review of C++ Functions
+
+
+    Wow! Check out all you''ve learned about C++ functions:
+
+
+    +   - A function is a named group of statements that do something together.
+
+    - Functions allow you to create more flexible, modular, and DRY code.
+
+    - C++ has many built-in functions that you can use.
+
+    - Functions are called like function_name();
+
+    - A function has a declaration with a return type and possible parameters.
+
+    - A function has a definition (or body) with a group of statements and a possible
+    return.
+
+    - void functions do not have return values.
+
+    - Functions with a return value have return statements.
+
+    - Parameters are variables used as placeholders for function input values.
+
+    - Arguments are a function''s actual input values.
+
+
+    You now know enough C++ to create some pretty cool projects on your own. But,
+    as you''ll see, there are still many ways to improve your code.'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "# 11) FUNCTIONS: SCOPE & FLEXIBILITY\n\n# 11.1) The Scope of Things:\n\nTake\
+    \ a look at the program below. We have a void function named favorite_animal()\
+    \ and main() with a few statements inside.\n\n```\n#include <iostream>\n\nstd::string\
+    \ sea_animal = \"manatee\";\n\nvoid favorite_animal(std::string sea_animal) {\n\
+    \    std::string animal = best_animal;\n    std::cout << \"Best animal:\" << animal\
+    \ << \"\\n\";\n}\n\nint main() {\n    favorite_animal(\"jaguar\");\n    std::cout\
+    \ << sea_animal << \"\\n\";\n    std::cout << animal << \"\\n\";\n\n}\n```\n\n\
+    When this program is compiled and executed, sea_animal will print, but animal\
+    \ won't. Why do you think that's the case?\n\nThe *scope* is the region of code\
+    \ that can access or view a given element.\n\n+   - Variables defined in the *global*\
+    \ scope are accessible throughout the program.\n- Variables defined in a function\
+    \ have *local* scope and are only accessible inside the function.\n\nsea_animal\
+    \ was defined in global scope at the top of the program, outside of main(). So\
+    \ sea_animal is defined everywhere in the program."
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: 'Because the animal was only defined within favorite_animal() and not returned,
+    it is not accessible to the rest of the program.
+
+
+    # 11.2) Multi-File Programs
+
+
+    Programs can grow quickly. With a few functions, you can declare the function
+    above main() and then you can define the function below main() like this:
+
+
+    ```
+
+    #include <iostream>
+
+    // Declaration at the top:
+
+    void eat();
+
+    Int main() {
+
+    eat();
+
+    }
+
+    // Definition at the bottom:
+
+    void eat();
+
+    std::cout << "nom nom nom\n";
+
+    ```
+
+
+    But this isn''t ideal when your code gets longer; it''s common to use the same
+    function in more than one .cpp file.
+
+
+    To make your code cleaner and more modular, you can move the function definitions
+    over another specialized .cpp file (e.g., my_functions.cpp), leaving a list of
+    declarations above main().
+
+
+    But files, like functions, have scope. So how does the main() program know about
+    the function definitions?
+
+
+    Before your program compiles, it links together any files you list in your compilation
+    statement into a single executable:
+
+
+    ```
+
+    g++ main.cpp my_functions.cpp
+
+    And voila! Your program knows the function definitions.
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# 11.3) Getting a Header Yourself
+
+
+    If your program keeps growing, you may have to scroll through many declarations
+    before you see main(). That doesn''t seem like the best way to do things. Plus
+    you don''t want to keep declaring the same functions over or for different files
+    — making changes would be incredibly tiresome!
+
+
+    Well, you can take those function declarations and move them all over to a header
+    file — usually with the same name as the file with all of the function definitions
+    — with the extension .hpp or .h. For example, if your function definitions are
+    in my_functions.cpp or the corresponding header file would be my_functions.hpp
+    or my_functions.h.
+
+
+    So how do you bring everything from a header file into scope for another file?
+    Do you just link the header in the compilation statement as you did with the second
+    .cpp file?
+
+
+    As you turns out, with headers, you can just add #include "my_functions.hpp" to
+    the very top of main.cpp:
+
+
+    ```
+
+    #include "my_functions.hpp"
+
+    Boom! This line pastes in everything from my_functions.hpp. Now you have access
+    to all of the function declarations you stowed away in your header.
+
+    ```
+
+
+    # 11.4) How to Get Your Functions Inline
+
+
+    Once you set foot in the wild of C++ development, you may encounter the term “inline
+    functions” with a couple of different meanings. An inline function is a function
+    definition, usually in a header file, qualified by inline like this this:
+
+
+    ```
+
+    inline
+
+    void eat() {
+
+
+    std::cout << "nom nom\n";
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "Using inline aslines the compiler to insert the function's body where the function\
+    \ call is, which sometimes helps with execution speed (and sometimes hinders execution\
+    \ speed). If you do use it, we recommend testing how it affects the execution\
+    \ speed of your program. The bottom line is inline is something you'll probably\
+    \ encounter, but may never use.\n\nHowever, you will sometimes also hear about\
+    \ \"inline functions\" that are just member functions (i.e. functions inside classes\
+    \ — we'll explain classes later) that have been defined and declared in a single\
+    \ line in a header file because the function body is so short:\n\n```\n// cookie_functions.hpp\n\
+    \n// Cookie::eat() belongs to the Cookie class:\nvoid Cookie::eat() { std::cout\
+    \ << \"nom nom\\n\";\n```\n\nPlease note that you should ALWAYS add the inline\
+    \ keyword if you are inlining functions in a header (unless you are dealing with\
+    \ member functions, which are automatically inline for you).\n\n# 11.5) Default\
+    \ Arguments\n\nIf you add a parameter to a function in C++, then an argument will\
+    \ be required when you call the function. What does \"required\" mean here? Well,\
+    \ will you get an error. But what if 9 times out of 10, you'll use the same input\
+    \ value? It would be annoying to enter the same value over and over again.\n\n\
+    To make your code more flexible for situations like this, you can add default\
+    \ arguments to your function declarations. Default arguments are assigned to parameters\
+    \ when the function is declared and defined:\n\n```\n// Declaration\nvoid intro(std::string\
+    \ name, std::string lang = \"C++\");\n\n// Definition\nvoid intro(std::string\
+    \ name, std::string lang) {\n    std::cout << \"Hi, my name is \"\n    << name\n\
+    \    << \" and I'm learning \"\n    << lang\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '<< "\n";
+
+    Then, if you leave the argument blank in your function call, instead of an error,
+
+    your function will run with the default value. Meanwhile, if you do an
+
+    argument to add when you call the function, that argument will replace the
+
+    default argument when your code executes.
+
+
+    Either of these will work for the function we defined:
+
+
+    ```
+
+    intro("Mariel")
+
+    // "Hi, my name is Mariel and I''m learning C++."
+
+    intro("Mariel", "Python")
+
+    // "Hi, my name is Mariel and I''m learning Python.
+
+    ```
+
+
+    Important: Your computer cannot read your mind; it determines which
+
+    argument corresponds with which parameter based on the order.
+
+
+    Parameters without default arguments come first. This will work
+
+    for add_num(3); because the computer knows 3 corresponds to num1:
+
+
+    ```
+
+    int add_nums(int num1, int num2 = 0);
+
+    But the following does NOT work for add_num(3); the computer assumes
+
+    that 3 still corresponds to num1:
+
+    ```
+
+
+    ```
+
+    int add_nums(int num1 = 0, int num2);
+
+    Similarly, when a function has two default arguments, you still need to call
+
+    with arguments — if BOTH of the following are true:
+
+    ```
+
+
+    +   - The first argument IS the default value.
+
+    - The second argument is NOT the default value.
+
+
+    # 11.6) Function Overload!
+
+
+    What if you want a function to accept an argument that can be either an int
+
+    a double? Or if you want some function parameters to be optional? C++
+
+    has a trick up its sleeve for such situations.
+
+
+    In a process known as function overloading, you can give multiple C++
+
+    the functions the same name. Just make sure at least one of these conditions is
+
+    true:
+
+
+    +   - Each has different type parameters.'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '+   • Each has a different number of parameters.
+
+
+    Overloading enables you to change the way a function behaves depending on what
+    is passed in as an argument:
+
+
+    ```
+
+    void print_cat_ears(char len) {
+
+    std::cout << """ << len << len << """ << "\n";
+
+    std::cout << """ << len << len << len << """ << "\n";
+
+    }
+
+
+    void print_cat_ears(int num) {
+
+    std::cout << """ << num << num << num << """ << "\n";
+
+    std::cout << num << num << num << num << num << num << """ << "\n";
+
+    }
+
+    ```
+
+
+    Given the above functions, you can call the functions like so and C++ will know
+    what to do:
+
+
+    ```
+
+    print_cat_ears(''A'');
+
+    print_cat_ears(4);
+
+    Output:
+
+    ```
+
+
+    | A A |
+
+    | AAA AAA |
+
+    | 4 4 |
+
+    | 444 444 |
+
+
+    # 11.7) Function Templates
+
+
+    Overloading can be tedious. Imagine you want to create a new function that works
+    with int, float, double, and other types. Do you need to redefine the SAME function
+    body over and over again with different parameters?
+
+
+    Thankfully not! When two functions have different types but the same body — as
+    was the case with print_cat_ears() —, there is a cleaner solution you can use:
+    templates.
+
+
+    A template is a C++ tool that allows programmers to add data types as parameters.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: 'This feature comes in handy for classes as well as functions. In fact, std::string
+    and std::vector are both template-based. The C++ standard library is full of templates!
+
+
+    # 11.8 How to Build Function Templates
+
+
+    So how do we implement templates with actual code? Unlike regular functions, templates
+    are entirely created in header files.
+
+
+    Templates let us choose the type implementation right when you call the function.
+    The type we choose may apply to the return type, a parameter type, or both.
+
+
+    Here''s how we could build a template for print_cat_ears() so that the parameter
+    type is flexible:
+
+
+    ```
+
+    <typename T>
+
+    void print_cat_ears(T item) {
+
+    std::cout << " " << item << " " << item << "\n";
+
+    std::cout << item << item << item << " " << item << item << "\n";
+
+    }
+
+    ```
+
+
+    We can call the function for int, char, std::string, or double:
+
+
+    ```
+
+    print_cat_ears(2);
+
+    // the output:
+
+    // 2 2
+
+    // 222 222
+
+    ```
+
+
+    Now we can use print_cat_ears() with a parameter of any type we want, as long
+    as the type can be used with the methods expected. For example, we couldn''t pass
+    a std::vector into the current print_cat_ears() because << won''t work with std::vector.
+
+
+    Note: Using templates will slow down the program''s compile-time, but speed up
+    the execution time.'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "# Review\n\nYou've learned quite a bit! Now you know a bit about how scope\
+    \ works for functions and files, as well as how to make functions more flexible\
+    \ for different use cases:\n\n+   - The scope is the region of code that has access\
+    \ to an element.\n  - Globally scoped variables are accessible everywhere.\n \
+    \ - A variable created inside a function has a local scope and can't be accessed\
+    \ outside the function.\n- C++ functions are usually split to make code more modular:\n\
+    \  - The definition is in a header file.\n  - The definition is in another .cpp\
+    \ file.\n- Programs with multiple .cpp files need to be linked at compile time:\n\
+    \n```\ng++ main.cpp fns.cpp\n```\n\n+   - Header files must be included in the\
+    \ file with main():\n\n```\n#include \"fns.hpp\"\n```\n\n+   - You can define\
+    \ a function inline using the inline keyword, which may or not improve execution\
+    \ speed.\n- Default arguments can be added to function declarations so that you\
+    \ can call the function without including those arguments.\n- You can overload\
+    \ C++ functions so that they handle different types of input and return different\
+    \ types.\n- A function template enables a function to behave the same with different\
+    \ types of parameters."
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# 12) Classes and Objects
+
+
+    #  12.1) What are Classes and Objects?
+
+
+    One of the best things about the writing program is being able to easily work
+    with and keep track of different data. Data is the driving force behind most programs
+    that you''ll write. The programmers are constantly parsing strings adding and
+    subtracting counting things in passing different pieces of data around and all
+    major applications being able to work with data in an organised and structured
+    way is extremely important.
+
+
+    By default, most programming languages will allow you to store and keep track
+    of three distinct types of data (Text, Numbers and Boolean values). With these
+    three datatypes we can represent all types of information like people''s names
+    with text whether or not someone is an organ donor with a Boolean value or the
+    price of an item with a number and being to keep track of simple pieces of data
+    like this is great. But what happens when we need to work with more complex data.
+    We can represent a name with a string and a price with a number but what if we
+    want to represent something more complex like an entity in the real world.
+
+
+    Let''s take a case for imagine we were writing a program for a school and we wanted
+    to keep track of the students who are currently enrolled, so now instead of keeping
+    track of names with strings or prices with numbers we want to be able to keep
+    track of students. The problem is we don''t have a data type for students. There''s
+    no student data type floating that''s built into the language like string numbers
+    or Boolean x'' on top of that we might also want to define some functionality
+    around the student like giving school administrators the ability to mark a student
+    as absent or change their grades for example.
+
+
+    And as we write more and more complex programs like the one for this school we
+    will want to be able to keep track of and model more complex pieces of data and
+    therefore we need more complex data types to solve this problem we can use an
+    object-oriented programming language is a programming language which allows developers
+    to create it''s custom data types.'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: 'So, even if the language doesn''t provide a student data type by default, a
+    developer can create the student data type and then use it just like they would
+    a normal string number or Boolean value so if we use an object-oriented programming
+    language to write our student program, we can easily keep track of all of the
+    students creating a custom student data type.
+
+
+    So, how exactly does this work, how can we go about creating our student data
+    type and start the first step is to create a student -class in object-oriented
+    programming a class is a specification of the new data type it''s essentially
+    a blueprint that tells the programming language what the new data type is made
+    of. In our student class, we can define the attributes and the functionality that
+    make up a student by creating a student class. The attribute of a class is individual
+    strings numbers or Booleans which define attributes of the entity we are modelling.
+
+
+    In this case, a student might have a name attribute which would be a string, a
+    GPA attribute would be a number attribute or freshman sophomore junior senior
+    might also be a string and then maybe it has a scholarship Boolean which would
+    determine whether or not the student has a scholarship. So, you can see we can
+    define all these different attributes of student which themselves could be strings
+    or Booleans.
+
+
+    In addition to attributes, we can also define functionality around the student.
+    So, for example, we might create a has honours function inside of the student
+    class which would use the GPA of the student to determine if they qualify for
+    honours so if the student has a GPA of greater than 3.5 then we would say they
+    have honoured. A week we create a give scholarship function which would set the
+    has scholarship to true giving the student a scholarship.
+
+
+    And so, the class can have these attributes and these functions essentially make
+    up the data type and allow us to define what a student looks like in our program.
+    When we create a class, we tell the language what this new data type looks like
+    what it does all we''re doing here is describing the data type we''re not creating
+    a student that we can work with to create a student in our program we''ll need
+    an object.
+
+
+    An Object is an instance of a class which means a student object would be an instance
+    of our student class so a student object is an actual student with an actual name
+    GPA year and scholarship status. So, in our program, we might'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: 'create three students object with names Nassima, Ahmad and Osman, and each
+    of them would be an instance of our student class. Now the object is the actual
+    thing we are going to work within our programs you could pass it around, you can
+    store it inside of a variable you can access each one of the attributes or call
+    any of those functions the object is the implementation of the class.
+
+
+    The Class is simply the blueprint. It defines what the new data type looks like.
+    Now the cool thing about classes and objects is once we define what the data type
+    looks like in the class, we can create many objects or instances of class as we
+    want. our program can keep track of students'' objects all with their name, GPA,
+    year etc. Now our code could use the functions exposed by each of these students''
+    objects to for example give them scholarships or figure out if they have honours
+    if some other piece of code was responsible for granting scholarships to students
+    it could use the given scholarship for a particular student to do.
+
+
+    So, Object-oriented programming is great because it allows us to model realworld
+    entities like students in our programs, so we can create a student class and then
+    create instances of that student class object and use them now you could do the
+    same thing with other entities in the real world. doesn''t just have to be students,
+    you can model a light bulb, you could model a microphone, you could model an animal
+    or a day of the week. You can model anything that you can think of.
+
+
+    Object-oriented programming is great because it allows you to be flexible enough
+    to model just anything in the real world.
+
+
+    # 12.2 Getting Classy with C++
+
+
+    So far, we''ve used several data types, including int, double, std::string, and
+    bool. When we work with int or std::string, we can create variables with certain
+    properties and methods specific to those types. For example:
+
+
+    ```
+
+    int age = 33;
+
+    age++; // age is now 34
+
+    But what happens when you want to create a "type" for something else? You can
+    make your own! Bjarne Stroustrup developed C++ because he wanted to
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: 'add a feature known as “classes” to the C language. A C++ class is a user-defined
+    type.
+
+
+    The class serves as a blueprint for objects, which are instances of the class
+    (just like age is an instance of int). An object gets characteristics and behaviours
+    from its class.
+
+
+    We can create an empty C++ class like this in a header file:
+
+
+    ```
+
+    class City {
+
+    }; // notice semicolon
+
+    Fun fact: C++''s original name was “C with Classes."
+
+    ```
+
+
+    # 12.3) Class Members
+
+
+    An empty class is pretty useless. Classes are designed to bring together information
+    and functionality — time to add stuff inside!
+
+
+    The components of a class are called class members. Just like you can get a string''s
+    length using .length(), you can access class members using the dot operator (object.class_member).
+
+
+    There are two types of class members:
+
+
+    +   - Attributes, also known as member data, consists of information about instance
+    of the class.
+
+    - Methods, also known as member functions, are functions that you can use with
+    an instance of the class. We use a .before method names to distinguish from regular
+    functions.
+
+
+    We encapsulate — or enclose for simpler access — attributes and methods in a class
+    like this:
+
+
+    ```
+
+    class City {
+
+    // attribute
+
+    int population;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "```\n// we'll explain 'public' later\npublic:\n//method\nvoid add_resident()\
+    \ {\n    population++;\n}\n;\n```\n\nUnless we have a mostly empty class, it's\
+    \ common to split function declarations from definitions. We declare methods inside\
+    \ the class (in a header), then define the methods outside the class (in a .cpp\
+    \ file of the name).\n\nHow can we define methods outside a class? We can do this\
+    \ using ClassName:: before the method name to indicate its class like this:\n\n\
+    ```\nint City::get_population() {\n    return population;\n}\n```\n\nUnlike regular\
+    \ functions, we need to include the header file in the .cpp file where we define\
+    \ the methods.\n\nNote: We must declare a method inside the class if we want to\
+    \ define it outside.\n\n# 12.4) Creating Objects\n\nNow that you have a class,\
+    \ let's create some objects! To refresh your memory, an object is an instance\
+    \ of a class, which encapsulates data and functionality pertaining to that data.\n\
+    \nTo create (or instantiate) an object, we can do this:\n\nCity accra:\nWe can\
+    \ give the object's attributes values like this (note that these must be attributes\
+    \ you defined in the class):\n\n```\naccra.population = 2270000:\nLater, we can\
+    \ access this information using the method we added to the City class (if it's\
+    \ in a public part of the class):\n```"
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '```
+
+    accra.get_population();
+
+    ```
+
+
+    # 12.5) Access Control: Public and Private
+
+
+    Let''s circle back to that public keyword. What was that about?
+
+
+    By default, everything in a class is private, meaning class members are limited
+    to the scope of the class. This makes it easier to keep data from mistakenly being
+    altered, and abstracts away all the nifty-gritty details. If you try to access
+    a private class member, you''ll get an error:
+
+
+    error: ''population'' is a private member of ''City''
+
+    But sometimes you need access to class members, and for that, there is public.
+    You can use it to make everything below accessible outside the class:
+
+
+    ```
+
+    class City {
+
+    int population;
+
+    public: // stuff below is public
+
+    void add_resident() {
+
+    population++;
+
+    }
+
+    };
+
+    ```
+
+
+    There is also a private access modifier for when you want something below public
+    to be private to the class:
+
+
+    ```
+
+    class City {
+
+    int population;
+
+    public:
+
+    void add_resident() {
+
+    population++;
+
+    }
+
+    rivate: // this stuff is private
+
+    bool is_capital;
+
+    };
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "# 12.6) Constructors\n\nIs there a way to give an object some data right when\
+    \ it gets created? We're so glad you asked!\n\nA constructor is a special kind\
+    \ of method that lets you decide how the objects of a class get created. It has\
+    \ the same name as the class and no return type. Constructors shine when you want\
+    \ to instantiate an object with specific attributes.\n\nIf we want to make sure\
+    \ each City is created with a name and a population, we can use parameters and\
+    \ a member initializer list to initialize attributes to values passed in:\n\n\
+    ```\n// city.hpp\n#include \"city.hpp\"\n\nclass City {\n    std::string name;\n\
+    \    int population;\npublic:\n    City(std::string new_name, int new_pop);\n\
+    };\n\n// city.cpp\nCity::City(std::string new_name, int new_pop)\n    // members\
+    \ initialized to values passed in\n    : name(new_name), population(new_pop) {};\n\
+    ```\n\nYou could also write the definition like this:\n\n```\nCity::City(std::string\
+    \ new_name, int new_pop) {\n    name = new_name;\n    population = new_pop;\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: 'However, member initialization list allows you to directly initialize each
+    member when it gets created.
+
+
+    To instantiate an object with attributes, you can do:
+
+
+    ```
+
+    // inside main()
+
+    City ankara("Ankara", 5445000);
+
+    ```
+
+
+    Now we have a City called ankara with the following attributes:
+
+
+    +   - ankara.name set to "Ankara".
+
+    - ankara.population set to 5445000.
+
+
+    # # 12.7 Destructors
+
+
+    So far, you''ve learned how to create and use objects. But there''s another part
+    of the object lifecycle we need to cover: how to destroy them! Muahahaha.
+
+
+    It''s far less nefarious than it sounds; object destruction is really about tidying
+    up and preventing memory leaks. A destructor is a special method that handles
+    object destruction. Like a constructor, it has the same name as the class and
+    no return type, but is preceded by a ~ operator and takes no parameters:
+
+
+    ```
+
+    City::City() (
+
+    // any final cleanup
+
+    ```
+
+
+    Inside you add any housekeeping that needs to happen before the object is destroyed.
+    You generally won''t need to call a destructor; the destructor will be called
+    automatically in any of the following scenarios:
+
+
+    +   - The object moves out of scope.
+
+    - The object is explicitly deleted.
+
+    - When the program ends.'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# Review
+
+
+    Hooray! You''ve learned the basics of classes and objects in C++:
+
+
+    +   * Classes are user-defined types.
+
+    * Objects are instances of classes.
+
+    * Class members are the data attributes and functions inside of a class.
+
+    * Creating a new object from a class is called instantiation.
+
+    * Class members can be designated as either private or public — they are private
+    by default.
+
+    * You can create a constructor to instantiate objects in a particular way.
+
+    * A destructor allows you to execute any cleanup necessary before an object gets
+    destroyed.'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# 13) Why Object-Oriented Programming?
+
+
+    Why has object-oriented programming become a major programming paradigm?
+
+
+    So far, you''ve built two kinds of C++ programs:
+
+
+    +   - Procedural: The program moves through a linear series of instructions.
+
+    - Functional: The program moves from one function to another.
+
+
+    But there is another way to structure C++ code: object-oriented programming.
+
+
+    Let''s consider a physical object: a light bulb. A light (usually) has two possible
+    states: on and off. It also has functionality that allows you to change its state:
+    you can turn it on and turn it off. Frankly, you don''t need to know electrical
+    engineering to use the light! You only need to know how to interact with it.
+
+
+    Object-oriented programming (OOP) is a programming paradigm that allows you to
+    package data states and functionality while keeping the details hidden away (like
+    with the lightbulb). As a result, code with OOP design is flexible, modular, and
+    abstract. This makes it particularly useful when you create larger programs.
+
+
+    In C++, you can apply OOP in your code with classes and objects. And the C++ objects
+    you create will have states and functionality.
+
+
+    There are four major benefits to object-oriented programming:
+
+
+    +   - Encapsulation: in OOP, you bundle code into a single unit where you can
+    determine the scope of each piece of data.
+
+    - Abstraction: by using classes, you can generalize your object types, simplifying
+    your program.
+
+    - Inheritance: because a class can inherit attributes and behaviours from another
+    class, you can reuse more code.
+
+    - Polymorphism: one class can be used to create many objects, all from the same
+    flexible piece of code.'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# 14) REFERENCES AND POINTERS
+
+
+    # 14.1 Introduction
+
+
+    A computer''s memory is a sequence of bytes. We can number the bytes from 0 to
+    the last. Each number, known as an address, represents a location in the memory.
+
+
+    Everything we put into memory has an address. For example, when we declare and
+    initialize an int variable named power:
+
+
+    ```
+
+    int power = 9000;
+
+    This will set aside an int-size piece of memory for the
+
+    variable power somewhere and put the value 9000 into that memory. But where is
+    "somewhere"? How is it useful?
+
+    ```
+
+
+    In this lesson, we will answer these questions by learning about:
+
+
+    +   - References
+
+    - Pointers
+
+
+    These are some of the most powerful features in C++; they allow programmers to
+    directly manipulate memory – the most critical and scarce resource in computers
+    -to optimize performance.
+
+
+    However, references and pointers are also sometimes considered two of the most
+    complex and difficult features in C++.
+
+
+    So let''s get started.'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# 14.2) References
+
+
+    In C++, a reference variable is an alias for something else, that is, another
+    name for an already existing variable.
+
+
+    So, suppose we make Sonny a reference to someone named Songqiao. You can refer
+    to the person as either Sonny or Songqiao.
+
+
+    Let''s take a look at how we can do this with this code. Suppose we have an int
+    variable already called songqiao, we can create an alias for it by using the &
+    sign in the declaration:
+
+
+    ```
+
+    Int &sonny = songqiao;
+
+    ```
+
+
+    So here, we made sonny a reference to songqiao.
+
+
+    Now when we make changes to sonny (add 1, subtract 2, etc), songqiao also changes.
+
+
+    Two things to note about references:
+
+
+    +   1. Anything we do to the reference also happens to the original.
+
+
+    ![](img/a6303f820ae398dbe366f0ffbaec1dcd_98_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: "2. Aliases cannot be changed to alias something else.\n\n# # 14.3 Pass-By-Reference\n\
+    \nSo, what's a good use case for references? Let's take a look.\n\nPreviously,\
+    \ when we passed parameters to a function, we used normal variables and that's\
+    \ known as *pass-by-value*. But because the variables passed into the function\
+    \ are out of scope, we can't modify the value of the arguments.\n\n*Pass-by-reference*\
+    \ refers to passing parameters to a function using references. When called, the\
+    \ function can modify the value of the arguments by using the reference passed\
+    \ in.\n\nThis allows us to:\n\n+   - Modify the value of the function arguments.\n\
+    - Avoid making copies of a variable/object for performance reasons.\n\nThe following\
+    \ code shows an example of a pass-by-reference. The reference parameters are initialized\
+    \ with the actual arguments when the function is called\n\n```\nvoid swap_num(int\
+    \ &i, int &j) {\n    int temp = i;\n    i = j;\n    j = temp;\n}\n\nint main()\
+    \ {\n    int a = 100;\n    int b = 200;\n\n    swap_num(a, b);\n\n    std::cout\
+    \ << \"A is \" << a << \"\\n\";\n    std::cout << \"B is \" << b << \"\\n\";\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "Notice that the int &i and int &j are the parameters of the function swap_num().\n\
+    \nWhen swap_num() is called, the values of the variables a and b will be modified\
+    \ because they are passed by reference. The output will be:\n\n| A is 200 |\n\
+    | B is 100 |\n\nSuppose we didn't pass-by-reference here and have the parameters\
+    \ simply int i and int j in the swap_num() function, then i and j would swap,\
+    \ but a and b would be modified.\n\nAnd the output will then be:\n\n| A is 100\
+    \ |\n| B is 200 |\n\nTo reiterate, using references as parameters allows us to\
+    \ modify the arguments' values. This can be very useful in a lot of cases.\n\n\
+    # 14.4) Pass-By-Reference with Const\n\nRemember const? The const keywords tell\
+    \ the compiler that we won't change something.\n\nFor example, in the following\
+    \ code, we are telling the compiler that the double variable pi will stay at 3.14\
+    \ throughout the program:\n\n```\ndouble const pi = 3.14;\n```\n\nIf we try to\
+    \ change pi, the compiler will throw an error.\n\nSomtimes, we use const in a\
+    \ function parameter; this is when we know for a fact that we want to write a\
+    \ function where the parameter won't change inside the function. Here's an example:\n\
+    \n```\nint triple(int const) {\n  return i * 3;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "In this example, we are not modifying the i. If inside the function triple(),\
+    \ the value of i is changed, there will be a compiler error.\n\nTo save the computational\
+    \ cost for a function that doesn't modify the parameter value(s), we can go a\
+    \ step further and use a const reference:\n\n```\nint triple(int const &i) {\n\
+    \    return i * 3;\n}\n```\n\nThis will ensure the same thing: the parameter won't\
+    \ be changed. However, making i a reference to the argument saves the computational\
+    \ cost of making a copy of the argument.\n\n# 14.5) Pointers\n\nIn C++, a pointer\
+    \ is mostly the same as other variables, which can store a piece of data. Unlike\
+    \ normal variables, which store a value (such as an int, double, char), the pointer\
+    \ stores a memory address.\n\nWhile references are a newer mechanism that originated\
+    \ in C++, we recommend avoiding pointers as much as possible; usually, a reference\
+    \ will do the trick. However, you will see pointers a lot in the wild, particularly\
+    \ in old projects, where they they are used in a very similar way to references.\n\
+    \nPointers must be declared before they can be used, just like a normal variable.\
+    \ They are syntactically distinguished by the \"*\", so that int means \"pointer\
+    \ to int\" and double means \"pointer to double\".\n\n```\nint* number;\ndouble*\
+    \ decimal;\nchar* character;\n```\n\nSo suppose we have a variable called gum:\n\
+    \n```\nint gum = 8;\nWe can create a pointer to it by:\n```\n\n```\nint* ptr =\
+    \ &gum;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '+   - int* makes it a pointer rather than a normal variable.
+
+    * ptr is the pointer name.
+
+    * &gum is the memory address of the other variable gum.
+
+
+    So now ptr has a value of gum''s memory address.
+
+
+    ![](img/a6303f820ae398dbe366f0ffbaec1dcd_102_0.png)
+
+
+    Note: Syntactically, spaces around * do not matter, but the best practice is to
+    have it after the data type.
+
+
+    ```
+
+    int* number;
+
+    int *number;
+
+    int * number;
+
+    ```
+
+
+    # 14.6) Dereference
+
+
+    So now we learned what a pointer is and how to create one, but there is a way
+    to obtain the value pointed to by the pointer?
+
+
+    The asterisk sign * a.k.a. the dereference operator is used to obtaining the value
+    pointed to by a variable. This can be done by preceding the name of a pointer
+    variable with *.'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "int blah = *ptr;\nThe double meaning of the * symbol can be tricky at first,\
+    \ so make sure to\nnote:\n\n+   * When * is used in a declaration, it is creating\
+    \ a pointer.\n When * is not used in a declaration, it is a dereference operator.\n\
+    \n# 14.7) Null Pointer\n\n+   * When we declare a pointer variable like so, its\
+    \ content is not initialized:\n int ptr;\n In other words, it contains an address\
+    \ of “somewhere\", which is of\ncourse not a valid location. This is dangerous!\
+    \ We need to initialize a\npointer by assigning it a valid address.\n* But suppose\
+    \ we don't know where we are pointing to, we can use a null\npointer.\n* nullptr\
+    \ is a new keyword introduced in C++11. It provides a typesafe\npointer value\
+    \ representing an empty pointer.\n* We can use nullptr like so:\n int ptr = nullptr;\n\
+    \ Note: In older C/C++ code, NULL was used for this purpose. nullptr is meant\n\
+    as a modern replacement to NULL.\n\n# Review\n\nCongratulations! You have officially\
+    \ done it. \U0001F44F\U0001F44F\U0001F44F\n\nIn this lesson, you have learned:\n\
+    \n+   * References\n Pass-by-reference\n Pass-by-reference with const\n* Memory\
+    \ addresses and how to access them\n* Pointers\n De-dereferencing a pointer\n\
+    \ nullptr\n\n```\n// Reference\nint &reference = original;\n\n// Pointer\nint*\
+    \ pointer = &original;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "# 16) Memory Allocation\n\nWhat is memory allocation? And what is manual memory\
+    \ management?\n\nEvery variable we have seen so far is a local variable. And local\
+    \ variables go out of scope when the function ends. But sometimes, this is not\
+    \ what we want. That's where the free store comes in. The free store is a memory\
+    \ for longer-lived variables.\n\n# 16.1) Manual Memory Management\n\nTo avoid\
+    \ wastage of memory, you can dynamically allocate any memory required during runtime\
+    \ using the new and delete operators in C++.\n\n```\nint main() {\n  // memory\
+    \ allocation\n  ptr = new int[num];\n  ...\n  // memory is released\n  delete\
+    \ ptr;\n}\n```\n\nThe new operator:\n\n```\nptr = new int[num];\n```\n\nThe delete\
+    \ operator:\n\n```\ndelete ptr;\n```\n\nIf you create something with new, at some\
+    \ point you must delete it. When something is not deleted, it will cause a memory\
+    \ leak.\n\n# 16.2) The Rule of Three\n\nThe rule of three is a rule of thumb in\
+    \ C++ that claims that if a class defines one of the following special member\
+    \ functions, it should define all three:\n\n+   * Destructor\n* Copy constructor\n\
+    * Copy assignment operator"
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# 16.3) The Rule of Five
+
+
+    With C++11, a new rule emerged: the rule of five. This adds two more special functions
+    to the rule of three lists:
+
+
+    +   - Destructor
+
+    - Copy constructor
+
+    - Copy assignment operator
+
+    - Move constructor
+
+    - Move assignment operator
+
+
+    As you can see, manual memory management is difficult and old-fashioned. Instead
+    of using new and delete, there''s something in the standard library that will
+    make your life a lot easier.
+
+
+    # 16.4) Standard Library Smart Pointers
+
+
+    A smart pointer is an abstract data type that was popularized by C++ during the
+    early 1990s. It simulates a pointer while providing additional features, such
+    as automatic memory management.
+
+
+    In the standard library, we have the following:
+
+
+    +   - unique_ptr: a smart pointer that owns and manages another object through
+    and disposes of that when the unique_ptr goes out of scope.
+
+    - shared_ptr: a smart pointer that retains shared ownership of an object through
+    a pointer. Several shared_ptr objects may own the same object.
+
+
+    | Next |
+
+    | Get Unstruck |'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# ABOUT THE AUTHOR
+
+
+    Ahmad Ibrahim is a student like most of you. He did his schooling At The Educators
+    School Bhara Kahu Campus-I (A Project of Beacon House) and High School at KIPS
+    COLLEGE ISLAMABAD G-9/MARKAZ. He studied Intermediate in Computer Science (ICS).
+    He has been a lot into computer science since his early school days and tried
+    to learn a lot of certifications from well-renowned institutes/organizations.
+    He achieved a Certificate of Completion in Introduction to IT and Cyber Security
+    from Cybrary, and he received a certificate of completion of the Fundamentals
+    of Digital Marketing exam from Google Garage by Google. He has been learning programming
+    throughout till now. He did the CS50x Course at Harvard Unversity, USA. He also
+    got a Cisco Networking Academy® Introduction to Cybersecurity Course Certification.
+    Furthermore, he is currently completing Professional Certification in IT Support
+    from Google Inc. In the COVID-19 pandemic, he decided to write a book for beginners
+    about C++ and he started to do and continued his learning of C++ Programming Language
+    and combined everything into his book he learned till now. From Author, “I have
+    received Cybersecurity Certificates from different platforms. I am always ready
+    to learn something new and keep going and never stop at a single place. My strength
+    is Allah and my Soul Mate. I am always ready to take up new challenges and strive
+    for excellence. This is because I believe in success and failures are the best
+    way to sculpt ourselves our goals. And all the belief of my Soul Mate in me and
+    my hard work, and I want fulfilment in everything. My short-term goal is to achieve
+    excellence in the skills I''m do or pursue take a challenge in some good organizations,
+    and climb the ladder of success. However, my long-term goal is to be a good human
+    being and the best in every field that is written for me and achieve a lot of
+    success. My moral is never to intend to harm anyone on purpose. That''s all about
+    me. Best of Luck to everyone.”'
+  merge: -1
+  img_proc: true
