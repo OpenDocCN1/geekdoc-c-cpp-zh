@@ -1,0 +1,1640 @@
+- pgno: 0
+  md: '# # LEARN C PROGRAMMING THROUGH\ NURSERY RHYMES AND FAIRY TALES
+
+
+    Classic Stories Translated into C Programs
+
+
+    By Shari Eskenas
+
+
+    Illustrated by Ana Quintero Villafraz
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_1_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_2_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Learn C Programming
+
+    through Nursery Rhymes and Fairy Tales
+
+
+    By Shari Eskenas
+
+    Illustrated by Ana Quintero Villafraz
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_3_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_4_0.png)
+
+
+    Copyright © 2023 by Shari Ekenas
+
+    Cover art and nursery rhyme artwork by Ana Quintero Villafraz
+
+    Paitetale artwork by Dan Tranh Art
+
+
+    All rights reserved No part of this book may be reproduced or used in any manner
+    without the prior written permission of the copyright owner, except for the use
+    of brief quotations in a book review
+
+
+    Published by Sundar Electronics LLC
+
+    https://www.sundareleronics.com
+
+
+    First edition 2023
+
+
+    ```
+
+    ISBN 978-1-759029-9-4 (Hardcover)
+
+    ISBN 979-8-881835-0-1 (Paperback)
+
+    ISBN 979-8-881835-3-2 (eBook)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# # Table of Contents
+
+
+    +   Jack Be Nimble...............................................8
+
+    Row, Row, Row Your Boat......................................10
+
+    Star Light, Star Bright.......................................12
+
+    Rain, Rain, Go Away...............................................14
+
+    Jack and Jill....................................................16
+
+    Humpty Dumpty................................................18
+
+    Peter Piper......................................................20
+
+    One, Two, Buckle My Shoe......................................22
+
+    Hickory Dickory Dock...........................................24
+
+    Hey Diddle Diddle...............................................26
+
+    One Potato, Two Potatoes.......................................28
+
+    Little Bo Peep................................................30
+
+    Twinkle, Twinkle, Little Star..................................32
+
+    I''m a Little Teapot...............................................34
+
+    M Muffin Man.....................................................36
+
+    Here We Go Round the Mulberry Bush............................38
+
+    This Little Piggy...............................................42
+
+
+    +   Goldilocks and the Three Bears...............................44
+
+    The Three Little Pigs...........................................50
+
+    Jack and the Beanstalk...........................................56
+
+    Little Red Riding Hood...........................................60
+
+    The Princess and the Pea.......................................66
+
+    Cinderella......................................................70
+
+    The Gingerbread Man..............................................78
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_5_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Dear Apprentice,
+
+
+    I''m so glad you''ve arrived at C Castle! A magical experience awaits you- you''ll
+    see computer code transformed into classic nursery rhymes and fairy tales!
+
+
+    Once upon a time in a faraway land, there was an enchanted computer deep in the
+    woods. The computer told nursery rhymes and fairy tales using code, which is a
+    set of instructions written for a computer to perform tasks, such as printing
+    text to the screen or playing a video.
+
+
+    A program is a collection of code that can be run by a computer. The enchanted
+    computer told the nursery rhymes and fairy tales using programming language has
+    its own set of rules for how the code is written, which is called the syntax.
+    Dependant programming languages are written with different syntaxand designed
+    for different uses.
+
+
+    People from the nearby village occasionally wandered into the forest and listened
+    to the enchanted computer''s stories. Over the years, the C programs stored on
+    the computer were written and recorded in a book. You will now be presented with
+    these C programs. Your journey has just begun! There are instructions at the end
+    of this book for running the enchanted programs on YOUR computer!
+
+
+    Warm Regards,
+
+    S.E.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_7_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# Jack Nimble\n\nJack be nimble,\nJack be quick,\nJack jump over the candlestick\n\
+    \n```\n#include <stdio.h>\n\nint main(void) {\n    printf(\"Jack be nimble, Jack\
+    \ be quick, Jack jump over the candlestick\");\n    return 0;\n}\n```\n\nLines\
+    \ of code can be separated with empty lines to make the code easier to read. A\
+    \ keyword is a word that has a special meaning in C, such as int and return that\
+    \ are described below.\n\nA statement is a complete program instruction that is\
+    \ run (executed) by a computer to perform an action. Programs' statements are\
+    \ executed from top to bottom. The first statement in this program is printf(\"\
+    Jack be nimble, Jack be quick, Jack jump over the candlestick\");\n\nmain() is\
+    \ a function. A block of code (within curly braces) that contains instructions\
+    \ to perform a task. Every C program needs a main() function, where the program\
+    \ begins running. It is considered good practice to indent the code within a code\
+    \ block, which makes it easier to read.\n\nprintf() is a function in the C standard\
+    \ library that outputs text to the computer screen. A library is a collection\
+    \ of predefined functions, data, and other resources that can be used in your\
+    \ programs. The C standard library is provided with your C compiler, which converts\
+    \ your C code into machine instructions for the computer and links with your standard\
+    \ library.\n\nA code block is run (executed) when the function is called with\
+    \ its name followed by parentheses. The printf() function passes the string to\
+    \ be printed within the parentheses to the standard output device (typically a\
+    \ screen). A string is a sequence of characters—letters, numbers, symbols, or\
+    \ spaces—that is enclosed in double (\"\") marks when written in code. \"Jack\
+    \ be nimble, Jack be quick, Jack jump over the candlestick\" is passed to printf()\
+    \ as a string within double quotes. When the printf() function returns Jack nimble,\
+    \ Jack be quick, Jump over the candlestick to the screen, without the double quotes.\n\
+    \nstdio.h is a header file that contains information needed for the C standard\
+    \ library input and output functions to work. This header file is needed to use\
+    \ the printf(). It is included in the program by #include.\n\nreturn returns a\
+    \ value of 0 to the system running the program, which is typically used as a signal\
+    \ that the program successfully finishes. The int main() indicates the return\
+    \ value is an integer (a whole number that doesn't have a decimal point). The\
+    \ void indicates that the main() function does not receive any data."
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_9_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "# Row, Row, Row Your Boat\n\nRow, row, row, your boat\nGently down the stream\n\
+    Merrily merrily, merrily, merrily\nLife is but a dream\n\n```\n// Row Your Boat\n\
+    #include <stdio.h>\nint main(void) {\n    printf(\"Row, row, row your boat\\n\"\
+    );\n    printf(\"Gently down the stream\\n\");\n    printf(\"Merrily merrily,\
+    \ merrily, merrily\\n\");\n    printf(\"Life is but a dream\\n\");\n    return\
+    \ 0;\n}\n```\n\n// Row Your Boat is a comment, which is indicated by the two forward\
+    \ slashes (/) in front of the line. It is written as a note for someone reading\
+    \ the code and is ignored by the computer. A comment can explain the purpose of\
+    \ the code or how it works.\n\nAn newline character that ends the line so that\
+    \ the next printf() will start printing at the beginning of the next line.\n\n\
+    When the program is executed, the fourprintf() functions print the following text\
+    \ on the screen:\n\nRow, row, row, your boat\nGently down the stream\nMerrily\
+    \ merrily, merrily, merrily\nLife is but a dream\n\n![](img/59c2bc7e23499c00f04d0ab71fe210db_10_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_11_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "# Star Light, Star Bright\n\nStar light, star bright.\nFirst star I see tonight;\n\
+    I wish / may. I wish / might.\nHave the wish / I wish tonight.\n\n```\n// Make\
+    \ a variable on a star\n#include <stdio.h>\nint main(void) {\n    int star_order\
+    \ = 1;\n\n    printf(\"Star light, star bright,\\n\");\n    printf(\"Star number\
+    \ %d that I see tonight,\\n\", star_order);\n    printf(\"Have I wish I wish I\
+    \ might,\\n\");\n\n    return 0;\n}\n```\n\nstar_order is called a variable. A\
+    \ variable stores a value in the computer's memory and the programmer gives it\
+    \ a name. The variable can be given any name—star_order was chosen because it's\
+    \ a meaningful name. Before variables are used, they must be declared with a type\
+    \ such as int for storing an integer. A variable's data type determines the type\
+    \ of data it can hold and how it can be used. For example, an integer can be added\
+    \ to another integer, but an integer can't be added to string.Variables can be\
+    \ assigned a starting value (initialized) when they are declared. In this program,\
+    \ the variable star_order is declared as an int and initialized to 1.\n\n%d is\
+    \ an integer format specifier. The format specifier of a percent sign followed\
+    \ by a character indicates the data type of the data to be displayed. In this\
+    \ program %d is replaced by the value of star_order when printf() prints the text.\n\
+    \nVariable names in C conventionally written in lowercase letters and an underscore\
+    \ (_) separates words in the name because variable names cannot contain blank\
+    \ spaces. They can contain letters, numbers, and underscores. A variable name\
+    \ cannot start with a number.\n\nThe four printf() functions print these lines:\n\
+    Star light, star bright,\nStar number 1 that I see tonight;\nI wish I may, I wish\
+    \ I might.\nHave the wish I wish tonight."
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "# Rain, Rain, Go Away\n\nRain, rain, go away\nCome again another day\nLittle\
+    \ Johnny wants to play.\n\n```\n#include <stdio.h>\n#define RAIN 1\n#define NO_RAIN\
+    \ 0\n\nint main(void) {\n    int weather = 1;\n    if (weather == RAIN) {\n  \
+    \      printf(\"Rain, rain, go away\\n\");\n        printf(\"Come again another\
+    \ day\\n\");\n        printf(\"Little Johnny wants to play.\\n\");\n    }\n  \
+    \  return 0;\n}\n```\n\n#define allows a constant value to be represented by a\
+    \ name in the code called macro. In this program, RAIN is a macro defined as the\
+    \ value 1 and the macro NO_RAIN is defined as the value 0. RAIN is replaced by\
+    \ 1 in main(). .define is called a preprocessor directive because the macro name\
+    \ is replaced by its value in every place it appears in the program before it\
+    \ is processed.\n\nThere is no semicolon at the end of #define line. Defining\
+    \ a constant value with a meaningful name, the code is easy to read and you can\
+    \ change the constant's value in a single place. It's common to use uppercase\
+    \ names for macros to easily distinguish them from variables.\n\nIf statement\
+    \ is a conditional statement that tests if a condition is true or false. An expression\
+    \ is a piece of code that evaluates to a single value. The expression parentheses\
+    \ if is the condition that is tested for true or false. If the statement's condition\
+    \ is true, its code block within curly braces {} executed.\n\nIn the if statement's\
+    \ condition (conditional expression),weather == RAIN, the double equal sign (=)\
+    \ is an equality operator. This is a type of comparison (relational) operator,\
+    \ which compares the relation between two values. The equality operator tests\
+    \ if the value on the left side of the operator is equal to the value on the right\
+    \ side of the operator. Sinceweather is a variable that stores the value and RAIN\
+    \ is replaced by 1, the expression is true, so if the statement's condition is\
+    \ true and its code block is executed.\n\nTheprintf() functions print:\nRain,\
+    \ rain, go away\nCome again another day\nLittle Johnny wants to play."
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_15_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_16_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Jack and Jill
+
+
+    Jack and Jill went up the hill
+
+    To fetch a pail of water.
+
+    Jack fell down and broke his crown,
+
+    And Jill came tumbling after.
+
+
+    In the first if condition, the && operator is called the logical AND operator.
+    It tests the expression on the left of it is true AND the expression on the right
+    of it is true. If both expressions are true, the overall condition evaluates to
+    true. Conversely, if either expression is false or both expressions are false,
+    the condition evaluates to false.
+
+
+    In this case, since jack_direction == UP and jill_direction == UP is also true,
+    if the condition is true. Therefore, the if statement''s code block is executed,
+    and jack_fall is assigned the value TRUE.
+
+
+    An if_else statement allows one of two code blocks to be based on whether the
+    condition is true or false. Any expression that evaluates to a non-zero value
+    is considered true. Since jack_fall now has a value of 1, the condition in the
+    second if statement evaluates to true and the if code block is executed. Conversely,
+    if the condition were not true, the else code block would be executed instead.
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_17_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_18_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# Humpty Dumpty\n\n> Humpty Dumpty sat on a wall.\nHumpty Dumpty had a great\
+    \ fall.\nAll the king's horses and all the king's men\nCouldn't put Humpty together\
+    \ again.\n\n```\n#include <stdio.h>\n\n#define TRUE 1\n#define FALSE 0\n\nint\
+    \ main(void) {\n    int humpty_dummy_together = TRUE, humpty_on_wall = TRUE, accident\
+    \ = FALSE;\n    if (humpty_on_wall) {\n        printf(\"Humpty Dumpty sat on a\
+    \ wall,\\n\");\n        accident = TRUE;\n    }\n    if (accident) {\n       \
+    \ printf(\"Humpty Dumpty had a great fall.\\n\");\n        humpty_dummy_together\
+    \ = FALSE;\n    }\n    if (!humpty_dummy_together) {\n        printf(\"All the\
+    \ king's horses and all the king's men mem\\n\");\n        printf(\"Couldn't put\
+    \ Humpty together again.\\n\");\n    }\n    return 0;\n}\n```\n\nMultiple variables\
+    \ can be declared on the same line if they are of the same data type. The variables\
+    \ humpty_dummy_together, humpty_on_wall, and accident are all integers declared\
+    \ on one line by being separated by commas with it at the start of the line.\n\
+    \nSince humpty_on_wall is initialized to FALSE, the first statement is executed,\
+    \ which assignsTRUE to accident. This causes the second statement to be executed,\
+    \ which assignsFALSE to humpty_dummy_together.\n\nThe NOT operator is represented\
+    \ by the exclamation mark (!) symbol. When it's placed in front of an expression,\
+    \ it reverses the logical value of the expression. It changes true to false, and\
+    \ false to true. Therefore, the if statement's condition evaluates to truehumpty_dummy_together\
+    \ is false, which is inverted by the NOT operator to make the condition true."
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# Peter Piper\n\nPeter Piper picked a peck of pickled peppers.\nIf Peter Piper\
+    \ picked a peck of pickled peppers.\nWhere's the peck of pickled peppers Peter\
+    \ Piper?\n\n```\n#include <stdio.h>\n\n#define PICKLED_PEPPERS 0\n#define CHOCOLATES\
+    \ 1\n#define FRUIT_CANDIES 2\n#define GUMMY_BEARS 3\n\nint main(void) {\n    int\
+    \ item_picked = PICKLED_PEPPERS;\n    if (item_picked == CHOCOLATES) {\n     \
+    \   printf(\"Peter Piper picked chocolates\\n\");\n    } else if (item_picked\
+    \ == PICKLED_PEPPERS) {\n        printf(\"Peter Piper picked a peck of pickled\
+    \ peppers\\n\");\n        printf(\"Where's the peck of pickled peppers Peter Piper\
+    \ picked?/\\n\");\n    } else if (item_picked == FRUIT_CANDIES) {\n        printf(\"\
+    Peter Piper picked fruit candies\\n\");\n    } else if (item_picked == GUMMY_BEARS)\
+    \ {\n        printf(\"Peter Piper picked gummy bears\\n\");\n    } else {\n  \
+    \      printf(\"Did Peter Piper pick anything?\\n\");\n    }\n    return 0;\n\
+    }\n```\n\nAn else if...else statement allows multiple conditions to be tested\
+    \ in sequence. In this program, the first true condition is executed. The first\
+    \ else if block is executed since item_picked was assigned the value of PICKLED_PEPPERS."
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Candy Shop
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_22_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "# One, Two, Buckle My Shoe\n\nOne, two, buckle my shoe\nThree, four, knock\
+    \ at the door\nFive, six, pick up sticks\nSeven, eight, lay them straight\nNine,\
+    \ ten, a big fat hen.\n\n```\n#include <stdio.h>\n\nint numbers[10] = {1, 2, 3,\
+    \ 4, 5, 6, 7, 8, 9, 10};\n\nint main() {\n    printf(\"%d, %d,\\n\", numbers[0],\
+    \ numbers[1]);\n    printf(\"%d, %d, knock at the door\\n\", numbers[2], numbers[3]);\n\
+    \    printf(\"%d, %d, pick up sticks\\n\", numbers[4], numbers[5]);\n    printf(\"\
+    %d, %d, lay them straight\\n\", numbers[6], numbers[7]);\n    printf(\"%d, %d,\
+    \ a big fat hen.\\n\", numbers[8], numbers[9]);\n\n    return 0;\n}\n```\n\nAn\
+    \ array is a collection of variables called elements that have the same data type.\
+    \ The elements are stored in a block of memory in sequential order. An array is\
+    \ declared with the data type of its elements followed by the array name and number\
+    \ of array elements in brackets].\n\nWhen an array is declared, you can initialize\
+    \ it by using a list of comma-separated values enclosed in braces (). In this\
+    \ program, numbers is an array that has 10 elements that are initialized with\
+    \ the integer values 1 through 10. The size could have been left out of the declaration\
+    \ (numbers[]), since the size is automatically determined from the number of values\
+    \ in the initialization list\n\nAn array is accessed with index, which is an integer\
+    \ value that represents its position in the array. The first element in an array\
+    \ starts at an index 0, so numbers[0] is the first array element, which has a\
+    \ value of 1. The last array element is numbers[9], which has a value of 10.\n\
+    \nThe printf() functions print:\n1, 2, buckle my shoe\n3, 4, knock at the door\n\
+    5, 6, pick up sticks\n7, 8, lay them straight\n9, 10, a big fat hen."
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "# Hickory Dickory Dock\n\nHickory, dickory, dock.\nThe mouse ran up the clock.\n\
+    The clock struck one,\nThe mouse ran down,\nHickory, dickory, dock.\n\n```\n```c\n\
+    #include <stdio.h>\ninclude <string.h>\nint main(void) {\n    int clock_hour =\
+    \ 1;\n    char mouse_run_direction[10] = \"up\";\n    char first[] = \"Hickory\"\
+    ;\n    char middle[] = \"dickory\";\n    char last[] = \"dock\";\n\n    printf(\"\
+    %s, %s, %s, first, middle, last,\\n\", first, middle, last);\n    printf(\"%s\
+    \ ran up the clock %d,\\n\", mouse_run_direction, clock_hour);\n    printf(\"\
+    The clock struck %d,\\n\", clock_hour);\n    strcpy(mouse_run_direction, \"down\"\
+    );\n    printf(\"%s ran down %s,\\n\", mouse_run_direction);\n    printf(\"%s,\
+    \ %s, %s, first, middle, last,\\n\", first, middle, last);\n    return 0;\n}\n\
+    ```\n```\n\nThe char type is used to represent a character as a letter or number.\
+    \ A string is an array of characters that represent such as words or sentences.mouse_run_direction\
+    \ is declared as a character array of size 10, which means it can hold up to ten\
+    \ characters. The null character \\ is automatically added as the last element\
+    \ of a string to indicate its end. Since it is initialized with the stringup,\
+    \ the characters u, p, and are stored in the first three elements of the array.\n\
+    \nWhen declaring a character array that is initialized with a string, it's not\
+    \ necessary to specify the array's size. However the size of the array is determined\
+    \ by the length of the string, which means there won't be enough space for characters\
+    \ if a longer string is assigned to the array later mouse_run_direction is declared\
+    \ with an array size of 10, which allows it to accommodate the longer down that\
+    \ it is assigned to. The size of each array first, middle, and last is determined\
+    \ by the size of its string. For examplelastdock has a size of four characters\
+    \ and the null character is automatically added at the end.\n\n%s is a string\
+    \ specifier that printf replaces with the actual string value passed to it.stringh\
+    \ is a header file in the C standard library that contains functions for performing\
+    \ string operations.strcpy is a function declared that is used to copy a string\
+    \ from one location to another. It is used to copy the string down into mouse_run_direction.\
+    \ The printf functions print the following:\n\nHickory, dickory, dock\nThe mouse\
+    \ ran up the clock.\nThe struck 1,\nThe mouse ran down,\nHickory, dickory, dock.\n\
+    \n![](img/59c2bc7e23499c00f04d0ab71fe210db_25_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_26_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# # Hey Diddle Diddle\n\n```\n#include <stdio.h>\n#define CAT 0\n#define FIDDLE\
+    \ 1\n#define SPOON 2\n#define MOON 3\n#define COW 4\n#define LITTLE_DOG 5\n\n\
+    int main(void) {\n    int thing_chosen;\n    char name[] = \"diddle\";\n\n   \
+    \ printf(\"%s %s\\n\", name);\n    printf(\"The cat and the fiddle\\n\");\n  \
+    \  printf(\"The cow jumped over the moon\\n\");\n    printf(\"The little dog laughed\
+    \ to see such sport,\\n\");\n    printf(\"And the dish ran away with the spoon\\\
+    n\");\n\n    thing_chosen = SPOON;\n    switch (thing_chosen) {\n        case\
+    \ 0:\n            printf(\"the cat\");\n            break;\n        case 1:\n\
+    \            printf(\"the fiddle\");\n            break;\n        case 2:\n  \
+    \          printf(\"the spoon\");\n            break;\n        case 3:\n     \
+    \       printf(\"the moon\");\n            break;\n        case 4:\n         \
+    \   printf(\"the cow\");\n            break;\n        case 5:\n            printf(\"\
+    the little dog\");\n            break;\n        default:\n            printf(\"\
+    nothing\");\n            break;\n    }\n\n    return 0;\n}\n```\n\nA switch statement\
+    \ is an alternative to using a long if_else if_else statement to test if an integer\
+    \ value or a character value is equal to a value in a list. The expression after_switch\
+    \ is tested for a match in a list of case values. If there is a matched value\
+    \ in the list, one or more statements with the matched value are executed. When\
+    \ a break is reached, the switch statement is exited. The default label is optional,\
+    \ and its code block will be executed if there is no matched value in the case\
+    \ list.\n\nSince thing_chosen was assigned the value of SPOON, which is 2, the\
+    \ case 2 code block is executed, which prints the spoon. Since there was no newline\
+    \ in the printf(), And the dish ran away with the spoon is printed as the last\
+    \ sentence.\n\n![](img/59c2bc7e23499c00f04d0ab71fe210db_27_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "# One Potato, Two Potatoes\n\nOne potato, two potatoes,\nThree potatoes, four!\n\
+    Five potatoes, six potatoes,\nSeven potatoes, more!\n\n```\n#include <stdio.h>\n\
+    int main(void) {\n    int potato_count = 0;\n    for (int i = 0; i < 7; i++) {\n\
+    \        potato_count = potato_count + 1;\n        if (potato_count == 1) {\n\
+    \            printf(\"One potato\\n\");\n        } else if (potato_count == 4)\
+    \ {\n            printf(\"four!\\n\");\n        } else {\n            printf(\"\
+    %d potatoes\\n\", potato_count);\n        }\n    }\n    printf(\"more!\\n\");\n\
+    \    return 0;\n}\n```\n\nA loop repeats a code block (with curly braces({}))\
+    \ for a specified number of times. In this program, the loop repeats (iterates)\
+    \ 7 times to count 7 potatoes. The loop's header, for(int i = 0; i < 7; i++),\
+    \ declares i as an integer and initializes it to 0. Although the loop variable\
+    \ can be any valid name, the i (representing \"index\") is commonly used in C\
+    \ programming. Next, this process is followed:\n\n+   Step 1. The condition <\
+    \ i < 7 is tested for true or false.\nStep 2. If the condition is true, the loop\
+    \ code block is executed. If it's false, the code block is not executed and the\
+    \ program continues jumping to the line of code after the loop.\nStep 3. After\
+    \ the code block executes,i++ increases i by the increment operator++.\n\nSteps\
+    \ 1 through3 are repeated until the condition i < 7 is false (when i = 7), at\
+    \ which point the program exits the loop.\n\nIn the for-loop, the statement potatoes\
+    \ = potatoes + 1 assigns the value of potatoes + 1 to potatoes, which increases\
+    \ the potatoes value by 1 using the addition operator(+). Since the loop repeats\
+    \ 7 times and potato_count was initialized to 0, the value of potato_count is\
+    \ 7 when the loop is exited.\n\nThe if..else statement within the for loop code\
+    \ block causes a particularprintf() statement to execute based on the potato_count\
+    \ value."
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_30_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# Little Bo-Peep\n\nLittle Bo-Peep has lost her sheep,\ndoes't know where to\
+    \ find them;\nleave them alone, and they'll come home,\nbringing their tails behind\
+    \ them.\n\n```\n#include <stdio.h>\n#define AT_HOME 1\n#define NOT_AT_HOME 0\n\
+    \nint main(void) {\n    int sheep_at_home[5] = {0};\n    int sheep_count = 5;\n\
+    \n    for (int i = 0; i < 5; i++) {\n        if (sheep_at_home[i] == NOT_AT_HOME)\
+    \ {\n            printf(\"Sheep number %d is not at home\\n\", sheep_count);\n\
+    \            sheep_count--;\n        }\n        if (sheep_count == 0) {\n    \
+    \        printf(\"Little Bo-Peep has lost her sheep\\n\");\n            printf(\"\
+    and doesn't know where to find them.\\n\");\n            printf(\"cleave them\
+    \ alone, and they'll come home\\n\");\n            printf(\"bringing their tails\
+    \ behind them.\\n\");\n        }\n    }\n\n    return 0;\n}\n```\n\nAn array's\
+    \ elements can be initialized by assigning within curly braces { } to the array\
+    \ when it is\ndeclared.\n\nIn this program, the for loop iterates (loops through)\
+    \ each array element using the loop variable; an\nindex to access each array.\
+    \ The first element is sheep_at_home[0], the first element\nof array starts at\
+    \ an index of 0. Since every array element was initialized to 0, the if statement\n\
+    for loop is true starts at 0; the sheep number value in\nprintf() is i+1, 0 Sheep\
+    \ number 1 is not at home is printed in the first iteration of the loop.\n\nThe\
+    \ sheep_count value is decreased (decremented) using the decrement operator as\
+    \ it is represented\nby minus signs --. The for loop iterates 5 times and sheep_count\
+    \ is decremented in every loop\niteration, sheep_count has a value of 0 when the\
+    \ loop is exited. Therefore, the next if statement outside\nof the for loop is\
+    \ executed and the nursery rhyme is printed."
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_32_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# Twinkle, Twinkle, Little Star\n\nTwinkle, twinkle, little star,\nHow I wonder\
+    \ what you are!\nUp above the world so high,\nLike a diamond in the sky.\nTwinkle,\
+    \ twinkle, little star,\nHow I wonder what you are!\n\n```\n#include <stdio.h>\n\
+    \nint main() {\n    char star_material[30];\n    int star_num;\n    char star_size[]\
+    \ = ('T', 'w', 'i', 'n', 'k', 'l', 'e', '\\0');\n\n    printf(\"Twinkle, %s star,\
+    \ how I wonder what you are!\\n\", star_size);\n    printf(\"Up above the world\
+    \ so high,Like a diamond in the sky.\\n\");\n    printf(\"Twinkle, twinkle, %s,\\\
+    n\", star_size);\n    printf(\"How I wonder what you are!\\n\");\n\n    printf(\"\
+    What is the star made of?\\n\");\n    fgets(star_material, 30, stdin);\n    printf(\"\
+    Enter a number for the star: \\n\");\n    scanf(\"%d\", &star_num);\n    printf(\"\
+    Star number %d is made out of %s\\n\", star_num, star_material);\n\n    return\
+    \ 0;\n}\n```\n\nThe star_material array was a length of 30 to provide enough space\
+    \ for any possible strings that may be assigned to it. The star_size array is\
+    \ initialized to the string .with comma-separated values. A character is represented\
+    \ in code by enclosing it with single quotation marks. When initializing a string\
+    \ this way, the null character \\0 must be included at the end so it is not automatically\
+    \ added and is needed to mark the end of the string.\n\nfgets() is a function\
+    \ that reads a line from a file or \"standard input\" (usually the keyboard) and\
+    \ stores it into a character array. The input is provided to fgets() from stdin,\
+    \ which is the \"standard stream\". The maximum number of characters to be read\
+    \ and stored fgets() the input into star_material with a newline character at\
+    \ the end (since you pressed Enter on your keyboard after typing the text) and\
+    \ adds a null character \\0 to the end of the string.\n\nscanf() is used to read\
+    \ user input of different data types. In example, scanf() reads an integer into\
+    \ star_num using the %d format specifier, the ampersand & operator is used in\
+    \ &star_num because it is required to provide a variable that is not a string.\
+    \ It is important to note that scanf() can only read and store the first word\
+    \ of a string input until it encounters a whitespace (such as a space, tab, or\
+    \ newline). Therefore, fgets() should be used to read text input that may contain\
+    \ spaces."
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_34_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# # I'm a Little Teapot\n\n```\n#include <stdio.h>\n#include <string.h>\n\n\
+    struct Teapot {\n    char size[10];\n    char height[10];\n    int steam_level;\n\
+    }\n\nint main(void) {\n    struct Teapot t1; //Declare structure variable\n  \
+    \  strcpy(t1.size, \"stout\");\n    strcpy(t1.height, \"short\");\n    t1.steam_level\
+    \ = 8;\n\n    printf(\"I'm a little teapot\\n\");\n    printf(\"%s and %s!\\n\"\
+    , t1.height, t1.size);\n    printf(\"Here is my handle!Here is my spout!\\n\"\
+    );\n    printf(\"When I get all steamed up, hear me shout!\\n\");\n\n    return\
+    \ 0;\n}\n```\n\nI'm a little teapot\nShort and stout.\nHere is my handle\nHere\
+    \ is my spout\nWhen I get all steamed up,\nTip over and pour me out!\n\nA structure\
+    \ is a custom data type that groups variables together, which allows you to create\
+    \ a collection of related information. A structure's data fields are called members,\
+    \ and they can be of different data types. A structure is defined using the keyword`struct`\
+    \ with the structure's members declared within curly braces (). The structure's\
+    \ name is given after the struct keyword.\n\nIn this program, the structure named\
+    \ teapot. The teapot structure contains char array members and one member. t1\
+    \ is declared as a Teapot variable.\nThe operator () is used to access members\
+    \ of a structure. The steam_level member of t1 is assigned a value of 8. The dot\
+    \ operator cannot be used to assign multiple array elements at once, char arrays\
+    \ cannot be assigned strings with the dot operator. The string function `strcpy()`\
+    \ is used to assign strings to the size and height members. The string stout is\
+    \ assigned to the size member of t1 and the string short is assigned to the height\
+    \ member of t1. The `printf()` functions print the following:\n\nI'm a little\
+    \ teapot\nShort and stout\nHere is my handle\nHere is my spout\nWhen I get all\
+    \ steamed up, hear me shout\nTip over and pour me out!"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "# The Muffin Man\n\nDo you know the muffin man?\nThe muffin man, the muffin\
+    \ man.\nDo you know the muffin man\nWho lives in Drury Lane?\n\n```\n#include\
+    \ <stdio.h>\n#include <string.h>\n\nttypedef struct {\n    char name[15];\n  \
+    \  char home_street_name[20];\n} Person_t;\n\nint main(void) {\n    Person_t person_1;\n\
+    \n    strcpy(person_1.name, \"the muffin man\");\n    strcpy(person_1.home_street_name,\
+    \ \"Drury Lane\");\n    printf(\"Do you know %s?\", person_1.name);\n    printf(\"\
+    %s, Do you know %s?%s?\", person_1.name, person_1.name, person_1.name);\n    printf(\"\
+    Who lives in %s?\", person_1.home_street_name);\n    printf(\"Enter Y or N: \"\
+    );\n    scanf(\"%c\", &response);\n\n    if (response == 'Y') {\n        printf(\"\
+    So you DO know the muffin man!\");\n    } else {\n        printf(\"I don't know\
+    \ him either\");\n    }\n\n    return 0;\n}}\n```\n\nThe keyword typedef allows\
+    \ to create a new name (alias) for an existing data type. In this program, typedef\
+    \ is used in struct to create a new struct type called Person_t. When you use\
+    \ typedef to create a new name for a struct data type, you can declare variables\
+    \ of that type without using the struct keyword. person_1 is declared with the\
+    \ Person_t data type created using typedef. The first printf() functions print:\n\
+    \nDo you know the muffin man?\nMuffin man, the muffin man. Do you know the muffin\
+    \ man?\nWho lives in Drury Lane?\nEnter Y or N:\n\nThe scanf() function reads\
+    \ the single character input entered by the user with the statement tests if response\
+    \ has the character value Y, and stores the result in response. In which case\
+    \ so you DO know the muffin man is printed. Otherwise, I don't know him either."
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_38_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "# # Here We Round the Mulberry Bush\n\n+   - Here we go round the mulberry\
+    \ bush.\n- Mulberry bush.\n- Here we go round the mulberry bush On a cold and\
+    \ frosty morning.\n\n+   - This is the way we brush our teeth.\n- Brush our teeth.\n\
+    - This is the way we brush our teeth On a cold and frosty morning.\n\n+   - This\
+    \ is the way we wash our face,\n- Wash our face.\n- Wash our face.\n- This is\
+    \ the way we wash our face On a cold and frosty morning.\n\n+   - This is the\
+    \ way we comb our hair,\n- Comb our hair,\n- Comb our hair.\n- This is the way\
+    \ we comb our hair On a cold and frosty morning.\n\n+   - This is the way we put\
+    \ on our clothes,\n- Put on our clothes.\n- Put on the clothes.\n- This is the\
+    \ way we put on our clothes On a cold and frosty morning.\n\n+   - Here we go\
+    \ round the mulberry bush,\n- Mulberry bush.\n- Mulberry bush.\n- Here we go round\
+    \ the mulberry bush On a cold and frosty morning.\n\n```\n#include <stdio.h>\n\
+    \n//Function definitions\nvoid mulberry_bush(void) {\n    printf(\"Here we go\
+    \ round the mulberry bush\n```\n\nThere’s a lot of repetitive text in our nursery\
+    \ rhyme! This is best handled with user-defined functions. A user-defined function\
+    \ is a block of code(with curly braces) that allows you to create a specific task.\
+    \ It allows you to reuse code without re-writing the code multiple times and makes\
+    \ the code organized.\n\nThe first line of the function definition is the function\
+    \ header (also called the function signature). The function name is followed by\
+    \ parentheses that can contain one or more parameters (also formal parameters),\
+    \ which are variables that store information passed into the function. In this\
+    \ program, the how_to() function has a single parameter perform_action[] that\
+    \ is a character array. Since the function mulberry_bush() has no parameters,\
+    \ void is written in its parentheses.\n\nA function can also return a value, whose\
+    \ data type is given before the function name. Since the two functions in this\
+    \ program don’t return a value,void is written before each function name."
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_40_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "```\n//Function prototypes\nvoid mulberry_bush(void);\nvoid how_to(char perform_action[]);\n\
+    \nint main(void)\n{\n    //Function calls\n    mulberry_bush();\n    how_to(\"\
+    wash our face\");\n    how_to(\"brush our teeth\");\n    how_to(\"comb our hair\"\
+    );\n    how_to(\"put on our clothes\");\n    mulberry_bush();\n\n    return 0;\n\
+    }\n```\n\nYou use a function to execute (run) a function's code. The function\
+    \ call consists of the function's name enclosed by parentheses that contain values\
+    \ to be passed into any parameters it has. A value that is passed into a function's\
+    \ parameter is called an argument.\n\nA function needs to be defined or declared\
+    \ before it is called. A function prototype is a function declaration that allows\
+    \ you to call a function defined after main(). The function prototypes on the\
+    \ previous page can be added to the program before or after the main() function.\n\
+    \nIn the first how_to() function, \"wash our face\" is the argument that is passed\
+    \ into the perform_action parameter of the how_to() function. The perform_action\
+    \ value can be used within the how_to() function. The how_to() function then prints:\n\
+    \n+   wash our face\nwash our face\nThis is the way we wash our face\n a cold\
+    \ and frosty rhyme.\n\nWhen a function is called, the program transfers control\
+    \ to the function. After the function executes, the program resumes from where\
+    \ it left off after the function call. The next function call how_to(\"brush our\
+    \ teeth\") is executed. The six function calls in this program print the six verses\
+    \ of the nursery rhyme.\n\nmulberry_bush() is a function that doesn't have any\
+    \ arguments since the function doesn't have parameters. It is used to print ones\
+    \ and all of the nursery rhyme.\n\nAs you can see, a function allows a block of\
+    \ code to be re-used without typing it multiple times. As a result, this program\
+    \ is shorter than the nursery rhyme it prints to the screen! Functions also make\
+    \ a program more organized and readable by breaking the program down into separate\
+    \ blocks of code."
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# This Little Piggy\n\nThis little piggy went to market.\nThis little piggy\
+    \ stayed home,\nThis little piggy had roast beef.\nThis little piggy had none.\n\
+    This little piggy went...\nWee, wee, wee,\nall the way home!\n\n```\n#include\
+    \ <stdio.h>\nvoid piggy_activity(int piggy_number); //Function prototype\nint\
+    \ main(void) {\n    for (int i = 1; i < 6; i++) {\n        piggy_activity(i);//Function\
+    \ call\n    }\n    return 0;\n}\nvoid piggy_activity(int piggy_number) //Function\
+    \ definition {\n    printf(\"This little piggy \");\n    switch (piggy_number)\
+    \ {\n        case 1:\n            printf(\"went to market\\n\");\n           \
+    \ break;\n        case 2:\n            printf(\"stayed home\\n\");\n         \
+    \   break;\n        case 3:\n            printf(\"had roast beef\\n\");\n    \
+    \        break;\n        case 4:\n            printf(\"had none\\n\");\n     \
+    \       break;\n        case 5:\n            printf(\"went wee, wee, wee, all\
+    \ the way home!\\n\");\n            break;\n        default:\n            printf(\"\
+    doesn't exist\\n\");\n    }\n}\n```\n\nFor the for loop, the piggy_activity()\
+    \ function is called with the current value of the loop variable as the argument\
+    \ passed into the piggy_number parameter. This results in the program calling\
+    \ piggy_activity() five times, each with a different argument from 1 to 5. In\
+    \ the first iteration of the for loop, the function call is piggy_activity(1),\
+    \ which starts at 1. In the last iteration of the for loop, the function call\
+    \ is piggy_activity(5). The switch statement determines the output based on the\
+    \ value of: piggy_number.\n\nWhen the first function is executed, This little\
+    \ piggy went to market. When the last function is executed, This little piggy\
+    \ went wee, wee, wee, all the way home is printed. If the piggy_number value does\
+    \ not match a case value, This little piggy doesn't exist would be printed. This\
+    \ does not happen in the program since the function is called with arguments from\
+    \ 1 through 5."
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_44_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "# Goldilocks and the Three Bears\n\nOnce upon a time, there was a girl named\
+    \ Goldilocks who liked to play in the woods One day as she was chasing butterflies\
+    \ in the forest, she arrived at a small house. Goldilocks knocked on the door,\
+    \ but no one was home. She smelled delicious food, so went inside. There were\
+    \ three bowls of porridge on the table. She tasted the large bowl of porridge\
+    \ and it was too hot. She tasted the medium sized of porridge, and it was too\
+    \ cold. She tasted the small bowl of porridge, and it was just right. so she ate\
+    \ the whole bowl!\n\n```\n#include <stdio.h>\nenum (FALSE, TRUE);\nenum size_e\
+    \ {SMALL = 2, MEDIUM, LARGE};\n//Function prototypes\nvoid porridge_test(enum\
+    \ size_e porridge_size);\nvoid chair_test(enum size_e chair_size, int person_weight);\n\
+    void bed_test(enum size_e bed_size);\nvoid porridge_test(enum size_e porridge_size)\
+    \ {\n    if (porridge_size == LARGE) {\n        printf(\"The large porridge is\
+    \ too hot\\n\");\n    } else if (porridge_size == MEDIUM) {\n        printf(\"\
+    The medium-sized porridge is too cold\\n\");\n    } else if (porridge_size ==\
+    \ SMALL) {\n        printf(\"The small porridge is just right! I'll eat it.\\\
+    n\");\n    }\n}\n```\n\nContinued...\n\nAn enum is a data type defined using the\
+    \ enum keyword that assigns integer values to names. By default, the first name\
+    \ is assigned values and each subsequent name is assigned one greater than the\
+    \ previous name. In program, FALSE has a value of 0 and the next value TRUE has\
+    \ a value of 1. Enums are typically capitalized to indicate they hold constant\
+    \ values.\n\nThere are two enums defined in this program it is good practice to\
+    \ use enums to group information together. An enum can be given a name like the\
+    \ enum size_e in this program. By giving an enum name, you can create a variable\
+    \ of type. The porridge_test parameter porridge_size is of type enum size_e, which\
+    \ means porridge_size can only accept a value defined in the size_e enum.\n\n\
+    Named values in an enum can be any integer value, but if not specified, the default\
+    \ is to increment the previous value by 1. In this program, SMALL is assigned\
+    \ a value of 2, MEDIUM is assigned 3 and LARGE is assigned 4.\n\n![](img/59c2bc7e23499c00f04d0ab71fe210db_45_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_46_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "Goldlocks looked for a place to sit and found three chairs. She sat in the\
+    \ large chair and it was too hard. She sat in the medium-sized chair and it was\
+    \ too soft. She sat in the small chair and it was just right. However, she exceeded\
+    \ the chair's weight limit of 50 pounds (as shown on the label) and the chair\
+    \ suddenly broke into pieces!\n\n```\nvoid chair_test(enum_size_e chair_size,\
+    \ int person_weight) {\n    if (chair_size == LARGE) {\n        printf(\"The large\
+    \ chair is too hard\\n\");\n    } else if (chair_size == MEDIUM) {\n        printf(\"\
+    The medium-sized chair is too soft\\n\");\n    } else if (chair_size == SMALL)\
+    \ {\n        printf(\"The small chair is just right!\\n\");\n        if (person_weight\
+    \ > 50) {\n            printf(\"Oh no, it broke into pieces!\\n\");\n        }\n\
+    \    }\n}\nContinued...\n```\n\nA function can have multiple parameters, which\
+    \ are separated by commas. When the function is called, arguments must be separated\
+    \ by commas in the same order as the parameters in the function definition. The\
+    \ chair_test() function has the parameters chair_size and person_weight.\n\nThe\
+    \ chair_test() function contains if...else if...else statements that test the\
+    \ value of chair_size to determine which message to print. If the value of chair_size\
+    \ is SMALL, the function prints The small chair is just right! and then checks\
+    \ the value of person_weight using another if statement nested inside the else\
+    \ if statement. It uses the greater than operator()> to test if person_weight\
+    \ is greater than 50, in which case it prints Oh no, it just broke into pieces!\n\
+    \n![](img/59c2bc7e23499c00f04d0ab71fe210db_47_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_48_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "Goldilocks looking for a place to rest and found three beds She climbed into\
+    \ the large bed and it was too hard. She climbed into the medium:sized bed and\
+    \ it was too soft. She climbed into the small bed and it was just right, so she\
+    \ fell asleep. The three bears who lived in the house returned from their walk\
+    \ and found Goldilocks asleep in the small bed. They woke up and she ran out the\
+    \ door!\n\n```\nvoid bed_test(enum size_e bed_size) {\n  if (bed_size == LARGE)\
+    \ {\n    printf(\"The large bed is too hard\\n\");\n  } else if (bed_size == MEDIUM)\
+    \ {\n    printf(\"The medium-sized bed is too soft\\n\");\n  } else if (bed_size\
+    \ == SMALL) {\n    printf(\"The small bed is just right! I'll take a nap.\\n\"\
+    );\n  }\n}\n\nint main(void) {\n  int bears_home = FALSE;\n  if (!bears_home)\
+    \ {\n    printf(\"I'll go into the house because no one is home\\n\");\n  }\n\
+    \  porridge_test(LARGE);\n  porridge_test(MEDIUM);\n  porridge_test(SMALL);\n\n\
+    \  int weight = 60;\n  chair_test(LARGE, weight);\n  chair_test(MEDIUM, weight);\n\
+    \  chair_test(SMALL, weight);\n\n  bed_test(LARGE);\n  bed_test(MEDIUM);\n  bed_test(SMALL);\n\
+    \  printf(\"Run! The bears are home!\\n\");\n  return 0;\n}\n```\n\nThe variable\
+    \ bears_home is assigned the enum value of FALSE, which is ø. The NOT operator\
+    \ (!) inverts the value of bears_home, making the if condition true and printing\
+    \ the messageI'll go into the house because no one is home.\n\nThe values of LARGE,\
+    \ MEDIUM, and SMALL are used as arguments in the function calls for porridge_test(),\
+    \ chair_test(), and bed_test(). Since chair_test() has two parameters, two arguments\
+    \ are included in the chair_test() function calls. The argument weight, which\
+    \ has a value of 60, is passed into the person_weight parameter of chair_test().\
+    \ Since this value is greater than 50, the nested if statement in chair_test()\
+    \ is executed and Oh, it just broke into pieces!"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_50_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# The Three Little Pigs\n\nOnce upon a time, three little pigs lived with their\
+    \ mother. One day, they left home and set out to build their own houses. The youngest\
+    \ pig built a house made of straw in one day. The middle pig built a house made\
+    \ of sticks in three days. The oldest pig built a house made of bricks in seven\
+    \ days.\n\n```\n#include <stdio.h>\n#define GONE 0\nenum {HOUSE_1 = 1, HOUSE_2,\
+    \ HOUSE_3};\n\nvoid wolf_action(int* house_number) { //function prototype\n\n\
+    int main(void) {\n    int youngest_pig_house = HOUSE_1, middle_pig_house = HOUSE_2,\
+    \ oldest_pig_house = HOUSE_3;\n\n    int* house_ptr = &youngest_pig_house;\n \
+    \   printf(\"the youngest pig built house #%d in one day \\n\", house_ptr);\n\
+    \    printf(\"at address %p\\n\", house_ptr);\n\n    house_ptr = &middle_pig_house;\n\
+    \    printf(\"the middle pig built house #%d in three days \\n\", house_ptr);\n\
+    \    printf(\"at address %p\\n\", house_ptr);\n\n    house_ptr = &oldest_pig_house;\n\
+    \    printf(\"the oldest pig built house #%d in seven days \\n\", house_ptr);\n\
+    \    printf(\"at address %p\\n\", house_ptr);\n```\n\nContinued...\nA pointer\
+    \ is a special variable that stores the memory address of another variable or\
+    \ value. While a normal variable holds a value or an address (an address in the\
+    \ computer's memory), a pointer \"points\" to this by storing the memory address.\
+    \ A pointer is declared with the type of data it points to, followed by an asterisk\
+    \ (*) and the name of the pointer variable. In this program, house_ptr is the\
+    \ name of a pointer that points to an int variable.\n\nThe address operator (&)\
+    \ is used in variable to get its memory address. The dereference operator (*)\
+    \ is used in front of a pointer to access the data stored at that memory address.\
+    \ It holds the value. The address added by house is given by &youngest_pig_house,\
+    \ middle_pig_house has a value of _, oldest_pig_house has a value of.\nThe first\
+    \ two printf statements print The youngest pig built house #1 in one day at address\
+    \ 0x7ffe2fd5ibc4. The % specifier is used to print the address, which will be\
+    \ specific to your computer's memory, so you may see a different value. house_ptr\
+    \ is reassigned the address of middle_pig_house, and then re-assigned the address\
+    \ of oldest_pig_house. The remaining printf statements print The middle pig built\
+    \ house #2 in two days at address 0x7ffe2fd5bca8 and the oldest pig built house\
+    \ #3 in seven days at address 0x7ffe2fd5bcc. The % in front of an address indicates\
+    \ that the address is in hexadecimal format, which is a way to represent numbers\
+    \ using a base of 16 (as opposed to decimal numbers, which use a base of 10)."
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_53_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "Just as the little pigs were enjoying their new houses. The Big Bad Wolf arrived\
+    \ He went to the house made of straw and shouted 'Let me in little pig, or I'll\
+    \ huff and I'll blow your house down!' The wolf blew the house made of straw.\
+    \ He went to the house made of sticks and shouted. Let me in little pig, or I'll\
+    \ huff and I'll blow your house down! The wolf blew the house made of sticks\n\
+    \n```\n/* Call wolf_action() with the address of each pig's house variable and\
+    \ display a message if a house variable is set to GONE (0) after the function\
+    \ call */\n\nwolf_action(&youngest_pig_house);\nif (youngest_pig_house == GONE)\
+    \ {\n    printf(\"The youngest pig's house is gone!\\n\");\n}\n\nwolf_action(&middle_pig_house);\n\
+    if (middle_pig_house == GONE) {\n    printf(\"The middle pig's house is gone!\\\
+    n\");\n}\n\nwolf_action(&oldest_pig_house);\nif (oldest_pig_house == GONE) {\n\
+    \    printf(\"The oldest pig's house is gone!\\n\");\n}\n\nreturn 0;\n```\n\n\
+    When variables are passed as arguments into function parameters, they arepassed\
+    \ by value. This means a copy of the variable's value is passed into the function\
+    \ parameter,leaving the original variable's value unaffected. Although the function\
+    \ can change the value passed into it, this doesn't impact the original instance.\
+    \ Instead, the new value can be returned to the function call.\n\nHowever, if\
+    \ a function parameter is a pointer, the address of a variable can be passed into\
+    \ it.this approach is called by reference. It allows the function to modify the\
+    \ variable directly, as now it has access to the original variable's memory location.\n\
+    The wolf_action() function (defined on the next page) has the potential to change\
+    \ the value of the variable whose address is passed into it. Therefore, after\
+    \ the address of youngest_pig_house is passed into wolf_action(), the variable\
+    \ youngest_pig_house is checked to see if it has a value of GONE (0). The other\
+    \ variables whose addresses are passed intowolf_action() are also tested for having\
+    \ a value ofGONE (0).\n\nA multi-line comment allows you to write a comment that\
+    \ spans as many lines as you want. As demonstrated in the code above, it starts\
+    \ with a forward slash and an asterisk /* and ends with an asterisk and a forward\
+    \ slash */."
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_55_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "He went to the brick house and shouted \"Let me in little pig or I'll puff\
+    \ and I'll puff and blow your house down!\" tried to blow down the brick house,\
+    \ but it was too sturdy! The Big Bad Wolf went down the chimney of the brick house\
+    \ and fell right into a pot of boiling soup. He ran out of the house and never\
+    \ came back again. The three little pigs lived happily ever after.\n\n```\nvoid\
+    \ wolf_action(int house_number) {\n    printf(\"Let me in little pig,\\n\");\n\
+    \    printf(\"Or I'll hull and I'll puff and blow your house down!\\n\");\n\n\
+    \    if (*house_number == 1) {\n        printf(\"The wolf blew down the straw\
+    \ house\\n\");\n        *house_number = GONE;\n    } else if (*house_number ==\
+    \ 2) {\n        printf(\"The wolf blew down the wood house\\n\");\n        *house_number\
+    \ = GONE;\n    } else if (*house_number == 3) {\n        printf(\"The wolf can't\
+    \ blow down the brick house\\n\");\n        printf(\"He went down the chimney\
+    \ and fell into a pot of boiling soup!\\n\");\n    }\n}\n```\n\nThe wolf_action()\
+    \ function's parameter, house_number, is a pointer to an integer. Note that the\
+    \ asterisk declares a variable to be a pointer can be placed anywhere between\
+    \ the data type and pointer name, so the parameter declaration could also be written\n\
+    \nint *house_number or int*house_number\n\nThe value in the address held by house_number\
+    \ is accessed by *house_number (using the dereference operator). If *house_number\
+    \ has a value of 1, the first if statement reassigns it value of GONE (0). This\
+    \ has the effect of changing the value of the variable address is passed into\
+    \ this function. If house_number has a value of 2, the first else statement reassigns\
+    \ it value of GONE (0). If house_number has a value of 3, its value is not modified.\n\
+    \nPointers are useful because they provide a way to access and manipulate memory\
+    \ directly. When used as function parameters, they enable the function to modify\
+    \ the actual data stored in memory, not just a copy of it."
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# Jack and the Beanstalk\n\nOnce upon a time, a boy named Jack lived in a cottage\
+    \ with his mother. One day, she told him to go to the town and trade his cow for\
+    \ money. In the town, Jack was convinced by a strange man to trade his cow for\
+    \ magic beans. When he got back home, his mother was angry and threw the magic\
+    \ beans out the window. The next morning, Jack saw a huge beanstalk growing outside!\n\
+    \n```\n#include <stdio.h>\nenum (MAGIC_BEANS, GIANT_BEANSTALK, COW, MONEY);\n\
+    int throw_into_yard(int item) {\n    if (item == MAGIC_BEANS) {\n        printf(\"\
+    Why did you throw the magic beans out the window?\\n\");\n        return item;\n\
+    \    }\n    return item;\n}\nint trade(int item) {\n    if (item == COW) {\n \
+    \       printf(\"I'll trade my cow for magic beans!\\n\");\n        return MAGIC_BEANS;\n\
+    \    }\n    return MONEY;\n}\nvoid climb_beanstalk(int visit_num) {\n    switch\
+    \ (visit_num) {\n        case 1:\n            printf(\"I climbed the beanstalk\
+    \ and took back a bag of gold coins!\\n\");\n            break;\n        case\
+    \ 2:\n            printf(\"I climbed the beanstalk and took back a hen that lays\
+    \ golden eggs!\\n\");\n            break;\n        case 3:\n            printf(\"\
+    I climbed the beanstalk and took back a magical hararp!\\n\");\n            printf(\"\
+    Oh no, the giant is chasing after me!\\n\");\n            printf(\"I cut down\
+    \ the beanstalk. Now we can live happily ever after!\\n\");\n            break;\n\
+    \        default:\n            printf(\"Invalid visit number. The beanstalk is\
+    \ gone!\\n\");\n    }\n}\n```\n\nFunctions return a single value with the return's\
+    \ data type specified in front of the function name. In this program, each function\
+    \ trade() and throw_into_yard() returns an int value to its function calling.\
+    \ In throw_into_yard(), if item has a value of 0 (MAGIC_BEANS), return giant_BEANSTALK\
+    \ causes the function to exit with a return value of 1 (GIANT_BEANSTALK). Otherwise,\
+    \ the integer value of item is returned from the function. Similarly, in trade(),\
+    \ if item has a value of 2 (COW), the function exits with a return value of 0\
+    \ (MAGIC_BEANS). Otherwise, the function returns a value of 3 (MONEY).\n\nContinued..."
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_59_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "Jack climbed up the beanstalk to a castle at the top. where a giant was sleeping.\
+    \ Jack took a\nbag of gold coins and climbed down the beanstalk before the giant\
+    \ woke up.Jack climbed the\nbeanstalk again and took back a then laid golden eggs.\
+    \ After Jack climbed to the castle for\nthe third time he took a musical harp.\
+    \ The giant heard the harp play as Jack was leaving and\nchased him down the beanstalk.\
+    \ Jack rushed down fast enough to cut the beanstalk before\nt giant could catch\
+    \ him. Jack and his mother lived happily ever after\n\n```\n//Function prototypes\n\
+    int trade(int item);\nint throw_into_yard(int item);\nvoid climb_beanstalk(int\
+    \ visit_num);\n\nint main(void) {\n    int in_yard;\n    int received_item = trade(COW);\n\
+    \n    if (received_item != MONEY) {\n        in_yard = throw_into_yard(received_item);\n\
+    \    }\n\n    if (in_yard == GIANT_BEANALK) {\n        printf(\"A giant just grew\
+    \ outside!\\n\");\n        climb_beanstalk(1);\n        climb_beanstalk(2);\n\
+    \        climb_beanstalk(3);\n    }\n\n    return 0;\n}\n```\n\nThe trade() function\
+    \ is called with an argument of2 (COW) and the returned value of@2 (MAGIC_BEANS)\n\
+    stored in received_item. Since the value of received_item is not equal to 3 (MONEY),\
+    \ the if\nstatement is evaluated as true. The throw_into_yard() function is then\
+    \ called with received_item as\nt argument. The throw_into_yard() function returns\
+    \ a value of 3 (GIANT_BEANALK) that is stored in\nin_yard.\n\nSince in_yard holds\
+    \ a value of 1 (GIANT_BEANALK), the second statement is evaluated as true and\n\
+    t climb_beanstalk() function is called three times. In the first call, an argument\
+    \ of 1 is passed to\nt function, which is used in the switch() statement to print\
+    \ I climbed the beanstalk and took\na bag of gold coins. In the second function\
+    \ call, the argument of 2 results in the printing of I\nargument of 3 results\
+    \ in the following lines being printed:\nI climbed the beanstalk and took back\
+    \ a musical harp\nIn the third function call, I climbed the beanstalk and took\
+    \ back a then then laid golden eggs.\nOh no, the giant is chasing after me!\n\
+    I cut down the beanstalk. Now we can live happily ever after"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_61_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "# # Little Red Riding Hood\n\nOnce upon a time, there was a girl known as Little\
+    \ Red Riding Hood. One day, her mother asked her to bring a basket of food (cupcakes,\
+    \ cookies, and donuts) to her grandmother because she wasn't feeling well. As\
+    \ Little Red Riding Hood was walking through the forest to her grandmother's house,\
+    \ a wolf asked her where she was going. Little Red Riding Hood told the wolf she\
+    \ was going to granny's house.\n\n```\n#include <stdio.h>\n\ntype struct {\n \
+    \   int ears;\n    int eyes;\n    int hands;\n    int teeth;\n}\nFeatures_t;\n\
+    enum {SMALL, MEDIUM, BIG};\nconst char HUNTER = 'H';\nconst char GRANNY = 'G';\n\
+    ```\n\n![](img/59c2bc7e23499c00f04d0ab71fe210db_62_0.png)\n\n```\n#define IS_FEATURE_BIG(feature)\
+    \ feature == BIG\n//Function prototypes\nint wolf_test(Features_t features);\n\
+    char scare_wolf(char person);\n```\n\nContinued...\n\nIn previous programs, we've\
+    \ defined a macro IS_FEATURE_BIG(feature) as a symbolic name for a value. However,\
+    \ a macro can also be used to define an expression, which is a combination of\
+    \ code that evaluates to a single value.\n\nIn this program, we've defined a macro\
+    \ IS_FEATURE_BIG(feature) as a substitute for the expression (feature == BIG).\
+    \ When we use IS_FEATURE_BIG(feature), the value or variable we provide as its\
+    \ parameter is substituted for feature in the expression feature == BIG. This\
+    \ approach enhances the code's readability because IS_FEATURE_BIG conveys the\
+    \ intent of the check.\n\nIn the wolf_test() function prototype, the features\
+    \ indicates it is a Features_t structure.\n\nA variable can be declared with the\
+    \ const modifier to indicate that its value is constant and won't change during\
+    \ the program's execution. You cannot re-assign the value of a_const constant\
+    \ variable once it is set. The const variables HUNTER and GRANNY are capitalized\
+    \ to indicate they hold constant values. HUNTER is assigned the character H and\
+    \ GRANNY is assigned the character G."
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_63_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "Once she arrived at the house she thought her grandmother looked peculiar.\
+    \ She exclaimed.\n'My, what big ears you have!' 'My, what big eyes you have!'\
+    \ 'My, what big hands you have!' and\nMy, what big teeth you have!\n\n```\nint\
+    \ wolf_test(Features_t features) {\n    int features_big = IS_FEATURE_BIG(features.ears)\
+    \ &&\n                        IS_FEATURE_BIG(features.eyes) &&\n             \
+    \           IS_FEATURE_BIG(features.hands) &&\n                        IS_FEATURE_BIG(features.teeth);\n\
+    \n    if (features_big) {\n        printf(\"My, what big ears you have! My, what\
+    \ big eyes you have!\\n\");\n        printf(\"My, what big hands you have! My,\
+    \ what big teeth you have!\\n\");\n        return 1;\n    } else {\n        return\
+    \ 0;\n    }\n}\n\nchar scare_wolf(char person) {\n    if (person == HUNTER) {\n\
+    \        printf(\"I'm a hunter and I'll scare the wolf with my axe!\\n\");\n \
+    \       return GRANNY;\n    } else {\n        return 0;\n    }\n}\nContinued...\n\
+    ```\n\nAt the beginning of the wolf_test() function, the logical AND operator\
+    \ (&& is used to check if all four\nexpressions are true. An expression that is\
+    \ true evaluates to a value of. Each expression uses the\nIS_FEATURE_BIG(feature)\
+    \ macro to test if features member is equal to BIG. For example,\nIS_FEATURE_BIG(features)\
+    \ is substituted with (features.ears == BIG), which tests if the value\noffeatures.ears\
+    \ is equal to BIG. If each expression is true (1), then the overall result of\
+    \ the operation is\ntrue (1). In this case, the if statement evaluates to true\
+    \ and a value of 0 is returned from the function. If\nany expression is false\
+    \ (0), then the overall result is false (0) and the function returns.\n\nIn the\
+    \ scare_wolf() function, the person variable holds the character, the if statement\
+    \ is evaluated as\ntrue because the constant variable HUNTER stores the character.\
+    \ In this case, the function returns GRANNY,\nwhich holds the character G. If\
+    \ the value of person is not, the else statement is executed, and the function\n\
+    returns 0."
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "Little Red Riding Hood realized a wolf was in granny's clothing and she screamed.\
+    \ A hunter heard her and ran into the house. He scared off the wolf with his axe\
+    \ and recovered Little Red Riding Hood's grandmother\n\n```\nint main(void) {\n\
+    \    Features_t features_seen;\n    features_seen.ears = BIG;\n    features_seen.eyes\
+    \ = BIG;\n    features_seen.hands = BIG;\n    features_seen.teeth = BIG;\n\n \
+    \   printf(\"Hi Granny!\\n\");\n    int big_result = wolf_test(features_seen);\n\
+    \n    if (big_result) {\n        printf(\"Oh no, it's a wolf!\\n\");\n    } else\
+    \ {\n        printf(\"I brought you cupcakes, cookies, and donuts\\n\");\n   \
+    \ }\n\n    char person_rescued = scare_wolf(HUNTER);\n    if (person_rescued ==\
+    \ GRANNY) {\n        printf(\"Granny and Little Red Riding Hood are safe!\");\n\
+    \    }\n\n    return 0;\n}\n```\n\nThe structure features_seen is declared to\
+    \ be of the Features_t struct type. All members of the features_seen structure\
+    \ are assigned BIG, which has the value 2. The features_seen struct is passed\
+    \ as an argument to wolf_test(). At the beginning of wolf_test(), all four expressions\
+    \ are true and features_big is assigned a value of 1. Therefore, since features_big\
+    \ has a non-zero value, the if statement in wolf_test() is evaluated to be true.\
+    \ A value of 0 is returned from the function and assigned to big_result. Therefore,Oh\
+    \ no, it's a wolf! is printed.\n\nSince scare_wolf() returns a value of G that\
+    \ is assigned to person_rescued, the last if statement is true and Granny and\
+    \ Little Red Riding Hood are safe!is printed."
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_67_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# The Princess and the Pea
+
+
+    Once upon a time, there was a prince who couldn''t find a princess to marry. One
+    stormy night, a girl arrived at the castle and said she was a princess. The king
+    and queen let her into the castle to stay for the night in the guest room. The
+    queen wanted to test if she was really a princess, so she put a pea on top of
+    the bed''s mattress and stacked 20 mattresses on top of it. She then stacked 20
+    feather beds on top of that ''Sweet dreams'' said the queen.
+
+
+    The bed_stack array''s elements are all initialized to @. In the for loop, since
+    i is initialized to 0 and the condition is i < 21, the loop executes 20 times.
+    There is an if...else statement nested within the for loop. In the loop''s first
+    iteration (when i has a value of 0), bed_stack[0] is assigned a value of 4 (PEA).
+    In all other iterations, bed_stack[i] is assigned a value of 2 (MATTRESS).
+
+
+    In the second loop, i is initialized to 21 and since the condition is i < 41,
+    the loop executes 20 times. For each iteration, bed_stack[i] is assigned a value
+    of 3 (FEATHER_BED).'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "The queen decided that if the girl felt the pea under all the mattresses and\
+    \ feather beds, she must be a princess. After the girl woke up, the queen asked\
+    \ her how well she slept. The girl responded that she didn't sleep well at all\
+    \ because she felt a lump under the bed. The queen exclaimed:\"You must be a princess!\"\
+    \ and proceeded to put the pea into a glass case. The prince and (now) princess\
+    \ fell in love and married. They lived happily ever after.\n\n```\nprintf(\"You\
+    \ are now going to sleep on a bed stacked with these items:\\n\");\nfor (int i\
+    \ = 0; i < 4; i++) {\n    if (bed_stack[i] == MATTRESS) {\n        printf(\"Mattress\
+    \ (item #%dn)\\n\", i);\n    } else if (bed_stack[i] == FEATHER_BED) {\n     \
+    \   printf(\"Feather bed (item #%d)\\n\", i);\n    }\n}\nprintf(\"\\nsweet dreams!\\\
+    n\\n\");\nprintf(\"How well did you sleep on a scale of 0-10?\\n\");\nsleep_quality\
+    \ = 0;\nprintf(\"Definitely a %d\\n\", sleep_quality);\nif (sleep_quality < 3)\
+    \ {\n    princess = TRUE;\n    printf(\"Oh, you must be a princess!\\n\");\n}\n\
+    return 0;\n//end of main\n```\n\nThis loop executes 41 times. For each iteration,\
+    \ the value of bed_stack[i] is equal to a value of 2 (MATTRESS), the nested if\
+    \ statement evaluates to true. This case occurs for i = 1 through 20, since the\
+    \ first element of bed_stack, bed_stack[0], was assigned a value of 4 (PEA). Elements\
+    \ bed_stack[1] through bed_stack[20] were each assigned a value of 2 (MATTRESS).\
+    \ For i = 1, Mattress (item #1) is printed.\n\nFor i through 40, the if statement\
+    \ is true because bed_stack[21] through bed_stack[40] were each assigned a value\
+    \ of 3 (FEATHER_BED). For i = 21, Feather bed (item #21) is printed.\n\nThe less\
+    \ than operator (<) is used to test if the value of sleep_quality is less than\
+    \ 3. Since sleep_quality was assigned a value of 0, the if statement is true,\
+    \ which assigns a value of 1 (TRUE) to princess. Therefore, the last statement\
+    \ evaluates to true and Oh, you must be a princess! is printed."
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_71_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "# #Cinderella\n\nOnce upon a time, a girl named Cinderella lived with her evil\
+    \ stepmother and two evil stepsisters They made her do all their chores.\n\n```\n\
+    #include <stdio.h>\n\n#define NUM_ITEMS 4\n#define STEPSISTER_ONE 1\n#define STEPSISTER_TWO\
+    \ 2\n#define CINDERELLA 3\n\ntyp enum {PUMPKIN, MICE, RAT, OLD_DRESS} original_items_e;\n\
+    \    CARRIAGE, HORSES, COACHMAN, NEW_GOWN} new_items_e;\n\nvoid transform(original_items_e\
+    \ item);\nvoid transform_back(new_items_e item);\nchar test_slipper(int person);\n\
+    void slipper_test_result(char result);\n\nvoid transform(original_items_e item)\n\
+    {\n    switch (item) {\n        case PUMPKIN:\n            printf(\"a carriage\\\
+    n\");\n            break;\n        case MICE:\n            printf(\"horses\\n\"\
+    );\n            break;\n        case RAT:\n            printf(\"a coachman\\n\"\
+    );\n            break;\n        case OLD_DRESS:\n            printf(\"a new gown\\\
+    n\");\n            break;\n        default:\n            break;\n    }\n}\n```\n\
+    \nContinued...\n\nIn The Muffin Man program, the typedef keyword was used to create\
+    \ a new name (alias) for struct data type. In this program, typedef is used in\
+    \ enum definitions to create new enum data types called original_items_e and new_items_e.\
+    \ This allows to declare original_items_e and new_items_e variables without using\
+    \ the enum keyword. The transform() function has a parameter item that is of the\
+    \ original_items_e_type. This means the function argument must be one of the enum\
+    \ constants in original_items_e. The transform_back() function has a parameter\
+    \ called new_item that is of the new_items_e_type."
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_73_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "One day, a messenger arrived at the house with an invitation to meet Prince\
+    \ Charming at the royal ball. On the day of the ball Cinderella was told she couldn't\
+    \ attend because she had too many chores to do. She was very upset, but suddenly\
+    \ out of nowhere her fairy godmother appeared and said she would help her get\
+    \ to the ball. The fairy godmother transformed a pumpkin into a carriage, mice\
+    \ into horses a coachman and Cinderella's old dress into a new gown. She also\
+    \ gave Cinderella glass slippers. The fairy godmother told Cinderella the spell\
+    \ would wear off at midnight at which time the transformed things would go back\
+    \ to her original states\n\n```\nvoid preprocessor_back(new_items_e_new_item)\
+    \ {\n    switch (new_item) {\n        case CARRIAGE:\n            printf(\"a pumpkin\\\
+    n\n```\n\n![](img/59c2bc7e23499c00f04d0ab71fe210db_74_0.png)\n\n#ifdef is a preprocessor\
+    \ directive that stands for \"defined\". It checks if a macro has been defined\
+    \ earlier in the code. This happens before the code is becompiled (converted into\
+    \ machine language code the computer can understand). The CHORES_NOT_DONE macro\
+    \ defined without any specific value, for the purposes of #ifdef, it is not necessary\
+    \ for the macro to be defined—only needs to be defined.\nIf after #ifdef has been\
+    \ defined, the code between #ifdef and #endif is included in the program before\
+    \ it is compiled. Otherwise this section of code is ignored if you want code to\
+    \ be included in the program only in certain situations, as when you're debugging\
+    \ (testing your code or finding the cause of \"bugs\" (errors)). In this program,\
+    \ since CHORES_NOT_DONE is defined, I can't go to the ball since I have too many\
+    \ chores is printed.\n\n__DATE__ is a predefined macro in the C language. Before\
+    \ the program is compiled, __DATE__ macro is replaced by a string that represents\
+    \ the current date."
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_75_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "Cinderella arrived at the ball at 8 oclock she danced with Prince Charming\
+    \ until she realized the clock was striking midnight and she promptly ran away\
+    \ As she was running down the palace stairs of her glass slippers fell off and\
+    \ she didn't even notice\n\n```\nprintf(\"I'm your fairy godmother and I'll make\
+    \ your dreams come true.\\n\\n\");\nprintf(\"I am transforming the pumpkin into\
+    \ %s\");\ntransform(PUMPKIN);\nprintf(\"I am transforming the mice into %s\");\n\
+    transform(MICE);\nprintf(\"I am transforming the rat into %s\");\ntransform(RAT);\n\
+    printf(\"I am transforming your dress into %s\");\ntransform(OLD_DRESS);\n\nprintf(\"\
+    Oh, and I also got you %d slippers\\n\", glass_slippers_num);\nprintf(\"The magic\
+    \ spell wears off at midnight. Have fun!\\n\\n\");\nint hour = 8;\nwhile (hour\
+    \ <= 11) {\n    printf(\"I'm dancing with Prince Charming!%s\\n\");\n    printf(\"\
+    The clock just struck %d, hour\", hour);\n    hour++; // This is the same as hour\
+    \ = hour + 1\n}\nprintf(\"Oh no, it's midnight! Bye Charming, I have to run!\\\
+    n\\n\\n// This is the same as glass_slippers_num = glass_slippers_num - 1\nglass_slippers_num--;\n\
+    ```\n\n```\nif (glass_slippers_num % 2) {\n    printf(\"Cinderella lost a glass\
+    \ slipper!\\n\");\n}\n```\n\nContinued...\n\nThe transform() function calls with\
+    \ arguments that are en constants. In the first call, transform(PUMPKIN), the\
+    \ constant PUMPKIN, which holds a value of &, is passed as the argument. In transform(object),\
+    \ the switch statement corresponds to the value is matched, which results in the\
+    \ printing of a carriage.\n\nA while loop executes a block of code (with curly\
+    \ braces) if its condition is true, and repeats the block's execution if its condition\
+    \ remains true after the code block executes. This process repeats until the condition\
+    \ evaluates to false, at which point the loop ends. The program uses less than\
+    \ or equal operator (<=) to test if the value of hour is less than or equal to\
+    \ 11. The increment operator (++) increases the value of hour by 1 in each iteration\
+    \ of the loop. The loop executes four times since hour is initialized to 8 and\
+    \ the loop repeats until hour is incremented to 12.\n\nThe decrement operator--\
+    \ decreases the value of glass_slippers_num. The modulus operator% returns the\
+    \ remainder after division. left is defined by the value on right if glass_slippers_num\
+    \ is 1, and the remainder of divided by 2 is 1, this non-zero remainder makes\
+    \ the if evaluate to true (any non-zero value evaluates to true) and Cinderella\
+    \ lost a glass slipper is printed.\n\n![](img/59c2bc7e23499c00f04d0ab71fe210db_76_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_77_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: 'She rode back home in the carriage, which soon turned back into a pumpkin.
+    The horses turned back into mice, the coachman turned back into a rat and her
+    new gown turned back into her old dress. She walked the way home Prince Charming
+    found the missing slipper on the stairs and her two sisters ran to the door and
+    tried to find which it belonged to. When he went to Cinderella''s house, it did
+    not fit either of them. Prince Charming noticed Cinderella cleaning upstairs and
+    asked her to try the slipper. It was a perfect fit! Cinderella and Prince Charming
+    married happily ever after at the palace.
+
+
+    ```
+
+    printf("nThe magic spell is on. The following things are back:\n");
+
+    transform_back("CARRIAGE");
+
+    transform_back("MORSES");
+
+    transform_back("COACHMAN");
+
+    transform_back("GOWN");
+
+
+    printf("nI need to find the girl this glass slipper belongs to!\n");
+
+    printf("nThe first stepsister is trying on the glass slipper:\n");
+
+    char result = test_slipper("STEPSISTER_ONE");
+
+    slipper_test_result(result);
+
+    printf("nThe second stepsister is trying on the glass slipper:\n");
+
+    result = test_slipper("STEPSISTER_TWO");
+
+    slipper_test_result(result);
+
+    printf("nPrince Charming asked Cinderella to try on the glass slipper.\n");
+
+    result = test_slipper("CINDERELLA");
+
+    slipper_test_result(result);
+
+    printf("nCinderella and Prince Charming lived happily ever after.\n
+
+    ```
+
+
+    The ternary operator, used in the test_slipper() function, is a compact way of
+    choosing between two expressions to evaluate based on a condition. If the condition
+    before the question mark is true, the ternary operator evaluates to the value
+    of the first expression that is after the question mark. Otherwise, the ternary
+    operator evaluates to the value of the expression that is after the colon (:).
+    test_slipper(STEPSISTER_ONE) returns ''N'' from the function. slipper_test_result()
+    is then called with ''N'' as the argument, which results in the printing of The
+    slipper doesn''t fit- she cannot be the girl I met at the ball. The next test_slipper()
+    and slipper_test_result() functions call result in the same output. Lastly, since
+    test_slipper(CINDERELLA) returns ''Y'', the if statement in slipper_test_result()
+    is executed.'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_79_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "# The Gingerbread Man\n\nOnce upon a time, an old woman and an old man lived\
+    \ in a cottage in the countryside. The old woman decided to make gingerbread cookies\
+    \ for dessert.\n\n```\n#include <stdio.h>\n#include <math.h>\n\n#define INGREDIENTS_NUM\
+    \ 11\n\nint main(void) {\n    enum ingredients_e {\n        EGGS, BUTTER, BAKING_SODA,\
+    \ GROUND_GINGER,\n        GROUND_CINNAMON, GROUND_CLOVES, GROUND_NUTMEG, SALT,\n\
+    \        GROUND_BLACK_PEPPER, DARK_BROWN_SUGAR\n    };\n    int ingredients[INGREDIENTS_NUM]\
+    \ = {\n        FLOUR, EGGS, BUTTER, BAKING_SODA, GROUND_GINGER,\n        GROUND_CINNAMON,\
+    \ GROUND_CLOVES, GROUND_NUTMEG, SALT,\n        GROUND_BLACK_PEPPER, DARK_BROWN_SUGAR\n\
+    \    };\n    float quantities[INGREDIENTS_NUM] = {3.2,0.2,0.75,0.75,1.0,0.5,0.5,0.5,0.25,0.5};\n\
+    // This recipe makes 20 gingerbread cookies. Enter an integer value.\n    printf(\"\
+    How many gingerbread cookies do you want to make?%d\\n\",\n    int cookie_num;\n\
+    \    scanf(\"%d\", &cookie_num);\n    int batches = ceil((float)cookie_num / 20);\
+    \ // round up to next batch number\n    printf(\"A batch of %d is needed to make\
+    \ %d d cookies%d\\n\", batches, cookie_num);\n    printf(\"The gingerbread cookie\
+    \ recipe calls for:%d\\n\");\n```\n\nContinued...\n\nThe elements of the ingredients\
+    \ array are initialized with enum constant values. The quantities array contains\
+    \ elements of float data type, which are used for storing-point numbers (numbers\
+    \ with a decimal point). Each of these float represents the quantity of the corresponding\
+    \ ingredient (at the same index) in the ingredients array.\n\nThe math.h header\
+    \ file, which is part of the C standard library, provides a variety of mathematical\
+    \ functions. Among these ceil(), which returns the 'ceiling' of floating-point\
+    \ number by rounding up to the nearest integer.\n\nIn C, the division of two integers\
+    \ returns an integer. The actual result of division is a fraction, the fractional\
+    \ part is discarded, not rounded. To keep the fractional part, you can convert\
+    \ (into a different data type) by placing the desired data type in parentheses\
+    \ before the variable or value you want to convert. The scanf() function is used\
+    \ to read an integer value entered by the user and store it in cookie_num, which\
+    \ then typecast to a float before it is divided by 20. The ceil() function is\
+    \ called on the result of this division. The value returned by ceil indicates\
+    \ the total number of batches required to make the desired number of cookies."
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_81_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "First. the old woman decided to make a unique gingerbread cookie in the shape\
+    \ of a man. She followed the gingerbread cookie recipe and mixed the ingredients.\n\
+    \n```\nfor (int i = 0; i < INGREDIENTS_NUM; i++) {\n    quantities[i] *= batches;\n\
+    \    switch (quantities[i]) {\n        case FLOUR:\n            printf(\"%.2f\
+    \ cups of flour\\n\", quantities[i]);\n            break;\n        case EGGS:\n\
+    \            printf(\"%.2f eggs\\n\", quantities[i]);\n            break;\n  \
+    \      case BUTTER:\n            printf(\"%.2f cups of butter\\n\", quantities[i]);\n\
+    \            break;\n        case BAKING_SODA:\n            printf(\"%.2f teaspoons\
+    \ of baking soda\\n\", quantities[i]);\n            break;\n        case GROUND_GINGER:\n\
+    \            printf(\"%.2f tablespoons of ground ginger\\n\", quantities[i]);\n\
+    \            break;\n        case GROUND_CINNAMON:\n            printf(\"%.2f\
+    \ tablespoons of ground cinnamon\\n\", quantities[i]);\n            break;\n \
+    \       case GROUND_CLOVES:\n            printf(\"%.2f tablespoons of ground cloves\\\
+    n\", quantities[i]);\n            break;\n        case GROUND_NUTMEG:\n      \
+    \      printf(\"%.2f tablespoons of ground nutmeg\\n\", quantities[i]);\n    \
+    \        break;\n        case SALT:\n            printf(\"%.2f tablespoons of\
+    \ salt\\n\", quantities[i]);\n            break;\n        case GROUND_BLACK_PEPPER:\n\
+    \            printf(\"%.2f tablespoons of ground black pepper\\n\", quantities[i]);\n\
+    \            break;\n        case DARK_BROWN_SUGAR:\n            printf(\"%.2f\
+    \ cups of dark brown sugar\\n\", quantities[i]);\n            break;\n       \
+    \ default:\n            break;\n    }\n}\nreturn 0;\n```\n\nIn the first line\
+    \ of the code, the multiplication compound-assignment operator(*= multiplies the\
+    \ current element of the quantities array by the value of batches. This operation\
+    \ is equivalent to quantities[i] = quantities[i] * batches and calculates the\
+    \ total quantity needed for the ingredient based on the number of required batches.\
+    \ The f in printf() is the format specifier used to print a float value the float\
+    \ value should be printed to two decimal places.\n\nThe switch statement inside\
+    \ the for loop is used to check each of the ingredients array against the constants\
+    \ declared in the ingredients_enum. When a match is found, the corresponding quantity\
+    \ from the quantities array is printed, providing the measurement amount for that\
+    \ specific ingredient."
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_83_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "She baked the cookie at 350 F for ten minutes She opened the oven and much\
+    \ to her\nastishment, the gingerbread man ran out after him he shouted.'Run,run\
+    \ as fast\nas you can, you can't catch me. I m The Gingerbread Man!Next the gingerbread\
+    \ man ran past\nold man in the garden and shouted.'We already ran away from an\
+    \ old man, and I can run as fast\nrun away from you!The old man and the gingerbread\
+    \ man met.Im The Gingerbread Man!Next the gingerbread man met a pig\nHe shouted.'We\
+    \ already ran away from an old man, and I can run away\nYou The pig and the gingerbread\
+    \ man shouted.'Run, run as fast as you can, you can't catch\nme. Im The Gingerbread\
+    \ Man!Next the gingerbread man met a cow. He shouted.'We already\nrun away from\
+    \ an old man, a pig, a cow, and I can run away from youThe cow ran and\nhe shouted.'Run,\
+    \ run as fast as you can, you can't catch me. Im The Gingerbread Man!Next\ngingerbread\
+    \ man met a horse. He shouted.Two already ran away from an old woman, as\nold\
+    \ man, a cow, and I can run away from youThe horse ran away and he shouted.'Run,\
+    \ as\nfast as you, you can't catch me. Im The Gingerbread Man!\n\nContinued...\n\
+    In the function bake_cookie(350, 10), the value 350 is passed to the temp parameter,\
+    \ and 10 is passed\nto minutes parameter.\n\nA global variable, as num_chasers\
+    \ and first_chaser, is defined outside of any function and can\n accessed by any\
+    \ function within the program. On the other hand, local variable is defined within\
+    \ a\nfunction and can only be used within that function. A function's parameter\
+    \ is a local variable, and it can have\ndifferent name than the argument passed\
+    \ to it during the function call.\n\nfirst_chaser is an example of a flag variable.\
+    \ The concept of a flag is tied to its value being in one\nof two states, commonly\
+    \ TRUE or FALSE. In this case,\"setting the flag\" assigning it TRUE, and clearing\n\
+    the flag' means assigning FALSE."
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_85_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: 'The gingerbread man was eventually blocked by a river and met a fox that offered
+    to take him across it. The gingerbread man hopped on his back but once the fox
+    asked him to hop on his nose, the gingerbread man became nervous and was able
+    to hop onto the other side of the river instead. The gingerbread man escaped and
+    ran away.
+
+
+    ```
+
+    void bake_cookie(int temp
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_87_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# Run the Programs!
+
+
+    Now you can share the nursery rhymes and fairy tales with YOUR computer! You can
+    run the programs on your computer using AC compiler, which converts your source
+    code (the code you wrote) into machine code that the computer can execute. There
+    are many free C compilers available online. If you search for "free online C compiler",
+    you''ll find compilers that run without requiring a download. This is the link
+    to a good online C compiler called GDB:
+
+
+    https://www.onlinegdb.com/online_c_compiler
+
+
+    Type the code in the editor and click the green Run button at the top. You''ll
+    see the output of the printf() functions in the console at the bottom.
+
+
+    # Common Errors
+
+
+    Code editors highlight different types of code with different colors, which is
+    called syntax highlighting. For example, comments are all highlighted with the
+    same color. This makes the code easier to read.
+
+
+    If you get an error after running the code, fix the code and run it all again!
+    There are many common syntax errors. Make sure to:
+
+
+    +   - Correctly use the assignment operator (=) and equality operator (==).
+
+    - End every statement with a semicolon (;)
+
+    - Insert the correct number of quotation marks and parentheses, and place them
+    correctly. You''ll also get an error if you copy and paste quotes (such as from
+    a word processor) written in unicode format ("") rather than ASCII format (''!'').
+    When you type marks directly into the code editor, it will be in ASCII format.
+
+    - Use open and closing braces around code blocks, including function bodies, loops
+    (such as for and while), and conditional statements (such as if and else). Although
+    a code block containing only one statement doesn''t require curly braces, it''s
+    good practice to include braces in case more lines are added in the future.
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_88_0.png)
+
+
+    You are now a C programmer!'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_89_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Change the Stories
+
+
+    Change the values of variables and see how the output changes. If Jack didn''t
+    fall down the hill?
+
+
+    # Why C Programming?
+
+
+    # You Don''t Need a Magic Wand
+
+
+    C is the most popular language in embedded systems! An embedded system is a hardware
+    and software system designed to perform one or more tasks within a larger system.
+    A microcontroller is a common type of embedded system that is in devices and appliances
+    around you, like your phone, printer, microwave, washing machine, and remote control—just
+    to name a few. Now you can make things move by programming them!
+
+
+    A microcontroller has all the components of a computer contained in a single chip
+    (integrated circuit or IC). Just like your computer reads input from the keyboard
+    and outputs to the screen, a microcontroller reads inputs (such as from a sensor
+    or button) and controlsoutputs (such as turning on an LED or motor). This allows
+    the embedded system to sense and interact with the outside world.
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_90_0.png)
+
+
+    You can apply the syntax and constructs you learned in this book to programming
+    microcontrollers, so you can create your own devices. The Arduino® is a popular
+    microcontroller development platform. The Arduino language is a set of C/C++ functions
+    that you can call from your code. For more information about the Arduino platform,
+    please visit:https://www.arduino.cc
+
+
+    Arduino® is a trademark of Arduino SA'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_91_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_92_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_93_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_94_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '![](img/59c2bc7e23499c00f04d0ab71fe210db_95_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# More programming books by Shari Eskenas
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_96_0.png)
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_96_1.png)
+
+
+    A Day in Code
+
+    An illustrated story written in
+
+    The C programming language
+
+    ISBN: 978-1-73590-791-8 (paperback)
+
+    978-1-73590-791-1 (hardcover)
+
+
+    A Day in Code: Python
+
+    Learn to code in Python
+
+    through an illustrated story
+
+    ISBN: 978-1-73590-794-9 (paperback)
+
+    978-1-73590-793-2 (hardcover)
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_96_2.png)
+
+
+    Learn Python through Nursery Rhymes and Fairy Tales
+
+    Clastic Stories Translated into Python Programs
+
+    ISBN: 978-1-73590-798-7 (paperback)
+
+    978-1-73590-796-3 (hardcover)
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_96_3.png)
+
+
+    Join the celebration at
+
+    www.sundalectronics.com/Cfairytales'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# # Once Upon a Time...
+
+
+    There was an enchanted computer that loved telling classic nursery rhymes and
+    fairy tales—using C code!
+
+
+    From Jack and Jill to Little Red Riding Hood, you''ll learn to program in C as
+    the code from the computer is explained in English.
+
+
+    Get ready for storytime...and coding time!
+
+
+    ![](img/59c2bc7e23499c00f04d0ab71fe210db_97_0.png)'
+  merge: -1
+  img_proc: true
