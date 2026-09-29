@@ -1,0 +1,4030 @@
+- pgno: 0
+  md: 'PD ISO/IEC TS 19217:2015
+
+
+    ![](img/e6ef4c765bbb1f3e7b4441293baadfd4_0_0.png)
+
+
+    # BSI Standards Publication
+
+
+    # Information technology — Programming languages — C++ Extensions for concepts
+
+
+    bsi.
+
+
+    ...making excellence a habit™'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# PD ISO/IEC TS 19217:2015
+
+
+    # PUBLISHED DOCUMENT
+
+
+    # National forward
+
+
+    This Published Document is the UK implementation of ISO/IEC TS 19217:2015.
+
+
+    The UK participation in its preparation was entrusted to Technical Committee IST/5,
+    Programming languages, their environments and system software interfaces.
+
+
+    A list of organizations represented on this committee can be obtained on request
+    to its secretary.
+
+
+    This publication does not purport to include all the necessary provisions of a
+    contract. Users are responsible for its correct application.
+
+
+    © The British Standards Institution 2015.
+
+    Published by BSI Standards Limited 2015
+
+
+    ISBN 978 0 580 92559 7
+
+    ICS 35.060
+
+
+    # Compliance with a British Standard cannot confer immunity from legal obligations.
+
+
+    This Published Document was published under the authority of the Standards Policy
+    and Strategy Committee on 29 February 2016.
+
+
+    # Amendments/corrigenda issued since publication
+
+
+    | Date | Text affected |'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# TECHNICAL SPECIFICATION
+
+
+    PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS
+
+    19217
+
+
+    First edition
+
+    2015-11-15
+
+
+    # Information technology — Programming languages — C++ Extensions for concepts
+
+
+    Technologie de l''information — Langages de programmation — Extensions C++ pour
+    les concepts
+
+
+    Reference number
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    ![](img/e6ef4c765bbb1f3e7b4441293baadfd4_2_0.png)
+
+
+    © ISO/IEC 2015'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    # COPYRIGHT PROTECTED DOCUMENT
+
+
+    © ISO/IEC 2015, Published in Switzerland
+
+    All rights reserved. Unless otherwise specified, no part of this publication may
+    be reproduced or utilized otherwise in any form or by any means, electronic or
+    mechanical, including photocopying, or posting on the internet or an intranet,
+    without prior written permission. Permission can be requested from either ISO
+    at the address below or ISO''s member body in the country of the region.
+
+
+    ISO copyright office
+
+    Ch. de Blandonnet 8 • CP 401
+
+    CH-1214 Vernier, Geneva, Switzerland
+
+    Tel. +41 22 749 91 11
+
+    Fax + +41 22 749 09 47
+
+    copyright@iso.org
+
+    www.iso.org
+
+
+    ii
+
+
+    © ISO/IEC 2015 – All rights reserved'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Contents
+
+
+    +   Contents iii
+
+
+    +   List of Tables iv
+
+
+    +   Foreword v
+
+
+    +   1 General 1
+
+    1.1 Scope 1
+
+    1.2 Normative references 1
+
+    1.3 Terms and definitions 1
+
+    1.4 Implementation compliance 2
+
+    1.5 Feature-testing recommendations 2
+
+    1.6 Acknowledgments 2
+
+
+    +   2 Lexical conventions 3
+
+    2.1 Keywords 3
+
+
+    +   5 Expressions 4
+
+    5.1 Primary expressions 4
+
+
+    +   7 Declarations 11
+
+    7.1 Specifiers 11
+
+
+    +   8 Declarators 21
+
+    8.3 Meaning of declarators 21
+
+
+    +   10 Derived classes 25
+
+    10.3 Virtual functions 25
+
+
+    +   13 Overloading 26
+
+    13.1 Overloadable declarations 26
+
+    13.3 Overload resolution 26
+
+    13.4 Address of overloaded function 27
+
+
+    +   14 Templates 28
+
+    14.1 Template parameters 28
+
+    14.2 Introduction of template parameters 30
+
+    14.3 Names of template specializations 32
+
+    14.4 Template arguments 33
+
+    14.6 Template declarations 33
+
+    14.7 Name resolution 39
+
+    14.8 Template instantiation and specialization 40
+
+    14.9 Function template specializations 41
+
+    14.10 Template constraints 43
+
+
+    +   A Compatibility 53
+
+    A.1 C++ extensions for Concepts and ISO C++ 2014'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# List of Tables
+
+
+    +   A Feature-test macro(s) ........................................................................................................................
+    2
+
+    10 simple-type-specifiers and the types they specify ..........................................................................................
+    12
+
+    B Value of folding empty sequences ........................................................................................................................
+    36'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Foreword
+
+
+    ISO (the International Organization for Standardization) and IEC (the International
+    Electrotechnical Commission) form the specialized system for worldwide standardization.
+    National bodies that are members of ISO or IEC participate in the development
+    of International Standards through technical committees established by the respective
+    organization to deal with particular fields of technical activity. ISO and IEC
+    technical committees collaborate in fields of mutual interest. Other international
+    organizations, governmental and non-governmental, in liaison with ISO and IEC,
+    also take part in the work. In the field of information technology, ISO and IEC
+    have established a joint technical committee, ISO/IEC JTC 1.
+
+
+    The procedures used to develop this document and intended for its further maintenance
+    are described in the ISO/IEC Directives, Part 1. In particular the different approval
+    criteria needed for the different types of document should be noted. This document
+    was drafted in accordance with the editorial rules of the ISO/IEC Directives,
+    Part 2 (see www://www.iso.org/directives).
+
+
+    Attention is drawn to the possibility that some of the elements of this document
+    may be the subject of patent rights. ISO and IEC shall not be held responsible
+    for identifying any or all such patent rights. Details of any patent rights identified
+    during the development of the document will be in the Introduction and/or on the
+    ISO list of patent declarations received (see www.iso.org/patents).
+
+
+    Any trade name used in this document is information given for the convenience
+    of users and does not constitute an endorsement.
+
+
+    For an explanation on the meaning of ISO specific terms and expressions related
+    to conformity assessment, as well as information about ISO''s adherence to the
+    WTO principles in the Technical Barriers to Trade (TBT) see the following URL:
+    Foreword - Supplementary information
+
+
+    The committee responsible for this document is ISO/IEC JTC 1, Information technology,
+    SC 22, Programming languages, their environments and system software interfaces.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    # [intro]
+
+
+    # 1 General
+
+
+    # 1.1 Scope
+
+
+    [intro.scope]
+
+
+    This Technical Specification describes extensions to the C++ Programming Language
+    (1.2) that enable the specification and checking of constraints on template arguments,
+    and the ability to overload specialize class templates based on those constraints.
+    These extensions introduce new syntactic forms and modifications to existing language
+    semantics.
+
+
+    The International Standard, ISO/IEC 14882, provides important context and specification
+    for this Technical Specification. Instructions to modify or add arguments are
+    written as explicit instructions. Modifications to modify existing text from the
+    International Standard underlining to represent added text and striethrough to
+    represent deleted text.
+
+
+    WG21 paper N419 defines “fold expressions”, which are used to define constraint
+    expressions from the use of constrained parameter packs. This feature is not present
+    in ISO/IEC 14882:2014, but it is planned to be included in the next revision of
+    International Standard. The specification of such feature is included in this
+    document.
+
+
+    # 1.2 Normative references
+
+
+    [intro.refs]
+
+
+    The following references are indispensable for the application of this document.
+    For cited references, the only cited edition applies. For updated references,
+    the latest edition of the referenced document (including any amendments) applies.
+
+
+    +   (1.1) ISO/IEC 14882:2014, Programming Languages—C++
+
+
+    ISO/IEC 14882:2014 is hereafter called the C++ Standard. The numbering of Clauses,
+    sections, and paragraphs in this document reflects the numbering in the C++ Standard.
+    References to Clauses and sections not appearing in this Technical Specification
+    refer to the original, unmodified text in the C++ Standard.
+
+
+    # 1.3 Terms and definitions
+
+
+    [intro.defs]
+
+
+    Modify the definitions of “signature” to include associated constraints (14.10.2).
+    This allows different translation units to contain definitions of functions with
+    the same signature, excluding associated constraints, without violating the constraints
+    in the signature, such functions would have the same mangled name, appearing as
+    multiple definitions of the same function.
+
+
+    # 1.3.1 signature
+
+
+    [defs.signature]
+
+
+    <template> name, parameter type list (8.3.5), and enclosing namespace (if any),
+    and any associated constraints (14.10.2)
+
+
+    > [Note: Signatures are used as a basis for name mangling and linking. — end note]
+
+
+    # 1.3.2 signature
+
+
+    [defs.signature.templ]
+
+
+    <template> name, parameter type list (8.3.5), and enclosing namespace (if any),
+    return type, and template parameter list, and any associated constraints (14.10.2)
+
+
+    # 1.3.3
+
+
+    [defs.signature.member]'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\nN4549\n\nsignature\n\
+    <class member function> name, parameter type list (8.3.5) of which the function\
+    \ is a member, cv-qualifiers (if any), and ref-qualifier (if any), and any associated\
+    \ constraints (14.10.2)\n\n1.3.4 [defus.signature.member.templ]\n<class member\
+    \ function template> name, parameter type list (8.3.5) of which the function is\
+    \ a member, cv-qualifiers (if any), ref-qualifier (if any), return type, and template\
+    \ list, and any associated constraints (14.10.2)\n\n1.4 Implementation compliance\
+    \ [intro.compliance]\nConformance requirements for this specification are the\
+    \ same as those defined in 1.4 in the C++ Standard. [Note: Conformance is defined\
+    \ in terms of the behavior of programs. end note]\n\n1.5 Feature-testing recommendations\
+    \ [intro.features]\nAn implementation that provides support for this Technical\
+    \ Specification shall define the feature test macro(s) in Table A.\n\nTable A\
+    \ — Feature-test macro(s)\n| Macro name | Value |\n|---|---| \n| __cpp_concepts\
+    \ | 201507 |\n\n+   1 The design of this specification is based, in part, on a\
+    \ concept specification of the algorithms part of the C++ standard library, known\
+    \ as “The Palo Alto” report (WG21 N351), which was developed by a large group\
+    \ of experts as a test of the expressive power of the idea of concepts. Despite\
+    \ syntactic differences between the notation of the Palo Alto report and this\
+    \ Technical Specification, the report can be seen as a large-scale test of the\
+    \ expressiveness of this Technical Specification.\n\n+   2 This work was funded\
+    \ by NSF grant ACI-1148461."
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 2 Lexical conventions
+
+
+    # 2.1 Keywords
+
+
+    In 2.1, add the keywords concept and requires to Table 4.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nN4549\n\n# 5 Expressions\
+    \ [expr]\n\nModify paragraph 8 to include a reference to requires-expressions.\n\
+    \n+   In some contexts, unevaluated operands appear (5.1.4, 5.2.8, 5.3.3, 5.3.7).\n\
+    \n# 5.1 Primary expressions [expr.prim]\n\n# 5.1.1 General [expr.prim.general]\n\
+    \nIn this section, the requires-expression to the rule for primary-expression.\n\
+    \n```\nprimary-expression:\nliteral\n( expression )\nid-expression\nlambda-expression\n\
+    fold-expression\nrequires-expression\n```\n\nIn paragraph 8, add auto and constrained-type-name\
+    \ to nested-name-specifier:\n\n```\nnested-name-specifier:\n::\ntype-name ::\n\
+    namespace-name ::\ndectype-specifier ::\nauto ::\nconstrained-type-name ::\nnested-name-specifier\
+    \ identifier ::\nnested-name-specifier template_opt\n```\n\nAdd a new paragraph\
+    \ after paragraph 11:\n\nIn a nested-name-specifier of the form auto:: or C::\
+    \ where C is a constrained-type-name, nested-name-specifier designates a placeholder\
+    \ that will be replaced later according to the rules for placeholder deduction\
+    \ in 7.1.6.4. If a placeholder designated by a constrained-type-specifier is not\
+    \ a placeholder, the program is ill-formed.[Note: A constrained-type-specifier\
+    \ can designate a placeholder for a non-type or template (7.1.6.4). -- end note]\
+    \ The replacement type for a placeholder should be a class or enumeration type.\
+    \ [Example:\n\n```\ntemplate<typename T> const bool B = sizeof(T) == sizeof(int);\n\
+    tint const B = true;\n```\n\n```\nstruct S1 { int n; };\nstruct S2 { char c; };\n\
+    struct S3 { struct X { using Y = int; }; };\n```\n\n```\nint auto:* p1 = &S1::n;\
+    \ // auto deduced as S1\n D:* p2 = &S1::n; // error: D does not designate a placeholder\
+    \ type\n C::* p3 = &S1::n; // OK: C deduced as S1\nchar C::* p4 = &S2::c; // error:\
+    \ deduction fails because constraints are not satisfied\n```"
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nN4549\n\n```\nvoid\
+    \ f(typename auto : <X:Y>);  // error: auto cannot be deduced from Si1\nf(S<1>());\
+    \ // OK\nf<S<3>>(O); // OK\n```\n\nIn the declaration of f, the placeholder f\
+    \ are satisfied even though f is a non-deduced context (14.8.2). It may be replaced\
+    \ later through the explicit specification of template arguments. — end example\n\
+    \nAdd a new parameter after paragraph 13\n\nA program that refers explicitly or\
+    \ implicitly to a function with associated constraints that are not satisfied\
+    \ (14.10.2), other than to declare, is ill-formed. [Example]:\n\n```\nvoid f()\
+    \ requires false;\n\nf0(); // error: cannot call f\nvoid (*p1)(int) = f; // error:\
+    \ cannot take the address of f\ndectype(f) p2 = nullptr; // error: type decltype(f)\
+    \ is invalid\n```\n\nIn each case the associated constraints of f are not satisfied.\
+    \ In the declaration of p2, constraints are required to be satisfied even an unvaluated\
+    \ expression (Clause 5).\n\n# 5.1.2 Lambda expressions\n\n[expr.prim.lambda]\n\
+    \nInsert the following after paragraph 4 to define the \"generic lambda\".\n\n\
+    > A generic lambda is a lambda-expression where one or more placeholders (7.1.6.4)\
+    \ appear in the parameter-type-list of the lambda-declarator.\n\nModify paragraph\
+    \ 5 so that the meaning of a generic lambda is defined in terms of its abbreviated\
+    \ member function call operator\n\nThe closure for a non-generic lambda-expression\
+    \ has a public inline function call operator (13.5.4) which return the lambda-expression's\
+    \ parameter-declaration-clause and trailing-return-type, respectively. For a generic\
+    \ lambda, the closure consists of one type template for each occurrence of auto\
+    \ in the lambda's parameter-template-declaration-clause, in order of appearance.\
+    \ The inventype template parameter is a pack if the lambda has more than one auto\
+    \ in its parameter-type (8.5.5).\n\nThe return type and function parameters of\
+    \ the function call operator are derived from the lambda-expression's return-type\
+    \ and parameter-declaration-clause by replacing each occurrence of auto in the\
+    \ decl-specifiers of the parameter-declaration-clause. The closure for\n\na generic\
+    \ lambda has a public inline template that is an abbreviated function template\
+    \ with parameters and return type derived from the lambda-expression's parameter-declaration-clause\
+    \ and trailing-return-type respectively.\n\nAdd the following after these paragraph\
+    \ in the C++ Standard.\n\n[Example]:\n\n```\ntemplate<typename T> concept bool\
+    \ C = true;\n\nauto g = (C& a, C* b) { *a = b; }; // OK: denotes a generic lambda\n\
+    ```\n\n```\nstruct Fun {\n    auto operator()(C& a, C* b) const { *a = b; }\n\
+    };\n```\n\n§ 5.1.2"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nN4549\n\nC is a constrained-type-specifier,\
+    \ signifying that the lambda is generic. The generic lambda g1 and the function\
+    \ object fun have equivalent behavior when called with the same arguments.— end\
+    \ example]\n\n# 5.1.3 Fold expressions\n\n[expr.prim.fold]\n\nAdd this to 5.1.2.\n\
+    \n+   A fold expression performs a template parameter pack (14.6.3) over a binary\
+    \ operator.\nfold-expression:\n( cast-expression fold-operator ... )\n( fold-operator\
+    \ cast-expression ...)\n( cast-expression fold-operator ... fold-expression ...)\n\
+    fold-operator: one of\n+ = / % % & & << >>\n- += *= /= %=&= |= >>==\n! != < >\
+    \ >= && | | .+ ->*\n\n+   An expression of the form (e op) where op is a fold-operator\
+    \ is called a unary left fold.\nAn expression of the form (e op op) where op is\
+    \ a fold-operator is called a unary right fold.\nUnary left folds and unary right\
+    \ folds are collectively called unary folds. In a binary fold, the left fold.\
+    \ If e2 contains an unexpanded parameter pack, e1 shall contain an unexpanded\
+    \ parameter pack, but not both. If e1 contains an unexpanded parameter pack, the\
+    \ expression is called a binary left fold. If e2 contains an unexpanded parameter\
+    \ pack, the expression is called a binary right fold.\n\n+   An expression of\
+    \ the form (e1 op1 op2) where op1 and op2 are fold-operators is called a binary\
+    \ left fold. In a binary fold, op1 and op2 shall be the same fold-operator, and\
+    \ either e1 contains an unexpanded parameter pack or e2 shall contain an unexpanded\
+    \ parameter pack.\nExample:\n\n```\ntemplate<typename ...Args>\nbool f(Args ...\
+    \ &args) {\n    return (args & & & args); // OK\n}\n\ntemplate<typename ...Args>\n\
+    bool f(Args ... &args) {\n    return (args * + args); // error: both operands\
+    \ contain unexpanded parameter packs\n}\n```\n\n— end example]\n\n# 5.1.4 Requires\
+    \ expressions\n\n[expr.prim.req]\n\nAdd this to 5.1.\n\n+   A requires-expression\
+    \ provides a concise way to express requirements on template arguments. A requirement\
+    \ that one can be checked by name lookup (3.4) or by checking properties of types\
+    \ and expressions."
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\n```\nrequires-expression:\n\
+    \  requires requirement-parameter-list_opt requirement-body\n  requirement-clause-list:\n\
+    \    ( parameter-declaration-clause_opt )\n  requirement-body:\n    { requirement-seq\
+    \ ? }\n  requirement-seq:\n    requirement\n    requirement-seq requirement\n\
+    \  requirement:\n    simple-requirement\ntype-requirement\n    compound-requirement\n\
+    \    nested-requirement\n```\n\n2 A-expression defines a constraint (14.10) based\
+    \ on its parameters (if any) and nested requirements.\n\n3 A-expression has type\
+    \ bool and is unevaluated (5). [Note: A requires-expression is transformed into\
+    \ a constraint in order to determine if it is satisfied (14.10.2) — end note]\n\
+    \n4 A requires-expression shall appear only within a concept definition (7.1.7),\
+    \ or within the requires-clause of a template-declaration (Clause 14) or function\
+    \ declaration (8.3.5). [Example: A common use of requires-expression is to define\
+    \ requirements in concepts such as the one below:\n\n```\ntemplate<typename T>\n\
+    concept bool R() {\n  requires (T i) {\n    typename T::;\n    (*) -> const T::type&;\n\
+    \  }\n```\n\nA requires-expression can also be used in a requires-clause as a\
+    \ writing of ad hoc constraints on template arguments such as the one below:\n\
+    \n```\ntemplate<typename T>\nrequires (T x) { x + x; }\nTadd(T a, T b) { return\
+    \ a + b; }\n```\n\nThe first introduces the requires-clause, and the second introduces\
+    \ the requires-expression. [Note: Such requirements can also be written by defining\
+    \ them within a concept.\n\n```\ntemplate<typename T>\nconcept C = requires (T\
+    \ x) { x + x; }\n```\n\n```\ntemplate<typename T>\nrequires (T a, T b)\nTadd(T\
+    \ a, T b) { return a + b; }\n```\n\n> - end note\nA requires-expression may introduce\
+    \ local parameters using a parameter-declaration-clause (8.3.5). A local parameter\
+    \ of a requires-expression shall not have a default argument. Each name introduced\
+    \ by a local parameter is in scope from the point of its declaration until the\
+    \ closing brace of the requirement-body. These parameters have no linkage, storage,\
+    \ or lifetime; they are only\n\n§ 5.1.4\n\nN 459"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nN4549\n\nused as notation\
+    \ for the purpose of defining requirements. The parameter-declaration-clause of\
+    \ a\nrequirement-parameter-list shall not terminate with an ellipsis. [Example:\n\
+    \n```\ntemplate<typename T>\nconcept C1() {\n  requires(T, t ) { t; }; // error:\
+    \ terminates with an ellipsis\n```\n\n```\ntemplate<typename T>\nconcept C2()\
+    \ {\n  requires(T, void (*p)(T, ...)) // OK: the parameter-declaration-clause\
+    \ of\n  // the requires-expression does not terminate\n  { p(t); }\n} // with\
+    \ an ellipsis\n```\n\n+   - example\nThe requirement-body is comprised of a sequence\
+    \ of requirements. These requirements may refer\nto local parameters, template\
+    \ parameters, and any other declarations visible from the enabling\ncontext. Each\
+    \ requirement asserts a constraint (14.10) to the conjunction of constraints defined\b\
+    y the requires-expression. Constraints are assessed in the order in which they\
+    \ are written.\n\n+   - The substitution of template arguments into a requires-expression\
+    \ may result in the formation\nof invalid types or expressions in its requirements.\
+    \ In such cases, the constraints corresponding\nto requirements are not satisfied;\
+    \ it does not cause the program to be formed. If the\nubstitution of template\
+    \ arguments into a requirement would always result in a substitution\nfailure,\
+    \ the program is ill-formed; no diagnostic reported. [Example:\n\n```\ntemplate<typename\
+    \ T> concept C =\nrequires {\n  new int-[size_tof(T)]; // ill-formed, no diagnostic\
+    \ required\n};\n```\n\n+   - example\n5.1.4.1 Simple requirements [expr.prim.req.simple]\n\
+    \nsimple-requirement:\nexpression;\n\nA simple-requirement introduces an expression\
+    \ constraint (14.10.1.3) for its expression. [Note:\n expression constraint asserts\
+    \ the validity of an expression. end note]\n[Example:\n\n```\ntemplate<typename\
+    \ T> concept B =\nrequires (T a, b) {\n  a + b; // an expression constraint for\
+    \ a + b\n```\n\n+   - example\n5.1.4.2 Type requirements [expr.prim.req.type]\n\
+    \ntype-requirement: nested-name-specifier_opt type-name;\n\nA type-requirement\
+    \ introduces a type constraint (14.10.1.4) for the type named by its optional\n\
+    nested-name-specifier and type-name. [Note: A type requirement asserts the validity\
+    \ of an\nassociated type, either as a member, a template specialization, or an\
+    \ alias template.\nIt is not used to specify requirements for arbitrary type-specifiers.\
+    \ end note] [Example:\n\n5.1.4.2 8"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nN4549\n\n```\ntemplate<typename\
+    \ T> struct S ( );\ntemplate<typename T> using Ref = T;;\n\ntemplate<typename\
+    \ T> concept bool C =\nrequires (\n    typename T::inner; // nested member name\n\
+    \    typename S<T>; // nested class template specialization\n    typename Ref<T>;\
+    \ // alias template substitution\n);\n\n// end example\n```\n\n# 5.1.4.3 Compound\
+    \ requirements\n\n```\ncompound-requirement:\n{ expression } noexcept_opt trailing-return-type_opt\
+    \ ;\n```\n\nA compound-requirement introduces a conjunction of one or more constraints\
+    \ for the expression E. The order in which these constraints are introduced is:\n\
+    \n+   (1.1) the compound-requirement introduces an expression constraint for E\
+    \ (14.10.1.3);\n(1.2) if the noexcept specifier is present, the compound-requirement\
+    \ appends an exception constraint for E (14.10.1.7);\n(1.3) if the trailing-return-type\
+    \ is present, the compound-requirement appends one or more constraints derived\
+    \ from the type T by the trailing-return-type:\n(1.3.1) if T contains one or more\
+    \ placeholders (7.1.6.4), the requirement adds a deduction constraint (14.10.1.6)\
+    \ of Against the type T;\n(1.3.2) otherwise, the requirement appends two constraints:\
+    \ a type constraint on the formation of T (14.10.1.4) and an implicit conversion\
+    \ constraint from E to T (14.10.1.5).\n\n```\n*Example:\ntemplate<typename T>\
+    \ concept bool C1 =\nrequires(T x) {\n    (++);\n};\n```\n\nThe compound-requirement\
+    \ in C1 introduces an expression constraint for x++. It is equivalent to a simple-requirement\
+    \ with the same expression.\n\n```\ntemplate<typename T> concept bool C2 =\nrequires(T\
+    \ x) {\n    (*x);\n};\n```\n\nThe compound-requirement in C2 introduces three\
+    \ constraints: an expression constraint for *x, a type constraint on T::inner,\
+    \ and a conversion constraint requiring *x to be implicitly convertible to T::inner.\n\
+    \n```\ntemplate<typename T> concept bool C3 =\nrequires(T x) {\n    {g(x)} noexcept;\n\
+    };\n```\n\nThe compound-requirement in C3 introduces two constraints: an expression\
+    \ constraint for g(x) and an exception constraint for g(x).\n\n§ 5.1.4.3"
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\nN4549\n\n```\ntemplate<typename\
+    \ T> concept bool C() { return true; };\n```\n\n```\ntemplate<typename T> concept\
+    \ bool C5 =\nrequires(T x) {\n    f(x) -> const C&;\n};\n```\n\nThe compound-requirement\
+    \ in C5 introduces two constraints: an expression constraint for f(x), and a deduction\
+    \ constraint requiring that overload resolution succeeds for the call g(f(x))\
+    \ where g is a following invented abbreviated function template.\n\n```\nvoid\
+    \ g(const C&);\n```\n\n- end example\n\n# 5.1.4.4 Nested requirements [expr.prim.req.nested]\n\
+    \nnested-requirement:\nrequires-clause;\n\nA nested-requirement can be used to\
+    \ specify additional constraints in terms of local parameters. A nested-requirement\
+    \ appends a predicate constraint [14.10.2] for its constraint-expression to the\
+    \ conjunction of constraints introduced by its enclosing requires-expression.\
+    \ [Example:\n\n```\ntemplate<typename T> concept bool C() { return sizeof(T) ==\
+    \ 1; };\n```\n\n```\ntemplate<typename T> concept bool D =\nrequires(T t) {\n\
+    \    requires (decltype(+t))();\n};\n```\n\nThe nested-requirement appends the\
+    \ predicate constraint sizeof(decltype (+t)) == 1 [14.10.1.2).\n end example]\
+    \ [Note: The constraint-expression of the predicate constraint introduced by a\
+    \ nested-requirement is later normalized for the purposes of determining constraint\
+    \ satisfaction (14.10.2) and partial ordering (14.10.3). — end note]"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    # 7 Declarations
+
+
+    # 7.1 Specifiers
+
+
+    Extend the decl-specifier production in paragraph 1 to include the concept specifier.
+
+
+    +   The specifiers that can be used in a declaration are
+
+    decl-specifier:
+
+    - storage-class-specifier
+
+    - type-specifier
+
+    - function-specifier
+
+    - friend
+
+    - typedef
+
+    - constexpr
+
+    - concept
+
+
+    # 7.1.6 Type specifiers
+
+
+    # 7.1.6.2 Simple type specifiers
+
+
+    Add constrained-type-specifier to the grammar for simple-type-specifiers.
+
+
+    +   simple-type-specifier:
+
+    - nested-name-specifier-opt type-name
+
+    - nested-name-specifier template simple-type-id
+
+    - char
+
+    - char16_t
+
+    - char32_t
+
+    - wchar_t
+
+    - bool
+
+    - short
+
+    - int
+
+    - long
+
+    - signed
+
+    - unsigned
+
+    - float
+
+    - double
+
+    - void
+
+    - auto
+
+    - decl-type-specifier
+
+    - constrained-type-specifier
+
+
+    Modify paragraph 2 to begin:
+
+
+    > The specifier is a placeholder for a type to be deduced (7.1.6.4). The specifier
+    and constrained-type-specifiers are placeholders for values (type, non-type) to
+    be deduced (7.1.6.4).
+
+
+    Add constrained-type-specifiers to the table of simple-type-specifiers in Table
+    10.
+
+
+    # 7.1.6.4 auto specifier
+
+
+    Extend this section to allow for constrained-type-specifiers as a new syntax for
+    designating placeholders. The section is refactored so that placeholders are introduced
+    in this section, deduction rules are defined in subsection 7.1.6.4.1, and the
+    meaning of constrained-type-specifiers is described in 7.1.6.4.2.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    Table 10 — simple-type-specifiers and the types they specify
+
+
+    | Specifier(s) | Type |
+
+    |---|---|
+
+    | type-name | the type named |
+
+    | simple-template-id | the type as defined in 14.3 |
+
+    | end-type | : |
+
+    | auto | placeholder for a type to be deduced |
+
+    | dectype(expression) | the type as defined below |
+
+    | constrained-type-specifier | placeholder for value (type, non-type, template)
+    to be deduced |
+
+
+    Replace paragraph 1 with the text:
+
+
+    +   1 The type specifiers auto and dectype(auto) and constrained-type-specifiers
+    designate a placeholder (type, non-type, or template) that will be replaced, either
+    through deduction or an explicit specification. The auto and dectype(auto) types
+    specify placeholders for values and templates. [Note: The deduction of placeholders
+    is through the invention of template parameters as described in 7.1.6.4 and 8.3.5
+    — end] placeholders are used to signify that a generic lambda (5.1.2), that a
+    function is an abbreviated function template (8.3.5), or a trailing-return-type
+    in a compound-requirement (5.1.4) introduces an argument deduction constraint
+    (14.10.1.6). Note: A nested-specifier can also include placeholders (5.1). Replacements
+    for constrained-type-specifiers are determined according to the rules in this
+    section. [end note]]
+
+
+    +   2 The placeholder typePlaceholders can appear with a function declarator in
+    the decl-specifier-seq, type-specifier-seq, conversion-function-id, or trailing-return-type,
+    in any context where such a placeholder is declared. If the function declarator
+    includes a trailing-return-type (8.3.5), that specifies the placeholder as the
+    declared return type. If the declared return type of the function contains a placeholder,
+    the return type of the function is deduced from the body of the function. In a
+    function with a return statement from auto D -> T which contains placeholders,
+    the initial auto does not designate a placeholder.
+
+
+    +   3 Modify paragraph 3 to allow the use of auto within the parameter type of
+    a lambda or function.
+
+    If the auto-type-specifier a placeholder appears as one of the decl-specifier-seq
+    of a parameter-declaration, in a parameter type of a lambda, the lambda is a generic
+    lambda (5.1.2). [Example:
+
+    auto lambda = (int, auto) { return int; }; // OK: a generic lambda
+
+    — end example] Similarly, if a placeholder appears in a parameter type of a function
+    declaration, the function declaration declares an abbreviated function template
+    (8.3.5). [Example:
+
+    void f(const auto, int); // OK: an abbreviated function template
+
+    — end example]
+
+
+    Add the following after paragraph 3 to describe what constrained-type-specifiers
+    in the return type refer to template parameters.
+
+
+    7.1.6.4'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nA constrained-type-specifier\
+    \ C1 with a placeholder if its declared return type of an abbreviated function\
+    \ declaration introduced constraint-expression (7.1.6.2) is determined to be equivalent,\
+    \ using the rules in 14.6.6.1 for comparing expressions, to the introduced constraint-expression\
+    \ for a constrained-type-specifier C2 in the parameter-declaration-clause of that\
+    \ function. Instead, C1 is replaced by the template parameter invented for C2\
+    \ (8.3.5). Example:\n\n```\ntemplate<typename T> const bool C = true;\n\ntemplate\
+    \ Struct T;\n\nconst& f1(C); // as same template parameter and no deduced return\
+    \ type\nTuple<...> f2(C); // as same template parameter and no deduced return\
+    \ type\n```\n\nIn the declaration f1, the constraint-expression introduced by\
+    \ the constrained-type-specifiers in the parameter-declaration-clause and return\
+    \ type are equivalent; they would both introduce the expression C, for some invented\
+    \ template parameter T. In f2, the use of C in the return type would introduce\
+    \ the constraint-expression (C) distinct from the invented template parameter\
+    \ (14.1) for the constrained-type-specifier C in the parameter-declaration-clause\
+    \ according to the rules in 8.3.5. — end example —\n\nAdd the following paragraph\
+    \ 4 to allow the use of **auto** in the **trailing-return-type of a compound-requirement**.\
+    \ Disallow the use of decl(auto) with function parameters and deduction constraints.\n\
+    \nIf a placeholder allows in the *trailing-return-type of a compound-requirement\
+    \ in a requirement*(5.1.4.3), then return type introduces an argument deduction\
+    \ constraint (14.10.1.6). Example:\n\n```\ntemplate<typename T> const bool T ()\
+    \ {\n    return requires (*) -> const auto; // OK: introduces an argument deduction\
+    \ constraint\n}\n\n— end example —\n```\n\nThe decltype(auto) type-specifier shall\
+    \ not appear in the declared type of a parameter-declaration or the trailing-return-type\
+    \ of a compound-requirement.\n\nModify paragraph 4 (paragraph 7, here) to allow\
+    \ multiple placeholders within a variable declaration, but disallowing constrained-type-specifiers.\n\
+    \nThe type of a variable declaration using a placeholder **auto** or **decl(auto)**\
+    \ is deduced from its initializer. This is allowed when declaring variables in\
+    \ a block (6.3), in namespace scope, and in a for-init-statement (6.5.3). ~~auto\
+    \ or decl(auto) shall appear as one of the decl-specifiers in the decl-type-specifier~~\
+    \ A placeholder can appear anywhere in the declared type of variable, but decl(auto)\
+    \ shall appear only as one of the decl-specifiers of the decl-type-seq, and the\
+    \ the decl-type-specifier of such a variable shall be followed by one or more\
+    \ init-declarators, each of which have a non-empty initializer. In an initializer\
+    \ of the\n\n```\n( expression-list)\n\nThe expression-list shall be a single argument-expression.\
+    \ Example:\n\nauto x = 5; // OK: x has type int\nconst auto *v = &x, u = 6; //\
+    \ OK: v has type const*, u has type const int\n```"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# PD ISO/IEC/TS 19217:2015
+
+    ISO/IEC/TS 19217:2015(E)
+
+    N4549
+
+
+    ```
+
+    static auto r = 0.0;
+
+    auto int r;
+
+    auto f() -> int;
+
+    auto g() { return 0.0; }
+
+    auto h();
+
+
+    // OK: y has type double
+
+    // error: auto is not a storage-class-specifier
+
+    // OK: f returns int
+
+    // OK: g returns double
+
+    // OK: h''s return type will be deduced when is defined
+
+    ```
+
+
+    // end example
+
+    Add the following declarations to the example in the previous paragraph.
+
+
+    ```
+
+    struct N {
+
+    template<typename T> struct Wrap;
+
+    template<typename T> static T make_wrap(T);
+
+    };
+
+
+    template<typename T, typename U> struct Pair;
+
+    template<typename T, typename U> U make_pair(T, U);
+
+    template<int N> Size void f(int);
+
+    ```
+
+
+    ```
+
+    void(auto* p1) = &Size<*>*(int); // OK: p1 has type double(Size<*>*)(int)
+
+    Pair<auto,> p2 = make_pair(auto, ''a''); // OK: p2 has type int<char>
+
+    Wrap<auto> x = make_wrap(0); // OK: a has type Wrap<double>
+
+    auto y = make_wrap(0); // error: failed to deduce value for auto
+
+    Size<auto>(*auto) = y; // error: failed to deduce value for auto
+
+    ```
+
+
+    ```
+
+    template<typename> bool C;
+
+    template<typename> bool D = false;
+
+    c z = 0; // OK: z has type int
+
+    // error: constraints not satisfied
+
+    cf(1) { return 0.0; } // OK: cf1 returns double
+
+    dcf(2) { return 0.0; } // error: constraints not satisfied
+
+    auto cf(3) -> C; // OK: cf3''s return type will be deduced when it is defined
+
+    ```
+
+
+    Update paragraph 6 (paragraph 9, here) to displace placeholders using auto decltype(auto)
+    placeholders in other contexts.
+
+    A program that uses auto decltype(auto) placeholders in a context not explicitly
+    allowed in this section is ill-formed.
+
+
+    # 7.1.6.4.1 Deducing rules for variables and return types [dec-spec.auto.deduct]
+
+
+    Factor the deduction rules for using a placeholder into a new subsection.
+
+
+    When a declaration is used in a placeholder, or a return statement in a function
+    declared with a placeholder, the deduced return type or variable type is determined
+    by the type of its initializer. If the initializer is a braced-list, it is deduced
+    to be void. Let T be the type of the variable or return type of the function.
+    If the placeholder is the auto type specifier. If T contains any occurrences of
+    the auto type-specifier or a constrained-type-specifier, the deduction is determined
+    using the rules for template argument deduction. The deduction for a return statement
+    and the rule for a braced-init-list is provided; otherwise, obtain it by replacing
+    the occurrences of auto with a new inferred type parameter U, or if the initializer
+    is a braced-init-list, with std::initializer_list<U>, or if
+
+
+    Otherwise, obtain from T as follows:
+
+
+    +   - when the initializer is a braced-init-list and a placeholder is a decl-specifier
+    of the specifier-seq of the variable declaration, replace occurrence of the placeholder
+    with std::initializer_list<U> where U is an unferred type parameter;
+
+
+    14'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# PD ISO/IEC T 19217:2015
+
+    ISO/IEC T 19217:2015(E)
+
+
+    (1.2) otherwise; replace each occurrence of a placeholder in the variable or return
+    type with a new
+
+    invented template parameter according to the rules for inventing template parameters
+
+    for placeholders in 8.3.5.
+
+
+    Deduce a value for each invented template parameter in P using the rules of template
+
+    duction from a function call (14.8.2.1), where P is a function template parameter
+
+    type and the initializer is the corresponding argument. If the deduction fails,
+    the declaration is ill-
+
+    formed. If any placeholders were introduced by a constrained-type-specifier,
+
+    then define C to be a constraint-expression as follows:
+
+
+    +   (1.3) if there is single constrained-type, then C is the constraint-expression
+    introduced by
+
+    the invented template constrained-parameter (14.1) to that constrained-type-
+
+    specifier;
+
+
+    +   (1.4) otherwise, C is the logical-and (5.4) which operates on the constrained-expressions
+
+    introduced by the invented template constrained-parameters corresponding to each
+    constrained-
+
+    type-specifier, in order of appearance.
+
+
+    If the normalized character for U is not satisfied by the values deduced for the
+    declared
+
+    type, the declaration is ill-formed. Otherwise, the type for the variable or return
+    type
+
+    is obtained by substituting the deduced U for each invented template parameter
+    into P.
+
+    Example:
+
+
+    ```
+
+    auto x1 = {1, 2}; // OK: decltype(x1) is std::initializer_list<int>
+
+    auto x2 = {1, 2, }; // error: cannot deduce element type
+
+
+    // end example
+
+    ```
+
+
+    Add the following to the first example in paragraph 7 in the C++ Standard.
+
+    Example:
+
+
+    ```
+
+    template<typename T> struct Vec { };ntemplate<typename T> Vec<T> make_vec(std::initializer_list<T>
+    l) { return Vec<T>{l}; }
+
+    template<typename...> Tuple<...> make_up(Ts... args) { return Tuple<Ts...>{args};
+    }
+
+
+    auto x3 = *x1.begin(); // OK: decltype(x3) is int&
+
+    const Vec<auto> v1 = make_vec({1, 2, 3}); // OK: decltype(v1) is Vec<int>
+
+    Vec<auto> v2 = {1, 2, 3}; // error: type deduction fails
+
+    Tuple<...> v3 = make_up(0, ''a''); // OK: decltype(v3) is Tuple<int, char>
+
+
+    // end example
+
+    ```
+
+
+    Add the following to the second example in paragraph 7 in the C++ Standard.
+
+    Example:
+
+
+    ```
+
+    template<typename T, typename U> struct Pair;
+
+    template<typename T, typename U> Pair<T, U> make_pair(T, U);
+
+
+    struct S { void mfn(bool); };
+
+    int fn(char, double);
+
+
+    Pair<(*)(auto, auto, auto), auto(*S::*)(auto)> p = make_pair(fn, &S::mfn);
+
+    ```
+
+
+    7.1.6.4.1'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+    N4549
+
+
+    The declared type of p is the deduced type of the parameter x in the class of
+    g(make_pair(fn, &::mfn)) of the following invented function template:
+
+
+    ```
+
+    template<class T1, class T2, class T3, class T4, class T5, class T6>
+
+    void g(Pair<T1>(*T2), T3, (T5::*)(T6)) x);
+
+    ```
+
+
+    — example
+
+
+    [Example]:
+
+
+    ```
+
+    template<typename T> concept bool C = true;
+
+
+    const C* cv = expr;
+
+    ```
+
+
+    The type of cv is deduced from the parameter p1 in the class f1(expr) of the following
+    invented function:
+
+
+    ```
+
+    template<T> void f1(const T* p1);
+
+    ```
+
+
+    — example
+
+
+    [Example]:
+
+
+    ```
+
+    auto cf(int) -> Pair<C, C> { return expr; }
+
+    ```
+
+
+    The return type of cf is deduced from the parameter p2 in the class f2(expr) of
+    the following invented function:
+
+
+    ```
+
+    template<T> void f2(Pair<T, T>);
+
+    ```
+
+
+    Both constrained-type-specifiers in the return type of cf correspond to the same
+    invented template parameter. — example
+
+
+    Copy paragraphs 8-15 from 7.1.6.4 in the C++ Standard into this section. Modify
+    paragraph 8 (here, 2) to read:
+
+
+    +   8 If the init-declarator-list contains more than one init-declarator, they
+    shall all form declarations of variables. The type of each declared variable is
+    determined as described above, and if the type that replaces the placeholder type
+    the declared variable type or return type is not the same in each deduction, the
+    program is ill-formed.
+
+
+    Add the following examples to paragraph:
+
+
+    [Example]:
+
+
+    ```
+
+    Pair<auto, auto> p1 = make_pair(0, 0);
+
+    *p2 = &p1; // replacement type is Pair<int, int>
+
+    Pair<auto, auto> p3 = make_pair(0, ''a'');
+
+    p4 = make_pair(''a'', 0); // error: different replacement type s
+
+    ```
+
+
+    — example
+
+
+    Modify paragraph 9 (here, 3).
+
+
+    +   9 If a function with a declared return type that contains a placeholder-type
+    placeholders has multiple return statements, the return type is deduced for each
+    return statement. If the type deduced is not the same in each deduction, the program
+    is ill-formed.
+
+
+    Modify the text of paragraph 10 (here, 4).
+
+
+    7.1.6.4.1'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    If a function with a declared return type that uses a placeholder type has no
+    return statements, the return type is deduced as though from a return statement
+    with no operand at the closing brace of the function body.
+
+
+    Modify the first sentence of paragraph 11 (here, 5).
+
+
+    If the type of an entity with an unduced placeholder type is needed to determine
+    the type of an expression, the practice is ill-formed.
+
+
+    Modify the text of paragraph 13 (here, 7).
+
+
+    Redeclarations or specializations of a function or function template with a declared
+    return type that uses a placeholder type placeholders also use that placeholder,
+    not a deduced type. If a placeholder is designated by a constrained-type-specifier,
+    redeeclarations or specializations shall use the same constrained-type-specifier:
+
+
+    Add the following to paragraph:
+
+
+    ```
+
+    template<typename> concept b Ci = true;
+
+    template<typename> concept C2 = true;
+
+
+    template<typename> auto cf(T) -> Ci; // #1
+
+    template<typename> cf(T); // #2: redeclaration of #1
+
+    template<typename> C2(T); // error: redeclared with different placeholder
+
+    ```
+
+
+    Modify paragraph 14 (here, 8).
+
+
+    A function declared with a return type that uses a placeholder type placeholders
+    shall not be virtual (10.3).
+
+
+    Modify paragraph 15 (paragraph 8, here) to read:
+
+
+    An explicit instantiation (14.8.2) does not cause the instantiation of an entity
+    declared using a placeholder type placeholders, but it also does not prevent that
+    entity from being instantiated as needed to determine its type.
+
+
+    # 7.1.6.4.2 Constrained type specifiers
+
+
+    [dcl.spec.auto.constr]
+
+
+    Add this to 7.1.6.4.
+
+
+    +   A constrained-type-specifier designates a placeholder (type, non-type, or
+    template) and introduces an associated constraint (14.10.2).
+
+
+    +   constrained-type-specifier:
+
+    qualified-concept-name:
+
+    qualified-concept-name:
+
+    nested-name-specifier_opt constrained-type-name
+
+    concept-name:
+
+    partial-concept-id
+
+    concept-name:
+
+    partial-concept-id:
+
+    concept-name < template-argument-list>
+
+
+    § 7.1.6.4.2
+
+
+    17'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# PD ISO/IEC/TS 19217:2015
+
+    ISO/IEC/TS 19217:2015(E)
+
+
+    N4549
+
+
+    ```
+
+    template<typename T> concept C1 = false;
+
+    template<int N> concept C2 = false;
+
+    template<typename X> concept C3 = false;
+
+
+    template<T, int N> class Array { };
+
+    template<T, typename typename> class A Stack { };
+
+    template<T> class Alloc { };
+
+
+    void f1(C1); // C1 designates a placeholder type
+
+    void f2(Array<auto, C2>); // C2 designates a placeholder for an integer value
+
+    void f3(Stack<auto, C3>); // C3 designates a placeholder for a class template
+
+
+    -- end example
+
+    ```
+
+
+    An identifier is a concept-name if it refers to a set of definitions (7.1.7).
+    [Note: The set of concepts may have at most one member of them when a concept-name
+    refers to a variable concept. — end note] | [Example:]
+
+
+    ```
+
+    template<T> concept C() { return true; }; // #1
+
+    template<T, typename> concept B() { return true; }; // #2
+
+    template<T, typename> concept D = true; // #3
+
+
+    void f(C()); // OK: the concept referred to by C includes both #1 and #2;
+
+    void g(D); // OK: the concept name D refers only to #3
+
+
+    -- example
+
+    ```
+
+
+    A partial-concept-id is a concept followed by a template-arguments. [Example:]
+
+
+    ```
+
+    template<T, int N = D> concept Seq = true;
+
+
+    void f1(Seq<3>); // OK
+
+    void f2(Seq<>); // OK
+
+
+    -- end
+
+    ```
+
+
+    The concept designated by a constrained-type-specifier is the one selected according
+    to the rules for concept resolution in 14.10.4.
+
+    Note: The constrained-expression introduced by a constrained-name is the one introduced
+    by the invention of a constrained-name (14.10.1). The rules for inventing template
+    parameters corresponding to the type of a variable or the declared type of a function
+    are described in 7.1.4.1. The rules for inventing template parameters to placeholders
+    in the parameter-declaration-clause of a lambda-expression (5.1.2) or function
+    declaration (8.3.5) are described in 8.3.5. The rules for inventing a template
+    parameter to placeholders in the trailing-type of a compound-requirement are described
+    in 14.10.1. — end note]
+
+
+    # 7.1.7 concept classifier [dec:Spec.concept]
+
+
+    Add this section to 7.1.1.
+
+
+    The concept specifier shall be only applied to the definition of a function template
+    or variable template, declared in namespace (3.6). A function template definition
+    having the concept classifier is called a function concept. A function concept
+    should have no exception-specification and is treated as if it were specified
+    with noexcept(true) (15.4). When a function is declared
+
+
+    § 7.1.7
+
+
+    18'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nN4549\n\nto be a concept,\
+    \ it will be the only declaration of that function. A variable definition having\
+    \ the concept specifier is called a variable concept. A concept definition refers\
+    \ to a function concept and its definition or a variable concept and its initializer.\
+    \ [Example:\n\n```\ntemplatetypename T>\n    concept F1() { return true; } //\
+    \ OK declares a concept\ntemplatetypename T>\n    concept bool F2(); // error:\
+    \ concept is not a definition\ntemplatetypename T>\n    constexpr bool F3()\n\
+    templatetypename T>\n    concept bool F3() { return true; } // error: redeclaration\
+    \ of a function as a concept\n    concept bool V1 = true; // OK declares a variable\n\
+    templatetypename T>\n    concept bool V2; // error: variable concept with no initializer\n\
+    struct S {\n    templatetypename T>\n    static bool C = true; // error: concept\
+    \ declared in class scope\n}\n```\n\n-- end example\n\nEvery concept is implicitly\
+    \ defined to be a constexpr (7.1.5). A concept definition shall not be declared\
+    \ with the thread_local, inline, friend, or constexpr specifiers, nor a concept\
+    \ definition have associated constraints (14.10.2).\n\nThe definition of a function\
+    \ concept or the initializer of a variable concept should not include a reference\
+    \ to the concept being declared. [Example:\n\n```\ntemplatetypename T>\n    concept\
+    \ bool F() { F<typename>::type(); } // error\ntemplatetypename T>\n    concept\
+    \ bool W = V<T>; // error\n```\n\n-- end example\n\nThe first declared template\
+    \ parameter of a concept definition is its prototype parameter. A variadic concept\
+    \ is a concept whose prototype parameter is a template pack.\n\nA function concept\
+    \ has the following restrictions:\n\n+   - (5.1) No function-specifiers shall\
+    \ appear in its declaration (7.1.2).\n- (5.2) The declared type shall have the\
+    \ type body.\n- (5.3) The declaration's parameter list shall be equivalent to\
+    \ an empty parameter list.\n- (5.4) The declaration shall have a function-body\
+    \ equivalent to { return E; } where E is a constraint-expression (14.10.13),\n\
+    \n[Note: Return type deduction requires the instantiation of the function definition,\
+    \ but concept definitions are not instantiated; they are normalized (14.10.2).\
+    \ -- end note] [Example:\n\n```\ntemplatetypename T>\n    concept int F0() { return\
+    \ 0; } // error: return type is not bool\ntemplatetypename T>\n    concept auto\
+    \ F1() { return true; } // error: return type is deduced\ntemplatetypename T>\n\
+    \    concept bool F3(T) { return true; } // error: not an empty parameter list\n\
+    ```\n\n§ 7.1.7\n\n19"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    end example]
+
+
+    6 A variable concept has the following restrictions:
+
+
+    +   (6.1) The declared type shall have the type bool.
+
+
+    +   (6.2) The declaration shall have an initializer.
+
+
+    +   (6.3) The initializer shall be a constraint-expression.
+
+
+    [Example:]
+
+
+    ```
+
+    template<typename T>
+
+    concept bool V1 = 3 + 4; // error: initializer is not a constraint-expression
+
+    concept bool V2 = 0; // error: not a template
+
+    ```
+
+
+    ```
+
+    template<typename T> concept bool C = true;
+
+    concept bool V3 = true; // error: constrained template declared as a concept
+
+    ```
+
+
+    end example]
+
+
+    7 A program shall not declare an explicit instantiation (14.8.2), an explicit
+    specialization (14.8.3), or a partial specialization of a concept definition.
+    [Note: This prevents users from subverting the constraint system by providing
+    a meaning for a concept that differs from its original definition.
+
+    end note]'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nN4549\n\n# 8 Declarators\
+    \ [dcl.decl]\n\nFactor the grammar of declarators to satisfy the constraint of\
+    \ functions declarators.\n\n+   - declarator:\n ptr-declarator\n nptr-declarator-and-qualifiers\
+    \ trailing-return-type requires-clause_opt\n parameters-and-qualifiers:\n (parameter-declaration-clause\
+    \ ) cv-qualifier-seq_opt\n ref-qualifier_opt exception-specification,opt attribute-specifier-seq_opt\
+    \ requires-clause_opt\n\nAdd the following paragraphs at the end of this section.\n\
+    \n4 The optional-clause (14.10.2) in a declarator shall be present only when the\
+    \ declarator declares a function (8.3.5), and that requires-clause shall not precede\
+    \ a trailing-return-type. When present in a declarator, the requires-clause precedes\
+    \ the trailing-return-clause. [Example:\n\n```\nvoid f1(int a) requires true;\
+    \ // OK\nafo2(int a) -> bool true; // OK\nf3(int a) -> bool true; // error: requires-clause\
+    \ precedes trailing-return-type\nvoid g(*f()) requires true; // error: constraint\
+    \ on a variable\ng(**) requires true; // error: constraint on a parameter-declaration\n\
+    ```\n\n* p = new void(*)(char) requires true; // error: not a function declaration\n\
+    \n— end clause;\n\n# 8.3 Meaning of declarators [dcl.meaning]\n\n# 8.3.5 Functions\n\
+    \nModify the condition in paragraph 1 to accept a requires-clause.\n\nD1 ( parameter-declaration-clause\
+    \ ) cv-qualifier-seq_opt\nref-qualifier_opt exception-specification,opt attribute-specifier-seq_opt\
+    \ requires-clause_opt\n\nModify the condition in paragraph 2 to accept a requires-clause.\n\
+    \nD1 ( parameter-declaration-clause ) cv-qualifier-seq_opt\nref-qualifier_opt\
+    \ exception-specification,opt attribute-specifier-seq_opt requires-clause_opt\n\
+    \nModify the second sentence of paragraph 5. This paragraph has been omitted.\n\
+    \n+   5 A single name can be used for several functions in a single scope; this\
+    \ function is overloading (Clause 13).\n\nAll declarations for a function shall\
+    \ agree exactly in both the return type, and the parameter-type, and associated\
+    \ constraints, if any (14.10.2).\n\nModify paragraph 6 to exclude constraints\
+    \ from the type of function. Note that the change occurs in the C++ Standard.\n\
+    \n+   6 The return type, the parameter-type, the ref-qualifier, and the cv-qualifier-seq,\
+    \ but not the default arguments (8.3.6), associated constraints (14.10.2), or\
+    \ the exception specification (15.4), are part of the function.\n\nModify paragraph\
+    \ 15. Note that the footnote reference has been omitted.\n\n§ 8.3.5\n\n21"
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+    N4549
+
+
+    There is a syntactic ambiguity when an ellipsis occurs at the end of a parameter-declaration-clause
+    without a preceding comma. In this case, the ellipsis is parsed as part of the
+    abstract-declarator the type of the parameter names a template pack that has not
+    been expanded or contains a placeholder (7.1.6.4); otherwise, it is parsed as
+    part of the parameter-declaration-clause.
+
+
+    Add the following after paragraph 15:
+
+
+    An abbreviated function template is a function declaration whose parameter-type-list
+    includes one or more placeholders (7.1.6.4). An abbreviated function template
+    is equivalent to a template template-parameter-list includes one invented template-parameter
+    for each occurrence of a placeholder in the parameter-declaration-clause, in order
+    of appearance, according to the rules. Note: Template parameters are also invented
+    to deduce the type of a variable or the return type of a function whose declared
+    type contains placeholders (7.1.6.4.1).
+
+
+    Each template parameter is invented as follows:
+
+
+    +   If the parameter is designated by the auto type-specifier, then the invented
+    template parameter is a type template.
+
+
+    +   Otherwise, if the parameter is designated by a constrained-type-specifier,
+    and the invented parameter is a constrained-parameter (14.1) whose qualified-concept-name
+    is that of the constrained-type-specifier.
+
+
+    +   If the placeholder appears in the decl-spec-seg of a function parameter (14.6.3),
+    or the type-spec-seg of a type-id that is a pack expansion, the invented template
+    parameter is a template parameter pack.
+
+
+    All placeholders designated by constrained-type-specifiers whose corresponding
+    constrained-parameters would introduce constraint-expressions (14.1), using the
+    rules for using expressions in 14.6.1, have the same invented template parameter.
+    Example:
+
+
+    ```
+
+    namespace N {
+
+    template<typename> concept bool C = true;
+
+    template<typename> concept bool D = true;
+
+    template<typename, int> concept bool G = true;
+
+    template<typename, int = 0> concept bool E = true;
+
+    }
+
+    void abbr(C a, D<0>);
+
+    ```
+
+
+    The constrained-type-specifiers C and D<0> correspond to distinct invented template
+    parameter in the declaration of abbr.
+
+
+    void f0(C a, C b);
+
+
+    The types of a and b are the same invented type parameter.
+
+
+    void f1(C* a, C* b);
+
+
+    The type of a is a reference to an invented template type parameter T, and the
+    type of b is a pointer to T.
+
+
+    ```
+
+    void f2(T::C a, C b);
+
+    void f3(D<0> a, D<1> b);
+
+    ```
+
+
+    In both functions, the a and b have different invented template type parameters.
+
+
+    § 8.3.5
+
+
+    22'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    ```
+
+    void f4(E, E< > b, E< > c);
+
+    nThe types of a, b, and c are the same because the constrained-type-specifiers
+    E, E<>, and E<>
+
+    all associate the constrained-expression ET, O<>, where T is an invented type
+    parameter-
+
+    ter.
+
+
+    void f5(C head, C... tail);
+
+    The types of head and tail are different. Their respective introduced constraint-expressions
+
+    <<C>> and <<U>> && ..., where T is the type parameter invented for head and U
+    is the
+
+    template parameter invented for tail (14.1).
+
+    ```
+
+
+    18 The adjusted function parameters of an invented template function are derived
+    from the parameter-
+
+    declaration-clause by replacing each occurrence of a placeholder with the name
+    of the corresponding invented
+
+    template. If the replacement of a placeholder with the name of a template parameter
+    results in
+
+    invalid declaration, the procedure is ill-formed. [Note: Equivalent template declarations
+
+    declare the function template (14.0.6.1). — end note] Example:
+
+
+    ```
+
+    template<typename T> class Vec {
+
+    template<typename T, typename U> class Pair {
+
+    template<typename... Args> class Tuple {
+
+
+    void f1(const auto&, auto);
+
+    void f2(Vec<auto>...);
+
+    void f3(Tuple<auto>...);
+
+    void f4(auto::(auto));
+
+
+    template<typename T, typename U> void f1(const T, U); // redeclaration of f1
+
+    template<typename T> T void f2(Vec<T>...); // redeclaration of f2
+
+    template<typename T> T void f3(Tuple<T>...); // redeclaration of f3
+
+    template<typename T, typename U> U void f4(U::(V)); // redeclaration of f4
+
+
+    template<typename T> T concept bool C1 = true;
+
+    template<typename T> T concept bool C2 = true;
+
+    template<typename T> T concept bool C3 = true;
+
+    template<typename T...> T concept bool C4 = true;
+
+
+    void g1(const C1&);
+
+    g2(Vec<C1&>...);
+
+    g3(C1&);
+
+    g4(Vec<C3<int>>);
+
+    g5(C4,...);
+
+    g6(Tuple<C4>...);
+
+    g7(C4 p);
+
+    g8(Tuple<C4>...);
+
+
+    template<C1, C2> T void g1(const T, U); // redeclaration of g1
+
+    template<C1, C2> T void g2(Vec<T>...); // redeclaration of g2
+
+    template<C1, C3> T void g3(T,...); // redeclaration of g3
+
+    template<C3, C4> T void g4(Vec<T>...); // redeclaration of g4
+
+    template<C4, C5> T void g5(Tuple<T>...); // redeclaration of g5
+
+    template<C4, C6> T void g6(Tuple<T>...); // redeclaration of g6
+
+    template<C4, C7> T void g7(T); // redeclaration of g7
+
+    template<C4, C8> T void g8(Tuple<T>...); // redeclaration of g8
+
+    ```
+
+
+    end example];
+
+
+    § 8.3.5
+
+
+    23'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    ```
+
+    template<int N> concept bool Num = true;
+
+    ```
+
+
+    ```
+
+    void h(Num*); // error: invalid type in parameter declaration
+
+    ```
+
+
+    The equivalent declaration would have this form:
+
+
+    ```
+
+    template<int N> void h(N*); // error: invalid type
+
+    ```
+
+
+    +   - end example
+
+
+    19 A function template can be an abbreviated function template. The invented template-parameters
+    are appended to the template-parameter-list after the explicitly declared template-parameters.
+
+    [Example:
+
+
+    ```
+
+    template<typename T, int N> class Array { };
+
+    ```
+
+
+    ```
+
+    template<int N, typename T> void f(Array<auto, N>*); // OK: redeclaration of f(Array<auto,
+    N>*)
+
+    ```
+
+
+    +   - end example'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# 10 Derived classes\n\n# 10.3 Virtual functions\n\nInsert the following paragraph\
+    \ after paragraph 5 in order to prohibit the declaration of constrained virtual\
+    \ functions and the overriding of a virtual function by a constrained member function.\n\
+    \nIf a virtual function has associated associated constraints (14.10.2), the program\
+    \ is ill-formed. [Example:\n\n```\nstruct A {\n    virtual void f() requires true;\
+    \ // error: constrained virtual function\n};\n— end example]\n```"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# 13 Overloading
+
+
+    Modify paragraph 1 to allow overloading based on constraints.
+
+
+    +   - When two or more different declarations are specified for a single name
+    in the same scope, name is said to be overloaded. By extension, two declarations
+    in the same scope declare the same name but with different types or different
+    associated constraints (14.10.2) are called overloaded. Only function and template
+    declarations can be overloaded; variable and type declarations cannot be overloaded.
+
+
+    # 13.1 Overloadable declarations
+
+
+    Update paragraph 3 to match a function''s constraints. Note that the itemized
+    list in the original text is omitted in this document.
+
+
+    > > As specified in 8.3.5, function declarations have equivalent parameter declarations
+    and associated constraints, if any (14.10.2), declare the same function and therefore
+    cannot be overloaded: ...
+
+
+    # 13.1.1 Declaration matching
+
+
+    Modify paragraph 1 to extend the declaration of matching to also include a function''s
+    constraints. Note that the example in the original text is omitted in this document.
+
+
+    Two declarations of the same name refer to the same function if they are in the
+    same scope and have equivalent parameter declarations (13.1) and equivalent associated
+    constraints, if any (14.10.2).
+
+
+    # 13.3 Overload resolution
+
+
+    # 13.3.2 Viable functions
+
+
+    Update paragraph 1 to require the checking of a candidate''s associated constraints
+    when determining if that candidate is viable.
+
+
+    +   - From the set of candidate functions constructed for a given context (13.3.1),
+    a set of viable functions is chosen, from which the best function will be selected
+    by comparing argument version sequences and associated constraints for the best
+    fit (13.3.3). The selection of viable functions considers associated constraints,
+    if any (14.10.2), and relationships between functions and parameters other than
+    the ranking of conversion sequences.
+
+
+    Insert a new paragraph after paragraph 2: this introduces new criterion for determining
+    if a candidate is viable, also the beginning of the subsequent paragraph for the
+    insertion.
+
+
+    +   - Second, for a function to be viable, if it has associated constraints, those
+    constraints shall be satisfied (14.10.2).
+
+    - Third, for F to be a viable function...
+
+
+    # 13.3.3 Best viable function
+
+
+    Modify the last item in list 1 and extend it with a final comparison based on
+    the associated constraints of those functions. Note that the preceding (unmodified)
+    items in the C++ Standard are elapsed in this document.
+
+
+    ...'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\n+   - F1 and F2 are\
+    \ function specializations, and the function template for F1 is more specialized\
+    \ by the template for F2 according to the partial ordering rules described in\
+    \ 14.6.6.2; or, if not,\n- F1 and F2 are non-template functions with the same\
+    \ parameter-type-lists, and F1 is more constrained than F2 according to the partial\
+    \ ordering of constraints described in 14.10.3.\n\n# 13.4 Address of overloaded\
+    \ function [over.over]\n\nModify paragraph 4 (paragraph 5 in this document) to\
+    \ incorporate constraints in the selection of an overloaded function when its\
+    \ address is\n\nEliminating from the set of selected functions whose constraints\
+    \ are not satisfied (14.10.2); if more than one function is selected if more than\
+    \ one function remains, any function template specializations in the set are eliminated\
+    \ if the set also contains a function that is not a function template specialization,\
+    \ and any given non-template function F0 is eliminated to the partial ordering\
+    \ rules of 14.10.3. Additionally, any given function template specialization F1\
+    \ is eliminated if the set contains a second function template specialization\
+    \ whose function is more specialized than the function template of F1 according\
+    \ to the partial ordering rules of 14.6.6.2. After such eliminations, if any,\
+    \ there shall remain exactly one selected function.\n\nAdd the following example\
+    \ at the end of paragraph 5.\n\n```\nExample:\nvoid f();\nvoid g() requires true;\
+    \ // #1\n g() requires false; // #2\nvoid (*pf)() = &kf; // selects #2\nvoid (*pg)()\
+    \ = &kg; // error: no matching function\n-- end example\n```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# Templates\n\nModify the template-declaration grammar in paragraph 1 to allow\
+    \ a template declaration introduced by a concept.\n\n```\ntemplate-declaration:\n\
+    template < template-parameter-list > requires-clause_opt declaration\ntemplate-introduction\
+    \ declaration\nrequires-clause:\n  requires constraint-expression\n```\n\nAdd\
+    \ the following paragraphs after paragraph 6.\n\nA template-declaration is written\
+    \ in terms of its template parameters. These parameters are declared explicitly\
+    \ in a template-parameter-list (14.1), or are introduced by a template-introduction\
+    \ (14.2). The optional requires-clause following a template-parameter-list allows\
+    \ the specification of constraints (14.10.2) on template arguments (14.4).\n\n\
+    # 14.1 Template parameters\n\n```\ntemplate-parameter:\n  type-parameter\n  parameter-declaration\n\
+    \  constrained-parameter:\n    qualified-name ... identifier_opt\n    qualified-concept-name\
+    \ identifier_opt default-template-argument_opt\ndefault-template-argument:\n \
+    \ = type-id\n  = id-expression\n  = initializer-clause\n```\n\nIn paragraph 1,\
+    \ extend the grammar for template parameters to constrained template parameters.\n\
+    \nInsert a new paragraph after paragraph 1.\n\nThere is an ambiguity in the syntax\
+    \ of a template parameter between the declaration of a constrained-parameter and\
+    \ a parameter-declaration. If the type-spec of a parameter-declaration is a constrained-type-specifier\
+    \ (7.1.6.4), then the template-parameter is a constrained-parameter.\n\nInsert\
+    \ the following paragraphs after paragraph 8. These paragraphs define the meaning\
+    \ of a constrained template parameter.\n\nA constrained-parameter declares a template\
+    \ parameter whose kind (type, non-type, template) and type match that of the prototype\
+    \ parameter of the concept designated by the qualified-concept-name (7.1.6.4.2)\
+    \ in the constrained-parameter. The designated concept is selected by the rules\
+    \ for concept resolution resolved in 14.10.4. Let X be the prototype parameter\
+    \ of the designated concept. The declared template parameter is determined by\
+    \ the kind of X (type, non-type, template) and the optional ellipsis in the constrained-parameter\
+    \ as follows.\n\n+   - If X is a template-parameter, the declared parameter is\
+    \ a type template-parameter."
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# PD ISO/IEC TIS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    If X is a non-type-parameter, the declared parameter is a non-type template-parameter
+    having the same type as X.
+
+
+    If X is a template-parameter, the declared X is a template-parameter having the
+    same type template-list as X, excluding default template-arguments.
+
+
+    If the qualified-name is followed by an ellipsis, the declared parameter is a
+    template parameter pack (14.6.3).
+
+
+    [Example]:
+
+    ```cpp
+
+    template<typename T> bool C1 = true;
+
+    template<typenametype> class X bool C2 = true;
+
+    template<int N> concept C3 = true;
+
+    template<typename...> bool C4 = true;
+
+    template<...> concept C5 = true;
+
+    ```
+
+
+    ```
+
+    template<C1> void f1();    // OK if T is a type-parameter
+
+    template<C2> void f2();    // OK if X is a template with one type-parameter
+
+    template<C3> void f3();    // OK if N has int
+
+    template<C4...> T void f4();(); // OK if Ta is a template parameter pack of types
+
+    template<C5> T void f5(); // OK if T is a type-parameter
+
+    template<C5...> Cs = f6(); // OK if Cs is a template parameter pack of chars
+
+    ```
+
+
+    A constrained-parameter introduces a constraint-expression (14.10.2). The expression
+    is derived from the qualified-name Q in the constrained-parameter, its designated
+    concept C, and its default-argument matches the declared parameter P.
+
+
+    +   First, if a template argument A from P. If P declares a template parameter
+    pack (14.6.3) and C is a variadic concept (7.1.7), then A is the pack expansion
+    P.... Otherwise, A is the id-expression P.
+
+
+    +   Then, if a template-id TT on the constrained-name Q. If Q is a concept-name,
+    then TT is C<A>. Otherwise, Q is a partial-concept-id of the form C<A1, A2, ...,
+    AN>, and TT is C<A, A1, A2, ..., AN>.
+
+
+    +   Then, an expression E as follows. If C is a variadic concept (7.1.7), then
+    E is the id-expression TT. Otherwise, E is the function call TT.
+
+
+    +   Finally, if P declares a template parameter pack and C is not a variadic concept,
+    E is adjusted to the fold-expression (E & ...). (5.1.3).
+
+
+    E is the introduced constrained-expression. Example:
+
+    ```cpp
+
+    template<typename> bool C1 = true;
+
+    template<typename...> T, typename concept C2() { return true; };
+
+    template<typename> T concept C3 = true;
+
+    ```
+
+
+    ```
+
+    template<C1> T struct s1; // associates C1<T>
+
+    template<C1...> T struct s2; // associates C1<T> & ...
+
+    template<C2...> T struct s3; // associates C2<T...>()
+
+    template<C3<int>> T struct s4; // // associates C3,T, int
+
+    ```
+
+
+    [end example]
+
+
+    Insert the following paragraph after paragraph 9 to require that the kind of default-argument
+    matches the kind of its constrained-parameter.
+
+
+    § 14.1
+
+
+    29'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "# PD ISO/IEC 19217:2015\nISO/IEC 19217:2015(E)\n\nN4549\n\nThe default template-argument\
+    \ of a constrained-parameter shall match the kind (type, non-type, template) of\
+    \ the declared template parameter. *Example:*\n\n```\ntemplate<typename T> concept\
+    \ bool C1 = true;\ntemplate<int N> concept bool C2 = true;\ntemplate<<typename\
+    \ typename> class X> concept bool C3 = true;\n```\n\n```\ntemplate<typename T>\
+    \ struct S0;\n\ntemplate<C1> T = struct S1; // OK\ntemplate<C2> N = struct S2;\
+    \ // OK\ntemplate<C3> X = struct S3; // OK\ntemplate<C1> T = struct S4; // error:\
+    \ default argument is not a type\n```\n\n-- end example]\n\n# 14.2 Introduction\
+    \ of template parameters\n\n[temp.intro]\nAdd this section after 14.1.\n\n+  \
+    \ A template-introduction provides a concise way of declaring templates.\n- template-introduction:\n\
+    \  qualified-name { introduction-list }\n- introduction-list:\n  introduced-parameter\n\
+    \  introduction-list, introduced-parameter\n  introduced-parameter:\n    ... identifier\n\
+    \nA template-introduction declares a template whose sequence of template-parameters\
+    \ are derived from a *qualified-name* (7.1.6.4.2) and the sequence of introduced-parameters\
+    \ in its introduction-list.\n\nThe concept designated by the *qualified-name*\
+    \ is selected by the concept resolution rules in 14.10.4. Let C be the declared\
+    \ concept. The template parameters declared by a template-introduction are derived\
+    \ from its introduced-parameters and the template parameter declarations of C\
+    \ to which these introduced-parameters are matched according to the rules in 14.10.4.\
+    \ For each *introduced-parameter* I, declare a template parameter using the following\
+    \ rules:\n\n+   Let P the template parameter declaration in C corresponding to\
+    \ I. If P does not declare a template pack (14.6.3), I shall not include an ellipsis.\n\
+    \n+   If P declares a template pack, pack J to be the pattern of the pack.\n\n\
+    +   Declare a template parameter according to the rules for declaring a *constrained-parameter*\
+    \ in 14.1, using P as the prototype and with no ellipses.\n\n*Example:*\n\n```\n\
+    template<typename T, int N, ...> concept bool C1 = true;\ntemplate<<typename typename>\
+    \ class X> concept bool C2 = true;\ntemplate<typename...> Ts> concept bool C3\
+    \ = true;\n```\n\n```\nC1{A, B, ...C} // OK: A is declared as template name A,\n\
+    struct S1; // B is declared as int, and\n```\n\n§ 14.2\n\n30"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "# PD ISO/IEC/TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nN4549\n\n```\n// C\
+    \ is declared as typename ... C\n\nC2<T> void f0();      // OK: T is declared\
+    \ as template<typename> class T\nC2{...Ts> void g0();  // error: the template\
+    \ parameter corresponding to Ts\n                        // is not a template\
+    \ parameter pack\n\nC3<T> struct S2;       // OK: T is declared as typename T\n\
+    C3{...Ts> struct S2;  // OK: Ts is declared as typename ... Ts\n```\n\n-- end\
+    \ example\n\nA concept referred to by qualified-concept-name may have template\
+    \ parameters with default\ntemplate arguments. An introduction-list may omit identifiers\
+    \ for a corresponding template\nargument if it has a default argument. Only the\
+    \ introduced-parameters are declared as template\nparameters. [Example]:\n\n```\n\
+    template<typename A, typename B = bool> concept C() { return true; }\n\nC<T> void\
+    \ f(T);      // OK: f is a function with\n                     // a single type\
+    \ parameter T\n```\n\n-- end example\n\nAn introduced template does not have a\
+    \ default template argument if its corre-\nsponding template parameter does. [Example]:\n\
+    \n```\ntemplate<typename T, int N = ~1> concept P() { return true; }\n\nP(T, N)\
+    \ struct Array {\n\nArray<double, O1> s1; // OK\n// error: Array takes two arguments\n\
+    ```\n\n-- end example\n\nA template-introduction introduces a constraint-expression\
+    \ (14.10.2). This expression is derived\nfrom the qualified-concept-name C in\
+    \ the template-introduction and the sequence of introduced-\nparameters.\n\nFirst,\
+    \ from a sequence of template arguments A1, A2, ..., AN corresponding to the\n\
+    introducedparameters P1, P2, ..., PN. For each introduced-template P, a cor-\n\
+    tending argument A as follows. If P includes an ellipsis, then P is a pack\nexpansion\
+    \ ... (14.6.3). Otherwise, A is the id-expression P.\n\nThen, an expression E\
+    \ follows. If C designates a variable (7.1.7), then E is\nt id-expression C<A1,\
+    \ ..., AN>. Otherwise, C designates a concept and E is\nthe function call<A1,\
+    \ ..., AN>().\n\n```\ntemplate<typename T, typename U> concept C1 = true;\ntemplate<typename\
+    \ T, typename U> concept C2(T) { return true; }\ntemplate<typename ...> concept\
+    \ C3 = true;\n```\n\n```\nC1(A, B) struct s1;      // associates C1<A, B>\nC2(A,\
+    \ B) struct s2;      // associates C2<A, B>\nC3{...Ts> struct s3;     // associates\
+    \ C3<Ts...>\nC(X, ...Y) struct s4;    // associates C3<X, Y...->\n```\n\nE is\
+    \ the introduced-constraint. [Example]:\n\n§ 14.2\n\n31"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '- end example]
+
+
+    A template declared by a template-introduction can be an abbreviated function
+    template
+
+    (8.3.5). The invented template parameters introduced by the placeholders in the
+    abbreviated
+
+    function template are appended to the list of template parameters declared by
+    the template-
+
+    introduction. [Example]:
+
+
+    ```
+
+    template<typename C1 = true;
+
+    CI<T> void f(T, auto);
+
+    template<C1 T, typename U> void f(T, U); // redeclaration of f(T, auto)
+
+    ```
+
+
+    - end example]
+
+
+    # 14.3 Names of template specializations [temp.names]
+
+
+    Add this paragraph at the end of the section to require the satisfaction of associated
+    constraints across
+
+    formation of the simple-template-id.
+
+
+    When the template-name of a simple-template-id has a constrained non-function
+    template
+
+    or a constrained template-parameter, but not a member template that is a member
+
+    of an unknown status (14.7), and all template-arguments in the simple-template-id
+    are
+
+    non-dependent 14.6.2.4, the associated constraints of the constrained template
+    shall be satisfied.
+
+    (14.10.2). [Example]:
+
+
+    ```
+
+    template<typename T> concept bool C1 = false;
+
+
+    template<C1 T> struct S {};
+
+    template<C1 T> using Ptr = T;
+
+    S<int> p; // error: constraints not satisfied
+
+    Ptr<int> p; // error: constraints not satisfied
+
+
+    template<typename T>
+
+    struct S2 { Ptr<int> x; }; // error: constraints not satisfied
+
+
+    template<typename T>
+
+    struct S3 { Ptr<T> x; }; // OK: satisfaction is not required
+
+
+    S3<int> x; // error: constraints not satisfied
+
+
+    template<typename C1> T class X
+
+    struct S4 {
+
+    X<int> x; // error: constraints not satisfied (#1)
+
+    }
+
+
+    template<typename T>
+
+    struct S5 {
+
+    using Type = typename T::MT<char>; // #2
+
+    }
+
+
+    template<typename C2> concept bool C2 = sizeof(T) == 1;
+
+    template<C2 T> struct S {};
+
+
+    template struct S<char[2]>; // error: constraints not satisfied
+
+    template<> struct S<char[2]> { {}; // error: constraints not satisfied
+
+    ```
+
+
+    14.3'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    In #1, the error is caused by the substitution of int into the associated template
+    parameter X. In #2, no constraints can be checked for typename T::template MT<char>
+    because MT is a member of an unknown specialization. — end example
+
+
+    # 14.4 Template arguments
+
+
+    # 14.4.1 Template template arguments
+
+
+    Modify paragraph 3 to include rules for matching constrained template-parameters.
+    Note that the examples following this paragraph in the C++ Standard are updated.
+
+    A-argument matches a template-parameter (call it P) when each of the parameters
+    in the template-parameter-list-of-argument''s class template or alias template
+    matches the corresponding template parameter in P and is at least constrained
+    as A according to the rules in 14.10.3. Two parameters match if they are of the
+    same kind (type, non-type, template), for non-template-parameters, their arguments
+    are equivalent (14.6.6.1), and for template-parameters, each of their template-parameter-lists
+    matches,. When P''s template-parameter-list contains a template pack (14.6.3),
+    the template pack matches template-parameter-list of A with the same kind (type,
+    non-type, template) and as the template-parameter pack in F (ignoring whether
+    those elements are template packs).
+
+
+    Add the following example to the end of paragraph 3, after the examples given
+    in the C++ Standard.
+
+
+    ```
+
+    [Example:
+
+    template<typename T> concept B = requires (T t) { t.f(); }
+
+    template<typename T> concept D = C&& && requires (T t) { t.g(); }
+
+
+    template<C> class P {
+
+    struct S { };
+
+
+    template<C> struct X { };
+
+    template<typename> struct Y { };
+
+    template<typename T> struct Z { };
+
+
+    Xs s1; // OK: X and P have equivalent constraints
+
+    Xs2; // error: P is not least constrained as Y (Y is more constrained than P)
+
+    Xs3; // OK: P is at least constrained as Z
+
+    — end example
+
+    ```
+
+
+    # 14.6 Template declarations
+
+
+    Modify paragraph 2 to indicate that associated constraints are unintentionally
+    separated from the template they are associated with.
+
+    For purposes of name lookup and initialization, default arguments, associated
+    constraints (14.10.2), and exception-specifications of function templates and
+    default arguments, associated constraints, and exception-specifications of member
+    functions of class templates are considered definitions; each default argument,
+    associated constraint, or exception-specification is a separate definition which
+    is unrelated to the function template definition or to any other arguments, associated
+    constraints, or exception-specifications.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "# 14.6.1 Class templates\n\nModify paragraph 3 to require template constraints\
+    \ for out-of-class definitions of constrained templates.\n\nWhen a function, a\
+    \ class member, a member enumeration, a static data member or member of a class\
+    \ template is defined outside of the class definition, the member definition is\
+    \ defined as a template definition in which the template-parameters and associated\
+    \ constraints (1.10.2) are those of the class template. The names of the template\
+    \ parameters used in the definition of the member may be different from the template\
+    \ parameters names used in the template list. The member definition must name\
+    \ the parameters in the same order as the one used in the template list of the\
+    \ member. expanded with an ellipsis in the template argument.\n\nAdd the following\
+    \ example at the end of paragraph 3.\n\nExample:\n\n```\ntemplate<typename> concept\
+    \ C = true;\ntemplate<typename> concept bool D = true;\n\ntemplate<C T> D(U) struct\
+    \ S {\n    void f();\n    void g();\n};\n\ntemplate<typename T> requires C<T>\
+    \ S<T>::f() // OK: parameters and constraints match\ntemplate<typename T> void\
+    \ S<T>::g() // error: no matching declaration for S<T>\n\ntemplate<C T> D(U) struct\
+    \ S<>::inner { }; // OK\n```\n\nend example]\n\n# 14.6.1.1 Member functions of\
+    \ class templates\n\nAdd the following example to the end of paragraph 1.\n\n\
+    Example:\n\n```\ntemplate<typename T> struct S {\n    void f() requires true;\n\
+    \    void g() requires true;\n};\n\ntemplate<typename T>\nS<T>::f() requires true\
+    \ {} // OK\ntemplate<typename T>\nS<T>::g() {} // error: no matching function\
+    \ in S<T>\n```\n\nend example]\n\n# 14.6.2 Member templates\n\nModify paragraph\
+    \ 1 in order to account for constrained member templates of (possibly) constrained\
+    \ class templates."
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nN4549\n\nA template\
+    \ can be declared within a class or class template; such a template is a member\
+    \ template. A member template can be defined within or outside its class definition\
+    \ or class template definition. A member template of a class template that is\
+    \ defined outside of its class definition shall be specified with the *template-parameters*\
+    \ and associated constraints (14.10.2) of the class template followed by the *template-parameters*\
+    \ and associated constraints of the member template.\n\nAdd the following example\
+    \ at the end of paragraph 1:\n\n[Example:\n\n```\ntemplate<typename> bool C1 =\
+    \ true;\ntemplate<typename> bool C2 = sizeof(T) <= 4;\n\ntemplate<C1>\nstruct\
+    \ S {\n    template<C2> void f(U);\n    template<C2> void g(U);\n};\n\ntemplate<C1>\
+    \ template<typename> U\nvoid S<T>::f() requires C2<U> {} // OK\ntemplate<C1> template<typename>\
+    \ U\nvoid S<T>::g() {} // error: no matching function in S<T>\n// end example\n\
+    ```\n\n# 14.6.3 Variadic templates\n\nAdd fold-expressions to the list of contents\
+    \ in which pack expansion can occur.\n\n---\n\n> In a fold-expression (5.1.3),\
+    \ the pattern is the cast-expression that contains an unexpanded parameter pack.\n\
+    \nModify paragraph 7 to exclude fold-expressions from producing a comma-separated\
+    \ list of elements.\n\nThe instantiation of a fold-expression that is not a sizeof...,\
+    \ an expression that is neither a sizeof... nor a fold-expression, produces a\
+    \ list $E_1, E_2,...,E_N$, where $N$ is the number of elements in the pack expansion\
+    \ parameters. Each $E_i$ is generated by instantiating the pattern and replacing\
+    \ each pack expansion with its $i$-th element.\n\nAdd the following paragraph\
+    \ at the end of paragraph 9:\n\nThe instantiation of a fold-expression:\n\n+ \
+    \  - $(E_1 \\ op E_2 \\dots E_N)$ for a unary left fold,\n- $(E_1 \\dots E_2 \\\
+    \ op E_N)$ for a unary right fold,\n- $((E_1 \\op E_2) \\op E_3) \\dots \\op E_N$\
+    \ for a binary left fold,\n- $E_1 \\op (\\dots (E_{N-1} \\op E_N))$ for a binary\
+    \ right fold.\n\nIn each case, the operator $N$ is the number of elements in the\
+    \ pack expansion parameters, and each $E_i$ is generated by instantiating the\
+    \ pattern and replacing each pack expansion with its $i$-th element. For a binary\
+    \ fold-expression, $E$ is generated by the cast-expression that did not contain\
+    \ an unexpanded parameter pack. [Example:\n\n```\ntemplate<typename...> Args\n\
+    \    bool all(typename... args) { return (... && args); };\n\nbool b = all(true,\
+    \ true, true, false);\n```\n\n§ 14.6.3\n\n35"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nWithin the instantiation\
+    \ of all, the returned expression expands to `((true && true) && false)`, which\
+    \ evaluates to false. — end example] If N is zero for a unary-expression, the\
+    \ value of the expression is shown in Table B; if the operator is not listed in\
+    \ Table B, the instantiation is ill-formed.\n\n# Table B — Value of folding empty\
+    \ sequences\n\n| Operator | Value when parameter pack is empty |\n|---|---|\n\
+    | * | 1 |\n| + | int() |\n| & | -1 |\n| & | int() |\n| && | true |\n| || | false\
+    \ |\n| , | void() |\n\n# 16.4.4 Friends\n\nModify 9 to restrict constrained friend\
+    \ declarations.\n\n+   9 When a friend declaration refers to a specialization\
+    \ of a function template, the parameter declarations shall not include default\
+    \ arguments, the declaration shall not have associated constraints (14.10.2),\
+    \ nor the inline specifier be used in such a declaration.\n\nAdd examples following\
+    \ that.\n\n+   10 [Note: Other friend declarations can be constrained. In a constrained\
+    \ friend declaration that is not a definition, constraints are used for declaration.\
+    \ — end note] [Example:\n```cpp\ntemplate<typename T> bool C1 = true;\ntemplate<typename\
+    \ T> bool C2 = false;\n```\n```cpp\ntemplate<C1> void g0(T);\ntemplate<C1> void\
+    \ g1(T);\ntemplate<C2> void g2(T);\n```\n```cpp\ntemplate<typename T>\nstruct\
+    \ S {\n    friend f1() requires true; // friend of all S<T>\n    friend f2() requires\
+    \ C<int>; // OK\n    friend g0(g<T>) requires C<T>; // error: constrained friend\
+    \ specialization\n    friend g1(g<T>); // OK\n    friend g2<T>(T); // error: constraint\
+    \ can never be satisfied, no diagnostic required\n};\n```\n\nThe friend declaration\
+    \ of g2 is ill-formed, no diagnostic required, because no valid specialization\
+    \ of S can be generated: the constraint g2 can never be satisfied, so template\
+    \ argument deduction (14.9.2.6) will always fail. — end example]\n\n+   11 [Note:\
+    \ Within a class template, a friend may define a non-template function whose constraints\
+    \ specify requirements on template arguments. — Example:]\n\n§ 16.4.4\n\n36"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nN4549\n\n```\ntemplate<typename\
+    \ T> concept bool Eq = requires (T t) { t == t; };\n\ntemplate<typename T>\nstruct\
+    \ S {\n    friend operator==(S a, S b) requires Eq<T> { return a == b; } // OK\n\
+    };\n```\n\n-- end In the instantiation of a class template (14.8), the template\
+    \ arguments are substituted into the constraints but not evaluated. Constraints\
+    \ are checked (14.10) only when function is considered as a viable candidate for\
+    \ overload resolution (13.3.2). If substitution fails, the program is ill-formed.\
+    \ -- end\n\n# 14.6.5 Class template partial specialization [temp.class.spec]\n\
+    \nAfter paragraph 3, the following explains constrained template partial specializations.\n\
+    \nA class partial specialization may be constrained (Clause 14). [Example]:\n\n\
+    ```\ntemplate<typename T> concept bool C = requires (T t) { t.f(); };\ntemplate<int>\
+    \ I = I > 0;\n\ntemplate<C1, T2, N> class AT1, T2*, I>; // #6\ntemplate<C, N,\
+    \ I> class A<int, T*, I>; // #7\n```\n\n-- end example\n\nRemove the 3rd item\
+    \ in the list of 8 to allow constrained template partial specializations because\
+    \ #6, which is redundant with the 4th item. Note that all other items in the list\
+    \ are listed.\n\nWithin the argument list of a class template partial specialization,\
+    \ the following restrictions apply:\n\n> The argument list of the specialization\
+    \ shall not be identical to the implicit argument list of the primary template.\n\
+    \n> The specialization shall be more specialized than the primary template (14.6.5.2).\n\
+    \n...\n\n# 14.6.5.1 Matching of class template partial specializations [temp.class.match]\n\
+    \nModify paragraph 2; constraints must be satisfied to match a partial specialization.\n\
+    A partial specialization matches given actual template argument list if the template\
+    \ arguments of the partial specialization can be deduced from the actual template\
+    \ argument list (14.9.2); and the deduced template arguments satisfy the constraints\
+    \ of the partial specialization, if any (14.10.2).\n\nAdd the following to the\
+    \ end of paragraph 2.\n\n[Example]:\n\n```\nstruct S { void f(); };\n\nA<S, 1>\
+    \ a6; // uses #6\nA<int, S*, 3> a8; // uses #7\n```\n\n-- end example\n\n14.6.5.1\n\
+    \n37"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# 14.6.5.2 Partial ordering of class template specializations
+
+
+    Modify paragraph 1 so that constraints are considered in the partial ordering
+    of class template specializations.
+
+
+    > For two class partial specializations, the first is at least specialized as
+    the second if, given the following rewrite to two function templates, the first
+    function is at least specialized as the second according to the ordering rules
+    for function templates (14.6.6.2);
+
+
+    +   - the first function has the same template parameters and associated constraints
+    (14.10.2) as the first partial specialization, and has a single function whose
+    type is a class template specialization with the template elements of the first
+    partial specialization, and
+
+    - the second function has the same template parameters and associated constraints
+    (14.10.2) as the second partial specialization, and has a single function whose
+    type is a class template specialization with the template elements of the second
+    partial specialization.
+
+
+    Add the following to the end of paragraph 1:
+
+
+    ```
+
+    Example:
+
+    ```cpp
+
+    template<typename T> concept bool requires (T t) { t.f(); };
+
+    template<typename T> concept bool D = C<T> && requires (T t) { t.f(); };
+
+    ```
+
+    ```cpp
+
+    template<C> class S {};
+
+    template<C> S<T> {}; // #1
+
+    template<D> class S<T> {}; // #2
+
+    ```
+
+    ```cpp
+
+    template<C> void f(S<T>); // A
+
+    template<D> void f(S<T>); // B
+
+    ```
+
+    ```
+
+
+    The partial specialization #2 is more specialized than #1 because B is more specialized
+    than A.
+
+
+    # 14.6.6 Function templates
+
+
+    # 14.6.6.1 Function template overloading
+
+
+    Modify paragraph 6 to account for constraints on function templates.
+
+
+    > Two function templates are equivalent if they are declared in the same scope,
+    have identical template parameter lists, and have return types and parameter lists
+    that are equivalent using the rules described above to compare expressions involving
+    template parameters.
+
+    Two function templates are equivalent if they:
+
+
+    +   - are declared in the same scope,
+
+    - have the same name,
+
+    - have identical template parameter lists, and
+
+
+    have return types, parameter lists, and associated constraints that are equivalent
+    using the rules described above to compare expressions involving template parameters.
+
+
+    Two function templates are functionally equivalent except that one or more expressions
+    involve template parameters in the return types, and parameter lists, and associated
+    constraints (14.10.2) are functionally equivalent using the rules described above'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\nto compare expressions\
+    \ involving template parameters. If a program contains declarations of function\
+    \ templates that are functionally equivalent but not equivalent, the program is\
+    \ ill-formed; no diagnosis is required.\n\n# 14.6.6.2 Partial ordering of function\
+    \ templates [temp.func.order]\n\nModify paragraph 2 to include constraints in\
+    \ the partial ordering of function templates.\n\nPartial ordering selects which\
+    \ of function templates is more specialized than the other by transforming each\
+    \ template in turn (next paragraph) and performing template argument deduction\
+    \ using the function type. The deduction process determines whether one of the\
+    \ templates is more specialized than the other; the specialized template is chosen\
+    \ by the partial ordering. If both deductions succeed, the partial ordering selects\
+    \ the more constrained template as described by rules in 14.10.3.\n\n# 14.7 Name\
+    \ resolution [temp.res]\n\nModify paragraph 8.\n\nKnowing which names are type\
+    \ names the syntax of every template to be checked. No diagnosis should be issued\
+    \ for a template with a valid specialization be generated. If no valid specialization\
+    \ can be generated for a template, and that is not instantiated, the template\
+    \ is ill-formed, no diagnosis is required. If every specialization of a variadic\
+    \ template requires an empty template package, the template is ill-formed, no\
+    \ diagnosis is required. If no instantiation of the associated constraints (14.10.2)\
+    \ would result in a valid expression, the template is ill-formed, no diagnosis\
+    \ is required. If a hypothetical instantiation of a immediately following definition\
+    \ would be ill-formed due to a constraint that does not depend on a template parameter,\
+    \ the program is ill-formed; no diagnosis is required. If the interpretation of\
+    \ the corresponding construct in the hypothetical instantiation is different from\
+    \ the interpretation of any actual instantiation of the template, the program\
+    \ is ill-formed; no diagnosis is required.\n\n# 14.7.2 Dependent names [temp.dep]\n\
+    \n# 14.7.2.2 Type-dependent expressions [temp.dep.expr]\n\nAdd the following paragraph\
+    \ to this section.\n\n+   - A fold-expression is type-dependent.\n\n# 14.7.2.3\
+    \ Value-dependent expressions [temp.dep.constexpr]\n\nModify paragraph 4 to include\
+    \ fold-expressions in the set of value-dependent expressions.\n\nExpressions of\
+    \ the following are value-dependent:\n\n```\nsizeof\t ... ( identifier )\nfold-expression\n\
+    ```\n\n# 14.7.4 Dependent name resolution [temp.dep.res]\n\n# 14.7.4.1 Point of\
+    \ instantiation [temp.point]\n\nAdd a new paragraph after paragraph 4.\n\nThe\
+    \ point of instantiation of a constraint-expression of a specialization immediately\
+    \ precedes the point of instantiation of the specialization."
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    # 14.8 Template instantiation and specialization
+
+
+    # 14.8.1 Implicit Instantiation
+
+
+    [temp.spec]
+
+    [temp.inst]
+
+
+    Change paragraph 1 to include associated constraints.
+
+
+    Unless a template specialization has been explicitly instantiated 14.8.2 or explicitly
+    specialized 14.3.3, the class template specialization is implicitly instantiated
+    when the specialization is referred in a context that requires a fully-defined
+    object type or when the completeness of the class affects the semantics of the
+    program. [Note: Within a template declaration, a local class or the members of
+    a local class are never considered to be entities that can be separately instantiated
+    (this includes their default arguments, exception-specifications, and non-static
+    data members, if any). As a result, the semantic constraints are instantiated
+    as the instantiation of the entry within the local class or declaration is declared.—
+    end note]
+
+
+    The implicit instantiation of a class template specialization requires the implicit
+    instantiation of the declarations, not of the definitions, default arguments,
+    associated constraints (14.10.2); or exception-specifications of the class member
+    functions, member constraints, scoped members, static data members, and templates
+    of insoped members and anonymous unions.
+
+
+    Add a new paragraph after this to describe how associated constraints are instantiated.
+
+
+    The associated constraints of a template specialization are not instantiated with
+    the specialization itself; they are instantiated only if they are satisfied (14.10.2).
+    [Note: The satisfaction of constraints is determined during member lookup or overload
+    resolution. Preserving of the substituted constraint also allows member function
+    to be partially ordered by these constraints according to the rules in 14.10.3.—
+    end note]
+
+
+    ```
+
+    Example:
+
+    template<T> concept C = size(T) > 2;
+
+    template<T> concept D = C<T> && size(T) > 4;
+
+    ```
+
+
+    ```
+
+    template<T> struct S {
+
+    S() requires C<T> {}; // #1
+
+    S() requires D<T> {}; // #2
+
+    };
+
+    ```
+
+
+    ```
+
+    S<char> s1; // error: no matching constructor
+
+    S<char> s2; // calls #2
+
+    ```
+
+
+    Even neither requires a part of the template specialization. This also has the
+    effect of suppressing the implicit generation of a default constructor (12.1).
+    [Example:
+
+
+    ```
+
+    template<typename> struct S {
+
+    template<typename> U requires false struct inner; // OK
+
+    ```
+
+
+    ```
+
+    template<typename> struct S2 {
+
+    template<typename> U
+
+    requires sizeof(T-(int)size(T))) > 1 // error: ill-formed, no diagnostic required
+
+    struct inner;
+
+    };
+
+    ```
+
+
+    — Every instantiation of S1 results in a valid type, although any use of its nested
+    Inner1 template is invalid. S2 is ill-formed, no diagnostic required, since no
+    substitution into the constraints of its Inner2 template would result in a valid
+    expression.
+
+
+    § 14.8.1
+
+
+    40'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# ISO/IEC T 19217:2015
+
+    ISO/IEC T 19217:2015(E)
+
+
+    N4549
+
+
+    # 14.8.2 Explicit instantiation [temp.explicit]
+
+
+    Add the following after paragraph 7.
+
+
+    > [Note: An instantiation of a constrained template shall satisfy that template''s-associated
+    constraints (14.10.2). The satisfaction of constraints is determined during name
+    lookup for explicit instantiations of function templates, during template argument
+    deduction (14.9.2.6) when one or more template arguments are left unspecified.,
+    or for explicit instantiations where all template arguments are specified (14.3),
+    — end note]
+
+
+    Modify paragraph 8 to ensure that only members whose constraints are explicitly
+    instantiated during class specialization. The note in the C++ Standard is omitted.
+
+
+    An instantiation of a class template is also an explicit instantiation of the
+    same kind (declaration or definition) of each of its members (not including inherited
+    from base classes and members that are templates) that has not been previously
+    specified in the translation unit containing the explicit instantiation, and provided
+    that the associated constraints, if any, are satisfied by the template arguments
+    of the explicit instantiation (14.10.2), except as described below.
+
+
+    # 14.8.3 Explicit specialization [temp.expl.spec]
+
+
+    Add the following after paragraph 10.
+
+
+    > [Note: A specialization of a constrained template shall satisfy that template''s-associated
+    constraints (14.10.2). The satisfaction of constraints is determined during name
+    lookup for explicit specializations in which all template arguments are specified
+    (14.3), or for explicit specializations of function templates, during template
+    argument deduction (14.9.2.6) when one or more template arguments are left unspecified.,
+    — end note]
+
+
+    # 14.9 Function template specializations [temp.fct.spec]
+
+
+    # 14.9.2 Template argument deduction [temp.deduct]
+
+
+    Add the following sentences to the end of paragraph 5. This defines the substitution
+    of template arguments into a function template constraints. Note that the last
+    part of paragraph 5 has been duplicated in order to provide context for the addition.
+
+
+    When all template arguments have been deduced or obtained from default template
+    arguments, all use of templates in the template parameter list of the template
+    and the function type are replaced with the corresponding deduced or default argument
+    values. If the substitution results in an invalid type, as described above, template
+    deduction fails. If the function has associated constraints (14.10.2), the template
+    arguments are substituted into the associated constraints without evaluating the
+    resulting expression. If this substitution results in an invalid type or expression,
+    type deduction fails. [Note: The satisfaction of constraints (14.10) is determined
+    during overload resolution (13.3), and by the function template specialization
+    — not at the point of substitution., — end note]
+
+
+    # 14.9.2.6 Deducing template arguments from a function deduction [temp.deduct]
+
+
+    Add the following after paragraph 1 in order to require the satisfaction of constraints
+    when matching a specialization to a template.
+
+
+    Remove from the set of function templates all those whose associated constraints
+    (if any) are not satisfied by the deduced template arguments (14.10.2).
+
+
+    Update paragraph 2 (now paragraph 3) to accommodate the new wording.
+
+
+    § 14.9.2.6
+
+
+    41'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: 'If, for the set of function templates so considered for the remaining templates,
+    there is either no match or more than one match after partial ordering has been
+    considered (14.6.6.2), deduction fails and, in the declaration cases, the program
+    is ill-formed.
+
+
+    Add the following example to paragraph 3.
+
+
+    [Example::
+
+
+    ```
+
+    template<typename T> concept bool C = requires (T t) { -t };
+
+
+    template<typename T> void f(T) {} // #1
+
+    template<typename T> void g(T) {} // #2
+
+    template<typename T> void g(T) {} // #3
+
+    ```
+
+
+    ```
+
+    template void f(int); // OK: refers to #1
+
+    template void f(void*); // error: no matching template
+
+    template void g(int); // OK: refers to #3
+
+    template void g(void*); // OK: refers to #2
+
+    ```
+
+
+    end example.]'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    # 14.10 Template constraints
+
+
+    [temp.constr]
+
+
+    Add this section after 14.9.
+
+
+    > [Note: This section defines the meaning of constraints on template arguments.
+    The abstract syntax, relation, and equivalence are defined in 14.10.1. Constraints
+    are associated with declarations in 14.10.2. Declarations are partially ordered
+    by their associated constraints (14.10.3) — end note]
+
+
+    # 14.10.1 Constraints
+
+
+    [temp.constr.constr]
+
+
+    A constraint is a sequence of logical operations and operands that specifies requirements
+    on template arguments. [Note: The operands of logical operation are constraints.
+    — end note] There are different kinds of constraints:
+
+
+    +   (1.1) conjunctions (14.10.1.1),
+
+    (1.2) disjunctions (14.10.1.1),
+
+    (1.3) predicate constraints (14.10.1.2),
+
+    (1.4) expression constraints (14.10.1.3),
+
+    (1.5) type constraints (14.10.1.4),
+
+    (1.6) implicit conversion constraints (14.10.1.5),
+
+    (1.7) argument deduction constraints (14.10.1.6),
+
+    (1.8) exception constraints (14.10.1.7),
+
+    (1.9) parameterized constraints (14.10.1.8)
+
+
+    For a constraint to be instantiated (14.8), its associated constraints shall be
+    satisfied (14.10.2). [Note: The satisfaction of constraints on class templates,
+    alias templates, and variables is required when referring to a template specification
+    (14.3). The satisfaction of constraints on functions and template functions is
+    required during overload resolution (14.3.2). The satisfaction of constraints
+    introduced by constraint-type-specifiers (7.1.6.4.2) in the type of a variable
+    or declared return type is required when valued for their corresponding placeholders
+    of template arguments (7.1.6) — end note] Determining if a constraint is satisfied
+    entails the substitution of template arguments for that constraint. The rules
+    for determining the satisfaction of different kinds of constraints are defined
+    in the following subsections:
+
+
+    When one declaration is more specialized than another requires knowing when two
+    constraints are equivalent (14.10.3). The rules for determining the difference
+    of constraints are defined in the following subsections. Two constraints that
+    are not equivalent are functionally equivalent, if for any set of template arguments,
+    both constraints are satisfied or both constraints are unsatisfied.
+
+
+    # 14.10.1.1 Logical operations
+
+
+    [temp.constr.op]
+
+
+    > There are binary logical operations on constraints: conjunction and disjunction.
+    [Note: For the purpose of exposition, conjunction is satisfied using the symbol
+    ∧ and disjunction is satisfied using the symbol ∨. The operands of these operations
+    are called the left and right operands. In the constraint A ∧ B, A is the left
+    operand, and B is the right operand. Grouping of constraints is shown using parentheses.
+    — end note]
+
+
+    > A conjunction is a constraint taking two operands. A conjunction of constraints
+    is satisfied if and only if both operands are satisfied. The satisfaction of a
+    conjunction''s operations are evaluated left-to-right; if the left operand is
+    not satisfied, template arguments are not substituted into the
+
+
+    §14.10.1.1
+
+
+    43'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    right operand, and the constraint is not satisfied. If the left and right operands
+    of a conjunction
+
+    predicate constraints (14.10.1.2), let P and Q be the expressions of these constraints
+    resulting
+
+    substitution. If the expression P && Q results in a user-declared operator&&,
+    the
+
+    program is ill-formed. Example:
+
+
+    ```
+
+    template <typename T>
+
+    const bool get_value() { return T::value(); };
+
+    ```
+
+
+    ```
+
+    template <typename T>
+
+    requires sizeof(T) > 1 && get_value<T>()
+
+    void f(T);
+
+    // has constraint sizeof(T) > 1 ^ get_value<T>()
+
+    ```
+
+
+    ```
+
+    void f(int);
+
+    f(''a''); // OK: calls f(int)
+
+    ```
+
+
+    In the satisfaction of the associated constraints (14.10.2) of f, the constraint
+    sizeof(char) =
+
+    1 is not satisfied; arguments are not substituted into the right operand of the
+    conjunction.
+
+    substitution would cause this expression to be ill-formed since get_value<char>()
+    produces
+
+    invalid expression that is not in the immediate context (14.9.2). — end example
+
+
+    A conjunction is equivalent to another conjunction D if and only if the left operands
+    of C and
+
+    D are equivalent and the right operands of C and D are equivalent.
+
+
+    A disjunction is taking two operands. A disjunction is satisfied if either or
+    both operands
+
+    erands are evaluated left-to-right: if the left operand is satisfied, the satisfaction
+    of a disjunction''s
+
+    eroperands are substituted into the right operand, and if the left and right operands
+    of
+
+    a conjunction of predicate constraints are (14.10.1.2), let P and Q be the expressions
+    of
+
+    constraints resulting from substitution. If the expression P || Q results in a
+    user to-
+
+    decloperator||, the program is ill-formed.
+
+
+    A disjunction is equivalent to another disjunction D if and only if the left operands
+    of C and
+
+    D are equivalent and the right operands of C and D are equivalent.
+
+
+    Note The prohibition against used logical operators disallows constraint-expressions
+
+    (14.10.2) whose evaluation disagrees with the satisfaction of its derived constraint.
+    That is,
+
+    for any atomic predicate constraints A and B, whose evaluation disagrees with
+    the satisfaction of its derived constraint. That is,
+
+    conjunction A && B is satisfied if and only if the constraint-expression PA &&
+    PB evaluates
+
+    nto true. Likewise, a disjunction A or B is satisfied if and only if the constraint-expression
+    PA || PB evaluates
+
+    by true. — end note
+
+
+    # 14.10.1.2 Predicate constraints [temp.const.pred]
+
+
+    A predicate constraint is satisfied when it evaluates to constant E (5.19). [Note:
+
+    Predicate constraints allows the definition of templates in terms of expression
+    constraints-
+
+    This allows the specification of constraints on non-type arguments and template
+
+    template arguments. — end note] Note: A predicate constraint is introduced by
+    the constraint-
+
+    expression of a requires-clause (14.10.2), or as the associated constraint of
+    constrained-parameter
+
+    (14.1) or template-introduction (14.2). — end note] After substitution, E shall
+    have type bool.
+
+    Example:
+
+
+    ```
+
+    template <typename T>
+
+    const bool c = sizeof(T) == 4 && true; requires predicate constraints
+
+    // sizeof(T) == 4 and true
+
+    ```
+
+
+    ```
+
+    template <typename T>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# PD ISO/IEC TS 19217:2015\nISO/IEC TS 19217:2015(E)\n\n```\nstruct B {\n \
+    \   constexpr explicit operator bool() const { return true; }\n};\n\ntemplate<typename\
+    \ T>\nrequires S<T>\nvoid f()();\n```\n\nf(0); // error: constraints are not satisfied\
+    \ because the\n// expression B<int>(0) does not have type bool\n\nNo conversions\
+    \ are applicable to predicate constraints. end example]\n\nA predicate constraint\
+    \ A is equivalent to another predicate B if and only if the expressions of A\n\
+    B are equivalent using the rules described in 14.6.6.1 to compare expressions.\n\
+    \n# 14.10.3 Expression constraints [temp.const.expr]\n\nAn expression constraint\
+    \ is a constraint that specifies a requirement on the formation of an\nexpression\
+    \ through substitution of template arguments. An expression constraint is satisfied\n\
+    if substitution did not fail. Within an expression constraint, E is an unevaluated\n\
+    (Clause 5). [Note: An expression constraint is introduced by the expression in\
+    \ either a\nnote or compound-expression (5.1.4)(5.1.3) of a requires-expression.\
+    \ — end\nnote]; [Example]:\n\n```\ntemplate<typename T> concept C = (T t) { ++\
+    \ };\n```\n\nThe concept C introduces an expression constraint for the expression\
+    \ ++. The type argument\nsatisfies this constraint because the expression ++ is\
+    \ valid after substituting int for T. — end\nexample]\n\nAn expression constraint\
+    \ A is equivalent to another expression constraint B if and only if the\nexpressions\
+    \ of A and B are equivalent using the rules described in 14.6.6.1 to compare expressions.\n\
+    \n# 14.10.4 Type constraints [temp.const.type]\n\nA type constraint is a constraint\
+    \ that specifies a requirement on the formation of a type T\nthrough a substitution\
+    \ of template arguments. A type constraint is satisfied if and only if T is\n\
+    ot ill-formed, meaning that the substitution yielding T did not fail. [Note: A\
+    \ type constraint\nis introduced by the typename-specifier in a type-requirement\
+    \ of a requires-expression (5.1.4.2).\n— end note]; [Example]:\n\n```\ntemplate<typename\
+    \ T> concept C = requires { typename T::type };\n```\n\nThe concept C introduces\
+    \ a type constraint for the name T::type. The type int does\nnot satisfy this\
+    \ constraint because substitution of that type results in a\nsubstitution failure;\
+    \ typename int::type is ill-formed. — end example]\n\nA type constraint A is a\
+    \ class template specialization does not require that T to be\ncomplete (3.9).\n\
+    \nA type constraint A is equivalent to another type constraint B if and only if\
+    \ the A and\nB are equivalent according to the rules in 14.4.\n\n# 14.10.5 Implicit\
+    \ conversion constraints [temp.const.conv]\n\nAn implicit conversion constraint\
+    \ is a constraint that specifies a requirement on the implicit\nconversion of\
+    \ an expression E to a type T. The constraint is satisfied if and only if E is\
+    \ implicitly"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "# PD ISO/IEC T 19217:2015\nISO/IEC T 19217:2015(E)\n\nN4549\n\nconvertible\
+    \ to T (Clause 4). [Note: A conversion constraint is introduced by a trailing-return-\n\
+    type in a compound-requirement where the trailing-return-type contains no placeholders\
+    \ (5.1.4.3).\n-- end note |] Example:\n\n```\ntemplate<typename T> bool c =\n\
+    \  requires(T a, T b) {\n    return a == b;\n  };\n```\n\nThe compound-requirement\
+    \ C introduces two atomic constraints: an\nexpression constraint for a == b, and\
+    \ the implicit conversion constraint that the expression a\n== b is implicitly\
+    \ convertible to bool. -- end example\n\nAn implicit conversion constraint is\
+    \ equivalent to another implicit conversion constraint B\nif and only the expressions\
+    \ of A and B are equivalent using the rules in 14.6.6.1 to compare\nconstraints,\
+    \ and the types of A and B are equivalent using the rules in 14.4.\n\n# 14.10.1.6\
+    \ Argument deduction constraint [temp.construct]\n\nAn argument deduction constraint\
+    \ specifies that the type of an expression\nE is deduced from a type T, where\
+    \ T includes one or more placeholders (7.1.4.4).\n[Note: An argument deduction\
+    \ constraint is introduced by a compound-requirement (5.1.4.3)\nhaving a trailing-return-type\
+    \ that contains one or more placeholders. In such a constraint, E isnthe expression\
+    \ of the compound-requirement, and T is the type specified by the trailing-return-\n\
+    type. -- end note ]\n\nTo determine if an argument deduction constraint is satisfied,\
+    \ an abbreviated function\nft with one parameter whose type is T (8.3.5). The\
+    \ constraint is satisfied if the resolution\nof the function call f(E) succeeds\
+    \ (13.3). [Note: Overload resolution succeeds when values\ndef for all template\
+    \ parameters in f that correspond to the placeholders in T,\nand the constraints\
+    \ associated with any constrained-type-specifiers are satisfied. -- end note]\n\
+    Example:\n\n```\ntemplate<typename T, typename U> struct Pair;\nntemplate<typename\
+    \ T>\nbool C() { return true; }\n\nbool C() { requires(T t) { (*t) -> Pair<Clk,\
+    \ auto>; }; }\n\ntemplate<C T> void g(int* nullptr); // error: constraints not\
+    \ satisfied.\n```\n\nThe invented abbreviated function f for the compound-requirement\
+    \ in C is:\n\n```\nvoid f(Pair<Clk, auto>);\n```\n\nIn the call g(int*nullptr),\
+    \ the constraints are not satisfied because no values can be deduced\nfor the\
+    \ placeholders C1 and auto from the expression *t when t has \"pointer-to-int\"\
+    . -- end\nample)\n\nAn argument deduction constraint A is equivalent to another\
+    \ argument deduction constraint B\nif and only the expressions of A and B are\
+    \ equivalent using the rules in 14.6.6.1 to compare\nexpressions, and the types\
+    \ of A and B are equivalent (14.4).\n\n§ 14.10.1.6\n\n46"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    # 14.10.7  Exception constraints
+
+
+    An exception constraint is a constraint for an expression E that is satisfied
+    if and only if the exception no(E) is true (5.3.7). [Note: Exception constraints
+    are introduced by a compound-requirement that includes the specifier (5.1.4.3).
+    — end note]
+
+
+    An exception constraint is equivalent to another exception constraint B if and
+    only if the expressions of A and B are equivalent using the rules described in
+    14.6.6.1 to compare expressions.
+
+
+    # 14.10.8  Parameterized constraints
+
+
+    A parameterized constraint is a constraint that defines a sequence of parameters
+    (8.3.5), constraint variables, and has a single operand. [Note: Parameterized
+    constraints are introduced by requires-expressions (5.1.4). The constraint variables
+    of a parameterized constraint correspond to the parameters in the requirement-list
+    of a requires-expression, and the operand of the conjunction of constraints. —
+    end note] [Note: Parameterized constraints have no corresponding C++ syntax. For
+    the purpose of exposition, a parameterized constraint is written as, e.g., λ(x
+    y) where x and y are constraint variables, and P(x,y) is the constraint''s operand
+    in terms of x and y. — end note] [Example]:
+
+
+    The concept Eq defines the parameterized constraint λ(T a, T b) P(a,b) where P(a,b)
+    is the constraint that a == b and a! must be valid expressions (14.10.1.3). —
+    end example
+
+
+    A parameterized constraint is satisfied if and only if substitution into its constraints
+    results in an invalid type, and the operand is satisfied. Template arguments are
+    substituted into the declared constraint variables in the order in which they
+    are declared. If substitution into a constraint variable fails, no more substitutions
+    are performed, and the constraint is not satisfied.
+
+
+    Two parameterized constraints A and B are equivalent if and only if they are equivalent.
+    Two expressions involving constraint variables are equivalent if they are equivalent
+    according to the rules for expressions described in 14.6.6.1, except that any
+    identifiers referring to constraint variables are equivalent if and only if their
+    types of corresponding declarations are equivalent (14.4).
+
+
+    A constraint should not appear as an evaluated operand (5) of a predicate constraint
+    (14.10.2). [Example]:
+
+
+    — end example
+
+
+    # 14.10.2  Constrained declarations
+
+
+    A template declaration (Clause 14) or function declaration (8.3.5) can be constrained
+    by the use of a requires-clause. This allows the specification of constraints
+    for that declaration as an expression:'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'constraint-expression:
+
+    logical-or-expression
+
+
+    # PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    2
+
+
+    Constraints can be associated with a declaration through use of template-introductions,
+    constrained-parameters in a template-parameter-list, and constrained-type-specifiers
+    in the parameter-type-list of a function template. Each of these forms introduces
+    constraint-expressions that are used to constrain the declaration. A template''s
+    associated constraints are defined as a single constraint-expression derived from
+    the constrained-expressions using the following rules:
+
+
+    (2.1)
+
+
+    If there are no constrained-expressions, the declaration is unconstrained.
+
+
+    (2.2)
+
+
+    If there is a single constrained-expression, that is the associated constraint.
+
+
+    (2.3)
+
+
+    Otherwise, the associated constraints are formed as a logical AND expression (5.14)
+    where operands are in the following order:
+
+
+    +   - the constraint-expression introduced by a template-introduction (14.2),
+    and
+
+
+    +   - the constraint-expression introduced by each constrained-parameter (14.1)
+    in the declaration-parameter-list, in order of appearance), and
+
+
+    +   - the constraint-expression introduced by a requires-clause following a template-parameter-list
+    (Clause 14), and
+
+
+    +   - the constraint-expression introduced by each constrained-type-specifier
+    (7.1.6.2) in the type of a parameter-declaration in a function (8.3.5) in order
+    of appearance, and
+
+
+    +   - the constraint-expression introduced by a requires-clause (Clause 8) of
+    a function declaration (8.3.5).
+
+
+    The associated constraints for a template declaration establishes the order in
+    which the normalized constraints (defined below) will be for comparison (to determine
+    when one replaces another), and the order in which constraints are instantiated
+    when checking for satisfaction (14.10.1). The constraint-expressions introduced
+    by constrained-type-specifiers in a variable type or in the return type of a function
+    are not included in the associated constraints of the declaration. [Note: These
+    constraints are checked during the instantiation of the declaration.—end note]
+    A program containing two declarations whose associated constraints are functionally
+    equivalent but not equivalent (14.6.6.1) is ill-formed, requiring diagnostic required.
+    [Example]:
+
+
+    ```
+
+    template<typename T> concept bool C = true;
+
+
+    void f1(C);
+
+    template<C T> void f1(T);
+
+    template<typename T> requires C<T> void f1(T);
+
+    template<typename T> void f1(T) requires C<T>
+
+    ```
+
+
+    All declarations of f1 declare the same constraint.
+
+
+    ```
+
+    template<typename T> concept bool C1 = true;
+
+    template<typename T> concept bool C2 = sizeof(T) > 0;
+
+    ```
+
+
+    ```
+
+    // #1
+
+    template<C1 T> void f2(T) requires C2<T>;ntemplate<typename T> requires C1<T>
+    && C2<T> void f2(T); // #2, redeclaring of #1
+
+    ```
+
+
+    The associated constraints of #1 are C1<T> && C2<T>, and those of #2 are also
+    C1<T> && C2<T>.
+
+
+    § 14.10.2
+
+
+    48'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    ```
+
+    template<C1> requires C2> void f3();
+
+    template<C2> requires C1> void f3(); // error: constraints are functionally
+
+    // equivalent but not equivalent
+
+    ```
+
+
+    The associated constraints of the first declaration are C1> && C2>, and those
+    of the second
+
+    are C2> && C1> — end example
+
+
+    The determination of a declaration''s associated constraints, and the partial
+    ordering
+
+    de declarations by those constraints, requires that they first normalized. Normalization
+
+    transform an expression into a sequence of constraints and disjunctions (14.10.1)
+    of atomic
+
+    constraints. The atomic constraints are those that have no operands: predicate
+
+    constraints14.10.2), expression constraints (14.10.3), type constraints (14.10.4),
+    implicit
+
+    conversion constraints (14.10.5), argument disjunctions (14.10.6), and exception
+
+    constraints. The normal form of an expression X is defined as follows. First,
+    create
+
+    a new expression E by replacing substitutions in X that refer to concepts with
+    their
+
+    corresponding definitions. In particular:
+
+
+    +   - replace all functions of the form C<A1, A2, ... AN>(), where C refers to
+    the
+
+    concept D (7.1.7) is selected by rules for constraint resolution (14.0.1), with
+    the result of
+
+    substituting A1, A2, ... AN into the expression returned by D, and
+
+
+    +   - replace all id-expressions of the form C<A1, A2, ... AN>, where C is the
+    variable concept
+
+    D (7.1.7) is replaced by rules for constraint resolution (14.10.4), with the result
+    of substituting
+
+    A1, A2, ... AN, into the initializer of D;
+
+
+    If any such substitution fails, the program is ill-formed. Second, transform the
+    expression E
+
+    a a constraint as:
+
+
+    +   - the normal form of an expression (E) is the normal form of E;
+
+
+    +   - the normal form of an expression E1 && E2 is the disjunction, and the constraint
+    (14.10.1.1) of the normal
+
+    form of E1 and E2;
+
+
+    +   - the normal form of a requires-expression, (5.1.4) having the form
+
+
+    > requires ( parameter-declaration-clause ) requirement-body
+
+    where the parameter-declaration-clause is not equivalent to any parameter list,
+    is the
+
+    parameter-declaration-clause and whose operand is the normal form of conjunction
+    of constraints
+
+    introduced by requirements in the requirement-body;
+
+
+    +   - the normal form of a requires-expression having one of the following forms
+
+    requires ( void ) requirement-body
+
+    requires () requirement-body
+
+    requires requirement-body
+
+
+    +   is the conjunction of constraints introduced by requirements in the requirement-body;
+
+    - within a requires-expression, any predicate constraint P introduced by a nested-requirement
+
+    (5.1.4.4) is replaced by the normal form of the expression of P;
+
+
+    +   -otherwise, the normal form of E is the predicate constraint whose expression
+    is E.
+
+
+    A declaration''s normalized constraints are yielded by normalizing its associated
+    constraints.
+
+    Example:'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# PDO/IEC T 19217:2015
+
+    ISO/IEC T 19217:2015
+
+
+    ```
+
+    template <typename> concept bool C1() { return sizeof(T) == 1; }
+
+    template <typename> concept bool C2 = C1<T>() && 1 == 2;
+
+    template <typename> concept bool C3 = requires { typename T::type };
+
+    template <typename> concept bool C4 = requires (T x) { ++x; }
+
+
+    template<C2> void f1(T); // #1
+
+    template<C3> void f2(T); // #2
+
+    template<C4> void f3(T); // error: invalid constraints (#4)
+
+    ```
+
+
+    The normalized associated constraints of f1 are sizeof(T) == 1 and 1 == 2; those
+    of #2 the type constraint for T::type; those of #3 are the constrained constraint
+    λ(T x) the expression constraint ++x. In the constraint-expression (bool3) + 4
+    is not a valid predicate constraint because it does not have type. — end example
+
+
+    A associated constraints are satisfied by a set of template arguments if its normalized
+    associated constraints are satisfied by those arguments.
+
+
+    # 14.10 Partial ordering by constraints
+
+
+    A constraint P is to subsum another constraint Q if, it can be determined that
+    P implies up to the value of expressions in P and Q. [Example: Substitution does
+    not determine if the predicate N > 0 (14.10.2) subsumes U > 0 for some template
+    argument U] — end example
+
+
+    In order to determine if a constraint P subsumes a constraint Q, transform P into
+    disjunctive normal form, and Q respectively. Parameterized constraints may appear
+    in conjunctive or disjunctive normal forms. For the purpose of this transformation,
+    the constraint λ(T x) P(x) is equivalent to the constraint P(x). Then, P subsumes
+    Q if and only if
+
+
+    +   - for every disjunctive clause Pi, in the disjunctive normal form of P, Pi
+    subsumes every conjunctive clause in the conjunctive normal form of Q, where
+
+    - a disjunctive clause Pi subsumes a conjunctive clause Qj if and only if each
+    atomic constraint Pi subsumes any atomic constraint Qj
+
+    - an atomic constraint A subsumes another atomic constraint B if and only if the
+    A and B are equivalent using the rules defined in 14.10.1 to compare constraints.
+
+
+    > Example: Let A and B be atomic constraints (14.10.1.2). The constraint A ∧ B
+    subsumes A, but A does not subsume A ∧ B. The constraint A ∨ B subsumes A, but
+    A ∨ B does not subsum B. Also note that each constraint subsumes itself. — end
+    example
+
+
+    The subsum relation relation defines a ordering on constraints. This partial ordering
+    is used to determine
+
+
+    +   - the best candidate of non-function templates (13.3.3),
+
+    - the address of a non-template function (13.4),
+
+    - the matching of template arguments (14.4.1),
+
+    - the partial ordering of class specializations (14.6.5.2),
+
+    - the partial ordering of function templates (14.6.6.2).
+
+
+    1 A constraint is in disjunctive normal form when it is a disjunction of clauses
+    where each clause is a conjunction of atomic constraints. Similarly, a constraint
+    is in conjunctive normal form when it is a conjunction of clauses where each clause
+    is a disjunction of atomic constraints. [Example: Let A, B, and C be atomic constraints.
+    The constraint A ∧ (B ∨ C) is in conjunctive normal form. Its conjunctive clauses
+    are A and (B ∨ C). The disjunctive normal de-form of the constraint A ∧ (B ∨ C)
+    is (A ∧ B) ∨ (A ∧ C). — end example
+
+
+    # § 14.10.3
+
+
+    50'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    When two declarations D1 and D2 are partially ordered by their normalized constraints
+    (14.10.2)
+
+    D1 is at least constrained as D2 if
+
+
+    +   - D1 and D2 are both constrained declarations and D1’s normalized constraints
+    subsum those
+
+    of D2; or
+
+    - D2 is unconstrained.
+
+
+    A declaration D1 is more constrained than any other declaration D2 when D1 is
+    at least as- constrained as D2, and is not at least constrained as D1.
+
+    [Example]:
+
+
+    ```
+
+    template<typename T> concept C1 = requires(T t) { --t };
+
+    template<typename T> concept C2 = C1<T> && requires(T t) { *t };
+
+
+    template<T> void f(T); // #1
+
+    template<T> void f(T); // #2
+
+    template<T> void g(T); // #3
+
+    template<T> void g(T); // #4
+
+
+    f(0); // selects #1
+
+    f((int)0); // selects #2
+
+    g(true); // #3 because C1<bool> is not satisfied
+
+    g(0); // selects #4
+
+    ```
+
+
+    # 14.10.4 Resolution of qualified references to concepts [temp.constr.resolve]
+
+
+    Concept resolution is the process of selecting a concept from a set of concepts
+    defined
+
+    br a qualified-concept-name, or from a set of declarations containing one or more
+
+    definitions referred to by a simple-template or a qualified-id whose unqualified-id
+    is a simple-template-id. Concept resolution is performed when such a name appears
+
+
+    +   - as a constrained-type-specifier (7.1.6.4.2),
+
+    - in a constrained-parameter (14.1),
+
+    - in a template-introduction (14.2), or,
+
+    - within a constraint-expression (14.10.2).
+
+
+    Such a name, C be the concept-name or template-name that refers to the set of
+    concept
+
+    definitions in that set matching to a sequence of parameters and wildcards. This
+    sequence is called
+
+    t concept argument list, and its elements are called concept arguments. For the
+    purpose this
+
+    matching, a wildcard can match a template of any kind (type, non-type, template)
+
+    described.
+
+
+    The method for determining the concept list depends on the context in which C
+    appears.
+
+
+    +   - If C is part of a constrained-type-specifier or constrained-parameter, then
+
+    - if C is a constrained-name-type, the concept argument list is comprised of a
+    single
+
+    wildcard, or
+
+    - if C is the concept-name of a partial-concept-id, the concept argument list
+    is comprised
+
+    of a single wildcard followed by the template-arguments of that partial-concept-id.
+
+
+    § 14.10.4
+
+
+    51'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    (3.2) If C is the concept-name in a template-introduction, the concept argument
+    list is a sequence of wildcards of the same length as the introduction-list of
+    the template-introduction.
+
+
+    (3.3) If C appears as a template-name of a simple-template-id, the concept argument
+    list is the sequence-template-arguments of that simple-template-id.
+
+
+    4 The selection of a concept from the set referred to by C is done by making the
+    argument list against the parameter lists of each concept in set. For a concept
+    CC to be a viable selection, each argument in the argument list is matched against
+    the corresponding parameters of CC. Default template arguments of CC (if any)
+    are instantiated for each template parameter that does not correspond to a concept
+    argument. Instantiated defaults are appended to the argument list. If the last
+    template parameter is not a parameter pack and the number of template parameters
+    of CC is greater than the number of arguments, CC is a viable selection. Otherwise,
+    concept arguments are matched to template parameters using the following:
+
+
+    +   - a template argument matches a template if and only if it matches in kind
+    (type, non-type, type) and according to the rules in 14.4;
+
+    - a wildcard matches a template parameter of any kind;
+
+    - a template parameter pack (14.6.3), matches zero or more concepts, provided
+    that each of those arguments match the pattern of the parameter pack using the
+    rules above for matching concept arguments and template parameters.
+
+
+    If any arguments do not match a corresponding template parameter, the concept
+    CC is not a viable selection. The concept selected by concept resolution shall
+    be the single selection in the set of concepts referred by C. Example:
+
+
+    ```
+
+    template T concept bool C1() { return true; } // #1
+
+    templatetypename T concept bool C2() { return true; } // #2
+
+    templateint T concept bool C3() { return true; }
+
+    templatetypename.. T concept bool C4() = true;
+
+    ```
+
+
+    ```
+
+    void f1(const C1+); // OK selects C1 #1
+
+    void f2(const C1<char>); // OK selects C1<char> #2
+
+    ```
+
+
+    ```
+
+    template<C2> struct S1; // error: no matching concept for C2<0>
+
+    // mismatched arguments
+
+    // resolution of C2 is ambiguous,
+
+    template<C2> struct S2; // both concepts are viable
+
+    ```
+
+
+    ```
+
+    C3(..Ts) void q1(); // OK: selects C3
+
+    C3(T) void q2(); // OK: selects C3
+
+    ```
+
+
+    - end example]'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: 'PD ISO/IEC TS 19217:2015
+
+    ISO/IEC TS 19217:2015(E)
+
+
+    N4549
+
+
+    # Annex A (informative)
+
+    Compatibility
+
+
+    [diff]
+
+
+    # A.1 C++ extensions for Concepts and ISO C++ 2014
+
+
+    [diff.iso]
+
+
+    1 This clause lists the differences between C++ with Concepts and ISO C++, by
+    the chapters of this document.
+
+
+    # A.1.1 Clause 2: lexical conventions
+
+
+    [diff.lex]
+
+
+    # 2.1 New Keywords
+
+
+    **Change:** New keywords are added to C++ extensions for Concepts; see 2.1.
+
+
+    **Rationale:** These new keywords were added in order to implement the semantics
+    of the new features. In particular, the **requires** keyword is added to introduce
+    constraints through a *requires-clause* or a *requires-expression*. The **concept**
+    keyword is added to enable the definition of concepts (7.1.7), the normalization
+    of constraints (14.10.2), and the semantic differentiation of *concept-names*
+    from other identifiers.
+
+
+    **Effect on original feature:** Change to semantics of well-defined feature. Any
+    C++ programs that used any of these keywords as identifiers are not valid C++
+    programs with Concepts.
+
+
+    **Difficulty of converting:** Syntactic transformation. Converting one specific
+    program is easy. Converting a large collection of related programs takes work.
+
+
+    **How widely used:** Seldon.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# # British Standards Institution (BSI)
+
+
+    BSI is the national body responsible for preparing British Standards and standards-related
+    publications, information and services.
+
+
+    BSI is incorporated by Royal Charter. British Standards and other standardization
+    products are published by BSI Standards Limited.
+
+
+    # ## About us
+
+
+    We bring together business, industry, government, consumers, innovators and others
+    to share their combined expertise and experience into standards-based solutions.
+
+
+    The knowledge embodied in our standards has been carefully assembled in a dependable
+    format and refined through our open consensus process. Organizations of all sizes
+    and across all sectors help them achieve their goals.
+
+
+    # ## Information on standards
+
+
+    We can provide you with the knowledge that your organization needs to succeed.
+    Find out more about British Standards by visiting our website at bishop, or contacting
+    our Customer Services team at
+
+
+    # ## Buying standards
+
+
+    You can download PDF versions of BSI publications, including British and adopted
+    European and international standards, through our website at bishop, where hard
+    copies can also be purchased.
+
+
+    If you need specific or foreign standards from the British Standards Development
+    Organizations, hard copies can be ordered from our Customer Services team.
+
+
+    # ## Subscriptions
+
+
+    Our range of subscriptions are designed to make standards easier for you. For
+    further information on our subscription products go to
+
+
+    With British Standards Online (BSO) you''ll have access to over 55,000 British
+    and adopted European international standards from your desktop. It''s an easy
+    way to stay up to date with the latest data and standards.
+
+
+    PLUS is an updating service exclusive to BSI Subscription Members. You will automatically
+    receive the latest hotlink standards when they''re released or revised.
+
+
+    To find out more about becoming a BSI Subscription Member and the benefits of
+    membership, visit bsi.com/shop.
+
+
+    With a Multi-User Licence (MUNL) you''re able to host standards across your organisation.
+    Licenses can cover as few or as many users as you wish. With updates supplied
+    as soon as they''re available, you can be sure of your documentation is current.
+    For further information, email bsimusales@bsigroup.com.
+
+
+    # ## BSI Group Headquarters
+
+
+    38 Chiswick High Road London W4 4AL UK
+
+
+    # ## Revisions
+
+
+    Our British Standards and other publications are updated by amendment or revision.
+
+
+    # ## Copyright
+
+
+    All the software and document set used out in all British Standards and other
+    BSI publications are the property of and copyrighted by BSI, or some other entity
+    that owns copyright in the information (such as the international standards).
+    Licensed software is provided for limited commercial purpose and use. As permitted
+    under the Copyright, Designs and Patents Act 1998 no may be reproduced, distributed
+    in a rental system or transmitted by any means - recording or otherwise - without
+    written permission from BSI. Details and advice can be obtained from the Copyright
+    & Licensing Department.
+
+
+    # ## Useful Contacts:
+
+
+    Customer Services
+
+    Tel: +44 (0) 8086 9001
+
+    Email (orders): orders@bsigroup.com
+
+
+    Subscriptions
+
+    Tel: +44 (0) 8086 9001
+
+    Email (subscriptions): subscriptions@bsigroup.com
+
+
+    # ## Knowledge Centre
+
+
+    Tel: +44 20 8966 7004
+
+    Email: knowledgecentre@bsigroup.com
+
+
+    # ## Copyright & Licensing
+
+
+    Tel: +44 (0)20 8966 7070
+
+    Email: copyright@bsigroup.com
+
+
+    ![](img/e6ef4c765bbb1f3e7b4441293baadfd4_61_0.png)'
+  merge: -1
+  img_proc: true
