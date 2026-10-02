@@ -1,0 +1,584 @@
+
+call `70print_color@@AEXXZ`; `object::print_color`
+
+lea ecx, DWORD PTR b$[esp+24]
+
+call `70dump@@AEXXZ`; `box::dump`
+
+lea ecx, DWORD PTR b$[esp+24]
+
+call `70sphere@@AEXXZ`; `sphere::dump`
+
+xor eax, 24
+
+add esp, 24
+
+ret
+
+```
+
+继承类必须始终将它们的字段添加在基类之后，以便基类方法能够操作它们自己的字段。当调用 `object::print_color()` 时，指向 `box` 和 `sphere` 对象的指针作为 `this` 传递，它可以轻松地处理这些对象，因为这些对象中的 `color` 字段始终位于固定地址（偏移量）上。可以说，只要字段固定在地址上，`object::print_color()` 与输入类型无关，而这个条件总是成立的。
+
+如果你发现拼写错误、错误或有任何建议，请随时给我写信：我的邮箱。
+
+如果你为 `box` 类创建一个继承类，编译器会在 `depth` 字段之后添加新字段，使 `box` 类的字段保持在固定地址上。因此，`box::dump()` 方法可以正常访问 `color`、`height` 和 `depth` 字段，这些始终是固定的已知地址。GCC 生成的代码几乎相同，唯一的区别是传递 `this` 指针（如上面所述，它是作为第一个参数传递的，而不是使用 `ECX` 寄存器）。
+
+# 封装
+
+封装是将数据隐藏在类的私有部分，例如允许类方法访问它们。然而，代码中有没有任何标记可以表明某些字段是私有的而另一些不是的吗？让我们尝试这个简单的例子：
+
+```cpp
+#include <stdio.h>
+
+class box {
+
+    private:
+
+        int color, width, height, depth;
+
+    public:
+
+    box(int color, int width, int height, int depth) {
+
+        this->color=color;
+
+        this->width=width;
+
+        this->height=height;
+
+        this->depth=depth;
+
+    }
+
+    void dump() {
+
+        printf("this is a box. color=%d, width=%d, height=%d, depth=%d", color, width, height, depth);
+
+    }
+
+};
+```
+
+这里的 `dump()` 方法如下：
+
+```asm
+?dump@QEAXXZ PROC ; box::dump, CODAT
+
+;this$ = ecx
+
+mov eax, DWORD PTR [ecx+12]
+
+mov ed, DWORD PTR [ecx+8]
+
+push eax
+
+mov eax, DWORD PTR [ecx+4]
+
+mov ecx, DWORD PTR [ecx]
+
+mov edx
+
+push eax
+
+push ecx
+```
+
+```asm
+'this is a box. color=%d, width=%d, height=%d, depth=%d, 0AH, 00H ; 'string
+
+push OFFSET ??_C@0DG@GNCNADAAL$this?is75box?45color=$DN?$CFd7?DN?75width~
+
+call printf
+
+add esp, 20
+
+ret
+
+?dump@box@QEAXXZ END ; box::dump
+```
+
+这是 MSVC 2008 通过 `/Ox` 布局：
+
+| offset | description |
+| --- | --- |
+| +0x0 | int color |
+| +0x4 | int width |
+| +0x8 | int height |
+| +0xC | int depth |
+
+这里的 `sphere::dump` 方法如下：
+
+```asm
+?dump@QEAXXZ PROC ; sphere::dump, CODAT
+
+;this$ = ecx
+
+mov eax, DWORD PTR [ecx+4]
+
+mov ecx, DWORD PTR [ecx]
+
+push eax
+
+push ecx
+```
+
+```asm
+'this is a sphere. color=%d, radius=%d, 0AH, 00H
+
+push OFFSET ??_C@0CF@EFEDJLC$this?is75sphere?45color=$DN?$CFd7?DN?75radius~
+
+call radius
+
+add esp, 12
+
+ret
+
+?dump@sphere@QEAXXZ END ; sphere::dump
+```
+
+这里的 `box::dump` 方法如下：
+
+```asm
+?dump@QEAXXZ PROC ; box::dump, CODAT
+
+;this$ = ecx
+
+mov eax, DWORD PTR [ecx+12]
+
+mov ed, DWORD PTR [ecx+8]
+
+push eax
+
+mov eax, DWORD PTR [ecx+4]
+
+mov ecx, DWORD PTR [ecx]
+
+mov edx
+
+push eax
+
+push ecx
+```
+
+```asm
+'this is a box. color=%d, width=%d, height=%d, depth=%d, 0AH, 00H ; 'string
+
+push OFFSET ??_C@0DG@GNCNADAAL$this?is75box?45color=$DN?$CFd7?DN?75width~
+
+call printf
+
+add esp, 20
+
+ret
+
+?dump@box@QEAXXZ END ; box::dump
+```
+
+这是 MSVC 2008 通过 `/Ox` 布局：
+
+| offset | description |
+| --- | --- |
+| +0x0 | int color |
+| +0x4 | int width |
+| +0x8 | int height |
+| +0xC | int depth |
+
+这里的 `sphere::dump` 方法如下：
+
+```asm
+?dump@QEAXXZ PROC ; sphere::dump, CODAT
+
+;this$ = ecx
+
+mov eax, DWORD PTR [ecx+4]
+
+mov ecx, DWORD PTR [ecx]
+
+push eax
+
+push ecx
+```
+
+```asm
+'this is a sphere. color=%d, radius=%d, 0AH, 00H
+
+push OFFSET ??_C@0CF@EFEDJLC$this?is75sphere?45color=$DN?$CFd7?DN?75radius~
+
+call radius
+
+add esp, 12
+
+ret
+
+?dump@sphere@QEAXXZ END ; sphere::dump
+```
+
+所以，这是内存布局：
+(基类 object)
+
+(继承类)
+box:
+
+| offset | description |
+| --- | --- |
+| +0x0 | int color |
+
+如果你发现拼写错误、错误或有任何建议，请随时给我写一封信：我的邮箱。谢谢！
+
+693
+
+| offset | description |
+| --- | --- |
+| +0x0 | int color |
+| +0x4 | int width |
+| +0x8 | int height |
+| +0xC | int depth |
+
+sphere:
+
+| offset | description |
+| --- | --- |
+| +0x0 | int color |
+| +0x4 | int radius |
+
+让我们来看看 `main()` 函数体：
+
+列表 3.94：优化 MSVC 2008 /Ob0
+
+```asm
+PUBLIC main
+
+TEXT SEGMENT
+
+s = -24; size = 8
+
+b$ = -16; size = 16
+
+main PROLOG
+
+    sub esp, 24
+
+    push 30
+
+    push 20
+
+    push 10
+
+    push 1
+
+    lea ecx, DWORD PTR b$[esp+40]
+
+    call `70box@@AAE@@HHHZ`; `box::box`
+
+    push 40
+
+    lea ecx, DWORD PTR b$[esp+32]
+
+    call `70sphere@@AE@@Z`; `sphere::sphere`
+
+    lea ecx, DWORD PTR b$[esp+24]
+
+    call `70print_color@@AEXXZ`; `object::print_color`
+
+    lea ecx, DWORD PTR b$[esp+24]
+
+    call `70print_color@@AEXXZ`; `object::print_color`
+
+    lea ecx, DWORD PTR b$[esp+24]
+
+    call `70dump@@AEXXZ`; `box::dump`
+
+    lea ecx, DWORD PTR b$[esp+24]
+
+    call `70sphere@@AEXXZ`; `sphere::dump`
+
+    xor eax, 24
+
+    add esp, 24
+
+    ret
+```
+
+继承类必须始终将它们的字段添加在基类之后，以便基类方法能够操作它们自己的字段。当调用 `object::print_color()` 时，指向 `box` 和 `sphere` 对象的指针作为 `this` 传递，它可以轻松地处理这些对象，因为这些对象中的 `color` 字段始终位于固定地址（偏移量）上。可以说，只要字段固定在地址上，`object::print_color()` 与输入类型无关，而这个条件总是成立的。
+
+这里的 `dump()` 方法如下：
+
+```asm
+?dump@QEAXXZ PROC ; box::dump, CODAT
+
+;this$ = ecx
+
+mov eax, DWORD PTR [ecx+12]
+
+mov ed, DWORD PTR [ecx+8]
+
+push eax
+
+mov eax, DWORD PTR [ecx+4]
+
+mov ecx, DWORD PTR [ecx]
+
+mov edx
+
+push eax
+
+push ecx
+```
+
+```asm
+'this is a box. color=%d, width=%d, height=%d, depth=%d, 0AH, 00H ; 'string
+
+push OFFSET ??_C@0DG@GNCNADAAL$this?is75box?45color=$DN?$CFd7?DN?75width~
+
+call printf
+
+add esp, 20
+
+ret
+
+?dump@box@QEAXXZ END ; box::dump
+```
+
+这里的 `sphere::dump` 方法如下：
+
+```asm
+?dump@QEAXXZ PROC ; sphere::dump, CODAT
+
+;this$ = ecx
+
+mov eax, DWORD PTR [ecx+4]
+
+mov ecx, DWORD PTR [ecx]
+
+push eax
+
+push ecx
+```
+
+```asm
+'this is a sphere. color=%d, radius=%d, 0AH, 00H
+
+push OFFSET ??_C@0CF@EFEDJLC$this?is75sphere?45color=$DN?$CFd7?DN?75radius~
+
+call radius
+
+add esp, 12
+
+ret
+
+?dump@sphere@QEAXXZ END ; sphere::dump
+```
+
+所以，这是内存布局：
+(基类 object)
+
+(继承类)
+box:
+
+| offset | description |
+| --- | --- |
+| +0x0 | int color |
+
+如果你发现拼写错误、错误或有任何建议，请随时给我写一封信：我的邮箱。谢谢！
+
+693
+
+| offset | description |
+| --- | --- |
+| +0x0 | int color |
+| +0x4 | int width |
+| +0x8 | int height |
+| +0xC | int depth |
+
+sphere:
+
+| offset | description |
+| --- | --- |
+| +0x0 | int color |
+| +0x4 | int radius |
+
+让我们来看看 `main()` 函数体：
+
+列表 3.94：优化 MSVC 2008 /Ob0
+
+```asm
+PUBLIC main
+
+TEXT SEGMENT
+
+s = -24; size = 8
+
+b$ = -16; size = 16
+
+main PROLOG
+
+    sub esp, 24
+
+    push 30
+
+    push 20
+
+    push 10
+
+    push 1
+
+    lea ecx, DWORD PTR b$[esp+40]
+
+    call `70box@@AAE@@HHHZ`; `box::box`
+
+    push 40
+
+    lea ecx, DWORD PTR b$[esp+32]
+
+    call `70sphere@@AE@@Z`; `sphere::sphere`
+
+    lea ecx, DWORD PTR b$[esp+24]
+
+    call `70print_color@@AEXXZ`; `object::print_color`
+
+    lea ecx, DWORD PTR b$[esp+24]
+
+    call `70print_color@@AEXXZ`; `object::print_color`
+
+    lea ecx, DWORD PTR b$[esp+24]
+
+    call `70dump@@AEXXZ`; `box::dump`
+
+    lea ecx, DWORD PTR b$[esp+24]
+
+    call `70sphere@@AEXXZ`; `sphere::dump`
+
+    xor eax, 24
+
+    add esp, 24
+
+    ret
+```
+
+```cpp
+{
+
+  public:
+
+    int density;
+
+    solid_object() { };
+
+    solid_object(int density)
+
+    {
+
+      this->density=density;
+
+    }
+
+    int density()
+
+    {
+
+      return density;
+
+    }
+
+    void dump()
+
+    {
+
+      printf("this is a solid_object. density=%d\n", density);
+
+    }
+
+}
+
+class solid_box: box, solid_object
+
+{
+
+  public:
+
+    solid_box(int width, int height, int depth, int density)
+
+    {
+
+      this->width=width;
+
+      this->height=height;
+
+      this->depth=depth;
+
+      this->density=density;
+
+    }
+
+    void dump()
+
+    {
+
+      printf("this is a solid_box. width=%d, height=%d, depth=%d, density=%d\n", width, height, depth, density);
+
+    }
+
+    int get_weight() { return get_volume() * get_density(); };
+
+}
+
+int main() {
+
+  solid_box b(10, 20, 30);
+
+  solid_object so(100);
+
+  solid_box sb(10, 20, 30, 3);
+
+  b.dump();
+
+  so.dump();
+
+  sb.dump();
+
+  printf("%d\n", sb.get_weight());
+
+  return 0;
+
+}
+```
+
+让我们在 MSVC 2008 中带有 /Ob0 和 /Ob1 选项编译它，查看 `box::dump()`、`solid_object::dump()` 和 `solid_box::dump()` 的代码：
+
+如果你发现任何拼写错误、错误或有任何建议，请随时给我留言：我的邮箱。谢谢！
+
+# 列表 3.95: 优化 MSVC 2008 /Ob0
+
+```asm
+?dumpbox@QAEXXZ PROC ; box::dump, CODAT
+
+;this$ = ecx
+
+mov eax, DWORD PTR [ecx+8]
+
+mov edx, DWORD PTR [ecx+4]
+
+push eax
+
+mov eax, DWORD PTR [ecx]
+
+push eax
+
+;this is a box. width=%d, height=%d, depth=%d; 0AH,00H
+
+push OFFSET ?7_0C@CMDIKPHDI@thisIs?5box?4?width=$d$DN?CFD0?5$
+
+\height=$d$DN?CFD$$
+
+call printf
+
+add esp, 16
+
+ret 0
+
+?dumpbox@QAEXXZ ENDP ; box::dump
+```
+
+# 列表 3.96: 优化 MSVC 2008 /Ob0
+
+```asm
