@@ -1,0 +1,170 @@
+
+
+勇敢，你可以通过在浏览器中请求该文件来查看，在浏览器的网站端口号之后直接复制并粘贴（例如，http://localhost:50404）。你可以安全地忽略该文件，因为你不需要对其进行任何更改即可正常运行。WebResource.syntax 会被其他控件使用，例如 TreeView，它通过它检索 TreeView 中的图像。
+
+除了 Java 之外，你可以在页面顶部找到一个 CSS `<style>` 块，它设置了菜单项的默认布局。除此，它还移除了 `<ul>` 元素显示中的项目符号，并移除了 `<a>` 元素的下划线。在 Monochrome（单色）主题中，你可以使用 CSS 对其进行样式设置。
+
+为了更好地与 Monochrome 主题的现有设计集成，你可以使用 CSS 对其进行样式。
+
+## 设置菜单控件
+
+Menu 控件暴露了许多复杂的样式属性，允许你更改主菜单和子菜单项等项目的外观。你还可以定义这些项目在激活（选中）或当鼠标悬停在它们上方时的外观。这些样式属性中的每一个都有许多视觉方面的属性，如字体、颜色和间距。图 7-7 显示了 `StaticMenuStyle` 属性的属性，它定义了页面首次加载时可见的主菜单项的外观。
+
+大多数属性（如 `BackColor`、`Foreground` 和 `Font`）被添加到包含菜单页面顶部 `<style>` 块中。这使得在其他页面或其他主题中重用该设计变得困难，因此最好使用 CSS。你可以看到它是如何工作的。
+
+![](img/9e033e3b9560597824f8b22941d6d8bb_288_0.png)
+
+图 7-7
+
+## 尝试设置菜单控件
+
+在本次练习中，你向 Monochrome.css 文件添加一些 CSS 规则，以影响 Menu 控件的样式设置。默认情况下，Menu 控件会向菜单项添加 CSS 类，例如 `level1` 和 `level2`，这使得在菜单的不同级别应用样式变得简单。
+
+- 1. 从 Monochrome 主题文件夹打开 Monochrome.css，并添加以下 CSS 规则。你可以跳过放置在 `/*` 和 `*/` 之间的注释；它们仅用于描述选择器的用途。如果你不想输入这些 CSS，也可以从本书的代码下载中获取此文件的副本，并将其复制到你的文件中。记住，CSS 是区分大小写的，请按此处所示精确输入选择器：
+
+```css
+ul.level1 {
+  /* 定义主菜单项的外观。 */
+  font-size: 14px;
+  font-weight: bold;
+  height: 19px;
+  line-height: 19px;
+}
+```
+
+```css
+ul.level1 .selected {
+  /* 定义激活菜单项的外观。 */
+  background-color: #509EE7;
+}
+```
+
+```css
+a.level1 {
+  /* 主菜单项文本左侧添加一些空白。
+  !!important 用于覆盖菜单生成的内联 CSS */
+  padding-left: 5px !important;
+}
+```
+
+```css
+a.level2 {
+  /* 定义子菜单项的外观。 */
+  background-color: #555555;
+  padding-left: 8px;
+}
+```
+
+```css
+a.level1.hover, a.level2.hover {
+  /* 定义主项目和子项目的悬停样式。 */
+  background-color: #509EE7;
+}
+```
+
+- 2. 保存并关闭文件。
+- 3. 接下来，创建在本章及后续章节中使用的以下文件夹和 Web Forms。使用 `MyBasePage` 模板创建新文件。此外，在标记视图中，为每个页面赋予有意义的标题以避免稍后出现错误。
+
+| 文件夹 | 文件名 | 标题 |
+|---|---|---|
+| /About | Default.aspx | 关于此站点 |
+| /About | Contact.aspx | 联系我们 |
+| /About | AboutUs.aspx | 关于我们 |
+| /Reviews | Default.aspx | 我最喜欢的评论 |
+| /Reviews | All.aspx | 所有评论 |
+| /Reviews | AllByGenre.aspx | 按类型分组的评论 |
+
+- 4. 保存所有更改，并在浏览器从根目录打开 `Default.aspx` 页面。你的网站菜单现在看起来好得多，并且更符合 Monochrome 主题的其他部分。当鼠标悬停在主菜单上时，子菜单将会出现，并在浅灰色背景上显示文本。当鼠标悬停在子菜单上时，其背景颜色会变化。图 7-8 显示了展开的 Reviews 菜单，其中在 Opera 中对“按类型”菜单应用了悬停样式。
+
+![](img/9e033e3b9560597824f8b22941d6d8bb_290_0.png)
+
+图 7-8
+
+> 常见错误 如果你在导航到一个新页面之一时遇到错误，请确保你为所有页面都提供了有效的标题。由于它们都继承自基类页面，标题会在页面加载时进行检查。如果菜单没有更新，请按 Ctrl+F5 从服务器获取工作表的最新副本。
+
+## 工作原理
+
+菜单 控件将自己渲染为一系列的 `<ul>` 和 `<li>` 元素。菜单项本身是简单的 `<a>` 元素，带有 `class` 属性以指示它们所处的级别。如果你在浏览器中查看页面的 HTML，你会看到类似如下的内容：
+
+```html
+<ul class="level1">
+  <li title="Go to the homepage" href="Default.aspx">HomeHome</</a>
+  <li title="Reviews published on this site">
+    <ul class="level2">
+      <li title="All Reviews Grouped by Genre">
+        <ul class="level3">
+          <li><a title="By Genre" href="/Reviews/AllByGenre.aspx">By Genre</</a></li>
+          <li><a title="All Reviews" href="/Reviews/All Reviews.aspx">All Reviews</</a></li>
+        </ul> <!-- 原文中修复了闭合标签 -->
+      </li>
+    </li>
+  </li> <!-- 其他菜单项在此处进入 -->
+</ul>
+```
+
+由于这段代码是纯 HTML 并应用了少量 `class` 属性，因此很容易使用你在前面的章节中学到的 CSS 技术对这些信息进行样式设置。你在步骤 1 中添加的代码使用了许多选择器来设置菜单的单个元素。例如，主菜单项的样式如下：
+
+```css
+ul.level1 {
+  font-size: 14px;
+  font-weight: bold;
+  height: 19px;
+  line-height: 19px;
+}
+```
+
+此代码应用于所有 CSS 类为 `level1` 的 `<ul>` 元素，这意味着它应用于所有主菜单项，如 Home、Reviews 和 About。查看菜单 HTML 中的第一个 `<a>` 元素，它代表了被选中的项目。注意它如何有一个名为 `selected` 的第二个类：
+
+```html
+<a title="To the homepage" class="level1 selected" href="/Site/Default.aspx">Home</</a>
+```
+
+然后使用此 CSS 选择器为选中的项目赋予不同的颜色：
+
+```css
+ul.level1 .selected {
+  background-color: #BCD1FE;
+}
+```
+
+相同的原理也适用于其他选择器，例如伪类 `:hover` 选择器，当当鼠标悬停在 `<a>` 元素上时应用它：
+
+```css
+a.level1:hover, a.level2:hover {
+  background-color: #509EE7;
+}
+```
+
+包含 `!important` 将此属性标记为菜单项的重要属性。
+
+```css
+a.level1 {
+  padding-left: 5px !important;
+}
+```
+
+## 使用 TreeView
+
+TreeView 能够显示分层项目列表，类似于资源管理器中的树结构。可以通过项目前面的小图标和减号图标展开和折叠项目。这使得 TreeView 显示站点地图的理想工具（尽管你也可以将其用于非导航目的）。然而，TreeView 使用的数据并不限于站点地图文件。你还可以将其绑定到常规 XML 文件，并程序地创建 TreeView 或其项目（节点）。
+
+下表列出了 TreeView 最常用的属性。再次，MSDN 在线是获取所有可用属性详细概述的好地方。
+
+| 属性 | 描述 |
+|---|---|
+| CssClass | 允许你设置应用于整个控件的 CSS 类属性。 |
+| CollapseImageUrl | 点击时折叠树的部分的图像。默认是一个带有减号的图标。 |
+| ExpandImageUrl | 点击时展开树的部分的图像。默认是一个带有加号的图标。 |
+| CollapseImageToolTip | 用户悬停在可折叠菜单项上显示的工具提示。 |
+| ExpandImageToolTip | 用户悬停在可展开菜单项上显示的工具提示。 |
+| ShowExpandCollapse | 决定是否可以通过点击前面的图像来折叠和展开 TreeView。 |
+| ShowLines | 决定是否使用线条连接树中的单个项目。 |
+| ExpandDepth | 决定首次加载时展开的级别。默认设置为 FullyExpand，这意味着树中的所有项目都是可见的。其他允许的设置是指示层级的数字值。 |
+
+要告诉 TreeView 显示哪些项目，请将其绑定到 SiteMapDataSource 控件，将在下演示。
+
+## 尝试使用 TreeView 控件构建导航系统
+
+在本次练习中，你将 TreeView 控件添加到 `<nav>` 元素中，位于你之前创建的 Menu 控件下方，并将 TreeView 绑定到与 Menu 相同的数据源。接下来，你将编写一些代码，根据激活的主题显示 Menu 或 TreeView。
+
+- 1. 在标记视图中打开主页面，并在 Menu 控件下方，从工具箱中拖入 TreeView 控件。
+

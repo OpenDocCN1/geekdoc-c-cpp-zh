@@ -1,0 +1,19 @@
+Although ASP.NET and the .NET Framework offer you many tools and technologies that enable you to work with databases without requiring a firm knowledge of the underlying concepts like SQL, it’s still important to understand them. Once you know how to access a database, you’ll find it easier to understand and appreciate other technologies, like the ADO.NET Entity Framework (discussed in Chapter 14), which provides easier access to database operations directly from code.
+
+In the chapters that follow, you apply the things you learn in this chapter. In Chapter 13, you see how to use built-in controls to work with data in your database. In Chapter 14, you learn how to use the ADO.NET Entity Framework as an additional layer on top of your database to access data in an object-oriented way with minimal code. Chapter 15, the last of the data-focused chapters, shows you advanced techniques for working with data.
+
+In the following sections, you see what a database is, and what different kinds of databases are available to you.
+
+# WHAT IS A DATABASE?
+
+By its simplest definition, a database is a collection of data that is arranged so it can be accessed, managed, and updated easily. For the purposes of this book, and the websites you will build, it’s also safe to assume that the data in the database is stored in an electronic format.
+
+The most popular type of database is the relational database. It’s the type of database that is frequently used in websites and is also the type of database that is used in the remainder of this book. However, the relational database is not the only one. Other types exist, including flat-file, NoSQL, object-relational, and object-oriented databases, but these are less common in Internet applications.
+
+A relational database has the notion of tables, where data is stored in rows and columns, much like a spreadsheet. Each row in a table contains the complete information about an item that is stored in the table. Each column, on the other hand, contains information about a specific property of the rows in the table.
+
+The term “relational” refers to the way the different tables in the database can be related to each other. Instead of duplicating the same data over and over again, you store repeating data in its own table and then create a relationship between that table and other tables. Consider the table called Review in Figure 12-1. This table could store the album reviews that are presented on the Planet Wrox website.
+
+![](bbox=[0.09, 0.77, 0.6, 0.9])
+
+FIGURE 12-1

@@ -1,0 +1,11 @@
+The bottom of the screen is divided in two. The left half shows you the HTML for the page (indicated by the active HTML tab). The Inspect button enables you to point at elements in your page, as you see in a moment. The Files tab shows all server-side files that were used to render this page. For the homepage of the Planet Wrox site, these are Frontend.master (the master page), Default.aspx (the homepage), and Banner.ascx (the Banner user control in the Sidebar <aside>). Clicking any of these files opens them in the code editor side by side with the Page Inspector.
+
+3. Click the Inspect button and then hover your mouse over elements in the page. When you do that, the code file that generated the element is shown side by side with the Page Inspector. For example, when you hover over the logo, the Frontend.master file appears. If you hover over the banner image, the Banner.ascx file is loaded, as shown in Figure 18-25.
+
+![](bbox=[0.16, 0.34, 0.82, 0.7])
+
+FIGURE 18-25
+
+Not only is the correct file opened, but the active control is selected for you (the highlighted Image control in Figure 18-25) as well. In addition, in the client-side HTML at the bottom left, the img element is highlighted. This makes it super easy to see how it all fits together: the <img> in the browser came from an Image control in Banner.ascx. If you didn’t know the source code of this site that well, finding this out without the Page Inspector would have been much more difficult. You had to diagnose the underlying HTML, find the <img> element, look for the control’s id attribute, and then search the entire site in VS for the text Image1.
+
+4. Click once on the <h1> element (with the text that welcomes the user). VS opens up Default.aspx in Preview mode (indicated by the tab with the page name at the right of the code editor) and correctly highlights the text. Make a change to the header text (for example, change “welcome to Planet Wrox” to “welcome to the Planet Wrox website”). Note that as soon as you

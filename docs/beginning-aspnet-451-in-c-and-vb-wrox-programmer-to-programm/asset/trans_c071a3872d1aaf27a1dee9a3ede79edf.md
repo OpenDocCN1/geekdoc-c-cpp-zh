@@ -1,0 +1,156 @@
+
+
+# 处理事件
+
+在正在绑定数据的行上使用 `FindControl`，你可以获取删除（Delete）链接的引用，将其转换为正确的 `LinkButton`，并将其 `Enabled` 属性设置为 `False`。由于这段代码在 GridView 中的某行处于编辑模式（通过点击编辑链接）时也会被调用，因此你需要检查 `DeleteLink` 是否为 `null`（VB.NET 中的 `Nothing`）。在正在编辑的情况下，GridView 并不包含 `DeleteLink`（因为激活的是 `EditTemplate` 而不是 `ItemTemplate`），因此 `FindControl` 返回 `null`。
+
+当你像本示例中通过将 `Enabled` 设置为 `False` 来禁用 `LinkButton` 时，ASP.NET 会应用类 `aspNetDisabled`:
+
+```html
+<a id="cpMainGridView_DeleteLink_0" class="aspNetDisabled-Delete/">
+```
+
+然后你可以使用 CSS 类（可以在你之前添加的 `Management.css` 中找到）对此禁用的链接进行样式设置，将其设置为灰色：
+
+```css
+.aspNetDisabled
+{
+    color: #CCC;
+}
+```
+
+如果你使用的是模型绑定（Model Binding）而不是 `SqlDataSource` 控件，你可以通过 `GetData` 方法实现此功能：
+
+```VB.NET
+Public Function GridView1_GetData() As IQueryable
+    Dim myEntities As New PlanetWroxEntities()
+    Return From genre myEntities.Genres.Include("Reviews")
+        Order By genre.Name
+        Select genre
+End Sub
+```
+
+```csharp
+public IQueryable<Genre> GridView1_GetData()
+{
+    PlanetWroxEntities myEntities = new PlanetWroxEntities();
+    return from genre in myEntities.Genres.Include("Reviews")
+        orderby genre.Name
+        select genre;
+}
+```
+
+这选择了每个 Genre 及其关联的 Reviews。然后你可以获取 Reviews 的计数（Count），并在标记标记中使用它来禁用删除按钮：
+
+```asp
+<asp:LinkButton Id="DeleteLink" runat="server" CausesValidation="False"
+CommandName="Delete" Text="Delete" Enabled="<%# Item.Reviews.Count > 0 %>">
+</asp:LinkButton>
+```
+
+注意，这段代码从数据库中选择了所有的评论，但效率并不高。作为替代方案，你可以选择一个包含 Genre 的 ID 和 Name 属性以及所有评论总计数的匿名对象。这意味着你需要在代码中使用 LINQ 的 `Skip` 和 `Take` 方法来实现你的分页和排序方法，因为模型绑定无法对匿名对象自动替你完成这些操作，或者你可以禁用 Grid 的排序和分页。
+
+通过禁用删除按钮，你可以轻松地防止在尝试删除具有关联评论的 genre 时发生错误。然而，你可能并不总是阻止在对数据源控件进行 CRUD 操作期间发生错误的发生。例如，你可能会尝试删除一个最初没有关联任何评论的 genre。想象一下，在你尝试删除该 genre 之前，有人为它插入了新的新评论。当你再次尝试删除该 genre 时，你将收到错误，因为该 genre 现在已与它相关联。在这种情况下，数据源控件允许你诊断发生的错误，然后采取必要的措施，向用户提供反馈，告知他们的 CRUD 操作未成功。
+
+# 处理数据源控件中发生的错误
+
+在第 18 章中，你将看到许多关于识别和处理 ASP .NET 页面中发生错误的内容。该章节演示了如何捕获代码中可能发生的错误，并通过记录日志或通知用户来处理它们。由于数据源控件也暴露了错误信息，因此在本章中查看数据错误很有趣。
+
+`SqlDataSource` 控件（以及其他数据源控件）为你提供了有关在四个 CRUD 操作期间可能发生的错误（术语中称为异常）的信息。
+通过 `SqlDataSourceStatusEventArgs`，所有事件都接受 `SqlDataSourceStatusEventArgs` 实例。图 15-10 显示了这三个 `EventArgs` 类及其属性。
+
+该类有两个重要的属性：`Exception` 和 `ExceptionHandled`。第一个包含实际发生的异常，或者当一切进展顺利且没有发生错误时为空（VB.NET 中的 `Nothing`）或 `null`（C# 中的 `null`）。你可以检查此错误并采取适当行动。例如，你可以通知用户出现了一些问题，或者向用户的 Web 管理员发送电子邮件告知该错误，以便采取后续行动。
+
+如果你决定在数据源控件的句程序中处理错误，你应该将对象的 `ExceptionHandled` 属性设置为 `True`。这会向 ASP.NET 运行时发出你已经知晓该错误并已进行妥善处理的信号。如果忽略此属性，运行时将带着异常结束，异常最终显示给用户。
+
+![](img/9e033e3b9560597824f8b22941d6d8bb_597_0.png)
+
+图 15-10
+
+在下面的练习中，我们展示了如何在 `Genres.aspx` 页面中使用 `SqlDataSourceStatusEventArgs` 类。请放心，你可以将这些原理同样应用于数据源控件触发的事件。
+
+# 处理删除行时发生的错误
+
+在本次尝试（Try Out）中，你将看到如何处理 GridView 在删除行时发生的异常。你将临时注释掉禁用删除链接的代码，以便尝试删除带有关联评论的 genre。当用户尝试删除带有有关评论的 genre 时，控件会显示错误消息。此练习主要用于演示如何处理源控件可能抛出的异常。从最终用户的角度来看，在不合适的情况下禁用删除链接（如你在之前的练习中做的那样）在大多数情况下可以解决问题，但有人仍可能在你尝试删除 genre 之前插入新的新评论。处理这种问题的方法是两种方案：禁用不可用的链接，以及在其他人其他人为你刚刚尝试删除的 genre 创建了评论时，优雅地处理错误。
+
+1. 从 `Management` 文件夹打开 `Genres.aspx`。
+2. 切换到设计视图，从工具箱将一个 `Label` 控件拖到 GridView 上。这会将 Label 放置在 GridView 上方持有错误消息。将 Label 的 `ID` 更改为 `ErrorMessage` 并清空它的 `Text` 属性（右键点击属性网中的 Text 标签并选择重置。这将从控件的标记中删除 `Text` 属性及其值）。将其 `CssClass` 设置为 `ErrorMessage`。最后，将 `EnableViewState` 设置为 `false`，以确保标签在回传后保持其文本。你应该得到以下代码：
+
+```asp
+<asp:Label ID="ErrorMessage" runat="server" CssClass="ErrorMessage"
+EnableViewState="false"/></asp:Label>
+<asp:GridView ID="GridView1" runat="server" AllowPaging="True">
+```
+3. 从 `Management` 文件夹打开 `Management.css` 文件并添加以下规则：
+
+```css
+.ErrorMessage
+{
+    color: Red;
+    font-weight: bold;
+}
+```
+4. 切换到 `Genres.aspx`，确保处于设计视图，并点击 `SqlDataSource` 控件选择它。然后打开它的属性，切换到事件选项卡，通过双击 `Deleted` 事件来设置事件处理程序。
+5. 在代码后文件的顶部添加以下命名空间以将 `SqlException` 类引入作用域：
+
+```VB.NET
+Imports System.Data
+```
+6. 在第 4 步添加的事件处理程序内部编写以下代码：
+
+```VB.NET
+Protected Sub SqlDataSource_Deleted(sender As Object,
+    e As SqlDataSourceEventArgs) Handles SqlDataSource.Deleted
+    If e.Exception Is Not Nothing AndOf(e.Exception) Is SqlException Then
+        Dim e.Exception As SqlException = CType(e.Exception, SqlException)
+        If e.Exception.Number = 547 Then
+            ErrorMessage.Text = "抱歉，你无法删除该 genre，因为它" &
+                "有关的评论需要先被删除。"
+            e.ExceptionHandled = True
+        End If
+    End If
+End Sub
+```
+
+```csharp
+protected void SqlDataSource_Deleted(object sender,
+    SqlDataSourceEventArgs e)
+{
+    if (e.Exception != null && e.Exception is SqlException)
+    {
+        SqlException myException = (SqlException)e.Exception;
+        if (myException.Number == 547)
+        {
+            ErrorMessage.Text = "抱歉，你无法删除该 genre，因为它\n联的评论需要先被删除。";
+            e.ExceptionHandled = true;
+        }
+    }
+}
+```
+7. 注释掉你在尝试中添加的代码，以停止禁用删除链接。对于本次练习，只需注释掉禁用链接的行即可：
+
+```VB.NET
+' deleteLink.Enabled = False
+```
+
+```csharp
+// deleteLink.Enabled = false;
+```
+在这种情况下，别忘记在 C# 的 GridView 标记中也移除处理程序。
+8. 保存所有更改，然后按 Ctrl+F5 在浏览器中打开 `Genres.aspx`。尝试删除一个有关评论的 genre，例如 Rap and Hip-Hop。而不是删除该 genre，ASPX 页面现在向你展示图 15-11 中 GridView 上方的错误。
+
+> 抱歉，你无法删除该 genre，因为它有关的评论需要先被删除。
+
+| 删除 | 名称 | 排序顺序 |
+|---|---|---|
+| 编辑 | Rap and Hip-Hop | 14 |
+| 编辑 | Pop | 12 |
+| 编辑 | Jazz | 8 |
+| 编辑 | Hard Rock | 3 |
+
+图 15-11
+
+如果错误消息没有以红色显示，请按 Ctrl+F5 强制刷新 Management 主题的样式。
+
+9. 点击 Management 菜单中的“管理评论”项，并从下拉列表中选择 Rap and Hip-Hop genre。删除该 genre 中的评论，或者编辑它们并将它们重新分配给不同的 genre。
+
