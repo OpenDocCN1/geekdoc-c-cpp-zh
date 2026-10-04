@@ -1,0 +1,76 @@
+
+
+```
+int x,y;
+
+main() {
+  x = 0;
+  y = x;
+  fork(thread_1);
+  int p = x - 2;
+  int q = p + 1;
+  y = q + 3;
+}
+
+thread_1() {
+  int a = y + 1;
+  int b = a + 4;
+  x = b / 2;
+}
+```
+
+## 3.4. SLICING THE CSDG
+
+![](img/27c6595637bae6b27613772d7079f8a2_94_0.png)
+
+Figure 3.7: Slicing an example <CSDG>
+
+As an example, consider the program and corresponding graph in Figure 3.7, where the shaded nodes are the slice for node 14 computed by the iterated phase slicer. thread_1 at node 13 towards node 9 and returns to node 15 via the interference edge from node 7. Notably, node 15 cannot influence the slicing criterion 14, because it cannot execute before 14. [Ram00,MOS01] as the exact order between threads is undecidable this order cannot be taken into account when computing interference dependencies. In contrast, intra-thread dependencies like data or control dependence take flow into account, making them transitive.
+
+Slicing other Concurrency-Related Dependencies Intractivity is regarded for interference only, mainly due to incompatible programming primitives, Krinke's and Nanda's models do not consider synchronization primitives, thus they can only argue about interference dependence. Approaches with a finer-grained concurrency model like that by Cheng and Hatfield [Che93b, ICD99,RH04] leverage context-sensitive slicing, which ignores intractivity issues and is also of precision. Dewar et al. [DCH+*99] argue that it remains unclear whether the gain in precision of context-sensitivity outweighs the additional cost.
+
+However, taking all concurrency-related dependencies into account, time travel may occur for all nodes of dependencies that cross thread boundaries, if control flow is ignored during dependence computation. In particular, [HCD+99, RH04] is intractive when crossing boundaries. Accordingly, some algorithms that prune time travels for interference dependence must be applied to get precise slices with ready dependence. The author is not aware of any work that identifies or targets this problem.
+
+### 3.4.3 Slicers Disallowing Time Travel
+
+To prune interference traversals that correspond to time travel situations, Krinke and Nanda [Kri03b, NR06] defined which paths in each thread's control flow
+
+## CHAPTER 3. CONCURRENCY
+
+graph correspond to a valid program execution. Their slicing algorithms are effectively symbolic deconstruction which marks all other paths as invalid such that they are not traversed during slicing.
+The threaded control flow graph (TCFG) consists of the ICFGs of each thread that are connected at fork and join nodes, respectively. Note that Krinke [Kr03b] and Nanda [NR06] require threads to be disjoint, which is in general not the case for Java threads. However, one can always duplicate parts of the graph to achieve disjointness, which will be assumed in the sequel.
+
+A interprocedural realizable path $P = n_1, \dots, n_k$ is an ordered sequence of nodes in the TCFG G that every projection of P to a thread $\theta$, created in $P$ is either empty or corresponds to an interprocedural realizable path in the thread.
+The slice of a cSDG w.r.t. $c$, the criterion $p$, depends on $S(p)$, consists of all nodes on $q$ which painfully depends and there exists an interprocedural trace witness $W$ in the TCFG for each such $q$.
+
+```
+S(p) = \begin{cases} q = n_1, \dots, n_k, \ q = n_{d_1}, \dots, n_{d_{k-1}}, n_k, p = d_i, i \in \cd, dd, id\}, 1 \le i \le k, \ \text{P is an interprocedural realizable path in G} \ \text{where } n_i \text{ is a node in } P \text{ in the same order as } W \end{cases}
+```
+
+Krinke's algorithm [Kr98] was the first to solve the transparency problem for programs without method calls. The effects of synchronization are ignored in this approach. The idea of his slicing algorithm is to keep track of control flow that is necessary for an execution to be valid. To end, each visited node is annotated with a state tuple $\Gamma$ containing many entries as threads. For each thread, the entry in state is its last node on the path from the slicing criterion to the currently visited node. Initially, the state tuple for the slicing criterion is empty except for that criterion's thread, which contains the slicing criterion. Empty slot in tuple are usually denoted $\perp$ and do not impose any restriction on that thread's control flow.
+
+With each traversal of an dependence edge $m \to n, m$ is annotated with a clone of $m$'s state tuple, the entry is replaced by $m$. When boundaries are crossed via interference, one must check whether intra-thread control flow from the source of interference to the statement listed in this thread (i.e in $m$'s slot of the state tuple at $m$) is actually possible. Krinke makes a feasible state tuple a threaded witness.
+In our example of Figure 3.7, this situation arises when the algorithm traverses from node 7 to node 15. left dependence from node 13, it is checked whether node 13 is reachable from node 15 via an interprocedural realizable path in the control flow graph. This is not the case, so the traversal is rejected resulting in an invalid execution trace, which means that node 15 is not included in the slice from node 14.
+
+> $^{11}$When methods are inline, this approach may also be used for programs with method calls, but may require exponential space, and inlining is not possible for programs with recursion
+
+## 3.5. RELATED WORK
+
+### 3.5 Related Work
+
+Nanda [NR00] adapted this for programs where threads are interleaved with loops. This paper targets cobegin/coend thread spawning which allows an optimization that may improve precision but only allows a fixed number of threads. Thus, an adaptation to Java's dynamic creation cannot be easily done.
+
+Chen and Xu [CX01a] propose another exponential execution, but by this algorithm, however, inter-thread dependencies from the same deficiencies, it too, was proposed [CYX+00] for Ada with a fixed number of threads and inlining of method calls accessing shared variables. Again this cannot be done for recursive programs. It remains unclear how Java version models which may be started an unbounded number of times.
+
+In [Kr03b], Krinke extended his approach to procedural programs. While this algorithm can still uses a fixed number of threads cannot be applied to Java.
+
+In her thesis [Nan01], Nanda, too, extended her approach to programs with method calls and fork-joining. All approaches using a fixed number of threads she duplicates a procedure for every thread Furthermore she presented a version of her two-phase algorithm which is context-sensitive and does not allow time travel
+
+A detailed discussion of Krinke [Kr03b] and Nanda's [Nan01, NR00] precise algorithms can be done in [GH09]. The authors provide solutions to several shortcomings of the previous algorithms, most dramatically thread creation in loops. Krinke and Nanda did not fully support. In new optimization techniques, slicing remains expensive (in number of threads), and the experiments in [GH09] indicate that preventing time travel should only be applied as a post-processing step, when cheaper methods like the iterative two-phase slice fail at establishing a desired property.
+
+Zhao and Li [ZL04] present the concurrent dependence graph (CPDG), featuring the traditional data, control, and parameter dependences as well as class and inheritance dependencies. Furthermore, they introduce interface-membership, package-membership and interface-inheritance dependences for the intra-thread case. They use synchronization and communication dependences of Cheng [Che93b, Che95a] and introduce synchronization-dependence for methods as usual membership dependency. It is how they model dependences due to field access, and their example program and CPDG clearly miss these dependences¹².
+
+Naumovich's work on may happen in parallel analysis [NAC99] may significantly improve computation of interference and ready dependence: Their definitions require two dependent statements to execute in parallel. Ready dependence itself is completely equal to Naumovich's notify-edges. MHP
+
+¹²For example there is no data dependence from line s30 to s32 in [ZL04]
+

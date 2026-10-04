@@ -1,0 +1,15 @@
+# CHAPTER INFORMATION FLOW CONTROL
+
+Instead, a specialized algorithm for summary edges may be leveraged over the computation of the security levels for summary declassification nodes and The result can be seen in Algorithms 8 and 9, which incorporate a backward IFC propagation into the algorithm by Reps et al. [RHSR94] as presented in Algorithm 2 on page 35.
+
+As an example, consider Figure 4.1 in pathEdge. Here, Algorithm 8 starts with adding node 15 as (15, 15, false) to pathEdge. Note that the third element of this tuple is false, it is a declassification node. When this tuple is removed from the workList, all predecessors of 15 are processed, in particular node 14. For this node, extendPathEdge will not find a previous tuple in pathEdge and thus no elements for $\gamma$, resp. v. As node 15 in $d$, $f' = \Gamma(R(15))$ and $R(f') = f' = false$, which yields a pathedge tuple (14, 14, confidential). For its predecessor 13, we will get a pathedge tuple (13, 13, confidential), and no other path leads to 13. Since 13 is a formal-in node, addSummaries will add a summary declassification node $d$ where $R(d) = confidential$ and $P(d) = \perp$ by the corresponding attribute class 4, 6, and 8 and 10, exactly as we define these nodes in the previous section.
+
+**Theorem 4.10.** IFC with summary declassification nodes determined by Algorithms 8 and 9 is sound and precise.
+
+**Proof.** We show that Algorithms 8 and 9 results in a superset of the constraints generated for all interprocedurally reachable paths. This guarantees soundness. To demonstrate, we show that the additional constraints are trivially satisfied by choosing $P(d) = \perp$ for all summary declassification nodes $d$, and thus do not change the fixedpoint. As these are straightforward extensions of the algorithm presented in [HRB90, RHSR94], we can assume that these algorithms traverse all interprocedurally realizable paths between formal-in and formal-out edges, using recursive calls. For soundness, we need to show twogoals:
+
++   1. If there is an interprocedurally realizable path between a formal-in and a formal-out member of the same call that does not contain a declassification node, then the algorithm will only generate a traditional summary edge, but no summary declassification. Due to transitivity of information flow on that path, the summary information must conservatively obey overacity. Algorithm 9 adheres to this requirement using the flag f in line 59. An induction over the length of the pathEdge will show this:
+
+If the length of the pathEdge is 0 $(x = y)$, line 9 asserts that if $x \in D$ then the flag $f$ is false, true. So let's assume $f$ correctly represents the fact if the pathEdge $(x, y, f)$ contains no declassifications. Then line 50 asserts $f'$ in the extended pathEdge $(w, y, f')$ is true (i.e. there is no declassification on the path $w \to y$), if $w \notin D \land f$ holds. Note that if there have other paths between $w$ and $y$ previously explored (the condition in line 40 holds), we only remember if there is any path without declassification by the disjunction in line 50.
+
+120
