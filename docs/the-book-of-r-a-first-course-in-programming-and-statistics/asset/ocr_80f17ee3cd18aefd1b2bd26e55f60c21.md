@@ -1,0 +1,15 @@
+of a normal distribution or the probability of success in a binomial distribution, but in practice these kinds of quantities are often unknown. In cases, you typically estimate the quantities from a sample (see Figure 13-2 on page 266 for a visual illustration of it). Any statistic estimated from a sample can be treated as a random variable, with the estimated value itself the realization of that random variable. It's therefore possible that different samples from the same population will provide a different value for the same statistic—realizations of random variables are naturally subject to variability. Being able to understand and model this natural variability inherent in estimated statistics (using relevant sampling distributions) is a key part of many statistical analyses.
+
+Like any other probability distribution, the central 'balance' of a sampling distribution is its mean, but the standard deviation of a sampling distribution is referred to as a standard error. The slight change in orthodoxy reflects that the probabilities of interest are no longer tied to raw measurements or observations per se, but rather to a quantity calculated from a sample of such observations. The theoretical formulas for sampling distributions therefore depend upon (a) the original probability distributions that are assumed to have generated the data and (b) the size of the sample itself.
+
+I'll focus on two simple and easily recognized statistics: a sample mean and a single sample proportion. I will then expand on this in Chapter 18 when covering hypothesis testing, and you'll need to understand the role of sampling distributions in assessing important model parameters when you look at regression methods in Chapters 20 to 22.
+
+NOTE
+
+> The validity of testing of sampling distributions as discussed in this chapter makes an important assumption. Whenever I talk about a sample of data from which a given statistic is calculated, I assume those observations are independent of one another and that are identically distributed. You will see this notion—independent, identically distributed observations—frequently abbreviated as iid in statistical material.
+
+# 17.1.1 Distribution for a Sample Mean
+
+The arithmetic mean is arguably the most common measure of centrality (Section 13.2.1) when summarizing a data set.
+
+Mathematically, the variability inherent in an estimated mean is described as follows: Formally, denote the random variable of interest as $ar{X}$. This represents the mean of a sample of $n$ observations from the “raw observation” random variable $X$, as in $x_1,x_2,...,x_n$. Those observations are assumed to have a true finite mean $-\infty < \mu_X < \infty$ and a true finite standard deviation $0 < \sigma_X < \infty$. The conditions for finding the probability distribution of a sample mean vary depending on whether you know the value of the standard deviation.

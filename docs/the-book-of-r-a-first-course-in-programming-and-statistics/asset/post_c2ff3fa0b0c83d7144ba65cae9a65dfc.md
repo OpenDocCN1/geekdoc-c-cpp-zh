@@ -1,0 +1,219 @@
+
+though it's important to be aware of the behavior before coercion from factors with numeric levels can cause confusion.
+
+```
+R qux <- factor(x=c(2,2,3,5))
+R qux
+[1] 2 2 3 5
+Levels: 2 3 5
+R as.numeric(qux)
+[1] 1 2 3
+```
+
+The numeric representation of the factor qux is c(1,1,2,3). This highlights that the levels of qux are simply treated as level 1 (even though it has a label of 2, level 2 (which has a label of 3), and level 3 (which has a label of 5).
+
+Coercion between object classes and structures can also be useful. For example, you might need to store the contents of a matrix as a single vector.
+
+```
+R foo <- matrix(data=1:4,nrow=2,ncol=2)
+R foo
+[,1] [,2]
+[1,] 1 3
+[2,] 2 4
+R as.vector(foo)
+[1] 1 2 3 4
+```
+
+Note that as.vector has coerced the matrix by "stacking" the columns into a single vector. The same column-wise decomposition occurs for higher-dimensional arrays, in order of layer or block.
+
+```
+R bar <- array(data=c(8,1,9,5,5,1,3,4,3,9,8,8),dim=c(2,3,2))
+R bar
+, ,1
+[,1] [,2] [,3]
+[1,] 8 9 5
+[2,] 1 5 1
+
+, ,2
+[,1] [,2] [,3]
+[1,] 3 3 8
+[2,] 4 9 8
+```
+
+```
+R as.matrix(bar)
+[,1]
+[1,] 8
+[2,] 1
+[3,] 9
+[4,] 5
+[5,] 5
+[6,] 1
+[7,] 3
+[8,] 4
+[9,] 3
+[10,] 9
+[11,] 8
+[12,] 8
+```
+
+```
+R> as.vector(bar)
+[1] 8 1 9 5 1 3 4 3 9 8 8
+```
+
+You can see that as.matrix stores the array as a 12 × 1 matrix, and as.vector stores it as a single vector. Similar common rules types apply to coercion when working with object structures. For example, coercing the following list baz to a data frame produces an error:
+
+```
+R baz <- list(var1=foo,var2=c(T,F,T),var3=factor(x=c(2,3,4,4,2)))
+R baz
+$var1
+[1] [2]
+[1] 1 3
+[2] 2 4
+
+$var2
+[1] TRUE FALSE TRUE
+$var3
+[1] 2 3 4 4 2
+Levels: 2 3 4
+```
+
+```
+R> as.data.frame(baz)
+Error in data.frame(var1 = 1:4, var2 = c(TRUE, FALSE, TRUE), var3 = c(1L, :
+arguments imply differing number of rows: 2, 3, 5
+```
+
+The error occurs because the variables do not have lengths. But there is no problem with coercing the list qux, shown here, which has equal-length members:
+
+```
+R> qux <- list(var1=c(3,4,5,1),var2=c(T,F,T),var3=factor(x=c(4,4,2,1)))
+R> qux
+$var1
+[1] 3 4 5 1
+
+$var2
+[1] TRUE FALSE TRUE TRUE
+
+$var3
+[1] 4 4 2 1
+Levels: 1 2 4
+```
+
+```
+R> as.data.frame(qux)
+var1 var2 var3
+1 TRUE 4
+2 FALSE 4
+3 TRUE 2
+4 TRUE 1
+```
+
+This stores the variables as a data set in a column-wise fashion, in the order that your list supplies as members.
+This discussion on object classes, data types, and coercion is not exhaustive, but it serves as a useful introduction to how R deals with issues surrounding the formal identification, description, and handling of the objects you create—issues that are present for most high-level languages. Once you're more familiar with R, the help files (such as the one accessed by entering ?as at the prompt) provide further details about object handling in the software.
+
+## Exercise 6.3
+
++ a. Identify the class of the following objects. For each object, also whether the class is explicitly or implicitly defined.
+  i. foo <- array(data=1:36,dim=c(3,3,4))
+  ii. bar <- as.vector(foo)
+  iii. baz <- as.character(bar)
+  iv. qux <- bar*c(-0.1,0.1)
+b. For each object in (a), find the sum of the result of calling is.numeric(foo)+is.integer(foo) would compute the sum for (i). Turn the collection of five results into a factor with levels 0, 1, and 2, identified by the results themselves. Compare this factor with the result of coercing it to a numeric vector.
+c. Turn the following:
+   [1] [2] [3] [4]
+   [1] 2 5 8 11
+   [2] 3 6 9 12
+   [3] 4 7 10 13
+into the following:
+   [1] "2" "5" "8" "11" "3" "6" "9" "12" "4" "7" "10" "13"
+
+d. Store the following matrix:
+| 34 0 1 |
+| 23 1 2 |
+| 33 1 1 |
+| 42 0 1 |
+| 41 0 2 |
+
+Then, do the following:
+ni. Coerce the matrix to a data frame.
+ii. As a data frame, coerce the second column to be logical-valued.
+iii. As a data frame, coerce the third column to be factor-valued.
+
+## Important Code in This Chapter
+
+| Function/operator | Brief description | First occurrence |
+| Inf, -Inf | Value for ±infinity | Section 6.1.1, p. 104 |
+| is.infinite | Element-wise check for Inf | Section 6.1.1, p. 105 |
+| is.finite | Element-wise check for finiteness | Section 6.1.1, p. 105 |
+| NaN | Value for invalid numerics | Section 6.1.2, p. 106 |
+| is.nan | Element-wise check for NaN | Section 6.1.2, p. 107 |
+| NA | Value for missing observation | Section 6.1.3, p. 108 |
+| is.na | Element-wise check for NA OR NaN | Section 6.1.3, p. 109 |
+| na.omit | Delete all NAs ands | Section 6.1.3, p. 110 |
+| NULL | Value for NULL | Section 6.1.4, p. 110 |
+| is.null | Check for NULL | Section 6.1.4, p. 111 |
+| attributes | List explicit attributes | Section 6.2.1, p. 114 |
+| attr | Obtain specific attribute | Section 6.2.1, p. 115 |
+| dimnames | Get array dimension names | Section 6.2.1, p. 116 |
+| class | Get object class [S3] | Section 6.2.2, p. 117 |
+| is_ | Object-checking functions | Section 6.2.3, p. 120 |
+| as_ | Object-coercion functions | Section 6.2.4, p. 121 |
+
+# BASIC PLOTTING
+
+![](img/b2cfc85cbb129f60fe595a2bae074fe4_160_0.png)
+
+One particularly popular feature of R is its incredibly flexible plotting tools for data and model visualization. This is what draws many to R in the first place. Mastering R’s graphical functionality does require practice, but the fundamental concepts are straightforward. In this chapter, I will provide an overview of the plot function and some useful options for controlling the appearance of the final graph. Then I'll cover the basics of using ggplot2, a powerful library for visualizing data in R. This chapter will cover just the basics of plotting, and then you'll learn more about creating different types of statistical plots in Chapter 14, and about advanced plotting techniques in Part V.
+
+## 7.1 Using plot with Coordinate Vectors
+
+The easiest way to think about generating plots in R is to treat your screen as a blank, two-dimensional canvas. You can plot points and lines using x and y-coordinates. On paper, these coordinates are usually represented with points written as a pair: (x value, y value). The R function plot, on the other hand takes two vectors—one of x locations and one vector of y locations—and opens a graphics device where it displays the result. If a
+
+graphics device is already open, R's default behavior is to refresh the device, overwriting the current contents with the new plot.
+
+For example, let's say you wanted to plot the points (1.1,2), (2.2,2), (3.5,-1.3), (3.9,0), and (4.2,0.2). In plot, you must provide the vector of x locations first y second. Let's define these as foo and bar, respectively:
+
+```
+R foo <- c(1.1,2,3.5,3.9,4.2)
+R bar <- c(2.2,-1.3,0,0.2)
+R plot(foo,bar)
+```
+
+**Figure 7-1** showing the resulting graphics device with the plot (I'll use this simple data set as a working example throughout this section).
+
+![](img/b2cfc85cbb129f60fe595a2bae074fe4_161_0.png)
+
+The x and y locations don't necessarily need to be specified as separate vectors. You can also specify coordinates in the form of a matrix, with the x values in the first column and the y values in the second column, or as a list. For example, setting up a matrix of the five points, the code exactly reproduces Figure 7-1 (note the window pane will look slightly depending on your operating system):
+
+```
+R baz <- cbind(foo,bar)
+R baz
+  foo bar
+[1,] 1.1 2.0
+[2,] 2.0 2.2
+[3,] 3.5 -1.3
+[4,] 3.9 0.0
+[5,] 4.2 0.2
+> plot(baz)
+```
+
+The plot function is one of R's versatile generic functions. It works differently for different objects and allows users to define their own methods for handling objects (including user-defined classes). Technically, the version of the plot command that you've just used is internally identified as plot.default. The help file plot.default provides additional details on this scatterplot style of data visualization.
+
+# Graphical Parameters
+
+There are a range of graphical parameters that can be supplied as arguments to the plot function (or other plotting functions, as those in Section 7.3). These parameters invoke simple visual enhancements, like coloring the points and adding axis labels, and can also control technical aspects of the graphics device (Chapter 23 covers the latter in more detail). Some of the most commonly used graphical parameters are listed here; I'll discuss each of these in turn in the following sections:
+
++ **type** Stands R to plot the supplied coordinates (for example, stand-alone points or joined by lines or both dots and lines).
+**main, xlab, ylab** Options to include plot title, the horizontal axis label, and the vertical axis label, respectively.
+**col** Color (or colors) to use for plotting points and lines.
+**pch** Stands for point character. This selects which character to use for plotting individual points.
+**cex** Stands for character expansion. This controls the size of plotted points characters.
+**lty** Stands for line type. This specifies the type of line to connect the points (for example, solid, dotted, or dashed).
+**lwd** Stands for line width. This controls the thickness of plotted lines.
+**xlim, ylim** This provides limits for the horizontal range and vertical range (respectively) of the plotting region.
+
+## 2.2.1 Automatic Plot Types
+
+By default, the plot function will plot individual points, as shown in Figure 7-1. This is the default plot type, but other plot types will have a different appearance. To control the plot type, you can specify a single character-valued option for the argument type.

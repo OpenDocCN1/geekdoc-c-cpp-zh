@@ -1,0 +1,13 @@
+reduced construction cost is associated with more experienced engineers, plants constructed in the Northeast, and plants with a cooling tower. However, this isn’t an accurate statement since you haven’t yet considered the interactive terms in those predictors. All estimated two-way interactive effects are positive—having more experienced engineers means a higher construction cost in the Northeast regardless of whether there’s a cooling tower, and having more experienced engineers also means higher costs for plants with a cooling tower, regardless of region.
+
+Cost is also dramatically increased for plants in the Northeast with a cooling tower, regardless of the experience of the engineer. All that being said, the negative three-way interaction suggests that the increased cost associated with more experienced engineers working in the Northeast and on a plant with a cooling tower is lessened somewhat after the main effects and two-way interactive effects are calculated.
+
+At the least, this example highlights the complexities associated with interpreting model coefficients for higher-order interactions. It’s also possible that statistically significant high-order interactions crop up due to lurking variables that have gone unaccounted for, that is, that the significant interactions are a spurious manifestation of patterns in the data that simpler terms involving those missing predictors could explain just as well (if not better). In part, this motivates the importance of adequate model selection, which is up next in the discussion.
+
+# Exercise 21.3
+
+Return your attention to the cats data frame in package MASS. In the first few problems in Exercise 21.1, you fitted the main-effect-only model to predict the heart weights of domestic cats by total body weight and sex.
+
++   a. Fit the model again, and this time include an interaction between the two predictors. Inspect the model summary. What do you notice in terms of the parameter estimates and their significance when compared to the earlier main-effect-only version?
+b. Produce a scatterplot of heart weight on body weight, using different point characters or colors to distinguish the observations according to sex. Use abline to add two lines denoting the fitted model. How does this plot differ from the one in Exercise 21.1 (d)?
+c. Predict the heart weight of Tilman’s cat using the new model (remember that Sigma is a 3.4 kg female) accompanied by a 95 percent prediction interval. Compare it to the main-effects-only model from the earlier exercise.

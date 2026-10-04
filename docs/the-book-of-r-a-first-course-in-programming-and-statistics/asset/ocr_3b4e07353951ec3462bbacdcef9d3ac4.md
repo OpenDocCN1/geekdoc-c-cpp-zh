@@ -1,0 +1,1 @@
++   * Exact matching requires the user to remember or look up the full, case-sensitive tags.

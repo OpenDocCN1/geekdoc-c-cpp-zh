@@ -1,0 +1,2 @@
+rather strict requirements to assure users of the stability and compatibility of your package.
+If you're interested in constructing your own installable R package, see the official Writing R Extensions manual, accessible on any CRAN mirror site by clicking the Manuals link under Documentation on the left of the home page; you can see this link in Figure A-2. If you're interested, you may also want to seek out the book by Wickham (2015b), which provides useful instruction on the R package-writing process and associated dos and don'ts.

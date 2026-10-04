@@ -1,0 +1,9 @@
+![](bbox=[0.231, 0.05645, 0.693, 0.37655])
+
+# 13.1.4 Parameter or Statistic?
+
+As already noted, statistics is concerned with understanding features of an overall population, defined as the entire collection of individuals or entities of interest. The characteristics of that population are referred to as parameters. Because researchers are rarely able to access relevant data on every single member of the population of interest, they typically collect a sample of entities to represent the population and record relevant data from these entities. They may then estimate the parameters of interest using the sample data—and those estimates are statistics.
+
+For example, if you were interested in the average age of women in the United States who own cats, the parameter of interest would be all women residing in the United States who own at least one cat. The parameter of interest is the true mean age of women in the United States who own at least one. Of course, obtaining the age of every single female American with a cat would be a difficult feat. A more feasible approach would be to identify a smaller number of cat-owning American women and take data from them—this is your sample, and the mean age of the women in your sample is your statistic.
+
+Thus, the key difference between a statistic and a parameter is whether the characteristic refers to the sample you drew your data from or the wider population. Figure 13-2 illustrates this, with the mean $\mu$ of a measure for individuals in a population as the parameter and with the mean $ar{x}$ of a sample of individuals taken from that population as the statistic.
