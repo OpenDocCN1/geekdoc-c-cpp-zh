@@ -1,0 +1,94 @@
+# ParseExact method
+
++   operators, list of, 193
+overloads defined, 152
+parameters for, 191
+support for, 191
+unsupported, 193
+operators
+binary, 192
+checked and unchecked, 116
+null-coalescing, 446
+and nullable types, 444
+unary, 192
+op_Implicit method, 197
+op_Implicit method, 197
+OptimizedArray method, 763
+optimizing code, 14, 277, 763
+Volatile class and, 765
+optional attribute, 212
+optional parameters, 209
+arguments, order of evaluation with, 210
+rules and guidelines, 211
+OrderedTaskScheduler, 713
+ordinal quality check, 329
+out keyword
+overloading methods based on, 216
+vs. ref keyword, 215
+out parameter, 282
+OutOfMemory exception, 510
+oververflows, checked and unchecked, 115
+overhead fields, 795
+overloading
+arity-base, 286
+nullable types and, 445
+overloading operators. *See operator overload*
+methods
+override methods, 172
+overriding methods, 299
+generic, 286
+ownership, of thread locks, 791
+
++   Parallel LINQ, 717
+buffering and merging, 720
+parallel processing queries, 719
+partitions across CPU cores, 720
+preserving operation order, 718
+sequential and parallel queries, 717
+stopping queries prematurely, 719
+parallel queries, 717
+ParallelEnumerable class, 717, 719
+ParallelLoopResult instance, 716
+ParallelLoopState object, 716
+ParallelOptions object, 714
+ParamArray attribute, 221
+ParamDef table, 39
+parameterful properties, 227, 242
+accessing from unsupported languages, 247
+selecting, 246
+ParameterInfo object, 602
+parameterless constructors, 186, 235
+parameterless properties, 227
+parameters
+declaring constants, 224
+declaring types, 214, 223
+default values, 210, 212
+default values, changing, 211
+for indexers, 244
+named, 209
+optional, 209
+out keyword vs. ref keyword, 215
+params keyword, 221
+ypassing by reference, 215
+ypassing via method, 214
+types, in methods, 214
+types, interfaces of, 306
+validation, 366
+variables, 211
+weak vs. strong, 223
+params keyword, 221
+Parse method, 348, 366, 370
+exception handling for, 493
+overloading, 349
+parameters, 349
+performance and, 350
+skipping leading space, 348
+ParseCombiningCharacters method, 333
+ParseExact method, 349
+
+# P
+
+packaging assemblies, 60
+Parallel class, 713, 714
+performance issues, 714
+when to use, 714

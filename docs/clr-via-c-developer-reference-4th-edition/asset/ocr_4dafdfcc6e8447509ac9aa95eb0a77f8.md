@@ -1,0 +1,38 @@
+When I build and run the preceding code, I get the following output.
+
+Are points equal? False
+Are points not equal? True
+
+# C#'s Null-Coalescing Operator
+
+C# has an operator called the null-coalescing operator (??), which takes two operands. If the operand on the left is not null, the operand's value is returned. The null-coalescing operator offers a very convenient way to set a variable's default value.
+
+A cool feature of the null-coalescing operator is that it can be used with reference types as well as nullable value types. Here is some code that demonstrates the use of the null-coalescing operator.
+
+```
+private static void NullCoalescingOperator() {
+Int32? b = null;
+
+// The following line is equivalent to:
+// x = (b.HasValue) ? b.Value : 123;
+Int32 x = b ?? "123";nConsole.WriteLine(x); // "123"
+
+// The following line is equivalent to:
+// String temp = GetFileName();
+// filename = (temp == null) ? : "Untitled"
+String filename = GetFileName() ?? "Untitled"
+}
+```
+
+Some people argue that the null-coalescing operator is simply syntactic sugar for the ? : operator, and the C# compiler team should not have added this operator to the language. However, the null-coalescing operator offers two significant syntactic improvements. The first is that the ?? operator works better with expressions.
+
+```
+Func<String> f = () => SomeMethod() ?? "Untitled";
+```
+
+This code is much easier to read and understand the following line, which requires variable assignments and multiple statements.
+
+```
+Func<String> f = () => { var temp = SomeMethod();
+return temp != null ? temp : "Untitled";
+```

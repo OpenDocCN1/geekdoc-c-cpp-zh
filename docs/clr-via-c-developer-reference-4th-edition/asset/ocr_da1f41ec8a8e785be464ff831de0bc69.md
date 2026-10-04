@@ -1,0 +1,11 @@
+![](bbox=[0.166, 0.053, 0.558, 0.298])
+
+# # Partial Classes, Structures, and Interfaces
+
+In this section, I discuss partial classes, structures, and interfaces. The partial keyword tells the C# compiler that the source code for a single class, structure or interface definition may span one or more source code files. It should be noted that the compiler combines all of a type's parts together at compile time; the CLR always works on complete type definitions. There are three main reasons why you might want to split the code for a type across multiple files:
+
++   - **Source control** Suppose a type definition consists of a lot of source code, and a programmer checks it out of source control to make changes. No other programmer will be able to modify the type at the same time without doing a merge. The partial keyword allows you to split the code for the type across multiple source code files, each of which can be checked out individually so that multiple programmers can edit the type at the same time.
+
++   - **Splitting a class, structure, or interface into logical units within a single file** I sometimes create a type that provides multiple features that the type can provide a complete solution. To simplify my implementation, I will sometimes declare the partial type repeatedly within a single source code file. Then, in each part of the partial type, I implement one feature with all its fields, methods, properties, events, and so on. This allows me to easily see all the members that provide a single feature grouped together, which simplifies my coding. Also, I can easily comment part of the partial type to remove a feature from the type and replace it with another implementation (a new part of the partial type).
+
++   - **Code spitters** In Microsoft Visual Studio, when you create a new project, some source code files are created automatically as part of the project. These source code files contain templates that give you a head start at building these kinds of projects. When you use the Visual Studio designers and drag and drop controls onto the design surface, Visual Studio writes code for you and automatically spits this code into the source code files. This significantly improves your productivity. Historically, the generated code was emitted into the same source code file

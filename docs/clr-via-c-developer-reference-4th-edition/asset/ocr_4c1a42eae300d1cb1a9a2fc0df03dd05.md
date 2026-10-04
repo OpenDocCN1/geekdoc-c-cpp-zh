@@ -1,0 +1,9 @@
+# PART I
+
+# CLR Basics
+
++   CHAPTER 1 The CLR's Execution Model ................................ 3
+
++   CHAPTER 2 Building, Packaging, Deploying, and Administering Applications and Types........................................... 33
+
++   CHAPTER 3 Shared Assemblies and Strongly Named Assemblies.................................................................... 65

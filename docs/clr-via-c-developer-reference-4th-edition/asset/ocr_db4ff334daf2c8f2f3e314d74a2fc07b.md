@@ -1,0 +1,39 @@
+The following C# code shows a type definition that contains an example of all the possible members. The code shown here will compile (with warnings), but it isn't representative of a type that you'd normally create; some of the methods do nothing of any real value. Right now, I want to show you how the compiler translates this type and its members into metadata. Once again, I'll discuss the individual members in the next few chapters.
+
+```
+using System;
+public sealed class SomeType { // 1
+    // Nested class
+    private class SomeNestedType { } // 2
+    // Constant, read-only, and static read/write field
+    Int32 c_SomeConstant = 1; // 3
+    private readonly String m_SomeReadOnlyField = "2"; // 4
+    private static Int32 s_SomeReadWriteField = 3; // 5
+    // Type constructor
+    static SomeType() { } // 6
+    // Instance constructors
+    public SomeType(Int32 x) { } // 7
+    public SomeType() { } // 8
+    // Instance and static methods
+    private String InstanceMethod() { return null; } // 9
+    public static void Main() { } // 10
+    // Instance property
+    public Int32 SomeProp { // 11
+        get { return 0; } // 12
+        set { } // 13
+    }
+
+    // Instance parameterful property (indexer)
+    public Int32 this[String s] { // 14
+        get { return 0; } // 15
+        set { } // 16
+    }
+    }
+
+    // Instance event
+    public event EventHandler SomeEvent; // 17
+```
+
+If you compile the type just defined and examine the metadata in ILasm.exe, you'll see the output in Figure 6-1.
+
+Notice that all the members in the source code cause the compiler to emit some metadata. In fact, some of the members cause the compiler to generate additional members as well as additional metadata. For example, the event member (17) causes the compiler to emit a field, two methods, and some additional metadata. I don't expect you to fully understand what you're seeing here now. but as you read the next few chapters, I encourage you to look back to this example to see how the member is defined and what effect it has on the metadata produced by the compiler.

@@ -1,0 +1,586 @@
+
+
+# 显示方法
+
+- Decoder 类（Decoder class），356
+- 解码 (Decoding)
+- 字节 (bytes), 356
+- 字符串 (strings), 356
+- 减方法 (Decrement method), 791
+- 加密 SecureStreams, 360
+- 专用线程 (dedicated threads), 679
+- 默认 AppDomain, 556
+- 默认属性 (default properties)。参参 parameterful
+- DefaultMemberAttribute, 246
+- DefaultParameterAttribute, 212
+- 类 (classes), 168
+- 字段（fields），带有初始化的初始化, 184
+- 属性 (properties), 230
+- 类型 (types), 251
+- 元数据中的定义表 (definition tables in metadata), 39
+- 延迟方法 (Delay method), 722
+- 延迟签名 (delayed signing), 76
+- Delegate 类 (Delegate class), 397
+- 委托字段 (delegate fields), 257
+- 委托类型 (delegate types)
+- 扩展方法用于 (extension methods for), 202
+- 序列化 (serializing), 618
+- WinRT, 647
+- 委托 (delegates), 249。另请查看回调函数 (callback functions)
+- 添加/删除 (adding/removing), 604
+- 数组，返回引用 (arrays, returning reference in), 405
+- 回调方法，调用 (callback method, invoking), 399
+- 回调实例方法 (calling back instance methods), 395
+- 使用...回调静态方法 (calling back static methods with), 394
+- 使用...调用私有成员 (calling private members with), 394
+- 链式 (chaining), 400, 404
+- 链式，C# 的支持 (chaining, C# support for), 404
+- 链式，结果变量 (chaining, result variable and), 404
+- 由...定义的类 (class defined by), 396, 397
+- 构造函数 (constructors), 398
+- 逆变类型参数 (contravariant type parameters), 279
+- 协变类型参数 (covariant type parameters), 279
+- 创建 (creating), 392
+- 定义 (defining), 408
+- ...的定义 (definitions for), 407
+- 扩展方法以及 (nextension methods and), 203
+- 垃圾回收 (garbage collection), 401
+- 通用 (generic), 278, 407
+- ...的初始化 (initialization of), 398
+- 不变类型参数 (invariant type parameters), 279
+- 动态调用 (invoking dynamically), 417
+- 多路复委托类 (MulticastDelegate class), 397
+- 反射以及 (reflection and), 416
+- 从链中移除 (removing from chains), 403
+- 语法 (syntax), 408
+- ...的语法快捷方式 (syntax shortcuts for), 409, 410, 213
+- 用于任务 (for tasks), 715
+- 取消注册 (unregistering), 260
+- Delete 方法，抛出的异常 (Delete method, exceptions thrown by), 532
+- 删除运算符 (delete operator), 93
+- DeleteAsync 方法, 742
+- 部署程序 (deploying assemblies), 60
+- 私有地 (privately), 79
+- 派生类 (dederived class), 311, 312
+- 派生类型，前提条件 (derived types, preconditions and), 502
+- 反序列化 (deserialization)
+- 状态的 (of application state), 616
+- 集合对象的 (of collection objects), 622
+- 控制 (controlling), 619
+- 数据反卷/解滚 (derrolling data), 624
+- ...的定义 (definition of), 611
+- 格式化一致性 (formatter consistency), 615
+- ISerializable 接口 (ISerializable interface), 625
+- 匹配的序列化方法 (matching serialization method), 628
+- 对象图的 (of object graphs), 615
+- 对象的，不同对象的 (of objects, of different objects), 633
+- 覆盖程序集/类型 (overriding assembly/type), 640
+- ...的快速上手 (quick start for), 613
+- 设置 (setting up), 628
+- 单例类型的 (of singleton types), 633
+- ...的流上下文 (streaming contexts for), 631
+- 代理...的 (surrogates for), 636
+- 类型绑定 (type bindings), 641
+- 类型实例的 (of type instances), 624
+- DeserializeFrom 方法, 615
+- 反序列化对象 (deserializing objects), 182
+- 诊断命名空间 (diagnostics namespace), 688
+- 字典类型，序列化 (dictionary type, serialization), 626
+- 直接内存访问 (direct memory accesses), 386
+- 禁用优化标志 (DisableOptimizations flag), 511
+- 类型消除歧义 (disambiguating types), 99
+- 分发器类 (Dispatcher classes), 723
+- DispatcherUnhandleException 事件, 488
+- 显示方法 (Display method), 283
+
+# Dispose 方法 (Dispose method)
+
+- Dispose 方法, 260, 358, 512, 533, 648
+- 避免 (avoiding), 535
+- 显式调用 (calling explicitly), 337
+- finally 块中 (in finally block), 535
+- 原生资源清理 (native resource cleanup and), 534
+- Task 对象 (Objects), 708
+- WaitHandle 类 (Wait class), 780
+- 分布式应用程序，未处理的异常 (distributed applications, unhandled exceptions in), 488
+- DllMain 方法, 671
+- DLLs
+- ...的互操作性 (interoperability of), 34
+- 性能问题以及 (performance issues and), 672
+- 线程攻击与分离 (thread-attack and thread-detach)
+- 通知 (notifications), 671
+- 双检查锁定 (double-check locking), 807
+- 双精度类型 (double type), 112
+- 从网络下载程序 (downloading assemblies from web), 458
+- dynamic.exe, 99
+- 动态表达式 (dynamic expressions), as object types, 147
+- dynamic 关键字 (dynamic keyword), 214
+- 动态类型 (dynamic type), 112
+- ...的示例 (example of), 145
+- var 关键字 (var keyword), 146
+- 动态可扩展应用程序 (dynamically extensible applications), 583
+- 构建 (building), 588
+- 扩展性框架 (MEF), 598
+- DynamicAttribute 方法, 145
+- dynamicInvocation 方法, 417
+- 动态化 (dynamification), 147
+- EnsureCapacity 方法, 337
+- EnsureInitialized 方法, 811
+- EnsureExecutionStack 方法, 489
+- Enter 方法, 790
+- 重载，不建议 (overloading, discouraged), 476
+- Monitor 类 (Monitor class), 795
+- Enum 类 (Enum class), 362
+- Enum 类型 (Enum type), 664
+- 枚举类型 (enumerated type), 661
+- 位标志，带有 (bit flags, defined with), 368
+- 派生类 (classes derived from), 362
+- 将符号转换为... (converting symbols into), 366
+- 将值转换为... (converting values into flags), 370
+- 声明 (declaring), 363
+- 定义的符号 (defined symbols in), 370
+- 定义 (defining), 367
+- 显示所有值 (displaying all values for), 365
+- 扩展方法用于 (extension methods for), 202
+- 格式化 (formatting), 364
+- isDefined 以及 (isDefined and), 371
+- 映射到字符串 (mapping to strings), 364
+- 方法 (methods), 371
+- 多符号 (with multiple symbols), 364
+- 参数验证 (parameter validation), 366
+- 作为原始类型 (as primitive types), 363
+- 序列化 (serializing), 618
+- ...的结构 (structure of), 362
+- 常量字段 (symbols as constant fields), 362
+- 底层类型 (underlying types for), 363
+- 用户界面显示 (user interface display of), 365
+- 枚举类型 (enumerating types), 588
+- WinRT 中的枚举类型 (enumeration types, in WinRT), 646
+- 临时垃圾收集 (ephemeral garbage collector). See collection
+- 结束代码 (epilogue code), 102
+- 等于运算符，可空类型 (equality operators, nullable types, and), 444
+- Equals 方法 (Equals method), 139, 238, 332, 388
+- 覆盖 (overriding), 140, 141
+- ...的属性 (properties of), 141
+- System.Object, 92
+- 错误消息 (error messages), 157
+- 错误。查看异常处理器 (errors. See exceptions; exception handler)
+- 升级策略 (escalation policy), 577
+- 早期绑定 (early binding), 589
+- 显式构建类型 (explicitly constructing types), 353
+- 无状态的 (stateless), 356
+- Encoding 类 (Encoding class), 352
+- 属性 (properties), 352
+- 编码 (encodings), 350
+- 属性值 (property values), 354
+- EndBackground.Processing., 755
+- EndsWith 方法，比较字符串 (EndsWith method, comparing strings), 325
+- WaitForConnection 方法, 743
+- Endx 方法, 481
+- 异步函数以及 (asynchronous functions and), 741
+- 类命名规范 (class naming convention), 251
+
+# 异常 (exceptions)
+
+- 代码约违背 (code contract violations), 500
+- 方法签名 (method signatures), 741
+- void 返回类型 (void return type), 253
+- 事件日志，查看...中的未处理异常 (event log, viewing unhandled exceptions in), 485
+- 用于类库对比 应用程序开发者 (for class library vs. application developers), 478, 485
+- CLS 对象 (CLS objects), 458
+- 定义的 (defined), 453
+- EventArgs 类 (EventArgs class), 251
+- EventAwaiter 类 (EventAwaiter class), 741
+- EventDef 表 (EventDef table), 39
+- EventHandler 委托类型 (WinRT), 647
+- EventStore 类型 (EventStore type), 262
+- 事件 (events), 249, 282
+- 不同的实现 (differing implementations of), 492
+- ...的示例代码 (example code for), 453
+- 由...抛出的异常 (exceptions thrown by), 457
+- finally 块 (finally blocks), 456, 478
+- 指南 (guidelines), 478, 485
+- 高错误率方法 (high error rate methods), 493
+- 用于...语言 (language for), 457
+- _add 前缀 (_add prefix), 257
+- 应用程序架构设计 (architecting applications for), 250
+- 自动重置 (auto-reset), 784
+- 编译器的实现 (compiler implementation of), 256
+- 定义 (defined), 24
+- 委托 (delegates), 249
+- 委托，添加/删除 (delegates, adding/removing), 604
+- 设计以暴露类型 (designing types to expose), 250
+- 显式实现 (explicitly implementing), 260
+- 成员，定义 (members, defining), 252
+- 上的元数据 (metadata on), 604
+- 管理编译器以及 (managing compilers and), 467
+- ...的机制 (mechanics of), 453
+- 迁移代码用于 (migrating code for), 459
+- 非 CLS 对象 (non-CLS objects), 458
+- 用于...的通知 (notifications for), 456
+- 性能问题 (performance issues), 492
+- ...中的问题 (problems with), 477
+- 运行时以及 (runtime and), 451
+- 运行的 (running), 452
+- 运行时 (runtime), 453
+- 运行环境 (runtime environment), 454
+- 运行时的 (runtime), 455
+- 运行时的 (runtime), 456
+- 运行时的 (runtime), 457
+- 运行时的 (runtime), 458
+- 运行时的 (runtime), 459
+- 运行时的 (runtime), 460
+- 运行时的 (runtime), 461
+- 运行时的 (runtime), 462
+- 运行时的 (runtime), 463
+- 运行时的 (runtime), 464
+- 运行时的 (runtime), 465
+- 运行时的 (runtime), 466
+- 运行时的 (runtime), 467
+- 运行时的 (runtime), 468
+- 运行时的 (runtime), 469
+- 运行时的 (runtime), 470
+- 运行时的 (runtime), 471
+- 运行时的 (runtime), 472
+- 运行时的 (runtime), 473
+- 运行时的 (runtime), 474
+- 运行时的 (runtime), 475
+- 运行时的 (runtime), 476
+- 运行时的 (runtime), 477
+- 运行时的 (runtime), 478
+- 运行时的 (runtime), 479
+- 运行时的 (runtime), 480
+- 运行时的 (runtime), 481
+- 运行时的 (runtime), 482
+- 运行时的 (runtime), 483
+- 运行时的 (runtime), 484
+- 运行时的 (runtime), 485
+- 运行时的 (runtime), 486
+- 运行时的 (runtime), 487
+- 运行时的 (runtime), 488
+- 运行时的 (runtime), 489
+- 运行时的 (runtime), 490
+- 运行时的 (runtime), 491
+- 运行时的 (runtime), 492
+- 运行时的 (runtime), 493
+- 运行时的 (runtime), 494
+- 运行时的 (runtime), 495
+- 运行时的 (runtime), 496
+- 运行时的 (runtime), 497
+- 运行时的 (runtime), 498
+- 运行时的 (runtime), 499
+- 运行时的 (runtime), 500
+- 运行时的 (runtime), 501
+- 运行时的 (runtime), 502
+- 运行时的 (runtime), 503
+- 运行时的 (runtime), 504
+- 运行时的 (runtime), 505
+- 运行时的 (runtime), 506
+- 运行时的 (runtime), 507
+- 运行时的 (runtime), 508
+- 运行时的 (runtime), 509
+- 运行时的 (runtime), 510
+- 运行时的 (runtime), 511
+- 运行时的 (runtime), 512
+- 运行时的 (runtime), 513
+- 运行时的 (runtime), 514
+- 运行时的 (runtime), 515
+- 运行时的 (runtime), 516
+- 运行时的 (runtime), 517
+- 运行时的 (runtime), 518
+- 运行时的 (runtime), 519
+- 运行时的 (runtime), 520
+- 运行时的 (runtime), 521
+- 运行时的 (runtime), 522
+- 运行时的 (runtime), 523
+- 运行时的 (runtime), 524
+- 运行时的 (runtime), 525
+- 运行时的 (runtime), 526
+- 运行时的 (runtime), 527
+- 运行时的 (runtime), 528
+- 运行时的 (runtime), 529
+- 运行时的 (runtime), 530
+- 运行时的 (runtime), 531
+- 运行时的 (runtime), 532
+- 运行时的 (runtime), 533
+- 运行时的 (runtime), 534
+- 运行时的 (runtime), 535
+- 运行时的 (runtime), 536
+- 运行时的 (runtime), 537
+- 运行时的 (runtime), 538
+- 运行时的 (runtime), 539
+- 运行时的 (runtime), 540
+- 运行时的 (runtime), 541
+- 运行时的 (runtime), 542
+- 运行时的 (runtime), 543
+- 运行时的 (runtime), 544
+- 运行时的 (runtime), 545
+- 运行时的 (runtime), 546
+- 运行时的 (runtime), 547
+- 运行时的 (runtime), 548
+- 运行时的 (runtime), 549
+- 运行时的 (runtime), 550
+- 运行时的 (runtime), 551
+- 运行时的 (runtime), 552
+- 运行时的 (runtime), 553
+- 运行时的 (runtime), 554
+- 运行时的 (runtime), 555
+- 运行时的 (runtime), 556
+- 运行时的 (runtime), 557
+- 运行时的 (runtime), 558
+- 运行时的 (runtime), 559
+- 运行时的 (runtime), 560
+- 运行时的 (runtime), 561
+- 运行时的 (runtime), 562
+- 运行时的 (runtime), 563
+- 运行时的 (runtime), 564
+- 运行时的 (runtime), 565
+- 运行时的 (runtime), 566
+- 运行时的 (runtime), 567
+- 运行时的 (runtime), 568
+- 运行时的 (runtime), 569
+- 运行时的 (runtime), 570
+- 运行时的 (runtime), 571
+- 运行时的 (runtime), 572
+- 运行时的 (runtime), 573
+- 运行时的 (runtime), 574
+- 运行时的 (runtime), 575
+- 运行时的 (runtime), 576
+- 运行时的 (runtime), 577
+- 运行时的 (runtime), 578
+- 运行时的 (runtime), 579
+- 运行时的 (runtime), 580
+- 运行时的 (runtime), 581
+- 运行时的 (runtime), 582
+- 运行时的 (runtime), 583
+- 运行时的 (runtime), 584
+- 运行时的 (runtime), 585
+- 运行时的 (runtime), 586
+- 运行时的 (runtime), 587
+- 运行时的 (runtime), 588
+- 运行时的 (runtime), 589
+- 运行时的 (runtime), 590
+- 运行时的 (runtime), 591
+- 运行时的 (runtime), 592
+- 运行时的 (runtime), 593
+- 运行时的 (runtime), 594
+- 运行时的 (runtime), 595
+- 运行时的 (runtime), 596
+- 运行时的 (runtime), 597
+- 运行时的 (runtime), 598
+- 运行时的 (runtime), 599
+- 运行时的 (runtime), 600
+- 运行时的 (runtime), 601
+- 运行时的 (runtime), 602
+- 运行时的 (runtime), 603
+- 运行时的 (runtime), 604
+- 运行时的 (runtime), 605
+- 运行时的 (runtime), 606
+- 运行时的 (runtime), 607
+- 运行时的 (runtime), 608
+- 运行时的 (runtime), 609
+- 运行时的 (runtime), 610
+- 运行时的 (runtime), 611
+- 运行时的 (runtime), 612
+- 运行时的 (runtime), 613
+- 运行时的 (runtime), 614
+- 运行时的 (runtime), 615
+- 运行时的 (runtime), 616
+- 运行时的 (runtime), 617
+- 运行时的 (runtime), 618
+- 运行时的 (runtime), 619
+- 运行时的 (runtime), 620
+- 运行时的 (runtime), 621
+- 运行时的 (runtime), 622
+- 运行时的 (runtime), 623
+- 运行时的 (runtime), 624
+- 运行时的 (runtime), 625
+- 运行时的 (runtime), 626
+- 运行时的 (runtime), 627
+- 运行时的 (runtime), 628
+- 运行时的 (runtime), 629
+- 运行时的 (runtime), 630
+- 运行时的 (runtime), 631
+- 运行时的 (runtime), 632
+- 运行时的 (runtime), 633
+- 运行时的 (runtime), 634
+- 运行时的 (runtime), 635
+- 运行时的 (runtime), 636
+- 运行时的 (runtime), 637
+- 运行时的 (runtime), 638
+- 运行时的 (runtime), 639
+- 运行时的 (runtime), 640
+- 运行时的 (runtime), 641
+- 运行时的 (runtime), 642
+- 运行时的 (runtime), 643
+- 运行时的 (runtime), 644
+- 运行时的 (runtime), 645
+- 运行时的 (runtime), 646
+- 运行时的 (runtime), 647
+- 运行时的 (runtime), 648
+- 运行时的 (runtime), 649
+- 运行时的 (runtime), 650
+- 运行时的 (runtime), 651
+- 运行时的 (runtime), 652
+- 运行时的 (runtime), 653
+- 运行时的 (runtime), 654
+- 运行时的 (runtime), 655
+- 运行时的 (runtime), 656
+- 运行时的 (runtime), 657
+- 运行时的 (runtime), 658
+- 运行时的 (runtime), 659
+- 运行时的 (runtime), 660
+- 运行时的 (runtime), 661
+- 运行时的 (runtime), 662
+- 运行时的 (runtime), 663
+- 运行时的 (runtime), 664
+- 运行时的 (runtime), 665
+- 运行时的 (runtime), 666
+- 运行时的 (runtime), 667
+- 运行时的 (runtime), 668
+- 运行时的 (runtime), 669
+- 运行时的 (runtime), 670
+- 运行时的 (runtime), 671
+- 运行时的 (runtime), 672
+- 运行时的 (runtime), 673
+- 运行时的 (runtime), 674
+- 运行时的 (runtime), 675
+- 运行时的 (runtime), 676
+- 运行时的 (runtime), 677
+- 运行时的 (runtime), 678
+- 运行时的 (runtime), 679
+- 运行时的 (runtime), 680
+- 运行时的 (runtime), 681
+- 运行时的 (runtime), 682
+- 运行时的 (runtime), 683
+- 运行时的 (runtime), 684
+- 运行时的 (runtime), 685
+- 运行时的 (runtime), 686
+- 运行时的 (runtime), 687
+- 运行时的 (runtime), 688
+- 运行时的 (runtime), 689
+- 运行时的 (runtime), 690
+- 运行时的 (runtime), 691
+- 运行时的 (runtime), 692
+- 运行时的 (runtime), 693
+- 运行时的 (runtime), 694
+- 运行时的 (runtime), 695
+- 运行时的 (runtime), 696
+- 运行时的 (runtime), 697
+- 运行时的 (runtime), 698
+- 运行时的 (runtime), 699
+- 运行时的 (runtime), 700
+- 运行时的 (runtime), 701
+- 运行时的 (runtime), 702
+- 运行时的 (runtime), 703
+- 运行时的 (runtime), 704
+- 运行时的 (runtime), 705
+- 运行时的 (runtime), 706
+- 运行时的 (runtime), 707
+- 运行时的 (runtime), 708
+- 运行时的 (runtime), 709
+- 运行时的 (runtime), 710
+- 运行时的 (runtime), 711
+- 运行时的 (runtime), 712
+- 运行时的 (runtime), 713
+- 运行时的 (runtime), 714
+- 运行时的 (runtime), 715
+- 运行时的 (runtime), 716
+- 运行时的 (runtime), 717
+- 运行时的 (runtime), 718
+- 运行时的 (runtime), 719
+- 运行时的 (runtime), 720
+- 运行时的 (runtime), 721
+- 运行时的 (runtime), 722
+- 运行时的 (runtime), 723
+- 运行时的 (runtime), 724
+- 运行时的 (runtime), 725
+- 运行时的 (runtime), 726
+- 运行时的 (runtime), 727
+- 运行时的 (runtime), 728
+- 运行时的 (runtime), 729
+- 运行时的 (runtime), 730
+- 运行时的 (runtime), 731
+- 运行时的 (runtime), 732
+- 运行时的 (runtime), 733
+- 运行时的 (runtime), 734
+- 运行时的 (runtime), 735
+- 运行时的 (runtime), 736
+- 运行时的 (runtime), 737
+- 运行时的 (runtime), 738
+- 运行时的 (runtime), 739
+- 运行时的 (runtime), 740
+- 运行时的 (runtime), 741
+- 运行时的 (runtime), 742
+- 运行时的 (runtime), 743
+- 运行时的 (runtime), 744
+- 运行时的 (runtime), 745
+- 运行时的 (runtime), 746
+- 运行时的 (runtime), 747
+- 运行时的 (runtime), 748
+- 运行时的 (runtime), 749
+- 运行时的 (runtime), 750
+- 运行时的 (runtime), 751
+- 运行时的 (runtime), 752
+- 运行时的 (runtime), 753
+- 运行时的 (runtime), 754
+- 运行时的 (runtime), 755
+- 运行时的 (runtime), 756
+- 运行时的 (runtime), 757
+- 运行时的 (runtime), 758
+- 运行时的 (runtime), 759
+- 运行时的 (runtime), 760
+- 运行时的 (runtime), 761
+- 运行时的 (runtime), 762
+- 运行时的 (runtime), 763
+- 运行时的 (runtime), 764
+- 运行时的 (runtime), 765
+- 运行时的 (runtime), 766
+- 运行时的 (runtime), 767
+- 运行时的 (runtime), 768
+- 运行时的 (runtime), 769
+- 运行时的 (runtime), 770
+- 运行时的 (runtime), 771
+- 运行时的 (runtime), 772
+- 运行时的 (runtime), 773
+- 运行时的 (runtime), 774
+- 运行时的 (runtime), 775
+- 运行时的 (runtime), 776
+- 运行时的 (runtime), 777
+- 运行时的 (runtime), 778
+- 运行时的 (runtime), 779
+- 运行时的 (runtime), 780
+- 运行时的 (runtime), 781
+- 运行时的 (runtime), 782
+- 运行时的 (runtime), 783
+- 运行时的 (runtime), 784
+- 运行时的 (runtime), 785
+- 运行时的 (runtime), 786
+- 运行时的 (runtime), 787
+- 运行时的 (runtime), 788
+- 运行时的 (runtime), 789
+- 运行时的 (runtime), 790
+- 运行时的 (runtime), 791
+- 运行时的 (runtime), 792
+- 运行时的 (runtime), 793
+- 运行时的 (runtime), 794
+- 运行时的 (runtime), 795
+- 运行时的 (runtime), 796
+- 运行时的 (runtime), 797
+- 运行时的 (runtime), 798
+- 运行时的 (runtime), 799
+- 运行时的 (runtime), 800
+- 运行时的 (runtime), 801
+- 运行时的 (runtime), 802
+- 运行时的 (runtime), 803
+- 运行时的 (runtime), 804
+- 运行时的 (runtime), 805
+- 运行时的 (runtime), 806
+- 运行时的 (runtime), 807
+- 运行时的 (runtime), 808
+- 运行时的 (runtime), 809
+- 运行时的 (runtime), 810
+- 运行时的 (runtime), 811
+- 运行时的 (runtime), 812
+- 运行时的 (runtime), 813
+

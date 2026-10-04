@@ -1,0 +1,96 @@
+# parsing
+
+parsing
+dates and times, 349
+strings, 348
+partial keyword, 159
+partial methods, 204
+efficiency of, 205
+overriding types with, 205
+private keyword and, 207
+return type for, 207
+rules and guidelines, 207
+runtime performance and, 206
+sealed classes and, 205
+in Visual Studio, 206
+passing arrays, 382
+passing parameters, via reference, 215
+path names, loading assemblies with, 586
+by local variable, 549
+PDB (Program Database) files, 15
+PE (portable executable) files
+manifest, 47
+command-line switches for compiling, 47
+components of, 38
+embedding resource files, into, 53
+PE32
+(+) files, 6
+(+) headers, 38
+PE32 headers, 5
+platform version and, 9
+PerfMon.exe, 524
+performance concerns, 15
+performance counters, 524
+performance issues
+binding handles and, 608
+context switching with, 672, 672
+DLLs and, 672
+double-check locking and, 808
+exception handling and, 492
+execution contexts and, 695
+hyperthreading and,, 567
+instance fields and, 567
+I/O operations and, 731
+of methods with variable number of
+arguments, 222
+monitoring with Task Manager, 569
+Parallel class and, 714
+reflection and, 589
+
+tasks and, 708
+thread pools and, 692
+ithreads and, 670, 674, 681
+thread synchronization and, 758
+thread synchronization locks and, 790
+Performance Monitor, testing exception
+handling with, 493
+PerView, 525
+periodic compute-bound operations, 720
+PEVerifyexe, 186
+Pinned flag, 546
+pinning objects, 548
+points of failure, of, 471. See also
+ceptions: exception handling
+policy controls, 886
+polygons, arrays of, 375
+polymorphism, WinRT components and, 646
+pooling strings, 332
+positional parameters, 424
+PostAsync method, 472
+postconditions, 498, 501
+execution of, 502
+side-effect free members, 501
+Power Threading library, 804
+preamble, 353
+preconditions, 498, 501
+initance of, 502
+side-effect free members, 501
+preemptive multithreaded operating
+system, 684
+PrepareConstrainedRegions method, 496
+primary constraints, 287
+primitive thread synchronization constructs, 760
+kernel-mode, 761, 778, 784
+interlocked, 768
+user-mode, 762
+volatile, 766
+primitive types, 111
+checked and unchecked, 115
+comparing to each other, 292
+defining constants with, 175
+dynamic, 144nasnasumerated types, 363
+vs. FCL types, 113
+with FCL types, 112
+parameter default values, 716
+
+848

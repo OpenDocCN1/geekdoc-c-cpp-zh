@@ -1,0 +1,103 @@
+
+然而，即使在高度受限于 I/O 的应用程序中，这些程序也会对接收到的数据进行某些计算，并行化这些计算可以极大提高应用程序的吞吐量。本章介绍了公共语言运行时（CLR）的线程池，以及关于其工作原理和如何使用的的一些基本概念。这些信息至关重要，因为线程池是使你设计并实现响应式且可扩展的应用程序和组件的核心技术。随后，本章将展示可用的各种机制，允许你通过线程池执行计算密集型操作。
+
+## 介绍 CLR 线程池
+
+正如上一章所述，创建和销毁线程是一项耗费时间的操作。此外，拥有大量线程会浪费内存资源，并且由于操作系统必须在可运行的线程之间进行调度和上下文切换，还会损害性能。为了改进这一点，CLR 包含了管理其自身线程池的代码。你可以将线程池看作一组供你的应用程序使用的线程。每个 CLR 都有一个线程池；该线程池由该 CLR 控制的所有 AppDomain 共享。如果一个进程内加载了多个 CLR，则每个 CLR 都有自己的自己的线程池。
+
+当 CLR 初始化时，线程池中没有线程。在内部，线程池维护一个操作请求队列。当你的应用程序想要执行异步操作时，你可以调用某些方法将条目添加到线程池队列中。线程池将从该队列中提取条目并将其分发给线程。如果线程池中没有线程，将创建一个新线程。创建线程会带来性能开销（如前文所述）。然而，当线程池完成其任务时，该线程不会被销毁；相反，线程将返回到线程池，并在那里闲置等待响应另一个请求。由于线程不会自销毁，因此不会产生额外的性能开销。
+
+如果你的应用程序向线程池发送许多请求，池可能不得不仅使用这一个线程来处理所有请求。然而，如果你的应用程序队列多个请求的速度快于线程池处理的速度，将创建额外的线程。你的应用程序最终会达到一个点，即其所有请求都可以由少数线程处理，因此线程池将不需要创建大量线程。
+
+如果你的应用程序停止向线程池发送请求，线程池中可能会有很多许多无所事事的线程。这是对内存资源的浪费。当线程池空置一段时间无事可做时（取决于不同版本的 CLR，可能会发生变化），线程会唤醒自己并自杀以释放资源。由于自杀的存在，会有性能开销。但这可能并不重要，因为线程自杀是因为它一直空闲，这意味着你的应用程序没有在执行大量工作。
+
+线程池的伟大之处在于，它管理了“保持少量线程以防浪费资源”与“利用多处理器、超线程处理器和多核处理器”之间的平衡。而且线程池是启发式的。如果你的应用程序需要执行许多任务且 CPU 可用，线程池就会创建线程。如果你的应用程序工作负载负载减少，线程池就会自杀。
+
+## 执行简单的计算密集型操作
+
+要向线程池队列异步计算密集型操作，你通常会调用 `ThreadPool` 类定义的方法之一。
+
+```csharp
+static Boolean QueueUserWorkItem(WaitCallback callback);
+static Boolean QueueUserWorkItem(WaitCallback callback, Object state);
+```
+
+这些方法将“工作项”和可选状态队列到线程池队列中，然后所有这些方法都会立即返回。工作项是由 `callback` 参数标识的简单方法，它将由线程池调用。该方法可以传递一个通过 `state` 参数（状态数据）指定的单个参数。不带 `state` 参数的 `QueueUserWorkItem` 版本会向 `callback` 方法传递 `null`。最终，池中的某些线程将执行你的项，调用你被调用的方法。你写的 `callback` 方法必须匹配 `System.Threading.WaitCallback` 委托类型：
+
+```csharp
+delegate void WaitCallback(Object state);
+```
+
+> **注意：** `WaitCallback` 委托、`TimerCallback` 委托（在本章“执行周期性计算密集型操作”节中讨论）以及 `ParameterizedThreadStart` 委托（在第26章“线程基础”中讨论）的签名都是完全相同的。如果你定义了一个具有此签名的方法，可以使用 `ThreadPool.QueueUserWorkItem`、使用 `System.Threading.Timer` 对象或使用 `System.Threading.Thread` 对象来调用它。
+
+以下代码演示了如何让线程池异步调用一个方法：
+
+```csharp
+using System;
+using System.Threading;
+public static class Program {
+    public static void Main() {
+        Console.WriteLine("Main thread: queuing an asynchronous operation");
+        ThreadPool.QueueUserWorkItem(ComputeBoundOp, S);
+        Console.WriteLine("Main thread: Doing other work...");
+        Thread.Sleep(1000); // Simulating other work (10 seconds)
+        Console.WriteLine("Hit <Enter> to end this program...");
+        Console.ReadLine();
+    }
+}
+```
+
+```csharp
+// 此方法的签名必须匹配 WaitCallback 委托
+private static void ComputeBoundOp(Object state) {
+    // 此方法由线程池执行
+    Console.WriteLine("ComputeBoundOp: state={0}", state);
+    Thread.Sleep(1000); // Simulates other work (1 second)
+    // 当此方法返回时，线程返回
+    // 到池中
+}
+```
+
+当我编译并运行它时，我得到以下输出：
+
+Main thread: queuing an asynchronous operation
+Main thread: Doing other work...
+ComputeBoundOp: state=
+Main thread: Hit <Enter> to end this program...
+
+## 执行上下文
+
+每个线程都有与其关联的执行上下文（execution context）。执行上下文包含了安全设置等。默认情况下，CLR 会自动导致启动线程的执行上下文流向辅助线程。这需要花费相当的时间，因为辅助线程必须创建并初始化更多的执行上下文结构。
+
+在 `System.Threading` 命名空间中，有一个 `ExecutionContext` 类，允许你控制线程的执行上下文如何从一个流到另一个。该类的结构如下所示：
+
+```csharp
+public sealed class ExecutionContext : IDisposable, ISerializable {
+    [SecurityCritical] static AsyncControl SuppressFlow();
+    public static void RestoreFlow();
+    public static bool IsSuppressed();
+}
+```
+
+你可以用此来抑制执行上下文的流动，从而提高应用程序的性能。对于服务器应用程序，性能提升可能是相当巨大的。对于客户端应用程序益处不大，而且 `SuppressFlow` 方法被标记为 `[SecurityCritical]` 特性，导致在某些客户端应用程序（如 Silverlight）中无法调用。当然，只有当辅助线程不需要访问上下文信息时，你应该抑制执行上下文的流动。如果启动执行上下文没有流向辅助线程，辅助线程将使用它最后一次使用的任何执行上下文。因此，辅助线程不应执行任何依赖执行上下文状态（如用户身份）的代码。
+
+以下示例演示了在向 CLR 线程池队列工作项时，抑制执行上下文的流动如何影响线程逻辑调用上下文中的数据。
+
+```csharp
+public static void Main() {
+    // 将一些数据放入主线程的逻辑调用上下
+    CallContext.LogicalGetData("Name", "Jeffrey");
+
+    // 启动一些由线程池线程执行的工作
+    // 线程池可以访问逻辑调用上下文
+    ThreadPool.QueueUserWorkItem(state => {
+        state = "0";Console.WriteLine("Name={0}", CallContext.LogicalGetData("Name"));
+    });
+
+    // 现在，抑制主线程执行上下文的流动
+    ExecutionContext.SuppressFlow();
+}
+```
+
+你添加到逻辑调用上下文的项必须是可序列化的，正如第24章“运行时序列化”所述。流动包含逻辑调用数据项的执行上下文会损害性能，因为捕获执行上下文需要对数据项进行序列化和反序列化。
+

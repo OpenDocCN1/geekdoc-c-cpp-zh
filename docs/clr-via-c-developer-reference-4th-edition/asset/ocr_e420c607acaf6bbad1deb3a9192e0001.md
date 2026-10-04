@@ -1,0 +1,43 @@
+constructor, it can have more than one. In addition, type constructors never have parameters. In C#, here's how to define a reference type and a value type that have type constructors.
+
+```
+internal sealed class SomeRefType {
+    static SomeRefType() {
+        // This executes the first time a SomeRefType is accessed.
+    }
+}
+```
+
+```
+internal struct SomeValueType {
+    // C does not allow value types to define parameterless type constructors.
+    static SomeValueType() {
+        // This executes the first time a SomeValueType is accessed.
+    }
+}
+```
+
+You'll notice you define type constructors just as you would parameterless instance constructors, except that you must mark them as static. Also, type constructors should always be private; C# makes them private for automatically. In fact, if you explicitly mark a type constructor as private (or anything else) in your source code, the C# compiler issues the following error: CS0515:'SomeValueType.SomeValueType()': access modifiers are not allowed on static constructors. Type constructors should be private to prevent developer-written code from calling them; the CLR is always capable of calling a type constructor.
+
+> Important Although you can define a type constructor within a value type, you never actually do this because there are times when the CLR will not call a value type's static type constructor. Here is an example.
+
+```
+internal struct SomeValueType {
+    static SomeValueType() {
+        Console.WriteLine("This never gets displayed");
+    }
+    public Int32 m_x;
+}
+```
+
+```
+public sealed class Program {
+    public static void Main() {
+        SomeValueType[] m_x = new SomeValueType[10];
+        a[0].m_x = 123;
+        Console.WriteLine(a[0].m_x); // Displays 123
+    }
+}
+```
+
+The calling of a type constructor is a tricky thing. When the just-in-time (JIT) compiler is compiling a method, it sees what types are referenced in the code. If any of the types define a type constructor, the JIT compiler checks if the type's constructor has already executed for the AppDomain. If the constructor has never executed, the JIT compiler emits a call to the type constructor into the native code that the JIT compiler is emitting. If the type constructor for the type has already executed, the JIT compiler does not emit the call because it knows that the type is already initialized.

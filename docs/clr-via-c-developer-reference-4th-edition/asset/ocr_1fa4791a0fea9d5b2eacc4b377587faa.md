@@ -1,0 +1,15 @@
+To prove that the object returned from MethodWithReturn is not a proxy object, my Ch22-1-AppDomains application calls System.Runtime.Remoting.RemotingService::public, static IsTransparentProxy method passing the reference returned from MethodWithReturn. As you can see from the output, IsTransparentProxy returns false, indicating that the object is a real object, not a proxy.
+
+Now, my program uses the real object to call the ToString method. Because the mbt variable refers to a real object, the real implementation of this method is called, and no AppDomain transition occurs. This can be evidenced by examining the debugger's Stack window, which will not show an [AppDomain Transition] line.
+
+To further prove that no proxy is involved, my Ch22-1-AppDomains application unloads the new AppDomain and attempts to call the ToString method again. Unlike Demo #1, the call succeeds time because unloading the new AppDomain had no impact on objects "owned" by the default AppDomain, and this object was marshaled by value.
+
+# Demo #3: Cross-AppDomain Communication Using NonMarshalable Types
+
+Demo #3 starts out similar to Demo #1 and #2. Just as in Demo #1 and #2, an AppDomain is created, then CreateAndUnwrap is called to load the same assembly into the new AppDomain, create a MarshalByRef in this new AppDomain, and the mbt variable refer to a proxy to this object.
+
+Then, using this, I call MarshalAndReturn, which accepts an argument. The CLR must maintain AppDomain isolation, so it cannot simply pass the reference to the argument into the new AppDomain. If the type of object is derived from MarshalByRef the CLR will make a proxy for it and marshal it by reference. If the object's type is marked as [Serializable], the CLR will serialize the object (and its children) to a byte array, marshal the byte array into the new AppDomain, and deserialize the object graph, passing the root of the object graph into the MethodArgAndReturn method.
+
+In this particular, I am passing a System.String across AppDomain boundaries. The System.String is not derived from MarshalByRefObject, so the CLR cannot create a proxy. Fortunately, System.String is marked as [Serializable], and therefore the CLR can marshal it by value, which allows the code to work. Note that for String objects, the CLR performs a special optimization. When marshaling a String object across an AppDomain boundary, the CLR just passes the reference to the String across the boundary; it does not make a copy of the String. The CLR can offer this optimization because String objects are immutable; therefore, it is impossible for code in one AppDomain to corrupt a String's characters. For more about immutability, see Chapter 14, "Chars, Strings, and Working with Text."
+
+> 4 By the way, this is how the System.String class is sealed. If the class was not sealed, then you could define your own class derived from String and add your own methods. If you did, there is no way that the CLR could ensure that "string" class was immutable.

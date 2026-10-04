@@ -1,0 +1,15 @@
+to another type (IConvertible), a type can serialize an instance of itself (ISerializable), etc. Note that value types must be derived from System.ValueType, and therefore, they cannot be derived from an arbitrary base class. In this case, use a CAN-DO relationship and define an interface.
+
++   - **Ease of use** It's generally easier for you as a developer to define a new type derived from a base type to implement all of the methods of an interface. The base type can provide a lot of functionality, the derived type probably needs relatively small modifications to its behavior. If you supply an interface, the new type must implement all of the members.
+
++   - **Consistent implementation** No matter how well an interface is documented, it's very unlikely that everyone will implement the contract 100 percent correctly. In fact, COM suffers from this problem, which is why some COM objects work only with Microsoft Word or Windows Internet Explorer. By providing a base type with a good implementation, you start off using a type that works and is well tested; you can then modify parts that need modification.
+
++   - **Versioning** If you add a method to the base type, the derived type inherits the method, you start off using a type that works, your source code doesn't even have to recompile. Adding a new member to an interface forces the inheritor of the interface to change its source code and recompile.
+
+In the FCL, the classes related to streaming data have an implementation inheritance design. System.IO.Stream is the abstract base class. It provides a bunch of methods, such as Read and Write. Other classes—System.FileStream, System.MemoryStream, and System.Net.Sockets.NetworkStream—are derived from Stream. Microsoft chose an IS-A relationship between each of these three classes and the Stream class makes it implementing the concrete classes easier. For example, the derived classes need to implement only synchronous I/O operations; inherit the ability to perform asynchronous I/O operations from the Stream class.
+
+Admittedly, choosing inheritance for interfaces is not entirely clear; if you consider the Windows Forms base class, in Button, CheckBox, ListBox, and all of the other controls are derived from System.Windows.Forms.Control, it's easy to imagine all of the code that Control implements, which the various controls simply inherit to function correctly.
+
+By contrast, Microsoft designed the FCL collections to interface based. System.Collections namespace defines several collection-related interfaces: IEnumerable<T>, IList<T>, IList<T>, and IDictionary<TKey, TValue>. Microsoft provided a number of classes, such as List<T>, Dictionary<TKey, TValue>, Queue<T>, Stack<T>, and so on, to implement combinations of these interfaces. The designers chose a CAN-DO relationship between the classes and the interfaces because the implementations of these various collection classes are radically different from one another. In other words, there isn't lot of shared code between List<T>, a Dictionary<TKey, TValue>, and a Queue<T>.
+
+CHAPTER 13 Interfaces 313

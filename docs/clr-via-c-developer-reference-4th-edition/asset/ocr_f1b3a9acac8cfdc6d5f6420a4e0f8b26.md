@@ -1,0 +1,37 @@
+Inherited virtual methods methods defined by the base types in the inheritance hierarchy well as any methods defined by the interface types. So if you have a simple type defined like this:
+
+```
+internal sealed class SimpleType : IDisposable {
+    public void Dispose() { Console.WriteLine("Dispose"); }
+}
+```
+
+the type method table contains entries for the following:
+
++   - All the instance methods defined by Object, the implicitly inherited base class.
+- All the interface methods defined by IDisposable, the inherited interface. In this example, there is only one method, Dispose, because the IDisposable interface defines just one method.
+- The new method, Dispose, introduced by SimpleType.
+
+To make things simple for the programmer, the C# compiler assumes that the Dispose method introduced by SimpleType is the implementation for IDisposable's Dispose method. The C# compiler makes this assumption the method is public and the signatures of the interface method and the newly introduced method are identical. That, the methods have the same parameter and return types. By the way, if the new Dispose method were marked as virtual, the C# compiler would still consider this method to be a match for the interface method.
+
+When the C# compiler matches a method to an interface method, it emits metadata indicating that both entries in SimpleType's method table would refer to the same implementation. To make this clearer, here is some code that demonstrates how to call the class's public Dispose method as well as how to call the class's implementation of IDisposable's Dispose method.
+
+```
+public sealed class Program {
+    public static void Main() {
+        SimpleType st = new SimpleType();
+
+        // This calls the public Dispose method implementation
+        st.Dispose();
+
+        // This calls IDisposable's Dispose method implementation
+        IDisposable d = st;
+        d.Dispose();
+    }
+}
+```
+
+In the first call to Dispose, the Dispose method defined by SimpleType is called. Then I define a variable, d, which is of IDisposable interface. I initialize the d variable to refer to the SimpleType object. Now when I call d.Dispose(), I am calling the IDisposable interface's Dispose method. Because C# requires the public Dispose method to also be the implementation for IDisposable's method, the same code will execute, and in this example, you can't see any observable difference. The output is as follows.
+
+Dispose
+Dispose

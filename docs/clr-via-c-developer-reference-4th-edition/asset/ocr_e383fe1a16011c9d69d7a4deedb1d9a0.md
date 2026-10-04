@@ -1,0 +1,45 @@
+# Step #4: Define a method that translates the input into the desired event
+
+Your class must have some method that takes some input and translates it into the raising of the event. In MyMailManager example, SimulateNewMail method is called to indicate that a new email message has arrived in MailManager.
+
+```
+internal class MailManager {
+    // Step #4: Define a method that translates the
+    // input into the desired event
+    public void SimulateNewMail(String from, String to, String subject) {
+
+        // Construct an object to hold the information we want
+        // to pass to the receivers of our notification
+        NewMailEventArgs e = new NewMailEventArgs(from, to, subject);
+
+        // Call our virtual method notifying our object that the event
+        // occurred. If no type overrides this method, our object will
+        // notify all the objects that registered interest in the event
+        OnNewMail(e);
+    }
+}
+```
+
+SimulateNewMail accepts information about the message and constructs a NewMailEventArgs, passing the message information to its constructor. MailManager's virtual OnNewMail is then called to formally notify the MailManager object of the new email message. Usually, this causes the event to be raised, notifying all of the registered methods. As mentioned before, a class using MailManager as a base class can override this behavior.)
+
+# How the Compiler Implements an Event
+
+Now that you know how to define a class that offers an event member, let's take a closer look at what an event really is and how it works. In MailManager class, we have a line of code that defines the event itself.
+
+```
+public event EventHandler<NewMailEventArgs> NewMail;
+
+When the C# compiler compiles the line above, it translates this single line of source code into
+t following three structures:
+
+// 1. A PRIVATE delegate field that is initialized to null
+private EventHandler<NewMailEventArgs> NewMail = null;
+
+// 2. A PUBLIC add_ method which is the Event name
+// Allows methods to register interest in the event.
+public void add_NewMail(EventHandler<NewMailEventArgs> value) {
+    // The loop and the call to CompareExchange is just a fancy way
+    // of adding a delegate to the event in a thread-safe way
+    EventHandler<NewMailEventArgs>prevHandler;
+}
+```

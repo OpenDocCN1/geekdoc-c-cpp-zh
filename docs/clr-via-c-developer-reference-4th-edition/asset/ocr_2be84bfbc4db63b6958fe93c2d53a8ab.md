@@ -1,0 +1,55 @@
+If you prefer, could define the Actions type without the [Flags] attribute and still get the
+correct string by using the "F" format.
+
+```
+// [Flags] // Commented out now
+internal enum Actions {
+None = 0
+Read = 0x0001,
+Write = 0x0002,
+Readwrite = Actions.Read | Actions.Write,
+Delete = 0x0004,
+Query = 0x0008,
+Sync = 0x0010
+}
+```
+
+Actions actions = Actions.Read | Actions.Delete; // 0x005
+Console.WriteLine(actions.ToString("F")); // "Read, Delete"
+
+If the numeric value has a bit that cannot be mapped to a symbol, the returned string will contain
+just a decimal number indicating the original numeric value; no symbols will appear in the string.
+
+Note the symbols you define in your enumerated type not have to be powers of 2. For
+example, the Actions type could define a symbol called A1 with a value of 0x001F. If an instance of
+the Actions type has a value of 0x001F, formatting the instance will produce a string that contains
+"All". All other symbols will not appear.
+
+So far, I've discussed how to convert numeric values into a string of flags. It's also possible to-
+vert a string of comma-delimited symbols into a numeric value by calling Enum's static Parse and
+TryParse. Here's some code demonstrating how to use this method.
+
+```
+// Because Query is defined as 8, 'a' is initialized to 8.
+Actions a = (Actions)Enum.Parse(Actions, "Query", true);
+Console.WriteLine(a.ToString()); // "Query"
+
+// Because Query and Read are defined, 'a' is initialized to 9.
+Enum.TryParse<Actions>("Query", "Read", false, out a);
+Console.WriteLine(a.ToString()); // "Read, Query"
+```
+
+```
+// Creates an instance of the Actions enum with a value of 28
+a = (Actions)Enum.Parse(Actions, "28", false);
+Console.WriteLine(a.ToString()); // "Delete, Query, Sync"
+```
+
+When Parse and TryParse are, the following actions are performed internally:
+
++   1. It removes all whitespace characters from the string and the end of the string.
+2. If the first character of the string is a digit, plus (+), or minus (-), the string is assumed
+to be a number, and an enum instance is returned whose numeric value is equal to the string
+converted to its numeric equivalent.
+3. The passed string is split into a set of tokens (separated by commas), and all white space is
+trimmed away from each token.

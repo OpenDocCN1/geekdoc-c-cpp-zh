@@ -1,0 +1,11 @@
+The book addresses Microsoft Visual Studio 2012, .NET Framework 4.5, and version 5.0 of the C# programming language. Because Microsoft tries to maintain a large degree of backward compatibility when releasing a new version of these technologies, many of the things I discuss in this book to earlier versions as well. All the code samples use the C# programming language as a way to demonstrate the behavior of the various functions. But, because the CLR is used by many programming languages, the book's content is still quite applicable for the non-C# programmer.
+
+> Note You can download the code in the book from Wintlect's website (http://Wintlect.com/Books).
+
+My editors and I have worked to bring you the most accurate, up-to-date, in-depth, easy-to-read, painless-to-understand, bug-free information. With this fantastic team assembled, things inevitably slip through the cracks. If you find any mistakes in this book (especially bugs) or have some constructive feedback, I would greatly appreciate it if you could contact me at JeffreyR@Wintlect.com.
+
+# Acknowledgments
+
+I couldn't have written this book without the help and technical assistance of many people. In particular, I'd like to thank my family. The amount of time and effort that goes into writing a book is hard to measure. All I know is I could not produced this book without the support of my wife, Kristin, and my two sons, Aidan and Grant. There were many times when we wanted to spend time together but were able to due book obligations. Now that the book is completed, I really look forward to adventures we will share together.
+
+For this revision, I truly had some fantastic people helping me. Several people on the .NET Framework team (of whom I consider friends) reviewed chapters and participated in stimulating conversations with me. Christophe Nasarre, who've worked with on several book projects, has done just a phenomenal job of verifying my work and making sure that I'd said everything the best way it could possibly be. He has truly had a significant impact on the quality of this book. As always, the Microsoft Press team is a pleasure to work with. I'd like to extend a special thanks to Ben Ryan, Devon Musgrave, and Carol Dillingham. Also, thanks to Susie Carr and Candace Sinclair for their editing and production support.

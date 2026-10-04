@@ -1,0 +1,40 @@
+
+But now, times have changed. Computers ship with phenomenal amounts of computing power. Earlier in this chapter, I showed you how Task Manager was reporting that my CPU was busy just 5 percent of the time. If my computer contained a quad-core CPU in instead of the dual-core CPU that it has now, Task Manager will report 2 percent more often. When an 80-core processor comes out, the machine will look like it's doing nothing all the time. To computer purchasers, it looks like they're spending more for CPUs and the computer is doing less work!
+
+This is the reason why the hardware manufacturers are having a hard time selling multi-core computers to users: the software isn't taking advantage of the hardware and users get no benefit from buying machines with additional CPUs. What I'm saying is that we now have an abundance of computing power available and so, developers can easily consume it. That's right—in the past, we never dreamed of having our applications perform some computation unless we know the end user wanted the result of computation. But when we have extra computing power, we can dream like this.
+
+Here is an example: when you start typing in Visual Studio's editor, Visual Studio automatically spawns the compiler and compiles your code. This makes developers incredibly productive because they can see warnings and errors in their source build as they type and fix things immediately. In fact, what developers think of today as the Edit-Build-Debug cycle will become the Edit-Debug cycle, because building (compiling) code will just help all the time. You, as an end user, will not notice this because there is a lot of CPU power available and other things you will be barely affected by the frequent running of the compiler. In fact, I would expect that in some future version of Visual Studio, the Build menu item will disappear completely, because building will become automatic. Not only does the application's UI simpler, but the application also offers "answers" to the end user, making them more productive.
+
+When we remove UI components like menu items, computers get simpler for end users. There are fewer options for them and fewer concepts to read and understand. It is the multicore revolution that allows us to remove these UI elements, making software so much simpler for end users that my grandmother might feel comfortable using a computer. For developers, removing UI elements usually results in less testing, and offering fewer options to the end user simplifies the code base. And if you currently localize in your UI elements and your documentation (like Microsoft does), removing the UI elements means that you write less documentation and you don't have to localize this documentation anymore. All of this can save your organization a lot of time and money.
+
+Here are some more examples of aggressive CPU consumption: spell checking and grammar checking of documents, recalculation of spreadsheets, indexing files on your disk for fast searching, and defragmenting your hard drive to improve I/O performance.
+
+I want to live in a world where the UI is reduced and simplified, I have more screen real estate to visualize the data that I'm actually working on, and applications offer information that helps me get my work done quickly and efficiently instead of telling the application to get information for me. The hardware has been for software developers to use for the past few years. It's time for the software to start using the hardware creatively.
+
+## Thread Scheduling and Priorities
+
+A preemptive operating system must use some kind of algorithm to determine which threads should be scheduled when and for how long. In this section, we'll look at the algorithm Windows uses. Earlier in this chapter, I mentioned how every kernel object contains a context structure. The context structure reflects the state of the thread's CPU registers when the thread executed. After a time-slice, Windows looks at all the kernel objects in existence. Of these objects, the threads that are not waiting for something are considered schedulable. Windows selects one of the schedulable kernel objects and context switches to it. Windows keeps a record of how many times each thread got context switched. You can see this using a tool like Microsoft Spy++, which shows the properties for a thread. Notice that this thread has been scheduled 31,768 times.
+
+![](img/0ce3b788d061e3d3095fa554b1a34adf_708_0.png)
+
+FIGURE 26-3 Spy++ showing a thread's properties.
+
+At this point, the thread is executing code and manipulating data in its process's address space. After another time-slice, Windows performs another context switch. Windows performs context switches from the moment the system is booted and continues until the system is shut down.
+
+> * As a side note, you can also see that the thread has been in the system for more than 25 hours, but it actually used less than one second of CPU time, which wastes a lot of resources.
+
+CHAPTER 26 Thread Basics 683
+
+Windows is called a preemptive multithreaded operating system because a thread is stopped at any time and another thread can be scheduled. As you'll see, you have control over this, but not much. Just remember that you cannot guarantee that your thread will always be running and no other thread will be allowed to run.
+
+> Developers frequently ask how they can guarantee that their thread will start within some time period after some event—for example, how can you ensure that a particular thread will start running within 1 ms of data coming from the network? I have an answer: You can't.
+
+Real-time operating systems can make these promises, but Windows is not a real-time operating system. A real-time operating system requires intimate knowledge of the hardware it is running so that it knows the latency associated with its hard disk controllers, keyboards, and other components. Microsoft's goal with Windows is to make it work on a wide variety of hardware: different CPUs, different drives, different networks, and so on. Windows is not designed to be a real-time operating system. Let me also add that the CLR makes managed code even in time. There are many reasons for this, including just-in-time (JIT) loading of DLLs, JIT compiling of code, and garbage collector kicking in unpredictable times.
+
+Every thread is assigned a priority level ranging from 0 (the lowest) to 31 (the highest). When the system decides which thread to assign to a CPU, it examines the priority 31 threads first and schedules them in a round-robin fashion. If a priority 31 thread is schedable, it is assigned to a CPU. At the end of this thread's time-slice, the system checks whether there is another priority 31 thread that can run; if so, it allows that thread to be assigned to a CPU.
+
+As long as priority 31 threads are schedable, the system never assigns any thread with a priority of 0 through 30 to a CPU. This is called starvation, and it occurs when higher-priority threads use too much CPU time that prevent lower-priority threads from executing. Starvation is much less likely to occur on a multiprocessor machine because a priority 31 and priority 30 thread can run simultaneously on such a machine. The system always tries to keep the CPUs busy, and CPUs idle if no threads are scheduled.
+
+Higher-priority threads always preempt lower-priority threads, regardless of how the lower-priority threads are executing. For example, if a priority 5 is running and the system determines that a higher-priority thread is ready to run, the system immediately suspends the lower-priority thread (even if it's in the middle of its time-slice) and assigns the CPU to the higher-priority thread, which gets a full time-slice.
+
+By the way, when the system boots, it creates a special thread called the zero page thread. This thread is assigned priority 0 and is the only thread in the entire system that runs at priority 0. The zero page thread is responsible for zeroing any free pages of RAM in the system when no other needs to perform work.
