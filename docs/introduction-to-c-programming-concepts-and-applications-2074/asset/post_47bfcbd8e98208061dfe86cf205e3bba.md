@@ -1,0 +1,158 @@
+
+# // QUIZ
+
++   1 Answer the following questions.
+
++   a What is the library that should be included to access files, and what is the library used to read and write from a string?
+
++   b What is the variable type you use that allows you to stream to and from a file, and what type allows you to stream to and from a string?
+
++   c What 2 pieces of information are provided when opening a file?
+
++   d What is the last thing you should do with a file in your program?
+
++   e What descriptor do you use to write to a file by adding to the end of an existing file?
+
++   f What function gives you access directly to the string stored inside a stringstream?
+
++   2 Write a program that creates a file named myfile.txt, containing your name.
+
++   3 Write a program that reads in integer scores from a file, scores.dat, and outputs the average score.
+
++   4 Write a program that reads in a series of integer scores on a single line from the console and outputs the average score.
+
+# // QUIZ ANSWERS
+
+1 fstream and sstream. These should be #included in the program if you wish to use file streaming or string streaming
+
+a fstream and stringstream. Notice that while fstream has the same name as the library that is included to gain access to it, stringstream does not.
+
+c The name of the file on the computer and the system you want to use the file you opened.
+
+d Close. Files should be closed when you are done using them.
+
+e There are 2 ways: You can use fstream::app to append to the end of a file, or you can use fstream::ate to designate the file for output, starting at the end of the current file. The second version would technically allow you to move to an earlier point in the file and overwrite.
+
+f str(). If you have a stringstream variable ss, then ss.str() will give you the string that is stored within it.
+
+Here is one program. Notice that you #include the fstream library. You create a fstream object, output_file, that you open to link to the file myfile.txt and designate as for output, you output one line: Finally, you close the file by calling the close command.
+
+With the loop, you simply update your total sum of scores and the number of scores you have. After the loop, you close the file. Finally, you print out the result (the total number of elements), being divided by the number in the computation to a floating-point value (in which case, double, float would also have been fine) so that you are performing floating-point division rather than
+
++   1 #include<fstream>
+2 using namespace std;
+3
+4 int main() {
+5 fstream_output_file("myfile.txt", fstream::out);
+6 output_file << "John Keyser"
+7 endl; // Use your name
+8 }\ output_file.close();
+
++   1 #include<fstream>
+2 #include<iostream>
+3 #include<string>
+4 using namespace std;
+5
+6 int main() {
+7 fstream score_file("scores.dat", fstream::out);
+8 int score;
+9 int total = 0;
+10 num_vals = 0;
+11 for (score_file >> score) { !score_file.eof(); score_file << score; }
+12 total += score;
+13 num_vals++;
+14
+15 score_file.close();
+16 cout << "The average was " << (double)num_vals << endl;
+17 }
+
+Here is one possible program. Notice that you first open the file, specifying that it will be for input. You use variables to handle an individual score, the total sum of scores, and the number of values read. Then you have a loop: begin by reading a value from the file into the score and do this every iteration of the loop. This continues until you reach the end of the file. Note that you could also use this loop as while or in other ways, to
+
+Here is a program; it may be helpful to compare the previous program to see differences between files and stringstreams. You will read an entire line from input (using the getline command in this case, ss). You will then read integers until you have the last value from the stringstream. Note that the for loop used for files should not be used here: the eof function is true only after trying to read beyond the last element, while for stringstreams, eof is true once the last element has been read. Thus, it is easier to use a while loop for stringstreams, with each iteration reading a value and updating the sum total and number of scores. The average is output just as with files.
+
+```
+#include <sstream>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string input;
+    getline(cin, input);
+    stringstream ss(input);
+    int total = 0;
+    int score;
+    int num_vals = 0;
+    while (ss.eof()) {
+        ss >> score;
+        total += score;
+        num_vals++;
+    }
+    cout << "The average was " << total / (double)num_vals << endl;
+}
+```
+
+## Top-Down Design
+Using a C++ Debugger
+
+By this point in the course, you've accumulated a lot of tools—a lot of individual ways to code various things. But there's a difference between knowing how to use the individual programming tools and knowing how to bring them together to create something larger. Some useful methods for approaching bigger software programs are top-down design, incremental development, and the debugger tool provided in your integrated development environment (IDE).
+
+IN THIS LECTURE:
+
++   - Top-Down Design
+  Program Fragment 11_c
+- Incremental Development
+  Program Fragment 11_d
+  Program Fragment 11_e
+- Debugger Tool
+  Quiz
+- Quiz Answers
+
+# // TOP-DOWN DESIGN
+
+The basic idea of top-down design is that you take a big task and break it into a sequence of smaller tasks, and then you take that and break it into a sequence of even smaller tasks, and so on.
+
+The question programmers face when performing top-down design is exactly how to break up the task.
+
+![](img/bdf1aaea7e08f6cbf15b0a740771ecdc_124_0.png)
+
+A pitfall for many beginners approaching a software program is jumping right into writing individual lines of code—the smallest unit of code there is. Instead, you need to consider the programming task as a whole and try to break it into conceptually simpler parts. Eventually, you go down into individual lines of code. But at first, you don't need to think about the details—just the overall steps to follow.
+
+In computer science, this hierarchical structure as a whole is called a tree. The individual elements in the tree are called nodes. The single node at the top of the tree is the root. If 2 nodes are connected, the one closer to the root is called parent, and the ones farther away are child. Every except the root has exactly one parent, but can have several. For a parent, the children, as well as all of their children are branches. Nodes that don't have children are leaf nodes.
+
+The number of levels in the tree are referred to the depth of the tree, and the average number of children in a non-leaf node is called the branching factor.
+
+Lecture 11 | Top-Down Design and Using a C++ Debugger
+
+As you think of the design process—that is, how you decompose into a hierarchy—you’re often concerned with 2 questions: how do you want the tree to be and what branching ratio you
+
+Imagine you have been asked to create a program to predict electricity usage at someone's house. You have files available as well as weather data and information about the person's schedule, and you want to get a sense of what to expect regarding energy demand.
+
+Next, you break down each of these items. Reading the electricity usage will depend on how it's stored, but suppose the data is stored in series of lines, each with a date and an electric meter reading. The basic process that you'll want to open the file, read each line, and then store the data in parallel vectors: for the date and one for the meter reading.
+
+There isn't a single answer to this question; instead, there are 2 rules of thumb:
+
++   The branching ratio (the number of children per node) should not be so high that you cannot understand all the children of one node. In other words, one task should be broken up into a few subparts so that it's easy to understand how the larger task is broken into smaller ones.
+
++   The depth (number of levels in the tree) should be deep enough that the leaf nodes are obvious—meaning that a particular task should be something an experienced programmer could implement without having to understand the other parts of the program. Typically, this is just a few lines of code.
+
+Let's use a top-down approach to attack this problem.
+
+First, think of the major steps that you'll want to go through. You'll want to read in information from the data files you have; get exactly what you want to predict, such as the range of dates; do your calculation to actually make the prediction; and output some results.
+
+You keep going until you reach a level that should be straightforward to code; each of your tasks should correspond to one or a few lines of code.
+
+You can continue to walk through the entire program at this level of detail for each part.
+
+Notice that any one step is simpler—that's the point! For any one idea, breaking it down into simpler ideas shouldn't be too difficult. Then, you can turn to each of those subtasks that you identified and expand them.
+
+For the first subtask, reading the data, you have information about electricity usage, past weather data, and past schedule, so you'll want to read in the data from each of those files.
+
+| Predict Electricity Usage | | | |
+| :--- | :--- | :--- | :--- |
+| Read past data | Get detail to predict | Calculate predicted usage | Present prediction |
+| Read past electricity usage | Read past weather | Read past individual schedule |
+| Open file | Loop through all lines (one date) | Store data, electric meter reading in parallel vectors |
+
+In software development, there's always more than one way to write a program. And while some ways of solving a programming problem are better or worse than others, there's rarely any one way that is truly ideal in every regard.

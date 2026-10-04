@@ -1,0 +1,156 @@
+
+
+使用异常可以帮助使你的代码更加健壮；也就是说你的代码能够更干净地处理更广泛的异常情况。处理这些情况的具体方式可以根据情况而有所不同。
+
+- 你可以关闭程序，也许在打印一些错误信息之后。
+- 如果问题的来源是用户错误，你可以提示用户再次输入。
+- 如果给定的值无效，你可以设置一个默认值来使用。
+
+除了一般的 **exception** 之外，还有特定的异常类型命名为 **logic_error**、**runtime_error**、**range_error** 等等。你可以为每种不同类型的异常分别设置 **catch** 块。要做到这一点，你需要在 **catch** 之后括号中定义的参数类型为更具体的异常类型，而不是一般的 **exception**。
+
+## READINGS
+
+- Stroustrup, *Programming Principles and Practice Using C++*, chap. 5.
+- Lippman, Lajoie, and Moo, *C++ Primer*, sections 5.6 and 18.1.
+- Ousterhout, *A Philosophy of Software Design*, chap. 10.
+
+## // QUIZ
+
+1. Put the following steps of the debugging process in order.
+
+2. Imagine that you need to make a call to a function named **draw_square**, which takes no parameters and returns nothing. But it may generate an exception. The code you would use to call the function but, if there is an exception, to print **Can't draw square.**.
+
+a. Retest.
+
+b. Identify the source of the failure.
+
+c. Isolate a repeatable error.
+
+3. Write a function named **tester** that takes 2 integer parameters and throws an exception if one is negative or otherwise returns the sum.
+
+d. Fix the error at its source.
+
+e. Consider similar cases.
+
+f. Narrow in on the location of failure.
+
+![](img/bdf1aaea7e08f6cbf15b0a740771ecdc_168_0.png)
+
+Lecture 14 | Systematic Debugging, Writing Exceptions
+
+## // QUIZ ANSWERS
+
+1 Isolate a repeatable error. You first need to have a definite error that you can reliably check.
+
+2 The code will need to use try-catch blocks. The function call should be inside of the try block, and the catch block will be used to catch the exception, with the output line inside that block.
+
+f Narrow in the location of failure. Find the line where you can identify things that goes wrong. Remember that the location of failure is where the bug manifests but is not necessarily where the actual bug in the code occurs.
+
+```cpp
+try {
+    draw_square();
+}
+catch (exception& e) {
+    cout << "Can't draw square" << endl;
+}
+```
+
+b Identify the source of the failure. Based on the location the error occurs, try to determine what the actual source of the error is. This requires logic, deduction, and inference.
+
+3 Fix the error at its source. When you know the error, you can fix it at its source.
+
+a Retest. Once the error has fixed, you need to test again to make everything still works—ensure you fixed the bug and did not create a new error.
+
+Here is a function. You need to go have a conditional to check either parameter is negative, and if so, throw an exception. Otherwise, return the sum.
+
+```cpp
+int tester(int a, int b) {
+    if ((a<0) || (b<0))
+        throw exception();
+    return a+b;
+}
+```
+
+e Consider similar cases. Because an error in one location in the program might have been repeated elsewhere, moving on, consider whether the error might have been made in other locations as well.
+
+![](img/bdf1aaea7e08f6cbf15b0a740771ecdc_169_0.png)
+
+## 15 Functions in Top-Down and Bottom-Up Design
+
+IN THIS LECT:
+
+- Top-Down Design
+- Program 15_1_1
+- Program 15_1_2
+- Program 15_1_3
+
+Functions let you write much bigger and more complex programs than would otherwise be possible, and the power of functions is even greater when integrated with a deliberate approach to software design. Functions integrate equally well with top-down and bottom-up design approaches.
+
+- Bottom-Up Design
+- Program 15_2_1
+- Program 15_2_3
+
+- Building a Library
+- Program 15_3
+
+- Quiz
+- Quiz Answers
+
+## // TOP-DOWN DESIGN
+
+With top-down design, you take a larger problem and treat it as a set of smaller problems without worrying about how each of the smaller problems impacts. Your job with one task is to break it into even simpler subtasks or implement it directly.
+
+So, if you consider the tree structure you create in top-down design, each of the nodes can become, in effect, a function of its own. Instead of merely turning the hierarchical tree into a series of comments, you can turn it into a collection of functions.
+
+Let's see what this might look like designing a program to play a game of Connect 4, which is played by 2 players, each with a different color piece, usually red or black. Players take turning down columns of the board: When a piece is dropped, it travels as far as it can, until it is either at the bottom or on top of another piece. The goal is to get 4 pieces in a row vertically, horizontally, or diagonally.
+
+Remember that you must have a function declaration before you call it, this means that the functions listed earlier in the code will be far from the root of the tree. The main function will correspond to the root of the tree and will come last.
+
+With functions, you have a similar motivation. A function is a way of conceptually separating one set of functionality from everything else. This is very similar to the way you treat each of the subtasks in top-down design.
+
+There are 3 problems that a program created to play this game needs to solve. You need to
+
+1 set up the board,
+2 repeatedly take turns, and
+3 determine and display the winner or note that it's a tie.
+
+Next, you can break these problems into smaller tasks.
+
+1 Initializing the game for the game and initializing board size to be empty. Traditional 4 can be played on a board with 7 columns and 6 rows, but basically of any board size could be used. You can get the board size from the user.
+2 For each turn, want to display the current board for the players, get the player's next move, make that, and check if someone won. These steps will happen throughout the game
+3 For declaring the winner, want to print out the board one more and print out who is winner.
+
+While some of these elements are now as simple as they can be, can be broken further. You need to check for various conditions: a vertical win, where someone has 4 consecutive pieces in the same column; a horizontal win, where someone has 4 consecutive pieces in the same row; and an increasing diagonal, where a player has 4 consecutive pieces in an increasing or decreasing diagonal. If none of these are the case, then you should check to see if the board is full, in which case it's a tie.
+
+Notice that the process for checking for a winner is basically the same as the process for printing. You have to make all the checks in both. This is one of the places where you can take advantage of fact that allows you to use code for multiple functions. You can write one set of functions that should be used in both of the functions.
+
+You also have a display or print board in 2 different places-something you do at the beginning of each turn and something you do before printing the winner. Again, you can write one function that gets from 2 different locations, saving you coding time.
+
+After you've broken down the game into a series of tasks, you're going to turn each of the nodes from your top-down design into a function, with main as the root
+
+node. Initially, you'll just create these functions, not worrying about the return types or the parameters for each; you'll go back to adjust as you fill in the functions.
+
+For example, you can create functions for the first branch of the top-down hierarchy. You'll have one function to initialize the board size and one to initialize the board. Because the function to initialize the game is higher in the hierarchy and will need to call the other functions, it could be
+
+You can do the same for all the branches from the beginning, or you can begin filling in these functions.
+
+// Program 15_1
+// Connect 4 Program - stage 1
+#include <iostream>
+#include <vector>
+using namespace std;
+void get_board_size() {
+// Get size of board
+    user;
+}
+void initialize_board() {
+// Initialize the board
+    itself, to empty squares */
+}
+void initialize_game() {
+// Initialize the game /
+}
+int main() {
+
+![](img/bdf1aaea7e08f6cbf15b0a740771ecdc_171_0.png)
+
