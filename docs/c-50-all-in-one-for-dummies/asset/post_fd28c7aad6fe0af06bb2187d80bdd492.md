@@ -1,0 +1,235 @@
+
+# Index 813
+
+- VirtualizingStackPanel panel, 591
+- Visio 2010 Add-in project, 514
+- Visual Basic, 486
+- Visual C#, defined, 14
+- Visual Studio 2012
+    - autoending, 87
+    - auxiliary windows, 534–537
+    - changing default program locations, 167
+    - class libraries, 378–380
+    - Code Editor, 531–534
+    - Data Source Configuration Wizard, 422–424
+    - designers
+        - Class Designer, 522–524
+        - Data View, 523–524
+        - overview, 517–518
+        - Web Forms, 521
+        - Windows Forms, 520–524
+        - WPF, 518–520
+    - Details View, 428–429
+    - email support, 464–466
+    - Entity Data Model Wizard, 424–427–435
+    - executing constructors from debugger, 274
+    - Extract Method refactoring, 228–229
+    - graphical programming example, 358–364
+    - hacking project types, 550–555
+    - identifying exceptions, 197–198
+    - implementing interfaces, 332
+    - stalling, 506–508
+    - My Project configuration file, 411–442
+    - namespaces, 391
+    - network connectivity status, 461–462
+    - network logging, 467–469
+    - New Project dialog box, 509–510
+    - opening, 15
+    - Options dialog box, 542–542
+    - origin of, 14
+    - overview, 501, 541–542
+    - panel
+        - Class View, 531
+        - Properties, 526–527
+        - Server Explorer, 529–531
+        - Solution Explorer, 524–526
+        - Toolbox, 527–529
+    - printing forms, 474
+    - projects, 508, 510–515
+    - Promote Local Variable to Parameter
+        - refactoring, 229
+    - snippets, 545–550
+    - Software Architecture Overview
+        - diagrams, 406
+        - Solution Explorer, 375, 378
+        - solutions, 510–511
+        - system requirements for, 507
+    - directives, 563–564
+    - overview, 557–559
+    - setting up, 560–562
+    - uses for, 559–560
+    - testing with, 731–733
+    - dtools, 537–539
+    - treating warnings across, 309
+    - unit features of, 382
+    - VCR Bar, 429
+    - versions of, 502–506
+    - web application construction
+        - Code Editor, 670–673
+        - code-behind, 674–675
+        - creating projects, 664
+        - file types, 673
+        - HTML Designer, 665–669
+        - MVC, 676
+        - n-tier code, 675–676
+        - overview, 663
+        - Windows login authentication, 409–410
+    - Visual Studio 6.0, 14
+    - Visual Studio .NET, 14
+    - void keyword, 240
+    - void methods, 224–241
+    - vscnt file, 550
+    - svsi file, 550
+    - template file, 554
+    - VSTS (Team System version of Visual Studio Studio, 2012), 504
+
+![](img/6df7bb88e9302e98442acc219cfbd7fc_838_0.png)
+
+- Wagner, Bill, 347
+- WCF (Windows Communication Foundation)
+    - configuration, 772–776
+    - consuming services, 777–778
+    - creating services, 767–770
+    - deployment, 777
+    - WCF (continued)
+        - overview, 765–767
+        - registration services, 770–772
+        - setting up to REST, 782–785
+    - Visual Studio projects, 514
+    - WCF Application project, 513, 726
+    - WCF Service Configuration Manager, Tools menu, Visual Studio, 537
+    - WCF Service Library project, 514
+    - WCF Service option, Visual Studio, 725
+    - web applications. also as ASP.NET; web controls
+        - building with Visual Studio
+            - Code Editor, 670–673
+            - code-behind files, 674–675
+            - creating projects, 664
+            - HTML designer, 665–669
+            - MVC, 676
+            - n-tier code, 675–676
+            - overview, 663
+            - deployment, 733–736
+            - file management, 724–729
+            - file types, 673
+            - master pages, 729–731
+            - overview, 652–654, 723–724
+            - testing with Visual Studio, 731–733
+        - web browser (light client interface), 652–653, 656
+        - Web controls
+            - accessibility, 689–698
+            - custom, 703–704
+            - data binding, 689–695
+            - defined, 677
+            - images, 680–681
+            - Label text, 678–679
+            - multis, 681
+            - panels, 681
+            - styling, 696–698
+            - tables, 671–682
+            - user controls, 699–703
+            - user input, 682–689
+        - Web forms designer, Visual Studio, 521
+        - Web projects
+            - defined, 508
+            - types of, 513
+        - Web Service Federation (WS-FED), 753
+        - Web Service Remote Portlets
+        - Web Service Security (WS-SX), 753
+        - web services
+            - ASMX
+                - consuming services, 762–764
+                - creating services, 755–757
+                - deployment, 762
+                - overview, 748–749, 751–752
+                - running services, 758
+            - SHARP, 758–761
+            - SOAP, 752–755
+            - REST
+                - creating services, 784
+                - error handling, 785
+                - MVC cache, 785
+                - overview, 748–749, 779–780
+                - principles of, 780–781
+                - SOAP versus, 781
+                - template, 782–783
+            - WCF
+                - configuration, 772, 774–776
+                - consuming services, 777–778
+                - creating services, 767–770
+                - deployment, 777
+                - overview, 765–767
+                - registration services, 770–772
+                - setting up to REST, 782–785
+            - XML, 418, 747–748
+            - Web Services Description Language (WSDL) standard, 742–743, 758
+            - Web Services Discovery (WS-DD), 753
+            - Web Services Reliable Exchange (WS-RX), 753
+            - Web Services Transactions (WS-TX), 753
+            - Web Test Recorder, Visual Studio, 731–732
+            - Web.config file, 727
+            - WebHttp endpoint, 773
+            - WebRequest class, 463–664
+            - NextResponse class, 463
+            - WF (Workflow Foundation), 514
+            - while loops
+                - combining with break, 98–101
+                - do...while loop, 97
+                - for loops, 103–104
+                - incrementing variables, 96–97
+                - white space, trimming, 55, 57, 62–64
+        - file I/O activity, 443, 446
+- Windows Communication Foundation. See
+    - Windows Forms Application, 512
+    - Windows Forms library, 513
+    - Windows Forms designer, Visual Studio, 520–521
+    - Forms Forms designer, Options dialog box, Visual Studio, 545
+    - Windows login, 408–411
+    - Windows Component project, 512
+    - Windows Security application, 408–411
+    - Windows Services project, 512
+- Windows Store projects
+    - Blend, 518
+- WPF, Windows Presentation Foundation (WPF)
+    - designer, Visual Studio, 518–520
+    - WPF User Control Library project, 512
+- Wrap Panel, 580–581
+- wrappers, defined, 163
+- wrapping classes and methods, 445, 444
+- WriteLine() method, 66-67, 86, 125, 241-242, 444
+- writers
+    - BinaryWriter class, 454
+    - overview, 439
+    - StreamWriter class, 439–440, 443–449
+    - StringWriter class, 439, 454–455
+    - TextWriter class, 439
+    - WS*, 752–754
+    - WS-DD (Web Service Discovery), 753
+    - WSDL Language, 742–743, 758
+    - DualHttpBinding endpoint, 773
+    - WS-FED (Web Service Federation), 753
+    - WSFederationHttpBinding endpoint, 773
+    - WHTTPBinding endpoint, 773
+    - WHTTPContextBinding endpoint, 773
+    - WS-RP (Web Service Remote Portlets), 753
+    - WS-RX (Web Services Reliable Exchange), 753
+    - WS-SX (Web Service Security), 753
+    - WS-TX (Web Services Transactions), 753
+- X specifier, Format() method, 66
+- XAML
+    - C# versus, 575–576
+    - controls, 591–599
+    - defining bindings, 603–605
+    - namespaces, 571–572
+    - overview, 569
+    - WPF, 518–520
+    - x:Class attribute, 571
+    - copy deployment, 733–734
+    - XML, 418, 493, 747–748
+    - x:Name attribute, 574
+    - xor (^) compound logical comparison operator, 77
+yield break statement, 153–155
+- yield return statement, 152–153, 154–155, 156
+- YieldBreakEx example, 154
+
+![](img/6df7bb88e9302e98442acc219cfbd7fc_838_0.png)

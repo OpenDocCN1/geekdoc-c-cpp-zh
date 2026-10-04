@@ -1,0 +1,43 @@
+```
+public void Enqueue(T item)
+{
+    switch (item.Priority) // Require IPrioritizable to ensure this property.
+    {
+        case Priority.High:
+            _queueHigh.Enqueue(item);
+            break;
+        case Priority.Medium:
+            _queueMedium.Enqueue(item);
+            break;
+        case Priority.Low:
+            _queueLow.Enqueue(item);
+            break;
+        default:
+            throw new ArgumentOutOfRangeException(
+                item.Priority.ToString(),
+                "bad priority in PriorityQueue.Enqueue");
+    }
+}
+```
+
+# The Dequeue() method
+
+Dequeue()’s job is a bit trickier than Enqueue()’s: It must locate the highest-priority underlying queue that has contents and then retrieve the front item from that subqueue. Dequeue() delegates the first part of the task, finding the highest-priority queue that isn’t empty, to a private TopQueue() method (described in the next section). Then Dequeue() calls the underlying queue’s Dequeue() method to retrieve the frontmost object, which it returns. Here’s how Dequeue() works:
+
+```
+//Dequeue -- Get T from highest-priority queue available.
+public T Dequeue()
+{
+    // Find highest-priority queue with items.
+    Queue<T> queueTop = TopQueue();
+    // If a non-empty queue is found
+    if (queueTop != null & queueTop.Count > 0)
+    {
+        return queueTop.Dequeue(); // Return its front item.
+    }
+    // If all queues empty, return null (you could throw exception).
+    return default(T); // What’s this? See discussion.
+}
+```
+
+A difficulty arises only if none of the underlying queues have any packages — in other words, the whole PriorityQueue is empty. What do you return in that case? Dequeue() returns null. The client — the code that calls PriorityQueue.Dequeue() — should check the Dequeue() return value in case it’s null. Where’s the null it returns? It’s that odd duck, default(T), at the end. I deal with default(T) a little later in this chapter in the section “Determining the null value for type T: default(T).”

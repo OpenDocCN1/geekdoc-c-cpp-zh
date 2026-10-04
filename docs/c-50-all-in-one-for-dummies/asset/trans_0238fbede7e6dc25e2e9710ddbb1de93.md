@@ -1,0 +1,145 @@
+
+第三次扫描找到 `\n` 字符并将其挤掉。在第四次扫描中，`IndexOfAny()` 找不到可查找的空白字符并返回 -1（未找到）。循环此结束。
+
+`RemoveWhiteSpace` 程序打印出一个包含多种形式空白字符的字符串。然后该程序剥离空白字符。该程序的输出如下：
+
+```
+before: this is a
+string
+after:thisisastring
+Press Enter to terminate...
+```
+
+## 让我们用 Split() 重构该拼接程序
+
+`RemoveWhiteSpace` 程序演示了 `Concat()` 和 `IndexOf()` 方法的使用；然而，它并没有使用效率最高的方法。一如既往，通过简单的检查就可以发现使用我们的老朋友 `Split()` 有更高效的方法。你可以在网站的 `RemoveWhiteSpaceWithSplit` 目录下找到包含此代码的程序——现在它位于另一个方法示例中。这里显示了执行工作的方法：
+
+![](img/6df7bb88e9302e98442acc219cfbd7fc_89_0.png)
+
+```csharp
+// RemoveWhiteSpace -- The RemoveSpecialChars method removes every
+// occurrence of the specified characters from the string.
+// Note: The rest of the program is not shown here.
+public static string RemoveSpecialChars(string input, char[] targets)
+{
+    // Split the input string up using the target
+    // characters as the delimiters.
+    string[] subStrings = input.Split(targets);
+
+    // output will contain the eventual output information.
+    string output = "";
+
+    // Loop through the substrings originating from the split.
+    foreach(string subString in subStrings)
+    {
+        output = String.Concat(output, subString);
+    }
+    return output;
+}
+```
+
+此版本使用 `Split()` 方法将输入字符串拆分为一组子字符串，使用字符作为分隔符。分隔符不会包含在创建的子字符串中，从而达到了删除它们。这里的逻辑简单得多且不易出错。后半部分的 `foreach` 循环使用 `Concat()` 将碎片重新组合在一起。程序的输出保持不变。将代码提取到方法中使其更加清晰。
+
+## 格式化你的字符串
+
+`String` 类还提供了 `Format()` 方法用于格式化输出，特别是数字。在最简单的形式下，`Format()` 允许在格式字符串中间插入字符串、数值或布尔输入。例如，考虑此调用：
+
+```csharp
+string myString = String.Format("{0} times {1} equals {2}", 2, 5);
+```
+
+`Format()` 的第一个参数被称为格式字符串。格式字符串中间的 `{n}` 项目表示格式字符串之后的第 $n$ 个参数将插入到该点。`{0}` 指向第一个参数（在此情况下为 2），`{1}` 指下一个（即 5），以此此类推。这返回一个字符串。生成的字符串是：
+
+```
+"2 times 5 equals 10"
+```
+
+除非另有指示，否则 `Format()` 对每个参数类型使用默认输出。`Format()` 允许你通过在占位符中包含指定控制来影响输出格式。请参表 3-1 的这些说明符的列表。例如，`{0:E6}` 表示“以指数形式输出数字，小数部分使用六个空格”。
+
+| 表 3-1 | 使用 String.Format() 的格式说明符 | | |
+| :--- | :--- | :--- | :--- |
+| 控制 | 示例 | 结果 |or |
+| C — 货币 | {0:C} of 123.456 | $123.46 | 货币符号取决于区域设置。 |
+| | {0:C} of -123.45 | ($123.45) | 指定区域控制。 |
+| D — 十进制 | {0:D5} of 123 | 00123 | 仅整数。 |
+| E — 指数 | {0:E} of 123.45 | 1.2345E+02 | 也称为科学计数法。 |
+| F — 固定位 | {0:F2} of 123.4567 | 123.46 | F 之后的数字表示小数点后的位数。 |
+| N — 数字 | {0:N} of 123456.789 | 123,456.79 | 添加逗号并四舍五入到最近的百分位。 |
+| | | | (续) |
+
+| 表 3-1 (续) | | | | |
+| :--- | :--- | :--- | :--- |
+| 控制 | 示例 | 结果 | 注意 |
+| | {0:N1} of 123456.789 | 123,456.8 | 控制小数点后的位数。 |
+| | {0:N0} of 123456.789 | 123,457 | 控制小数点后的位数。 |
+| X — 十六进制 | {0:X} of 123 | 0x7B | 7B 十六进制 = 123 十进制（仅限整数）。 |
+| {0:0} | {0:000.00} of 12.3 | 012.30 | 如果数字不存在则强制显示为 0。 |
+| {0:#} | {0:###.##} of 12.3 | 12.3 | 强制留空空格；其他任何字段不能侵占左侧的三位和小数点后的两位（有助于保持小数点对齐）。 |
+| | {0:##0.0#} of 0 | 0.0 | 结合 # 和零强制 # 分配空间，并强制即使数字为 0 也至少显示一个数字。 |
+| {0:# or 0%} | {0:#00.#%} of .1234 | 12.3% | % 将数字显示为百分比（乘以 100 并添加 % 符号）。 |
+| | {0:#00.#%} of .0234 | 02.3% | % 将数字显示为百分比（乘以 100 并添加 % 符号）。 |
+
+![](img/6df7bb88e9302e98442acc219cfbd7fc_91_0.png)
+
+`Console.WriteLine()` 方法使用相同的占位符系统。第一个占位符 `{0}` 获取语句中格式字符串部分之后的第一个变量或值，以此此类推。给定与之前的 `Format()` 调用相同的参数，`Console.WriteLine()` 将向控制台写入相同的字符串。你也可以访问格式说明符。从现在起，我大部分时间使用 `WriteLine` 的格式化形式，而不是使用 `+` 运算符拼接项目来形成最终字符串。
+
+这些格式说明符看起来可能有点困惑。（我甚至没有提到货币和日期控制）。在帮助索引中探索“格式说明符”主题以获取更多信息。为了帮助你理清这些选项，下面的 `OutputFormatControls` 程序允许你输入一个浮点数，后跟一个说明符。然后程序将使用指定的显示数字：
+
+```csharp
+// OutputFormatControls -- Allow the user to reformat input numbers
+// using a variety of specifiers input at time.
+namespace OutputFormatControls
+{
+    using System;
+    public class Program
+    {
+        public static void Main(string[] args)
+        //             // 循环直到用户
+        // 输入空行而不是数字。
+        for(;;)
+        {
+            // 首先输入一个数字 -- 当用户
+        // 输入空行时终止。
+            Console.WriteLine("Enter a double number");
+        string numberInput = Console.ReadLine();
+        if (numberInput.Length == 0)
+        {
+            break;
+        }
+        double number = Double.Parse(numberInput);
+        // 现在输入说明符代码；使用空格
+        // 作为分隔符进行分割。
+        Console.WriteLine("Enter the format specifiers"
+            + " separated by a blank "
+            + "(Example: C E F1 NO 000000.00000)");
+        char[] separator = { ' ' };
+        string formatString = Console.ReadLine();
+        string[] formats = formatString.Split(separator);
+        // 遍历说明符列表。
+        foreach(string s in formats)
+        {
+            if (s.Length != 0)
+            {
+                // 从早期输入的字母
+                // 创建完整的格式说明符。
+                string formatCommand = "{0:" + s + "}";
+                // 使用重构的格式说明符
+                // 输出。
+                Console.Write(
+                    "The format specifier {0} results in ", formatCommand);
+                try
+                {
+                    Console.WriteLine(formatCommand, number);
+                }
+                catch(Exception)
+                {
+                    Console.WriteLine("<illegal control>");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+    }
+}
+```
+

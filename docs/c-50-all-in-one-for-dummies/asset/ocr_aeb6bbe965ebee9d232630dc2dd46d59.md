@@ -1,0 +1,21 @@
+# # Chapter 2: Building Web Applications
+
+In This Chapter
+
++   - Building ASP.NET with Visual Studio
+- Making use of stylesheets
+- Working with ASP.NET MVC
+
+There is a lot to get to web development. People used to ask me what language programmed in. I told them I was a web developer.
+
+"No, really, what language do you program in?” they would ask.
+
+"Web. It's seven languages. Seven that I have to know. Crimin, it is really seven"
+
+At the time, we was needed to know SQL, VBScript, XML, Visual Basic, HTML, CSS, and JavaScript. At least it is a little better now. You can get by without C++, which was once required. Oh, and C# can replace Visual Basic. The rest...
+
+With Visual Studio in the mix, things are a little easier than they once were. You have two considerations when you choose Visual Studio to be your tool of choice to build a web application. The first is the tool itself. The second is the way you are going to use the tool, or your methodology.
+
+If you've been working with the samples in this book, working in Visual Studio is going to feel very familiar. There is a design view for the user interface. The Code Editor works just like the Code Editor in all the other environments. The only caveat is the unusual type of types that you will see occasionally in web applications. You'll get used to them..
+
+The methodology debate — that is, which methodology works better — is harder to get used to because it is a religious war. People will tell you to use one or the other for this reason and that is the same thing. Feel free to ignore me. Just don't use something only because it is new and shiny. Do the research, try things, and build software that works. In this chapter, you see how to build an application in one methodology, using Visual Studio as your tool.

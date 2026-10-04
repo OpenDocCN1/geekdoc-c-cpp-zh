@@ -1,0 +1,315 @@
+
+# Index 809
+
+source files
+- console application, 15–18
+- defined, 12
+- dividing programs into multiple, 373–375
+- span control, 666, 668
+- special projects
+  - defined, 508
+  - types of, 514–515
+- specialization, 208–209
+- specifiers, defined, 65
+- Split(), 58–60, 64
+- splitting number series, 58–60
+- SQL Injection attacks, 413–414
+- SQL Server project, 513
+- SSL (Secure Sockets Layer), 457
+- Stack Panel, WPF
+  - changing orientation of, 580
+  - overview, 573
+  - vertical, 579–580
+- stack trace, 189–190
+- stacked method, 237–238
+- StackOverflow exception, 186
+- Stack<T> class, 121, 126–127
+- Star grid unit type, 584–585, 591
+- Start Page B feeds, 543
+- start-projects, 373
+- StartUri value, 571
+- state-based testing, 641
+- statelessness, defined, 652
+- static (class) methods
+  - advantages of, 230
+  - arguments implementing, 236–239
+  - matching definitions with usage, 234–235
+  - overview, 232
+  - passing multiple to methods, 233–234
+  - passing to methods, 232–233
+- defined, 22–25, 245–246
+- example of, 222–235
+- invoking, 224
+- mixing with nonstatic, 235–255
+- naming, 225
+- overloading method names, 235–236
+- private, 228, 230
+- stacked class, 237–238
+- values, 239–241
+- static keyword, 220
+- static properties, 267
+- stopping conditions, 190
+- stored procedures
+  - defined, 433
+  - opening in Server Explorer, 531
+- Stream classes
+  - BufferedStream class, 456
+  - CryptoStream class, 456
+  - FileStream arguments, 433–444
+  - defined, 455
+  - readers and writers, 439
+  - streams, 437–438
+  - using statement, 447–449
+  - wrapping, 445
+  - MemoryStream class, 455
+  - NetworkStream class, 456
+  - UnmanagedMemoryStream class, 456
+  - StreamReader class, 439–440, 447–448, 453–454
+- streams
+  - altering content sent to clients, 710–711
+  - flushing, 437
+  - overview, 438
+  - producing with foreach statements, 157
+  - requests, 706–709
+  - StreamWriter class, 439–440, 443–449
+- IDE acronym, 407
+- String class, See also strings
+  - method for comparing strings, 48–52
+  - method for formatting, 65–69
+  - method for joining arrays, 60
+  - method for splitting number series, 58–60
+  - method for output management, 60–64
+  - method for parsing numeric input, 55–58
+  - methods for searching, 54
+  - methods for searching, 54–55
+  - methods for switching class, 52–54
+  - methods for trimming white space, 55
+- string variable type versus, 45
+- string constants (string literals)
+  - defined, 36
+  - immutability of, 47
+- string variable type. See also strings
+  - char versus, 37–38
+  - constants, 451
+  - converting to, 420
+- string variable type (continued)
+  - overview, 36–37
+- String class versus, 45
+- StringBuilder class, 69–70
+- StringChunks collection, 153–154
+  - Empty value, 36
+- StringReader, 439, 454–455
+- strings
+  - command-line input
+  - joining arrays, 60
+  - parsing numeric input, 55–58
+  - splitting number space, 58–60
+  - trimming excess space, 55
+  - comparing
+    - with or without class, 51–52
+    - Compare() | method, 48–51
+  - overview, 48
+  - formatted output, 65–69
+  - immutability of, 46
+  - looping through, 53–54
+  - output management, 60
+  - searching, 55
+  - StringBuilder class, 69–70
+  - switching case, 52–53
+  - StringWriter class, 439, 454–455
+- struct constraint, 175
+- StudentWithMethods example, 245
+- subclasses, 282–283, 291. See also instance
+- submit buttons, 669
+- subscribing events, 367
+- structible classes, 291
+- String() | method, 53, 54
+- surround snippets, 546–547
+- sut (System Test) variable, 640
+- switch command, 52
+- switch statements
+  - restrictions on use of, 92
+  - testing variables for numerous values, 91–94
+  - yield break statement, 154–155
+- SymmetricWith() | method, 130
+- synchronous I/O, 438
+- Syndication Service Library project, 554
+- String namespace, 375
+- System Test (out) variable, 640
+- System.Data namespace
+  - connecting to data source, 422–428
+  - Entity Framework, 433–436
+  - features of, 418
+  - namespaces, 419
+  - overview, 418
+  - sample database schema, 421–422
+  - visual tools, 428–431
+  - writing data code, 430–433
+- System.Data.Common namespace, 419
+- System.Data.Odbc namespace, 419
+- System.Data.OleDb namespace, 419
+- System.Data.OracleClient namespace, 419
+- System.Data.SqlClient namespace, 419
+- System.Data.SqlTypes namespace, 419
+- System.Drawing namespace
+  - brushes, 473
+  - example project, 475–480
+  - Graphics class, 472
+  - overview, 471
+  - pens, 472–473
+  - text, 473
+- System.Drawing.2D namespace, 471
+- System.Drawing.Text namespace, 473
+- System.Drawing.Imaging namespace, 471
+- System.Drawing.Text namespace, 471, 473
+- System.IO namespace
+  - overview, 437–438
+  - readers and writers, 439
+- System.Net namespace
+  - checking network status, 461–462
+  - classes, 459–460
+  - code-orientation of, 460
+  - downloading files, 462–464
+  - e-mailing status reports, 464–466
+  - logging network activity, 467–469
+  - overview, 457–458
+- System.Security namespace, 416
+- System.Web namespace, 417, 670–705
+- System.Windows namespace, 417
+- <T> notation, 121
+- Text Transformation Toolkit (VTS),
+  - directives, 563–564
+  - overview, 557–559
+  - up, 560–562
+- tab character, 35
+- Table control, 681–682
+- TabPanel, 591
+- Tabs panel, Options dialog box, 544
+- Task List, Visual Studio, 536–537
+- Team Foundation Solver, 504
+- temperature-conversion, floating-point version, 31
+- template design, 563–564
+- templates, backing, 551–555
+- ternary operator, 88
+- test doubles, 643
+- Text project, 515
+- text controls, 683–684
+- TextBlock, 503
+- TextBox, 594, 683–684
+- TextMode, property, 683
+- TextReader class, 439
+- TextWriter class, 439, 443–449
+- this keyword, 301
+- tight coupling, 173–174
+- TimeSpan class, 40
+- ToArray() method, 123
+- ToBoolean() method, 56
+- ToDecimal() method, 86
+- ToDouble() method, 56
+- ToInt() method, 56–57
+- ToLower() method, 52
+- ToUpper() method, 53, 317–318
+- ToolbarOverflow, 591
+- ToolbarPanel, 591
+- Toolbox window, Visual Studio, 528–529
+- Top-level, sensitivity,
+- Top menu, Visual Studio, 537–538
+- Top() utility method, 172
+- TraceContext, 720–722
+- tracing, 720
+- trailing zeros, 95–96
+- TreeView class, 598
+- Trim() method, 55, 60–61
+- TrimEnd() method, 55
+- TrimFront() method, 55
+- trim strings, 60–62
+- trust, 711–712
+- try blocks, 181–182
+- try catch blocks, 69, 69
+- try/finally exception-handling blocks, 448–449
+- UIElements, 578
+- int variable type, 28
+- long variable type, 28
+- UML (Unified Modeling Language), 318, 320
+- Unicode format, 440–441
+- Uniform Grid, WPF, 583
+- union operation, 128–129
+- UnionWith() method, 129, 131
+- Unit library for Windows Store, project, 512
+- unit testing
+  - customer maintenance example, 640–642, 644–646
+  - overview, 632–633
+  - positive and negative conditions, 634
+  - state-based behavior, 641
+  - testing, 641
+- Unity, 647
+- UnmanagedMemoryStream class, 456
+- Unrestricted level, Asp.NET, 712
+- unwinding the call stack, 184–185
+- UpdateSourceTrigger property, 612
+- Upload classes, 459
+- user input controls
+  - multiple selection controls, 686–687
+  - overview, 682–683
+  - single-item selection controls, 685–686
+  - special-use controls, 688–689
+  - text input controls, 683–684
+- users, defined, 237
+- ushort variable type, 28
+- using directives, 18, 20–382, 393, 447–450
+- UTF8 encoding, 441
+- variables
+  - Boolean, 34
+  - casts, 41–42
+  - character, 34–37
+  - comparisons of, 33–34
+  - decimal, 33
+  - declaring, 25–27
+  - defined, 22, 25
+  - floating-point, 30–33
+  - fractions, 29
+  - inferring data types, 42–44
+  - initializing, 26–27
+  - integers, 26–28
+  - members, 212–213
+  - naming conventions, 38, 213
+  - numeric constants, 40–41
+  - prefixing data members with underscores, 253
+  - scope implementations, 102
+  - type values, 37
+- variance
+  - contravariance, 178–179
+  - covariance, 179
+  - defined, 177
+  - overview, 177–188
+- Variant type, 43, 481, 485, 487
+- VB Class, 481, 487
+- VScript, 481–482
+- VehicleData example, 214–215
+- VerticalAlignment property, 586
+- VerticalContentAlignment property, 586
+- ViewModel (Model-View-View Model) pattern
+  - customer maintenance example
+    - AddCustomerCommand class, 643–645
+    - Model, 637–643
+    - overview, 637
+    - View, 646–648
+  - ViewModel, 645–646
+  - overview, 623
+  - reasons for using, 634–635
+  - traditional architecture versus, 635–637
+- ViewState object, 661, 671, 720
+- virtual keyword, 315
+- virtual methods, declaring and overriding, 369–370
+- Virtual PC, 507–508
+- ValidateOnDataErrors property, 612
+- ValidateOnExceptions property, 613
+- value types
+  - boxing, 160–161
+  - defined, 37
+- var keyword
+  - arrays, 118–119
+  - collections, 127
+  - inferring data types, 43–44
+  - VariableArrayAverage example, 111–112
+  - variable-length arrays, 110–112

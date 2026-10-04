@@ -1,0 +1,40 @@
+A sealed class cannot be used as the base class for any other class.
+
+Consider this code snippet:
+
+```
+using System;
+public class BankAccount
+{
+    // Withdrawal -- You can withdraw any amount up to the
+    //     balance; return the amount withdrawn
+    virtual public void Withdraw(decimal withdrawal)
+    {
+        Console.WriteLine("invokes BankAccount.Withdraw()");
+    }
+}
+public sealed class SavingsAccount : BankAccount
+{
+    override public void Withdraw(decimal withdrawal)
+    {
+        Console.WriteLine("invokes SavingsAccount.Withdraw()");
+    }
+}
+public class SpecialSaleAccount : SavingsAccount  // Oops!
+{
+    override public void Withdraw(decimal withdrawal)
+    {
+        Console.WriteLine("invokes SpecialSaleAccount.Withdraw()");
+    }
+}
+```
+
+This snippet generates the following compiler error:
+
+```
+'SpecialSaleAccount' : cannot inherit from sealed class 'SavingsAccount'
+```
+
+You use the sealed keyword to protect your class from the prying methods of a subclass. For example, allowing a programmer to extend a class that implements system security enables someone to create a security back door.
+
+Sealing a class prevents another program, possibly somewhere on the Internet, from using a modified version of your class. The remote program can use the class as is, or not, but it can’t inherit bits and pieces of your class while overriding the rest.

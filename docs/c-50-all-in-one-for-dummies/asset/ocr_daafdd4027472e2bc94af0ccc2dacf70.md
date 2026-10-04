@@ -1,0 +1,35 @@
+```
+<Ellipse Canvas.Left="28" Canvas.Top="142" Height="80" Name="ellipse1" Stroke="Black" Width="161" Fill="#FF0000FA" />
+<Ellipse Canvas.Left="96" Canvas.Top="14" Height="108" Name="ellipse2" Stroke="Black" Width="78" Fill="#FF E5D620" />
+</Canvas>
+```
+
+# The Uniform Grid
+
+The Uniform Grid divides the layout area into equally sized cells. (See Figure 2-7 and Listing 2-6.) The number of Rows and Columns are defined in the UniformGrid XAML tag. As discussed in Chapter 1, cell contents are positioned using the Grid.Row and Grid.Column attached properties. Note that the Rows and Columns are zero-based.
+
+The Uniform Grid is not as versatile as the Grid (see the next section), but if you need a very quick checkerboard pattern, it can be an effective Panel. In order to highlight the borders of the cells, I’ve added Borders. For more on Borders, see the section "Exploring Common XAML Controls," later in this chapter.
+
+![](bbox=[0.22, 0.49, 0.37, 0.58])
+
+Figure 2-7:
+Uniform Grid.
+
+# Listing 2-6: Uniform Grid XAML
+
+```
+<UniformGrid Rows="2" Columns="2">
+    <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBlock Text="0,0"/>
+    </Border>
+    <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBlock Text="0,1"/>
+    </Border>
+    <Border Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBlock Text="1,0"/>
+    </Border>
+    <Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBlock Text="1,1"/>
+    </Border>
+</UniformGrid>
+```

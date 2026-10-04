@@ -1,0 +1,27 @@
+# 752 Getting to SOAP
+
+None of the other messaging protocols are all of those. They all have small (occasionally large) problem that prevents the benefits of remote procedure access to really shine. Web services provide what is actually needed. The second web service protocol to provide these benefits in usable form is SOAP. (REST is the first, but that is a story for later chapter.)
+
+# Getting to Know SOAP
+
+Simple Object Access Protocol or SOAP is an XML-based protocol for sending messages over the Internet, usually via HTTP. You can think of it as an envelope for remote procedure calls because that is exactly what it is.
+
+The major benefit to SOAP, aside from its rather global acceptance and its longevity, is the rich experience that it provides the client. There are a lot of developer features in SOAP, like transactions and security, and they all work pretty well.
+
+# SOAP and standards
+
+Standards are discussed throughout this book, but it bears discussing here too. Here is how standards-based development works:
+
++   1. Either by industry need or a company idea, some organization develops a standard. This is usually a recognized organization like the World Wide Web Consortium (W3C) or a company, like Microsoft or IBM.
+2. The standard is distributed to the community for review.
+3. After community acceptance, the standard is certified, either by the originating organization or an organization like IEEE or ISO.
+4. Some company, when developing a product, realizes that it needs a feature that happens to be described by that standard.
+5. After reviewing the standard, the company decides to implement the standard.
+
+Realistically, regardless of certification, only when a large number of companies implement a standard does it actually become a genuine standard. Many-called "web" browsers over the years supported "standard" protocols like VRML and that never made it.
+
+It's true, folks. The Internet superhighway is littered with the broken documents of dead standards.
+
+# The WS-* standards
+
+WS-* (usually pronounced WS-star, referring to the wildcard * character that refers to all standards that begin with (WS) standards fit right in here.

@@ -1,0 +1,285 @@
+
+# Index 793
+
+- defining with C#, 605–606
+- defining with XAML, 603–605
+- dependency properties, 601–602
+- editing data, 606–610
+    - overview, 601
+    - setting up automatic, 545
+    - validating data, 610–614
+- web controls
+    - commonly bound, 693–695
+    - overview, 689–690
+    - setting up markup for, 690–691
+    - using code-behind, 692–693
+- Data Designer, Options dialog box, Visual Studio, 545
+- Data Encryption Standard (DES), 411
+- data entry form, 589–591
+- data members, initializing with default constructor, 270–271
+- data silos, 747
+- Data View, Visual, 523–524
+- database-generic containers, 418
+- data-specific adapters, 418
+- DataContext class, 604, 606, 608, 648
+- DataGrid control, 595, 693–695
+- DataReader class, 420
+- DataRow class, 420
+- DataSet class, 347, 420, 433
+- DataSource property, 690, 692
+- DataTable class, 420
+- DataTemplateSelector class, 621
+- View class, 347, 420
+- DatePicker class, 595
+- DateTime type, 39–40
+- DayOfWeek object, 39
+- DCOM (Distributed Object Model), 793
+- Debug menu, Visual Studio, 538
+- debug option, output directive, 564
+- debug statements, 535
+- debugger, Visual Studio, 274–277
+- decimal variable type
+    - constants, 410
+    - converting to and from, 422
+    - declaring, 33
+    - integers and floating-points versus, 33–34
+    - limitations of, 34
+    - overview, 33
+    - as value type, 37
+- DecimalBankAccount example, 263–265
+- Declarative Flowchart Service Library project, 514
+- Declarative Sequential Service Library project, 514
+- declaring
+    - constants, 221–222
+    - numeric constants, 40–41
+    - variables
+        - Boolean, 34
+        - decimal, 33
+        - floating-point, 30–31
+        - initializing when, 27
+        - overview, 25
+        - rules for, 27
+        - string, 36
+- decoupled adapters, 174
+- decrement (--n and n--) operators, 75
+- Default.aspx file, 727
+- Default.aspx.cs file, 727
+- delegates
+    - anonymous methods, 364–365
+    - back proper, 353–354
+    - custom versus predefined, 364
+    - defining, 354–355
+- events
+    - addressing, 366–367
+    - how observers handle, 370–371
+    - Observer design pattern, 365–366
+    - passing extra information into event handlers, 368–369
+    - publish, 368
+    - Publish/Subscribe analogy, 366
+    - raising, 369–370
+    - subscribing to, 367
+    - when use, 371
+    - examples of, 356
+    - life cycle, 355–366, 362–364
+    - SimpleDelegateExample example, 357–358
+    - SimpleProgress example, 358–364
+    - when use, 371
+- limiters, defined, 58
+- DemonstrateConstructor example, 272–278
+- Dependency Injection (DI), 647
+- dependence properties, 601–602
+- DependencyObject object, 601
+- DependencyProperty property, 601
+- Dequeue method, 163, 171, 174
+- DES (Data Encryption Standard), 411
+- DescendingEvents method, 156–157
+- design patterns, 365–366
+- designers (Graphic Development Environments), Visual Studio
+- Class Designer, 522–523
+- Data View, 523–524
+    - overview, 517–518
+- Windows Forms, 520–521
+- WPF, 518–520
+- destructors, 301
+- Device Independent Units (DI), 578
+- DI (Dependency Injection), 647
+- dictionary, 124–126
+- DictionaryExample, 124–126
+- Dictionary<Key, Value> class, 121, 124–126
+- iterating, through, 133–39
+- Directory class, 136–143
+- DirectoryInfo objects, 137
+- Display() method, 337–338
+- display-only XML controls, 592–594
+- Ratio method, 241
+- Rounded method, 237–258
+- Dispose() method, 301, 449
+- Distributed COM (COM), 493, 575
+- DI (Device Independent Units), 578
+- .dll files See class libraries
+- CLR (Dynamic Language Runtime), 490–491
+    - overview, 488–499
+- DNS classes, 459
+- do, while loop, 97
+- Dock Panel, WPF, 581–582
+- Domain Specific Languages (DSLs), 557–558
+- dot operator (.), 217
+- Dotfuscator Community Edition, Tools menu, Visual Studio, 537
+- do-to-each trick, 313
+- double variable type
+    - access control, 265
+    - constants, 411
+    - defining methods with no value, 240
+    - size and range of, 30–31
+    - as value type, 377
+- DoubleBankAccount example, 262–263
+- Double.Epsilon constant, 76–77
+- downcast (explicit edition), 80–81
+- Download class, 459
+- DownloadFile() method, 462–464
+- downloading files, 462–464
+- DREAD model of risk assessment, 408
+- creating and adding projects to, 378
+- defined, 377
+- testing class libraries, 381–382
+- dropdown control, 685–686
+- duration variable, 363
+- DSL (Domain Specific Languages), 557–558
+- DumpBuffer() method, 138
+- DumpHex() method, 136–138
+- Dynamic Entities Web Application project, 513
+- Dynamic Entities Web site option, Visual Studio, 725
+- Dynamic Data Link to SQL Web Application project, 513, 726
+- Dynamic Data Link to SQL Web site option. Visual Studio, 725
+- Dynamic Import, 494–495
+- dynamic keyword, 44, 484
+- Dynamic Language Runtime. See DLR
+- dynamic languages, 482–484
+- dynamic operations, 486–487
+- dynamic programming
+    - classic examples of, 486–487
+- Dynamic Language Runtime, 488–491
+- dynamic types, 482–484
+- making static operations dynamic, 487
+- overview, 481–486
+- process of, 484–486
+
+# E
+- e parameter, 368
+- E specifier, Format() method, 65, 68
+- ECMAS, 658
+- element binding, 611
+- else statements, 87–88
+- e-mail support, 464–466
+- Empty project, 512
+- empty strings (null strings), 36, 55
+- Empty site option, Visual Studio, 725
+- Encapsulated Field, Refactor method, Visual Studio, 539
+- encryption. Windows applications, 411
+- Endpoint class, 459
+- Enqueue() method, 163, 170–171
+- Entity Data Model, 224–427
+- Entity Framework
+    - generating entity model, 434–436
+    - overview, 433–434
+    - writing code for entity model, 436
+- enumerating, 139. See also iterating
+- enumerifiers, 155–157. See also iterating
+- Envoy (Entity Design Time Environment), 558
+- Environment section, Options dialog box, Visual Studio
+    - defining Start Page, 543
+    - Font and Colors settings, 542–543
+    - keyboard commands, 543
+    - overview, 542–443
+- EvenNumbers, 155–157
+- events
+    - defined, 364
+    - how observers handle, 371
+    - Observer design pattern, 365–366
+    - Publish/Subscribe analytics, 366–370
+    - when use, 371
+- Excel 2010 Add-in project, 514
+- Excel 2010 Template project, 514
+- Excel 2010 Workbook project, 513
+- exception-handling
+    - catch blocks, 183, 190
+    - catch, 181, 192
+    - catch, 194, 195
+    - custom, 186
+    - design system for handling, 195–198
+    - errors code, 186
+    - robustness of code, 192
+    - exceptions
+        - catch, 183, 190
+        - catch, 181, 192
+        - catch, 194, 195
+        - custom, 186
+        - design system for handling, 195–198
+        - errors code, 186
+        - robustness of code, 192
+    - exceptions
+        - catch, 183, 190
+        - catch, 181, 192
+        - catch, 194, 195
+        - custom, 186
+        - design system for handling, 195–198
+        - errors code, 186
+        - robustness of code, 192
+    - exceptions
+        - catch, 183, 190
+        - catch, 181, 192
+        - catch, 194, 195
+        - custom, 186
+        - design system for handling, 195–198
+        - errors code, 186
+        - robustness of code, 192
+- ExceptionWith() method, 130
+- executable programs (executables), console application, 18–19
+- expression types, assigning, 81
+- external methods, defined, 259
+- External Tools, menu, Visual Studio, 537
+- Extract Interface tool. Refactor menu, Visual Studio, 539
+- Extract Method tool, Refactor menu, Visual Studio, 228–229, 259,
+- extension methods, 155
+
+# F
+- F specifier() method, 65, 68
+- Factorial() method, 188–190
+- FactorialException example, 187–190
+    - creating interface types, 334–335
+    - defined, 129
+    - purpose of, 173–174
+- factoring classes, 318–323
+- Fake keyword, 642–643
+- fiddler, 657
+- file access
+    - defined, 437
+- Find() method, 146
+- FindEmpty() method, 146
+- fires holes, 420
+- firewalls, 460
+- FixedArrayAverage example, 109–110
+- fixed-value arrays, 108–109
+- flags, 305–306
+- flexible dependencies, 350
+- floatingpoint(float) variable type
+    - comparing, 76–77
+- FileRead example, 450–454
+- FileWrite example, 441–446
+- readers and writers, 439, 454–455
+- streams, 437–438
+- using statement, 447–450
+- file extensions, default programs, 545
+- file management
+    - file types, 727–728
+    - .NET Framework, 715–771
+    - organization, 728–729
+    - project types, 724–726
+- File Transfer Protocol (FTP), 462
+    - upload size limits, 416
+- FileInfo objects, 137–138
+- FileRead class, 136
+- FileRead example, 450–454
+- FileStream class
+    - arguments, 433–444
+    - defined, 455

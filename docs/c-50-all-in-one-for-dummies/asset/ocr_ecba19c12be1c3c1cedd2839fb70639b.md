@@ -1,0 +1,54 @@
+```
+yield return db;
+}
+}
+}
+}
+```
+
+![](bbox=[0.11, 0.24, 0.21, 0.32])
+
+For a more real-world illustration of iterator blocks, see the example PackageFactoryWithIterator, available with this chapter. The example extends the PriorityQueue example in Chapter 8 of this minibook.
+
+# Iterating days of the month: A first example
+
+The following fragment from the IteratorBlocks example provides an iterator that steps through the months of the year:
+
+```
+//MonthDays -- Define an iterator that returns the months
+//  and their lengths in days -- sort of a "collection" class.
+class MonthDays
+{
+    // Here's the "collection."
+    string[] months =
+        { "January 31", "February 28", "March 31",
+          "April 30", "May 31", "June 30", "July 31",
+          "August 31", "September 30", "October 31",
+          "November 30", "December 31" };
+
+    //GetEnumerator -- Here's the iterator. See how it's invoked
+    //  in Main() with foreach.
+    public System.Collections.IEnumerator GetEnumerator()
+    {
+        foreach (string month in months)
+        {
+            // Return one month per iteration.
+            yield return month;
+        }
+    }
+}
+```
+
+Here’s part of a Main() method that iterates this collection using a foreach loop:
+
+```
+// Instantiate a MonthDays "collection" class.
+MonthDays md = new MonthDays();
+// Iterate it.
+foreach (string month in md)
+{
+    Console.WriteLine(month);
+}
+```
+
+This extremely simple collection class is based on an array, as KeyedArray is. The class contains an array whose items are strings. When a client iterates this collection, the collection’s iterator block delivers strings one by one. Each string contains the name of a month (in sequence), with the number of days in the month tacked on to the string. It isn’t useful, but, boy, is it simple — and different!

@@ -1,0 +1,46 @@
+Back when these examples were written, the 2008 U.S. presidential campaign was in full swing, with about ten early candidates in each major party. A good many of those candidates were also members of the U.S. Senate. How can you produce a list of just the candidates who are also in the Senate? The HashSet<T> IntersectWith() method gives you the overlapping items between the candidate list and the Senate list — items in both lists, but only those items:
+
+```
+Console.WriteLine("\nFinding the overlap in two lists:");
+List<string> presidentialCandidates =
+    new List<string> { "Clinton", "Edwards", "Giuliani", "McCain", "Obama",
+    "Romney" };
+List<string> senators = new List<string> { "Alexander", "Boxer", "Clinton",
+    "McCain", "Obama", "Snowe" };
+HashSet<string> senatorsRunning = new HashSet<string>(presidentialCandidates);
+// IntersectWith() collects items that appear in both lists, eliminates others.
+senatorsRunning.IntersectWith(senators);
+foreach (string senator in senatorsRunning)
+{
+    Console.WriteLine(senator);
+}
+```
+
+The result is "Clinton", "McCain", "Obama" because those are the only ones in both lists. The opposite trick is to remove any items that appear in both of two lists so that you end up with just the items in your target list that aren’t duplicated in the other list. This calls for the HashSet<T> method ExceptWith():
+
+```
+Console.WriteLine("\nExcluding items from a list:");
+Queue<int> queue =
+    new Queue<int>(new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17 });
+HashSet<int> unique = new HashSet<int> { 1, 3, 5, 7, 9, 11, 13, 15 };
+// ExceptWith() removes items in unique that are also in queue: 1, 3, 5, 7.
+unique.ExceptWith(queue);
+foreach (int n in unique)
+{
+    Console.WriteLine(n.ToString());
+}
+```
+
+After this code, unique excludes its own items that duplicate items in queue (1, 3, 5, 7, and 9) and also excludes items in queue that aren’t in unique (0, 2, 4, 6, 8, and 17). You end up with 11, 13, and 15 in unique.
+
+Meanwhile, the next code segment uses the SymmetricExceptWith() method to create the opposite result from IntersectWith(). Whereas intersection gives you the overlapping items, SymmetricExceptWith() gives you the items in both lists that don’t overlap. The uniqueToOne set ends up containing just 5, 3, 1, 12, and 10:
+
+```
+Console.WriteLine("\nFinding just the non-overlapping items in two lists:");
+Stack<int> stackOne = new Stack<int>(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
+Stack<int> stackTwo = new Stack<int>(new int[] { 2, 4, 6, 7, 8, 10, 12 });
+HashSet<int> nonoverlapping = new HashSet<int>(stackOne);
+// SymmetricExceptWith() collects items that are in one collection but not
+// the other: the items that don’t overlap.
+nonoverlapping.SymmetricExceptWith(stackTwo);
+```

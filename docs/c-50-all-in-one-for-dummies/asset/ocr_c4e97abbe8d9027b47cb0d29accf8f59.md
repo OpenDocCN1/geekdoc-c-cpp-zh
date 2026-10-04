@@ -1,0 +1,46 @@
+```
+decimal.Round(value,
+    numberOfSignificantDigits);
+// Convert that to a string.
+string s = Convert.ToString(roundedValue);
+return s;
+}
+```
+
+![](bbox=[0.1, 0.28, 0.2, 0.38])
+
+Why would Microsoft make these changes? The answer is COM. The Component Object Model (COM) was the architectural paradigm of choice for Microsoft products before .NET was released, and it’s still quite prevalent. (Notice that I didn’t say popular.) Office, for one, is entirely developed using COM. COM applications are developed in C++ or Visual Basic 6 and earlier, and methods from those classes allow for optional parameters. Thus, communicating with COM without using optional parameters can become difficult. To address this imbalance, optional parameters (along with a number of other features) were added to C# 4.0.
+
+I cover named and optional parameters ad nauseam in Book III.
+
+# Returning Values after Christmas
+
+Many real-world operations create values to return to the caller. For example, Sin() accepts an argument and returns the trigonometric sine. A method can return a value to the caller in two ways — most commonly via the return statement; however, a second method uses the call-by-reference feature.
+
+# Returning a value via return postage
+
+The following code snippet demonstrates a small method that returns the average of its input arguments:
+
+```
+public class Example
+{
+    public static double Average(double d1, double d2)
+    {
+        double average = (d1 + d2) / 2;
+        return average;
+    }
+    public static void Main(string[] args)
+    {
+        double v1 = 1.0;
+        double v2 = 3.0;
+        double averageValue = Average(v1, v2);
+        Console.WriteLine("The average of " + v1
+            + " and " + v2 + " is "
+            + averageValue);
+        // This also works.
+        Console.WriteLine("The average of " + v1
+            + " and " + v2 + " is "
+            + Average(v1, v2));
+    }
+}
+```

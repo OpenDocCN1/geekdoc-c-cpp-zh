@@ -1,0 +1,34 @@
+# Using Some of the T4 Directives
+
+Clearly, this is a very Hello World example. The magic of T4 is complex, and I had to spend a lot of time (believe it not) making the simplest example.
+
+One of the things that makes T4 work well are the directives built into the language. These commands are just like shell commands. They have parameters and perform certain tasks on the file.
+
+# Setting the output
+
+The first directive you see in the example in the earlier section "Creating a template from text file" is the output directive. I wanted a C# file, so I used the .cs extension. You could edit anything, text, HTML, VB, or even a custom format that you need for your project, such as
+
+```
+<@ output extension="*.bill #>
+```
+
+Another parameter for output Encoding, which is exactly what it sounds like. Options include
+
++   - Default
+- ASCII
+- BigEndianUnicode
+- Unicode
+- UTF32
+- UTF7
+- UTF-8
+
+If you need to represent special characters in your files, you need to specify your encoding.
+
+# Configuring a template
+
+Template is a directive that specifies the various properties of the T4 text itself. The goal is to affect how the parsing engine interprets the code in the template itself. The options include
+
++   - language: This is the language for the code that does the work. You can emit anything, but the code in the template has to be VB or C#.\n- inherits: This is a class that derives from TextTransformation to be used as the base class.
+
+| Book IV Chapter 4 |
+| Transforming Text | Templates |
