@@ -1,0 +1,118 @@
+
+
+the data less than or equal to the cutoff frequency $f_c = 0.2$ and removes frequencies greater than $f_c = 0.2$. The result in Equation 2.3 says that ideally, we design our filter, so that
+
+```
+$|H(e^{-2\pi f})|^2=1, \quad f \leq 0.2\n= 0, \quad f > 0.2, \qquad (2.10)$
+```
+
+since according to Theorem 2.2, this would eliminate frequency behavior from the spectrum of the output for $f > 0.2$ and leave it unchanged for $f \leq 0.2$.
+Figure 2.1a shows the squared frequency response for this ideal (brickwall) filter, and Figure 2.1b shows the ideal squared frequency response for a band-pass filter that passes frequencies $0.1 \leq f \leq 0.2$.
+
+## **EXAMPLE 2.1: FIRST DIFFERENCE FILTER**
+
+Consider a time series realization $x_t, t=1, \dots, n$, and suppose we compute the first difference $y_t = x_t - x_{t-1}$. In order to see the effect of this differencing operation, we note that the first difference is a linear filter of the form Equation 2.1 where $h_1=1, h_j=0, j \neq 0$ or 1. We can thus $H(e^{-2\pi f})-1$ is given by $2-\cos(2\pi f)$ and $|H(e^{-2\pi f})|^2=2(1-\cos(2\pi f))$. The plot of $|H(e^{-2\pi f})|^2$ is given in Figure 2.2b where it can be seen that a difference is a high-pass filter, but that it is not a sharp filter in that we show the realization previously shown in Figure 1.3a, which shows a wandering behavior associated with low-frequency behavior, along with some higher frequency oscillation. The first difference data are shown in Figure 2.2c where it can be seen that the low-frequency wandering behavior has been removed with only the higher frequency behavior remaining. The first difference is widely used in time series analysis, but if the goal is to remove a specific range of low frequencies from the data, there are better approaches.
+
+![](img/41dcbfb9af56fa48895afde322197b0b_83_0.png)
+
+**FIGURE 2.1**
+Squared frequency response function, $|H(e^{-2\pi f})|^2$, for ideal (a) low-pass and (band-pass) filters.
+
+## Applied Time Series Analysis with R
+
+![](img/41dcbfb9af56fa48895afde322197b0b_84_0.png)
+
+Figure 2.2
+(a) Realization previously shown in Figure 1.3a, (b) squared frequency response function for a first difference, and (c) first difference of the data in the (a).
+
+## EXAMPLE 2.2: SUM AND MOVING AVERAGE FILTERS
+
+Consider again a time series $x_t$, $t = 1, \dots, n$, and suppose we compute the sum $y_t = x_t + x_{t-1}$, which is also a linear filter where in this case $h_0 = 1$, $h_1 = 1$, and $h_j = 0$, $j \neq 0$ or $1$. Calculations show that
+
+> $H(e^{-2\pi if}) = 1 + \cos 2\pi f - i \sin 2\pi f$
+
+and
+
+> $|H(e^{-2\pi if})|^2| = 2(1 + \cos 2\pi f)$
+
+The plot of $|H(e^{-2\pi if})|^2|$ is given in Figure 2.3, where it can be seen that it is a mirror image of Figure 2.2b for the difference filter, and as a consequence, low frequencies are passed and high frequencies tend to be removed. Again, this is not a sharp filter and can be improved.
+Closer observation of Figures 2.2b and 2.3 shows that $|H(e^{-2\pi if})|^2=4$ when $f=0.5$ for the difference filter and when $f=0$ for the sum filter. The goal of a filter is to leave some frequency content unchanged and remove others. Thus, according to Theorem 2.2, it is desirable that
+
+## Linear Filters
+
+![](img/41dcbfb9af56fa48895afde322197b0b_85_0.png)
+
+**FIGURE 2.3**
+Squared frequency response functions for a 2-point sum filter.
+
+$|H(e^{-j2\pi f})|^2 = 1$ for the range of frequencies that are to be retained. To this end, we consider the three moving average filters
+
+$y_i = (1/2)(x_i + x_{i-1})$ 2-point moving average
+$y_i = (1/3)(x_i + x_{i-1} + x_{i-2})$ 3-point moving average
+$y_i = (1/7)(x_i + x_{i-1} + x_{i-2} + x_{i-3} + x_{i-4} + x_{i-5} + x_{i-6})$ 7-point moving average for the corresponding frequency response functions
+
+> $H(e^{-j2\pi f}) = \frac{1}{2}(1 + 2\cos 2\pi f - i\sin 2\pi f)$ 2-point
+$\frac{1}{3}(1 + 2\cos 2\pi f)$ 3-point
+$\frac{1}{7}(1 + 2\cos 2\pi f + 2\cos 4\pi f + 2\cos 6\pi f)$ 7-point.
+
+The squared frequency response functions for these moving average filters are shown in Figure 2.4 where it can be seen that these are all lowpass filters (smoothers). Also, as the number of data values involved in the moving average filter increases, the "cutoff" frequency decreases and the filter becomes "sharper" in the squared frequency response is closer to the ideal filter. Figure 2.5 shows the result of applying the three moving average filters to the data in Figure 2.2a. As would expected from Figure 2.4, it can be seen that as the number of points in the moving average increases, the smoother the output series becomes. In all these cases, the low-frequency "wandering behavior" in the original series is retained.
+
+### 2.4.1 Butterworth Filters
+
+One of the common filters used by scientists and engineers is the Butterworth filter (see Butterworth, 1930; Porat, 1997). This filter will
+
+## Applied Time Series Analysis with R
+
+![](img/41dcbfb9af56fa48895afde322197b0b_86_0.png)
+
+**FIGURE 2.4** Squared frequency response functions for three moving average smoothers. (a) 2-point moving average: (b) 3-point moving average. (c) 7-point moving average.
+
+![](img/41dcbfb9af56fa48895afde322197b0b_86_1.png)
+
+**FIGURE 2.5** Output series from applying three moving average smoothers to the data in Figure 2.2a. (a) 2-point moving average. (b) 3-point moving average. (c) 7-point moving average.
+
+## Linear Filters
+
+be briefly introduced here. While the Butterworth filter can be of any type (low pass, high pass, etc.) our discussion will focus on an N-th order low-pass Butterworth filter, which has a squared frequency response function
+
+```
+$|H(e^{-2\pi f})|^2 = \left(\frac{f}{f_c}\right)^{2N}$
+```
+
+Increasing the value of N sharpens the filter as shown in Figure 2.6 where we show the squared frequency response functions for low-pass Butterworth filters with $f_c = 0.2$ for various values of N. That is, for large values of N, the squared frequency response function of a low-pass Butterworth filter with cutoff, $f_c$, more closely satisfies the ideal filter
+
+```
+$|H(e^{-2\pi f})|^2 = 1, \ f \le f_c \nn=0, \ f > f_c$
+```
+
+![](img/41dcbfb9af56fa48895afde322197b0b_87_0.png)
+
+**FIGURE 2.6**
+Squared frequency response functions, $|H(e^{-2\pi f})|^2$, for low-pass Butterworth filters with various values of N. (a) $N=1$, (b) $N=2$, (c) $N=4$, (d) $N=10$.
+
+## Applied Time Series Analysis with R
+
+shown in Figure 2.1a. We will not discuss issues of filter design such as the choice of N or phase. For discussion of such issues, see Porat (1997).
+Although the impulse response function associated with Equation 2.11 is of infinite order, it can be well approximated by a ratio of two N-th order polynomials
+
+```
+$\sum_{k=0}^{\infty} h_k B^k = \frac{\sum_{k=0}^{N} \alpha_k B^k}{\sum_{k=1}^{N} \beta_k B^k} \quad (2.12)$
+```
+
+which leads to the easy to implement recursive filter
+
+```
+$y_t = \sum_{k=0}^{N} \alpha_k x_{t-k} - \sum_{k=1}^{N} \beta_k y_{t-k}$
+```
+
+EXAMPLE 2.3: BUTTERWORTH LOW-PASS FILTER EXAMPLE
+In Figure 2.7a, we show a realization of length $n = 200$ from signal
+
+```
+$X_t = \cos(2\pi(0.025) t) + 3\cos(2\pi(0.125) t, \quad (2.13)$
+```
+
+which has two cycles, with frequencies $f = 0.025$ and $f = 0.125$. Figure 2.7b and c are plots of the two additive components that sum to $X_t$. For illustration, we apply a low Butterworth filter with cutoff frequency $f_c = 0.04$ in order to retain the cycle associated with $f = 0.025$ and filter out the higher frequency cycle associated with $f = 0.125$. Figure 2.8c shows results using Butterworth filters with orders $N = 1$ and $N = 3$, as in Figure 2.8a and b, we show the squared response functions associated with these two filters. In Figure 2.8a, we see that the Butterworth filter with $N=1$ would not be expected to perform well, because the squared response still has power at $f = 0.125$, and the frequency is to be removed. Figure 2.8b shows that the squared response for $N = 3$ has very little power below $f = 0.08$, and the Butterworth filter with $N = 3$ should produce the desired results. In Figure 2.8c, we see that, as expected, some of the higher frequency leaked through the filter, while Figure 2.8d shows that the filtered series resulting from a Butterworth filter with $N = 3$ look very similar to Figure 2.7b.
+
+One point that should be made is that the Butterworth filter has end effect problems that are associated with all linear filters. This is a result of the fact that in order to obtain, for example, the filtered value at $t=1$, the filter ideally needs to use values prior to $t=1$, which do not exist. Methods for dealing with end effects in filters have been recommended, but will not be discussed here.
+

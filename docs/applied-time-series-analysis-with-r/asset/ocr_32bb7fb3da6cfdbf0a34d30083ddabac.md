@@ -1,0 +1,7 @@
+Show that this model can be written as
+
+$$\nabla X_t = \beta_0 + \tau X_{t-1} + \beta_1\nabla X_{t-1} + \cdots + \beta_p\nabla X_{t-p+1} + a_t,$
+
+where $\nabla X_{t-j} = (1 - B)X_{t-j} = X_{t-j} - X_{t-j-1}$, $\beta_0 = \mu(1 - \phi_1 - \cdots - \phi_p)$, $\tau = -(1 - \phi_1 - \cdots - \phi_p)$, and $\beta_j = -(\phi_{j+1} + \cdots + \phi_p)$, for $j = 1, \dots, p - 1$.
+
+NOTE: This alternative expression is known as the *error correction* form.

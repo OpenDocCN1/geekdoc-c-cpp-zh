@@ -1,0 +1,10 @@
+# 520 Applied Time Series Analysis with R
+
+smooth coefficients is primarily to describe the 11 bumps of various sizes throughout the signal. In the right panel we show a noisy bumps signal of length n=256, this is, bumps signal with additive noise. These signals can be generated using function test.data package waveband which generates tests studied by Donoho and Johnstone (1994), see Appendix 1B for more details. The smoother (coarser) of the noisy bumps signal with rows d3, d4, and s4 is very similar to that on the left-hand side of the original bumps signal. That is, the high frequency is primarily described using the d1 and d2 rows. The notes that bumps the signal at the top left in Figure 12.8 is relatively simple and that signal, which means can be reproduced with only about wavelet and scaling coefficients. Again points out the "sparseness" of the wavelet transform, and it seems reasonable that eliminating the zero and near zero wavelet coefficients before reconstruction of the bumps signal would have negligible effect. Inspection of the wavelet coefficients in the right panel of Figure 12.8 shows that the noise in the wavelet series is primarily described by relatively small wavelet coefficients in levels 1 and 2.
+
+In the left panel of Figure 12.9, we show, from bottom to top: Sv, Dv, Dv, D2, D1, (defined in Equations 12.31 and 12.33) association with the DWT for the bumps data in the top left of Figure 12.8. From Equation 12.3 it follows that the bumps signal at the top is the sum of the very crude "smooth approximation" Ss, and the increasingly finer details Dv, Dv, and D1. The plot in the right panel of Figure 12.9 shows the smooth approximations Ss, Sy, Sv, and S=x using the relationship Sj-1=Dj+Sj, with D4+S4=S3, D3+S3=S2+D2=S etc. In the figure it can be seen that the smooth approximations, S, are quite poor
+
+![](bbox=[0.143, 0.597, 0.857, 0.866])
+
+FIGURE 12.9
+(a) Left panel: MRD for bumps signal, for levels 1 , ... , 4. (b) Right panel: MRA for bumps signal for levels 1, ... , 4.

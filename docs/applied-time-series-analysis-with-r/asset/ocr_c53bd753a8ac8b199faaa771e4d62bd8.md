@@ -1,0 +1,11 @@
+# 8
+
+# Model Identification
+
+In Chapter 7, we discussed the problem of estimating the parameters of a given ARMA(p,q) process assuming the model orders $p$ and $q$ are known. The procedure for finding an appropriate model actually begins with the intriguing and sometimes challenging problem of determining the number of parameters that should be estimated. In this chapter, we consider the problem of identifying the model orders $p$ and $q$ for the stationary ARIMA(p,d,q) model as well as $p, d,$ and $q$ for the non-stationary ARMA(p,d,q) model. Since there is realistically not a “true ARMA model” for a real process, our goal will be to find a model that adequately describes the process but not contain unnecessary parameters. Tukey (1961) refers to such a model as being parsimonious.
+
+# 8.1 Preliminary Check for White Noise
+
+In searching for a parsimonious model, the investigation would begin with a decision concerning whether or not the process can be adequately modeled using the simplest of ARMA models, white noise. Unnecessarily complicated models can be obtained by the careless analyst for processes that should have been modeled as white noise in the first place. Several techniques are available for testing for white noise, and we will address this problem further in Section 9.1 when we discuss the examination of residuals from a fitted model (which should essentially be white noise if the model is appropriate).
+
+At this point, we focus on checking for white noise by examining realizations and sample autocorrelations. The first advice we give in this context is that you should first examine a plot of the data! The failure to realize that a set of time series data should be modeled as white noise or to notice other basic characteristics is often the result of having to plot the data. In Figures 1.3b, 1.4b, and 1.9b, we showed that after realization, the autocorrelations, and the sample autocorrelations from a white noise model show. There is no cyclic or trending behavior in the data, and while the autocorrelations for a white noise process have the property that $ho_k = 0$ for $k \neq 0$, the sample autocorrelations will not be identically zero as is illustrated

@@ -1,0 +1,15 @@
+506 Applied Time Series Analysis with R
+
+# 12.3.1 Fourier Series Background
+
+In order to fully appreciate wavelet methods, it is necessary to have some familiarity with the classical Fourier methods of wavelet analysis is an extension. For a brief review of Fourier series, see Appendix 12A.
+
+As discussed in Section 1.5 and Appendix 12A, Fourier analysis involves expressing functions as linear combination of sines and cosines. 12A.1 states that a well-behaved function, $g$, defined on $[-\pi,\pi]$ can be expressed as a linear combination of the *basis functions* in the orthogonal systems $S_1=\{\cos kx, \sin kx; k=1, 2, ...\}$ or equivalently of $S_2=\{e^{ik}, k=0, \pm1, ...\}$. The advantage of using $S_2$ is that the basis functions actually consist of one "fundamental" function, namely, $\phi(x)=e^{ix}$, and the individual functions are "integral dilations" of this function, that is, $e^{kx}=\phi(kx)$. As $k$ increases, the function $\phi(kx)=\cos(kx)+i\sin(kx)$ increases frequency; that is, the integer $k$ controls the frequency content in the basis function $\phi(kx)$. Fourier analysis is based on the fact that when certain conditions hold, functions can be written as a linear combination of dilations of the single function $e^{ix}$, see Appendix 12A. In wavelet analysis a fundamental role such as by $\phi(x)=e^{ix}$ in Fourier analysis.
+
+# 12.3.2 Wavelet Analysis Introduction
+
+Suppose that $g$ is square integrable over the real line, that is, $\int_{-\infty}^{\infty}g(x)^2dx<\infty$. The class of such functions is denoted $L^2(\mathbb{R})$ where $\mathbb{R}=(-\infty,\infty)$. We desire a collection of basis functions (which are all variations of a single functional, $\psi(x)$ such that functions $g\in L^2(\mathbb{R})$ can be approximated arbitrarily using a finite linear combination of these elements. It should be noted that $\sin x, \cos x$ and $e^{ix}$ are not candidates for the desired basis functions since they are not in $L^2(\mathbb{R})$. In fact, a necessary condition for $\int_{-\infty}^{\infty}g(x)^2dx<\lim_{|x|to\infty}|g(x)|=0$. That is, the basis functions must decay to zero as $|x|\to\infty$, so intuitively short waves or "wavelets" are needed. In the wavelet analysis, it is common to use $\psi(2^{-jx})$, where $j$ is an integer, and $j$ controls the amount of damping in the basis function $\psi(2^{-jx})$ similar to the way $k$ controls the frequency behavior in the basis function $\phi(kx)$. Approximating functions $g$ that are defined over the entire real line would intuitively be difficult to accomplish simply using dilations of a single, quickly damping function. Thus, in wavelet analysis, we consider dilations and translations of the basis functions for purposes of estimating localized frequency behavior. That is, given a function $\psi(x)$, we use as our basis collection the
+
+```
+$\psi_{j,k}(x)=2^{-j}\psi(2^{-jx}x-k),$$ (12.9)
+```
