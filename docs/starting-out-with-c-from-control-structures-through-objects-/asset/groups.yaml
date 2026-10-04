@@ -1,0 +1,1926 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Appendix O: Solutions to Odd Numbered Review Questions
+
+
+    # Chapter 1
+
+
+    +   1. Main memory, or RAM, is volatile, which means its contents are erased when
+    power is removed from the computer. Secondary memory, such as a disk, does not
+    lose its contents when power is removed from the computer.
+
+
+    +   3. An operating system
+
+
+    +   5. Because high level languages are the misuse of a key word, operator, punctuation,
+    or other part of the programming language. A logical error is a mistake that causes
+    the program to produce the wrong results.
+
+
+    +   9. CPU
+
+
+    +   11. disk
+
+
+    +   13. instructions
+
+
+    +   15. machine language
+
+
+    +   17. low-level
+
+
+    +   19. key words
+
+
+    +   21. operators
+
+
+    +   23. syntax
+
+
+    +   25. defined
+
+
+    +   27. input
+
+
+    +   29. hierarchy chart'
+  - "[PAGE 1]\n\n# 31. Hierarchy chart:\n\n![](img/3af3ad0d2f1fe20139551695356e239f_1_0.png)\n\
+    \n33. 7\n\n35. 365\n\n# Chapter 2\n\n+   1. 1, 2, 3\n\n+   3. int months = 2,\
+    \ days, years = 3;\n\n+   5. Multi-line comment\n\n+   7. #include <iostream>\n\
+    {\n  cout << \"Two mandolins likes creatures in the\\n\\n\\n\";\n  cout << \"\
+    dark\\n\\n\\n\";\n  cout << \"Creating the agony of ecstasy.\\n\\n\\n\";\n  cout\
+    \ << \" George Barker\\n\\n\\n\";\n  return 0;\n}\n\n+   9. C\n\n+   11. B\n\n\
+    +   13. B\n\n+   15. B, C\n\n+   17. A) 12\nB) 4\nC) 2\nD) 6\nE) 1\n\n+   19.\
+    \ A\n\n+   21. A\n\n+   23. False"
+  - '[PAGE 2]
+
+
+    +   25. Display "Enter the customer''s maximum amount of credit: "
+
+    ReadCredit;
+
+    Display "Enter the amount of credit the customer has used: "
+
+    ReadUsed.'
+  - "[PAGE 3]\n\n# Appendix O: Solutions to Odd Numbered Review Questions\n\navailableCredit\
+    \ = maxCredit - creditUsed;\nDisplay \"The customer's available credit is $\\\
+    $\"\nDisplay availableCredit.\n\n```\n#include <iostream>\nusing namespace std;\n\
+    \nint main() {\n  double maxCredit, creditUsed, availableCredit;\n\n  cout <<\
+    \ \"Enter the customer's maximum amount of credit: \";\n  cin >> maxCredit;\n\
+    \  cout << \"Enter the amount of credit used by the customer: \";\n  cin >> creditUsed;\n\
+    \  availableCredit = maxCredit - creditUsed;\n  cout << \"The customer's available\
+    \ credit is $\\$\";\n  cout << endl;\n  return 0;\n}\n```\n\n```\n#include <iostream>\n\
+    using namespace std;\n\nint main() {\n  int score1, score2, score3, averageScore;\n\
+    \n  cout << \"Enter the score for the 1st game: $\\$\";\n  cin >> score1;\n  cout\
+    \ << \"Enter the score for the 2nd game: $\\$\";\n  cin >> score2;\n  cout <<\
+    \ \"Enter the score for the 3rd game: $\\$\";\n  cin >> score3;\n  averageScore\
+    \ = (score1 + score2 + score3) / 3;\n  cout << \"The average score is: $\\$\"\
+    ;\n  cout << averageScore << endl;\n  return 0;\n}\n```\n\n+   29. The first cin\
+    \ statement should read:\ncin >> number1 >> number2;\nThe assignment statement\
+    \ should read:\nquotient = static_cast<float>(number1) / number2;\nThe last statement\
+    \ is missing a semicolon."
+  - '[PAGE 4]
+
+
+    # Appendix O: Solutions to Odd Numbered Review Questions
+
+
+    31. There shouldn''t be a semicolon after the #include directive.
+
+    The function header for main should read:
+
+
+    ```
+
+    int main()
+
+    ```
+
+
+    The combined assignment operators improperly used.
+
+    The statements should be:
+
+
+    ```
+
+    number1 *= 50;
+
+    number2 *= 50;
+
+    ```
+
+
+    33. There shouldn''t be a semicolon after the #include directive.
+
+    name should be declared as a string, and the #include <string> directive should
+    be used.
+
+    The following statement:
+
+
+    ```
+
+    getline >> name;
+
+    getline(cin, name);
+
+    ```
+
+
+    35. 6 12
+
+
+    37. Minutes: 612000.0000
+
+    Hours: 10200.0332
+
+    Days: 425.0014
+
+    Months: 13.9726
+
+    Years: 1.1644
+
+
+    # Chapter 4
+
+
+    +   1. In an if/else statement, the conditions are tested until one is found to
+    be true. The conditionally executed statement(s) are executed and the program
+    exits if the if/else statement. In a series of if statements, all of the if statements
+    execute and test their conditions because they are not connected.
+
+
+    +   3. A flag is a Boolean variable signaling that some condition exists in the
+    program. When the flag is set to false it indicates the condition does not exist
+    yet. When the flag is set to true it indicates the condition does not exist.
+
+
+    +   5. It takes two expressions as operands and creates a single expression that
+    is true only when both expressions are true.
+
+
+    +   7. Because they test for specific relationships between items. The relationships
+    are greater-than, less-than-equal-to, greater-than or equal-to, less-than or equal-to,
+    and not equal-to.
+
+
+    +   9. relational
+
+
+    +   11. False, True
+
+
+    +   13. True
+
+
+    +   15. True, False
+
+
+    +   17. nested
+
+
+    +   19. ||
+
+
+    +   21. left-right
+
+
+    +   23. ||
+
+
+    +   25. >
+
+
+    ©2012 Pearson Education, Inc. Upper Saddle River, NJ. All Rights Reserved.'
+  - "[PAGE 5]\n\n# Appendix O: Solutions to Odd Numbered Review Questions\n\n27. integer\n\
+    \n29. break\n\n```\n31. if (y == 0)\n    x = 100;\n```\n\n```\n33. if (sales <\
+    \ 10000)\n    commission = .10;\n    else if (sales <= 15000)\n    commission\
+    \ = .15;\n    else\n        commission = .20;\n```\n\n```\n35. if (amount1 > 1)\n\
+    \    if (amount2 < 100)\n        cout << (amount1 > amount2 ? amount1 : amount2);\n\
+    ```\n\n```\n37. if (temperature >= -50 && temperature <= 150)\n    cout << \"\
+    The number is valid.\";\n```\n\n```\n39. if (str1 > str2)\n    cout << str2;\n\
+    else\n    cout << str1;\n```\n\n41. C, A, B\n\n43. False\n\n45. True\n\n47. True\n\
+    \n49. True\n\n51. True\n\n53. False\n\n55. F\n\n57. T\n\n59. The conditionally\
+    \ executed blocks in the if/else construct should be enclosed in braces.\nThe\
+    \ following statement:\ncout << \"quotient of \" << numl <<\nshould read:\ncout\
+    \ << \"quotient of \" << numl;\n\n61. A switch statement cannot be used to test\
+    \ relational expressions. An if/else if-statement should be used instead.\n\n\
+    62. It should use && instead of ||. The statement should read:\n\n```\n65. The\
+    \ : and ? are transposed.\nz = (a < 10) ? 0 : 7;\n```\n\n# Chapter 5\n\n+   1.\
+    \ By indenting the statements, you make them stand out from the surrounding code.\
+    \ This helps you identify at a glance the statements that are conditionally executed\
+    \ by a loop.\n\n+   2. Because they are only executed when a condition is true."
+  - "[PAGE 6]\n\n# Appendix O: Solutions to Odd Numbered Review Questions\n\n+   5.\
+    \ The while loop.\n\n+   7. The for loop.\n\n+   9. An accumulator is used to\
+    \ keep a running total of numbers. In a loop, a value is usually added to the\
+    \ current value of the accumulator. If it is not properly initialized, it will\
+    \ not contain the correct total.\n\n+   11. fstream\n\n+   13. ifstream\n\n+ \
+    \  15. A file's read position marks the location of the next byte that will be\
+    \ read from the file. When an input file is opened, its read position is initially\
+    \ set to the first byte in the file.\n\n+   17. prefix\n\n+   19. body\n\n+  \
+    \ 21. pretest\n\n+   23. infinite or endless\n\n+   25. running total\n\n+   27.\
+    \ sentinel\n\n+   29. while and for\n\n+   31. initialization, test, update\n\n\
+    +   33. break\n\n```\n35. int product = 0, num;\nwhile (product < 100)\n{\n  \
+    \  cin >> num;\n    product = num * 10;\n}\n```\n\n```\n37. for (int x = 0; x\
+    \ <= 1000; x += 10)\n    cout << x;\n```\n\n```\n39. for (int row = 0; row < 10;\
+    \ row++)\n{\n    for (int col = 0; col < 15; col++)\n        cout << '#';\n  \
+    \  cout << endl;\n}\n```\n\n```\n41. char sure = 'X';\nwhile (sure != 'Y' && sure\
+    \ != 'N')\n{\n    cout << \"Are you sure you want? \";\n    cin >> sure;\n}\n\
+    ```\n\n```\n43. int x = 50;\nwhile (x > 0)\n{\n    cout << x << \" seconds to\
+    \ go.\\n\";\n    x--;\n}\n```"
+  - '[PAGE 7]
+
+
+    ```
+
+    45. ifstream inputFile("Numbers.txt");
+
+    int number;
+
+    while (inputFile >> number)
+
+    cout << number << endl;
+
+    inputFile.close();
+
+    ```
+
+
+    47. false
+
+
+    49. false
+
+
+    51. false
+
+
+    53. false
+
+
+    55. false
+
+
+    57. true
+
+
+    59. true
+
+
+    61. false
+
+
+    63. true
+
+
+    65. The statement result = +(num1 + num2); is invalid.
+
+
+    67. The while statement should not end with a semicolon.
+
+    It could be argued that bigNum should be defined as a long.
+
+    count should be initialized to 1.
+
+
+    69. The expression tested by the do-while loop should be choice == 1 instead of
+    choice = 1.
+
+
+    # Chapter 6
+
+
+    +   1. Because they are created in memory when the function begins execution,
+    and are destroyed\when the function ends.
+
+
+    +   3. Inside the parentheses of a function header.
+
+
+    +   5. Yes. The first argument is passed into the parameter variable that appears
+    first inside
+
+    the header''s parentheses. Likewise, the second argument is passed into the second
+
+    parameter, and so on.
+
+
+    +   7. It makes the process easier to manage. Imagine a book that has a thousand
+    pages, but isn''t
+
+    divided into chapters or sections. Trying to find a single topic in the book would
+    be very dif-
+
+    ficult. Real-world programs can handle thousands of lines of code, unless they
+    are
+
+    modularized, can be very difficult to modify and maintain.
+
+
+    +   9. A function as the following could be written to get user input. The input
+    is stored in the
+
+    variables that are passed as arguments.
+
+
+    ```
+
+    void getValues(int &x, int &y) {
+
+    cout << "Enter a number: ";ncin >> x;
+
+    cout << "Enter another number: ";ncin >> y;
+
+    }
+
+    ```
+
+
+    +   11. void
+
+
+    +   13. arguments'
+  md: "\n# Appendix O: Solutions to Odd Numbered Review Questions\n\n# Chapter 1\n\
+    \n+   1. Main memory, or RAM, is volatile, which means its contents are erased\
+    \ when power is removed from the computer. Secondary memory, such as a disk, does\
+    \ not lose its contents when power is removed from the computer.\n\n+   3. An\
+    \ operating system\n\n+   5. Because high-level languages are the misuse of a\
+    \ key word, operator, punctuation, or other part of the programming language.\
+    \ A logical error is a mistake that causes the program to produce the wrong results.\n\
+    \n+   9. CPU\n\n+   11. disk\n\n+   13. instructions\n\n+   15. machine language\n\
+    \n+   17. low-level\n\n+   19. key words\n\n+   21. operators\n\n+   23. syntax\n\
+    \n+   25. defined\n\n+   27. input\n\n+   29. hierarchy chart\n\n## 31. Hierarchy\
+    \ chart:\n\n![](img/3af3ad0d2f1fe20139551695356e239f_1_0.png)\n\n33. 7\n\n35.\
+    \ 365\n\n# Chapter 2\n\n+   1. 1, 2, 3\n\n+   3. int months = 2, days, years =\
+    \ 3;\n\n+   5. Multi-line comment\n\n+   7. #include <iostream>\n{\n  cout <<\
+    \ \"Two mandolins likes creatures in the\\n\\n\\n\";\n  cout << \"dark\\n\\n\\\
+    n\";\n  cout << \"Creating the agony of ecstasy.\\n\\n\\n\";\n  cout << \" George\
+    \ Barker\\n\\n\\n\";\n  return 0;\n}\n\n+   9. C\n\n+   11. B\n\n+   13. B\n\n\
+    +   15. B, C\n\n+   17. A) 12\nB) 4\nC) 2\nD) 6\nE) 1\n\n+   19. A\n\n+   21.\
+    \ A\n\n+   23. False\n\n+   25. Display \"Enter the customer's maximum amount\
+    \ of credit: \"\nReadCredit;\nDisplay \"Enter the amount of credit the customer\
+    \ has used: \"\nReadUsed.\n\n# Appendix O: Solutions to Odd Numbered Review Questions\n\
+    \navailableCredit = maxCredit - creditUsed;\nDisplay \"The customer's available\
+    \ credit is $\"\nDisplay availableCredit.\n\n```cpp\n#include <iostream>\nusing\
+    \ namespace std;\n\nint main() {\n  double maxCredit, creditUsed, availableCredit;\n\
+    \n  cout << \"Enter the customer's maximum amount of credit: \";\n  cin >> maxCredit;\n\
+    \  cout << \"Enter the amount of credit used by the customer: \";\n  cin >> creditUsed;\n\
+    \  availableCredit = maxCredit - creditUsed;\n  cout << \"The customer's available\
+    \ credit is $\";\n  cout << endl;\n  return 0;\n}\n```\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\n\nint main() {\n  int score1, score2, score3, averageScore;\n\
+    \n  cout << \"Enter the score for the 1st game: $\";\n  cin >> score1;\n  cout\
+    \ << \"Enter the score for the 2nd game: $\";\n  cin >> score2;\n  cout << \"\
+    Enter the score for the 3rd game: $\";\n  cin >> score3;\n  averageScore = (score1\
+    \ + score2 + score3) / 3;\n  cout << \"The average score is: $\";\n  cout << averageScore\
+    \ << endl;\n  return 0;\n}\n```\n\n+   29. The first cin statement should read:\n\
+    cin >> number1 >> number2;\nThe assignment statement should read:\nquotient =\
+    \ static_cast<float>(number1) / number2;\nThe last statement is missing a semicolon.\n\
+    \n# Appendix O: Solutions to Odd Numbered Review Questions\n\n31. There shouldn't\
+    \ be a semicolon after the #include directive.\nThe function header for main should\
+    \ read:\n\n```cpp\nint main()\n```\n\nThe combined assignment operators improperly\
+    \ used.\nThe statements should be:\n\n```cpp\nnumber1 *= 50;\nnumber2 *= 50;\n\
+    ```\n\n33. There shouldn't be a semicolon after the #include directive.\nname\
+    \ should be declared as a string, and the #include <string> directive should be\
+    \ used.\nThe following statement:\n\n```cpp\ngetline >> name;\ngetline(cin, name);\n\
+    ```\n\n35. 6 12\n\n37. Minutes: 612000.0000\nHours: 10200.0332\nDays: 425.0014\n\
+    Months: 13.9726\nYears: 1.1644\n\n# Chapter 4\n\n+   1. In an if/else statement,\
+    \ the conditions are tested until one is found to be true. The conditionally executed\
+    \ statement(s) are executed and the program exits if the if/else statement. In\
+    \ a series of if statements, all of the if statements execute and test their conditions\
+    \ because they are not connected.\n\n+   3. A flag is a Boolean variable signaling\
+    \ that some condition exists in the program. When the flag is set to false it\
+    \ indicates the condition does not exist yet. When the flag is set to true it\
+    \ indicates the condition does not exist.\n\n+   5. It takes two expressions as\
+    \ operands and creates a single expression that is true only when both expressions\
+    \ are true.\n\n+   7. Because they test for specific relationships between items.\
+    \ The relationships are greater-than, less-than-equal-to, greater-than or equal-to,\
+    \ less-than or equal-to, and not equal-to.\n\n+   9. relational\n\n+   11. False,\
+    \ True\n\n+   13. True\n\n+   15. True, False\n\n+   17. nested\n\n+   19. ||\n\
+    \n+   21. left-right\n\n+   23. ||\n\n+   25. >\n\n©2012 Pearson Education, Inc.\
+    \ Upper Saddle River, NJ. All Rights Reserved.\n\n# Appendix O: Solutions to Odd\
+    \ Numbered Review Questions\n\n27. integer\n\n29. break\n\n```cpp\n31. if (y ==\
+    \ 0)\n    x = 100;\n```\n\n```cpp\n33. if (sales < 10000)\n    commission = .10;\n\
+    \    else if (sales <= 15000)\n    commission = .15;\n    else\n        commission\
+    \ = .20;\n```\n\n```cpp\n35. if (amount1 > 1)\n    if (amount2 < 100)\n      \
+    \  cout << (amount1 > amount2 ? amount1 : amount2);\n```\n\n```cpp\n37. if (temperature\
+    \ >= -50 && temperature <= 150)\n    cout << \"The number is valid.\";\n```\n\n\
+    ```cpp\n39. if (str1 > str2)\n    cout << str2;\nelse\n    cout << str1;\n```\n\
+    \n41. C, A, B\n\n43. False\n\n45. True\n\n47. True\n\n49. True\n\n51. True\n\n\
+    53. False\n\n55. F\n\n57. T\n\n59. The conditionally executed blocks in the if/else\
+    \ construct should be enclosed in braces.\nThe following statement:\ncout << \"\
+    quotient of \" << numl <<\nshould read:\ncout << \"quotient of \" << numl;\n\n\
+    61. A switch statement cannot be used to test relational expressions. An if/else\
+    \ if-statement should be used instead.\n\n62. It should use && instead of ||.\
+    \ The statement should read:\n65. result = +(num1 + num2); is invalid.\n# Chapter\
+    \ 5\n\n+   1. By indenting the statements, you make them stand out from the paragraph.\n\
+    \n+   2. Because they are only executed when a condition is true.\n\n# Appendix\
+    \ O: Solutions to Odd Numbered Review Questions\n\n+   5. The while loop.\n\n\
+    +   7. The for loop.\n\n+   9. An accumulator is used to keep a total.\n\n+  \
+    \ 11. fstream\n\n+   13. ifstream\n\n+   17. prefix\n\n+   19. body\n\n+   21.\
+    \ pretest\n\n+   23. infinite\n\n+   25. running total\n\n+   27. sentinel\n\n\
+    +   29. while and for\n\n+   31. initialization, update\n\n```cpp\n35. int product\
+    \ = 0, num;\nwhile (product < 100)\n{\n    cin >> num;\n    product = num * 10;\n\
+    }\n```\n\n```cpp\n37. for (int row = 0; row < 1000; row++)\n    for (int col =\
+    \ 0; col < 15; col++)\n        cout << '#';\n    cout << endl;\n}\n```\n\n```cpp\n\
+    39. for (int row = 0; row < 1000; row++)\n{\n    for (int col = 0; col < 15; col++)\n\
+    \        cout << '#';\n    cout << endl;\n}\n```\n\n```cpp\n41. char sure = 'X';\n\
+    while (sure != 'Y' && sure != 'N')\n{\n    cout << \"Are you sure you want to\
+    \ \";\n    cin >> sure;\n}\n```\n\n```cpp\n43. int x = 50;\nwhile (x > 0)\n{\n\
+    \    cout << x << \" seconds to go.\\n\";\n    x--;\n}\n```\n\n```cpp\n45. ifstream\
+    \ inputFile(\"Numbers.txt\");\nint number;\nwhile (inputFile >> number)\ncout\
+    \ << number << endl;\ninputFile.close();\n```\n\n47. false\n\n49. false\n\n51.\
+    \ false\n\n53. false\n\n55. false\n\n57. true\n\n59. true\n\n61. false\n\n63.\
+    \ true\n\n67. The while statement should not end with a semicolon.\nIt could be\
+    \ argued that bigNum should be defined as a long.\ncount should be initialized\
+    \ to 1.\n\n69. The expression tested by the do-while loop should be choice ==\
+    \ 1 instead of choice = 1.\n"
+  mdcn: "\n\n# 附录 O：奇数复习题答案\n\n# 第 1 章\n\n+   1. 主内存或 RAM 是易失的，这意味着当计算机断电时，其内容会被擦除。次级存储（如磁盘）在计算机断电时不会丢失其内容。\n\
+    \n+   3. 操作系统\n\n+   5. 因为高级语言是对编程语言中关键字、运算符、标点符号或其他部分的误用。逻辑错误是导致程序产生错误结果的失误。\n\
+    \n+   9. CPU\n\n+   11. 磁盘\n\n+   13. 指令\n\n+   15. 机器语言\n\n+   17. 低级\n\n+  \
+    \ 19. 关键字\n\n+   21. 运算符\n\n+   23. 语法\n\n+   25. 已定义\n\n+   27. 输入\n\n+   29.\
+    \ 层级结构图\n\n## 31. 层级结构图：\n\n![](img/3af3ad0d2f1fe20139551695356e239f_1_0.png)\n\
+    \n33. 7\n\n35. 365\n\n# 第 2 章\n\n+   1. 1, 2, 3\n\n+   3. int months = 2, days,\
+    \ years = 3;\n\n+   5. 多行注释\n\n+   7. #include <iostream>\n{\n  cout << \"Two\
+    \ mandolins likes creatures in the\\n\\n\\n\";\n  cout << \"dark\\n\\n\\n\";\n\
+    \  cout << \"Creating the agony of ecstasy.\\n\\n\\n\";\n  cout << \" George Barker\\\
+    n\\n\\n\";\n  return 0;\n}\n\n+   9. C\n\n+   11. B\n\n+   13. B\n\n+   15. B,\
+    \ C\n\n+   17. A) 12\nB) 4\nC) 2\nD) 6\nE) 1\n\n+   19. A\n\n+   21. A\n\n+  \
+    \ 23. False\n\n+   25. 显示“输入客户的最大信誉额度：”\nReadCredit;\n显示“输入客户已使用的信誉额度：”\nReadUsed.\n\
+    \n# 附录 O：奇数复习题答案\n\navailableCredit = maxCredit - creditUsed;\n显示“客户的可用信誉额度为 $”\n\
+    显示 availableCredit.\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint\
+    \ main() {\n  double maxCredit, creditUsed, availableCredit;\n\n  cout << \"Enter\
+    \ the customer's maximum amount of credit: \";\n  cin >> maxCredit;\n  cout <<\
+    \ \"Enter the amount of credit used by the customer: \";\n  cin >> creditUsed;\n\
+    \  availableCredit = maxCredit - creditUsed;\n  cout << \"The customer's available\
+    \ credit is $\";\n  cout << endl;\n  return 0;\n}\n```\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\n\nint main() {\n  int score1, score2, score3, averageScore;\n\
+    \n  cout << \"Enter the score for the 1st game: $\";\n  cin >> score1;\n  cout\
+    \ << \"Enter the score for the 2nd game: $\";\n  cin >> score2;\n  cout << \"\
+    Enter the score for the 3rd game: $\";\n  cin >> score3;\n  averageScore = (score1\
+    \ + score2 + score3) / 3;\n  cout << \"The average score is: $\";\n  cout << averageScore\
+    \ << endl;\n  return 0;\n}\n```\n\n+   29. 第一个 `cin` 语句应该读取：\ncin >> number1 >>\
+    \ number2;\n赋值语句应该读取：\nquotient = static_cast<float>(number1) / number2;\n最后一条语句缺少分号。\n\
+    \n# 附录 O：奇数复习题答案\n\n31. #include 预指令后不应该有分号。\nmain 函数头头应该是：\n\n```cpp\nint main()\n\
+    ```\n\n复合赋值运算符使用不当。\n语句应该是：\n\n```cpp\nnumber1 *= 50;\nnumber2 *= 50;\n```\n\n\
+    33. #include 预指令后不应该有分号。\nname 应该声明为字符串（string），并且应该使用 #include <string> 预指令。\n\
+    以下语句：\n\n```cpp\ngetline >> name;\ngetline(cin, name);\n```\n\n35. 6 12\n\n37.\
+    \ 分钟：612000.0000\n小时：10200.0332\n天：425.0014\n月份：13.9726\n年：1.1644\n\n# 第 4 章\n\
+    \n+   1. 在 if/else 语句中，会一直测试条件，直到找到一个为真的条件。条件执行的语句将被执行，程序在 if/else 语句处退出。在系列 if\
+    \ 语句中，所有的 if 语句都会执行并测试它们的条件，因为它们没有相互连接。\n\n+   3. 标志（flag）是一个布尔变量，用于指示程序是否存在某种条件。当标志被设置为\
+    \ false 时，表示条件尚不存在。当标志被设置为 true 时，表示条件已存在。\n\n+   5. 它接受两个表达式作为操作数，并创建一个只有当两个表达式都为真时才为真的表达式。\n\
+    \n+   7. 因为它们测试了项目之间的特定关系。这些关系是大于、小于等于、大于等于、小于以及不等于。\n\n+   9. 关系 (relational)\n\
+    \n+   11. False, True\n\n+   13. True\n\n+   15. True, False\n\n+   17. 嵌套 (nested)\n\
+    \n+   19. ||\n\n+   21. 从到右 (left-right)\n\n+   23. ||\n\n+   25. >\n\n©2012 Pearson\
+    \ Education, Inc. Upper Saddle River, NJ. 版权所有。\n\n# 附录 O：奇数复习题答案\n\n27. 整数 (integer)\n\
+    \n29. break\n\n```cpp\n31. if (y == 0)\n    x = 100;\n```\n\n```cpp\n33. if (sales\
+    \ < 10000)\n    commission = .10;\n    else if (sales <= 15000)\n    commission\
+    \ = .15;\n    else\n        commission = .20;\n```\n\n```cpp\n35. if (amount1\
+    \ > 1)\n    if (amount2 < 100)\n        cout << (amount1 > amount2 ? amount1 :\
+    \ amount2);\n```\n\n```cpp\n37. if (temperature >= -50 && temperature <= 150)\n\
+    \    cout << \"The number is valid.\";\n```\n\n```cpp\n39. if (str1 > str2)\n\
+    \    cout << str2;\nelse\n    cout << str1;\n```\n\n41. C, A, B\n\n43. False\n\
+    \n45. True\n\n47. True\n\n49. True\n\n51. True\n\n53. False\n\n55. F\n\n57. T\n\
+    \n59. if/else 结构应该用大括号括起来。62 switch 语句不能测试关系表达式。应该使用 if-else 语句。\n\n# 第 5 章\n\n\
+    +   1. 通过缩进，可以使它们与段落区分开。\n\n+   2. 因为它们在条件为真时才执行。\n\n# 附录 O：奇数复习题\n\n+   5. while\
+    \ 循环。\n\n+   7. for 循环。\n\n+   9. 累加器（accumulator）用于记录总和。\n\n+   11. fstream\n\
+    \n+   13. ifstream\n\n+   17. 前置 (prefix)\n\n+   19. 体 (body)\n\n+   21. 后置 (pretest)\n\
+    \n+   23. 无限 (infinite)\n\n+   25. 运行总和 (running total)\n\n+   27. 哨兵 (sentinel)\n\
+    \n+   29. while 和 for\n\n+   31. 初始化，更新\n\n```cpp\n35. int product = 0, num;\n\
+    while (product < 100)\n{\n    cin >> num;\n    product = num * 10;\n}\n```\n\n\
+    ```cpp\n37. for (int row = 0; row < 1000; row++)\n    for (int col = 0; col <\
+    \ 15; col++)\n        cout << '#';\n    cout << endl;\n}\n```\n\n```cpp\n39. for\
+    \ (int row = 0; row < 1000; row++)\n{\n    for (int col = 0; col < 15; col++)\n\
+    \        cout << '#';\n    cout << endl;\n}\n```\n\n```cpp\n41. char sure = 'X';\n\
+    while (sure != 'Y' && sure != 'N')\n{\n    cout << \"Are you sure you want to\
+    \ \";\n    cin >> sure;\n}\n```\n\n```cpp\n43. int x = 50;\nwhile (x > 0)\n{\n\
+    \    cout << x << \" seconds to go.\\n\";\n    x--;\n}\n```\n\n```cpp\n45. ifstream\
+    \ inputFile(\"Numbers.txt\");\nint number;\nwhile (inputFile >> number)\ncout\
+    \ << number << endl;\ninputFile.close();\n```\n\n47. false\n\n49. false\n\n51.\
+    \ false\n\n53. false\n\n55. false\n\n57. true\n\n59. true\n\n61. false\n\n63.\
+    \ true\n\n67. while 语句末尾不应该有分号。可以认为 bigNum 应该定义为 long 类型。\ncount 应该初始化为 1。\n\n\
+    69. do-while 循环测试的表达式应该是 choice == 1 而不是 choice = 1。\n\n"
+  merge: -1
+- raw:
+  - "[PAGE 8]\n\n# Appendix O: Solutions to Odd Numbered Review Questions\n\n+   15.\
+    \ value\n\n+   17. local\n\n+   19. global\n\n+   21. local\n\n+   23. return\n\
+    \n+   25. last\n\n+   27. reference\n\n+   29. reference\n\n+   31. parameter\
+    \ lists\n\n```\n33. double half(double num)\n{\n    return num / 2;\n}\n```\n\n\
+    ```\n35. void timesTen(int num)\n{\n    cout << (num * 10) << endl;\n}\n37. void\
+    \ getNumber(int &num)\n{\n    cout << \"Enter a number in the range 1 - 100 :\
+    \ \";\n    cin >> num;\n    while (num < 1 || num > 100)\n    {\n        cout\
+    \ << \"That number is out of range.\\n\";\n        cout << \"Enter a number in\
+    \ the range 1 - 100 : \";\n        cin >> num;\n    }\n}\n```\n\n+   39. False\n\
+    \n+   41. True\n\n+   43. True\n\n+   45. False\n\n+   47. True\n\n+   49. True\n\
+    \n+   51. True\n\n+   53. False\n\n+   55. True\n\n57. The assignment statement\
+    \ should read:\n\n```\naverage = (value1 + value2 + value3) / 3.0;\n```\n\nThe\
+    \ function is defined as a double but returns no value."
+  - '[PAGE 9]
+
+
+    # Appendix O: Solutions to Odd Numbered Review Questions
+
+
+    59. The parameter should be defined as:
+
+
+    ```
+
+    int &value
+
+    cin >> value;
+
+    ```
+
+
+    # Chapter 7
+
+
+    +   1. The size declarator is used in a definition of an array to indicate the
+    number of elements the array will have. A subscript is used to access a specific
+    element in an array.
+
+
+    +   2. Because, with the array alone the function has no way of determining the
+    number of elements it has.
+
+
+    +   5. By providing an initialization list. The array is sized to hold the number
+    of values in the list.
+
+
+    +   7. Because an array name without brackets and a subscript represents the array’s
+    beginning memory address. The statement shown attempts to assign the address of
+    array2 to array1, which is not permitted.
+
+
+    +   9. By reference.
+
+
+    +   11. By using the same subscript value for each array.
+
+
+    +   13. The second size declarator, which is for the number of columns.
+
+
+    +   15. size declarator
+
+
+    +   17. subscript
+
+
+    +   19. size declarator, subscript
+
+
+    +   21. initialization
+
+
+    +   23. initialization list
+
+
+    +   25 =
+
+
+    +   27. address, or name
+
+
+    +   29. rows, columns
+
+
+    +   31. braces
+
+
+    +   33. Standard Template Library (or STL)
+
+
+    +   35. sequence
+
+
+    +   37. push_back
+
+
+    +   41. for (int i = 0; i < 20; i++)
+
+    cout << names[i] << endl;
+
+
+    ```
+
+    43. const int SIZE = 10;
+
+    int id[SIZE]; // To hold ID numbers
+
+    double weeklyPay[SIZE]; // To hold weekly pay
+
+    // Display each employee''s gross weekly pay.
+
+    for (int i = 0; i < SIZE; i++)
+
+    {
+
+    ```'
+  - "[PAGE 10]\n\n```\ncout << \"The pay for employee \"\n<< id[i] << \" is $\\$ \n\
+    << showpoint << setprecision(2)\n<< weeklyPay[i] << endl;\n```\n\n```\n47. numberArray[0][0]\
+    \ = 145;\nnumberArray[8][10] = 18;\nconst int NUM_COLS = 5;\nconst int row, col;\
+    \ // Loop counters\ntotal;\n// Accumulator\n// Display the sum of each row.\n\
+    for (row = 0; row < NUM_ROWS; row++)\n{\n// Set the accumulator.\ntotal = 0;\n\
+    // Sum a row.\nfor (col = 0; col < NUM_COLS; col++)\ntotal += days[row][col];\n\
+    // Display the row's total.\ncout << \"The total for row \" << row\n<< \" is \"\
+    \ << total << endl;\n}\n```\n\n```\n// Display the sum of each column.\nfor (col\
+    \ = 0; col < NUM_COLS; col++)\n{\n// Set the accumulator.\ntotal = 0;\n// Sum\
+    \ a column.\nfor (row = 0; row < NUM_ROWS; row++)\ntotal += days[row][col];\n\
+    // Display the column's total.\ncout << \"The total for column \" << col\n<< \"\
+    \ is \" << total << endl;\n}\n```\n\n51. True\n\n53. False\n\n55. False\n\n57.\
+    \ True\n\n59. True"
+  - '[PAGE 11]
+
+
+    # Appendix O: Solutions to Odd Numbered Review Questions
+
+
+    +   61. False
+
+    63. False
+
+    65. True
+
+    67. True
+
+    69. True
+
+    71. True
+
+    73. False
+
+    75. False
+
+    77. True
+
+    79. True
+
+
+    +   81. The size declarator cannot be negative.
+
+    83. The initialization list must be enclosed in braces.
+
+    85. For the array to be implicitly sized there must be an initialization list.
+
+    87. The assignment operator cannot be used to assign the contents of one array
+    to another, a single statement.
+
+    89. The parameter must specify the number of columns, not the number of rows.
+
+
+    # Chapter 8
+
+
+    +   1. Because it uses a loop to sequentially step through an array, starting
+    with the first element. compares each element with the value being searched for,
+    and stops when either the value is found or the end of the array is encountered.
+
+    3. N/2 times
+
+    5. Ten
+
+    7. The selection sort usually performs fewer exchanges because it moves items
+    immediately to their final position in the array.
+
+    9. binary
+
+    11. binary
+
+    13. descending
+
+    15. False
+
+    17. False
+
+
+    # Chapter 9
+
+
+    +   1. dereferences a pointer, allowing code to work with the value that the pointer
+    points to.
+
+    3. Multiplication operator, definition of a pointer variable, and the indirection
+    operator.
+
+    5. It adds 4 times the size of an int to the address stored in ptr.
+
+    7. To dynamically allocate memory.'
+  - '[PAGE 12]
+
+
+    ©2012 Pearson Education, Inc. Upper Saddle River, NJ. All Rights Reserved.'
+  - "[PAGE 13]\n\n# 14 Appendix O: Solutions to Odd Numbered Review Questions\n\n\
+    5. cstring\n\n7. string\n\n9. isupper\n\n11. isdigit\n\n13. toupper\n\n15. cctype\n\
+    \n17. concatenate\n\n19. strcpy\n\n21. strncmp\n\n23. atoi\n\n27. if (toupper(choice)\
+    \ == 'Y')\n\n```\n29. if (strlen(name) <= 9)\n    strcpy(str, name);\n```\n\n\
+    ```\n31. int wCount(char *str)\n{\n    int num = 0;\n    while (*str != '\\0')\n\
+    {\n        if (*str == 'W')\n            num++;\n    }\n    return num;\n}\n```\n\
+    \n33. False\n\n35. False\n\n37. True\n\n39. False\n\n41. True\n\n43. The isupper\
+    \ function can only be used to test a character, not a string.\n\n45. The compiler\
+    \ will not allocate enough space in string1 to accommodate both strings.\n\n#\
+    \ Chapter 11\n\n+   1. A data type that is built into the C++ language, as int,\
+    \ char, float, etc.\n\n+   3. The elements of an array must all be of the same\
+    \ data type. The members of a structure may be of different data types.\n\n+ \
+    \  5. A FullName info;\n   info.lastName = \"Smith\"\n   info.middleName = \"\
+    Bart\"\n   info.firstName = \"William\""
+  - '[PAGE 14]
+
+
+    # Appendix O: Solutions to Odd Numbered Review Questions
+
+
+    C) cout << Info.lastName << endl;
+
+    cout << info.middleName << endl;
+
+    cout << info.firstName << endl;
+
+
+    +   7. A) "Canton"
+
+    B) "Haywood"
+
+    C) 9478
+
+    D) uninitialized
+
+
+    9. All the members of a union occupy the same area of memory, whereas the members
+    of the structure have their own memory locations.
+
+
+    +   11. 0 1 2
+
+    13. declared
+
+    15. members
+
+    17. tag
+
+
+    ```
+
+    19. Car hotRod = {"Ford", "Mustang", 1997, 20000};
+
+    ```
+
+
+    ```
+
+    21. Car forSale[35] = {{"Ford", "Taurus", 1997, 21000,
+
+    "Honda", "Accord", 1992, 11000,
+
+    "Lamborghini", "Countach", 1997, 200000};
+
+    ```
+
+
+    ```
+
+    23. struct TempScale {
+
+    double fahrenheit;
+
+    double centigrade;
+
+    }
+
+    struct Reading {
+
+    int windSpeed;
+
+    double humidity;
+
+    tempScale temperature;
+
+    };
+
+    ```
+
+
+    ```
+
+    25. void showReading(Reading values) {
+
+    cout << "Wind speed: " << values.windSpeed << endl;
+
+    cout << "Humidity: " << values.humidity << endl;
+
+    cout << "Fahrenheit temperature: " << values.temperature.fahrenheit << endl;
+
+    cout << "Centigrade temperature: " << values.temperature.centigrade << endl;
+
+    }
+
+    ```
+
+
+    ```
+
+    27. getReading() {
+
+    Reading local;
+
+    cout << "Enter the following values:\n";ncout << "Wind speed: ";
+
+    cin >> local.windSpeed;
+
+    cout << "Humidity: ";
+
+    cin >> local.humidity;
+
+    cout << "Fahrenheit temperature: ";
+
+    cin >> local.temperature.fahrenheit;
+
+    }
+
+    ```'
+  - "[PAGE 15]\n\n# 16 Appendix O: Solutions to Odd Numbered Review Questions\n\n\
+    ```\ncout << \"Centigrade temperature: \";\n >> local.temperature.centigrade;\n\
+    return local;\n}\n```\n\n29. rptr->WindSpeed = 50;\n\n```\n31. union Items\n{\n\
+    char alpha;\nint num;\nlong bigNum;\nfloat real;\n};\nItems x;\n```\n\n33. num\
+    \ = 452;\n\n35. enum Pets(DOGS, CATS, BIRDS, HAMSTERS);\n\n37. True\n\n39. False\n\
+    \n41. False\n\n43. True\n\n45. True\n\n47. True\n\n49. False\n\n51. False\n\n\
+    53. True\n\n55. True\n\n57. The structure declaration has no tag.\n\n59. No structure\
+    \ variable has been declared. TwoVals is the structure tag.\n\n61. The initialization\
+    \ list of the customerer variable must be enclosed in braces.\n\n63. Structure\
+    \ members cannot be initialized in the structure definition.\n\n65. The function\
+    \ must define a variable of the TwoVals structure. The variable, then, should\
+    \ be used in the assignment statement.\n\n67. x and y cannot be meaningfully used\
+    \ at the same time.\n\n# Chapter 12\n\n+   1. The fastest data type allows both\
+    \ reading and writing, while the istream data type allows only for reading, and\
+    \ the ofstream data type allows only for writing.\n\n+   3. Its contents are erased.\
+    \ (In other words, the file is truncated).\n\n+   5. By reference the internal\
+    \ state of file stream objects changes with most every operation. They should\
+    \ always be passed to functions to ensure internal consistency.\n\n+   7. When\
+    \ the end of the file has been encountered, the eof member function reports the\
+    \ state of this bit."
+  md: "\n# Appendix O: Solutions to Odd Numbered Review Questions\n\n- 15. value\n\
+    - 17. local\n- 19. global\n- 21. local\n- 23. return\n- 25. last\n- 27. reference\n\
+    - 29. reference\n- 31. parameter lists\n\n```cpp\n33. double half(double num)\n\
+    {\n    return num / 2;\n}\n```\n\n```cpp\n35. void timesTen(int num)\n{\n    cout\
+    \ << (num * 10) << endl;\n}\n37. void getNumber(int &num)\n{\n    cout << \"Enter\
+    \ a number in the range 1 - 100 : \";\n    cin >> num;\n    while (num < 1 ||\
+    \ num > 100)\n    {\n        cout << \"That number is out of range.\\n\";\n  \
+    \      cout << \"Enter a number in the range 1 - 100 : \";\n        cin >> num;\n\
+    \    }\n}\n```\n\n- 39. False\n- 41. True\n- 43. True\n- 45. False\n- 47. True\n\
+    - 49. True\n- 51. True\n- 53. False\n- 55. True\n\n57. The assignment statement\
+    \ should read:\n\n```cpp\naverage = (value1 + value2 + value3) / 3.0;\n```\n\n\
+    The function is defined as a double but returns no value.\n\n59. The parameter\
+    \ should be defined as:\n\n```cpp\nint &value\ncin >> value;\n```\n\n# Chapter\
+    \ 7\n\n- 1. The size declarator is used in a definition of an array to indicate\
+    \ the number of elements the array will have. A subscript is used to access a\
+    \ specific element in an array.\n- 2. Because, with the array alone the function\
+    \ has no way of determining the number of elements it has.\n- 5. By providing\
+    \ an initialization list. The array is sized to hold the number of values in the\
+    \ list.\n- 7. Because an array name without brackets and a subscript represents\
+    \ the array’s beginning memory address. The statement shown attempts to assign\
+    \ the address of array2 to array1, which is not permitted.\n- 9. By reference.\n\
+    - 11. By using the same subscript value for each array.\n- 13. The second size\
+    \ declarator, which is for the number of columns.\n- 15. size declarator\n- 17.\
+    \ subscript\n- 19. size declarator, subscript\n- 21. initialization\n- 23. initialization\
+    \ list\n- 25. =\n- 27. address, or name\n- 29. rows, columns\n- 31. braces\n-\
+    \ 33. Standard Template Library (or STL)\n- 35. sequence\n- 37. push_back\n- 41.\
+    \ for (int i = 0; i < 20; i++)\n    cout << names[i] << endl;\n\n```cpp\n43. const\
+    \ int SIZE = 10;\nint id[SIZE]; // To hold ID numbers\ndouble weeklyPay[SIZE];\
+    \ // To hold weekly pay\n// Display each employee's gross weekly pay.\nfor (int\
+    \ i = 0; i < SIZE; i++)\n{\n    cout << \"The pay for employee \"\n    << id[i]\
+    \ << \" is $\" \n    << showpoint << setprecision(2)\n    << weeklyPay[i] << endl;\n\
+    }\n```\n\n```cpp\n47. numberArray[0][0] = 15;\nnumberArray[8][10] = 18;\nconst\
+    \ int NUM_COLS = 5;\nconst int row, col; // Loop counters\ntotal; // Accumulator\n\
+    // Display the sum of each row.\nfor (row = 0; row < NUM_ROWS; row++)\n{\n   \
+    \ // Set the accumulator.\n    total = 0;\n    // Sum a row.\n    for (col = 0;\
+    \ col < NUM_COLS; col++)\n        total += days[row][col];\n    // Display the\
+    \ row's total.\n    cout << \"The total for row \" << row\n    << \" is \" <<\
+    \ total << endl;\n}\n```\n\n```cpp\n// Display the sum of each column.\nfor (col\
+    \ = 0; col < NUM_COLS; col++)\n{\n    // Set the accumulator.\n    total = 0;\n\
+    \    // Sum a column.\n    for (row = 0; row < NUM_ROWS; row++)\n        total\
+    \ += days[row][col];\n    // Display the column's total.\n    cout << \"The total\
+    \ for column \" << col\n    << \" is \" << total << endl;\n}\n```\n\n- 51. True\n\
+    - 53. False\n- 55. False\n- 57. True\n- 59. True\n- 61. False\n- 63. False\n-\
+    \ 65. True\n- 67. True\n- 69. True\n- 73. False\n- 75. False\n- 77. True\n- 79.\
+    \ True\n- 81. The size declarator cannot be negative.\n- 83. The initialization\
+    \ list must be enclosed in braces.\n- 85. For the array to implicitly sized must\
+    \ be an initialization list.\n- 87. The assignment operator cannot be used to\
+    \ assign the contents of one array to another, a single statement.\n- 89. The\
+    \ parameter must specify the number of columns, not the number of rows.\n\n# Chapter\
+    \ 8\n\n- 1. Because it uses a loop to sequentially step through an array, starting\
+    \ with the first element, compares each element with the value being searched,\
+    \ and stops when the value is found or the end of the array is encountered.\n\
+    - 3. N/2 times\n- 5. Ten\n- 7. Selection sort usually performs fewer exchanges\
+    \ because it moves items immediately to their final position in the array.\n-\
+    \ 9. binary\n- 11. binary\n- 13. descending\n- 15. False\n- 17. False\n\n# Chapter\
+    \ 9\n\n- 1. dereferences a pointer, allowing code to work with the value that\
+    \ pointer points to.\n- 3. Multiplication operator, definition of a pointer variable,\
+    \ and indirection operator.\n- 5. It adds 4 times the size of an int to the address\
+    \ stored in ptr.\n- 7. To dynamically allocate memory.\n\n- 5. string\n- 7. string\n\
+    - 9. isupper\n- 11. isdigit\n- 13. toupper\n- 15. cctype\n- 17. concatenate\n\
+    - 19. strcpy\n- 21. strncmp\n- 23. atoi\n- 27. if (toupper(choice) == 'Y')\n-\
+    \ 29. if (strlen(name) <= 9)\n    strcpy(str, name);\n\n```cpp\n31. int wCount(char\
+    \ *str)\n{\n    int num = 0;\n    while (*str != '\\0')\n    {\n        if (*str\
+    \ == 'W')\n            num++;\n    }\n    return num;\n}\n```\n\n- 33. False\n\
+    - 35. False\n- 37. True\n- 39. False\n- 41. True\n- 43. The isupper function can\
+    \ only be used to test a character, not a string.\n- 45. The compiler will not\
+    \ allocate enough space to accommodate both strings.\n\n# Chapter 11\n\n- 1. A\
+    \ data type that is built into the C++ language, as int, char, float, etc.\n-\
+    \ 3. The elements of an array must all be of the same type. The members of a structure\
+    \ may be of different types.\n- 5. FullName info;\n   info.lastName = \"Smith\"\
+    \n   info.middleName = \"Bart\"\n   info.firstName = \"William\"\n\n- C) cout\
+    \ << info.lastName << endl;\ncout << info.middleName << endl;\ncout << info.firstName\
+    \ << endl;\n- 7. A) \"Canton\"\nB) \"Haywood\"\nC) 978\nD) uninitialized\n- 9.\
+    \ All the members of a union occupy the same area of memory, whereas the members\
+    \ of the structure have their own memory locations.\n- 11. 0 1 2\n- 13. declared\n\
+    - 15. members\n- 17. tag\n- 19. Car hotRod = {\"Ford\", \"Mustang\", 1997, 2000};\n\
+    - 21. Car forSale[35] = {\"Ford\", \"Taurus\", 1997, 21000, \"Honda\", \"Accord\"\
+    , 1992, 11000, \"Lamborghini\", \"Countach\", 1997, 20000};\n\n```cpp\n23. struct\
+    \ TempScale {\n    double fahrenheit;\n    double centigrade;\n};\nstruct Reading\
+    \ {\n    int windSpeed;\n    double humidity;\n    TempScale temperature;\n};\n\
+    ```\n\n```cpp\n25. void showReading(Reading values)\n{\n    cout << \"Wind speed:\
+    \ \" << values.windSpeed << endl;\n    cout << \"Humidity: \" << values.humidity\
+    \ << endl;\n    cout << \"Fahrenheit temperature: \" << values.temperature.fahrenheit\
+    \ << endl;\n    cout << \"Centigrade temperature: \" << values.temperature.centigrade\
+    \ << endl;\n}\n```\n\n```cpp\n27. getReading() {\n    Reading local;\n    cout\
+    \ << \"Enter the following values:\\n\";\n    cout << \"Wind speed: \";\n    cin\
+    \ >> local.windSpeed;\n    cout << \"Humidity: \";\n    cin >> local.humidity;\n\
+    \    cout << \"Fahrenheit temperature: \";\n    cin >> local.temperature.fahrenheit;\n\
+    }\n```\n\n```cpp\ncout << \"Centigrade temperature: \";\ncin >> local.temperature.centigrade;\n\
+    return local;\n}\n```\n\n- 29. rptr->WindSpeed = 50;\n\n```cpp\n31. union Items\n\
+    {\n    char alpha;\n    int num;\n    long bigNum;\n    float real;\n};\nItems\
+    \ x;\n```\n\n- 33. num = 452;\n- 35. enum Pets(DOGS, CATS, BIRDS, HAMSTERS);\n\
+    - 37. True\n- 39. False\n- 41. False\n- 43. True\n- 45. True\n- 47. True\n- 49.\
+    \ False\n- 51. False\n- 53. True\n- 55. True\n- 57. The structure declaration\
+    \ has no tag.\n- 59. No structure variable has been declared. TwoVals is the structure\
+    \ tag.\n- 61. The initialization list of the customer variable must be enclosed\
+    \ in braces.\n- 63. Structure members cannot be initialized in the structure definition.\n\
+    - 65. The function must define a variable of the TwoVals structure. The variable,\
+    \ then, should be used in the assignment statement.\n- 67. x and y cannot be meaningfully\
+    \ used at the same time.\n\n# Chapter 12\n\n- 1. The fastest data type allows\
+    \ both reading and writing, while the istream data type allows only for reading,\
+    \ and the ofstream data type allows only for writing.\n- 3. Its contents are erased.\
+    \ (In other words, the file is truncated).\n- 5. By reference the internal state\
+    \ of file stream objects changes with most every operation. They should always\
+    \ be passed to functions to ensure internal consistency.\n- 7. When the end of\
+    \ the file has been encountered, the eof member function reports the state of\
+    \ this bit.\n"
+  mdcn: "\n\n# 附录 O：奇数复习题答案\n\n- 15. value\n- 17. local\n- 19. global\n- 21. local\n\
+    - 23. return\n- 25. last\n- 27. reference\n- 29. reference\n- 31. parameter lists\n\
+    \n```cpp\n33. double half(double num)\n{\n    return num / 2;\n}\n```\n\n```cpp\n\
+    35. void timesTen(int num)\n{\n    cout << (num * 10) << endl;\n}\n37. void getNumber(int\
+    \ &num)\n{\n    cout << \"Enter a number in the range 1 - 100 : \";\n    cin >>\
+    \ num;\n    while (num < 1 || num > 100)\n    {\n        cout << \"That number\
+    \ is out of range.\\n\";\n        cout << \"Enter a number in the range 1 - 100\
+    \ : \";\n        cin >> num;\n    }\n}\n```\n\n- 39. False\n- 41. True\n- 43.\
+    \ True\n- 45. False\n- 47. True\n- 49. True\n- 51. True\n- 53. False\n- 55. True\n\
+    \n57. 赋值语句应该是：\n\n```cpp\naverage = (value1 + value2 + value3) / 3.0;\n```\n\n\
+    该函数定义为 double 但没有返回任何值。\n\n59. 参数应该定义为：\n\n```cpp\nint &value\ncin >> value;\n\
+    ```\n\n# 第 7 章\n\n- 1. 尺寸声明符（size declarator）用于数组的定义，用指示数组拥有的元素数量。下标（subscript）用于访问数组中的特定元素。\n\
+    - 2. 因为仅凭数组，函数没有办法确定它包含的元素数量。\n- 5. 通过提供初始化列表。数组的大小设置为容纳列表中数值的数量。\n- 7. 因为不带括号和下标的数组名代表数组的起始内存地址。所示的语句试图将\
+    \ array2 的地址赋值给 array1，这是不允许的。\n- 9. 通过引用（By reference）。\n- 11. 通过对每个数组使用相同的下标值。\n\
+    - 13. 第二尺寸声明符，用于列数。\n- 15. 尺寸声明符 (size declarator)\n- 17. 下标 (subscript)\n- 19.\
+    \ 尺寸声明符, 下标\n- 21. 初始化 (initialization)\n- 23. 初始化列表 (initialization list)\n-\
+    \ 25. =\n- 27. 地址或名称 (address, or name)\n- 29. 行、列 (rows, columns)\n- 31. 大括号\
+    \ (braces)\n- 33. 标准模板库（或 STL）\n- 35. 序列 (sequence)\n- 37. push_back\n- 41. for\
+    \ (int i = 0; i < 20; i++)\n    cout << names[i] << endl;\n\n```cpp\n43. const\
+    \ int SIZE = 10;\nint id[SIZE]; // 用于存储 ID 号\ndouble weeklyPay[SIZE]; // 用于存储周薪\n\
+    // 显示每个员工的周总薪。\nfor (int i = 0; i < SIZE; i++)\n{\n    cout << \"The pay for employee\
+    \ \"\n    << id[i] << \" is $\" \n    << showpoint << setprecision(2)\n    <<\
+    \ weeklyPay[i] << endl;\n}\n```\n\n```cpp\n47. numberArray[0][0] = 15;\nnumberArray[8][10]\
+    \ = 18;\nconst int NUM_COLS = 5;\nconst int row, col; // 循环计数器\ntotal; // 累加器\n\
+    // 显示每行的和。\nfor (row = 0; row < NUM_ROWS; row++)\n{\n    // 设置累加器。\n    total\
+    \ = 0;\n    // 求行和。\n    for (col = 0; col < NUM_COLS; col++)\n        total +=\
+    \ days[row][col];\n    // 显示行的总数。\n    cout << \"The total for row \" << row\n\
+    \    << \" is \" << total << endl;\n}\n```\n\n```cpp\n// 显示每列的和。\nfor (col = 0;\
+    \ col < NUM_COLS; col++)\n{\n    // 设置累加器。\n    total = 0;\n    // 求列和。\n    for\
+    \ (row = 0; row < NUM_ROWS; row++)\n        total += days[row][col];\n    // 显示列的总数。\n\
+    \    cout << \"The total for column \" << col\n    << \" is \" << total << endl;\n\
+    }\n```\n\n- 51. True\n- 53. False\n- 55. False\n- 57. True\n- 59. True\n- 61.\
+    \ False\n- 63. False\n- 65. True\n- 67. True\n- 69. True\n- 73. False\n- 75. False\n\
+    - 77. True\n- 79. True\n- 81. 尺寸声明符不能为负数。\n- 83. 初始化列表必须括在大括号内。\n- 85. 隐式尺寸数组必须是初始化列表。\n\
+    - 87. 赋值运算符不能将一个数组的内容赋值给另一个数组，这是一个语句。\n- 89. 参数必须指定列数而不是行数。\n\n# 第 8 章\n\n- 1.\
+    \ 因为它使用循环遍历数组，从第一个元素开始，与搜索值进行比较，当找到该值或遇到数组结束时停止。\n- 3. N/2 次\n- 5. 十\n- 7. 选择排序的交换次数较少，因为它直接将项目移动到它们的最终位置。\n\
+    - 9. 二分 (binary)\n- 11. 二分 (binary)\n- 13. 降序 (descending)\n- 15. False\n- 17.\
+    \ False\n\n# 第 9 章\n\n- 1. 解引用指针，允许代码操作指针指向。\n- 3. 乘法运算符、指针变量定义和间接运算符（indirection\
+    \ operator）。\n- 5. 将 ptr 存储的地址增加 int 的 4 倍。\n- 7. 为了动态分配内存。\n\n- 5. string\n-\
+    \ 7. string\n- 9. isupper\n- 11. isdigit\n- 13. toupper\n- 15. cctype\n- 17. 拼接\
+    \ (concatenate)\n- 19. strcpy\n- 21. strncmp\n- 23. atoi\n- 27. if (toupper(choice)\
+    \ == 'Y')\n- 29. if (strlen(name) <= 9)\n    strcpy(str, name);\n\n```cpp\n31.\
+    \ int wCount(char *str)\n{\n    int num = 0;\n    while (*str != '\\0')\n    {\n\
+    \        if (*str == 'W')\n            num++;\n    }\n    return num;\n}\n```\n\
+    \n- 33. False\n- 35. False\n- 37. True\n- 39. False\n- 41. True\n- 43. isupper\
+    \ 函数只能用于测试字符，而不是字符串。\n- 45. 编译器不会分配足够的空间来容纳两个字符串。\n\n# 第 11 章\n\n- 1. C++ 语言内置的数据类型，如\
+    \ int, char, float 等。\n- 3. 数组的元素必须是相同类型。结构体的成员可以是不同的类型。\n- 5. FullName info;\n\
+    \   info.lastName = \"Smith\"\n   info.middleName = \"Bart\"\n   info.firstName\
+    \ = \"William\"\n\n- C) cout << info.lastName << endl;\ncout << info.middleName\
+    \ << endl;\ncout << info.firstName << endl;\n- 7. A) \"Canton\"\nB) \"Haywood\"\
+    \nC) 978\nD) 未初始化 (uninitialized)\n- 9. 联合体（union）的所有成员占用同一块内存，而结构体（structure）的成员有自己的内存位置。\n\
+    - 11. 0 1 2\n- 13. 已声明 (declared)\n- 15. 成员 (members)\n- 17. 标签 (tag)\n- 19. Car\
+    \ hotRod = {\"Ford\", \"Mustang\", 1997, 2000};\n- 21. Car forSale[35] = {\"Ford\"\
+    , \"Taurus\", 1997, 21000, \"Honda\", \"Accord\", 1992, 11000, \"Lamborghini\"\
+    , \"Countach\", 1997, 20000};\n\n```cpp\n23. struct TempScale {\n    double fahrenheit;\n\
+    \    double centigrade;\n};\nstruct Reading {\n    int windSpeed;\n    double\
+    \ humidity;\n    TempScale temperature;\n};\n```\n\n```cpp\n25. void showReading(Reading\
+    \ values)\n{\n    cout << \"Wind speed: \" << values.windSpeed << endl;\n    cout\
+    \ << \"Humidity: \" << values.humidity << endl;\n    cout << \"Fahrenheit temperature:\
+    \ \" << values.temperature.fahrenheit << endl;\n    cout << \"Centigrade temperature:\
+    \ \" << values.temperature.centigrade << endl;\n}\n```\n\n```cpp\n27. getReading()\
+    \ {\n    Reading local;\n    cout << \"Enter the following values:\\n\";\n   \
+    \ cout << \"Wind speed: \";\n    cin >> local.windSpeed;\n    cout << \"Humidity:\
+    \ \";\n    cin >> local.humidity;\n    cout << \"Fahrenheit temperature: \";\n\
+    \    cin >> local.temperature.fahrenheit;\n}\n```\n\n```cpp\ncout << \"Centigrade\
+    \ temperature: \";\ncin >> local.temperature.centigrade;\nreturn local;\n}\n```\n\
+    \n- 29. rptr->WindSpeed = 50;\n\n```cpp\n31. union Items\n{\n    char alpha;\n\
+    \    int num;\n    long bigNum;\n    float real;\n};\nItems x;\n```\n\n- 33. num\
+    \ = 452;\n- 35. enum Pets(DOGS, CATS, BIRDS, HAMSTERS);\n- 37. True\n- 39. False\n\
+    - 41. False\n- 43. True\n- 45. True\n- 47. True\n- 49. False\n- 51. False\n- 53.\
+    \ True\n- 55. True\n- 57. 结构声明没有标签。\n- 59. 没有声明结构体变量。TwoVals 是结构标签。\n- 61.  的初始化列表必须括在大括号内。\n\
+    - 63. 结构成员不能在结构定义中初始化。\n- 65. 函数必须定义一个 TwoVals 结构变量。然后，该变量应用于赋值语句。\n- 67. x 和\
+    \ y 不能同时有效使用。\n\n# 第 12 章\n\n- 1. 最快的数据类型允许读取和写入，而 istream 数据类型只允许读取，而 ofstream\
+    \ 数据类型只允许写入。\n- 3. 内容会被擦除。（换句话说，文件被截断）。\n- 5. 因为引用文件流对象的内部状态在大多数操作中都会发生变化。它们应该始终传递给函数以确保内部一致性。\n\
+    - 7. 当遇到文件末尾时，eof 成员函数会报告该位的状态。\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 16]
+
+
+    # Appendix O: Solutions to Odd Numbered Review Questions
+
+
+    9. By using the getline function.
+
+
+    10. Two arguments: The starting address of the section of memory where the data
+    will be stored, and the number of bytes to read.
+
+
+    11. The seekg function moves a file''s write position, and the seekp function
+    moves a file''s read position.
+
+
+    12. Call the file object''s clear member function.
+
+
+    13. Use the seekg function to move the read position back to the beginning of
+    the file.
+
+
+    14. NULL or 0
+
+
+    +   21. getline
+
+
+    +   23. put
+
+
+    +   25. text, ASCII text
+
+
+    +   27. structures
+
+
+    +   29. read
+
+
+    +   31. sequential
+
+
+    +   33. seekg
+
+
+    +   35. tellg
+
+
+    +   37. ios::beg
+
+
+    +   39. ios::cur
+
+
+    ```
+
+    41. fstream places("places.dat", ios::in | ios::out);
+
+    ```
+
+
+    ```
+
+    43. pets.open("pets.dat", ios::in)
+
+    fstream open("pets.dat", ios::in);
+
+    ```
+
+
+    +   49. True
+
+
+    +   51. True
+
+
+    +   53. True
+
+
+    +   55. False
+
+
+    +   57. True
+
+
+    +   59. True
+
+
+    +   61. True
+
+
+    +   63. False'
+  - '[PAGE 17]
+
+
+    # Appendix O: Solutions to Odd Numbered Review Questions
+
+
+    65. File should be opened as
+
+
+    ```
+
+    fstream file("info.dat", ios::in | ios::out);
+
+    or
+
+    fstream file:
+
+    file.open("info.dat", ios::in | ios::out);
+
+    ```
+
+
+    67. File access logs must be specified with fstream objects.
+
+
+    69. The file class flag should be ios::in. Also, the get member function cannot
+    be used to read a string.
+
+
+    71. The file class flag should be ios::out. Also, the last line should read
+
+    dataFile.write(reinterpret_cast<char *>(&dt), sizeof(dt));
+
+
+    # Chapter 13
+
+
+    +   1. A class describes a data type. An instance of a class is an object of the
+    data type that exists in memory.
+
+
+    +   3. private
+
+
+    +   5. A class is analogous to the blueprint.
+
+
+    +   7. Yes it is. This protects the variables from being directly manipulated
+    by code outside the class, and prevents them from receiving invalid data.
+
+
+    +   9. When the function is for internal processing, but not useful to the program
+    outside the class. In some cases a class may contain member functions that initialize
+    member variables or destroy their contents. These functions should not be accessible
+    by an external part of the program because they be called at the wrong time.
+
+
+    +   11. A default constructor is a constructor that is called without any arguments.
+    It is not to have more than one default constructor.
+
+
+    +   13, the constructor executes when the object is created.
+
+
+    +   15. A class''s responsibilities are the things that the class is responsible
+    for knowing and the actions that the class is responsible for doing.
+
+
+    +   17. procedural programming, object-oriented programming
+
+
+    +   19. object-oriented
+
+
+    +   21. class
+
+
+    +   23. access specifier
+
+
+    +   25. public
+
+
+    +   27. ->
+
+
+    +   29. canine.cpp
+
+
+    +   31. constructor
+
+
+    +   33. constructors'
+  - "[PAGE 18]\n\n35. default\n\n37. ~\n\n39. default\n\n41. constructor, destructor\n\
+    \n```\n43. class Circle\n{\n    private:\n        double radius;\n    public:\n\
+    \        void setRadius(double r)\n        { radius = r; }\n        double getRadius()\n\
+    \        { return radius; }\n        double getArea()\n        { return 3.14159\
+    \ * radius * radius; }\n}\n```\n\n```\n45. class Circle\n{\n    private:\n   \
+    \     double radius;\n    public:\n        Circle()\n        { radius = 0.0; }\n\
+    \        Circle(double r)\n        { radius = r; }\n        void setRadius(double\
+    \ r)\n        { radius = r; }\n        double getRadius()\n        { return radius;\
+    \ }\n        double getArea()\n        { return 3.14159 * radius * radius; }\n\
+    }\n```\n\n47. Circle collection[5] = { 12, 7, 9, 14, 8 };\n\n| Animal | Medication\
+    \ | Nurse |\n| --- | --- | --- |\n| Doctor | Invoice | Customer |\n| Patient |\
+    \ Client |\n\n51. False\n\n53. False\n\n55. False\n\n57. True\n\n59. False\n\n\
+    61. True\n\n49."
+  - '[PAGE 19]
+
+
+    +   63. True
+
+
+    +   65. True
+
+
+    +   67. False
+
+
+    +   69. True
+
+
+    +   71. False There should not be a colon after the word Circle.
+
+
+    Colons should appear after the words private and public.
+
+    Aemicolon should appear after the closing brace.
+
+
+    +   75. The semicolon should not appear after the word DumbBell.
+
+    The function header for setWeight should appear as:
+
+
+    ```
+
+    void DumbBell::setWeight(int w)
+
+    ```
+
+
+    The line reads:
+
+    DumbBell(200);
+
+    should read:
+
+
+    ```
+
+    bar.setWeight(200);
+
+    ```
+
+
+    bar.weight cannot be accessed outside of the class because no access specifier
+    appeared before it the class, making the private to the class by default. This
+    means the statement will not work.
+
+
+    # Chapter 14
+
+
+    +   1. Each class object has its own copy of the class''s instance member variables.
+    All objects of the class share the class''s static member variables.
+
+
+    +   3. Outside the class declaration.
+
+
+    +   5. Because every member function of the first class would have access to the
+    class''s private member variables.
+
+
+    +   7. When an object is initialized with another object''s data.
+
+
+    +   9. When an object has a pointer as a member, and it points to a chunk of dynamically
+    allocated memory. When this object is copied to another object via member assignment,
+    the receiver''s pointer will point to the same chunk of memory.
+
+
+    +   11. It is a copy constructor that is automatically created for a class, and
+    performswise assignment.
+
+
+    +   13. The object on the right side of the = operator in the statement that called
+    the overloaded function operator.
+
+
+    +   15. A dummy parameter is used in the function header of a postfix operator.
+
+
+    +   17. A Boolean value.
+
+
+    +   19. Place the key word at::ic before the variable declaration (inside the
+    class). Then, place a definition of the variable outside the class.
+
+
+    +   21. 3, 3, 1, 0, Thing::putThing(2);'
+  - '[PAGE 20]
+
+
+    # Appendix O: Solutions to Odd Number Reviewed Questions 21
+
+
+    +   23. To inform the compiler of the class''s existence before it reaches the
+    class''s definition.
+
+
+    +   25. Because the parameter variable is created in memory when the function
+    executes, and is initialized with the argument object. This causes the constructor
+    to be called.
+
+
+    +   27. outside
+
+
+    +   29. before
+
+
+    +   31. forward declaration
+
+
+    +   33. copy constructor
+
+
+    +   35. overloaded
+
+
+    +   37. aggregation
+
+
+    +   39. Bird Bird::operator=(const Bird &right)
+
+
+    +   41. bool Yen::operator=(const Yen &right)
+
+
+    +   43. Collection Collection:operator[](const Collection &sub)
+
+
+    +   45. True
+
+
+    +   47. False
+
+
+    +   49. True
+
+
+    +   51. True
+
+
+    +   53. True
+
+
+    +   55. False
+
+
+    +   57. True
+
+
+    +   59. The copy constructor''s parameter should be a reference variable.
+
+
+    +   61. The overloaded + function header should read
+
+
+    ```
+
+    void operator+(const Point &right)
+
+    ```
+
+
+    +   63. The float conversion function header should read
+
+
+    ```
+
+    operator float()
+
+    ```
+
+
+    # Chapter 15
+
+
+    +   1. When one object is a specialized version of another object, there is an
+    "is a" relationship between them. This indicates that one class is "a" specialized
+    version of the other class.
+
+
+    +   3. Base class access specification specifies how members of the base class
+    are inherited by the derived class. Member access specification specifies how
+    class members may be accessed by code outside the class.
+
+
+    +   5. No.
+
+
+    +   7. When a derived class has a function with the same name as a base class
+    function, and the base class function is not virtual, it is said that the function
+    is redefined in the derived class. If the base class''s function is however, it
+    is said that the function is overridden.
+
+
+    +   9. An abstract base class is not instantiated, but serves as a base class
+    for other classes. The abstract base class represents the generic, abstract form
+    of all the classes that are derived from it. It is abstract when it has one or
+    more virtual functions.
+
+
+    ©2012 Pearson Education, Inc. Upper Saddle River, NJ. All Rights Reserved.'
+  - '[PAGE 21]
+
+
+    # Appendix O: Solutions to Odd Numbered Review Questions
+
+
+    +   11. Dog
+
+    13. public
+
+    15. private
+
+    17. inaccessible, protected, protected
+
+    19. members
+
+    21. last
+
+    23. The base class version.
+
+    25. static
+
+    27. polymorphism
+
+    29. abstract base class
+
+    31. chain
+
+    33. override or redefine
+
+
+    ```
+
+    35. class SoundSystem : public CDplayer, public Tuner, public CasettePlayer
+
+    37. class B
+
+    {
+
+    private:
+
+    int m;
+
+    protected:
+
+    int n;
+
+    public:
+
+    void setM(int);
+
+    int getM();
+
+    void setN(int);
+
+    int getN();
+
+    virtual int calc()
+
+    { return m * n; }
+
+    }
+
+    class D : public B
+
+    {
+
+    protected:
+
+    float q;
+
+    float r;
+
+    public:
+
+    void setQ(float);
+
+    float getQ();
+
+    void setR(float);
+
+    float getR();
+
+    virtual float calc()
+
+    { return q * r; }
+
+    };
+
+    ```
+
+
+    +   39. True
+
+    41. True
+
+    43. False
+
+    45. False
+
+    47. True'
+  md: "\n## Appendix O: Solutions to Odd Numbered Review Questions\n\n9. By using\
+    \ the getline function.\n\n10. Two arguments: The starting address of the section\
+    \ of memory where the data will be stored, and the number of bytes to read.\n\n\
+    11. The seekg function moves a file's write position, and the seekp function moves\
+    \ a file's read position.\n\n12. Call the file object's clear member function.\n\
+    \n13. Use the seekg function to move the read position back to the beginning of\
+    \ the file.\n\n14. NULL or 0\n\n- 21. getline\n- 23. put\n- 25. text, ASCII text\n\
+    - 27. structures\n- 29. read\n- 31. sequential\n- 33. seekg\n- 35. tellg\n- 37.\
+    \ ios::beg\n- 39. ios::cur\n\n```cpp\n41. fstream places(\"places.dat\", ios::in\
+    \ | ios::out);\n```\n\n```cpp\n43. pets.open(\"pets.dat\", ios::in)\nfstream open(\"\
+    pets.dat\", ios::in);\n```\n\n- 49. True\n- 51. True\n- 53. True\n- 55. False\n\
+    - 57. True\n- 59. True\n- 61. True\n- 63. False\n\n65. File should be opened as\n\
+    \n```cpp\nfstream file(\"info.dat\", ios::in | ios::out);\nor\nfstream file:\n\
+    file.open(\"info.dat\", ios::in | ios::out);\n```\n\n67. File access logs must\
+    \ be specified with fstream objects.\n\n69. The file class flag should be ios::in.\
+    \ Also, the get member function cannot be used to read a string.\n\n71. The file\
+    \ class flag should be ios::out. Also, the last line should read\ndataFile.write(reinterpret_cast<char\
+    \ *>(&dt), sizeof(dt));\n\n## Chapter 13\n\n- 1. A class describes a data type.\
+    \ An instance of a class is an object of the data type that exists in memory.\n\
+    - 3. private\n- 5. A class is analogous to the blueprint.\n- 7. Yes it is. This\
+    \ protects the variables from being directly manipulated by code outside the class,\
+    \ and prevents them from receiving invalid data.\n- 9. When the function is for\
+    \ internal processing, but not useful to the program outside the class. In some\
+    \ cases a class may contain member functions that initialize member variables\
+    \ or destroy their contents. These functions should not be accessible by an external\
+    \ part of the program because they be called at the wrong time.\n- 11. A default\
+    \ constructor is a constructor that is called without any arguments. It is not\
+    \ to have more than one default constructor.\n- 13. executes when the object is\
+    \ created.\n- 15. A class's responsibilities are the things the class is responsible\
+    \ for knowing and the actions that the class is responsible for doing.\n- 17.\
+    \ procedural programming, object-oriented programming\n- 19. object-oriented\n\
+    - 21. class\n- 23. access specifier\n- 25. public\n- 27. ->\n- 29. canine.cpp\n\
+    - 31. constructor\n- 33. constructors\n- 35. default\n- 37. ~\n- 39. default\n\
+    - 41. constructor, destructor\n\n```cpp\n43. class Circle\n{\n    private:\n \
+    \       double radius;\n    public:\n        void setRadius(double r)\n      \
+    \  { radius = r; }\n        double getRadius()\n        { return radius; }\n \
+    \       double getArea()\n        { return 3.14159 * radius * radius; }\n}\n```\n\
+    \n```cpp\n45. class Circle\n{\n    private:\n        double radius;\n    public:\n\
+    \        Circle()\n        { radius = 0.0; }\n        Circle(double r)\n     \
+    \   { radius = r; }\n        void setRadius(double r)\n        { radius = r; }\n\
+    \        double getRadius()\n        { return radius; }\n        double getArea()\n\
+    \        { return 3.14159 * radius * radius; }\n}\n```\n\n- 47. Circle[5] = {\
+    \ 12, 7, 9, 14, 8 };\n\n| Animal | Medication | Nurse |\n| :--- | :--- | :---\
+    \ |\n| Doctor | Invoice | Customer |\n| Patient | Client |\n\n- 51. False\n- 53.\
+    \ False\n- 55. False\n- 57. True\n- 59. False\n- 61. True\n- 49.\n- 63. True\n\
+    - 65. True\n- 67. False\n- 69. True\n- 71. False There should not be a colon after\
+    \ the word Circle. Colons should appear after the words private and public. A\
+    \ semicolon should appear after the closing brace.\n- 75. The semicolon should\
+    \ not appear after the word DumbBell. The function header for setWeight should\
+    \ appear as:\n\n```cpp\nvoid DumbBell::setWeight(int w)\n```\n\nThe line reads:\n\
+    DumbBell(200);\nshould read:\n\n```cpp\nbar.setWeight(200);\n```\n\nbar.weight\
+    \ cannot be accessed outside of the class because no access specifier appeared\
+    \ before the class, making the private to the class by default. This means the\
+    \ statement will not work.\n\n## Chapter 14\n\n- 1. Each class object has its\
+    \ own copy of the class's instance member variables. All objects of the class\
+    \ share the class's static member variables.\n- 3. Outside the class declaration.\n\
+    - 5. Because every member function of the first class would have access to the\
+    \ class's private member variables.\n- 7. When an object is initialized with another\
+    \ object's data.\n- 9. When an object has a pointer as a member, and it points\
+    \ to a chunk of dynamically allocated memory. When this object is copied to another\
+    \ object via member assignment, the receiver's pointer will point to the same\
+    \ chunk of memory.\n- 11. It is a copy constructor that is automatically created\
+    \ for a class, and performs assignment.\n- 13. The object on the right side of\
+    \ the = operator in the statement that called the overloaded function operator.\n\
+    - 15. A dummy parameter is used in the function header of a postfix operator.\n\
+    - 17. A Boolean value.\n- 19. Place the keyword :: before the variable declaration\
+    \ (inside the class). Then, place a definition of the variable outside the class.\n\
+    - 21. 3, 3, 1, 0, Thing::putThing(2);\n\n## Appendix O: Solutions to Odd Numbered\
+    \ Review Questions\n\n- 23. To inform the compiler of the class's existence before\
+    \ it reaches the class's definition.\n- 25. Because the parameter variable is\
+    \ created in memory when the function executes, and is initialized with the argument\
+    \ object. This causes the constructor to be called.\n- 27. outside\n- 29. before\n\
+    - 31. forward declaration\n- 33. copy constructor\n- 35. overloaded\n- 37. aggregation\n\
+    - 39. Bird Bird::operator=(const Bird &right)\n- 41. bool Yen::operator=(const\
+    \ Yen &right)\n- 43. Collection Collection::operator[](const Collection &sub)\n\
+    - 45. True\n- 47. False\n- 49. True\n- 51. True\n- 53. True\n- 55. False\n- 57.\
+    \ True\n- 59. The copy constructor's parameter should be a reference variable.\n\
+    - 61. The overloaded + function header should read\n\n```cpp\nvoid operator+(const\
+    \ Point &right)\n```\n\n- 63. The float conversion function header should read\n\
+    \n```cpp\noperator float()\n```\n\n## Chapter 15\n\n- 1. When one object is a\
+    \ specialized version of another object, there is an \"is a\" relationship between\
+    \ them. This indicates that one class is \"a\" specialized version of the other\
+    \ class.\n- 3. Base class access specification specifies how members of the base\
+    \ class are inherited by the derived class. Member access specification specifies\
+    \ how members may be accessed by code outside the class.\n- 5. No.\n- 7. When\
+    \ a derived class has a function with the same name as a base class function,\
+    \ and the base class function is not virtual, it is said that the function is\
+    \ redefined in the derived class. If the base class's function is however, it\
+    \ is said that the function is overridden.\n- 9. An abstract base class is not\
+    \ instantiated, but serves as a base class for other classes. The abstract base\
+    \ class represents the generic, abstract form of all the classes that are derived\
+    \ from it. It is abstract when it has one or more virtual functions.\n\n## Appendix\
+    \ O: Solutions to Odd Numbered Review Questions\n\n- 11. Dog\n- 13. public\n-\
+    \ 15. private\n- 17. inaccessible, protected, protected\n- 19. members\n- 21.\
+    \ last\n- 23. The base class version.\n- 25. static\n- 27. polymorphism\n- 29.\
+    \ abstract base class\n- 31. chain\n- 33. override or redefine\n- 35. class SoundSystem\
+    \ : public CDplayer, public Tuner, public CasettePlayer\n- 37. class B\n{\n  \
+    \  private:\n        int m;\n    protected:\n        int n;\n    public:\n   \
+    \     void setM(int);\n        int getM();\n        void setN(int);\n        int\
+    \ getN();\n        virtual int calc()\n        { return m * n; }\n}\nclass D :\
+    \ public B\n{\nprotected:\n        float q;\n        float r;\n    public:\n \
+    \       void setQ(float);\n        float getQ();\n        void setR(float);\n\
+    \        float getR();\n        virtual float calc()\n        { return q * r;\
+    \ }\n};\n\n- 39. True\n- 41. True\n- 43. False\n- 45. False\n- 47. True\n"
+  mdcn: "\n\n## 附录 O：奇数复习题答案\n\n9. 使用 `getline` 函数。\n\n10. 两个参数：存储数据的内存区域起始地址，以及要读取的字节数。\n\
+    \n11. `seekg` 函数移动文件的写入位置，而 `seekp` 函数移动文件的读取位置。\n\n12. 调用文件对象的 `clear` 成员函数。\n\
+    \n13. 使用 `seekg` 函数将读取位置移回文件开头。\n\n14. NULL 或 0\n\n- 21. getline\n- 23. put\n\
+    - 25. text, ASCII text\n- 27. structures\n- 29. read\n- 31. sequential\n- 33.\
+    \ seekg\n- 35. tellg\n- 37. ios::beg\n- 39. ios::cur\n\n```cpp\n41. fstream places(\"\
+    places.dat\", ios::in | ios::out);\n```\n\n```cpp\n43. pets.open(\"pets.dat\"\
+    , ios::in)\nfstream open(\"pets.dat\", ios::in);\n```\n\n- 49. True\n- 51. True\n\
+    - 53. True\n- 55. False\n- 57. True\n- 59. True\n- 61. True\n- 63. False\n\n65.\
+    \ 文件应该这样打开：\n\n```cpp\nfstream file(\"info.dat\", ios::in | ios::out);\nor\nfstream\
+    \ file:\nfile.open(\"info.dat\", ios::in | ios::out);\n```\n\n67. 文件访问日志必须用 `fstream`\
+    \ 对象指定。\n\n69. 文件类标志应该是 `ios::in`。此外，`get` 成员函数不能用于读取字符串。\n\n71. 文件类标志应该是 `ios::out`。此外，最后一行应该是：\n\
+    `dataFile.write(reinterpret_cast<char *>(&dt), sizeof(dt));`\n\n## 第13 章\n\n-\
+    \ 1. 类描述了一种数据类型。类的实例是存在于内存中的该数据类型的对象。\n- 3. private\n- 5. 类比蓝图。\n- 7. 是的。这保护变量不被类外部的代码直接操作，并防止它们接收无效数据。\n\
+    - 9. 当函数用于内部处理但对类外部程序没有用时。在某些情况下，类可能包含初始化成员变量或销毁内容的成员函数。这些函数不应被程序的外部部分访问，因为它们会在错误的时间被调用。\n\
+    - 11. 默认构造函数是不带任何参数调用的构造函数。它不应该有多个默认构造函数。\n- 13. 在对象创建时执行。\n- 15. 类的职责是类负责知道的事情以及类负责执行的动作。\n\
+    - 17. 过程化编程，面向对象编程\n- 19. 面向对象\n- 21. class\n- 23. 访问修符\n- 25. public\n- 27. ->\n\
+    - 29. canine.cpp\n- 31. constructor\n- 33. constructors\n- 35. default\n- 37.\
+    \ ~\n- 39. default\n- 41. constructor, destructor\n\n```cpp\n43. class Circle\n\
+    {\n    private:\n        double radius;\n    public:\n        void setRadius(double\
+    \ r)\n        { radius = r; }\n        double getRadius()\n        { return radius;\
+    \ }\n        double getArea()\n        { return 3.14159 * radius * radius; }\n\
+    }\n```\n\n```cpp\n45. class Circle\n{\n    private:\n        double radius;\n\
+    \    public:\n        Circle()\n        { radius = 0.0; }\n        Circle(double\
+    \ r)\n        { radius = r; }\n        void setRadius(double r)\n        { radius\
+    \ = r; }\n        double getRadius()\n        { return radius; }\n        double\
+    \ getArea()\n        { return 3.14159 * radius * radius; }\n}\n```\n\n- 47. Circle[5]\
+    \ = { 12, 7, 14, 8 };\n\n| Animal | Medication | Nurse |\n| :--- | :--- | :---\
+    \ |\n| Doctor | Invoice | Customer |\n| Patient | Client |\n\n- 51. False\n- 53.\
+    \ False\n- 55. False\n- 57. True\n- 59. False\n- 61. True\n- 63. True\n- 65. True\n\
+    - 67. False\n- 69. True\n- 71. False Circle 后面不应该有冒号。private 和 public 后面应该有冒号。大括号后面应该有分号。\n\
+    - 75. DumbBell 后面不应该有冒号。setWeight 的函数头应该是：\n\n```cpp\nvoid DumbBell::setWeight(int\
+    \ w)\n```\n\nDumbBell(200); 应该是：\n\n```cpp\nbar.setWeight(200);\n```\n\nbar.weight\
+    \ 不能在类外部访问，因为类之前出现了访问修符，使其默认为私。该语句将无法工作。\n\n## 第14 章\n\n- 1. 每个类对象都有类实例成员变量的拷贝。类的所有对象共享静态成员变量。\n\
+    - 3. 类声明之外。\n- 5. 因为基类的每个成员函数都可以访问类的私有成员变量。\n- 7. 当使用另一个对象初始化时。\n- 9. 当对象有一个指针作为成员时，它指向动态分配的内存。当此对象通过成员赋值拷贝到另一个对象时，接收者的指针将指向同一内存。\n\
+    - 11. 它是为类自动创建并执行赋值的拷贝构造函数。\n- 13. 调用重载运算符的语句右侧的对象。\n- 15. 后置运算符的函数头使用了虚拟参数。\n\
+    - 17. 布尔值。\n- 19. 在变量声明前放置 ::（类内部）。然后，类外放置变量的定义。\n- 21. 3, 3, 1, 0, Thing::put(2);\n\
+    \n## 附录 O：奇数复习题答案\n\n- 23. 在到达类定义之前通知类的存在。\n- 25. 因为参数变量在函数执行时创建，并用参数初始化。这会导致构造函数被调用。\n\
+    - 27. outside\n- 29. before\n- 31. 前向声明\n- 33. 拷贝构造函数\n- 35. 重载的\n- 37. 聚合\n-\
+    \ 39. Bird::operator=(const Bird &right)\n- 41. bool Yen::operator=(const Yen\
+    \ &right)\n- 43. Collection::operator[](const Collection &sub)\n- 45. True\n-\
+    \ 47. False\n- 49. True\n- 51. True\n- 53. True\n- 55. False\n- 57. True\n- 59.\
+    \ 拷贝构造函数的参数应该是引用变量。\n- 61. 重载的 + 函数头应该是：\n\n```cpp\nvoid operator+(const Point\
+    \ &right)\n```\n\n- 63. float 转换函数头应该是：\n\n```cpp\noperator float()\n```\n\n##\
+    \ 第15 章\n\n- 1. 当一个对象是另一个对象的特殊版本时，它们之间存在“是”的关系。这意味着一个类是另一个类的特殊版本。\n- 3. 基类访问规范规定了派生类如何继承基类的成员。成员访问规范规定了类外部代码如何访问成员。\n\
+    - 5. 不。\n- 7. 当派生类有一个与基类函数同名的函数，且基类函数不是虚拟的时，称该函数在派生类中被重定义。然而，如果基类函数是虚拟的，则称该函数被重写（覆盖）。\n\
+    - 9. 抽象基类不被实例化，而是作为类的基类。抽象基类代表了所有派自它的类的通用、抽象形式。当它拥有一个或多个虚拟函数时，它是抽象的。\n\n## 附录\
+    \ O：奇数复习题答案\n\n- 11. Dog\n- 13. public\n- 15. private\n- 17. inaccessible, protected,\
+    \ protected\n- 19. members\n- 21. last\n- 23. 基类版本。\n- 25. static\n- 27. 多态\n\
+    - 29. 抽象基类\n- 31. 链\n- 33. override or redefine\n- 35. class SoundSystem : public\
+    \ CDplayer, public Tuner, public CasettePlayer\n- 37. class B\n{\n    private:\n\
+    \        int m;\n    protected:\n        int n;\n    public:\n        void setM(int);\n\
+    \        int getM();\n        void setN(int);\n        int getN();\n        virtual\
+    \ int calc()\n        { return m * n; }\n}\nclass D : public B\n{\nprotected:\n\
+    \        float q;\n        float r;\n    public:\n        void setQ(float);\n\
+    \        float getQ();\n        void setR(float);\n        float getR();\n   \
+    \     virtual float calc()\n        { return q * r; }\n};\n\n- 39. True\n- 41.\
+    \ True\n- 43. False\n- 45. False\n- 47. True\n\n"
+  merge: 0
+- raw:
+  - "[PAGE 22]\n\nAppendix O: Solutions to Odd Numbered Review Questions 23\n\n+ \
+    \  49. True\n\n+   51. True\n\n+   53. The first line of the class declaration\
+    \ should read\n\nclass Car : public Vehicle\n\nAlso, the class declaration should\
+    \ end in a semicolon.\n\n+   55. The constructor function header should read\n\
+    \nSnowMobile(int h, double w) : Vehicle(h)\n\nAlso, the constructor parameter\
+    \ w is not used.\n\n+   57. The parameter list for the setContents functions must\
+    \ be different.\n\n# Chapter 16\n\n+   1. A throw point is a line in a program\
+    \ that contains a throw statement, thus throwing an exception.\n\n+   3. A try\
+    \ block contains blocks of code executing any statements that might directly or\
+    \ indirectly cause an exception to be thrown. A catch block catches a specific\
+    \ exception and contains code to return it.\n\n+   5. Once an exception has been\
+    \ thrown, the program cannot jump back to the throw point. The function that executes\
+    \ a throw statement will immediately terminate. If that function was called by\
+    \ another function, then the calling function will terminate as well. This process,\
+    \ known as unwinding the stack, continues for the entire chain of nested function\
+    \ calls, from the throw point, all the way back to the catch.\n\n+   7. By catching\
+    \ the bad_alloc exception.\n\n+   9. Because a class object passed to a function\
+    \ template must support all the operators of the function will use the object.\n\
+    \n+   11. Sequence and associative.\n\n+   13. throw point\n\n+   15. catch\n\n\
+    +   17. template prefix\n\n+   19. specialized\n\n+   21. associative\n\n+   23.\
+    \ bad_alloc\n\n```\n25. char * allocBlock(int size)\n{\n  char *ptr;\n  try {\n\
+    \    ptr = new char[size];\n  }\n```\n\n©2012 Pearson Education, Inc. Upper Saddle\
+    \ River, NJ. All Rights Reserved."
+  - "[PAGE 23]\n\n# Appendix O: Solutions to Odd Numbered Review Questions\n\n```\n\
+    catch(bad_alloc)\n{\n    ptr = 0;\n    return ptr;\n}\n```\n\n```\ntemplate <class\
+    \ T>\nvoid displayContents(T arr[], int size)\n{\n    for (int i = 0; i < size;\
+    \ i++)\n    cout << arr[i] << endl;\n}\n```\n\n```\n// Search for the value 7.\n\
+    binary_search(vect.begin(), vect.end(), 7);\n```\n\n31. False\n\n33. True\n\n\
+    35. True\n\n39. False\n\n41. True\n\n43. False\n\n45. True\n\n47. The try block\
+    \ must appear before the catch block.\n\n49. The return statement should read\
+    \ return * number;\n\n51. The type parameter T2 is not used.\n\n53. The statement\
+    \ should read count << valueSet[2] << endl;\n\n# Chapter 17\n\n+   1. A linked\
+    \ list can easily grow or shrink. In fact, the programmer doesn't need to know\
+    \ how many nodes will be in the list. They are created in memory as they are needed.\
+    \ Also, when a node is inserted or deleted from a linked list, none of the other\
+    \ nodes have to be moved.\n\n+   3. A pointer that points to the first node in\
+    \ the list.\n\n+   5. The last node in the list usually points to address 0, the\
+    \ null address.\n\n+   7. Append a node means that a new node is added to the\
+    \ end of the list. Inserting a node means that a new node is inserted somewhere\
+    \ in the middle of the list.\n\n+   * Remove the node from the list without breaking\
+    \ the links created by the next pointers.\n* Deleting the node from memory.\n\n\
+    +   11. In a singly linked list each node is linked to a single other node. In\
+    \ a doubly linked list each node only points to the next node, but also the previous\
+    \ one. In a circularly linked list the last node points to the first,"
+  - '[PAGE 24]
+
+
+    ©2022 Pearson Education, Inc. Upper Saddle River, NJ. All Rights Reserved.'
+  - "[PAGE 25]\n\n# 26 Appendix O: Solutions to Odd Numbered Review Questions\n\n\
+    23.\n\n| | Top of stack |\n|---||\n| 8 | |\n| | Bottom of stack |\n\n25.\n\n|\
+    \ 9 | 12 | 10 |\n|---|---|---|\n| Front | | Rear |\n\n27. Code segment using an\
+    \ if/else statement:\n\n```\nif (rear == queueSize - 1)\n  rear = 0;\nelse\n \
+    \ rear++;\n```\n\nCode segment using modular arithmetic:\n\n```\nrear = (rear\
+    \ + 1) % queueSize;\n```\n\n29. False\n\n31. True\n\n# Chapter 19\n\n+   1. For\
+    \ question 12: num <= 0\n   For question 13: num > 0\n   For question 14: pos\
+    \ < size - 1\n3. Recursive functions are less efficient, due to the overhead associated\
+    \ with each function call.\n5. The program will eventually run out of stack memory\
+    \ and abort.\n7. base case\n9. indirect\n\n```\n10. int findLargest(const int\
+    \ arr[], int start, int end)\n{\n  int largest;\n  if(start == end)\n    return\
+    \ arr[start];\n  else\n  {\n```\n\n©2012 Pearson Education, Inc. Upper Saddle\
+    \ River, NJ. All Rights Reserved."
+  - "[PAGE 26]\n\n```\nlargest = findLargest(arr, start + 1, end);\nif(arr[start]\
+    \ >= largest)\n    return arr[start];\nelse\n    return largest;\n}\n***\n***\n\
+    ***\n***\n***\n***\n***\n***\n**\n*\n```\n\n# # Chapter 20\n\n+   1. Two others.\n\
+    3. A node that has no children.\n5. The order in which the values are inserted.\n\
+    7. root node\n9. leaf node\n11. inorder, preorder, and posteriori\n13. (Recursive\
+    \ Function)\n    Display In Order(Node Pointer)\n    If Pointer is not Null\n\
+    \        Display In Order (Node Pointer -> Left).\n        Display the node's\
+    \ Value.\n        Display In Order (Node Pointer -> Right).\n    End If\n    Display\
+    \ In Order\n15. (Recursive Function)\n    Display Post Order(Node Pointer)\n \
+    \   If Pointer is not Null\n        Display Post Order (Node Pointer -> Left).\n\
+    \        Display Post Order (Node Pointer -> Right).\n        Display the node's\
+    \ Value.\n    End If\n    Display Post Order"
+  - '[PAGE 27]
+
+
+    # Appendix O: Solutions to Odd Numbered Review Questions
+
+
+    17.
+
+
+    ![](img/3af3ad0d2f1fe20139551695356e239f_27_0.png)
+
+
+    19. 12 7 3 9 10 22 18 14 20 24 30
+
+
+    21. True
+
+
+    23. True
+
+
+    25. False'
+  md: "\n## Appendix O: Solutions to Odd Numbered Review Questions\n\n- 49. True\n\
+    - 51. True\n- 53. The first line of the class declaration should read\n`class\
+    \ Car : public Vehicle`\nAlso, the class declaration should end in a semicolon.\n\
+    - 55. The constructor function header should read\n`SnowMobile(int h, double w)\
+    \ : Vehicle(h)`\nAlso, the constructor parameter w is not used.\n- 57. The parameter\
+    \ list for the setContents functions must be different.\n\n## Chapter 16\n\n-\
+    \ 1. A throw point is a line in a program that contains a throw statement, thus\
+    \ throwing an exception.\n- 3. A try block contains blocks of code executing any\
+    \ statements that might directly or indirectly cause an exception to be thrown.\
+    \ A catch block catches a specific exception and contains code to return it.\n\
+    - 5. Once an exception has been thrown, the program cannot jump back to the throw\
+    \ point. The function that executes a throw statement will immediately terminate.\
+    \ If that function was called by another function, then the calling function will\
+    \ terminate as well. This process, known as unwinding the stack, continues for\
+    \ the entire chain of nested function calls, from the throw point, all the way\
+    \ back to the catch.\n- 7. By catching the bad_alloc exception.\n- 9. Because\
+    \ a class object passed to a function template must support all the operators\
+    \ of the function will use the object.\n- 11. Sequence and associative.\n- 13.\
+    \ throw point\n- 15. catch\n- 17. template prefix\n- 19. specialized\n- 21. associative\n\
+    - 23. bad_alloc\n\n```cpp\nchar * allocBlock(int size)\n{\n  char *ptr;\n  try\
+    \ {\n    ptr = new char[size];\n  }\ncatch(bad_alloc)\n{\n    ptr = 0;\n    return\
+    \ ptr;\n}\n```\n\ntemplate <class T>\nvoid displayContents(T arr[], int size)\n\
+    {\n    for (int i = 0; i < size; i++)\n    cout << arr[i] << endl;\n}\n```\n\n\
+    ```cpp\n// Search for the value 7.\nbinary_search(vect.begin(), vect.end(), 7);\n\
+    ```\n\n- 31. False\n- 33. True\n- 35. True\n- 39. False\n- 41. True\n- 43. False\n\
+    - 45. True\n- 47. The try block must appear before the catch block.\n- 49. The\
+    \ return statement should read return * number;\n- 51. The type parameter T2 is\
+    \ not used.\n- 53. The statement should read count << valueSet[2] << endl;\n\n\
+    ## Chapter 17\n\n- 1. A linked list can easily grow or shrink. In fact, the programmer\
+    \ doesn't need to know how many nodes will be in the list. They are created in\
+    \ memory as they are needed. Also, when a node is inserted or deleted from a linked\
+    \ list, none of the other nodes have to be moved.\n- 3. A pointer that points\
+    \ to the first node in the list.\n- 5. The last node in the list usually points\
+    \ to address 0, the null address.\n- 7. Append a node means that a new node is\
+    \ added to the end of the list. Inserting a node means that a new node is inserted\
+    \ somewhere in the middle of the list.\n- Remove the node from the list without\
+    \ breaking the links created by the next pointers.\n- Deleting the node from memory.\n\
+    - 11. In a singly linked list each node is linked to a single other node. In a\
+    \ doubly linked list each node only points to the next node, but also the previous\
+    \ one. In a circularly linked list the last node points to the first,\n\n## Appendix\
+    \ O: Solutions to Odd Numbered Review Questions\n\n23.\n\n| | Top of stack |\n\
+    |---|---|\n| 8 | |\n| | Bottom of stack |\n\n25.\n\n| 9 | 12 | 10 |\n|---|---|---|\n\
+    | Front | | Rear |\n\n27. Code segment using an if/else:\n\n```cpp\nif (rear ==\
+    \ queueSize - 1)\n  rear = 0;\nelse\n  rear++;\n```\n\nCode segment using modular\
+    \ arithmetic:\n\n```cpp\nrear = (rear + 1) % queueSize;\n```\n\n- 29. False\n\
+    - 31. True\n\n## Chapter 19\n\n- 1. For question 12: num <= 0\n   For question\
+    \ 13: num > 0\n   For question 14: pos < size - 1\n- 3. Recursive functions are\
+    \ less efficient, due to the overhead associated with each function call.\n- 5.\
+    \ The program will eventually run out of stack memory and abort.\n- 7. base case\n\
+    - 9. indirect\n\n```cpp\nint findLargest(const int arr[], int start, int end)\n\
+    {\n  int largest;\n  if(start == end)\n    return arr[start];\n  else\n  {\n \
+    \   largest = findLargest(arr, start + 1, end);\n    if(arr[start] >= largest)\n\
+    \        return arr[start];\n    else\n        return largest;\n  }\n}\n```\n\n\
+    ## Chapter 20\n\n- 1. Two others.\n- 3. A node that has no children.\n- 5. The\
+    \ order in which the values are inserted.\n- 7. root node\n- 9. leaf node\n- 11.\
+    \ inorder, preorder, and posteriori\n- 13. (Recursive Function)\n    Display In\
+    \ Order(Node Pointer)\n    If Pointer is not Null\n        Display InOrder (Node\
+    \ Pointer -> Left).\n        Display the node's Value.\n        Display InOrder\
+    \ (Node Pointer -> Right).\n    End If\n    Display InOrder\n- 15. (Recursive\
+    \ Function)\n    Display Post Order(Node Pointer)\n    If Pointer is not Null\n\
+    \        Display Post Order (Node Pointer -> Left).\n        Display Post Order\
+    \ (Node Pointer -> Right).\n        Display the node's Value.\n    End If\n  \
+    \  Display Post Order\n\n## Appendix O: Solutions to Odd Numbered Review Questions\n\
+    \n17.\n\n![](img/3af3ad0d2f1fe20139551695356e239f_27_0.png)\n\n19. 12 7 3 9 10\
+    \ 22 18 14 20 24 30\n\n- 21. True\n- 23. True\n- 25. False\n"
+  mdcn: "\n\n## 附录 O：奇数复题解答\n\n- 49. 正确\n- 51. 正确\n- 53. 类声明的第一行应为\n`class Car : public\
+    \ Vehicle`\n此外，类声明应该以分号结束。\n- 55. 构造函数头头部应为\n`SnowMobile(int h, double w) : Vehicle(h)`\n\
+    此外，构造函数参数 w 未被使用。\n- 57. `setContents` 函数的参数列表必须不同。\n\n## 第 16 章\n\n- 1. 抛出点是程序中包含\
+    \ `throw` 语句的行，从而抛出异常。\n- 3. `try` 块包含代码块，执行任何可能直接或间接导致抛出异常的语句。`catch` 块捕获特定的异常并包含返回它的代码。\n\
+    - 5. 一旦抛出异常，程序就无法跳回抛出点。执行 `throw` 语句的函数将立即终止。如果该函数是由另一个函数调用的，那么调用函数也将终止。这一过程被称为栈回溯（unwinding\
+    \ the stack），它会沿着整个嵌套函数调用链持续，从抛出点一直回到 `catch` 块。\n- 7. 通过捕获 `bad_alloc` 异常。\n\
+    - 9. 因为传递给函数模板的类对象必须支持函数使用该对象的所有运算符。\n- 11. 序列（Sequence）和关联（associative）。\n- 13.\
+    \ 抛出点 (throw point)\n- 15. 捕获 (catch)\n- 17. 模板前缀 (template prefix)\n- 19. 特化的\
+    \ (specialized)\n- 21. 关联的 (associative)\n- 23. bad_alloc\n\n```cpp\nchar * allocBlock(int\
+    \ size)\n{\n  char *ptr;\n  try {\n    ptr = new char[size];\n  }\ncatch(bad_alloc)\n\
+    {\n    ptr = 0;\n    return ptr;\n}\n```\n\ntemplate <class T>\nvoid displayContents(T\
+    \ arr[], int size)\n{\n    for (int i = 0; i < size; i++)\n    cout << arr[i]\
+    \ << endl;\n}\n```\n\n```cpp\n// 查找值 7。\nbinary_search(vect.begin(), vect.end(),\
+    \ 7);\n```\n\n- 31. 错误\n- 33. 正确\n- 35. 正确\n- 39. 错误\n- 41. 正确\n- 43. 错误\n- 45.\
+    \ 正确\n- 47. `try` 块必须出现在 `catch` 块之前。\n- 49. 返回语句应为 `return * number;` \n- 51.\
+    \ 类型参数 `T2` 未被使用。\n- 53. 语句应为 `count << valueSet[2] << endl;`\n\n## 第 17 章\n\n\
+    - 1. 链表可以很容易地增长或缩小。事实上，程序员不需要知道链中有多少个节点。它们在需要时在内存中创建。此外，当从链表中插入或删除节点时，其他节点都不需要移动。\n\
+    - 3. 指向链表中第一个节点的指针。\n- 5. 链表的最后一个节点通常指向地址 0，即空地址（null address）。\n- 7. 追加节点意味着将新节点添加到链的末尾。插入节点意味着将新节点插入到链的中间某个位置。\n\
+    - 从列表中删除节点而不破坏由 `next` 指针创建的链接。\n- 从内存中删除节点。\n- 11. 在单链表中，每个节点只连接到另一个节点。在双向链表中，每个节点不仅指向下一个节点，还指向上一个节点。在循环链表中，最后一个节点指向第一个。\n\
+    \n## 附录 O：奇数复题解答\n\n23.\n\n| | 栈顶 |\n|---|---|\n| 8 | |\n| | 栈底 |\n\n25.\n\n|\
+    \ 9 | 12 | 10 |\n|---|---|---|\n| 队头 | | 尾 |\n\n27. 使用 if/else 的代码段：\n\n```cpp\n\
+    if (rear == queueSize - 1)\n  rear = 0;\nelse\n  rear++;\n```\n\n使用取模运算的代码段：\n\
+    \n```cpp\nrear = (rear + 1) % queueSize;\n```\n\n- 29. 错误\n- 31. 正确\n\n## 第 19\
+    \ 章\n\n- 1. 对于问题 12：num <= 0\n   对于问题 13：num > 0\n   对于问题 14：pos < size - 1\n\
+    - 3. 递归函数的效率较低，因为与每次函数调用相关的开销。\n- 5. 程序最终将耗尽栈内存并终止。\n- 7. 边界情况 (base case)\n-\
+    \ 9. 间接 (indirect)\n\n```cpp\nint findLargest(const int arr[], int start, int\
+    \ end)\n{\n  int largest;\n  if(start == end)\n    return arr[start];\n  else\n\
+    \  {\n    largest = findLargest(arr, start + 1, end);\n    if(arr[start] >= largest)\n\
+    \        return arr[start];\n    else\n        return largest;\n  }\n}\n```\n\n\
+    ## 第 20 章\n\n- 1. 另外两个。\n- 3. 没有子节点的节点。\n- 5. 插入值的顺序。\n- 7. 根节点 (root node)\n\
+    - 9. 叶子节点 (leaf node)\n- 11. 中序 (inorder)、前序 (preorder) 和后序 (posteriori)\n- 13.\
+    \ (递归函数)\n    显示中序 (节点指针)\n    如果指针不为空\n        显示中序 (节点指针 -> 左侧)。\n        显示节点的值。\n\
+    \        显示中序 (节点指针 -> 右侧)。\n    结束如果\n    显示 InOrder\n- 15. (递归函数)\n    显示后序\
+    \ (节点指针)\n    如果指针不为空\n        显示后序 (节点指针 -> 左侧)。\n        显示后序 (节点指针 -> 右侧)。\n\
+    \        显示节点的值。\n    结束如果\n    显示 Post Order\n\n## 附录 O：奇数复题解答\n\n17.\n\n![](img/3af3ad0d2f1fe20139551695356e239f_27_0.png)\n\
+    \n19. 12 7 3 9 10 22 18 14 20 24 30\n\n- 21. 正确\n- 23. 正确\n- 25. 错误\n\n"
+  merge: 0
