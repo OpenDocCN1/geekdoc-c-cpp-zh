@@ -1,0 +1,238 @@
+
+- `for range declaration`（for 范围声明），48
+- `for-statement`（for 语句），48
+- `for_each`，1082
+- `for_each`：vs. `transform`（for_each 与 transform 的对比），649
+- `for_each`，1063, 1064, 1067
+- `format_type`（格式类型），740, 741, 794
+- `format_self`（格式化自身），557
+- `format_specifier`（格式说明符），557
+- `format_string`（格式字符串），140, 557
+- `format_default`（默认格式），553
+- `format_first_only`（仅格式化第一个），553
+- `format_copy`（格式拷贝），554
+- `format_extd`（扩展格式），554
+- `formatted_input`（格式化输入），144
+- `formatted_output`（格式化输出），129, 134
+- `formatting`（格式化），123, 128
+- `formatting_commands`（格式化命令），120
+- `formatting_flags`（格式化标志），127, 129
+- `forward`（前向/向前），828, 829
+- `forward_class_reference`（前向类引用），196
+- `forward_declaration`（前向声明），119, 197
+- `forward_declaration`：`enum class`（前向声明：枚举类），39
+- `forward_iterators`（前向迭代器），107
+- `forward`：`parameters`（前向参数），831
+- `forward_iterator_tag`（前向迭代器标记），881
+- `ForwardIterator`（前向迭代器），522, 881
+- `printf`，120
+- `free`（释放），215, 219, 224
+- `free_compiler`（自由编译器），6
+- `free function`（自由函数），308
+- `Free Software Foundation`（自由软件基金会），6
+- `Friel, J.E.F.`，545
+- `friend`（友元），481, 844, 845
+- `friend`：作为前向声明，504
+- `friend`：绑定的，844, 847
+- `friend`：`extended_declaration`（扩展声明），483
+- `friend`：函数声明，482
+- `friend`：类模板中的友元，844
+- `friend`：嵌套类，501
+- `friend`：未绑定的，853
+- `friend`：模板参数命名，1092
+- `friend_among_class`（类间友元），481
+- `from_address`（从地址），990
+- `from_time_t`（从 `time_t` 转换），81
+- `front`（头部），112, 361, 364, 378, 378
+- `front_inserter`（头部插入器），523
+- `FSF`（自由软件基金会），6
+- `function`（函数），153
+- `function`：`header`（函数头文件），123, 136, 147, 466
+- `function-named`（命名函数），733, 744
+- `function-named`：嵌套类，499
+- `function(std::)`（std 函数），775
+- `function_adapters`（函数适配器），336
+- `function_call_operator`（函数调用运算符），336
+- `function_object`（函数对象），336, 398
+- `function_object`：匿名，343
+- `function_object`：算术，513
+- `function_object`：逻辑，517
+- `function_relation`（函数关系），516
+- `function_overloading`（函数重载），12, 185
+- `function_pointer`：多态，775
+- `function_precedence`（函数优先级），744
+- `function_selection`（函数选择），777
+- `function_template`（函数模板），739
+- `function_template`：重载的，763
+- `function_template`：`partial_specialization`（部分特化），818
+- `function_template`：与重载的对比，776
+- `functions`：多个，758
+- `functions_templates`：`specialized_types`（模板特化类型），767
+- `function_list`（函数列表），280
+- `function_block`（函数块），294
+- `function_pointer_to_transformation`（函数指针转转换），754
+- `function`：`candidate`（候选函数），778
+- `function`：`constant_expression`（常量表达式），205
+- `function`：`free`（自由函数），321
+- `function`：`returning_value`（函数返回值），242
+- `function`：`variadic`（变参函数），739
+- `function`：`viable`（可行函数），778
+- `function_local`（局部函数），347
+- `function`：`header`（函数头文件），511, 518, 750, 775, 840
+- `functionality`（功能性），359
+- `functions as members of structs`（作为结构体成员的函数），19
+- `functions having identical_names`（同名函数），12, 20
+- `functor`（函数对象），336
+- `fundamental_type`（基本类型），922
+- `future`（未来），709
+- `future`（协程），888
+- `future`：`header`（未来头文件），709, 712, 715, 718, 722
+- `future_already_retrieved`（已获取的未来），711
+- `future_category`（未来分类），284
+- `future_err`（未来错误），711
+- `future_error`（未来错误），709, 710, 712
+- `future_status`（未来状态），709
+- `g++`，5, 6, 1100
+- `Gamma`，440, 476, 1063, 1090
+- `gamma_distribution<Real=double>`，568
+- `gcm.cache`，1025
+- `gcount`（字符计数），144
+- `generalized_const`（通用常量），205
+- `generalized_value`（通用值），38
+- `generalized_pair`（通用对），359, 834
+- `generate`（生成），603
+- `generator_n`，603
+- `generator`：`random_number`（随机数生成器），560
+- `generator`：`algorithms`（算法生成器），357, 581, 582
+- `generator_data_type`（生成器数据类型），917
+- `generator_software`（软件生成器），119
+- `generic type`（通用类型），357
+- `generic_category`（通用分类），86, 284
+- `generic_distribution<IntType=int>`，569
+- `get`（获取），144, 150, 533, 535, 537, 838
+- `get_allocator`（获取分配器），112, 364, 368, 378, 384, 392, 401
+- `get_deleter`（获取删除器），533, 537
+- `get_future`（获取未来），721
+- `get_id`（获取 ID），665, 670, 776
+- `get_stop_source`（获取停止源），676
+- `get_stop_token`（获取停止令牌），776
+- `get_wrapped`（获取封装的），733, 734
+- `getline`，112, 125, 145
+- `giga`，728
+- `global_block`（全局块），264
+- `global_function`（全局函数），209
+- `global_namespace`（全局命名空间），63
+- `global_scope`（全局作用域），486
+- `global_variable`（全局变量），201, 796
+- `global_variable`：`avoid`（避免全局变量），17
+- `gvalue`（通用值），38
+- `gntime`（全局时间），140
+- `GNU`，5, 6, 227, 505, 1100
+- `good`（良好），124, 125
+- `goto`，263
+- `gcptr`（垃圾指针），461, 1049, 1051, 1056
+- `grammar`（语法），1045, 1101
+- `grammar_specification_file`（语法规范文件），1101
+- `grammatical_rules`（语法规则），1102
+- `greater`（大于），516
+- `greater_equal`（大于等于），516
+- `handler`（协程处理器），988
+- `hard_link_count`（硬链接计数），92
+- `hardware_concurrency`（硬件并发性），670, 676
+- `has_denom`（有分母），773
+- `has_denom_loss`（分母丢失），773
+- `has_infinity`（无限大），773
+- `has_NaN`（有 NaN），773
+- `has_signaling`（有符号），773
+- `has_function`（有函数），397
+- `hash_value`（哈希值），397
+- `hash_function`（哈希函数），401
+- `hashing`（哈希），382
+- `header`（头文件），192, 199
+- `header_file`（头文件），122, 194
+- `header_section`（头文件章节），1102
+- `header`：`precompiled`（预编译头文件），1023
+- `hesp`（堆空间），658
+- `heto`（目标），78
+- `heterogeneous_lookup`（异构查找），406
+- `hex`（十六进制），130
+- `hexadecimal_constant`（十六进制常量），51
+- `hidden_data_member`（隐藏数据成员），472
+- `hiding`：`base_class members`（隐藏：基类成员），421
+- `hierarchic_sort`（分层排序），859
+- `hierarchy_of_code`（代码层次结构），409
+- `high_resolution_check`（高分辨率检查），81
+- `Hopcraft, J.E.`，366
+- `hours`（小时），79
+- `http://cppwin.com`，6
+- `http://fb-gitlab.io/hobispp`，1109
+- `http://fb-gitlab.io/bobocat/`，286, 468, 1051
+- `http://gnu.org`，6
+- `http://mingw-w64/catalog/`，666
+- `http://oreilly.com/catalog/`，663
+- `http://publications.direct.com/c/`，3
+- `http://python.org`，6
+- `http://gnu.org/licenses/`，3
+- `http://linux.org`，6
+- `http://www.org/catalog/`，1096
+- `http://www.stroustrup.com/`，22
+- `http://www.parashift.com/c/lite/`，23
+- `http://cppref.io`，163
+- `http://fb-gitlab.io/cpp/`，1100
+- `http://fb-gitlab.io/yodil/`，3
+- `human-readable`（可读的），129
+- `I/O library`（输入/输出库），119
+- `multiplexing`（多路复），1072
+- `identically_named_functions`（同名成员函数），425
+- `identifier`：`initial_underscore`（标识符：下划线开头），352
+- `identifiers_starting_with_underscore`（下划线开头的标识符），63
+- `IEC-559`，773
+- `IEEE-754`，773
+- `if constexpr`，783
+- `ifstreambuf`，1050, 1049, 1080
+- `ifstream`，143, 147, 159
+- `ifstream_constructors`（ifstream 构造函数），147
+- `ignore`（忽略），145
+- `imag`（图像），408
+- `imaginary_part`（虚部），406
+- `implementation`，161, 481
+- `implementation_deployment`（实现部署），481
+- `implemented-in-terms-of`（实现），433
+- `implicit_conversion`（隐式转换），428
+- `import`（导入），138, 153
+- `in_avail`（可用），459
+- `include`（包含），195, 198
+- `include_guard`（包含保护符），16
+- `includes`（包含），605
+- `inclusive_seam`（包含边界），628
+- `increment`（递增），95
+- `increment_operator`（增运算符），317
+- `index_order`（顺序），303, 361, 382, 388
+- `index_order`：`multiple_arguments`（顺序：多个参数），307
+- `indirect_base_class`（间接基类），412
+- `inequality_operator`（不等运算符），356
+- `infinity`（无限），773
+- `inheritance`（继承），193, 409, 411
+- `init`：`access_to_base_class`（初始化：访问基类成员），416
+- `init`：`multiple`（初始化：多个），423
+- `init`：`no_derived_constructors`（初始化：无派生构造函数），419
+- `init`：`private_derivation`（初始化：私有继承），858
+- `init`，467, 1066
+- `initialization`（初始化），181, 214, 234, 361
+- `initialization`：`static_data_member`（初始化：静态数据成员），202
+- `initializer_list`（初始化列表），40, 181
+- `initializer_list`，183
+- `initializer_list`：`header_file`（列表头文件），40
+- `inline`（内联），191, 398, 440, 512, 777
+- `inline_function`（内联函数），191
+- `inline_member_functions`（内联成员函数），499
+- `inline-inconsistency`（内联不一致性），191
+- `inline`：`avoid!`（内联：避免!），192
+- `inline-disadvantage`（内联缺点），191
+- `inline`：`static_members`（内联：静态成员），210
+- `inner_ptr`（内部指针），606
+- `inner_merge`（内部合并），608
+- `input`（输入），143, 150
+- `input_language`（输入语言），1101
+- `input_iterator_tag`（输入迭代器标记），880
+- `InputIterator`，521, 880
