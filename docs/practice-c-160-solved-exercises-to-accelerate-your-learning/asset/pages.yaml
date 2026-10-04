@@ -1,0 +1,4273 @@
+- pgno: 0
+  md: '# PRACTICE
+
+    C++
+
+    160
+
+
+    solved
+
+    EXERCISES
+
+    to accelerate your learning
+
+
+    RUHAN CONCEIÇÃO'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# PRAC-
+
+    TICE C++
+
+
+    160 Solved Exercises
+
+    to Accelerate your'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # Learning
+
+
+    Ruhan Avila da Conceição'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # Preface
+
+
+    Welcome to this book where solved and commented C++ exercises are presented. In
+    this book, you will find a collection of over 160 exercises designed to help you
+    improve your programming skills in this powerful language.
+
+
+    Learning to program involves not only understanding theoretical concepts but also
+    applying those concepts in real-life situations. That''s exactly what you will
+    find in this book: a wide variety of problems ranging from basic fundamentals
+    to more complex challenges.
+
+
+    As you progress through the exercises, you will be challenged with tasks involving
+    mathematical formula manipulation, strings, condi-'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'tionales, loops, vector manipulation, matrices, and much more.
+
+
+    The main goal of this book is to provide the practical and comprehensive resource
+    for programmers seeking improvement. Whether you are a beginner in C++ looking
+    to solidify your knowledge or an experienced programmer wishing to deepen your
+    expertise, these exercises will serve as an excellent study guide and reference.
+    This book is also suitable for teachers who would like to have a rich collection
+    of solved Programming Logic exercises to create exercises and questions for their
+    students.
+
+
+    Enjoy this learning journey and dive into the solved and commented C++ exercises.
+    Prepare yourself for stimulating challenges, creative solutions, and a unique
+    opportunity to enhance your programming skills.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'This book was written using artificial intelligence tools in content creation,
+    but all materials have been reviewed and edited by the author to deliver a final
+    high-quality product.
+
+
+    Happy reading, happy studying, and have fun exploring the fascinating world of
+    C++ programming
+
+
+    Ruhan Avila da Conceição.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # Summary
+
+
+    +   - Introduction
+
+    - Basic Exercises
+
+    - Mathematical Formulas
+
+    - Conditionals
+
+    - Repeat Loops
+
+    - Arrays
+
+    - Strings
+
+    - Matrices
+
+    - Recursive Functions
+
+    - Regular Expressions
+
+    - Sorting Algorithms
+
+    - Complete List of Exercises
+
+    - Additional Content
+
+    - About the Author'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# # Introduction
+
+
+    If you have acquired this book, you want to start programming and be logically
+    challenged as soon as possible, without wanting to read a sermon on the mount.
+    But it is important to highlight a few things before we begin.
+
+
+    Even though many exercises may be considered easy, if you are new to this programming
+    journey, it is important for you to first try to solve the problem on your own
+    before looking at the solution. There is more than one possible solution to the
+    same problem, and you need to think and develop your own solution. Then, you can
+    compare it with the proposed one in the book, identify the strengths of each,
+    and try to learn a little more.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'If the exercise is too difficult and you can''t solve it, move on to the next
+    one and try again the next day. Don''t immediately jump to the answer, even if
+    you can''t solve it, and definitely don''t look at the answer without even attempting
+    to solve it.
+
+
+    Learning programming logic is not about getting the answer; it''s about the journey
+    you take to arrive at the answer.
+
+
+    With that being said, the remaining chapters of this book are divided according
+    to the programming topics covered in the proposed exercises.
+
+
+    From now on, it''s all up to you!'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "# Basic Exercises\n\n1. Write a program that prints\n\"Hello World!\" on the\
+    \ screen.\n\n```\n#include <iostream>\n```\n\n```\nint main() {\n    std::cout\
+    \ << \"Hello World!\" << std::endl;\n    return 0;\n}\n```\n\n2. Write a program\
+    \ that prints \"Hello\"\non one line and \"World!\" on the bottom\nline, using\
+    \ two different commands.\n\n```\n#include <iostream>\n```\n\n```\nint main()\
+    \ {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "```\nstd::cout << \"Hello\" << std::endl;\nstd::cout << \"World!\" << std::endl;\n\
+    return 0;\n}\n```\n\n# 3. Write a program that prints \"Hello\" on one line and\
+    \ \"World!\" on the bottom line, using only one command to print.\n\n```\n#include\
+    \ <iostream>\n\nint main() {\n    std::cout << \"Hello\" << std::endl << \"World!\"\
+    \ << std::endl;\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "# 4. Write a program that prints \"Hello\" on one line and \"World!\" on the\
+    \ bottom line, leaving a blank line between the words.\n\n```\n#include <iostream>\n\
+    \nint main() {\n    std::cout << \"Hello\" << std::endl << std::endl << \"World!\"\
+    \ << std::endl;\n    return 0;\n}\n```\n\n# 5. Write a program that prints \"\
+    Hello World!\" (in the same line) on the screen, using one command to print \"\
+    Hello\" and another command to print \"World!\".\n\n```\n#include <iostream>\n\
+    \nint main() {\n    std::cout << \"Hello\";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "```\nstd::cout << \"World!\" << std::endl;\nreturn 0;\n}\n```\n\n# 6. Write\
+    \ a program that prints \"Hello World!\" (in the same line) on the screen, using\
+    \ one command to print \"Hello\", another command to print \"World\", and another\
+    \ to print \"!\".\n\n```\n#include <iostream>\n\nint main() {\n    std::cout <<\
+    \ \"Hello\";\n    std::cout << \"World\";\n    std::cout << \"!\" << std::endl;\n\
+    \    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "# 7. Make a program that asks for the\nuser's name, and prints the name on\n\
+    the screen immediately after.\n\n```\n#include <iostream>\n#include <string>\n\
+    \nint main() {\n    std::string name;\n\n    std::cout << \"Please enter your\
+    \ name: \";\n    std::getline(std::cin, name);\n    std::cout << \"Hello, \" <<\
+    \ name << \"!\" << std::endl;\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "# 8. Make a program that reads the names of three people in sequence, followed\
+    \ by their respective ages, and prints each name with their respective ages on\
+    \ the screen.\n\n```\n#include <iostream>\n#include <string>\n\nint main() {\n\
+    \    std::string name1, name2, name3;\n    int age1, age2, age3;\n\n    // Read\
+    \ details for the first person\n    std::cout << \"Enter the name of the first\
+    \ person: \";\n    std::getline(std::cin, name1);\n    std::cout << \"Enter the\
+    \ age of \" << name1 << \":\";\n    std::cin >> age1;\n    std::cin.ignore();\
+    \ // To Clear the newline left by the previous input\n```"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '```
+
+    // Read details for the second person
+
+    std::cout << "Enter the name of the second person":";
+
+    std::getline(std::cin, name2);
+
+    std::cout << "Enter the age of " << name2 << ":";
+
+    std::cin >> age2;
+
+    std::cin.ignore(); // To clear the newline left by the previous input
+
+    ```
+
+
+    ```
+
+    // Read details for the third person
+
+    std::cout << "Enter the name of the third person:\
+
+    ```
+
+
+    ```
+
+    // Output the details
+
+    std::cout << std::endl;
+
+    std::cout << name1 << " is " << age1 << " years old." << std::endl;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "```\nstd::cout << name2 << \" is \" << age2 << \" years old.\" << std::endl;\n\
+    std::cout << name3 << \" is \" << age3 << \" years old.\" << std::endl;\n\n  return\
+    \ 0;\n}\n```\n\n# 9. Make a program that reads the names of three people in sequence,\
+    \ followed by their respective ages and heights, and prints the data in table\
+    \ format on the screen.\n\n```\n#include <iostream>\n#include <iomanip>\n#include\
+    \ <string>\n\nint main() {\n  std::string name1, name2, name3;\n  int age1, age2,\
+    \ age3;\n  float height1, height2, height3;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '```
+
+    // Read details for the first person
+
+    std::cout << "Enter the name of the first person: ";
+
+    std::getline(std::cin, name1);
+
+    std::cout << "Enter the age of " << name1 << ":";
+
+    std::cin >> age1;
+
+    std::cout << "Enter the height (in meters) of " <<
+
+    name1 << ";"
+
+    std::cin >> height1;
+
+    std::cin.ignore(); // To clear the newline left by
+
+    the previous input
+
+
+    // Read details for the second person
+
+    std::cout << "Enter the name of the second person: ";
+
+    std::getline(std::cin, name2);
+
+    std::cout << "Enter the age of " << name2 << ":";
+
+    std::cin >> age2;
+
+    std::cout << "Enter the height (in meters) of " <<
+
+    name2 << ":";
+
+    std::cin >> height2;
+
+    std::cin.ignore(); // To clear the newline left by
+
+    the previous input
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '```
+
+    // Read details for the third person
+
+    std::cout << "Enter the name of the third person: ";
+
+    std::getline(std::cin, name3);
+
+    std::cout << "Enter the age of " << name3 << ":";
+
+    std::cin >> age3;
+
+    std::cout << "Enter the height (in meters) of " << name3 << ":";
+
+    std::cin >> height3;
+
+    std::cin.ignore(); // To clear the newline left by the previous input
+
+    ```
+
+
+    // Output the details in table format
+
+
+    ```
+
+    std::cout << std::endl;
+
+    std::cout << std::left << std::setw(20) << "Name" << std::setw(5) << "Age" <<
+    std::setw(10) << "Height(m)" << std::endl;
+
+    std::cout << "--------------------------------" << std::endl;
+
+    std::cout << std::left << std::setw(20) << name1 << std::setw(5) << age1 << std::setw(10)
+    << height1 << std::endl;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '```
+
+    std::cout << std::left << std::setw(20) << name2
+
+    << std::setw(5) << age2
+
+    << std::setw(10) << height2 << std::endl;
+
+    std::cout << std::left << std::setw(20) << name3
+
+    << std::setw(5) << age3
+
+    << std::setw(10) << height3 << std::endl;
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # 10. Make a program that reads the names of three people in sequence, followed
+    by reading their respective ages and heights, and prints the data on the screen
+    in table format, using dashes (-) to separate rows and pipes (|) to separate columns.
+
+
+    ```
+
+    #include <iostream>
+
+    #include <iomanip>
+
+    #include <string>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "```\nint main() {\n    std::string name1, name2, name3;\n    int age1, age2,\
+    \ age3;\n    float height1, height2, height3;\n\n    // Read details for the first\
+    \ person\n    std::cout << \"Enter the name of the first person: \";\n    std::getline(std::cin,\
+    \ name1);\n    std::cout << \"Enter the age of \" << name1 << \":\";\n    std::cin\
+    \ >> age1;\n    std::cout << \"Enter the height (in meters) of \" << name1 <<\
+    \ \":\";\n    std::cin >> height1;\n    std::cin.ignore(); // To clear the newline\
+    \ left by the previous input\n\n    // Read details for the second person\n  \
+    \  std::cout << \"Enter the name of the second person: \";\n    std::getline(std::cin,\
+    \ name2);\n    std::cout << \"Enter the age of \" << name2 << \":\";\n    std::cin\
+    \ >> age2;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '```
+
+    std::cout << "Enter the height (in meters) of " <<
+
+    name2 << ":";
+
+    std::cin >> height2;
+
+    std::cin.ignore(); // To clear the newline left by
+
+    the previous input
+
+    ```
+
+
+    // Read details for the third person
+
+
+    ```
+
+    std::cout << "Enter the name of the third person:
+
+    ";
+
+    std::getline(std::cin, name3);
+
+    std::cout << "Enter the age of " << name3 << ":";
+
+    std::cin >> age3;
+
+    std::cout << "Enter the height (in meters) of " <<
+
+    name3 << ":";
+
+    std::cin >> height3;
+
+    std::cin.ignore(); // To clear the newline left by
+
+    the previous input
+
+    ```
+
+
+    // Output the details in table format
+
+
+    ```
+
+    std::cout << std::endl;
+
+    std::cout << std::left << std::setw(20) << "| Name"
+
+    << std::setw(5) << "| Age"
+
+    << std::setw(10) << "| Height(m) |" <<
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "```\nstd::endl;\nstd::cout << \"|-------------------|---|----------\" <<\n\
+    std::endl;\nstd::cout << std::left << std::setw(20) << \"|\" + \nname1\n    <<\
+    \ std::setw(5) << \"|\" + std::to_string(age1)\n    << std::setw(10) << \"|\"\
+    \ + std::\nto_string(height1) + \"|\" << std::endl;\nstd::cout << \"|-------------------|---|----------\"\
+    \ <<\nstd::endl;\nstd::cout << std::left << std::setw(20) << \"|\" + \nname2\n\
+    \    << std::setw(5) << \"|\" + std::to_string(age2)\n    << std::setw(10) <<\
+    \ \"|\" + std::\nto_string(height2) + \"|\" << std::endl;\nstd::cout << \"|-------------------|---|----------\"\
+    \ <<\nstd::endl;\nstd::cout << std::left << std::setw(20) << \"|\" + \nname3\n\
+    \    << std::setw(5) << \"|\" + std::to_string(age3)\n    << std::setw(10) <<\
+    \ \"|\" + std::\nto_string(height3) + \"|\" << std::endl;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "```\nstd::cout << \"|-------------------|-------|------------\\|\" << std::endl;\n\
+    \n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "# Mathematical\n Formulas\n\n11. Write a program that prompts the user for\
+    \ two numbers and displays the addition, subtraction, multiplication, and division\
+    \ between them.\n\n```\n#include <iostream>\n\nint main() {\n    double num1,\
+    \ num2;\n\n    // Prompt the user for two numbers\n    std::cout << \"Enter the\
+    \ first number: \";\n    std::cin >> num1;\n\n    std::cout << \"Enter the second\
+    \ number: \";\n    std::cin >> num2;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "```\n// Display the results\nstd::cout << \"Addition: \" << num1 + num2 <<\
+    \ std::endl;\nstd::cout << \"Subtraction: \" << num1 - num2 << std::endl;\nstd::cout\
+    \ << \"Multiplication: \" << num1 * num2 << std::endl;\nstd::cout << \"Division:\
+    \ \" << num1 / num2 << std::endl;\n  return 0;\n}\n```\n\n# 12. Write a program\
+    \ that calculates the arithmetic mean of two numbers entered by the user.\n\n\
+    ```\n#include <iostream>\nint main() {\n  double num1, num2;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "```\n// Prompt the user for two numbers\nstd::cout << \"Enter the first number:\
+    \ \";\nstd::cin >> num1;\n\nstd::cout << \"Enter the second number: \";\nstd::cin\
+    \ >> num2;\n\n// Calculate the arithmetic mean\ndouble mean = (num1 + num2) /\
+    \ 2;\n\n// Display the result\nstd::cout << \"The arithmetic mean of \" << num1\n\
+    \ << \" and \" << num2 << << \" is: \" << mean << std::endl;\n\nreturn 0;\n}\n\
+    ```\n\n# 13. Create a program that calculates and displays the arithmetic mean\
+    \ of three numbers entered by the user.\n\n```\n#include <iostream>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "```\nint main() {\n    double num1, num2, num3;\n\n    // Prompt the user for\
+    \ three numbers\n    std::cout << \"Enter the first number: \";\n    std::cin\
+    \ >> num1;\n\n    std::cout << \"Enter the second number: \";\n    std::cin >>\
+    \ num2;\n\n    std::cout << \"Enter the third number: \";\n    std::cin >> num3;\n\
+    \n    // Calculate the arithmetic mean\n    double mean = (num1 + num2 + num3)\
+    \ / 3;\n\n    // Display the result\n    std::cout << \"The arithmetic mean of\
+    \ \" << num1\n    << \",\" << num2 << \" and \" << num3 << \" is:\" <<\n    mean\
+    \ << std::endl;\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "# 14. Write a program that reads two numbers, the first being the base and\
+    \ the second the exponent, and then printing the first number raised to the second.\n\
+    \n```\n#include <iostream>\n#include <cmath> // Required for the pow() function\n\
+    \nint main() {\n    double base, exponent;\n\n    // Prompt the user for the base\
+    \ and the exponent\n    std::cout << \"Enter the base: \";\n    std::cin >> base;\n\
+    \n    std::cout << \"Enter the exponent: \";\n    std::cin >> exponent;\n\n  \
+    \  // Calculate the power using the pow() function\n    double result = std::pow(base,\
+    \ exponent);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "```\n// Display the result\nstd::cout << base << \" raised to the power of\
+    \ \" << exponent << \" is:\" << result << std::endl;\n\nreturn 0;\n}\n```\n\n\
+    # 15. Write a program that reads a number and prints the square root of the number\
+    \ on the screen.\n\n```\n#include <iostream>\n#include <cmath> // Required for\
+    \ the sqrt() function\n\nint main() {\n    double number;\n\n    // Prompt the\
+    \ user for a number\n    std::cout << \"Enter a number: \";\n    std::cin >> number;\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "```\n// Ensure the number is non-negative\nif (number < 0) {\n    std::cout\
+    \ << \"The number is negative, and its square root is not real.\" << std::endl;\n\
+    \    return 1;\n}\n\n// Calculate the square root using the sqrt() function\n\
+    double sqrt_value = std::sqrt(number);\n\n// Display the result\nstd::cout <<\
+    \ \"The square root of \" << number << \" is:\" << sqrt_value << std::endl;\n\n\
+    \    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# 16. Write a program that calculates the geometric mean of three numbers entered\
+    \ by the user -> GeoMean = $\\sqrt[3]{n_1 \times n_2 \times n_3}$\n\n```\n#include\
+    \ <iostream>\n#include <cmath> // Required for the cbrt() and pow() functions\n\
+    \nint main() {\n    double num1, num2, num3;\n\n    // Prompt the user for three\
+    \ numbers\n    std::cout << \"Enter the first number: \";\n    std::cin >> num1;\n\
+    \n    std::cout << \"Enter the second number: \";\n    std::cin >> num2;\n\n \
+    \   std::cout << \"Enter the third number: \";\n    std::cin >> num3;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '```
+
+    // Calculate the geometric mean
+
+    double product = num1 * num2 * num3;
+
+    double geometric_mean = std::cbrt(product);
+
+    ```
+
+
+    ```
+
+    // Alternatively, you can use the pow() function
+
+    // double geometric_mean = std::pow(product, 1.0 / 3.0);
+
+    ```
+
+
+    # 17. Write a program that calculates the BMI of an individual, using the formula
+    BMI = weight / height²
+
+
+    ```
+
+    #include <iostream>
+
+    #include <cmath> // Required for the pow()
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "```\nint main() {\n    double weight, height;\n\n    // Prompt the user for\
+    \ weight and height\n    std::cout << \"Enter your weight in kilograms: \";\n\
+    \    std::cin >> weight;\n\n    std::cout << \"Enter your height in meters: \"\
+    ;\n    std::cin >> height;\n\n    // Calculate the BMI\n    double bmi = weight\
+    \ / std::pow(height, 2);\n\n    // Display the BMI\n    std::cout << \"Your BMI\
+    \ is: \" << bmi << std::endl;\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# 18. Create a program that calculates and displays the perimeter of a circle,\
+    \ prompting the user for the radius, using the formula P = 2πr\n\n```\n#include\
+    \ <iostream>\n#include <cmath> // Required for the M_PI constant\n\nint main()\
+    \ {\n    double radius;\n\n    // Prompt the user for the radius\n    std::cout\
+    \ << \"Enter the radius of the circle: \";\n    std::cin >> radius;\n\n    //\
+    \ Calculate the perimeter/circumference\n    double perimeter = 2 * M_PI * radius;\n\
+    \n    // Display the result\n    std::cout << \"The perimeter (circumference)\
+    \ of the circle with radius \" << radius << \" is: \" <<\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "```\nperimeter << std::endl;\n\nreturn 0;\n}\n```\n\n# 19. Write a program\
+    \ that calculates the area of a circle from the radius, using the formula A =\
+    \ πr²\n\n```\n#include <iostream>\n#include <cmath> // Required for the M_PI constant\n\
+    \nint main() {\n    double radius;\n\n    // Prompt the user for the radius\n\
+    \    std::cout << \"Enter the radius of the circle: \";\n    std::cin >> radius;\n\
+    \n    // Calculate the area\n    double area = M_PI * std::pow(radius, 2);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "```\n// Display the result\nstd::cout << \"The area of the circle with radius\
+    \ \" << radius << \" is:\" << area << std::endl;\n\nreturn 0;\n}\n```\n\n# 20.\
+    \ Write a program that calculates the delta of a quadratic equation (Δ = b² -\
+    \ 4ac).\n\n```\n#include <iostream>\n#include <cmath>\n\nint main() {\n    double\
+    \ a, b, c;\n\n    // Prompt the user for the coefficients of the quadratic equation\n\
+    \    std::cout << \"Enter the coefficient a: \";\n    std::cin >> a;\n\n    std::cout\
+    \ << \"Enter the coefficient b: \";\n    std::cin >> b;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\nstd::cout << \"Enter the coefficient c: \";\nstd::cin >> c;\n\n// Calculate\
+    \ delta (Δ)\ndouble delta = std::pow(b, 2) - 4 * a * c;\n\n// Display the result\n\
+    std::cout << \"The delta (Δ) of the equation is: \" <<\ndelta << std::endl;\n\n\
+    return 0;\n}\n```\n\n# 21. Write a program that calculates the perimeter and area\
+    \ of a rectangle, using the formulas P = 2(w + l) and A = wl, where w is the width\
+    \ and l is the length\n\n```\n#include <iostream>\n\nint main() {\n    double\
+    \ width, length;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "```\n// Prompt the user for the width and length of\nrectangle\nstd::cout <<\
+    \ \"Enter the width of the rectangle: \";\nstd::cin >> width;\n\nstd::cout <<\
+    \ \"Enter the length of the rectangle: \";\nstd::cin >> length;\n\n// Calculate\
+    \ the perimeter and area\ndouble perimeter = 2 * (width + length);\ndouble area\
+    \ = width * length;\n\n// Display the results\nstd::cout << \"The perimeter of\
+    \ the rectangle is: \"\n<< perimeter << std::endl;\nstd::cout << \"The area of\
+    \ the rectangle is: \" << area\n<< std::endl;\n\n  return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "# 22. Write a program that calculates the perimeter and area of a triangle,\
+    \ using the formulas P = a + b + c and A = (b * h) / 2, where a, b and c are the\
+    \ sides of the triangle and h is the height relative to the side B.\n\n```\n#include\
+    \ <iostream>\n\nint main() {\n    double a, b, c, h;\n\n    // Prompt the user\
+    \ for the sides and height of the triangle\n    std::cout << \"Enter the length\
+    \ of side a: \";\n    std::cin >> a;\n\n    std::cout << \"Enter the length of\
+    \ side b: \";\n    std::cin >> b;\n\n    std::cout << \"Enter the length of side\
+    \ c: \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '```
+
+    std::cin >> c;
+
+
+    std::cout << "Enter the height relative to side b: ";std::cin >> h;
+
+
+    // Calculate the perimeter and area
+
+    double perimeter = a + b + c;
+
+    double area = (b * h) / 2;
+
+
+    // Display the results
+
+    std::cout << "The perimeter of the triangle is: " << perimeter << std::endl;
+
+    std::cout << "The area of the triangle is: " << area << std::endl;
+
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# 23. Write a program that calculates the average velocity of an object, using\
+    \ the formula v = Δs/Δt, where v is the average velocity, Δs is the space variation,\
+    \ and Δt is the time variation\n\n```\n#include <iostream>\n\nint main() {\n \
+    \   double delta_s, delta_t;\n\n    // Prompt the user for the space variation\
+    \ and time variation\n    std::cout << \"Enter the space variation (Δs) in meters:\"\
+    ;\n    std::cin >> delta_s;\n\n    std::cout << \"Enter the time variation (Δt)\
+    \ in seconds:\";\n    std::cin >> delta_t;\n\n    // Calculate the average velocity\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '```
+
+    double average_velocity = delta_s / delta_t;
+
+
+    // Display the result
+
+    std::cout << "The average velocity (v) is: " << age_velocity << " m/s" << std::endl;
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # 24. Write a program that calculates the kinetic energy of a moving object, using
+    the formula E = (mv²) / 2, where E is the kinetic energy, m is the mass of the
+    object, and v is the velocity.
+
+
+    ```
+
+    #include <iostream>
+
+    #include <cmath> // Required for the pow()
+
+    function
+
+
+    int main() {
+
+    double mass, velocity;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '```
+
+    // Prompt the user for the mass and velocity of the object
+
+    std::cout << "Enter the mass of the object (in kg): ";
+
+    std::cin >> mass;
+
+
+    std::cout << "Enter the velocity of the object (in m/s): ";
+
+    std::cin >> velocity;
+
+
+    // Calculate the kinetic energy
+
+    double kinetic_energy = (mass * std::pow(velocity, 2)) / 2;
+
+
+    // Display the result
+
+    std::cout << "The kinetic energy of the object is: " << kinetic_energy << " Joules"
+    << std::endl;
+
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "25. Write a program that calculates the work done by a force acting on an object,\
+    \ using the formula W = F * d, where W is the work, F is the applied force, and\
+    \ d is the distance traveled by the object.\n\n```\n#include <iostream>\n\nint\
+    \ main() {\n    double force, distance;\n\n    // Prompt the user for the applied\
+    \ force and distance\n    std::cout << \"Enter the force applied on the object\
+    \ (Newtons):\";\n    std::cin >> force;\n\n    std::cout << \"Enter the distance\
+    \ traveled by the object (in meters):\";\n    std::cin >> distance;\n\n    //\
+    \ Calculate the work done\n```"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "```\ndouble work = force * distance;\n\n// Display the result\nstd::cout <<\
+    \ \"The work done by the force is: \" <<\nwork << \" Joules\" << std::endl;\n\n\
+    return 0;\n}\n```\n\n# **26. Write a program that calculates the n-th term of\
+    \ an arithmetic progression given the value of the first term, the common difference\
+    \ (ratio), and the value of n read from the user $\rightarrow a_n = a_1 + (n -\
+    \ 1) \\times r$\n\n```\n#include <iostream>\n\nint main() {\n    double a1, d;\n\
+    \    int n;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '```
+
+    // Prompt the user for the first term, common
+
+    difference, and n
+
+    std::cout << "Enter the first term of the arith-metic progression: ";
+
+    std::cin >> a1;
+
+
+    std::cout << "Enter the common difference of
+
+    the arithmetic progression: \
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "# 27. Write a program that reads the x and y position of two points in the\
+    \ Cartesian plane, and calculates the distance between them\n\n```\n#include <iostream>\n\
+    #include <cmath> // For the sqrt() and pow() functions\n\nint main() {\n    double\
+    \ x1,y1,x2,y2;\n\n    // Prompt the user for the coordinates of the first point\n\
+    \    std::cout << \"Enter the x and y coordinates of the first point (separated\
+    \ by space): \";\n    std::cin >> x1 >> y1;\n\n    // Prompt the user for the\
+    \ coordinates of the second point\n    std::cout << \"Enter the x and y coordinates\
+    \ of the second point (separated by space): \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "```\nstd::cin >> x2 >> y2;\n\n// Calculate the distance between the two points\n\
+    double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));\n\n// Display the result\n\
+    std::cout << \"The distance between the two points is:\" << distance << std::endl;\n\
+    \n  return 0;\n}\n```\n\n# 28. Create a program that prompts the user for the\
+    \ radius of a sphere and calculates and displays its volume.\n\n```\n#include\
+    \ <iostream>\n#include <cmath> // For the pow() function\n\nconst double PI =\
+    \ 3.14; // Value of Pi\n```"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "```\nint main() {\n    double radius;\n\n    // Prompt the user for the radius\
+    \ of the sphere\n    std::cout << \"Enter the radius of the sphere: \";\n    std::cin\
+    \ >> radius;\n\n    // Calculate the volume of the sphere\n    double volume =\
+    \ (4.0 / 3.0) * PI * pow(radius, 3);\n\n    // Display the result\n    std::cout\
+    \ << \"The volume of the sphere with radius \" << radius << \" is: \" << volume\
+    \ << \" cubic units\" << std::endl;\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "# 29. Make a program that reads the resistance of two resistors and displays\
+    \ the resulting resistance value when connected in series, adding the values,\
+    \ and in parallel using the formula (R1 * R2) / (R1 + R2)\n\n```\n#include <iostream>\n\
+    \nint main() {\n    double R1, R2;\n\n    // Prompt the user for the resistances\
+    \ of the two resistors\n    std::cout << \"Enter the resistance of the first resistor\
+    \ (in ohms):\";\n    std::cin >> R1;\n\n    std::cout << \"Enter the resistance\
+    \ of the second resistor (in ohms):\";\n    std::cin >> R2;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "```\n// Calculate the resulting resistance when the\nresistors are connected\
+    \ in series\ndouble series_resistance = R1 + R2;\n\n// Calculate the resulting\
+    \ resistance when the\nresistors are connected in parallel\ndouble parallel_resistance\
+    \ = (R1 * R2) / (R1 + R2);\n\n// Display the results\nstd::cout << \"Resulting\
+    \ resistance when con-\nected in series: \" << series_resistance << \" ohms\"\n\
+    << std::endl;\nstd::cout << \"Resulting resistance when con-\nected in parallel:\
+    \ \" << parallel_resistance << \" \nohms\" << std::endl;\n\n  return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "# 30. Make a program that reads a value of a product and the tax (in percentage),\
+    \ and calculates the final value of it.\n\n```\n#include <iostream>\n```\n\n```\n\
+    int main() {\n    double productValue, taxRate;\n\n    // Prompt the user for\
+    \ the product value\n    std::cout << \"Enter the value of the product: \";\n\
+    \    std::cin >> productValue;\n\n    // Prompt the user for the tax rate (in\
+    \ percentage)\n    std::cout << \"Enter the tax rate (in percentage): \";\n  \
+    \  std::cin >> taxRate;\n\n    // Calculate the tax amount\n    double taxAmount\
+    \ = (taxRate / 100) * productValue;\n\n    // Calculate the final product value\
+    \ including\n```"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '```
+
+    double finalValue = productValue + taxAmount;
+
+    // Display the results
+
+    std::cout << "Final value of the product after applying the tax: " << finalValue
+    << std::endl;
+
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "# Conditionals\n\n31. Make a program that asks for a person's age and displays\
+    \ whether they are of legal age or not (age >= 18).\n\n```\n#include <iostream>\n\
+    int main() {\n    int age;\n\n    // Prompt the user for their age\n    std::cout\
+    \ << \"Please enter your age:\";\n    std::cin >> age;\n\n    // Check if the\
+    \ person is of legal age or not\n    if (age >= 18) {\n        std::cout << \"\
+    You are of legal age.\" << std::endl;\n    } else {\n        std::cout << \"You\
+    \ are not of legal age.\" << std::endl;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "```\n}\n  return 0;\n}\n```\n\n# 32. Write a program that reads a number and\
+    \ reports whether it is odd or even.\n\n```\n#include <iostream>\n\nint main()\
+    \ {\n  int number;\n\n  // Prompt the user for a number\n  std::cout << \"Please\
+    \ enter a number: \";\n  std::cin >> number;\n\n  // Determine if the number is\
+    \ odd or even\n  if (number % 2 == 0) {\n    std::cout << \"The number is even.\"\
+    \ << std::endl;\n  } else {\n    std::cout << \"The number is odd.\" << std::endl;\n\
+    \  }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "```\nreturn 0;\n}\n```\n\n# 33. Write a program that reads a number and reports\
+    \ whether it is positive, negative or zero.\n\n```\n#include <iostream>\n\nint\
+    \ main() {\n    double number;\n\n    // Prompt the user for a number\n    std::cout\
+    \ << \"Please enter a number: \";\n    std::cin >> number;\n\n    // Determine\
+    \ if the number is positive, negative, or zero\n    if(number > 0) {\n       \
+    \ std::cout << \"The number is positive.\" << std::endl;\n    } else if (number\
+    \ < 0) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "```\nstd::cout << \"The number is negative.\" << std::endl;\nelse {\n    std::cout\
+    \ << \"The number is zero.\" << std::endl;\n    return 0;\n}\n```\n\n# 34. Create\
+    \ a program that reads three numbers and checks if their sum is positive, negative\
+    \ or equal to zero\n\n```\n#include <iostream>\n\nint main() {\n    double num1,\
+    \ num2, num3;\n\n    // Prompt the user for three numbers\n    std::cout << \"\
+    Enter the first number: \";\n    std::cin >> num1;\n\n    std::cout << \"Enter\
+    \ the second number: \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "```\nstd::cin >> num2;\nstd::cout << \"Enter the third number: \";\nstd::cin\
+    \ >> num3;\n\n// Calculate the sum of the three numbers\ndouble sum = num1 + num2\
+    \ + num3;\n\n// Determine if the sum is positive, negative, or zero\nif (sum >\
+    \ 0) {\n    std::cout << \"The sum is positive.\" << std::endl;\n} else if (sum\
+    \ < 0) {\n    std::cout << \"The sum is negative.\" << std::endl;\n} else {\n\
+    \    std::cout << \"The sum is zero.\" << std::endl;\n}\n\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "# 35. Write a program that reads two numbers and tells you which one is bigger.\n\
+    \n```\n#include <iostream>\n\nint main() {\n    double num1, num2;\n\n    // Prompt\
+    \ the user for two numbers\n    std::cout << \"Enter the first number: \";\n \
+    \   std::cin >> num1;\n\n    std::cout << \"Enter the second number: \";\n   \
+    \ std::cin >> num2;\n\n    // Determine and display which number is bigger\n \
+    \   if (num1 > num2) {\n        std::cout << \"The first number (\" << num1 <<\
+    \ \") is bigger.\" << std::endl;\n    } else if (num1 < num2) {\n        std::cout\
+    \ << \"The second number (\" << num2 << \") is bigger.\" << std::endl;\n    }\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "```\n} else {\n    std::cout << \"Both numbers are equal.\" <<\n    std::endl;\n\
+    }\n\n    return 0;\n}\n```\n\n# 36. Write a program that asks the user for three\
+    \ numbers and displays the largest one.\n\n#include <iostream>\n\n```\nint main()\
+    \ {\n    double num1, num2, num3;\n\n    // Prompt the user for three numbers\n\
+    \    std::cout << \"Enter the first number: \";\n    std::cin >> num1;\n\n   \
+    \ std::cout << \"Enter the second number: \";\n    std::cin >> num2;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "```\nstd::cout << \"Enter the third number: \";\nstd::cin >> num3;\n\n// Determine\
+    \ and display the largest number\nif (num1 >= num2 && num1 >= num3) {\n    std::cout\
+    \ << \"The largest number is: \" << num1\\ << std::endl;\n} else if (num2 >= num1\
+    \ && num2 >= num3) {\n    std::cout << \"The largest number is: \" << num2\\ <<\
+    \ std::endl;\n} else {\n    std::cout << \"The largest number is: \" << num3\\\
+    \ << std::endl;\n}\n\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "# 37. Make a program that reads three numbers, and informs if their sum is\
+    \ divisible by 5 or not.\n\n```\n#include <iostream>\n\nint main() {\n    double\
+    \ num1, num2, num3;\n\n    // Prompt the user for three numbers\n    std::cout\
+    \ << \"Enter the first number: \";\n    std::cin >> num1;\n\n    std::cout <<\
+    \ \"Enter the second number: \";\n    std::cin >> num2;\n\n    std::cout << \"\
+    Enter the third number: \";\n    std::cin >> num3;\n\n    // Calculate the sum\
+    \ of the numbers\n    double sum = num1 + num2 + num3;\n\n    // Check if the\
+    \ sum is divisible by 5\n```"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "```\nif (static_cast<int>(sum) % 5 == 0) {\n    std::cout << \"The sum of the\
+    \ numbers is divisible by 5.\" << std::endl;\n} else {\n    std::cout << \"The\
+    \ sum of the numbers is not divisible by 5.\" << std::endl;\n}\n    return 0;\n\
+    }\n```\n\n# 38. Write a program that asks for an integer and checks if it is divisible\
+    \ by 3 and 5 at the same time.\n\n```\n#include <iostream>\n\nint main() {\n \
+    \   int number;\n    // Prompt the user for an integer\n    std::cout << \"Enter\
+    \ an integer: \";\n    std::cin >> number;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "```\n// Check if the number is divisible by both 3 and 5\nif (number % 3 ==\
+    \ 0 && number % 5 == 0) {\n    std::cout << \"The number is divisible by both\
+    \ 3 and 5.\" << std::endl;\n} else {\n    std::cout << \"The number is not divisible\
+    \ by both 3 and 5.\" << std::endl;\n}\nreturn 0;\n}\n```\n\n#  39. Make a program\
+    \ that asks for two numbers and displays if the first is divisible by the second\n\
+    \n```\n#include <iostream>\nint main() {\n    double num1, num2;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "```\n// Prompt the user for two numbers\nstd::cout << \"Enter the first number:\
+    \ \";\nstd::cin >> num1;\n\nstd::cout << \"Enter the second number: \";\nstd::cin\
+    \ >> num2;\n\n// Ensure the second number isn't zero before attempting division\n\
+    if (num2 == 0) {\n    std::cout << \"The second number cannot be zero (division\
+    \ by zero is undefined).\" << std::endl;\n} else if (static_cast<int>(num1) %\
+    \ static_cast<int>(num2) == 0) {\n    std::cout << \"The first number is divisible\
+    \ by the second number.\" << std::endl;\n} else {\n    std::cout << \"The first\
+    \ number is not divisible by the second number.\" << std::endl;\n}\n\nreturn 0;\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "```\n}\n```\n\n# 40. Make a program that reads the scores of two tests and\
+    \ reports whether the student passed (score greater than or equal to 6) or failed\
+    \ (score less than 6) in each of the tests.\n\n```\n#include <iostream>\nint main()\
+    \ {\n    double test1Score, test2Score;\n\n    // Prompt the user for scores of\
+    \ two tests\n    std::cout << \"Enter the score for the first test: \";\n    std::cin\
+    \ >> test1Score;\n\n    std::cout << \"Enter the score for the second test: \"\
+    ;\n    std::cin >> test2Score;\n\n    // Determine and display the result for\
+    \ the first\n```"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "```\nif (test1Score >= 6) {\n    std::cout << \"Passed in the first test.\"\
+    \ << std::endl;\n} else {\n    std::cout << \"Failed in the first test.\" << std::endl;\n\
+    }\n\n// Determine and display the result for the second test\nif (test2Score >=\
+    \ 6) {\n    std::cout << \"Passed in the second test.\" << std::endl;\n} else\
+    \ {\n    std::cout << \"Failed in the second test.\" << std::endl;\n}\n\n    return\
+    \ 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "# 41. Make a program that reads the grades of two tests, calculates the simple\
+    \ arithmetic mean, and informs whether the student passed (average greater than\
+    \ or equal to 6) or failed (average less than 6).\n\n```\n#include <iostream>\n\
+    \nint main() {\n    double test1Grade, test2Grade;\n\n    // Prompt the user for\
+    \ grades of two tests\n    std::cout << \"Enter the grade for the first test:\
+    \ \";\n    std::cin >> test1Grade;\n\n    std::cout << \"Enter the grade for the\
+    \ second test: \";\n    std::cin >> test2Grade;\n\n    // Calculate the simple\
+    \ arithmetic mean of the\n```"
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "grades\ndouble average = (test1Grade + test2Grade) / 2;\n\n```\n// Display\
+    \ the average\nstd::cout << \"Average grade: \" << average << \\std::endl;\n```\n\
+    \n// Determine and display the result based on the average\n\n```\nif (average\
+    \ >= 6) {\n    std::cout << \"Student passed.\" << std::endl;\n} else {\n    std::cout\
+    \ << \"Student failed.\" << std::endl;\n}\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "# 42. Make a program that reads the age of three people and how many of them\
+    \ are of legal age (age 18 or older).\n\n```\n#include <iostream>\n\nint main()\
+    \ {\n    int age1, age2, age3;\n    int countLegalAge = 0;\n\n    // Prompt the\
+    \ user for the ages of three people\n    std::cout << \"Enter the age of the first\
+    \ person: \";\n    std::cin >> age1;\n    if(age1 >= 18) countLegalAge++;\n\n\
+    \    std::cout << \"Enter the age of the second person: \";\n    std::cin >> age2;\n\
+    \    if (age2 >= 18) countLegalAge++;\n\n    std::cout << \"Enter the age of the\
+    \ third person: \";\n    std::cin >> age3;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "```\nif (age3 >= 18) countLegalAge++;\n\n// Display the result\nstd::cout <<\
+    \ countLegalAge << \" of them are of legal age (18 or older).\" << std::endl;\n\
+    \nreturn 0;\n}\n```\n\n#  43. Make a program that reads three numbers, and displays\
+    \ them on the screen in ascending order.\n\n```\n#include <iostream>\n\nint main()\
+    \ {\n    double num1, num2, num3;\n\n    // Prompt the user for three numbers\n\
+    \    std::cout << \"Enter the first number: \";\n    std::cin >> num1;\n\n   \
+    \ std::cout << \"Enter the second number: \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "```\nstd::cin >> num2;\n\nstd::cout << \"Enter the third number: \";\nstd::cin\
+    \ >> num3;\n\n// Display the numbers in ascending order\nif (num1 <= num2 && num1\
+    \ <= num3) {\n    std::cout << num1 << \", \";\n    if (num2 <= num3) {\n    \
+    \    std::cout << num2 << \", \" << num3;\n    } else {\n        std::cout <<\
+    \ num3 << \", \" << num2;\n    }\n} else if (num2 <= num1 && num2 <= num3) {\n\
+    \    std::cout << num2 << \", \";\n    if (num1 <= num3) {\n        std::cout\
+    \ << num1 << \", \" << num3;\n    } else {\n        std::cout << num3 << \", \"\
+    \ << num1;\n    }\n} else {\n    std::cout << num3 << \", \";\n    if (num1 <=\
+    \ num2) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "```\nstd::cout << num1 << \", \" << num2;\n} else {\n  std::cout << num2 <<\
+    \ \", \" << num1;\n}\n}\n```\n\n```\nstd::cout << std::endl;\nreturn 0;\n}\n```\n\
+    \n# 44. Write a program that reads three numbers and tells you if they can be\
+    \ the sides of a triangle (the sum of two sides must always be greater than the\
+    \ third side).\n\n```\n#include <iostream>\n```\n\n```\nint main() {\n  double\
+    \ side1, side2, side3;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "```\n// Prompt the user for three sides\nstd::cout << \"Enter the first side:\"\
+    ;\nstd::cin >> side1;\n\nstd::cout << \"Enter the second side:\";\nstd::cin >>\
+    \ side2;\n\nstd::cout << \"Enter the third side:\";\nstd::cin >> side3;\n\n//\
+    \ Check the triangle inequality conditions\nif (side1 + side2 > side3 && side1\
+    \ + side3 > side2 && side2 + side3 > side1) {\n    std::cout << \"The given sides\
+    \ can form a triangle.\" << std::endl;\n} else {\n    std::cout << \"The given\
+    \ sides cannot form a triangle.\" << std::endl;\n}\n\n  return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "# 45. Make a program that reads the year of birth of a person and informs if\
+    \ he is able to vote (age greater than or equal to 16 years old).\n\n```\n#include\
+    \ <iostream>\n#include <ctime> // For getting the current year\n\nint main() {\n\
+    \    int birthYear;\n    int currentYear;\n\n    // Get the current year\n   \
+    \ time_t now = time(0);\n    tm *ltm = localtime(&now);\n    currentYear = 1900\
+    \ + ltm->tm_year;\n\n    // Prompt the user for their year of birth\n    std::cout\
+    \ << \"Enter your year of birth: \";\n    std::cin >> birthYear;\n\n    int age\
+    \ = currentYear - birthYear;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "```\n// Check if the person is eligible to vote\nif (age >= 16) {\n    std::cout\
+    \ << \"You are eligible to vote.\" << std::endl;\n} else {\n    std::cout << \"\
+    You are not eligible to vote.\" << std::endl;\n}\n\n  return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "46. Create a program that asks for a person's age and displays whether they\
+    \ are a child (0-12 years old), teenager (13-17 years old), adult (18-59 years\
+    \ old), or elderly (60 years old or older), using nested conditionals, without\
+    \ using logical operators.\n\n```\n#include <iostream>\n\nint main() {\n    int\
+    \ age;\n\n    // Prompt the user for their age\n    std::cout << \"Enter your\
+    \ age: \";\n    std::cin >> age;\n\n    // Check the age range using nested conditionals\n\
+    \    if (age < 13) {\n        std::cout << \"You are a child.\" << std::endl;\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "```\n} else if (age < 18) {\n    std::cout << \"You are a teenager.\" << std::endl;\n\
+    } else if (age < 60) {\n    std::cout << \"You are an adult.\" << std::endl;\n\
+    } else {\n    std::cout << \"You are elderly.\" << std::endl;\n}\n\n  return 0;\n\
+    }\n```\n\n# 47. Create a program that asks for a person's age and displays whether\
+    \ they are a child (0-12 years old), teenager (13-17 years old), adult (18-59\
+    \ years old), or elderly (60 years old or older), using logical operators, without\
+    \ using else, elif, etc.\n\n```\n#include <iostream>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "```\nint main() {\n    int age;\n\n    // Prompt the user for their age\n \
+    \   std::cout << \"Enter your age: \";\n    std::cin >> age;\n\n    // Check the\
+    \ age range using only if statements and logical operators\n    if (age >= 0 &&\
+    \ age <= 12) {\n        std::cout << \"You are a child.\" << std::endl;\n    }\n\
+    \    if (age >= 13 && age <= 17) {\n        std::cout << \"You are a teenager.\"\
+    \ << std::endl;\n    }\n    if (age >= 18 && age <= 59) {\n        std::cout <<\
+    \ \"You are an adult.\" << std::endl;\n    }\n    if (age >= 60) {\n        std::cout\
+    \ << \"You are elderly.\" << std::endl;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "```\nreturn 0;\n}\n```\n\n# 48. Make a program that reads a person's age and\
+    \ informs if he is not able to vote (age less than 16 years old), if he is able\
+    \ to vote but is not obligated (16, 17 years old, or age equal to or greater than\
+    \ 70 years), or if it is obligatory (18 to 69 years old).\n\n```\n#include <iostream>\n\
+    \nint main() {\n    int age;\n\n    // Prompt the user for their age\n    std::cout\
+    \ << \"Enter your age: \";\n    std::cin >> age;\n\n    // Check the age and display\
+    \ the corresponding voting status\n```"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: "```\nif (age < 16) {\n    std::cout << \"You are not able to vote.\" << std::endl;\n\
+    } else if (age == 16 || age == 17 || age >= 70) {\n    std::cout << \"You are\
+    \ able to vote, but it's not obligatory.\" << std::endl;\n} else {\n    std::cout\
+    \ << \"Voting is obligatory for you.\" << std::endl;\n}\n\n  return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "# 49. Make a program that reads three grades from a student and reports whether\
+    \ he passed (final grade greater than or equal to 7), failed (final grade less\
+    \ than 4) or was in recovery (final grade between 4 and 7).\n\n```\n#include <iostream>\n\
+    \nint main() {\n    double grade1, grade2, grade3, average;\n\n    // Read the\
+    \ three grades from the user\n    std::cout << \"Enter the first grade: \";\n\
+    \    std::cin >> grade1;\n\n    std::cout << \"Enter the second grade: \";\n \
+    \   std::cin >> grade2;\n\n    std::cout << \"Enter the third grade: \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "```\nstd::cin >> grade3;\n// Calculate the average of the grades\naverage =\
+    \ (grade1 + grade2 + grade3) / 3.0;\n\n// Determine and display the student's\
+    \ status\nif (average >= 7) {\n    std::cout << \"You passed!\" << std::endl;\n\
+    } else if (average < 4) {\n    std::cout << \"You failed.\\\n```"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "# 50. Write a program that asks for a person's height and weight and calculates\
+    \ their body mass index (BMI), displaying the corresponding category (underweight,\
+    \ normal weight, overweight, obese, severely obese).\n\n```\n#include <iostream>\n\
+    \nint main() {\n    double height, weight, bmi;\n\n    // Get height and weight\
+    \ from the user\n    std::cout << \"Enter your height in meters: \";\n    std::cin\
+    \ >> height;\n\n    std::cout << \"Enter your weight in kilograms: \";\n    std::cin\
+    \ >> weight;\n\n    // Calculate BMI\n```"
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: "```\nbmi = weight / (height * height);\n\n// Display BMI and category\nstd::cout\
+    \ << \"Your BMI is: \" << bmi << std::endl;\n\nif (bmi < 18.5) {\n    std::cout\
+    \ << \"You are underweight.\" << std::endl;\n} else if (bmi >= 18.5 && bmi < 24.9)\
+    \ {\n    std::cout << \"You are of normal weight.\" << std::endl;\n} else if (bmi\
+    \ >= 24.9 && bmi < 30) {\n    std::cout << \"You are overweight.\" << std::endl;\n\
+    } else if (bmi >= 30 && bmi < 35) {\n    std::cout << \"You are obese.\" << std::endl;\n\
+    } else {\n    std::cout << \"You are severely obese.\" << std::endl;\n}\n\n  return\
+    \ 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "# 51. Write a program that asks the user to enter their grade (0-100) and prints\
+    \ their letter grade (A for 90-100, B for 80-89, C for 70-79, D for 60-69, F for\
+    \ under 60).\n\n```\n#include <iostream>\n\nint main() {\n    int grade;\n\n \
+    \   // Ask user for their grade\n    std::cout << \"Enter your grade (0-100):\"\
+    ;\n    std::cin >> grade;\n\n    // Determine and print letter grade\n    if (grade\
+    \ >= 90 && grade <= 100) {\n        std::cout << \"Your letter grade is: A\" <<\
+    \ std::endl;\n    } else if (grade >= 80 && grade < 90) {\n        std::cout <<\
+    \ \"Your letter grade is: B\" << std::endl;\n    } else if (grade >= 70 && grade\
+    \ < 80) {\n        std::cout << \"Your letter grade is: C\" << std::endl;\n  \
+    \  } else if (grade >= 60 && grade < 70) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "```\nstd::cout << \"Your letter grade is: D\" << std::endl;\n} else if (grade\
+    \ < 60) {\n  std::cout << \"Your letter grade is: F\" << std::endl;\n} else {\n\
+    \  std::cout << \"Invalid grade input.\" << std::endl;\n}\n\n  return 0;\n}\n\
+    ```\n\n# 52. Write a program that reads the values a, b and c of a quadratic equation,\
+    \ and says if the roots of the function are real or imaginary.\n\n```\n#include\
+    \ <iostream>\n\nint main() {\n  double a, b, c, discriminant;\n\n  // Read coefficients\n\
+    \  std::cout << \"Enter the value of a: \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "```\nstd::cin >> a;\n\nstd::cout << \"Enter the value of b: \";\nstd::cin >>\
+    \ b;\n\nstd::cout << \"Enter the value of c: \";\nstd::cin >> c;\n\n// Calculate\
+    \ the discriminant\ndiscriminant = b*b-4*a*c;\n\n// Check the nature of roots\
+    \ based on the discriminant\nif (discriminant > 0) {\n    std::cout << \"The roots\
+    \ are real and distinct.\" << std::endl;\n} else if (discriminant == 0) {\n  \
+    \  std::cout << \"The roots are real and the same.\" << std::endl;\n} else {\n\
+    \    std::cout << \"The roots are imaginary.\" << std::endl;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: "```\nreturn 0;\n}\n```\n\n53. Create a program that reads the price of a product.\
+    \ If the price is more than US $200, the tax is 5%, if it is more than US $500,\
+    \ the tax is 7.5%. Products up to US $200 do not pay taxes. Print the final price\
+    \ of the product on the screen.\n\n```\n#include <iostream>\n#include <iomanip>\n\
+    \nint main() {\n    double price, tax, finalPrice;\n\n    // Read product price\n\
+    \    std::cout << \"Enter the price of the product: \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "```\nstd::cin >> price;\n\n// Determine tax rate based on price\nif (price\
+    \ > 500) {\n    tax = 0.075; // 7.5%\n} else if (price > 200) {\n    tax = 0.05;\
+    \ // 5%\n} else {\n    tax = 0; // No tax\n}\n\n// Calculate final price\nfinalPrice\
+    \ = price + (price * tax);\n\n// Print the final price\nstd::cout << std::fixed\
+    \ << std::setprecision(2);\nstd::cout << \"The final price of the product (including\
+    \ tax) is: \" << finalPrice << std::endl;\n\nreturn 0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "```\n}\n```\n\n# 54. Write a program that reads a year (a four digit number)\
+    \ and checks whether it is a leap year or not.\n\n```\n#include <iostream>\n```\n\
+    \n```\nint main() {\n    int year;\n    // Prompt the user for input\n    std::cout\
+    \ << \"Enter a year (four digits): \";\n    std::cin >> year;\n    // Check if\
+    \ the year is a leap year\n    if ((year % 4 == 0 && year % 100 != 0) || year\
+    \ % 400 == 0) {\n        std::cout << year << \" is a leap year.\" << std::endl;\n\
+    \    } else {\n        std::cout << year << \" is not a leap year.\" << std::endl;\n\
+    \    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "```\n}\nreturn 0;\n}\n```\n\n# 55. Input three numbers representing the coefficients\
+    \ of a quadratic equation (a, b, c) and find its roots, also mention if they are\
+    \ real or complex\n\n```\n#include <iostream>\n#include <cmath>\n\nint main()\
+    \ {\n    double a, b, c, discriminant, realPart, imaginary-Part, root1, root2;\n\
+    \n    // Read the coefficients of the quadratic equation\n    std::cout << \"\
+    Enter the coefficients a, b and c separated by spaces: \";\n    std::cin >> a\
+    \ >> b >> c;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "```\n// Calculate the discriminant\ndiscriminant = b * b - 4 * a * c;\n\\if\
+    \ (discriminant > 0) {\n  // Two real and distinct roots\n  root1 = (-b + sqrt(discriminant))\
+    \ / (2 * a);\n  root2 = (-b - sqrt(discriminant)) / (2 * a);\n  std::cout << \"\
+    Roots are real and distinct.\" << std::endl;\n  std::cout << \"Root 1: \" << root1\
+    \ << std::endl;\n  std::cout << \"Root 2: \" << root2 << std::endl;\n} else if\
+    \ (discriminant == 0) {\n  // Two real and equal roots\n  root1 = -b / (2 * a);\n\
+    \  std::cout << \"Roots are real and equal.\" << std::endl;\n  std::cout << \"\
+    Root 1 and Root 2: \" << root1 << std::endl;\n} else {\n  // Complex roots\n \
+    \ realPart = -b / (2 * a);\n  imaginaryPart = sqrt(-discriminant) / (2 * a);\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "```\nstd::cout << \"Roots are complex and distinct.\";\n<< std::endl;\nstd::cout\
+    \ << \"Root 1: \" << realPart << \" + \" << imaginaryPart << \"i\" << std::endl;\n\
+    std::cout << \"Root 2: \" << realPart << \" - \" << imaginaryPart << \"i\" <<\
+    \ std::endl;\n}\n  return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "# Repeat Loops\n\n56. Write a program that displays the numbers 1 through 10\
+    \ using a while loop.\n\n```\n#include <iostream>\n\nint main() {\n    int i =\
+    \ 1; // Initialize counter to 1\n\n    while (i <= 10) {\n        std::cout <<\
+    \ i << std::endl;\n        i++; // Increment the counter\n    }\n\n    return\
+    \ 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: "# 57. Write a program that displays the numbers 1 through 10 using a for loop.\n\
+    \n```\n#include <iostream>\n\nint main() {\n    for (int i = 1; i <= 10; i++)\
+    \ {\n        std::cout << i << std::endl;\n    }\n\n    return 0;\n}\n```\n\n\
+    # 58. Write a program that displays all numbers from 1 to 100, using a while loop.\n\
+    \n```\n#include <iostream>\n\nint main() {\n    int i = 1; // Initialize counter\
+    \ to 1\n\nwhile (i <= 100) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "```\nstd::cout << i << \"\";\ni++; // Increment the counter\n}\nnreturn 0;\n\
+    }\n```\n\n# 59. Write a program that displays all numbers from 1 to 100, using\
+    \ a for loop.\n\n```\n#include <iostream>\n\nint main() {\n    for (int i = 1;i<=\
+    \ 100;i++) {\n        std::cout << i << \"\";\n    }\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "# 60. Write a program that displays all numbers from 1 to 100, using a do-while\
+    \ loop.\n\n```\n#include <iostream>\n\nint main() {\n    int i = 1;\n\n    do\
+    \ {\n        std::cout << i << \"\";\n        i++;\n    } while (i <= 100);\n\n\
+    \    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: "# 61. Write a program that prints all even numbers from 1 to 100 using a while\
+    \ loop and an if statement inside the loop to check if the number is even or not.\n\
+    \n```\n#include <iostream>\n\nint main() {\n    int i = 1;\n\n    while (i <=\
+    \ 100) {\n        if (i % 2 == 0) { // Check if the number is even\n         \
+    \   std::cout << i << \" \";\n        }\n        i++;\n    }\n\n    return 0;\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "# 62. Write a program that prints all even numbers from 1 to 100 using a while\
+    \ loop without using any if statement.\n\n```\n#include <iostream>\n\nint main()\
+    \ {\n    int i = 2;\n\n    while (i <= 100) {\n        std::cout << i << \"\"\
+    ;\n        i += 2; // Increment by 2 to get the next even number\n    }\n\n  \
+    \  return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "# 63. Write a program that displays even numbers 1 to 50 and odd numbers 51\
+    \ to 100 using a repeating loop.\n\n```\n#include <iostream>\n```\n\n```\nint\
+    \ main() {\n    // Display even numbers from 1 to 50\n    for (int i = 2; i <=\
+    \ 50; i += 2) {\n        std::cout << i << \"\";\n    }\n\n    std::cout << std::endl;\
+    \ // For better separation\n\n    // Display odd numbers from 51 to 100\n    for\
+    \ (int i = 51; i <= 100; i += 2) {\n        std::cout << i << \"\";\n    }\n\n\
+    \    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: "# 64. Create a program that prompts the user for a number and displays the\
+    \ table of that number using a loop.\n\n```\n#include <iostream>\n\nint main()\
+    \ {\n    int number;\n\n    // Ask user for a number\n    std::cout << \"Enter\
+    \ a number: \";\n    std::cin >> number;\n\n    // Display the table of that number\n\
+    \    for (int i = 1; i <= 10; i++) {\n        std::cout << number << \" x \" <<\
+    \ i << \" = \" << number*i << std::endl;\n    }\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "# 65. Create a program that displays the table of all numbers from 1 to 10.\n\
+    \n```\n#include <iostream>\n\nint main() {\n    for (int number = 1; number <=\
+    \ 10; number++) {\n        std::cout << \"Table of \" << number << \":\" << std::endl;\n\
+    \n        for (int i = 1;i<= 10; i++){\n            std::cout << number << \"\
+    x\" << i << \" = \" << number*i << std::endl;\n        }\n\n        std::cout\
+    \ << std::endl; // To separate tables\n    }\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "# 66. Write a program that calculates and displays the value of the power of\
+    \ a number entered by the user raised to an exponent also entered by the user,\
+    \ using repetition loops.\n\n```\n#include <iostream>\n\nint main() {\n    double\
+    \ base, result = 1.0;\n    int exponent;\n\n    // Get input from the user\n \
+    \   std::cout << \"Enter the base: \";\n    std::cin >> base;\n\n    std::cout\
+    \ << \"Enter the exponent (positive or negative integer): \";\n    std::cin >>\
+    \ exponent;\n\n    if (exponent > 0) {\n        for (int i = 1; i <= exponent;\
+    \ i++) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "```\nresult *= base;\n}\nelse if (exponent < 0) {\n    for (int i = 1; i <=\
+    \ -exponent; i++) {\n        result /= base;\n    }\n} // If exponent is 0, result\
+    \ remains 1.0\nstd::cout << base << \"raised to the power \" << exponent << \"\
+    \ is:\" << result << std::endl;\nreturn 0;\n}\n```\n\n# 67. Create a program that\
+    \ displays the first N first perfect squares, where N is informed by the user,\
+    \ using a loop.\n\n```\n#include <iostream>\nint main() {\n    int N;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: "```\n// Get input from the user\nstd::cout << \"Enter the value of N: \";\n\
+    std::cin >> N;\n\nfor (int i = 1;i<= N; i++) {\n    std::cout << \"Square of \"\
+    \ << i << \" is:\" << i*i<< std::endl;\n}\n\nreturn 0;\n}\n```\n\n# 68. Write\
+    \ a program that asks the user for a number N and says whether it is prime or\
+    \ not.\n\n```\n#include <iostream>\n\nint main() {\n    int N, i;\n\n    // Get\
+    \ input from the user\n```"
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: "```\nstd::cout << \"Enter a number N:\";\nstd::cin >> N;\n\nif (N <= 1) {\n\
+    \    std::cout << N << \" is not a prime number.\" << std::endl;\n    return 0;\n\
+    }\n\nfor (i = 2; i*i <= N; i++) {\n    if (N % i == 0) {\n        std::cout <<\
+    \ N << \" is not a prime number.\" << std::endl;\n        return 0; // If any\
+    \ divisor found, break the loop and print non-prime message\n    }\n\n    std::cout\
+    \ << N << \" is a prime number.\" << std::endl;\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "# 69. Write a program that prompts the user for a number N and displays all\
+    \ prime numbers less than N.\n\n```\n#include <iostream>\n\nint main() {\n  int\
+    \ N;\n\n  // Get input from user\n  std::cout << \"Enter a number N: \";\n  std::cin\
+    \ >> N;\n\n  // Print prime numbers less than N\n  std::cout << \"Prime numbers\
+    \ less than \" << N << \"are: \";\n\n  for (int num = 2; num < N; num++) {\n \
+    \   bool isPrime = true;\n\n    for (int i = 2; i*i <= num; i++) {\n      if (num\
+    \ % i == 0) {\n        isPrime = false;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: "```\nbreak; // If any divisor found, set isPrime to\nfalse and break the inner\
+    \ loop\n}\n}\nif (isPrime) {\n    std::cout << num << \" \";\n}\n}\n```\n\n```\n\
+    std::cout << std::endl; // Newline after printing\nall prime numbers\nreturn 0;\n\
+    }\n```\n\n# 70. Create a program that displays\nthe first N prime numbers, where\
+    \ N is\ninformed by the user, using a loop.\n\n```\n#include <iostream>\nint main()\
+    \ {\n    int N;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: "```\n// Get input from the user\nstd::cout << \"Enter the number of prime numbers\n\
+    you want: \";\nstd::cin >> N;\n\nstd::cout << \"The first \" << N << \" prime\
+    \ numbers\nare: \";\n\nint count = 0; // to keep track of the number of\nprimes\
+    \ found\nfor (int num = 2; count < N; num++) {\n  bool isPrime = true;\n  for\
+    \ (int i = 2; i*i <= num; i++) {\n    if (num % i == 0) {\n      isPrime = false;\n\
+    \      break; // If any divisor found, set isPrime to\n      false and break the\
+    \ inner loop\n    }\n  }\n  if (isPrime) {\n    std::cout << num << \" \";\n \
+    \ }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: "```\ncount++;\n}\n\nstd::cout << std::endl; // Newline after printing all prime\
+    \ numbers\nreturn 0;\n}\n```\n\n# 71. Write a program that prompts the user for\
+    \ two numbers A and B and displays all numbers between A and B.\n\n```\n#include\
+    \ <iostream>\n\nint main() {\n    int A, B;\n\n    // Get the two numbers from\
+    \ the user\n    std::cout << \"Enter the value of A: \";\n    std::cin >> A;\n\
+    \n    std::cout << \"Enter the value of B: \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "```\nstd::cin >> B;\nif (A > B) {\n    std::cout << \"A should be less than\
+    \ or equal to B.\\n\";\n    return 1; // Exit with error code\n}\n\n// Display\
+    \ numbers between A and B\nstd::cout << \"Numbers between \" << A << \" and \"\
+    \ << B << \" are:\\n\";\n\nfor (int i = A; i <= B; i++) {\n    std::cout << i\
+    \ << \" \";\n}\n\nstd::cout << std::endl; // Newline after printing all numbers\n\
+    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: "# 72. Write a program that reads numbers from the user until a negative number\
+    \ is entered, and prints the sum of the positive numbers.\n\n```\n#include <iostream>\n\
+    \nint main() {\n    double number, total = 0;\n\n    std::cout << \"Enter numbers\
+    \ (enter a negative number to stop):\" << std::endl;\n\n    while (true) {\n \
+    \       std::cin >> number;\n\n        if (number < 0) {\n            break; //\
+    \ Exit the loop if a negative number is entered\n        }\n\n        total +=\
+    \ number;\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: "```\n}\nstd::cout << \"Sum of the positive numbers: \" <<\ntotal << std::endl;\n\
+    \nreturn 0;\n}\n```\n\n# 73. Write a program that asks the user for a number N\
+    \ and displays the sum of all numbers from 1 to N.\n\n```\n#include <iostream>\n\
+    \nint main() {\n  int N, sum = 0;\n\n  std::cout << \"Enter a number N: \";\n\
+    \  std::cin >> N;\n\n  for (int i = 1; i<= N; i++) {\n    sum += i;\n  }\n}\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: "```\nstd::cout << \"The sum of numbers from 1 to \" <<\nN << \" is:\" << sum\
+    \ << std::endl;\n\nreturn 0;\n}\n```\n\n# 74. Write a program that calculates\
+    \ and displays the sum of even numbers from 1 to 100 using a repeating loop.\n\
+    \n```\n#include <iostream>\n\nint main() {\n  int sum = 0;\n\n  for (int i = 2;i\
+    \ <= 100;i += 2) {\n    sum += i;\n  }\n\n  std::cout << \"The sum of even numbers\
+    \ from 1 to 100 is:\" << sum << std::endl;\n\n  return 0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: "```\n}\n```\n\n# 75. Write a program that prompts the user for a number and\
+    \ displays the Fibonacci sequence up to the given number using a repeating loop.\n\
+    \n```\n#include <iostream>\n\nint main() {\n    int n, t1 = 0, t2 = 1, nextTerm\
+    \ = 0;\n\n    std::cout << \"Enter the number of terms: \";\n    std::cin >> n;\n\
+    \n    std::cout << \"Fibonacci Series: \";\n\n    for (int i = 1; i <= n; ++i)\
+    \ {\n        if (i == 1) {\n            std::cout << t1 << \"\";\n           \
+    \ continue;\n        }\n        if (i == 2) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '```
+
+    std::cout << t2 << " ";
+
+    continue;
+
+    }
+
+    nextTerm = t1 + t2;
+
+    t1 = t2;
+
+    t2 = nextTerm;
+
+    ```
+
+
+    ```
+
+    std::cout << nextTerm << " ";
+
+    }
+
+    std::cout << std::endl;
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # 76. Write a program that reads numbers from the user until zero is entered,
+    and displays the average of the numbers entered.
+
+
+    #include <iostream>'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: "```\nint main() {\n  double sum = 0.0;\n  int count = 0;\n  double num;\n\n\
+    \  std::cout << \"Enter numbers (enter 0 to stop): \"\n  << std::endl;\n\n  do\
+    \ {\n    std::cin >> num;\n    if (num != 0) {\n      sum += num;\n      count++;\n\
+    \    }\n  } while (num != 0);\n\n  if (count != 0) {\n    double average = sum\
+    \ / count;\n    std::cout << \"Average of the numbers entered: \"\n    << average\
+    \ << std::endl;\n  } else {\n    std::cout << \"No numbers were entered.\" <<\n\
+    \  }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "```\nstd::endl;\n}\nreturn 0;\n}\n```\n\n# 77. Write a program that prompts\
+    \ the user for a list of numbers, until the user types the number zero, and displays\
+    \ the largest and smallest numbers in the list.\n\n```\n#include <iostream>\n\
+    #include <limits> // For std::numeric_limits\nint main() {\n    double largest\
+    \ = std::numeric_limits<double>::lowest();\n    double smallest = std::numeric_limits<double>::max();\n\
+    \    double num;\n    std::cout << \"Enter numbers (enter 0 to stop): \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "```\n<< std::endl;\ndo {\n  std::cin >> num;\n\n  if (num != 0) {\n    if (num\
+    \ > largest) {\n      largest = num;\n    }\n    if (num < smallest) {\n     \
+    \ smallest = num;\n    }\n  }\n} while (num != 0);\n\nif (largest != std::numeric_limits<double>::lowest()\
+    \ && smallest != std::numeric_limits<double>::max()) {\n  std::cout << \"Largest\
+    \ number: \" << largest << std::endl;\n  std::cout << \"Smallest number: \" <<\
+    \ smallest << std::endl;\n} else {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: "```\nstd::cout << \"No numbers were entered.\" <<\nstd::endl;\n}\n\nreturn\
+    \ 0;\n}\n```\n\n# 78. Write a program that prompts the user\nfor a number and\
+    \ displays its divisors.\n\n```\n#include <iostream>\n\nint main() {\n    int\
+    \ num;\n\n    std::cout << \"Enter a number: \";\n    std::cin >> num;\n\n   \
+    \ std::cout << \"Divisors of \" << num << \" are: \";\n\n    for (int i = 1; i\
+    \ <= num; i++) {\n        if (num % i == 0) {\n            std::cout << i << \"\
+    \";\n        }\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '```
+
+    }
+
+    std::cout << std::endl;
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # 79. Write a program that determines the greatest common divisor (GCD) between
+    two numbers entered by the user.
+
+
+    ```
+
+    #include <iostream>
+
+
+    int main() {
+
+    int a, b;
+
+
+    // Get input from user
+
+    std::cout << "Enter two integers: ";
+
+    std::cin >> a >> b;
+
+
+    // Calculate GCD using the Euclidean algorithm
+
+    while (b != 0) {
+
+    int remainder = a % b;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '```
+
+    a = b;
+
+    b = remainder;
+
+    }
+
+
+    // Print the result
+
+    std::cout << "The GCD of the numbers is:" << a <<
+
+    std::endl;
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # 80. Write a program that determines the lowest common multiple (LCM) between
+    two numbers entered by the user.
+
+
+    ```
+
+    #include <iostream>
+
+
+    int main() {
+
+    int a, b, lcm, gcd, temp_a, temp_b;
+
+
+    // Get input from user
+
+    std::cout << "Enter two integers: ";
+
+    std::cin >> a >> b;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: "```\n// Store the original values for later use\ntemp_a = a;\ntemp_b = b;\n\
+    ```\n\n```\n// Calculate GCD using the Euclidean algorithm\nwhile (b != 0) {\n\
+    \    int remainder = a % b;\n    a = b;\n    b = remainder;\n}\n```\n\n```\ngcd\
+    \ = a;\n```\n\n```\n// Calculate LCM\nlcm = (temp_a * temp_b) / gcd;\n```\n\n\
+    ```\n// Print the result\nstd::cout << \"The LCM of \" << temp_a << \" and \"\
+    \ <<ntemp_b << \" is \" << lcm << \".\" << << std::endl;\n```\n\n```\nreturn 0;\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: "# 81. Write a program that calculates the series below up to the tenth element:\n\
+    \n$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \\dots$\n\n\
+    ```\n#include <iostream>\n\nint main() {\n    double x;\n    double e_to_x = 1.0;\
+    \ // Initialize with the first term (1)\n\n    // Get input from user\n    std::cout\
+    \ << \"Enter the value of x: \";\n    std::cin >> x;\n\n    double power_of_x\
+    \ = x; // Initialize with x for the first term\n    double factorial = 1.0; //\
+    \ Initialize with 1 for the first term\n\n    // Calculate e^x using the series\
+    \ up to the tenth element\n```"
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: "```\nfor (int i = 1; i <= 10; i++) {\n    e_to_x += power_of_x / factorial;\n\
+    \    power_of_x *= x; // Calculate x^(i+1)\n    factorial *= (i + 1); // Calculate\
+    \ (i+1)!\n}\n\n// Print the result\nstd::cout << \"The value of e^\" << x << \"\
+    \ using the series up to the tenth element is:\" << e_to_x << std::endl;\n\n \
+    \   return 0;\n}\n```\n\n# 82. Rewrite the previous exercise code until the difference\
+    \ between the terms is less than 0.001.\n\n```\n#include <iostream>\n\nint main()\
+    \ {\n    double x;\n    double e_to_x = 1.0; // Initialize with the first\n```"
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: "# term (1)\n\n```\n// Get input from user\nstd::cout << \"Enter the value of\
+    \ x: \";\nstd::cin >> x;\n\ndouble power_of_x = x; // Initialize with x for the\
+    \ first term\ndouble factorial = 1.0; // Initialize with 1 for the first term\n\
+    double term = power_of_x / factorial; // value of the term\n```\n\n```\n// Calculate\
+    \ e^x using the series until the difference between terms is less than 0.001\n\
+    while (term >= 0.001) {\n    e_to_x += term;\n    factorial *= (factorial + 1);\
+    \ // Calculate (i+1)!\n    power_of_x *= x; // Calculate x^(i+1)\n    term = power_of_x\
+    \ / factorial; // Calculate the new term\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '```
+
+    // Print the result
+
+    std::cout << "The approximated value of e^" << x << " using the series until the
+    difference between terms is less than 0.001 is: " << e_to_x << std::endl;
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # 83. Make a program that calculates the value of sine using the Taylor series
+    according to the equation below until the difference between the terms is less
+    than 0.001.
+
+
+    ![](img/619173754d5014de60ea4a602e9f26e2_128_0.png)
+
+
+    ```
+
+    #include <iostream>
+
+    #include <cmath>
+
+    ```
+
+
+    ```
+
+    int main() {
+
+    double x;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: "```\ndouble sine_of_x = 0.0;\n\n// Get input from user\nstd::cout << \"Enter\
+    \ the value of x (in radians): \";\nstd::cin >> x;\n\ndouble power_of_x = x; //\
+    \ Initialize with x for the first term\ndouble factorial = 1.0; // Initialize\
+    \ with 1 for the first term\ndouble term = power_of_x; // value of the first term\n\
+    int n = 0; // start with n = 0\n\n// Calculate sin(x) using the Taylor series\
+    \ until the difference between terms is less than 0.001\nwhile (fabs(term) >=\
+    \ 0.001) {\n  sine_of_x += term; // add the term to the result\n  n++; // increase\
+    \ n by 1\n  factorial *= (2*n) * (2*n + 1); // Calculate (2n+1)!\n  power_of_x\
+    \ *= x * x; // Calculate x^2\n  term = power_of_x / factorial; // Calculate the\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: "```\nif (n % 2 != 0) { // alternate the sign of the term\n    term = -term;\n\
+    }\n```\n\n```\n// Print the result\nstd::cout << \"The approximated value of sin(\\\
+    \ << x << \") using the Taylor series until the difference between terms is less\
+    \ than 0.001 is:\" << sine_of_x << std::endl;\n```\n\n# 84. Make a program that\
+    \ calculates the value of cosine using the Taylor series according to the equation\
+    \ below until the difference between the terms is less than 0.001.\n\n$cos(x)\
+    \ = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} + \\frac{x^8}{8!}\
+    \ - \\frac{x^{10}}{10!} \\cdots$\n\n```\n#include <iostream>\n#include <cmath>\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: "```\nint main() {\n    double x;\n    double cosine_of_x = 1.0;\n\n    // Get\
+    \ input from user\n    std::cout << \"Enter the value of x (in radians): \";\n\
+    \    std::cin >> x;\n\n    double power_of_x = 1.0; // Initialize with 1 for the\
+    \ first term\n    double factorial = 1.0; // Initialize with 1 for the first term\n\
+    \    double term = 1.0; // value of the first term\n    int n = 0; // start with\
+    \ n = 0\n\n    // Calculate cos(x) using the Taylor series until the difference\
+    \ between terms is less than 0.001\n    while (fabs(term) >= 0.001) {\n      \
+    \  n++; // increase n by 1\n        power_of_x = x * x; // Calculate x^(2n)\n\
+    \        factorial *= (2*n - 1) * (2*n); // Calculate (2n)!\n        term = power_of_x\
+    \ / factorial; // Calculate the\n```"
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: "```\nnew term\nif (n % 2 != 0) { // alternate the sign of the term\n    term\
+    \ = -term;\n}\ncosine_of_x += term; // add the term to the\nresult\n}\n\n// Print\
+    \ the result\nstd::cout << \"The approximated value of cos(\" \n<< x << \") using\
+    \ the Taylor series until the differ-\nence between terms is less than 0.001 is:\
+    \ \" <<\ncosine_of_x << std::endl;\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: "# 85. Write a program that displays the sine and cosine value of all numbers\
+    \ from 0 to 6.3, with a step of 0.1, using Taylor series to calculate the respective\
+    \ sines and cosines.\n\n```\n#include <iostream>\n#include <cmath>\n```\n\n```\n\
+    int main() {\n    const double STEP_SIZE = 0.1;\n    const double END_POINT =\
+    \ 6.3;\n```\n\n```\nfor(double x = 0; x <= END_POINT; x += STEP_SIZE) {\n    //\
+    \ Calculate sine using Taylor series\n    double sine_of_x = x;\n    double term\
+    \ = x;\n    double power_of_x = x;\n    double factorial = 1;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: "```\nint n = 1;\nwhile (fabs(term) >= 0.001) {\n  power_of_x *= x * x;\n  factorial\
+    \ *= (2 * n) * (2 * n + 1);\n  term = power_of_x / factorial;\n  if (n % 2 !=\
+    \ 0) {\n    term = -term;\n  }\n  sine_of_x += term;\n  n++;\n}\n```\n\n```\n\
+    // Calculate cosine using Taylor series\ndouble cosine_of_x = 1.0;\nterm = 1.0;\n\
+    power_of_x = 1.0;\nfactorial = 1.0;\nn = 0;\nwhile (fabs(term) >= 0.001) {\n \
+    \ n++;\n  power_of_x *= x * x;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: "```\nfactorial *= (2 * n - 1) * (2 * n);\nterm = power_of_x / factorial;\n\
+    if (n % 2 != 0) {\n    term = -term;\n}\ncosine_of_x += term;\n}\n\n// Print sine\
+    \ and cosine values\nstd::cout << \"For x = \" << x << \", sine(x) = \" << \n\
+    sine_of_x << \" and cosine(x) = \" << cosine_of_x << std::endl;\n}\n\nreturn 0;\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: "# Arrays\n\n86. Write a program that reads an array of integers and displays\
+    \ the elements in reverse order.\n\n```\n#include <iostream>\n\nint main() {\n\
+    \    int n;\n\n    // Prompt the user for the size of the array\n    std::cout\
+    \ << \"Enter the number of elements:\";\n    std::cin >> n;\n\n    // Allocate\
+    \ memory for the array\n    int* arr = new int[n];\n\n    // Prompt the user for\
+    \ the array elements\n    std::cout << \"Enter \" << n << \" integers:\" <<\n\
+    \    std::endl;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: "```\nfor(int i = 0; i < n; i++) {\n    std::cin >> arr[i];\n}\n```\n\n// Display\
+    \ the elements in reverse order\n\n```\nstd::cout << \"Elements in reverse order:\"\
+    \ << std::endl;\nfor (int i = n - 1; i>= 0; i--) {\n    std::cout << arr[i] <<\
+    \ \"\";\n}\nstd::cout << std::endl;\n```\n\n// Free the allocated memory\n\n```\n\
+    delete[] arr;\n```\n\n```\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: "# 87. Create a program that reads an array of integers and displays the sum\
+    \ of all the elements.\n\n```\n#include <iostream>\n\nint main() {\n    int n,\
+    \ sum = 0;\n\n    // Prompt the user for the size of the array\n    std::cout\
+    \ << \"Enter the number of elements: \";\n    std::cin >> n;\n\n    // Allocate\
+    \ memory for the array\n    int* arr = new int[n];\n\n    // Prompt the user for\
+    \ the array elements\n    std::cout << \"Enter \" << n << \" integers:\" << std::endl;\n\
+    \    for(int i = 0; i < n; i++) {\n        std::cin >> arr[i];\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: "```\n// Calculate the sum of the elements\nfor (int i = 0; i < n; i++) {\n\
+    \    sum += arr[i];\n}\n\n// Display the sum\nstd::cout << \"The sum of the elements\
+    \ is: \" << std::endl;\n\n// Free the allocated memory\ndelete[] arr;\n\nreturn\
+    \ 0;\n}\n```\n\n# 88. Write a program that reads an array of integers and displays\
+    \ the average of the elements.\n\n```\n#include <iostream>\nint main() {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: "```\nint n;\ndouble sum = 0.0; // Use double to handle possible fractional\
+    \ results\n\n// Prompt the user for the size of the array\nstd::cout << \"Enter\
+    \ the number of elements: \";\nstd::cin >> n;\n\n// Allocate memory for the array\n\
+    int* arr = new int[n];\n\n// Prompt the user for the array elements\nstd::cout\
+    \ << \"Enter \" << n << \" integers:\" << std::endl;\nfor (int i = 0; i < n; i++)\
+    \ {\n  std::cin >> arr[i];\n}\n\n// Calculate the sum of the elements\nfor (int\
+    \ i = 0; i < n; i++) {\n  sum += arr[i];\n}\n\n// Calculate the average\n```"
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: '```
+
+    double average = sum / n;
+
+    ```
+
+
+    ```
+
+    // Display the average
+
+    std::cout << "The average of the elements is: " <<
+
+    average << std::endl;
+
+    ```
+
+
+    ```
+
+    // Free the allocated memory
+
+    delete[] arr;
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # 89. Write a program that reads an array of integers and displays the largest
+    element in the array.
+
+
+    ```
+
+    #include <iostream>
+
+    ```
+
+
+    ```
+
+    int main() {
+
+    int n;
+
+    ```
+
+
+    ```
+
+    // Prompt the user for the size of the array
+
+    std::cout << "Enter the number of elements: ";
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: "```\nstd::cin >> n;\n\n// Allocate memory for the array\nint* arr = new int[n];\n\
+    \n// Prompt the user for the array elements\nstd::cout << \"Enter \" << n << \"\
+    \ integers:\" << std::endl;\nfor (int i = 0; i < n; i++) {\n    std::cin >> arr[i];\n\
+    }\n\n// Find the largest element\nint max = arr[0];\nfor (int i = 1; i < n; i++)\
+    \ {\n    if (arr[i] > max) {\n        max = arr[i];\n    }\n}\n\n// Display the\
+    \ largest element\nstd::cout << \"The largest element is: \" << max << std::endl;\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: "```\n// Free the allocated memory\ndelete[] arr;\n\nreturn 0;\n}\n```\n\n#\
+    \ 90. Create a program that reads two vectors of integers of the same size and\
+    \ displays a new vector with the sum of the corresponding elements of the two\
+    \ vectors.\n\n```\n#include <iostream>\n\nint main() {\n  int n;\n\n  // Prompt\
+    \ the user for the size of the vectors\n  std::cout << \"Enter the number of elements:\
+    \ \";\n  std::cin >> n;\n\n  // Allocate memory for the vectors\n```"
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: "```\nint* vec1 = new int[n];\n* vec2 = new int[n];\n* sumVec = new int[n];\n\
+    \n// Prompt the user for the elements of the first vector\nstd::cout << \"Enter\
+    \ elements of the first vector:\" << std::endl;\nfor (int i = 0; i < n; i++) {\n\
+    \    std::cin >> vec1[i];\n}\n\n// Prompt the user for the elements of the second\
+    \ vector\nstd::cout << \"Enter elements of the second vector:\" << std::endl;\n\
+    for (int i = 0; i < n; i++) {\n    std::cin >> vec2[i];\n}\n\n// Calculate the\
+    \ sum of corresponding elements\nfor (int i = 0; i < n; i++) {\n    sumVec[i]\
+    \ = vec1[i] + vec2[i];\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: "```\n}\n// Display the resulting vector\nstd::cout << \"Resulting vector:\"\
+    \ << std::endl;\nfor (int i = 0; i < n; i++) {\n    std::cout << sumVec[i] <<\
+    \ \" \";\n}\nstd::cout << std::endl;\n\n// Free the allocated memory\ndelete[]\
+    \ vec1;\ndelete[] vec2;\ndelete[] sumVec;\n\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: "# 91. Write a program that reads two arrays of integers with the same size\
+    \ and displays a new array with the elements resulting from the multiplication\
+    \ of the corresponding elements of the two arrays.\n\n```\n#include <iostream>\n\
+    \nint main() {\n    int n;\n\n    // Prompt the user for the size of the arrays\n\
+    \    std::cout << \"Enter the number of elements: \";\n    std::cin >> n;\n\n\
+    \    // Allocate memory for the arrays\n    int* arr1 = new int[n];\n    int*\
+    \ arr2 = new int[n];\n    int* productArr = new int[n];\n\n    // Prompt the user\
+    \ for the elements of the first array\n```"
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: "```\nstd::cout << \"Enter elements of the first array:\" <<\nstd::endl;\nfor\
+    \ (int i = 0; i < n; i++) {\n    std::cin >> arr1[i];\n}\n```\n\n// Prompt the\
+    \ user for the elements of\nt second array\n\n```\nstd::cout << \"Enter elements\
+    \ of the second array:\" <<\nstd::endl;\nfor (int i = 0; i < n; i++) {\n    std::cin\
+    \ >> arr2[i];\n}\n```\n\n// Calculate the product of corresponding ele-\nments\n\
+    \n```\nfor (int i = 0; i < n; i++) {\n    productArr[i] = arr1[i] * arr2[i];\n\
+    }\n```\n\n// Display the resulting array\n\n```\nstd::cout << \"Resulting array\
+    \ from multiplica-\ntion\" << std::endl;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: "```\nfor (int i = 0; i < n; i++) {\n    std::cout << productArr[i] << \" \"\
+    ;\n}\nstd::cout << std::endl;\n```\n\n```\n// Free the allocated memory\ndelete[]\
+    \ arr1;\ndelete[] arr2;\ndelete[] productArr;\n\nreturn 0;\n}\n```\n\n# 92. Write\
+    \ a program that reads an array of integers and displays how many times a specific\
+    \ number appears in the array.\n\n```\n#include <iostream>\n\nint main() {\n \
+    \   int n, count = 0, searchValue;\n\n    // Prompt the user for the size of the\
+    \ array\n```"
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: "```\nstd::cout << \"Enter the number of elements: \";\n::cin >> n;\n\n// Allocate\
+    \ memory for the array\nint* arr = new int[n];\n\n// Prompt the user for the elements\
+    \ of the array\nstd::cout << \"Enter the elements:\" << std::endl;\nfor (int i\
+    \ = 0; i < n; i++) {\n  std::cin >> arr[i];\n}\n\n// Prompt the user for the number\
+    \ to be searched for\nstd::cout << \"Enter the number to search for: \";\n::cin\
+    \ >> searchValue;\n\n// Check each element in the array\nfor (int i = 0; i < n;\
+    \ i++) {\n  if (arr[i] == searchValue) {\n    count++;\n  }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '```
+
+    // Display the result
+
+    std::cout << "The number " << searchValue <<
+
+    " appears " << count << " times in the array." <<
+
+    std::endl;
+
+    ```
+
+
+    ```
+
+    // Free the allocated memory
+
+    delete[] arr;
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # 93. Write a program that reads an array cout of integers and checks if they
+    are in ascending order.
+
+
+    ```
+
+    #include <iostream>
+
+    int main() {
+
+    int n;
+
+    bool isAscending = true;
+
+    ```
+
+
+    ```
+
+    // Prompt the user for the size of the array
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: "```\nstd::cout << \"Enter the number of elements:\";\nstd::cin >> n;\n\n//\
+    \ Allocate memory for the array\nint* arr = new int[n];\n\n// Prompt the user\
+    \ for the elements of the array\nstd::cout << \"Enter the elements:\" << std::endl;\n\
+    for (int i = 0; i < n;i++) {\n  std::cin >> arr[i];\n}\n\n// Check if the array\
+    \ is in ascending order\nfor (int i = 1; i < n;i++) {\n  if (arr[i] < arr[i -\
+    \ 1]) {\n    isAscending = false;\n    break;\n  }\n}\n\n// Display the result\n\
+    if (isAscending) {\n  std::cout << \"The array is in ascending order.\";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: "```\n<< std::endl;\n} else {\n    std::cout << \"The array is not in ascending\
+    \ order.\" << std::endl;\n}\n```\n\n```\n// Free the allocated memory\ndelete[]\
+    \ arr;\n\n    return 0;\n}\n```\n\n# 94. Create a program that reads an array\
+    \ of integers and finds the second largest element in the array.\n\n```\n#include\
+    \ <iostream>\n#include <limits> // for std::numeric_limits\n\nint main() {\n \
+    \   int n;\n\n// Prompt the user for the size of the array\n```"
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: "```\nstd::cout << \"Enter the number of elements:\";\nstd::cin >> n;\n```\n\
+    \n```\n// Validate input\nif (n < 2) {\n    std::cout << \"You need at least two\
+    \ elements to determine the second largest.\" << std::endl;\n    return 0;\n}\n\
+    ```\n\n```\n// Allocate memory for the array\nint* arr = new int[n];\n```\n\n\
+    ```\n// Prompt the user for the elements of the array\nstd::cout << \"Enter the\
+    \ elements:\" << std::endl;\nfor (int i = 0; i < n; i++) {\n    std::cin >> arr[i];\n\
+    }\n```\n\n```\nint largest = std::numeric_limits<int>::min();\nint secondLargest\
+    \ = std::numeric_limits<int>::min();\n```\n\n```\n// Find the largest and second\
+    \ largest elements\n```"
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: "```\nfor (int i = 0; i < n; i++) {\n    if (arr[i] > largest) {\n        secondLargest\
+    \ = largest;\n        largest = arr[i];\n    } else if (arr[i] > secondLargest\
+    \ && arr[i] != largest) {\n        secondLargest = arr[i];\n    }\n}\n\n// Display\
+    \ the result\nstd::cout << \"The second largest element is: \" << secondLargest\
+    \ << std::endl;\n\n// Free the allocated memory\ndelete[] arr;\n\nreturn 0;\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: "# 95. Given an array, find the kth\nlargest and smallest element in it.\n\n\
+    ```\n#include <iostream>\n#include <algorithm> // for std::sort\n\nint main()\
+    \ {\n    int n, k;\n\n    // Prompt the user for the size of the array\n    std::cout\
+    \ << \"Enter the number of elements: \";\n    std::cin >> n;\n\n    // Prompt\
+    \ for the value of k\n    std::cout << \"Enter the value of k: \";\n    std::cin\
+    \ >> k;\n\n    // Validate input\n    if (k > n || k <= 0) {\n        std::cout\
+    \ << \"Invalid value of k.\" << std::endl;\n        return 0;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: "```\n// Allocate memory for the array\nint* arr = new int[n];\n\n// Prompt\
+    \ the user for the elements of the array\nstd::cout << \"Enter the elements:\"\
+    \ << std::endl;\nfor (int i = 0; i < n; i++) {\n  std::cin >> arr[i];\n}\n\n//\
+    \ Sort the array\nstd::sort(arr, arr + n);\n\n// Display the kth smallest and\
+    \ kth largest elements\nstd::cout << \"The \" << k << \"th smallest element is:\
+    \ \" << arr[k - 1] << std::endl;\nstd::cout << \"The \" << k << \"th largest element\
+    \ is: \" << arr[n - k] << std::endl;\n\n// Free the allocated memory\ndelete[]\
+    \ arr;\n\nreturn 0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: "```\n}\n```\n\n# 96. Write a program that checks if an array contains duplicate\
+    \ elements.\n\n```\n#include <iostream>\n```\n\n```\nint main() {\n    int n;\n\
+    \n    // Get the size of the array\n    std::cout << \"Enter the number of elements:\
+    \ \";\n    std::cin >> n;\n\n    int arr[n];\n\n    // Input elements\n    std::cout\
+    \ << \"Enter the elements of the array:\\n\";\n    for (int i = 0; i < n; i++)\
+    \ {\n        std::cin >> arr[i];\n    }\n}\n```\n\n```\nbool hasDuplicate = false;\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: "```\n// Check for duplicates\nfor (int i = 0; i < n; i++) {\n  for (int j =\
+    \ i + 1; j < n; j++) {\n    if (arr[i] == arr[j]) {\n      hasDuplicate = true;\n\
+    \      break;\n    }\n  }\n  if (hasDuplicate) {\n    break;\n  }\n}\n\nif (hasDuplicate)\
+    \ {\n  std::cout << \"The array contains duplicates.\\n\";\n} else {\n  std::cout\
+    \ << \"The array does not contain duplicates.\\n\";\n}\n\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: "# 97. Given an array of size n, find an element that appears more than n/2\
+    \ times. (This element is called the majority element.)\n\n```\n#include <iostream>\n\
+    ```\n\n```\nint main() {\n    int n;\n\n    // Get the size of the array\n   \
+    \ std::cout << \"Enter the number of elements:\";\n    std::cin >> n;\n\n    int\
+    \ arr[n];\n\n    // Input elements\n    std::cout << \"Enter the elements of the\
+    \ array:\\n\";\n    for (int i = 0; i < n; i++) {\n        std::cin >> arr[i];\n\
+    \    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: "```\n// Boyer-Moore Voting Algorithm\nint candidate = -1;\nint count = 0;\n\
+    \nfor (int i = 0; i < n; i++) {\n  if (count == 0) {\n    candidate = arr[i];\n\
+    \  }\n  if (arr[i] == candidate) {\n    count++;\n  }\n} else {\n    count--;\n\
+    \  }\n}\n\n// Verify the candidate is indeed the majority\ncount = 0;\nfor (int\
+    \ i = 0; i < n; i++) {\n  if (arr[i] == candidate) {\n    count++;\n  }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: "```\nif (count > n / 2) {\n    std::cout << \"The majority element is: \" <<\
+    \ candidate << std::endl;\n} else {\n    std::cout << \"There is no majority element.\\\
+    n\";\n}\n\nreturn 0;\n}\n```\n\n# 98. Create a program that reads an array of\
+    \ integers and checks if all elements are even.\n\n```\n#include <iostream>\n\n\
+    int main() {\n    int n;\n\n    // Get the size of the array\n    std::cout <<\
+    \ \"Enter the number of elements: \";\n    std::cin >> n;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: "```\nint arr[n];\n\n// Input elements\nstd::cout << \"Enter the elements of\
+    \ the array:\\n\";\nfor (int i = 0; i < n; i++) {\n    std::cin >> arr[i];\n}\n\
+    ```\n\n```\n// Check if all elements are even\nbool allEven = true;\nfor (int\
+    \ i = 0; i < n; i++) {\n    if (arr[i] % 2 != 0) {\n        allEven = false;\n\
+    \        break; // exit loop as soon as a non-even number is found\n    }\n}\n\
+    \nif (allEven) {\n    std::cout << \"All elements in the array are even.\\n\"\
+    ;\n} else {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: "```\nstd::cout << \"Not all elements in the array are even.\\n\";\n}\nreturn\
+    \ 0;\n}\n```\n\n# 99. Write a program that checks if an array contains duplicate\
+    \ elements.\n\n```\n#include <iostream>\n\nint main() {\n    int n;\n\n    //\
+    \ Get the size of the array\n    std::cout << \"Enter the number of elements:\"\
+    ;\n    std::cin >> n;\n\n    int arr[n];\n\n    // Input elements\n    std::cout\
+    \ << \"Enter the elements of the array:\\n\";\n    for (int i = 0; i < n; i++)\
+    \ {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: "```\nstd::cin >> arr[i];\n}\n\n// Check for duplicates\nbool hasDuplicates\
+    \ = false;\nfor (int i = 0; i < n - 1; i++) {\n  for (int j = i + 1; j < n; j++)\
+    \ {\n    if (arr[i] == arr[j]) {\n      hasDuplicates = true;\n      break;\n\
+    \    }\n  }\n  if (hasDuplicates) break; // exit outer loop if a duplicate is\
+    \ found\n}\n\n\nif (hasDuplicates) {\n  std::cout << \"The array contains duplicate\
+    \ elements.\\n\";\n} else {\n  std::cout << \"The array does not contain duplicate\
+    \ elements.\\n\";\nn\n```"
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: "```\nreturn 0;\n}\n```\n\n# 100. Given an array of random numbers, push all\
+    \ the zero's of the array to the end without changing the order of non-zero elements.\n\
+    \n```\n#include <iostream>\n#include <vector>\n\nint main() {\n    int n;\n\n\
+    \    std::cout << \"Enter the number of elements: \";\n    std::cin >> n;\n\n\
+    \    std::vector<int> nums(n);\n\n    std::cout << \"Enter the elements of the\
+    \ array:\\n\";\n    for (int i = 0; i < n; i++) {\n        std::cin >> nums[i];\n\
+    \    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: "```\n}\nint count = 0; // Count of non-zero elements\n\n// Traverse the array\
+    \ and if an element is nonzero, then place the element at next available position\n\
+    for (int i = 0; i < n; i++) {\n  if (nums[i] != 0) {\n    nums[count++] = nums[i];\n\
+    \  }\n}\n\n// Set remaining positions to zero\nwhile (count < n) {\n  nums[count++]\
+    \ = 0;\n}\n\nstd::cout << \"Array after pushing zeros to the end:\\n\";nfor (int\
+    \ num : nums) {\n  std::cout << num << \" \";\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: "```\nstd::cout << std::endl;\n  return 0;\n}\n```\n\n# 101. Given an unsorted\
+    \ array of integers, find the length of the longest consecutive elements sequence.\n\
+    \n```\n#include <iostream>\n#include <unordered_set>\n#include <vector>\n\nint\
+    \ main() {\n  std::vector<int> nums;\n  std::unordered_set<int> set;\n  int n,\
+    \ input, longestStreak = 0;\n\n  std::cout << \"Enter the number of elements:\
+    \ \";\n  std::cin >> n;\n\n  std::cout << \"Enter the elements of the array:\\\
+    n\";\n  for (int i = 0; i < n; i++) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: "```\nstd::cin >> input;\nnums.push_back(input);\nset.insert(input);\n}\n```\n\
+    \n```\nfor (int num : nums) {\n  // Check if this number is the potential start\
+    \ of a sequence\n  if (set.find(num - 1) == set.end()) {\n    int currentNum =\
+    \ num;\n    int currentStreak = 1;\n\n    // Check for the next elements in the\
+    \ sequence\n    while (set.find(currentNum + 1) != set.end()) {\n      currentNum\
+    \ += 1;\n      currentStreak += 1;\n    }\n\n    // Update the longest streak\n\
+    \    if (currentStreak > longestStreak) {\n      longestStreak = currentStreak;\n\
+    \    }\n  }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: "```\n}\n}\nstd::cout << \"The length of the longest consecutive sequence is:\
+    \ \"\n<< longestStreak << std::endl;\nreturn 0;\n}\n```\n\n# 102. Given an array\
+    \ of integers, find all pairs in the array that sum up to a specified value.\n\
+    \n```\n#include <iostream>\n#include <unordered_set>\n#include <vector>\n```\n\
+    \n```\nint main() {\n    std::vector<int> nums;\n    std::unordered_set<int> set;\n\
+    \    int n, input, longestStreak = 0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: "```\nstd::cout << \"Enter the number of elements: \";\nstd::cin >> n;\n\nstd::cout\
+    \ << \"Enter the elements of the array:\\n\"\nfor (int i = 0; i < n; i++) {\n\
+    \  std::cin >> input;\n  nums.push_back(input);\n  set.insert(input);\n}\n```\n\
+    \n```\nfor (int num : nums) {\n  // Check if this number is the potential start\
+    \ of a sequence\n  if (set.find(num - 1) == set.end()) {\n    int currentNum =\
+    \ num;\n    int currentStreak = 1;\n\n    // Check for the next elements in the\
+    \ sequence\n    while (set.find(currentNum + 1) != set.end()) {\n      currentNum\
+    \ += 1;\n      currentStreak += 1;\n    }\n  }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: "```\n}\n// Update the longest streak\nif(currentStreak > longestStreak) {\n\
+    \    longestStreak = currentStreak;\n}\n}\n```\n\n```\nstd::cout << \"The length\
+    \ of the longest consecutive elements sequence is: \" <<n longestStreak << std::endl;\n\
+    ```\n\n```\nreturn 0;\n}\n```\n\n# 103. Make an algorithm that reads an array\
+    \ of n positions, and then creates a new vector that calculates the difference\
+    \ of each element with the next element.\n\n```\n#include <iostream>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: "```\n#include <vector>\n\nint main() {\n    int n;\n\n    std::cout << \"Enter\
+    \ the number of elements: \";\n    std::cin >> n;\n\n    if (n < 2) {\n      \
+    \  std::cout << \"Please enter a value greater than 1 for meaningful differences.\"\
+    \ << std::endl;\n        return 1;\n    }\n\n    std::vector<int> nums(n);\n \
+    \   std::vector<int> differences(n - 1);\n\n    std::cout << \"Enter the elements\
+    \ of the array:\\n\";\n    for (int i = 0; i < n; i++) {\n        std::cin >>\
+    \ nums[i];\n    }\n\n    for (int i = 0; i < n - 1; i++) {\n        differences[i]\
+    \ = nums[i] - nums[i + 1];\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: "```\n}\nstd::cout << \"The differences between consecutive elements are:\\\
+    n\";nfor (int diff : differences) {\n    std::cout << diff << \" \";\n}\nstd::cout\
+    \ << std::endl;\n\nreturn 0;\n}\n```\n\n# 104. Given an array of integers, find\
+    \ the subarray of given length with the least average.\n\n```\n#include <iostream>\n\
+    #include <vector>\n\nint main() {\n    int n, k;\n\nstd::cout << \"Enter the number\
+    \ of elements: \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: "```\nstd::cin >> n;\n\nstd::vector<int> nums(n);\n\nstd::cout << \"Enter the\
+    \ elements of the array:\\\";\nfor (int i = 0; i < n; i++) {\n    std::cin >>\
+    \ nums[i];\n}\n\nstd::cout << \"Enter the length of the subarray: \";\nstd::cin\
+    \ >> k;\n\nif (k > n) {\n    std::cout << \"Subarray length is larger than array\
+    \ size!\" << std::endl;\n    return 0;\n}\n\n// Calculate the sum of the first\
+    \ 'k' elements\\int sum = 0;\nfor (int i = 0; i < k; i++) {\n    sum += nums[i];\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: "```\nint min_sum = sum;\nint start_index = 0; // Starting index of mini-mum\
+    \ sum subarray\n```\n\n```\n// Sliding window approach\nfor (int i = k; i < n;\
+    \ i++) {\n    sum += nums[i] - nums[i - k];\n    if (sum < min_sum) {\n      \
+    \  min_sum = sum;\n        start_index = i - k + 1;\n    }\n}\n```\n\n```\nstd::cout\
+    \ << \"The subarray of length \" << k << \"with the least average is:\\n\"\nfor\
+    \ (int i = start_index; i < start_index + k; i++) {\n    std::cout << nums[i]\
+    \ << \" \";\n}\nstd::cout << std::endl;\n```\n\n```\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: "# 105. Given two sorted arrays, merge them into a single sorted array.\n\n\
+    ```\n#include <iostream>\n#include <vector>\n\nint main() {\n    int n1, n2;\n\
+    \n    // Read first array\n    std::cout << \"Enter the number of elements in\
+    \ the first array: \";\n    std::cin >> n1;\n    std::vector<int> arr1(n1);\n\
+    \    std::cout << \"Enter the sorted elements of the first array:\\n\";\n    for\
+    \ (int i = 0; i < n1; i++) {\n        std::cin >> arr1[i];\n    }\n\n    // Read\
+    \ second array\n    std::cout << \"Enter the number of elements in the\n```"
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: "```\nsecond array: \";\nstd::cin >> n2;\nstd::vector<int> arr2(n2);\nstd::cout\
+    \ << \"Enter the sorted elements of the second array:\\n\";\n```\n\n```\nfor (int\
+    \ i = 0; i < n2; i++) {\n    std::cin >> arr2[i];\n}\n```\n\n```\n// Merging arrays\n\
+    int i = 0, j = 0;\nstd::vector<int> merged(n1 + n2);\nint k = 0; // Index for\
+    \ merged array\nwhile (i < n1 && j < n2) {\n    if (arr1[i] <= arr2[j]) {\n  \
+    \      merged[k++] = arr1[i++];\n    } else {\n        merged[k++] = arr2[j++];\n\
+    \    }\n}\n```\n\n```\n// If there are remaining elements in arr1\nwhile (i <\
+    \ n1){\n```"
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: "```\nmerged[k++] = arr1[i++];\n}\n\n// If there are remaining elements in arr2\n\
+    while (j < n2) {\n    merged[k++] = arr2[j++];\n}\n\n// Print merged array\nstd::cout\
+    \ << \"Merged sorted array is:\\n\";\nfor (int m = 0; m < k; m++) {\n    std::cout\
+    \ << merged[m] << \" \";\n}\nstd::cout << std::endl;\n\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: "# Strings\n\n106. Create a program that reads two words and concatenates them,\
+    \ displaying the resulting word.\n\n```\n#include <iostream>\n#include <string>\n\
+    \nint main() {\n    std::string word1, word2;\n\n    // Read the first word\n\
+    \    std::cout << \"Enter the first word: \";\n    std::cin >> word1;\n\n    //\
+    \ Read the second word\n    std::cout << \"Enter the second word: \";\n    std::cin\
+    \ >> word2;\n\n    // Concatenate the words\n```"
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: "```\nstd::string concatenatedWord = word1 + word2;\n\n// Display the resulting\
+    \ word\nstd::cout << \"Resulting word: \" << concatenated-\nWord << std::endl;\n\
+    \nreturn 0;\n}\n```\n\n# 107. Write a program that takes a word and displays each\
+    \ letter separately.\n\n```\n#include <iostream>\n#include <string>\n\nint main()\
+    \ {\n    std::string word;\n\n    // Read the word\n    std::cout << \"Enter a\
+    \ word: \";\n    std::cin >> word;\n\n    // Display each letter separately\n\
+    \    for (int i = 0; i < word.length(); i++) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: "```\nstd::cout << word[i] << std::endl;\n}\nreturn 0;\n}\n```\n\n# 108. Create\
+    \ a program that takes a sentence and replaces all the letters \"a\" with \"e\"\
+    .\n\n```\n#include <iostream>\n#include <string>\n\nint main() {\n    std::string\
+    \ sentence;\n\n    // Get the entire line including spaces\n    std::cout << \"\
+    Enter a sentence: \"\n    std::getline(std::cin, sentence);\n\n    // Replace\
+    \ every 'a' with 'e'\n    for (int i = 0; i < sentence.length(); i++) {\n    \
+    \    if (sentence[i] == 'a') {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: '```
+
+    sentence[i] = ''e'';
+
+    }
+
+    }
+
+    ```
+
+
+    ```
+
+    // Display the modified sentence
+
+    std::cout << "Modified sentence: " << sentence << std::endl;
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # 109. Create a program that takes a sentence and replaces all spaces with a new
+    line.
+
+
+    ```
+
+    #include <iostream>
+
+    #include <string>
+
+    ```
+
+
+    ```
+
+    int main() {
+
+    std::string sentence;
+
+    ```
+
+
+    ```
+
+    // Get the entire line including spaces
+
+    std::cout << "Enter a sentence: ";
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: "```\nstd::getline(std::cin, sentence);\n\n// Replace every space with newline\n\
+    for (int i = 0; i < sentence.length(); i++) {\n    if (sentence[i] == ' ') {\n\
+    \        sentence[i] = '\\n';\n    }\n}\n\n// Display the modified sentence\n\
+    std::cout << \"Modified sentence:\\n\" << sentence << std::endl;\n\n    return\
+    \ 0;\n}\n```\n\n# 110. Write a program that receives a name and checks that it\
+    \ starts with the letter \"A\".\n\n```\n#include <iostream>\n#include <string>\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: "```\nint main() {\n    std::string name;\n\n    // Get the name input\n   \
+    \ std::cout << \"Enter a name: \";\n    std::getline(std::cin, name);\n\n    //\
+    \ Check if the first character of the name is 'A'\n    if (name[0] == 'A' || name[0]\
+    \ == 'a') {\n        std::cout << \"The name starts with the letter 'A'.\\n\"\
+    ;\n    } else {\n        std::cout << \"The name does not start with the letter\
+    \ 'A'.\\n\";\n    }\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: "# 111. Write a program that reads a word and checks if it is a palindrome (if\
+    \ it can be read backwards the same way).\n\n```\n#include <iostream>\n#include\
+    \ <string>\n#include <algorithm>\nint main() {\n    std::string word;\n    //\
+    \ Get the word input\n    std::cout << \"Enter a word: \";\n    std::cin >> word;\n\
+    \    std::string reversedWord = word;\n    std::reverse(reversedWord.begin(),\
+    \ reversedWord.end());\n    // Check if the word and its reversed version are\
+    \ the same\n    if (word == reversedWord) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: "```\nstd::cout << word << \" is a palindrome.\\n\";\nelse {\n  std::cout <<\
+    \ word << \" is not a palindrome.\\n\";\n}\nreturn 0;\n}\n```\n\n# 112. Create\
+    \ a program that reads two words and checks if the second word is an anagram of\
+    \ the first.\n\n```\n#include <iostream>\n#include <string>\n#include <algorithm>\n\
+    \nint main() {\n  std::string word1, word2;\n\n  // Get the word inputs\n  std::cout\
+    \ << \"Enter the first word: \";\n  std::cin >> word1;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: "```\nstd::cout << \"Enter the second word: \";\nstd::cin >> word2;\n\n// If\
+    \ the lengths are different, they can't be anagrams\nif (word1.length()!= word2.length())\
+    \ {\n    std::cout << \"The words are not anagrams.\\n\"\n    return 0;\n}\n\n\
+    // Sort both words\nstd::sort(word1.begin(), word1.end());\nstd::sort(word2.begin(),\
+    \ word2.end());\n\n// Check if the sorted words are the same\nif (word1 == word2)\
+    \ {\n    std::cout << \"The words are anagrams.\\n\"\n} else {\n    std::cout\
+    \ << \"The words are not anagrams.\\n\"\n}\n\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: "# 113. Write a program that takes a full name and displays only the first name.\n\
+    \n```\n#include <iostream>\n#include <string>\n```\n\n```\nint main() {\n    std::string\
+    \ fullName;\n\n    // Get the full name input\n    std::cout << \"Enter the full\
+    \ name: \";\n    std::getline(std::cin, fullName);\n\n    // Find the first space\
+    \ in the name\n    size_t spacePosition = fullName.find(' '');\n\n    std::string\
+    \ firstName;\n\n    // If a space was found, extract the first name\n    if (spacePosition\
+    \ != std::string::npos) {\n        firstName = fullName.substr(0, spacePosition);\n\
+    \    } else {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: "```\n// If no space was found, assume the full input\nis is the first name\n\
+    firstName = fullName;\n}\nstd::cout << \"First name: \" << firstName << std::endl;\n\
+    \nreturn 0;\n}\n```\n\n# 114. Make a program that receives a sentence and displays\
+    \ the amount of blank spaces present in it.\n\n```\n#include <iostream>\n#include\
+    \ <string>\n\nint main() {\n    std::string sentence;\n    int count = 0;\n\n\
+    \    // Get the sentence input\n```"
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: "```\nstd::cout << \"Enter a sentence: \";\nstd::getline(std::cin, sentence);\n\
+    \n// Loop through each character and count\nspaces\nfor (char c : sentence) {\n\
+    \    if (c == ' ') {\n        count++;\n    }\n}\n\nstd::cout << \"Number of blank\
+    \ spaces: \" << count <<n std::endl;\n\nreturn 0;\n}\n```\n\n# 115. Create a program\
+    \ that reads a word and displays the number of vowels present in it.\n\n```\n\
+    #include <iostream>\n#include <string>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: "```\nint main() {\n    std::string word;\n    int count = 0;\n\n    // Get\
+    \ the word input\n    std::cout << \"Enter a word: \";\n    std::cin >> word;\n\
+    \n    // Loop through each character and count vowels\n    for (char c : word)\
+    \ {\n        // Convert the character to lowercase for uniformity\n        c =\
+    \ std::tolower(c);\n        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' ||\
+    \ c == 'u') {\n            count++;\n        }\n    }\n\n    std::cout << \"Number\
+    \ of vowels: \" << count << std::endl;\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: "# 116. Create a program that reads a word and displays the number of vowels\
+    \ and consonants present in it.\n\n```\n#include <iostream>\n#include <string>\n\
+    #include <cctype>\n\nint main() {\n    std::string word;\n    int vowelCount =\
+    \ 0, consonantCount = 0;\n\n    // Get the word input\n    std::cout << \"Enter\
+    \ a word: \";\n    std::cin >> word;\n\n    // Loop through each character and\
+    \ count vowels and consonants\n    for (char c : word) {\n        // Convert the\
+    \ character to lowercase for uniformity\n```"
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: "```\nc = std::tolower(c);\nif (c == 'a' || c == 'e' || c == 'i' || c == 'o'\
+    \ || c == 'u') {\n    vowelCount++;\n} else if (std::isalpha(c)) { // Ensure the\
+    \ character is a letter\n    consonantCount++;\n}\n}\n```\n\n```\nstd::cout <<\
+    \ \"Number of vowels: \" << vowelCount << std::endl;\nstd::cout << \"Number of\
+    \ consonants: \" << consonantCount << std::endl;\n\nreturn 0;\n}\n```\n\n# 117.\
+    \ Write a program that takes a full name and displays the last name (last name)\
+    \ first.\n\n```\n#include <iostream>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: "```\n#include <string>\n#include <sstream>\n\nint main() {\n    std::string\
+    \ fullName, word, lastName;\n\n    std::cout << \"Enter your full name: \";\n\
+    \    std::getline(std::cin, fullName);\n\n    std::stringstream ss(fullName);\n\
+    \n    // Extract words until the end, keeping the last\n    word as the potential\
+    \ last name\n    while (ss >> word) {\n        lastName = word;\n    }\n\n   \
+    \ std::cout << \"Last name first: \" << lastName << \", \" << fullName.substr(0,\
+    \ fullName.rfind(lastName)) << std::endl;\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: "# 118. Implement a method to perform basic string compression using the counts\
+    \ of repeated characters. For instance, the string aabcccccaaa would become a2b1c5a3.\n\
+    \n```\n#include <iostream>\n#include <string>\n#include <sstream>\n\nint main()\
+    \ {\n    std::string input;\n    std::cout << \"Enter a string: \";\n    std::cin\
+    \ >> input;\n\n    if (input.empty()) {\n        std::cout << \"Compressed string:\
+    \ \" << input << std::endl;\n        return 0;\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: "```\nstd::stringstream compressed;\nchar currentChar = input[0];\nint count\
+    \ = 1;\n\nfor (int i = 1; i < input.length(); i++) {\n  if (input[i] == currentChar)\
+    \ {\n    count++;\n  } else {\n    compressed << currentChar << count;\n    currentChar\
+    \ = input[i];\n    count = 1;\n  }\n}\n```\n\n// Append the last character and\
+    \ its count\ncompressed << currentChar << count;\n\n```\nstd::string result =\
+    \ compressed.str();\nif (result.length() < input.length()) {\n  std::cout << \"\
+    Compressed string: \" << result << std::endl;\n} else {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: '```
+
+    std::cout << "Compressed string: " << input <<
+
+    std::endl;
+
+    }
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # 119. Rawwords: Write an algorithm that checks whether a word is a "rawword".
+
+    A word is considered a "prime word" if the sum of the letter values (where ''a''
+    = 1, ''b'' = 2, etc.) is a prime number.
+
+
+    ```
+
+    #include <iostream>
+
+    #include <string>
+
+
+    int main() {
+
+    std::string word;
+
+    std::cout << "Enter a word: ";
+
+    std::cin >> word;
+
+
+    int sum = 0;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: "```\nfor(char c : word) {\n  // Ensure the character is a lowercase letter\n\
+    if(c >= 'a' && c <= 'z') {\n    sum += (c - 'a' + 1); // 'a' = 1, 'b' = 2, etc.\n\
+    \  }\n}\n```\n\n// Check for prime. A prime number is only divisible by 1 and\
+    \ itself.\nnbool isPrime = true;\n\n```\n// Corner cases: 0 and 1 are not prime\
+    \ numbers\nif(sum <= 1) {\n  isPrime = false;\n}\n```\n\n```\n// Check for divisibility\
+    \ from 2 to sqrt(sum)\nfor(int i = 2; i*i <= sum && isPrime; i++) {\n  if(sum\
+    \ % i == 0) {\n    isPrime = false;\n  }\n}\n```\n\n```\nif(isPrime) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: "```\nstd::cout << word << \" is a rawword.\" <<\nstd::endl;\n} else {\n   \
+    \ std::cout << word << \" is not a rawword.\" <<\nstd::endl;\n}\n\nreturn 0;\n\
+    }\n```\n\n# 120. Given a list of strings, write a function to determine the longest\
+    \ common prefix.\n\n```\n#include <iostream>\n#include <vector>\n#include <string>\n\
+    #include <algorithm>\n\nint main() {\n    // Sample list of strings\n    std::vector<std::string>\
+    \ strs = {\"flow-\n```"
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: "```\ner\",\"flow\",\"flight\\};\n\nif (strs.empty()) {\n    std::cout << \"\
+    No common prefix\" << std::endl;\n    return 0;\n}\n\n// Take the shortest string\
+    \ as the potential prefix\nstd::string prefix = *min_element(strs.begin(), strs.end(),\
+    \ [](const std::string &s1, const std::string &s2) {\n    return s1.size() < s2.size();\n\
+    });\n\nfor (const std::string &str : strs) {\n    // Compare the current prefix\
+    \ with each string in the list\n    // If a mismatch is found, reduce the size\
+    \ of the prefix and try again\n    while (str.substr(0, prefix.size())!= prefix)\
+    \ {\n        prefix = prefix.substr(0, prefix.size() - 1);\n        if (prefix.empty())\
+    \ {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: "```\nstd::cout << \"No common prefix\" << std::endl;\n  return 0;\n}\n}\n}\n\
+    ```\n\n```\nstd::cout << \"Longest Common Prefix: \" << prefix << std::endl;\n\
+    \  return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: "# Matrices\n\n121. Write a program that fills a 3x3 matrix with values entered\
+    \ by the user and displays the sum of the main diagonal values.\n\n```\n#include\
+    \ <iostream>\n\nint main() {\n    int matrix[3][3];\n    int diagonalSum = 0;\n\
+    \n    std::cout << \"Enter the values for a 3x3 matrix:\" << std::endl;\n\n  \
+    \  // Reading values into the matrix\n    for (int i = 0; i < 3; i++) {\n    \
+    \    for (int j = 0; j < 3; j++) {\n            std::cout << \"Enter value for\
+    \ position [\" << i << \"<<\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: "```\n\\[\" << j << \":\";\nstd::cin >> matrix[i][j];\n}\n```\n\n```\n// Calculating\
+    \ the sum of the main diagonal\nfor (int i = 0; i < 3; i++) {\n    diagonalSum\
+    \ += matrix[i][i];\n}\n```\n\n```\nstd::cout << \"The sum of the main diagonal\
+    \ values is: \" << diagonalSum << std::endl;\n\nreturn 0;\n}\n```\n\n# 122. Write\
+    \ a program that fills a 4x4 matrix with random values and displays the transposed\
+    \ matrix.\n\n```\n#include <iostream>\n#include <ctime>\n#include <cstdlib>\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: "```\nint main() {\n    int matrix[4][4];\n    int transposed[4][4];\n\n   \
+    \ // Seed for random number generator\n    std::srand(static_cast<unsigned int>(std::time(nullptr)));\n\
+    \n    std::cout << \"Original Matrix:\" << std::endl;\n\n    // Filling the matrix\
+    \ with random values and\n    displaying them\n    for (int i = 0; i < 4; i++)\
+    \ {\n        for (int j = 0; j < 4; j++) {\n            matrix[i][j] = std::rand()\
+    \ % 100; // Filling with random values between 0 and 99\n            std::cout\
+    \ << matrix[i][j] << \"\\t\";\n        }\n        std::cout << std::endl;\n  \
+    \  }\n\n    // Transposing the matrix\n    for (int i = 0; i < 4; i++) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: "```\nfor (int j = 0; j < 4; j++) {\n    transposed[j][i] = matrix[i][j];\n\
+    }\n\nstd::cout << \"\\nTransposed Matrix:\" << std::endl;\n\n// Displaying the\
+    \ transposed matrix\nfor (int i = 0; i < 4; i++) {\n    for (int j = 0; j < 4;\
+    \ j++) {\n        std::cout << transposed[i][j] << \"\\t\";\n    }\n    std::cout\
+    \ << std::endl;\n}\n\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: "# 123. Write a program that fills a 5x5 matrix with integers and displays the\
+    \ largest value in the matrix and its position.\n\n```\n#include <iostream>\n\n\
+    int main() {\n    int matrix[5][5];\n    int largestValue = INT_MIN; // Initialize\
+    \ with smallest possible integer\n    int rowIndex = 0, colIndex = 0;\n\n    std::cout\
+    \ << \"Enter the values for the 5x5 matrix:\" << std::endl;\n\n    // Filling\
+    \ the matrix with values entered by the user\n    for (int i = 0; i < 5; i++)\
+    \ {\n        for (int j = 0; j < 5; j++) {\n            std::cout << \"Enter value\
+    \ for [\" << i << \",\" << j << \"]\": \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: "```\nstd::cin >> matrix[i][j];\n```\n\n```\n// Check if the current value is\
+    \ the largest\nif (matrix[i][j] > largestValue) {\n    largestValue = matrix[i][j];\n\
+    \    rowIndex = i;\n    colIndex = j;\n}\n```\n\n```\n// Display the largest value\
+    \ and its position\nstd::cout << \"The largest value in the matrix is \" << largestValue\
+    \ << \" at position [\" << rowIndex << \\][\"\" << col-Index << \"]\" << std::endl;\n\
+    \nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: "# 124. Count negative numbers in a matrix\n\n```\n#include <iostream>\n\nint\
+    \ main() {\n    int matrix[5][5];\n    int negativeCount = 0;\n\n    std::cout\
+    \ << \"Enter the values for the 5x5 matrix:\" << std::endl;\n\n    // Filling\
+    \ the matrix with values entered by the user\n    for (int i = 0; i < 5; i++)\
+    \ {\n        for (int j = 0; j < 5; j++) {\n            std::cout << \"Enter value\
+    \ for [\" << i << \\][\" << j << \"]: \";\n            std::cin >> matrix[i][j];\n\
+    \        }\n\n        // Check if the current value is negative\n        if (matrix[i][j]\
+    \ < 0) {\n            negativeCount++;\n        }\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: "```\n}\n}\n// Display the count of negative numbers\nstd::cout << \"The number\
+    \ of negative values in the matrix is:\" << negativeCount << std::endl;\n\nreturn\
+    \ 0;\n}\n```\n\n# 125. Write a program that reads a 3x3 matrix and calculates\
+    \ the average of the values present in the even positions (sum of the even indices)\
+    \ of the matrix.\n\n```\n#include <iostream>\n\nint main() {\n    int matrix[3][3];\n\
+    \    int sum = 0;\n    int count = 0;\n\n    std::cout << \"Enter the values for\
+    \ the 3x3 ma-\n```"
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: "```\ntrix:\" << std::endl;\n\n// Filling the matrix with values entered by\
+    \ the\nuser\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n\
+    \        std::cout << \"Enter value for [\" << i << \"][\" << j << \"]\":\";\n\
+    \    }\n    std::cin >> matrix[i][j];\n}\n\n// Check if both row and column\n\
+    indices are even\nif (i % 2 == 0 && j % 2 == 0) {\n    sum += matrix[i][j];\n\
+    \    count++;\n}\nstd::cout\n}\n\n// Calculate average\ndouble average = static_cast<double>(sum)\
+    \ /\ncount;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: "```\n// Display the average of the even positions\nstd::cout << \"The average\
+    \ of values in the even positions is: \" << average << std::endl;\n\nreturn 0;\n\
+    }\n```\n\n# 126. Calculate the sum of boundary elements of a matrix.\n\n```\n\
+    #include <iostream>\n\nint main() {\n    int M, N;\n\n    // Ask user for dimensions\
+    \ of the matrix\n    std::cout << \"Enter number of rows (M): \";\n    std::cin\
+    \ >> M;\n\n    std::cout << \"Enter number of columns (N): \";\n    std::cin >>\
+    \ N;\n\n    int matrix[M][N];\n```"
+  merge: -1
+  img_proc: true
+- pgno: 212
+  md: "```\nint boundarySum = 0;\n\n// Input the matrix elements\nstd::cout << \"\
+    Enter the elements of the matrix:\" << std::endl;\nfor (int i = 0; i < M; i++)\
+    \ {\n    for (int j = 0; j < N; j++) {\n        std::cout << \"matrix[\" << i\
+    \ <<\n```"
+  merge: -1
+  img_proc: true
+- pgno: 213
+  md: "```\nreturn O;\n}\n```\n\n```\n#include <iostream>\n\nint main() {\n    const\
+    \ int SIZE = 4;\n    int matrix[SIZE][SIZE];\n    bool isDiagonal = true;\n\n\
+    \    // Input the matrix elements\n    std::cout << \"Enter the elements of the\
+    \ 4x4 matrix:\" << std::endl;\n    for (int i = 0; i < SIZE; i++) {\n        for\
+    \ (int j = 0; j < SIZE; j++) {\n            std::cout << \"matrix[\" << i << \"\
+    ][\" << j << \"\\]: \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 214
+  md: "```\nstd::cin >> matrix[i][j];\n}\n\n// Check if the matrix is diagonal\nfor\
+    \ (int i = 0; i < SIZE; i++) {\n    for (int j = 0; j < SIZE; j++) {\n       \
+    \ if (i!=j && matrix[i][j] != 0) {\n            isDiagonal = false;\n        \
+    \    break;\n        }\n    }\n    if (isDiagonal) {\n        break;\n    }\n\
+    }\n\nif (isDiagonal) {\n    std::cout << \"The matrix is a diagonal matrix.\"\
+    \ << std::endl;\n} else {\n    std::cout << \"The matrix is not a diagonal matrix.\"\
+    \ << std::endl;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 215
+  md: "```\n}\n  return 0;\n}\n```\n\n# 128. Write a program to determine whether\
+    \ a given matrix is symmetric.\n\n```\n#include <iostream>\n```\n\n```\nint main()\
+    \ {\n    const int SIZE = 4; // You can change this to any desired size\n    int\
+    \ matrix[SIZE][SIZE];\n    // Input the matrix elements\n    std::cout << \"Enter\
+    \ the elements of the \" << \"x\" << SIZE << \" matrix:\" << std::endl;\n    for\
+    \ (int i = 0; i < SIZE; i++) {\n        for (int j = 0; j < SIZE; j++) {\n   \
+    \         std::cout << \"matrix[\" << i <<\n```"
+  merge: -1
+  img_proc: true
+- pgno: 216
+  md: "```\n}\n\n// Check if the matrix is symmetric\nbool isSymmetric = true;\nfor\
+    \ (int i = 0; i < SIZE; i++) {\n  for (int j = 0; j < SIZE; j++) {\n    if (matrix[i][j]\
+    \ != matrix[j][i]) {\n      isSymmetric = false;\n      break;\n    }\n  }\n}\n\
+    if (!isSymmetric) {\n  break;\n}\n}\nif (isSymmetric) {\n  std::cout << \"The\
+    \ matrix is symmetric.\" << std::endl;\n} else {\n  std::cout << \"The matrix\
+    \ is not symmetric.\" << std::endl;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 217
+  md: "```\nreturn 0;\n}\n```\n\n# 129. Write a program that fills a 4x4 matrix with\
+    \ random numbers and displays the sum of the values present in each row and in\
+    \ each column.\n\n```\n#include <iostream>\n#include <ctime>\n#include <cstdlib>\n\
+    \nint main() {\n    const int SIZE = 4;\n    int matrix[SIZE][SIZE];\n    int\
+    \ rowSum[SIZE] = {0};\n    int colSum[SIZE] = {0};\n\n    // Seed random number\
+    \ generator\n    srand(time(0));\n\n    // Fill matrix with random numbers and\
+    \ display\n```"
+  merge: -1
+  img_proc: true
+- pgno: 218
+  md: "```\nthe matrix\nstd::cout << \"Matrix:\\n\";\nfor (int i = 0; i < SIZE; i++)\
+    \ {\n    for (int j = 0; j < SIZE; j++) {\n        matrix[i][j] = 1 + rand() %\
+    \ 100; // random numbers between 1 and 100\n        std::cout << matrix[i][j]\
+    \ << \"\\t\";\n        rowSum[i] += matrix[i][j];\n        colSum[j] += matrix[i][j];\n\
+    \    }\n    std::cout << \"\\n\";\n}\n\n// Display the sum of values in each row\n\
+    std::cout << \"\\nRow sums:\\n\";\nfor (int i = 0; i < SIZE; i++) {\n    std::cout\
+    \ << \"Row \" << i + 1 << \":\" << rowSum[i] << \"\\n\";\n}\n\n// Display the\
+    \ sum of values in each column\nstd::cout << \"\\nColumn sums:\\n\";\nfor (int\
+    \ j = 0; j < SIZE; j++) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 219
+  md: "```\nstd::cout << \"Column\" << j << \":\" << col-Sum[j] << \"\\n\";\n}\nreturn\
+    \ 0;\n}\n```\n\n# 130. Write a program that reads a 3x3 matrix and calculates\
+    \ the determinant of the matrix.\n\n#include <iostream>\n\n```\nint main() {\n\
+    \    const int SIZE = 3;\n    double matrix[SIZE][SIZE];\n\n    // Read the matrix\n\
+    \    std::cout << \"Enter the elements of the 3x3 matrix:\\\\n\";\n    for (int\
+    \ i = 0; i < SIZE; i++) {\n        for (int j = 0; j < SIZE; j++) {\n        \
+    \    std::cout << \"Element[\" << i + 1 << \"]\" << j + 1\n```"
+  merge: -1
+  img_proc: true
+- pgno: 220
+  md: '```
+
+    std::cin >> matrix[i][j];
+
+    }
+
+    // Calculate determinant
+
+    double determinant = 0.0;
+
+    determinant += matrix[0][2] * (matrix[1][1] * matrix[2][2] - matrix[1][2] * matrix[2][1]);
+
+    determinant -= matrix[0][1] * (matrix[1][1] * matrix[2][2] - matrix[1][2] * matrix[2][0]);
+
+    determinant += matrix[0][2] * (matrix[1][0] * matrix[2][1] - matrix[1][1] * matrix[2][0]);
+
+    // Display the determinant
+
+    std::cout << "The determinant of the matrix is:" << determinant << "\n";
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 221
+  md: "# 131. Write a program that reads two 2x2 matrices and displays the sum of\
+    \ the two matrices.\n\n```\n#include <iostream>\n```\n\n```\nint main() {\n  \
+    \  const int SIZE = 2;\n    double matrix1[SIZE][SIZE], matrix2[SIZE][SIZE],\n\
+    \    result[SIZE][SIZE];\n\n    // Read the first matrix\n    std::cout << \"\
+    Enter the elements of the first 2x2 matrix:\\n\";\n    for (int i = 0; i < SIZE;\
+    \ i++) {\n        for (int j = 0; j < SIZE; j++) {\n            std::cout << \"\
+    Element [\" << i + 1 << \\][\" << j + 1 << \"]:\";\n            std::cin >> matrix1[i][j];\n\
+    \        }\n    }\nn}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 222
+  md: "```\n// Read the second matrix\nstd::cout << \"Enter the elements of the second\n\
+    2x2 matrix:\\n\";\nfor (int i = 0; i < SIZE; i++) {\n  for (int j = 0; j < SIZE;\
+    \ j++) {\n    std::cout << \"Element[\" << i + 1 << \"]\" << j + 1\n    << \"\
+    :\\n\";\n    std::cin >> matrix2[i][j];\n  }\n}\n```\n\n```\n// Calculate the\
+    \ sum\nfor (int i = 0; i < SIZE; i++) {\n  for (int j = 0; j < SIZE; j++) {\n\
+    \    result[i][j] = matrix1[i][j] + matrix2[i][j];\n  }\n}\n```\n\n```\n// Display\
+    \ the result\nstd::cout << \"Sum of the two matrices is:\\n\";\nfor (int i = 0;\
+    \ i < SIZE; i++) {\n  for (int j = 0; j < SIZE; j++) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 223
+  md: "```\nstd::cout << result[i][j] << \" \";\n}\nstd::cout << \"\\n\";\n}\nreturn\
+    \ 0;\n}\n```\n\n# 132. **Write a program that reads two matrices and returns the\
+    \ multiplication between them as an answer. The program should observe whether\
+    \ or not it is possible to perform the multiplication between the two matrices.\n\
+    \n```\n#include <iostream>\n#include <vector>\n\nint main() {\n    int rows1,\
+    \ cols1, rows2, cols2;\n\n    // Get the dimensions of the first matrix\n```"
+  merge: -1
+  img_proc: true
+- pgno: 224
+  md: "```\nstd::cout << \"Enter the number of rows and columns for the first matrix:\
+    \ \";\nstd::cin >> rows1 >> cols1;\n\n// Read the first matrix\nstd::vector<std::vector<double>>\
+    \ matrix1(rows1, std::vector<double>(cols1));\nstd::cout << \"Enter elements of\
+    \ the first matrix: \\n\";nfor (int i = 0; i < rows1; i++) {\n  for (int j = 0;\
+    \ j < cols1; j++) {\n    std::cin >> matrix1[i][j];\n  }\n}\n\n// Get the dimensions\
+    \ of the second matrix\nstd::cout << \"Enter the number of rows and columns for\
+    \ the second matrix: \";\nstd::cin >> rows2 >> cols2;\n\n// Read the second matrix\n\
+    std::vector<std::vector<double>> matrix2(rows2, std::vector<double>(cols2));\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 225
+  md: "```\nstd::cout << \"Enter elements of the second matrix:\\\\n\";\nfor (int\
+    \ i = 0; i < rows2; i++) {\n  for (int j = 0; j < cols2; j++) {\n    std::cin\
+    \ >> matrix2[i][j];\n  }\n}\n```\n\n```\n// Check for multiplication possibility\n\
+    if (cols1 != rows2) {\n  std::cout << \"Matrix multiplication is not possible.\"\
+    ;\n  return 0;\n}\n```\n\n```\n// Perform multiplication\nstd::vector<std::vector<double>>\
+    \ result(rows1, std::vector<double>(cols2, 0));\nfor (int i = 0; i < rows1; i++)\
+    \ {\n  for (int j = 0; j < cols2; j++) {\n    for (int k = 0; k < cols1; k++)\
+    \ {\n      result[i][j] += matrix1[i][k] * matrix2[k][j];\n    }\n  }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 226
+  md: "```\n}\n}\n// Display the result\nstd::cout << \"Result of matrix multiplication:\\\
+    \\n\";\nfor (int i = 0; i < rows1; i++) {\n    for (int j = 0; j < cols2; j++)\
+    \ {\n        std::cout << result[i][j] << \" \";\n    }\n    std::cout << \"\\\
+    n\";\n}\n```\n\nreturn 0;\n}\n\n# 133. Print a matrix in spiral order.\n\n```\n\
+    #include <iostream>\n#include <vector>\n\nint main() {\n    int rows, cols;\n\
+    ```\n\n```\n// Read matrix dimensions\n```"
+  merge: -1
+  img_proc: true
+- pgno: 227
+  md: "```\nstd::cout << \"Enter the number of rows and columns:\";\nstd::cin >> rows\
+    \ >> cols;\n```\n\n```\n// Read matrix values\nstd::vector<std::vector<int>> matrix(rows,\n\
+    std::vector<int>(cols));\n```\n\n```\nstd::cout << \"Enter matrix elements:\\\
+    n\";\nfor (int i = 0;i < rows;i++) {\n    for (int j = 0; j < cols; j++) {\n \
+    \       std::cin >> matrix[i][j];\n    }\n}\n```\n\nint top = 0, bottom = rows\
+    \ - 1, left = 0, right = cols - 1;\n\n```\n// Print matrix in spiral order\nwhile\
+    \ (top <= bottom && left <= right) {\n    // Print top row\n    for (int i = left;\
+    \ i <= right; i++) {\n        std::cout << matrix[top][i] << \" \";\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 228
+  md: "```\n// Print rightmost column\nfor (int i = top; i <= bottom; i++) {\n  std::cout\
+    \ << matrix[i][right] << \" \";\n}\nright--;\n```\n\n```\n// Print bottom row\
+    \ (only if there's more\n one row left to process)\nif (top <= bottom) {\n  for\
+    \ (int i = right; i >= left; i--) {\n    std::cout << matrix[bottom][i] << \"\
+    \ \";\n  }\n  bottom--;\n}\n```\n\n```\n// Print leftmost column (only if there's\
+    \ more\n one column left to process)\nif (left <= right) {\n  for (int i = bottom;\
+    \ i >= top; i--) {\n    std::cout << matrix[i][left] << \" \";\n  }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 229
+  md: "```\nleft++;\n}\n}\nreturn 0;\n}\n```\n\n134. Write a program that reads an\
+    \ m x n matrix, indicating the location where there are mines in a Minesweeper\
+    \ game (being 0 for a neutral field, and 1 for locations where there would be\
+    \ mines), and the program should return a matrix indicating, for each position,\
+    \ the number of mines in neighboring houses.\n\n```\n#include <iostream>\n#include\
+    \ <vector>\n\nint main() {\n    int m, n;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 230
+  md: "```\n// Read matrix dimensions\nstd::cout << \"Enter the number of rows and\
+    \ col-umns (m n): \";\nstd::cin >> m >> n;\n```\n\n```\n// Read matrix values\n\
+    ```\n\n```\nstd::vector<std::vector<int>> matrix(m, std::vector<int>(n));\nstd::cout\
+    \ << \"Enter matrix elements (0 for neutral, 1 for mine):\\n\";\nfor (int i =\
+    \ 0; i < m; i++) {\n    for (int j = 0; j < n; j++) {\n        std::cin >> matrix[i][j];\n\
+    \    }\n}\n```\n\n```\nstd::vector<std::vector<int>> result(m, std::vector<int>(n,\
+    \ 0));\n```\n\n```\nfor (int i = 0; i < m; i++) {\n    for (int j = 0; j < n;\
+    \ j++) {\n        // If there's a mine at this location, skip count-\n```"
+  merge: -1
+  img_proc: true
+- pgno: 231
+  md: "```\nif (matrix[i][j] == 1) continue;\n\n// Check the surrounding 8 cells\n\
+    for (int x = -1; x <= 1; x++) {\n    for (int y = -1; y <= 1; y++) {\n       \
+    \ if (x == 0 && y == 0) continue; // Skip the center cell\n        int new_i =\
+    \ i + x;\n        int new_j = j + y;\n\n        if (new_i >= 0 && new_i < m &&\
+    \ new_j >= 0 && new_j < n && matrix[new_i][new_j] == 1) {\n            result[i][j]++\n\
+    \        }\n    }\n}\n```\n\n// Print resulting matrix\nstd::cout << \"Resulting\
+    \ matrix:\\n\";"
+  merge: -1
+  img_proc: true
+- pgno: 232
+  md: "```\nfor (int i = 0; i < m; i++) {\n    for (int j = 0; j < n; j++) {\n   \
+    \     if (matrix[i][j] == 1) std::cout << \"M\";\n        else std::cout << result[i][j]\
+    \ << \" \";\n    }\n    std::cout << \"\\n\";\n}\n\nreturn 0;\n}\n```\n\n# 135.\
+    \ Make a function that receives a 3x3 matrix representing the game of tic-tac-toe,\
+    \ and check if there is a winner, if there is a tie, or if the game is not over\
+    \ yet\n\n#include <iostream>\n#include <vector>\n\n```\nenum class GameState {\n\
+    \    X_Wins,\n    O_Wins,\n```"
+  merge: -1
+  img_proc: true
+- pgno: 233
+  md: "Tie,\nOngoing\n};\n\nGameState checkTicTacToe(std::vector<std::vector<char>>&\
+    \ board) {\n\n```\n// Check rows, columns, diagonals\nfor (int i = 0; i < 3; ++i)\
+    \ {\n    if (board[i][0] == board[i][1] && board[i][1] ==\nboard[i][2] && board[i][0]\
+    \ != ' ') {\n        return board[i][0] == 'X' ? GameState::X_Wins :\nGameState::O_Wins;\n\
+    \    }\n\n    if (board[0][i] == board[1][i] && board[1][i] ==\nboard[2][i] &&\
+    \ board[0][i] != ' ') {\n        return board[0][i] == 'X' ? GameState::X_Wins\
+    \ :\nGameState::O_Wins;\n    }\n}\n```\n\n```\n// Check diagonals\nif (board[0][0]\
+    \ == board[1][1] && board[1][1] ==\n```"
+  merge: -1
+  img_proc: true
+- pgno: 234
+  md: "```\nboard[2][2] && board[0][0] != ' ') {\n    return board[0][0] == 'X' ?\
+    \ GameState::X_Wins :\nGameState::O_Wins;\n}\n```\n\n```\nif (board[0][2] == board[1][1]\
+    \ && board[1][1] ==\nboard[2][0] && board[0][2] != ' ') {\n    return board[0][2]\
+    \ == 'X' ? GameState::X_Wins :\nGameState::O_Wins;\n}\n```\n\n```\n// Check for\
+    \ a tie or ongoing game\nbool isFull = true;\nfor (int i = 0; i < 3 && isFull;\
+    \ ++i) {\n    for (int j = 0; j < 3; ++j) {\n        if (board[i][j] == ' ') {\n\
+    \            isFull = false;\n            break;\n        }\n    }\n}\n```\n\n\
+    ```\nreturn isFull ? GameState::Tie : GameState::On-\n```"
+  merge: -1
+  img_proc: true
+- pgno: 235
+  md: "```\ngoing;\n}\nint main() {\n    std::vector<std::vector<char>> board(3, std::vector<char>(3));\n\
+    ```\n\n```\n    std::cout << \"Enter Tic-Tac-Toe board (X, O, or space for each\
+    \ cell):\\n\"\nfor (int i = 0; i < 3; ++i) {\n    for (int j = 0; j < 3; ++j)\
+    \ {\n        std::cin >> board[i][j];\n    }\n}\n```\n\n```\nGameState result\
+    \ = checkTicTacToe(board);\nswitch (result) {\n    case GameState::X_Wins:\n \
+    \       std::cout << \"X Wins!\\n\"\n        break;\n    case GameState::O_Wins:\n\
+    \        std::cout << \"O Wins!\\n\";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 236
+  md: "```\nbreak;\ncase GameState::Tie:\n    std::cout << \"It's a Tie!\\n\";n  \
+    \  break;\ncase GameState::Ongoing:\n    std::cout << \"The game is still ongoing.\\\
+    n\"\n    break;\n}\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 237
+  md: "# Recursive Functions\n\n136. Write a recursive function to calculate the factorial\
+    \ of a number.\n\n```\n#include <iostream>\n\nlong long factorial(int n) {\n \
+    \   if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\n\nint main() {\n\
+    \    int num;\n    std::cout << \"Enter a number:\";\n    std::cin >> num;\n \
+    \   std::cout << \"Factorial of \" << num << \" is \" << factorial(num) << std::endl;\n\
+    \n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 238
+  md: "# 137. Implement a recursive function to calculate the Fibonacci sequence up\
+    \ to a given number.\n\n```\n#include <iostream>\n\nint fibonacci(int n) {\n \
+    \   if (n <= 1) return;\n    return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\n\
+    int main() {\n    int num;\n    std::cout << \"Enter a number: \";\n    std::cin\
+    \ >> num;\n\n    std::cout << \"Fibonacci sequence up to \" << num << \" terms:\"\
+    \ << std::endl;\n    for (int i = 0; i < num; i++) {\n        std::cout << fibonacci(i)\
+    \ << \" \";\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 239
+  md: "```\nstd::cout << std::endl;\n\nreturn 0;\n}\n```\n\n# 138. Create a recursive\
+    \ function to check if a number is prime.\n\n```\n#include <iostream>\n#include\
+    \ <cmath>\n```\n\n```\nbool isPrimeRecursive(int n, int i = 2) {\n    // Base\
+    \ case: if n is less than 2, it's not prime\n    if (n <= 1) return false;\n\n\
+    \    // If we reach a divisor other than 1 and itself, it's not prime\n    if\
+    \ (n % i == 0) return false;\n\n    // If we've checked up to the square root\
+    \ of n and found no divisors, it's prime\n```"
+  merge: -1
+  img_proc: true
+- pgno: 240
+  md: '```
+
+    if (i * i > n) return true;
+
+    ```
+
+
+    ```
+
+    // Continue checking the next potential divisor
+
+    return isPrimeRecursive(n, i + 1);
+
+    }
+
+    ```
+
+
+    ```
+
+    int main() {
+
+    int num;
+
+    std::cout << "Enter a number: ";nstd::cin >> num;
+
+    ```
+
+
+    ```
+
+    if (isPrimeRecursive(num)) {
+
+    std::cout << num << "is a prime number." <<nstd::endl;
+
+    } else {
+
+    std::cout << num << "is not a prime number."
+
+    << std::endl;
+
+    }
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 241
+  md: "# 139. Develop a recursive function to calculate the sum of the digits of an\
+    \ integer.\n\n```\n#include <iostream>\nint sumOfDigits(int n) {\n  // Base case:\
+    \ if n is a single digit number, return the number itself\n  if (n < 10) return\
+    \ n;\n\n  // Get the last digit and add it to the recursive result of the rest\
+    \ of the number\n  return n % 10 + sumOfDigits(n / 10);\n}\n\nint main() {\n \
+    \ int num;\n  std::cout << \"Enter a number: \";\n  std::cin >> num;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 242
+  md: "```\nint result = sumOfDigits(num);\nstd::cout << \"Sum of digits of \" <<\
+    \ num << \" is:\" <<\nresult << std::endl;\n\nreturn 0;\n}\n```\n\n# 140. Write\
+    \ a recursive function to calculate the power of an integer raised to an exponent.\n\
+    \n```\n#include <iostream>\n```\n\n```\nint power(int base, int exponent) {\n\
+    \  // Base case: if the exponent is 0, the result is 1\n  if (exponent == 0) return\
+    \ 1;\n```\n\n```\n  // Recursive case: multiply the base by the result of the\
+    \ power function with reduced exponent\n  return base * power(base, exponent -\
+    \ 1);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 243
+  md: "```\nint main() {\n    int base, exponent;\n    std::cout << \"Enter base:\
+    \ \";\n    std::cin >> base;\n    std::cout << \"Enter Exponent: \";\n    std::cin\
+    \ >> exponent;\n\n    int result = power(base, exponent);\n    std::cout << base\
+    \ << \" raised to the power \" << exponent << \" is: \" << result << std::endl;\n\
+    \n    return 0;\n}\n```\n\n# 141. Implement a recursive function to find the greatest\
+    \ common divisor (GCD) of two numbers.\n\n#include <iostream>\n\n```\nint gcd(int\
+    \ a, int b) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 244
+  md: "```\n// Base case: If b is 0, then a is the GCD\nif (b == 0) return a;\n\n\
+    // Recursive case: Find GCD of b and the remainder\nwhen a a is divided by b\n\
+    return gcd(b, a % b);\n}\n\nint main() {\n    int num1, num2;\n    std::cout <<\
+    \ \"Enter first number: \";\n    std::cin >> num1;\n    std::cout << \"Enter second\
+    \ number: \";\n    std::cin >> num2;\n\n    int result = gcd(num1, num2);\n  \
+    \  std::cout << \"GCD of \" << num1 << \" and \" << num2 << \" is:\" << result\
+    \ << std::endl;\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 245
+  md: "# 142. Create a recursive function to reverse a string.\n\n```\n#include <iostream>\n\
+    #include <string>\nstd::string reverseString(const std::string &str) {\n    //\
+    \ Base case: If the string is empty or contains just one character\n    if (str.length()\
+    \ <= 1) return str;\n\n    // Recursive case: Reverse the substring without the\
+    \ first character\n    // and concatenate the first character to the end\n   \
+    \ return reverseString(str.substr(1)) + str[0];\n}\n\nint main() {\n    std::string\
+    \ input;\n    std::cout << \"Enter a string: \";\n    std::cin >> input;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 246
+  md: "```\nstd::string reversed = reverseString(input);\nstd::cout << \"Reversed\
+    \ string: \" << reversed << std::endl;\n\nreturn 0;\n}\n```\n\n# 143. Develop\
+    \ a recursive function to find the smallest value in an array.\n\n#include <iostream>\n\
+    \n```\nint findSmallest(int arr[], int n, int index = 0, int smallest = INT_MAX)\
+    \ {\n  // Base case: if index is equal to n, return the smallest found so far\n\
+    \  if (index == n) return smallest;\n\n  // If the current element is smaller\
+    \ than the smallest,\n  // update the smallest value\n  if (arr[index] < smallest)\
+    \ smallest = arr[index];\n```"
+  merge: -1
+  img_proc: true
+- pgno: 247
+  md: "```\n// Move to the next element\nreturn findSmallest(arr, n, index + 1, smallest);\n\
+    }\n\nint main() {\n    int n;\n    std::cout << \"Enter the number of elements:\"\
+    ;\n    std::cin >> n;\n\n    int arr[n];\n    std::cout << \"Enter \" << n <<\
+    \ \" numbers:\" << std::endl;\n    for (int i = 0; i < n; i++) {\n        std::cin\
+    \ >> arr[i];\n    }\n\n    int smallest = findSmallest(arr, n);\n    std::cout\
+    \ << \"Smallest value: \" << smallest << std::endl;\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 248
+  md: "# 144. Write a recursive function to determine whether a word is a palindrome.\n\
+    \n```\n#include <iostream>\n#include <string>\nbool isPalindrome(const std::string&\
+    \ word, int start, int end) {\n  // Base case: if start is greater than or equal\
+    \ to end, return true (the word is a palindrome)\n  if (start >= end) return true;\n\
+    \  // If characters at current indices don't match, return false\n  if (word[start]\
+    \ != word[end]) return false;\n  // Move to the next set of characters\n  return\
+    \ isPalindrome(word, start + 1, end - 1);\n}\n\nint main() {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 249
+  md: "```\nstd::string word;\nstd::cout << \"Enter a word: \";\nstd::cin >> word;\n\
+    ```\n\n```\nif (isPalindrome(word, 0, word.length() - 1)) {\n    std::cout <<\
+    \ word << \" is a palindrome.\" << std::endl;\n} else {\n    std::cout << word\
+    \ << \" is not a palindrome.\" << std::endl;\n}\n```\n\n```\nreturn 0;\n}\n```\n\
+    \n# 145. Implement a recursive function to calculate the sum of elements of an\
+    \ array.\n\n```\n#include <iostream>\n```\n\n```\nint sumArray(int arr[], int\
+    \ size) {\n    // Base case: if the size is zero, return 0\n    if (size == 0)\
+    \ return 0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 250
+  md: "```\n// Recursively calculate the sum of the remaining elements and add the\
+    \ current element\nreturn arr[size - 1] + sumArray(arr, size - 1);\n}\n\nint main()\
+    \ {\n  int n;\n  std::cout << \"Enter the number of elements: \";\n  std::cin\
+    \ >> n;\n\n  int *arr = new int[n];\n  std::cout << \"Enter the elements of the\
+    \ array: \";\n  for(int i = 0; i < n; i++) {\n    std::cin >> arr[i];\n  }\n\n\
+    \  std::cout << \"Sum of the array elements: \" << sumArray(arr, n) << std::endl;\n\
+    \n  delete[] arr; // Don't forget to free the dynamically allocated memory\n \
+    \ return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 251
+  md: '```
+
+    ```
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 252
+  md: "# Regular Expressions\n\n146. Write a regex to validate\nmail addresses, ensuring\
+    \ it\ncontains @ and . symbols.\n\n```\n#include <iostream>\n#include <regex>\n\
+    #include <string>\n```\n\n```\nint main() {\n    std::string email;\n    std::cout\
+    \ << \"Enter email address: \";\n    std::cin >> email;\n\n    // Regex pattern\
+    \ to check if email contains @\n    // and . symbols\n    std::regex pattern(R\"\
+    ([^@]+@[^@]+\\.[^@]+$\\)\");\n\n    if (std::regex_match(email, pattern)) {\n\
+    \        std::cout << \"Valid email address!\" << std::endl;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 253
+  md: "```\n} else {\n    std::cout << \"Invalid email address!\" << std::endl;\n\
+    }\n\nreturn 0;\n}\n```\n\n# 147. Extract all valid dates from a string in the\
+    \ format YYYY-MM-DD or DD/MM/YYYY.\n\n```\n#include <iostream>\n#include <regex>\n\
+    #include <string>\n\nint main() {\n    std::string input;\n    std::cout << \"\
+    Enter the string: \";\n    std::getline(std::cin, input);\n\n    // Regex pattern\
+    \ for YYYY-MM-DD and DD/MM/YYYY date formats\n```"
+  merge: -1
+  img_proc: true
+- pgno: 254
+  md: "```\nstd::regex pattern(R\"(\\d{4}-\\d{2}-\\d{2})|(\\d{2}/\\d{2}/\\d{4}))\"\
+    );\n```\n\n```\nstd::smatch matches;\nwhile (std::regex_search(input, matches,\
+    \ pattern)) {\n    std::cout << matches[0] << std::endl;\n    input = matches.suffix().str();\n\
+    }\n```\n\n```\nreturn 0;\n}\n```\n\n# 148. Check if a given string is a valid\
+    \ credit card number (typically 16 digits, sometimes separated by - or spaces).\n\
+    \n```\n#include <iostream>\n#include <regex>\n#include <string>\n```\n\n```\n\
+    int main() {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 255
+  md: "```\nstd::string input;\nstd::cout << \"Enter the credit card number: \";\n\
+    std::getline(std::cin, input);\n\n// Regex pattern for a credit card number format\n\
+    std::regex pattern(R\"(\\d{4}-\\d{4}-\\d{4}-\\d{4} \\d{4} \\d{4} \\d{4}|\\d{16})$\"\
+    );\n\nif (std::regex_match(input, pattern)) {\n    std::cout << \"Valid credit\
+    \ card number format!\" << std::endl;\n} else {\n    std::cout << \"Invalid credit\
+    \ card number format!\" << std::endl;\n}\n\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 256
+  md: "# 149. Validate passwords to ensure they contain at least one uppercase character,\
+    \ one lowercase character, one digit, one special character, and are at least\
+    \ 8 characters long.\n\n```\n#include <iostream>\n#include <regex>\n#include <string>\n\
+    \nint main() {\n    std::string input;\n    std::cout << \"Enter the password:\
+    \ \";\n    std::getline(std::cin, input);\n\n    // Regex pattern for password\
+    \ validation\n    std::regex pattern(R\"((?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\\
+    W_]).{8,})\");\n\n    if (std::regex_search(input, pattern)) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 257
+  md: "```\nstd::cout << \"Valid password!\" << std::endl;\n} else {\n  std::cout\
+    \ << \"Invalid password!\" << std::endl;\n}\n  return 0;\n}\n```\n\n# 150. Replace\
+    \ multiple spaces in a text with a single space.\n\n```\n#include <iostream>\n\
+    #include <regex>\n#include <string>\nint main() {\n  std::string input;\n  std::cout\
+    \ << \"Enter the text: \";\n  std::getline(std::cin, input);\n  std::regex pattern(R(\\\
+    s+\\)\");\n  std::string replacement(\" \");\n```"
+  merge: -1
+  img_proc: true
+- pgno: 258
+  md: "```\nstd::string result = std::regex_replace(input,\npattern, replacement);\n\
+    \nstd::cout << \"Processed text: \" << result <<\nstd::endl;\n\nreturn 0;\n}\n\
+    ```\n\n# 151. Validate and extract currency values from a text (e.g., $100.25).\n\
+    \n```\n#include <iostream>\n#include <regex>\n#include <string>\n\nint main()\
+    \ {\n    std::string input;\n    std::cout << \"Enter the text: \";\n    std::getline(std::cin,\
+    \ input);\n\n    std::regex pattern(R\"(\\\\$\\d+(\\.\\d{1,2})?)\");\n```"
+  merge: -1
+  img_proc: true
+- pgno: 259
+  md: "```\nstd::smatch matches;\nstd::string::const_iterator searchStart(input.cbe-\n\
+    gin());\nwhile (std::regex_search(searchStart, input.cend(), matches, pattern))\
+    \ {\n    std::cout << \"Found currency value: \" << matches[0] << '\\n';\n   \
+    \ searchStart = matches.suffix().first;\n}\n\nreturn 0;\n\n```\n\n# 152. Write\
+    \ a regex to extract all URLs from a text.\n\n```\n#include <iostream>\n#include\
+    \ <regex>\n#include <string>\n\nint main() {\n    std::string input;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 260
+  md: '```
+
+    std::cout << "Enter the text: ";
+
+    std::getline(std::cin, input);
+
+    std::regex pattern(R("bhttps?://[^\s<>"]+|www\.[^\s<>"]+"));
+
+
+    std::smatch matches;
+
+    std::string::const_iterator searchStart(input.begin());
+
+    while (std::regex_search(searchStart, input.end(), matches, pattern)) {\std::cout
+    << "Found URL: " << matches[0] << ''\n'';
+
+    searchStart = matches.suffix().first;
+
+    }
+
+    return 0;
+
+    ```
+
+
+    # 153. Extract all hex color codes from a text (e.g., #AABBCC or #ABC).
+
+
+    #include <iostream>'
+  merge: -1
+  img_proc: true
+- pgno: 261
+  md: "```\n#include <regex>\n#include <string>\n\nint main() {\n    std::string input;\n\
+    \    std::cout << \"Enter the text: \";\n    std::getline(std::cin, input);\n\n\
+    \    std::regex pattern(R\"#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}))\");\n\n    std::smatch\
+    \ matches;\n    std::string::const_iterator searchStart(input.begin());\n    while\
+    \ (std::regex_search(searchStart, input.end(), matches, pattern)) {\n        std::cout\
+    \ << \"Found hex color. \" << matches[0] << '\\\\n';\n        searchStart = matches.suffix().first;\n\
+    \    }\n\n    return 0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 262
+  md: "# 154. Extract all valid IPv4 addresses from a text.\n\n```\n#include <iostream>\n\
+    #include <regex>\n#include <string>\n```\n\n```\nint main() {\n    std::string\
+    \ input;\n    std::cout << \"Enter the text: \";\n    std::getline(std::cin, input);\n\
+    \n    std::regex pattern(R\"(\\\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\\
+    .(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\\b)\");\n\n    std::smatch matches;\n\
+    \    std::string::const_iterator searchStart(input.cbegin(), input.cend());\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 263
+  md: "```\nwhile (std::regex_search(searchStart, input.cend(), matches, pattern))\
+    \ {\n    std::cout << \"Found IPv4 address:\" << matches[0] << '\\\\n';\n    searchStart\
+    \ = matches.suffix().first;\n}\n\nreturn 0;\n}\n```\n\n# 155. Use capture groups\
+    \ to rearrange date formats (convert YYYY-MM-DD to DD-MM-YYYY).\n\n```\n#include\
+    \ <iostream>\n#include <regex>\n#include <string>\n\nint main() {\n    std::string\
+    \ input;\n    std::cout << \"Enter the date in format YYYY-MM-DD:\";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 264
+  md: '```
+
+    std::getline(std::cin, input);
+
+
+    std::regex pattern(R"(\d{4})-(\d{2})-(\d{2}))");
+
+    std::string replacement("$3-$2-$1");
+
+
+    std::string newFormat = std::regex_replace(input, pattern, replacement);
+
+    std::cout << "Reformatted date: " << newFormat << ''\\n'';
+
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 265
+  md: "# Sorting Algorithms\n\n156. Implement the Bubble Sort algorithm\n\n```\n#include\
+    \ <iostream>\nvoid bubbleSort(int arr[], int n) {\n  for (int i = 0; i < n-1;\
+    \ i++) { // Loop over each element\n    for (int j = 0; j < n-i-1; j++) { // Loop\
+    \ over the unsorted part\n      if (arr[j] > arr[j+1]) { // Compare the adjacent\
+    \ elements\n        // Swap arr[j] and arr[j+1]\n        int temp = arr[j];\n\
+    \        arr[j] = arr[j+1];\n        arr[j+1] = temp;\n      }\n    }\n  }\n}\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 266
+  md: "```\n}\nint main() {\n    int arr[] = {64, 34, 25, 12, 22, 11, 90};\n    int\
+    \ n = sizeof(arr) / sizeof(arr[0]);\n\n    std::cout << \"Original array: \\n\"\
+    ;\n    for (int i = 0; i < n; i++) {\n        std::cout << arr[i] << \" \";\n\
+    \    }\n    std::cout << \"\\n\";\n\n    bubbleSort(arr, n);\n\n    std::cout\
+    \ << \"Sorted array: \\n\";\n    for (int i = 0; i < n; i++) {\n        std::cout\
+    \ << arr[i] << \" \";\n    }\n    std::cout << \"\\n\";\n\n    return 0;\n}\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 267
+  md: "# 157. Implement the Selection Sort algorithm\n\n```\n#include <iostream>\n\
+    \nvoid selectionSort(int arr[], int n) {\n    for (int i = 0; i < n-1; i++) {\n\
+    \        int min_idx = i; // Find the minimum\nelement in the unsorted array\n\
+    \        for (int j = i+1; j < n; j++) {\n            if (arr[j] < arr[min_idx])\
+    \ {\n                min_idx = j;\n            }\n        }\n\n    // Swap the\
+    \ found minimum element with\nthe first element\n    int temp = arr[min_idx];\n\
+    \    arr[min_idx] = arr[i];\n    arr[i] = temp;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 268
+  md: "```\n}\nint main() {\n    int arr[] = {64, 25, 12, 22, 11};\n    int n = sizeof(arr)\
+    \ / sizeof(arr[0]);\n\n    std::cout << \"Original array: \\n\";\n    for (int\
+    \ i = 0; i < n; i++) {\n        std::cout << arr[i] << \" \";\n        std::cout\
+    \ << \"\\n\";\n    }\n\n    selectionSort(arr, n);\n\n    std::cout << \"Sorted\
+    \ array: \\n\";\n    for (int i = 0; i < n; i++) {\n        std::cout << arr[i]\
+    \ << \" \";\n        std::cout << \"\\n\";\n    }\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 269
+  md: "# 158. Implement the Insertion Sort algorithm\n\n```\n#include <iostream>\n\
+    ```\n\n```\nvoid insertionSort(int arr[], int n) {\n    for (int i = 1; i < n;\
+    \ i++) {\n        int key = arr[i];\n        int j = i - 1;\n        // Move elements\
+    \ of arr[0..i-1] that are greater than the key\n        // to one position ahead\
+    \ of their current position\n        while (j >= 0 && arr[j] > key) {\n      \
+    \      arr[j + 1] = arr[j];\n            j = j - 1;\n        }\n        arr[j\
+    \ + 1] = key;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 270
+  md: "```\nint main() {\n    int arr[] = {12, 11, 13, 5, 6};\n    int n = sizeof(arr)\
+    \ / sizeof(arr[0]);\n\n    std::cout << \"Original array: \\n\";\n    for (int\
+    \ i = 0; i < n; i++) {\n        std::cout << arr[i] << \" \";\n    }\n    std::cout\
+    \ << \"\\n\";\n\n    insertionSort(arr, n);\n\n    std::cout << \"Sorted array:\
+    \ \\n\";\n    for (int i = 0; i < n; i++) {\n        std::cout << arr[i] << \"\
+    \ \";\n    }\n    std::cout << \"\\n\";\n\n    return 0;\n}\n```\n\n# 159. Implement\
+    \ the Merge Sort algorithm\n\n```\n#include <iostream>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 271
+  md: "```\nvoid merge(int arr[], int l, int m, int r) {\n  int n1 = m - l + 1;\n\
+    \  int n2 = r - m;\n\n  // Create temp arrays\n  int L[n1], R[n2];\n\n  // Copy\
+    \ data to temp arrays L[] and R[]\n  for (int i = 0; i < n1; i++) {\n    L[i]\
+    \ = arr[l + i];\n    for (int j = 0; j < n2; j++) {\n      R[j] = arr[m + 1 +\
+    \ j];\n    }\n  }\n\n  int i = 0;\n  int j = 0;\n  int k = l;\n\n  // Merge the\
+    \ temp arrays back into arr[l..r]\n  while (i < n1 && j < n2) {\n    if (L[i]\
+    \ <= R[j]) {\n      arr[k] = L[i];\n      i++;\n    } else\n```"
+  merge: -1
+  img_proc: true
+- pgno: 272
+  md: "```\narr[k] = R[j];\nj++;\n}\nkk++;\n}\n```\n\n// Copy the remaining elements\
+    \ of L[], if there are any\n\n```\nwhile (i < n1) {\n  arr[k] = L[i];\n  i++;\n\
+    \  k++;\n}\n```\n\n// Copy the remaining elements of R[], if there are any\n\n\
+    ```\nwhile (j < n2) {\n  arr[k] = R[j];\n  j++;\n  k++;\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 273
+  md: "```\nvoid mergeSort(int arr[], int l, int r) {\n  if (l >= r) {\n    return;\
+    \ // Returns recursively\n  }\n\n  int m = l + (r - l) / 2;\n  mergeSort(arr,\
+    \ l, m);\n  mergeSort(arr, m + 1, r);\n  merge(arr, l, m, r);\n}\n```\n\n```\n\
+    int main() {\n  int arr[] = {12, 11, 13, 5, 6, 7};\n  int n = sizeof(arr) / sizeof(arr[0]);\n\
+    \n  std::cout << \"Given array: \\n\";\n  for (int i = 0; i < n; i++) {\n    std::cout\
+    \ << arr[i] << \" \";\n  }\n  std::cout << \"\\n\";\n\n  mergeSort(arr, 0, n -\
+    \ 1);\n\n  std::cout << \"Sorted array: \\n\";\n  for (int i = 0; i < n; i++)\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 274
+  md: "```\nstd::cout << arr[i] << \" \";\nstd::cout << \"\\n\";\n\nreturn 0;\n}\n\
+    ```\n\n# 160. Implement the Quick Sort algorithm\n\n```\n#include <iostream>\n\
+    \n// Function to swap two elements\nvoid swap(int* a, int* b) {\n    int t = *a;\n\
+    \    *a = *b;\n    *b = t;\n}\n\n// Function that partitions the array using the\
+    \ last element as the pivot\nint partition(int arr[], int low, int high) {\n \
+    \   int pivot = arr[high];\n    int i = (low - 1);\n\nfor (int j = low; j <= high\
+    \ - 1; j++) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 275
+  md: "```\nif (arr[j] < pivot) {\n    i++;\n    swap(&arr[i], &arr[j]);\n}\n\nswap(&arr[i\
+    \ + 1], &arr[high]);\nreturn (i + 1);\n```\n\n```\nvoid quickSort(int arr[], int\
+    \ low, int int, int high) {\n    if (low < high) {\n        // pi is partitioning\
+    \ index\n        int pi = partition(arr, low, high);\n\n        // Separately\
+    \ sort elements before and after partition\n        quickSort(arr, low, pi - 1);\n\
+    \        quickSort(arr, pi + 1, high);\n    }\n}\n```\n\n```\nint main() {\n \
+    \   int arr[] = {10, 7, 8, 9, 1, 5};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 276
+  md: "```\nint n = sizeof(arr) / sizeof(arr[0]);\n\nstd::cout << \"Given array: \\\
+    n\";\nfor (int i = 0; i < n; i++) {\n    std::cout << arr[i] << \" \";\n    std::cout\
+    \ << \"\\n\";\n}\n\nquickSort(arr, 0, n - 1);\n\nstd::cout << \"Sorted array:\
+    \ \\n\";\nfor (int i = 0; i < n; i++) {\n    std::cout << arr[i] << \" \";\n \
+    \   std::cout << \"\\n\";\n}\n\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 277
+  md: '# # Complete List of Exercises
+
+
+    # Basic Exercises
+
+
+    +   1. Write a program that prints "Hello World!" on the screen.
+
+    2. Write a program that prints "Hello" on one line and "World!" on the bottom
+    line, using two different commands.
+
+    3. Write a program that prints "Hello" on one line and "World!" on the bottom
+    line, using only one command to print.
+
+    4. Write a program that prints "Hello" on one line and "World!" on the bottom
+    line, leaving a blank line between the words.'
+  merge: -1
+  img_proc: true
+- pgno: 278
+  md: '5. Write a program that prints "Hello World!" (in the same line) on the screen,
+    using one command to print "Hello" and another command to print "World!".
+
+
+    6. Write a program that prints "Hello World!" (in the same line) on the screen,
+    using one command to print "Hello", another command to print "World", and another
+    to print "!".
+
+
+    7. Make a program that asks for the user''s name, and prints the name on the screen
+    immediately after.
+
+
+    8. Make a program that reads the names of three people in sequence, followed by
+    their respective ages, and prints each name with their respective ages on the
+    screen.
+
+
+    9. Make a program that reads the names of three people in sequence, followed by
+    their respective ages and heights, and prints the data in table'
+  merge: -1
+  img_proc: true
+- pgno: 279
+  md: 'format on the screen.
+
+
+    +   10. Make a program that reads the names of three people in sequence, followed
+    by reading their respective ages and heights, and prints the data on the screen
+    in table format, using dashes (-) to separate rows and pipes (|) to separate columns.
+
+
+    # Mathematical Formulas
+
+
+    +   11. Write a program that prompts the user for two numbers and displays the
+    addition, subtraction, multiplication, and division between them.
+
+
+    +   12. Write a program that calculates the arithmetic mean of two numbers entered
+    by the user.
+
+
+    +   13. Create a program that calculates and displays the arithmetic mean of three
+    numbers entered by the user.'
+  merge: -1
+  img_proc: true
+- pgno: 280
+  md: '14. Write a program that reads two numbers, the first being the base and the
+    second the exponent, and then printing the first number raised to the second.
+
+
+    15. Write a program that reads a number and prints the square root of the number
+    on the screen.
+
+
+    16. Write a program that calculates the geometric mean of three numbers entered
+    by the user → GeoMean=3n1n2n3
+
+
+    17. Write a program that calculates the BMI of an individual, using the formula
+    BMI = weight / height²
+
+
+    18. Create a program that calculates and displays the perimeter of a circle, prompting
+    the user for the radius, using the formula P = 2πr
+
+
+    19. Write a program that calculates the area of a circle from the radius, using
+    the formula A = πr²'
+  merge: -1
+  img_proc: true
+- pgno: 281
+  md: '20. Write a program that calculates the delta of a quadratic equation (Δ =
+    b² - 4ac).
+
+
+    21. Write a program that calculates the perimeter and area of a rectangle, using
+    the formulas P = 2(w + l) and A = wl, where w is the width and l is the length
+
+
+    22. Write a program that calculates the perimeter and area of a triangle, using
+    the formulas P = a + b + c and A = (b*h) / 2, where a, b and c are the sides of
+    the triangle and h is the height relative to the side B.
+
+
+    23. Write a program that calculates the average velocity of an object, using the
+    formula v = Δs/Δt, where v is the average velocity, Δs is the space variation,
+    and Δt is the time variation
+
+
+    24. Write a program that calculates the kinetic energy of a moving object, using
+    the formula E = (mv²) / 2, where E is the kinetic energy, m is'
+  merge: -1
+  img_proc: true
+- pgno: 282
+  md: 'the mass of the object, and v is the velocity.
+
+    25. Write a program that calculates the work done by a force acting on an object,
+    using the formula W = F * d, where W is the work, F is the applied force, and
+    d is the distance traveled by the object.
+
+
+    26. Write a program that calculates the n-th term of an arithmetic progression
+    given the value of the first term, the common difference (ratio), and the value
+    of n read from the user -> an=a 1+(n-1)r
+
+
+    27. Write a program that reads the x and y position of two points in the Cartesian
+    plane, and calculates the distance between them
+
+
+    28. Create a program that prompts the user for the radius of a sphere and calculates
+    and displays its volume.
+
+
+    29. Make a program that reads the resistance'
+  merge: -1
+  img_proc: true
+- pgno: 283
+  md: 'of two resistors and displays the resulting resistance value when connected
+    in series, adding the values, and in parallel using the formula (R1 * R2) / (R1
+    + R2)
+
+
+    30. Make a program that reads a value of a product and the tax (in percentage),
+    and calculates the final value of it.
+
+
+    Conditionals
+
+
+    31. Make a program that asks for a person''s age and displays whether they are
+    of legal age or not (age >= 18).
+
+
+    32. Write a program that reads a number and reports whether it is odd or even.
+
+
+    33. Write a program that reads a number and reports whether it is positive, negative
+    or zero.
+
+
+    34. Create a program that reads three numbers and checks if their sum is positive,
+    negative or equal to zero'
+  merge: -1
+  img_proc: true
+- pgno: 284
+  md: '35. Write a program that reads two numbers and tells you which one is bigger.
+
+
+    36. Write a program that asks the user for three numbers and displays the largest
+    one.
+
+
+    37. Make a program that reads three numbers, and informs if their sum is divisible
+    by 5 or not.
+
+
+    38. Write a program that asks for an integer and checks if it is divisible by
+    3 and 5 at the same time.
+
+
+    39. Make a program that asks for two numbers and displays if the first is divisible
+    by the second
+
+
+    40. Make a program that reads the scores of two tests and reports whether the
+    student passed (score greater than or equal to 6) or failed (score less than 6)
+    in each of the tests.
+
+
+    41. Make a program that reads the grades of two tests, calculates the simple arithmetic
+    mean, and informs whether the student passed'
+  merge: -1
+  img_proc: true
+- pgno: 285
+  md: '(average greater than or equal to 6) or failed (average less than 6).
+
+
+    42. Make a program that reads the age of three people and how many of them are
+    of legal age (age 18 or older).
+
+
+    43. Make a program that reads three numbers, and displays them on the screen in
+    ascending order.
+
+
+    44. Write a program that reads three numbers and tells you if they can be the
+    sides of a triangle (the sum of two sides must always be greater than the third
+    side).
+
+
+    45. Make a program that reads the year of birth of a person and informs if he
+    is able to vote (age greater than or equal to 16 years old).
+
+
+    46. Create a program that asks for a person''s age and displays whether they are
+    a child (0-12 years old), teenager (13-17 years old),'
+  merge: -1
+  img_proc: true
+- pgno: 286
+  md: 'adult (18-59 years old), or elderly (60 years old or older), using nested conditionals,
+    without using logical operators.
+
+
+    47. Create a program that asks for a person''s age and displays whether they are
+    a child (0-12 years old), teenager (13-17 years old), adult (18-59 years old),
+    or elderly (60 years old or older), using logical operators, without using else,
+    elif, etc.
+
+
+    48. Make a program that reads a person''s age and informs if he is not able to
+    vote (age less than 16 years old), if he is able to vote but is not obligated
+    (16, 17 years old, or age equal to greater than 70 years), or if it is obligatory
+    (18 to 69 years old).
+
+
+    49. Make a program that reads three grades from a student and reports whether
+    he passed (final grade greater than or equal to 7), failed'
+  merge: -1
+  img_proc: true
+- pgno: 287
+  md: '(final grade less than 4) or was in recovery (final grade between 4 and 7).
+
+
+    50. Write a program that asks for a person''s height and weight and calculates
+    their body mass index (BMI), displaying the corresponding category (underweight,
+    normal weight, overweight, obese, severely obese).
+
+
+    51. Write a program that asks the user to enter their grade (0-100) and prints
+    their letter grade (A for 90-100, B for 80-89, C for 70-79, D for 60-69, F for
+    under 60).
+
+
+    52. Write a program that reads the values a, b and c of a quadratic equation,
+    and says if the roots of the function are real or imaginary.
+
+
+    53. Create a program that reads the price of a product. If the price is more than
+    US$200, the tax is 5%, if it is more than US$500, the tax is 7.5%. Products up
+    to US$200 do not pay'
+  merge: -1
+  img_proc: true
+- pgno: 288
+  md: 'taxes. Print the final price of the product on the screen.
+
+
+    54. Write a program that reads a year (a four digit number) and checks whether
+    it is a leap year or not.
+
+
+    55. Input three numbers representing the coefficients of a quadratic equation
+    (a, b, c) and find its roots, also mention if they are real or complex
+
+
+    # Repeat Loops
+
+
+    56. Write a program that displays the numbers 1 through 10 using a while loop.
+
+
+    57. Write a program that displays the numbers 1 through 10 using a for loop.
+
+
+    58. Write a program that displays all numbers from 1 to 100, using a while loop.
+
+
+    59. Write a program that displays all numbers from 1 to 100, using a for loop.'
+  merge: -1
+  img_proc: true
+- pgno: 289
+  md: '60. Write a program that displays all numbers from 1 to 100, using a do-while
+    loop.
+
+
+    61. Write a program that prints all even numbers from 1 to 100 using a while loop
+    and an if statement inside the loop to check if the number is even or not.
+
+
+    62. Write a program that prints all even numbers from 1 to 100 using a while loop
+    without using any if statement.
+
+
+    63. Write a program that displays even numbers 1 to 50 and odd numbers 51 to 100
+    using a repeating loop.
+
+
+    64. Create a program that prompts the user for a number and displays the table
+    of that number using a loop.
+
+
+    65. Create a program that displays the table of all numbers from 1 to 10.
+
+
+    66. Write a program that calculates and'
+  merge: -1
+  img_proc: true
+- pgno: 290
+  md: 'displays the value of the power of a number entered by the user raised to an
+    exponent also entered by the user, using repetition loops.
+
+
+    67. Create a program that displays the first N perfect squares, where N is informed
+    by the user, using a loop.
+
+
+    68. Write a program that asks the user for a number N and says whether it is prime
+    or not.
+
+
+    69. Write a program that prompts the user for a number N and displays all prime
+    numbers less than N.
+
+
+    70. Create a program that displays the first N prime numbers, where N is informed
+    by the user, using a loop.
+
+
+    71. Write a program that prompts the user for two numbers A and B and displays
+    all numbers between A and B.
+
+
+    72. Write a program that reads numbers from'
+  merge: -1
+  img_proc: true
+- pgno: 291
+  md: 'the user until a negative number is entered, and prints the sum of the positive
+    numbers.
+
+
+    73. Write a program that asks the user for a number N and displays the sum of
+    all numbers from 1 to N.
+
+
+    74. Write a program that calculates and displays the sum of even numbers from
+    1 to 100 using a repeating loop.
+
+
+    75. Write a program that prompts the user for a number and displays the Fibonacci
+    sequence up to the given number using a repeating loop.
+
+
+    76. Write a program that reads numbers from the user until zero is entered, and
+    displays the average of the numbers entered.
+
+
+    77. Write a program that prompts the user for a list of numbers, until the user
+    types the number zero, and displays the largest and smallest numbers in the list.'
+  merge: -1
+  img_proc: true
+- pgno: 292
+  md: '78. Write a program that prompts the user for a number and displays its divisors.
+
+
+    79. Write a program that determines the greatest common divisor (GCD) between
+    two numbers entered by the user.
+
+
+    80. Write a program that determines the lowest common multiple (LCM) between two
+    numbers entered by the user.
+
+
+    81. Write a program that calculates the series below up to the tenth element:
+
+
+    82. Rewrite the previous exercise code until the difference between the terms
+    is less than 0.001.
+
+
+    83. Make a program that calculates the value of sine using the Taylor series according
+    to the equation below until the difference between the terms is less than 0.001.
+
+
+    84. Make a program that calculates the value of cosine using the Taylor series
+    according to the'
+  merge: -1
+  img_proc: true
+- pgno: 293
+  md: 89. Write a program that reads an array of integers and displays the largest
+    element in the
+  merge: -1
+  img_proc: true
+- pgno: 294
+  md: 'array.
+
+
+    90. Create a program that reads two vectors of integers of the same size and displays
+    a new vector with the sum of the corresponding elements of the two vectors.
+
+
+    91. Write a program that reads two arrays of integers with the same size and displays
+    a new array with the elements resulting from the multiplication of the corresponding
+    elements of the two arrays.
+
+
+    92. Write a program that reads an array of integers and displays how many times
+    a specific number appears in the array.
+
+
+    93. Write a program that reads an array of integers and checks if they are in
+    ascending order.
+
+
+    94. Create a program that reads an array of integers and finds the second largest
+    element in'
+  merge: -1
+  img_proc: true
+- pgno: 295
+  md: 'the array.
+
+
+    95. Given an array, find the kth largest and smallest element in it.
+
+
+    96. Write a program that checks if an array contains duplicate elements.
+
+
+    97. Given an array of size n, find an element that appears more than n/2 times.
+    (This element is called the majority element.)
+
+
+    98. Create a program that reads an array of integers and checks if all elements
+    are even.
+
+
+    99. Write a program that checks if an array contains duplicate elements.
+
+
+    100. Given an array of random numbers, push all the zero''s of the array to the
+    end without changing the order of non-zero elements.
+
+
+    101. Given an unsorted array of integers, find the length of the longest consecutive
+    elements sequence.'
+  merge: -1
+  img_proc: true
+- pgno: 296
+  md: '102. Given an array of integers, find all pairs in the array that sum up to
+    a specified value.
+
+
+    103. Make an algorithm that reads an array of n positions, and then creates a
+    new vector that calculates the difference of each element with the next element.
+
+
+    104. Given an array of integers, find the subarray of given length with the least
+    average.
+
+
+    105. Given two sorted arrays, merge them into a single sorted array.
+
+
+    # Strings
+
+
+    106. Create a program that reads two words and concatenates them, displaying the
+    resulting word.
+
+
+    107. Write a program that takes a word and displays each letter separately.
+
+
+    108. Create a program that takes a sentence and replaces all the letters "a" with
+    "e".'
+  merge: -1
+  img_proc: true
+- pgno: 297
+  md: '+   109. Create a program that takes a sentence and replaces all spaces with
+    a new line.
+
+
+    +   110. Write a program that receives a name and checks that it it starts with
+    the letter "A".
+
+
+    +   111. Write a program that reads a word and checks if it is a palindrome (if
+    it can be read backwards the same way).
+
+
+    +   112. Create a program that reads two words and checks if the second word is
+    an anagram of the first.
+
+
+    +   113. Write a program that takes a full name and displays only the first name.
+
+
+    +   114. Make a program that receives a sentence and displays the amount of blank
+    spaces present in it.
+
+
+    +   115. Create a program that reads a word and displays the number of vowels
+    present in it.
+
+
+    +   116. Create a program that reads a word and'
+  merge: -1
+  img_proc: true
+- pgno: 298
+  md: 'displays the number of vowels and consonants present in it.
+
+
+    117. Write a program that takes a full name and displays the last name (last name)
+    first.
+
+
+    118. Implement a method to perform basic string compression using the counts of
+    repeated characters. For instance, the string aabcccccaaa would become a2b1c5a3.
+
+
+    119. Rawwords: Write an algorithm that checks whether a word is a "rawword". A
+    word is considered a "prime word" if the sum of the letter values (where ''a''
+    = 1, ''b'' = 2, etc.) is a prime number.
+
+
+    120. Given a list of strings, write a function to determine the longest common
+    prefix.
+
+
+    # Matrices
+
+
+    121. Write a program that fills a 3x3 matrix with values entered by the user and
+    displays the'
+  merge: -1
+  img_proc: true
+- pgno: 299
+  md: 'sum of the main diagonal values.
+
+
+    122. Write a program that fills a 4x4 matrix with random values and displays the
+    transposed matrix.
+
+
+    123. Write a program that fills a 5x5 matrix with integers and displays the largest
+    value in the matrix and its position.
+
+
+    124. Count negative numbers in a matrix
+
+
+    125. Write a program that reads a 3x3 matrix and calculates the average of the
+    values present in the even positions (sum of the even indices) of the matrix.
+
+
+    126. Calculate the sum of boundary elements of a matrix.
+
+
+    127. Write a program that reads a 4x4 matrix and checks if it is a diagonal matrix,
+    that is, if all elements outside the main diagonal are equal to zero.'
+  merge: -1
+  img_proc: true
+- pgno: 300
+  md: '128. Write a program to determine whether a given matrix is symmetric.
+
+
+    129. Write a program that fills a 4x4 matrix with random numbers and displays
+    the sum of the values present in each row and in each column.
+
+
+    130. Write a program that reads a 3x3 matrix and calculates the determinant of
+    the matrix.
+
+
+    131. Write a program that reads two 2x2 matrices and displays the sum of the two
+    matrices.
+
+
+    132. Write a program that reads two matrices and returns the multiplication between
+    them as an answer. The program should observe whether or not it is possible to
+    perform the multiplication between the two matrices.
+
+
+    133. Print a matrix in spiral order.
+
+
+    134. Write a program that reads an m x n'
+  merge: -1
+  img_proc: true
+- pgno: 301
+  md: 'matrix, indicating the location where there are mines in a Minesweeper game
+    (being 0 for a neutral field, and 1 for locations where there would be mines),
+    and the program should return a matrix indicating, for each position, the number
+    of mines in neighboring houses.
+
+
+    135. Make a function that receives a 3x3 matrix representing the game of tic-tac-toe,
+    and check if there is a winner, if there is a tie, or if the game is not over
+    yet
+
+
+    # Recursive Functions
+
+
+    136. Write a recursive function to calculate the factorial of a number.
+
+
+    137. Implement a recursive function to calculate the Fibonacci sequence up to
+    a given number.
+
+
+    138. Create a recursive function to check if a number is prime.'
+  merge: -1
+  img_proc: true
+- pgno: 302
+  md: '139. Develop a recursive function to calculate the sum of the digits of an
+    integer.
+
+
+    140. Write a recursive function to calculate the power of an integer raised to
+    an exponent.
+
+
+    141. Implement a recursive function to find the greatest common divisor (GCD)
+    of two numbers.
+
+
+    142. Create a recursive function to reverse a string.
+
+
+    143. Develop a recursive function to find the smallest value in an array.
+
+
+    144. Write a recursive function to determine whether a word is a palindrome.
+
+
+    145. Implement a recursive function to calculate the sum of elements of an array.
+
+
+    # Regular Expressions
+
+
+    146. Write a regex to validate email addresses, ensuring it contains @ and . symbols.'
+  merge: -1
+  img_proc: true
+- pgno: 303
+  md: '147. Extract all valid dates from a string in the format YYYY-MM-DD or DD/MM/YYYY.
+
+
+    148. Check if a given string is a valid credit card number (typically 16 digits,
+    sometimes separated by - or spaces).
+
+
+    149. Validate passwords to ensure they contain at least one uppercase character,
+    one lowercase character, one digit, one special character, and are at least 8
+    characters long.
+
+
+    150. Replace multiple spaces in a text with a single space.
+
+
+    151. Validate and extract currency values from a text (e.g., $100.25).
+
+
+    152. Write a regex to extract all URLs from a text.
+
+
+    153. Extract all hex color codes from a text (e.g., #AABBCC or #ABC).
+
+
+    154. Extract all valid IPv4 addresses from a text.'
+  merge: -1
+  img_proc: true
+- pgno: 304
+  md: '155. Use capture groups to rearrange date formats (convert YYYY-MM-DD to DD-MM-YYYY).
+
+
+    # Sorting Algorithms
+
+
+    +   156. Implement the Bubble Sort algorithm
+
+
+    +   157. Implement the Selection Sort algorithm
+
+
+    +   158. Implement the Insertion Sort algorithm
+
+
+    +   159. Implement the Merge Sort algorithm
+
+
+    +   160. Implement the Quick Sort algorithm'
+  merge: -1
+  img_proc: true
+- pgno: 305
+  md: '# Additional Content
+
+
+    In case you want to access the code of all the exercises, you can get it from
+    the link below:
+
+
+    https://forms.gle/FbhMBdTEfocC3zsSt5
+
+
+    Each file is named with the exercise number, with the extension .cpp'
+  merge: -1
+  img_proc: true
+- pgno: 306
+  md: '# # About the Author
+
+
+    ![](img/619173754d5014de60ea4a602e9f26e2_306_0.png)
+
+
+    Ruhan Avila da Conceição (@ruhanconce-icao, on social media) holds a degree in
+    Computer Engineering (2015) from the Federal University of Pelotas and a Master''s
+    in Computing (2016) also from the same university. Since 2018 he has been a professor
+    at the Federal Institute of Education, Science and Technology in the field of
+    Informatics, where he teaches, among others, the disciplines of Object Oriented
+    Programming, Visual Programming and Mobile Device Programming.'
+  merge: -1
+  img_proc: true
+- pgno: 307
+  md: 'In 2014, even as an undergraduate student, Ruhan received the title of Researcher
+    from Rio Grande do Sul in the Young Innovator category due to his academic and
+    scientific career during his years at the university. His research topic has always
+    been related to the algorithmic development of efficient solutions for encoding
+    videos in real time. Still with regard to scientific research, Ruhan accumulates
+    dozens of works published in national and international congresses, as well as
+    articles in scientific journals of great relevance, and two computer programs
+    registered at the National Institute of Intellectual Property.
+
+
+    Initiated in programming in the C language, Ruhan Conceição has extensive knowledge
+    in JavaScript languages, as well as their libraries and frameworks ReactJS, React
+    Native, NextJS;'
+  merge: -1
+  img_proc: true
+- pgno: 308
+  md: 'and Java. In addition, the author has also developed projects in Python, C#,
+    Matlab, Google-Script and C++.
+
+
+    # Mastering Python
+
+
+    ![](img/619173754d5014de60ea4a602e9f26e2_308_0.png)
+
+
+    Mastering Python: 100+ Solved and Commented Exercises to Accelerate Your Learning
+
+
+    https://a.co/d/bGRbAoE'
+  merge: -1
+  img_proc: true
+- pgno: 309
+  md: '# Mastering Java
+
+
+    ![](img/619173754d5014de60ea4a602e9f26e2_309_0.png)
+
+
+    Mastering Java: 100+
+
+    Solved and Commented Exercises to Accelerate Your Learning
+
+
+    https://a.co/d/0w0Hcs2'
+  merge: -1
+  img_proc: true
