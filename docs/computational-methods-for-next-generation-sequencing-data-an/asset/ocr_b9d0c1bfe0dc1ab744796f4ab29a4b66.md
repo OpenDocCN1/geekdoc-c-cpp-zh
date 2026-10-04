@@ -1,0 +1,15 @@
+analyzed. In the absence of sequencing errors, the genotype for each of these sites would be the set of different alleles supported by the base calls at these positions. However, every sequencing technology produces some percentage of erroneous base calls, which could be spurious genotypes if this naive approach is used. The main challenge to identify and genotype SNPs is to separate base calls from calls supporting real alleles that differ from the genomic
+
+For each genomic location, the problem can be formalized as follows: Given a set of $R_i$ of size $d$ spanning a genomic location $i$, for $r \in R_i$, let $r(i)$ be the base call with the $r$ aligning to the genomic location $i$, and let $p_{r(i)}$ be the probability of error sequencing $r(i)$. The value of $d$ is usually called depth of coverage, read depth (RD), or just coverage. In the absence of alleles, let $A = \{A', C', G', T'\}$ be the set of the four possible alleles. The coverage of allele $a \in A$ can be calculated as $d_a = |\{r \in R_i : r(i) = a\}|$. Assuming that the sequencing sample comes from a diploid individual, 10 possible genotypes can be made picking two of the four nucleotides with replacement. The problem is then to find the most likely genotype $G_i = H_i'_i$ where $H_i$ and $H'_i$ belong to $A$.
+
+# 6.2.2 Bayesian Model
+
+Simple algorithms to find SNPs ignore the base error probability and set minimum thresholds on the allele coverage $d_a$, either to a fixed number or to a fixed percentage of the total coverage $d$. The most widely used strategy to take into account the information contained in the error probabilities is based on the Bayes theorem, for which this problem can be written as
+
+> $P(G_i|R_i) = \frac{P(R_i|G_i)P(G_i)}{P(R_i)}$
+
+The main difference among Bayesian algorithms for SNP detection lies in the way conditional probabilities are calculated (18). Here, we will describe a simple, accurate model introduced in Reference 19. Assuming independence between the reads, the conditional probability of $G_i$ can be expressed as a product of read contributions as follows:
+
+> $P(R_i|G_i) = \prod_{r\in R R} P(r(i)|G_i)$
+
+For a mapped read $r \in R_i$, let $r(i)$ be the spanning locus $i$ and $p_{r(i)}$ be the probability of error sequencing the base $r(i)$, which we estimate from the quality score $q_{r(i)}$ calculated during primary analysis $p_{r(i)} = 10^{-q_{r(i)}/10}$ (20). Let $H_i$ and $H'_i$ be the two alleles in the locus $i$, or in others, let $G_i = H_iH'_i$. The observed base $r(i)$ could read from either $H_i$ or $H'_i$. If there is an error in this read, we assume that the error can produce any of the other possible bases to be observed with the same probability, the probability of observing a base $r(i)$ given the real base is different $p_{r(i)}/3$ while the probability of observing $r(i)$ without error is $1-p_{r(i)}$.

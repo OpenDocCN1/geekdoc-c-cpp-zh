@@ -1,0 +1,15 @@
+using 454 GS Junior System (454 Life Sciences, Branford, CT). Extraction of the total nucleic acids was performed using MagNa Pure Nucleic Acid Isolation Kit (Roche Diagnostics, Mannheim, Germany) and reverse-transcribed using the SuperScript cDNA synthesis kit (Invitrogen, Carlsbad, CA).
+
+The HVR1 amplification was accomplished using two rounds of PCR. For the first round of amplification, regular region-specific primers were used. Forward and reverse tags consisting of primer adapters and multiple identifiers (MID – 454A and 454B) were added to the HVR1-specific primers. For the high-throughput purpose, pools were processed as a single specimen, tagged with a single MID for deep sequencing. PCR products were pooled and amplified by emulsion PCR using the GS FLX Torrent Series Amplicon kit and bidirectionally sequenced. The sequenced reads were identified and separated using sample-specific MID tags. Low-quality reads were removed using the GS Run Processor v2.3 (Roche, 2010).
+
+# 3.5.2 Results
+
+The algorithmic approach described in Section 3.3 was used to reconstruct samples from experimental data described in Section 3.5.1. Before applying algorithms for samples recovery, the data were preprocessed in order to get rid of sequencing errors and PCR chimeras.
+
+The reads from each pool were separated into clusters using Algorithm IGEM, each cluster was processed using NGS error correction algorithms KEC and ET (41) and the corrected reads were merged. Then the sequences were deconstructed using Algorithm IS. The obtained samples will be referred as *pooling samples*
+
+For the verification of pooled samples, we compared them with the individually sequenced samples. The sequences were compared pairwise alignment; insertions and deletions were ignored (since indels are rare in HVR1 and, therefore, rather sequencing artifacts; moreover, some indel in sequences from individually sequenced and pooling samples may be introduced due to the inaccurate correction of homopolymer errors for the samples). For each sample, 10 reference sequences were taken from the set of individually sequenced variants, and the correctness of sample reconstruction was assessed using alignment of sequences in the pooled samples with these. For alignment, Muscle was used.
+
+In average, 259 unique haplotypes per sample from a pool were obtained (from 23 haplotypes in Sample $S_3$ to 548 haplotypes in Sample $S_4$), which exceeds the number of HCV haplotypes in other studies (43–45) after the standard sequencing of 99.634% of all analyzed sequences were correctly classified into samples. Two reads assigned to sample $S_7$ showed higher similarity with the reference sequence but, subsequent analysis showed that these reads are highly different from each other and from other sequences that belong to samples $S_6$ and $S_7$. Therefore, these reads are likely to be sequencing artifacts, which were not removed by the error correction algorithm.
+
+In general, the percentage of haplotypes from individually sequenced samples found in pooled samples was not high (Figure 3.8a), with an average of 14.66%.

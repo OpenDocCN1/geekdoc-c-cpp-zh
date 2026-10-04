@@ -1,0 +1,15 @@
+# BISULFITE-CONVERSION-BASED METHODS FOR DNA METHYLATION SEQUENCING 235
+
+mappings are allowed. Thus, the best alignment is considered the one with zero mismatches, and A–G mapping correctly contributes to methylation status of the cytosine on the negative genomic strand. Now consider the 5' maje AACGTC (the last A is). This read maps with zero mismatches to DS* when T–C matches are allowed and A–G matches are allowed, and thus, the read is considered ambiguous and disregarded from further analysis. By disregarding this read, we affect the methylation level estimation: (if the read comes from PCR* strand, the number of Gs mapped to Gs will be affected, and the methylation level of cytosines on the negative genomic strand will be underestimated; (ii) if the read originates from PCR* strand, the total count of Cs mapped to Cs will be affected, that is, the methylation level will also be underestimated for cytosines on the positive genomic strand. Or, if we do not disregard such read, then the methylation level might be overestimated, which is worse scenario when the DNA is mostly unmethylated.
+
+# 10.6 BISULFITE CONVERSION RATE
+
+When estimating methylation level of or inferring methylation status of cytosines, it is important to realize that the bisulfite conversion rate is not 100%. Ideally, bisulfite treatment all unmethylated cytosines should be converted to uracils; however, in reality some unmethylated cytosines will not convert. There are two common ways for the estimation of the bisulfite conversion rate. If it is known that cytosines are unmethylated in non-CpG context, one can estimate the bisulfite conversion rate by counting the number of Cs mapped to Cs in non-CpG context. Alternatively, one can use controls (spike-ins) using the DNA of species with a known methylation state, though the conversion properties of different DNAs might differ and should be taken into account too.
+
+# 10.7 REDUCED REPRESENTATION BISULFITE SEQUENCING
+
+Reduced representation bisulfite sequencing (RRBS) has been developed and for comparative methylation analysis between multiple samples (7, 8). First, DNA is digested with the methylation-insensitive MspI enzyme, and then DNA fragments of the specified size (40–220bp) are selected with sodium bisulfite, amplified by PCR and sequenced. The sequenced reads cover the DNA regions enriched for CpG sites. To improve mapping accuracy of the sequenced reads resulting from RRBS, alignment tools have been developed as RRB-SMAP (28) and BS-Seeker2 (29). Both tools take advantage of the knowledge of the restriction enzymes' sites and DNA fragments size to select the corresponding genomic regions for building index for the alignment of RRBS reads. This saves computational resources and improves the accuracy of mapping.
+
+# 10.8 ACCURACY AS A PERFORMANCE MEASUREMENT
+
+Two common major performance measurements of an aligner for BS-reads are mapping accuracy and methylation call accuracy. Mapping accuracy is usually defined as

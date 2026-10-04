@@ -1,0 +1,215 @@
+
+
+# 424 NGS 数据分析的计算方法
+
+- 63. Zhang W, Zeng E, Emery SJ, Livermore J, Liu D, Jones SE. 使用随机森林从基因组预测细菌功能性状。Computational Advances in Bio and Medical Sciences (ICCABS), 2013 IEEE 3rd National Conference on; 2013. p 1-2.
+- 64. Yamada T, Letunic I, Okuda S, Kanehisa M, Bork P. iPath2.0: 交互式通路探索器。Nucleic Acid Res 2011;39(Web Server issue):W412-W415.
+- 65. Li L, Stockert CJ Jr, Roos SD. OrthoCL: 真核基因组同源基因的鉴定。Genome Res 2003;13(2):2178–2189.
+- 66. Ratusov RL, Banfield JF. Lipman DJ. 蛋白质家族的基因组视角。Science 1997;278(5338):631–637.
+- 67. Allen EE, Banfield JF. 微生物生态学与进化的社区基因组学。Nat Rev Microbiol 2005;3(6):489–498.
+- 68. West SA, Diggle SP, Buckling A, Gardner A, Griffin AS. 微生物的社会生活。Annu Rev Ecol Evol Syst 2007;38(1):53–77.
+- 69. Fruchterman TMJ, Reingold EM. 力导布局的社交网络分析。Softw Pract Exp 1991;21(11):129–1164.
+- 70. Haythornwaite C. 数据挖掘与分析：研究信息交换的方法与技术。Lib Inf Sci Res 1996;18(4):323–342.
+- 71. Zaki MJ, Meira W Jr. 数据挖掘与分析：基本概念与算法。纽约：Cambridge University Press; 2014.
+- 72. Fernandez M, Riveros JD, Campos M, Matthee K, Narasimhan G. “社交网络”。BMC Genomics 2015;16 Suppl 11:S6.
+- 73. Koller D, Friedman N. 概率图模型：原理与技术 - 自适应计算与机器学习。Cambridge (MA): The MIT Press; 2009.
+
+# 索引
+
+- 1000 基因组计划 (1000 Genomes Project), 175, 176
+- 454 生命科学 (454 Life Sciences), 386
+- 5-羟甲基胞嘧啶, 5-hmC, 198
+- 5-甲基胞嘧啶, 5-mC, 198, 200, 454, 270, 384
+- ABI SOLiD, 384
+- GPDA 算法, 66, 68, 74
+- GPDA 算法, 64
+- IS 算法, 69, 70, 74, 77
+- 比对 (alignment), 150, 152, 334–336, 338, 345, 346, 348, 384
+- 比对区间 (alignment interval), 153, 154
+- 比对耗尽 (Alignment Exertion), 158
+- 等位基因型 (allele), 134–135, 139–141
+- 可变剪接 (alternative splicing), 287
+- 亚马逊弹性计算云 (EC2), 8
+- 亚马逊云服务 (AWS), 15
+- AMP-methylKit, 214
+- 抗体 (antibody), 228
+- Apriori 算法, 409, 410
+- 拟南芥 (Arabidopsis thaliana), 222
+- 关联规则 (association rules), 409
+- 平均预测误差 (APE), 392–394, 396, 397
+- 禽流流感 (avian influenza), 383, 384
+- AzureBlast, 16
+- B-SOLANA, 212
+- 细菌 (bacteria), 402, 405, 410, 412, 413, 416, 420
+- 细菌分类群 (bacterial taxa), 402, 403, 409, 410
+- BALM, 201
+- 带状比对 (banded alignment), 154
+- 条形码 (barcode), 88
+- 条形码技术 (barcoding), 58
+- 碱基质量评分 (base quality score), 136–139
+- Batman, 201
+- 贝叶斯推断算法 (Bayesian inference algorithm), 387
+- 贝叶斯模型 (Bayesian Model), 136, 137, 139
+- BEER, 277
+- BESST, 126
+- BFAST, 276
+- 二项概率模型 (binomial probabilistic model), 234
+- 二分图匹配 (bipartite matching), 111
+- Bismark, 212, 232, 234
+- BISS, 231, 232
+- 亚硫酸氢盐转化 (bisulfite conversion), 228
+- 亚硫酸氢盐转化率 (bisulfite conversion rate), 235
+- 亚硫酸氢盐库 (bisulfite libraries), 229, 230, 233
+- 亚硫酸氢盐测序 (BS-seq), 199, 220
+- 亚硫酸氢盐处理过的序序列 (bisulfite-treated sequenced reads), 229
+- BLAST, 16, 99
+- Bowtie, 232, 276
+- Bowtie2 比对器, 100
+- BRAT, 212, 231–233
+- BRAT-bw, 232, 234
+- BS-reads, 229, 230
+- BS-Seeker, 212, 232, 234, 235
+- BS-seq, 228, 229
+- BMAP, 212
+- BSmap, 232
+- BPIPE, 214
+- 鲍特定律 (Butter's law), 4
+- BWA 比对器, 100
+- BWT, 231, 232
+- 癌症基因组谱 (Cancer Genome Atlas), 175
+- 细胞分化 (cell differentiation), 228
+- CLASS, 255
+- CLIQ, 206
+- 云计算 (cloud computing), 4, 7
+- CloudAligner, 18
+- CloudBurst, 14
+- club (俱乐部), 416
+- ClustalW, 390
+- 聚类 (clustering), 334–347, 342, 350
+- 聚类 (clusters), 403, 406, 412
+- 非典型聚类 (clusters of unorthodox (COG)), 35, 412
+- 同源读段 (concordant read), 156
+- 冲突图 (conflict graph), 89
+- 联合集 (Conjoint), 309, 310
+- 连通性图 (connectivity graph), 255, 256
+- 人口统计 (census), 88, 89, 98
+- 保守区域 (conserved region), 86, 89, 94
+- 重叠群组 (Contig Assembly), 252
+- 拷贝数 (copy number), 405, 406
+- 拷贝数变异 (Copy Number Variant), 134, 135, 139, 143
+- 缺失 (deletion), 175
+- 相关性 (correlation), 409, 410
+- 覆盖度 (coverage), 135–137, 307, 318
+- CpG_MPs, 231
+- Crossbow (十字弩), 216
+- Cuff, 305, 316, 318
+- Cufflinks, 255
+- 培养 (culturing), 402
+- 截止值 (cutoff), 250
+- 从头组装 (EAD novo), 249
+- 生态基因组学 (ecological genomics), 226
+- edgeR, 302, 306–314, 319, 322, 335
+- 编辑距离 (edit distance), Levenshtein, 390
+- 环境条件 (environmental conditions), 409
+- 环境基因组的 (environmental genomic), 26
+- 环境信息序列 (environmental sequence), 25
+- 纠错 (error correction), 250, 252
+- 纠错算法 (error algorithms), 333–337, 339, 342, 345, 346
+- 错误谱 (error profile), 322, 333, 350
+- 易错基因 (error-prone genes), 392
+- ET 算法, 348–350
+- 精确断点 (exact breakpoints), 181, 185
+- 外显子接头 (exon–junctions), 303
+- 期望极大化 (expectation maximization), 263
+- 期望极大化方法, 304
+- 期望极大化 (EM) 算法, 89, 91
+- 假发现 (false discovery), 234
+- Fastq 格式, 271
+- FastQC, 272
+- FastX, 272
+- 适应度 (fitness), 355, 357, 358
+- 通量模拟器 (Flux simulator), 277, 279, 280
+- FPKM, 275
+- Fruchman–Reingold 算法, 415
+- 成分分析 (functional composition analysis), 410
+- 功能谱 (functional profile), 403, 410, 412, 417
+- 数据即服务 (Dias (Data as a Service)), 8
+- 数据转换并行 (data transformation parallel), 21
+- 德布因图 (De Bruijn graph), 249, 250, 251, 289–291
+- 从头序列组装 (de novo sequence assembly), 288
+- 解卷积 (deconvolution), 58–60, 68, 74, 80
+- 退性引物 (degenerate primers), 405, 407
+- 缺失 (deletions), 151, 155–158
+- GC/Pol, 97
+- Galaxy, 145
+- 配子形成 (gamogenesis), 227
+- 空隙估计 (gap estimation), 108, 119, 120, 123, 124
+- 空隙 (gaps), 157
+- GC 内容 (GC-content), 142
+- 基因表达 (Gene Expression), 311
+- 基因表达 (gene expression), 228, 302, 303, 306, 311, 312, 315, 318, 323, 325
+- 遗传多样性 (genetic diversity), 350
+- 基因组变异 (genomic variation), 133, 144, 151
+- 插入缺失 (indel), 134, 145, 150
+- 跳过重叠群的插入 (insertion of skipped contigs), 120
+- 插入 (insertions), 175
+- 正向链 (generic strand), 229, 232
+- 分型分析 (genotyping), 141
+- 整数线性规划 (integer linear program), 114
+- 内部片段 (Internal segment), 152
+- 内含子内留 (intron retention), 204
+- 倒位 (inversion), 134, 135, 141, 150, 323, 335
+- 逆辛普森指数 (Inverse-Simpson index), 403
+- 基础设施服务 (IaaS (Infrastructure as a Service)), 13
+- IsoDe, 311, 312, 318, 323, 325
+- 全局单倍型重构 (global haplotype reconstruction), 388
+- gmap 注释 (gmap annotation), 279
+- 异构体 (isoforms), 248
+- IsoInfer, 255
+- Isoasso, 255, 304, 307
+- Google App 引擎 (GAE), 8
+- 图形表达语法 (Grammar of Graphics), 48
+- 迭代并行 (iterative parallel), 21
+- Grinder, 937
+- Jaccard, 403
+- GTF 文件, 277
+- 詹森-香农散度 (JSD), 93
+- 硬件服务 (HaaS (Hardware as a Service)), 8
+- Hadoop, 8
+- k-mer, 334, 339, 345, 348
+- 基于 k-mer 的算法 (k-mer-Based Algorithms), 379
+- 汉明距离 (Hamming distance), 232
+- 纠错算法 (KEC algorithm), 392, 342, 343, 345, 346, 358
+- 单倍型 (haplotype), 333–337, 342, 346, 350
+- Kryver's l, 4
+- HCV, 385, 94
+- KL度 (Kullback–Leibler divergence), 93
+- HCV 病毒, 94
+- 基于似然的方法 (Likelihood-Based Methods), 262
+- 隐藏马尔可夫模型 (hidden Markov Model (HMM)), 368, 369
+- 局部单倍型重构 (local haplotype reconstruction), 387
+- 层次聚类 (hierarchical clustering), 477
+- 对数似然函数 (log-likelihood function), 339
+- 高性能计算 (high performance computing), 27
+- 共同祖先 (lowest common ancestor), 27
+- 高通量测序 (HTS), 386
+- 映射器 (mapper), 9
+- 高保真测序方案 (high-fidelity sequencing protocol), 86, 93
+- 映射 (mapping), 89
+- 组蛋白修饰 (histone modifications), 228, 385
+- MapReduce, 9
+- HIV, 385, 86
+- MAQ, 276
+- 标记基因 (marker genes), 402–405
+- HIV-1, 357–370
+- 马尔可夫链支架 (Markov chain scaffolding), 121
+- hMedIP-seq, 199
+- 最大宽度路径 (max-width path), 387
+- 同源性搜索 (homology search), 41
+- 最大团 (max-clique), 157
+- 同聚单倍型 (homopolorph), 332, 333, 343, 344, 346
+- 最大缩进集 (maximal indent set), 89
+- 水平基因转移 (horizontal gene transfer), 406, 417
+- 最大切 (maximum cut), 91
+- 人类单倍型重构 (human haplotype reconstruction), 370
+- 最大似然估计 (maximum likelihood), 158

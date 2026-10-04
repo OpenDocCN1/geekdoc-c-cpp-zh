@@ -1,0 +1,15 @@
+these networks by measuring changes in the abundance of either taxa or genes in different environments. Noisy snapshots can clue us in many of the interactions that are occurring. Network diagrams are powerful tools for examining the complex relationships in microbial communities. A large number of connections can be studied at once, and for the discovery of unexpected associations between OTUs, both cooperative and competitive. This is still an incomplete picture. There are too many elements that are not captured by current methods, and in many cases it is likely that we lack sufficient information to correctly deduce the direction of individual interactions or the topology of the networks being studied. More effort needs to be focused on ways of discovering the structure of microbial networks.
+
+Studying these in humans is particularly challenging. We all have different experiences, different foods, live in different places, and participate in different social networks. All of these differences contribute to the high variability in the environment that we provide to our bacterial residents. Some markers may exist that distinguish between the microbial communities present at different sites. Our intuition tells us that there should be a difference between the community residing in healthy tissue versus diseased tissue. Something must be about the network of bacteria in the lungs of someone with emphysema as compared to someone with respiratory problems at all. Is there a signature that we have yet to discover? If there is validity to the concept of an enterotype, a classification of individuals based on the bacteria present in the gut, is there a "respiotype" likely to simply define these types based on presence or absence of specific bacteria. What role does host genotype play? Is it the interactions between functional elements, taxon-specific characteristics, host tissue properties, the presence of metabolites, toxins, sensing molecules, and exogenous influences that will produce distinct signatures between healthy and diseased environments. Discovery of these highly heterogeneous subnetworks will be challenging, but their value for rapidly assessing state of health, predicting disease progression, and developing intervention strategies cannot be understated.
+
+# REFERENCES
+
++   1. Costello EK, Laub CL, Hamady M, Fierner N, Gordon J, Knight R. Bacterial community variation in human body habitats across space and time. Science 2009:326(6090):1694–1697.
+
++   2. Peterson J et al. The NIH microbiome project. Genome Res 2019:19(12):2317–2323.
+
++   3. Turnburg PJ, Ley RE, Hamady M, Fraser-Liggett CM, Knight R, The human microbiome project. Nature 2007;499(7164):804–810.
+
++   4. Turnburg PJ, Gordon JI. The core gut microbiome, energy balance and obesity. J. Physiol. (London) 2009;587(Pt 17):4153–4158.
+
++   5. Marrazzo JM, Martin D, Watts DH, Schulte J, Sobel JD, Hillier L, Deal C, Fredricks DN. Bacterial genesis: identifying research goals of a workshop sponsored by DHHS/NIH/NIAID. Sex Trans Dis 2010;37(12):732–744.

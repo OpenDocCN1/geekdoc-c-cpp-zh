@@ -1,0 +1,9 @@
+# COMPUTATIONAL METHODS FOR NGS DATA ANALYSIS
+
+![](bbox=[0.118, 0.096, 0.858, 0.449])
+
+**Figure 8.4** IGV view of an example of long insertion. The insertion is between 750,000 and 750,001. Please see www.wiley.com/Mandoiu/NextGenerationSequencing for a color version of this figure.
+
+organisms have two copies of genomes for normal tissues, but genomes from some samples, for example, tumor cells, can be highly altered and the copy number may not be two. When we see some region with lower coverage, instead of calling it as deletion immediately, more work has to be done to filter out the false positives. We will give an example of an SV calling tool that uses this signature in the next section.
+
+In 8.3, some reads are marked with colors. The ones with red are very important for the purpose of calling deletions. They are marked with red because the insert size of these reads is significantly longer than expected. As mentioned earlier, we expect the insert size of paired-end read to be similar to the library insert size. The simulated data sets use the mean insert size of 500, but those reads marked with red apparently have much longer insert sizes. The values are larger than 1000, since they are out of the region of 250,001-251,000. Recall that the insert size of these reads is about 1500, which is the size of the deletion plus the mean insert size. The reason for the longer insert sizes is illustrated in Figure 8.5. The donor genome is shown both as split and consecutive sequences. A paired-end read is generated from the donor genome, which is shown at the bottom of the figure. The read is from a segment of sequence that spans the breakpoint. The length of the segment follows an assumed normal distribution whose mean is the library insert size. But we only know the true length of the segment in simulation. In practice, we have the sequences of the reads. So we need to map the read to the reference genome to get the estimate of

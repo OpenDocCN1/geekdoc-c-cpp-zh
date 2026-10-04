@@ -1,0 +1,13 @@
+# 202	COMPUTATIONAL METHODS FOR NGS DATA ANALYSIS
+
+![](bbox=[0.121, 0.098, 0.856, 0.212])
+
+**Figure 9.2** The mapped reads at $p$ and $q$ is the same, but their methylation level is different because of the different number of CpGs within captured fragments, that is, the region around $p$ shows twice much methylation as around $q$.
+
+number of methylated CpGs, resulting in a methylation at $p$ half of that at $q$, assuming sequencing and affinity efficiency.
+
+**9.2.1.3 Differential Methylation** Differential methylation between two samples can be defined as log2 fold change of read depth of a given window or genomic feature. An alternative method is to use the enriched regions (peaks) that mutually exclusive pairs in two samples are differentially methylated. However, these methods are limited in statistical assessment and sensitivity, respectively. The best solution is to apply statistical models to methylation changes and measure the significance of differentially methylated regions in terms of $p$-values: SICER (54), ChIPDiff (60), DiffBind (61), BChIP (63), edgeR (63), DESSeq (64), MEDIPS, a specialized program for MedIP-seq, used the $t$ and Wilcoxon tests, and the latest versions use edgeR (58, 65).
+
+**9.2.1.4 Pipelines** Two pipelines have been developed from sequence mapping to methylation profiling and differential methylation including quality assessment of sequencing and affinity efficiency. MEDUSA (Methylated DNA Utility for Sequence Analysis) (66) is a full pipeline for MedIP-seq and sequence mapping using BWA, baseline filtering using SAMTools, quality assessment of sequencing using FastQ, coverage and saturation plots using MEDIPS, identification of DMRs using USeq and R Bioconductor DESSeq in the old version and MEDIPS in the new, and annotation using BEDTools. The output of MedUSA can be visualized on the UCSC genome browser. MeQA (MedIP-seq quality assessment) (67), use FastQ for quality of sequencing; BWA for sequence mapping; SAMTools for sorting and filtering; Samstat for mapping summary quality check; MEDIPS for saturation, coverage, and CpG enrichment estimation; and CEAS for DMR annotation (Figure 9.3).
+
+**9.2.1.5 Tag Density Plot** Most programs generate sequence mapping results in the wiggle and BED format, be displayed onto the UCSC genome browser (68), gbrowser (69), IGV (70), and IGB (71). Visualization is very useful for interpreting results intuitively and summarizing the overall methylation tendency. A tag density plot is an extended wiggle plot made by drawing the mean read coverage for a group of regions of interest, for example, upregulated genes and all genes.

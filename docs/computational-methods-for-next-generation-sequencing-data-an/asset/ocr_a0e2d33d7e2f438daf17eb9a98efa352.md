@@ -1,0 +1,15 @@
+ShoRAH disregards pairing information of reads, but it is scalable enough to handle up to 1M reads. ShoRAH fails to produce full-length genome but reliably 98% of the consensus genome. It reasonably estimates the number of different viral genome, but even the most accurate ShoRAH-assembled viral genome from the closest true 1.3 kb-long viral genome in five nucleotides.
+
+QuasiRecomb designed to handle paired-end read data and manages to produce full-length viral genomes. Unfortunately, it can reliably process no more than 100K reads. Also the number of assembled distinct viral genomes is 10-200 times more than the number of true viral genomes. The most accurate QuasiRecomb-assembled viral genome still differs from the closest true 1.3 kb-long viral genome in four nucleotides.
+
+Unfortunately, we could not compare our method with QColors (23) assembly algorithm, which employs a similar conflict graph to represent viral population. CSP solver is used by QColors for coloring the graph, which may limit its scalability to high-throughput data sets containing millions of sequencing reads. Currently, QColors is not publicly available¹
+
+# 4.6 PERFORMANCE OF VGA ON REAL HIV DATA
+
+To test the ability of VGA to accurately assemble a diverse natural occurring population and predict variant abundance levels in Reference 5, we used an Illumina HiSeq HIV data set, which consisted of 15M 2 × 100 bp paired-end reads with attached boards. Next, the high-fidelity sequencing protocol to eliminate sequencing errors was applied resulting in 3M consensus error-corrected reads (referred to as reads). The reads were then used to build de novo population consensus using Vicuna 1.3 (15). When we run on our real data, Vicuna produced four contigs of average length 1195bp. Each contig was then run through BLAST to check for overlaps. Once overlaps were found, the contigs were assembled into a final consensus of length 4337bp.
+
+# 4.6.1 Validation de novo Consensus
+
+A de novo assembled consensus was compared against reference-based consensus in Reference 5. To produce reference-based consensus, we iteratively map onto the HIV reference (Gag/Pol 3.4 kb HIV genome) using InDelFixer. InDelFixer iteratively changes the reference genome by the mapping of the current iteration. We also used InDelFixer in single iteration to map reads onto the constructed de novo consensus. De novo consensus is longer (4337 bp) than the reference-based consensus (3440 bp) and contained two regions with extremely peaked coverage compared to the surrounding regions. Both regions were considered to be the result of technical artifacts and removed from further consideration. After removing both regions, the length
+
+> ¹Upon querying for information on obtaining QColors, the authors were informed that the original software was tightly coupled to the analyses in its original manuscript and is not currently available for general use.
