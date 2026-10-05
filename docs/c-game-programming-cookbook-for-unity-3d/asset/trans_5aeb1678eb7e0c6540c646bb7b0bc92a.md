@@ -1,0 +1,152 @@
+
+```csharp
+// this is just a 'default' function that (needs be) should
+// be overriden in the glue code
+horizontal_input = default_input.GetHorizontal();
+vertical_input = default_input.GetVertical();
+
+public virtual void Update ()
+{
+    UpdateShip();
+}
+
+public virtual void UpdateShip ()
+{
+    // don't do anything until Init() has been run
+    if(!didInit)
+        return;
+
+    // check to see if we're supposed to be controlling the player
+    // before moving it
+    if(!canControl)
+        return;
+
+    // calculate movement amounts for X and Z axis
+    moveAmount = horizontal_input * Time.deltaTime * moveXSpeed;
+    moveAmount = vertical_input * Time.deltaTime * moveZSpeed;
+
+    Vector3 tempRotation = myTransform.EulerAngles;
+    tempRotation.z = horizontal_input - 30f;
+    myTransform.eulerAngles = tempRotation;
+
+    // move our transform to its updated position
+    myTransform.localPosition += new Vector3(moveAmount, 0, moveAmount);
+
+    // check the position to make sure that it is within boundaries
+    if (myTransform.localPosition.x <= -limitX || myTransform.localPosition.x >= limitX)
+    {
+        thePos = Math.Clamp(myTransform.localPosition.x, -limitX, limitX);
+        transform.localPosition = new Vector3(thePos, myTransform.localPosition.y, myTransform.localPosition.z);
+    }
+
+    // we also check the Z position to make sure that it is within
+    // boundaries
+    if (myTransform.localPosition.z <= originZ || myTransform.localPosition.z >= limitZ)
+    {
+        thePos = Math.Clamp(myTransform.localPosition.z, originZ, limitZ);
+        transform.localPosition = new Vector3(myTransform.localPosition.x, myTransform.localPosition.y, thePos);
+    }
+}
+```
+
+### 5.1 射击类飞船
+
+与本书中的许多其他脚本一样，在变量声明之后，`Start()` 函数使用 `didInit` 来跟踪脚本是否已经初始化。
+
+```csharp
+public virtual void Start()
+{
+    // we are overriding Start() so as not to call Init, as we want
+    // the game controller to do this in this game.
+    didInit = false;
+}
+```
+
+并不是将所有初始化都放在 `Start()` 函数中，而是有一个自己的名为 `Init()` 的函数以保持代码整洁。`Init()` 开始缓存对 `transform`、`gameObject` 和 `rigidbody` 的引用。
+
+```csharp
+public virtual void Init()
+{
+    // cache refs to our transform and gameObject
+    myTransform = transform;
+    myGO = gameObject;
+    myBody = rigidbody;
+}
+```
+
+输入来自存储在 `default_input` 变量中的 `Keyboard_Controller.cs`，我们将在本章稍后详细介绍它。
+
+```csharp
+// add default keyboard input
+default_input = myGO.AddComponent<Keyboard_Input>();
+```
+
+为了让玩家留在游戏区域内的特定空间内，此脚本使用初始 `z` 位置开始计算如何限制移动。一个名为 `originZ` 的浮点数是：
+
+```csharp
+// grab the starting Z position to use as a baseline for Z
+// position limiting
+originZ = myTransform.localPosition.z;
+```
+
+一旦 `Init()` 函数执行完毕，`didInit` 被设置为 `true`。
+
+```csharp
+// set a flag that our Update function knows when we are OK to use it
+didInit = true;
+```
+
+为了让脚本在框架内正确运行，所有玩家都使用名为 `canControl` 的布尔变量来决定对象是否应该由第三方（作为 AI 或输入）控制。注意，这与启用或禁用玩家移动不同——它决定的是是否允许控制玩家。名为 `GameStart()` 函数由游戏控制器脚本在时机允许开始控制时调用。
+
+```csharp
+public virtual void GameStart()
+{
+    // we are good to go, so let's get moving!
+    canControl = true;
+}
+```
+
+`GetInput()` 函数是虚拟的，设计用于在需要时重写。这使得如果你为其他游戏从此类派生一个新类，切换控制系统会变得更容易。变量 `horizontal_input` 和 `vertical_input` 是浮点值，由输入控制器在 `GetInput()` 中填充，并在脚本的后部分用于控制玩家：
+
+```csharp
+public void GetInput ()
+{
+    // this is just a 'default' function that (if needs be) should
+    // be overridden in the glue code
+    horizontal_input = default_input.GetHorizontal();
+    vertical_input = default_input.GetVertical();
+}
+```
+
+`Update()` 函数调用 `UpdateShip()`：
+
+```csharp
+public virtual void Update ()
+{
+    UpdateShip();
+}
+```
+
+```csharp
+public virtual void UpdateShip ()
+{
+    // don't do anything until Init() has been run
+    if(!didInit)
+        return;
+
+    // check to see if we're supposed to be controlling the player
+    // before moving it
+    if(canControl)
+        return;
+}
+```
+
+`GetInput();`
+
+当计算移动量（使用输入值作为倍数）时，我们使用 `Time.deltaTime` 使移动与帧无关。通过将移动量乘以 `deltaTime`（自上次更新以来的时间），我们的移动会适应更新之间的时间间隔，而不是只在引擎必须执行操作时更新：
+
+```csharp
+// calculate movement amounts for X and Z axis
+moveAmount = horizontal_input * Time.deltaTime * moveXSpeed;
+moveAmount = vertical_input * Time.deltaTime * moveZSpeed;
+```

@@ -1,0 +1,8 @@
+# 12 Dish: Metal Vehicle Doom
+
+As anyone who knows me will tell you, racing is my favorite genre of video games. I like genuine, no-frills racing where the focus is about getting your car from the start to the finish as quickly as possible—you can keep all the fancy stuff, I'm only here for the racing! The types I enjoy are the low-to no-budget quirky little racers, games that aren't afraid to be racing games and not feel like they have to innovate for the sake of it or innovate to grab extra extras. I like visceral, honest racing, games like Bugbear Entertainment's FlatOut 1, 2 and Ultimate Carnage; Black Box's Need for Speed Carbon; Team6 Game Studios' European Street Racer. Throughout my career, I have been involved in the creation of numerous racing games, from promotional free browser-based titles to console games and retail games. As an independent developer in 2012, I single-handedly made my own ambitious racing game called Heading Racing (see Figure 12.1).
+
+In my last book, Game Development for iOS with Unity3d, I built a simple mobile-ready kart game using colliders on a rigid body that slid around a zero-friction environment. In this book, the racing is more ambitious. Metal Vehicle Doom (Figure 12.2) features everything a fully featured no-nonsense racing game might—AI opponents, a respawning system, wrong-detection, and modern video game car physics using Unity's wheel colliders for suspension and control.
+
+The overall structure of Metal Vehicle Doom adds the Global Race Controller to the scheme, with Race Controller objects added to the player (see Figure 12.3).
+This game may be found in the example projects and its game scenes in the Scenes/Metal Vehicle Doom named game_MVD and menu_MVD.

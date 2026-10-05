@@ -1,0 +1,3 @@
+This is a book about concepts, and it is inevitable that there will be better methods for achieving some of the same goals. The techniques and concepts offered in this book are meant to provide solid foundation, not to be the final word on any subject. It is the author's intention that, as you gain your own experiences in game development, you make your own rules and draw your own conclusions.
+
+Additional material is available from the CRC Press Web site: http://www.crcpress.com/product/isbn/9781466581401.

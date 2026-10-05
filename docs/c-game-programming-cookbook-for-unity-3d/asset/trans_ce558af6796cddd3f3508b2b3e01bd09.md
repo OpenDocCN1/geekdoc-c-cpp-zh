@@ -1,0 +1,243 @@
+
+
+```cs
+{
+  currentWaypointNum=0;
+  currentWaypointTransform=waypointManager.Getwaypoint(currentWaypointNum);
+}
+```
+
+```cs
+// 现在我们需要检查是否足够接近当前路点，
+// 以移动到下一个路点
+```
+
+```cs
+myPosition = myTransform.position;
+myPosition.y=0;
+```
+
+```cs
+// 获取路点位置并将其“扁平化”
+nodePosition = currentWaypointTransform.position;
+nodePosition.y=0;
+```
+
+```cs
+// 检查这辆车到路点的距离
+```
+
+```cs
+currentWaypointDist = Vector3.Distance(nodePosition, myPosition);
+```
+
+```cs
+if (currentWaypointDist < waypointDistance) {
+  // 我们很接近当前节点，所以让我们移动 
+  // 到下一个节点；
+  currentWaypointNum++;
+```
+
+```cs
+// 现在检查我们是否已经完全绕过了 
+// 赛道并重新开始
+```
+
+```cs
+if(currentWaypointNum==totalWaypoints){
+  // 完成了一圈！将 lapDone 标记设为
+  // true，这将在我们经过
+  // 第一个路点时进行检查（这样你就不会
+  // 在几乎完成比赛时从另一侧
+  // 绕回来来搞乱它）
+  isLapDone=true;
+```
+
+```cs
+// 将我们的当前路点重新重置为
+// 第
+  currentWaypointNum=0;
+```
+
+}
+// 从路点控制器获取我们的 transform 引用
+currentWaypointTransform=waypointManager.Getwaypoint(currentWaypointTransform);
+```
+
+```cs
+// 将我们的调试框放置在当前路点，这样我们就能
+// 看到它（如果你正在调试，取消注释！）
+debugBox.transform.position=currentWaypointTransform.position;
+}
+```
+
+```cs
+public void CheckWrongWay()
+{
+  if (currentWaypointTransform==null)
+    return;
+}
+```
+
+```cs
+Vector3 relativeTarget = myTransform.InverseTransformPoint(currentWaypoint.transform.position);
+// 计算轮子的目标角度，
+// 使它们指向目标
+targetAngle = Mathf.Atan2(relativeTarget.x, relativeTarget.z);
+// Atan 返回弧度角，转换为角度
+targetAngle *= Mathf.Rad2Deg;
+```
+
+```cs
+if(targetAngle-90 || targetAngle>90) {
+    goingWrongWay=true;
+} else {
+    goingWrongWay=false;
+    timeWrongWayStarted=-1;
+}
+
+if(oldWrongWay!=goingWrongWay) {
+    // 保存当前时间
+    timeWrongWayStarted= Time.time;
+}
+
+oldWrongWay=goingWrongWay;
+```
+
+```cs
+public void OnTriggerEnter( Collider other ) {
+    // 如果我们刚刚击到的触发器是起点线触发器，
+    // 我们可以在 lapDone 为 true 时增加我们的圈数计数
+    // 检查触发器的名称并确保 lapDone 为 true
+    if(other.name=="TRIGGER_STARTLINE" && lapDone==true) {
+        // 增加圈数计数
+        lapCounter++;
+
+        // 重置我们的 lapDone 标记，准备完成
+        // 下一圈
+        lapDone=false;
+    }
+    // 告诉比赛控制器我们刚刚完成了一圈
+    // 以及我们正处于哪一圈
+    GlobalRaceManager.Instance.CompletedLap(myID);
+
+    // 这不是最完美的解决方案，但意味着我们不需要
+    // 将其硬编码在游戏控制器脚本
+    // 类型或玩家控制器脚本中。至少在这里，
+    // 我们获取我们的对象并对其调用 SendMessage，
+    // 告诉它圈数已完成
+    gameObject.SendMessageUpwards("LapFinished", SendMessageOptions.DontRequireReceiver);
+}
+```
+
+## 12.3.2.1 脚本拆解
+
+`RaceController` 脚本将跟踪比赛所需的除玩家以外的所有所有内容。它继承自 `MonoBehaviour`，以便接入 `Update()`、`Start()` 等自动化调用：
+
+```cs
+using UnityEngine;
+using System.Collections;
+
+public class RaceController : MonoBehaviour
+{
+    // 每个参赛者都会由全局比赛管理器分配一个唯一的 ID（稍后会介绍）。
+    // 当脚本首次运行时，myID 变量被设置为 -1，这样任何
+    // 访问它的脚本都会立即知道它尚未准备就绪。
+
+    // 将 myID 默认设置为 -1，以便当另一个脚本
+    // 尝试 GetID 时我们尚未初始化
+    private int myID = -1;
+
+    // RaceController() 在脚本实例化时由引擎自动调用。
+    // 为了尽可能在比赛开始前为玩家设置 ID，
+    // 通过调用 GlobalRaceManager.Instance.GetUniqueID() 来设置。
+    public RaceController()
+    {
+        myID = GlobalRaceManager.Instance.GetUniqueID(this);
+        Debug.Log("ID assigned to "+myID);
+    }
+
+    // Init() 获取 myTransform 的引用并将其 doneInit 设置为 true：
+    public void Init()
+    {
+        myTransform= transform;
+        doneInit= true;
+    }
+
+    // 可能某些其他脚本需要获取玩家的唯一编号，
+    // 这就是 GetID() 函数返回 myID 的原因：
+    public int GetID() {
+        return myID;
+    }
+
+    // 当玩家通过赛道上所有的路点时，lapDone 变量被设置为 true。
+    // 这个布尔值用于玩家碰到起点/终点触发器时，
+    // 判断是否应该增加圈数。这种方式增加圈数（而不是仅仅在起点/终点
+    // 增加圈数计数器）可以确保玩家已经绕了赛道一圈
+    // 并穿过了终点线：
+    public bool IsLapDone() {
+        return lapDone;
+    }
+
+    // RaceFinished() 是负责查找玩家最终比赛位置并    // 告诉玩家何时停止比赛的函数。首先，我们为其他脚本
+    // 设置了内部变量，即 isFinished、raceRunning 和 finalPosition：
+    public void RaceFinished() {
+        isFinished=true;
+        raceRunning=true;
+    }
+
+    // finalPosition 通过通过 GetPosition（传入玩家的 ID）
+    // 点击 GlobalRaceManager 获取其比赛位置值：
+```cs
+    // 找出我们在哪个位置结束的
+    int finalPosition=GlobalRaceManager.Instance.GetPosition(myID);
+```
+
+    // 为了告诉玩家比赛已经结束，此脚本使用了 Unity 的函数
+    // GameObject.SendMessageUpwards()。这是此脚本向 gameObject 及其每个祖先
+    // 发送的消息。如果挂载了组件脚本并包含与发送的消息同名的函数
+    //（例如 LapFinished()），那么它将被调用。
+
+    // 代码的这部分可以直接存储玩家控制脚本的引用，但    // 这意味着硬编码玩家脚本，从而降低此脚本的整体灵活性。
+    // 例如，此游戏的玩家控制脚本命名为 PlayerController_MVD。
+    // 示例 Tank Battle 的玩家控制脚本名为 PlayerController_TB。
+    // 如果我们想为此游戏的玩家脚本创建引用，它需要 PlayerController_MVD
+    // 类型的变量，而 Tank Battle 游戏则需要不同类型的变量：PlayerController_TB。
+    // 要让这两个游戏都能工作，意味着我们需要创建两个独立的脚本
+    // 或者两个版本的脚本。相反，SendMessageUpwards() 将消息发送给所有
+    // 内容，而不关心它正在交的是什么类型的脚本，以防同一个 GameObject
+    // 上没有附加带有 LapFinished() 函数的脚本，使用了参数 SendMessageOptions.DontRequireReceiver，
+    // 这意味着如果没有脚本来接收消息，就不会发生错误或警告：
+
+```cs
+gameObject.SendMessage("PlayerFinished", finalRacePosition, SendMessageOptions.DontRequireReceiver);
+```
+
+在 RaceStart() 中，我们的内部状态变量 Finished 和 raceRunning 被设为 false。注意 raceRunning 初始为 false，因为它将在此脚本初始化之后的另一个函数中被设置：
+
+```cs
+public void RaceStart()
+{
+    isFinished=false;
+    raceRunning=false;
+}
+```
+
+其他脚本可能需要知道此玩家是否已经完成了比赛。IsFinished() 函数会返回一个对此的布尔值：
+
+```cs
+public bool IsFinished()
+{
+    return isFinished;
+}
+```
+
+当其他脚本需要查找玩家当前是第几圈时，GetCurrentLap() 函数通过玩家的 ID 作为参数获取最新信息（以便全局比赛管理器知道是谁在请求圈数计数），并在 GlobalRaceManager.Instance.GetLapsDone() 的返回值上加 1。GetLapsDone() 将是完成的圈数，而当前是第几圈：
+
+```cs
+public int GetCurrentLap()
+{
+    return GlobalRaceManager.Instance.GetLapsDone(myID)+1;
+}
+```
+

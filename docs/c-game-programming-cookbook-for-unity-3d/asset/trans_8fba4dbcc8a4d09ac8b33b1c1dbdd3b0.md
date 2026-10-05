@@ -1,0 +1,218 @@
+
+
+```cs
+// 射击 / 动作按钮
+public bool Fire;
+
+// 武器槽位
+public bool Slot1;
+public bool Slot2;
+public bool Slot3;
+public bool Slot4;
+public bool Slot5;
+public bool Slot6;
+public bool Slot7;
+public bool Slot8;
+public bool Slot9;
+
+public float vert;
+public float horz;
+public bool shouldRespawn;
+
+public Vector3 TEMPVec;
+private Vector3 zeroVector = new Vector3(0,0,0);
+
+public virtual void CheckInOut()
+{
+    // 使用重写你自己的代码来处理输入
+    horz = Input.GetAxis("Horizontal");
+    vert = Input.GetAxis("Vertical");
+}
+
+public virtual float GetHorizontal()
+{
+    // 返回缓存的水平输入轴值
+    return horz;
+}
+
+public virtual float GetVertical()
+{
+    // 返回缓存的垂直输入轴值
+    return vert;
+}
+
+public virtual bool GetFire()
+{
+    return Fire;
+}
+
+public bool GetRespawn()
+{
+    return shouldRespawn;
+}
+
+public virtual Vector3 GetMovementDirectionVector()
+{
+    // 移动方向的临时向量被设置为
+    // 一个否则未使用的、值始终为 0,0,0 的向量
+    TEMPVec = zeroVector;
+    // 如果我们向左或向右，将速度向量的 X
+    // 设置为我们的水平输入值
+    if(Left || Right)
+    {
+      TEMPVec.x=horz;
+    }
+
+    // 如果我们向上或向下，将速度向量的 X 设置为
+    // 垂直输入值
+    if (Up || Down)
+    {
+      TEMPVec.y=vert;
+    }
+    // 返回移动向量
+    return TEMPVec;
+}
+```
+
+## 2.2.6.1 脚本拆解
+
+BaseInputController.cs 继承自 MonoBehaviour。
+
+```cs
+public class BaseInputController : MonoBehaviour
+{}
+```
+
+输入脚本使用 `CheckInput()` 作为它们的默认主更新函数，旨在用于从玩家类中调用。此 `CheckInput()` 只包含输入所需的极少内容。它从输入类获取轴输入：
+
+```cs
+public virtual void CheckInput()
+```
+
+Input 类提供了指向 Unity 输入系统的接口。它可以被用于从移动设备上的陀螺仪输入到键盘按键的一切内容。Unity 的输入系统有一个垂直轴设置，开发者可以在 Unity 编辑器的 Input Manager 中为轴命名。在 Unity 中，可以通过 `Edit -> Project Settings -> Input` 访问 Input Manager。
+
+默认情况下，Unity 设置了水平和垂直轴输入。它们的名称分别为 `Horizontal` 和 `Vertical`，可以通过 `Input.GetAxis()` 访问，将虚拟轴的名称作为参数传递，并接收于 -1 到 1 之间的浮点数返回值。浮点数变量 `horz` 和 `vert` 持有这些返回值：
+
+```cs
+// 使用重写你自己的代码来处理输入
+horz=Input.GetAxis("Horizontal");
+vert=Input.GetAxis("Vertical");
+```
+
+提供了一个函数来返回 `horz` 的值，即由名为 `Horizontal` 的虚拟轴提供的水平轴：
+
+```cs
+public virtual float GetHorizontal()
+{
+  // 返回我们缓存的水平输入轴值
+  return horz;
+}
+```
+
+提供了一个函数来返回 `vert` 的值，即由名为 `Vertical` 的虚拟轴提供的垂直轴：
+
+```cs
+public virtual float GetVertical()
+{
+    // 返回我们缓存的垂直输入值
+    return vert
+}
+```
+
+`GetFire()` 返回布尔值 `Fire` 的值。`GetRespawn()` 返回布尔值 `shouldRespawn` 的值。在此阶段，你可能会注意到，在这个默认输入脚本中没有实际代码来设置 `Fire` 或 `shouldRespawn`。它们都是作为一种指南提供的，其意图是根据游戏所需的具体情况在基础上进行构建：
+
+```cs
+public virtual bool GetFire(){
+    return Fire;
+}
+
+public bool GetRespawn(){
+    return shouldRespawn;
+}
+```
+
+在某些情况下，拥有一个移动向量比处理来自 `horz` 和 `vert` 的数字更有用。`GetMovementDirectionVector()` 将根据当前的输入状态返回一个 `Vector3` 类型。在这里，`TEMPVec` 接收输入值并由函数返回：
+
+```cs
+public virtual Vector3 GetMovementDirectionVector(){
+    // 移动方向的临时向量被设置为
+    // 一个否则未使用的、值始终为 0,0,0 的向量
+    TEMPVec=zeroVector;
+}
+```
+
+该向量从 0,0,0 开始，但其 `x` 和 `y` 值将被分别设置为 `horz` 和 `vert` 的值。最后，`TEMPVec` 中的向量被返回：
+
+```cs
+TEMPVec.x=horz;
+TEMPVec.y=vert;
+
+// 返回移动向量
+return TEMPVec;
+```
+
+## 3 玩家结构
+
+玩家可以采取任何形式——人类、外星人、动物、车辆；设计一个能够处理所有这些对象的结构本身就是一个挑战。玩家存储数据的方式、他们需要存储的数据、各种类型的移动代码及其控制系统构成了成百种可能的组合。以模块化的方式处理玩家结构需要仔细考虑如何处理所有这些不同的场景，还需要考虑我们的组件如何相互通信以及与游戏的其余部分通信（例如，玩家对象通常需要与游戏状态通信等），而且玩家可能还需要与环境进行交互。
+
+本书的整体玩家结构可以分解为几个主要组件，如图 3.1 所示。
+
+- 1. **游戏特定控制器**。此脚本旨在作为玩家控制器和用户管理器之间的桥梁。例如，某些游戏可能需要车辆，而某些游戏可能。
+- 2. **移动控制器**。移动控制器负责移动玩家并定义玩家类型。
+- 3. **玩家管理器**。此脚本位于玩家内部。
+- 4. **数据管理器**。数据管理器负责统计数据，如得分、等级等。
+
+### 3.1 游戏特定控制器
+
+玩家控制器继承自移动控制器（移动控制器专门负责特定类型的移动），并在此基础上构建以提供完整的玩家逻辑。
+
+移动控制器将在本书稍后部分介绍。第 5 章概述了三种玩家类型的移动控制器：飞船、类玩家和轮式车辆。
+
+玩家控制器的逻辑取决于游戏；本书中的示例使用了第 5 章的移动控制器，通过将移动控制器与武器控制器相结合来武装玩家，或控制 AI 控制器。
+
+关于玩家控制器的真实示例，请查看第 10 到 13 章的示例游戏。在本节中，我们构建了一个简单的玩家控制器来移动飞船。它继承自 `BaseTopDownSpaceShip.cs`，这可以在第 5 章完整找到。此脚本还包含一个玩家管理器。
+
+```cs
+using UnityEngine;
+using System.Collections;
+```
+
+```cs
+public class SimplePlayerController : BaseTopDownSpaceShip
+{
+    public BasePlayerManager myPlayerManager;
+    public UserManager myDataManager;
+
+    public override void Start()
+    {
+        // 通知基类初始化
+        base.Init();
+
+        // 现在执行自己的初始化
+        this.Init();
+    }
+
+    public override void Init()
+    {
+        // 如果编辑器中没有设置玩家管理器，让我们尝试
+        // 寻找一个
+        if(myPlayerManager==null)
+            myPlayerManager=gameObject.GetComponent<BasePlayerManager>();
+
+        myDataManager= myManager.DataManager;
+        myDataManager.SetName("Player");
+        myDataManager.SetHealth(3);
+
+        didInit=true;
+    }
+
+    public override void Update()
+    {
+        // 执行基类中的更新
+        UpdateShip();
+
+        // 在 Init() 运行之前不要执行任何操作
+    }
+}
+```
+

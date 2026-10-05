@@ -1,0 +1,203 @@
+
+
+```cs
+// 缓存对玩家控制器的引用
+myController= myGO.GetComponent<BasePlayerManager>();
+```
+
+```cs
+// 调用基类初始化
+myController.Init();
+```
+
+这款游戏中的汽车物理非常简单。在商业化的赛车游戏中，可能会有各种物理脚本在运行，以保持车辆在过弯时直立并表现得像一辆真实的汽车。高级物理超出了本书的范围，因此我们通过这样设置物理刚体（rigidbody）的重心来鼓励汽车保持直立。如果你注释掉这一行并运行《Metal Vehicle Doom》，汽车在过弯时会翻自自己。改变重心可能会对物理效果产生奇怪的影响，尽管通过一些尝试，你可能可以达到很好的稳定性水平，而不会在物理反应上出现太奇怪的现象：
+
+```cs
+// 通过这段简单的代码，我们将重心设置得
+// 较低，以防止汽车翻倒
+myBody.centerOfMass= new Vector3(0,-3.5f,0);
+```
+
+玩家身上挂载了一个 `AudioSource` 来为引擎发出声音。该源引用的 `AudioClip` 使用了循环音频，根据车辆的速度向上或向下移动音调，听起来会很好听：
+
+```cs
+// 检查是否需要寻找引擎声音源
+if (engineSoundSource==null)
+{
+engineSoundSource= myGO.GetComponent<AudioSource>();
+}
+```
+
+`RaceController`（如在本章较早之前过的）接下来由另一个函数 `AddRaceController()` 添加：
+
+```cs
+AddRaceController();
+```
+
+按照协议要求，赛车控制器内的圈数计数器被重置：
+
+```cs
+// 重置我们的圈数计数器
+raceControl.ResetLapCounter();
+```
+
+此脚本用于与武器系统配合，我们在变量 `Control` 中保留了武器控制器组件（`Standard_SlotWeaponController`）的引用。代码使用 `GameObject.GetComponent` 来查找它：
+
+```cs
+// 获取武器控制器的引用
+weaponController=myGO.GetComponent<Standard_SlotWeaponController>();
+```
+
+代码的后续部分，如果在 Unity 检查器中没有设置玩家管理器组件，我们使用 `GameObject.GetComponent()` 尝试寻找 `BasePlayerManager` 组件。一旦找到玩家管理器脚本，`myDataManager` 将被设置为属于玩家管理器的数据管理器对象。
+
+数据管理器用于存储玩家信息（详细拆解请参见第 3 章）：
+
+```cs
+// 如果编辑器中没有设置玩家管理器，让我们尝试
+// 寻找一个
+if (myPlayerManager==null)
+PlayerManager=myGO.GetComponent<BasePlayerManager>();
+
+// 缓存数据管理器的引用
+myDataManager=myPlayerManager.DataManager;
+```
+
+这段代码根据变量 `startHealthAmount` 设置了玩家名称和默认血量值。玩家名称在游戏游戏中没有被使用，但为了保持示例之间的一致性，我们在这里设置了它：
+
+```cs
+// 设置默认数据
+myDataManager.SetName("Player");
+myDataManager.SetHealth(startHealthAmount);
+```
+
+当 `aiControlled` 布尔值设置为 `true` 时，玩家名称被设置为 `AIPlayer`，脚本需要运行 `InitAI()` 函数让 AI 控制器准备就绪：
+
+```cs
+if(aiControlled)
+{
+    //将我们的名字设置为 AI 玩家
+    myDataManager.SetName("AIPlayer");
+
+    // 设置 AI
+    InitAI();
+}
+```
+
+AI 玩家比用户需要更多的初始化设置。`InitAI()` 函数首先使用 `GameObject.GetComponent` 寻找 `BaseAIController` 组件：
+
+```cs
+void InitAI()
+{
+    // 缓存对 AI 控制器的引用
+    AIController=myGO.GetComponent<BaseAIController>();
+```
+
+为了让 AI 正常工作，为玩家添加 `BaseAIController` 组件是至关重要的。脚本并没有报错，而是如果已经不存在，会继续使用 `GameObject.AddComponent()` 添加一个 `BaseAIController`：
+
+```cs
+// 检查是否找到了 AI 控制器组件，如果
+// 没有，我们在这里添加一个
+if (AIController==null)
+AIController=myGO.AddComponent<BaseAIController>();
+```
+
+在控制器上调用 `Init()`（关于 `AIController` 在执行 `Init()` 期间实际发生了什么，请参阅第 9 章中的 AI 系统）：
+
+```cs
+// 初始化 AI 控制器
+AIController.Init();
+```
+
+与现实中的对应物一样，我们的汽车使用转向系统来向左右移动。`AIController` 不会强制汽车向特定方向移动，而是会提供我们的 `CarController_MVD` 脚本可以使用的输入，就像是用户输入一样。正如你可能从第 9 章回想起来的那样，AI 系统有一个基于视角的转向输入特定状态。这里调用了 `AIController` 对象以将其状态设置为 `AIStates.AIState.steer_to_waypoint`：
+
+```cs
+// 告诉 AI 控制器进入路点转向
+// 模式
+AIController.SetAIState(AIStates.AIState.steer_to_waypoint);
+```
+
+由于这是一个 AI 车辆，需要禁用默认输入方法（否则 AI 可能必须与玩家输入作）：
+
+```cs
+// 禁用我们的默认方法
+default_input.enabled=false;
+```
+
+使用第 9 章 9.3 节的 `BaseArmedEnemy` 脚本作为武器控制器。如果玩家身上没有挂载，则会添加一个：
+
+```cs
+// 添加一个 AI 武器控制器
+gmyGO.GetComponent<BaseArmedEnemy>();
+
+// 如果我们还没有枪的控制器，让我们添加一个
+// 以防止情况变糟并发出警告，以便可以// 进行修复
+if (gunController==null)
+{
+    gunControl=myGO.AddComponent<BaseArmedEnemy>();
+    Debug.LogWarning("WARNING! Trying to initialize car
+without a BaseArmedEnemy attached. Player
+cannot fire!");
+}
+```
+
+枪控制器在看到前方有敌人时需要显示。对于这一点，这里的脚本将其 `currentState` 设置为 `AIAttackStates.AIAttackState.look_and_destroy`：
+
+```cs
+// 告诉枪控制器执行“查看”并摧毁
+gunController.currentState=
+AIAttackStates.AIAttackState.look_and_destroy;
+```
+
+任何游戏都可以使用赛车控制器脚本。它不需要是车辆汽车；也可以是人类、机器人或任何其他移动的物体。赛车控制器挂载在所有需要在比赛中被追踪的玩家身上，全局管理器与它们通信并跟踪比赛。不需要额外的工作！
+
+话虽如此，我们需要确保玩家身上都挂载了赛车控制器。`AddRaceController()` 开始使用 `GameObject.AddComponent()` 为此玩家添加一个 `RaceController` 实例：
+
+```cs
+public void AddRaceController()
+{
+    if (myGO==null)
+        myGO=gameObject;
+}
+```
+
+```cs
+// 为我们的对象添加赛车控制器
+raceControl=myGO.AddRaceController();
+```
+
+从赛车控制器获取 ID 以用于其他地方也是一个好主意，保持任何 ID 数字的一致。`raceID` 是一个整数，被设置为从返回的 ID：
+
+- 从控制脚本获取我们的赛道 ID，这样我们就不需要与
+- 全局赛车控制器通信时查找它
+raceID=raceControl.GetID();
+
+每半秒，此玩家脚本将调用 `UpdatePosition()` 从比赛管理器更新其位置。使用 `InvokeRepeating` 来周期性进行此设置：
+
+- 设置重复调用以更新我们的赛道位置，
+- 而不是每个 tick 或 update 都调用一次
+InvokeRepeating("UpdatePosition",0, 0.5);
+
+`UpdatePosition()` 询问全局比赛管理器该玩家在哪个比赛中，然后将其存储在变量 `myPosition` 中：
+
+```cs
+public void UpdatePosition()
+{
+    // 从全局比赛管理器获取我们的赛道位置
+    myPosition=GlobalRaceManager.Instance.GetPosition(raceID);
+}
+```
+
+`UpdatePhysics()` 函数由 `BaseVehicle` 脚本每次 `FixedUpdate()` 调用：
+
+```cs
+public override void UpdatePhysics()
+{
+    if (canControl)
+        base.UpdatePhysics();
+}
+```
+
+在低速下，很难快速转向车辆。当用户撞到墙上时，缓慢的转向速度会让游戏变成一种非常沮丧的体验。此重写 `UpdatePhysics()` 的目的是添加一些转向辅助力，让车辆在较低速度下也能转向，从而更容易脱困。这意味着车辆可以在赛道上做转圈，但那是另一个故事了……
+
+在这里我们检查 `mySpeed` 的值（当然，它持有玩家的移动速度）并查看它是否低于 `TorqueHelperMaxSpeed` 的值。意图是在 Unity 窗口中设置它的值。如果 `mySpeed` 大于 `TorqueHelperMaxSpeed`，则不会对车辆应用辅助力。如果它低于该阈值，则使用 `rigidbody.AddTorque()` 来转向车辆：
+
