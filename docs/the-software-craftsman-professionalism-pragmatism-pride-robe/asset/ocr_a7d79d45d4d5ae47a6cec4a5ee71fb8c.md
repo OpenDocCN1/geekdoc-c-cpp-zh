@@ -1,0 +1,21 @@
+# 14. Technical Changes
+
+How do I integrate technical practices to my team? How do I convince my team to Test-Driven Development (TDD)? How do I convince my manager to let us pair programming? How can I introduce another new language or framework in my current project? These are questions that always pop up conversations with other developers. Over the years of finding other developers to adopt technical practices or to change their outside is far harder than convincing managers. Many developers suffer when Kent Beck calls adolescent surety. They think they have the secret formula for delivering great software and nothing is worth considering.
+
+From developers to managers and architects, learning how to do it is essential when driving technical change. In this chapter we look at different types of skepticism and how to convince them to be more open to different ideas.
+
+# Identifying Skepticism Patterns
+
+The first thing that any software craftsman needs before trying to change the culture of a team or trying to introduce new practices, tools, or processes is to identify the different types of skepticism he is facing. Terence Ryan, in his book Technical Change, defines the categories of technical change that tend to fall under:
+
++   - The Uninformed: The reason why they don't use tools or practices is lack of awareness. They simply don't know that tools or practices exist. Because of natural tendency to fear the change, when new ideas are presented, they are usually rejected without much consideration. Developers in this group usually don't spend much time reading books or going on outings to understand what is outside their circle.
+
++   - The Herd: They feel they are not experienced enough to make technical changes; they leave the decisions to more-and-more experienced developers. They also think they are not allowed to do certain things because nobody else does them. They could easily adopt technical practices or tools if someone else asked for it, but not leaders.
+
++   - The Cynic: They like to be argumentative just to prove that they are smarter than everyone else. They question everything-it's not personal-previous events have made them so frustrated that they just can't escape the use of anything new in development. Many developers believe that knowing amount is more important than being smart. One of the reasons for them not to adopt technical practices or tools is that they don't know how to do something. They fear their seniority status might be threatened if they show that they don't know. It is easier to find ways to undermine and avoid new ideas than to embrace them.
+
++   - The Time-Crained: They are always busy and have no time for changes. Developers in this group are usually busy and unable to see the long term. They don't have time to do things right but they have time to do the same things over and over. For them, if they take TDD as an example, writing tests will take too much-it is an extra thing they need to do. But they can't see the amount of time that is spent manually trying to change the code without tests, and all of it, not making any improvements for the long term system. The only thing they don't have time to change is the way they work.
+
++   - The Boss: If the boss is not a technical person, she doesn't understand what you are talking about and will fail to sell all the arguments for what you are proposing. The boss managers have development problems. Instead of "creating tools to automate something," you need to say "reducing project costs." If the boss is a de-developer, one who wroteing code age ago, you might even have a bigger problem. "When we need developers, we need managers" Very few were actually developers in fact, and even fewer were promoted because of software development skills; they would disagree with this statement, of course. If they still write code, they sometimes be perceived by Time Crained.
+
++   - The Irrational: The worst type. All types of skepticism besides their opposition to new ideas on premises, although not necessarily correct, are at least rational and logical. As the skeptic has a
