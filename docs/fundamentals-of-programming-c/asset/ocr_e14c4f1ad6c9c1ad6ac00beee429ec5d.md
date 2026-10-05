@@ -1,0 +1,59 @@
+# 10.1. GLOBAL VARIABLES
+
+)
+
+```
+/*
+* Assigns the sum of the globals arg1 and arg2
+* to the global variable result
+*/
+void add() {
+  result = arg1 + arg2;
+}
+/*
+* subtract
+* Assigns the difference of the globals arg1 and arg2
+* to the global variable result
+*/
+void subtract() {
+  result = arg1 - arg2;
+}
+```
+
+```
+/*
+* main
+* Runs a command loop that allows users to
+* perform simple arithmetic.
+*/
+int main() {
+  bool done = false; // Initially not done
+  do {
+    switch (menu()) {
+      case 'A': // Addition
+      case 'a':
+        get_input();
+        add();
+        report();
+        break;
+      case 'S': // Subtraction
+      case 's':
+        get_input();
+        subtract();
+        report();
+      case 'P': // Print result
+      case 'p':
+        report();
+        break;
+      case 'H': // Display help screen
+      case 'h':
+        help_screen();
+        break;
+      case 'Q': // Quit the program
+        done = true;
+        break;
+    }
+  } while (!done);
+  return 0;
+}
+```

@@ -1,0 +1,1242 @@
+
+
+# 17.3 继承的使用
+
+继承是一种设计工具，它允许开发者利用现有类并产生新类，以提供增强的或不同的行为。这种增强或新的行为并不是以牺牲现有代码为代价的；也就是说，在使用继承时，程序员不需要接触基类中的任何源代码。此外，开发者可以利用代码（基类中的代码），而无需在派生类中重复它。
+
+列表 17.2 (fancytext.cpp) 提供了一个完整的程序，通过简单的类展示了我们如何使用继承来增强无序文本对象的行为。
+
+```
+Listing 17.2: fancytext.cpp
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+// 所有 Text 派生类的基类
+class Text {
+    string text;
+public:
+    // 从客户端提供的字符串创建 Text 对象
+    Text(const string& t) : text(t) {}
+
+    // 允许客户端查看文本字段
+    virtual string get() const {
+        return text;
+    }
+
+    // 将另一个字符串附加到现有文本的后面
+    void append(const string& extra) {
+        text += extra;
+    }
+};
+
+// 为文本提供最小的装饰
+class FancyText : public Text {
+    string left_bracket;
+    string right_bracket;
+    string connector;
+public:
+    // 客户端提供要包装的字符串以及一些装饰
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+
+    // 允许客户端查看装饰后的文本字段
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+```
+
+# 17.3 继承的使用
+
+列表 17.2 (fancytext.cpp) 的输出如下：
+
+```
+plain
+<<fancy>>
+FIXED
+--------------------
+plainA
+<<fancy***A>>
+FIXED
+--------------------
+plainB
+<<fancy***B>>
+FIXED
+```
+
+在列表 17.2 (fancytext.cpp) 中，Text 充了其他类的基类。**FancyText** 和 **FixedText**。一个 Text 对象封装了一个 `std::string` 对象，由于该字符串对象对于 **Text** 类是私有的，客户端无法直接获取该字符串对象。客户端可以通过 `get` 方法查看封装的字符串，并使用 `append` 方法以有限的方式对其进行修改。列表 17.2 (fancytext.cpp) 包含了两个新关键字：
+
+- **virtual** 关键字出现在 Text 类中 **get** 和 **append** 方法定义的前面。`virtual` 指定符表明 Text 类的设计者意图让派生类能够自定义 **get** 和 **append** 方法的行为。
+- **override** 关键字出现在 Fancy 类中 **get** 和 **append** 方法定义的末尾，以及 **FixedText** 类中 **append** 方法定义的末尾。这意味着这些方法的具体行为在某些方面与它们在 Text 类中的实现有所不同。**FixedText** 类仅重写了 **append** 方法；它在不作修改的情况下继承了 **get** 方法。
+
+考虑 **FancyText::get** 方法：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+}
+```
+
+**FancyText** 类更改了 get 方法。我们说 Fancy 类重写了它的 get 方法。`override` 关键字强调 **FancyText** 中 get 方法的类意图执行某些与 **Text** get 方法中的代码不同的操作。在这种情况下，**FancyText::get** 方法通过拼接三个字符串来构建一个字符串：第一个字符串是前缀括号字符串，第二个是封装的字符串，第三个是尾部括号字符串。注意第二个字符串是通过表达式获得的：
+
+```
+Text::get()
+```
+
+这调用了基类版本的 get 方法。我们说 FancyText::get 方法将其部分工作委托给了基类版本 **Text::get**。注意语句
+
+```cpp
+return left_bracket + text + right_bracket; // 非法
+```
+
+该语句是非合法的，因为 text 是基类的私有成员。类的 private不可访问。派生类没有特殊特权。为了执行委托，我们使用 `Text::get()` 而不是简单的 `get()`；不带限定的表达式 `get()` 等同于 `this->get`，它会调用 `FancyText::get`。这意味着在 FancyText::get 的定义中调用 get 是递归调用，这并不是我们想要的。
+
+在基类中声明的方法在派生类中自动是虚的，但 `override` 的使用使其与众不同。
+
+`override` 是 C++11 引入语言的。在 C++11 之前，当派生类中的方法签名与其基类中的虚方法签名相同时，该方法会隐式地重写其基类版本。问题在于程序员可能意图重写派生类中的方法，但写错了签名。导致的方法重载了原始方法而不是重写它。如果程序员使用了 `override` 且签名与基类版本不匹配，编译器将报告错误。`override` 指定符为程序员显式地通信其意图提供了一种方法。
+
+![](img/e326304bd50fbc4f7d5a64c1487eb635_471_0.png)
+
+为了后兼容，`override` 关键字是可选的。它的存在允许编译器验证该方法确实在重写基类中的虚方法。如果没有它，程序员必须注意忠实地重现要重写的方法签名。
+
+`override` 是一个上下文敏感的关键字，意味着它只在出现在方法头声明中时才是关键字。在其他上下文中，它的行为就像一个标识符。
+
+FixedText 类没有改变 FixedText 对象的方法工作方式；因此，FixedText::get 方法没有添加任何装饰。
+
+FancyText::append 方法通过在现有封装的字符串和要附加的字符串之间插入一个特殊的隔符字符串来重写 append 方法。类似于 FancyText::get，FancyText::append 方法将实际的拼接操作委托给其基类版本，FancyText 无法直接影响其文本字段。
+
+FixedText::append 方法不允许封装的文本字符串被修改。FancyText 的构造函数需要四个参数：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+```
+
+# 17.3 的使用
+
+继承是一种设计工具，它允许开发者利用现有类并产生新类，以提供增强的或不同的行为。这种增强或新的行为并不是以牺牲现有代码为代价的；也就是说，在使用继承时，程序员不需要接触基类中的任何源代码。此外，开发者可以利用代码（基类中的代码），而无需在派生类中重复它。
+
+列表 17.2 (fancytext.cpp) 提供了一个完整的程序，通过简单的类展示了我们如何使用继承来增强无序文本对象的行为。
+
+```
+Listing 17.2: fancytext.cpp
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+// 所有 Text 派生类的基类
+class Text {
+    string text;
+public:
+    // 从客户端提供的字符串创建 Text 对象
+    Text(const string& t) : text(t) {}
+
+    // 允许客户端查看文本字段
+    virtual string get() const {
+        return text;
+    }
+
+    // 将另一个字符串附加到现有文本的后面
+    void append(const string& extra) {
+        text += extra;
+    }
+};
+
+// 为文本提供最小的装饰
+class FancyText : public Text {
+    string left_bracket;
+    string right_bracket;
+    string connector;
+public:
+    // 客户端提供要包装的字符串以及一些装饰
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+
+    // 允许客户端查看装饰后的文本字段
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+```
+
+# 17.3 继承的使用
+
+列表 17.2 (fancytext.cpp) 的输出如下：
+
+```
+plain
+<<fancy>>
+FIXED
+--------------------
+plainA
+<<fancy***A>>
+FIXED
+--------------------
+plainB
+<<fancy***B>>
+FIXED
+```
+
+在列表 17.2 (fancytext.cpp) 中，Text 充了其他类的基类。**FancyText** 和 **FixedText**。一个 Text 对象封装了一个 `std::string` 对象，由于该字符串对象对于 **Text** 类是私有的，客户端无法直接获取该字符串对象。客户端可以通过 `get` 方法查看封装的字符串，并使用 `append` 方法以有限的方式对其进行修改。列表 17.2 (fancytext.cpp) 包含了两个新关键字：
+
+- **virtual** 关键字出现在 Text 类中 **get** 和 **append** 方法定义的前面。`virtual` 指定符表明 Text 类的设计者意图让派生类能够自定义 **get** 和 **append** 方法的行为。
+- **override** 关键字出现在 Fancy 类中 **get** 和 **append** 方法定义的末尾，以及 **FixedText** 类中 **append** 方法定义的末尾。这意味着这些方法的具体行为在某些方面与它们在 Text 类中的实现有所不同。**FixedText** 类仅重写了 **append** 方法；它在不作修改的情况下继承了 **get** 方法。
+
+考虑 **FancyText::get** 方法：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+}
+```
+
+**FancyText** 类更改了 get 方法。我们说 Fancy 类重写了它的 get 方法。`override` 关键字强调 **FancyText** 中 get 方法的类意图执行某些与 **Text** get 方法中的代码不同的操作。在这种情况下，**FancyText::get** 方法通过拼接三个字符串来构建一个字符串：第一个字符串是前缀括号字符串，第二个是封装的字符串，第三个是尾部括号字符串。注意第二个字符串是通过表达式获得的：
+
+```
+Text::get()
+```
+
+这调用了基类版本的 get 方法。我们说 FancyText::get 方法将其部分工作委托给了基类版本 **Text::get**。注意语句
+
+```cpp
+return left_bracket + text + right_bracket; // 非法
+```
+
+该语句是非合法的，因为 text 是基类的私有成员。类的 private不可访问。派生类没有特殊特权。为了执行委托，我们使用 `Text::get()` 而不是简单的 `get()`；不带限定的表达式 `get()` 等同于 `this->get`，它会调用 `FancyText::get`。这意味着在 FancyText::get 的定义中调用 get 是递归调用，这并不是我们想要的。
+
+在基类中声明的方法在派生类中自动是虚的，但 `override` 的使用使其与众不同。
+
+`override` 是 C++11 引入语言的。在 C++11 之前，当派生类中的方法签名与其基类中的虚方法签名相同时，该方法会隐式地重写其基类版本。问题在于程序员可能意图重写派生类中的方法，但写错了签名。导致的方法重载了原始方法而不是重写它。如果程序员使用了 `override` 且签名与基类版本不匹配，编译器将报告错误。`override` 指定符为程序员显式地通信其意图提供了一种方法。
+
+![](img/e326304bd50fbc4f7d5a64c1487eb635_471_0.png)
+
+为了后兼容，`override` 关键字是可选的。它的存在允许编译器验证该方法确实在重写基类中的虚方法。如果没有它，程序员必须注意忠实地重现要重写的方法签名。
+
+`override` 是一个上下文敏感的关键字，意味着它只在出现在方法头声明中时才是关键字。在其他上下文中，它的行为就像一个标识符。
+
+FixedText 类没有改变 FixedText 对象的方法工作方式；因此，FixedText::get 方法没有添加任何装饰。
+
+FancyText::append 方法通过在现有封装的字符串和要附加的字符串之间插入一个特殊的隔符字符串来重写 append 方法。类似于 FancyText::get，FancyText::append 方法将实际的拼接操作委托给其基类版本，FancyText 无法直接影响其文本字段。
+
+FixedText::append 方法不允许封装的文本字符串被修改。FancyText 的构造函数需要四个参数：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+```
+
+# 17.3 的使用
+
+继承是一种设计工具，它允许开发者利用现有类并产生新类，以提供增强的或不同的行为。这种增强或新的行为并不是以牺牲现有代码为代价的；也就是说，在使用继承时，程序员不需要接触基类中的任何源代码。此外，开发者可以利用代码（基类中的代码），而无需在派生类中重复它。
+
+列表 17.2 (fancytext.cpp) 提供了一个完整的程序，通过简单的类展示了我们如何使用继承来增强无序文本对象的行为。
+
+```
+Listing 17.2: fancytext.cpp
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+// 所有 Text 派生类的基类
+class Text {
+    string text;
+public:
+    // 从客户端提供的字符串创建 Text 对象
+    Text(const string& t) : text(t) {}
+
+    // 允许客户端查看文本字段
+    virtual string get() const {
+        return text;
+    }
+
+    // 将另一个字符串附加到现有文本的后面
+    void append(const string& extra) {
+        text += extra;
+    }
+};
+
+// 为文本提供最小的装饰
+class FancyText : public Text {
+    string left_bracket;
+    string right_bracket;
+    string connector;
+public:
+    // 客户端提供要包装的字符串以及一些装饰
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+
+    // 允许客户端查看装饰后的文本字段
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+```
+
+# 17.3 继承的使用
+
+列表 17.2 (fancytext.cpp) 的输出如下：
+
+```
+plain
+<<fancy>>
+FIXED
+--------------------
+plainA
+<<fancy***A>>
+FIXED
+--------------------
+plainB
+<<fancy***B>>
+FIXED
+```
+
+在列表 17.2 (fancytext.cpp) 中，Text 充了其他类的基类。**FancyText** 和 **FixedText**。一个 Text 对象封装了一个 `std::string` 对象，由于该字符串对象对于 **Text** 类是私有的，客户端无法直接获取该字符串对象。客户端可以通过 `get` 方法查看封装的字符串，并使用 `append` 方法以有限的方式对其进行修改。列表 17.2 (fancytext.cpp) 包含了两个新关键字：
+
+- **virtual** 关键字出现在 Text 类中 **get** 和 **append** 方法定义的前面。`virtual` 指定符表明 Text 类的设计者意图让派生类能够自定义 **get** 和 **append** 方法的行为。
+- **override** 关键字出现在 Fancy 类中 **get** 和 **append** 方法定义的末尾，以及 **FixedText** 类中 **append** 方法定义的末尾。这意味着这些方法的具体行为在某些方面与它们在 Text 类中的实现有所不同。**FixedText** 类仅重写了 **append** 方法；它在不作修改的情况下继承了 **get** 方法。
+
+考虑 **FancyText::get** 方法：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+}
+```
+
+**FancyText** 类更改了 get 方法。我们说 Fancy 类重写了它的 get 方法。`override` 关键字强调 **FancyText** 中 get 方法的类意图执行某些与 **Text** get 方法中的代码不同的操作。在这种情况下，**FancyText::get** 方法通过拼接三个字符串来构建一个字符串：第一个字符串是前缀括号字符串，第二个是封装的字符串，第三个是尾部括号字符串。注意第二个字符串是通过表达式获得的：
+
+```
+Text::get()
+```
+
+这调用了基类版本的 get 方法。我们说 FancyText::get 方法将其部分工作委托给了基类版本 **Text::get**。注意语句
+
+```cpp
+return left_bracket + text + right_bracket; // 非法
+```
+
+该语句是非合法的，因为 text 是基类的私有成员。类的 private不可访问。派生类没有特殊特权。为了执行委托，我们使用 `Text::get()` 而不是简单的 `get()`；不带限定的表达式 `get()` 等同于 `this->get`，它会调用 `FancyText::get`。这意味着在 FancyText::get 的定义中调用 get 是递归调用，这并不是我们想要的。
+
+在基类中声明的方法在派生类中自动是虚的，但 `override` 的使用使其与众不同。
+
+`override` 是 C++11 引入语言的。在 C++11 之前，当派生类中的方法签名与其基类中的虚方法签名相同时，该方法会隐式地重写其基类版本。问题在于程序员可能意图重写派生类中的方法，但写错了签名。导致的方法重载了原始方法而不是重写它。如果程序员使用了 `override` 且签名与基类版本不匹配，编译器将报告错误。`override` 指定符为程序员显式地通信其意图提供了一种方法。
+
+![](img/e326304bd50fbc4f7d5a64c1487eb635_471_0.png)
+
+为了后兼容，`override` 关键字是可选的。它的存在允许编译器验证该方法确实在重写基类中的虚方法。如果没有它，程序员必须注意忠实地重现要重写的方法签名。
+
+`override` 是一个上下文敏感的关键字，意味着它只在出现在方法头声明中时才是关键字。在其他上下文中，它的行为就像一个标识符。
+
+FixedText 类没有改变 FixedText 对象的方法工作方式；因此，FixedText::get 方法没有添加任何装饰。
+
+FancyText::append 方法通过在现有封装的字符串和要附加的字符串之间插入一个特殊的隔符字符串来重写 append 方法。类似于 FancyText::get，FancyText::append 方法将实际的拼接操作委托给其基类版本，FancyText 无法直接影响其文本字段。
+
+FixedText::append 方法不允许封装的文本字符串被修改。FancyText 的构造函数需要四个参数：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+```
+
+# 17.3 的使用
+
+继承是一种设计工具，它允许开发者利用现有类并产生新类，以提供增强的或不同的行为。这种增强或新的行为并不是以牺牲现有代码为代价的；也就是说，在使用继承时，程序员不需要接触基类中的任何源代码。此外，开发者可以利用代码（基类中的代码），而无需在派生类中重复它。
+
+列表 17.2 (fancytext.cpp) 提供了一个完整的程序，通过简单的类展示了我们如何使用继承来增强无序文本对象的行为。
+
+```
+Listing 17.2: fancytext.cpp
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+// 所有 Text 派生类的基类
+class Text {
+    string text;
+public:
+    // 从客户端提供的字符串创建 Text 对象
+    Text(const string& t) : text(t) {}
+
+    // 允许客户端查看文本字段
+    virtual string get() const {
+        return text;
+    }
+
+    // 将另一个字符串附加到现有文本的后面
+    void append(const string& extra) {
+        text += extra;
+    }
+};
+
+// 为文本提供最小的装饰
+class FancyText : public Text {
+    string left_bracket;
+    string right_bracket;
+    string connector;
+public:
+    // 客户端提供要包装的字符串以及一些装饰
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+
+    // 允许客户端查看装饰后的文本字段
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+```
+
+# 17.3 继承的使用
+
+列表 17.2 (fancytext.cpp) 的输出如下：
+
+```
+plain
+<<fancy>>
+FIXED
+--------------------
+plainA
+<<fancy***A>>
+FIXED
+--------------------
+plainB
+<<fancy***B>>
+FIXED
+```
+
+在列表 17.2 (fancytext.cpp) 中，Text 充了其他类的基类。**FancyText** 和 **FixedText**。一个 Text 对象封装了一个 `std::string` 对象，由于该字符串对象对于 **Text** 类是私有的，客户端无法直接获取该字符串对象。客户端可以通过 `get` 方法查看封装的字符串，并使用 `append` 方法以有限的方式对其进行修改。列表 17.2 (fancytext.cpp) 包含了两个新关键字：
+
+- **virtual** 关键字出现在 Text 类中 **get** 和 **append** 方法定义的前面。`virtual` 指定符表明 Text 类的设计者意图让派生类能够自定义 **get** 和 **append** 方法的行为。
+- **override** 关键字出现在 Fancy 类中 **get** 和 **append** 方法定义的末尾，以及 **FixedText** 类中 **append** 方法定义的末尾。这意味着这些方法的具体行为在某些方面与它们在 Text 类中的实现有所不同。**FixedText** 类仅重写了 **append** 方法；它在不作修改的情况下继承了 **get** 方法。
+
+考虑 **FancyText::get** 方法：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+}
+```
+
+**FancyText** 类更改了 get 方法。我们说 Fancy 类重写了它的 get 方法。`override` 关键字强调 **FancyText** 中 get 方法的类意图执行某些与 **Text** get 方法中的代码不同的操作。在这种情况下，**FancyText::get** 方法通过拼接三个字符串来构建一个字符串：第一个字符串是前缀括号字符串，第二个是封装的字符串，第三个是尾部括号字符串。注意第二个字符串是通过表达式获得的：
+
+```
+Text::get()
+```
+
+这调用了基类版本的 get 方法。我们说 FancyText::get 方法将其部分工作委托给了基类版本 **Text::get**。注意语句
+
+```cpp
+return left_bracket + text + right_bracket; // 非法
+```
+
+该语句是非合法的，因为 text 是基类的私有成员。类的 private不可访问。派生类没有特殊特权。为了执行委托，我们使用 `Text::get()` 而不是简单的 `get()`；不带限定的表达式 `get()` 等同于 `this->get`，它会调用 `FancyText::get`。这意味着在 FancyText::get 的定义中调用 get 是递归调用，这并不是我们想要的。
+
+在基类中声明的方法在派生类中自动是虚的，但 `override` 的使用使其与众不同。
+
+`override` 是 C++11 引入语言的。在 C++11 之前，当派生类中的方法签名与其基类中的虚方法签名相同时，该方法会隐式地重写其基类版本。问题在于程序员可能意图重写派生类中的方法，但写错了签名。导致的方法重载了原始方法而不是重写它。如果程序员使用了 `override` 且签名与基类版本不匹配，编译器将报告错误。`override` 指定符为程序员显式地通信其意图提供了一种方法。
+
+![](img/e326304bd50fbc4f7d5a64c1487eb635_471_0.png)
+
+为了后兼容，`override` 关键字是可选的。它的存在允许编译器验证该方法确实在重写基类中的虚方法。如果没有它，程序员必须注意忠实地重现要重写的方法签名。
+
+`override` 是一个上下文敏感的关键字，意味着它只在出现在方法头声明中时才是关键字。在其他上下文中，它的行为就像一个标识符。
+
+FixedText 类没有改变 FixedText 对象的方法工作方式；因此，FixedText::get 方法没有添加任何装饰。
+
+FancyText::append 方法通过在现有封装的字符串和要附加的字符串之间插入一个特殊的隔符字符串来重写 append 方法。类似于 FancyText::get，FancyText::append 方法将实际的拼接操作委托给其基类版本，FancyText 无法直接影响其文本字段。
+
+FixedText::append 方法不允许封装的文本字符串被修改。FancyText 的构造函数需要四个参数：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+```
+
+# 17.3 的使用
+
+继承是一种设计工具，它允许开发者利用现有类并产生新类，以提供增强的或不同的行为。这种增强或新的行为并不是以牺牲现有代码为代价的；也就是说，在使用继承时，程序员不需要接触基类中的任何源代码。此外，开发者可以利用代码（基类中的代码），而无需在派生类中重复它。
+
+列表 17.2 (fancytext.cpp) 提供了一个完整的程序，通过简单的类展示了我们如何使用继承来增强无序文本对象的行为。
+
+```
+Listing 17.2: fancytext.cpp
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+// 所有 Text 派生类的基类
+class Text {
+    string text;
+public:
+    // 从客户端提供的字符串创建 Text 对象
+    Text(const string& t) : text(t) {}
+
+    // 允许客户端查看文本字段
+    virtual string get() const {
+        return text;
+    }
+
+    // 将另一个字符串附加到现有文本的后面
+    void append(const string& extra) {
+        text += extra;
+    }
+};
+
+// 为文本提供最小的装饰
+class FancyText : public Text {
+    string left_bracket;
+    string right_bracket;
+    string connector;
+public:
+    // 客户端提供要包装的字符串以及一些装饰
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+
+    // 允许客户端查看装饰后的文本字段
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+```
+
+# 17.3 继承的使用
+
+列表 17.2 (fancytext.cpp) 的输出如下：
+
+```
+plain
+<<fancy>>
+FIXED
+--------------------
+plainA
+<<fancy***A>>
+FIXED
+--------------------
+plainB
+<<fancy***B>>
+FIXED
+```
+
+在列表 17.2 (fancytext.cpp) 中，Text 充了其他类的基类。**FancyText** 和 **FixedText**。一个 Text 对象封装了一个 `std::string` 对象，由于该字符串对象对于 **Text** 类是私有的，客户端无法直接获取该字符串对象。客户端可以通过 `get` 方法查看封装的字符串，并使用 `append` 方法以有限的方式对其进行修改。列表 17.2 (fancytext.cpp) 包含了两个新关键字：
+
+- **virtual** 关键字出现在 Text 类中 **get** 和 **append** 方法定义的前面。`virtual` 指定符表明 Text 类的设计者意图让派生类能够自定义 **get** 和 **append** 方法的行为。
+- **override** 关键字出现在 Fancy 类中 **get** 和 **append** 方法定义的末尾，以及 **FixedText** 类中 **append** 方法定义的末尾。这意味着这些方法的具体行为在某些方面与它们在 Text 类中的实现有所不同。**FixedText** 类仅重写了 **append** 方法；它在不作修改的情况下继承了 **get** 方法。
+
+考虑 **FancyText::get** 方法：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+}
+```
+
+**FancyText** 类更改了 get 方法。我们说 Fancy 类重写了它的 get 方法。`override` 关键字强调 **FancyText** 中 get 方法的类意图执行某些与 **Text** get 方法中的代码不同的操作。在这种情况下，**FancyText::get** 方法通过拼接三个字符串来构建一个字符串：第一个字符串是前缀括号字符串，第二个是封装的字符串，第三个是尾部括号字符串。注意第二个字符串是通过表达式获得的：
+
+```
+Text::get()
+```
+
+这调用了基类版本的 get 方法。我们说 FancyText::get 方法将其部分工作委托给了基类版本 **Text::get**。注意语句
+
+```cpp
+return left_bracket + text + right_bracket; // 非法
+```
+
+该语句是非合法的，因为 text 是基类的私有成员。类的 private不可访问。派生类没有特殊特权。为了执行委托，我们使用 `Text::get()` 而不是简单的 `get()`；不带限定的表达式 `get()` 等同于 `this->get`，它会调用 `FancyText::get`。这意味着在 FancyText::get 的定义中调用 get 是递归调用，这并不是我们想要的。
+
+在基类中声明的方法在派生类中自动是虚的，但 `override` 的使用使其与众不同。
+
+`override` 是 C++11 引入语言的。在 C++11 之前，当派生类中的方法签名与其基类中的虚方法签名相同时，该方法会隐式地重写其基类版本。问题在于程序员可能意图重写派生类中的方法，但写错了签名。导致的方法重载了原始方法而不是重写它。如果程序员使用了 `override` 且签名与基类版本不匹配，编译器将报告错误。`override` 指定符为程序员显式地通信其意图提供了一种方法。
+
+![](img/e326304bd50fbc4f7d5a64c1487eb635_471_0.png)
+
+为了后兼容，`override` 关键字是可选的。它的存在允许编译器验证该方法确实在重写基类中的虚方法。如果没有它，程序员必须注意忠实地重现要重写的方法签名。
+
+`override` 是一个上下文敏感的关键字，意味着它只在出现在方法头声明中时才是关键字。在其他上下文中，它的行为就像一个标识符。
+
+FixedText 类没有改变 FixedText 对象的方法工作方式；因此，FixedText::get 方法没有添加任何装饰。
+
+FancyText::append 方法通过在现有封装的字符串和要附加的字符串之间插入一个特殊的隔符字符串来重写 append 方法。类似于 FancyText::get，FancyText::append 方法将实际的拼接操作委托给其基类版本，FancyText 无法直接影响其文本字段。
+
+FixedText::append 方法不允许封装的文本字符串被修改。FancyText 的构造函数需要四个参数：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+```
+
+# 17.3 的使用
+
+继承是一种设计工具，它允许开发者利用现有类并产生新类，以提供增强的或不同的行为。这种增强或新的行为并不是以牺牲现有代码为代价的；也就是说，在使用继承时，程序员不需要接触基类中的任何源代码。此外，开发者可以利用代码（基类中的代码），而无需在派生类中重复它。
+
+列表 17.2 (fancytext.cpp) 提供了一个完整的程序，通过简单的类展示了我们如何使用继承来增强无序文本对象的行为。
+
+```
+Listing 17.2: fancytext.cpp
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+// 所有 Text 派生类的基类
+class Text {
+    string text;
+public:
+    // 从客户端提供的字符串创建 Text 对象
+    Text(const string& t) : text(t) {}
+
+    // 允许客户端查看文本字段
+    virtual string get() const {
+        return text;
+    }
+
+    // 将另一个字符串附加到现有文本的后面
+    void append(const string& extra) {
+        text += extra;
+    }
+};
+
+// 为文本提供最小的装饰
+class FancyText : public Text {
+    string left_bracket;
+    string right_bracket;
+    string connector;
+public:
+    // 客户端提供要包装的字符串以及一些装饰
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+
+    // 允许客户端查看装饰后的文本字段
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+```
+
+# 17.3 继承的使用
+
+列表 17.2 (fancytext.cpp) 的输出如下：
+
+```
+plain
+<<fancy>>
+FIXED
+--------------------
+plainA
+<<fancy***A>>
+FIXED
+--------------------
+plainB
+<<fancy***B>>
+FIXED
+```
+
+在列表 17.2 (fancytext.cpp) 中，Text 充了其他类的基类。**FancyText** 和 **FixedText**。一个 Text 对象封装了一个 `std::string` 对象，由于该字符串对象对于 **Text** 类是私有的，客户端无法直接获取该字符串对象。客户端可以通过 `get` 方法查看封装的字符串，并使用 `append` 方法以有限的方式对其进行修改。列表 17.2 (fancytext.cpp) 包含了两个新关键字：
+
+- **virtual** 关键字出现在 Text 类中 **get** 和 **append** 方法定义的前面。`virtual` 指定符表明 Text 类的设计者意图让派生类能够自定义 **get** 和 **append** 方法的行为。
+- **override** 关键字出现在 Fancy 类中 **get** 和 **append** 方法定义的末尾，以及 **FixedText** 类中 **append** 方法定义的末尾。这意味着这些方法的具体行为在某些方面与它们在 Text 类中的实现有所不同。**FixedText** 类仅重写了 **append** 方法；它在不作修改的情况下继承了 **get** 方法。
+
+考虑 **FancyText::get** 方法：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+}
+```
+
+**FancyText** 类更改了 get 方法。我们说 Fancy 类重写了它的 get 方法。`override` 关键字强调 **FancyText** 中 get 方法的类意图执行某些与 **Text** get 方法中的代码不同的操作。在这种情况下，**FancyText::get** 方法通过拼接三个字符串来构建一个字符串：第一个字符串是前缀括号字符串，第二个是封装的字符串，第三个是尾部括号字符串。注意第二个字符串是通过表达式获得的：
+
+```
+Text::get()
+```
+
+这调用了基类版本的 get 方法。我们说 FancyText::get 方法将其部分工作委托给了基类版本 **Text::get**。注意语句
+
+```cpp
+return left_bracket + text + right_bracket; // 非法
+```
+
+该语句是非合法的，因为 text 是基类的私有成员。类的 private不可访问。派生类没有特殊特权。为了执行委托，我们使用 `Text::get()` 而不是简单的 `get()`；不带限定的表达式 `get()` 等同于 `this->get`，它会调用 `FancyText::get`。这意味着在 FancyText::get 的定义中调用 get 是递归调用，这并不是我们想要的。
+
+在基类中声明的方法在派生类中自动是虚的，但 `override` 的使用使其与众不同。
+
+`override` 是 C++11 引入语言的。在 C++11 之前，当派生类中的方法签名与其基类中的虚方法签名相同时，该方法会隐式地重写其基类版本。问题在于程序员可能意图重写派生类中的方法，但写错了签名。导致的方法重载了原始方法而不是重写它。如果程序员使用了 `override` 且签名与基类版本不匹配，编译器将报告错误。`override` 指定符为程序员显式地通信其意图提供了一种方法。
+
+![](img/e326304bd50fbc4f7d5a64c1487eb635_471_0.png)
+
+为了后兼容，`override` 关键字是可选的。它的存在允许编译器验证该方法确实在重写基类中的虚方法。如果没有它，程序员必须注意忠实地重现要重写的方法签名。
+
+`override` 是一个上下文敏感的关键字，意味着它只在出现在方法头声明中时才是关键字。在其他上下文中，它的行为就像一个标识符。
+
+FixedText 类没有改变 FixedText 对象的方法工作方式；因此，FixedText::get 方法没有添加任何装饰。
+
+FancyText::append 方法通过在现有封装的字符串和要附加的字符串之间插入一个特殊的隔符字符串来重写 append 方法。类似于 FancyText::get，FancyText::append 方法将实际的拼接操作委托给其基类版本，FancyText 无法直接影响其文本字段。
+
+FixedText::append 方法不允许封装的文本字符串被修改。FancyText 的构造函数需要四个参数：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+```
+
+# 17.3 的使用
+
+继承是一种设计工具，它允许开发者利用现有类并产生新类，以提供增强的或不同的行为。这种增强或新的行为并不是以牺牲现有代码为代价的；也就是说，在使用继承时，程序员不需要接触基类中的任何源代码。此外，开发者可以利用代码（基类中的代码），而无需在派生类中重复它。
+
+列表 17.2 (fancytext.cpp) 提供了一个完整的程序，通过简单的类展示了我们如何使用继承来增强无序文本对象的行为。
+
+```
+Listing 17.2: fancytext.cpp
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+// 所有 Text 派生类的基类
+class Text {
+    string text;
+public:
+    // 从客户端提供的字符串创建 Text 对象
+    Text(const string& t) : text(t) {}
+
+    // 允许客户端查看文本字段
+    virtual string get() const {
+        return text;
+    }
+
+    // 将另一个字符串附加到现有文本的后面
+    void append(const string& extra) {
+        text += extra;
+    }
+};
+
+// 为文本提供最小的装饰
+class FancyText : public Text {
+    string left_bracket;
+    string right_bracket;
+    string connector;
+public:
+    // 客户端提供要包装的字符串以及一些装饰
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+
+    // 允许客户端查看装饰后的文本字段
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+```
+
+# 17.3 继承的使用
+
+列表 17.2 (fancytext.cpp) 的输出如下：
+
+```
+plain
+<<fancy>>
+FIXED
+--------------------
+plainA
+<<fancy***A>>
+FIXED
+--------------------
+plainB
+<<fancy***B>>
+FIXED
+```
+
+在列表 17.2 (fancytext.cpp) 中，Text 充了其他类的基类。**FancyText** 和 **FixedText**。一个 Text 对象封装了一个 `std::string` 对象，由于该字符串对象对于 **Text** 类是私有的，客户端无法直接获取该字符串对象。客户端可以通过 `get` 方法查看封装的字符串，并使用 `append` 方法以有限的方式对其进行修改。列表 17.2 (fancytext.cpp) 包含了两个新关键字：
+
+- **virtual** 关键字出现在 Text 类中 **get** 和 **append** 方法定义的前面。`virtual` 指定符表明 Text 类的设计者意图让派生类能够自定义 **get** 和 **append** 方法的行为。
+- **override** 关键字出现在 Fancy 类中 **get** 和 **append** 方法定义的末尾，以及 **FixedText** 类中 **append** 方法定义的末尾。这意味着这些方法的具体行为在某些方面与它们在 Text 类中的实现有所不同。**FixedText** 类仅重写了 **append** 方法；它在不作修改的情况下继承了 **get** 方法。
+
+考虑 **FancyText::get** 方法：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+}
+```
+
+**FancyText** 类更改了 get 方法。我们说 Fancy 类重写了它的 get 方法。`override` 关键字强调 **FancyText** 中 get 方法的类意图执行某些与 **Text** get 方法中的代码不同的操作。在这种情况下，**FancyText::get** 方法通过拼接三个字符串来构建一个字符串：第一个字符串是前缀括号字符串，第二个是封装的字符串，第三个是尾部括号字符串。注意第二个字符串是通过表达式获得的：
+
+```
+Text::get()
+```
+
+这调用了基类版本的 get 方法。我们说 FancyText::get 方法将其部分工作委托给了基类版本 **Text::get**。注意语句
+
+```cpp
+return left_bracket + text + right_bracket; // 非法
+```
+
+该语句是非合法的，因为 text 是基类的私有成员。类的 private不可访问。派生类没有特殊特权。为了执行委托，我们使用 `Text::get()` 而不是简单的 `get()`；不带限定的表达式 `get()` 等同于 `this->get`，它会调用 `FancyText::get`。这意味着在 FancyText::get 的定义中调用 get 是递归调用，这并不是我们想要的。
+
+在基类中声明的方法在派生类中自动是虚的，但 `override` 的使用使其与众不同。
+
+`override` 是 C++11 引入语言的。在 C++11 之前，当派生类中的方法签名与其基类中的虚方法签名相同时，该方法会隐式地重写其基类版本。问题在于程序员可能意图重写派生类中的方法，但写错了签名。导致的方法重载了原始方法而不是重写它。如果程序员使用了 `override` 且签名与基类版本不匹配，编译器将报告错误。`override` 指定符为程序员显式地通信其意图提供了一种方法。
+
+![](img/e326304bd50fbc4f7d5a64c1487eb635_471_0.png)
+
+为了后兼容，`override` 关键字是可选的。它的存在允许编译器验证该方法确实在重写基类中的虚方法。如果没有它，程序员必须注意忠实地重现要重写的方法签名。
+
+`override` 是一个上下文敏感的关键字，意味着它只在出现在方法头声明中时才是关键字。在其他上下文中，它的行为就像一个标识符。
+
+FixedText 类没有改变 FixedText 对象的方法工作方式；因此，FixedText::get 方法没有添加任何装饰。
+
+FancyText::append 方法通过在现有封装的字符串和要附加的字符串之间插入一个特殊的隔符字符串来重写 append 方法。类似于 FancyText::get，FancyText::append 方法将实际的拼接操作委托给其基类版本，FancyText 无法直接影响其文本字段。
+
+FixedText::append 方法不允许封装的文本字符串被修改。FancyText 的构造函数需要四个参数：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+```
+
+# 17.3 的的使用
+
+继承是一种设计工具，它允许开发者利用现有类并产生新类，以提供增强的或不同的行为。这种增强或新的行为并不是以牺牲现有代码为代价的；也就是说，在使用继承时，程序员不需要接触基类中的任何源代码。此外，开发者可以利用代码（基类中的代码），而无需在派生类中重复它。
+
+列表 17.2 (fancytext.cpp) 提供了一个完整的程序，通过简单的类展示了我们如何使用继承来增强无序文本对象的行为。
+
+```
+Listing 17.2: fancytext.cpp
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+// 所有 Text 派生类的基类
+class Text {
+    string text;
+public:
+    // 从客户端提供的字符串创建 Text 对象
+    Text(const string& t) : text(t) {}
+
+    // 允许客户端查看文本字段
+    virtual string get() const {
+        return text;
+    }
+
+    // 将另一个字符串附加到现有文本的后面
+    void append(const string& extra) {
+        text += extra;
+    }
+};
+
+// 为文本提供最小的装饰
+class FancyText : public Text {
+    string left_bracket;
+    string right_bracket;
+    string connector;
+public:
+    // 客户端提供要包装的字符串以及一些装饰
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+
+    // 允许客户端查看装饰后的文本字段
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+```
+
+# 17.3 继承的使用
+
+列表 17.2 (fancytext.cpp) 的输出如下：
+
+```
+plain
+<<fancy>>
+FIXED
+--------------------
+plainA
+<<fancy***A>>
+FIXED
+--------------------
+plainB
+<<fancy***B>>
+FIXED
+```
+
+在列表 17.2 (fancytext.cpp) 中，Text 充了其他类的基类。**FancyText** 和 **FixedText**。一个 Text 对象封装了一个 `std::string` 对象，由于该字符串对象对于 **Text** 类是私有的，客户端无法直接获取该字符串对象。客户端可以通过 `get` 方法查看封装的字符串，并使用 `append` 方法以有限的方式对其进行修改。列表 17.2 (fancytext.cpp) 包含了两个新关键字：
+
+- **virtual** 关键字出现在 Text 类中 **get** 和 **append** 方法定义的前面。`virtual` 指定符表明 Text 类的设计者意图让派生类能够自定义 **get** 和 **append** 方法的行为。
+- **override** 关键字出现在 Fancy 类中 **get** 和 **append** 方法定义的末尾，以及 **FixedText** 类中 **append** 方法定义的末尾。这意味着这些方法的具体行为在某些方面与它们在 Text 类中的实现有所不同。**FixedText** 类仅重写了 **append** 方法；它在不作修改的情况下继承了 **get** 方法。
+
+考虑 **FancyText::get** 方法：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+}
+```
+
+**FancyText** 类更改了 get 方法。我们说 Fancy 类重写了它的 get 方法。`override` 关键字强调 **FancyText** 中 get 方法的类意图执行某些与 **Text** get 方法中的代码不同的操作。在这种情况下，**FancyText::get** 方法通过拼接三个字符串来构建一个字符串：第一个字符串是前缀括号字符串，第二个是封装的字符串，第三个是尾部括号字符串。注意第二个字符串是通过表达式获得的：
+
+```
+Text::get()
+```
+
+这调用了基类版本的 get 方法。我们说 FancyText::get 方法将其部分工作委托给了基类版本 **Text::get**。注意语句
+
+```cpp
+return left_bracket + text + right_bracket; // 非法
+```
+
+该语句是非合法的，因为 text 是基类的私有成员。类的 private不可访问。派生类没有特殊特权。为了执行委托，我们使用 `Text::get()` 而不是简单的 `get()`；不带限定的表达式 `get()` 等同于 `this->get`，它会调用 `FancyText::get`。这意味着在 FancyText::get 的定义中调用 get 是递归调用，这并不是我们想要的。
+
+在基类中声明的方法在派生类中自动是虚的，但 `override` 的使用使其与众不同。
+
+`override` 是 C++11 引入语言的。在 C++11 之前，当派生类中的方法签名与其基类中的虚方法签名相同时，该方法会隐式地重写其基类版本。问题在于程序员可能意图重写派生类中的方法，但写错了签名。导致的方法重载了原始方法而不是重写它。如果程序员使用了 `override` 且签名与基类版本不匹配，编译器将报告错误。`override` 指定符为程序员显式地通信其意图提供了一种方法。
+
+![](img/e326304bd50fbc4f7d5a64c1487eb635_471_0.png)
+
+为了后兼容，`override` 关键字是可选的。它的存在允许编译器验证该方法确实在重写基类中的虚方法。如果没有它，程序员必须注意忠实地重现要重写的方法签名。
+
+`override` 是一个上下文敏感的关键字，意味着它只在出现在方法头声明中时才是关键字。在其他上下文中，它的行为就像一个标识符。
+
+FixedText 类没有改变 FixedText 对象的方法工作方式；因此，FixedText::get 方法没有添加任何装饰。
+
+FancyText::append 方法通过在现有封装的字符串和要附加的字符串之间插入一个特殊的隔符字符串来重写 append 方法。类似于 FancyText::get，FancyText::append 方法将实际的拼接操作委托给其基类版本，FancyText 无法直接影响其文本字段。
+
+FixedText::append 方法不允许封装的文本字符串被修改。FancyText 的构造函数需要四个参数：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+```
+
+# 17.3 的的使用
+
+继承是一种设计工具，它允许开发者利用现有类并产生新类，以提供增强的或不同的行为。这种增强或新的行为并不是以牺牲现有代码为代价的；也就是说，在使用继承时，程序员不需要接触基类中的任何源代码。此外，开发者可以利用代码（基类中的代码），而无需在派生类中重复它。
+
+列表 17.2 (fancytext.cpp) 提供了一个完整的程序，通过简单的类展示了我们如何使用继承来增强无序文本对象的行为。
+
+```
+Listing 17.2: fancytext.cpp
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+// 所有 Text 派生类的基类
+class Text {
+    string text;
+public:
+    // 从客户端提供的字符串创建 Text 对象
+    Text(const string& t) : text(t) {}
+
+    // 允许客户端查看文本字段
+    virtual string get() const {
+        return text;
+    }
+
+    // 将另一个字符串附加到现有文本的后面
+    void append(const string& extra) {
+        text += extra;
+    }
+};
+
+// 为文本提供最小的装饰
+class FancyText : public Text {
+    string left_bracket;
+    string right_bracket;
+    string connector;
+public:
+    // 客户端提供要包装的字符串以及一些装饰
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+
+    // 允许客户端查看装饰后的文本字段
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+```
+
+# 17.3 继承的使用
+
+列表 17.2 (fancytext.cpp) 的输出如下：
+
+```
+plain
+<<fancy>>
+FIXED
+--------------------
+plainA
+<<fancy***A>>
+FIXED
+--------------------
+plainB
+<<fancy***B>>
+FIXED
+```
+
+在列表 17.2 (fancytext.cpp) 中，Text 充了其他类的基类。**FancyText** 和 **FixedText**。一个 Text 对象封装了一个 `std::string` 对象，由于该字符串对象对于 **Text** 类是私有的，客户端无法直接获取该字符串对象。客户端可以通过 `get` 方法查看封装的字符串，并使用 `append` 方法以有限的方式对其进行修改。列表 17.2 (fancytext.cpp) 包含了两个新关键字：
+
+- **virtual** 关键字出现在 Text 类中 **get** 和 **append** 方法定义的前面。`virtual` 指定符表明 Text 类的设计者意图让派生类能够自定义 **get** 和 **append** 方法的行为。
+- **override** 关键字出现在 Fancy 类中 **get** 和 **append** 方法定义的末尾，以及 **FixedText** 类中 **append** 方法定义的末尾。这意味着这些方法的具体行为在某些方面与它们在 Text 类中的实现有所不同。**FixedText** 类仅重写了 **append** 方法；它在不作修改的情况下继承了 **get** 方法。
+
+考虑 **FancyText::get** 方法：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+}
+```
+
+**FancyText** 类更改了 get 方法。我们说 Fancy 类重写了它的 get 方法。`override` 关键字强调 **FancyText** 中 get 方法的类意图执行某些与 **Text** get 方法中的代码不同的操作。在这种情况下，**FancyText::get** 方法通过拼接三个字符串来构建一个字符串：第一个字符串是前缀括号字符串，第二个是封装的字符串，第三个是尾部括号字符串。注意第二个字符串是通过表达式获得的：
+
+```
+Text::get()
+```
+
+这调用了基类版本的 get 方法。我们说 FancyText::get 方法将其部分工作委托给了基类版本 **Text::get**。注意语句
+
+```cpp
+return left_bracket + text + right_bracket; // 非法
+```
+
+该语句是非合法的，因为 text 是基类的私有成员。类的 private不可访问。派生类没有特殊特权。为了执行委托，我们使用 `Text::get()` 而不是简单的 `get()`；不带限定的表达式 `get()` 等同于 `this->get`，它会调用 `FancyText::get`。这意味着在 FancyText::get 的定义中调用 get 是递归调用，这并不是我们想要的。
+
+在基类中声明的方法在派生类中自动是虚的，但 `override` 的使用使其与众不同。
+
+`override` 是 C++11 引入语言的。在 C++11 之前，当派生类中的方法签名与其基类中的虚方法签名相同时，该方法会隐式地重写其基类版本。问题在于程序员可能意图重写派生类中的方法，但写错了签名。导致的方法重载了原始方法而不是重写它。如果程序员使用了 `override` 且签名与基类版本不匹配，编译器将报告错误。`override` 指定符为程序员显式地通信其意图提供了一种方法。
+
+![](img/e326304bd50fbc4f7d5a64c1487eb635_471_0.png)
+
+为了后兼容，`override` 关键字是可选的。它的存在允许编译器验证该方法确实在重写基类中的虚方法。如果没有它，程序员必须注意忠实地重现要重写的方法签名。
+
+`override` 是一个上下文敏感的关键字，意味着它只在出现在方法头声明中时才是关键字。在其他上下文中，它的行为就像一个标识符。
+
+FixedText 类没有改变 FixedText 对象的方法工作方式；因此，FixedText::get 方法没有添加任何装饰。
+
+FancyText::append 方法通过在现有封装的字符串和要附加的字符串之间插入一个特殊的隔符字符串来重写 append 方法。类似于 FancyText::get，FancyText::append 方法将实际的拼接操作委托给其基类版本，FancyText 无法直接影响其文本字段。
+
+FixedText::append 方法不允许封装的文本字符串被修改。FancyText 的构造函数需要四个参数：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+```
+
+# 17.3 的的使用
+
+继承是一种设计工具，它允许开发者利用现有类并产生新类，以提供增强的或不同的行为。这种增强或新的行为并不是以牺牲现有代码为代价的；也就是说，在使用继承时，程序员不需要接触基类中的任何源代码。此外，开发者可以利用代码（基类中的代码），而无需在派生类中重复它。
+
+列表 17.2 (fancytext.cpp) 提供了一个完整的程序，通过简单的类展示了我们如何使用继承来增强无序文本对象的行为。
+
+```
+Listing 17.2: fancytext.cpp
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+// 所有 Text 派生类的基类
+class Text {
+    string text;
+public:
+    // 从客户端提供的字符串创建 Text 对象
+    Text(const string& t) : text(t) {}
+
+    // 允许客户端查看文本字段
+    virtual string get() const {
+        return text;
+    }
+
+    // 将另一个字符串附加到现有文本的后面
+    void append(const string& extra) {
+        text += extra;
+    }
+};
+
+// 为文本提供最小的装饰
+class FancyText : public Text {
+    string left_bracket;
+    string right_bracket;
+    string connector;
+public:
+    // 客户端提供要包装的字符串以及一些装饰
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+
+    // 允许客户端查看装饰后的文本字段
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+```
+
+# 17.3 继承的使用
+
+列表 17.2 (fancytext.cpp) 的输出如下：
+
+```
+plain
+<<fancy>>
+FIXED
+--------------------
+plainA
+<<fancy***A>>
+FIXED
+--------------------
+plainB
+<<fancy***B>>
+FIXED
+```
+
+在列表 17.2 (fancytext.cpp) 中，Text 充了其他类的基类。**FancyText** 和 **FixedText**。一个 Text 对象封装了一个 `std::string` 对象，由于该字符串对象对于 **Text** 类是私有的，客户端无法直接获取该字符串对象。客户端可以通过 `get` 方法查看封装的字符串，并使用 `append` 方法以有限的方式对其进行修改。列表 17.2 (fancytext.cpp) 包含了两个新关键字：
+
+- **virtual** 关键字出现在 Text 类中 **get** 和 **append** 方法定义的前面。`virtual` 指定符表明 Text 类的设计者意图让派生类能够自定义 **get** 和 **append** 方法的行为。
+- **override** 关键字出现在 Fancy 类中 **get** 和 **append** 方法定义的末尾，以及 **FixedText** 类中 **append** 方法定义的末尾。这意味着这些方法的具体行为在某些方面与它们在 Text 类中的实现有所不同。**FixedText** 类仅重写了 **append** 方法；它在不作修改的情况下继承了 **get** 方法。
+
+考虑 **FancyText::get** 方法：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    string get() const override {
+        return left_bracket + Text::get() + right_bracket;
+    }
+}
+```
+
+**FancyText** 类更改了 get 方法。我们说 Fancy 类重写了它的 get 方法。`override` 关键字强调 **FancyText** 中 get 方法的类意图执行某些与 **Text** get 方法中的代码不同的操作。在这种情况下，**FancyText::get** 方法通过拼接三个字符串来构建一个字符串：第一个字符串是前缀括号字符串，第二个是封装的字符串，第三个是尾部括号字符串。注意第二个字符串是通过表达式获得的：
+
+```
+Text::get()
+```
+
+这调用了基类版本的 get 方法。我们说 FancyText::get 方法将其部分工作委托给了基类版本 **Text::get**。注意语句
+
+```cpp
+return left_bracket + text + right_bracket; // 非法
+```
+
+该语句是非合法的，因为 text 是基类的私有成员。类的 private不可访问。派生类没有特殊特权。为了执行委托，我们使用 `Text::get()` 而不是简单的 `get()`；不带限定的表达式 `get()` 等同于 `this->get`，它会调用 `FancyText::get`。这意味着在 FancyText::get 的定义中调用 get 是递归调用，这并不是我们想要的。
+
+在基类中声明的方法在派生类中自动是虚的，但 `override` 的使用使其与众不同。
+
+`override` 是 C++11 引入语言的。在 C++11 之前，当派生类中的方法签名与其基类中的虚方法签名相同时，该方法会隐式地重写其基类版本。问题在于程序员可能意图重写派生类中的方法，但写错了签名。导致的方法重载了原始方法而不是重写它。如果程序员使用了 `override` 且签名与基类版本不匹配，编译器将报告错误。`override` 指定符为程序员显式地通信其意图提供了一种方法。
+
+![](img/e326304bd50fbc4f7d5a64c1487eb635_471_0.png)
+
+为了后兼容，`override` 关键字是可选的。它的存在允许编译器验证该方法确实在重写基类中的虚方法。如果没有它，程序员必须注意忠实地重现要重写的方法签名。
+
+`override` 是一个上下文敏感的关键字，意味着它只在出现在方法头声明中时才是关键字。在其他上下文中，它的行为就像一个标识符。
+
+FixedText 类没有改变 FixedText 对象的方法工作方式；因此，FixedText::get 方法没有添加任何装饰。
+
+FancyText::append 方法通过在现有封装的字符串和要附加的字符串之间插入一个特殊的隔符字符串来重写 append 方法。类似于 FancyText::get，FancyText::append 方法将实际的拼接操作委托给其基类版本，FancyText 无法直接影响其文本字段。
+
+FixedText::append 方法不允许封装的文本字符串被修改。FancyText 的构造函数需要四个参数：
+
+```cpp
+class FancyText : public Text {
+public:
+    //
+    FancyText(const string t, const string& left,
+              const string& right, const string& conn)
+    : Text(t), left_bracket(left),
+      right_bracket(right), connector(conn) {}
+```
+

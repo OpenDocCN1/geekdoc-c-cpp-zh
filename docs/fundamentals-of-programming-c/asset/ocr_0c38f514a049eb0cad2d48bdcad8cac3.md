@@ -1,0 +1,1 @@
+Observe that the result is a floating-point value, so you should use floating-point arithmetic to compute the answers for this problem.
