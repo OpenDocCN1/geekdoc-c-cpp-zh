@@ -1,0 +1,267 @@
+
+# Index 937
+
+- Empty trees, 802
+- Encapsulation, 3, 258–259, 264, 473
+  - test for, 265–266
+  - end function, 793, 796, 863
+- End of line, 383
+
+```
+#endif directive, 484
+Ending, programs, 30
+endl, 29–30
+```
+- End-of-file marker, 530
+- Enumeration type, 66
+- eof function, 529–533
+- Equality (=) operator, 59, 723, 895
+  - with C-strings, 372–374
+- string class, 404
+- Equality testing, C-strings, 373–374
+- Error messages, stack overflow, 583
+- Escape sequences, 17, 18
+- Evaluating
+  - arithmetic expressions, 49
+  - Boolean expressions, 48–50, 54–55
+  - Evaluation complete, 53, 555
+  - short-circuit, 53, 55, 892
+- Exception classes, 836–837, 841
+  - hierarchies, 850
+- Exception handlers, 832
+- Exception handling
+  - basics of, 827–846
+  - catch blocks, 830, 832–834, 836, 840–841
+  - defining exception classes, 836–837
+  - example of, 827–830
+  - introduction to, 826
+  - multiple exceptions, 836, 838–841
+  - try-catch blocks, 849
+  - programming techniques for, 846–851
+  - throw statement, 831–832, 833
+  - try blocks, 830–831, 832–833, 836
+  - try-catch mechanism, 834–835
+- Exception specification, 843–845
+  - multiple, 836, 838–841
+  - use of, 849
+  - rethrowing, 851
+  - throwing, 826, 831–832
+    - in a function, 841–843
+    - uncaught, 848–849
+    - when to throw, 847–848
+- exit function, 104, 105–106
+- Exponents, 16
+- Expressions
+  - arithmetic, 19–21, 28
+  - assignment statements, as 11
+  - comma, 66
+  - comma operator in, 72–73
+  - conditional operator, 67
+  - comma, 62
+  - increment operator in, 73
+  - order of evaluation, 27
+  - external file name, 519–520
+  - extraction (>) operator, 396, 399–400, 519, 547
+  - overloading, 346–352, 354–355
+
+# F
+
+- abs function, 103, 104
+- fail function, 526, 527
+- false value, 15, 17, 49, 50
+- file input and output (I/O), 380, 517–522
+  - formatting, 534–544
+  - introduction to, 83–87, 516
+  - random access, 556–557
+
+# Files
+
+- appending, 522–524
+- application, 479–480, 481
+  - checking for end of, 529–533
+  - checking for open, 526
+  - close, 520
+  - driver, 479–480
+  - editing, 544–546
+  - external names, 519–520
+  - reader, 473–474, 496
+  - implementation, 473–476–479, 481, 497
+  - interface, 473–475, 479, 481
+  - linking, 479
+  - names, as input, 533–534
+  - opening, 518, 524–526
+  - random access to, 556–557
+  - writing, 517–518
+- fill function, 540
+- first-out, 895–899
+- First-in/first-out, 770, 773
+- Fixed-point notation, 535, 537
+- float type, 9, 16
+- Floating-point division, 21–23, 111
+- Floating-point numbers, 8–9, 20, 103
+- Floating-point notation, 16, 30–32
+- formatting, 109
+- floor function, 104, 115–116
+- Boolean expressions, 46–56
+- branching mechanisms, 56–67
+- break statement, 80–81
+- continue statements, 80, 82–83
+- file input, 83–87
+- loops, 67
+- flush function, 520, 522
+- for statements, 72–74
+- for arrays, 189
+- variables declared in, 133
+- Formal parameters, 112, 114, 115
+- Formatting, 30–312
+- output, 542–544
+- with stream functions, 534–540
+- Forward declaration, 341–342, 776
+- Forward iterators, 868, 897
+- Forest manager, 429, 431, 747
+- Friend classes, 341–343, 774–777
+- Friend functions, 338–343, 717
+- friend keyword, 338
+- Front of list, 770
+- fstream class, 555–557
+- <fstream> library, 518, 556
+- Function calls, 101, 106, 154
+- in branching and loop statements, 132–133
+- void, 119–120
+- Function prototype, 112, 120
+- Function templates, 694–707
+  - calling, 698
+  - class within, 709
+  - compiling, 698–699
+  - declaring, 700–701
+  - defining, 700–701
+  - generic algorithms, 889–902
+  - generic sorting function example, 701–705
+  - syntax, 695–698
+  - type parameters, 696, 698
+  - with, in namespace, 705–706
+- Functions, 4, 100
+  - specific functions in <cstring> library, 374–376
+  - accessor, 262–263
+  - arguments, 101, 104–105, 117
+  - arrays as, 196–199
+  - indexed variables as, 195–196
+  - arrays in, 195–207
+  - body, 112
+  - boolean values returned by, 118–119
+  - calling, 115–117, 255
+  - character manipulation, 389–392
+  - declaration, 112, 114, 120
+  - definition, 112–115, 119–121, 301–302
+  - friend, 336, 338, 717
+  - hash, 777, 778
+  - headers, 112
+  - helping, 497–502, 504
+  - inline, 301–303
+  - invocation, 101
+  - iterative version, 584, 601–602
+  - library, 921–927
+  - local variables, 125–127
+  - manipulators, 538–539
+  - mathematical, 890–891
+  - member, 252–258, 332–334, 382–384, 377–388, 620–621
+  - redefining, 631–632
+  - mutator, 263
+- names
+- Greater (>), 48
+  - overloading, 163–171
+- Greater than equal to (>=), 48
+  - overloading, 632, 696
+  - "Has a relationship", 650
+  - parameters, 112, 114, 115
+- Hash functions, 777, 788
+- Hash maps, 777
+  - private member, 628
+  - with chaining, 779
+  - procedural architecture, 127–128
+  - programmer-defined, 111–124
+  - random number generator, 107–111, 113
+  - recursive, 132, 585–599
+  - hash_map_class, 887
+  - hash_set_class, 887
+  - HashTable, 780–883
+  - recursive void, 573–585
+- Header files, 473–474, 496, 929
+  - function, 112
+  - head function, 741, 742, 743
+  - static, 303, 306
+- Helping functions, 497–502, 504
+- Hierarchical structures, 247–249
+  - testing and debugging, 173–176
+  - exception class, 850
+  - that are not inherited, 633
+  - that return a value, 100–105, 112–114, 352–354, 463, 585–593
+  - that return an array, 202, 442–444
+  - virtual, 662–683
+  - void, 100, 107–119, 122, 573–585
+- Identifiers (Integrated Development Environments)
+  - if statements, 61, 80
+  - if-else, 6, 56–58, 529
+  - Garbage collection, 3
+  - Generic algorithms, 889–902
+  - generic sorting, 701–705
+  - ifstream class, 84–86, 518, 524, 527, 547–558, 388
+  - get function, 382–384, 386–387
+  - ignore function, 388
+  - getline function, 379–380, 399–401
+  - Illegal array index, 192
+  - getLink function, 774
+- Implementation, 265, 473
+  - Implementation file, 473, 476–479, 481, 497
+- Global namespace, 487, 502
+- Global variables, 128–131
+- Inadvertent local variables, 158–159
+- include directives, 37, 101–102, 104
+  - in separate compilation, 479, 483
+- Increment (++) operator, 25, 71, 713
+- iterators, 865
+  - overloading, 355–358, 793, 859
+  - with pointers, 61
+- Indented statements, 61
+- Indexed variables, 187, 190–191, 218
+  - as function arguments, 95–196
+  - for C-string variables, 371
+- Indexes
+  - array, 189, 218
+  - out of range, 192
+- Inequalities, strings of, 47
+- Infinite loops, 77–78
+- Infinite recursion, 580–581, 594, 600
+- Information hiding, 128, 258–259, 264
+- Inheritance
+  - base classes, 517–552
+  - derived classes, 514–516
+  - inherited members, 617–624
+  - Initialization section, 279
+  - arrays, 192–193
+  - C-string variables, 370–371
+  - static variables, 303
+- Inline functions, 301–303
+- In-order processing, 502
+  - character, 381–382
+  - checking, with newline, 384–386
+  - C-string, 379–381
+  - file names as, 533–534
+  - with string class, 396–397
+  - unexpected, 386–387
+- using cin, 32–34
+- Input (>>) operator, 379
+- Input iterators, 861
+- Input member functions, 921–927
+- Input streams, 83–86, 517–519, 547–548
+- insert function, 742, 744–745, 808
+- Inserting nodes, 740–745
+- Insertion (<<) operator, 28, 379
+- inStream, 527
+- int type, 4, 8, 19
+  - assigning to double variables, 15
+  - constants, 16
+  - Integer division, 21–23, 111
+  - Integers, 20
+  - types, 8–10
+  - unsigned, 10

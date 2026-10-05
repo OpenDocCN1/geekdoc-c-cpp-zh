@@ -1,0 +1,31 @@
+# Linked List Applications 769
+
+# EXAMPLE: (continued)
+
+variable top is a pointer that points to the head of the linked list. The pointer top serves the same purpose as the pointer head did in our previous discussions of linked lists.
+
+Self-Test Exercise 13 is to write the definition of the member function push. However, we have already given the algorithm for this task. The code for the push member function is essentially the same as the function headInsert shown in Display 17.15, except that in the function push we use a pointer top in place of a pointer named head.
+
+An empty stack is just an empty linked list, so an empty stack is implemented by setting the pointer top to NULL. Once that NULL represents the empty stack, the implementations of the default constructor and the member function are obvious.
+
+The definition of the copy constructor is a bit more complicated and does not use any techniques we have not already discussed. The details are left to Self-Test Exercise 14.
+
+The pop member function first checks to see if the stack is empty. If it is not, it proceeds to remove the top character in the stack. It sets the local variable result to the top symbol on the stack as:
+
+```
+result = top->getData();
+```
+
+After the data in the top node is saved in the variable result, the pointer top is moved to the next node in the linked list, effectively removing the top node from the list. The pointer top is moved with the statement
+
+```
+top = top->getLink();
+```
+
+However, before the pointer is moved, a temporary pointer, called discard, is positioned so that it points to the node that is about to be removed from the list. The storage for the removed node can then be recycled with the following call to delete:
+
+```
+delete discard;
+```
+
+Each node that is removed from the linked list by the member function pop has its memory recycled with a call to delete, so that the destructor needs to do remove each item from the stack with a call to pop. Each node will then have its memory returned to the freelore for recycling.

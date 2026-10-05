@@ -1,0 +1,23 @@
+# Linked List Applications
+
+from Node, and (2) giving the definition of Node within the definition of Queue, so that Node is a local class (template) definition. (Protected inheritance is discussed in existing Chapter 14, and classes defined locally within a class are discussed in Chapter 7.)
+
+# EXAMPLE: Hash Tables with Chaining
+
++   - hash table
+- hash map
+
+A hash table or hash map is a data structure that efficiently stores and retrieves data from memory. There are many ways to construct a hash table; in this section we will use an array in combination with linked lists. In Section 17.1, we searched a linked list by iterating through every node in the list looking for a target. This process might require the examination of every node in the list, a potentially time-consuming process if the list is long. In contrast, a hash table has the potential to get the target very quickly, although in worst-case (but highly unlikely) scenario our implementation would run as slowly as using a linked list.
+
+An object is stored in a hash table by associating with a key. Given the key, we can retrieve the object. Ideally, the key is unique to each object. If the object has intrinsically unique key, then we can use a hash function to compute one. In such cases the hash table functions multiple
+
++   - hash function
+
+For example, let us use a hash table to store a dictionary of words. Such a hash table might be useful to make a spell-checker—words missing from the hash table might not be properly corrected. We will construct the hash table with a fixed array, each array element references a linked list. The key computed by the hash function will map to the index of the array. The actual data will be stored in a linked list at the hash list value's index. Display 17.23 illustrates the idea with a fixed array of ten entries. Initially each entry of the array hasharray contains a reference to an empty linked list. First, we add the word “cat,” which has been assigned the key or hash value of 2 (we will show how this was computed shortly). Next, we add “dog” and “bird,” which are assigned hash values of 4 and 7, respectively. Each of these strings is inserted as the head of the linked list using the hash value as the index in the array. Finally, we add “turtle,” which also has a hash of 2. Since “cat” is already stored at index 2, we now have a collision. Both “turtle” and “cat” map to the same index in the array. Using the existing linked list, there are now two nodes at index 2: “turtle” and “cat.”
+
++   - collision
+- chaining
+
+To retrieve a value from the hash table, we first compute the hash value of the target. Next we sequentially search the linked list that is stored at hasharray[hashvalue] for the target. If the target is not found in this linked list, the target is not stored in the hash table. If the size of the linked list is small, the retrieval process will be quick.
+
+(continued)

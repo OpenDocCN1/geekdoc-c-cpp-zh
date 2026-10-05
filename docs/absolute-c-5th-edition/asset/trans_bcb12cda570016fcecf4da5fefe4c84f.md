@@ -1,0 +1,195 @@
+
+
+# 节点与链表 761
+
+显示 17.14 链表库接口（部分 2/2）
+
+```cpp
+template<class T>
+void deleteNode(Node<T>* pointer);
+// 前置条件：指针指向的节点在链表中 
+// 之后至少有一个节点。
+// 后置条件：指针所指向的节点之后的节点 
+// 已从链表中移除，并将其存储空间
+// 返回到堆存储区。
+```
+
+```cpp
+template<class T>
+void deleteFirst(Node<T>*& head);
+// 前置条件：指针 head 指向链表中的
+// 至少一个节点
+// 后置条件：head 指向的节点已从
+// 链表中移除，其存储空间返回到堆存储区。
+```
+
+```cpp
+template<class T>
+Node<T>* search(Node<T>*, const T& target);
+// 前置条件：指针 head 指向链表的头部。
+// 最后一个节点中的指针变量为 NULL。
+// == 被定义为相等的准则。
+// 如果列表为空，则 head 为 NULL。
+// 返回一个指向第一个与 target 相等的节点的
+// 指针。如果没有等于 target，
+// 则函数返回 NULL。
+} // LinkedListsSavitch
+```
+
+```cpp
+#endif //LISTTOOLS_H
+```
+
+显示 17.15 链表库实现（部分 1/2）
+
+```cpp
+// 这是实现文件 listtools.cpp。该文件包含
+// 在 listtools.h 中声明的函数的函数定义。
+#include <cdef>
+#include "listtools.h"
+```
+
+```cpp
+namespace LinkedListsSavitch
+{
+template<class T>
+void headInsert(Node<T>*& head, const T& theData)
+{
+    head = new Node<T>(theData, head);
+}
+```
+
+# 762 第 17 章 链式数据结构
+
+显示 17.15 链表库的实现文件（部分 2/2）
+
+```cpp
+12   template<class T>
+13   void insert(Node<T>* afterMe, const T&theData)
+14   {
+15       afterMe->setLink(new Node<T>(theData, afterMe->getLink( )));
+16   }
+```
+
+```cpp
+17   template<class T>
+18   void deleteNode(Node<T>* before)
+19   {
+20       Node<T>* discard;
+21       discard = before->setLink(before->getLink( ));
+22       delete discard;
+23   }
+```
+
+```cpp
+25   template<class T>
+26   void deleteFirstNode(Node<T>*& head)
+27   {
+28       Node<T>* discard;
+29       discard = head;
+30       head = head->getLink();
+31       delete discard;
+32   }
+```
+
+```cpp
+33   // 使用 cdef
+34   template<class T>
+35   Node<T>* search(Node<T>* head, const T& target)
+36   {
+37       Node<T>* here = head;
+38       if (here == NULL) // 如果列表为空
+39       {
+40           return NULL;
+41       } else
+42       {
+43           while (here->getData() != target && here->getLink() != NULL)
+44               here = here->getLink();
+45           if (here->getData() == target)
+46               return here;
+47           else
+48               return NULL;
+49       }
+50   }
+51 //LinkedListSavitch
+```
+
+## 17.2 链表应用
+
+但许多先在前的必在后，许多后在后的必在先。
+
+> > 马太福音 19:30
+
+先到先得
+
+一个常见的（且更世俗的）俗语
+
+链表有许多应用。本节仅介绍它们用法的几个小例子——即所有以链表作为实现核心的常用数据结构。
+
+## 示例：栈模板类
+
+栈（Stack）是一种按照数据存储顺序的相反顺序检索数据的数据结构。假设你向栈中放入字母 'A'、'B'然后是 'C'。当你从栈中取出这些字母时，它们将按 'C'、'B' 然后是 'A' 的顺序被移除。栈的用法如图 17.16 所示。如该栈所示，你可以将栈想象成地面上的一个洞。要从栈中取出东西，你必须先移除你想要的元素之上的物品。因此，栈通常被称为后入先出（last-in/first-out）数据结构。
+
+显示 17.16 栈
+
+![](img/f4b6fc3d28ec32a6e3350e2846d6e0d1_792_0.png)
+
+# 第 17 章 链式数据结构
+
+## 示例（续）
+
+栈用于许多语言处理任务。第13章讨论了计算机系统如何使用栈来跟踪 C++ 函数调用。然而，在这里我们将关注于一个非常简单的应用。在这个示例中，我们的目标是展示如何使用链式技术来实现特定的数据结构，例如栈。
+
+我们栈类的接口在显示 17.17 中。这是一个模板，包含一个类型参数 $\tau$，用于栈中存储的数据类型。栈中存储的一个项是一个类型为 $\tau$ 的值。在我们展示的示例中，$\tau$ 被替换为类型 `char`。在大多数应用中，栈中的项可能是一个结构或类对象。每个记录（类型为 $\tau$ 的项）作为调用帧（called frame）存储在栈中，这解释了为什么我们有时在栈模板类的定义中使用 `stackFrame` 作为标识符。你对栈可以执行两个基本操作：向栈中添加项和从栈中移除项。添加项被称为“推”（push）入栈，因此我们这样命名了执行此操作的成员函数。从栈中移除项被称为“弹出”（pop）栈，因此我们这样命名了执行此操作的成员函数。
+
+`push` 和 `pop` 的名称源于一种栈的可视化机制。栈类似于有时用于在食堂放置盘子的机制。该机制将盘子存储在台面的洞中。盘子下方有一个弹簧，其张力经过调整，使得顶部的盘子凸在台面以上。如果这种机制用作栈，将违反某些物理定律（但是一个很好的比喻）。向栈中添加盘子，你将其放在其他盘子上面。当你移除一个盘子时，下面的盘子会弹出。
+
+显示 17.18 展示了一个使用栈类的简单程序。该程序一次读取一个字符并放入栈中。数据按照进入栈的相反顺序从栈中移除并显示到屏幕。我们在应用程序中包含了栈类的实现，正如我们通常对模板类这样做。在对栈类的实现之前，我们无法运行甚至编译程序。
+
+栈类的成员函数定义在显示 17.19 中。我们的栈实现为链表，链表的头部作为栈的顶部。
+
+显示 17.17 栈模板类接口文件
+
+```cpp
+// 这是头文件 stack.h。这是栈类的接口，它是一个用于类型 T 项栈的模板类。
+#ifndef STACK_H
+#define STACK_H
+namespace StackSavitch {
+    template<class T>
+    class Node {
+    public:
+        Node(T theData, Node<T>* theLink) : theData(theData), link(theLink){
+            Node<T>* getLink() const { return link; }
+            T getData() const { return data; }
+            void setData(const T& theData) { data = theData; }
+            void setLink(Node<T>* pointer) { link = pointer; }
+        }
+    private:
+        T data;
+        Node<T>* *link;
+    };
+    template<class T>
+    class Stack {
+    public:
+        Stack();
+        // 将对象初始化为空栈。
+        Stack(Stack<T>& other)& operator=(const Stack<T>& rightSide);
+        virtual ~Stack();
+        void push(T stackFrame);
+        // 后置条件：stackFrame 已添加到栈中。
+        T pop();
+        // 前置条件：栈不为空。
+        // 返回顶部栈帧并从栈中移除该顶部栈帧。
+        bool isEmpty() const;
+        // 如果栈为空则返回 true。否则返回 false。
+    private:
+        Node<T>* *top;
+    };
+}
+#endif // STACK_H
+```
+
+你可能倾向于将参数 T 替换为 `const T&`。
+
+> 析构函数销毁栈并将所有内存返回堆存储区。
+

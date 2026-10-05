@@ -1,0 +1,42 @@
+# Simple Structure Types
+
+You define a structure type as shown here. The Structure_Tag is the name of the structure type.
+
+```
+struct Structure_Tag
+{
+    Type_1 Member_Variable_Name_1;
+    Type_2 Member_Variable_Name_2;
+    .
+    Type_Last Member_Variable_Name_Last;
+}; // Do not forget this semicolon.
+```
+
+# EXAMPLE
+
+```
+struct Automobile
+{
+    int year;
+    int doors;
+    double horsePower;
+    char model;
+}
+```
+
+Although we will not use this feature, you can combine member names of the same type into a single list separated by commas. For example, the following is equivalent to the previous structure definition.
+
+```
+struct Automobile
+{
+    int year;
+    double horsePower;
+    char model;
+}
+```
+
+Variables of a structure type can be declared in the same way as variables of other types. For example,
+
+Automobile myCar;
+
+The member variables are specified using the dot operator. For example, myCar.year, myCar.doors, myCar.horsePower, and myCar.model.

@@ -1,0 +1,33 @@
+# CHAPTER 14 Inheritance
+
+Display 14.7 gives a demonstration program that illustrates the use of the derived classes HourlyEmployee and SalariedEmployee.
+
+# Redefining an Inherited Function
+
+A derived class inherits all the member functions (and member variables) that belong to the base class. However, if a derived class requires a different implementation for an inherited member function, the function may be redefined in the derived class. When a member function is redefined, you must list its declaration in the definition of the derived class, even though the declaration is the same as in the base class. If you do not wish to redefine a member function that is inherited from the base class, do not list it in the definition of the derived class.
+
+# Redefining versus Overloading
+
+Do not confuse redefining a function in a derived class with overloading a function name. When you redefine a function definition, the new definition given in the derived class has the same number and types of parameters. When you overload a function, the function in the derived class has a different number of parameters or a parameter of a different type from the function in the base class, and the derived class has both functions. For example, suppose we added a function with the following function declaration to the definition of the class HourlyEmployee:
+
+```
+void setName(string firstName, string lastNameName);
+```
+
+the class HourlyEmployee would have this two-argument function setName
+
+```
+void setName(string new);
+```
+
+the class HourlyEmployee would have two functions named setName. This would be overloading the function name setName.
+
+On the other hand, both the class Employee and the class HourlyEmployee define a function with the following function declaration:
+
+```
+void printCheck();
+```
+
+In this case, the class HourlyEmployees has only one function named printCheck, but the definition of the function printCheck for the class HourlyEmployee is different from its definition for the class Employee. In this case, the function printCheck has been redefined.
+
+If you are redefining and overloading confused, you do one consolation: both are legal. So, it is more important to learn how to use them than it is to learn distinguish between them. Nonetheless, you should learn the difference between them.

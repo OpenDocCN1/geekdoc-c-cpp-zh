@@ -1,0 +1,17 @@
+# CHAPTER 14 Inheritance
+
+# Inherited Members
+
+A derived class automatically has all the member variables and all the ordinary functions of the base class. (As discussed later in this chapter, there are some specialized member functions, such as constructors, that are not automatically inherited.) These members from the base class are said to be inherited. These inherited member functions and inherited member variables are, with one exception, not mentioned in the definition of the derived class but are automatically members of the derived class. As explained in the text, you mention an inherited member function in the definition of the derived class if you want to change the definition of the inherited member function.
+
+In addition to the inherited member variables and member functions, a derived class can add new member variables and new member functions. The declarations for the new member functions are listed in the class definition. For example, the derived class HourlyEmployee adds the two member variables rate and hours and adds the new member functions setRate, getRate, setHours, and getHours. This is shown in Display 14.3. Note that you do not give the declarations of the inherited member functions unless you want to change these definitions, which is a point we will discuss shortly. For now, do not worry about the details of the constructor definition for the derived class. We will discuss constructors in the next section.
+
+In the implementation file for the derived class, such as the implementation of HourlyEmployee in Display 14.5, you do not need to define functions for the inherited member functions unless the definition of the member function is changed in the derived class, a point we will discuss.
+
+# Parent and Child Classes
+
+When discussing classes, it is common to use terminology derived from family relationships. A base class is often called a parent class. A derived class is then called a child class. This makes the language of inheritance very smooth. For example, we can say that a child class inherits member variables and member functions from its parent class. This analogy is often carried one step further. A class that is a parent of a parent of another class (or some other number of "parent" iterations) is often called an ancestor class. If class A is an ancestor of class B, B is often called a descendant of class A.
+
+The definition of an inherited member function can be changed in the definition of a derived class that is it different from what it is in the base class. This is called redefining the inherited member function. For example, the member function printCheck() is redefined in the definition of the derived class HourlyEmployee. To redefine a member function definition, simply
+
+redefining

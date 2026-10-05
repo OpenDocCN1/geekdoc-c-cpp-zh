@@ -1,0 +1,44 @@
+# 310 CHAPTER 7 Constructors and Other Tools
+
+# Display 7.7 Using a Vector
+
+```
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> v;
+    cout << "Enter a list of positive numbers.\\n";
+    cout << "Place a negative number at the end.\\n";
+    int next;
+    cin >> next;
+    while (next > 0) {
+        v.push_back(next);
+        cout << next << " added.\\n";
+        cout << v.size() << " " << v.size() << endl;
+        cin >> next;
+    }
+
+    cout << "You entered:\\n";
+    for (unsigned int i = 0; i < v.size(); i++) {
+        cout << v[i] << " ";
+    }
+
+    return 0;
+}
+```
+
+Sample Dialogue
+
+> Enter a list of positive numbers.
+Place a negative number at the end.
+2 4 6 8 -1
+2 added. v.size = 1
+4 added. v.size = 2
+6 added. v.size = 3
+8 added. v.size = 4
+You entered:
+2 4 6 8
+
+When you use the constructor with an integer argument, vectors of numbers are initialized to the zero of the number type. If the vector base type is a class type, the default constructor is used for initialization.

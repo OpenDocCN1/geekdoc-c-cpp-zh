@@ -1,0 +1,21 @@
+# Self-Test Exercises (continued)
+
++   5. Give a definition for a class TitledEmployee that is a derived class of the base class SalariedEmployee given in Display 14.4. The class TitledEmployee has one additional member variable of type string title. It also has two additional member functions: getTitle, which takes no arguments and returns a string, and setTitle, which is a void function that takes one argument of type string. It redefines the function setName. You do not need to give any implementations, just the class definition. However, do give all #include directives and using namespaces directives. Place the class TitledEmployee in the namespace SavitchEmployees.
+
++   6. Give the definitions of the constructors for the class TitledEmployee that gave the answer to Self-Test Exercise 5. Also, the redefinition of the member function setName should insert the title into the name. Do not bother with #include directives or namespace details.
+
++   7. You know that an overloaded assignment operator and a copy constructor are not inherited. This means that if you not define an overloaded assignment operator or a copy constructor for a derived class, then derived class will have no assignment operator and no copy constructor?
+
+# 14.2 Programming with Inheritance
+
+The devil is in the details.
+
+Common saying
+
+This section presents some of the more subtle details regarding inheritance and gives another complete example, plus discussion on inheritance and related programming techniques. The material in this section uses dynamic arrays (Chapter 10), and most of the topics are only relevant to classes that use dynamic arrays or pointers and other dynamic data.
+
+# Assignment Operators and Copy Constructors in Derived Classes
+
+Overloaded assignment operators and constructors are not inherited. However, they can be used—and in almost all cases must be used—in the definitions of overloaded assignment operators and copy constructors in derived classes.
+
+When overloading the assignment operator in a derived class, you normally use the overloaded assignment operator from the base class. To help understand the

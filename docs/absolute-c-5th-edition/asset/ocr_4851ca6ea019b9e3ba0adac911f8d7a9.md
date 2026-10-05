@@ -1,0 +1,25 @@
+# catch-Block Parameter
+
+The catch-block parameter is an identifier in the heading of a catch block that serves as a placeholder for an exception (a value) that might be thrown. When a suitable value is thrown in the preceding try block, that value is plugged in for the catch-block parameter. In order for the catch block to be executed, the value must be of the type given for its catch-block parameter.) You can use any legal (nonreserved word) identifier for its catch-block parameter.
+
+# EXAMPLE
+
+```
+catch(int e)
+{
+    cout << e << " donuts, and No Milk!\n"
+    << "Go buy some milk.\n"
+}
+```
+
+e is the catch-block parameter.
+
+If no exception (no value) is thrown in the try block, then after the try block is completed, program execution continues with the code after the catch block. In other words, if no exception is thrown, the catch block is ignored. Most of the time the program is executed, the throw statement will not be executed, and in most cases the code in the try block will run to completion and the code in the catch block will be ignored.
+
+# try-throw-catch
+
+The basic mechanism for throwing and catching exceptions is a try-throw-catch sequence. The throw statement throws the exception (a value). The catch block catches the exception (the value). When an exception is thrown, the try block ends and then the code in the catch block is executed. After the catch block is completed, the code after the catch block or blocks is executed (provided the catch block has not ended or performed some other action).
+
+(The type of exception must match the type listed for the catch-block parameter or else the exception will not be caught by that catch block. This point is discussed further in the subsection "Multiple Throws and Catches.")
+
+If no exception is thrown in the try block, then after the try block is completed, program execution continues with the code after the catch block or blocks. (In other words, if no exception is thrown, the catch block or blocks are ignored.)

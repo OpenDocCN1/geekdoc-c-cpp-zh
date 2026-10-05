@@ -1,0 +1,58 @@
+# 604 CHAPTER 13 Recursion
+
+```
+void writeDown(int n)
+{
+    if (n >= 1)
+    {
+        cout << n << " \ //write while the
+        //recursion winds
+        writeDown(n - 1);
+    }
+}
+```
+
+//5
+
+```
+void writeUp(int n)
+{
+    if (n >= 1)
+    {
+        writeUp(n - 1);
+        cout << n << " \ //write while the
+        //recursion unwinds
+    }
+}
+```
+
+//testing code for both Self-Test Exercises 4 and 5
+
+```
+int main()
+{
+    cout << "calling writeUp(" << 10 << "\n";
+    writeUp(10);
+    cout << endl;
+    cout << "calling writeDown(" << 10 << "\n";
+    writeDown(10);
+    cout << endl;
+    return 0;
+}
+```
+
+```
+/* Test results
+calling writeUp(10)
+1 2 3 4 5 6 7 8 9 10
+calling writeDown(10)
+10 9 8 7 6 5 4 3 2 1*/
+```
+
++   6. An error message that says "stack overflow" is telling you that the computer has attempted to place more activation frames on the stack than are allowed on your system. A likely cause of this error message is infinite recursion.
+
++   7. using std::cout;
+void cheers(int n)
+{
+    while (n > 1)
+}

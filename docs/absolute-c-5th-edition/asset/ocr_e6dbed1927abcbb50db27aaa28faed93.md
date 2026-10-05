@@ -1,0 +1,38 @@
+# References and More Overloaded Operators 345
+
+We will only be returning a reference when defining certain kinds of overloaded operators.
+
+| L-Values and R-Values |
+| The term l-value is used for something that can appear on the left-hand side of an assignment operator. The term r-value is used for something that can appear on the right-hand side of an assignment operator. |
+| If you want the object returned by a function to be an l-value, it must be returned by reference. |
+
+> TIP: Returning Member Variables of a Class Type When returning a member variable of a class type, in almost all cases it is important to return the member value by const value. To see why, suppose you do not, as in the example outlined in follows:
+
+```
+class Employee {
+  public:
+    Money& getSalary() { return salary; }
+  private:
+    Money salary;
+
+};
+```
+
+In this example, salary is a private member variable that should not be changeable except by using some accessor function of the Employee. The getSalary function returns the variable salary which is of type Money. If we do not return salary by reference then a new, temporary copy of salary will be created and returned. We might wish to avoid this overhead by returning a reference to salary as indicated in the example. However, though salary is declared as private, this is circumvented as follows:
+
+```
+Employee joe;
+(joe.getSalary()).input();
+```
+
+The lucky employee joe can now enter any salary she wishes!
+ the other hand, suppose getSalary returns its value by const value, as follows:
+
+```
+class Employee {
+  public:
+    const Money& getSalary() { return salary; }
+  ..
+```
+
+(continued)
