@@ -1,0 +1,15 @@
+# More code examples that work with strings
+
+9-7 presents some additional string-handling routines. The first four parse the data in strings. The fifth one adds characters to a string. And the sixth replaces some of the characters in a string with other characters. If you can understand the code in these routines, you should be able to write your routines whenever needed.
+
+The first routine shows how to parse the first name from a string that contains a full name. Here, the full name is assigned to the fullName variable so you can visualize the statements that follow with that name. In practice, though the name would be entered by a user or read from a file so you wouldn't know what it was.
+
+To start, this routine uses the Trim method to remove spaces from the beginning and end of the string that a user may have typed accidentally. Next, the IndexOf method is used to get the position of the first space in the string, which should be between the first name and the middle name or last name. If this method doesn't find a space in the string, though, it returns -1. In that case, the if-else statement assigns the entire string to the first name variable. Otherwise, it uses the Substring method to set the first name variable equal to the string that begins at the first character of the string and has a length that's equal to the position of the first space.
+
+To remove the spaces from the beginning and end of the string, this routine also uses the Trim method. Then, it uses the StartsWith and EndsWith methods to determine whether the first or last character in the string is a pipe character. If it is, the Remove method removes that character from the string.
+
+The next three statements use the IndexOf method to determine the index values of the first character for each substring after the first.(The first substring will start at index 0.) To do that, it determines the index of the next pipe character and adds 1. After that, the next four statements use these index variables as arguments of the Substring method to return the street, city, state, and zip code. To calculate the length of each substring, this code subtracts the starting index from the ending index and then subtracts 1 from value. This results in the length of the substring without the pipe character.
+
+The third and fourth routines use the Split method to perform the same operations as the first and second routines. As you can see, the Split method can simplify your code significantly, particularly if the string're parsing consists of several elements.
+
+The fifth and sixth routines show how to add hyphens to a phone number and change the hyphens in a date to slashes. To add hyphens, you simply use the Insert method to insert the hyphens at the appropriate index. And to change the hyphens to slashes, you use the Replace method.

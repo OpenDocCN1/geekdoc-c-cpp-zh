@@ -1,0 +1,5 @@
+# How to rename a form
+
+Figure 10-9 shows a procedure that you can use to rename a form. To start, you can right-click the form in the Solution Explorer and select the Rename command. Or, you can select the form in the Solution Explorer and press in F2. Then, you can enter the new name for the form. In the project shown in this figure, I renamed the form that was originally named Form1.cs to frmCustomer.cs. This automatically changes all names necessary to get the form to run correctly.
+
+However, if you have added event handlers for form events the old form name will still be used by these event handlers and their wiring. Although this code should work correctly, you may want to update it so it reflects the new form name. If of the form in the method declaration for the event handler. When you do, the refactoring bar should appear under the name of the event handler. Then, you can point at that bar, click the drop-down arrow, and select the Rename command from the resulting menu. This will rename the method declaration and update the wiring for the event handler.

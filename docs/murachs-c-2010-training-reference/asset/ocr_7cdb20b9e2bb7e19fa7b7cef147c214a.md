@@ -1,0 +1,9 @@
+# How to edit the columns of a DataGridView control
+
+Figure 19-10 shows how to edit the columns of a DataGridView control using the Edit Columns dialog box. From this dialog box, you can remove columns from selecting the column and clicking the Remove button. You can also change the order of the columns by selecting the column you want to move and clicking the up or down arrow to the right of the list of columns.
+
+Finally, you can use the Add button in this dialog box to add a column to the grid. You might need to do that if you delete a column and then decide you want to include it. You can also use the dialog box that's displayed when you want on how to do that, see Visual Studio help.
+
+Once you've got the right columns displayed in the correct order, you can click the Add button to unbind columns to the grid. edit the properties for a column by selecting the column to display its properties in the Bound Column Properties window. For example, for each column shown here for adding a space between the two words in the column name. I changed the HeaderText property by adding the widths of the InvoiceID, SalesTax, and Shipping columns, and I applied the appropriate formatting to all of the columns except for the InvoiceID column. You'll see the dialog boxes for formatting data in the next figure.
+
+Another column property you may need to change is the ReadOnly property. This property is useful if a DataGridView control lets the user or modify rows, but you only want the user to be able to enter data in selected columns. Then, you can set the ReadOnly property of the other columns to True so the user can't enter data into those columns.

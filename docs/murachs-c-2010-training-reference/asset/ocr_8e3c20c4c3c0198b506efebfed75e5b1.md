@@ -1,0 +1,11 @@
+# How to perform operations on dates and times
+
+Figure 9-4 presents some of the methods of the DateTime structure that you can use to perform operations on dates and times. Most of these methods let you add a specific number of intervals, like hours, days, or months, to a DateTime value. However, you can use the Add method to add a TimeSpan to a date, and you can use the Subtract method to determine the time span between two dates, which is often required in business applications.
+
+Like DateTime values, TimeSpan values are based on a structure defined by the .NET Framework. TimeSpan values also hold a number of ticks, just like DateTime values. However, a TimeSpan value represents a time interval. In contrast, a DateTime value represents a specific point in time.
+
+The first group of statements in this figure shows how the Add methods work. For example, the second statement shows how to add two months to a DateTime value, and the third statement shows how to add 60 days. Similarly, the fourth statement shows how to add 30 minutes, and the fifth statement shows how to add 12 hours.
+
+The second group of statements shows how you can use a TimeSpan variable to determine the number of days between two DateTime values. Here, the first statement retrieves the current date, and the second statement assigns a date to another DateTime variable. Next, the third statement uses the Subtract method to subtract the two date values and assign the result to a TimeSpan variable, which represents the number of days, minutes, hours, and seconds between the two dates. Finally, the last statement uses the Days property of the TimeSpan structure to extract the number of days from the TimeSpan value. This is one of several properties of this structure that let you extract the data from a TimeSpan value.
+
+In addition to the properties and methods provided by the DateTime structure, you can use some of the standard operators to work with dates. For instance, the first example in this figure shows how to use the subtraction operator to calculate the time between two dates instead of using the Subtract method. The last example shows that you can also use DateTime values in a conditional expression. Here, the conditional expression tests if one DateTime value is greater than another.

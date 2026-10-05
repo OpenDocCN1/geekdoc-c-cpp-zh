@@ -1,0 +1,13 @@
+# How to use casting with inheritance
+
+Another potentially confusing aspect of using inheritance is knowing how to cast inherited objects explicitly. The basic rule is that C# can implicitly cast a subclass to its base class, but you must use explicit casting if you want to treat a base class object as one of its subclasses. Figure 14-16 illustrates how this works.
+
+The two methods at the top of this figure both call the GetDisplayText method to get data in a displayable format. The first method, named DisplayProduct, accepts a Product object and executes the GetDisplayText method of the Product class, so it can be used with either a Book or a Software object. In contrast, the second method, named DisplayBook, accepts a Book object and calls the GetDisplayText method of the Book class, so it can only be used with Book objects.
+
+The second example shows code that doesn't require casting. Here, the first statement creates a new Book object and assigns it to a variable of type Book. Then, the DisplayProduct method is called to format the Book object that this variable refers to. Although the DisplayProduct method expects a Product object, it can cast the Book object to a Product object since Book is a subclass of the Product class.
+
+The third example is similar, but it assigns the new Book object to a variable of type Product. Then, it calls the DisplayBook method. Because this method expects a Book object, however, the Product object must be explicitly cast to a Book object. If it isn't, the C# compiler will display a compiler error indicating that it can't convert a Product object to a Book object.
+
+The fourth example shows code that results in a casting exception. Here, a Software object is assigned to a variable of type Product. Then, the DisplayBook method is called to format the object that this variable refers to. Notice that this variable is explicitly cast to a Book object since that's what the DisplayBook method expects. Because the p variable holds a Software object rather than a Book object, however, this results in a casting exception.
+
+The last example shows how you can use the operator to avoid throwing an exception if a cast is invalid. As the operator is similar to a cast, but returns null if the object can't be converted to the specified type. In the example, a null value will be passed to the DisplaySoftware method because the object referenced by the p variable is a Book object, which can't be cast to a Software object.

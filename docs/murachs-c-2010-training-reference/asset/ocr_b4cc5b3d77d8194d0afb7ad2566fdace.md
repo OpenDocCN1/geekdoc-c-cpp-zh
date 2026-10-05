@@ -1,0 +1,51 @@
+# Customer class that's split into two files
+
+The first file
+
+```
+public partial class Customer
+{
+// Some members of the Customer class
+}
+```
+
+The second file
+
+```
+public partial class Customer
+{
+// The rest of the members of the Customer class
+}
+```
+
+# A Form class that's split into two files
+
+The Form1.cs file
+
+```
+public partial class Form1 : Form
+{
+// The code for the Form1 class that's added
+// by the programmer
+}
+```
+
+The Form1.designer.cs file
+
+```
+partial class Form1
+{
+// The code for the Form1 class that's generated
+// by Visual Studio
+}
+```
+
+# Description
+
++   * Partial classes can be used to split the code for a class across several files.
+* To code a partial class, enter the partial keyword before the class keyword.
+* All partial classes must belong to the same namespace and the same assembly.
+* If a class you're working on becomes very long, or if you want to have different programmers work on different parts of a class, you can use partial classes to split the class across two or more files.
+* Visual Studio uses partial classes to separate the code that's generated for a Form class from the code that's entered by the programmer.
+
+![](bbox=[0.051, 0.943, 0.517, 0.959])

@@ -1,0 +1,7 @@
+# Section 1
+
+# An introduction to Visual Studio
+
+This section gets you started right by introducing you to the Visual Studio 2010 components that support C# programming. To start, chapter 1 introduces you to the .NET Framework, the languages that work with the .NET Framework, and the Visual Studio development environment. Then, chapter 2 shows you how to use Visual Studio to design a form for a Windows Forms application. Finally, chapter 3 shows you how to use Visual Studio to enter and edit the code that determines how the form works.
+
+When you complete this section, you should have a general understanding of how to use Visual Studio to develop a Windows application. You should also have the skills that you need for designing a Windows form and entering the code for it. Then, the next section of this book will teach you the essentials of the C# language.

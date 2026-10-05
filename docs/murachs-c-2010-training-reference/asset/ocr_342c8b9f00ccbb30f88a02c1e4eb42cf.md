@@ -1,0 +1,19 @@
+# How to organize your classes
+
+In this topic, you'll learn how to organize applications that use multiple classes by coding more than one class per file, by splitting a single class across multiple files, and by working with namespaces.
+
+# How to code multiple classes in a single file
+
+In most cases, you'll code each class that's required by an application in a separate file. If two or more classes are closely related, however, you might want to consider storing them in the same file. Figure 16-1 shows two ways you can do that.
+
+First, you can simplify the class declarations one after the other as shown in the first example. The advantage of doing that is that it makes it easier to manage the files that make up the application. If the classes are large, however, you should place them in separate files even if they are closely related. Otherwise, it may be difficult to locate the code for a specific class.
+
+You can also code two or more classes in a single file by nesting one class within another. Nested classes are useful when one class only makes sense within the context of the other class. The second example in this figure illustrates how to nest two classes. Here, the class name InnerClass is nested within a class named OuterClass.
+
+If you want to refer to the inner class from a class other than the outer class, you have to qualify it with the name of the outer class like this:
+
+```
+OuterClass.InnerClass ic = new OuterClass.InnerClass();
+```
+
+However, you typically only need to refer to the inner class from the outer class, and you can do that without qualifying the name of the inner class.

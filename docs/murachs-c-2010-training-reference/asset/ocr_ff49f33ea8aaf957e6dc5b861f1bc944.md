@@ -1,0 +1,15 @@
+# How to use the exception classes for file I/O
+
+In chapter 7, you learned the basic skills for handling exceptions. Now, figure 21-4 summarizes the exceptions that can occur when you perform I/O operations. Most of the time, you can write code so these exceptions are avoided. For example, you can avoid a DirectoryNotFoundException by using the Exists method of the Directory class to be sure the directory exists before you try to use it in the file path for a new file stream. Similarly, you can avoid a FileNotFoundException by using the Exists method of the File class.
+
+I/O exceptions are often serious problems like hardware problems that an application can't do anything about. For example, if an application needs to open a file on a network drive that isn't available, an exception will be thrown. In that case, it is common to handle the exception by displaying an error message.
+
+When handling I/O exceptions, it's common to use a finally block. In this block, it's common to use the stream's Stream class to close all streams that are open. This frees the resources that are used to access the file.
+
+The code example shows how to handle some of the most common I/O exceptions. For the start, the statement just before the try block declares a variable for the stream. That variable, which is available to the catch blocks and the finally block. In this case, the stream is a FileStream object, but you'll learn to work with other types of streams later in this chapter.
+
+Within the try block, the first statement creates an instance of a stream. After this, the try block will contain more code that uses the stream to read and write data. Later in this chapter, you'll learn how to write this type of code. Now, you can assume that there is more code in the try block that uses the stream, and you can assume that this code may throw I/O exceptions, such as the exception that occurs when an application attempts to read the end of the stream.
+
+After the try block, the catch blocks are coded starting with the most specific type of exception and moving up the inheritance towards the most general type of exception. In this case, the DirectoryNotFoundException and FileNotFoundException classes inherit the IOException class. As a result, all three of these catch blocks display a message that describes the type of exception to the user. This is a common way to handle I/O exceptions. However, in some cases, you may want to create a directory or file or allow the user to search for a directory or file.
+
+Finally within the block, if an if statement is used to determine whether an exception was thrown before the stream was opened. If it was, the variable for the stream will be equal to a null value. As result, calling the Close method isn't necessary and would throw a NullPointerException. However, if an exception was thrown while the stream was opened, the variable won't be equal to null. In that case, the Close method frees the resources used by the stream.

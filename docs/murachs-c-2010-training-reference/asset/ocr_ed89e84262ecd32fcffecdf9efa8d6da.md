@@ -1,0 +1,15 @@
+# # How to throw an exception
+
+When you code properties and methods, it's often a good idea to check the arguments that are passed to the properties or methods to make sure that they are valid. Then, if an argument isn't valid, an exception should be thrown to notify the user of the class that an error has occurred. For example, when you code indexers, you may want to check make sure that the index argument falls within a valid range.
+
+Figure 13-4 shows how argument exceptions should be handled. Here, the get accessor for the first indexer checks that the int value's passed to it falls within a valid range. If the int value is less than zero or if it is greater than equal to the number of products in the list, the indexer throws an exception. Otherwise, the int value is used to return the specified Product Object from the list.
+
+The second indexer works similarly to the first indexer, but it accepts a string that specifies the product's code. To start, the get accessor checks if the string contains more than four characters. If so, a fetch loop compares the product with each code in the list. If the product codes match, the get accessor returns the Product object from the list. Otherwise, the get accessor returns a null value.
+
+As learned in chapter 7, the throw statement specifies an exception object for the exception to be thrown. The .NET Framework defines the exception classes listed in this figure as standard exceptions that you can use when validating arguments. If an argument is outside the range of values that are acceptable for a property, for example, you should throw an ArgumentOutOfRangeException If an attempt is made to set a property to a null value and the property requires a value, you should throw an ArgumentNullException. For any other argument errors, you should throw an ArgumentException.
+
+Notice that all three of these exceptions have a constructor that accepts a message parameter. You can use this parameter to provide an error message that indicates what is wrong with the data. However, since the ArgumentOutOf already contains an error message that describes the problem, you can just specify the parameter that's out of range.
+
+When you code a statement that uses a property or method that throws an argument exception, you might think that you should include the statement in a try-catch statement so you can catch any exception when it occurs. But I don't recommend that. Instead, you should validate the data before passing it to the property or method. If the statement in this figure, for example, checks the length of the product before the user passes this product code to the second indexer. That way, the exception should never occur.
+
+Why include the validation code in the class at all? Because if you design your classes so they're reusable, you can't always count on other programmers to validate the data they pass to the class. By including this validation code, you make the class completely self-contained.

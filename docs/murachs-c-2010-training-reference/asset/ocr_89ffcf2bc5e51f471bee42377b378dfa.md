@@ -1,0 +1,11 @@
+# How to use the FormClosing event
+
+Figure 10–14 shows how you can use a dialog box to cancel the FormClosing event of a form. This technique is often used when a user attempts to close a form that contains unsaved data.
+
+To start, it's important to understand that the FormClosing event is executed when the user attempts to close the form before the form is actually closed. This event occurs if the user clicks a button on the form that calls the Close method for the form. It also occurs if the user clicks the Close button in the upper right corner of the form.
+
+This figure presents an event handler for the FormClosing event of a form. This event receives two parameters. You can use the Cancel property of the second parameter, which is named e, to determine whether or not the form is closed. By default, this property is set to false, which means that the FormClosing event will not be cancelled and the form will be closed. If you do not want to close the form, you can set this property to cancel the FormClosing event.
+
+The event handler shown here starts by checking a class variable isDataSaved to determine if the form contains unsaved data. If it doesn't, no additional processing is performed and the form is closed. If the form contains unsaved data, however, a dialog box is displayed that asks the user if the data should be saved. As you see, this dialog box contains Yes, No, and Cancel buttons as well as a warning icon. The code for this dialog box doesn't specify a default button, the first button is the default.
+
+After the dialog box is displayed, if statements are used to check the user's response and perform the appropriate action. If for example, the Cancel property of the e parameter is set to true. This cancels the FormClosing event and returns the user to the form. If the user clicks the Yes button, the code checks whether the form contains valid data. If it does, the SaveData method is called to save the data and the form is closed. If it doesn't, the Cancel property of the parameter named e is set to true and the FormClosing event is cancelled. On the other hand, if the user clicks the No button, no code is executed. As a result, the form is closed without saving the data.

@@ -1,0 +1,9 @@
+# When and how to pass arguments by reference and by value
+
+By default, the arguments are passed to a method are *by value*. That means that the value of each passed variable is assigned to the corresponding parameter in the method. Because of that, the method can change the value of the parameter without affecting the value of the variable in the calling method.
+
+In some cases, though, you'll want to be able to change the value of the variable in the calling method from the called method. To do that, you can pass the argument by *reference* as shown in figure 6-5. Here, the *ref* keyword is coded before the method, and before the parameter declaration. Then, when you call the method, a reference to the variable that you specify for the corresponding argument is passed to the method. As a result, if the method changes the value of the parameter, it also changes the value of the variable in the passed by reference. Then, when the method changes the fourth parameter, the method changes
+
+In this figure, the first three arguments are passed by value, but the fourth is passed by reference. When the method changes the variable in the calling method is also changed. As a result, there's no need for the method to return the value of the `futureValue` variable.
+
+In general, though, it's better to pass arguments by value instead of by reference. That way, the data in the calling method can't be changed by the called method. What if you want the method to return two or more values instead of just one? The best way to do that is to return one object that contains those values, and you'll learn how to do that in section 3.

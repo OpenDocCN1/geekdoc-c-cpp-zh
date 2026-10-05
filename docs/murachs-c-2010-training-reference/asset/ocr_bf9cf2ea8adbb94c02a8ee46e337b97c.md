@@ -1,0 +1,13 @@
+# How to add output files to a Setup project
+
+Once you create a Setup project, you can use the setup editors it provides to customize the project. To start, you'll want to add any output files you want the Setup program to deploy to the Setup project. Figure 25-9 shows you how to do that.
+
+To add output files to a Setup project, you use the File System Editor shown in this figure. This editor is displayed by default when you create a Setup project. In the left pane of this editor, you can see three folders that represent the folder where applications are installed on the user's system, the folder that contains the items that are displayed on the user's desktop, and the folder that contains the items that are displayed in the user's Programs menu. For complex applications, you can include additional special folders and custom folders. For simple applications, though, you'll use just the three default folders and any subfolders you create.
+
+A Setup project must include at least the primary output for the project, which is the exe file for a Windows application. In most cases, you'll add this file to the Application Folder. Then, when you select this folder, the file will appear in the right pane of the File System Editor as shown in this figure. To add a Readme file or a database file that's used by the application to add the primary output to the Application Folder, right-click on the folder, select the Add→Project Output command, and use the Add Project Output dialog box.
+
+You can also use the Add menu to add files to a Setup project. For example, you might want to add a Readme file or a database file to the application. To do that, select the File command and identify the file.
+
+Another common file that you'll include in a Setup project is a shortcut to the application. When the application is installed, for example, you may want a shortcut to be added to the user's desktop or Programs menu. To create a shortcut, right-click on the file that you want to create a shortcut to and select the Create Shortcut command. Then, the shortcut is created in the same folder as the file it was created from. At that point, you can give the shortcut an appropriate name and move it to the folder where you want it to appear on the user's computer.
+
+For example, suppose you want a shortcut to the Future Value application to appear in the user's All Programs→Murach menu. To accomplish that, you start by adding a sub named Murach to the User's Programs Menu folder using the Add→Folder command. Then, you create and name the shortcut as described above and move it to the Murach subfolder.
