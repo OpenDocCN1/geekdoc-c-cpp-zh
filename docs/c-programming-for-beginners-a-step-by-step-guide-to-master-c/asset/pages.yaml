@@ -1,0 +1,2490 @@
+- pgno: 0
+  md: '# # C
+
+    # PROGRAMMING
+
+    # FOR
+
+    # BEGINNERS
+
+
+    SETT JOHN'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# COPYRIGHT
+
+
+    All rights reserved. This book or any portion thereof may not be reproduced, or
+    used in any manner whatsoever without the express written permission of the publisher
+    except for the use of brief quotation in a book review.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# TABLE OF CONTENT
+
+
+    INTRODUCTION 7
+
+
+    Integrated Development (IDE) 16
+
+
+    STRUCTURE OF C LANGUAGE PROGRAM 18
+
+
+    Comment line 19
+
+
+    Preprocessor Directive: 20
+
+
+    Global Declaration: 21
+
+
+    Steps for Compiling and Executing the Programs 25
+
+
+    CHARACTER SET 37
+
+
+    Identifiers 38'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'Keyword 39
+
+
+    Data Types 40
+
+
+    CONSTANTS 45
+
+
+    Character Constant 51
+
+
+    String Constant 53
+
+
+    Symbolic Constant 54
+
+
+    Variables 55
+
+
+    Variable Initialization 56
+
+
+    EXPRESSIONS 58
+
+
+    Operator 59
+
+
+    Logical or Boolean Operator 72
+
+
+    Control Statement 74'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'LOOPS IN C 76
+
+
+    While loop 77
+
+
+    do while loop 79
+
+
+    for loop 83
+
+
+    Nesting of loop 86
+
+
+    Break statement(break) 87
+
+
+    Continue statement (key word (continue) 89
+
+
+    if statement 92
+
+
+    if....else ... Statement 93
+
+
+    Nesting of if ..else 97
+
+
+    If....else LADDER 98'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'ARRAY 101
+
+
+    Initialization Of An Array: 104
+
+
+    Accessing Of Array Element: 107'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# INTRODUCTION
+
+
+    C is a programming language developed at AT & T’s Bell Laboratories of USA in
+    1972. It was designed and written by a man named Dennis Ritchie. In the late seventies
+    C began to replace the more familiar languages of that time like PL/I, ALGOL,
+    etc
+
+
+    ANSI C standard emerged in the early 1980s, this book was split into two titles:
+    The original was still called Programming in C, and the title that covered ANSI
+    C was called Programming in ANSI C. This was done because it took several years
+    for the compiler vendors to release their'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: ANSI C compilers and for them to become ubiquitous. It was initially designed
+    for programming UNIX operating system. Now the software tool as well as the C
+    compiler is written in C. Major parts of popular operating systems like Windows,
+    UNIX, Linux is still written in C. This is because even today when it comes to
+    performance (speed of execution) nothing beats C. Moreover, if one is to extend
+    the operating system to work with new devices one needs to write device driver
+    programs. These programs are exclusively written in C. seems so popular is because
+    it is reliable,
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'simple and easy to use. often heard today is – “C has been already superceded
+    by languages like C++, C# and Java.
+
+
+    There is a close analogy between learning English language and learning C language.
+    The classical method of learning English is to first learn the alphabets used
+    in the language, then learn to combine these alphabets to form words, which in
+    turn are combined to form sentences and sentences are combined to form paragraphs.
+    Learning C is similar and easier. Instead of
+
+
+    9'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'straight-away learning how to write programs, we must first know what alphabets,
+    numbers and special symbols are used in C, then using them constants, variables
+    and keywords are constructed, and finally how are these combined to form an instruction.
+    A group of instructions would be combined later on to form a program. So
+
+
+    ![](img/7e3f35612983959bbf2e3b551f6c2979_9_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'a computer program is just a collection of the instructions necessary to solve
+    a specific problem. The basic operations of a computer system form what is known
+    as the computer’s instruction set. And the approach or method that is used to
+    solve the problem is known as an algorithm.
+
+
+    So for as programming language concern these are of two types.
+
+
+    +   1) Low level language
+
+    2) High level language
+
+
+    # Low level language:'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: Low level languages are machine level and assembly level language. In machine
+    level language computer only understand digital numbers i.e. in the form of 0
+    and 1. So, instruction given to the computer is in the form binary digit, which
+    is difficult to implement instruction in binary code. This type of program is
+    not portable, difficult to maintain and also error prone. The assembly language
+    is on other hand modified version of machine level language. Where instructions
+    are given in English like word as ADD, SUM, MOV etc. It is easy to write and understand
+    but not
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'understand by the machine. So the translator used here is assembler to translate
+    into machine level. Although language is bit easier, programmer has to know low
+    level details related to low level language. In the assembly level language the
+    data are stored in the computer register, which varies for different computer.
+    Hence it is not portable.
+
+
+    # High level language:
+
+
+    These languages are machine independent, means it is portable. The language in
+    this category is Pascal, Cobol, Fortran etc. High level languages'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'are understood by the machine. So it need to translate by the translator into
+    machine level. A translator is software which is used to translate high level
+    language as well as low level language to machine level language.
+
+
+    Three types of translator are there:
+
+
+    # Compiler
+
+
+    # Interpreter
+
+
+    # Assembler
+
+
+    Compiler and interpreter are used to convert the high level language into machine
+    level language. The program written in high level language is known'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'as source program and the
+
+    corresponding machine level language program is called as object program.
+
+    Both compiler and interpreter perform the same task but there working is different.
+    Compiler read the program at-a-time and searches the error and lists them. If
+    the program is error free then it is converted into object program. When program
+    size is large then compiler is preferred. Whereas interpreter read only one line
+    of the source code and convert to object code. If it check error, statement by
+    statement and hence of take more time.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Integrated Development
+
+
+    # Environments (IDE)
+
+
+    The process of editing, compiling,
+
+    running, and debugging programs is
+
+    often managed by a single integrated
+
+    application known as an Integrated
+
+    Development Environment, or IDE for
+
+    short. An IDE is a windows-based
+
+    program that allows us to easily manage
+
+    large software programs, edit files in
+
+    windows, and compile, link, run, and
+
+    debug programs.
+
+
+    On Mac OS X, CodeWarrior and Xcode
+
+    are two IDEs that are used by many'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'programmers. Under Windows, Microsoft Visual Studio is a good example of a
+    popular IDE. Kylix is a popular IDE for developing applications under Linux.
+
+    Most IDEs also support program development in several different programming languages
+    in addition to C, such as C# and C++.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# STRUCTURE OF C
+
+
+    # LANGUAGE PROGRAM
+
+
+    +   1 ) Comment line
+
+
+    +   2) Preprocessor directive
+
+
+    +   3 ) Global variable declaration
+
+
+    +   4) main function( )
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    Local variables; Statements;
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    User defined function
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Comment line
+
+
+    It indicates the purpose of the program.
+
+
+    It is represented as
+
+
+    ```
+
+    /*....................................*/
+
+    ```
+
+
+    Comment line is used for increasing the readability of the program. It is useful
+    in explaining the program and generally used for documentation. It is enclosed
+    within the decimeters. Comment line can be single or multiple line but should
+    not be nested. It can be anywhere in the program except inside string constant
+    & character constant.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Preprocessor Directive:
+
+
+    #include<stdio.h> tells the compiler to include information about the standard
+    input/output library. It is also used in symbolic constant such as #define PI
+    3.14(value). The stdio.h (standard input output header file) contains definition
+    &declaration of system defined function such as printf( ), scanf( ), pow( ) etc.
+
+
+    Generally printf() function used to display and scanf() function used to read
+    value'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# Global Declaration:
+
+
+    This is the section where variable are
+
+    declared globally so that it can be access
+
+    by all the functions used in the program.
+
+    And it is generally declared outside the
+
+    function :
+
+
+    main()
+
+
+    It is the user defined function and every
+
+    function has one main() function from
+
+    where actually program is started and it
+
+    is encloses within the pair of curly
+
+    braces.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'The main( ) function can be anywhere in the program but in general practice
+    it is placed in the first position.
+
+
+    Syntax : main()
+
+
+    ```
+
+    {
+
+    ........
+
+    ........
+
+    ........
+
+    }
+
+    ```
+
+
+    The main( ) function return value when it declared by data type as int main( )
+
+
+    ```
+
+    {
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '```
+
+    return 0
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    The main function does not return any
+
+    value when void (means null/empty) as
+
+    void main(void ) or void main()
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    printf("C language");
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    Output: C language
+
+
+    The program execution start with
+
+    opening braces and end with closing
+
+    brace.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'And in between the two braces
+
+    declaration part as well as executable part is mentioned. And at the end of each
+    line, the semi-colon is given which indicates statement termination.
+
+
+    ```
+
+    /*First c program with return statement*/
+
+    #include <stdio.h>
+
+    int main (void)
+
+    {
+
+    printf("welcome to c Programming language.\n"); return 0;
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'Output: welcome to c programming language.
+
+
+    # Steps for Compiling and Executing the Programs
+
+
+    A compiler is a software program that analyzes a program developed in a particular
+    computer language and then translates it into a form that is suitable for execution
+    on a particular computer system. Figure below shows the steps that are involved
+    in entering, compiling, and executing a computer program developed in the C programming
+    language and the typical'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'Unix commands that would be entered from the command line.
+
+
+    Step 1: The program that is to be compiled is first typed into a file on the computer
+    system. There are various conventions that are used for naming files, typically
+    be any name provided the last two characters are ".c" or file with extension .c.
+    So, the file name prog1.c might be a valid filename for a C program. A text editor
+    is usually used to enter the C program into a file. For example, vi is a popular
+    text editor used on Unix systems. The program that is entered into the file is
+    known as the'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'source program because it represents the original form of the program expressed
+    in the C language.
+
+
+    Step 2: After the source program has been entered into a file, then proceed to
+    have it compiled. The compilation process is initiated by typing a special command
+    on the system. When this command is entered, the name of the file that contains
+    the source program must also be specified. For example, under Unix, the command
+    to initiate program compilation is called cc. If we are using the popular GNU
+    C compiler, the command we use is gcc.
+
+
+    27'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'Typing the line
+
+
+    ```
+
+    gcc prog1.c or cc prog1.c
+
+    ```
+
+
+    In the first step of the compilation
+
+    process, the compiler examines each
+
+    program
+
+
+    statement contained in the source
+
+    program and checks it to ensure that it
+
+    conforms to the syntax and semantics of
+
+    the language. If any mistakes are
+
+    discovered by the compiler during this
+
+    phase, they are reported to the user and
+
+    the compilation process ends right there.
+
+    The errors then have to be corrected in
+
+    the source program (with the use of an'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: 'editor), and the compilation process
+
+    must be restarted. Typical errors
+
+    reported during this phase of compilation
+
+    might be due to an expression that has
+
+    unbalanced parentheses (syntactic
+
+    error), or due to the use of a variable
+
+    that is not “defined” (semantic error).
+
+
+    Step 3: When all the syntactic and
+
+    semantic errors have been removed from
+
+    the program, the compiler then proceeds
+
+    to take each statement of the program
+
+    and translate it into a “lower” form that
+
+    is equivalent to assembly language
+
+    program needed to perform the identical
+
+    task.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'Step 4: After the program has been translated the next step in the compilation
+    process is to translate the assembly language statements into actual machine instructions.
+    The assembler takes each assembly language statement and converts it into a binary
+    format known as object code, which is then written into another file on the system.
+    This file has the same name as the source file under Unix, with the last letter
+    “o” (for object) instead of a “c”.
+
+
+    Step 5: After the program has been translated into object code, it is ready to
+    be linked. This process is once again'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'performed automatically whenever the cc or gcc command is issued under Unix.
+
+    The purpose of the linking phase is to get the program into a final form for execution
+    on the computer.
+
+
+    If the program uses other programs that were previously processed by the compiler,
+    then during this phase the programs are linked together. Programs that are used
+    from the system’s program library are also searched and linked together with the
+    object program during this phase.
+
+
+    The process of compiling and linking a program is often called building.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'The final linked file, which is in an
+
+
+    executable object code format, is stored
+
+    in another file on the system, ready to be
+
+    run or executed. Under Unix, this file is
+
+    called a.out by default. Under Windows,
+
+    the executable file usually has the same
+
+    name as the source file, with the c
+
+    extension replaced by an exe extension.
+
+
+    Step 6: To subsequently execute the
+
+    program, the command a.out has the
+
+    effect of loading the program called a.out'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'into the computer’s memory and
+
+
+    initiating its execution.
+
+
+    When the program is executed, each of the
+
+    stements of the program is sequentially
+
+    executed in turn. If the program requests any
+
+    data from the user, known as input, the
+
+    program temporarily suspends its execution so
+
+    that the input can be entered. Or, the program
+
+    might simply wait for an event, such as a
+
+    mouse being clicked, to occur. Results that are
+
+    displayed by the program, known as output,
+
+    appear in a window, sometimes called the
+
+    console. If the program does not produce the
+
+    desired results, it is necessary to go back and
+
+    analyze the program’s logic. This is known
+
+    as the debugging phase, during which an
+
+
+    33'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: 'attempt is made to remove all the known
+
+    problems or bugs from the program. To do this,
+
+    it will most likely be necessary to make
+
+    changes to original source program.
+
+
+    ![](img/7e3f35612983959bbf2e3b551f6c2979_33_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "```\n/* Simple program to add two numbers\n */\n\n#include <stdio.h>\n\nint\
+    \ main (void)\n{\n    int v1, v2, sum; //v1,v2,sum are\n    variables and int\
+    \ is data type declared v1\n    = 150;\n\n    v2 = 25;\n\n    sum = v1 + v2;\n\
+    \n    printf(\"The sum of %i and %i is= %i\\n\",\n    v1, v2, sum);\n\n    return\
+    \ 0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "```\n}\n```\n\nOutput:\n\nThe sum of 150 and 25 is=175\n\n# CHARACTER SET\n\
+    \nA character denotes any alphabet, digit or special symbol used to represent\
+    \ information. Valid alphabets, numbers and special symbols allowed in C are\n\
+    \n| Alphabets | A, B, ......, Y, Z |\n| a, b, ........ y, z |\n| Digits | 0, 1,\
+    \ 2, 3, 4, 5, 6, 7, 8, 9 |\n| Special symbols | ~! @# % ^ & * ( ) _ - + = | \\\
+    \ { }\n [ ] : \" '<>,.?/ |\n\n36"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'The alphabets, numbers and special symbols when properly combined constants,
+    variables and keywords.
+
+
+    # Identifiers
+
+
+    Identifiers are user defined word used to name of entities like variables, arrays,
+    functions, structures etc. Rules for naming identifiers are:
+
+
+    +   1) name should only consists of alphabets (both upper and lower case), digits
+    and underscore (_) sign.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '2) first characters should be alphabet or underscore
+
+
+    3) name should not be a keyword
+
+
+    4) since C is a case sensitive, the upper case and lower case considered differently,
+    for example code, Code, CODE etc. are different identifiers.
+
+
+    5) identifiers are generally given in some meaningful name such as value, net_salary,
+    age, data etc. An identifier name may be long, some implementation recognizes
+    only first eight characters, most recognize 31 characters. ANSI standard compiler
+    recognize 31'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'characters. Some invalid identifiers are
+
+    5cb, int, res#, avg no etc.
+
+
+    # Keyword
+
+
+    There are certain words reserved for
+
+    doing specific task, these words are
+
+    known as reserved word or keywords.
+
+    These words are predefined and always
+
+    written in lower case or small letter.
+
+    These keywords can’t be used as a
+
+    variable name as it assigned with fixed
+
+    meaning. Some examples are int, short,
+
+    signed, unsigned, default, volatile, float,
+
+    long, double, break, continue, typedef,
+
+    static, do, for, union, return, while, do,'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: 'extern, register, enum, case, goto,
+
+    struct, char, auto, const etc.
+
+
+    # Data Types
+
+
+    Data types refer to an extensive system used for declaring variables or functions
+    of different types before its use. The type of a variable determines how much
+    space it occupies in storage and how the bit pattern stored is interpreted. The
+    value of a variable can be changed any time.
+
+
+    C has the following 4 types of data types basic built-in data types: int, float,
+    double, char'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: 'Enumeration data type: enum
+
+
+    Derived data type: pointer, array,
+
+    structure, union
+
+
+    Void data type: void
+
+
+    A variable declared to be of type int can
+
+    be used to contain integral values only—nthat is, values that do not contain
+
+    decimal places. A variable declared to be
+
+    of type float can be used for storing
+
+    floating- point numbers (values
+
+    containing decimal places). The double
+
+    type is the same as type float, only with
+
+    roughly twice the precision. The char
+
+    data type can be used to store a single'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'character, such as the letter a, the digit character 6, or a semicolon similarly
+    A variable declared char can only store character type value.
+
+
+    There are two types of type qualifier in c
+
+
+    Size qualifier: short, long
+
+
+    Sign qualifier: signed, unsigned
+
+
+    When the qualifier unsigned is used the number is always positive, and when signed
+    used number may be positive or negative. If the sign qualifier is not mentioned,
+    then by default sign qualifier is assumed. The range of values for signed data
+    types is less than that of'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: 'unsigned data type. Because in signed type, the left most bit is used to represent
+    sign, while in unsigned type this bit is also used to represent the value. The
+    size and range of the different data types on a 16 bit machine is given below:
+
+
+    | Basic data type | Data type with qualifier | Size (byte) | Range |
+
+    |---|---|---|--|
+
+    | char | char or signed char | 1 | -128 to 127 |
+
+    | | unsigned char | 1 | 0 to 255 |
+
+    | int | int or signed int | 2 | -32768 to 32767 |
+
+    | | unsigned int | 2 | 0 to 65535 |
+
+    | | short or signed short int | 2 | -128 to 127 |
+
+    | | unsigned short int | 2 | 0 to 65535 |
+
+    | | long or signed long int | 4 | -2147483648 to 2147483647 |
+
+    | | unsigned long int | 4 | 0 to 4294967295 |
+
+    | float | float | 4 | -3.4E-38 to 3.4E+38 |
+
+    | double | double | 8 | 1.7E-308 to 1.7E+308 |
+
+    | | Long double | 10 | 3.4E-4932 to 1.1E+4932 |'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# CONSTANTS
+
+
+    Constant is a any value that cannot be changed during program execution. In C,
+    any number, single character, or character string is known as a constant.
+
+    A constant is an entity that doesn''t change whereas a variable is an entity that
+    may change. For example, the number 50 represents a constant integer value. The
+    character string "Programming in C is fun.\
+
+    " is an example of a constant character string. C constants can be divided into
+    two major categories:
+
+
+    Primary Constants'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# Secondary Constants
+
+
+    These constants are further categorized as
+
+
+    ![](img/7e3f35612983959bbf2e3b551f6c2979_44_0.png)
+
+
+    Numeric constant
+
+
+    Character constant'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'String constant
+
+
+    # Numeric constant: Numeric constant
+
+
+    consists of digits. It required minimum size of 2 bytes and max 4 bytes. It may
+    be positive or negative but by default sign is always positive. No comma or space
+    is allowed within the numeric constant and it must have at least 1 digit. The
+    allowable range for integer constants is -32768 to 32767. Truly speaking the range
+    of an Integer constant depends upon the compiler. For a 16-bit compiler like Turbo
+    C or Turbo C++ the range is -32768 to 32767.
+
+
+    For a 32-bit compiler the range would be even greater. Mean by a 16-bit or a 32-bit
+    compiler, what range of an Integer'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: 'constant has to do with the type of compiler.
+
+
+    It is categorized a integer constant and real constant. An integer constants are
+    whole number which have no decimal point. Types of integer constants are:
+
+
+    Decimal constant: 0 9(base 10)
+
+
+    Octal constant: 0 7(base 8)
+
+
+    Hexa decimal constant: 0----9, A F(base 16)
+
+
+    In decimal constant first digit should not be zero unlike octal constant first
+    digit must be zero(as 076, 0127) and in hexadecimal constant first two digit 47'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: 'should be 0x/ 0X (such as 0x24, 0x87A).
+
+
+    By default type of integer constant is integer but if the value of integer constant
+    is exceeds range then value represented by integer type is taken to be unsigned
+    integer or long integer. It can also be explicitly mention integer and unsigned
+    integer type by suffix I/L and u/U.
+
+
+    **Real constant** is also called floating point constant. To construct real constant
+    we must follow the rule of ,
+
+
+    -real constant must have at least one digit.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '+   -It must have a decimal point.
+
+
+    +   -It could be either positive or negative.
+
+
+    +   -Default sign is positive.
+
+
+    +   -No commas or blanks are allowed within a real constant. Ex.: +325.34 426.0
+
+
+    +   -32.76
+
+
+    To express small/large real constant exponent(scientific) form is used where number
+    is written in mantissa and exponent form separated by e/E. Exponent can be positive
+    or negative integer but mantissa can be real/integer'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: 'type, for example 3.6*105=3.6e+5. By default type of floating point constant
+    is double, it can also be explicitly defined it by suffix of f/F.
+
+
+    # Character Constant
+
+
+    Character constant represented as a single character enclosed within a single
+    quote. These can be single digit, single special symbol or white spaces as ''9'',
+    ''c'', ''$'', '' '' etc. Every character constant has a unique integer like value
+    in machine''s character code as if machine using ASCII (American standard code
+    for information interchange). Some numeric value associated with each upper and'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'lower case alphabets and decimal integers are as:
+
+
+    A Z ASCII value (65-90)
+
+
+    a z ASCII value (97-122)
+
+
+    0----------9 ASCII value (48-59)
+
+
+    ; ASCII value (59)
+
+
+    # String Constant
+
+
+    Set of characters are called string and when sequence of characters are enclosed
+    within a double quote (it may be combination of all kind of symbols) is a string
+    constant. String constant has zero, one or more than one character and'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'at the end of the string null character(\0) is automatically placed by compiler.
+    Some examples are “sarathina", "908", "3"", "A" etc. In C although same characters
+    are enclosed within single and double quotes it represents different meaning such
+    as “A” and ‘A’ are different because first one is string attached with null character
+    at the end but second one is character constant with its corresponding ASCII value
+    is 65.
+
+
+    # Symbolic Constant
+
+
+    Symbolic constant is a name that substitute for a sequence of characters and,
+    characters may be numeric, character or string constant. These'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'constant are generally defined at the beginning
+
+    of the program as
+
+
+    #define name value , here name
+
+    generally written in
+
+
+    upper case for example
+
+
+    ```
+
+    #define MAX 10
+
+    #define CH `b`
+
+    #define NAME "sony"
+
+    ```
+
+
+    # Variables
+
+
+    Variable is a data name which is used to
+
+    store some data value or symbolic'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: 'names for storing program computations and results. The value of the variable
+    can be change during the execution. The rule for naming the variables is same
+    as the naming identifier. Before used in the program it must be declared. Declaration
+    of variables specify its name, data types and range of the value that variables
+    can store depends upon its data types.
+
+
+    Syntax:
+
+
+    ```
+
+    int a;
+
+    char c;
+
+    float f;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Variable Initialization
+
+
+    When we assign any initial value to variable during the declaration, is called
+    initialization of variables. When variable is declared but contain undefined value
+    then it is called garbage value. The variable is initialized with the assignment
+    operator such as
+
+
+    Data type variable name=constant;
+
+
+    Example: int a=20;
+
+
+    Or int a;
+
+
+    a=20;'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# EXPRESSIONS
+
+
+    An expression is a combination of variables, constants, operators and function
+    call. It can be arithmetic, logical and relational for example:-
+
+
+    ```
+
+    int z= x+y // arithmetic expression
+
+    a>b //relational
+
+    a==b // logical
+
+    funcc(a, b) // function call
+
+    ```
+
+
+    Expressions consisting entirely of constant values are called constant expressions.
+    So, the expression
+
+
+    ```
+
+    121 + 17 - 110
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'is a constant expression because each of
+
+    the terms of the expression is a constant
+
+    value. But if i were declared to be an
+
+    integer variable, the expression
+
+
+    180 + 2 - j
+
+
+    would not represent a constant
+
+    expression.
+
+
+    # Operator
+
+
+    This is a symbol use to perform some
+
+    operation on variables, operands or with the
+
+    constant. Some operator required 2 operand to
+
+    perform operation or Some required single
+
+    operation.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: 'Several operators are there those are, arithmetic operator, assignment, increment
+    , decrement, logical, conditional, comma, size of , bitwise and others.
+
+
+    # 1. Arithmetic Operator
+
+
+    This operator used for numeric calculation. These are of either Unary arithmetic
+    operator, Binary arithmetic operator. Where Unary arithmetic operator required
+
+
+    only one operand such as +-, ++, --!, tiled. And these operators are addition,
+    subtraction, multiplication, division. Binary arithmetic operator on other hand
+    required two operand and its operators are +(addition), -(subtraction),'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '*(multiplication), /(division),
+
+    %(modulus). But modulus cannot applied with floating point operand as well as
+    there are no exponent operator in c.
+
+
+    Unary (+) and Unary (-) is different from addition and subtraction.
+
+
+    When both the operand are integer then it is called integer arithmetic and the
+    result is always integer. When both the operand are floating point then it is
+    called floating arithmetic and when operand is of integer and floating point then
+    it is called mix type or mixed mode arithmetic . And the result is in float type.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# 2. Assignment Operator
+
+
+    A value can be stored in a variable with the use of assignment operator. The assignment
+    operator(=) is used in assignment statement and assignment expression. Operand
+    on the left hand side should be variable and the operand on the right hand side
+    should be variable or constant or any expression. When variable on the left hand
+    side is occur on the right hand side then we can avoid by writing the compound
+    statement. For example,
+
+
+    ```
+
+    int x= y;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '```
+
+    int Sum=x+y+z;
+
+    ```
+
+
+    # 3. Increment and Decrement
+
+
+    The Unary operator ++, --, is used as increment and decrement which acts upon
+    single operand. Increment operator increases the value of variable by one
+
+
+    .Similarly decrement operator decrease the value of the variable by one. And these
+    operator can only used with the variable, but cann''t use with expression and
+    constant as ++6 or ++(x+y+z).
+
+
+    It again categories into prefix post fix . In the prefix the value of the variable
+    is incremented 1st, then the new value is'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: 'used, where as in postfix the operator is
+
+    written after the operand(such as
+
+    m++,m--).
+
+
+    # EXAMPLE
+
+
+    ```
+
+    let y=12; z= ++y; y= y+1; z= y;
+
+    ```
+
+
+    Similarly in the postfix increment and
+
+    decrement operator is used in the
+
+    operation . And then increment and
+
+    decrement is perform.
+
+
+    # EXAMPLE
+
+
+    ```
+
+    let x= 5; y= x++; y=x;
+
+    ```
+
+
+    ```
+
+    x = x+1;
+
+    ```
+
+
+    # 4. Relational Operator'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'It is use to compared value of two
+
+
+    expressions depending on their relation.
+
+
+    Expression that contain relational
+
+
+    operator is called relational expression.
+
+
+    Here the value is assign according to
+
+    true or false value. a.(a>=b) || (b>20)
+
+
+    b.(b>a) && (e>b)
+
+
+    c. 0(b!=7)
+
+
+    # 5. Conditional Operator
+
+
+    It sometimes called as ternary operator.
+
+    Since it required three expressions as
+
+    operand and it is represented as (?, , :).'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "# SYNTAX\n\n```\nexp1 ? exp2 :exp3\n```\n\nHere exp1 is first evaluated. It\
+    \ is true\nthen value return will be exp2 . If false\nthen exp3.\n\n# EXAMPLE\n\
+    \n```\nvoid main()\n{\n    int a=10, b=2\n    int s=(a>b) ? a:b;\n    printf(\"\
+    value is:%d\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: 'Output:
+
+
+    Value is:10
+
+
+    # 6. Comma Operator
+
+
+    Comma operator is use to permit different expression to be appear in a situation
+    where only one expression would be used. All the expression are separator by comma
+    and are evaluated from left to right.
+
+
+    EXAMPLE
+
+
+    ```
+
+    int i, j, k, l;
+
+    for(i=1,j=2;i<=5;j<=10;i++;j++)
+
+    ```
+
+
+    # 7. Sizeof Operator'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: 'Size of operator is a Unary operator, which gives size of operand in terms
+    of byte that occupied in the memory. An operand may be variable, constant or data
+    type qualifier.
+
+
+    Generally it is used make portable program(program that can be run on different
+    machine) . It determines the length of entities, arrays and structures when their
+    size are not known to the programmer. It is also use to allocate size of memory
+    dynamically during execution of the program.
+
+
+    # EXAMPLE
+
+
+    ```
+
+    main( )
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '```
+
+    {
+
+
+    int sum; float f;
+
+
+    printf("%d%d", sizeof(f), size of (sum)
+
+    );
+
+
+    printf("%d%d", size of(235 L), size
+
+    of(A));
+
+
+    }
+
+    ```
+
+
+    # 8. Bitwise Operator
+
+
+    Bitwise operator permit programmer to access and manipulate of data at bit level.'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: 'Various bitwise operator enlisted are
+
+
+    one''s complement (~)
+
+
+    bitwise AND (&)
+
+
+    bitwise OR (|)
+
+
+    bitwise XOR (^)
+
+
+    left shift (<<)
+
+
+    right shift (>>)
+
+
+    These operator can operate on integer
+
+    and character value but not on float and
+
+    double. In bitwise operator the function
+
+    showbits( ) function is used to display
+
+    the binary representation of any integer
+
+    or character value.'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: 'In one''s complement all 0 changes to 1 and all 1 changes to 0. In the bitwise
+    OR its value would obtaining by 0 to 2 bits.
+
+
+    As the bitwise OR operator is used to set on a particular bit in a number. Bitwise
+    AND the logical AND.
+
+
+    It operate on 2operands and operands are compared on bit by bit basic. And hence
+    both the operands are of same type.
+
+
+    # Logical or Boolean Operator
+
+
+    Operator used with one or more operand and return either value zero (for false)
+    or one (for true). The operand may be 70'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'constant, variables or expressions. And the expression that combines two or
+    more expressions is termed as logical expression. C has three logical operators
+    :
+
+
+    Operator
+
+
+    &&: AND
+
+
+    ||: OR
+
+
+    !: NOT
+
+
+    Where logical NOT is a unary operator and other two are binary operator. Logical
+    AND gives result true if both the conditions are true, otherwise result is false.
+    And logial OR gives result false if'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: 'both the condition false, otherwise result
+
+
+    is true.
+
+
+    # Precedence and associativity of operators
+
+
+    | Operators | Description | Precedence level | Associativity |
+
+    |---|---|---|---|
+
+    | 0 | function call | 1 | left to right |
+
+    | [] | array subscript | | |
+
+    | → | arrow operator dot operator | | |
+
+    | + | unary plus | 2 | right to left |
+
+    | - | unary minus | | |
+
+    | ++ | increment | | |
+
+    | -- | decrement | | |
+
+    | ! | logical not | | |
+
+    | * | l’s complement | | |
+
+    | & | redirection address | | |
+
+    | (data type) | type cast size in byte | | |
+
+    | * | multiplication | 3 | left to right |
+
+    | / | division | | |
+
+    | % | modulus | | |
+
+    | + | addition | 4 | left to right |'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# Control Statement
+
+
+    Generally C program statement is executed in a order in which they appear in the
+    program. But somettimes we use decision making condition for execution only a
+    part of program, that is called control statement. Control statement defined how
+    the control is transferred from one part to the other part of the program. There
+    are several control statement like if...else, switch, while, do. while, for loop,
+    break, continue, goto etc.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '74'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# LOOPS IN C
+
+
+    Loop:-it it is a block of statement that performs set of instructions. In loops
+
+
+    Repeating particular portion of the program either a specified number of time
+    or until a particular no of condition is being satisfied.
+
+
+    There are three types of loops in c
+
+
+    +   1.While loop
+
+
+    +   2.do while loop
+
+
+    +   3.for loop'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "# While loop\n\nSyntax:-\n\n```\nwhile(condition)\n{\n  Statement 1;\n  Statement\
+    \ 2;\n}\nOr while(test condition)\n  Statement;\n```\n\nThe test condition may\
+    \ be any expression .when we want to do something a fixed no of times but not\
+    \ known about the number of iteration, in a program then while loop is used."
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: 'Here first condition is checked if, it is
+
+    true body of the loop is executed else, If
+
+    condition is false control will be out
+
+    of loop.
+
+
+    Example:-
+
+
+    ```
+
+    /* wap to print 5 times welcome to C */
+
+    #include<stdio.h>
+
+    void main()
+
+    {
+
+    int p=1;
+
+    While(p<=5)
+
+    {
+
+    printf("Welcome to C\n");
+
+    P=p+1;
+
+    }
+
+    }
+
+    ```
+
+
+    Output: Welcome to C
+
+    77'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: 'Welcome to C
+
+
+    Welcome to C
+
+
+    Welcome to C
+
+
+    Welcome to C
+
+
+    So as long as condition remains true
+
+    statements within the body of while loop
+
+    will get executed repeatedly.
+
+
+    # do while loop
+
+
+    This (do while loop) statement is also
+
+    used for looping. The body of this loop
+
+    may contain single statement or block of
+
+    statement. The syntax for writing this
+
+    statement is:'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: 'Syntax:-
+
+
+    ```
+
+    Do
+
+    {
+
+    Statement;
+
+    }
+
+    while(condition);
+
+    ```
+
+
+    Example:- #include<stdio.h>
+
+
+    void main()
+
+
+    {
+
+
+    int X=4;
+
+
+    do
+
+
+    {'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '```
+
+    Printf("%d",X); X=X+1;
+
+    ```
+
+
+    ```
+
+    }while(X<=10);
+
+    ```
+
+
+    ```
+
+    Printf(" "
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    Output: 4 5 6 7 8 9 10
+
+
+    Here firstly statement inside body is executed then condition is checked. If the
+    condition is true again body of loop is executed and this process continue until
+    the condition becomes false. Unlike while loop semicolon is placed at the end
+    of while.'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: 'There is minor difference between while and do while loop, while loop test
+    the condition before executing any of the statement of loop. Whereas do while
+    loop test condition after having executed the statement at least one within the
+    loop.
+
+
+    If initial condition is false while loop would not executed it’s statement on
+    other hand do while loop executed it’s statement at least once even If condition
+    fails for first time. It means do while loop always executes at least once. Notes:
+
+
+    Do while loop used rarely when we want to execute a loop at least once.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# for loop
+
+
+    In a program, for loop is generally used when number of iteration are known in
+    advance. The body of the loop can be single statement or multiple statements.
+
+
+    Its syntax for writing is:
+
+
+    Syntax:-
+
+
+    ```
+
+    for(exp1;exp2;exp3)
+
+    {
+
+    Statement;
+
+    }
+
+    ```
+
+
+    Or'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "```\nfor(initialized counter; test counter; update counter)\n{\n  Statement;\n\
+    }\n```\n\nHere exp1 is an initialization expression, exp2 is test expression or\
+    \ condition and exp3 is an update expression. Expression 1 is executed only once\
+    \ when loop started and used to initialize the loop variables. Condition expression\
+    \ generally uses relational and logical operators. And updation part executed\
+    \ only when after body of the loop is executed."
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '```
+
+    Example:- void main()
+
+    {
+
+    int i; for(i=1;i<10;i++)
+
+    {
+
+    Printf(" %d ", i);
+
+    }
+
+    }
+
+    ```
+
+
+    Output:-1 2 3 4 5 6 7 8 9'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# Nesting of loop
+
+
+    When a loop written inside the body of another loop then, it is known as nesting
+    of loop. Any type of loop can be nested in any type such as while, do while, for.
+    For example nesting of for loop can be represented as :
+
+
+    ```
+
+    void main()
+
+    ```
+
+
+    ```
+
+    {
+
+    nint i,j; for(i=0;i<2;i++) for(j=0;j<5;
+
+    j++) printf("%d %d", i, j);
+
+
+    }
+
+    ```
+
+
+    Output: i=0'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '```
+
+    j=0 1 2 3 4
+
+    ```
+
+
+    ```
+
+    i=1
+
+    ```
+
+
+    ```
+
+    j=0 1 2 3 4
+
+    ```
+
+
+    # Break statement(break)
+
+
+    Sometimes it becomes necessary to
+
+    come out of the loop even before loop
+
+    condition becomes false then break
+
+    statement is used. Break statement is
+
+    used inside loop and switch statements.
+
+    It cause immediate exit from that loop
+
+    which it appears and it is generally
+
+    written with condition. It is written with
+
+    the keyword as break. When break
+
+    statement is encountered loop is'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "terminated and control is transferred to the statement, immediately after loop\
+    \ situation where we want to jump out of the loop instantly without waiting to\
+    \ get back to conditional state.\n\nWhen break is encountered inside any loop,\
+    \ control automatically passes to the first statement after the loop. This break\
+    \ statement is usually associated with if statement.\n\nExample :\n\n```\nvoid\
+    \ main()\n{\n  int j=0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '```
+
+    for(;j<6;j++)
+
+
+    if(j==4) break;
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    0 1 2 3
+
+
+    # Continue statement (key word continue)
+
+
+    Continue statement is used for
+
+    continuing next iteration of loop after skipping some statement of loop. When
+    it encountered control automatically passes through the beginning of the loop.
+    It is usually associated with the if
+
+    88'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: 'statement. It is useful when we want to continue the program without executing
+    any part of the program.
+
+
+    The difference between break and continue is, when the break encountered loop
+    is terminated and it transfer to the next statement and when continue is encounter
+    control come back to the beginning position.
+
+
+    In while and do while loop after continue statement control transfer to the test
+    condition and then loop continue where as in, for loop after continue control
+    transferred to the updating expression and condition is tested.'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: "Example:- void main()\n\n```\n{\n  int n;\n  for(n=2; n<=9; n++) {\n    if(n==4)\
+    \ continue;\n    printf(\"%d\", n);\n  }\n  Printf(\"out of loop\");\n}\n```\n\
+    \nOutput: 2 3 5 6 7 8 9 out of loop\n90"
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# if statement
+
+
+    Statement execute set of command like when condition is true and its syntax is
+
+
+    If (condition) Statement;
+
+
+    The statement is executed only when condition is true. If the if statement body
+    is consists of several statement then better to use pair of curly braces. Here
+    in case condition is false then compiler skip the line within the if block.
+
+
+    ```
+
+    void main()
+
+    {
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '```
+
+    int n;
+
+    printf(" enter a number:");
+
+    scanf("%d",&n);
+
+
+    If (n>10)
+
+
+    Printf(" number is grater");
+
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    Enter a number:12 Number is greater
+
+
+    # if....else ... Statement
+
+
+    it is bidirectional conditional control statement that contains one condition
+    & two possible action. Condition may be'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "true or false, where non-zero value regarded as true & zero value regarded\
+    \ as false. If condition are satisfy true, then a single or block of statement\
+    \ executed otherwise another single or block of statement is executed. \n\nIts\
+    \ syntax is:-\n\n```\nif (condition)\n{\nStatement1; Statement2;\n}\nelse\n{}\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '```
+
+    Statement1; Statement2;
+
+    }
+
+    ```
+
+
+    Else statement cannot be used without if or no multiple else statement are allowed
+    within one if statement. It means there must be a if statement with in an else
+    statement.
+
+
+    Example:-
+
+
+    ```
+
+    /* To check a number is eve or odd */
+
+
+    void main()
+
+    {
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '```
+
+    int n;
+
+
+    printf("enter a number:"); sacnf("%d",
+
+    &n);
+
+
+    If (n%2==0)
+
+
+    printf("even number");
+
+
+    else
+
+    }
+
+
+    printf("odd number");
+
+
+    Output: enter a number:121 odd number
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# Nesting of if ...else
+
+
+    When there are another if else statement
+
+    in if-block or else-block, then it is called
+
+    nesting of if-else statement.
+
+
+    Syntax is :-
+
+
+    ```
+
+    if (condition)
+
+    {
+
+    If (condition)
+
+    Statement1;
+
+    else
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '```
+
+    }
+
+    statement2;
+
+    }
+
+    ```
+
+
+    Statement3;
+
+
+    # If....else LADDER
+
+
+    In this type of nesting there is an else statement in every else part except the
+    last part. If condition is false control pass to block where condition is again
+    checked with its if statement.
+
+
+    Syntax is :-'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '```
+
+    if (condition)
+
+    Statement1;
+
+    else if (condition)
+
+    statement2;
+
+    else if (condition)
+
+    statement3;
+
+    else
+
+    statement4;
+
+    ```
+
+
+    This process continue until there is no if statement in the last block. if one
+    of the'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: 'condition is satisfy the condition other
+
+
+    nested “else if” would not executed.
+
+
+    But it has disadvantage over if else
+
+
+    statement that, in if else statement
+
+
+    whenever the condition is true, other
+
+
+    condition are not checked. While in this
+
+
+    case, all condition are checked.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# ARRAY
+
+
+    Array is the collection of similar data types or collection of similar entity
+    stored in contiguous memory location. Array of character is a string. Each data
+    item of an array is called element. And each element is unique and located in
+    separated memory location. Each of elements of an array share a variable but each
+    element having different index no. known as subscript.
+
+
+    An array can be a single dimensional or multi-dimensional and number of subscripts
+    determines its dimension. And number of subscript is always starts with zero.
+    One dimensional array is known as'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: 'vector and two dimensional arrays are known as matrix.
+
+
+    ADVANTAGES: array variable can store more than one value at a time where other
+    variable can store one value at a time.
+
+
+    Example:
+
+
+    ```
+
+    int arr[100];
+
+    ```
+
+
+    ```
+
+    int mark[100];
+
+    ```
+
+
+    DECLARATION OF AN ARRAY :
+
+
+    Its syntax is :
+
+
+    Data type array name [size];
+
+
+    ```
+
+    int arr[100];
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '```
+
+    int mark[100];
+
+    ```
+
+
+    ```
+
+    int a[5]={10,20,30,100,5}
+
+    ```
+
+
+    The declaration of an array tells the compiler that, the data type, name of the
+    array, size of the array and for each element it occupies memory space. Like int
+    data type, it occupies 2 bytes for each element and for float it occupies 4 byte
+    for each element etc. The size of the array operates the number of elements that
+    can be stored in an array and it may be a int constant or constant int expression.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: 'We can represent individual array as : int ar[5];
+
+
+    ar[0], ar[1], ar[2], ar[3], ar[4];
+
+
+    Symbolic constant can also be used to specify the size of the array as: #define
+    SIZE 10;
+
+
+    # Initialization Of An Array:
+
+
+    After declaration element of local array has garbage value. If it is global or
+    static array then it will be automatically initialize with zero. An explicitly
+    it can be initialize that'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: 'Data type array name [size] = {value1, value2, value3...}
+
+
+    Example:
+
+
+    ```
+
+    in ar[5]={20,60,90, 100,120}
+
+    ```
+
+
+    Array subscript always start from zero which is known as lower bound and upper
+    value is known as upper bound and the last subscript value is one less than the
+    size of array. Subscript can be an expression i.e. integer value. It can be any
+    integer, integer constant, integer variable, integer expression or return value
+    from functional call that yield integer value.'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: 'So if i & j are not variable then the valid subscript are ar
+
+
+    ```
+
+    [i*7],ar[i*],ar[i++],ar[3];
+
+    ```
+
+
+    The array elements are standing in continuous memory locations and the amount
+    of storage required for hold the element depend in its size & type.
+
+
+    Total size in byte for 1D array is:
+
+
+    Total bytes=size of (data type) * size of array.
+
+
+    Example : if an array declared is: int [20];
+
+
+    Total byte= 2 * 20 =40 byte.'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "# Accessing Of Array\n\n# Element:\n\n```\n/*Write a program to input values\
+    \ into\nan array and display them*/\n#include<stdio.h>\n\nint main()\n{\nint arr[5],i;\
+    \ for(i=0;i<5;i++)\n{\n    printf(\"enter a value for arr[%d] \\n\",i);\n    scanf(\"\
+    %d\",&arr[i]);\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '```
+
+    printf("the array elements are: \n"); for
+
+    (i=0;i<5;i++)
+
+    {
+
+    printf("%d\d\t",arr[i]);
+
+    }
+
+    return 0;
+
+    }
+
+    ```
+
+
+    OUTPUT:
+
+
+    Enter a value for arr[0] = 12
+
+
+    Enter a value for arr[1] = 45
+
+
+    Enter a value for arr[2] = 59
+
+
+    Enter a value for arr[3] = 98
+
+
+    Enter a value for arr[4] = 21
+
+
+    107'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: 'The array elements are 12 45 59 98 21
+
+
+    Example: From the above example value stored in an array are and occupy its memory
+    addresses 2000, 2002, 2004, 2006, 2008 respectively.
+
+
+    a[0]=12, a[1]=45, a[2]=59, a[3]=98, a[4]=21
+
+
+    | ar[0] | ar[1] | ar[2] | ar[3] | ar[4] |
+
+    | --- | --- | --- | --- | --- |
+
+    | 12 | 45 | 59 | 98 | 21 |
+
+    | 2000 | 2002 | 2004 | 2006 | 2008 |'
+  merge: -1
+  img_proc: true

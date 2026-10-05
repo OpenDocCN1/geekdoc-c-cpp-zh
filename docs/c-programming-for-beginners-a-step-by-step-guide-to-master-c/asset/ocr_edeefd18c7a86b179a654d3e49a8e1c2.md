@@ -1,0 +1,3 @@
+as source program and the
+corresponding machine level language program is called as object program.
+Both compiler and interpreter perform the same task but there working is different. Compiler read the program at-a-time and searches the error and lists them. If the program is error free then it is converted into object program. When program size is large then compiler is preferred. Whereas interpreter read only one line of the source code and convert to object code. If it check error, statement by statement and hence of take more time.
