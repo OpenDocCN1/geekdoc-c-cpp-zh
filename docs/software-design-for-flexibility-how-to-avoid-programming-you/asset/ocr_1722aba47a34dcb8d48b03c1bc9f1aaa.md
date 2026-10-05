@@ -1,0 +1,9 @@
+# # 1
+
+# ## Flexibility in Nature and in Design
+
+It is difficult to design a mechanism of general utility that does any particular job very well, so most engineered systems are designed to perform a specific job. General-purpose inventions, such as the screw fastener, are rare and of great significance. The digital computer is a breakthrough of this kind, because it is a universal machine that can simulate any other information-processing machine.¹¹ We write software that configures our computers to effect this simulation for the specific jobs that we need done.
+
+We have designed software to do particular jobs very well, as an extension of past engineering practice. Each piece of software is designed to do a relatively narrow job. As the problem to be solved changes, the software must be changed. But small changes to the problem do not often only small changes to the software. Software is designed too tightly for to be much flexibility. As a consequence, systems cannot evolve gracefully. They are brittle and must be replaced with entirely new designs as the problem domain changes² This is slow and expensive.
+
+Our engineered systems do not have to be brittle. The Internet has been extended from a small system to one of global scale. Our cities evolve organically, to accommodate new business models, life styles, and means of transportation and communication. Indeed, from observation of biological systems we see that it is possible to build systems that can be adapted to changes in the environment, both individually and as an evolutionary ensemble. Why is this not the way we design and build most software? There are historical reasons, but the main reason is that we don't know how to do this generally.

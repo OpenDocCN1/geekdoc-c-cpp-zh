@@ -1,0 +1,11 @@
+At this moment it is an accident a system turns out to be robust in the face of changes in requirements.
+
+# Additive programming
+
+Our goal in this book is to investigate how to construct computational systems so that they can be easily adapted to changing requirements. One should not have to modify a working program. One should be able to add to it to implement new functionality or to adjust old functions for new requirements. We call this **additive programming**. We explore techniques to add functionality to an existing program without breaking it. Our techniques do not guarantee that the additions are correct: the additions must themselves be debugged; but they should not damage existing functionality accidentally.
+
+Many of the techniques we explore in this book are not novel; some of them date back to the early days of computing! They are also not a comprehensive set, but simply some that we have found useful. Our intention is not to promote the use of these techniques, but to encourage a style of thinking that is focused on flexibility.
+
+In order for additive programming to be possible, it is necessary to minimize the assumptions about how a program works and how it will be used. Assumptions made during the design and construction of a program may reduce the possible future extensions of the program. Instead of making such assumptions, we build our programs to make just-in-time decisions based on the environment that the program is running in. We will explore several techniques that support this kind of design.
+
+We can always combine programs to get the union of the behaviors that each supports. But we want the whole to be more than the sum of its parts; we want the parts of the combined system to cooperate to give the system capabilities that no one part can provide by itself. But there are tradeoffs here the parts that we combine to make a system must sharply separate concerns. If a part does one thing extremely well, it is easier to reuse, and also easier to debug, than one that combines several disparate capabilities. If we want to build additively, it is important that the individual pieces combine with minimal unintended interactions.

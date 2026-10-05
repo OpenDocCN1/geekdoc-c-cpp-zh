@@ -1,0 +1,11 @@
+such garbage collectors (or ribosomes),21 However, even for safety-critical systems, such as autopilots, the restriction of applicability to situations for which the system is provably correct as specified may actually contribute to unnecessary failure. Indeed, we want an autopilot to make a good-faith attempt to fly an airplane that is damaged in a way not anticipated by the designer!
+
+We are arguing against the discipline of requiring proofs: the requirement that everything must be proved to be applicable in a situation before it is allowed to be used in situation excessively inhibits the use of techniques that could enhance the robustness of designs. This is especially true of techniques that allow a method to be used, on a tight leash, outside of its proven domain, and techniques that provide for future expansion without putting limits on the ways things can be extended.
+
+Unfortunately, many of the techniques we advocate make the problem of proof much more difficult, if not impossible. On the other hand, sometimes the best way to attack a problem is to generalize it until the proof becomes simple.
+
++   1 The discovery of the existence of universal machines by Alan Turing [124], and the fact that the set of functions that can be computed by Turing machines is equivalent to both the set of functions representable in Alonzo Church's λ calculus [17, 18, 16] and the general recursive functions of Kurt Gödel [45] and Jacques Herbrand [55], ranks among the greatest intellectual achievements of the twentieth century.
+
++   2 Of course, there are some wonderful exceptions. For example, Emacs [113] is an extensible editor that has evolved gracefully to adapt to changes in the computing environment and changes to its users' expectations. The computing world is just beginning to explore “engineered frameworks,” for example, Microsoft’s .net and Sun’s Java. These are intended to be infrastructures to support evolving systems.
+
++   3 A parti (pronounced parTEE) is the central idea of an architectural work: it is “the [architectural] composition being

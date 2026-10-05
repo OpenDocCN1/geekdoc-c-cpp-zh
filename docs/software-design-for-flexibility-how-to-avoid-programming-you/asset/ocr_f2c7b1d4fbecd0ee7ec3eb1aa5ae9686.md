@@ -1,0 +1,11 @@
+We also need a way to assign names to layers. Every layer must have a name, so that the layer in a datum can be specified. The name is also used by a layered procedure to connect the process for that layer to the corresponding layers in the incoming data. We have written our example using variables to refer to layer names, as in unit-layer, which is bound to the name for the unit layer. This makes the user interface independent of the details of how a layer name is specified; this will turn out to be useful.
+
+Another aspect of layer naming is that there must be a distinguished base layer, which represents the underlying computation being performed. In our example using layered-datum, the base layer's value is distinguished by being the first argument and by not having an associated name.
+
+Layered data can be built from simple data structures. We can use any convenient data structure that can associate a layer name with a value and permits many such associations. A special name can be used to identify the base layer, making the data structure simple and uniform.
+
+Building layered procedures is more complicated, because the processing for most layers will need some information from the computation in the base layer. For example, suppose we are multiplying two numbers that carry support information. Normally, the support of the result is the union of the supports of the arguments. But suppose one argument has a base-layer value of zero; then the support of the result is the support of the zero, and the support of the other argument is irrelevant.
+
+The base layer must not depend on any non-base layer because that violates the idea of the base layer: it is an independent computation that the other layers enhance. And a non- base layer should not depend on another non-base layer. A non-base layer generally shouldn't share information with another non-base layer since its behavior would be different depending on the presence or absence of the other layer. This would be inconsistent with our general approach of building additive programs.
+
+So building a layered procedure involves a balance between sharing information from the base layer to the non-base layers and isolating layers in most other cases. We will address this in the next sections as we explore the details of implementing layering.

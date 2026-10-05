@@ -1,0 +1,9 @@
+# Exercise 5.26: Search control in the embedded system
+
+How could we change the embedded system of section 5.4.2, with analysis to enable combinators that have success and failure continuations, to enable both depth-first search (as it is now) and breadth-first search? Explain your strategy. Make a new implementation that incorporates this ability to control the search order. Note: This is a rather large transformation.
+
+# 5.6 Power and responsibility
+
+In this chapter we have seen that we have great power from the Church-Turing universality of computation. We can never complain: “I cannot express this in the language I must use.” If we know the tricks of interpretation and compilation we can always escape from the confines of any language because it is always possible to build an appropriate domain-specific language for the problem at hand. The exposition here uses Scheme as the underlying language and builds powerful Lisp-based languages on top of Scheme. The reason we use Lisp syntax here is because it greatly simplifies the exposition of these ideas. (See exercise 5.7 on if notations. If we had to do this in a language with a complicated syntax the exposition would be many times longer and tedious.) But the power of interpretation is available in any Turing-universal language.
+
+It is important for future flexibility that the languages we build be simple and general. They must have very few mechanisms: primitives, means of combination, and means of abstraction. We want to be able to extend them as needed and to be able to mix and match the parts of programs. And, most important, when we have multiple languages, each of which is appropriate for some part of a problem, there must be good ways for those languages to interoperate.

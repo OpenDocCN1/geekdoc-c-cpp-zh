@@ -1,0 +1,11 @@
+because it requires fewer premises to be believed. This is implemented by the mechanism of merging value sets, which we will describe in sentence 7.4.3.
+
++   13. Dependency-directed backtracking was first introduced by Richard Stallman and Gerald Jay Sussman in the context of electrical circuit analysis [114]. A very similar technique, “clausal learning,” was developed in the context of logic by Karl Lieberherr [84]. Clausal learning is now used in the best SAT solvers. Ramin Zabih, David McAllister, and David Chapman showed one way to build this technique in List code [132]. Guy Steele showed an elegant way to incorporate dependency-directed backtracking into a constraint language [116]. Building on the work of John Doyle [30] and David McAllister, Ken Forbus and Johan deKler elaborated the theory and practice of dependencies and “truth-maintenance systems” [36], a general way to think about dependencies and backtracking. The way we implement dependency-directed backtracking in this book was developed by Alexey Radon and Gerald Jay Sussman [99, 100].
+
++   14. This use of the procedure pairwise-union implements the rule of logic, which is a generalization of modus ponens. In propositional logic the cut is written (A ∨ B) ∧ (¬B ∨ C) ⊢ (A ∨ C). This rule, combined with unification (section 4.4), is the basis of the famous resolution theorem proving algorithm invented by Robinson [104].
+
++   15. The precise number of failed choices of assignments is very dependent on the details of the computation. In this problem the number of failed choices can be anywhere from about 60 to about 200, depending on the order of propagator activations. But for this formulation of this problem the average number of failures is about 110.
+
++   16. This puzzle is taken from a booklet called Mathematical Recreations, published in the 1960s by Litton Industries, where it is attributed to the Kansas State Engineer.
+
++   17. Pattern-directed invocation was introduced by Carl Hewitt in PLANNER [56] and by Alain Colmerauer in Polrog [78]. This
