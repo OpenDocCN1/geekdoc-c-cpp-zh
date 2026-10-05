@@ -1,0 +1,5 @@
+# ### Listing 24.9 Iterator adapters change the behavior of operations.
+
+Every time the iterator out_it of type ostream_iterator is dereferenced and assigned something, it outputs it to cout. Between the elements, it prints a comma with a space ". So a *out_it = 42 results in the output 42., The copy algorithm from the <algorithm> header now performs exactly this assignment for all elements within the range data.begin() and data.end(). As a result, you get to see all elements on cout.
+
+In the <iterator> header, there are other useful things for iterators. For example, you can reverse a range with reverse_iterator or use make_move_iterator to turn a copying algorithm into a moving one. For the exact functionalities, I refer you to the standard library reference, e.g., https://cppreference.com.

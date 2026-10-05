@@ -1,0 +1,7 @@
+vector. However, the vector must have enough space allocated beforehand; that's why you create it with the length constructor argument in the appropriate size.
+
+Besides vector, only array has such a data() method. No other standard container guarantees that its data is contiguous, allowing it to be read in one go with read() and similar functions.
+
+A word about return data;, where the return type is vector<char>—a value, not a reference or pointer. Potentially, returning such a value type could require a large copy operation. However, the compiler and the standard mandated library work together here to “avoid the copy” (copy elision). This is guaranteed in this case because all return statements within the function return the same local variable; here it's trivial because there's only a single return. In this case, the compiler never needs to create a copy for the return, even if it is returned by value. Before the standard copy elision in this situation, this scenario was commonly referred to as return value optimization (RVO).
+
+The pack() function starts with two trivial lines. The first line, readFile(), reads the input, and the second line, GzWriteStream gz, prepares the output. This is done using the overloaded operator<<. For simplicity, I implemented it as a method. A free friend function would have been possible as well, but it is not necessarily needed here as the stream class is under—unlike ostream, where you can only work with a free function overload of operator<<.

@@ -1,0 +1,7 @@
+not cause you more trouble than they bring you benefits.
+
+When you use pointers, the step to using dynamic memory is not far: new is the keyword here. However, I must immediately prevent a potential misunderstanding: If you use standard containers like vector and its relatives, then you are already using dynamic memory without realizing it. You get all the benefits but do not have to worry about the tricky details. Therefore, I would like to preface the following: in C++, you will not be able to avoid pointers in the medium term, but you should always check the alternatives first. If you want to handle dynamic memory yourself, then do not use raw pointers for its ownership, but use the unique_ptr and shared_ptr pointers.
+
+# 20.1 Addresses
+
+At runtime, every “thing” must be stored somewhere. The most important things here are variables. In this sense, parameters are also variables. Other things might not be so obvious that they need to be stored somewhere are functions and methods. In C++, functions are also just variables of a certain (complicated) type. For comparison: things that are no longer present at runtime do not have an address, such as types themselves and the *.cpp files that are translated into

@@ -1,0 +1,7 @@
+# # Part I
+
+# ## Fundamentals
+
+You'll need a compiler or an IDE and must understand how to use them and how they work with your computer.
+
+Then you'll find out how the C++ language is structured and how you can put the various building blocks together into an executable program.

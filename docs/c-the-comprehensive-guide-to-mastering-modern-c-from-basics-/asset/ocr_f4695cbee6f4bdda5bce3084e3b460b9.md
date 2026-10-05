@@ -1,0 +1,7 @@
+# 4.3 Operators
+
+One- and two-character operators are very often used in expressions. 3+4 is a simple example, but an expression such as !isBad && (x >= x0) &&(x <= x1) could also appear. You can achieve a lot in C++ with such sequences of operators and operands. Now that you know a lot about variables, types, and expressions, you should get to know the possible operators.
+
+As an example, I will explain operators mainly using the int and bool types that you get to know the repertoire first. However, many operators can also be applied to other types. These include built-in types, such as float, but also types from the standard library, such as std::string and std::stream.
+
+In C++, you can define your own types that also support operators. It is up to you to ensure that these then also do something that applies to the built-in types. For example, we expect + to perform an addition—like with an int. However, the class string uses + for concatenation, which is still “addition-like.\ But you can, if you write, write a class Image that stores itself in a file + followed by a string. (Please don't do this!) We will deal with this in a suitable place. Here you will first find out what operators there are.

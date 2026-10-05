@@ -1,0 +1,1 @@
+blocks and automatically behave better regarding removal.

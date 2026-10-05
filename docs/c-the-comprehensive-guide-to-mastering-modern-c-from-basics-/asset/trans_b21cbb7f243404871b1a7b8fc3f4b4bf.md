@@ -1,0 +1,167 @@
+
+
+```cpp
+cout << data.size() << "\n";      // 输出: 0
+data.resize(100);                            // 放大
+cout << data.size() << "\n";              // 输出: 100
+valarray<int> data2(200);                       // 为200个值分配空间
+cout << data2.size() << "\n";              // 输出: 200
+valarray<int> dataC(5, 20);                   // 五个20，与vector不同
+cout << dataC[6] << "\n"; // 输出: 20:
+data[6]=5;
+valarray data(2, 3, 5, 7, 11); // valarray<int>, 初始化列表
+cout << data.size() << ":" << data[3] << "\n"; // 输出: 5:
+data[3]=7;
+```
+
+如你所见，你也可以初始值重新定义一组值。但注意：`valarray(value, size)` 两个参数的顺序与 `vector` 相反！最好养成只用数字指定大小或使用初始化列表来定义 `valarray` 的习惯。
+
+拷贝和移动也是允许的。
+
+`slice_array`、`gslice_array`、`mask_array` 和 `indirect_array` 辅助类都可以指定为初始化源。注意这些构造函数没有标记为 `explicit`，允许参数和返回值的隐式转换。
+
+## 24.12.3 赋值
+赋值运算符 `operator=` 支持与构造函数相同的参数。
+
+它没有像其他（真实）容器那样的 `assign` 方法，但至少有一个 `swap`。
+
+## 24.12.4 插入和删除
+你不能像使用 `insert` 那样真正的插入。不过，你可以通过 `operator[]` 读写元素。访问不会经过检查；你必须自己处理范围边界。没有相应的 `at()` 方法。
+
+但是，你仍然可以在之后更改 `valarray` 的大小。为此，有一个 `resize` 方法：
+
+- *resize(size_t size, T value)——放大或缩小、截断或用值初始化*
+
+在此操作过程中，所有数据可能会被复制。因此，指向 `valarray` 的指针和迭代器将失效。
+
+> `operator[]` 在 `valarray` 中几乎是魔法的。它不仅可以处理整数索引来访问单个元素，还可以使用切片、掩码和间接作为索引。
+
+事实上，上述辅助类被用作索引，但在实践中，这里发生了许多类型转换，因此你使用以下类型作为索引：
+
+- *Slice (切片)*
+你使用 `slice` 或 `gslice`。
+
+- *Mask (掩码)*
+你取一个与数据 `valarray<T>` 大小相同的 `valarray<bool>`。
+
+- *Indirection (间接引用)*
+你取一个与数据 `valarray<T>` 大小相同的 `valarray<size_t>`。
+
+## 考虑以下示例：
+
+```cpp
+// https://godbolt.org/z/PeG4K7Edc
+vararray v {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+vararray<int> r1(v(slice(0, 4, 3))); // 从0开始，4个元素，步长为3
+cout << r1; // 输出: 1 4 7
+vararray<int> r2(v > 6); // 通过 vararray<bool> 址
+cout << r2; // 输出: 7 8 9 10 11 12
+const vararray<size_t> indirect{2, 3, 6}; // 允许重复
+vararray<int> r5(v(indirect)); // 通过 vararray<size_t> 址
+cout << r5; // 输出: 3 4 7
+```
+
+## 24.12.6 特性：操作所有元素
+对于 `valarray` 中的数据，有一些非常有用的方法用于操作全部：
+
+- *sum, min, and max*
+计算所有值的和、最小值和最大值。对于普通容器，应使用 `<algorithm>` 中的 `accumulate` 或 `max_element`。
+
+- *shift and cshift*
+移动整个 `valarray` 的值；`cshift` 用零填充。
+
+- *apply*
+对 `valarray` 中的每个元素调用函数。函数必须接受一个 `T` 类型的参数并返回一个 `T`。总体上，它返回一个新的 `valarray`。对于普通容器，可能会使用 `for_each`。
+
+- *Integer, floating point, boolean, and bitwise arithmetic*
+使用内置运算符 `+`, `*=`, `<<` 等同时修改 `valarray` 的所有值。你可以指定一个单值（标量）或在适当的情况下另一个 `valarray` 作为操作数。写入 `va * vb` 等同于 `va[0]*vb]; va[1]*vb]; ...` 这适用于所有二进制运算符。
+
+- *Mathematical functions*
+`valarray` 重载了许多数学函数，按逐元素应用于所有值。示例包括 `abs`, `exp`, `sqrt`, `log10`, `sin`, `cos`, `asin` 等。每次调用都会接收到的一个新的 `valarray`。
+
+- *Comparison operations*
+你可以使用 `>` 将 `valarray` 的所有元素与单值或另一个 `valarray` 进行比较。返回一个 `valarray<bool>`。
+
+## 24.12.7 特性：切片和掩码
+与普通容器相比的特性是，你可以使用辅助类来切片 `valarray` 的部分。这些切片可以是复杂的，例如包含步长，从而模拟多维。通过掩码，可以从操作中排除 `valarray` 的部分。`slice` 辅助对象表示复杂的索引，类似于普通数组的工作方式。你通过以下构造函数创建一个 slice 对象：
+
+- slice()——空切片
+- slice(size_t start, size_t size, size_t stride)——start、size 和 stride 的参数
+- slice(const slice& other)——用于拷贝
+
+然后你可以使用此辅助对象作为 `[]` 的索引。返回一个 `valarray` 或一个可以转换为 `valarray` 的代理对象。例如，如果你有一个从1 到 12 的值的 `valarray`，`slice(0,4,3)` 址了值1、4和7，这些值恰好占据了 3 × 4 矩阵的第一列。虽然 `slice` 从二维矩阵中提取一维切片，但 `gslice` 类用于多维切片。例如，如果你将1 到 12 的值视为大小为 2 × 3 × 2 的三维立方体，那么 `v[gslice({0, 2}, {6,2})]` 址了前面 2 × 3 面的二维切片，其值为1、3、5和7、9、11：
+
+```cpp
+// https://godbolt.org/z/ehP47v
+valarray<int> v {
+1, 2, 3,
+4, 5, 6,
+7, 8, 9,
+10, 11, 12};
+v(0, 4, 3) = valarray<int>(v[slice(0, 4, 3)]); // 第一列平方
+cout << v; // 输出: 1 2 9 10 5 6 8 10 11 12
+v(0, 4, 3) = valarray<int>{1, 7, 10}; // 恢复
+valarray<int> r3(gslice({0, 2}, {6,2})); // 从三维立方体提取二维切片
+cout << r3; // 输出: 1 3 5 7 9 11
+valarray<char> text("now it starts", 20);
+valarray<char> caps("NIRS", 4);
+valarray<size_t> idx{0, 4, 7, 14}; // text 中的索引
+text[idx] = caps; // 间接赋值
+
+cout << text; // 输出: Now It Really Starts
+```
+
+首先，程序将 `valarray v` 解析为大小为 2 × 3 的二维矩阵。通过简单的切片，我找到第一列并使用 `*=` 将其自乘。结果，你看到只有1、4、7和10被覆盖了。
+
+为了清晰起见，我恢复了原始状态，因为下一步将12个值视为一个三维对象——即边长为 2 × 3 × 2 的立方体。在这里，`gslice` 割出一个二维部分。
+
+最后，我使用 `valarray<size_t>` 作为 `operator[]` 的参数来对数据 `valarray` 执行间接赋值。`text[idx] = caps` 为 `idx` 指定的字母分配了新值。
+
+在乘法中，你可能知道大小为 2 × 4 的矩阵可以与另一个大小为 4 × 2 的矩阵相乘；在这个积中，一个矩阵的行乘以另一个矩阵的列。对于此，你也可以也可以配合巧妙的切片使用 `valarray`：
+
+```cpp
+// https://godbolt.org/z/hf8qz5xs
+#include <iostream>
+#include <iomanip> // setw
+#include <valarray>
+using namespace std;
+
+/* 输出矩阵 */
+template<class T>
+void printMatrix(ostream&os, const valarray<T>& a, size_t n) {
+  for(size_t i = 0; i < (n*n); ++i) {
+    os << setw(3) << a[i];      // 输出值
+    os << ((i+1)%n ? '' : '\n');   // 换行?
+  }
+}
+
+/* 矩阵乘法 */
+template<class T>
+valarray<T> matult(
+    const valarray<T>& a, size_t arows, size_t acols,
+    const valarray<T>& b, size_t brows, size_t bcols) {
+    /* 条件: acols = brows */
+    valarray<T> result(arows * bcols);
+    for(size_t i = 0; i < arows; ++i)
+        for(size_t j = 0; j < bcols; ++j) {
+            auto row = a[slice(acols*i, acols, 1)]; // 行
+            auto col = b[slice(j, brows, bcols)]; // 列
+            result[i*bcols+j] = (row*col).sum(); // 行列乘积
+        }
+    }
+    return result;
+}
+
+int main() {
+    constexpr int n = 3;
+    valarray ma{1,0,-1, 2,2,-3, 3,4,0}; // 3 x 3 矩阵
+    valarray mb{3,4,-1, 1,-3,0, -1,1,2}; // 3 x 3 矩阵
+    printMatrix(cout, ma, n);
+    cout << " -times-\n";
+    printMatrix(cout, mb, n);
+    cout << " -results in:-\n";
+    valarray<int> mc = matult(ma, n, n, mb, n, n);
+    printMatrix(cout, mc, n);
+}
+```
+

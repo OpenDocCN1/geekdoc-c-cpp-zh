@@ -1,0 +1,1 @@
+Exceptional cases like text from Listing 21.1 only confirm the rule. There, omitting the parentheses in the macro definition allows you to chain multiple stream operations << in the parameter when calling the macro.

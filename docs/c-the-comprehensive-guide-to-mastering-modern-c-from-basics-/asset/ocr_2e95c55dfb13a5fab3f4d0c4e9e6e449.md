@@ -1,0 +1,1 @@
+that std::exception is not really special when it comes to exception handling; it just comes with some helper functions, like what().

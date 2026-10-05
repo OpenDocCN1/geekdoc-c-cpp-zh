@@ -1,0 +1,7 @@
+also camp, but Car does not require this. So you can actually use VwBus wherever you require car. For C++, this can be expressed more practically: functions that use pointers or references to a base class must, without knowing it, be able to handle derived classes as well.
+
++   - Interface segregation principle
+Clean separation of interfaces ensures that a user is not dependent on methods they do not need. You avoid interfaces with many methods and split them into smaller, more specific ones, so users only need to know the methods that actually interest them. If it ever becomes necessary—for example, as part of refactoring—you can later slice, split, and rearrange large classes differently, and only a few callers will even notice. Well-designed interfaces then help with testing because your system is less tightly coupled.
+
++   - Dependency inversion principle
+The goal is to make higher-level modules independent of lower-level modules. You achieve this by having both sides use an abstraction layer that decouples the two module layers from each other. Here again, MVC is a good example: instead of building a GUI that is tightly coupled with the data, you separate the into (data) model and view, then build a controller with many abstract classes in between that connects both.

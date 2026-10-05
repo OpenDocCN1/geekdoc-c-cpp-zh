@@ -1,0 +1,1 @@
+simplifies the design. But exceptions should not be an excuse and should not become the rule.

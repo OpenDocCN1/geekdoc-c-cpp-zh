@@ -1,0 +1,168 @@
+
+```cpp
+MyValue& MyValue::operator=(const MyValue&);
+```
+
+Note that this is a method and not a constructor. The object to which something is assigned already exists; its content is to be overwritten by this assignment operator. Because it is not a constructor, you do not perform the transfer of the data fields in an initializer list, but like a method in the body.
+
+```cpp
+// https://cppbolt.org/z/S65GV9Yj
+struct MyValue {
+    // everything else as before
+    MyValue& operator=(const MyValue& right) {
+        if(this != &right) { // 1. check for self-assignment
+            // 2. Release previous resources; none here
+            // 3. element-wise transfer by assignment or similar
+            name_ = right.name_ + "-Assignment (previously " + name_ +
+        }
+        /* number remains, and thus the original indentation */
+        return *this; // 4. return self
+    }
+};
+```
+
+Listing 16.16 The schema for implementing a custom assignment operator.
+
+If you insert this into the definition of struct MyValue, you will get the following output:
+
+Constructor ABCD
+Constructor WXYZ
+Destructor WXYZ
+Destructor WXYZ-Assignment (previously ABCD)
+
+And so the world is in order: You can see from the text and indentation which original was overwritten and when it was cleared away.
+
+If you define the `operator=` assignment operator for your class yourself, be sure to follow the implementation pattern shown previously:
+
+- Check with `if(this != &right)` whether this has the same address as `&`. If you don't do this, problems can arise with self-assignments like `value1 = value1;`
+
+- Release all previous resources of the object to be overwritten. This is indicated in `Listing 16.16` at 2. because there is nothing to do for `Value` here.
+
+- Transfer all elements from right to left as 3.. This is often done by assignment or some other form of copying. If you intentionally omitted the transfer of `number_` in this case, add a comment about the unusual nature.
+
+- Return a reference to the current object with `return *`. This allows assignment chains like `value1 = value2 = value3 = value4;`
+
+The similarities of the assignment operator to the copy constructor are very extensive:
+
+- Normally, you do not need a self-defined assignment operator; the compiler-generated one is at least as good for built-in data types, standard containers, and most types of the standard library.
+
+- If you define (or need to define) a copy constructor or destructor yourself, you usually also need your own assignment operator—and vice versa.
+
+Besides the different way you implement the assignment operator, there is another crucial difference: if you have const data elements in your class, then the assignment operator is removed from the list of available operations—or “deleted.” The consequence is that you can no longer overwrite an instance by assignment. To illustrate, I reduce the MyValue class to a constructor and a constant data field.
+
+```cpp
+struct Number {
+    const int number; // constant data field
+    explicit Number(int v)
+        : number{v} // initialization of the constant data field
+    () {}
+};
+int main() {
+    Number c1(4);
+    Number c2(7);
+    c1 = c2; // Error: Assignment removed by compiler
+}
+```
+
+Listing 16.17 The "const" data element is initially without an assignment operator.
+
+The c1 = c2 assignment is not possible here. The compiler tries to generate an assignment operator; it tries to assign number_ = other.number_. This is not possible because number_ is declared with const. So instead of generating an assignment operator, the compiler deletes it. This results in the = operator not being available for this class.
+
+## 16.8 Removing Methods
+
+This has the same effect as if you had defined MyNumber as shown in the next listing. Note that I have again made number_ non-const, and the compiler would have generated an assignment operator.
+
+```cpp
+// https://godbolt.org/z/398GhcbaE
+struct MyNumber {
+    int number; // variable data field
+
+    explicit MyNumber(int v)
+        : number(v) {}
+    MyNumber& operator=(const MyNumber&) = delete; // remove assignment
+    MyNumber& operator=(const MyNumber&) = delete; // remove copy
+};
+int main() {
+    MyNumber c1(4);
+    MyNumber c2(7);
+
+    c1 = c2; // Error - assignment removed by programmer
+    MyNumber c3(c1); // Error - copy removed by programmer
+}
+```
+
+Listing 16.18 Use "= delete" to manually remove operations.
+
+The = delete is a way for programmers to prevent the compiler from generating a method. And as you can see from the second = delete in MyNumber(const MyNumber&) = delete;, you can also remove a constructor with it. Thus, a copy of MyNumber in MyNumber{c1}; is also no longer possible.
+
+In our MyValue examples, it wasn't too problematic that I gradually addressed the necessary implementation of the copy constructor and assignment operator. The copy constructor or assignment operator generated by the compiler at worst produced incorrect output on the screen.
+
+Listing 16.7 did not address copying and assignment, which resulted in an error-prone class. What happens if you copy or assign a Database instance? You end up duplicating a database handle or overwriting an existing one:
+
+- If you duplicate it, then the destructor will call db_close on the same handle twice.
+- If you overwrite it, then you miss a db_close, and a handle is not released.
+
+Both are serious errors that occur if your listing does not adhere to the following rule: If you define a destructor yourself, you almost always need your own copy constructor and your own assignment operator as well.
+
+With = delete, you can quickly get the problem under control for Database.
+
+```cpp
+// https://godbolt.org/z/vb5a3EjcY
+#include <iostream> // cout
+#include "database.hpp" // include the foreign API
+
+class Database {
+    const db_handle_t db_; // make constant
+public:
+    explicit Database(const char* filename);
+    ~Database();
+    int execute(const char* query);
+    Database(const Database&) = delete; // prohibit copying
+    Database& operator=(const Database&) = delete; // prohibit assignment
+};
+
+// Implementations as below
+int main() {
+    Database db("customers.dat");
+    std::cout << "Count: " << db.execute("select * from cust") << "\n";
+    Database db2{ db }; // compiler prevents copy
+    db = db2; // compiler prevents assignment
+}
+```
+
+Listing 16.19 With the deleted functions, the compiler prevents incorrect usage of the class. I also have marked the db_ data field with const. This alone would prevent the compiler from generating an operator=, making the program safe in this regard. Because I manually remove the copy constructor anyway, it doesn't hurt to play it safe and treat the assignment operator the same way.
+
+## 16.9 Move Operations
+
+You have learned two ways to copy a class instance. Let's assume your class is Image:
+
+- Image(const Image&)—the copy constructor
+This can only happen during the initialization of a new object.
+- Image& operator=(const Image&)—the assignment operator
+This overwrites and only happens with an already existing object.
+
+In most cases, all data fields from the source are copied into the target. Of course, this can be very costly.
+
+```cpp
+// https://godbolt.org/z/75Kh5Ws45
+#include <vector>
+class Image {
+    std::vector<std::byte> data;
+public:
+    explicit Image(const char *fn) { /*...*/ }
+    // Compiler generates (among others):
+    // Copy constructor, assignment, but also moves
+};
+std::vector<Image> loadCollection(bool empty) {
+    if(empty) return std::vector<Image>();
+    std::vector<Image> result = {}; // return initially empty
+    // three images in the collection ... copy?
+    result.push_back(Image("MonaLisa.png"));
+    result.push_back(Image("TheScream.png"));
+    result.push_back(Image("BoyWithPipe.png"));
+    return result; // return collection by value
+}
+int main() {
+    // store return in variable
+}
+```

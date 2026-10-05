@@ -1,0 +1,1 @@
+times j=0; (j < v.size()-i)? What happens with an empty vector or one with only a single element? Let me tell you: the listing is correct, and—yes—it actually implements Bubblesort. But you surely understand what I mean. It took either more time (or/and experience) to gain this certainty with Listing 25.1, or my assurance that it is a correct Bubblesort.

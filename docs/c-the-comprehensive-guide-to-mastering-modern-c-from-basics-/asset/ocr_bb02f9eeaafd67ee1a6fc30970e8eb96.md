@@ -1,0 +1,7 @@
+then pick those that best meet their requirements, as shown in Figure 19.5.
+
+This leads to a certain degree of duplication. However, interfaces are just the *definitions* of the methods. The implementations within the module itself are not duplicated. The number of actual duplications is small and manageable.
+
+To a certain extent, C++ offers you a solution through multiple inheritance. You can keep the duplicated methods in the various interfaces to a minimum by dividing them even more carefully and then expecting users to use several at the same time to a certain extent. However, this is difficult in practice for several reasons. As a reminder, multiple inheritance in this sense means that a class inherits *implementations* from several base classes. It does *not* mean that a class only inherits the *interfaces* from several base classes. On the one hand, multiple inheritance is a technical and mental challenge. On the other hand, the implementation classes within the module itself sometimes need to use multiple interfaces simultaneously to be meaningfully implemented. In that case, it is often better to offer an interface that combines the functionalities. Both the implementation and the users can use this directly.
+
+With ISP, it's all about keeping the needs of the users in mind. Making their needs ours ultimately improves our own code and makes our lives easier in the long run when programming.

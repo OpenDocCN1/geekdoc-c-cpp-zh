@@ -1,0 +1,1 @@
+desired, you should allow this suite a bit more time to run—for example, a few minutes. However, it shouldn't be much longer than that because if there are errors to fix, you need to be able to run the suite multiple times.

@@ -1,0 +1,1 @@
+**Figure 18.5** The diamond problem arises when a base class is inherited twice.

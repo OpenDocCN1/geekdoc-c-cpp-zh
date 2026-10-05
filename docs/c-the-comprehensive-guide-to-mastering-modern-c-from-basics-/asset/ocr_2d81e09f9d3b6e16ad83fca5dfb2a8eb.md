@@ -1,0 +1,7 @@
+# 22.4 “void” Pointers
+
+The third function, gzwrite(), takes two parameters: a void* to the data and the length of the data. The return value is the amount of data written; a value of zero indicates an error.
+
+But what exactly is void*? Did you notice that our own write() function, using the as_bytes function, created a span<byte> method data() returns a const byte*, which I then passed to the void* of gzwrite()? Normally, C++ always complains when you take a variable of one type and try to use it as something else. Imagine if gzwrite() took an int: then the const byte from write wouldn't fit, and I would have had to define the parameter differently—or use a trick. And what if the data to be written are int* data or double*? Do you need a gzwrite() function for each pointer type? Yes and no: gzwrite() doesn't really care whether the pointer points to byte, unsigned char, int, or double data, so long as you also provide the correct length of the data. And this is exactly where void* comes into play: all raw pointer types can be converted to a void* without the compiler complaining. What the function does with absolute raw data is entirely its own business. Here, it takes the raw data, whose length it knows, compresses it, and then writes it to the output file.
+
+In a C function, it is more common to pass raw data of unspecified types as parameters. Often, you also pass

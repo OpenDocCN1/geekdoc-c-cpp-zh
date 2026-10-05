@@ -1,0 +1,5 @@
+class instead: template<class T> means exactly the same thing.
+
+Since C++20, you can also use the name of a concept instead of typename to restrict the type of a template parameter. If infos is supposed to work only for integer types, use the std::integral concept from the <concepts> header instead of typename.
+
+Outside of angle brackets, a typename appears exactly when you are writing a template and a type you are using is itself a template type in which you are using one of your template parameters. You can see this in Listing 23.11 at typename::numeric_limits<INT_TYP>. Then you need the additional word typename before the name of the template type you are using. Otherwise, the compiler cannot know, before you assign a value/type to INT_TYP, whether numeric...<...> is a variable, a type, or something else. You then have to tell it: “Hey, by the way, this is a type.”

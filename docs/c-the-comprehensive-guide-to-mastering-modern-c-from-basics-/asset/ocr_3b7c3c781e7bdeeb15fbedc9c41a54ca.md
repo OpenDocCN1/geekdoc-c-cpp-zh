@@ -1,0 +1,7 @@
+benefits of modern C++. You program around it manually, and your code becomes ... larger and slower. However, there is indeed a reason to avoid exceptions: in real-time systems that must guarantee a response time, exceptions must not occur at certain points. A *thrown* exception can potentially mean a lot of overhead, and how much that cannot be predicted in the general case. At least in this program path, exceptions must be avoided.
+
++   - NR.4. Not: Every class must be in its own file.
+While this is a good starting point, you should not prevent you from making your code even more meaningful. Also, combining several tiny classes in one file is better than having hundreds of tiny files. You can, for example, group such classes in their own namespace and have a better reason for a separate file. In C++, not everything is within classes; we have free functions that also belong in a meaningful place.
+
++   - NR.5. Not: The constructor should do as little as possible.
+There are reasons for separating initialization in the constructor and another initialization routine. For example, the two phases might have different semantics, as is the case in GUI programming: initialization of data and initialization of views. However, the reason *should not be* that there is too much code or it takes too long. The most important thing is that you throw an exception when an error occurs so that the object is considered not constructed. A small or large constructor is suitable for this. It is also not the case that object creation is

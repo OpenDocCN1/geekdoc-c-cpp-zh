@@ -1,0 +1,120 @@
+
+
+| 操作 | atkey | next | insert_list | access | → | ++ | set | multiset | map | unordered_set | multiset_map | ordered_map | unordered_map |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| (begin)/end | 连续的 | 连续的 | 随机访问 | | | | ++ | | | | | | | | |
+| (begin)/end | 连续的 | 连续的 | 随机访问 | | | | ++ | | | | | | | | |
+| assign | assign | assign | | | | | | | | | | | | | |
+| operator[] | operator[] | operator[] | | | | | | | operator[] | | | | | | |
+| front | front | front | | | | | | | | | | | | | |
+| back | back | back | | | | | | | | | | | | | |
+| empty | empty | empty | | | | | | empty | empty | empty | empty | empty | empty |
+| size | size | size | | | | | | size | size | size | size | size | size |
+| max_size | max_size | max_size | max_size | size | | | | | | max_size | max_size | max_size | max_size | max_size |
+| resize | resize | | | | | | | | | | reserve | reserve | reserve | |
+| capacity | capacity | | | | | | | | | | | | | | |
+| shrink_to_fit | shrink_to_fit | shrink_to_fit | | | | | | | | | | | | | |
+| clear | clear | clear | | | | | | clear | clear | clear | clear | clear | clear |
+| insert | insert | insert | insert_after | | | | | insert | insert | insert | insert | insert | insert |
+| replace | replace | replace | replace_after | | | | | | | | | | | | |
+| erase_front | erase_front | | | | | | | erase_front | erase_front | erase_front | erase_front | erase_front | erase_front |
+| erase | erase | erase | | | | | | | | erase | erase | erase | erase |
+| push | push | push | push_front | | | | | push | push | push | push | push | push |
+| push_front | push_front | push_front | push_front | | | | | push_front | push_front | push_front | push_front | push_front | push_front |
+| pop_front | pop_front | pop_front | | | | | | | | | | | | | |
+| push_back | push_back | push_back | push_back | | | | | push_back | push_back | push_back | push_back | push_back | push_back |
+| erase_back | erase_back | erase_back | | | | | | | | | | | | | |
+| pop_back | pop_back | pop_back | | | | | | | | | | | | | |
+| swap | swap | swap | | | | | | swap | swap | swap | swap | swap | swap |
+| merge | merge | merge | merge | | | | | | | merge | merge | merge | merge |
+| splice | splice | splice | splice_after | | | | | | | | | | | | | |
+ remove remove | remove remove | remove remove | | | | | | | | | | | | |
+
+ remove_ifif remove removeifif remove remove_if | | | | | | | | | | | | | |
+| reverse | reverse | | | | | | | | | | | | | | | |
+| unique | unique | unique | unique | | | | | | | | | | | | |
+| sort | sort | sort | sort | | | | | | | | | | | | | |
+| count | count | count | count | | | | | count | count | count | count | count | count |
+| find | find | find | find | | | | | find | find | find | find | find | find |
+| lower_bound | lower_bound | lower_bound | lower_bound | | | | | | lower_bound | lower_bound | lower_bound | lower_bound | lower_bound |
+| upper_bound | upper_bound | upper_bound | upper_bound | | | | | | upper_bound | upper_bound | upper_bound | upper_bound | upper_bound |
+| equal_range | equal_range | equal_range | equal_range | | | | | | | | | equal_range 或 range |
+
+*复杂度* 必须按源排序。如源
+
+![](img/290cf954dfcaad53865de6b98cca8e6f_1900_0.png)
+
+![](img/290cf954dfcaad53865de6b98cca8e6f_1901_0.png)
+
+# 注释
+
+[ 1 ] 至少，这是通常的做法。标准并没有规定这一点，而且有些 C++ 变体有不同的做法。
+
+[ 2 ] 守卫！防御！特里·普拉切特，“在像多个（multiple）这样的形容词之后，名词就不重要了，后面通常没好事发生。”
+
+[ 3 ] 暂时忽略 Java 8 的默认实现。
+
+[ 4 ] 这并不完全正确，编译器为某些特性保留了运行时信息 (RTTI)。这是可以关闭的。
+
+[ 5 ] 单位转换，Gordon S. Novak, http://www.utexas.edu/users/novak/ , IEEE 软件工程，第 21 卷，第 8 期（1995年），651-661页。
+
+[ 6 ] 然而，你会发现许多库没有使用扩展，例如 Qt 库。
+
+[ 7 ] C++20：完整指南，Nico Josutt,https://leanpub.com/cpp20, Leanpub,2022。
+
+[ 8 ] Cppmodules, Nico Josutt,https://github.com/josutt/cppmodules,2023。
+
+[ 9 ] 这种字符串内部以一个结束字符结尾，这就是为什么数组长度是 9 而不是 8，就像可见字符一样。
+
+[ 10 ] C++ 中的整数溢出有多灾难？http://stackoverflow.com/questions/902426,2014-02-02。
+
+[ 11 ] 误算针形的面积和角度，W. Kahan,https://people.ecs.berkeley.edu/~wkahan/Triangle.pdf,2014-09-04。
+
+[ 12 ] 解密浮点，John Farrier, CppCon 2015。
+
+[ 13 ] 其他书籍使用 field。由于这些混乱，我倾向于在本书中使用 C++ 原始术语。
+
+[ 14 ] 额外的工作极少，以至于可以称为零成本。
+
+[ 15 ] 语句结构化编程，D. E. Knuth [1974]。
+
+[ 16 ] 不需要实例变量的静态方法稍后介绍。
+
+[ 17 ] 更准确地说：Type const 或 Type*。
+
+[ 18 ] 这里我只考虑使用大括号 `{}` 的统一初始化。没有提到带括号的构造，以及拷贝和移动。之后将处理这些形式。
+
+[ 19 ] 查看复活节日期（Date of Easter），https://en.wikipedia.org/wiki/Date_of_Easter,2024-05-19。
+
+[ 20 ] “项目 43：Const 正性”，Herb Sutter, Exceptional C++, Addison-Wesley 2000。
+
+[ 21 ] “废弃 volatile”，J. F. Bastien, CppCon 2019,https://www.youtube.com/watch?v=KJW_DLaXIY。
+
+[ 22 ] https://www.raspberrypi.org/forums/viewtopic.php?t=130798&p=875156,2024-02-25。
+
+[ 23 ] 单元测试，Martin Fowler,http://martinfowler.com/bliki/UnitTest.html,2014-05-05,2017-12-25。
+
+[ 24 ] 值参数在这里是不计的。
+
+[ 25 ] TDD 模式：不要跨越边界，William E. Caputo,http://www.williamcaputo.com/posts/000019.xhtml,2004-12-31,2024-08-11。
+
+[ 26 ] Mock 并不是 Stub（桩根），Martin Fowler,https://martinfowler.com/articles/mocksArentStubs.html,2007,2017-11-25。
+
+[ 27 ] 单元测试原理，Joseph D. Purcell,https://josecell.github.io/principles-of-unit-testing/presentations/2017-03-17-MidwestPHP/index.xhtml#/6/17, Midwest PHP 2017年3月，2024-05-19。
+
+[ 28 ] 测试开发：示例，Kent Beck, Addison-Wesley Longman (2002)。
+
+[ 29 ] http://c2.com/cgi/wiki?ArrangeActAssert,2017-11-25。
+
+[ 30 ] 在某些测试框架中，每个测试函数只有一个断言（assert）是有帮助的，因为可能很难定位失败的测试。大多数框架并非如此，包括这里显示的 C++ 框架。
+
+[ 31 ] 探索 C++ 单元测试框架丛林，Noel Llopis,http://gamesfromwithin.com/exploring-the-c-unit-testing-framework-jungle,2010,2017-11-25。
+
+[ 32 ] C+ 单元测试更简单，http://cute-test.com/,2017-11-25。
+
+[ 33 ] CppUnit,https://freedesktop.org/Software/cppunit/,2024-05-19。
+
+[ 34 ] doctest,https://github.com/doctest/doctest,2024-05-19。
+
+[ 35 ] Google Test,https://github.com/google/googletest,2024-05-19.
+
