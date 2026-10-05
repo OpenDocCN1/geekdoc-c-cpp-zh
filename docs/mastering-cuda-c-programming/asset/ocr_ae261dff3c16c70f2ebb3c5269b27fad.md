@@ -1,0 +1,3 @@
+# Conditional Execution and Its Impact on Performance
+
+Conditional execution in CUDA programming significantly affects the performance of GPU-accelerated applications. The CUDA model handles conditionals and control flow differently from traditional sequential programming due to the parallel nature of GPU execution. Understanding how conditional statements can impact the execution of threads in a warp and, by extension, the overall performance is essential for optimizing CUDA applications.

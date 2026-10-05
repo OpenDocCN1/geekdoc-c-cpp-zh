@@ -1,0 +1,3 @@
+# Utilizing Texture and Surface Memory
+
+The CUDA programming model provides a sophisticated memory hierarchy to efficiently manage and access data during GPU computations. Among the various types of memory, texture and surface memory play a pivotal role in enhancing the performance of applications that require repetitive read or write operations on specific patterns of data. This section dives into understanding what texture and surface memory are, their characteristics, and how to effectively utilize them in CUDA C programming.

@@ -1,0 +1,1 @@
+This C++ example demonstrates CUDA’s ability to enhance traditional applications with significant compute power directly from GPU accelerators, leading to dramatic performance improvements.

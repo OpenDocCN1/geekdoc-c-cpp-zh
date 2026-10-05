@@ -1,0 +1,3 @@
+# Use of Portable Libraries
+
+Leveraging portable libraries can significantly simplify cross-platform development. These libraries abstract away the specifics of the underlying platform and provide a unified API that works across different environments. Examples include Thrust, a parallel algorithms library that closely resembles the C++ Standard Template Library (STL), and CUDA-aware MPI for distributed computing, which seamlessly integrates CUDA applications into MPI environments without the need for explicit memory management.

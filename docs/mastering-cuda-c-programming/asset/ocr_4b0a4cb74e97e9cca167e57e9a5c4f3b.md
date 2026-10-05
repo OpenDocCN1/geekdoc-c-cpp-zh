@@ -1,0 +1,3 @@
+# Understanding Thread Divergence
+
+Before delving into strategies to reduce thread divergence, it is essential to understand its causes and effects. Thread divergence typically occurs in the presence of conditional statements clauses, switches, or loops) that cause threads within the same warp to execute different instructions. While divergence cannot always be completely avoided, its impact can be minimized through careful algorithm design and implementation practices.

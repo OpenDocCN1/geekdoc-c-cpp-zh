@@ -1,0 +1,1 @@
+models. By handling the implementation details of standard neural network layers, cuDNN frees up developers to experiment with innovative model architectures without worrying about the computational complexity of their operations.

@@ -1,0 +1,3 @@
+# Occupancy
+
+Occupancy is a key metric in understanding the performance of CUDA applications. It refers to the ratio of active warps to the maximum number of possible warps on a Streaming Multiprocessor (SM). High occupancy does not guarantee optimal performance, but it is often an indicator that the GPU resources are being utilized effectively. To measure and optimize occupancy, NVIDIA provides a tool called the CUDA Occupancy Calculator, which helps in selecting thread block size and amount of shared memory to maximize occupancy based on your kernel’s resource requirements.

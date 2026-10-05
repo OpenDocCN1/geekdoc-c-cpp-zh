@@ -1,0 +1,3 @@
+# Compiling CUDA Code for Performance
+
+Optimizing CUDA code involves a comprehensive understanding of how to effectively compile it for maximum performance. The compilation process can significantly influence the execution speed and efficiency of CUDA applications. This section delves into several critical considerations and strategies to compile CUDA code optimally, including selecting the right compiler flags, understanding PTX (Parallel Thread Execution) versioning, and utilizing the NVCC (NVIDIA CUDA Compiler) effectively.

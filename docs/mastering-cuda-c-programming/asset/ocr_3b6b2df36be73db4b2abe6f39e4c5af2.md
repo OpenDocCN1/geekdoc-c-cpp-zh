@@ -1,0 +1,3 @@
+# Understanding and Utilizing Constant Memory
+
+Constant memory in CUDA architecture plays a pivotal role in optimizing the performance of CUDA applications. It is a type of read-only memory that is cached on-chip, which means it offers faster access compared to regular global memory and is beneficial when the same data needs to be read multiple times by various threads. Understanding how to effectively utilize constant memory can substantially improve the computational efficiency of your CUDA applications.

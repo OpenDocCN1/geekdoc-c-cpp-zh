@@ -1,0 +1,3 @@
+# Overview of CUDA Libraries
+
+The CUDA ecosystem provides a powerful suite of libraries designed to simplify and accelerate GPU programming tasks across various domains, including linear algebra, signal processing, random number generation, and deep learning. These libraries are optimized for performance on NVIDIA GPUs, offering high-level functionality while abstracting away the complexities of direct GPU programming. This section delves into several of these key libraries: cuBLAS for linear algebra, cuFFT for Fast Fourier Transform (FFT) operations, cuRAND for random number generation, and cuDNN for deep learning primitives.

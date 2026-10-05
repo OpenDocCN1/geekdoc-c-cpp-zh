@@ -1,0 +1,5 @@
+# Introduction to Debugging CUDA Applications
+
+Debugging is an essential phase in the development of any application, including those developed with CUDA. Given the parallel nature of CUDA programs, debugging becomes a more nuanced and sometimes challenging task. A clear understanding of debugging tools and strategies specific to CUDA is critical for developers looking to expedite the development process, ensuring both correctness and efficiency in their applications.
+
+CUDA provides various tools designed to assist in identifying errors and problematic sections within a CUDA application. Notable among these tools are CUDA-GDB and CUDA-MEMCHECK, which are tailored for debugging CUDA applications running on GPUs. This section introduces the fundamental aspects of debugging CUDA applications, highlighting how these tools can be utilized to simplify the debugging process.

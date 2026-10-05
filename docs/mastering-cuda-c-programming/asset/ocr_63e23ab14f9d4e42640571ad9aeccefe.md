@@ -1,0 +1,3 @@
+Thrust: Parallel Algorithms Library
+
+Thrust is a powerful library for CUDA and C++ programming, designed to abstract the complexities of parallel computing, making it more accessible and manageable. At its core, Thrust provides a rich collection of data parallel primitives such as scan, sort, and reduce, which can be composed together to solve complex problems with minimal lines of code. By leveraging Thrust, developers can achieve significant performance improvements with less effort, allowing them to focus on the higher-level structure of their applications rather than the intricacies of GPU programming.

@@ -1,0 +1,5 @@
+# Debugging and Profiling CUDA Applications
+
+The development of robust and efficient CUDA applications necessitates a combination of effective debugging and profiling practices. This chapter delves into the methodologies and tools available for identifying and resolving bugs within CUDA code, alongside strategies for measuring and optimizing application performance. It introduces CUDA-specific debugging tools like CUDA-GDB and CUDA-MEMCHECK, and profiling tools, including NVIDIA Nsight and the Visual Profiler. By providing a systematic approach to debugging and profiling, the chapter aims to equip developers with the necessary skills to enhance the reliability and performance of their CUDA applications, enabling them to identify bottlenecks and optimize resource usage for improved computational efficiency.
+
+10.1

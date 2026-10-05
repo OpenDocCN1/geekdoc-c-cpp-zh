@@ -1,0 +1,3 @@
+# Overview of Memory Types in CUDA
+
+In the realm of CUDA programming, efficient memory utilization is a cornerstone for achieving optimal performance in GPU-accelerated applications. NVIDIA's CUDA architecture offers a sophisticated memory hierarchy designed to cater to different types of data access patterns and requirements. This section provides a comprehensive exploration of the various memory types available in CUDA, their characteristics, and their optimal use cases. Understanding this memory hierarchy is crucial for leveraging the full potential of CUDA-enabled GPUs.

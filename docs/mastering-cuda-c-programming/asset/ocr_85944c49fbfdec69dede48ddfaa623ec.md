@@ -1,0 +1,6 @@
+# Understanding Compiler Options
+
+When compiling CUDA code, utilizing the right set of compiler options is pivotal. These options can drastically affect the performance characteristics of the resulting binary. Below are several important flags and strategies to consider:
+
+-O2 and -O3 optimization flags instruct the compiler to optimize the code for maximum speed (-O2) and even more aggressive optimizations that might involve longer compilation times (-O3). While these optimizations can significantly boost performance, it's crucial to test thoroughly, as they might also introduce bugs or unexpected behavior in some cases.
+--gpu-architecture and flags allow developers to specify the target GPU architecture (e.g., compute_50) and the PTX version for just-in-time compilation. Tailoring your application to the specific characteristics of the target GPU can unlock substantial performance improvements. flag replaces certain floating-point math operations with faster, but potentially less precise, versions. It's beneficial for applications where computational speed is prioritized over mathematical precision.

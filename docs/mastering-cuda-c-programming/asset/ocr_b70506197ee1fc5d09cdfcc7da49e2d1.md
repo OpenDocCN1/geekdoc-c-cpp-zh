@@ -1,0 +1,7 @@
+# The Concept of General-Purpose GPU Computing
+
+General-Purpose computing on Graphics Processing Units (GPGPU) fundamentally revolutionizes the concept of high-performance computing by leveraging the parallel processing power of GPUs. This paradigm shift extends the GPU’s capabilities beyond graphics rendering, making it a potent tool for executing computationally intensive tasks traditionally handled by the Central Processing Unit (CPU).
+
+Historically, GPUs were designed to accelerate the rendering of images and video, a task that demands considerable computational resources to the inherent parallel nature of processing multiple pixels simultaneously. Recognizing that this parallel processing capability could be harnessed for a broader range of computational tasks, developers and researchers began exploring ways to use GPUs for general-purpose computing. This exploration led to the development of programming models and platforms, among which CUDA (Compute Unified Device Architecture) by NVIDIA stands out as a pioneering and widely adopted framework.
+
+The core principle of GPGPU is leveraging the GPU’s parallel processing architecture for tasks that can be divided into multiple, simultaneous operations. Unlike CPUs, which are optimized for sequential processing and conduct tasks in a linear fashion, GPUs consist of hundreds or thousands of smaller cores to execute multiple tasks concurrently. This architectural difference renders GPUs highly efficient for algorithms that can be parallelized.
