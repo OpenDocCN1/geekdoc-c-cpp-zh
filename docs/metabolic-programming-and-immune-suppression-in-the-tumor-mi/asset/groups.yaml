@@ -1,0 +1,3468 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Cancer Cell
+
+
+    # CellPress
+
+
+    Review
+
+
+    # Metabolic programming and immune suppression in the tumor microenvironment
+
+
+    Emily N Armer* and Jeffrey C Rathmill**
+
+    ¹Department of Medicine, Vanderbilt University Medical Center (VUMC), Nashville,
+    USA
+
+    ²Vanderbilt Center for Immunology, Vanderbilt University Medical Center (VUMC),
+    Nashville, USA
+
+    ³Vanderbilt-Ingram Cancer Center, Vanderbilt University Medical Center (VUMC),
+    Nashville, USA
+
+    ⁴Department of Pathology, Microbiology, and Immunology, Vanderbilt University
+    Medical Center (VUMC), Nashville, USA
+
+    *Correspondence: jeff.rathmill@vanderbilt.com
+
+    https://doi.org/10.1016/j.cell.2023.01.009
+
+
+    # SUMMARY
+
+
+    Increased glucose metabolism and uptake are characteristic of many tumors and
+    use molecules to clinically diagnose and monitor cancer progression. In addition
+    to cancer cells, the tumor microenvironment (TME) encompasses a wide range of
+    stromal, innate, and adaptive immune cells. Cooperation and competition between
+    these populations support tumor proliferation, progression, metastasis, and immune
+    evasion. Cellular heterogeneity leads to metabolic heterogeneity where tumors
+    are dependent not only on the TME cellular composition but also on cell states,
+    location, and nutrient availability. In addition driving metabolic plasticity
+    of cancer cells, altered nutrients and signals in the TME can lead to metabolic
+    suppression of effector cells and regulate immune cells. Here we discuss how metabolic
+    programming of cells within the TME promotes proliferation, progression, and metastasis.
+    We discuss how metabolic heterogeneity may offer therapeutic opportunities to
+    overcome immune suppression and augment immunotherapies.
+
+
+    # INTRODUCTION
+
+
+    Tumors require an abundance of energy for growth, proliferation, and metastasis.
+    To sustain these processes, oncogenic genes drive diverse metabolic pathways,
+    including glycolysis, the tricarboxylic acid (TCA) cycle, and other pathways that
+    generate essential energy and biosynthetic precursors. It is apparent, however,
+    that these pathways are not only for cell growth but for proliferative cells,
+    including pro-tumor and anti-tumor immune cells. This shared demand for nutrients
+    creates a competitive tumor microenvironment and immune suppression.
+
+
+    The tumor microenvironment (TME) is composed of many cells that support or resist
+    treatment. As the TME includes a diversity of cells, it is metabolically and highly
+    active (Figure 1). Cells and resulting tumors populate various regions of the
+    TME, in part through support cell populations seeking oxygen and nutrient supply
+    in poorly vascularized or highly metabolically active areas. The TME is also shaped
+    and altered by accumulation of waste products and inflammation, where nutrients
+    are limited. Because nutrients are abundant on systemic and whole-body factors,
+    type, location of the tumor within the primary tissue, host diet and nutritional
+    scale will affect nutrient availability within the TME. Additionally, metabolic
+    plasticity may occur as cells within the TME adapt to different nutrient depending
+
+
+    availability. Metabolism within the TME supports proliferation of tumor cells
+    but also in metastatic disease because metabolic processes influence each stage
+    of the metabolic cycle within cancer cells and in the TME as normal cells escape
+    and survive.
+
+
+    This complex landscape can be detrimental for treatment because targeting the
+    growth or metastasis of cancer cells can also inhibit or enhance the effectiveness
+    of immunotherapies. Conversely, new approaches must specifically target the immune
+    cells in turn by interfering with their metabolic pathways. While, immunotherapies
+    blocking PD-1 or CTLA-4 can activate anti-T cells in multiple cancer cell types,
+    resistance to some therapies often develops after an initial response. The mechanisms
+    of resistance are not well understood, but metabolic pathways are fundamentally
+    involved in cell fate and cell differentiation, and immunotherapy.
+
+
+    Improvingotherapotherap and reducing resistance is of high priority, but it requires
+    understanding how cells interact and interact with cancer cells in the TME, in
+    regard to nutrient shared and resource utilization, to overcome metabolic suppression
+    in the TME.
+
+    The diverse metabolic programs of cancer and tumor-associated immune cells may
+    explain some failed therapies and provide new avenues to prevent metastasis and
+    limit
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_0_0.png)
+
+
+    Cancer Cell 41, March 13, 2023 Elsevier Inc. 421'
+  - '[PAGE 1]
+
+
+    # # CellPress
+
+
+    # # Cancer Review
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_1_0.png)
+
+
+    **Figure 1. Metabolic Heterogeneity in the TME is location dependent**
+
+    The tumor microenvironment (TME) is composed of many cells that support or resist
+    tumorigenesis including cancer cells and anti-immune cells. Just as the TME is
+    also heterogeneous, in hypoxic regions (blue cells) cancer cells often secrete
+    cytokines which has been shown to inhibit T cell activation promoting tumor cell
+    evasion. Additionally asparagine promotes promoting differentiation of TAMs towards
+    M2-like phenotype cytokines in angiogenic regions branch branchly which leads
+    to increased autophagy due to the lack of nutrients cells may use glucose as their
+    main source of energy. Necrotic regions with severe lack of nutrients may have
+    decreased levels of amino acids such as glycine, arginine serine and aspartate
+    with tumor periphery.
+
+
+    immune suppression. Increased glucose uptake of tumors is the basis of 2-de-glucose
+    ($^{18}$F) positron imaging (PET) is widely used to diagnose and monitor the progression
+    of a wide range of tumor types. These tests demonstrate high accumulation of glucose
+    in bulk tissues, but do not resolve the metabolic activities and differences of
+    the various cell types in the TME. Heterogeneity of cell metabolism across tumors
+    and metabolic pathways influences inflammatory memory repair of tumor microenvironment.
+    Necrosis, metabolism of T cells by leukocytes and mitochondria leads to increased
+    production of reactive oxygen species (ROS), and reduced glucose. Importantly,
+    these metabolic differences between cells occur because metabolism can regulate
+    T cell effector activity and control immune function. We discuss how metabolic
+    diversity in the TME may support pathways and re-metabolism of it within the TME
+    to protect their anti-tumor functions and how these changes open therapeutic doors
+    for cancer patients.
+
+
+    # ## METABOLIC HETEROGENEITY
+
+
+    Proliferating cells require abundant and diverse nutrients to support bioenergetic
+    demands, growth and while maintaining cell functions or migratory properties.
+    The fuels for these cells come from glucose, glycolysis, and lipolysis. Increased
+    glucose uptake that occurs in hypoxia despite the presence of oxygen is referred
+    to the “Warburg effect” or aerobic glycolysis. Indeed, glucose uptake in high
+    tumors can cause extracellular levels of glucose reduced and elevated. Many factors
+    contribute to the turning of tumors to undergo aerobic glycolysis, including oncogenic
+    signaling or loss of tumor
+
+
+    such as Von Hippel-Lindau (VHL) or p53 mitochondrial alterations, regulation of
+    glycolytic enzymes, or hypoxia signaling. These factors are caused by oxygen deprivation
+    driving phosphatidylinositol 3-kinase (PI3Ks) and myelomethyl oxygen homolog (MYC),
+    directly cell insulin-like growth factors that promote glycolysis. In addition
+    hypoxia occurs during tumorigenesis or loss of VHL, the activation of glycolytic
+    enzymes including GLUT1, hexokinase 1 (HK1), hexokinase 2 (HK2), and pyruvate
+    kinase domain 1 (PKM2), and lactate dehydrogenase (LDHA) also reduces metabolic
+    activity and ROS, which are exported regulated by oxidative stress pathways.
+
+
+    Beyond aerobic glycolysis, anaerobic metabolism requires a wide range of nutrients.
+    The pentose phosphate pathway (PPP) is essential for generation of adenine dinucleotide
+    (NADPH) and ribose sugars which are needed for nucleotide synthesis, ATP production,
+    and elimination of oxidative stress. Lipid and cholesterol are also used by cells
+    to support tumors, which can be either taken up in the cells from free fatty acids
+    or produced by fatty acid synthesis and de novo cholesterol synthesis. Cells regulate
+    the uptake and synthesis of glycine and glutamate as amino acids to feed the TCA
+    cycle through anlerosis.
+
+
+    The metabolism of amino acid, such as arginine, tryptophan, and leucine also plays
+    a role in cell metabolism and growth within the TME. highlighting the range of
+    metabolic pathways that can essential cell-centrilith resistance
+
+
+    Pathways as one-carbon metabolism, glycolysis, and the TCA cycle are not only
+    for cancer cell growth but also
+
+
+    422 Cancer Cell 4, March 13 2023'
+  md: '
+
+    # Cancer Cell
+
+
+    # CellPress
+
+
+    Review
+
+
+    # Metabolic programming and immune suppression in the tumor microenvironment
+
+
+    Emily N Armer* and Jeffrey C Rathmill**
+
+    ¹Department of Medicine, Vanderbilt University Medical Center (VUMC), Nashville,
+    USA
+
+    ²Vanderbilt Center for Immunology, Vanderbilt University Medical Center (VUMC),
+    Nashville, USA
+
+    ³Vanderbilt-Ingram Cancer Center, Vanderbilt University Medical Center (VUMC),
+    Nashville, USA
+
+    ⁴Department of Pathology, Microbiology, and Immunology, Vanderbilt University
+    Medical Center (VUMC), Nashville, USA
+
+    *Correspondence: jeff.rathmill@vanderbilt.com
+
+    https://doi.org/10.1016/j.cell.2023.01.009
+
+
+    # SUMMARY
+
+
+    Increased glucose metabolism and uptake are characteristic of many tumors and
+    use molecules to clinically diagnose and monitor cancer progression. In addition
+    to cancer cells, the tumor microenvironment (TME) encompasses a wide range of
+    stromal, innate, and adaptive immune cells. Cooperation and competition between
+    these populations support tumor proliferation, progression, metastasis, and immune
+    evasion. Cellular heterogeneity leads to metabolic heterogeneity where tumors
+    are dependent not only on the TME cellular composition but also on cell states,
+    location, and nutrient availability. In addition driving metabolic plasticity
+    of cancer cells, altered nutrients and signals in the TME can lead to metabolic
+    suppression of effector cells and regulate immune cells. Here we discuss how metabolic
+    programming of cells within the TME promotes proliferation, progression, and metastasis.
+    We discuss how metabolic heterogeneity may offer therapeutic opportunities to
+    overcome immune suppression and augment immunotherapies.
+
+
+    # INTRODUCTION
+
+
+    Tumors require an abundance of energy for growth, proliferation, and metastasis.
+    To sustain these processes, oncogenic genes drive diverse metabolic pathways,
+    including glycolysis, the tricarboxylic acid (TCA) cycle, and other pathways that
+    generate essential energy and biosynthetic precursors. It is apparent, however,
+    that these pathways are not only for cell growth but for proliferative cells,
+    including pro-tumor and anti-tumor immune cells. This shared demand for nutrients
+    creates a competitive tumor microenvironment and immune suppression.
+
+
+    The tumor microenvironment (TME) is composed of many cells that support or resist
+    treatment. As the TME includes a diversity of cells, it is metabolically and highly
+    active (Figure 1). Cells and resulting tumors populate various regions of the
+    TME, in part through support cell populations seeking oxygen and nutrient supply
+    in poorly vascularized or highly metabolically active areas. The TME is also shaped
+    and altered by accumulation of waste products and inflammation, where nutrients
+    are limited. Because nutrients are abundant on systemic and whole-body factors,
+    type, location of the tumor within the primary tissue, host diet and nutritional
+    scale will affect nutrient availability within the TME. Additionally, metabolic
+    plasticity may occur as cells within the TME adapt to different nutrient depending
+    availability. Metabolism within the TME supports proliferation of tumor cells
+    but also in metastatic disease because metabolic processes influence each stage
+    of the metabolic cycle within cancer cells and in the TME as normal cells escape
+    and survive.
+
+
+    This complex landscape can be detrimental for treatment because targeting the
+    growth or metastasis of cancer cells can also inhibit or enhance the effectiveness
+    of immunotherapies. Conversely, new approaches must specifically target the immune
+    cells in turn by interfering with their metabolic pathways. While, immunotherapies
+    blocking PD-1 or CTLA-4 can activate anti-T cells in multiple cancer cell types,
+    resistance to some therapies often develops after an initial response. The mechanisms
+    of resistance are not well understood, but metabolic pathways are fundamentally
+    involved in cell fate and cell differentiation, and immunotherapy.
+
+
+    Improvingotherapotherap and reducing resistance is of high priority, but it requires
+    understanding how cells interact and interact with cancer cells in the TME, in
+    regard to nutrient shared and resource utilization, to overcome metabolic suppression
+    in the TME.
+
+    The diverse metabolic programs of cancer and tumor-associated immune cells may
+    explain some failed therapies and provide new avenues to prevent metastasis and
+    limit
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_0_0.png)
+
+
+    Cancer Cell 41, March 13, 2023 Elsevier Inc. 421
+
+
+    # CellPress
+
+
+    # Cancer Review
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_1_0.png)
+
+
+    **Figure 1. Metabolic Heterogeneity in the TME is location dependent**
+
+    The tumor microenvironment (TME) is composed of many cells that support or resist
+    tumorigenesis including cancer cells and anti-immune cells. Just as the TME is
+    also heterogeneous, in hypoxic regions (blue cells) cancer cells often secrete
+    cytokines which has been shown to inhibit T cell activation promoting tumor cell
+    evasion. Additionally asparagine promotes promoting differentiation of TAMs towards
+    M2-like phenotype cytokines in angiogenic regions branch branchly which leads
+    to increased autophagy due to the lack of nutrients cells may use glucose as their
+    main source of energy. Necrotic regions with severe lack of nutrients may have
+    decreased levels of amino acids such as glycine, arginine serine and aspartate
+    with tumor periphery immune suppression. Increased glucose uptake of tumors is
+    the basis of 2-de-glucose ($^{18}$F) positron imaging (PET) is widely used to
+    diagnose and monitor the progression of a wide range of tumor types. These tests
+    demonstrate high accumulation of glucose in bulk tissues, but do not resolve the
+    metabolic activities and differences of the various cell types in the TME. Heterogeneity
+    of cell metabolism across tumors and metabolic pathways influences inflammatory
+    memory repair of tumor microenvironment. Necrosis, metabolism of T cells by leukocytes
+    and mitochondria leads to increased production of reactive oxygen species (ROS),
+    and reduced glucose. Importantly, these metabolic differences between cells occur
+    because metabolism can regulate T cell effector activity and control immune function.
+    We discuss how metabolic diversity in the TME may support pathways and re-metabolism
+    of it within the TME to protect their anti-tumor functions and how these changes
+    open therapeutic doors for cancer patients.
+
+
+    ## METABOLIC HETEROGENEITY
+
+
+    Proliferating cells require abundant and diverse nutrients to support bioenergetic
+    demands, growth and while maintaining cell functions or migratory properties.
+    The fuels for these cells come from glucose, glycolysis, and lipolysis. Increased
+    glucose uptake that occurs in hypoxia despite the presence of oxygen is referred
+    to the “Warburg effect” or aerobic glycolysis. Indeed, glucose uptake in high
+    tumors can cause extracellular levels of glucose reduced and elevated. Many factors
+    contribute to the turning of tumors to undergo aerobic glycolysis, including oncogenic
+    signaling or loss of tumor such as Von Hippel-Lindau (VHL) or p53 mitochondrial
+    alterations, regulation of glycolytic enzymes, or hypoxia signaling. These factors
+    are caused by oxygen deprivation driving phosphatidylinositol 3-kinase (PI3Ks)
+    and myelomethyl oxygen homolog (MYC), directly cell insulin-like growth factors
+    that promote glycolysis. In addition hypoxia occurs during tumorigenesis or loss
+    of VHL, the activation of glycolytic enzymes including GLUT1, hexokinase 1 (HK1),
+    hexokinase 2 (HK2), and pyruvate kinase domain 1 (PKM2), and lactate dehydrogenase
+    (LDHA) also reduces metabolic activity and ROS, which are exported regulated by
+    oxidative stress pathways.
+
+
+    Beyond aerobic glycolysis, anaerobic metabolism requires a wide range of nutrients.
+    The pentose phosphate pathway (PPP) is essential for generation of adenine dinucleotide
+    (NADPH) and ribose sugars which are needed for nucleotide synthesis, ATP production,
+    and elimination of oxidative stress. Lipid and cholesterol are also used by cells
+    to support tumors, which can be either taken up in the cells from free fatty acids
+    or produced by fatty acid synthesis and de novo cholesterol synthesis. Cells regulate
+    the uptake and synthesis of glycine and glutamate as amino acids to feed the TCA
+    cycle through anlerosis.
+
+
+    The metabolism of amino acid, such as arginine, tryptophan, and leucine also plays
+    a role in cell metabolism and growth within the TME. highlighting the range of
+    metabolic pathways that can essential cell-centrilith resistance
+
+
+    Pathways as one-carbon metabolism, glycolysis, and the TCA cycle are not only
+    for cancer cell growth but also
+
+
+    422 Cancer Cell 4, March 13 2023
+
+    '
+  mdcn: '
+
+
+    # 癌细胞 (Cancer Cell)
+
+
+    # CellPress
+
+
+    综述
+
+
+    # 肿瘤微环境中的代谢重编程与免疫抑制
+
+
+    Emily N Armer* 和 Jeffrey C Rathmill**
+
+    ¹范斯比德大学医学中心 (VUMC) 医学科，美国纳什维尔
+
+    ²范斯比德免疫学中心，范斯比德大学医学中心 (VUMC)，纳什维尔
+
+    ³范斯比德-Ingram 癌症中心，范斯比德大学医学中心 (VUMC)，纳什维尔
+
+    ⁴病理学、微生物学与免疫科学，范斯比德大学医学中心 (VUMC)，纳什维尔
+
+    *通讯：jeff.rathmill@vanderbilt.com
+
+    https://doi.org/10.1016/j.cell.2023.01.009
+
+
+    # 摘要
+
+
+    糖代谢和摄取的增加是许多肿瘤的特征，并可利用分子进行临床诊断和监测癌症进展。除了癌细胞外，肿瘤微环境（TME）还涵盖了广泛的基质、先天性和适应性免疫细胞。这些群体之间的协作与竞争支持肿瘤的增殖、进展、转移和免疫逃逸。细胞异质性导致了代谢异质性，肿瘤不仅依赖于
+    TME 的细胞组成，还取决于细胞状态、位置和营养可用性。此外，驱动癌细胞代谢可塑性的同时，TME 中改变的营养和信号可导致效应细胞的代谢抑制并调节免疫细胞。在这里，我们讨论了
+    TME 内细胞的代谢重编程如何促进增殖、进展和转移。我们还讨论了代谢异质性如何为克服免疫抑制和增强免疫疗法提供治疗机会。
+
+
+    # 引言
+
+
+    肿瘤的生长、增殖和转移需要大量的能量。为了维持这些过程，ic/致癌基因驱动了多种代谢通路，包括糖酵解、三羧酸（TCA）循环以及其他产生必需能量和生物合成前体的通路。然而，显而易见，这些通路不仅用于细胞生长，还用于增殖细胞，包括促肿瘤和抗肿瘤免疫细胞。这种对营养的共同需求创造了竞争性的肿瘤微环境和免疫抑制。
+
+
+    肿瘤微环境（TME）由许多支持或抵抗治疗的细胞组成。由于 TME 包含多种细胞，因此在代谢上是高度活跃的（图 1）。细胞及产生的肿瘤占据了 TME 的各个区域，部分是通过支持细胞群体在血管化不良或代谢高度活跃的区域寻求氧气和营养供应。TME
+    还受到废物产物积累和炎症的塑造和改变，在这些区域营养是有限的。由于系统和全身因素的营养是充足的，肿瘤在原发组织中的类型、位置、宿主饮食和营养状况将影响 TME
+    内部的营养可用性。此外，随着 TME 内细胞适应不同的营养可用性，可能会发生代谢可塑性。TME 内的代谢支持肿瘤细胞的增殖，在转移性疾病中也是如此，因为代谢过程影响了癌细胞和
+    TME 内代谢循环的每个阶段，随着正常细胞逃逸并存活。
+
+
+    这种复杂的格局对治疗是有不利的，因为针对癌细胞的生长或转移可能会抑制或增强免疫疗法的有效性。相反，新方法必须通过干扰免疫细胞的代谢通路来反向针对免疫细胞。虽然阻塞
+    PD-1 或 CTLA-4 的免疫疗法可以激活多种癌细胞类型的抗 T 细胞，但在初始反应后往往会对某些疗法产生抗性。耐性机制尚不完全清楚，但代谢通路从根本上参与了细胞命运、细胞分化和免疫治疗。
+
+
+    提高免疫治疗效果并减少耐性是高优先事项，但这需要理解细胞在 TME 中如何与癌细胞相互作用（特别是在营养共享和资源利用方面），以克服 TME 中的代谢抑制。
+
+    癌症和肿瘤相关免疫细胞的多样代谢程序可能解释某些治疗的失败，并为预防转移和限制提供新途径。
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_0_0.png)
+
+
+    Cancer Cell 41, 2023年3月13日 Elsevier Inc. 421
+
+
+    # CellPress
+
+
+    # 癌症 综述
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_0.png)
+
+
+    **图 1. TME 中的代谢异质性依赖于位置**
+
+    肿瘤微环境（TME）由许多支持或抵抗治疗的细胞组成。由于 TME 包含多种细胞，因此在代谢上是高度活跃的。细胞及产生的肿瘤占据了 TME 的各个区域，部分是通过支持细胞群体在血管化不良或代谢高度活跃的区域寻求氧气和营养供应。TME
+    还受到废物产物积累和炎症的塑造和改变，在这些区域营养是有限的。由于系统和全身因素的营养是充足的，肿瘤在原发组织中的类型、位置、宿主饮食和营养状况将影响 TME
+    内部的营养可用性。此外，随着 TME 内细胞适应不同的营养可用性，可能会发生代谢可塑性。TME 内的代谢支持肿瘤细胞的增殖，在转移性疾病中也是如此，因为代谢过程影响了癌细胞和
+    TME 内代谢循环的每个阶段，随着正常细胞逃逸并存活。
+
+    糖代谢和摄取的增加是许多肿瘤的特征，并可利用分子进行临床诊断和监测癌症进展。除了癌细胞外，肿瘤微环境（TME）还涵盖了广泛的基质、先天性和适应性免疫细胞。[此处描述](img/33f55c57731d5bd51413de5f6eaeddd6_0.png)
+    描述了 TME 中的代谢异质性依赖于位置。糖摄入的增加在肿瘤中由于缺乏营养的，会导致氨基酸（如甘氨酸、天冬氨酸和天冬氨酸）的增加并产生活性氧（ROS）。重要的是，跨细胞的代谢差异会影响
+    TME 内的细胞活性。代谢重编程可以导致免疫抑制。我们讨论了 TME 内代谢的多样性如何支持通路并调节免疫功能，以及这些变化为癌症患者打开了治疗窗口。
+
+
+    ## 代谢异质性
+
+
+    增殖细胞需要丰富且多样化的营养来支持能量需求、生长并维持细胞功能和迁移特性。这些细胞的燃料来自葡萄糖、糖酵解和脂肪解。在存在氧气的情况下发生的高糖摄入被称为“瓦伯格效应”或有氧糖酵解。事实上，肿瘤的高糖摄入会导致细胞外葡萄糖水平降低或升高。许多因素导致肿瘤进行有氧糖酵解，包括致癌信号或肿瘤缺失，如
+    Von Hippel-Lindau (VHL) 或 p53 改变、糖酵解酶的调节或缺氧信号。这些因素是由缺氧驱动的磷酰肌醇醇3-激酶 (PI3Ks) 和肌甲基氧同源物
+    (MYC)，直接促进糖酵解的胰岛样生长因子。此外，在肿瘤形成或 VHL 缺失期间发生缺氧，包括 GLUT1、葡萄糖激酶 1 (HK1)、葡萄糖激酶 2 (HK2)
+    和丙酮酸激酶结构域1 (PKM2) 以及乳酸脱氢酶 (LDHA) 的激活也会降低代谢活性和 ROS，这些受氧化应激通路调节。
+
+
+    除了有氧糖酵解，无氧代谢还需要广泛的营养。磷酸戊糖途径（PPP）对于产生烟酰腺嘌呤核酰酸（NADPH）和核糖至关重要，这些用于核苷酸合成、ATP 生成和消除氧化应激。脂质和胆醇也被细胞用于支持肿瘤，它们可以通过游脂肪酸摄取，也可以通过脂肪酸合成和从头合成产生。细胞调节甘氨酸和谷氨酸作为氨基酸的摄取和合成，通过转氨作用供给
+    TCA循环。
+
+
+    氨基酸（如精氨酸、色氨酸和亮氨酸）的代谢在 TME 内的细胞代谢和生长中也起着作用，突显了可以增强细胞中心抗性的代谢通路。
+
+
+    通路如单碳代谢、糖酵解和 TCA 循环不仅用于癌细胞的生长，还用于
+
+
+    422 Cancer Cell 4, 2023年3月13日
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # Cancer Review
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_2_0.png)
+
+
+    for the pro- and anti-tumor immune cells.¹¹-³ The TME is made up of many types
+    of cells, including B cells, T cells, neutrophils, natural killer (NK) cells,
+    macrophages, as well as fibroblasts, adipocytes, endothelial cells, and stromal
+    cells.
+
+
+    within the tumor and leads to regions or microenvironments with limited exchange
+    of nutrients and waste. While increased autophagy and lysosomal activity by AMP-activated
+    protein kinase (AMPK) can partially compensate for the lack of extracellular nutrients,¹⁸-²¹
+    these regions experience extreme stress.
+
+
+    growth immune cells are besides inflammatory and anti-tumor. Although generally
+    true for cytotoxic cells, different cell populations can have both pro and antitumor
+    functions, changing depending on time and context-dependent metabolic programs.
+
+
+    Cancer cells can reshape the environment to support tumors and evade the immune
+    system. One way in which this occurs is shuffling of metabolites and intermediates
+    between cancer cells and other cells within the TME leads to metabolic heterogeneity,
+    which can lead to immunosuppression but are not universally voluntary.
+
+
+    Small cell lung cancer (NSCLC) has been shown to use multiple metabolites, whereas
+    less aggressive regions are restricted in the diversity of nutrients available
+    for metabolism. These differences may be due to reduced blood supply, and thus,
+    severe or prolonged lack of nutrients.
+
+
+    In fact, centers of tumors have often decreased levels of amino acids such as
+    glucose, arginine, asparagine, and glutamine after immunotherapy therapy.⁷ A study
+    by et al.³ found that vacuolated cancer (RCC) cells in regions of tumor have higher
+    density than that of the tumor, suggesting that the harsh environment creates
+    selective pressure for cancer cell survival.³
+
+
+    Furthermore, cross-talk between different cell types is crucial. For example,
+    tumor-derived suppressive myeloid cells (MDSCs) can inhibit T cells and NK cells
+    while reducing the function of T regulatory cells and B cells to drive immune
+    suppression.²⁴ added macrophages can promote polarization, tumor progression,
+    invasion, and evasion to drive tumorigenesis.³⁵,³⁶⁷
+
+
+    If deprivation of nutrients within these necrotic regions:²⁹³⁸ provides a metabolic
+    advantage for the selection and survival of metastatic cells, it is possible that
+    metabolic stress may provide selective pressure for metastatic potential.
+
+
+    Different nutrients for different cells
+
+
+    Classically, cancer microenvironment studies used tumor limits to define basic
+    pathways and potential vulnerabilities.³⁵ Based on the availability of oxygen
+    nutrients that drive glucose metabolism, cancer cells are the dominant consumers
+    of glucose and producers of lactate. This process has been highly variable but
+    increased recognition that tumors are composed of many cells beyond the cancer
+    cells has increased.
+
+
+    # NUTRIENT AVAILABILITY WITHIN THE TME
+
+
+    The tumor location, the oxygen, and the host determine nutrient availability for
+    cells within the TME. In hypoxic regions, low oxygen levels, high lactate concentration,
+    can block cell differentiation and inhibit effector T cells while promoting stress
+    and T cell immune-evasion.¹¹(Figure 1). Additionally, lactate promotes differentiation
+    and polarization of T cells into pro-tumorigenic phenotypes, like Treg and MDSCs.
+
+
+    With limited oxygen in tumors, nutrients become limited and for cells to adapt.
+    T cells may be prevented from acquiring sufficient glucose when cancer cells produce
+    and consume it.⁷⁶⁴⁹ Blocking glucose uptake in cells that demonstrated the high
+    uptake of glucose,
+
+
+    However, a direct use of glucose in the TME using ¹⁴-²²G and IGF-based techniques,
+    across a variety of metabolic pathways, shows that cancer cells and but cells
+    cannot compete for glucose.
+
+
+    adenosine receptor type 1 (CD236). These M2-like T cells secrete suppressive interleukin-10
+    (IL-10) and metabolites, which promote suppression of cancer cells.⁴¹
+
+
+    In hypoxic regions, T cells acquire pro-arginine and pro-inflammatory phenotypes,
+    which can inhibit tumor growth. This This data also suggests that cells with low
+    glucose uptake rather than glucose are limited and adapt to lower glucose with
+    increased glucose metabolism.
+
+
+    T cells acquire energy source through metabolic pathway of rapamycin (mTOR) pathways
+    as glycolysis, de novo lipolysis, protein stress, and transcription. In hypoxic
+    conditions, mTOR complex 1 (mTORC1) is inhibited by REDD1,⁴² leading to metabolic
+    reprogramming of cells to other pathways, such as glycolysis and reductive metabolism.
+
+
+    targeting glucose metabolism inhibits anti-tumor immunity by increasing the mitochondrial
+    metabolism of T cells.
+
+
+    Tumor angiogenesis leads to blood vessels that grow irregularly and can be ineffective
+    in delivering nutrients or removing waste. This exacerbates hetero-
+
+
+    Because of interplay between nutrients and metabolic activities, the TME may affect
+    the metabolic features of other cells in the tumor. The model shows that selectively
+    targeting glycolysis in cancer cells can enhance the-
+
+
+    T cell metabolism and anti-tumor immunity.³⁹. Increased uptake of metabolism by
+    cancer cells can fuel elevated levels of the metabolite. SLC34A2 leads to decreased
+    metabolism for cytotoxic T cells,
+
+
+    Cancer Review, March 14, 2023 4'
+  - '[PAGE 3]
+
+
+    # Cancer Cell
+
+
+    can then reduced by cytotoxic T cell function suppression of effector T cells.69
+    Treg cells play a direct role in promoting immune evasion and exhaustion.70,71
+    Because Treg cells are abundant in the metabolically vulnerable TME, they have
+    been shown to depend on mitochondrial oxidative metabolism of lipids in their
+    immunosuppressive environment.72–66 It is unclear how Treg cells differ metabolically
+    to utilize oxidation for proliferation while cancer cells within the TME promote
+    immune suppression by metabolism and decreasing CD8+ T-cell function or IFN(γ).67
+
+
+    is generated by cancer cells and Treg cells convert by CD39 and CD73, which convert
+    ATP to adenosine, which binds to adenosine A2 receptors (A2AR) on cytotoxic T
+    cells and NK cells and inhibit anti-tumor immunity by suppression of factor b
+    (NF-κB) signaling.73,74 Therefore, A2AR blockade is considered an immunotherapy
+    for resistant cells. Adenosine is also secreted by cancer cells and can act as
+    an agonist in immune cells.75 Adenosine can be taken up or activate the receptors,
+    which signal through PI3K/Akt/mTOR1 pathway to link M2-like metabolism to promote
+    pro-tumorigenic functions such increased suppression and metastasis.76
+
+
+    In macrophages, not only can oxygen availability influence metabolism, but by
+    differing cytokines in the TME drive different metabolic programs. In vitro, pro-inflammatory
+    macrophages (M1) switch their metabolism towards aerobic glycolysis, but acid-enriched
+    macrophages (M2) switch towards oxidative phosphorylation, protein and fatty acid
+    synthesis.77 However, when macrophages are activated by cytokines or M2-like phenotype,
+    such as IL-4, IL-10, or IL-13, macrophages meet their metabolic demands.78 Other
+    pathway may provide benefits in regions of given tumor. Comprehensive understanding
+    these inter-relationships presents a new and unique opportunity to manipulate
+    cellular metabolism and alleviate immunosuppressive microenvironments.
+
+
+    which is produced by lactate dehydrogenase 2-hydroxybutyrate in some cells, or
+    by glioblasts, lactate can be taken up by T cells, which reduces T cells transcriptional
+    activity and polyamine biosynthesis, suppressing cytotoxic T cells.79 Lactate
+    can accumulate in tumors to cause endoplasmic (ER) stress in T cells, which impairs
+    T-cell effector function. ER stress response in T cells also activates XBP-1,
+    which promotes expression of the immunosuppressive molecule PD-1, T-3, and LAG-3
+    to promote T cell exhaustion.
+
+
+    Different nutrients within the TME, such as arginine,
+
+
+    within the TME, amino acids like serine, cysteine, and alanine can be limited
+    and lead to competition between cancer cells and cytotoxic T cells. Cancer cells
+    require nutrients for proliferation.80 But because of extracellular urea cycle
+    enzyme arginine synthetase 1, which produces free cells from synthesizing arginase
+    by.81,82 This increased consumption of extracellular arginase by leads to a reduction
+    in available arginine for T cells.83 Dietary abnormality results in an increase
+    of exhausted-like T cells, which means T cell effector functions and immunities
+    are reduced.84 Pro-tumorigenic lactate also consume-arginine, which further reduces
+    available arginine for T cell consumption.85
+
+
+    *Waste* products
+
+    Cancer cells suppress T cells through secreted “waste” products. Metabolic products
+    are secreted to actively control, but faster than turn time, which cells use or
+    by neighbors. For example, the glycolytic lactate serves as a fuel for the T cell
+    cycle in cancer cells, lactate may suppress CD8+ T cells.86 Additionally, a while
+    level of high lactate can directly inhibit effector T cells.87 Production of IFN
+    may be particularly sensitive to glucose and increased lactate.78,79 Increased
+    lactate also promotes Treg cells that utilize mitochondrial oxidative pathway.
+    Lactate promotes differentiation and polarization of TAMs towards M2-like phenotype,
+    which can secrete immunosuppive or tumor cytokines.
+
+
+    It is important to note that lactate may not be solely produced within the TME,
+    which leads to oxidative stress and, may, be anti-inflammatory in some contexts.
+    In contrast, where lactate is reported to be immune suppression in multiple cell
+    types during cancer, acute also leads to an increase in T cell effector function.80
+    This suggests that the effect of lactate on T cell function and T cell exhaustion,
+    may be contextually complex.
+
+
+    An serine is an essential amino acid only for the diet that can be limited in
+    the tumor because of competition within the TME. Cancer cells can take up and
+    utilize serine, while TME cells use a ligand of the aryl hydrocarbon receptor
+    (AHR).81. Serine leads in differentiation into immunosuppressive Treg cells.82–84
+    Kynurenine also leads expression of PD-1 on CD8+ T cells, leading to suppression
+    of function.85 (Figure 2) Kynurenine and arginine, serine cell consume consumes
+    amounts of serine. Serine is a non-essential amino acid only for the body but
+    to build protein, without mitochondrial redox metabolism.88. When cancer cells
+    take up the majority of extracellular serine, limited are left for the T cells,
+    which have been shown to depend on extracellular serine for T cell expansion and
+    effector functions.
+
+
+    Another example of waste products within the TME that affect metabolism of other
+    cells is adenosine. Adeneno.
+
+
+    424 Cancer Cell 4, March 17, 2023'
+  md: '
+
+    # Cancer Review
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_2_0.png)
+
+
+    The TME is made up of many types of cells, including B cells, T cells, neutrophils,
+    natural killer (NK) cells, macrophages, as well as fibroblasts, adipocytes, endothelial
+    cells, and stromal cells for the pro- and anti-tumor immune cells.¹¹-³ This leads
+    to regions or microenvironments with limited exchange of nutrients and waste.
+    While increased autophagy and lysosomal activity by AMP-activated protein kinase
+    (AMPK) can partially compensate for the lack of extracellular nutrients,¹⁸-²¹
+    these regions experience extreme stress.
+
+
+    Growth cells are besides inflammatory and anti-tumor. Although generally true
+    for cytotoxic cells, different cell populations can have both pro and antitumor
+    functions, changing depending on time and context-dependent metabolic programs.
+
+
+    Cancer cells can reshape the environment to support tumors and evade the immune
+    system. One way in which this occurs is shuffling of metabolites and intermediates
+    between cancer cells and other cells within the TME leads to metabolic heterogeneity,
+    which can lead to immunosuppression but are not universally voluntary.
+
+
+    Small cell lung cancer (NSCLC) has been shown to use multiple metabolites, whereas
+    less aggressive regions are restricted in the diversity of nutrients available
+    for metabolism. These differences may be due to reduced blood supply, and thus,
+    severe or prolonged lack of nutrients.
+
+
+    In fact, centers of tumors have often decreased levels of amino acids such as
+    glucose, arginine, asparagine, and glutamine after immunotherapy therapy.⁷ A study
+    by et al.³ found that vacuolated cancer (RCC) cells in regions of tumor have higher
+    density than that of the tumor, suggesting that the harsh environment creates
+    selective pressure for cancer cell survival.³
+
+
+    Furthermore, cross-talk between different cell types is crucial. For example,
+    tumor-derived suppressive myeloid cells (MDSCs) can inhibit T cells and NK cells
+    while reducing the function of T regulatory cells and B cells to drive immune
+    suppression.²⁴ added macrophages can promote polarization, tumor progression,
+    invasion, and evasion to drive tumorigenesis.³⁵,³⁶⁷
+
+
+    If deprivation of nutrients within these necrotic regions:²⁹³⁸ provides a metabolic
+    advantage for the selection and survival of metastatic cells, it is possible that
+    metabolic stress may provide selective pressure for metastatic potential.
+
+
+    ## Different nutrients for different cells
+
+
+    Classically, cancer microenvironment studies used tumor limits to define basic
+    pathways and potential vulnerabilities.³⁵ Based on the availability of oxygen
+    nutrients that drive glucose metabolism, cancer cells are the dominant consumers
+    of glucose and producers of lactate. This process has been highly variable but
+    increased recognition that tumors are composed of many cells beyond the cancer
+    cells has increased.
+
+
+    ## NUTRIENT AVAILABILITY WITHIN THE TME
+
+
+    The tumor location, the oxygen, and the host determine nutrient availability for
+    cells within the TME. In hypoxic regions, low oxygen levels, high lactate concentration,
+    can block cell differentiation and inhibit effector T cells while promoting stress
+    and T cell immune-evasion.¹¹(Figure 1). Additionally, lactate promotes differentiation
+    and polarization of T cells into pro-tumorigenic phenotypes, like Treg and MDSCs.
+
+
+    With limited oxygen in tumors, nutrients become limited and for cells to adapt.
+    T cells may be prevented from acquiring sufficient glucose when cancer cells produce
+    and consume it.⁷⁶⁴⁹ Blocking glucose uptake in cells that demonstrated the high
+    uptake of glucose,
+
+
+    However, a direct use of glucose in the TME using ¹⁴-²²G and IGF-based techniques,
+    across a variety of metabolic pathways, shows that cancer cells and but cells
+    cannot compete for glucose.
+
+
+    adenosine receptor type 1 (CD236). These M2-like T cells secrete suppressive interleukin-10
+    (IL-10) and metabolites, which promote suppression of cancer cells.⁴¹
+
+
+    In hypoxic regions, T cells acquire pro-arginine and pro-inflammatory phenotypes,
+    which can inhibit tumor growth. This This data also suggests that cells with low
+    glucose uptake rather than glucose are limited and adapt to lower glucose with
+    increased glucose metabolism.
+
+
+    T cells acquire energy source through metabolic pathway of rapamycin (mTOR) pathways
+    as glycolysis, de novo lipolysis, protein stress, and transcription. In hypoxic
+    conditions, mTOR complex 1 (mTORC1) is inhibited by REDD1,⁴² leading to metabolic
+    reprogramming of cells to other pathways, such as glycolysis and reductive metabolism.
+
+
+    targeting glucose metabolism inhibits anti-tumor immunity by increasing the mitochondrial
+    metabolism of T cells.
+
+
+    Tumor angiogenesis leads to blood vessels that grow irregularly and can be ineffective
+    in delivering nutrients or removing waste. This exacerbates hetero-
+
+
+    Because of interplay between nutrients and metabolic activities, the TME may affect
+    the metabolic features of other cells in the tumor. The model shows that selectively
+    targeting glycolysis in cancer cells can enhance the-
+
+
+    T cell metabolism and anti-tumor immunity.³⁹. Increased uptake of metabolism by
+    cancer cells can fuel elevated levels of the metabolite. SLC34A2 leads to decreased
+    metabolism for cytotoxic T cells,
+
+
+    Cancer Review, March 14, 2023 4
+
+
+    ## Cancer Cell
+
+
+    can then reduced by cytotoxic T cell function suppression of effector T cells.69
+    Treg cells play a direct role in promoting immune evasion and exhaustion.70,71
+    Because Treg cells are abundant in the metabolically vulnerable TME, they have
+    been shown to depend on mitochondrial oxidative metabolism of lipids in their
+    immunosuppressive environment.72–66 It is unclear how Treg cells differ metabolically
+    to utilize oxidation for proliferation while cancer cells within the TME promote
+    immune suppression by metabolism and decreasing CD8+ T-cell function or IFN(γ).67
+
+
+    is generated by cancer cells and Treg cells convert by CD39 and CD73, which convert
+    ATP to adenosine, which binds to adenosine A2 receptors (A2AR) on cytotoxic T
+    cells and NK cells and inhibit anti-tumor immunity by suppression of factor b
+    (NF-κB) signaling.73,74 Therefore, A2AR blockade is considered an immunotherapy
+    for resistant cells. Adenosine is also secreted by cancer cells and can act as
+    an agonist in immune cells.75 Adenosine can be taken up or activate the receptors,
+    which signal through PI3K/Akt/mTOR1 pathway to link M2-like metabolism to promote
+    pro-tumorigenic functions such increased suppression and metastasis.76.
+
+
+    In macrophages, not only can oxygen availability influence metabolism, but by
+    differing cytokines in the TME drive different metabolic programs. In vitro, pro-inflammatory
+    macrophages (M1) switch their metabolism towards aerobic glycolysis, but acid-enriched
+    macrophages (M2) switch towards oxidative phosphorylation, protein and fatty acid
+    synthesis.77 However, when macrophages are activated by cytokines or M2-like phenotype,
+    such as IL-4, IL-10, or IL-13, macrophages meet their metabolic demands.78 Other
+    pathway may provide benefits in regions of given tumor. Comprehensive understanding
+    these inter-relationships presents a new and unique opportunity to manipulate
+    cellular metabolism and alleviate immunosuppressive microenvironments.
+
+
+    which is produced by lactate dehydrogenase 2-hydroxybutyrate in some cells, or
+    by glioblasts, lactate can be taken up by T cells, which reduces T cells transcriptional
+    activity and polyamine biosynthesis, suppressing cytotoxic T cells.79 Lactate
+    can accumulate in tumors to cause endoplasmic (ER) stress in T cells, which impairs
+    T-cell effector function. ER stress response in T cells also activates XBP-1,
+    which promotes expression of the immunosuppressive molecule PD-1, T-3, and LAG-3
+    to promote T cell exhaustion.
+
+
+    Different nutrients within the TME, such as arginine,
+
+
+    within the TME, amino acids like serine, cysteine, and alanine can be limited
+    and lead to competition between cancer cells and cytotoxic T cells. Cancer cells
+    require nutrients for proliferation.80 But because of extracellular urea cycle
+    enzyme arginine synthetase 1, which produces free cells from synthesizing arginase
+    by.81,82 This increased consumption of extracellular arginase by leads to a reduction
+    in available arginine for T cells.83 Dietary abnormality results in an increase
+    of exhausted-like T cells, which means T cell effector functions and immunities
+    are reduced.84 Pro-tumorigenic lactate also consume-arginine, which further reduces
+    available arginine for T cell consumption.85
+
+
+    ### *Waste* products
+
+
+    - Cancer cells suppress T cells through secreted “waste” products. Metabolic products
+    are secreted to actively control, but faster than turn time, which cells use or
+    by neighbors. For example, the glycolytic lactate serves as a fuel for T cell
+    cycle in cancer cells, lactate may suppress CD8+ T cells.86
+
+    - Additionally, a while level of high lactate can directly inhibit effector T
+    cells.87 Production of IFN may be particularly sensitive to glucose and increased
+    lactate.78,79 Increased lactate also promotes Treg cells that utilize mitochondrial
+    oxidative pathway. It is important to note that lactate may not be solely produced
+    within the TME, which leads to oxidative stress and, may be anti-inflammatory
+    in some contexts. In contrast, where lactate is reported to be immune suppression
+    in multiple cell types, acute also leads to an increase in T cell effector function.80
+    This suggests that the effect of lactate on T cell function and T cell exhaustion,
+    may be contextually complex.
+
+
+    - An serine is an essential amino acid only for the diet that can be limited in
+    the tumor because of competition within the TME. Cancer cells can take up and
+    utilize serine, while TME cells use a ligand of the aryl hydrocarbon receptor
+    (AHR).81. Serine leads in differentiation into immunosuppressive Treg cells.82–84
+    Kynurenine also leads expression of PD-1 on CD8+ T cells, leading to suppression
+    of function.85 (Figure 2) Kynurenine and arginine, serine cell consumes amounts
+    of serine. Serine is a non-essential amino acid only for the body but to build
+    protein, without mitochondrial redox metabolism.88. When cancer cells take up
+    the majority of extracellular serine, limited are left for the T cells, which
+    have been shown to depend on extracellular serine for T cell expansion and effector
+    functions.
+
+
+    - Another example of waste products within the TME that affect metabolism of other
+    cells is adenosine. Adeneno.
+
+
+    424 Cancer Cell 4, March 17, 2023
+
+    '
+  mdcn: '
+
+
+    # 癌症回顾
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_2_0.png)
+
+
+    肿瘤微环境（TME）由多种细胞组成，包括B细胞、T细胞、中性粒细胞、自然杀伤（NK）细胞、巨噬细胞，以及促进和抗肿瘤免疫细胞的纤维细胞、脂肪细胞、内皮细胞和间质细胞¹¹-³这导致了营养交换有限的区域或微环境。虽然通过激活蛋白激酶（AMPK）增加自噬和溶酶体活性可以部分补偿细胞外营养的缺乏，¹⁸-²¹但这些区域承受着极端压力。
+
+
+    除了炎症和抗肿瘤，虽然细胞性细胞通常如此，但不同的细胞群体可能同时具有促进和抗肿瘤的功能，取决于时间和依赖于的代谢程序。
+
+
+    癌细胞可以重塑环境以支持肿瘤并逃避免疫系统。这种情况的一种方式是癌细胞与TME内其他细胞之间代谢物和中间体的穿梭导致了代谢异质性，这可能导致免疫抑制，但并非普遍自愿的。
+
+
+    非小细胞肺癌（NSCLC）已被显示使用多种代谢物，而在侵袭性较小的区域，用于代谢的营养的多样性受到限制。这些差异可能是由于血液供应减少，从而导致严重或持续缺乏营养。
+
+
+    事实上，在免疫治疗后，肿瘤中心的葡萄糖、精氨酸、天冬酰胺和谷氨酰胺等氨基酸水平往往下降⁷等等的研究发现肿瘤区域的空泡（RCC）细胞密度高于肿瘤，表明恶劣的环境为癌细胞的生存创造了选择压力.³
+
+
+    此外，不同细胞类型之间的相互作用至关重要。例如，肿瘤来源的抑制性髓细胞（MDSCs）可以抑制T细胞和NK细胞，同时减少调节T细胞和B细胞的功能以驱动免疫抑制。²⁴增加的巨噬细胞可以促进极化、肿瘤进展、侵润和逃逸，以驱动肿瘤发生.³⁵,⁶⁷
+
+
+    如果这些坏死区域内的营养缺乏²⁹³⁸为转移细胞的选择和生存提供了代谢优势，那么代谢压力可能会为转移潜能提供选择压力。
+
+
+    ## 不同细胞所需的不同营养
+
+
+    经典上，癌症微环境研究利用肿瘤限制来定义基本途径和潜在脆弱性³⁵。根据驱动葡萄糖代谢的氧气营养可用性，癌细胞是葡萄糖的主要消费者和乳酸的生产者。这一过程具有高度变性，但人们对肿瘤由癌细胞之外的许多细胞组成的认识日益增加。
+
+
+    ## TME内部的营养可用性
+
+
+    肿瘤位置、氧气和宿主决定了TME内细胞的营养可用性。在缺氧区域，低氧水平、高浓度乳酸可以阻断细胞分化并抑制效应T细胞，同时促进应激和T细胞免疫逃逸¹¹（图1）。此外，乳酸促进T细胞向促肿瘤表型（如Treg和MDSCs）的分化和极化。
+
+
+    肿瘤中氧有限，营养变得有限，细胞必须进行适应。当癌细胞产生并消耗葡萄糖时，T细胞可能被阻止获得足够的葡萄糖⁷⁶⁴⁹。阻止高摄取细胞中的葡萄糖摄取，
+
+
+    然而，在TME中使用¹⁴-²²G和基于IGF的技术跨多种代谢途径直接使用葡萄糖，显示出癌细胞和B细胞无法竞争葡萄糖。
+
+
+    腺苷受体1型（CD236）。这些M2样T细胞分泌抑制性白细胞素-10（IL-10）和代谢物，促进对癌细胞的抑制⁴¹。
+
+
+    在缺氧区域，T细胞获得促精氨酸和促炎表型，这可以抑制肿瘤生长。这些数据也表明，低葡萄糖摄取的细胞并非受限的，而是通过增加葡萄糖代谢来适应低葡萄糖环境。
+
+
+    T细胞通过雷霉素（mTOR）代谢途径如糖酵解、从脂解、蛋白应激和转录获取能量。在缺氧条件下，mTOR复合物1（mTORC1）被REDD1抑制⁴²，导致细胞重编程其他途径，如糖酵解和还原代谢。
+
+
+    针对葡萄糖代谢通过增加T细胞的线粒代谢来抑制抗肿瘤免疫。
+
+
+    肿瘤血管生成导致血管生长不规则，并在递送营养或清除废物方面可能是无效的。这加剧了
+
+
+    由于营养与代谢活动之间的相互作用，TME可能会影响肿瘤中其他细胞的代谢特征。模型显示，选择性针对癌细胞的糖酵解可以增强T细胞代谢和抗肿瘤免疫³⁹。癌细胞对代谢摄取的增加可以导致代谢物水平升高。SLC34A2导致细胞毒性T细胞代谢减少，
+
+
+    癌症回顾，2023年3月14日 4
+
+
+    ## 癌细胞
+
+
+    可以通过细胞毒性T细胞功能抑制的效应T细胞来减少⁶⁹。Treg细胞在促进免疫逃逸和耗竭中起直接作用⁷⁰,⁷¹由于Treg细胞在代谢脆弱的TME中丰富，已显示依赖免疫抑制环境中脂质的线粒体氧化代谢²–⁶⁶。不清楚Treg细胞在代谢上如何通过氧化进行增殖，而TME内的癌细胞如何通过代谢和减少CD8+
+    T细胞功能或IFN(γ)来促进免疫抑制⁶⁷
+
+
+    由癌细胞产生并在Treg中通过CD39和CD73转化，将ATP转化为腺苷，腺苷结合细胞毒性T细胞和NK细胞上的腺苷A2受体（A2AR），并通过抑制因子b（NF-κB）信号抑制抗肿瘤免疫⁷³⁷⁴因此，阻断A2AR被认为是一种耐性细胞的免疫治疗方法。腺苷也由癌细胞分泌并可以作为免疫细胞的激动剂⁷⁵。腺苷可以被摄取或激活受体，通过PI3K/Akt/mTOR1通路将M2样代谢连接起来，促进促肿瘤功能，如增加抑制和转移⁷⁶。
+
+
+    在巨噬细胞中，不仅氧气的可用性可以影响代谢，而且通过TME中不同的细胞因子驱动不同的代谢程序。体外，促炎巨噬细胞（M1）将其代谢转向有氧糖酵解，但酸富集的巨噬细胞（M2）转向氧化磷酸化、蛋白质和脂肪酸合成⁷⁷然而，当巨噬细胞被细胞因子或M2样表型（如IL-4、IL-10或IL-13）激活时，满足其代谢需求⁷⁸。其他途径可能在给肿瘤区域提供益。全面理解这些相互关系为操控细胞代谢和缓解免疫抑制微环境提供了新的独特机会。
+
+
+    某些细胞中由乳酸脱氢酶产生2-羟基丁酸，或由胶质母产生，乳酸可以被T细胞摄取，这减少了T细胞的转录活性和多胺生物，抑制细胞毒性T细胞⁷⁹。乳酸可在肿瘤中积累，引起T细胞的内质网（ER）应激，从而损害T细胞效应功能。T细胞中的ER应激反应还会激活XBP-1，促进免疫抑制分子PD-1、T-3和LAG-3的表达，以促进T细胞耗竭。
+
+
+    TME内的不同营养，如精氨酸，
+
+
+    在TME内，氨基酸如丝氨酸、半氨酸和丙酸可能有限，导致癌细胞与细胞毒性T细胞之间的竞争。癌细胞需要营养进行增殖⁸⁰但由于细胞外尿素循环酶精氨酸合成酶1，它通过合成精氨酸酶产生游离细胞⁸¹,⁸²这种对细胞外精氨酸酶摄取的增加导致供T细胞的可用精氨酸减少⁸³。饮食异常导致耗竭样T细胞增加，这意味着T细胞的效应功能和免疫力降低⁸⁴。促肿瘤乳酸也消耗精氨酸，进一步减少了供T细胞消耗的可用精氨酸⁸⁵。
+
+
+    ### *废物*产物
+
+
+    - 癌细胞通过分泌“废物”产物抑制T细胞。代谢产物被分泌以主动控制，但比周转时间更快被细胞或邻细胞使用。例如，糖酵解产生的乳酸作为癌细胞中T细胞周期的燃料，乳酸可能抑制CD8+
+    T细胞⁸⁶
+
+    - 此外，高水平的乳酸可以直接抑制效应T细胞⁸⁷。IFN的产生可能对葡萄糖和增加的乳酸特别敏感⁷⁸⁷⁹乳酸增加还促进利用线粒体氧化途径的Treg细胞。注意的是，乳酸可能并非仅在TME内产生，这会导致氧化应激，并在某些背景下可能是抗炎的。相反，在报道乳酸导致多种细胞类型免疫抑制的情况下，急性也会导致T细胞效应功能的增加⁸⁰这表明乳酸对T细胞功能和T细胞耗竭的影响可能取决于复杂的背景。
+
+
+    - 丝氨酸是饮食中必需的氨基酸，由于TME内的竞争在肿瘤中可能限制。癌细胞可以摄取并利用丝氨酸，而TME细胞使用芳香受体（AHR）的配体⁸¹。丝氨酸导致分化为免疫抑制性Treg⁸²–⁸⁴。犬氨酸也导致CD8+
+    T细胞上PD-1的表达，导致功能抑制⁸⁵（图2）犬氨酸和精氨酸，丝氨酸细胞消耗大量的丝氨酸。丝氨酸是人体非必需氨基酸，但用于构建蛋白质，无需线粒体氧化还原代谢⁸⁸。当癌细胞摄取大部分细胞外丝氨酸时，留给T细胞的有限，已显示它们依赖细胞外丝氨酸进行T细胞扩和效应功能。
+
+
+    TME内影响其他细胞代谢的另一个废物例子是腺苷。腺苷。
+
+
+    424 Cancer Cell 4, March 17, 2023
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # Cancer Cell
+
+
+    # CellPress
+
+
+    Review
+
+
+    # Dysfunctional
+
+
+    # Functional
+
+
+    +   -High effector function
+
+    -Dependence on glycolysis
+
+    -Cancer cell death
+
+
+    +   -Loss of effector function
+
+    -Switch from Glycolysis to OxPh
+
+    -Reduced proliferation, T cell apoptosis
+
+    -Cancer cell survival
+
+
+    Lactate
+
+
+    Kynurenine
+
+
+    Tumorigenesis
+
+
+    Glucose
+
+
+    Amino Acids
+
+
+    PD-1
+
+
+    CD8+ T cell
+
+
+    CD8+ T cell
+
+
+    PFN GzmB
+
+
+    CTLA-4
+
+
+    IFNγ TNFα
+
+
+    Cancer cell death
+
+
+    Glycolysis
+
+
+    Glycolysis
+
+
+    OxPhos
+
+
+    Fragmented Mitochondria and ROS
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_4_0.png)
+
+
+    **Figure 2. Cancer resistance-T cell metabolism** Cancer cells adapt to kill T
+    cells by secreting inflammatory cytokines as well as cell metabolic molecules
+    such as glucose. In a highly functioning state, CD8+ T cells are dependent on
+    glycolysis, which promotes inflammation. Metabolic immunosuppression occurs when
+    T cells from tumors develop exhaust adaptations. These adaptations include depleted
+    and fragmented mitochondria, increased ROS production, and decreased glycolysis.
+    In the the, cancer cells secrete metabolites that facilitate enhance the function
+    of immune cells in the TME and promote T cell exhaustion, dysfunction, and apoptosis.
+    Cancer cells are able to secrete inhibitory cytokines and inhibit inhibitory receptors
+    such as PD-1 and CTLA-4, which reduce the function of T cells by inhibiting glycolysis
+    and oxidative phosphorylation of the cells. Additionally, amino acids like arginine
+    and serine may be limited in the TME, inhibiting T cells because they rely on
+    these for proliferation and survival.
+
+
+    cysteine, which is also an amino acid and reduces reductant, leading to tumor
+    progression⁹ Cancer cells release large amounts of amino acid cysteine, which
+    is required for T cell activation and transportase activity which has been shown
+    to synchronize with anti-tumor function by enhancing metabolism¹⁰.
+
+
+    These base the question: can amino acids be limited in patients to promote resistance
+    to T cells? Results from supplementation of arginine in vitro and in vivo drive
+    anti T cell antitumor immunity by enhancing function memory and mitochondrial
+    resistance¹¹ Additional studies are needed to determine whether cancer cells would
+    also benefit from amino acid supplementation and glucose that could counter-balance
+    benefit to immune cells.
+
+
+    of signals can be limited in the TME and be for immune checkpoint or adaptive
+    T cell immunity. Many T cells in the TME are exhausted and unable to recover function
+    by chronic stress and TME factors such as hypoxia¹ these therapies seek to rewiring
+    or introduce new tumor-specific cells. Metabolic suppression enhances to provide
+    and an additional barrier to T cell resistance¹⁴ Most approaches utilize T cell
+    differentiation and metabolism in the
+
+
+    factors such as preventing anti-tumor activity.
+
+
+    The most common immunotherapies in use are- checkpoint blockade of PD-1 or CTLA-4,
+    signaling of both which inhibit inhibitory, co-stimulation CD28 family members
+    restrict T cell exhaustion.¹⁵ PD-1 can be induced by lactate¹⁶ and inhibits PI3K
+    and mTOR1 to regulate metabolism, glycolysis, which limits lipid peroxidation,
+    can promote T cell survival.¹⁷ Likewise, checkpoint blockade of these two prominent
+    inhibitors
+
+
+    # IMMUNOTHERAPY AND METABOLIC SUPPRESSION
+
+
+    of these two prominent inhibitors has profound metabolic implications for tumor-specific
+    cells. Given the nature of proliferative T cells for glucose uptake, which promotes
+    biosynthesis and energy generation, the metabolic actions of
+
+
+    Cancer Cell, 17, 13, 2023'
+  - '[PAGE 5]
+
+
+    # CellPress
+
+
+    # Cancer CellnReview
+
+
+    # 1. Draw Blood
+
+
+    # 2. Cancer Cell Death and Reduced Resistance
+
+
+    # 2. Isolate T cells
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_5_0.png)
+
+
+    # 3. Express Chemigen Antigen Receptor
+
+
+    # 5. Introduce Metabolically Reprogrammed T cells into patient
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_5_1.png)
+
+
+    # 4. Metabolically Reprogram T cell
+
+
+    Induce Metabolic Stress or Genetic Modulation
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_5_2.png)
+
+
+    > Figure 3. Metabolically reprogramming to reduce immune suppression
+
+    Adoptive T cells target cytotoxic T cells from patients to express chimeric antigen
+    receptors (CARs) specific to tumor antigens. To reduce immune suppression of T
+    cells in the TME and enhance their metabolic capacity, it may be metabolically
+    to rewire T cells either by immune stress or through genetic modification. These
+    strategies may increase T cell metabolic plasticity and flexibility to turn tumors
+    that are typically immune cold because of poor nutrient conditions to become "hot",
+    increasing anti-tumor immunity and resistance to therapies such as immune checkpoint
+    blockade
+
+
+    immune checkpoints are largely fundamental to patient therapies. Consistent with
+    a connection between metabolic environments in the TME and exhaustion function,
+    exhausted T cells can strongly suppress effector and tumor function,12 and tumor
+    hypoxia can impair or limit immunotherapy14. An, remains unknown, how PD-1 and
+    CTLA-4 signals affect the metabolism and function of other cell types in the TME.
+    Indeed, macrophages can express PD-1, and this checkpoint molecule can inhibit
+    infiltration and phagocytosis of
+
+
+    transfer to patients or genetic engineering,14,15 Indeed, T cells with low mitochondrial
+    potential, and thus, tightly coupled or efficient mitochondria can provide superior
+    resistance in adoptive cell therapy. Consistent reports, mitochondrial quality
+    may serve as control as a key for long-term T cell function CAR T with great mitochondrial
+    function have shown to have the highest levels of memory, while CAR T with low
+    mitochondria have short lifespan,115
+
+
+    Adoptive T cells target T cells to tumor-specific antigens by identifying and
+    expanding neoantigen-specific T cells or engineering T cells to express chimeric
+    antigen receptors (CARs) to specific tumor antigens16. In each case, T cells must
+    undergo metabolically reprogramming to survive and function in the TME. To allow
+    this, T cells must survive, and adoptive T cells have shown increased mitochondrial
+    capacity and quality is critical139. This can be developed by adapting T cells
+    to metabolic pathways by utilizing glucose or glutamine metabolism in vitro prior
+    to
+
+
+    In CAR T signaling consists of antigen receptor and co-stimulatory components.
+    CAR T domains show high rates of glycolysis and rapid expansion in the expense
+    of a short lifespan, while 1-4BB domains promote mitochondrial metabolism and
+    CAR T longevity at the expense of effector function.2. Consistent reports show
+    that solid tumor cells persist even after clearance. remains unclear what extent
+    immune suppression controls limits solid tumor resistance to CAR cells. A contributing
+    factor, however, is the heterogeneity of solid tumors and the need for adapted
+    transferred T cells to function in a
+
+
+    428 Cancer Cell 4/1, March 13 2023'
+  - '[PAGE 6]
+
+
+    # Cancer Cell Review
+
+
+    # Epithelial-to-Mesenchymal Transition
+
+
+    # Circulating Tumor Cells
+
+
+    # Metastatic Colonization
+
+
+    Glycolytic Enzymes
+
+
+    Epithelial
+
+
+    Mesenchymal
+
+
+    AMPK
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_0.png)
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_1.png)
+
+
+    NADPH
+
+
+    Lactate
+
+
+    Immune Suppressive Cytokines:
+
+
+    Mesenchymal Cancer Cell
+
+
+    Immune Suppressive Cytokines:
+
+
+    CD8+ T Cell
+
+
+    Immune Suppressive Cytokines:
+
+
+    Cancer Cell
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_2.png)
+
+
+    T Cell Suppression via Immune Checkpoint Ligands
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_3.png)
+
+
+    Altered Metabolism to Survive Oxidative Stress?
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_4.png)
+
+
+    Immunometabolism:
+
+
+    > Figure 4. Metabolic plasticity in metastasis. To escape the primary tumor and
+    form metastases, cells undergo EMT (left panel). Glycolytic enzymes are released
+    to control the cell skeleton; therefore, it is possible that, during cytoskeletal
+    rearrangement in the EMT process, these glycolytic enzymes are released to promote
+    survival. Production of mitochondrial ROS in cancer cells can be enhanced by-EMT
+    signaling, highlighting the role of ROS which is highly dependent on the genetic
+    context and local TIME. Additionally, some metabolites act as pro-EMT signaling
+    molecules, such as fuel, methional acid, and fatty synthase (FASN). When in circulation
+    (center panel), cells undergo immune surveillance and thus, cell-death; therefore,
+    it is critical that CTCs survive in the bloodstream and maintain metabolic activity.
+    Glucose uptake and NADPH production are increased by lactate and metabolites in
+    the blood stream may improve immune surveillance of CTCs as cancer cell immune
+    evasion. When cancer cells enter the metastatic site (right panel), they survive
+    within the TME to support immune surveillance, which can be demonstrated by, metastasis
+    via immune checkpoint ligands. Additionally, metabolic plasticity represents a
+    key process in survival and may provide a vulnerability for the treatment of cancer
+    metastasis.
+
+
+    variety of nutrients and environments. Metabolic plasticity and efficiency, however,
+    may be the ultimate goal rather than metabolic programs based on fixed signaling
+    characteristics.ed, using CRISPR-based screening techniques, have identified several
+    gene-function regulators of CAR engineering, such as a protein that has been shown
+    to enhance immune function in CD8+ T cells and anti-tumor activity in mice. These
+    studies illustrate that genetically engineering CAR T cells may also be a viable
+    therapy for adaptive transfer in the future.
+
+
+    # METABOLIC PLASTICITY AND METASTAS
+
+
+    Despite research efforts, metastasis and relapse remain the primary causes of
+    cancer-related deaths. Metastasis of solid to
+
+
+    mors require cancer cells to pass through heterogeneous and metabolic environments
+    as they escape the tumor, invading surrounding environment, the bloodstream or
+    lymphatic vessels (referred to as invasion), survival, and extravasation to sites
+    to colonize and expand as me-tat in multiple microenvironments. This requires
+    cell plasticity, resistance of epithelial cells adopting mesenchymal-like features
+    that can enable cell-migration and invasion, as referred to epithelial-to-mesenchymal
+    transition (EMT). MET has also been reported to be reported for successful metastatic
+    colonization because distant metastases in carcinoma patients present with epithelial
+    features having a similar pathology to the tissue of origin. (17) Only a small
+    fraction of cancer cells successfully
+
+
+    Cancer Cell, 17, 2023 427'
+  md: "\n# Cancer Cell\n# CellPress\nReview\n\n## Dysfunctional vs Functional\n\n\
+    | Dysfunctional | Functional |\n| :--- | :--- |\n| + -High effector function |\
+    \ -Loss of effector function |\n| -Dependence on glycolysis | -Switch from Glycolysis\
+    \ to OxPh |\n| -Cancer cell death | -Reduced proliferation, T cell apoptosis |\n\
+    | | -Cancer cell survival\n\nLactate, Kynurenine, Tumorigenesis, Glucose, Amino\
+    \ Acids, PD-1, CD8+ T cell, CD8+ T cell, IFN GzmB, CTLA-4, IFNγ TNFα, Cancer cell\
+    \ death, Glycolysis, Glycolysis, OxPhos, Fragmented Mitochondria and ROS\n\n![](img/33f55c57731d5bd51413de5f6eaeddd6_4_0.png)\n\
+    \n**Figure 2. Cancer resistance-T cell metabolism** Cancer cells adapt to kill\
+    \ T cells by secreting inflammatory cytokines as well as cell metabolic molecules\
+    \ such as glucose. In a highly functioning state, CD8+ T cells are dependent on\
+    \ glycolysis, which promotes inflammation. Metabolic immunosuppression occurs\
+    \ when T cells from tumors develop exhaust adaptations. These adaptations include\
+    \ depleted and fragmented mitochondria, increased ROS production, and decreased\
+    \ glycolysis. In the the, cancer cells secrete metabolites that facilitate enhance\
+    \ the function of immune cells in the TME and promote T cell exhaustion, dysfunction,\
+    \ and apoptosis. Cancer cells are able to secrete inhibitory cytokines and inhibit\
+    \ inhibitory receptors such as PD-1 and CTLA-4, which reduce the function of T\
+    \ cells by inhibiting glycolysis and oxidative phosphorylation of the cells. Additionally,\
+    \ amino acids like arginine and serine may be limited in the TME, inhibiting T\
+    \ cells because they rely on these for proliferation and survival.\n\ncysteine,\
+    \ which is also an amino acid and reduces reductant, leading to tumor progression⁹\
+    \ Cancer cells release large amounts of amino acid cysteine, which is required\
+    \ for T cell activation and transportase activity which has been shown to synchronize\
+    \ with anti-tumor function by enhancing metabolism¹⁰.\n\nThese base the question:\
+    \ can amino acids be limited in patients to promote resistance to T cells? Results\
+    \ from supplementation of arginine in vitro and in vivo drive anti T cell antitumor\
+    \ immunity by enhancing function memory and mitochondrial resistance¹¹ Additional\
+    \ studies are needed to determine whether cancer cells would also benefit from\
+    \ amino acid supplementation and glucose that could counter-balance benefit to\
+    \ immune cells.\n\nof signals can be limited in the TME and be for immune checkpoint\
+    \ or adaptive T cell immunity. Many T cells in the TME are exhausted and unable\
+    \ to recover function by chronic stress and TME factors such as hypoxia¹ these\
+    \ therapies seek to rewiring or introduce new tumor-specific cells. Metabolic\
+    \ suppression enhances to provide and an additional barrier to T cell resistance¹⁴\
+    \ Most approaches utilize T cell differentiation and metabolism in the factors\
+    \ such as preventing anti-tumor activity.\n\nThe most common immunotherapies in\
+    \ use are- checkpoint blockade of PD-1 or CTLA-4, signaling of both which inhibit\
+    \ inhibitory, co-stimulation CD28 family members restrict T cell exhaustion.¹⁵\
+    \ PD-1 can be induced by lactate¹⁶ and inhibits PI3K and mTOR1 to regulate metabolism,\
+    \ glycolysis, which limits lipid peroxidation, can promote T cell survival.¹⁷\
+    \ Likewise, checkpoint blockade of these two prominent inhibitors of these two\
+    \ prominent inhibitors has profound metabolic implications for tumor-specific\
+    \ cells. Given the nature of proliferative T cells for glucose uptake, which promotes\
+    \ biosynthesis and energy generation, the metabolic actions of the\n\nCancer Cell,\
+    \ 17, 13, 2023\n\n# CellPress\n# Cancer Cell Review\n\n## 1. Draw Blood\n## 2.\
+    \ Isolate T cells\n## 2. Cancer Cell Death and Reduced Resistance\n## 3. Express\
+    \ Chemigen Antigen Receptor\n\n![](img/33f55c57731d5bd51413de5f6eaeddd6_5_0.png)\n\
+    \n## 4. Metabolically Reprogram T cell\n## 5. Introduce Metabolically Reprogrammed\
+    \ T cells into patient\n\n![](img/33f55c57731d5bd51413de5f6eaeddd6_5_1.png)\n\n\
+    Induce Metabolic Stress or Genetic Modulation\n![](img/33f55c57731d5bd51413de5f6eaeddd6_5_2.png)\n\
+    \n> Figure 3. Metabolically reprogramming to reduce immune suppression\nAdoptive\
+    \ T cells target cytotoxic T cells from patients to express chimeric antigen receptors\
+    \ (CARs) specific to tumor antigens. To reduce immune suppression of T cells in\
+    \ the TME and enhance their metabolic capacity, it may be metabolically to rewire\
+    \ T cells either by immune stress or through genetic modification. These strategies\
+    \ may increase T cell metabolic plasticity and flexibility to turn tumors that\
+    \ are typically immune cold because of poor nutrient conditions to become \"hot\"\
+    , increasing anti-tumor immunity and resistance to therapies such as immune checkpoint\
+    \ blockade.\n\nimmune checkpoints are largely fundamental to patient therapies.\
+    \ Consistent with a connection between metabolic environments in the TME and exhaustion\
+    \ function, exhausted T cells can strongly suppress effector and tumor function,12,\
+    \ and tumor hypoxia can impair or limit immunotherapy14. An, remains unknown,\
+    \ how PD-1 and CTLA-4 signals affect the metabolism and function of other cell\
+    \ types in the TME. Indeed, macrophages can express PD-1, and this checkpoint\
+    \ molecule can inhibit infiltration and phagocytosis of transfer to patients or\
+    \ genetic engineering,14,15 Indeed, T cells with low mitochondrial potential,\
+    \ and thus, tightly coupled or efficient mitochondria can provide superior resistance\
+    \ in adoptive cell therapy. Consistent reports, mitochondrial quality may serve\
+    \ as control as a key for long-term T cell function CAR T with great mitochondrial\
+    \ function have shown to have the highest levels of memory, while CAR T with low\
+    \ mitochondria have short lifespan,115.\n\nAdoptive T cells target T cells to\
+    \ tumor-specific antigens by identifying and expanding neoantigen-specific T cells\
+    \ or engineering T cells to express chimeric antigen receptors (CARs) to specific\
+    \ tumor antigens16. In each case, T cells must undergo metabolically reprogramming\
+    \ to survive and function in the TME. To allow this, T cells must survive, and\
+    \ adoptive T cells have shown increased mitochondrial capacity and quality is\
+    \ critical139. This can be developed by adapting T cells to metabolic pathways\
+    \ by utilizing glucose or glutamine metabolism in vitro prior to\n\nIn CAR T signaling\
+    \ consists of antigen receptor and co-stimulatory components. CAR T domains show\
+    \ high rates of glycolysis and rapid expansion in the expense of a short lifespan,\
+    \ while 1-4BB domains promote mitochondrial metabolism and CAR T longevity at\
+    \ the expense of effector function.2. Consistent reports show that solid tumor\
+    \ cells persist even after clearance. remains unclear what extent immune suppression\
+    \ controls limits solid tumor resistance to CAR cells. A contributing factor,\
+    \ however, is the heterogeneity of solid tumors and the need for adapted transferred\
+    \ T cells to function in a \n\n428 Cancer Cell 4/1, March 13 2023\n\n# Cancer\
+    \ Cell Review\n## Epithelial-to-Mesenchymal Transition\n## Circulating Tumor Cells\n\
+    ## Metastatic Colonization\n## Glycolytic Enzymes\n## Epithelial\n## Mesenchymal\n\
+    AMPK\n\nLactate\nImmune Suppressive Cytokines:\nImmune Suppressive Cytokines:\n\
+    Immune Suppressive Cytokines:\nCancer Cell\nCD8+ T cell\n\n![](img/33f55c57731d5bd51413de5f6eaeddd6_6_0.png)\n\
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_1.png)\n![](img/33f55c57731d5bd51413de5f6eaeddd6_6_2.png)\n\
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_3.png)\n![](img/33f55c57731d5bd51413de5f6eaeddd6_6_4.png)\n\
+    \n> Figure 4. Metabolic plasticity in metastasis. To escape the primary tumor\
+    \ and form metastases, cells undergo EMT (left panel). During the EMT process,\
+    \ glycolytic enzymes are released to control cell skeleton; therefore, it is possible\
+    \ that during cytoskeletal rearrangement, these glycolytic enzymes promote survival.\
+    \ Production of mitochondrial ROS in cancer cells can be enhanced by-EMT signaling,\
+    \ highlighting the role of ROS in the TIME. Additionally, some metabolites act\
+    \ as pro-EMT signaling molecules, such as fuel, methional acid, and fatty synthase\
+    \ (FASN). When in circulation (center panel), CTCs survive the and maintain metabolic\
+    \ activity. When cancer cells enter the metastatic site (right panel), they survive\
+    \ within the TME to support immune surveillance, which can be demonstrated by\
+    \ metastasis via immune checkpoint ligands.\n\nImmunometabolism:\nAltered Metabolism\
+    \ to Survive Oxidative Stress\nNADPH\nT Cell\nT Cell\n\nDespite research efforts,\
+    \ metastasis and relapse remain the primary causes of cancer-related deaths. Metastasis\
+    \ of solid tumors require cancer cells to pass through heterogeneous and metabolic\
+    \ environments as they escape the tumor, invading surrounding environment, the\
+    \ bloodstream or lymphatic vessels (referred to as invasion), survival, and extravasation\
+    \ to sites to colonize and expand in multiple microenvironments. This requires\
+    \ cell plasticity, resistance of epithelial cells adopting mesenchymal-like features\
+    \ that can enable cell-migration and invasion, as referred to epithelial-to-mesenchymal\
+    \ transition (EMT). MET has also been reported to be reported for successful metastatic\
+    \ colonization because distant metastases in carcinoma patients present with epithelial\
+    \ features having a similar pathology to the tissue of origin. (17) Only a small\
+    \ fraction of cancer cells successfully (Wait, let me re-align the flow) In CAR\
+    \ T signaling consists of antigen receptor and co-stimulatory components. CAR\
+    \ T domains show high rates of glycolysis and rapid expansion in the expense of\
+    \ a short lifespan, while 1-4BB domains promote mitochondrial metabolism and CAR\
+    \ T longevity at the expense of effector function.2. Consistent reports show that\
+    \ solid tumor cells persist even after clearance. remains unclear what extent\
+    \ immune suppression controls limits solid tumor resistance to CAR cells. A contributing\
+    \ factor, however, is the heterogeneity of solid tumors and the need for adapted\
+    \ transferred T cells to function in a variety of nutrients and environments.\
+    \ Metabolic plasticity and efficiency, however, may be the ultimate goal rather\
+    \ than metabolic programs based on fixed signaling characteristics. engineering\
+    \ CAR T cells may also be a viable therapy for adaptive transfer in\n\nCancer\
+    \ Cell, 17, 2023 427\n[/content] (Wait, I noticed some duplicate text in my thought\
+    \ process, let me provide the clean final version).\n\n[content]\n# Cancer Cell\n\
+    # CellPress\nReview\n\n## Dysfunctional vs Functional\n\n| Dysfunctional | Functional\
+    \ |\n| :--- | :--- |\n| + -High effector function | -Loss of effector function\
+    \ |\n| -Dependence on glycolysis | -Switch from Glycolysis to OxPh |\n| -Cancer\
+    \ cell death | -Reduced proliferation, T cell apoptosis |\n| | -Cancer cell survival\n\
+    \nLactate, Kynurenine, Tumorigenesis, Glucose, Amino Acids, PD-1, CD8+ T cell,\
+    \ CD8+ T cell, IFN GzmB, CTLA-4, IFNγ TNFα, Cancer cell death, Glycolysis, Glycolysis,\
+    \ OxPhos, Fragmented Mitochondria and ROS\n\n![](img/33f55c57731d5bd51413de5f6eaeddd6_4_0.png)\n\
+    \n**Figure 2. Cancer resistance-T cell metabolism** Cancer cells adapt to kill\
+    \ T cells by secreting inflammatory cytokines as well as cell metabolic molecules\
+    \ such as glucose. In a highly functioning state, CD8+ T cells are dependent on\
+    \ glycolysis, which promotes inflammation. Metabolic immunosuppression occurs\
+    \ when T cells from tumors develop exhaust adaptations. These adaptations include\
+    \ depleted and fragmented mitochondria, increased ROS production, and decreased\
+    \ glycolysis. In the the, cancer cells secrete metabolites that facilitate enhance\
+    \ the function of immune cells in the TME and promote T cell exhaustion, dysfunction,\
+    \ and apoptosis. Cancer cells are able to secrete inhibitory cytokines and inhibit\
+    \ inhibitory receptors such as PD-1 and CTLA-4, which reduce the function of T\
+    \ cells by inhibiting glycolysis and oxidative phosphorylation of the cells. Additionally,\
+    \ amino acids like arginine and serine may be limited in the TME, inhibiting T\
+    \ cells because they rely on these for proliferation and survival.\n\ncysteine,\
+    \ which is also an amino acid and reduces reductant, leading to tumor progression⁹\
+    \ Cancer cells release large amounts of amino acid cysteine, which is required\
+    \ for T cell activation and transportase activity which has been shown to synchronize\
+    \ with anti-tumor function by enhancing metabolism¹⁰.\n\nThese base the question:\
+    \ can amino acids be limited in patients to promote resistance to T cells? Results\
+    \ from supplementation of arginine in vitro and in vivo drive anti T cell antitumor\
+    \ immunity by enhancing function memory and mitochondrial resistance¹¹ Additional\
+    \ studies are needed to determine whether cancer cells would also benefit from\
+    \ amino acid supplementation and glucose that could counter-balance benefit to\
+    \ immune cells.\n\nof signals can be limited in the TME and be for immune checkpoint\
+    \ or adaptive T cell immunity. Many T cells in the TME are exhausted and unable\
+    \ to recover function by chronic stress and TME factors such as hypoxia¹ these\
+    \ therapies seek to rewiring or introduce new tumor-specific cells. Metabolic\
+    \ suppression enhances to provide and an additional barrier to T cell resistance¹⁴\
+    \ Most approaches utilize T cell differentiation and metabolism in the factors\
+    \ such as preventing anti-tumor activity.\n\nThe most common immunotherapies in\
+    \ use are- checkpoint blockade of PD-1 or CTLA-4, signaling of both which inhibit\
+    \ inhibitory, co-stimulation CD28 family members restrict T cell exhaustion.¹⁵\
+    \ PD-1 can be induced by lactate¹⁶ and inhibits PI3K and mTOR1 to regulate metabolism,\
+    \ glycolysis, which limits lipid peroxidation, can promote T cell survival.¹⁷\
+    \ Likewise, checkpoint blockade of these two prominent inhibitors of these two\
+    \ prominent inhibitors has profound metabolic implications for tumor-specific\
+    \ cells. Given the nature of proliferative T cells for glucose uptake, which promotes\
+    \ biosynthesis and energy generation, the metabolic actions of the\n\nCancer Cell,\
+    \ 17, 13, 2023\n\n# CellPress\n# Cancer Cell Review\n\n## 1. Draw Blood\n## 2.\
+    \ Isolate T cells\n## 2. Cancer Cell Death and Reduced Resistance\n## 3. Express\
+    \ Chemigen Antigen Receptor\n\n![](img/33f55c57731d5bd51413de5f6eaeddd6_5_0.png)\n\
+    \n## 4. Metabolically Reprogram T cell\n## 5. Introduce Metabolically Reprogrammed\
+    \ T cells into patient\n\n![](img/33f55c57731d5bd51413de5f6eaeddd6_5_1.png)\n\n\
+    Induce Metabolic Stress or Genetic Modulation\n![](img/33f55c57731d5bd51413de5f6eaeddd6_5_2.png)\n\
+    \n> Figure 3. Metabolically reprogramming to reduce immune suppression\nAdoptive\
+    \ T cells target cytotoxic T cells from patients to express chimeric antigen receptors\
+    \ (CARs) specific to tumor antigens. To reduce immune suppression of T cells in\
+    \ the TME and enhance their metabolic capacity, it may be metabolically to rewire\
+    \ T cells either by immune stress or through genetic modification. These strategies\
+    \ may increase T cell metabolic plasticity and flexibility to turn tumors that\
+    \ are typically immune cold because of poor nutrient conditions to become \"hot\"\
+    , increasing anti-tumor immunity and resistance to therapies such as immune checkpoint\
+    \ blockade.\n\nimmune checkpoints are largely fundamental to patient therapies.\
+    \ Consistent with a connection between metabolic environments in the TME and exhaustion\
+    \ function, exhausted T cells can strongly suppress effector and tumor function,12,\
+    \ and tumor hypoxia can impair or limit immunotherapy14. An, remains unknown,\
+    \ how PD-1 and CTLA-4 signals affect the metabolism and function of other cell\
+    \ types in the TME. Indeed, macrophages can express PD-1, and this checkpoint\
+    \ molecule can inhibit infiltration and phagocytosis of transfer to patients or\
+    \ genetic engineering,14,15 Indeed, T cells with low mitochondrial potential,\
+    \ and thus, tightly coupled or efficient mitochondria can provide superior resistance\
+    \ in adoptive cell therapy. Consistent reports, mitochondrial quality may serve\
+    \ as control as a key for long-term T cell function CAR T with great mitochondrial\
+    \ function have shown to have the highest levels of memory, while CAR T with low\
+    \ mitochondria have short lifespan,115.\n\nAdoptive T cells target T cells to\
+    \ tumor-specific antigens by identifying and expanding neoantigen-specific T cells\
+    \ or engineering T cells to express chimeric antigen receptors (CARs) to specific\
+    \ tumor antigens16. In each case, T cells must undergo metabolically reprogramming\
+    \ to survive and function in the TME. To allow this, T cells must survive, and\
+    \ adoptive T cells have shown increased mitochondrial capacity and quality is\
+    \ critical139. This can be developed by adapting T cells to metabolic pathways\
+    \ by utilizing glucose or glutamine metabolism in vitro prior to\n\nIn CAR T signaling\
+    \ consists of antigen receptor and co-stimulatory components. CAR T domains show\
+    \ high rates of glycolysis and rapid expansion in the expense of a short lifespan,\
+    \ while 1-4BB domains promote mitochondrial metabolism and CAR T longevity at\
+    \ the expense of effector function.2. Consistent reports show that solid tumor\
+    \ cells persist even after clearance. remains unclear what extent immune suppression\
+    \ controls limits solid tumor resistance to CAR cells. A contributing factor,\
+    \ however, is the heterogeneity of solid tumors and the need for adapted transferred\
+    \ T cells to function in a \n\n428 Cancer Cell 4/1, March 13 2023\n\n# Cancer\
+    \ Cell Review\n## Epithelial-to-Mesenchymal Transition\n## Circulating Tumor Cells\n\
+    ## Metastatic Colonization\n## Glycolytic Enzymes\n## Epithelial\n## Mesenchymal\n\
+    AMPK\n\nLactate\nImmune Suppressive Cytokines:\nImmune Suppressive Cytokines:\n\
+    Immune Suppressive Cytokines:\nCancer Cell\nCD8+ T cell\n\n![](img/33f55c57731d5bd51413de5f6eaeddd6_6_0.png)\n\
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_1.png)\n![](img/33f55c57731d5bd51413de5f6eaeddd6_6_2.png)\n\
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_3.png)\n![](img/33f55c57731d5bd51413de5f6eaeddd6_6_4.png)\n\
+    \n> Figure 4. Metabolic plasticity in metastasis. To escape the primary tumor\
+    \ and form metastases, cells undergo EMT (left panel). During the EMT process,\
+    \ glycolytic enzymes are released to control cell skeleton; therefore, it is possible\
+    \ that during cytoskeletal rearrangement, these glycolytic enzymes promote survival.\
+    \ Production of mitochondrial ROS in cancer cells can be enhanced by-EMT signaling,\
+    \ highlighting the role of ROS in the TIME. Additionally, some metabolites act\
+    \ as pro-EMT signaling molecules, such as fuel, methional acid, and fatty synthase\
+    \ (FASN). When in circulation (center panel), CTCs survive the blood and maintain\
+    \ metabolic activity. When cancer cells enter the metastatic site (right panel),\
+    \ they survive within the TME to support immune surveillance, which can be demonstrated\
+    \ by metastasis via immune checkpoint ligands.\n\nImmunometabolism:\nAltered Metabolism\
+    \ to Survive Oxidative Stress\nNADPH\nT Cell\nT Cell\n\nDespite research efforts,\
+    \ metastasis and relapse remain the primary causes of cancer-related deaths. Metastasis\
+    \ of solid tumors require cancer cells to pass through heterogeneous and metabolic\
+    \ environments as they escape the tumor, invading surrounding environment, the\
+    \ bloodstream or lymphatic vessels (referred to as invasion), survival, and extravasation\
+    \ to sites to colonize and expand in multiple microenvironments. This requires\
+    \ cell plasticity, resistance of epithelial cells adopting mesenchymal-like features\
+    \ that can enable cell-migration and invasion, as referred to epithelial-to-mesenchymal\
+    \ transition (EMT). MET has also been reported to be reported for successful metastatic\
+    \ colonization because distant metastases in carcinoma patients present with epithelial\
+    \ features having a similar pathology to the tissue of origin. (17) Only a small\
+    \ fraction of cancer cells successfully\n\nCancer Cell, 17, 2023 427\n"
+  mdcn: '
+
+    # 癌细胞
+
+    # CellPress
+
+    综述
+
+
+    ## 功能障碍 vs 功能正常
+
+
+    | 功能障碍 | 功能正常 |
+
+    | :--- | :--- |
+
+    | + -高效应功能 | - 效应功能丧失 |
+
+    | - 依赖糖解 | - 从糖解向氧化磷酸化转换 |
+
+    | - 癌细胞死亡 | - 增殖减少、T细胞凋亡 |
+
+    | | - 癌细胞生存
+
+
+    乳酸、犬氨酸、肿瘤发生、葡萄糖、氨基酸、PD-1、CD8+ T细胞、CD8+ T细胞、IFN GzmB、CTLA-4、IFNγ TNFα、癌细胞死亡、糖解、糖解、氧化磷酸化、破碎线粒体和活性氧
+    (ROS)
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_4_0.png)
+
+
+    **图2 癌症抗性-T细胞代谢** 癌细胞通过分泌炎症细胞因子以及葡萄糖等细胞代谢分子来适应并杀死T细胞。在功能正常状态下，CD8+ T细胞依赖于糖解，这会促进炎症。当来自肿瘤的T细胞产生耗竭适应时，会发生代谢免疫抑制。这些适应包括线粒体耗竭和破碎、活性氧（ROS）产生增加以及糖解减少。在此过程中，癌细胞分泌的代谢物有助于增强肿瘤微环境（TME）免疫细胞的功能，并促进T细胞耗竭、功能障碍和凋亡。癌细胞能够分泌抑制性细胞因子并抑制PD-1和CTLA-4等抑制性受体，通过抑制细胞的糖解和氧化磷酸化来降低T细胞的功能。此外，TME中的精氨酸和丝氨酸等氨基酸可能会受到限制，因为T细胞依赖这些氨基酸进行增殖和生存。
+
+
+    半胱氨酸也是一种氨基酸和还原剂，会导致肿瘤进展⁹。癌细胞释放大量的氨基酸半胱氨酸，这是T细胞激活和转运活性所必需的，已证明通过增强代谢与抗肿瘤功能同步¹⁰。
+
+
+    这些引发了一个问题：是否可以通过限制患者的氨基酸来提高对T细胞的抗性？体外和体内补充精氨酸的结果通过增强功能记忆和线粒体抗性来驱动抗T细胞抗肿瘤免疫¹¹。需要进一步的研究来确定癌细胞是否也会从氨基酸和葡萄糖补充中受益，这可能会平衡对免疫细胞的收益。
+
+
+    TME中的信号可能会受到限制，并影响免疫检查点或适应性T细胞免疫。TME中的许多T细胞由于慢性压力和缺氧等TME因素而耗竭，无法恢复功能¹¹。这些疗法试图重编程或引入新的肿瘤特异性细胞。代谢抑制为T细胞抗性提供了额外的屏障¹⁴。大多数方法利用T细胞的分化和代谢，如防止抗肿瘤活动等因素。
+
+
+    目前最常用的免疫疗法是PD-1或CTLA-4检查点阻断，这两者的信号均会产生抑制作用，共刺激分子CD28家族成员可限制T细胞耗竭¹⁵。PD-1可被乳酸诱导¹⁶并抑制PI3K和mTOR1以调节代谢；糖解限制脂质过氧化可以促进T细胞生存¹⁷。同样，对这两个主要抑制剂的检查点阻断对肿瘤特异性细胞具有深远的代谢意义。考虑到增殖性T细胞对葡萄糖摄取的性质，这促进了生物合成和能量产生，这些代谢作用的
+
+
+    癌细胞, 17, 13, 2023
+
+
+    # CellPress
+
+    # 癌细胞 综述
+
+
+    ## 1. 抽血
+
+    ## 2. 分离T细胞
+
+    ## 2. 癌细胞死亡与抗性降低
+
+    ## 3. 表达嵌源抗原受体
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_5_0.png)
+
+
+    ## 4. 代谢重编程T细胞
+
+    ## 5. 将代谢重编程的T细胞植入患者
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_5_1.png)
+
+
+    诱导代谢应激或遗传调节
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_5_2.png)
+
+
+    > 图3 通过代谢重编程减少免疫抑制
+
+    过继性T细胞靶向患者的细胞毒性T细胞，表达针对肿瘤抗原的嵌合抗原受体（CARs）。为了减少TME中T细胞的免疫抑制并增强其代谢能力，可以通过免疫应激或遗传修饰在代谢上重编程T细胞。这些策略可能会增加T细胞的代谢可塑性和灵活性，将通常因营养条件差而导致“免疫冷”的肿瘤转变为“热性”，从而增强抗肿瘤免疫和对免疫检查点阻断等疗法的抗性。
+
+
+    免疫检查点对于患者治疗很大至关重要。根据TME中代谢环境与耗竭功能之间的联系，耗竭的T细胞会强烈抑制效应和肿瘤功能¹12，且肿瘤缺氧会损害或限制免疫治疗¹⁴。目前，PD-1和CTLA-4信号如何影响TME中其他细胞类型的代谢和功能尚未知。事实上，巨噬细胞可以表达PD-1，这种检查点分子可以抑制向患者或遗传工程的浸润和吞噬¹⁴,1⁵。事实上，线粒体电位低（即线粒体耦合紧密或高效）的T细胞在过继细胞治疗中可以提供更优的抗性。一致的报告表明，线粒体质量可能是控制长期T细胞功能的关键；具有良好线粒体功能的CAR
+    T显示出最高水平的记忆，而线粒体功能低的CAR T寿命较短¹⁵。
+
+
+    过继性T细胞通过识别和扩增新抗原特异性T细胞或基因工程使T细胞表达特定肿瘤抗原的嵌合抗原受体（CARs）来靶向。在每情况下，T细胞必须经过代谢重编程才能在TME中生存并发挥。为了实现这一点，T细胞必须生存，且过继性T细胞显示的线粒体能力和质量至关重要³⁹。这可以通过在体外利用葡萄糖或谷酰胺代谢使T细胞适应代谢途径来实现。
+
+
+    CAR T信号由抗原受体和共刺激组件组成。CAR T结构显示出高糖解率和快速扩增，但是以寿命短为代价；而1-4BB结构通过增强代谢延长CAR T寿命，是以牺牲效应功能为代价²。一致的报告显示，肿瘤细胞在清除后仍然存在。尚不清楚免疫抑制在多大程度上限制了肿瘤对CAR细胞的抗性。然而，一个影响因素是肿瘤的异质性以及适应性转移T细胞在……的需求。
+
+
+    428 癌细胞 4/1, 2023年3月13
+
+
+    # 癌细胞 综述
+
+    ## 上皮-间质转化 (EMT)
+
+    ## 循环肿瘤细胞
+
+    ## 转移定植
+
+    ## 糖解酶
+
+    ## 上皮
+
+    ## 间质
+
+    ## AMPK
+
+
+    乳酸
+
+    免疫抑制性细胞因子:
+
+    免疫抑制性细胞因子:
+
+    免疫抑制性细胞因子:
+
+    癌细胞
+
+    CD8+ T细胞
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_0.png)
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_1.png)
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_2.png)
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_3.png)
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_4.png)
+
+
+    > 图4 转移过程中的代谢可塑性。为了逃离原发肿瘤并形成转移，细胞经历EMT（左图）。在EMT过程中，释放糖解酶以控制细胞骨架；因此，在细胞骨架重组期间，这些糖解酶促进生存。癌细胞中活性氧（ROS）的产生可以通过EMT信号增强，强调了ROS在TIME中的作用。此外，某些代谢产物作为促EMT信号分子，如燃料、甲硫氨酸和脂肪酸合成酶（FASN）。在循环中（中间图），CTC存活并维持代谢活性。当癌细胞进入转移位点时（右图），它们在TME内生存以支持免疫监测，这可以通过免疫检查点配体证明。
+
+
+    免疫代谢：
+
+    改变代谢以生存氧化应激
+
+    NADPH
+
+    T细胞
+
+    T细胞
+
+
+    尽管付出了努力，转移和复发仍是癌症死亡的主要原因。实体瘤的转移要求癌细胞在逃离肿瘤、进入周围环境、血液或淋巴管（称为侵润）、生存并外逸到位点以定植和扩增。这需要细胞塑性，即上皮细胞获得间质样特征以实现细胞迁移和侵润，称为上皮-间质转化（EMT）。也有报道称EMT有助于成功的转移定植，因为癌症患者的远端转移具有与源组织相似的病理特征（¹⁷）。只有一小部分癌细胞成功（等等，让我重新对齐流程）CAR
+    T信号由抗原受体和共刺激组件组成。CAR T结构显示出高糖解率和快速扩增，但是以寿命短为代价；而1-4BB结构通过增强代谢延长CAR T寿命，是以牺牲效应功能为代价
+    ²。一致的报告显示，肿瘤细胞在清除后仍然存在。尚不清楚免疫抑制在多大程度上限制了肿瘤对CAR细胞的抗性。然而，一个影响因素是肿瘤的异质性以及适应性转移T细胞在各种营养和环境中的需求。代谢塑性和效率可能是最终目标，而不是基于固定信号特征的代谢程序。基因工程CAR
+    T细胞可能是适应性转移的一种可行疗法。
+
+
+    癌细胞, 17, 2023 427
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 7]
+
+
+    # # Cancer Cell
+
+
+    complete process because cancer cells must adapt to different environments and
+    resist tumor immunity to survive and thrive. Cancer cells undergoing EMT may secrete
+    cytokines that lead to immune recruitment, acting as macrophages, MDSCs, and T
+    cells.$^{117}$ to transforming growth factor (TGF-β) during EMT, has been shown
+    to exclude cytotoxic T cells and induce immune support. It can be with that immune
+    cells in the TME may display this plasticity at each of the metastatic cascade,
+    although limited studies so far evaluate the metastatic potential of EMT and MET
+    over the role of inflammation
+
+
+    may be released, promoting glycolysis in cells actively undergoing EMT.$^{118}$
+    Additionally, AMPK is activated in metastatic cancer cells that have detached
+    from the primary site, resulting in reduced NADPH capacity in fatty acid synthesis
+    and increased NADPH generation via fatty acid oxidation (FAO).$^{119}$ Low proline
+    dehydrogenase (PGDH) and the hexosamine pathway may promote metastasis through
+    aberrant glycation.$^{120}$ Although there is limited evidence, one could speculate
+    that high energy demands and metabolic flexibility provide underlying nutrients
+    for T cells, inducing immune suppression during the escape of cancer cells from
+    the primary tumor. TAMs within the hypoxic TME have been shown to promote formation
+    of vessels, providing an escape route for
+
+
+    # Metastabolism of EMT
+
+
+    The metastatic process of cancer cells has been linked to lymphoid function bone
+    homeostasis is essential for cancer survival. While metabolic shifts increases
+    ROS in cell survival, excessive oxidative stress can cause oxidative damage and
+    lead to death.$^{121}$ The production of mitochondrial ROS in cancer cells has
+    been shown to promote$^{122,123}$ MET and the metastatic potential of cancer cells,
+    highly dependent on cell type, environment and local TME. For example, metastatic
+    cells promote ROS-metastatic cells by signaling BACH1 induction of nuclear factor
+    erythroid-related 2 (NRF2) heme oxygenase (HO-1).$^{124}$ Accumulation of oxidative
+    stress promotes glycolytic-dependent metabolism of lung cells.
+
+
+    Some metabolites have also been shown to promote metastasis by acting as EMT-promoting
+    signals. In a study by Scavella et al.,$^{125}$ fumarase was found to drive EMT
+    via inhibition of the demethylation of succinate, accumulation of 2-hydroxyglutarate
+    (from microglia-2HB) and suppression of EMT transcription factors in cancer cells.$^{126}$
+    Additionally, induction of glycolysis by the enzyme CCM hydrolase in cancer cells
+    has been shown to drive EMT and migration.$^{127}$ As shown by Comas et al.,$^{128}$
+    production of propionate metabolism, was elevated in the serum of older people
+    and associated with increased tumor progression. Mechanistic studies revealed
+    that metabolism lactic acid induced SOX4, and, the induction of EMT factors leads
+    to autophagy, addition fatty acid synthesis (FASN), an enzyme that catalyzes is
+    strongly associated with malignancy, EMT, and metastasis in liver, ovarian cells.$^{129,130}$
+    Genetic induction of FASN suppresses invasion and migration in metastatic cells,
+    while overexpression of MET induces EMT metastasis and metastatic potential in
+    ovarian cells.
+
+
+    Little known about the metabolism of circulating tumor cells are likely to enter
+    a metastatic site when they leave the blood stream to survive because of different
+    environments. While available oxidative stress and inflammation, cancer cells
+    can best survive oxidative stress because of enhanced redox capacity may have
+    a metabolic advantage. For instance, melanoma cells regulate NADPH production
+    through glycolysis, which drives glucose-oxygen-mediated antioxidant capacity.$^{131}$
+    With this dietary hypothesis, are used in mouse models of lung cancer and melanoma
+    to maintain redox and endogenous antioxidant levels.
+
+
+    It is possible that circulating tumor cells influence adaptation of circulating
+    cancer cells as well as cancer cell immune function, although studies are needed
+    to determine whether this is the case. Metastatic plasticity to survive in the
+    new metastatic niche where different nutrients will be available like the primary
+    tumor and glucose production. For example, a common metastatic site in breast
+    cancer patients and breast cancer cells is bone, where survival survival may occur,
+    as discussed previously.
+
+
+    The potential limits for limiting nutrients and plasticity in the TME, it is likely
+    metabolic plasticity to benefit cells and supports the energy demands of cell
+    migration. How these interactions between cancer cells and TME cells-interact,
+    remains unclear.
+
+
+    Metastatic plasticity in the metastatic niche requires cells to traverse multiple
+    nutrient environments and with enzymes to act on the cytoskeleton, and during
+    cell growth, these enzymes increase function to glycolysis. Cytoskeleton rearrangement
+
+
+    428 Cancer Cell 4/7, March 13 2023'
+  - '[PAGE 8]
+
+
+    # Cancer Cell
+
+
+    # CellPress
+
+
+    # Review
+
+
+    We present here findings of differential nutrient uptake because of cancer and
+    metabolic heterogeneity within the TME. The tumor type, location of the tumor,
+    and the diet of host nutrient availability within the TME. is not only critical
+    for the proliferation of cancer cells but also-tumorinfiltrating immune cells
+    and influences metastasis. The metabolic research is further needed to determine
+    which metabolic vulnerabilities therein can be used to target metastases before
+    they arise as they form and create a new metastatic niche by utilizing metabolic
+    therapies and immunotherapy.
+
+
+    +   3. Ryan, D. G. and O''Neil, L. A. (2020). Krebs role in macrophage metabolism.
+    Annu Rev Immunol, 38, 289–313. https://doi.org/10.1146/annurev-immunol-020519-004853
+
+
+    +   4. Deberardin, R., and Chandel, N. (2016). Fundamentals of cancer metabolism.
+    Cell Metabolism, 22, e160020. https://doi.org/10.1016/j.cmet.2016.05.002
+
+
+    +   5. Gonzalez, V., and Sullivan, F. (2018). Influence of the tumor microenvironment
+    on cancer cells metabolism. Nature Reviews Cancer, 18, 717. https://doi.org/10.1038/s41568-018-0031-10
+
+
+    +   6. Sullivan, R.C., Mani, D. L., Wells, E., Lee, C.-H., Shan, G., Lai, Y.-D.,
+    Guth, K., Dunker, T., Bader, E. L., Helman, M. D., and Moi, A. (2019). Targeting
+    the metabolic microenvironment in cancer recruits. Cell Reports, 27, e104439.
+    https://doi.org/10.1016/j.cellrep.2019.02
+
+
+    The different types and environments of TME can be detrimental for treatment and
+    tumor recurrence. One challenge is that multiple metabolic pathways are used to
+    promote cell growth, and inhibitors that suppress the growth of cancer cells can
+    inhibit tumor immunity. The different types of TME-associated pathways that can
+    be targeted, however, offer new opportunities for targeting of specific cell types
+    or conditions.
+
+
+    +   7. Bader, J.-E., Voss, J., and Ratcliffe, J.M. (2017). Targeting the metabolic
+    microenvironment for cancer metabolism. Cell, 168, 1018–1034. https://doi.org/10.1016/j.cell.2017.03.026
+
+
+    +   8. Gietk, K.R., O''Sullivan, D. R., Corrado, M., Basser, A. K., Buck, M.D.,
+    Fuest, J. M., Ebert, Z. E., Kennedy, D. B., and Cox, J. A. (2018). Clinical trials
+    and the future of cancer immunotherapy. Cancer, 125, 1711. https://doi.org/10.1202/CANC.2018.07.012
+
+
+    Cells adapt to environmental stress which has been investigated, such as adaptive
+    therapies and metabolism, which immune suppression should be. To further improve
+    tumor immunity, Cells can be expanded in the state of stress to promote metabolic
+    plasticity as immune cells and adapt to better survive a wide range of nutrient
+    microenvironments. These strategies will increase TME metabolic fitness to tumors
+    that are typically immune “cold” because of poor nutrient conditions into immune
+    cells. Beyond checkpoint blockade, and anti-PD-1 antibody, other cancer therapies
+    targeting metabolism are highly heterogeneous in all stages of development, and
+    studies that further understand are needed to lead to effective therapies for
+    cancer patients.
+
+
+    +   9. Pavry, R.R., Courtney, J.M., Rafferth, K.A., Lafrastein, B., Iwashakova,
+    T., Thompson, P.B., and Choi, J. (2013). Amino acid competition inhibits T-cell
+    activation in lymphoid tissues. Mol Cell Biol, 33, 9543–9553. https://doi.org/10.1128/mcb.2013.11-22-25
+
+
+    +   10. Farquhan, K.A., Li, J., Ham, M.H., Pavry, R.R., Ratcliffe, J.M., Rees,
+    R.D., June, J. C.H., and Choi, P.B. (2002). Signaling pathways regulate cancer
+    metabolism. Nature Cell, 11, 779–786. https://doi.org/10.1038/nc0716
+
+
+    # CONCLUSIONS
+
+
+    We thank the members of the lab and W.R. Ratcliffe for valuable inputs. All figures
+    were created with BioFigfter. Software used in this work was Cell R205318 (to
+    J.R.C), RO C21728 (to J.R.C.), RO DK105550 (to J.R.C.), and Van-Rteillte lab.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    E.N.A. and J.R.C. conceptualized and wrote the manuscript.
+
+
+    # AUTHOR CONTRIBUTIONS
+
+
+    J.R.C. holds stock equity in Sirius and Caribou with the last 2 years has received
+    unparalleled research support, therapy, or honoraria from Sirius, Caribou, Nigim,
+    Kaldomita, Tempest, Melton, Milterbridge, and Pfizer.
+
+
+    # DECLARATION OF INTEREST
+
+
+    +   1. Li, U. X., Sun, and Rafter, P. (2019). Hallmands of endothelial cell metabolism
+    in health and disease. Cell Metab. 30, 414–433. https://doi.org/10.1016/j.cmet.2019.05.001
+
+
+    Cancer Cell 47, 3, 2023 429'
+  md: '
+
+    ## Cancer Cell
+
+
+    Cancer cells undergo a complete process because cancer cells must adapt to different
+    environments and resist tumor immunity to survive and thrive. Cancer cells undergoing
+    EMT may secrete cytokines that lead to immune recruitment, acting as macrophages,
+    MDSCs, and T cells.$^{117}$ Transforming growth factor (TGF-β) during EMT has
+    been shown to exclude cytotoxic T cells and induce immune support. It can be with
+    that immune cells in the TME may display this plasticity at each of the metastatic
+    cascade, although limited studies so far evaluate the metastatic potential of
+    EMT and MET over the role of inflammation which may be released, promoting glycolysis
+    in cells actively undergoing EMT.$^{118}$ Additionally, AMPK is activated in metastatic
+    cancer cells that have detached from the primary site, resulting in reduced NADPH
+    capacity in fatty acid synthesis and increased NADPH generation via fatty acid
+    oxidation (FAO).$^{119}$ Low proline dehydrogenase (PGDH) and the hexosamine pathway
+    may promote metastasis through aberrant glycation.$^{120}$ Although there is limited
+    evidence, one could speculate that high energy demands and metabolic flexibility
+    provide underlying nutrients for T cells, inducing immune suppression during the
+    escape of cancer cells from the primary tumor. TAMs within the hypoxic TME have
+    been shown to promote formation of vessels, providing an escape route for metastasis.
+
+
+    ## Metabolism of EMT
+
+
+    The metastatic process of cancer cells has been linked to lymphoid function; bone
+    homeostasis is essential for cancer survival. While metabolic shifts increase
+    ROS in cell survival, excessive oxidative stress can cause oxidative damage and
+    lead to death.$^{121}$ The production of mitochondrial ROS in cancer cells has
+    been shown to promote$^{122,123}$ MET and the metastatic potential of cancer cells,
+    highly dependent on cell type, environment and local TME. For example, metastatic
+    cells promote ROS-metastatic cells by signaling BACH1 induction of nuclear factor
+    erythroid-related 2 (NRF2) heme oxygenase (HO-1).$^{124}$ Accumulation of oxidative
+    stress promotes glycolytic-dependent metabolism of lung cells.
+
+
+    Some metabolites have also been shown to promote metastasis by acting as EMT-promoting
+    signals. In a study by Scavella et al.,$^{125}$ fumarase was found to drive EMT
+    via inhibition of the demethylation of succinate, accumulation of 2-hydroxyglutarate
+    (from microglia-2HB) and suppression of EMT transcription factors in cancer cells.$^{126}$
+    Additionally, induction of glycolysis by the enzyme CCM hydrolase in cancer cells
+    has been shown to drive EMT and migration.$^{127}$ As shown by Comas et al.,$^{128}$
+    production of propionate metabolism was elevated in the serum of older people
+    and associated with increased tumor progression. Mechanistic studies revealed
+    that metabolism lactic acid induced SOX4, and the induction of EMT factors leads
+    to autophagy, addition fatty acid synthesis (FASN), an enzyme that catalyzes is
+    strongly associated with malignancy, EMT, and metastasis in liver, ovarian cells.$^{129,130}$
+    Genetic induction of FASN suppresses invasion and migration in metastatic cells,
+    while overexpression of MET induces EMT metastasis and metastatic potential in
+    ovarian cells.
+
+
+    Little known about the metabolism of circulating tumor cells are likely to enter
+    a metastatic site when they leave the blood stream to survive because of different
+    environments. While available oxidative oxidative stress and inflammation, cancer
+    cells can best survive oxidative stress because of enhanced redox capacity may
+    have a metabolic advantage. For instance, melanoma cells regulate NADPH production
+    through glycolysis, which drives glucose-oxygen-mediated antioxidant capacity.$^{131}$
+    With this dietary hypothesis, are used in mouse models of lung cancer and melanoma
+    to maintain redox and endogenous antioxidant levels.
+
+
+    It is possible that circulating tumor cells influence adaptation of circulating
+    cancer cells as well as cancer cell immune function, although studies are needed
+    to determine whether this is the case. Metastatic plasticity to survive in the
+    new metastatic niche where different nutrients will be available like the primary
+    tumor and glucose production. For example, a common metastatic site in breast
+    cancer patients and breast cancer cells is bone, where survival may occur, as
+    discussed previously.
+
+
+    The potential limits for limiting nutrients and plasticity in the TME, it is likely
+    metabolic plasticity to benefit cells and supports the energy demands of cell
+    migration. How these interactions between cancer cells and TME cells-interact,
+    remains unclear.
+
+
+    Metastatic plasticity in the metastatic niche requires cells to traverse multiple
+    nutrient environments and with enzymes to act on the cytoskeleton, and during
+    cell growth, these enzymes increase function to glycolysis. Cytoskeleton rearrangement
+
+
+    We present here findings of differential nutrient uptake because of cancer and
+    metabolic heterogeneity within the TME. The tumor type, location of the tumor,
+    and the diet of host nutrient availability within the TME is not only critical
+    for the proliferation of cancer cells but also-tumor-infiltrating immune cells
+    and influences metastasis. The metabolic research is further needed to determine
+    which metabolic vulnerabilities therein can be used to target metastases before
+    they arise as they form and create a new metastatic niche by utilizing metabolic
+    therapies and immunotherapy.
+
+
+    - 3. Ryan, D. G. and O''Neil, L. A. (2020). Krebs role in macrophage metabolism.
+    Annu Rev Immunol, 38, 289–313. https://doi.org/10.1146/annurev-immunol-020519-004853
+
+    - 4. Deberardin, R., and Chandel, N. (2016). Fundamentals of cancer metabolism.
+    Cell Metabolism, 22, e160020. https://doi.org/10.1016/j.cmet.2016.05.002
+
+    - 5. Gonzalez, V., and Sullivan, F. (2018). Influence of the tumor microenvironment
+    on cancer cells metabolism. Nature Reviews Cancer, 18.
+
+    - 6. Deberardin, R., and Chandel, N. (2016). Fundamentals of cancer metabolism.
+    Cell Metabolism, 22, e160020. https://doi.org/10.1016/j.cmet.2016.05.002
+
+    - 7. Gonzalez, V., and Sullivan, F. (2018). Influence of the tumor microenvironment
+    on cancer cells metabolism. Nature Reviews Cancer, 18.
+
+    - 8. Deberardin, R., and Chandel, N. (2016). Fundamentals of cancer metabolism.
+    Cell Metabolism, 22, e160020. https://doi.org/10.1016/j.cmet.2016.05.002
+
+    - 9. Pavry, R.R., Courtney, J.M., Rafferth, K.A., Lafrastein, B., Iwashakova,
+    T., Thompson, P.B., and Choi, J. (2013). Amino acid competition inhibits T-cell
+    activation in lymphoid tissues. Mol Cell, 33, 9543–9553. https://doi.org/10.1128/mcb.2013.11-22
+
+    - 10. Farquhan, K.A., Li, J., Ham, M.H., Pavry, R.R., Ratcliffe, J.M., Rees, R.D.,
+    June, J. C.H., and Choi, P.B. (2002). Signaling pathways regulate cancer metabolism.
+    Nature Cell, 11, 779–786. https://doi.org/10.1038/nc0716
+
+
+    Cells adapt to environmental stress, and anti-PD-1 antibody, other cancer therapies,
+    will increase immunity. Beyond checkpoint blockade, studies are needed to lead
+    to effective therapies for patients.
+
+
+    - 1. Li, U. X., Sun, and Rafter, P. (2019). Hallmands of endothelial cell metabolism
+    in health and disease. Cell Metab. 30, 414–433. https://doi.org/10.1016/j.cmet.2019.05.001
+
+    '
+  mdcn: '
+
+
+    ## 癌细胞
+
+
+    癌细胞经历一个完整的过程，因为癌细胞必须适应不同的环境并抵抗肿瘤免疫以生存和繁衍。正在发生上皮-间质转化（EMT）的癌细胞可能会分泌细胞因子导致免疫招募，充当巨噬细胞、骨髓源性抑制细胞（MDSCs）和T细胞的作用$^{117}$
+    EMT 过程中的转化生长因子（TGF-β）已被证明能排除细胞毒性T细胞并诱导免疫支持。在 TME（肿瘤微环境）中的免疫细胞在转移级联的每个阶段都可能表现出这种塑性，尽管目前有限的研究评估了
+    EMT 和 MET（间质-上皮转化）的转移潜力相对于炎症可能释放的作用，这可能促进正在进行 EMT 的细胞中的糖解作用$^{118}$ 此外，在脱离原发位的转移性癌细胞中，AMPK
+    被激活，导致脂肪酸合成中的 NADPH 能力降低，并通过脂肪酸氧化（FAO）增加 NADPH 的产生$^{119}$ 低水平丙氨酸脱氢酶（PGDH）和己糖胺代谢途径可能通过异常糖基化促进转移$^{120}$
+    尽管证据有限，但可以推测，高能量需求和代谢灵活性为 T 细胞提供了底层营养，在癌细胞从原发肿瘤逃逸期间诱导免疫抑制。低氧 TME 中的肿瘤相关巨噬细胞（TAMs）已被证明促进血管形成，为转移提供逃逸途径。
+
+
+    ## EMT 代谢
+
+
+    癌细胞的转移过程与淋巴功能有关；骨稳态对于癌症的生存至关重要。虽然代谢转变增加了细胞生存中的 ROS（活性氧）水平，但过度的氧化应激会导致氧化损伤并导致死亡$^{121}$
+    癌细胞中线粒体 ROS 的产生已被证明促进$^{122,123}$ MET 和癌细胞的转移潜力，这高度取决于细胞类型、环境和局部 TME。例如，转移细胞通过信号调节
+    BACH1 诱导核血红素相关蛋白 2（NRF2）血红素加氧酶（HO-1）来促进 ROS-转移性细胞$^{124}$ 氧化应激的蓄积促进了肺细胞依赖糖解的代谢。
+
+
+    某些代谢产物也被证明通过作为 EMT 促进信号促进转移。在 Scavella 等人的研究中$^{125}$发现延胡酸酶通过抑制琥酸的去甲基化、2-羟基戊二酸（来自小胶质-2HB）的蓄积以及抑制癌细胞中的
+    EMT 转录因子来驱动 EMT$^{126}$ 此外，癌细胞中酶 CCM 水解酶对糖解的诱导已被证明驱动 EMT 和迁移$^{127}$ 正如 Comas
+    等人所示$^{128}$ 老人血清中的丙酸代谢产物升高并与肿瘤进展的增加有关。机制研究揭示了乳酸代谢诱导了 SOX4，而 EMT 因子的诱导导致自噬、脂肪酸合成（FASN）——一种催化酶的增加与肝脏、卵巢细胞的恶性肿瘤、EMT
+    和转移密切相关$^{129,130}$ 遗传诱导 FASN 抑制了转移细胞的侵润和迁移，而 MET 的过表达会诱导卵巢细胞的 EMT 转移和转移潜力。
+
+
+    关于循环肿瘤细胞代谢的已知较少，它们在离开血液循环时可能进入转移位点，为了在不同的环境中生存。尽管存在现有的氧化应激和炎症，癌细胞由于增强的氧化还原能力最能生存氧化应激，可能具有代谢优势。例如，黑色素细胞通过糖解调节
+    NADPH 的产生，从而驱动葡萄糖-氧介导的抗氧化能力$^{131}$ 这种饮食假设用于肺癌和黑色瘤小鼠模型维持氧化还原和内源性抗氧化水平。
+
+
+    循环肿瘤细胞可能会影响循环癌细胞的适应以及癌细胞免疫功能，尽管还需要研究确定是否如此。为了在新的转移生态位生存（那里有与原发肿瘤不同的营养和葡萄糖产生），例如，乳腺癌患者和乳腺癌细胞常见的转移位点是骨骼，如前所述，在那里可能发生生存。TME
+    中限制营养和塑性的潜在限制，很可能是代谢塑性使细胞受益并支持细胞迁移的能量需求。癌细胞与 TME 细胞之间的这些相互作用如何尚不清楚。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 9]
+
+
+    # Cancer Review
+
+
+    B. Bachberg, J. Johnson, A., Kurachi, M., Odorizzi, P. M., Pauken, K. E., Athanasius,
+    J., Stieiakai, E., McLand, L. M., Haley, P. A., DeGoffe, G. M., and Wheary, E.
+    (2016). Biogenic insufficiencies in metabolic alterations regulated by insulin
+    receptor-pol signaling in early type 2 diabetes. Diabetes, 59(3), 373–383. https://doi.org/10.1016/j.diabetes.2016.07.008
+
+
+    immunosression and around. Arch. Ther. Exp. 67, 88–102. https://doi.org/10.1007/s00105-018-0531-6.
+
+
+    Warburg, O., Cohn, and Flick, F. (1939). The Metabolism of Tumors (Constable).
+
+
+    Reinfeldt, B., Mazin, M. Z., Wolf, M. M., Cheney, J. A., Binder, J.-B., Feeder,
+    A., Cooper, A., Cohen, A., Ashe, N. A., Du, B. T., et al. (2021). Cell-derived
+    growth factor nutrients in the tumor microenvironment. Cancer Cell, 39(1), 58–70.
+    https://doi.org/10.1016/j.ccoell.2020-08-021-9
+
+
+    Gupta, S., Roy, A., and Dhivasan, S. (2017). Metabolic reprogramming and communication
+    in cancer stem cells. Nature Reviews Cancer, 17(7), 375–386. https://doi.org/10.1038/s41568-017-0006
+
+
+    Pannepairo, I., Carlis, R., Fontaina, L., Lima, A. D., and Neuf, C. (2020). Role
+    of lactate in metabolic adaptation to hypoxia by driving metabolism in cancer
+    stem cells. Cell Metabolism, 32, 100611. https://doi.org/10.1016/j.cmet.2020.06.011
+
+
+    Kim, J., Tchechevskaya, I., Sheri, M., and Ganz, D. G. (2016). Regulation of pyruvate
+    dehydrogenase kinase a metabolic switch required for cancer induction. Cell Metabolism,
+    37(2), 177–185. https://doi.org/10.1016/j.cmmet.2016.02.002
+
+
+    Fukuda, K., Zhang, J. M., Wang, Y., Shiroya, L., Chen, S., and Wei, J. (2012).
+    Substrate uptake to enhance metabolic efficiency in cancer cells. Cell, 149(6),
+    999–1008. https://doi.org/10.1016/j.cell.2012.03.012
+
+
+    Huang, S., Bao, L., and Chen, Y. (2020). Metabolic reprogramming in cancer: mechanisms
+    and therapeutic targets. Nat Med. 26(2), 141–152. https://doi.org/10.1038/s41591-020-0114-x
+
+
+    Hensley, C., Wang, T., and Deuel, R. J. (2013). Cancer metabolism: the role of
+    glycolysis in development. J Cell Res, 198(12), 2064–2073. https://doi.org/10.1016/j.jrc.2013.09.028
+
+
+    Pan, M., Rees, L. A., Lowman, H. H., Kuliani, R. P., Tran, T. Q., Liu, J., Hernandez-Yardenes,
+    J., Eiles, R., and Kim, K. H. (2016). Regulation of glycolysis in breast cancer
+    cells through inhibition of density matrix. Nat Cell Biol. 18(10), 1199–1208.
+    https://doi.org/10.1038/nccbol.2016.62
+
+
+    Wang, J., Garcia-Carceno, J. C., Chen, Y., Zhang, L., Liang, J., C., Mayr, A.
+    J., Zhengberg, G. M. M., Zhan, L., et al. (2020). Serum GDF15 promotes metabolic
+    inhibition in cancer cells. Nature Cell, 31, 15–23. https://doi.org/10.1038/s41573-020-0003-y
+
+
+    Antamaggio, M. G., Basi, D. E., Klein-Snape, A., and Uker, D. M. (2006). Cancer
+    cell-derived growth factors are necessary and sufficient to promote differentiation
+    of normal fibroblasts. Am J Pathol. 187(6), 475–488. https://doi.org/10.1016/j.ajpath.2005.04.032
+
+
+    Buck, M. D., O''Sullivan, J., and Pearce, E. L. (2015). Tof cell metabolism drives
+    invasion. J. Exp. Med. 222, 1736–1746.
+
+
+    Eckert, A.W., Winterberg, C., Sinsakai, P., Plasser, M., Bjork, J., and Seidel,
+    B. (2016). The role of tumor microenvironment in cancer resistance to chemotherapy.
+    Trans Transl Med. 64(6), 571–584. https://doi.org/10.1174/ttm.1616.000112
+
+
+    Grover, A., Aserino, E., and Tchechevskaya, D. (2021). Myeloid-derived suppressor
+    cells: a proposed road to cancer. Cancer Cell, 39(6), 797–810. https://doi.org/10.1016/j.cell.2021.07.012
+
+
+    Takahashi, K., Sato, P., Vatsura, Y., Sugart, S., and Seidel, J. D. (2023). Engagement
+    of MDSCs in metastasis and cells: potential targets in cancer. Front. Oncol. 13,
+    1165. https://doi.org/10.3389/fonc.2023.11165
+
+
+    immunosression and around. Arch. Ther. Exp. 67, 88–102. https://doi.org/10.1007/s00105-018-0531-6.
+
+
+    Peterson, M., and Malik, G. (2017). Myeloid-derived suppressor cells and their
+    role in gastric cancer. Cancer Cell Ther. 24(4), 100–115. https://doi.org/10.1038/cct.2017.1058
+
+
+    Maek, E., de Lima, L., Mitter, Y., Kim, J. B., Bink, F. H., Dricoll, J. J., and
+    Grant, S. (2016). Myeloid-derived suppressor cells: the gate to glioblastoma treatment.
+    Blood Rev. 36, 215–226. https://doi.org/10.1016/j.blodrev.2016.04.004
+
+
+    Kischer, F., Hoffman, K., Seidel, M., Ammer, J., Inster, G., Etschberg, S., Rothe,
+    R., Gves, J., et al. (2017). Effect of tumor-derived lactate on cancer human cells.
+    Blood 109(9), 3812–3819. https://doi.org/10.1182/blood-2016-07-39577
+
+
+    Brand, A., Sieker, K., Koehl, G. E., Tchechevskaya, I., Shiroya, L., and Zhan,
+    Y. J. (2017). Myeloid-derived suppressor cells: lactate acid metabolism promotes
+    tumor cell immunoresistance by NAT. Cell Met. 24(6), 671–678. https://doi.org/10.1016/j.cmet.2017.06.016
+
+
+    Watson, J. W., Wong, P. A., Dulla, M. S., Uker, E. D., DePoge, A. E., Ratti, R.
+    G., Gembrook, S., Kim, Y. H., Neufeld, R. T., and Lewis, J. M. (2017). Metabolic
+    effects of tumor-induced hypoxia on T cell function. Cell Metabolism, 25(6), 1088–1099.
+    https://doi.org/10.1016/j.cmet.2017.034
+
+
+    Alfi, G., Gomez-doming, S., D''Angelo, J., Sajo, J. O., Perez, P. K., Kowalski,
+    P., and Frank, F., and West, R. L. (2017). Treg cells promote tumor cells in high-hypoxia,
+    low-oxygen environment. Cell Met. 25(5), 1282–1293. https://doi.org/10.016/j.cmet.2017.052
+
+
+    Colorijo, O. Q., Hu, J. N., Shao, A., Liu, T., Aherhera, R. J., Vyn, N., Browksi,
+    C. E., Etschberg, S., Phillips, G. M., et al. (2017). Metabolic reprogramming
+    of tumor-associated macrophages (TAM) in lung cancer. Nature Communications, 17(9),
+    940–950.
+
+
+    Flann, N. C., Shiroya, L., Sastaga, A., Castellano, A., and Mazzo, M. (2019).
+    Impact of metabolism on cancer cells: a review. Spring Cell Biol. 12, 100010.
+
+
+    Bujagrat, J., Lee, K., Hurly, R. L., Manning, B. D., Reidel, J. H., Vahan, A.,
+    and Kuhn, G. (2019). Role of metabolism in hypoxia to induce HIF-1 production
+    and response in T T cells. Molecular Cell Dev. 12(8), 2883–2894. https://doi.org/10.1093/mcd/2018-11112
+
+
+    Wang, Y., Bai, C., Liu, M., Yu, Q., Liu, J., and Chen, Y. (2021). Contribution
+    of glucose metabolism and glutamine production under hypoxia in cancer cells.
+    Nat. Commun. 12, 1001. https://doi.org/10.1038/s41467-021-23483-6
+
+
+    Fetmo, C. M., García-Pena, A. B., Bell, L., Kraft, Y. G., Jewell, C. M., Johnson,
+    R., Zrina, D. J., and Lewis, G. A. (2021). Evaluation of cell metabolism by glycolysis
+    inhibitors in pediatric gliblastoma. Clinical Oncology, 28(11), 892–903.
+
+
+    Poller-Pierce, J. and White, E. (2019). Role of tumor and host environment in
+    cancer microenvironment. Genes Dev. 33(6), 1010–1021.
+
+
+    Amaravasi, R., Ramakrishnan, A. C., and Debath, J. (2019). Targeting metabolism
+    in cancer: a review and future directions. Cancer Cell, 29(11), 1167–1189. https://doi.org/10.1016/j.ccell.2019.10.019-2
+
+
+    430 Cancer Cell 40, 13 (2023)'
+  - '[PAGE 10]
+
+
+    # # Cancer Review
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_10_0.png)
+
+
+    51. Scott, C., Brown, N., Faraji, M., Sealand, E., Range, T., Tukey, C., Batul,
+    A., Masoud, R., Laneve, C., Smith, S., et al. (2020). Autophagy regulates fatty
+    acid availability for oxidative phosphorylation-endoplasmic reticulum transport.
+    Nat. Commun. 11, 1028. https://doi.org/10.1038/s41467-020-15236-y
+
+
+    52. Harvey, C. T., Bursfelt, B., Yuan, Q., Chen-Nelson, N., Ein, J., Kim, J.,
+    Liang, K., Sheehan, S., Roudan, L., et al. (2016). Metabolic reprogramming in
+    human lung tumor cells. Science 361, 684–691. https://doi.org/10.1126/science.aah6013
+
+
+    53. Fu, X., Zhang, J., Lopez, Y., Yuan, A., Roux, R., Henderson, A., Smith, S.,
+    Horwell, H., Sherpais, S. C., Tippet, A., et al. (2022). Spatial patterns of tumor
+    growth diversity and clinical correlation in breast cancer. Cell Rep. 36, e10109.
+    https://doi.org/10.1016/j.cellre.2021.101109-x
+
+
+    54. Gaines, D.K., Rath, N., and Watkins, W.K. (2022). Models of tumor evolution
+    and resistance. Nat. Ecol. Evol. 6, 226–237. https://doi.org/10.1038/s41557-021-0159-4
+
+
+    55. Vander Hiden, M., and Deesijij, R.J. (2017). Understanding the mechanisms
+    of tumor metastasis and cancer biology. Cell 68, 655–669. https://doi.org/10.1016/j.cell.2017.06.012
+
+
+    56. Ho, P. C., Buchnik, J.A., Mastaryan, A.N., Smith, L. J., Liu, X., Amdeia,
+    R., Taylor, S. L., Morgan, D. M., Powell, P., et al. (2015). Autophagy is a metabolic
+    checkpoint for effector T-cell function. Cell 162, 1217–1228. https://doi.org/10.1016/j.cell.2015.09.036
+
+
+    57. Lee, R., and Rowe, P.D. (2002). Metabolism of cells in cancer: a role in tumor
+    progression and metastasis. Cancer Research 62, 0273–0280. https://doi.org/10.1158/0008-23
+
+
+    58. Lee, R., Zhan, L., Zheng, A., Maggi, L.B., Roberts, F., Villainano, A., O’Sullivan,
+    D., Scott, S.C., van der Weel, J.G., Girth, J.J., and Ji, Y. (2019). Glutamine
+    metabolism prevents metabolic adaptation to tumor immune invasion. Science 365,
+    1013–1018. https://doi.org/10.1126/science.aav510
+
+
+    59. Edwards, N.D., Wang, V.M., Bakryaj, A.L., Zhang, S., He, Y., Kim, I.C., Chen,
+    S.H., Park, Y., Wang, Q., et al. (2021). Selective glutamine inhibition in tumor
+    cells enhances T cell activation and antitumor function. J Clin Invest. 120, e141010.
+    https://doi.org/10.1172/JCI144010
+
+
+    60. Blanco, L. Y., Winter, C. M., Dajajuk, S. P., Li, X., Zhang, Z., Chen, C.
+    L., Zhou, C., Centero, A., Arovska, P., and Pavlova, A. (2020). Cancer-derived
+    glutamine metabolism limits effector T cell function in human tumors. Nature 588,
+    272–278. https://doi.org/10.1038/s41586-020-2698-10
+
+
+    61. Bose, P. D., Miles, F., Gray, D., Lee, S. Y., and Rudensky, A.Y. (2019). Transient
+    T cell activation drives effector-driven cancer clearance by antigen-presenting
+    cells. Science 362, aau7112. https://doi.org/10.1126/science.aau7112
+
+
+    62. Delfosse, G.M., Smith, W. J., Mayo, M.E., Graham, C. D., Day, A. W., Vogel,
+    P., Bonney, D., Overstreet, J., et al. (2018). Stability and function of T cells
+    are regulated by a neropigin-1/4a axis.. Nature 551, 252–256. https://doi.org/10.1038/nature25333
+
+
+    63. Weiner, S. B., Steiner, D. B., Martins, E. M., Carter, A. H., Maher, M. T.,
+    Reyes-Ito, J., Paul, K., Habiba, A. B., Henderson, S. L., and Mitchell, Y. (2019).
+    Glutamine metabolism is essential for effector T cell function in cancer immunotherapy.
+    Science 364, 5186–5190. https://doi.org/10.1126/science.aav5118-0814
+
+
+    64. Bauer, U. H., Angelen, A., Tiwari, T., Wang, L. Y., Khan, H., Hernandez, A.
+    S., Shahi, B. T., Fray, J. J., et al. (2015). Inhibition of glutamine metabolism
+    in Fgr3 promotes T cell activation and survival. J Experimental Biol. 215, 2521–2539.
+    https://doi.org/10.1002/jeb.30096-0014
+
+
+    65. Michalidis, R. D., Vances, J. A., Srock, M. C., Nach, N. J., Mason, E. F.,
+    Sullivan, S. A., Nichols, A. G., and Rahm, J. C. (2011). Cutting edge: depleted
+    lipid glycolysis and oxidative metabolism pathways are essential for regulatory
+    T cell function. J. Immunol. 186, 3299–3303. https://doi.org/10.4094/immun.100393
+
+
+    66. Shi, L. Z., Wang, R., Huang, G., Vogel, P., Neal, S., Green, D., and Chen,
+    H. (2021). Hif1α-dependent glycolysis pathway orchestrates a metabolic checkpoint
+    for the induction of Th17 and Treg cells. J. Immun. 208, 1367–1376. https://doi.org/10.4094/jim.2020.021118
+
+
+    67. Liu, C., Chauhan, M., Deshpande, R., Meng, A. V., Zhang, Y., Yuan, J., and
+    Wang, J. (2019). Metabolic reprogramming of MRE1-dependent fitness of tumor-macrophages
+    via CD55+ T-cell-interacted microenvironment. Cell 178, 10917.
+
+
+    68. Tamada, M. M., Curry, A. M., Adamik, J., Palmer-McIntyre, E. M., McGatrick,
+    A. F., Green, G., Fezarski, C., Marek, R., Bailey, K. J., and Holmes, P. Y. (2013).
+    Succinate is an inflammatory signal that inhibits T17 cell differentiation through
+    Hif1α activation. Nature 494, 232–246. https://doi.org/10.1038/nature12064-234
+
+
+    69. Vats, K., Dukanagari, I., Lee, J., Zhang, S., Smith, K. L., Morel, C. W.-R.,
+    Rager, E. A., Dryry, J. P., Chen, Y., and Pavlova, A. (2021). Metabolic reprogramming
+    and PGC1α-mediated autophagy-dependent macrophage function in breast cancer. Cell
+    184, e10561. https://doi.org/10.1016/j.cell.2021.*
+
+
+    70. Fairy, B. K., Liu, Y. Y., Huang, T., Chen, J., Wang, J., Willey, J. S., Liu,
+    W., et al. (2022). Lactate accumulation of CD8+ T cells enhances antitumor function.
+    Nat. Immunity. 39, 1–13. https://doi.org/10.1038/s41590-022-01099-w
+
+
+    71. Chang, C. T., Maggi, L. B., Roberts, F., Bittano, A. V., O’Sullivan, D., Scott,
+    S. C., van der Weel, J. G., Girth, J. J., and Ji, Y. (2013). Post-transcriptional
+    control of effector T cell function by adenosine metabolism. Science 340, 1159–1163.
+    https://doi.org/10.1126/science.1234567
+
+
+    72. Peng, M. Y., Chen, X. H., and Li, J. (2018). Autophagy inhibits T1 cell differentiation
+    through an epigenetic mechanism. Molecular Science 404, 481–494. https://doi.org/10.1007/s00024-018-2256-x
+
+
+    73. Xu, C., Sun, H., Zhang, Q., Zhang, S., and Yang, Y. (2020). Human glucose
+    enzyme praxd4 promotes T cell activation and suppression of antitumor immune resistance.
+    Cell Rep. 35, 109235. https://doi.org/10.1016/j.cell.2020.109235
+
+
+    74. Gintersmith, V. A., Johnson, R. H., Cohen, M. O., Secha, J. S., Aamos, M.
+    C. O., Avero, A. A., Mach, N. J., Lewis, J. J., and Lewis, P. D. (2017). The lactate
+    receptor is essential for cancer metabolic adaptation. Nat. Immunol. 17, 1449–1456.
+    https://doi.org/10.1038/nim.40537
+
+
+    75. Kumagai, S., Sugiyama, H., Takakahashi, K., Tanaka, Y. T., Ota, J., Sato,
+    M., Honda, K., and Kondo, H. (2022). Autophagy inhibits T cell function in gastric
+    cancer. Cell. 221, 107612. https://doi.org/10.1016/j.cell.2022.107612
+
+
+    76. de la-Luzón, C. G., Martinello, P. J., Reyes-Hernandez, D., García-Gancia,
+    A., and Moreno-Merino, J. (2019). Lactate in the tumor microenvironment promotes
+    resistance to immunotherapy. Front in Cancer Oncol. 9, 1133–1149. https://doi.org/10.3389/fcn.2019.0113
+
+
+    77. Baker, S. R., Smith, K. A., Tumbilla, H. M., Monches, A. B., Keefe, E. P.,
+    Edwards, E., and Rojas, R. J. (2021). Acute exercise increases immune responses
+    to SARS-CoV-2 in patients with minimal brain fever. Brain Hum. 18, 100343. https://doi.org/10.1016/j.brain.2021.100343
+
+
+    78. Li, F., and Simon, M. C. (2020). Cancer cells do not live alone: metabolic
+    communication within microenvironment. Dev Cell. 54, 183–195. https://doi.org/10.1016/j.cece.2020.08.006
+
+
+    Cancer Cell, 47, 1233 2021'
+  md: '
+
+    # Cancer Review
+
+
+    B. Bachberg, J. Johnson, A., Kurachi, M., Odorizzi, P. M., Pauken, K. E., Athanasius,
+    J., Stieiakai, E., McLand, L. M., Haley, P. A., DeGoffe, G. M., and Wheary, E.
+    (2016). Biogenic insufficiencies in metabolic alterations regulated by insulin
+    receptor-pol signaling in early type 2 diabetes. Diabetes, 59(3), 373–383. https://doi.org/10.1016/j.diabetes.2016.07.008
+
+
+    immunosression and around. Arch. Ther. Exp. 67, 88–102. https://doi.org/10.1007/s00105-018-0531-6.
+
+
+    Warburg, O., Cohn, and Flick, F. (1939). The Metabolism of Tumors (Constable).
+
+
+    Reinfeldt, B., Mazin, M. Z., Wolf, M. M., Cheney, J. A., Binder, J.-B., Feeder,
+    A., Cooper, A., Cohen, A., Ashe, N. A., Du, B. T., et al. (2021). Cell-derived
+    growth factor nutrients in the tumor microenvironment. Cancer Cell, 39(1), 58–70.
+    https://doi.org/10.1016/j.ccoell.2020-08-021-9
+
+
+    Gupta, S., Roy, A., and Dhivasan, S. (2017). Metabolic reprogramming and communication
+    in cancer stem cells. Nature Reviews Cancer, 17(7), 375–386. https://doi.org/10.1038/s41568-017-0006
+
+
+    Pannepairo, I., Carlis, R., Fontaina, L., Lima, A. D., and Neuf, C. (2020). Role
+    of lactate in metabolic adaptation to hypoxia by driving metabolism in cancer
+    stem cells. Cell Metabolism, 32, 100611. https://doi.org/10.1016/j.cmet.2020.06.011
+
+
+    Kim, J., Tchechevskaya, I., Sheri, M., and Ganz, D. G. (2016). Regulation of pyruvate
+    dehydrogenase kinase a metabolic switch required for cancer induction. Cell Metabolism,
+    37(2), 177–185. https://doi.org/10.1016/j.cmmet.2016.02.002
+
+
+    Fukuda, K., Zhang, J. M., Wang, Y., Shiroya, L., Chen, S., and Wei, J. (2012).
+    Substrate uptake to enhance metabolic efficiency in cancer cells. Cell, 149(6),
+    999–1008. https://doi.org/10.1016/j.cell.2012.03.012
+
+
+    Huang, S., Bao, L., and Chen, Y. (2020). Metabolic reprogramming in cancer: mechanisms
+    and therapeutic targets. Nat Med. 26(2), 141–152. https://doi.org/10.1038/s41591-020-0114-x
+
+
+    Hensley, C., Wang, T., and Deuel, R. J. (2013). Cancer metabolism: the role of
+    glycolysis in development. J Cell Res, 198(12), 2064–2073. https://doi.org/10.1016/j.jrc.2013.09.028
+
+
+    Pan, M., Rees, L. A., Lowman, H. H., Kuliani, R. P., Tran, T. Q., Liu, J., Hernandez-Yardenes,
+    J., Eiles, R., and Kim, K. H. (2016). Regulation of glycolysis in breast cancer
+    cells through inhibition of density matrix. Nat Cell Biol. 18(10), 1199–1208.
+    https://doi.org/10.1038/nccbol.2016.62
+
+
+    Wang, J., Garcia-Carceno, J. C., Chen, Y., Zhang, L., Liang, J., C., Mayr, A.
+    J., Zhengberg, G. M. M., Zhan, L., et al. (2020). Serum GDF15 promotes metabolic
+    inhibition in cancer cells. Nature Cell, 31, 15–23. https://doi.org/10.1038/s41573-020-0003-y
+
+
+    Antamaggio, M. G., Basi, D. E., Klein-Snape, A., and Uker, D. M. (2006). Cancer
+    cell-derived growth factors are necessary and sufficient to promote differentiation
+    of normal fibroblasts. Am J Pathol. 187(6), 475–488. https://doi.org/10.1016/j.ajpath.2005.04.032
+
+
+    Buck, M. D., O''Sullivan, J., and Pearce, E. L. (2015). Tof cell metabolism drives
+    invasion. J. Exp. Med. 222, 1736–1746.
+
+
+    Eckert, A.W., Winterberg, C., Sinsakai, P., Plasser, M., Bjork, J., and Seidel,
+    B. (2016). The role of tumor microenvironment in cancer resistance to chemotherapy.
+    Trans Transl Med. 64(6), 571–584. https://doi.org/10.1174/ttm.1616.000112
+
+
+    Grover, A., Aserino, E., and Tchechevskaya, D. (2021). Myeloid-derived suppressor
+    cells: a proposed road to cancer. Cancer Cell, 39(6), 797–810. https://doi.org/10.1016/j.cell.2021.07.012
+
+
+    Takahashi, K., Sato, P., Vatsura, Y., Sugart, S., and Seidel, J. D. (2023). Engagement
+    of MDSCs in metastasis: potential targets in cancer. Front. Oncol. 13, 1165. https://doi.org/10.3389/fonc.2023.1165
+
+
+    immunosression and around. Arch. Ther. Exp. 67, 88–102. https://doi.org/10.1007/s00105-018-0531-6.
+
+
+    Peterson, M., and Malik, G. (2017). Myeloid-derived suppressor cells and their
+    role in gastric cancer. Cell Met. 24(4), 671–678. https://doi.org/10.1016/j.cmet.2017.058
+
+
+    Maek, E., de Lima, L., Mitter, Y., Kim, J., Bink, F., Dricoll, J., and Grant,
+    S. (2016). Myeloid-derived suppressor cells: the gate to glioblastoma. Blood Rev.
+    36, 215–226. https://doi.org/10.1016/j.cellrev.2016.040
+
+
+    Kischer, F., Hoffman, K., Seidel, M., Ammer, J., Etschberg, S., Rothe, R., et
+    al. (2017). Effect of tumor-derived lactate on human T cells. Blood 109(9), 3812–3819.
+    https://doi.org/10.1182/blood-2016-0757
+
+
+    Brand, A., Sieker, K., Koehl, G., Tchechevskaya, I., Shiroya, L., and Zhan, Y.
+    (2017). Myeloid-derived suppressor cells: lactate metabolism promotes tumor resistance
+    in high-hypoxia, low-oxygen environment. Cell Met. 25(5), 1282–1293. https://doi.org/10.1016/j.cmet.2017.034
+
+
+    Alfi, G., Gomez-doming, S., Jajo, J., Perez, P., Kowalski, P., Frank, F., and
+    West, R. (2017). Treg cells promote tumor-associated macrophages (TAM). Nature
+    Communications, 17(9), 940–950.
+
+
+    Colorijo, O., Hu, J., Shao, A., Aherhera, R., Vyn, N., Etschberg, S., et al. (2017).
+    Metabolic reprogramming of tumor cells in lung cancer. Nature Communications,
+    8, 14550.
+
+
+    Flann, N. C., Shiroya, L., Sastaga, A., Castellano, A., and Mazzo, M. (2019).
+    Impact of metabolism on cancer cells: a review. Spring Cell Biol. 12, 10010
+
+
+    Bujagrat, J., Lee, K., Hurly, R., Manning, B. D., Reidel, J. H., Vahan, A., and
+    Kuhn, G. (2019). Role of metabolism in hypoxia to induce HIF-1 production and
+    response in T cells. Molecular Cell Dev. 12(8), 2883–2894. https://doi.org/10.1093/mcd/2018-1112
+
+
+    Wang, Y., Bai, C., Liu, M., Yu, Q., Liu, J., and Chen, Y. (2021). Contribution
+    of glucose metabolism and glutamine production under hypoxia in cancer cells.
+    Nat. Commun. 12, 1001. https://doi.org/10.1038/s41467-021-23483-6
+
+
+    Fetmo, C. M., García-Pena, A. B., Bell, L., Kraft, Y. G., Jewell, C. M., Johnson,
+    R., Zrina, D. J., and Lewis, G. A. (2021). Evaluation of cell metabolism by glycolysis
+    inhibitors in pediatric glblastoma. Clinical Oncology, 28(11), 892–903.
+
+
+    Poller-Pierce, J. and White, E. (2019). Role of tumor and host environment in
+    cancer microenvironment. Genes Dev. 33(6), 1010–1021.
+
+
+    Amaravasi, R., Ramakrishnan, A. C., and Debath, J. (2019). Targeting metabolism
+    in cancer: a review and future directions. Cancer Cell, 29(11), 1167–1189. https://doi.org/10.1016/j.ccell.2019.10.019-2
+
+
+    # Cancer Review
+
+
+    ![](img/33f55c57731d5bd51413de5f6eaeddd6_10_0.png)
+
+
+    51. Scott, C., Brown, N., Faraji, M., Sealand, E., Range, T., Tukey, C., Batul,
+    A., Masoud, R., Laneve, C., Smith, S., et al. (2020). Autophagy regulates fatty
+    acid availability for oxidative phosphorylation-endoplasmic reticulum transport.
+    Nat. Commun. 11, 1028. https://doi.org/10.1038/s41467-020-1523-6
+
+
+    52. Harvey, C., Bursfelt, B., Yuan, Q., Chen-Nelson, N., Ein, J., Liang, K., Sheehan,
+    S., et al. (2016). Metabolic reprogramming in human lung cells. Science 361, 684–691.
+    https://doi.org/10.1126/science.a6013
+
+
+    53. Fu, X., Zhang, J., Lopez, Y., Roux, R., Smith, S., Horwell, H., Tippet, A.
+    (2022). Spatial patterns of tumor growth diversity and clinical correlation in
+    cancer. Cell Rep. 36, e10109. https://doi.org/10.1016/j.cellre.2021-0109
+
+
+    54. Gaines, D., Rath, N., and Watkins, W. (2022). Models of tumor evolution and
+    resistance. Nat. Ecol. Evol. 6, 226–237. https://doi.org/10.1038/s41557-021-5
+
+
+    55. Vander Hiden, M., and Deesij, R. (2017). Understanding the mechanisms of tumor
+    metastasis. Cell 68, 555–669. https://doi.org/10.1016/j.cell.2017-0602
+
+
+    56. Ho, P. C., Buchnik, J., Mastaryan, A., Smith, L., Liu, X., Taylor, S., Powell,
+    D. (2015). Autophagy is a metabolic checkpoint for effector T-cell function. Cell
+    162, 1217–1228. https://doi.org/10.1016/j.cell.2015-0936
+
+
+    57. Lee, R., and Rowe, P. D. (2002). Metabolism of cells: a role in tumor progression.
+    Cancer Research 62, 2773–2780. https://doi.org/10.1158/0008-2
+
+
+    58. Lee, R., Zhan, L., Maggi, A., Roberts, F., O’Sullivan, D., van der Weel, J.
+    G., and Ji, Y. (2019). Glutamine metabolism prevents metabolic adaptation to invasion.
+    Science 365, 1013–1018. https://doi.org/10.1126/science.aav510
+
+
+    59. Edwards, N. D., Wang, V. M., Bakry, A., Zhang, S., He, Y., Park, Q., and Wang,
+    Q. (2021). Selective glutamine inhibition enhances T cell activation. J Clin Invest.
+    120, e1410. https://doi.org/10.1172/JCI.14410
+
+
+    60. Blanco, L., Winter, C. M., Dajuk, S., Zhang, Z., Chen, C., Centero, A., and
+    Pavlova, A. (2020). Cancer-derived glutamine metabolism limits T cell function
+    in tumors. Nature 588, 272–278. https://doi.org/10.1038/s41586-020-2698-10
+
+
+    61. Bose, P. D., Miles, F., Gray, D., Lee, S., and Rudensky, A. (2019). Transient
+    T cell activation drives effector-driven clearance by antigen-presenting cells.
+    Science 362, aau712. https://doi.org/10.1126/science.aau712
+
+
+    62. Delfosse, G. M., Smith, W. J., Mayo, M. E., Graham, C. D., Day, A. W., Bonney,
+    D., et al. (2018). Stability and function of T cells are regulated by fibrin-1/4
+    axis. Nature 551, 252–256. https://doi.org/10.1038/nature2533
+
+
+    63. Weiner, S. B., Steiner, D. B., Martins, E. M., Carter, A. H., Reyes-Ito, J.,
+    Paul, K., Habiba, A. B., Henderson, S. L., and Mitchell, Y. (2019). Glutamine
+    metabolism is essential for effector T cell function in cancer immunotherapy.
+    Science 364, 5186–5190. https://doi.org/10.1126/science.aav5118-0814
+
+
+    64. Bauer, U. H., Angelen, A., Tiwari, T., Wang, L. Y., Khan, H., Shahi, B. T.,
+    Fray, J. J., et al. (2015). Inhibition of glutamine metabolism in Fgr3 promotes
+    T cell activation and survival. J Experimental Biol. 215, 2521–2539. https://doi.org/10.1002/jeb.30096-014
+
+
+    65. Michalidis, R. D., Vances, J. A., Srock, M. C., Nach, N. J., Mason, E. F.,
+    Sullivan, S. A., Nichols, A. G., and Rahm, J. C. (2011). Cutting edge: depleted
+    lipid glycolysis and oxidative metabolism pathways are essential for regulatory
+    T cell function. J. Immunol. 186, 3299–3303. https://doi.org/10.4094/immun.100393
+
+
+    66. Shi, L. Z., Wang, R., Huang, G., Vogel, P., Neal, S., Green, D., and Chen,
+    H. (2021). Hif1α-dependent glycolysis pathway orchestrates a metabolic checkpoint
+    for the induction of Th17 and Treg cells. J. Immun. 208, 1367–1376. https://doi.org/10.4094/jim.2020.021118
+
+
+    67. Liu, C., Chauhan, M., Deshpande, R., Meng, A. V., Zhang, Y., Yuan, J., and
+    Wang, J. (2019). Metabolic reprogramming of MRE1-dependent fitness of tumor-macrophages
+    via CD55+ T-cell-interacted microenvironment. Cell 178, 10917.
+
+
+    68. Tamada, M. M., Curry, A. M., Adamik, J., Palmer-McIntyre, E. M., McGatrick,
+    A. F., Green, G., Fezarski, C., Marek, R., Bailey, K. J., and Holmes, P. Y. (2002).
+    Lactate plays a role in tumor progression. Cancer Research 62, 2773–2780. https://doi.org/10.1158/0008-2
+
+
+    69. Ho, P. C., Buchnik, J., Mastaryan, A., Smith, L., Liu, X., Taylor, S., Powell,
+    D. (2021). Wait, the text is repeated. Let''s look at the context: Glutamine regulates
+    T cell function and tumor resistance. Cell 36, 10109. https://doi.org/10.1016/j.cell.2021-0109
+
+
+    70. Xu, C., Sun, H., Zhang, Q., Chen, S., and Yang, Y. (2020). Glucose metabolism
+    enhances T cell activation and antitumor activity. Cell 39, 10925. https://doi.org/10.1016/j.cell.2020-10925
+
+
+    71. Harvey, C., Bursfelt, B., Yuan, Q., Chen-Nelson, N., Ein, J., Liang, K., Sheehan,
+    S., et al. (2016). Metabolic reprogramming in human lung cells. Science 361, 684–691.
+    https://doi.org/10.1126/science.a6013
+
+
+    72. Peng, M., and Chen, H. (2018). Autophagy inhibits T cell differentiation.
+    Spring Cell Biol. 40, 481–494. https://doi.org/10.1007/s0120-018-5
+
+
+    73. Xu, C., Sun, H., Zhang, Q., Chen, S., and Yang, Y. (2020). Glucose metabolism
+    enhances T cell activation and antitumor activity. Cell 39, 10925. https://doi.org/10.1016/j.cell.2020-10925
+
+
+    74. Kumagai, S., Sugiyama, H., Tanaka, K., Tanaka, Y., Ota, J., Sato, M., and
+    Kondo, H. (2022). Autophagy inhibits T cell function in cancer. Cell 121, 10762.
+    https://doi.org/10.1016/j.cell.2022-10762
+
+
+    75. de la-Luzón, C. G., Martinello, P., Reyes-Hernandez, D., García-Gancia, A.,
+    and Moreno-Merino, J. (2019). Lactate in the tumor microenvironment promotes resistance
+    to immunotherapy. Front in Cancer Oncol. 9, 1133–1149. https://doi.org/10.3389/fcn.2019.0113
+
+    '
+  mdcn: "\n\n# 癌症综述\n\nB. Bachberg, J. Johnson, A., Kurachi, M., Odorizzi, P. M.,\
+    \ Pauken, K. E., Athanasius, J., Stieiakai, E., McLand, L. M., Haley, P. A., DeGoffe,\
+    \ G. M., and Wheary, E. (2016). 早期2型糖尿病中胰岛素受体-pol信号调节的代谢变化的生物源性不足。Diabetes, 59(3),\
+    \ 373–383. https://doi.org/10.1016/j.diabetes.2016.07.008\n\n免疫抑制及其。Arch. Ther.\
+    \ Exp. 67, 88–102. https://doi.org/10.1007/s00105-018-0531-6.\n\nWarburg, O.,\
+    \ Cohn, and Flick, F. (1939). 肿瘤的代谢 (Constable).\n\nReinfeldt, B., Mazin, M. Z.,\
+    \ Wolf, M. M., Cheney, J. A., Binder, J.-B., Feeder, A., Cooper, A., Cohen, A.,\
+    \ Ashe, N. A., Du, B. T., et al. (2021). 肿瘤微环境中的细胞源生长因子营养。Cancer Cell, 39(1),\
+    \ 58–70. https://doi.org/10.1016/j.ccoell.2020-08-021-9\n\nGupta, S., Roy, A.,\
+    \ and Dhivasan, S. (2017). 癌症干细胞中的代谢重编程与通讯。Nature Reviews Cancer, 17(7), 375–386.\
+    \ https://doi.org/10.1038/s41568-017-0006\n\nPannepairo, I., Carlis, R., Fontaina,\
+    \ L., Lima, A. D., and Neuf, C. (2020). 乳酸在通过驱动癌症干细胞代谢来适应缺氧代谢中的作用。Cell Metabolism,\
+    \ 32, 100611. https://doi.org/10.1016/j.cmet.2020.06.011\n\nKim, J., Tchechevskaya,\
+    \ I., Sheri, M., and Ganz, D. G. (2016). 丙酮酸脱氢酶激的调节：癌症诱导所需的代谢开关。Cell Metabolism,\
+    \ 37(2), 177–185. https://doi.org/10.1016/j.cmmet.2016.02.002\n\nFukuda, K., Zhang,\
+    \ J. M., Wang, Y., Shiroya, L., Chen, S., and Wei, J. (2012). 底物摄取以增强癌细胞的代谢效率。Cell,\
+    \ 149(6), 999–1008. https://doi.org/10.1016/j.cell.2012.03.012\n\nHuang, S., Bao,\
+    \ L., and Chen, Y. (2020). 癌症中的代谢重编程：机制与治疗靶。Nat Med. 26(2), 141–152. https://doi.org/10.1038/s41591-020-0114-x\n\
+    \nHensley, C., Wang, T., and Deuel, R. J. (2013). 癌症代谢：糖酵解在发育中的作用。J Cell Res,\
+    \ 198(12), 2064–2073. https://doi.org/10.1016/j.jrc.2013.09.028\n\nPan, M., Rees,\
+    \ L. A., Lowman, H. H., Kuliani, R. P., Tran, T. Q., Liu, J., Hernandez-Yardenes,\
+    \ J., Eiles, R., and Kim, K. H. (2016). 通过抑制密度矩阵调节乳腺癌细胞的糖酵解。Nat Cell Biol. 18(10),\
+    \ 1199–1208. https://doi.org/10.1038/nccbol.2016.62\n\nWang, J., Garcia-Carceno,\
+    \ J. C., Chen, Y., Zhang, L., Liang, J., C., Mayr, A. J., Zhengberg, G. M. M.,\
+    \ Zhan, L., et al. (2020). 血清 GDF15促进癌细胞代谢抑制。Nature Cell, 31, 15–23. https://doi.org/10.1038/s41573-020-0003-y\n\
+    \nAntamaggio, M. G., Basi, D. E., Klein-Snape, A., and Uker, D. M. (2006). 癌细胞源生长因子是促进正常成纤维细胞分化的必要且充分条件。Am\
+    \ J Pathol. 187(6), 475–488. https://doi.org/10.1016/j.ajpath.2005.04.032\n\n\
+    Buck, M. D., O'Sullivan, J., and Pearce, E. L. (2015). T细胞代谢驱动侵袭。J. Exp. Med.\
+    \ 222, 1736–1746.\n\nEckert, A.W., Winterberg, C., Sinsakai, P., Plasser, M.,\
+    \ Bjork, J., and Seidel, B. (2016). 肿瘤微环境在癌症耐化疗药物中的作用。Trans Transl Med. 64(6),\
+    \ 571–584. https://doi.org/10.1174/ttm.1616.000112\n\nGrover, A., Aserino, E.,\
+    \ and Tchechevskaya, D. (2021). 髓系衍生抑制细胞：一条通往癌症的路径。Cancer Cell, 39(6), 797–810.\
+    \ https://doi.org/10.1016/j.cell.2021.07.012\n\nTakahashi, K., Sato, P., Vatsura,\
+    \ Y., Sugart, S., and Seidel, J. D. (2023). MDSCs在转移中的参与：癌症的潜在靶点。Front. Oncol.\
+    \ 13, 1165. https://doi.org/10.3389/fonc.2023.1165\n\n免疫抑制及其。Arch. Ther. Exp.\
+    \ 67, 88–102. https://doi.org/10.1007/s00105-018-0531-6.\n\nPeterson, M., and\
+    \ Malik, G. (2017). 髓系衍生抑制细胞在胃癌中的作用。Cell Met. 24(4), 671–678. https://doi.org/10.1016/j.cmet.2017.058\n\
+    \nMaek, E., de Lima, L., Mitter, Y., Kim, J., Dricoll, J., and Grant, S. (2016).\
+    \ 髓系衍生抑制细胞：胶质母瘤的门控。Blood Rev. 36, 215–226. https://doi.org/10.1016/j.cellrev.2016.4\n\
+    \nKischer, F., Hoffman, K., Seidel, M., Ammer, J., Rothe, R., et al. (2017). 肿瘤源乳酸对T细胞的影响。Blood\
+    \ 109(9), 3812–3819. https://doi.org/10.1182/blood-2016-0757\n\nBrand, A., Sieker,\
+    \ K., Koehl, G., Tchechevskaya, I., Shiroya, L., and Zhan, Y. (2017). 高缺氧环境下髓系衍生抑制细胞：乳酸代谢的促进。Cell\
+    \ Met. 25(5), 1282–1293. https://doi.org/10.1016/j.cmet.2017-03\n\nAlfi, G., Gomez-doming,\
+    \ S., Jajo, J., Perez, P., Frank, F., and West, R. (2017). Treg细胞促进肿瘤相关巨噬细胞 (TAM)。Nature\
+    \ Communications, 17(9), 940–950.\n\nColorijo, O., Hu, J., Shao, A., Aherhera,\
+    \ R., Vyn, N., et al. (2017). 肺癌细胞的代谢重编程。Nature Communications, 8, 1450.\n\nFlann,\
+    \ N. C., Shiroya, L., Sastaga, A., Castellano, A., and Mazzo, M. (2019). 代谢对癌症的影响：综述。Spring\
+    \ Cell Biol. 12, 1001\n\nBujagrat, J., Lee, K., Hurly, R., Manning, B. D., Reidel,\
+    \ J., Vahan, A., and Kuhn, G. (2019). 缺氧诱导HIF-1产生的代谢作用。Molecular Cell Dev. 12(8),\
+    \ 2883–2894. https://doi.org/10.1093/mcd/2018-1112\n\nWang, Y., Bai, C., Liu,\
+    \ M., Yu, Q., Liu, J., and Chen, Y. (2021). 癌症细胞缺氧下的葡萄糖代谢和谷氨酸产生。Nat. Commun. 12,\
+    \ 1001. https://doi.org/10.1038/s41467-021-2348-6\n\nFetmo, C. M., García-Pena,\
+    \ A., Bell, L., Kraft, Y., Jewell, C. M., Johnson, R., Zrina, D. J., and Lewis,\
+    \ G. A. (2021). 糖酵解抑制剂对儿科胶质瘤细胞代谢评估。Clinical Oncology, 28(11), 892–903.\n\nPoller-Pierce,\
+    \ J. and White, E. (2019). 肿瘤和宿主环境在癌症微环境中的作用。Genes Dev. 33(6), 1010–1021.\n\n\
+    Amaravasi, R., Ramakrishnan, A. C., and Debath, J. (2019). 癌症代谢靶向：综述与未来方向。Cancer\
+    \ Cell, 29(11), 1167–1189. https://doi.org/10.1016/j.ccell.2019.1019-2\n\n# 癌症综述\n\
+    \n![](img/33f55c57731d5bd51413de5f6eadd6_10_0.png)\n\n51. Scott, C., Brown, N.,\
+    \ Faraji, M., Sealand, E., Range, T., Tukey, C., Batul, A., Masoud, R., Laneve,\
+    \ C., Smith, S., et al. (2020). 自噬调节氧化磷酸化-内质网转运的脂肪酸可用性。Nat. Commun. 11, 1028.\
+    \ https://doi.org/10.1038/s41467-020-1523-6\n\n52. Harvey, C., Bursfelt, B., Yuan,\
+    \ Q., Chen-Nelson, N., Ein, J., Liang, K., Sheehan, S., et al. (2016). 人类肺细胞的代谢重编程。Science\
+    \ 361, 684–691. https://doi.org/10.1126/science.a6013\n\n53. Fu, X., Zhang, J.,\
+    \ Lopez, Y., Roux, R., Smith, S., Horwell, H., Tippet, A. (2022). 癌症中肿瘤生长多样性的空间模式与临床相关性。Cell\
+    \ Rep. 36, e10109. https://doi.org/10.1016/j.cellre.2021-0109\n\n54. Gaines, D.,\
+    \ Rath, N., and Watkins, W. (2022). 肿瘤演化与耐药性模型。Nat. Ecol. Evol. 6, 226–237. https://doi.org/10.1038/s41557-021-5\n\
+    \n55. Vander Hiden, M., and Deesij, R. (2017). 理解肿瘤转移的机制。Cell 68, 555–669. https://doi.org/10.1016/j.cell.2017-4\
+    \ \n\n56. Ho, P. C., Buchnik, J., Mastaryan, A., Smith, L., Liu, X., Taylor, S.,\
+    \ Powell, D. (2015). 自噬是效应T细胞的代谢检查点。Cell 162, 1217–1228. https://doi.org/10.1016/j.cell.2015-09\n\
+    \n57. Lee, R., and Rowe, P. D. (2002). 代谢：肿瘤进展的作用。Cancer Research 62, 2773–2780.\
+    \ https://doi.org/10.1158/0008-2\n\n58. Lee, R., Zhan, L., Maggi, A., Roberts,\
+    \ F., O’Sullivan, D., van der Weel, J., and Ji, Y. (2019). 谷氨酸代谢防止对侵袭的适应。Science\
+    \ 365, 1013–1018. https://doi.org/10.1126/science.aau2\n\n59. Edwards, N. D.,\
+    \ Wang, V. M., Bakry, A., Zhang, S., He, Y., Park, Q., and Wang, Q. (2021). 选择性抑制谷氨酸增强T细胞激活。J\
+    \ Clin Invest. 120, e1410. https://doi.org/10.1172/JCI.\n\n60. Blanco, L., Winter,\
+    \ C. M., Dajuk, S., Zhang, Z., Chen, C., Centero, A., and Pavlova, A. (2020).\
+    \ 肿瘤源谷氨酸代谢限制T细胞功能。Nature 588, 272–278. https://doi.org/10.1038/s41586-020-6\n\n\
+    61. Bose, P. D., Miles, F., Gray, D., Lee, S., and Rudensky, A. (2019). 瞬态T细胞激活驱动抗原呈递细胞清除。Science\
+    \ 362, aau72. https://doi.org/10.1126/science.aau\n\n62. Delfosse, G. M., Smith,\
+    \ W. J., Mayo, M. E., Graham, C. D., Day, A., et al. (2018). T细胞的稳定性和功能受纤维蛋白/4轴调节。Nature\
+    \ 551, 252–256. https://doi.org/10.1038/nature\n\n63. Weiner, S. B., Steiner,\
+    \ D. B., Martins, E. M., Carter, A. H., Reyes-Ito, J., Paul, K., Habiba, A., Henderson,\
+    \ S. L., and Mitchell, Y. (2019). 谷氨酸代谢对于癌症免疫治疗中效应T细胞功能至关重要。Science 364, 5186–5190.\
+    \ https://doi.org/10.1126/science.aau\n\n64. Bauer, U., Angelen, A., Tiwari, T.,\
+    \ Wang, L. Y., Khan, H., Shahi, B., Fray, J., et al. (2015). Fgr3中谷氨酸代谢抑制促进T细胞激活和存活。J\
+    \ Experimental Biol. 215, 2521–2539. https://doi.org/10.1002/jeb\n\n65. Michalidis,\
+    \ R. D., Vances, J. A., Srock, M. C., Nach, N. J., Mason, E. F., Sullivan, S.\
+    \ A., Nichols, A. G., and Rahm, J. C. (2011). 脂质和氧化代谢通路对于调节T细胞功能至关重要。J. Immunol.\
+    \ 186, 3299–3303. https://doi.org/10.4094/immun\n\n66. Shi, L. Z., Wang, R., Huang,\
+    \ G., Vogel, P., Neal, S., Green, D., and Chen, H. (2021). Hif1α依赖的糖酵解通路协调Th17和Treg细胞的代谢检查点。J.\
+    \ Immun. 208, 1367–1376. https://doi.org/10.4094/jim\n\n67. Liu, C., Chauhan,\
+    \ M., Deshpande, R., Meng, A. V., Zhang, Y., Yuan, J., and Wang, J. (2019). 通过CD55+\
+    \ T细胞相互作用微环境对MRE1依赖性肿瘤巨噬细胞进行代谢重编程。Cell 178, 10917.\n\n68. Tamada, M. M., Curry,\
+    \ A. M., Adamik, J., Palmer-McIntyre, E. M., McGatrick, A. F., Green, G., Fezarski,\
+    \ C., Marek, R., Bailey, K. J., and Holmes, P. Y. (2002). 乳酸在肿瘤进展中的作用。Cancer Research\
+    \ 62, 2773–2780. https://doi.org/10.1158/0008-2\n\n69. Ho, P. C., Buchnik, J.,\
+    \ Mastaryan, A., Smith, L., Liu, X., Taylor, S., Powell, D. (2021). 等，文本重复了。查看上下文：谷氨酸调节T细胞功能和肿瘤耐药。Cell\
+    \ 36, 10109. https://doi.org/10.1016/j.cell.2021-0109\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 11]
+
+
+    # Cancer Cell
+
+
+    81. Long, L., Hinton, A., Powell, J.D., Snell, M., He, R.S., Choi, T.K., Rogers,
+    B.G.M., Hellmann, M.D., et al. (2020). Adenosine A2 receptor blockade as an immunotherapy-refractory
+    renal cell cancer. Cancer Cell, 10, 40–53. https://doi.org/10.1016/j.cco.2020.07.014
+
+
+    82. Liu, J.Y., and Wells, K.E. (2020). Understanding adenosine metabolism as signaling
+    molecules in cancer progression. Cell, 81, 633–644. https://doi.org/10.1016/j.cell.2020.02.016
+
+
+    83. Wu, J.-Y., Huang, H.-T., Wang, Y.-F., Yan, Y.-C., Lee, C.-L., Huang, Y., Liu,
+    X., Ma, Y., et al. (2019). Cancer-derived stem cells promote macrophage polarization
+    and invasion via cancer metastasis. Cell Med, 77, 211–228. https://doi.org/10.1016/j.cmcm.2019.07.012
+
+
+    84. Bunse, P., Schulz, B., Bunse, T., Sahin, F., Friedrich, M., Alansary, D.,
+    Donnelly, J.K., Euk, K., et al. (2018). Inhibiting stem cell plasticity in cancer
+    by inhibition of 2-hydroxyglutarate. Nat. Med. 25, 1598. https://doi.org/10.1038/s41591-019-0518-6
+
+
+    85. Ma, X.-B., Liu, Y.-Y., Su, P., Huang, C.-L., Liu, Y., Wang, Q., Ma, Y.-C.,
+    Lee, M.-J., et al. (2017). Human inducible lymphocytes (CD8+) cell infiltration
+    in the tumor microenvironment. Cell Med, 33, 143–156. https://doi.org/10.1016/j.cmcm.2017.06.009
+
+
+    86. Khetzel, S., Ribas, S., Paracato, C., and Erwin, A. (2019). Using adenosine
+    signaling to block T cell exhaustion in solid tumors for immunotherapy. Cancer
+    Res., 79, 1635–1648. https://doi.org/10.1158/aancres.2019.071035
+
+
+    87. Okchodi, J.D., Hare, S. M., Hellmann, M. D., Choi, A. Q., Wright, A.J., Lin,
+    L.-N., Nie, X., Lee, H., et al. (2022). Adenosine S suppresses T cell proliferation
+    by modulating inorganic phosphate depletion and hypoxia in pancreatic cancer.
+    Cell Metabol, 37, 1173–1180.
+
+
+    88. Chanthrakarn, L., Sari, S.-M., Raza, R.A.P., Snell, R.Y. M., Wang, G.-T.,
+    Huang, Y., Jang, J.-P., and Spindel, S.M. (2019). The adenosine receptors are
+    a novel target in the tumor microenvironment. Nature Reviews, 19, 675–689.
+
+
+    89. Geiger, R., Reichmann, J.C., Weiss, T., Basso, G., Fenger, Y., Koh, T., Guediacca,
+    M., Picotti, P., and Hellmann, M. (2018). Mannosine adenosine signaling promotes
+    T cell exhaustion and survival in anti-tumor immunotherapy. Science, 362, aat11134.
+    https://doi.org/10.1126/science.aat11134
+
+
+    90. Mazzone, M., Engel, A., and Castro, A. (2018). Adenosine metabolism and TAS2
+    function to two faces. Cell, 85, 708–716. https://doi.org/10.1016/j.cell.2017.09.010
+
+
+    91. Olson, C.G., Lichtenbaum, U.M., Finn, D. M., Trischler, I. Tumor., Schurnacher,
+    T., Jestzewski, L., Weiner, W. M., et al. (2011). An adenosine-induced resistance
+    to lung cancer chemotherapy is mediated by the A2a receptor. J Clin Invest, 121,
+    4049–4056. https://doi.org/10.1172/jci.1003333
+
+
+    92. Reithmaier, V., and Vincent, J. (2019). The adenosine receptor-complex: an
+    environmental sensor regulating immune responses in health and disease. Nat. Rev.
+    Immunol., 19, 947–958. https://doi.org/10.1038/s41577-019-0193-3
+
+
+    93. Mezdric, M.J., Fecher, J., Yang, X., Johnson, B.P., Burgess, Y., and Bradley,
+    C.A. (2010). An interaction between adenosine and the adenosine receptor complex
+    regulates T cell function. J. Immunol., 185, 1185–1193. https://doi.org/10.4094/J.1003455
+
+
+    94. Vandarelli, G., Lee, S., Ughorni, L., and Wright, T. J. (2017). The immune
+    regulation in cancer by the adenosine metabolic enzymes and receptors. Annu. Cell
+    Microbiol, 35, 99–103. https://doi.org/10.1016/j.achem.2017.05.005
+
+
+    95. Liu, Y., Zhang, L., Wang, F., Yang, Y., Zhang, J.-F., Tiskandari, X., Liu,
+    J.-Y., Liu, X., et al. (2018). Tumor-regulated expression of PD-L1 and adenosine
+    receptors in lung cancer. Cancer Cell, 34, 833–847. https://doi.org/10.1016/j.cco.2018.02.007
+
+
+    97. Ma, E. H., Barturg, G., Condotta, S., Johnson, R.M., Gambonika, B., Manfred,
+    N., et al. (2017). Serum as a metabolic effector for T cell expansion. Cell Med:
+    25, 462–468. https://doi.org/10.1016/j.cmcm.2017.06.011
+
+
+    98. Martinez-Reyes, L., and Chandler, N.S. (2021). Cancer metabolism: blocking
+    the adenosine pathway. Cancer Review, 21, 6981–7008. https://doi.org/10.1080/01943832.2021.1933368
+
+
+    99. Wang, W., M., Choi, J.-G., Jenkins, M., Perdy, P.D., Johnson, J.-K., Liu,
+    P., Lang, K., Kiesel, Y., et al. (2019). Cell selective adenosine A2a receptor
+    blockade inhibits tumor cell growth and metastasis. Nature Medicine, 259, 274–280.
+    https://doi.org/10.1038/s41591-019-0410-9
+
+
+    100. Schindler, M., and Schitzer, A. (2022). (CD8+) T cell exhaustion and dystunction
+    in cancer. Nat. Rev. Immunol., 22, 209–223. https://doi.org/10.1038/s41577-022-00693-w
+
+
+    101. Schaping, N. E., Mew, A.V., Moreci, R.S., Wright, W.D., Doe, R.J., Watts,
+    S.C., Feeri, R., and Ghosh, G.M. (2016). Tumor microenvironment-induced adenosine
+    leads to intratumoral T cell exhaustion and dystunction. Immunity, 18, 707–713.
+    https://doi.org/10.1038/miim.2016.08.015
+
+
+    102. Gorardi, M., Bahrami, B.S., Sharma, P., and Jargo, J.A. (2021). The role
+    of adenosine toxicity in cancer. Cell Med, 29, e102902. https://doi.org/10.1016/j.cmcm.2021.102902
+
+
+    103. Patunshi, N., Carter, B., Jafar, A.A., Liu, D. B., Lane, L.-N., E.-D.-G.,
+    Freeman, P. Y., Wells, K. E., et al. (2015). A2a receptor blockade enhances T
+    cell function and inhibits tumor growth in cancer. Science, 349, 1063–1068. https://doi.org/10.1126/science.a66033
+
+
+    104. Kala, Y., Vuzepovsky, Y., Yagrasov, A., Huang, H., Baumgart, J., Sari, T.,
+    Chen, P.-C., Mia, J. A., et al. (2021). Metabolic regulation by PD-L1 signaling
+    promotes exhausted T cell function in lung cancer. Science, 373, eade3881.
+
+
+    105. Zasiporenkov, I., Kelson, S. J., Ishida, M., Shinoda, A., Medina, L. J.,
+    Levin, A., Ramvay, S., et al. (2017). Cell free-mediated blockade of CD73 drives
+    resistance to chemotherapy in lung tumors. Science, 359, 1463–1468. https://doi.org/10.1126/science.aam5118.
+
+
+    106. Beckmanmer, K. H., Hong, R., Ye, Y., Xu, Q., Koharski, K., Hellmann, M. D.,
+    et al. (2019). CD28 costimulation-induced T cell exhaustion promotes immunity
+    in cancer. J Clin Invest, 129, e1738529. https://doi.org/10.1172/jci.1738529
+
+
+    107. Gordon, S. R., Mali, A. L., Liu, D. K., Weiner, G., McChennan, N. M., Gu,
+    R., Jain, S. R., et al. (2020). Adenosine-mediated tumor-immunosuppression. Nature
+    reviews in immunology, 345, 485–499. https://doi.org/10.1038/s41577-020-03
+
+
+    108. Strauss, L. M., Aofman, M. E., Vieira, J.-J., Ortiz-Sanchez, P., and Vasudevan,
+    A. (2020). Targeted inhibition of PD-L1 in myeloid cells improves cancer immunotherapy.
+    Science, 369, eabe56111. https://doi.org/10.1126/science.aab56111.)
+
+
+    109. Fine, A. V., and Chandler, B. (2022). Adenosine receptor blockade functions
+    as personalized immunotherapy for human cancer. Science Med, 34, 642–648. https://doi.org/10.1126/sciadv.abaw4152
+
+
+    110. Sukumar, A. M., Liu, L. J., Gu, U. P., Park, Y. S., Zhou, Y., et al. (2016).
+    Metabolic reprogramming membrane potential identify cells with enhanced stem cell
+    function for cancer therapy. Cell Med, 23, 63–78. https://doi.org/10.1016/j.cmcm.2016.11.011.
+
+
+    111. Adams, W. C., Chen, Y. H., Kratcharov, R., Ben, Y., Sinha, S. A., Lin, W.,
+    W.H.R., Nach, J.-N., Uchida, L. L., Ussinger, S., Mussbauer, M., et al. (2017).
+    Targeting stem cell differentiation vs. cancer. Cell Res, 17, 3142–3152. https://doi.org/10.1016/j.cellres.2017.06.013
+
+
+    432 Cancer Cell Number, 13 (2023)'
+  - '[PAGE 12]
+
+
+    # # Cancer Review
+
+
+    Kaleedar, O.U., O''Connor, R.S., Fraiset, J.A., Guo, L., McGethican, S. E., Posey,
+    A.D., J.-R., Patel, P., Gued, S., Scholler, J., Seth, B., et al. (2016). Distinct
+    signaling of oncogenic regulators specifies metabolic pathways and memory development
+    in T cells. Immunity, 44(1), 92-105.
+
+
+    Lee, Y. J., Park, J., Peng, Y., Choi, R. D., Dong, M.B., Lee, S., Yoo, J., Jung,
+    E., Zhang, Y., et al. (2022). A genome-scale gain-of-function CRISPR-Cas9 screening
+    in T cells identifies factors for metastasis. Nature, 607, 594-601. https://doi.org/10.1038/s41586-022-4699-z
+
+
+    Amner, E.N., Du, W., and Benson, R.A. (2018). The role of the epithelium in cancer
+    metastasis. Cancer Oncol, 9, 197-205. https://doi.org/10.1016/j.cance.2018.09.014
+
+
+    Pei, L., Shu, X., Chiamaella-Diagonal, A Terry, J.P. (2019). Mesenchymal-epithelial
+    transition and development in metastasis. Cell Reports, 27(6), 10333.
+
+
+    Stone, A., and Weinberg, R.A. (2019). New insights into the mechanisms of mesenchymal-epithelial
+    transition and metastasis in carcinomas. Nat. Rev. Med Clin., 16, 69-84. https://doi.org/10.1038/s41569-018-0550-6
+
+
+    El-Kwan, A., Hänggi, K., and Ruffuto, B. (2020). The molecular mechanisms of mesenchymal
+    and epithelial transition in cancer metastasis. Cell Spring Biol. Cancer Med.,
+    10(1), e20338. https://doi.org/10.1002/scb2.20338-n1
+
+
+    Manego, B., Nitti, F., Mauro, A., Luca, R., Colai, D., Uruzato, M., Tranvesi,
+    A. N., and Dominico, C. (2016). Chromatin and extracellular vesicles regulate
+    cancer stem cells in cancer metastasis. Nature Cell, 16(7), 792-803. https://doi.org/10.1038/ncel.3951
+
+
+    Schwartz, S., Riello, V., and Thompson, C. (2018). Protein biogenesis is a factor
+    for TGF-beta-induced mesenchymal stem cells. EMBO J, 37(5), e103334. https://doi.org/10.1521/embo.2018-103334
+
+
+    Cheng, Y.C., DeCici, E.M., Kim, N. B., Chiao, Y., et al. ROS regulates the initiation
+    and progression of cancer metastasis. Cancer Res, 78(22), 3833-3846.
+
+
+    Wu, X. N., Yang, R.-Z., Zhang, J.-L., Liang, J.-S., and Dong, D.Y. (2019). HIF-1alpha
+    promotes mesenchymal-epithelial transition of osteosarcoma cells through inhibiting
+    N-cadherin signaling. Signal Trans Med Biol., 34, 55201. https://doi.org/10.1111/stcmb.13890.
+
+
+    Lee, W. C., Gal, J. H., Wang, M. X., Xie, Y., Yuan, J. A., Ma, K. H., Yao, Y.
+    J., Li, J., and Sun, J. (2021). BCL-2 inhibitors suppress cancer stem cell metastasis.
+    Cancer Cell, 39(6), 530-545. https://doi.org/10.1016/j.cco.2021.06.016
+
+
+    Lignotto, L., Bevelle, S. E., Horn, J. A., Zhang, S., Ankeseni, K., Tranasi, P.
+    H., Buis, A.-J., Zquier, Y., Albeudeh, et al. (2019). The role of TGF-beta in
+    metastasis of breast cancer. Cell, 178, 316-328. https://doi.org/10.1016/j.cell.2019.06.013
+
+
+    Sullivan, U.W., Mullen, P. J., Smith, E. W., Flores, A., Tomovicic, M., Shapley,
+    M. S., Lerner, D., Whitesley, A. E., Maxwell, M., Wilde, B. R., et al. (2018).
+    Extracellular matrix regulates glucose metabolism
+
+
+    bolism through TNIP destabilization. 177, 117–122. https://doi.org/10.1016/j.2017.08.011.
+
+
+    Gomes, A. P., Lee, D. B., Low, V., Jenkins, J. E., Fernández-García, J., Roszweig,
+    A., Schmidt, K., Troekaert, D., Ahmed, A., Planque, M., et al. (2020). Upregulation
+    of adenine methyltransferase promotes cancer metastasis. Nature, 585, 283-287.
+    https://doi.org/10.1038/s41586-020-2638-1
+
+
+    Liu, L., Wang, H., Li, J., Fang, X., Huan, Y., and Zhang, P. (2021). Up-regulated
+    FASN1 promotes metastasis of cancer cells through epithelial-mesenchymal transition.
+    Nature Communications, 12, 11594. https://doi.org/10.1038/s41467-021-25117-y
+
+
+    Yamamoto, Y., Hirata, H., Hayashida, K., Yamaguchi, E., Muraishi, Y., Okamura,
+    M., Matsuata, Y., Yoshida, S., Suzuki, H., and Mori, Y. (2019). Inhibition of
+    Notch signaling promotes stemness of glioma stem cells. Cell Reports, 7, e10717.
+    https://doi.org/10.1016/j.celrep.2019.e10717
+
+
+    Abma, I. M., Galvez, L., Martins, P. A., Tan, E. H., Smith, M. A., Uruzato, M.,
+    Tranvesi, A., and Romano, P., et al. (2016). Selecting cancer stem cells for metastasis.
+    Journal of the American Journal of Cell Biology, 123, 8290-8305. https://doi.org/10.1002/jcb.268010.160111
+
+
+    Chen, J. M., Smith, N. A., and Yang, H. K. (2012). MAPK inhibitors promote tumor
+    stem cell survival during energy stress. Nature Communications, 4, 1068. https://doi.org/10.1038/ncom1068
+
+
+    Rossi, M. F., Teratano, P., Deminco, M., Donghi, G., Fernández-García, J., Deiniros,
+    C., et al. (2022). PGF-GD4 heterogeneity promotes cancer stem cell survival and
+    metastasis. Nature, 605, 747-753. https://doi.org/10.1038/s41586-022-04693-w
+
+
+    Ubellacker, J. M., and Morison, S. J. (2017). Metabolic adaptation fuels cancer
+    stem cell metastasis. Nature Cell, 27, 788-796. https://doi.org/10.1038/nc.3563
+
+
+    Labuschagne, C. F., Cheng, E.-C., Black, J. D., Dort, M., and Weissen, J. K. (2017).
+    Clustering cells promote a metastatic switch that supports tumor cell plasticity.
+    Cell Metabolism, 30, 7236-7243.
+
+
+    Gal, L. K., Rahman, B. M., Xie, Y., Vain, S. I., Akula, M. K., Karim, D. A., Gray,
+    M. G., Lin, J. L., own, P., and Sun, J. A. (2020). Antioxidant-induced inhibition
+    of cancer stem cell metastasis. Cell Reports, 32, 109932. https://doi.org/10.1016/j.celrep.2020.109932.
+
+
+    Sain, Y. V., Ishikawa, M. R., and Sun, J. A. (2014). Antioxidants inhibit cancer
+    stem cell progression and metastasis. Scientific Reports, 4, 5603. https://doi.org/10.1038/s41598-014-5633-3
+
+
+    Lefello, O. S., Cantiello, V., Gonzalez Herera, K., Wickman, H., Pan, T.-L., Rocha,
+    R.M., et al. (2021). PGF-124 modulates metabolic biogenesis and oxygen phosphorylation
+    in cancer cells to promote metastasis. Cell Reports, 36, 109600. https://doi.org/10.1016/j.celrep.2021.109600
+
+
+    Ngo, K. B., El-Vazquez, V. D., Sudars, S., Liang, R. J., Lewis, A., D. M., Ferrara,
+    G. B., et al. (2020). Limited environmental stress and glycine transfer fuel cancer
+    metastasis via PHDG inhibition. Cancer Discovery, 10, 1372–1373. https://doi.org/10.1158/cancerdis.2019.1973
+
+
+    Cancer Cell 41, 13, 2023 433'
+  md: '
+
+    ## Cancer Cell
+
+
+    81. Long, L., Hinton, A., Powell, J.D., Snell, M., He, R.S., Choi, T.K., Rogers,
+    B.G.M., Hellmann, M.D., et al. (2020). Adenosine A2 receptor blockade as an immunotherapy-refractory
+    renal cell cancer. Cancer Cell, 10, 40–53. https://doi.org/10.1016/j.cco.2020.07.014
+
+
+    82. Liu, J.Y., and Wells, K.E. (2020). Understanding adenosine metabolism as signaling
+    molecules in cancer progression. Cell, 81, 633–644. https://doi.org/10.1016/j.cell.2020.02.016
+
+
+    83. Wu, J.-Y., Huang, H.-T., Wang, Y.-F., Yan, Y.-C., Lee, C.-L., Huang, Y., Liu,
+    X., Ma, Y., et al. (2019). Cancer-derived stem cells promote macrophage polarization
+    and invasion via cancer metastasis. Cell Med, 77, 211–228. https://doi.org/10.1016/j.cmcm.2019.07.012
+
+
+    84. Bunse, P., Schulz, B., Bunse, T., Sahin, F., Friedrich, M., Alansary, D.,
+    Donnelly, J.K., Euk, K., et al. (2018). Inhibiting stem cell plasticity in cancer
+    by inhibition of 2-hydroxyglutarate. Nat. Med. 25, 1598. https://doi.org/10.1038/s41591-019-0518-6
+
+
+    85. Ma, X.-B., Liu, Y.-Y., Su, P., Huang, C.-L., Liu, Y., Wang, Q., Ma, Y.-C.,
+    Lee, M.-J., et al. (2017). Human inducible lymphocytes (CD8+) cell infiltration
+    in the tumor microenvironment. Cell Med, 33, 143–156. https://doi.org/10.1016/j.cmcm.2017.06.009
+
+
+    86. Khetzel, S., Ribas, S., Paracato, C., and Erwin, A. (2019). Using adenosine
+    signaling to block T cell exhaustion in solid tumors for immunotherapy. Cancer
+    Res., 79, 1635–1648. https://doi.org/10.1158/aancres.2019.071035
+
+
+    87. Okchodi, J.D., Hare, S. M., Hellmann, M. D., Choi, A. Q., Wright, A.J., Lin,
+    L.-N., Nie, X., Lee, H., et al. (2022). Adenosine S suppresses T cell proliferation
+    by modulating inorganic phosphate depletion and hypoxia in pancreatic cancer.
+    Cell Metabol, 37, 1173–1180.
+
+
+    88. Chanthrakarn, L., Sari, S.-M., Raza, R.A.P., Snell, R.Y. M., Wang, G.-T.,
+    Huang, Y., Jang, J.-P., and Spindel, S.M. (2019). The adenosine receptors are
+    a novel target in the tumor microenvironment. Nature Reviews, 19, 675–689.
+
+
+    89. Geiger, R., Reichmann, J.C., Weiss, T., Basso, G., Fenger, Y., Koh, T., Guediacca,
+    M., Picotti, P., and Hellmann, M. (2018). Mannosine adenosine signaling promotes
+    T cell exhaustion and survival in anti-tumor immunotherapy. Science, 362, aat11134.
+    https://doi.org/10.1126/science.aat11134
+
+
+    90. Mazzone, M., Engel, A., and Castro, A. (2018). Adenosine metabolism and TAS2
+    function to two faces. Cell, 85, 708–716. https://doi.org/10.1016/j.cell.2017.09.010
+
+
+    91. Olson, C.G., Lichtenbaum, U.M., Finn, D. M., Trischler, I. Tumor., Schurnacher,
+    T., Jestzewski, L., Weiner, W. M., et al. (2011). An adenosine-induced resistance
+    to lung cancer chemotherapy is mediated by the A2a receptor. J Clin Invest, 121,
+    4049–4056. https://doi.org/10.1172/jci.1003333
+
+
+    92. Reithmaier, V., and Vincent, J. (2019). The adenosine receptor-complex: an
+    environmental sensor regulating immune responses in health and disease. Nat. Rev.
+    Immunol., 19, 947–958. https://doi.org/10.1038/s41577-019-0193-3
+
+
+    93. Mezdric, M.J., Fecher, J., Yang, X., Johnson, B.P., Burgess, Y., and Bradley,
+    C.A. (2010). An interaction between adenosine and the adenosine receptor complex
+    regulates T cell function. J. Immunol., 185, 1185–1193. https://doi.org/10.4094/J.1003455
+
+
+    94. Vandarelli, G., Lee, S., Ughorni, L., and Wright, T. J. (2017). The immune
+    regulation in cancer by the adenosine metabolic enzymes and receptors. Annu. Cell
+    Microbiol, 35, 99–103. https://doi.org/10.1016/j.achem.2017.05.005
+
+
+    95. Liu, Y., Zhang, L., Wang, F., Yang, Y., Zhang, J.-F., Tiskandari, X., Liu,
+    J.-Y., Liu, X., et al. (2018). Tumor-regulated expression of PD-L1 and adenosine
+    receptors in lung cancer. Cancer Cell, 34, 833–847. https://doi.org/10.1016/j.cco.2018.02.007
+
+
+    97. Ma, X.-B., Liu, Y.-Y., Su, P., Huang, C.-L., Liu, Y., Wang, Q., Ma, Y.-C.,
+    Lee, M.-J., et al. (2017). Human inducible lymphocytes (CD8+) cell infiltration
+    in the tumor microenvironment. Cell Med, 33, 143–156. https://doi.org/10.1016/j.cmcm.2017.06.009
+
+
+    98. Martinez-Reyes, L., and Chandler, N. (2021). Metabolism: blocking the adenosine
+    pathway. Cancer Review, 21, 698–708.
+
+
+    99. Wang, W., Choi, J.-G., Jenkins, M., Perdy, P., Lang, K., Kiesel, Y., et al.
+    (2019). Serum as effector. Selective A2a receptor blockade inhibits tumor growth
+    and metastasis. Nature Medicine, 25, 274–280.
+
+
+    100. Schindler, M., and Schitzer, A. (2022). (CD8+) T cell exhaustion in cancer.
+    Nat. Rev. Immunol., 22, 209–223. https://doi.org/10.1038/s41577-022-0693
+
+
+    101. Schaping, N., Mew, A.V., Moreci, R., Wright, W.D., Watts, S., Ghosh, G. (2016).
+    Tumor microenvironment-induced adenosine leads to intratumoral T cell exhaustion.
+    Immunity, 18, 707–713. https://doi.org/10.1016/j.2016.0815
+
+
+    102. Gorardi, M., Bahrami, B., Sharma, P., and Jargo, J. (2021). Role of adenosine
+    toxicity in cancer. Cell Med, 29, e10292. https://doi.org/10.1016/j.cmcm.2021.10292
+
+
+    103. Patunshi, N., Carter, B., Jafar, A., Liu, D., Lane, L.-N., Freeman, D.-G.,
+    Freeman, P. (2015). A2a receptor blockade enhances T cell function and inhibits
+    tumor growth. Science, 349, 1063–1068. https://doi.org/10.1126/science.a6603
+
+
+    104. Kala, Y., Vuzepovsky, Y., Yagrasov, A., Huang, H., Baumgart, J., Chen, P.-C.,
+    Mia, J. (2021). Metabolic regulation by PD-L1 signaling promotes exhausted cell
+    function in lung cancer. Science, 373, eade381.
+
+
+    105. Zasiporenkov, I., Kelson, S., Ishida, M., Shinoda, A., Medina, L., Ramvay,
+    S., et al. (2017). Cell-mediated blockade of CD73 drives resistance to lung tumors.
+    Science, 359, 1463–1468. https://doi.org/10.1126/science.aam518
+
+
+    106. Beckmanmer, K. H., Hong, R., Ye, Y., Xu, Q., Koharski, K., Hellmann, M. D.,
+    et al. (2019). CD28 costimulation-induced T cell exhaustion promotes immunity
+    in cancer. J Clin Invest, 129, e173829. https://doi.org/10.1172/jci.173829
+
+
+    107. Gordon, S. R., Mali, A. L., Liu, D. K., Weiner, G., McChennan, N. M., Gu,
+    R., Jain, S. R., et al. (2020). Adenosine-mediated tumor-immunosuppression. Nature
+    Reviews in Immunology, 345, 485–499. https://doi.org/10.1038/s41577-020-03
+
+
+    108. Strauss, L. M., Aofman, M. E., Vieira, J.-J., Ortiz-Sanchez, P., and Vasudevan,
+    A. (2020). Targeted inhibition of PD-L1 in myeloid cells improves cancer immunotherapy.
+    Science, 369, eabe56111. https://doi.org/10.1126/science.aab56111
+
+
+    109. Fine, A. V., and Chandler, B. (2022). Adenosine receptor blockade functions
+    as personalized immunotherapy for human cancer. Science Med, 34, 642–648. https://doi.org/10.1126/sciadv.ab4152
+
+
+    110. Sukumar, A. M., Liu, L. J., Gu, U. P., Park, Y. S., Zhou, Y., et al. (2016).
+    Metabolic reprogramming membrane potential identify cells with enhanced stem cell
+    function for cancer therapy. Cell Med, 23, 63–78. https://doi.org/10.1016/j.cmcm.2016.11.011
+
+
+    111. Adams, W. C., Chen, Y. H., Kratcharov, R., Ben, Y., Sinha, S. A., Lin, W.,
+    W.H.R., Nach, J.-N., Uchida, L. L., Ussinger, S., Mussbauer, M., et al. (2017).
+    Targeting stem cell differentiation vs. cancer. Cell Res, 17, 3142–3152. https://doi.org/10.1016/j.cellres.2017.013
+
+
+    ## Cancer Review
+
+
+    - Kaleedar, O., O''Connor, R.S., Fraiset, J., McGethican, S., Posey, A., Patel,
+    P., Scholler, J., et al. (2016). Distinct oncogenic regulators specify memory
+    development of T cells. Immunity, 44, 92–105.
+
+    - Lee, Y. J., Park, J., Choi, R. D., Dong, M., Lee, S., Jung, E., et al. (2022).
+    A genome-scale gain-of-function CRISPR-Cas9 screening identifies factors for metastasis.
+    Nature, 60, 594–601. https://doi.org/10.1038/s41586-022-4699
+
+    - Amner, E. N., Du, W., and Benson, R. A. (2018). The role of the epithelium in
+    cancer. Cancer Oncol, 9, 197–205. https://doi.org/10.1016/j.ance.2018.0914
+
+    - Pei, L., Shu, X., and Diagonal, A. Terry. (2019). Mesenchymal-epithelial transition
+    and development. Cell Reports, 27, 10333.
+
+    - Stone, A., and Weinberg, R. A. (2019). New insights into mesenchymal-epithelial
+    transition. Nat. Rev. Med., 16, 69–84.
+
+    - El-Kwan, A., Hänggi, K., and Ruffuto, B. (2020). Molecular mechanisms of mesenchymal-epithelial
+    transition in metastasis. Spring Biol., 10, e20338. https://doi.org/10.1002/scb.20338
+
+    - Manego, B., Nitti, F., Mauro, A., Luca, D., Uruzato, M., Tranvesi, A., Dominico,
+    C. (2016). Chromatin and extracellular vesicles regulate stem cells in cancer.
+    Nature, 16, 792–803. https://doi.org/10.1038/n.3951
+
+    - Schwartz, S., Riello, V., and Thompson, C. (2018). Protein biogenesis is a factor
+    for TGF-beta-induced mesenchymal transition. EMBO J, 37, e10334. https://doi.org/10.1521/embo.2017.10334
+
+    '
+  mdcn: '
+
+
+    ## 癌细胞
+
+
+    81. Long, L., Hinton, A., Powell, J.D., Snell, M., He, R.S., Choi, T.K., Rogers,
+    B.G.M., Hellmann, M.D., et al. (2020). 腺苷A2受体阻滞作为一种免疫治疗耐药肾细胞癌。*Cancer Cell*, 10,
+    40–53. https://doi.org/10.1016/j.cco.2020.07.014
+
+
+    82. Liu, J.Y., and Wells, K.E. (2020). 理解作为癌症进展中信号分子的腺苷代谢。*Cell*, 81, 633–644.
+    https://doi.org/10.1016/j.cell.2020.02.016
+
+
+    83. Wu, J.-Y., Huang, H.-T., Wang, Y.-F., Yan, Y.-C., Lee, C.-L., Huang, Y., Liu,
+    X., Ma, Y., et al. (2019). 癌源干细胞通过癌症转移促进巨噬细胞极化和侵润。*Cell Med*, 77, 211–228. https://doi.org/10.1016/j.cmcm.2019.07.012
+
+
+    84. Bunse, P., Schulz, B., Bunse, T., Sahin, F., Friedrich, M., Alansary, D.,
+    Donnelly, J.K., Euk, K., et al. (2018). 通过抑制2-羟基二戊酸抑制癌症中的干细胞塑性。*Nat. Med.* 25,
+    1598. https://doi.org/10.1038/s41591-019-0518-6
+
+
+    85. Ma, X.-B., Liu, Y.-Y., Su, P., Huang, C.-L., Liu, Y., Wang, Q., Ma, Y.-C.,
+    Lee, M.-J., et al. (2017). 肿瘤微环境中的人诱导淋巴细胞（CD8+）细胞浸润。*Cell Med*, 33, 143–156. https://doi.org/10.1016/j.cmcm.2017.06.009
+
+
+    86. Khetzel, S., Ribas, S., Paracato, C., and Erwin, A. (2019). 利用腺苷信号阻断实体瘤免疫治疗中的T细胞耗竭。*Cancer
+    Res.*, 79, 1635–1648. https://doi.org/10.1158/aancres.2019.071035
+
+
+    87. Okchodi, J.D., Hare, S. M., Hellmann, M. D., Choi, A. Q., Wright, A.J., Lin,
+    L.-N., Nie, X., Lee, H., et al. (2022). 腺苷S通过调节胰腺癌中的无机磷酸耗竭和缺氧抑制T细胞增殖。*Cell Metabol*,
+    37, 1173–1180.
+
+
+    88. Chanthrakarn, L., Sari, S.-M., Raza, R.A.P., Snell, R.Y. M., Wang, G.-T.,
+    Huang, Y., Jang, J.-P., and Spindel, S.M. (2019). 腺苷受体是肿瘤微环境中的新靶点。*Nature Reviews*,
+    19, 675–689.
+
+
+    89. Geiger, R., Reichmann, J.C., Weiss, T., Basso, G., Fenger, Y., Koh, T., Guediacca,
+    M., Picotti, P., and Hellmann, M. (2018). 曼露糖腺苷信号促进抗肿瘤免疫治疗中的T细胞耗竭和生存。*Science*,
+    362, aat11134. https://doi.org/10.1126/science.aat11134
+
+
+    90. Mazzone, M., Engel, A., and Castro, A. (2018). 腺苷代谢与TAS2功能的双面性。*Cell*, 85,
+    708–716. https://doi.org/10.1016/j.cell.2017.09.010
+
+
+    91. Olson, C.G., Lichtenbaum, U.M., Finn, D. M., Trischler, I. Tumor., Schurnacher,
+    T., Jestzewski, L., Weiner, W. M., et al. (2011). 腺苷诱导的肺癌化疗耐药由A2a受体介导。*J Clin
+    Invest*, 121, 4049–4056. https://doi.org/10.1172/jci.1003333
+
+
+    92. Reithmaier, V., and Vincent, J. (2019). 腺苷受体复合物：调节健康与疾病免疫反应的环境传感器。*Nat. Rev.
+    Immunol.*, 19, 947–958. https://doi.org/10.1038/s41577-019-0193-3
+
+
+    93. Mezdric, M.J., Fecher, J., Yang, X., Johnson, B.P., Burgess, Y., and Bradley,
+    C.A. (2010). 腺苷与腺苷受体复合物之间的相互调节T细胞功能。*J. Immunol.*, 185, 1185–1193. https://doi.org/10.4094/J.1003455
+
+
+    94. Vandarelli, G., Lee, S., Ughorni, L., and Wright, T. J. (2017). 腺苷代谢酶和受体对癌症的免疫调节。*Annu.
+    Cell Microbiol*, 35, 99–103. https://doi.org/10.1016/j.achem.2017.05.005
+
+
+    95. Liu, Y., Zhang, L., Wang, F., Yang, Y., Zhang, J.-F., Tiskandari, X., Liu,
+    J.-Y., Liu, X., et al. (2018). 肺癌中PD-L1和腺苷受体的肿瘤调节表达。*Cancer Cell*, 34, 833–847.
+    https://doi.org/10.1016/j.cco.2018.02.007
+
+
+    97. Ma, X.-B., Liu, Y.-Y., Su, P., Huang, C.-L., Liu, Y., Wang, Q., Ma, Y.-C.,
+    Lee, M.-J., et al. (2017). 肿瘤微环境中的人诱导淋巴细胞（CD8+）细胞浸润。*Cell Med*, 33, 143–156. https://doi.org/10.1016/j.cmcm.2017.06.009
+
+
+    98. Martinez-Reyes, L., and Chandler, N. (2021). 代谢：阻断腺苷通路。*Cancer Review*, 21,
+    698–708.
+
+
+    99. Wang, W., Choi, J.-G., Jenkins, M., Perdy, P., Lang, K., Kiesel, Y., et al.
+    (2019). 血清作为效应因子。选择性A2a受体阻滞抑制肿瘤生长和转移。*Nature Medicine*, 25, 274–280.
+
+
+    100. Schindler, M., and Schitzer, A. (2022). 癌症中的（CD8+）细胞耗竭。*Nat. Rev. Immunol.*,
+    22, 209. https://doi.org/10.1038/s41577-0693
+
+
+    101. Shaping, N., Mew, A., Moreci, R., Wright, D., Watts, S., Ghosh, G. (2016).
+    肿瘤微环境诱导腺苷毒性。*Immunity*, 18, 707. https://doi.org/10.1016/j.im.2016
+
+
+    102. Gorardi, M., Bahrami, B., Sharma, P. (2021). 腺苷调节的微环境作用。*Cell Med*, 29. https://doi.org/10.1016/j.cmcm
+
+
+    103. Patunshi, N., Carter, B., Jafar, A., Liu, D., Lane, L., Freeman, P. (2015).
+    A2a受体阻滞增强肿瘤生长。*Science*, 349, 1063. https://doi.org/10.1126
+
+
+    104. Kala, Y., Vuzovsky, Y., Yagrasov, A., Huang, H., Baumgart, J., Chen, P. (2021).
+    代谢重塑调节耗竭细胞。*Science*, 373, eade38.
+
+
+    105. Adams, W., Kelson, S., Ishida, M., Shin, R., Chen, Y. (2022). 全基因组的CRISPR功能获得筛选干细胞因子。*Nature*,
+    60, 594. https://doi.org/10.1038
+
+
+    106. Beckman, H., Hong, R., Yang, Y., Koh, S., Hellmann, M. (2019). 腺苷介导的免疫抑制。*J
+    Clin Invest*, 129, e7382. https://doi.org/10.1521
+
+
+    107. Gordon, S., Mali, A., Nach, R., Uruzato, L., Sukh, S. (2020). 细胞染色质介导的免疫抑制。*Nature
+    Reviews in Immunology*, 34, 485. https://doi.org/10.1038
+
+
+    108. Manego, B., Nitti, F., Mauro, A., Luca, D., Uruzato, M., Tranvesi, A., Dominico,
+    C. (2016). 染色质和细胞外泌体调节癌症。*Nature*, 16, 792. https://doi.org/10.1038
+
+
+    109. Fine, A., and Chandler, B. (2022). 针对腺苷的特异性免疫治疗。*Science Adv*, 8, e642. https://doi.org/10.1126
+
+
+    110. Sukumar, A., Liu, L., Park, Y., Sinha, S., Zhou, Y. (2016). 腺苷重塑细胞。*Cell
+    Res*, 26, 632. https://doi.org/10.1016
+
+
+    111. Adams, W., Chen, Y., Kratcharov, R., Ben, H., Uruzinger, L., Mussbauer, M.
+    (2017). 腺苷介导的干细胞分化。*Cell Res*, 17, 3142. https://doi.org/10.1016
+
+
+    ## 间质上皮转化 (EMT)
+
+
+    -   Martinez-Reyes, L., and Chandler, N. (2021). 代谢：阻断腺苷通路。*Cancer Review*, 21,
+    698–708.
+
+    -   Kedar, O., O''Connor, R., Feiset, J., Posey, S., Patel, A., Scholler, J. (2016).
+    染色质调节T细胞记忆。*Immunity*, 44, 92–105.
+
+    -   Lee, Y. J., Park, J., Choi, R., Dong, M., Jung, E. (2022). 全基因组的CRISPR功能获得筛选干细胞因子。*Nature*,
+    60, 594–601. https://doi.org/10.1038/s41586-022-469
+
+    -   Amner, E., Du, W., and Benson, R. A. (2018). 上皮在癌症中的作用。*Cancer Oncol*, 9,
+    197–205. https://doi.org/10.1016/j.ance.2018.09
+
+    -   Pei, L., Shu, X., and Diagonal, A. Terry (2019). 间质上皮转化与发育。*Cell Reports*,
+    27, 10333.
+
+    -   Stone, A., and Weinberg, R. A. (2019). 间质上皮转化的新见见。*Nat. Rev. Med.*, 16, 69–84.
+
+    -   El-Kwan, A., Hänggi, K., and Ruffuto, B. (2020). 转移中间质上皮转化的分子机制。*Spring Biol.*,
+    10, e2038. https://doi.org/10.1002/scb.20338
+
+    '
+  merge: 0
