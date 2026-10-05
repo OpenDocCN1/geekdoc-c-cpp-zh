@@ -1,0 +1,13 @@
+# 5.3. Introduction to Pthreads
+
+When parallel regions are implemented using conditional variables, the manager thread puts itself to sleep if it wants to assign work but the worker is busy. The worker threads put themselves to sleep if they are free to work but find that no work has been assigned. The spinlock-behavior of mutexes does not occur here. There is regular and predictable alternation between assignment of work by the manager and its completion by the worker threads.
+
+# TLB flushes and cost of conditional variables implementation
+
+Table 5.6 shows that the average cost of a parallel region implemented using conditional variables is 30,000 cycles with two threads. On a quad-core 3.4 GHz AVX machine (see A.1 for its full name), the cost is much lower and only 9,000 cycles with four threads. Even with eight threads, the average cost per parallel region is 18,000 cycles and much lower than the cost for two threads.
+
+The explanation of this conundrum appears to be as follows. With two, four, or eight threads, there will be context switches during the alternation between assignment of work and its completion by the worker threads. With two threads, the threads get switched around between the four cores of the 3.4 GHz AVX machine. When either the worker or manager is switched out, an editor, a web browser, or a kernel thread gets the processor. With eight threads, there are many more context switches per parallel region on an average, but nearly every context switch between two threads in the same group of context switches between two threads in the same thread group are much less expensive. The kernel does not need to switch page tables or flush the TLB. The TLB flush is essential to preserve the integrity and correctness of the memory system when processes with different virtual address spaces are switched. The greater expense of context switches and related factors appear to explain the reason the conditional variables implementation is so much more expensive with just two threads.
+
+**Exercise 5.3.1.** Write a program to reverse a long array using Pthreads. Does your program need mutexes or spinlocks? Do you expect your program to be faster or slower than an OpenMP program for the same task? Explain.
+
+**Exercise 5.3.2.** Explain why the volatile qualifier is used in the C implementation of parallel regions but not in the implementations using mutexes, spinlocks, or conditional variables.

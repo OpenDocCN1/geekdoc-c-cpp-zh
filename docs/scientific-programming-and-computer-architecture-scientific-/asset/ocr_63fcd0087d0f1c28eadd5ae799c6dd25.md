@@ -1,0 +1,13 @@
+378 Chapter 6. Special Topic: Networks and Message Passing
+
+20 }
+
+We will assume that the MPI program is started up with exactly two processes and that each process calls unsafe(). The two processes send a certain number of doubles to each other. The number of doubles transmitted is given by the first argument. It is assumed that rank and nprocs have been appropriately initialized by both processes after MPI_initialize(). These are passed to unsafe() as arguments on line 1. The buffers for sending and receiving appear as sendbuf and recvbuf on line 2. These buffers are allocated by each process before the call to unsafe().
+
+The MPI syntax that appears in unsafe(), supplemented by variants of send and receive described in a later section, is nearly all the MPI syntax we need. Line 5 defines status to be type MPI_Status. The MPI_Recv() function returns information on status on lines 12 and 18. Other MPI variants for message passing and probing return status information.
+
+The MPI_Barrier() on line 6 stalls until all processes have entered the barrier. Its argument is a communicator, and the only MPI communicator we use, MPI_COMM_WORLD, includes all processes. The barrier plays no essential role in the function unsafe(). MPI processes get in sync while sending and receiving messages. The situation is different from shared memory where threads might conflict while reading and writing from the same location. Processes that communicate or coordinate using shared memory must spin locks, mutexes, critical regions, or barriers. Barriers are useful in MPI, but they are less frequently used. There is a degree of synchronization inherent in message passing.
+
+The if-block of statements from lines 8 through 12 is executed only by the process with rank 0. The else-if block of statements from lines 15 through 18 is executed by the process with rank nprocs-1. Because we are assuming exactly two processes, the else-if is executed by the process with rank 1. This manner of using rank to distinguish between processes is typical of MPI in the same way that use of thread identifiers is typical of OpenMP.
+
+The crucial bits of syntax in unsafe() are MPI_Send() and MPI_Recv(). On lines 8 and 9, the process with rank 0 sends a message to rank 1. The first argument to MPI_Send() is a pointer to the buffer. This argument is declared to be of type void *. On line 8, the argument is of type double *, which is automatically cast to the right type. Any pointer may be cast to void *. The second argument is the number of items in the buffer, and the third argument is the data type of each

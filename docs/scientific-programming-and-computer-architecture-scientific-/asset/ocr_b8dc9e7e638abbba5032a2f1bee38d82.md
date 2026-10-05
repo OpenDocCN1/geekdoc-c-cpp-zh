@@ -1,0 +1,12 @@
+be said that the use of .d files is far from a perfect solution. The .d files replicate information that is already present in the C/C++ sources and header files. Such replication of information or logic is usually not a good idea. Every time information or logic is replicated, it creates room for inconsistencies.
+
+The third and final reiterates points that may have arisen in a concrete way.
+The include directive on line 1 splices in all makevars.mk at this point. This Makefile resides in linking/linalag, while makevars.mk is at the root of the source tree (see figure 2.2). Therefore, line 1 refers to the file to be included as ../../makevars.mk. Once this file is included, all the variables and pattern rules defined in it become available.
+
+We want the compilation command to look for MKL header files at the right places. CFLAGS variable is modified to do that on line 2. It will be evaluated during the first pass and used when the recipe for generating %. targets depend on %.cpp sources is invoked during the second pass. That recipe of course is in makevars.mk, which is above the definition of CFLAGS. Similarly, line 3 sets the LIBS so the MKL libraries are linked when the %.exe target that depends on %.o object is built using the recipe in makevars.mk.
+
+The dependencies on lines 10 and 12 will be omitted. GNU make will use the pattern rule for %.o depending on %.cpp sources to generate those rules automatically—if the corresponding source files lusolve.cpp and test_lusolve.cpp are in the directory.
+
+Makefiles capture the dependency of object files on source files and headers perfectly. A perfect capture is possible because typically an object file depends only on the source file (of the same name but with a different extension) and the header files included from inside the source file. In contrast, no attempt is made to capture the dependencies between object files. Each object file is a collection of functions. Because functions may call one another, the dependency graph between object files is typically more complicated. Circular dependencies between object files are common. Resolving these dependencies is left to the linker.
+
+If suitable pattern rules have been defined, the dependencies of object files are deduced automatically by make. In contrast, we almost always need to indicate which object files are used to build an executable. We usually include rules as lines 10 and 12, which indicate the dependence of object files on sources, to make the structure of the program more explicit within the Makefiles.

@@ -1,0 +1,13 @@
+# Chapter 6. Special Topic: Networks and Message Passing
+
+MPI send/receive is an exchange of message envelopes to enable RDMA transactions to be set up. The actual RDMA transaction is initiated later after the envelopes have been matched. MPI send/receive transactions can be mapped to either RDMA send or RDMA receive. For reasons explained in section 6.3.1, RDMA receive is slightly more natural, and Open MPI opts for it.
+
+Our systems/architecture perspective brings out other aspects of sending and receiving in MPI. Persistent MPI send/receive may seem the best because it gives advance notice of the memory that will be used in subsequent sends and receives. In fact, giving advance notice of memory to be used is not a good idea in Open MPI. When MPI receives notice of memory to be used, it allocates pages for all the memory. That has the undesirable effect of making it impossible to use paging in near memory, when the MPI process is multithreaded.
+
+Much of the time, the nonblocking MPI_Send() and MPI_Irecv() variants are the best options. In modern networks such as Infiniband, the bandwidth of data transfer out of a single node can be around 10% to 20% of the bandwidth to DRAM memory from a single node. Such remarkably high have raised the potential of network computing. A great range of scientific problems, from optimization and data mining to numerical PDE, are amenable to parallelization across high-performance networks.
+
+In section 6.3.2, we turn to the Jacobi iteration, a standard example in the MPI world. There is a single MPI process on each computing node, and each MPI process uses OpenMPI threads to carry out its share of the Jacobi iteration. In the Jacobi example, the cost of MPI message passing is negligible. The optimizations that make a difference are those of memory optimizations we have already studied. This situation is uncommon.
+
+The matrix transpose example of section 6.3.3 gives a good picture of how MPI optimizations work. In this example, each process communicates with every other process. We use the matrix transpose example to illustrate both load balancing and the overlapping of process activity with network activity.
+
+In matrix transposition, the data format at the receiver differs from the data format at the sender. Having to cope with changes in data format comes up in all kinds of network programming. The change in data format implies a need for buffers and copying into and out of buffers. The challenge in matrix transposition is to hide the cost of copying into and out of buffers by overlapping with network activity.
