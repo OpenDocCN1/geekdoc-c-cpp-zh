@@ -1,0 +1,334 @@
+
+
+# 索引 889
+
+- 五项法则 (Rule of five), 620
+- 三法则 (Rule of three), 610
+- 运行时错误 (Runtime error), 9
+- 运行时识别 (Runtime identification), 818
+- dynamic_cast<>, 818
+- type_info, 821
+- typeid, 821
+- 右值 (Rvalue), 46
+- 右值引用 (Rvalue reference), 481
+- 单链表 (Single linked list), 425
+- sizeof, 55
+- sizeof..., 501
+- size_t, 55
+- skipws
+- 标志 (flag), 34
+- 操纵符 (manipulator), 36
+- 智能指针 (Smart pointers), 826
+- auto_ptr, 826
+- shared_ptr, 831
+- unique_ptr, 826
+- weak_ptr, 832
+- sort(), 838
+- 数组排序算法 (Sort array algorithms), 348
+- 泡沫排序 (bubble sort), 356
+- 插入排序 (insertion sort), 353
+- 快速排序 (quick sort), 360
+- 选择排序 (selection sort), 348
+- scanf(), 40
+- 科学法 (scientific)
+- 标志 (flag), 34
+- 操纵符 (manipulator), 36
+- 科学计数法 (Scientific notation), 21
+- 作用域 (Scope)
+- 类 (class), 512
+- 举取值 (enumerator), 57
+- 全局 (global), 291
+- 局部 (local), 289
+- 命名空间 (namespaces), 805
+- 作用域运算符 ::, 5
+- 变量 (variable), 288
+- 作用域变量规则 (Scope variable rules), 292
+- 搜索算法 (Search algorithms)
+- 二分查找 (binary search), 345
+- 线性查找 (linear search), 343
+- 自赋值 (Self-assignment), 564
+- seekk(), 781
+- seekp(), 781
+- 选择排序 (Selection sort), 348
+- 序列容器 (Sequence containers), 847
+- 数组 (array), 847
+- 双端队列 (deque), 847
+- 前向链表 (forward_list), 847
+- 列表 (list), 847
+- 向量 (vector), 838
+- 源文件 (Source files), 2
+- 特化 (Specializations)
+- 类模板 (class template), 762
+- 函数模板 (function template), 498
+- sort(), 286
+- strand(), 101
+- 栈 (Stack), 273
+- 动态数据结构 (dynamic data structure), 427
+- 溢出 (overflow), 404
+- stack(), 850
+- 标准异常 (Standard exceptions), 734
+- bad_alloc, 735
+- bad_cast, 820
+- 域错误 (domain_error), 735
+- 无效参数 (invalid_argument), 735
+- 长度错误 (length_error), 735
+- 逻辑错误 (logic_error), 735
+- 越界异常 (out_of_range), 735
+- 溢出错误 (overflow_error), 735
+- 范围错误 (range_error), 735
+- 运行时错误 (runtime_error), 735
+- 下溢错误 (underflow_error), 735
+- 标准库算法 (Standard library algorithms), 835
+- copy(), 839
+- count_if(), 839
+- find(), 837
+- for_each, 836
+- sort(), 838
+- 标准模板库 (Standard template library), 835
+- 算法 (algorithms), 835
+- 算法与指针 (algorithms and pointers), 843
+- 容器 (containers), 846
+- 函数对象 (function object), 855
+- 迭代器 (iterators), 840
+- Lambda 表达式 (lambda expressions), 857
+- 预迭代器 (predefined iterators), 844
+- 序列文件访问 (Serial file access), 781
+- set(), 850
+- setbase(), 361
+- setf(), 341
+- setfill(), 36
+- setflags(), 336
+- setprecision(), 736
+- set_terminate(), 736
+- setw(), 36
+- 浅拷贝 (Shallow copy), 606
+- shared_ptr, 831
+- 短型 (short), 13
+- 短路求值 (Short-circuit evaluation), 52
+- showbase
+- 标志 (flag), 34
+- 操纵符 (manipulator), 36
+- showpoint:
+- 标志 (flag), 34
+- 操纵符 (manipulator), 36
+- showpos
+- 标志 (flag), 34
+- 操纵符 (manipulator), 36
+- 有符号 (signed), 133
+- 语句 (Statement)
+- break, 88, 103
+- continue, 105
+- do-while, 125
+- for, 99
+- goto, 128
+- if-else, 71
+- return, 274
+- switch, 88
+
+# 索引 890
+
+- throw, 718
+- try-catch, 718
+- while, 117
+- 包含数组的 (which contains array), 372
+- 包含指针的 (which contains pointer), 372
+- 包含结构体的 (which contains structure), 373
+- switch, 88
+- 静态 (Static)
+- 类函数 (class function), 610
+- 类变量 (class variable), 538
+- 函数 (function), 297
+- 内存分配 (memory allocation), 403
+- 变量 (variable), 295
+- static_assert(), 457
+- 静态绑定 (Static binding), 657
+- static_cast(), 824
+- 静态指针 (Static pointer), 805
+- 静态控制 (Static control), 15
+- std, 39
+- stout, 31
+- 存储类型 (Storage classes), 288
+- strcat(), 241
+- strncmp(), 242
+- strcpy(), 239
+- 流标志 (Stream flags), 774
+- 流 (Streams), 275
+- string, 244
+- append(), 246
+- at(), 246
+- c_str(), 247
+- capacity(), 246
+- erase(), 246
+- find(), 246
+- getline(), 245
+- resize(), 246
+- size, 246
+- T
+- tell(), 781
+- tellp(), 781
+- 模板类 (Template classes), 745
+- 成员 members, 756
+- 默认参数 (default parameter), 754
+- 默认参数值 (default parameter values), 755
+- 示例 (example), 750
+- 实例化 (instantiation), 748
+- 递归 (recursive), 756
+- 静态成员 (static members), 755
+- 不同类型的模板参数 (template parameters with different types), 752
+- 非类型参数 (use of non-type parameters), 753
+- 模板类与友元函数 (Template classes and friend functions), 758
+- 友元函数 (bound friend functions), 759
+- 非模板类型函数 (non-template type functions), 760
+- 模板函数 (Template functions), 488
+- 默认参数值 (default parameter values), 496
+- 显式实例化 (explicit instantiation), 496
+- 显式规格 (explicit specification), 498
+- 隐式实例化 (implicit instantiation), 490
+- 载载模板 (overload template), 497
+- 不同类型的参数 (parameters with different types), 493
+- 类型参数集 (set of type parameters), 495
+- 非类型参数集 (use of non-type parameters), 495
+- 类型变量 (variable of types), 500
+- terminate(), 736
+- 三元运算符 (Ternary operator), 85
+- this, 532
+- 字符串 (Strings), 227
+- 指针 (and pointers), 232
+- 二维数组 (two-dimensional arrays), 258
+- C 风格 (C-style), 227
+- C 风格函数 (C-style functions), 238
+- 字面量 (literals), 227
+- 库与指针 (libraries and pointers), 231
+- 输出 (output), 228
+- 读取 (read), 234
+- 原始类型 (raw-type), 229
+- string 类 (string class), 244
+- strlen(), 238
+- strncmp(), 242
+- strcpy(), 239
+- 结构绑定 (Structure bindings), 618
+- 成员 (access members), 369
+- 类 (and classes), 516
+- 数组的 (array of), 378
+- 位域 (bit-fields), 375
+- 不完整声明 (incomplete declaration), 374
+- 成员初始化 (initialization of structure members), 369
+- 成员 (members), 365
+- 结构间操作 (operations between structures), 371
+- 结构指针 (pointer to structure), 377
+- 结构成员指针 (pointer to structure member), 370
+- thread_local, 192
+- throw, 718
+- time(), 101
+- 尾返回类型 (trailing return type), 267
+- 编译单元 (Translation unit), 272
+- 图序列 (Trigraph sequence), 218
+- true, 13
+- 二维数组 (Two dimensional arrays), 152
+- 访问 (access), 153
+- 指针 (and pointers), 199
+- 声明 (declaration), 152
+- 类型别名 (Type Alias), 268
+- 类型转换 (Type cast), 832
+- 类型大小 (Type sizes), 133
+- type_def, 268
+- typeid, 821
+- typeinfo, 820
+- typename, 489
+- 一元运算符 (Unary operators), 645
+- 未定义行为 (Undefined behaviour), 110
+
+# 索引 891
+
+- 下溢错误 (underflow_error), 735
+- unique_ptr<>, 826
+- 联合体 (Unions), 393
+- 成员访问 (access to union members), 394
+- 类 (and classes), 516
+- 声明 (declaration), 393
+- 标志 (flag), 34
+- 操纵符 (manipulator), 36
+- 无命名空间 (Unnamed namespace), 814
+- unordered_map, 850
+- unordered_multimap, 850
+- unordered_set, 850
+- 取消 (unset), 34, 37
+- 无符号变量 (Unsigned variables), 13
+- 标志 (flag), 34
+- 操纵符 (manipulator), 36
+- 存储类型 (storage classes), 288
+- 类型转换 (type casts), 23, 822
+- 类型 (types), 12
+- 未赋值 (unassigned), 13
+- volatile, 833
+- 变变模板 (Variadic templates), 500
+- vector<, 188
+- at(), 190
+- begin(), 140
+- capacity(), 140
+- end(), 140
+- erase(), 140
+- insert(), 140
+- 迭代器 (iterator), 140
+- push_back(), 140
+- size(), 140
+- swap(), 141
+- 向量向量 (Vector of vector), 156
+- 虚与非虚基类 (Virtual and non-virtual base classes), 706
+- 虚基类 (Virtual base classes), 703
+- 虚析构函数 (Virtual destructor), 668
+- 虚函数 (Virtual functions), 667
+- 访问修饰符 (and access specifiers), 667
+- 动态多态 (dynamic polymorphism), 659
+- 默认参数 (and predefined arguments), 667
+- 所有构造函数与析构函数 (all of constructors and destructors), 669
+- 声明 (declaration), 658
+- final, 648, 663
+- 函数表 (function tables (vt)), 660
+- 纯虚函数 (pure virtual functions), 689
+- V
+- va_start(), 327
+- va_arg(), 327
+- va_end(), 327
+- va_list(), 327
+- 赋值 (Value assignment), 17
+- 变量 (Variables), 11
+- 地址 (address), 170
+- 算术转换 (arithmetic conversions), 21
+- 赋值 (assignment), 17
+- 原子性 (atomic), 16, 289
+- C 风格字符串 (C-style strings), 227
+- 常量 (constant), 24
+- 声明 (declaration), 15
+- 定义 (definition), 17, 294
+- 举枚举 (enumeration), 57
+- 外部 (extern), 294
+- 浮点数 (floating_point), 14
+- 全局 (global), 290
+- 初始值 (initial value), 16
+- 整数 (integers), 13
+- 局部 (local), 288
+- 命名 (naming), 11
+- 输出 (output), 31
+- 寄存器 (register), 288, 290
+- 作用域 (scope), 288
+- 大小 (size), 13
+- 静态 (static), 295
+- 重写 (override), 661
+- 空指针 (void pointer), 177
+- 返回类型 (return type), 266
+- volatile, 833
+- W
+- wchar_t, 13
+- 虚弱指针 (weak_ptr), 832
+- what(), 734
+- while, 117
+- 空白字符 (White characters), 640
+- width(), 38
+- write(), 794
+- ws, 36
+- X
+- xor, 60
+- xor, 62
+- xor_eq, 62
+

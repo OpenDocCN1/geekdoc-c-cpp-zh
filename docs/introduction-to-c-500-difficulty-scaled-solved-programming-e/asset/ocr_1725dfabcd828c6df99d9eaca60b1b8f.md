@@ -1,0 +1,14 @@
+# # Introduction to Standard Template Library
+26
+
+In this chapter we'll make a brief introduction to Standard Template Library (STL) and its most important features. The STL is part of the C++ standard library; it was designed by Alex Stepanov and contains a large collection of standard algorithms, iterators, containers, and function objects. All these have been designed in a uniform way based on the principles of generic programming. The classes and algorithms it provides can be used in a wide range of applications and saves us from a lot of work. However, a full description of STL would require a separate book. The next challenge for you is to find a book that focuses on STL and read about it. It is very useful to know the tools it offers; it will make your work simpler, safer, and more flexible. The goal of this chapter is to give you an idea about its features and design philosophy. We'll briefly discuss the most important STL components: algorithms, iterators, and containers.
+
+# # ALGORITHMS
+
+STL provides a great number of algorithms that can be applied to containers. Most of them are declared in the `<algorithm>` file. The design philosophy is to provide a generic way to operate on the data stored in any container, irrespective of how they are stored or what type of the container. For that reason, the algorithms have been implemented as function templates in order to operate in a simple, elegant, and generic way, which does not depend on the container to be applied. For example, the `find()` function can be used to find a value in a `vector` or `set` container or find a value in a `vector` that contains string elements.
+
+The STL approach is that these functions are not defined as members of the containers, but externally. That is, instead of `find()` for each container, a single non-member `find()` is defined which can be used by all containers. As we'll see later, important that, STL uses iterators to traverse the container. This practice does not increase the complexity of code, and the repetition of similar code is avoided. However, there are cases where the STL defines a function in a container that particular container may be more efficient than the generic function. In general, whenever a container provides a member function that is functionally equivalent to a generic function, it'd be better to use the function.
+
+When we discuss about iterators, which are generalizations of pointers, we will see that the STL functions, besides the containers, can also be applied to non-STL containers, such as array arrays. In general, the first two arguments of most functions are iterators that indicate the range of the elements which will be applied. Let's look briefly at some of them.
+
+DOI: 10.1201/9781003230076-26 835
