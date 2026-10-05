@@ -1,0 +1,23 @@
+# Sec. 9.4 Hashing
+
+Note that in examples 2 and 3, either high- or low-order bits of the key are poorly distributed.
+
+When designing hash functions, we are generally faced with one of two situations.
+
++   1. We know nothing about the distribution of the incoming keys. In this case, we wish to select a hash function that evenly distributes the key range across the hash table, while avoiding obvious opportunities for clustering as hash functions that are sensitive to the high- or low-order bits of the key value.
+
++   2. We know something about the distribution of the incoming keys. In this case, we should use a distribution-dependent hash function that assigns clusters of related keys to the same hash table slot. For example, if hashing English words, we should *not* hash on the value of the first character because this is likely to be unevenly distributed.
+
+Below are several examples of hash functions that illustrate these points.
+
+**Example 5** Consider the hash function used to hash integers to a table of sixteen slots:
+
+```
+int h(int x) {
+  return x % 16;
+}
+```
+
+The value returned by this hash function depends solely on the least significant bits of the key. Because these bits are likely to be poorly distributed (an example, a high percentage of the keys might be even numbers, which means that the low bit is zero), the result will also be poorly distributed. This example shows that the size of the table $M$ can have a big effect on the performance of a hash system because this is typically used as the modulus to ensure that the hash function produces a number in the range $0$ to $M-1$.
+
+**Example 9.6** A good hash function for numerical values comes from the mid-square method. The mid-square method squares the key value, and then takes the $r$ bits of the result, giving a value in the range $0$ to $2^r-1$. This works well for most or all of the key value contribute to the result. For example, consider whose whose keys are 4-digit numbers in base 10. The goal is to hash these keys to a table of size 100 (i.e., a range of $0$ to $99$). This range is equivalent to two digits in base 10. That is, $r=2$. If the input is the number 4567, squaring yields an 8-digit number, $20857489$. The middle two digits of this result are 57. All digits

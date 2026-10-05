@@ -1,0 +1,1 @@
+Here is an implementation for the recursive Towers of Hanoi algorithm. Function **move(start, goal)** takes the top ring from Pole **start** and moves it to Pole **goal**. If **move** were to print the values of its parameters, the result of calling **TOH** would be a list of ring-moving instructions that solves the problem.

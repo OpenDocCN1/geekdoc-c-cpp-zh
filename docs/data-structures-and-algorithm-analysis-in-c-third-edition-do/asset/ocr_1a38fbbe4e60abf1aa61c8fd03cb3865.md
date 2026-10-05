@@ -1,0 +1,15 @@
+112
+
+Chap. 4 Lists, Stacks, and Queues
+
+The freelist variable declaration uses the keyword static. This creates a single variable shared among all instances of the Link nodes. We want only a single freelist for all Link nodes of a given type. A program might create multiple lists. If they are all of the same type (that is, their elements are the same), then they can and share the same freelist. This will happen with the implementation of Figure 4.11. If lists are created that have different element types, because this code is implemented with a template, the need for different list implementations will be discovered by the compiler at compile time. Separate versions of the list class will be generated for each element type. Thus, each element type will get its own copy of the Link class and each distinct implementation will generate a separate freelist.
+
+# 4.1.3 Comparison of List Implementations
+
+Now that we have seen two different implementations for lists, it is natural to ask which is better. In particular, if you must implement a list for some task, which implementation should you choose?
+
+Array-based lists have the disadvantage that their size is predetermined before the array is allocated. Array-based lists cannot grow beyond their determined size. Whenever the list contains only a few elements, a substantial amount of space might be tied up in a large array. Linked lists have the advantage that they only need space for the objects on the list. There is no limit to the number of elements on a list, as long as there is free-store memory available. The amount of space required by a linked list is $\Theta(n)$, while the space required by the array-based list implementation is $f(n)$, but can be better.
+
+Array-based lists have the disadvantage that an extra pointer is wasted for every list node. Linked lists require that if the element size is small, then the overhead for lists can be a significant fraction of the total storage. Whenever the array-based list is completely filled, there is no storage overhead. The array-based list will then be more space efficient, by a constant factor, than the linked implementation.
+
+A simple formula can be used to determine whether the array-based list or linked list implementation will be more space efficient in a particular situation. Let $n$ the number of elements currently in the list, $P$ the size of a pointer in storage, $E$ the size of a data element in storage units (this could be, from one for a Boolean variable up to thousands of bytes or more for complex records), and $D$ the maximum number of elements that can be stored in the list. The amount of space required for the array-based list is $DE$, regardless of the number of elements actually stored in the list at any given time. The amount of space required for the linked list is $n(P + E)$. The smaller of these expressions for a given value $n$ determines the more space-efficient implementation for $n$ elements. In general, the linked implementation requires less space

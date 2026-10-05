@@ -1,0 +1,15 @@
+Sec. 4.1 Lists
+
+115
+
+approach requires that the user do or her own type checking, either to enforce homogeneity or to differentiate between the various object types.
+
+Besides C++ templates, there are other techniques that implementors of a list class can use to ensure that the element for a given list remains fixed, while permitting different lists to store different element types. One approach is to store an object of the appropriate type in the header node of the list (perhaps an object of the appropriate type is supplied as a parameter to the list constructor), and then check that all operations on it use the same element type.
+
+The third issue that users of the list implementations must face is primarily of concern when programming in languages that do not support automatic garbage collection. Then is how to deal with the memory of the objects stored on the list when the list is deleted or the clear method is called. The clear method are problematic in that there is a potential that they will be misused, thus causing a memory leak. The type of the element stored whether there is a potential for trouble here. If the elements are of a simple type such as a user-defined class, then their destructor will be called. If the elements are pointers to objects? Then deleting listArray in the array-based implementation, might remove only the reference to an object, leaving its memory space inaccessible. Unfortunately, there is no way for the list implementation to know whether a given object is pointed to in another part of the program or not. Thus, the user of the list must be responsible for deleting these objects when that is appropriate.
+
+# 4.1.5 Doubly Linked Lists
+
+The singly linked list presented in Section 4.1.2 allows for direct access from a list only to the next node in the list. A doubly linked list allows convenient access from list to the next node and also to the preceding node on the list. The doubly linked list accomplishes this in the obvious way by storing two pointers: one to the node following it (as in the singly linked list), and a second pointer to the node preceding it. The most common reason to use a doubly linked list is because it is easier to implement than a singly linked list. While the code for the doubly linked implementation is a little longer than for the singly linked version, it tends to be a bit more “obvious” in its intention, and so easier to implement and debug. Figure 4.12 illustrates the doubly linked list concept. Whether a list implementation is doubly or singly linked should be hidden from the List class user.
+
+Like our singly linked list, the doubly linked list implementation makes use of a header node. We also add a tail node to the end of the list. The tailer is similar to the header, in that it is a node that contains no value, and always exists. When the doubly linked list is initialized, the header and tail nodes

@@ -1,0 +1,11 @@
+![](bbox=[0.365, 0.19, 0.63, 0.32])
+
+**Figure 8.9** The snowlow analogy showing the action during one revolution of the snowlow. A circular track is laid out for purposes of illustration, and is shown in cross section. At any time *T*, the most snow is directly in front of the snowlow. As the plow moves around the track, the same amount of snow is always in front of the plow. As the plow moves forward, less is that of snow that was in the track at time *T*; more is snow that has fallen.
+
+the latest key value becomes greater and so new key values coming from the input file are more likely to be too small (i.e., "after the plow"); such records to the bottom of the array. The total length of the run is expected to be twice the size of the array. Of course, assumes that incoming key values are evenly distributed within the range (in terms of the plow analogy, we assume that snow falls throughout the track). Sorted and reversed sorted inputs do not meet this expectation and so change the length of the run.
+
+# 8.5.3 Multiway Merging
+
+The second stage of a typical external sorting algorithm merges the runs created by the first stage. Assume that we have *R* runs to merge. If a simple two-way merge is used, then *R* runs (regardless of their sizes) will log *R* passes through the file. While *R* should much less than the total number of records (because the initial runs each contain many records), we would like to reduce still the number of passes required to merge the runs. Note that two-way merging does not make good use of available memory. Because merging is a sequential process over two runs, only one block of records per run need be in memory at a time. Keeping more than one block of a run in memory at any time will not reduce the disk I/O required by the merge (if several blocks are read from a file once, at least they take advantage of sequential access). Thus, most of the space used by the heap for replacement selection (typically many blocks in length) is not being used by the merge process.
+
+We can make better use of this space and at the same time greatly reduce the number of passes needed to merge the runs if we merge several runs at a time. Multiway merging is similar to two-way merging. If we have *B* runs to merge, with a block from each run available in memory, then the *B*-way merge algorithm

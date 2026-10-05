@@ -1,0 +1,33 @@
+5.15 (a) Show the BST that results from inserting the values 15, 20, 25, 18, 16, 5, and 7 (in order).
+
+(b) Show the enumerations for the tree of (a) that result from doing a preorder traversal, an inorder traversal, and a postorder traversal.
+
+5.16 Draw the BST that results from adding the value 5 to the BST shown in Figure 5.13(a).
+
+5.17 Draw the BST that results from deleting the value 7 from the BST of Figure 5.13(b).
+
+5.18 Write a function that prints out the nodes for a BST in sorted order from highest to lowest.
+
+5.19 Write a recursive function named smallcount that, giving the pointer to the root of the BST and a key $K$, returns the number of nodes having key less than or equal to $K$. Function smallcount should visit as few nodes in the BST as possible.
+
+5.20 Write a recursive function named printRange that, giving the pointer to the root of a BST, a low value, and a high value, prints in sorted order records whose key values fall between the two given keys. Function printRange should visit as few nodes in the BST as possible.
+
+5.21 Write a recursive function checkBST that, giving the pointer to the root of a binary tree, will return true if the tree is a BST, and false if it is not.
+
+5.22 Describe a simple modification to the BST that will allow it to support finding the K smallest value in $\Theta(\log n)$ average case time. Then write a pseudo-code function for finding the K smallest in your modified BST.
+
+5.23 What are the minimum and maximum number of elements in a heap of height $h$?
+
+5.24 Where in a max-heap the smallest element reside?
+
+5.25 Show the max-heap that results from running buildHeap on the following values stored in an array:
+
+10 5 12 3 2 1 8 7 9 4
+
+5.26 (a) Show the heap that results from deleting the maximum value from the max-heap of Figure 5.20b.
+
+(b) Show the heap that results from deleting the element with value 5 from the max-heap of Figure 5.20b.
+
+5.27 Revise the definition of Figure 5.19 to implement a min-heap. The member function removemax should be replaced by a new function called removemin.
+
+5.28 Build the Huffman coding tree and determine the codes for the following set of letters and weights:

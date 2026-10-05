@@ -1,0 +1,15 @@
+16
+
+Chap. 1 Data Structures and Algorithms
+
+members of a collection so that completely different activities can be substituted within a generic method that accesses all of the collection members.
+
+# 1.4 Problems, Algorithms, and Programs
+
+Programmers commonly deal with problems, algorithms, and computer programs. These are three distinct concepts.
+
+**Problems:** As your intuition would suggest, a **problem** is a task to be performed. It is best thought of in terms of inputs and matching outputs. A problem definition should not include any constraints on *how* the problem is to be solved. The solution method should be developed only after the problem is precisely defined and thoroughly understood. However, a problem definition should include constraints on the resources that may be consumed by any acceptable solution. For any problem to be solved by a computer, there are always such constraints, whether stated or implied. For example, any computer program may use only the main memory and disk space available, and it must run in a “reasonable” amount of time.
+
+Problems can be viewed as functions in the mathematical sense. A **function** is a matching between inputs (the **domain**) and outputs (the **range**). An input to a function might be a single value or a collection of information. The values making up an input are called **parameters** of the function. A specific selection of values for the parameters is called an **instance** of the problem. For example, the input to a sorting function might be an array of integers. An array of integers, with a given size and specific values for each position in the array, would be an instance of the sorting problem. Different instances might generate the same output. Any problem instance must always result in the same output every time the function is invoked using that particular input.
+
+This concept of all problems behaving like mathematical functions might not match your intuition for the behavior of computer programs. You might know of programs which can give you the same input value on two separate occasions, and two different outputs will result. For example, if you type “**date**” to a UNIX command prompt, you will get the current date. Naturally the date will be on different days, even though the same command is given. However, there is obviously more to the input for the date program than the command that you type to run. The date program computes a function. In other words, on any particular day there can only be a single answer returned by a properly running date program. For all computer programs, the output is completely determined by the program’s set of inputs. Even a “random number generator” is completely determined by its inputs (although some random number generating systems appear to get around this by accepting a random input from a physical process beyond the user’s control). The relationship between programs and functions is explored further in Section 17.3.

@@ -1,0 +1,9 @@
+[Wel88] Dominic Welsh, Codes and Cryptography. Oxford University Press, Oxford, 1988.
+
+[Win94] Patrick Henry Winston. On to C++. Addison-Wesley, Reading, MA, 1994.
+
+[WL99] Arthur Whimby and Jack Lochhead. Problem Solving & Comprehension. Lawrence Erbaum Associates, Mahwah, NJ, sixth edition, 1999.
+
+[WMB99] L.H. Witten, A. Moffat, and T.C. Bell. Managing Gigabytes. Morgan Kaufmann, second edition, 1999.
+
+[Zei07] Paul Zeitz. The Art and Craft of Problem Solving. John Wiley & Sons, New York, NY, second edition, 2007.

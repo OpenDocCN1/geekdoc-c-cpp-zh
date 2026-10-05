@@ -1,0 +1,13 @@
+448
+
+**Example 13.4** Consider a search for value 89 in the splay tree of Figure 13.10(a). The splay tree's search operation is identical to searching in a BST. However, once the value has been found, it is played to the root. Three rotations are required in this example. The first is a zigzag rotation, whose result is shown in Figure 13.10(b). The second is a zigzag rotation, whose result is shown in Figure 13.10(c). The final step is a single rotation resulting in the tree of Figure 13.10(d). Notice that the splaying process has made the tree shallower.
+
+# 13.3 Spatial Data Structures
+
+All of the search discussed so far — BSTs, AVL trees, splay trees, 2-trees, B-trees, and trees — are designed for searching on a one-dimensional key. A typical example is integer key, whose one-dimensional range can be visualized as a number line. These various tree structures can be viewed as dividing this one-dimensional number into pieces.
+
+Some databases require support for multiple keys. In other words, records can be searched for any one of several key fields, such as name or ID number. Typically, each key has its own one-dimensional index, and any given search query searches on one of these independent indices as appropriate.
+
+A multidimensional search key presents a rather different concept. Imagine we have a database of city records, where each city has a name and an xy-coordinate. A BST or splay tree provides good performance for searching on city name, which is a one-dimensional key. Separate BSTs used to index it would allow us to insert and delete cities, and locate them by name or by coordinate. However, search on one of the coordinates is not a natural way to search in a two-dimensional space. Another option is to combine the xycoordinates into a single key, by concatenating the two coordinates, and index by the resulting key in a BST. That would allow search by coordinate, but not allow efficient for two-dimensional range queries as searching for all cities within a given distance of a specified point. The problem is that the BST only works well for one-dimensional keys, while a coordinate is a two-dimensional key where neither dimension is more important than the other.
+
+Multidimensional range queries are the defining feature of a spatial application. Because a coordinate gives a position in space, it is called a spatial attribute. To implement spatial applications efficiently requires the use of spatial data structures. Spatial data structures store objects organized by position and are an important class of data structures used in geographic information systems, computer graphics, robotics, and many other fields.
