@@ -1,0 +1,225 @@
+
+Unity 游戏制作教程
+
+## 第 19 章：制作塔楼
+
+![](img/fd5c2ca20ea33da76d2b61297cc57f6c_552_0.png)
+
+选择 `BtnUpgradeTower`，将 `TowerInfoWindow` 拖入 `On Click ()` 的 Object 字段，并在方法下拉菜单中选择 `TowerInfoWindow ► UpgradeTower`。
+
+这是用于塔楼信息窗口（Tower Info Window）的。现在从 `PrefabsTower` 文件夹将一个 `StoneTower` 预制体拖入场景。选择 `StoneTower` 作为 `Pointer Click` 事件的 Object，并在方法下拉菜单中选择 `StoneTower,ShowTowerInfo`。点击 **Apply** 按钮保存预制体，然后从层级面板（Hierarchy）中删除 `Tower`。
+
+`UIManager` 仍然需要塔楼信息窗口的引用才能显示它。选择 `UIManager`，将 `TowerInfoWindow` 拖入它的 `Tower info` 字段。
+
+![](img/fd5c2ca20ea33da76d2b61297cc57f6c_552_1.png)
+
+保存场景并按下 **Play** 按钮测试新更改。购买一个塔楼，尝试点击塔楼并点击塔楼信息窗口中的 **Upgrade** 按钮来升级。
+
+## 胜利与失败窗口
+
+这些是玩家赢得或输掉游戏时出现的窗口：
+
+![](img/fd5c2ca20ea33da76d2b61297cc57f6c_552_2.png)
+
+为了让这些窗口出现，需要在 `GameManager` 和 `UIManager` 中都进行一些调整。打开 `UIManager` 脚本，在 `public GameObject towerInfoWindow;` 下方添加这些行：
+
+```cs
+public GameObject winGameWindow;
+public GameObject loseGameWindow;
+public GameObject blackBackground;
+```
+
+这些变量将持有窗口和背景的引用。
+
+现在，在 `ShowTowerInfoWindow()` 下方添加这些方法：
+
+```cs
+public void ShowWinScreen()
+{
+  blackBackground.SetActive(true);
+  winGameWindow.SetActive(true);
+}
+
+public void ShowLoseScreen()
+{
+  blackBackground.SetActive(true);
+  loseGameWindow.SetActive(true);
+}
+```
+
+这些每个方法都会打开相应的窗口并启用黑色背景，以防止玩家在游戏结束后点击塔楼和塔楼槽。
+
+保存此脚本并打开 `GameManager` 脚本（它位于 `Scripts > Game` 文件夹中）。在 `OnGameWin()` 的底部添加此行：
+
+```cs
+UIManager.Instance.ShowWinScreen();
+```
+
+同样在 `OnGameLose()` 方法的底部添加此行：
+
+```cs
+UIManager.Instance.ShowLoseScreen();
+```
+
+这些代码将确保在玩家胜利或失败时窗口会显示。保存此脚本并返回 Unity。选择 `UI Manager`，将 `Screen Canvas -> WinWindow` 和 `LoseWindow` 分别拖入 `Win Game Window` 和 `Lose Game Window` 字段。最后，将 `BlackBackground` 游戏对象拖入 `Black Background` 字段。
+
+## Unity 游戏制作教程
+
+## 第 19 章：制作塔楼
+
+| Screen Canvas | UI Manager (Script) |
+|---|---|
+| > TopBar | UIManager |
+| > AddTowerWindow | AddTowerWindow |
+| > TowerInfoWindow | TowerInfoWindow |
+| Black-background | Win Game Window None (Game Object)|
+| > WinWindow | Lose Game Window None (Game Object)|
+| > LoseWindow | Black-background (Game Object)|
+
+现在，在胜利和失败窗口上都添加事件。选择 `WinWindow` 的子物体 `BtnNextLevel`，将 `GameManager` 拖入 `On Click ()` Object 字段。。在下拉菜单中选择 `GameManager > Retrylevel`。
+
+现在选择 `BtnQuit`，将 `GameManager` 拖入它的 Object 字段，并在方法下拉菜单中选择 `GameManager > QuitToFullScreen`。
+
+最后，对 `LoseWindow` 的子物体 `BtnRetry` 和 `BtnQuit` 执行相同的操作。
+
+保存课程并按下 **Play** 按钮测试游戏。击杀敌人或输掉游戏。你应该看到胜利或失败窗口！
+
+## 敌人血条
+
+现在，无法知道敌人还剩多少血量。可以通过给敌人添加血条来解决这个问题：
+
+![](img/fd5c2ca20ea33da76d2b61297cc57f6c_554_0.png)
+
+`Health Bar` 预制体位于 `Prefabs > UI` 文件夹。为了让它工作，`UIManager` 和 `EnemyManager` 的脚本需要一些添加。打开 `UIManager` 脚本，在 `public Text txtEscapedEnemies;` 下方添加这些变量：
+
+```cs
+public Transform enemyHealthBars;
+public GameObject enemyHealthPrefab;
+```
+
+变量 `enemyHealthBars` 持有物体 `EnemyHealthBars` 的引用，`enemyHealthPrefab` 存储 `Health Bar` 预制体的引用，以便生成新的血条。
+
+现在，在 `ShowLoseScreen()` 下方添加此方法来实际制作血条：
+
+```cs
+//1
+public void CreateHealthBarForEnemy(Enemy enemy)
+{
+//2
+GameObject healthBar = Instantiate(enemyHealthPrefab);
+//3
+healthBar.transform.SetParent(enemyHealthBars, false);
+//4
+healthBar.GetComponent<EnemyHealthBar>().enemy = enemy;
+}
+```
+
+回顾上述方法：
+
+- 1. `CreateHealthBarForEnemy` 接收需要血条的敌人作为参数。
+- 2. 创建一个新的血条。
+- 3. 将新血条父子化到 `EnemyHealthBars`。
+- 4. 将敌人引用传递给血条。
+
+保存此脚本并打开位于 `Scripts > Game Enemy` 文件夹下的 `EnemyManager` 脚本。在 `RegisterEnemy()` 方法的底部添加此行：`UIManager.Instance.CreateHealthBarForEnemy(enemy);`
+
+这将为每个敌人创建一个新的血条。保存此脚本并返回 Unity。选择 `UIManager`，将 `Screen Canvas -> EnemyBars` 拖入 `Enemy Bars` 字段。然后将 `Prefab -> UI -> Health Bar` 预制体拖入 `Enemy Bars` 字段。![](img/fd5c2ca20ea33da76d2b61297cc57f6c_555_0)
+
+保存场景并运行游戏。你会注意到敌人上方出现了小血条！
+
+## 中心窗口
+
+中心窗口用于用于通知玩家新波敌人即将到来：![](img/fd5c2ca20ea33da76d2b61297cc57f6c_556_0)
+
+打开 `UIManager` 脚本，在 `public GameObject blackBackground;` 下方添加此变量：
+
+```cs
+public GameObject centerWindow;
+```
+
+该变量持有中心窗口的引用。现在在 `CreateHealthBarForEnemy()` 方法下方添加此协程：
+
+```cs
+//1
+public void ShowCenterWindow(string text)
+{
+  centerWindow.transform.Find("TxtWave").GetComponent<Text>().text = text;
+  StartCoroutine(EnableDisableCenterWindow());
+}
+//2
+private IEnumerator EnableDisableCenterWindow()
+{
+  for (int i = 0; i < 3; i++)
+  {
+    yield return new WaitForSeconds(0.4f);
+    centerWindow.SetActive(true);
+  }
+  yield return new WaitForSeconds(0.4f);
+  centerWindow.SetActive(false);
+}
+
+```每个部分的作用：
+
+- 1. 设置中心窗口的文本并启动 `EnableDisableCenterWindow()`。
+- 2. 每隔 0.4 秒启用中心窗口 3 次，以引起玩家注意。
+
+保存此脚本并打开位于 `Scripts > Game` 的 `WaveManager` 脚本。在 `Wave()` 方法中 `break;` 上方添加此行：
+
+```cs
+UIManager.Instance.ShowWindow("Wave " + GameManager.Instance.waveNumber);
+```
+
+由于 `GameManager` 负责制作波次，它是通知 `UIManager` 显示中心窗口的最佳位置。保存此脚本并返回 Unity。选择 `UIManager`，将 `CenterWindow` 拖入其 `Center Window` 字段。
+
+| CenterWindow | Tower Info | TurningWindow |
+|---|---|---|
+| TxtWave | Win Window | LoseWindow |
+| TowerSlots | Lose Game Window | LoseWindow |
+| | Black Background | Black Background |
+| | Center Window | None (Game Object)|
+
+全部搞定！保存场景并按下按钮测试。在波开始时，中心窗口应该会闪烁三次。
+
+## 伤害画布
+
+最后一次打开 `UIManager` 脚本以显示伤害画布（Damage Canvas）。它有一个红色边框来表示敌人逃脱了。
+
+```cs
+public GameObject damageCanvas;
+```
+
+这是对伤害画布的引用。现在在其他方法下方添加此方法和协程组合：
+
+```cs
+//1
+public void ShowDamage()
+{
+    StartCoroutine(DoDamageAnimation());
+}
+//2
+private IEnumerator DoDamageAnimation()
+{
+    for (int i = 0; i < 3; i++)
+    {
+        yield return new WaitForSeconds(0.1f);
+        damageCanvas.SetActive(true);
+    }
+    yield return new WaitForSeconds(0.1f);
+    damageCanvas.SetActive(false);
+}
+```
+
+保存此脚本并切换到 `GameManager` 脚本。在 `OnEnemyEscape()` 内部，`escapedEnemies++` 下方添加此行：
+
+```cs
+UIManager.Instance.ShowDamage();
+```
+
+保存此脚本并返回 Unity 进行最后的链接。选择 `UIManager`，将 `Screen Canvas DamageCanvas` 拖入 `DamageCanvas` 字段。
+
+| Screen Canvas | Black Background | Black Background |
+| --- | --- | --- |
+| > DamageCanvas | Center Window | Center Window |
+| > TopBar | DamageCanvas | None (Game Object)|
+
+现在保存场景并运行测试效果。敌人通过出口时你会看到红色边框在闪烁！

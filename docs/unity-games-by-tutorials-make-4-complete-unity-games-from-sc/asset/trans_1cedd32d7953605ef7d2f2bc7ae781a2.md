@@ -1,0 +1,103 @@
+
+
+# 设置 2D 物理层
+
+要开始操作，你需要设置层碰撞矩阵。你可以在第 4 章“物理学”中学习更多关于该矩阵的知识。
+
+# 配置层碰撞矩阵
+
+点击 **Edit > Project Settings > Tags and Layers** 打开 **Tags and Layers** 检查器。
+
+Unity 在 **Layers** 展开列表下提供了一系列 **User Layers**（用户层），除了内置层外，你可以使用它们来定义自定义碰撞层。
+
+使用 **Layer 8** 和 **User Layer 9** 创建两个名为 **Player**（玩家）和 **Hazards**（危险）的新层。
+
+玩家将被放置在 **Player** 层，而锯片将使用 **Hazards** 层。
+
+点击 **Edit > Project Settings > Physics 2D** 打开 **Physics2DSettings Inspector**。在底部你会看到 **Layer Collision Matrix**（层碰撞矩阵）。如果尚未显示，请将其展开。
+
+你会发现 Unity 已经将你新定义的层 **(Player and Hazards)** 添加到矩阵中。
+
+取消勾选 **Hazards** 与 **Hazards** 相交处的框框，并确保 **Player** 与 **Hazards** 相交处的框框被勾选。同时确保 **Default** 与 **Hazards** 相交处的框框也是未勾选状态。
+
+![](img/fd5c2ca20ea33da76d2b61297cc57f6c_356_0.png)
+
+这些更改的原因是：
+
+- **移除 Hazards 与 Hazards 的相交**：这可以防止靠得很近（或重叠）的锯片进行碰撞检查，避免它们在物理引擎中相互碰撞，并有助于提高性能。
+- **启用 Player 与 Hazards 的相交**：这确保玩家可以与触摸危险物体进行交互。
+- **移除 Default 与 Hazards 的相交**：你将所有的关卡/平台构建块留在了 Default 层上，因此你不希望危险物体对这些块进行碰撞检查。通常锯片会“嵌入”或放置在平台块后面，因此在这里禁用碰撞也可以节省性能。
+
+在 Game 场景中，选择 SoyBoy 并将 GameObject 层更改为新的 Player 物理层。点击 Apply 更新预制体实例。
+
+# 完成 2D 角色控制器
+
+到目前为止，Super Soy Boy 只能向左右移动并面向这些方向。你需要获取控制器的核心部分，以提供完整的平台移动动作。
+
+# 关于 2D 射线检测的说明
+
+2D 射线检测将用于你的角色控制器中，用以判断你何时触碰地面、跳跃、顶住墙等。
+
+2D 射线检测通过 `Physics2D.Raycast()` 完成。该方法返回 `RaycastHit2D` 类型，它引用了射线击中的第一个 `Collider2D` 对象。如果射线没有击中任何物体，则碰撞返回 `null`。
+
+![](img/fd5c2ca20ea33da76d2b61297cc57f6c_357_0.png)
+
+在上面的示例中，射线从 Super Soy Boy 向右侧发射。射线击中了一个 `Collider2D` 对象。在代码中，将返回一个 `RaycastHit2D` 对象，该对象的 `collider` 属性将包含对对象 BoxCollider2D 对象的引用。
+
+# 为跳跃和贴墙滑动编写控制器
+
+你将添加的第一项额外功能是执行基础跳跃的能力。
+
+在代码编辑器中打开 `SoyBoyController.cs`，在脚本顶部、其他现有字段下方添加以下新的 `public` 字段：
+
+```
+public bool isJumping;
+public float jumpSpeed = 8f;
+private float raycastLength = 0.005f;
+private float width;
+private float height;
+```
+
+在 `Awake()` 方法的底部，添加以下代码：
+
+```
+width = GetComponent<Collider2D>().bounds.extents.x + 0.1f;
+height = GetComponent<Collider2D>().bounds.extents.y + 0.2f;
+```
+
+在这里，你获取了 SoyBoy 贴图的宽度和高度。除了这些尺寸外，你还分分别向贴图的宽度和高度增加了 0.1 和 0.2。这提供了一点缓冲区，允许稍后的射线检测保持在贴图外部，而不是贴图边界内部。
+
+记住，此脚本挂载在 SoyBoy 上，因此 `GetComponent` 调用将在 SoyBoy GameObject 上搜索这些组件。
+
+现在你将在允许玩家实际跳跃之前执行两次检查。一个是检查他们当前是否没有处于跳跃状态，另一个检查是确保他们当前正触碰地面。
+
+在 `SoyBoyController.cs` 中添加以下新方法，紧接现有的（空的）`Start()` 之后：
+
+```
+public bool PlayerIsOnGround(
+ // 1
+bool groundCheck1 = Physics2D.Raycast(new Vector2(
+transform.position.x, transform.position.y - height),
+-Vector2.up, raycastLength);
+bool groundCheck2 = Physics2D.Raycast(new Vector2(
+transform.position.x + (width - 0.2f),
+transform.position.y - height),
+-Vector2.up,
+raycastLength);
+bool groundCheck3 = Physics2D.Raycast(new Vector2(
+transform.position.x - (width - 0.2f),
+transform.position.y - height),
+raycastLength);
+ // 2
+if (groundCheck1 || groundCheck2 || groundCheck3)
+{
+return true;
+
+![](img/fd5c2ca20ea33da76d2b61297cc57f6c_358_0.png)
+}
+else
+{
+    return false;
+}
+```
+
