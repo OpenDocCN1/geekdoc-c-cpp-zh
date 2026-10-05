@@ -1,0 +1,1 @@
+An array can have an arbitrary number of dimensions.
