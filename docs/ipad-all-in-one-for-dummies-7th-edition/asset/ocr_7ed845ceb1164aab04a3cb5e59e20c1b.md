@@ -1,0 +1,13 @@
+# 274 Appreciating iPad's Gaming Strengths
+
+These versions of iPad with their Retina displays give you four times as many pixels as earlier iPad models (3.1 million, to be exact). You get 2048 x 1536 resolution, greater color saturation, and a crisp image that rivals many HDTVs.
+Faster processor: The dual-core A8 chip in your iPad Air 2 is a super-fast processor that can run around your iPhone, making it a great device for gaming. The A8 chip is very speedy and drives the Retina display without sacrificing the ten-hour battery life iPads are known for. With iPad Air 2, the A8X chip offers 2.5x faster graphics than other models.
+Built-in accelerometer and three-axis gyroscope: Gamers will find these elements useful to shift around in a more versatile manner as they virtually move through games that involve motion. The built-accelerometer and three-axis gyroscope let you grab your iPad and use it as a steering or wheel game feature, so you really feel like you're in action (With iPad 2, the gyroscope, accelerometer, and compass were added to help apps like Maps pinpoint your location and movements as you scroll around).
+M8 processor: This feature provides the ability to sense your movements. This ability is likely to result in some interesting gaming and exercise apps.
+Playing games in full screen: Rather than playing on a small iPhone screen, you can play most games designed for iPad in full-screen mode on your iPad. Having a full screen brings the gaming experience to a more engaging way than a small screen can ever.
+Dragging elements around the screen: The Multi-Touch iPad screen is responsive and if you're about to be zapped by aliens in a fight-to-death computer game, responsiveness counts.
+The ten-hour battery life of an iPad: This long battery life on every version of iPad means you can suck energy out of it playing into the hours of night.
+Specialized game-playing features: Some games are coming out with features that take advantage of iPad's capabilities. For example, Gameloft has come out with a version of its N.O.V.A. game that includes a feature called multiple-target acquisition, which lets you target bad guys in a single move to blow them out of the water with one shot. The Need for Speed racing games allow you to look in your rearview mirror to see what is coming up behind you, a feature made possible by iPad's large screen, compared to an iPhone.
+Great sound: The built-in stereo speakers in the iPad Air 2 and iPad mini 2 are powerful little things, but if you want more up-close and personal, you can plug in a headphone, some speaker systems, or a microphone using the built-in jack.
+
+![](bbox=[0.143, 0.442, 0.223, 0.513])

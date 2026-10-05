@@ -1,0 +1,605 @@
+
+[content]
+## 502 Getting Helpful Tips
+
+under the command Siri head and edit the question by typing, or you can tap the Microphone key on the onscreen keyboard and dictate the correct information. If a word is underlined in blue, it's a possible error. Tap the word and then tap an alternative that Siri suggests. You can also simply speak to Siri and say something like, "I meant Sri Lanka" or "No, send it to Sally." If even corrections aren't working, you may need to restart your iPad to reset the software.
+
+- **Headsets and earphones:** If you're using iPhone EarPods or a Bluetooth headset to activate Siri, instead of pressing the Home button, press and hold the center button (the little button on the headset starts and stops a call)
+
+- **Using My Friends:** You can download a free app from the App Store called Find My allows you to ask Siri to locate your friends geographically, if they are carrying a device with GPS on and location tracking.
+
+- **Getting help with Siri:** To get help with Siri features, just press and hold the Home button and ask Siri, "What can you do?"
+
+- **Joking around:** If you need a good laugh
+
+## Index
+
+### Symbols and Numerics
+- (period), 473
+- (equal sign), 384
+- (comma), 473
+- 3D view, Maps, 303
+- 3G/4G devices
+- connecting to Internet, 74–75
+- downloading movies and, 175
+- FaceTime calls, and 216
+- networking icons, 42
+- overview, 12–13
+- settings for, 149, 292
+- Siri and 494
+- tethering iPad to phone, 293
+- turn-by-turn navigation, 316–317
+- turn off cellular data, 124
+- 4G LTE networks, 289, 292
+
+### A
+- ABC TV, 178, 198
+- Air Rental app, 325
+- accelerometer and, 274
+- Air Motion Coprocessor and, 8
+- overview, 275
+- accessibility
+- Assistive Touch, 55–57
+- brightness, 46–47
+- caption, 53
+- changing wallpaper, 47–48
+- Guided Access feature, 57–59
+- hearing options, 54–55
+- Home button speed, 57
+- subtitles, 53
+- vision settings, 51–52
+- VoiceOver, setting up, 48–50
+- volume options, 52–53
+- accessories
+- Apple, 15–16
+- gaming, 278
+- third-party, 16–18
+- App Store
+- installing apps, 87–88
+- overview, 70
+- searching, 85–
+- App Switcher, 38–39
+- Apple Digital AV, 11, 16
+- Apple ID, 14
+- App Stores, 14–15
+- Apple TV, 192
+- AppleCare+, 157, 161
+- apps
+- deleting, 91–92
+- iCloud synchronization of, 88
+- stalling, 88
+- in Newsstand, 269–271
+- notification settings, 466–467
+- organizing in folders, 90–91
+- organizing on Home Screens, 88–90
+- resetting, 146
+- searching, 35–37
+- settings for built-in, 150–151
+- updating, 92–93
+- arcade games, 275
+- Ask to Join Networks option, 291
+- Assistive Touch, 55–57
+- AT&T, 13
+- attachments, email, 121
+- audio messages, 229
+- audiobooks
+- previewing in iTunes Store, 173–174
+- searching for, 187
+- Auto-Customization feature, 144
+- Auto-Correction feature, 144
+- Autofill feature, Safari, 112
+- Auto-Lock setting, 142
+- AVI videos, 201
+- battery
+- charging, 23–24, 156–157
+- extending life of, 142, 156–157
+- bands and, 274
+- Bing search, 495, 500
+- Blue Reader, 253
+- Bluetooth
+- Control Center and, 42
+- keyboards, 380
+- bookmarks
+- Blu-ray Ripper, 201
+- board games, 275
+- e-book, 264–265
+- Safari, 103–105
+- accessibility options, 46–47
+- adjusting in iBooks, 257–259
+- setting, 139–140
+- Control Center and, 43
+- Broken Sword - The Magic Mirror, 276
+- builds of Keynote presentations, 403, 406–409
+- travel tools, 322–324
+- car rental tools, 324–325
+- hotel reservation, 325
+- local transit tools, 327
+- travel guides, 328–329
+- using built-in apps, 320–321
+- Badge icon, 466
+- Banner notifications, 466
+- Bigfoot World Atlas, 328
+- barometer sensor, 8
+- backup, iCloud, 164–165
+- calendars
+- alerts, adding, 446–448, 497–498
+- choosing to display, 450
+- events, adding, 443–445
+- events, adding from email, 131–132
+- events, adding from Siri, 445, 497–498
+- events, deleting, 453–454
+- Family Sharing feature, 452–453
+- events, repeating, 445–446, 453–554
+- events, searching, 448–449
+- events, syncing, 450–452
+- hiding all, 450
+- jumping to Today, 443
+- LDAP accounts, 295–296
+- List view, 442
+- Microsoft Exchange accounts, 294–295
+- Month view, 441
+- multiple, 449
+- screen orientation and, 443
+- searching, 448–449
+- syncing, 450–452
+- syncing members, 264–465
+- Today view, 440
+- Week view, 440–441
+- calls, FaceTime
+- accepting, 218
+- business travel, 330
+- Do Not Disturb and, 470
+- ending, 210
+- making, 215–217
+- making using Siri, 216–217, 496
+- muting, 219
+- overview, 71–215
+- recent, 218
+- rejecting, 218
+- switching between cameras, 220
+- capturing video, 213–214
+- digital, 234–235
+- iPad interface, 22
+- overview, 39–41, 64–65
+- switching between, 64
+- switching during FaceTime call, 220
+- taking pictures, 208–210
+- capitalization, 430
+- Caps Lock feature, 33, 127, 145
+- captioning, 53–54
+- car rental tools, 324–325
+- card games, 275
+- cases, 16, 154–155, 278
+- CBS News, 178
+- cells in Numbers app, 379, 388
+- cellular data
+- 4G LTE networks, 289, 292
+- connecting to Internet, 74–75
+- downloading movies and, 175
+- FaceTime calls and, 216
+- networking icons, 428
+- overview, 12–13
+- settings for, 149, 292
+- Siri and 494
+- tethering iPad to, 293
+- turn-by-turn navigation, 316–317
+- turning off, 124
+- character style, 358–360
+- charging, 23–24, 156–157
+- charts, in Numbers, 369–370
+- chat
+- clearing conversation, 231–232
+- group messaging, 232
+- overview, 64
+- sending audio messages, 229
+- sending map of current location, 220–231
+- sending messages using Siri, 501
+- sending photos, 229–230
+- sending text messages, 226–229
+- sending videos, 229–230
+- setting ringtone for contact, 247
+- setting up, 245
+- sharing photos, 244–244
+- sharing contacts, 487
+- sharing files, 421
+- sharing Keynote presentations, 398
+- sharing notes, 435
+- sharing photos, 244
+- supported devices, 41
+- system sounds, 148
+- setting for task reminders, 462–463
+- setting in Clock app, 456–457
+- albums, photo, 237–240–241
+- Alert Style notifications, 466
+- adding, 446–448
+- adding using Siri, 497–498
+- Do Not Disturb and, 470
+- alignment, text, 358, 360–362
+- all-day events, 443
+- Amazon, 253
+- ABC TV, 178, 198
+- Air Rentals app, 325
+- accelerometer and, 274
+- Air Motion Coprocessor and, 8
+- overview, 275
+- accessibility
+- Assistive Touch, 55–57
+- brightness, 46–47
+- changing wallpaper, 47–48
+- Guided Access feature, 57–59
+- hearing options, 54–55
+- Home button speed, 57
+- subtitles, 53
+- vision settings, 51–52
+- VoiceOver, setting up, 48–50
+- volume options, 52–53
+- accessories
+- Apple, 15–16
+- gaming, 278
+- third-party, 16–18
+- App Store
+- installing apps, 87–88
+- overview, 70
+- searching, 85–
+- App Switcher, 38–39
+- Apple Digital AV, 11, 16
+- Apple ID, 14
+- App Stores, 14–15
+- Apple TV, 192
+- AppleCare+, 157, 161
+- apps
+- deleting, 91–92
+- iCloud synchronization of, 88
+- stalling, 88
+- in Newsstand, 269–271
+- notification settings, 466–467
+- organizing in folders, 90–91
+- organizing on Home Screens, 88–90
+- resetting, 146
+- searching, 35–37
+- settings for built-in, 150–151
+- updating, 92–93
+- arcade games, 275
+- Ask to Join Networks option, 291
+- Assistive Touch, 55–57
+- AT&T, 13
+- attachments, email, 121
+- audio messages, 229
+- audiobooks
+- previewing in iTunes Store, 173–174
+- searching for, 187
+- Auto-Customization feature, 144
+- Auto-Correction feature, 144
+- Autofill feature, Safari, 112
+- Auto-Lock setting, 142
+- AVI videos, 201
+- battery
+- charging, 23–24, 156–157
+- extending life of, 142, 156–157
+- bands and, 274
+- Bing search, 495, 500
+- Blue Reader, 253
+- Bluetooth
+- Control Center and, 42
+- keyboards, 380
+- bookmarks
+- Blu-ray Ripper, 201
+- board games, 275
+- e-book, 264–265
+- Safari, 103–105
+- accessibility options, 46–47
+- adjusting in iBooks, 257–259
+- setting, 139–140
+- Control Center and, 43
+- Broken Sword - The Magic Mirror, 276
+- builds of Keynote presentations, 403, 406–409
+- travel tools, 322–324
+- car rental tools, 324–325
+- hotel reservation, 325
+- local transit tools, 327
+- travel guides, 328–329
+- using built-in apps, 320–321
+- Badge icon, 466
+- Banner notifications, 466
+- Bigfoot World Atlas, 328
+- barometer sensor, 8
+- backup, iCloud, 164–165
+- calendars
+- alerts, adding, 446–448, 497–498
+- choosing to display, 450
+- events, adding, 443–445
+- events, adding from email, 131–132
+- events, adding from Siri, 445, 497–498
+- events, deleting, 453–454
+- Family Sharing feature, 452–453
+- events, repeating, 445–446, 453–554
+- events, searching, 448–449
+- events, syncing, 450–452
+- hiding all, 450
+- jumping to Today, 443
+- LDAP accounts, 295–296
+- List view, 442
+- Microsoft Exchange accounts, 294–295
+- Month view, 441
+- multiple, 449
+- screen orientation and, 443
+- searching, 448–449
+- syncing, 450–452
+- syncing members, 264–465
+- Today view, 440
+- Week view, 440–441
+- calls, FaceTime
+- accepting, 218
+- business travel, 330
+- Do Not Disturb and, 470
+- ending, 210
+- making, 215–217
+- making using Siri, 216–217, 496
+- muting, 219
+- overview, 71–215
+- recent, 218
+- rejecting, 218
+- switching between cameras, 220
+- capturing video, 213–214
+- digital, 234–235
+- iPad interface, 22
+- overview, 39–41, 64–65
+- switching between, 64
+- switching during FaceTime call, 220
+- taking pictures, 208–210
+- capitalization, 430
+- Caps Lock feature, 33, 127, 145
+- captioning, 53–54
+- car rental tools, 324–325
+- card games, 275
+- cases, 16, 154–155, 278
+- CBS News, 178
+- cells in Numbers app, 379, 388
+- cellular data
+- 4G LTE networks, 289, 292
+- connecting to Internet, 74–75
+- downloading movies and, 175
+- FaceTime calls and, 216
+- networking icons, 428
+- overview, 12–13
+- settings for, 149, 292
+- Siri and 494
+- tethering iPad to, 293
+- turn-by-turn navigation, 316–317
+- turning off, 124
+- character style, 358–360
+- charging, 23–24, 156–157
+- charts, in Numbers, 369–370
+- chat
+- clearing conversation, 231–232
+- group messaging, 232
+- overview, 64
+- sending audio messages, 229
+- sending map of current location, 220–231
+- sending messages using Siri, 501
+- sending photos, 229–230
+- sending text messages, 226–229
+- sending videos, 229–230
+- setting ringtone for contact, 247
+- setting up, 245
+- sharing photos, 244–244
+- sharing contacts, 487
+- sharing files, 421
+- sharing Keynote presentations, 398
+- sharing notes, 435
+- sharing photos, 244
+- supported devices, 41
+- system sounds, 148
+- setting for task reminders, 462–463
+- setting in Clock app, 456–457
+- albums, photo, 237–240–241
+- Alert Style notifications, 466
+- adding, 446–448
+- adding using Siri, 497–498
+- Do Not Disturb and, 470
+- alignment, text, 358, 360–362
+- all-day events, 443
+- Amazon, 253
+- ABC TV, 178, 198
+- Air Rental app, 325
+- accelerometer and, 274
+- Air Motion Coprocessor and, 8
+- overview, 275
+- accessibility
+- Assistive Touch, 55–57
+- brightness, 46–47
+- changing wallpaper, 47–48
+- Guided Access feature, 57–59
+- hearing options, 54–55
+- Home button speed, 57
+- subtitles, 53
+- vision settings, 51–52
+- VoiceOver, setting up, 48–50
+- volume options, 52–53
+- accessories
+- Apple, 15–16
+- gaming, 278
+- third-party, 16–18
+- App Store
+- installing apps, 87–88
+- overview, 70
+- searching, 85–
+- App Switcher, 38–39
+- Apple Digital AV, 11, 16
+- Apple ID, 14
+- App Stores, 14–15
+- Apple TV, 192
+- AppleCare+, 157, 161
+- apps
+- deleting, 91–92
+- iCloud synchronization of, 88
+- stalling, 88
+- in Newsstand, 269–271
+- notification settings, 466–467
+- organizing in folders, 90–91
+- organizing on Home Screens, 88–90
+- resetting, 146
+- searching, 35–37
+- settings for built-in, 150–151
+- updating, 92–93
+- arcade games, 275
+- Ask to Join Networks option, 291
+- Assistive Touch, 55–57
+- AT&T, 13
+- attachments, email, 121
+- audio messages, 229
+- audiobooks
+- previewing in iTunes Store, 173–174
+- searching for, 187
+- Auto-Customization feature, 144
+- Auto-Correction feature, 144
+- Autofill feature, Safari, 112
+- Auto-Lock setting, 142
+- AVI videos, 201
+- battery
+- charging, 23–24, 156–157
+- extending life of, 142, 156–157
+- bands and, 274
+- Bing search, 495, 500
+- Blue Reader, 253
+- Bluetooth
+- Control Center and, 42
+- keyboards, 380
+- bookmarks
+- Blu-ray Ripper, 201
+- board games, 275
+- e-book, 264–265
+- Safari, 103–105
+- accessibility options, 46–47
+- adjusting in iBooks, 257–259
+- setting, 139–140
+- Control Center and, 43
+- Broken Sword - The Magic Mirror, 276
+- builds of Keynote presentations, 403, 406–409
+- travel tools, 322–324
+- car rental tools, 324–325
+- hotel reservation, 325
+- local transit tools, 327
+- travel guides, 328–329
+- using built-in apps, 320–321
+- Badge icon, 466
+- Banner notifications, 466
+- Bigfoot World Atlas, 328
+- barometer sensor, 8
+- backup, iCloud, 164–165
+- calendars
+- alerts, adding, 446–448, 497–498
+- choosing to display, 450
+- events, adding, 443–445
+- events, adding from email, 131–132
+- events, adding from Siri, 445, 497–498
+- events, deleting, 453–454
+- Family Sharing feature, 452–453
+- events, repeating, 445–446, 453–554
+- events, searching, 448–449
+- events, syncing, 450–452
+- hiding all, 450
+- jumping to Today, 443
+- LDAP accounts, 295–296
+- List view, 442
+- Microsoft Exchange accounts, 294–295
+- Month view, 441
+- multiple, 449
+- screen orientation and, 443
+- searching, 448–449
+- syncing, 450–452
+- syncing members, 264–465
+- Today view, 440
+- Week view, 440–441
+- calls, FaceTime
+- accepting, 218
+- business travel, 330
+- Do Not Disturb and, 470
+- ending, 210
+- making, 215–217
+- making using Siri, 216–217, 496
+- muting, 219
+- overview, 71–215
+- recent, 218
+- rejecting, 218
+- switching between cameras, 220
+- capturing video, 213–214
+- digital, 234–235
+- iPad interface, 22
+- overview, 39–41, 64–65
+- switching between, 64
+- switching during FaceTime call, 220
+- taking pictures, 208–210
+- capitalization, 430
+- Caps Lock feature, 33, 127, 145
+- captioning, 53–54
+- car rental tools, 324–325
+- card games, 275
+- cases, 16, 154–155, 278
+- CBS News, 178
+- cells in Numbers app, 379, 388
+- cellular data
+- 4G LTE networks, 289, 292
+- connecting to Internet, 74–75
+- downloading movies and, 175
+- FaceTime calls and, 216
+- networking icons, 428
+- overview, 12–13
+- settings for, 149, 292
+- Siri and 494
+- tethering iPad to, 293
+- turn-by-turn navigation, 316–317
+- turning off, 124
+- character style, 358–360
+- charging, 23–24, 156–157
+- charts, in Numbers, 369–370
+- chat
+- clearing conversation, 231–232
+- group messaging, 232
+- overview, 64
+- sending audio messages, 229
+- sending map of current location, 220–231
+- sending messages using Siri, 501
+- sending photos, 229–230
+- sending text messages, 226–229
+- sending videos, 229–230
+- setting ringtone for contact, 247
+- setting up, 245
+- sharing photos, 244–244
+- sharing contacts, 487
+- sharing files, 421
+- sharing Keynote presentations, 398
+- sharing notes, 435
+- sharing photos, 244
+- supported devices, 41
+- system sounds, 148
+- setting for task reminders, 462–463
+- setting in Clock app, 456–457
+- albums, photo, 237–240–241
+- Alert Style notifications, 466
+- adding, 446–448
+- adding using Siri, 497–498
+- Do Not Disturb and, 470
+- alignment, text, 358, 360–362
+- all-day events, 443
+- Amazon, 253
+- ABC TV, 178, 198
+- Air Rental app, 325
+- accelerometer and, 274
+- Air Motion Coprocessor and, 8
+- overview, 275
+- accessibility
+- Assistive Touch, 55–57
+- brightness, 46–47
+- changing wallpaper, 47–48
+- Guided Access feature, 57–59
+- hearing options, 54–55
+- Home button speed, 57
+- subtitles, 53
+- vision settings, 51–52
+- VoiceOver, setting up, 48–50
+- volume options, 52–53
+- accessories
+- Apple, 15–16
+- gaming, 278
+- third-party, 16–18

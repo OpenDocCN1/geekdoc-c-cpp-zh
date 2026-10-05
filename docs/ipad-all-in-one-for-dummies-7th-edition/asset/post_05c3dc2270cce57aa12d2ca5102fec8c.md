@@ -1,0 +1,264 @@
+
+## Index 511
+
+- instant messaging (IM), 221. See also
+- iTunes Store
+  - alternatives to, 178
+  - connecting to, 74–75
+  - music in, 185
+  - opening contact website, 485
+  - overview, 170–172
+  - saving items from, 235–236
+  - previewing items in, 173–174
+  - searching, 37–53
+  - purchasing items in, 175–176
+  - Siri and 494, 501
+  - redeemable certificates, 176
+- Internet service provider (ISP), 63
+  - renting movies, 176–178
+- Invert Color feature, 51
+  - searching in, 172–173
+- InvisibleShield screen protector, 155
+- iTunes U. 70, 79
+- iOS
+  - iWork apps. See additional apps
+  - file storage, 418–419
+  - creating documents, 339–340
+  - new features, 7–9, 475, 495
+  - image placement, 346–348
+  - QuickType bar, 31
+  - Keynote page, 336–337
+  - updating, 37–38, 158–159
+  - moving files to computer, 350–351
+- 3G/4G devices, 12–13, 301
+- Numbers app, 335–336
+  - Air 2 model, 7
+  - opening documents, 340–341
+  - e-readers versus, 250
+  - overview, 333–334
+  - file storage, 418–419
+- Pages app, 333–354
+  - interface, 21–23
+  - popovers and dialogs, 342–342
+  - mini 3 model, 7
+  - sharing documents, 349
+  - prices, 12
+  - templates, 339–
+  - unpacking, 20–21
+  - toolbars in, 342–346
+  - updating operating system, 37–38
+  - uninstalling, and document backup, 349
+  - version variations, 10
+  - Welcome screens, 337–338
+- iPad Log, 162
+- iWork for iCloud, 333
+- IPS (in-switching), 273
+  - jailbreaking, 85
+- ISP (Internet service provider), 63
+  - jokes, asking Siri for, 502
+- iTransit apps, 325
+- Joystick-It, 278
+- iTunes
+  - auto-downloading purchases from other devices, 179
+  - Home sharing, 190, 192, 423–424
+  - iPad settings, 76–79
+  - organizing apps on device, 90
+  - requirements, 73
+  - setting up, 75–56
+  - sync options, 14
+  - syncing contacts, 476
+  - syncing over USB connection, 79–80
+  - syncing over Wi-Fi connection, 80–81
+- iOS and, 27
+- Kaleidoscope effect, 211–212
+- keyboard
+  - Bluetooth, 380
+  - Caps Lock feature, 127
+  - .com key, 98
+  - iOS 8 features, 9
+  - Lightning Wired, 17
+  - moving, 34
+  - resetting dictionary, 146
+- iTunes Match, 81, 82, 185
+- iTunes Radio, 193–194, 498
+- keyboard (continued)
+  - settings, 144–146
+  - split feature, 34–35
+  - system sounds, 148
+  - troubleshooting, 158
+  - unlocking, 31–34
+- Keynote app
+  - adding media, 402
+  - best practices, 396, 412
+  - builds, 203, 406–408
+  - builds, multiple, 408–409
+  - dialogs, in, 341–342
+  - documents, creating, 339–340
+  - documents, opening, 340–341
+  - documents, sharing, 349
+  - formatting text, 401
+  - image placement, in, 346–348
+  - interface, 397–400
+  - moving files to, 350–351
+  - presentations, 411–413
+  - overview, 336–337, 395
+- popovers
+  - presentations, creating, 400–401
+  - presentations, playing, 399, 413
+  - projectors and, 410–411
+  - screen orientation for, 399
+  - slides, creating, 401–402
+  - slides, multiple, 402–403
+  - templates, 339–340
+  - toolbars in, 342–346
+  - uninstalling, 349
+- kids' games, 275
+- Kindle app, 253
+- LDAP (Lightweight Directory Access Protocol)
+  - directory access using, 475
+  - importing contacts, using, 472
+  - setting up account, 295–286
+- LDAP (Data Interchange Format), 472
+  - library, music, 184–185
+- Light effect, 212
+- Lightning connector, 22, 23
+- Lightning to VGA Adapter, 410
+- Lightning Wired keyboard, 17
+- Lightroom, 237
+- Lightweight Directory Access Protocol
+  - line spacing, in Pages documents, 360–362
+- LinkedIn, 300, 499
+- List view, calendar, 442
+- lists in Pages documents, 360
+- reminder, 463–464
+- local tools, 325
+- location
+  - 3G/4 devices and, 301
+  - adding to contact, 314–315
+  - current, 300, 499
+  - information about locations, 313
+  - sharing information about, 315–316
+  - viewing photos by, 241–242
+- Location Services, 141, 499
+  - accessing Notification Center from, 468
+  - notifications on, 467
+  - system sounds, 148
+  - using Siri while active, 493
+- wallpaper, 47–48
+- locking iPad, 43–44
+- Lonely Planet Travel Guides, 329
+- lost iPad, 84, 162–163
+- Louis Vuitton, 176
+- Motion Coprocessor, 8, 274
+- Mac Rumors, 162
+- Mail app
+  - adding counts, 117–120
+  - attachments, 124
+  - attachments, opening, 121
+  - formatting text, 128–129
+- IMAP accounts, 120–121
+- junk mail, 134
+- messages marking unread, 475
+  - messages, composing, 126–127, 486–487
+  - messages, creating from, 131–132
+  - messages, deleting, 133–134
+  - messages, flagging, 124–126
+  - messages, forwarding, 124–126
+  - messages, opening, 121, 123
+  - messages, printing, 132
+  - messages, replying to, 124–126
+  - messages, using Siri, 127, 501
+  - moving messages to, 134–135
+- Microsoft Exchange, 294–295
+  - notifications, general, 122
+  - notifications, upon to, 131
+- overview, 63, 141
+- POP accounts, 120–121
+- Quote level, 128
+  - searching in, 35–37, 129–130
+  - settings for, 150
+  - sharing contacts using, 487–488
+  - sharing files using, 420–421
+  - sharing highlighted text from e-book, 263
+  - sharing location from map, 315–316
+  - sharing notes using, 435–436
+- signatures, 126
+- Trash folder, 134
+- turning off, 121
+- viewing inbox, 123
+- maintenance
+  - battery life and, 156–157
+  - cases/covers, 154–155
+  - cleaning screen, 153–154
+- maps
+  - adding location to contact, 314–315
+  - current location, 300
+  - directions on, 311–312
+  - dropping pins on, 306–307
+  - favorites, 308–310
+  - gestures for, 300, 304
+  - getting directions using Siri, 499–500
+- location information, 313–315
+  - printing, 303
+  - recent locations, 310
+  - searching for, 304–306
+  - searching using Siri, 499
+  - sending via iMessage service, 230–231
+- turn-by-turn navigation, 316–317
+- viewing contact location, 488–489
+- views for, 301–303
+- Yelp reviews on, 308
+- zooming in, 303–304
+- margins, in Pages, 356, 364
+- Match service, iTunes, 81, 82
+- memory
+  - purchasing iPad, 11–12
+  - updating iOS and, 397
+- merging contacts, 476
+- Messages app
+  - clearing conversation, 231–232
+  - group messaging, 232
+  - overview, 69
+  - sending audio messages, 229
+  - sending map of current location, 230–235
+  - sending messages using Siri, 501
+  - sending photos, 229–230
+  - sending text messages, 226–226
+  - sending videos, 229–230
+  - setting ringtone for contact, 482–483
+  - setting up account, 225–226
+  - settings for, 150
+  - sharing photos using, 243–244
+- Michelin Travel Guide, 327–328
+- microblogs, 22–23
+- phone, 22–23
+- Microsoft Exchange accounts, 294–295, 475
+- Microsoft Office, 356
+- Microsoft Outlook, 479
+- MiBug, 230
+- MIMO (multiple-input, multiple output), 8
+- Minecraft Pocket Edition app, 277
+- Monkey Island 2 Special Edition: LeChuck's Revenge for iPad app, 276
+- Month view, calendar, 441
+- MPEG-4 video, 201
+- multiple-input, multiple output (MIMO), 8
+- multiple-target acquisition, 274
+- multitasking, 27, 38–39, 485
+- music
+  - Control Center and, 42
+  - creating radio, 194–195
+  - Home Sharing feature, 192
+  - in iTunes Store, 69
+  - playing, 188–190
+  - playing using Siri, 498
+  - playlists, 185–187
+  - previewing in iTunes Store, 173–174
+  - radio, 184–193
+  - searching, 35–37, 187–188
+  - searching for name of playing, 187
+  - settings for, 151
+  - shuffling, 120
+  - using AirPlay, 192
+  - viewing history, 310
+  - viewing photos, 241–242
+  - volume, 147
