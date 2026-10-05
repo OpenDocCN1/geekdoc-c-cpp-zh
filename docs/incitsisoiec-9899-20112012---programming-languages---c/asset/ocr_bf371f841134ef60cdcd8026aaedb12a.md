@@ -1,0 +1,57 @@
+```
+(6.7.6) direct-declarator:
+  identifier
+  ( declarator )\n  direct-declarator [ type-qualifier-list_opt assignment-expression_opt ]
+  direct-declarator [ static type-qualifier-list_opt assignment-expression ]
+  direct-declarator [ type-qualifier-list static assignment-expression ]
+  direct-declarator [ type-qualifier-list_opt * ]
+  direct-declarator ( parameter-type-list )
+  direct-declarator ( identifier-list_opt )
+```
+
+```
+(6.7.6) pointer:
+  * type-qualifier-list_opt
+  * type-qualifier-list_opt pointer
+```
+
+```
+(6.7.6) type-qualifier-list:
+  type-qualifier
+  type-qualifier-list type-qualifier
+```
+
+```
+(6.7.6) parameter-type-list:
+  parameter-list
+  parameter-list , ...
+```
+
+```
+(6.7.6) parameter-list:
+  parameter-declaration
+  parameter-list , parameter-declaration
+```
+
+```
+(6.7.6) parameter-declaration:
+  declaration-specifiers declarator
+  declaration-specifiers abstract-declarator_opt
+```
+
+```
+(6.7.6) identifier-list:
+  identifier
+  identifier-list , identifier
+```
+
+```
+(6.7.7) type-name:
+  specifier-qualifier-list abstract-declarator_opt
+```
+
+```
+(6.7.7) abstract-declarator:
+  pointer
+  pointer_opt direct-abstract-declarator
+```

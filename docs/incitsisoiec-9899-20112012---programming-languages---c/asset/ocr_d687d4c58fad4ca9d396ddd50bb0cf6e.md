@@ -1,0 +1,79 @@
+# ### 7.20.2.1 Limits of exact-width integer types
+
++   - minimum values of exact-width signed integer types
+
+```
+INTN_MIN exactly $-(2^{N-1})$
+```
+
++   - maximum values of exact-width signed integer types
+
+```
+INTN_MAX exactly $2^{N-1} - 1 $
+```
+
++   - maximum values of exact-width unsigned integer types
+
+```
+UINTN_MAX exactly $2^N - 1 $
+```
+
+# ### 7.20.2.2 Limits of minimum-width integer types
+
++   - minimum values of minimum-width signed integer types
+
+```
+INT_LEASTN_MIN $-(2^{N-1} - 1)$
+```
+
++   - maximum values of minimum-width signed integer types
+
+```
+INT_LEASTN_MAX $2^{N-1} - 1 $
+```
+
++   - maximum values of minimum-width unsigned integer types
+
+```
+UINT_LEASTN_MAX $2^N - 1 $
+```
+
+# ### 7.20.2.3 Limits of fastest minimum-width integer types
+
++   - minimum values of fastest minimum-width signed integer types
+
+```
+INT_FASTN_MIN $-(2^{N-1} - 1)$
+```
+
++   - maximum values of fastest minimum-width signed integer types
+
+```
+INT_FASTN_MAX $2^{N-1} - 1 $
+```
+
++   - maximum values of fastest minimum-width unsigned integer types
+
+```
+UINT_FASTN_MAX $2^N - 1 $
+```
+
+# ### 7.20.2.4 Limits of integer types capable of holding object pointers
+
++   - minimum value of pointer-holding signed integer type
+
+```
+INPTR_MIN $-(2^{15} - 1)$
+```
+
++   - maximum value of pointer-holding signed integer type
+
+```
+INPTR_MAX $2^{15} - 1 $
+```
+
++   - maximum value of pointer-holding unsigned integer type
+
+```
+UINTPTR_MAX $2^{16} - 1 $
+```

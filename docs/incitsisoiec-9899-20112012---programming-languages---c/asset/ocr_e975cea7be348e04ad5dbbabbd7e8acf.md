@@ -1,0 +1,49 @@
+# 7.22 General utilities <stdlib.h>
+
+The header <stdlib.h> declares five types and several functions of general utility, and defines several macros.(291)
+
+The types declared are size_t and wchar_t (both described in 7.19),
+
+```
+div_t
+```
+
+which is a structure type that is the type of the value returned by the div function,
+
+```
+ldiv_t
+```
+
+which is a structure type that is the type of the value returned by the ldiv function, and
+
+```
+ll1div_t
+```
+
+which is a structure type that is the type of the value returned by the 11div function.
+
+The macros defined are NULL (described in 7.19);
+
+```
+EXIT_FAILURE
+```
+
+and
+
+```
+EXIT_SUCCESS
+```
+
+which expand to integer constant expressions that can be used as the argument to the exit function to return unsuccessful or successful termination status, respectively, to the host environment;
+
+```
+RAND_MAX
+```
+
+which expands to an integer constant expression that is the maximum value returned by the rand function; and
+
+```
+MB_CUR_MAX
+```
+
+which expands to a positive integer expression with type size_t that is the maximum number of bytes in a multibyte character for the extended character set specified by the current locale (category LC_CTYPE), which is never greater than MB_LEN_MAX.

@@ -1,0 +1,176 @@
+
+- lower function, 7.0.3.1.1, 7.0.3.2.1
+- upper function, 7.0.3.1.2, 7.0.3.2.1
+- translation environment, 5.5.1
+- translation limits, 5.2.4.1
+- translation phases, 5.1.1.2
+- translation unit, 5.1.1.1, 9
+- trap, see a function
+- trap representation, 3.19.4, 6.2.6.1, 6.2.6.2, 6.2.3, 6.5.2.3
+- trigonometric functions
+    - complex, 7.3.5, G.6.1
+    - real, 12.4.F10.1
+- trigraph sequences, 5.1.1.2, 5.2.1.1
+- true value, 7.16
+- trunc functions, 7.12.9.F10.6
+- trunc type-generic macro, 7.25
+- truncation, 6.3.1.4, 7.12.9.8, 7.21.3, 7.21.5.3
+- truncation toward zero, 6.5.5
+- ss_create function, 7.26.6.1
+- ss_delete function, 7.26.6.2
+- SSD_DTOR_ITERATIONS macro, 7.26.1
+- ss_dtor_type, 7.26.1
+- ss_get function, 7.26.6.3
+- ss_set function, 7.26.6.4
+- ss_t_type, 7.26.1
+- two's complement, 6.2.6.2, 7.20.1.1
+- type category, 6.2.5
+- type conversion, 6.5.3
+- type definitions, 6.7.8
+- type domain, 6.2.5, G.2
+- type names, 6.7.7
+- type pulling, 6.5.2.3
+- type qualifiers, 6.7.3
+- type specifiers, 6.7.2
+- type-generic macro, header, 7.25, G
+- type-generic macro, header, 6.7.8
+- typedef declared class-specifier, 6.7.1, 6.7.8
+- typeof storage-class classifier, 6.2.5
+- atomic, 5.1.2.3, 6.2.5, 6.2.6.1, 6.3.2.1, 6.5.2.3, 6.5.2.4, 6.316.2, 6.2.7.4, 6.10.8.3, 7.17.6
+- character, 6.7.9
+- compatible, 6.2.7, 6.7.2, 6.7.3, 6.7.6
+- complex, 6.2.5, G
+- composite, 6.2.7
+- const qualified, 6.7.3
+- conversions, 6.3
+- imaginary, G
+- restricted qualified, 6.7.3
+- volatile qualified, 6.7.3
+- uchar_h header, 6.4.4.4, 6.4.5, 28
+- CHAR_MAX macro, 5.2.4.1
+- UINT_FAST_N max, 7.20.2.3
+- uint_fast_N type, 7.20.1.3
+- uint_least_16_t, 7.28
+- uint_least_32_t, 7.28
+- UINT_least_N max, 7.20.2.2
+- uint_least_N type, 7.20.1.2
+- UINT_MAX macro, 5.2.4.1
+- UINT_MAX macro, 7.20.4.2
+- UINTMAX_N macro, 7.8.2.3, 7.8.2.4, 7.20.2.5
+- uintmax_t_type, 7.20.1.5, 7.21.6.1, 7.21.6.2, 7.29.1, 7.29.2.2
+- UINT_N macro, 7.20.4.1
+- UINT_N_MAX macro, 7.20.2.1
+- uint_t_type, 7.20.1.1
+- uintPTR_MAX macro, 7.20.4.2
+- uintptr_t_type, 7.20.1.4
+- ULLONG_MAX macro, 5.2.4.2.1, 7.22.1.4, 7.29.4.1.2
+- ULLONG_N macro, 5.2.4.2.1, 7.22.1.4, 7.29.4.1.2
+- unary arithmetic operators, 6.5.3.3
+- unary expression, 6.5.3
+- unary minus operator, 6.5.3.3, F
+- unary operators, 6.5.3.3
+- unary plus operator (+), 6.5.3.3
+- unbuffered stream, 7.21.3
+- undefined preprocessing directive, 6.10.3.5, 7.1.3
+- undefined behavior, 4.3.3, 4.2
+- underscore leader, 6.4.2.1
+- underscore leadership, 7.21.1
+- getoc function, 7.21.7.1, 7.21.10.1, 7.21.9.2, 7.21.9.3
+- getwc function, 7.21.1, 7.29.1.30
+- Unicode, 7.28, see also char16_t type, char32_t_type, char_t_type
+- Unicode required, 6.10.8
+- unicode header, 7.28
+- arrow operator (-), 6.5.2.3
+- content, 6.2.3.3
+- dot operator (.), 6.5.2.3
+- initialization, 6.7.9
+- member alignment, 6.7.2.1
+- member name, 6.2.3
+- member operator (.), 6.3.2.1, 6.5.2.3
+- pointer operator (-), 6.5.2.3
+- specifier, 6.7.2.1
+- tag, 6.2.3, 6.7.2.3
+- type, 6.2.5, 6.7.2.1
+- universal character, 6.4.3
+- normalized floating-point numbers, 5.2.4.2
+- unqualified type, 6.2.5
+- unqualified version, 6.2.5
+- sequenced, 5.1.2.3, 6.5, 6.5.16, see also
+- indeterminately sequenced, 5.1.2.3, 6.5.16
+- unsigned char type, 6.3.5.3, 3.9.1.2
+- unsigned integer suffix, U, 6.4.4.1
+- unsigned integer types, 6.2.5, 6.3.13, 6.4.4.1
+- unsigned type conversion, 6.3.1.1, 6.3.1.3, 6.3.1.4, 6.3.1.8
+- unsigned types, 6.2.5, 6.7.2, 6.7.2.1, 7.2.9, 7.2.2.1
+- unspecified behavior, 3.4.4, J.
+- unspecified value, 3.19.3
+- uppercase case, 5.2.1
+- use of library, 7.1.4
+- usual arithmetic conversions, 6.3.1, 6.5.5, 6.6, 6.5.8, 6.5.9, 6.5.10
+- USHRT_MAX, 5.2.4.1
+- UTF-16, 6.10.8
+- UTF-32, 6.10.8
+- UTF-8 string literal, see string literal, general, 7.2.2, 7.31.2
+- width, 7.2.4, 3.9.2, unicode, 7.2
+- va_arg macro, 7.1.16, 7.1.16.1, 7.1.16.2, 7.1.16.3, 7.1.16.4, 7.2.16.9, 7.2.16.10, 7.2.16.11, 7.2.16.12, 7.2.16.13, 7.2.16.14, 7.2.9.25, 7.2.9.26, 7.2.9.27, 7.2.9.28, 7.2.9.29, 7.2.9.30
+- va_list type, 7.16.16
+- va_start macro, 7.1.16, 7.1.16.1, 7.1.16.2, 7.1.16.3, 7.1.16.4
+- va_copy macro, 7.1.3, 7.1.16, 7.1.16.1
+- va_end macro, 7.1.3, 7.1.16.1, 7.1.16.4, 7.2.16.8, 7.2.16.9, 7.2.16.10, 7.2.16.11, 7.2.16.12, 7.2.16.13, 7.2.16.14, 7.2.9.25, 7.2.9.26, 7.2.9.27, 7.2.9.28, 7.2.9.29, 7.2.9.30
+- value, 3.19
+- value bits, 6.2.6
+- variable arguments, 6.10.3
+- variable arguments header, 76
+- variable length array, 6.7.6, 6.7.6.2, 6.10.8
+- modified variable type, 6.7.6, 6.7.6.2, 6.10.8
+- vertical-tab escape sequence (\), 5.2.2, 6.4.4.4, 7.4.10
+- vfprintf function, 7.2.1.1, 7.2.16.8
+- vprintf_s function, 3.5.3.3.8
+- vscanf function, 7.2.1.1, 7.2.16.8, 7.2.16.9
+- vscanf_s function, 3.5.3.3.8
+- vprintf function, 7.2.1.1, 7.2.16.8, 7.2.16.9
+- vprintf_s function, 3.5.3.3.8
+- visibility of side effects, 6.2.9
+- visible side of effects, 5.1.2.4
+- visible side effect, 5.1.2.4
+- VLA, variable length array
+- void expression, 6.7.6
+- void parameter, 6.7.6
+- void type, 6.2.5, 6.3.2.2, 6.7.2.2
+- volatile storage, 6.2.3, 6.7.3
+- volatile-qualified type, 6.2.5, 6.7.3
+- vprintf function, 7.2.1.1, 7.2.16.8, 7.2.16.10
+- vprintf_s function, 3.5.3.3.8
+- vscanf function, 7.2.1.1, 7.2.16.8, 7.2.16.9
+- vscanf_s function, 3.5.3.3.8
+- vsnprintf function, 7.2.1.1, 7.2.16.8, 7.2.16.13
+- vsnprintf_s function, 3.5.3.3.8
+- vswprint_s function, 3.5.3.3.8
+- vswcanf function, 7.2.1.1, 7.2.16.8, 7.2.16.9
+- vswcanf_s, 3.5.3.3.8
+- vswprintf function, 7.2.1.1, 7.2.16.8, 7.2.16.13
+- vswprintf_s function, 3.5.3.3.8
+- warnings, 1
+- char h header, 5.2.4.2.2, 7.21.1, 7.29, 7.3.16
+- char_MAX macro, 7.20.3, 7.29
+- char_MIN micro, 7.20.3, 7.29
+- char_t type, 3.7, 6.3, 4.5, 6.7, 6.9, 10.8.2, 7.20.3, 7.21.6, 7.2.1, 7.22, 7.29.1, 7.29.2
+- wcrtomb function, 7.21.3, 7.21.6, 7.29.1, 7.29.2, 7.29.6.3, 7.29.4.2
+- wcscat function, 7.29.4.3
+- wcschr function, 7.29.4.5
+- wcscmp function, 7.29.4.4
+- wscoll function, 7.29.4.2, 7.29.4.4
+- wscpy function, 7.29.4.2
+- wcsspn function, 7.29.4.5
+- wcsftime function, 7.11.1, 7.29.5.1
+- wcslen function, 7.29.4.6
+- wcsansat function, 7.29.4.3
+- wcsncmp function, 7.29.4.3
+- wcsncpy function, 7.29.4.2
+- wcslen function, 7.29.4.6
+- wcschr function, 7.29.4.5
+- wcstoll function, 7.29.4.1
+- wcstoul function, 7.29.4.1
+- wcspprintf function, 7.2.16.8, 7.2.16.13
+- vsnprintf function, 7.2.16.8, 7.2.16.13
+- vsnprintf_s function, 3.5.3.3.8

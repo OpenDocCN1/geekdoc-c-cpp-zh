@@ -1,0 +1,87 @@
+# 6.5 Expressions 76
+
++   6.5.1 Primary expressions 78
+
++   6.5.2 Postfix operators 79
+
++   6.5.3 Unary operators 88
+
++   6.5.4 Cast operators 91
+
++   6.5.5 Multiplicative operators 92
+
++   6.5.6 Additive operators 92
+
++   6.5.7 Bitwise shift operators 94
+
++   6.5.8 Relational operators 95
+
++   6.5.9 Equality operators 96
+
++   6.5.10 Bitwise AND operator 97
+
++   6.5.11 Bitwise exclusive OR operator 98
+
++   6.5.12 Bitwise inclusive OR operator 98
+
++   6.5.13 Logical AND operator 99
+
++   6.5.14 Logical OR operator 99
+
++   6.5.15 Conditional operator 100
+
++   6.5.16 Assignment operators 101
+
++   6.5.17 Comma operator 105
+
+# 6.6 Constant expressions 106
+
+# 6.7 Declarations 108
+
++   6.7.1 Storage-class specifiers 109
+
++   6.7.2 Type qualifiers 111
+
++   6.7.3 Type identifiers 121
+
++   6.7.4 Function specifiers 125
+
++   6.7.5 Alignment specifier 127
+
++   6.7.6 Declarators 128
+
++   6.7.7 Type names 136
+
++   6.7.8 Type definitions 137
+
++   6.7.9 Initialization 139
+
++   6.7.10 Static assertions 145
+
+# 6.8 Statements and blocks 146
+
++   6.8.1 Labeled statements 146
+
++   6.8.2 Compound statement 147
+
++   6.8.3 Expression and null statements 147
+
++   6.8.4 Selection statements 148
+
++   6.8.5 Iteration statements 150
+
++   6.8.6 Jump statements 151
+
+# 6.9 External definitions 155
+
++   6.9.1 Function definitions 156
+
++   6.9.2 External object definitions 158
+
+# 6.10 Preprocessing directives 160
+
++   6.10.1 Conditional inclusion 162
+
++   6.10.2 Source file inclusion 164
+
++   6.10.3 Macro replacement 166

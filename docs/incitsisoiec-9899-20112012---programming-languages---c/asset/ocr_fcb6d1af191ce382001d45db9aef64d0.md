@@ -1,0 +1,28 @@
+# # Annex A
+(informative)
+
+# # Language syntax summary
+
+NOTE The notation is described in 6.1.
+
+# ## A.1 Lexical grammar
+
+# ### A.1.1 Lexical elements
+
+(6.4) token:
+
++   - keyword
+- identifier
+- constant
+- string-literal
+- punctuator
+
+(6.4) preprocessing-token:
+
++   - header-name
+- identifier
+- pp-number
+- character-constant
+- string-literal
+- punctuator
+- each non-white-space character that cannot be one of the above
