@@ -1,0 +1,15 @@
+The output shows that NTFS has registered its NTFSCopyRead routine as the I/O table's FastIoRead entry. As the name of this fast I/O entry, the I/O manager calls this function when issuing a read I/O request if the file is cached. If the call doesn't succeed, the standard IRP path is selected.
+
+# Mapped-file I/O and file caching
+
+Mapped-file I/O is an important feature of the I/O system—one that the I/O system and the memory manager produce jointly. (See Chapter 5 for details on how mapped files are implemented.) Mapped-file I/O refers to the ability to view a file residing on disk as part of a process's virtual memory. A program can access the file without buffering or performing I/O. The program accesses memory, and the memory manager uses its paging mechanism to load the correct page from the disk. The application writes changes back to the file as part of normal paging.
+
+Mapped-file I/O is available in user mode through the Windows CreateFile, MapViewOf, and related functions. Within the operating system, mapped-file I/O is used for important operations such as file caching and image activation (loading and executing programs). The other major consumer of mapped-file I/O is the cache manager. File systems use the cache manager to map data in virtual memory to provide better response time for I/O-bound programs. Whereas most caching systems allocate a fixed number of bytes for caching files in memory, the Windows cache grows or shrinks depending on how much memory is available. This size variability is possible because the cache manager relies on the memory manager to automatically expand (or shrink) the size of the cache using the normal working set mechanisms explained in Chapter 5—this case applied to the system set. By taking advantage of the memory manager's paging system, the cache manager avoids duplicating the work that the memory manager already performs. (The workings of the cache manager are explained in detail in Chapter 14 in Part 2)
+
+# Scatter/ I/O
+
+Windows supports a special kind of high-performance I/O called scatter/gather, available via the Windows ReadScatter and WriteGather functions. These functions allow an application to issue a single read or write from more than one buffer in virtual memory to a contiguous area of a file on disk instead of issuing a separate I/O request for each buffer. To use scatter/gather I/O, the file must be opened for non-cached I/O, the user buffers must be page-aligned, and the IOS must be asynchronous (overlapping). Furthermore, if the I/O is directed at a mass storage device, the I/O must be aligned on a device sector boundary and have a length that is a multiple of the sector size.
+
+# I/O request packets
+
+An I/O request packet (IRP) is where the I/O system stores information to process an I/O request. When a thread calls an I/O API, the I/O manager constructs an IRP to represent the operation as it progresses through the I/O system. If possible, the I/O manager allocates IRPs from one of per-processor IRP non-paged look-aside lists:

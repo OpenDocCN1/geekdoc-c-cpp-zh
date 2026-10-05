@@ -1,0 +1,17 @@
+35. It initializes the shim engine and parses the shim database.
+
+36. It enables the parallel image loader, as long as the loader functions scanned earlier do not have any system call hooks or "detours" attached to them, and based on the number of loader threads that have been configured through policy and image execution options.
+
+37. It sets the LdrInState variable to 1, meaning "importing in progress."
+
+At this point, the image loader is ready to start parsing the import table of the executable before loading any DLLs that were dynamically linked during the compilation of the application. This will happen for .NET images, which will have their imports processed by calling the .NET runtime, as because each imported DLL can also have its import table, this operation, in the past, continued until all DLLs had been satisfied and all functions to be imported have been found. As each DLL was loaded, the loader kept state information for it and built the module.
+
+In newer versions of Windows, the loader builds a dependency map ahead of time, with specific nodes that describe a single DLL and its dependency graph, building out separate nodes that can be loaded in parallel. At various points when serialization is needed, the thread pool queue will be "drained," which serves as a synchronization point. One such point is before calling the DLL initialization routines of all the static imports, which is done; once this is done, all the static TLS initializers are called. Finally, for Windows applications, between these two steps, the Kernel32 thread initialization function (BaseThreadInitThunk) is called at the beginning, and the Kernel32 post-process initialization routine is called at the end.
+
+# DLL name resolution and redirection
+
+Name resolution is the process by which the system converts the name of a PE-format binary to a physical file in locations where the caller has not specified or cannot specify a unique identity. Because the locations of various directories (the application directory, the system directory, and so on) cannot be hardcoded at link time, this is the resolution of all binary dependencies as well as LoadLibrary functions where the caller does not specify a full path.
+
+When resolving binary dependencies, the basic Windows application model locates files in a search path—a list of locations that are searched sequentially for a file with a matching name—although various system components override the search path mechanism in order to extend the default application model. The notion of a search path is holdover from the era of the command line, when an application's current directory was a meaningful notion; this is somewhat anachronistic for modern GUI applications.
+
+However, the placement of the current directory in this ordering load operations on binaries to be overridden by placing multiple binaries with the same base name in the application's current directory, a technique known as binary planting. To prevent security risks associated with this behavior, a feature known as safe search mode was added to the path computation and is enabled by all processes. Under safe mode, the current directory is moved behind the three system directories, resulting in the following path order:

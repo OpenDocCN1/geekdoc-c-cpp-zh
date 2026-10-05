@@ -1,0 +1,15 @@
+What does Windows do to address this situation? An ideal solution (at least in theory) would be to track locks and owners and boost the appropriate threads that forward progress can be made. This idea is implemented with a feature called Autoboost, described later in this chapter in the section "Autoboost." However, for general starvation scenarios, this mitigation is used.
+
+You saw how the code for exclusive resources manages this scenario by boosting the owner threads so that they have a chance to run and release the resource. However, exclusive resources are only one of the many synchronization constructs available to developers, and the boosting technique will not apply to any primitive. Therefore, Windows includes a generic CPU starvation-relief mechanism as part of a thread called the balance-set manager (This is a system that exists to perform primary memory-management functions and is described in more detail in Chapter 5.) Once per second, this thread scans the ready queues for any threads that have been in the ready state (that is, haven't run) for approximately 4 seconds. If it finds such a thread, the balance-set manager boosts the thread's priority to 15 and sets the quantum target to an equivalent CPU clock cycle count of 3 quantum units. After the quantum, the thread's priority decays immediately to its original baseline priority. If the thread wasn't finished and a higher-priority thread is ready to run, the decayed thread returns to the ready queue, where it becomes again eligible for any boost after another 4 seconds.
+
+The balance-set manager doesn't actually scan all the ready threads every it runs. To minimize the CPU time it uses, it scans 16 ready threads. If there are more threads at priority level, it remembers where it left off and picks up again on the next pass. Also, it boosts 10 threads per pass. If it finds more than 10 threads meriting this particular boost (which indicates an unusually busy system), it stops the scan and picks up again on the next pass.
+
+> Note As mentioned, scheduling decisions in Windows are not affected by the number of threads and are made in constant time. Because the balance-set manager must scan ready queues constantly, this operation depends on the number of threads on the system; more threads require more scanning time. However, the balance-set manager is not considered part of the scheduler or its algorithms and is simply an extended mechanism to increase reliability. Additionally, because of the cap on threads and queues to scan, the performance impact is minimized and predictable in a worst-case scenario.
+
+# EXPERIMENT: Watching priority boosts for CPU starvation
+
+Using the CPU Stress tool, you can watch priority boosts in action. In this experiment, you'll see usage change when a priority is boosted. Take the following steps:
+
++   1. Run CPUSTRESS.exe.
+2. The activity level of thread 1 is Low. Change it to Maximum.
+3. The thread priority of thread 1 is Normal. Change it to Lowest.

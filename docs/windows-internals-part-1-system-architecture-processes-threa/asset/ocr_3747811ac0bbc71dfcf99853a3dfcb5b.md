@@ -1,0 +1,14 @@
+# TABLE 7-20 Process mitigation options (continued)
+
+| Mitigation Name | Use Case | Enabling Mechanism |
+|---|---|---|
+| ASLR Disallow Stripped Images | This blocks the load of any library without relocations (linked with / FIXED flag) when combined with ASLR Force Relocates. | This is set with SetProcessMitigationPolicy or with PROCESS_CREATION_MITIGATION_POLICY_RELOCATE_ALWAYS_ON_RELOCS process-creation flag. |
+| DEP: Permanent | This prevents the process from disabling DEP on itself. Only relevant on x86 32-bit applications (and over WoW64). | This is set with SetProcessMitigationPolicy, process-creation attribute or SetProcessDEPPolicy. |
+| DEP: Disallow ATL Thunk Emulation | This prevents legacy ATL thunks in compatibility heap, even if a count issue exists. Only relevant on 32-bit applications (and over WoW64). | This is set with SetProcessMitigationPolicy, process-creation attribute or SetProcessDEPPolicy. |
+| SEH Overwrite Protection (SEHOP) | This prevents exception handlers from being overwritten with incorrect addresses, even if the image was not linked with SEH (/SAFEH). Only relevant on 32-bit applications (and over WoW64). | This can be set with SetProcessMitigationPolicy or with PROCESS_CREATION_MITIGATION_POLICY_SEHOP_ENABLE_process-creation flag. |
+| Raise on Invalid Handle | This helps catch use-after-free attacks in which a process uses a handle that is no longer valid (example: SetEvent on a mutex) by crashing the process instead of returning a failure that the process might ignore. | This is set with SetProcessMitigationPolicy or the PROCESS_CREATION_MITIGATION_POLICY_HANDLE_CHECKS_ALWAYS_ON process-creation attribute flag. |
+| Raise on Invalid Handle Close | This helps catch reuse (double-handle) attacks in which a process is attempting to close a handle that has already been closed, suggesting that a different handle might potentially be used in other scenarios, which in an exploit would be successful, ultimately limiting its universal effectiveness. | This is undocumented, and can only be set through an undocumented API. |
+| Disallow Win32k System Calls | This disables access to the Win32 kernel-mode subsystem driver, which implements the Window Manager (GUI) and Graphics Device interface (GDI) and DirectX. | This is set with SetProcessMitigationPolicy or the PROCESS_CREATION_MITIGATION_POLICY_DISABLE_SYSTEM_CALL_ALWAYS_ON process-creation attribute flag. |
+| Filter Win32k System Calls | This filters access to the Win32k kernel-mode subsystem driver only to permit APIs allowing simple GUI and DirectX access, mitigating many of the possible attacks, without completely disabling availability of GUI/GDI services. | This is set an internal process-creation attribute flag, which can define one of three possible sets of Win32 filters that are enabled. However, because the filter sets are hard-coded, this mitigation is reserved for Microsoft internal use.
+
+736 CHAPTER 7 Security

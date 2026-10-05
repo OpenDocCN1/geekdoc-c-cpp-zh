@@ -1,0 +1,15 @@
+All Windows client editions support multiple sessions, created locally through a feature fast switching, When a user chooses to disconnect their session instead of log off (for example, by clicking the Start button, clicking the current user, and using Switch Account from the submenu that appears or by holding down the Windows key, pressing L, and then clicking a different user in the bottom-left corner of the screen), the current session—that is, the processes running in it and all the session-wide data structures remain active in the system and the system returns to the main login screen (if it's not already there). If a new user logs in, a new session is created.
+
+For applications that might be aware of running in a terminal server session, there are a set of Windows APIs for programmatically detecting that as well as for controlling various aspects of Terminal Services. (see the Windows SDK and Remote Desktop Services APIs for details).
+
+Chapter 2 briefly describes how sessions are created and contains some experiments showing how to view session using various tools, the kernel debugger. "Object manager" section in Chapter 8 in Part 2 describes how the system namespace for objects is instantiated on a per-session basis and how applications need to be aware of others of themselves on the same system can accomplish that. Finally, Chapter 5 covers the memory manager sets up and manages session-wide data.
+
+# Objects and handles
+
+In the Windows OS, a kernel object is a single, run-time instance of a statically defined object type. An object type comprises a system-defined data type, functions that operate on instances of the data type, and a set of object attributes. If you write Windows applications, you might encounter process, thread, file, and event objects, to name just few examples. These objects are based on lower-level objects that Windows creates and manages. In Windows, a process is an instance of the process object type, a file is an instance of the file object type, and so on.
+
+An attribute is a field of data in an object that partially defines the object's state. An object of process type, for example, would have attributes that include the process ID, a base priority, and a pointer to an access token object. Object methods, the means for manipulating objects, usually read or change object attributes. For example, the open method for a process would accept a process identifier and return a pointer to the object as output.
+
+There is a parameter named ObjectAttributes that a caller supplies when creating an object using the kernel object manager APIs. This parameter shouldn't be confused with the more general meaning of the term used in this book, however.
+
+The fundamental difference between an object and an ordinary data structure is that the internal structure of an object is opaque. You must call an object service to get data out or put data into an object. You cannot directly read or change data inside an object. This difference separates the underlying implementation of the object from that merely uses it, a technique that allows object implementations to be changed easily over time.

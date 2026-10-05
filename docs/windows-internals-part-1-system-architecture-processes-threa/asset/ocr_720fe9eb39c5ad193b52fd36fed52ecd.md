@@ -1,0 +1,15 @@
+> Note MSV1_0 does not cache a entire password hash in the registry because that would enable someone with physical access to the system to compromise a user's domain account and gain access to encrypted files and network resources the user is authorized to access. Instead, it caches half of the hash. The cached half-hash is sufficient to verify that a user's password is correct, but it isn't sufficient to gain access to EFS keys and to authenticate as the user on a domain because these actions require the full hash.
+
+MSV1_0 needs to authenticate using a remote system, when a user logs on to a trusted pre-Windows 2000 domain, MSV1_0 uses the Netlogin service to communicate with an instance of Netlogon on the remote system. Netlogon on the remote system interacts with the MSV1_0 authentication package on that system, passing back authentication results to the system on which the logon is performed.
+
+# Kerberos
+
+The basic control flow for Kerberos authentication is the same as for MSV1_0. However in many cases, domain logins are performed from member workers or servers over a domain controller, so the authentication package must communicate across the network as part of the authentication process. The package does so by communicating via the Kerberos TCP/IP port (port 88) with the Kerberos service on a domain controller. The Kerberos Key Distribution Center service (Kdscvc.dll), which implements the Kerberos authentication protocol, runs in the Lsass process on domain controllers.
+
+After validating hashed user-name and password information with Active Directory's user account objects (using thetdds.dll), Kdscvc returns credentials to Lsass, which returns the result of the authentication and the user's domain logon credentials (if the logon was successful) across the network to the system where the logon is taking place.
+
+> Note This description of Kerberos authentication is highly simplified, but it highlights the roles of the various components involved. Although the Kerberos authentication protocol plays a key role in distributed domain security in Windows, its details are outside the scope of this book.
+
+After a logon has been authenticated, Lsass looks in the local policy database for the user's allowed access, including interactive, network, batch, or service process. If the requested logon doesn't match the allowed access, the logon will be terminated. Lsass deletes the newly created logon session by cleaning up all of its data structures and returns failure to Winlogon, which in turn displays an appropriate message to the user. If the request is allowed, Lsass adds the appropriate security IDs (such as Everyone, Interactive, and the like). It checks its policy database for all granted privileges for all the SIDs for this and adds them privileges to the user's access token.
+
+When Lsass has accumulated all the necessary information, it calls the executive to create the access token. The executive creates a primary access token for an interactive or service logon and an impersonation

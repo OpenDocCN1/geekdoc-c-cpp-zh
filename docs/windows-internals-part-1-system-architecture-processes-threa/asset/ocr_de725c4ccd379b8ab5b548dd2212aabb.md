@@ -1,0 +1,14 @@
+The SRM, which runs in kernel, and Lass, which runs in user mode, communicate using the ALPC facility described in Chapter 8, "System mechanisms," in Part 2. During system initialization, the SRM creates a port named SeInCommandPort, to which Lass connects. When the Lass process starts, it creates an ALPC port named Saul. The SRM connects to it, resulting in the creation of private communication ports. The SRM creates a shared memory for messages longer than 256 bytes, passing a handle in the kernel call. Once the SRM and Lass connect to each other during system initialization, they no longer listen on their respective connect ports. Therefore, a later user process has no way to connect successfully to either of these ports for malicious purposes. The connect request will never complete.
+
+# Virtualization-based security
+
+It is common to refer to the kernel as *trusted*, yet countless-third-party drivers are written each month—Microsoft has stated that a million unique driver-crashes are seen through telemetry, monthly! Each of these can contain any number of vulnerabilities, not to mention purposefully malicious kernel-mode code. In reality, the idea that the kernel is a small, protected component, and user-mode applications are "safe" from attack, is clearly an unrealized ideal. This state of affairs leads to an inability to fully trust the kernel, and leaves user-mode applications, which may contain highly sensitive user data, open to compromise from malicious user-mode applications (which exploit buggy kernel-mode components) or malicious kernel-mode programs.
+
+As discussed in Chapter 2, "System architecture," Windows 10 and Server 2016 include a virtualization-based security (VBS) architecture that enables an orthogonal level of trust: the virtual trust level (VTL). In this section, you will see how Credential Guard and Device Guard leverage VTL to protect user data and provide an additional hardware-trustbased security for digital code-signing purposes. At the end of this chapter, you will also see how Kernel Patch Protection (KPP) is provided through the PatchGuard component and enhanced by the VBS-powered HyperGuard technology.
+
+As a reminder, user mode and kernel mode runs in VTL 0 and is unaware of the existence of VTL 1. This means anything placed at VTL 1 is hidden and inaccessible to VTL 0. If malware is able to penetrate the kernel mode, it still cannot gain access to anything stored in VTL 1, even user-mode code running in VTL 1 (which is called Isolated User Mode). Figure 7-2 shows the main VBS components we'll be looking at in this section:
+
++   - Hypervisor-Based Code Integrity (HVCI) and Kernel-Mode Code Integrity (KMCI), which Device Guard
+- LSA (Lsass.exe) and isolated LSA (Lsasolso.exe), which power Credential Guard
+
+Additionally, recall that the implementation of Trustlets in IUM, was shown in Chapter 3, "Process and jobs."

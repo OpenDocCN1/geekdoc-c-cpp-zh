@@ -1,0 +1,17 @@
+# Process internals
+
+This section describes the Windows process data structures maintained by various parts of the system and describes different ways and tools to examine this data.
+
+Each Windows process is represented by an executive process (EPROCESS) structure. Besides containing many attributes relating to a process, EPROCESS contains and points to a number of other related data structures. For example, each process has one or more threads, each represented by an executive thread (ETHREAD) structure. (Thread data structures are explained in Chapter 4, "Threads")
+
+The EPROCESS and most of its related data structures exist in system address space. One exception is the Process Environment Block (PEB), which exists in the process (user) address space (because it contains information accessed by user-mode code). Additionally, some of the process data structures used in memory management, such as the working set, are list only within the context of the current process, because they are stored in process-specific system space. (See Chapter 5, "Memory management," for more information on process address space)
+
+For each process that is executing a Windows program, the Windows subsystem process (Csrss) maintains a parallel structure called CSR_PROCESS. Additionally, the kernel-mode part of the Windows subsystem (w32ks.sys) maintains a per-process data structure, w32process, which is created the first time a thread calls a Windows USER or GUI function that it can. This happens as soon as the User32.dll library is loaded. Typical functions that this library is loaded by are CreateWindow(Ex) and GetMessage.
+
+Since the kernel-mode Windows subsystem makes heavy use of DirectX-based hardware acceleration, the Graphics Device Interface (GDI) component infrastructure causes the DirectX Graphics Kernel (Dxgkrnl.sys) to initialize a structure of its own, DXPROCESS. This structure contains information for DirectX objects (surfaces, shaders, etc.) and the GPU-related counters and policy settings for computational and memory management-related scheduling.
+
+Except for the 1idle process, every EPROCESS structure is encapsulated as a process object by the executive manager (described in Chapter 8 in Part 2). Because processes are not named objects, they are not visible in the WinObj tool (from Sysinternals). You can see the Type object Process in the ObjectTypes directory (in WinObj). A handle to a process provides, through use of the process-related APIs, access to some of the data in the EPROCESS structure and in some of its associated structures.
+
+Many drivers and system components, by registering process-creation notifications, choose to create their own data structures to track information on a per-process basis. The executive functions PsSetCreateProcessNotifyRoutine(Ex, Ex, Ex,2) allow this and are documented in the WDK. When one discusses the overhead of a process, the size of such data structures must often be taken into consideration, although it is nearly impossible to obtain an accurate number. Additionally, some of these functions allow them to disable, or block, the creation of processes. This provides anti-malware vendors with an architectural way to add security enhancements to the operating system, either through hash-based blacklisting or other techniques.
+
+CHAPTER 3 Processes and jobs 105

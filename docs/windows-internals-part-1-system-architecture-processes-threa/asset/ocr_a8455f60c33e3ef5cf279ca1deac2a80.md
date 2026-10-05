@@ -1,0 +1,14 @@
+# Locking memory
+
+In general, it's better to let the memory manager decide which pages remain in physical memory. However, there might be special circumstances when it might be necessary for an application or device driver to lock pages in physical memory. Pages can be locked in memory in two ways:
+
++   - Applications can use the VirtualLock function to lock pages in their working set. Pages locked using this mechanism remain in memory until explicitly unlocked or the process that locked them terminates. The number of pages a process can't exceed its minimum working set size minus eight pages. If a process needs to more pages, it can increase its working set with the SetProcessWorkingSetSizeEx function, discussed later in this chapter in the section "Working management."
+- Device drivers can use the ProbeAndLockPages, MLockPagableCodeSection, MLockPagableDataSection, or MLockPagableSectionByKernel-mode functions. Pages locked using this mechanism remain in memory until explicitly unlocked. The last of three APIs enforce no quota on the number of pages that can be locked in memory because the resident available page charge is obtained when the driver first calls. This ensures that it never cause a system crash due to overlocking. For the first API, page quotas must be obtained or the API will return a failure.
+
+# Allocation granularity
+
+Windows aligns each region of process address space to begin on an integral boundary defined by the value of system granularity, which can be retrieved from the Windows-SystemInfo or GetNativeSystemInfo functions. This value is 64 KB, a granularity that is used by the memory manager to efficiently allocate metadata (for example, VADs, bitmaps, and so on) to support various operations. In addition, if support were added for future processes with larger page sizes (for example, up to 64 KB) or virtually indexed caches that require system-wide physical-to-virtual page alignment, the risk of requiring changes to applications that made assumptions about allocation alignment would be reduced.
+
+> Windows kernel-mode code isn't subject to the same restrictions. It can reserve memory on a single-page granularity (although this is not exposed to device drivers for the reasons detailed earlier). This level of granularity is primarily used to pack TE allocations densely. Because this mechanism is internal, this code can be changed if a future platform requires different values. For the purposes of supporting 16-bit and MS-DOS applications on x86 systems only, the memory manager provides the MEM_DOS_LIM flag to the MapViewOfEx API, which is used to force the use of single-page granularity.
+
+Finally, when a region of address space is reserved, Windows ensures that the size and bound of the region is a multiple of the system page size, whatever that may be. For example, x86 systems use 4 KB pages, if you tried to reserve a region of memory 18 KB in size, the actual amount reserved on

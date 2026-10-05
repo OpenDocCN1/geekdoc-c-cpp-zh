@@ -1,0 +1,15 @@
+as the secure attention sequence (SAS), always displays a system-controlled Windows security screen (if a user is already logged on) or the logon screen so that-Trojan horses can easily be recognized. The SAS can also be set programmatically via the SendSAS API if Group Policy and other restrictions allow it). A Trojan horse presenting a fake login dialog box will be bypassed when the SAS is entered.
+
++   - **This requires support for separate accounts for administrative functions. For example, separate accounts are provided for administration (Administrators), user accounts charged with backing up the computer, and standard users.
+
+Windows meets all these requirements through its security subsystem and related components.
+
+# # The Common Criteria
+
+In 1996, the United States, United Kingdom, Germany, France, Canada, and the Netherlands released the newly developed Common Criteria for Information Technology Security Evaluation (CCITS). CITSEC, usually referred to as the Common Criteria (CC), is the recognized multinational standard for security evaluation. The CC home page is at http://www.niap-ccevs.org/cc-scheme.
+
+The CC is more flexible than the TCSEC trust grants and has a closer structure to the ITSEC standard than to TCSEC. The CC includes the concept of a Protection Profile (PP), used to collect security requirements into easily specified and compared sets, and the concept of a Security Target (ST), which contains a set of security requirements that can be made by reference to a PP. The CC also defines a range of seven Evaluation Assurance Levels (EALs), which indicate a level of confidence in the certification. In this way, the CC (like the ITSEC standard before it) removes the link between functionality and assurance level that was present in TCSEC and earlier certification schemes.
+
+Windows 2000, Windows XP, Windows Server 2003, and Windows Vista Enterprise all achieved Common Criteria certification under the Controlled Access Protection Profile (CAPP). This is roughly equivalent to a TCSEC C2 rating. All receiving a rating of EAL 4+, the "plus" flaw remediation." EAL 4 is the highest level recognized across national bodies.
+
+In March 2011, Windows 7 and Windows Server 2008 R2 were evaluated as meeting the requirements of the US Government Protection Profile for General-Purpose Operating Systems in a Networked environment, version 1.0 (GOSPP) (http://www.commoncriteriaportal.org/files/ppfiles/pp_go vieill_v1.0.pdf). The certification includes the Hyper-V hyper again. Windows achieved Evaluation Assurance Level 4 with flaw remediation (EAL 4+). The validation report can be found at http://www.commoncriteriaportal.org/files/epfiles/st_vid10390-vr.pdf, and the description of the security target, giving details of the requirements satisfied, can be found at http://www.commoncriteriaportal.org/files/epfiles/st_vid10390-st.pdf. Similar certifications were achieved by Windows 10 and Windows Server 2012 R2 in June 2016. The report can be found at http://www.commoncriteriaportal.org/files/epfiles/cr_windows10.pdf.

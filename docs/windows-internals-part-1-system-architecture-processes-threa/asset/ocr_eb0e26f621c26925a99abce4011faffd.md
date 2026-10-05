@@ -1,0 +1,15 @@
+attributes or claim that access to a resource, such as “Clearance Level: Top Secret” or “Seniority: 10 Years.” With the ability to populate such attributes automatically by parsing SQL databases and schemes through Active Directory, this significantly more elegant and flexible security model helps organizations avoid cumbersome group management and group hierarchies.
+
++   - **Privileged control** This is necessary for those times when discretionary access control is not enough. It is a method of ensuring that someone can get to objects if the owner isn't available. For example, if an employee leaves a company, the administrator needs a way to gain access to files that might have been accessible only to that employee. In this case, under Windows, the administrator can take ownership of the file so that they can manage its rights as necessary.
+
++   - **Mandatory integrity control** This is required when an additional level of security control is needed to protect objects that are being accessed from the same user account. It's used for everything providing part of the sandboxing technology for Windows Apps (see the upcoming discussion), isolating Protected Mode Internet Explorer (or other browsers) by a user's configuration, to protecting objects created by an elevated administrator account from access.
+
+Starting with Windows 8, a sandbox called an AppContainer is used to host Windows Apps, which provides isolation with relation to other AppContainers and non-Windows Apps. Processes in AppContainers can communicate with brokers (isolated processes using the user's credentials) and sometimes other AppContainers or processes through well-defined contracts provided by the Windows Runtime. A canonical example is the Microsoft Edge browser that runs inside an AppContainer and provides better protection against malicious code running within its boundaries. Additionally, third-party developers can leverage AppContainers to isolate their own non-Windows Apps in similar ways. The AppContainer model forces a significant shift in traditional programming paradigms, moving from the traditional multithreaded single-process application implementation to a multi-process one.
+
+Security pervades the interface of the Windows API. The Windows subsystem implements object-based security in the same way as the OS does: protecting Windows objects from unauthorized access by placing security descriptors on them. The first time an application tries to access a shared object, the Windows subsystem verifies the application's right to do so. If the security succeeds, the Windows subsystem allows the application to proceed.
+
+For a comprehensive description of Windows security, see Chapter 7.
+
+# Registry
+
+If you've worked with Windows operating systems, you've probably heard about or looked at the registry. You can't talk about Windows internals without referring to the registry because it's the system database that contains the information required to boot and configure the system, system-wide settings that control the operation of Windows, the security database, and per-user

@@ -1,0 +1,313 @@
+
+
+## 负载管理器–核心（线程）
+
+- 负载管理器 (balance manager)
+- 优先级提升 (priority boosts), 247
+- 工作集 (working sets), 421–422
+- 带宽 (bandwidth), 551–552
+- 二进制主导 (binary piloting), 210
+- 位图 (CFG) (bitmap), 744–747
+- BNO 隔离 (BNO isolation), 44
+- 代理程序 (AppSettings), 709
+- 桶 (heaps) (buckets), 335
+- 构建树 (build-trees), 125
+- 增加 (bump), 540–541
+- dus 驱动程序 (dus drivers), 493
+- 绕过遍历权限 (Bypass Traverse Privilege), 675
+- 缓存文件 (caching files), 513
+- 包含加载算法 (including loading algorithm), 368–369
+- 取消 I/O (cancellation I/O)
+    - 概述, 537
+    - 线程碎片 (thread fragmentation), 539
+    - 用户 (users), 537–538
+- 炮弹密度 (cannon density), 357
+- 目录 (Class 和 Play) (catalogs (Class and Play)), 574
+- 基于声明的访问控制 (CBAC (Claims-Based Access Control)), 667
+- 通用运行时 (CM (Common Runtime)), 607
+- 控制前向守卫 (CFG (Control Forward Guard)), 741
+    - 位图 (bitmap), 744
+    - 映像加载器 (image loader), 750–751
+    - 内核 (CFG) (kernel (CFG)), 751–752
+    - 概述, 741
+    - 遍历 (traversal), 747
+    - 抑制 (suppression), 741
+    - 查看 (viewing), 718
+- 控制流完整性 (CFI (control integrity)), 750
+- 检查的加载 (内核调试) (checked load (kernel debugging)), 57
+- 检查大区域空间支持 (checking large area space support), 351
+- 基于声明的访问控制 (CFG) (Claims-Based Access Control (CFG)), 667
+- 类层次结构 (class hierarchy), 444
+- 类对象 (class objects), 103
+- 分类，内存合并 (classification, memory combining), 461
+- 客户端，内存限制 (clients, memory limits), 447–449
+- 时钟锁 (clock lock), 223–234
+- 时钟间隔 (clock interval), 223
+- 集簇页页异常 (clustered page fault), 387–388
+- 收集的页异常 (collected page faults), 387
+- 核心转储 (内核对象模型) (core dump (kernel object model)), 5
+- 合并内存 (combining memory)
+    - 分类 (classification), 461
+    - 创建线程 (creating threads), 462–464
+    - 概述, 459–460
+    - 页合并 (page combining), 462
+    - 查看 (viewing), 465–467
+- 命令提示窗口，打开 (command prompt windows, opening), 13
+- 声明（点） (declaration (points)), 40
+- 地址 (address), 746
+- ca, a, 408–411
+- lcupinto, 233
+- dlbgprint, 58
+
+## C
+
+- ldd, 380
+- devnode, 562–563
+- devobj, 504–506, 524
+- devstack, 251
+- ldq, 379
+- devrb, 502–506, 517
+- 文件 (file), 408
+- 文件对象 (fileobj), 509
+- 句柄 (handle), 409, 408, 707
+- 堆 (heap), 338
+- 堆 (heap), 341–343
+- 堆 (heap), 340
+- lp, 519–522, 541
+- linfdpree, 521
+- 任务 (job), 180–182, 265, 594
+- 列表 (list), 167
+- 旁边缓存 (lookaside), 331
+- imemeage, 410
+- ninruma, 270
+- 对象 (object), 502–504
+- 分区 (partition), 448
+- ppc, 276
+- pey, 109–116
+- pifn, 444
+- poolleted, 328
+- pocvaps, 597
+- pypolicline, 598
+- 进程 (process), 109–180, 191, 261, 518
+- ptype, 375, 469
+- 就绪 (ready), 230–231
+- truano, 180
+- isd, 655
+- 会话 (sesion), 331
+- tmtfr, 268
+- 类型空间 (typespace), 335
+- teb, 201–205
+- trad, 197–199, 201, 261, 518
+- 令牌 (token), 637
+- vennfer, 557, vlm, 307, lmav, 455
+- dwlkfdifr, 580
+- lwmprint, 58
+- 进程 (process), 109–110
+- ney, 209
+- at (at), 8
+- AuditPool, 682
+- 中断命令 (break commands), 40
+- cron, 83
+- d30, 380
+- docker, 190
+- dt, 40–42, 78, 108, 182
+- 转储 (dump), 40
+- gg, 276
+- ko, 210
+- lml, 112
+- 池管理器 (poolman), 327
+- powercfg/a, 592
+- powercfg/h, 591
+- powercfg/list, 598
+- q, 42
+- runas, 101
+- schtacks, 8
+-  (start), 218–219
+- u, 71
+- 胜利者 (winner), 3
+- 提交负载 (commit charge)
+    - 内存管理器 (memory manager), 313
+    - 页异常 (page faults): 见页异常 (page faults)
+- 提交限制 (commit limit)
+    - 提交负载 (commit charge), 394–396
+    - 内存管理器 (memory manager), 313
+- 已提交页 (miles) (committed pages (miles)), 310–313
+- 通用标准 (CC) (Common Criteria (CC)), 607
+- 通信 (communication), 614–615
+- 复杂，断言 (complex, assertions), 723
+- 完成部分 (completion parts), 541–546
+- 组件对象模型 (COM) (component object model (COM)), 5
+- 组件 (components)
+    - 架构 (architecture), 61–62
+    - 内存管理器 (memory manager), 302–303
+    - 安全 (security), 608–611
+    - SuperFetch, 473–474
+- 压缩（内存） (compression (memory)), 449–456
+- 并发（线程） (concurrency (threads)), 542
+- 冲突 ACES，内核 (conflict ACES, kernel), 667
+- 配置 (configuring)
+    - FFS, 290–292
+    - 量 (quantum), 237–238
+- 连接待命 (Connected Standby), 594
+- 选举 (UAC) (election (UAC)), 729
+- 上下文 (contexts)
+    - 容器通知 (I/O) (container notification (I/O)), 52
+    - 容器（silos） (containers (silos))
+        - cil 功能 (functionality), 189–190
+        - 内容 (contents), 190–211
+        - 创建 (creating), 189
+        - 隔离 (isolation), 184–186
+        - 监控 (monitors), 187–188
+        - 对象 (objects), 183–186
+        - 概述 (overview), 183
+    - 上下文切换 (context switches), 215
+    - 上下文切换 (context switches), 255–256
+    - 直接切换 (Direct Switch), 19
+    - 映像加载器 (image loader), 163
+    - 任务（silos） (jobs (silos)), 186–188
+    - 线程 (threads), 18
+    - 控制守卫 (Control Guard). 见 CFG
+    - 控制流完整性 (CFI) (control flow integrity (CFI)), 740
+    - 功率 (power), 599–600
+    - 量 (quantums), 234–235
+    - 属性 (attributes), 131–136
+    - 写时复制 (copy-on-write), 321–323
+    - 核心（线程） (cores (threads)), 572
+
+## CPU 处理器 (CPU) (CPU)
+
+- 速率限制 (rate limits), 292–295
+- 集合 (sets), 278–283
+- 饥饿 (starvation), 246–248
+- 凭证机构 (Credential authority)
+- 验证策略 (authentication policies), 616–617
+- Kerberos 漫游 (Kerberos roaming), 616–617
+- NTOW/TGT 密钥 (NTOW/TGT key), 613–614
+- 安全通信 (secure communication), 614–615
+- UEFI, 616
+- 凭证提供者（DLLs） (credential providers (DLLs)), 98
+- 进程数据 (process data), 105–111
+- 线程数据 (thread data), 195,206
+
+## DEP（数据执行保护） (DEP (Data Execution Protection)), 319–321
+
+- DLLs, 98
+- 凭证工作线程 (credential workers), 98
+- 主功能 (Main function), 154
+- 导入 (import), 168–170
+- 名称方向 (name direction), 162–163
+- 安全 DLL 模式 (safe DLL mode), 160
+- 加载顺序 (load order), 163–174
+- 8
+- 系统 DLL (system DLLs), 62–63
+
+## DAC（数据访问控制） (DAC (Data Access Control)), 666
+
+- ACLs，DLLs
+- 地址空间 (address spaces), 348–349
+- 加载 (loading), 471–472
+- 数据执行保护（DEP） (Data Execution Protection (DEP)), 319–321
+
+- 地址空间 (address spaces), 348–349
+- 设计池（AfterFree） (design pools (AfterFree)), 45–46
+- FFN, 440–443
+- 过程命令 (procedural command), 109
+- DGXPROCESS, 105
+- EPPROCESS, 105–108
+- THREAD (线程)
+- KPOPROCESS, 106–107
+- W2PROCESS, 103–115
+
+## D
+
+- 延迟过程调用 (DPCs) (Deferred Procedure Calls (DPCs))
+    - I/O, 490–492
+    - 栈 (stacks), 401
+- 需求需分页 (demand paging), 413
+- 依赖遍历 (Dependency Walker)
+    - 导出函数 (exported functions), 34–35
+    - HAL 依赖项 (HAL dependencies), 80–82
+    - 桌面应用 (desktops apps), 103
+    - 确定访问调用 (determining access calls), 659–665
+- 驱动程序总线 (drive bus)
+    - ntbus, 493–497
+    - 类数组 (arrays), 494
+    - 驱动程序对象 (drive objects), 500–507
+    - 分发 (dispatches), 504,517–518
+- 驱动程序查看器 (Driver Viewer), 见驱动程序查看器
+- 文件对象 (file objects), 507
+- 驱动程序函数 (driver functions), 499
+- 安装 (installing), 571–577
+- 分发路由 (dispatch routes), 517–518
+- 分层驱动程序 (layered drivers), 533–536
+- 溢载 (overloaded), 525–528
+- 用户地址空间 (user address spaces), 521
+- KMDF, 578–587
+- IRP, 533–536
+- 溢载 (overload), 494–496
+- 加载 (loading), 575–579
+- 打开的对象 (opening objects), 510
+- 端口地址 (port addresses), 482–496
+- 功率管理 (power management), 599
+- 例程 (routines), 488–500
+- 系统调用 (syscalls), 561–569
+- 类型 (types), 492–496
+- UMDF, 578–581–587
+- 通用 Windows 服务 (Universal Windows Services), 82
+- 驱动程序 (drivers), 498
+- Wdf We, 见 Wdf 查看器
+- WDK（Windows 驱动程序工具包） (WDK (Windows Driver Kit)), 43–44
+- WM, 83–84–293
+- 驱动设备 (drive devices), 500–507
+- 驱动程序对象 (drive objects), 500–507
+- 驱动程序 (drivers). 见驱动程序查看器
+- 直接切换 (direct Switch), 255–256
+- 构建的上下文 (constructed context), 197
+- dpatch 事件 (dpatch events), 239–240
+- 版本（Windows） (editions (Windows)), 54–57
+- EMET（增强缓解工具包） (EMET (Enhanced Mitigation Experience Toolkit)), 370
+- 内存（内存） (enclaves (memory)), 467–472
+- 增强缓解工具 (EMET) (Enhancement Mitigation Experience Tool (EMET)), 370
+- 条目（PPN） (entries (PPN)), 443
+- 枚举器 (enumerators (Enumerators)), 561–563
+- 环境（AppContainer 服务） (environment (AppContainer services))
+    - 覆盖 (overrule), 693–695
+    - 查看原子表 (viewing atom table), 697–698
+    - 查看安全属性 (viewing security attributes), 695–697
+- EPPROCESS 对象, 105–108
+- PROCESS 对象, 138–140
+- ETHREAD 数据, 105,194–201
+- 事件 (events)
+    - dpatch 事件, 239–240
+    - 通知警报 (notification alerts), 223–425
+- 感叹号（I）, 40
+- 执行初始线程 (executing initial thread), 148
+- 执行内核 (executive), 72–75
+- 执行资源（优先级） (executive resources (priority)), 242–243
+- 执行资源（优先级） (executive resources (priority)), 242–243
+- 退出线程 (exiting threads), 260
+- 执行内核对象 (executive object), 138–143
+- 执行资源（优先级） (executive resources (priority)), 242–243
+- 空闲负载 (free charge), 394–396
+- 分配内存 (allocating memory), 311–313
+- 计算加载地址 (calculating load address), 368–369
+- 检查构建的 (checked built), 57–58
+- 检查大地址支持 (checking large address support), 351
+- 配置元组 (configuring tuples), 237–238
+- 创建新数量的线程 (creating new number of threads), 399
+- 调试案例 (debugging cases), 539–541
+- 设备树 (device trees), 562–563
+- ETHREAD_STRUCTURE, 197–208
+- KTHREAD_STRUCTURE, 197–208
+- 识别类型 (identifying types), 267
+- 低优先级启动程序 (launching programs at low priority), 230–231
+- 级别 (levels), 661–664
+- 性能监控内核/模式 (Performance monitor kernel/mode)
+- 设置地址限制 (setting address limits), 363
+- 跟踪 (tracking start), 148–154
+- 跟踪空间 (tracking space), 329–330
+- 使用用户空间 (using user space), 647–670
+- 内核跟踪 (kernel tracking), 715–716
+- 驱动程序跟踪 (driver tracking), 275–276
+- 线程跟踪 (thread tracking), 195–206
+

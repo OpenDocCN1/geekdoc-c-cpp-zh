@@ -1,0 +1,15 @@
+Before Windows 8, devices could only reach D3-hot state when the system is fully on (S0). The transition to D3-cold was implicit when the system went into a sleep state. Starting with Windows 8, a device's power state can be set to D3-cold while the system is fully on. The driver that controls the device cannot put the device into D3-cold state directly; it can put the device into D3-hot state, and then, depending on other devices on the same bus entering D3-hot states, the bus driver and firmware may decide to move all devices to D3-cold. The decision to move to D3-cold depends on two factors: the actual activity of the bus driver and firmware, and second the driver that must enable the transition to D3-cold by specifying that in the installation INF file or by calling the SetD3ColdSupport function dynamically.
+
+Microsoft, in conjunction with the major hardware OEMs, has defined a series of power management reference specifications that specify the power states that are required for all devices in a particular class (for the major device classes: display, network, SCSI, and so on). For some devices, there's no intermediate power state between fully on and fully off, which results in these states being undefined.
+
+# Connected Standby and Modern Standby
+
+You may have noticed in the experiment above system state called Connected Standby (S0 Low Power Idle1e). Although not an official ACPI state, it is a variant of S0 known as Connected Standby on Windows 8.x and later enhanced in Windows 10 (desktop and mobile devices) and called Modern Standby. The "normal" state (S3 above) is sometimes referred to as Legacy Standby.
+
+The problem with Legacy Standby is that the system is not working, and therefore, for the user receives an email, the system can't up without waking to S0, which may or may not, depending on configuration and device capabilities. Even if the system wakes up to get that email, it won't go immediately to sleep again. Modern Standby solves both issues.
+
+Systems that support Modern Standby go into this state when the system is instructed to go to Standby. The system is technically still at S0, meaning the CPU is active and code can execute. However, desktop processes (non-UWP apps) are suspended, as UWP apps (most are not in the foreground and suspended anyway), but background tasks created by UWP apps are allowed to execute. For example, an email client would periodically polls for messages.
+
+Being in Modern Standby also means that the system is able to wake to S0 very quickly, sometimes referred to as Instant On. Note that not all systems support Modern Standby, as it depends on the chipset and other platform components (as be seen in the last experiment, the system on which the experiment ran not support Modern Standby and thus supports Legacy Standby).
+
+For more information on Modern Standby, consult the Windows Hardware documentation at https://msdn.microsoft.com/en-us/library/windows/hardware/mt282515(v=vs.85).aspx.

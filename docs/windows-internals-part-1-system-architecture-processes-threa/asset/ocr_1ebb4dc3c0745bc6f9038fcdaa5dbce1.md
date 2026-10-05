@@ -1,0 +1,16 @@
+Because systems today have sufficiently large amounts of memory—on average more than 2 GB (although SuperFetch works well on low-memory systems, too)—the actual amount of memory that frequently used processes on a machine need resident for optimal performance ends being a manageable subset of their entire memory footprint. Often, SuperFetch can fit all the pages into RAM. When it can't, technologies such as ReadyBoost and ReadyDrive can prevent further disk usage.
+
+# Robust performance
+
+A final performance-enhancing functionality of SuperFetch is called robustness, or robust performance. This component—managed by the user-mode SuperFetch service but ultimately implemented in the kernel (PF routines)—watches for specific file I/O access that harm system performance by polluting the standby lists with unused data. For example, if a process were to copy a large file across the system, the standby list would be populated with the file's contents, even though that file might never be accessed again (or not for a long period of time). This would throw out other data within that priority—and if this was an interactive and useful program, changes to its priority would be at 5.
+
+SuperFetch responds to two kinds of I/O access patterns:
+
++   - **Sequential file access** With this type of I/O access pattern, the system goes through all the data in a file.
+- **Sequential directory access** With this type of I/O access, the system goes through every file in a directory.
+
+When SuperFetch detects that a certain amount of data past an internal threshold has been populated in the standby list as this kind of access, it applies aggressive deprioritization (robustion) to the pages being used to map this file. This occurs within the targeted process only as not penalize other applications. These pages, which are said to be robust, essentially reprioritized to priority 2.
+
+Because this component of SuperFetch is reactive and not predictive, it does some time for the robust to keep track of this process for the next time it runs. Once SuperFetch has determined that this process always performs this kind of sequential access, it remembers this and robust files as soon as they're remapped instead of waiting for the reactive behavior. At this point, the entire process is now considered robust for future access.
+
+Just by applying this logic, however, SuperFetch could potentially hurt many legitimate applications or user scenarios that perform sequential access in the future. For example, by using the Sysintern Strings.exe you can look for a string in all executables that are part of a directory. If there are many files, SuperFetch would likely perform robustness. Next time you run Strings with a different search pattern, it would run just as slowly as the first time you'd expect it to run much faster. To prevent this, SuperFetch keeps a list of processes that it watches into the future, as well as an internal hard-coded list of exceptions. If a process is detected to later re-access robust files, robustness is disabled on the process to restore to the expected behavior.
