@@ -1,0 +1,5280 @@
+- pgno: 0
+  md: '# C++ & Python
+
+    For Beginners
+
+
+    All you need to get started
+
+    with C++ & Python
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_0_0.png)
+
+
+    Over 446
+
+    Tips & Hints Inside
+
+
+    +   - Jargon-free Tips & Advice
+
+    - Step-by-step Tutorials
+
+    - Clear Full Colour Guides'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Are you a Windows PC user?
+
+
+    Then don''t miss our latest essential Windows 11 user guide on Readly now!
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_1_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# C++ & Python For Beginners
+
+
+    Starting something new can be daunting. Learning a skill or mastering a new piece
+    of hardware is tough. Even tougher if you have no-one at hand to help. Conversely
+    as the complexity of our consumer technology increases, the size of the requisite
+    instruction manual decreases or in some cases it simply disappears. At numerous
+    times in our lives we have all been "beginners", there is no shame in that fact
+    and rightly so. How many times have you asked aloud, “What does this button do?”,
+    “Why doesn’t that work?”, “What do you mean it doesn’t do that?”, “HELP!”. At
+    the start of any new journey or adventure we are all beginners but fortunately
+    for you we are here to stand beside you at every stage.
+
+
+    Over this extensive series of titles we will be looking in great depth at the
+    latest consumer electronics, software, hobbies and trends out of the box! We will
+    guide you step-by-step through using all aspects of the technology that you may
+    have been previously apprehensive at attempting. Let our expert guide help you
+    build your technology understanding and skills, taking you from a novice to a
+    confident and experienced user.
+
+
+    Over the page our journey begins. We would wish you luck but we’re sure with our
+    support you won’t need it.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Contents
+
+
+    +   6 Say Hello to Python
+
+    - 8 Why Python?
+
+    - 10 Equipment You Will Need
+
+    - 12 Getting to Know Python
+
+    - 14 How to Set Up Python in Windows
+
+    - 16 How to Set Up Python on a Mac
+
+    - 18 How to Set Up Python in Linux
+
+
+    +   20 Getting Started with Python
+
+    - 22 Starting Python for the First Time
+
+    - 24 Your First Code
+
+    - 26 Saving and Executing Your Code
+
+    - 28 Executing Code from the Command Line
+
+    - 30 Numbers and Expressions
+
+    - 32 Using Comments
+
+    - 34 Working with Variables
+
+    - 36 User Input
+
+    - 38 Creating Functions
+
+    - 40 Conditions and Loops
+
+    - 42 Python Modules
+
+
+    +   58 C++ Fundamentals
+
+    - 60 Your First C++ Program
+
+    - 62 Structure of a C++ Program
+
+    - 64 Compile and Execute
+
+    - 66 Using Comments
+
+    - 68 Variables
+
+    - 70 Data Types
+
+    - 72 Strings
+
+    - 74 C++ Maths
+
+
+    +   44 Say Hello to C++
+
+    - 46 Why C++?
+
+    - 48 Equipment Needed
+
+    - 50 How to Set Up C++ in Windows
+
+    - 52 How to Set Up C++ on a Mac
+
+    - 54 How to Set Up C++ in Linux
+
+    - 56 Other C++ IDEs to Install
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_3_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/588364e02a77f179099fae91a1713f0a_4_0.png)
+
+
+    # BDM''s
+
+    Code Portal
+
+    60+ Python programs
+
+    21,500+ lines spent
+
+    Master Python with the help of our
+
+    fastic Code Portal, featuring
+
+    code for games, tools and more.
+
+
+    ...technology is everywhere and it''s
+
+    connected through programming. Your
+
+    TV, microwave, in-car entertainment and
+
+    the Internet itself are all reliant on good
+
+    programming to make them work
+
+    way you want them to...
+
+
+    C++ & Python For Beginners
+
+    8th Edition
+
+    ISBN: 978-1-912847-13-6
+
+    Published by: Paperpac Limited
+
+    Distribution by:
+
+    Ready All, Zinos, Magter, Cagffin, PocketMags
+
+
+    2021 Paperpac Limited All rights reserved. No part of this publication
+
+    or be reproduced in any other form, stored in a retrieval system or
+
+    integrated into any other publication, database or commercial
+
+    procedural without the prior written permission.
+
+    Under no circumstances should this publication and its contents be
+
+    used in any manner except for the purpose of obtaining the
+
+    publisher''s written permission. We pride ourselves on the quality of
+
+    the text and information contained in our publications, but decline
+
+    nto be responsible for any mistakes or inaccuracies found within
+
+    the text of this publication. The publisher
+
+    cannot guarantee that all apps and software will work on
+
+    very every device, so the reader should
+
+    determ the suitability of this book and its content for
+
+    various purposes. Registered trademarks used herein are for
+
+    design purposes and are not representative of content.
+
+    We advise all potential buyers to check listing prior to purchase for
+
+    confirmation of actual content. All final edition opinion herein is that of the
+
+
+    reviewer - as an individual and is not representative of the publisher
+
+    or any of its affiliates. The publisher holds no responsibility in
+
+    regard to editorial opinion and content.
+
+    Information contained in this book as such does not necessarily reflect
+
+    the views or opinions of the producers of apps or products contained
+
+    within. Registered trademarks for the respective companies are acknowledged.
+
+    Additional images contained within this publication are reproduced under
+
+    licences, which may be subject to change.
+
+    All information was correct at time of publication. Some content may
+
+    have previously published in other volumes.
+
+
+    +   - Paperpac Limited
+
+    Registered in England & Wales No: 4308513
+
+
+    @bdmpubs FDM Publications www.bdmpublications.com
+
+
+    www.bdmpublications.com 5'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/588364e02a77f179099fae91a1713f0a_5_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Say Hello to Python
+
+
+    There are many different programming languages available to learn and use. Some
+    are complex and incredibly powerful and some are extremely basic and used as minor
+    utilities for operating systems. Python sits somewhere in the middle, combining
+    ease of use with a generous helping of power that allows the user to create minor
+    utilities, a range of excellent games and performance-heavy computational tasks.
+
+
+    However, there''s more to Python than simply being another programming language.
+    It has a vibrant and lively community behind it that shares knowledge, code and
+    project ideas; as well as bug fixes for future releases. It''s thanks to this
+    community that the language has grown and thrived and now it''s your turn to take
+    the plunge and learn how to program in Python.
+
+
+    The first half of this book helps you get started with the latest version of Python
+    and from there guide you on how to use some of the most common and interesting
+    functions and features of the language. Before long, you will be able to code
+    your own helpful system tools, text adventures and even control a character as
+    they move around the screen.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Say Hello to Python
+
+
+    # # Why Python?
+
+
+    There are many different programming languages available for the modern computer,
+    and some still available for older 8 and 16-bit computers. Some of these languages
+    are designed for scientific work, others for mobile platforms and such. So why
+    you choose Python out of all of the rest?
+
+
+    # ## PYTHON POWER
+
+
+    Ever since the earliest computers we have around, enthusiasts, users and professionals
+    have toiled away the wee hours, sleeping over an overheating heat of circuitry
+    to create something akin to magic.
+
+
+    These pioneers carved their way into a new frontier, forging small routines that
+    enabled the letter ''A'' to scratch the screen. May not sound terribly to a generation
+    that''s used to ultra-high definition graphics and open world, multi-player gaming
+    brilliantly.
+
+
+    Regardless of whether you use an Android device, iOS device, PC, Mac, Linux, Smart
+    TV, games console, MP3 player, GPS device built-in to a car, set-top box or a
+    thousand other connected ''smart'' appliances, them all is programming.
+
+
+    All aforementioned digital devices need instructions to tell them what to do,
+    and allow them to be interacted with. These instructions forming the core of the
+    device and can be built using a variety of programming.
+
+
+    Naturally these bedroom coders helped form the foundations for every piece of
+    digital technology we use today. Some went to become chief developers for software
+    companies, others pushed the available hardware to limits and founded the gaming
+    empire that continues to amass.
+
+
+    The languages in use today differ depending on the situation, the platform, the
+    device and how its device will interact with
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_7_0.png)
+
+
+    C++ is usually reserved for more operations, operating, games, and so on.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# Why Python?\n\nenvironment or users. Operating systems, as Windows, macOS\
+    \ and are usually a combination of C++, C#, and some form of visual-language games.\
+    \ Games generally use C++ with memory management pages as a platform of available\
+    \ languages such as HTML, Java, Python and so on.\n\nPython was created over twenty\
+    \ years ago and has evolved to become an ideal beginner's language for learning\
+    \ how to program a computer. It's perfect for the hobbyist, student, teacher and\
+    \ those who simply need to create their own interaction between themselves or\
+    \ for a piece of external hardware and the computer itself.\n\nMore general-purpose\
+    \ programming is used to create programs, apps, software or whatever they want\
+    \ to call them. They are widely used across all platforms and virtually every\
+    \ conceivable application. Some languages are faster than others and are easier\
+    \ to learn than others. Python is one such general-purpose\n\nPython is free to\
+    \ download, install and is also available for Linux, Windows, macOS, MS-DOS, OS2,\
+    \ IBM-series machines and has been voted one of the top five languages in the\
+    \ world and is continually evolving ahead of the hardware and internet development\
+    \ curve.\n\nPython is known as a High-Level Language in that it 'talks' to the\
+    \ hardware and operating system using your variables, objects, attributes, subroutines,\
+    \ loops and countless more interactions. It is not as streamlined as a Low-Level\
+    \ Language, which can directly interact with memory addresses, calls and registers,\
+    \ and because it's universally accessible and easy to learn.\n\nSo answer the\
+    \ question: why python? Simply put, it's free, to learn, exceptionally powerful,\
+    \ universally accepted, and effective a superb learning and educational tool.\n\
+    \n```\n// Import Java\nimport java.lang.reflect.*;\nclass Invoke {\n    public\
+    \ static void main(String[] args) {\n        try {\n            Class c = Class.forName(args[0]);\n\
+    \            Method m = c.getMethod(args[1], new Class[]);\n            Object\
+    \ ret = m.invoke(null, null);\n            System.out.println(\"Invoked static\
+    \ method \" + args[1] + \" with no arguments results: \" + ret);\\n        } catch\
+    \ (ClassNotFoundException e) {\n            System.out.println(\"Class not found:\
+    \ \" + args[0]);\n        } catch (NoSuchMethodException e) {\n            System.out.println(\"\
+    Method not found: \" + args[1]);\n        } catch (IllegalAccessException e) {\n\
+    \            System.out.println(\"You don't have permission to invoke that method\\\
+    n        } catch (Exception e) {\n            System.out.println(\"An exception\
+    \ occurred while invoking that method\\n        }\n        System.out.println(\"\
+    Method error: \" + e.getMessage());\n    }\n}\n```\n\n```\n50 LET py=15\n60 FOR\
+    \ y=1 TO 10\n70 LET BY=Y=Y+(RND*28)\n80 LET bx=0\n90 FOR d=1 TO 20\n100 PRINT\
+    \ bx,py,\"U\"\n110 PRINT bx,py,\"V\"\n120 LET py=py-5\n130 IF py<0 THEN LET py=30\n\
+    140 FOR n=1 TO 10: NEXT n\n150 IF py=27 THEN LET py=27\n160 bx=bx+2\n170 PRINT\
+    \ AT, 5,py,\"B\"\n180 LET s=s+1\n190 PRINT AT, 10,\"score:\",s\n200 FOR v=1 TO\
+    \ 1000: NEXT v\n210 NEXT\n```\n\nBASIC was so simple the language that started\
+    \ early 8-bit computer users learned.\n\nJava is a powerful language that's used\
+    \ in web, set-box devices, TVs and even cases.\n\n![](img/588364e02a77f179099fae91a1713f0a_8_0.png)\n\
+    \n```\ndef play_game():\n    attempts = 0\n    while (guess = input(\"Enter a\
+    \ letter: \")) != \"quote\":\n        attempts += 1\n        if not guess.isalpha():\n\
+    \            print(\"Invalid, try again.\")\n            continue\n        if\
+    \ guess not in alphabet:\n            print(\"The letter is not in the alphabet.\
+    \ Try again.\")\n            continue\n        if guess in secret_letters:\n \
+    \           print(\"Correct!\")\n            secret_letters.remove(guess)\n  \
+    \          if len(secret_letters) == 0:\n                print(\"You have found\
+    \ all letters. Congratulations!\")\n                break\n        else:\n   \
+    \         print(\"You already found that letter. Try again.\")\n    print(f\"\
+    You failed in {attempts} attempts.\")\n```\n\nPython is a modern language based\
+    \ on BASIC, it's easy to learn and makes for an ideal beginner's programming language."
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Say Hello to Python
+
+
+    # Equipment You Will Need
+
+
+    You can learn Python with very little hardware or initial financial investment.
+    You don''t need an incredibly powerful computer and any software that''s required
+    is freely available.
+
+
+    # WHAT WE''RE USING
+
+
+    Thankfully, Python is a multi-platform programming language available for Windows,
+    macOS, Linux, Raspberry Pi and more. If you have one of those systems, then you
+    can easily start using Python.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_9_0.png)
+
+
+    # COMPUTER
+
+
+    Obviously you''re going to need a computer in order to learn how to program in
+    Python and to test your code. You can use Windows (from XP onward) on either 32
+    or 64-bit processor, an Apple Mac or Linux installed PC.
+
+
+    # AN IDE
+
+
+    An IDE (Integrated Developer Environment) is used to enter and execute Python
+    code. It enables you to inspect your program code and the values in the code,
+    as well as offering advanced features. There are many different IDEs available,
+    so find the one that works for you and gives the best results.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_9_1.png)
+
+
+    # PYTHON SOFTWARE
+
+
+    macOS and Linux already come with Python preinstalled as part of the operating
+    system, as does the Raspberry Pi. However, you need to ensure that you''re running
+    the latest version of Python. Windows needs to download and install Python, which
+    we''ll cover shortly.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_9_2.png)
+
+
+    # TEXT EDITOR
+
+
+    While a text editor is an ideal environment to enter code into, it''s not an absolute
+    necessity. You can enter and execute code directly from the IDLE but a text editor,
+    such as Sublime Text or Notepad++, offers more advanced Features and color coding
+    when entering code.
+
+
+    # INTERNET ACCESS
+
+
+    Python is an ever evolving environment and as new versions often introduce new
+    concepts or change existing code and code structure to make it more efficient
+    language. Having access to the Internet will keep you up-to-date, it helps you
+    when you get stuck and get access to Python''s immense number of modules.
+
+
+    # TIME AND PATIENCE
+
+
+    While other books may lead you to devices, you won''t be a programmer in 24-hours.
+    Learning to code in Python takes time, and patience. You may get stuck at times
+    and the code will flow like water. Understand that you''re learning something
+    entirely new, and you will get get there.
+
+
+    10 www.bdmpublic.com'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# THE RASPBERRY PI
+
+
+    Why use a Raspberry Pi? The Raspberry Pi is a tiny computer that''s very cheap
+    to purchase but offers the user a fantastic learning platform. Its main operating
+    system, Raspbian, comes preinstalled with the latest Python with many Modules
+    and extras.
+
+
+    # RASPBIAN
+
+
+    The Raspberry Pi 3 is the latest version, incorporating a more powerful CPU, more
+    memory, Wi-Fi and Bluetooth support. You can pick up a Pi for £32 or as a part
+    of kit for £50+, depending on the kit you''re interested in.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_10_0.png)
+
+
+    # FUZE PROJECT
+
+
+    The FUZE is a learning environment built on the latest model of the Raspberry
+    Pi. You can purchase the workstations that come with an electronics kit and even
+    a robot arm for you to build and project. You can find more information on the
+    FUZE at www.fuze.co.uk.
+
+
+    # RASPBIAN
+
+
+    The Raspberry Pi''s main operating system is a Debian-based Linux distribution
+    that contains everything you need in a simple to use package. It''s streamlined
+    for the Pi and is an ideal platform for hardware and software projects, programming
+    and even as desktop computer.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_10_1.png)
+
+
+    # BOOKS
+
+
+    We have several via great-coding titles available at www.bdmpublications.com.
+    Our Pi books cover how to buy your first Raspberry Pi, set it up and use it; there
+    are some great, step-by-step project examples and guides to get the most from
+    the Raspberry Pi too.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_10_2.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_10_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "# Say Hello to Python\n\n# Getting to Know Python\n\nPython is the greatest\
+    \ computer programming language ever created. It enables you to fully harness\
+    \ the power of a computer, in a language that is clean and easy to understand.\n\
+    \n# WHAT IS PROGRAMMING?\n\nIt helps to understand what a programming language\
+    \ is before you try to learn one, and let's take a look at how Python came about\
+    \ and how it relates to other languages.\n\n![](img/588364e02a77f179099fae91a1713f0a_11_0.png)\n\
+    \n# PROGRAMMING RECIPES\n\nPrograms are like recipes for computers.\n\n+   Put\
+    \ 100 grams of self-rising flour in a bowl.\nAdd 100 grams of butter to the bowl.\n\
+    Add 100 milliliters of milk.\nBake for half an hour.\n\nA programming language\
+    \ is a list of instructions that a computer follows. These instructions can be\
+    \ as simple as saving or playing a music file, or complex as building a whole\
+    \ world. Python was conceived in the late 1980s by Guido van Rossum at Centrum\
+    \ Wiskunde & the Netherlands as successor to the ABC language.\n\nPut 100 grams\
+    \ of self-rising flour in a bowl.\nAdd 100 grams of butter to the bowl.\nAdd 100\
+    \ milliliters of milk.\nBake for half an hour.\n\n```\ncake = []\nflour = 100\n\
+    butter = 50\nmilk = 100\ncake.append([flour,butter,milk])\n```\n\n> Guido van\
+    \ Rossum, the Father of Python.\n\nJust like a recipe, a program consists of instructions\
+    \ that you follow in order. A program describes what a cake might run like this:\n\
+    \n```\nbowl = []\nflour = 100\nbutter = 50\nmilk = 100\nbowl.append([flour,butter,milk])\n\
+    cake.cake()\n```\n\n# PROGRAM COMMANDS\n\nYou might not understand some of the\
+    \ Python commands, like append and cake.cake(bowl). The first list is, the second\
+    \ one; we'll look at both in this book. The main thing to know is it's easy to\
+    \ read commands in Python. When you learn the commands, it's easy to figure out\
+    \ how a program works.\n\n![](img/588364e02a77f179099fae91a1713f0a_11_1.png)\n\
+    \n```\ndef cake(self):\n    for ingredient in self:\n        print(ingredient)\n\
+    ```\n\n```\ncake = []\nflour = 100\nbutter = 50\nmilk = 100\ncake.append([flour,butter,milk])\n\
+    ```\n\n![](img/588364e02a77f179099fae91a1713f0a_11_2.png)\n\nwww.bdmppublications.com"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# HIGH-LEVEL LANGUAGES
+
+
+    Computer languages that are easy to read are known as "high-level". This is because
+    they fly high above the hardware (also referred to as "the metal") Languages that
+    "fly close to the metal," like Assembly, are known as "low-level". Low-level languages
+    are hard to read like this: `msg db len eq $ - md`
+
+
+    # ZEN OF PYTHON
+
+
+    Python lets you access all the power of a computer in a language that humans can
+    understand. Behind all this is an called "The Zen of Python." This is a collection
+    of 20 software principles that influence the design of language. Principles "Beautiful
+    is better than ugly" and "Simple is better than complex." Type import this and
+    it will display all princes.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_12_0.png)
+
+
+    # PYTHON 3 VS PYTHON 2
+
+
+    In a typical computing scenario, Python is complicated by the existence of two
+    active versions of the language: Python 3 and Python 2.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_12_1.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_12_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# # How to Set Up Python in Windows
+
+
+    Windows users can easily install the latest version of Python via the main Downloads
+    page. Whilst most seasoned Python developers shun Windows as the platform of choice
+    for building their code, it''s an ideal starting point for beginners.
+
+
+    # ## INSTALLING PYTHON 3.X
+
+
+    Microsoft Windows doesn''t come with Python preinstalled as standard, so you''re
+    going to have to install it manually. Frankly, it''s an easy process to:
+
+
+    +   **STEP 1** Start by opening your web browser to [www.python.org/downloads/].
+    Look for the download link for Python 3.x.x (in this case it is Python 3.6.2 but
+    as you may see later versions of 3).
+
+
+    +   **STEP 3** Choosing the Customise option allows you to specify certain parameters,
+    and whilst you stay with the defaults, a good habit to adopt at times (sometimes
+    with Python, thankfully) installers can include unwanted avoidable features. On
+    the next fellow, ensure all boxes are ticked and click the next button.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_13_0.png)
+
+
+    Download the latest version of Python
+
+    [Download Python 3.6.2] [Download Python 2.7.18]
+
+    Wondering which version of Python is right to use? [Here''s more about the difference
+    between Python 2 and 3].
+
+
+    Looking for Python with a different OS? Python for [Windows, Linux/Unix, Mac OS,
+    Other]
+
+    Want to help develop latest versions of Python? [Pre-releases]
+
+
+    +   **STEP 2** Click the download link for version 3.x, save the file to your
+    Python Downloads folder. When the file is downloaded, double-click to execute
+    and the Python installer will launch. From here you have two choices: Install
+    Now or Custom. We recommend using the Custom for the installation line:
+
+
+    # ## Advanced Options
+
+
+    Install Python 3.6 (32-bit)
+
+    Select to Install Python with default settings, or choose to enable extra features.
+
+    - Install Now
+
+    Includes installer, pip and documentation
+
+    Creates shortcuts and file locations
+
+    - Customise installation
+
+    Choose location and features
+
+
+    +   - Install for all users
+
+    - Associate files with Python (requires the python)
+
+    - Create shortcuts for installed applications
+
+    - Add Python to environment variables
+
+    - Precompiled library path
+
+    - Download debug binaries (requires VS 5 or later)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_13_1.png)
+
+
+    Customise installation
+
+    C:\Program Files (x86)\Python36-3
+
+
+    14 | www.bdpublications.com'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# # How to Set Up Python in Windows
+
+
+    **STEP 5** You may need to confirm the installation with the Windows authentication
+    notification. Simply click Yes and Python will be install. Once the installation
+    is complete the final Windows page will allow you to view the latest release notes,
+    and follow some online tutorials.
+
+
+    **STEP 8** Clicking on the IDLE (Python 3.6 32-bit) link will launch your Python
+    journey. Don''t worry if your version is newer, as it''s Python 3.x code will
+    work inside your Python 3 interface.
+
+
+    ### Setup successful
+
+    Special thanks to Mark Hammond, without whose of your freely shared options, Python
+    for Windows would be still for us.
+
+    How to start? Check out the online tutorials and documentation.
+
+    See what''s new in windows.
+
+
+    +   - Disable path length limit
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_14_0.png)
+
+
+    **STEP 6** Before you close the install window, it''s best to click on the link
+    next to the shared Disable Path Length Limit. This will allow you to bypass the
+    260 Character limit, enabling you to execute Python programs stored in deepe arrangements.
+    Again, click Yes to activate the process; then you can close the installation
+    window.
+
+
+    **STEP 9** If you now click on the Start button again, and this time type CMD,
+    you''ll be presented with the Command Prompt. Click it to get to the Windows command
+    line. From there you will need to type python and Enter.
+
+
+    +   - Disable path length limit
+
+    Changes your machine configuration to allow other programs, Python Python to,
+    bypass the 260 character "MAX_PATH" limitation.
+
+
+    ```
+
+    Python 3.6.2 (Windows v9.6.213f32, Jul 8 2017, 08:14:34) (MSC V.1900 32 bit (Intel))
+    on win
+
+    type "help", "copyright", "credits" or "license" for more information.
+
+    ```
+
+
+    **STEP 7** Windows 10 users will now find the installed Python 3.x within the
+    Start button Recently Added section. The first link, Python 3.6 (32-bit) will
+    launch the command line version of Python when clicked (or that in a moment).
+    To open the IDLE, type IDLE into Windows start.
+
+
+    **STEP 10** The command line version of Python works might be the same as the
+    Shell you opened in Step it; the three left-facing arrows (>>>). While it''s a
+    perfectly fine environment, it''s not too user-friendly; leave the command line
+    for now. Enter exit to leave and close the Command Prompt.
+
+
+    | Best match |
+
+    | --- |
+
+    | IDLE (Python 3.6 32-bit) <br>Desktop app |
+
+    | Search results |
+
+    | IDLE - web results |
+
+
+    ```
+
+    C:\Windows\System32> Python (Windows v9.6.213f)
+
+    © 2017 Microsoft Corporation. All rights reserved.
+
+    C:\Users\Userday> Python (Windows v9.6.213f, Jul 8 2017, 08:14:34) (MSC V.1900
+    32 bit (Intel)) on win-32
+
+    > help
+
+    type "help", "copyright", "credits" or "license" for more information.
+
+    > exit
+
+    c:\Users\Userday>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# # How to Set Up Python on a Mac
+
+
+    If you''re running an Apple Mac, setting up Python is incredibly easy. In fact
+    that a version of Python is already installed. However, you should make sure you''re
+    running the latest version.
+
+
+    # ## INSTALLING PYTHON
+
+
+    Apple''s operating system comes with Python installed, so you don''t need to install
+    it separately. However, Apple doesn''t update Python very often and it makes sense
+    to check and update first.
+
+
+    +   **STEP 1** Open a new Terminal by clicking Go > Utilities, then double-click
+    the Terminal icon. Now enter `--version`. You should see "Python 2.5.1" or even
+    later, if Apple has updated the OS and Python installation. Either way, it''s
+    best to check for the latest.
+
+
+    +   **STEP 3** Click on the latest version of Python 3.x, in our case this is
+    the download for Python 3.6.2. This will automatically download the latest version
+    of Python and depending on how you''ve got your Mac configured, it automatically
+    starts the installation.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_15_0.png)
+
+
+    +   **STEP 2** Open Safari and head over to `www.python.org/downloads`. As with
+    the Windows procedure on the previous pages, you can see two download buttons:
+    one for Python 3.6.2, and the other for Python 2.7.13. Note, that version numbers
+    may be different from what you see here due to the frequent releases of Python.
+
+
+    +   **STEP 4** With the Python installation window open, click the Continue to
+    begin the installation. It''s worth taking a moment to read the Important Information
+    section, in case there mentions applies to your version of Python on macOS. When
+    ready, continue again.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_15_1.png)
+
+
+    # ### Download the latest version for Mac OS X
+
+
+    Wondering which version to use? Here''s more about the difference between Python
+    2 and 3.
+
+
+    Looking for Python with another OS? Check for Windows, Linux, Mac OS or Other.
+
+
+    Want to help test versions of Python? Pre-releases
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_15_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# How to Set Up Python on a Mac
+
+
+    **STEP 5** The next section details the Software License Agreement, and it''s
+    probably not particularly interesting to most folks. When you''re ready, click
+    on the Continue button once again.
+
+
+    **STEP 8** There''s nothing much left to do in the Python installation wizard
+    so if you drop back into a Terminal Session and re-enter the command: `python3
+    --version`, you can see the new version if you need to exit: `python`, to exit:
+    `exit()`
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_16_0.png)
+
+
+    **STEP 6** Finally you''re be presented with the amount of space Python will take
+    on your system and an Install button, which you need to click to start the actual
+    installation of Python 3.x on Mac. You may need to enter your password to authenticate
+    the installation
+
+
+    **STEP 9** You need to search in Finder for the Python IDLE; when you''ve found
+    it, click to launch and it should look similar to that of the Windows IDLE version
+    on the previous page. The difference might be that Mac detected hardware platform
+    it is running on.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_16_1.png)
+
+
+    ```
+
+    Python 3.6.8 (default, Clang 7.0.0 1, Dec 22 2016, 17:23:13)
+
+    GCC 4.0.1 (Apple Inc. build 549d3) on Darwin
+
+    Type ''copyright'', ''credits'' or ''license'' for more information.
+
+    WARNING: The version of Tcl/Tk may be unstablenVisit http://www.python.org/download/mac/
+    for current information.
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_16_2.png)
+
+
+    **STEP 7** The installation didn''t take too long; the Mac Mini we used in this
+    section is a little slower than modern Mac machines and it will take around thirty
+    seconds for the Installation Success prompt to be displayed.
+
+
+    **STEP 10** Older Mac versions may have trouble with the newer versions of Python
+    3.x, in which case you will need to revert to a Python 3.x build; as long as you''re
+    using Python 3.x, this code in book will work for you.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_16_3.png)
+
+
+    ```
+
+    Python 3.1.2 (r312:00GM, Mar 24 2010, 01:33:18)
+
+    GCC 4.0.1 (Apple Inc. build 549d3) on Darwin
+
+    Type ''copyright'', ''credits'' or ''license'' for more
+
+    >>
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_16_4.png)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "# # How to Set Up Python in Linux\n\nPython version 2.x is already installed\
+    \ in most Linux distributions but we're going to be using Python 3.x, there's\
+    \ a little work we need to do first to get hold of it. Frankly, it's not too difficult.\n\
+    \n# ## PYTHON PENGEN\n\nLinux is such a versatile operating system that it's often\
+    \ difficult to nail down one way of doing something. Different distributions go\
+    \ about installing software in different ways, so we will stick to Linux Mint\
+    \ 18.1 for this particular tutorial.\n\n**STEP 1** First need to ascertain which\
+    \ version of Python is currently installed in your Linux system; as mentioned,\
+    \ we're going to be using Linux Mint 18.1 for this section. As with macOS, drop\
+    \ into a Terminal pressing Ctrl+Alt+T.\n\n**STEP 3** Some Linux distros will automatically\
+    \ update the installation of Python to the latest versions whenever the system\
+    \ is updated. To check, first do a system update and upgrade with:\n\n```\nsudo\
+    \ apt-get update && sudo apt-get upgrade\nter your password and let the system\
+    \ do any updates.\n```\n\n```\nFile Edit View Search Terminal Help\ndavid@david-mint\
+    \ ~ $\n```\n\n![](img/588364e02a77f179099fae91a1713f0a_17_0.png)\n\n```\nFile\
+    \ Edit View Search Terminal Help\ndavid@david-mint ~ \n```\n\n**STEP 2** Next\
+    \ enter: python --version in the Terminal screen. We should have the output relating\
+    \ to version 2.x of Python in the display. In this case the output is Python 2.72.\n\
+    \n**STEP 4** Once the update and upgrade is complete, you may need to answer 'Y'\
+    \ to authorise your actions, enter: python3 --version to see if Python 3 is updated\
+    \ or even installed. In the case of Linux Mint, the version has Python 3.5.2,\
+    \ which is fine for our purposes.\n\n```\nFile Edit View Search Terminal Help\n\
+    david@david-mint ~ $ python --version\nPython 2.7.12\ndavid@david-mint ~ $ _\n\
+    ```\n\n```\nSetting up libncurses5 (7.1-1ubuntu2.1_amd64) \nSetting up libncursesw5\
+    \ (7.1-1ubuntu2.1_amd64) \nSetting up libsqlite3-0 (3.22.0-0ubuntu8.1) \nSetting\
+    \ up libz1g (9.5-1ubuntu2_amd64) \nSetting up libreadline (6.2-1ubuntu2_amd64)\
+    \ \nSetting up libbz21 (1.0.8-2ubuntu2_amd64) \nSetting up libncurses5 (7.1-1ubuntu2.1_amd64)\
+    \ \nSetting up libncursesw5 (7.1-1ubuntu2.1_amd64) \nSetting up libsqlite3-0 (3.22.0-0ubuntu8.1)\
+    \ \nSetting up libz1g (9.5-1ubuntu2_amd64) \nSetting up libreadline (6.2-1ubuntu2_amd64)\
+    \ \nSetting up libbz21 (1.0.8-2ubuntu2_amd64) \nSetting up libgdbm8 (5.1.2-2ubuntu)\
+    \ \nSetting up libtinfo5 (6.2-2ubuntu2) \nSetting up libncurses6 (6.1-1ubuntu2.1)\
+    \ \nSetting up libncursesw6 (6.1-1ubuntu2.1) \nSetting up libpython3.5 (3.5.2-2ubuntu3.1)\
+    \ \nSetting up libpython3.5-minimal (3.5.2-2ubuntu3.1) \nSetting up libpython3.5-dev\
+    \ (3.5.2-2ubuntu3.1) \nSetting up python3.5 (3.5.2-2ubuntu3.1) \nSetting up python3.5-minimal\
+    \ (3.5.2-2ubuntu3.1) \nSetting up python3.5-dev (3.5.2-2ubuntu3.1) \nSetting up\
+    \ xorg-dev (1.2.0-1ubuntu2) \nSetting up xutils-dev (1.0.5-1ubuntu) \nSetting\
+    \ up build-essential (9.4.2-1ubuntu1) \nSetting up pkg-config (0.29.2-1ubuntu1)\
+    \ \nSetting up python-dev (2.7.1-1ubuntu2.5) \ndavid@david-mint ~ $ _\n```"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# # How to Set Python in Linux
+
+
+    **STEP 5** However, if you want the latest version, 3.6.2 to build Python from
+    source at the time of writing, you need by entering these commands into the Terminal:
+
+
+    ```
+
+    sudo apt-get install build-essential checkinstall
+
+    sudo apt-get install libreadline-dev libsqlite3-dev
+
+    sudo apt-get install libnssl-dev libsqlite3-dev tk-dev
+
+    sudo apt-get install libdbm-dev libgdbm-dev libreadline-dev
+
+    ```
+
+
+    **STEP 8** Within the Python folder, enter:
+
+    ./configure
+
+    sudo make altinstall
+
+
+    This could take little depending on the speed of your computer. Once finished,
+    run python3.6 --version to check the installed version.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_18_0.png)
+
+
+    **STEP 6** Open your Linux web browser and go to the Python download page: www.python.org/downloads.
+    Click on the Download Python 3.6.2 (or whichever version you''re looking for)
+    to download the Python-3.6.2.tar.xz
+
+
+    **STEP 9** For the GUI IDE, you will need to enter the command into the Terminal:
+
+
+    ```
+
+    sudo apt-get install idle3
+
+    ```
+
+
+    The IDLE can be started with the command: idle3. Note that IDLE runs from a different
+    version than the one you installed from.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_18_1.png)
+
+
+    **STEP 7** In the Terminal, download the contents of the Python source code with:
+    tar -xvf Python-3.6.2. Then enter the newly extracted folder with cd Python-3.6.2/
+
+
+    **STEP 10** You also need Pip (Pip Install Packages) to help you install more
+    modules and extras. Enter: sudo apt-get install python3-pip
+
+
+    ```
+
+    pip3 install --upgrade pip
+
+    ```
+
+
+    When complete, the Python and Python 3.x will be available via the Programming
+    Session in your distro''s menu.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_18_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '![](img/588364e02a77f179099fae91a1713f0a_19_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# # Getting Started with Python
+
+
+    Getting started with Python may seem a little daunting at first but the language
+    has been designed with simplicity in mind. Like most things, you need to start
+    slowly, learn how to get a result and how to get what you want from the code.
+
+
+    In this section, we cover variables, numbers and expressions, user input, conditions
+    and loops; and the types of errors you may well come across in your time with
+    Python.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# # Starting Python for the First Time
+
+
+    We''re going to be using the Raspberry Pi as our Python 3 hardware platform. The
+    latest version of Raspian comes preinstalled with Python 3, version 3.4.2 to be
+    exact, so long as you have a version 3 Shell, all our code will work.
+
+
+    # STARTING PYTHON
+
+
+    We''re not going to into the details of getting the Raspberry Pi up and running,
+    there''s plenty of material available on that subject. However, once you''re ready,
+    fire up your Pi and get ready for coding.
+
+
+    +   **STEP 1** With the Raspberry desktop loaded, click on the Menu by Programming
+    > Python 3 IDLE. This opens the Python 3 Shell. Windows and Mac users can find
+    the Python 3 IDLE Shell from the Windows Start menu and via Finder.
+
+
+    +   **STEP 3** For example, in the Shell enter: 2+2 After pressing Enter, the
+    next line displays the answer: 4. Basically, Python has taken the ''code'' and
+    produced the relevant output.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_21_0.png)
+
+
+    ```
+
+    Python 3.4.2 Shell
+
+    Python 3.4.2 (default, Oct 9 2014, 13:31:11)
+
+    (GCC 4.9.2) on Linux
+
+    >>> type ''copyright'', ''credits'' or ''license'' for more information.
+
+    >>> 2+2
+
+    4
+
+    ```
+
+
+    +   **STEP 2** The Shell is where you can enter code and see the responses and
+    output of code you''ve programmed into Python. This is a kind of sandbox, where
+    you are able to try out some simple code and processes.
+
+
+    +   **STEP 4** The Python Shell acts very much like a calculator, since code is
+    a series of mathematical interactions with the system. Integers, which are the
+    infinite sequence of numbers can be easily added, subtracted, multiplied and so
+    on.
+
+
+    ```
+
+    Edit Edit Help Windows Shell
+
+    Python 3.4.2 (default, Oct 9 2014, 13:31:11)
+
+    (GCC 4.9.2) on Linux
+
+    >>> type ''copyright'', ''credits'' or ''license'' for more information.
+
+    >>> 2+2
+
+    4
+
+    >>> 23453*64545232
+
+    151361111436
+
+    >>> 645678/123456
+
+    5.229988812312343
+
+    >>> 977862998*43504
+
+    4254094221992
+
+    >>> 506472823506
+
+    >>>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# Starting Python for the First Time\n\nSTEP 5 while it's very interesting,\
+    \ it's not particularly exciting. Instead, try this:\n\n```\nprint(\"Hello everyone!\"\
+    )\n```\n\nJust like the code you entered in Sublime in Installing a: Text editor\
+    \ of this book.\n\nSTEP 8 The Python IDE is a configurable environment. If you\
+    \ don't change the ways you are represented, then you can change them via Options\
+    \ > Configure IDE and clicking on the Highlighting tab. We recommend that, you\
+    \ won't be seeing as our screenshots.\n\n```\nPython 3.4.2\nFile Edit Debug Window\n\
+    Python 3.4.2 (Oct. 19 2014, 13:31:15)\n>>> print(type(\"copyright, \"credits\"\
+    \ or \"license\") for more information.)\n'str'\n>>> 2385669532\n6480599242-12345\n\
+    978809269-12345\n12874274534\n>>> print(\"Hello everyone!\")\nhello everyone!\n\
+    ```\n\nSTEP 6 This is a more like it, since you've just your first bit of code.\
+    \ The print command is fairly self-explanatory, it prints things. Python 3 requires\
+    \ the brackets as well in order to output to the screen, in this case the \"Hello\
+    \ everyone!\".\n\nSTEP 9 Just like most programs, regardless of the operating\
+    \ system, there are numerous shortcut keys. We don't have room for all here but\
+    \ within the Options > Configure IDE and under the Keys tab, you can see a list\
+    \ of the current bindings.\n\n```\n>>> print(\"Hello everyone!\")\nHello everyone!\n\
+    >>> \n```\n\nSTEP 7 You have noticed the colour coding within the Python IDE.\
+    \ The colours represent elements of python code. They are:\n\nSTEP 10 The Python\
+    \ IDE is a power interface and that's actually been written in Python using if\
+    \ you want to know many and outs of the Shell, we recommend you take a few minutes\
+    \ to www.docs.python.org/3/library/idle.html which details many of the IDE's features.\n\
+    \n+   - Black - Data and Variables Blue - User Functions\n- Green - Strings Red\
+    \ - Comments\n- Purple - Functions Light - Error Messages\n- Orange - Comments\n\
+    \n# IDLE Colour Coding\n\n| Color | Use | Examples |\n|---|---|---|\n| Black |\
+    \ Data & variables | 2.3.4 |\n| Green | Strings | \"Hello World\" |\n| Purple\
+    \ | Functions | len(1) |\n| Orange | Comments | get_area() |\n| Red | Comments\
+    \ | #number VAT |\n| Light red | Error messages | SyntaxError:"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Getting Started with Python
+
+
+    # Your First Code
+
+
+    Essentially
+
+
+    # PLAYING WITH PYTHON
+
+
+    With most languages, computer or human, it''s all about remembering and applying
+    the right words to the right situation. You''re not born knowing these words,
+    so you need to learn them.
+
+
+    +   STEP 1 If you''ve closed Python 3 IDLE, reopen it in the Shell, enter the
+    operating system version you prefer in the following:
+
+
+    ```
+
+    print("Hello")
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_23_0.png)
+
+
+    +   STEP 3 You can see that instead of the number 4, the output is the 2+2 you
+    asked to be printed to the screen. The question marks are defining what''s being
+    output to the IDE Shell: print the total of 2+2 you need to remove quotes:
+
+
+    ```
+
+    print(2+2)
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_23_1.png)
+
+
+    +   STEP 2 Just as predicted, the word Hello appears in the Shell as blue text,
+    indicating outputting from a string. It''s fairly straightforward and doesn''t
+    need too much explanation. Now try:
+
+
+    ```
+
+    print("2+2")
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_23_2.png)
+
+
+    +   STEP 4 You can continue as such, printing 2+2, 464+2344 and so on to the Shell.
+    An easier way is to use a variable, which is something we will cover in more depth
+    later. Now, enter:
+
+
+    ```
+
+    a=2
+
+    b=2
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_23_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# STEP 5
+
+
+    What you have done here is assigning the letters a and b values: 2 and 2. These
+    are variables, which can be called upon Python to output, add, subtract, and so
+    on for long as their numbers stay the same. Try this:
+
+
+    print(a)
+
+
+    ```
+
+    ### Python 3.4.2 Shell
+
+    Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+
+    Type "copyright", "credits" or "license" for more information.
+
+    >>> print("Hello")
+
+    Hello
+
+    >>> a=2
+
+    >>> b=2
+
+    >>> print(a+b)
+
+    4
+
+    >>> print(a-b)
+
+    0
+
+    >>> print(a*b)
+
+    4
+
+    >>> print(a/b)
+
+    1.0
+
+    ```
+
+
+    # STEP 8
+
+
+    Let''s add a surname:
+
+
+    ```
+
+    surname="Hayward"
+
+    print(surname)
+
+    ```
+
+
+    You have two variables containing a first name and a surname and you can print
+    them independently.
+
+
+    ```
+
+    ### Python 3.4.2 Shell
+
+    Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+
+    Type "copyright", "credits" or "license" for more information.
+
+    >>> print("Hello")
+
+    Hello
+
+    >>> name="David"
+
+    >>> surname="Hayward"
+
+    >>> print(name)
+
+    David
+
+    >>> print(surname)
+
+    Hayward
+
+    ```
+
+
+    # STEP 6
+
+
+    The output of the last steps confirms the values of a and b individually, as you''ve
+    asked to be printed separately. If you want to add them up, use the following:
+
+
+    print(a+b)
+
+
+    This code simply takes the values of a and b, adds them and outputs the result.
+
+
+    ```
+
+    ### Python 3.4.2 Shell
+
+    Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+
+    Type "copyright", "credits" or "license" for more information.
+
+    >>> print("Hello")
+
+    Hello
+
+    >>> a=2
+
+    >>> b=2
+
+    >>> print(a+b)
+
+    4
+
+    >>> print(a-b)
+
+    0
+
+    >>> print(a*b)
+
+    4
+
+    >>> print(a/b)
+
+    1.0
+
+    ```
+
+
+    # STEP 9
+
+
+    If we were to apply the same routine as before, using the + symbol, the name wouldn''t
+    appear correctly in the Shell. Try it:
+
+
+    print(name+surname)
+
+
+    You need a space between the two, defining them as separate values and not mathematically
+    as you play around.
+
+
+    ```
+
+    ### Python 3.4.2 Shell
+
+    Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+
+    Type "copyright", "credits" or "license" for more information.
+
+    >>> print("Hello")
+
+    Hello
+
+    >>> name="David"
+
+    >>> surname="Hayward"
+
+    >>> print(name+surname)
+
+    DavidHayward
+
+    ```
+
+
+    # STEP 10
+
+
+    In Python 3 you can separate the two variables with a space, comma:
+
+
+    print(name, surname)
+
+
+    Alternatively, you can add the space yourself:
+
+
+    print(name + " " + surname)
+
+
+    The use of the comma is much easier, as you can see.
+
+    nCongratulations, you''ve just taken your first steps into the world of Python.
+
+
+    ```
+
+    ### Python 3.4.2 Shell
+
+    Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+
+    Type "copyright", "credits" or "license" for more information.
+
+    >>> print("Hello")
+
+    Hello
+
+    >>> name="David"
+
+    >>> surname="Hayward"
+
+    >>> print(name, surname)
+
+    David Hayward
+
+    ```
+
+
+    You can play with different kinds of variables and the Function. For example,
+    consider someone''s name:
+
+
+    name="David"
+
+
+    print(name)
+
+
+    ```
+
+    ### Python 3.4.2 Shell
+
+    Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+
+    Type "copyright", "credits" or "license" for more information.
+
+    >>> print("Hello")
+
+    Hello
+
+    >>> a=2
+
+    >>> b=2
+
+    >>> print(a+b)
+
+    4
+
+    >>> print(a-b)
+
+    0
+
+    >>> print(a*b)
+
+    4
+
+    >>> print(a/b)
+
+    1.0
+
+    ```
+
+
+    print(name)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# # Saving and Executing Your Code
+
+
+    Whilst working in the IDLE Shell is perfectly fine for small code snippets, it''s
+    not designed for entering longer program listings. In this section you''re going
+    to be introduced to the IDLE Editor, where you will be working from now on.
+
+
+    # ## EDITING CODE
+
+
+    You will eventually reach a point where you have to move on from inputting lines
+    of code into the Shell. Instead, the IDLE Editor will allow you to save and execute
+    your Python code.
+
+
+    +   **STEP 1** First, open the Python IDLE Shell and when it''s up, click on File
+    -> New File. This will open a new window with Untitled as its name. This is the
+    PythonLE Editor and you can enter the code needed to create your future programs.
+
+
+    +   **STEP 3** You can see that the same colour coding is in place in the IDLE
+    Editor as it is in the Shell, enabling you to better understand what''s going
+    on with your code. However, to execute the code you need to first save it. Press
+    F5 and you get a Save... Check box open.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_25_0.png)
+
+
+    +   **STEP 2** The IDLE Editor is, for all intents and purposes, a simple text
+    editor with Python features, colour coding and so; in the same vein as Sublime.
+    You can edit your code as you would within the Shell, so taking an Example from
+    the previous tutorial, enter:
+
+
+    +   **STEP 4** Click on the OK button in the Save box and select a destination
+    where you''ll save all your Python code. The destination can be a dedicated folder
+    called Python or you can just dump it wherever you like. Remember to keep a tidy
+    drive though, to help you out in the future.
+
+
+    ```
+
+    print("Hello everyone!")
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_25_1.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_25_2.png)
+
+
+    | | | |
+
+    |---|---|--|
+
+    | __pycache__ | | loop.py |
+
+    | Blue Projects | Circle.py | man.py |
+
+    | Browser Projects | graphics.py | test.py |
+
+    | Python Code | img.py | Square.py |
+
+    | Scratch Projects | ingest.py | wordgame.py |
+
+    | Addition | | |'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# STEP 5 Enter a name for your code, ''print hello'' for example, and click
+    on the Save button. The Python code is saved if executed it will be detailed in
+    the IDLE Shell. In this case, the words ''Hello everyone!''
+
+
+    # STEP 8 Let''s extend the code and enter a few examples from the previous tutorial:
+
+
+    ```
+
+    a=2
+
+    b=2
+
+    name="David"
+
+    surname="Hayward"
+
+    print(a+b)
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_26_0.png)
+
+
+    If you press F5 it will be saved to save the code, as it''s been modified from:
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_26_1.png)
+
+
+    # STEP 6 This is how the majority of your Python code will be conducted. Enter
+    it into the Editor, F5, save the code and look at the output in the Shell. Sometimes
+    it will differ, depending on whether you''ve requested a separate window, but
+    essentially that''s process. The process we will use throughout this unless, otherwise
+    stated.
+
+
+    If you click the OK button, the file will be overwritten with the new code entries,
+    and executed, with the output in the Shell. It''s not a problem with these few
+    lines, but if you edited a larger file, overwriting can become an issue. Use File
+    > Save As from Editor to create a copy.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_26_2.png)
+
+
+    # STEP 7 If you open the file location of the saved Python code, you can see that
+    it is in a .py extension. This is the default Python file name. And any code you
+    create will be whatever.py any code download from the Internet be. Just sure that
+    the code is written for Python 3.
+
+
+    # STEP 10 Create a new file. Close the Editor, and open a new instance (File >
+    New File from the Shell). Enter the following and save it as hello:
+
+
+    ```
+
+    a="Python"
+
+    b=15
+
+    c="cool!"
+
+    print(a, b, c)
+
+    ```
+
+
+    You will use this code in the tutorial.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_26_3.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_26_4.png)'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Executing Code from the Command Line
+
+
+    Although we''re working from the GUIDLE throughout this book, it''s worth taking
+    a look at Python''s command line handling. We already know there''s a command
+    line version of Python but it''s also used to execute code.
+
+
+    # COMMAND THE CODE
+
+
+    Using the code we created in the previous tutorial, the one we named hello.py,
+    let''s see how you can run code that was made in the GUI at the command line level.
+
+
+    +   STEP 1 Python, in Linux, with two possible ways of executing code via the
+    command line. One of the ways is with Python 2, while the other uses the Python
+    3 libraries and so on. First though, drop into the command line or Terminal on
+    your operating system.
+
+
+    +   STEP 3 Now you''re at the command line we can start Python. For Python 3 you
+    need to enter the command and press Enter. This will put you into the command
+    line version of the Shell, with the familiar three right-arrows as cursor (>>).
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_27_0.png)
+
+
+    +   STEP 2 Just as before, Raspberry Pi: Windows we''re using will need to click
+    the Start button and search for CMD, then click the Command Line returned search;
+    and macOS users can access to their command line by clicking Go > Utilities >
+    Terminal.
+
+
+    +   STEP 4 From here you''re able to enter the code''ve looked at previously,
+    such as:
+
+
+    ```
+
+    a=2
+
+    print(a)
+
+    ```
+
+
+    You can see that it works exactly the same.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_27_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # Executing Code from the Command Line
+
+
+    **STEP 5** Now enter: exit() to leave the command line session and return you
+    back to the command prompt. Enter the folder you saved from the previous tutorial
+    and list the available files within; hopefully you see the hello.py.
+
+
+    **STEP 8** The result of running Python 3 code from the Python 2 code is quite
+    obvious. Whilst it doesn''t error out in any way, due to the differences between
+    how Python 3 handles Print over Python 2, the result is not what we expect. Using
+    Sublime for the open, the hello.py
+
+
+    ```
+
+    hello.py
+
+    python 2.7 (default Oct 19 2014, 12:31:11)
+
+    print(''copyright'', ''credits'' or ''license'' for more information.
+
+    print(''hello, world'')
+
+
+    exit()
+
+    C:\Documents\rasberrypi~/Documents/Python Code
+
+    python hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    python3 hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    ```
+
+
+    ```
+
+    hello.py
+
+    python 2.7 (default Oct 19 2014, 12:31:11)
+
+    print(''copyright'', ''credits'' or ''license'' for more information.
+
+    print(''hello, world'')
+
+
+    exit()
+
+    C:\Documents\rasberrypi~/Documents/Python Code
+
+    python hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    python3 hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    ```
+
+
+    **STEP 6** From within the same folder as the code you''re going to run, enter
+    into the following python3 hello.py
+
+    This will execute the code we created, which remind you to:
+
+
+    **STEP 9** Since Sublime Text isn''t available for Raspberry Pi, you to temporarily
+    leave the Pi for a moment and use an example that you don''t need to use the Python
+    IDLE. With the hello.py file open, alter to include the following:
+
+
+    a="Python"
+
+    b="cool"
+
+    print(a, b, c)
+
+
+    name=input("What is your name ?")
+
+    print("hello", name)
+
+
+    ```
+
+    hello.py
+
+    python 2.7 (default Oct 19 2014, 12:31:11)
+
+    print(''copyright'', ''credits'' or ''license'' for more information.
+
+    print(''hello, world'')
+
+
+    exit()
+
+    C:\Documents\rasberrypi~/Documents/Python Code
+
+    python hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    python3 hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    ```
+
+
+    ```
+
+    hello.py
+
+    python 2.7 (default Oct 19 2014, 12:31:11)
+
+    print(''copyright'', ''credits'' or ''license'' for more information.
+
+    print(''hello, world'')
+
+
+    exit()
+
+    C:\Documents\rasberrypi~/Documents/Python Code
+
+    python hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    python3 hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    ```
+
+
+    **STEP 7** Naturally, since you are using Python 3, the syntax and layout that
+    is unique to Python 3, if you try to use the code with Python 2 by entering:
+
+
+    **STEP 10** Save the hello.py file and drop back to the command line. Now the
+    newly saved python3 hello.py
+
+
+    python hello.py
+
+
+    The result will be your original code! showing, for your name, with the added
+    input command in your code, and displaying it in the command window.
+
+
+    ```
+
+    hello.py
+
+    python 2.7 (default Oct 19 2014, 12:31:11)
+
+    print(''copyright'', ''credits'' or ''license'' for more information.
+
+    print(''hello, world'')
+
+
+    exit()
+
+    C:\Documents\rasberrypi~/Documents/Python Code
+
+    python hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    python3 hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    ```
+
+
+    ```
+
+    hello.py
+
+    python 2.7 (default Oct 19 2014, 12:31:11)
+
+    print(''copyright'', ''credits'' or ''license'' for more information.
+
+    print(''hello, world'')
+
+
+    exit()
+
+    C:\Documents\rasberrypi~/Documents/Python Code
+
+    python hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    python3 hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    ```
+
+
+    ```
+
+    hello.py
+
+    python 2.7 (default Oct 19 2014, 12:31:11)
+
+    print(''copyright'', ''credits'' or ''license'' for more information.
+
+    print(''hello, world'')
+
+
+    exit()
+
+    C:\Documents\rasberrypi~/Documents/Python Code
+
+    python hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    python3 hello.py
+
+    rasberrypi~/Documents/Python Code $
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# # Numbers and Expressions
+
+
+    We''ve seen some basic mathematical expressions with Python, simple addition and
+    the like. Let''s expand on that now and see how powerful Python is as a calculator.
+    You can work within the IDLE Shell or in the Editor, whichever you like.
+
+
+    # IT''S ALL MATHS, MAN
+
+
+    You can get some impressive results with the mathematical powers of Python; as
+    with most, if not all, programming languages, maths is a small gland located at
+    the back of the head
+
+
+    +   **STEP 1** Open up the GUI version of Python 3, as mentioned above. Next time
+    when you''re going to use the Shell or the Editor to warm up your muscle which
+    is a small gland located at the back of (or not)
+
+
+    +   **STEP 3** You can use all the mathematical operations: divide, multiply,
+    brackets and so on. Practise with a few, for example:
+
+
+    ```
+
+    1/2
+
+    6/2
+
+    2*3
+
+    (1+2)+(3*4)
+
+    ```
+
+
+    ```
+
+    Python 3.4.2 Shell
+
+    File Edit Shell Debug Options windows help
+
+    Python 3.4.2 (default. Oct 19 2014, 13:31:11)
+
+    (GCC 4.9.0) on Linux
+
+    >>> print("copyright "credits" or "license") for more information.
+
+    >>> 1/2
+
+    0.5
+
+    >>> 54356+3553245
+
+    3607601
+
+    >>> 986734*2734484421
+
+    ```
+
+
+    +   **STEP 2** In the Shell enter the following:
+
+    2*2
+
+    54356+3553245
+
+    986734*2734484421
+
+
+    +   **STEP 4** You''ve not noticed, division produces a decimal number. In Python
+    these are called floats, or floating point arithmetic. However, if you need an
+    integer to a decimal, you can use a double slash:
+
+
+    You can see that Python can handle large numbers easily.
+
+
+    ```
+
+    1/2
+
+    6/2
+
+    2*3
+
+    (1+2)*(3*4)
+
+    ```
+
+
+    And so on.
+
+
+    ```
+
+    Python 3.4.2 Shell
+
+    File Edit Shell Debug Options windows help
+
+    Python 3.4.2 (default. Oct 19 2014, 13:31:11)
+
+    (GCC 4.9.0) on Linux
+
+    >>> print("copyright "credits" or "license") for more information.
+
+    >>> 1/2
+
+    0.5
+
+    >>> 54356+3553245
+
+    3607601
+
+    >>> 986734*2734484421
+
+    269807102281179024
+
+    >>> 6/2
+
+    3.0
+
+    >>> 2*3
+
+    6
+
+    >>> (1+2)*(3*4)
+
+    36
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "# Numbers and Expressions\n\n**STEP 5** You can also use an operation to see\
+    \ the remainder left over from division. For example:\n\n**STEP 8** This will\
+    \ be displayed as '01', converting the integer into binary and adding the prefix\
+    \ 0b to the front. If you want to remove the 0b prefix, then you can use:\n\n\
+    10/3\nWill display 3.333333333, which is 3.3-recurring. If you now enter:\n\n\
+    **Format(3, \"b\")**\nThe command converts a value, the number 3, to a formatted\
+    \ representation as controlled by the format specification, the 'b' part.\n\n\
+    10%3\nWill display 1, which is the remainder left over from dividing 10 into 3.\n\
+    \n```\n>> 2**3\n== 8\n>> (1+2)*3\n== 9\n>> 1/2\n== 0.5\n>> 6/2\n== 3\n>> 10/3\n\
+    == 3.3333333333333335\n>> 10%3\n== 1\n```\n\n```\n>> 2**3\n== 8\n>> (1+2)*3\n\
+    == 9\n>> 1/2\n== 0.5\n>> 6/2\n== 3\n>> 10/3\n== 3.3333333333333335\n>> 10%3\n\
+    == 1\n```\n\n**STEP 6** Next up we have the power operator, or exponentiation\
+    \ if you want to be. To work out of something you can use a double multiplication\
+    \ symbol or double-star on the keyboard:\n\n**STEP 9** A Boolean logical that\
+    \ is either true or false. We can use these to compare data and see if it's equal\
+    \ to, less than or greater than. This is in a New File:\n\n**2**3\n10**10\nEssentially,\
+    \ it's 2**3 but you already know the basics behind math operators. This is how\
+    \ you would out in Python:\n\n```\na = 6\nb = 7\nprint(a == a)\n True\nprint(a\
+    \ == b)\n False\nprint(a == 6 and b == 7)\n True\nprint(a == 4 and b == 7)\n False\n\
+    print(5, not a == 7 and b)\n False\nprint(6, a == 7 or b == 7)\n True\nprint(7,\
+    \ a == 7 or b == 6)\n True\nprint(8, not (7 or b == 6))\n False\nprint(9, not\
+    \ (7 and b == 6))\n```\n\n```\n>> 2**3\n== 8\n>> (1+2)*3\n== 9\n>> 1/2\n== 0.5\n\
+    >> 6/2\n== 3\n>> 10/3\n== 3.3333333333333335\n>> 10%3\n== 1\n>> 2**3\n== 8\n>>\
+    \ 10**10\n== 10000000000\n```\n\n**STEP 7** Numbers and expressions don't stop\
+    \ there. Python has built-in functions to work out of numbers, absolute values,\
+    \ complex numbers and a host of mathematical expressions and Pythagorean tongues.\
+    \ To convert to binary, use:\n\n**STEP 10** Execute the code from Step 9, and\
+    \ you can see a series of True or False statements, demonstrating the result of\
+    \ the two values: 6 and 7. It's an extension of what you've looked at, an important\
+    \ part of programming.\n\nbin(3)\n\n```\n>> 1/2\n== 0.5\n>> 2**3\n== 8\n>> (1+2)*3\n\
+    == 9\n>> 1/2\n== 0.5\n>> 6/2\n== 3\n>> 10/3\n== 3.3333333333333335\n>> 10%3\n\
+    == 1\n>> 2**3\n== 8\n>> 10**10\n== 10000000000\n>>bin(3)\n'0b11'\n```\n\n![](img/588364e02a77f179099fae91a1713f0a_30_0.png)\n\
+    \n![](img/588364e02a77f179099fae91a1713f0a_30_1.png)\n\nwww.bdmpublic.com 31"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# Using Comments
+
+
+    When you write your code, the flow of it, what each variable does, the overall
+    program will operate and is all inside of your head. Another programmer could
+    follow the code line by line over time, it can become difficult to read.
+
+
+    # #COMMENTS!
+
+
+    Programmers use a method of keeping their code readable by commenting on sections.
+    If a variable is used, the programmer comments on what it''s supposed to do, for
+    example. It''s just good practice.
+
+
+    +   * STEP 1 Start by creating a new instance of the IDLE Editor (File -> New
+    File) and create a simple variable and print command:
+
+
+    ```
+
+    a=10
+
+    print("The value of A is", a)
+
+    ```
+
+
+    Save the file and execute.
+
+
+    +   * STEP 3 Resave the code and execute it. You can see that the output in the
+    IDLE Shell is still the same as before, despite the lines being added. Simply
+    put, the hash symbol (#) a line of text that the programmer can insert to inform
+    them, and others, of what''s going on without the user aware.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_31_0.png)
+
+
+    +   * STEP 2 Running the code will return the line: The value of A is 10 to the
+    IDLE Shell window, which is what we expect. Now, add some of the comments you''d
+    normally see within code:
+
+
+    ```
+
+    # Set the value of A to 10
+
+    a=10
+
+    # Print the current value of A
+
+    print("The value of A is", a)
+
+    ```
+
+
+    +   * STEP 4 Let''s assume that the variable A we''ve created is the number of
+    lives in a game. Every time the player dies, the variable is decreased by 1. The
+    programmer could insert an input line like the following:
+
+
+    ```
+
+    a-=1
+
+    print("You just lost a life!")
+
+    print("You now have", a, "lives left!")
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_31_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# Using Comments\n\n# STEP 5\n\nWhile we know that the variable A is, and that\
+    \ the player has lost one, a casual viewer or checking the code may not know.\
+    \ Imagine for a moment that the code is twenty thousand lines, instead of just\
+    \ seven. You can see how comments work.\n\n# STEP 8\n\nInline comments are comments\
+    \ that follow a section of code. Take our examples from, instead of inserting\
+    \ the code on a separate line, we could use:\n\n```\na=10 # Set the start value\
+    \ of A to 10\nprint(\"Value of A is,\") # Print the current value of A\na=9 #\
+    \ Player lost a life!\nprint(\"You've just lost a life!\")\nprint(\"You now have,\"\
+    \ \"lives!\") # Inform player, and display current value of A (lives)\n```\n\n\
+    ```\nPython 3.8.2\ndefault():\n    # Oct 19 2019 12:34:56\n    a=10\n    # print(\\\
+    credits\" or \"license\" for information.\n    # works really.\n\n#########################\n\
+    # The values\n#########################\n    a=9\n    print(\"Value of A is,\"\
+    )\n    print(\"You've just lost a life!\")\n    print(\"You now have lives!\"\
+    )\n```\n\n# STEP 6\n\nEssentially the new code with comments could look like:\n\
+    \n+   # Set the start value of A to 10\n# Print the current value of A\nprint(\"\
+    Value of A is,\")\n# Player lost a life!\na=9\n# Inform player, and display current\
+    \ value of A (lives)\nprint(\"You've just lost a life!\")\nprint(\"You now have,\"\
+    \ \"lives!\")\n\n# STEP 9\n\nThe comment, hash symbol, can also be used to comment\
+    \ out sections of code. For instance, if you wanted to remove the first statement,\
+    \ you would use:\n\n> # Set the value of A is,\n\n```\nComments.py -Documents/Python/Code/Comments.py\
+    \ (3.4.2)\nEdit Edit Format Options Help\n# Set the start value of A to 10\n#\
+    \ print the current value of A\nprint(\"Value of A is,\")\n# Player lost a life!\n\
+    a=9\n# Inform player, and display current value of A (lives)\nprint(\"You've just\
+    \ lost a life!\")\nprint(\"You now have,\" \"lives!\")\n```\n\n# STEP 7\n\nYou\
+    \ can use comments in different ways. For example, Block Comments are a large\
+    \ section of text that details what is going on in the code, to help readers what\
+    \ you're doing.\n\n+   # This is the best game ever, and has been developed by\
+    \ a crack squad of Python experts\n# who not slept in weeks. Being very smelly,\
+    \ the code at least works well.\n# works really well.\n\n# STEP 10\n\nYou also\
+    \ use three quotes to comment out a Block Comment or multi-section of code. Please\
+    \ place before and after the areas you want to comment for them:\n\n> \"\"\"\n\
+    \nThis is the best game ever, and has been developed by a crack squad of Python\
+    \ experts who haven't slept in weeks. Being very smelly, the code at least works\
+    \ well really.\n\n```\nComments.py -Documents/Python/Code/Comments.py (3.4.2)\n\
+    Edit Edit Format Options Help\n# This is the best game ever, and has been developed\
+    \ by a crack squad of Python experts\n# who haven't slept in weeks. Being very\
+    \ smelly, the code at least works well.\n# Set the start value of A to 10\n# print\
+    \ the current value of A\nprint(\"Value of A is,\")\n# Player lost a life!\na=9\n\
+    # Inform player, and display current value of A (lives)\nprint(\"You've just lost\
+    \ a life!\")\nprint(\"You now have,\" \"lives!\")\n```\n\nwww.bdmpublications.com"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# # Working with Variables
+
+
+    We''ve seen some examples of variables in our Python code already but it''s always
+    worth going through the way they operate and how Python creates and assigns certain
+    values to a variable.
+
+
+    # ## VAR VARIABLES
+
+
+    You''ll be working with the Python 3 IDLE Shell in this tutorial. If you haven''t
+    already, open Python 3 or close down the previous IDLE Shell to clear up any code.
+
+
+    +   - STEP 1 In some programming languages you''re required to use a dollar sign
+    to denote a string, which is a variable made of multiple characters, such as the
+    name of a person. In Python this is not necessary. In the Shell enter: name="David
+    Howard" (or use your own name, unless you also David Howard).
+
+
+    +   - STEP 3 You''ve seen previously that variables can be concatenated using
+    the plus symbol between the variables names. In our example we can use: print(name
+    + " "). The middle part between quotations allows us to add a colon and a space,
+    as variables are connected without spaces, so we need to add them manually.
+
+
+    ```
+
+    Python 3.4.2 (default, Oct 19 2014, 12:31:11)
+
+    >>> type(''copyright'', ''credits'' or ''license'') for more information.
+
+    >>> print(name)
+
+    David Howard
+
+    >>> David Howard
+
+    ```
+
+
+    +   - STEP 2 You can check the type of variable in use by issuing the type( )
+    command, placing the name of the variable inside the brackets. In out this would
+    be: type(name). Add a new string variable: title="Descended from Vikings".
+
+
+    +   - STEP 4 You can also combine variables within another variable. For example,
+    to combine both name and title variables into a new variable we:
+
+
+    ```
+
+    Python 3.4.2 (default, Oct 19 2014, 12:31:11)
+
+    >>> type(''copyright'', ''credits'' or ''license'') for more information.
+
+    >>> print(name)
+
+    David Howard
+
+    >>> type(name)
+
+    <class ''str''>
+
+    >>> title="Descended from Vikings"
+
+    David Howard Descended from Vikings
+
+    ```
+
+
+    Then the output of the new variable as:
+
+
+    ```
+
+    print(character)
+
+    ```
+
+
+    Numbers are stored as different:
+
+
+    ```
+
+    age=44
+
+    Type (age)
+
+    ```
+
+
+    Which, as we know, are integers.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# Working with Variables\n\n# STEP 5\n\nHowever, you can't combine both strings\
+    \ and integer variables in the same command, as you would need a set of variables.\
+    \ To edit one into the other or vice versa. When you try to combine both, you\
+    \ will get an error message:\n\n```\nprint (name + age)\n```python\nPython 3.4.2\
+    \ (default, Oct 19 2014, 13:31:11)\nname = 'Thor'\nage = 44\nprint(type(name))\n\
+    <class 'str'>\nprint(type(age))\n<class 'int'>\nprint(name + ' Descended from\
+    \ Vikings')\nThorended from Vikings\nprint(name + age)\nTypeError: Can't convert\
+    \ 'int' object to str\n```\n```\n\n# STEP 8\n\nThis presents a bit of a problem\
+    \ when you want to work with a number that's been inputted by the user, as age\
+    \ + 10 won't work due to being a string and an integer. Instead, you need to:\n\
+    \n```\nint(age) + 10\n```\n\nThis will cast the string into an integer that can\
+    \ be worked.\n\n```\nPython 3 4 2\nEdit File Debug Options Windows Help\nPython\
+    \ 3.4.2 (default, Oct 19 2014, 13:31:11)\nage = input(\"Enter your age: \")\n\
+    print(type(age))\n<class 'str'>\nprint(age + 10)\nTypeError: Can't convert 'str'\
+    \ object to int\n```\n\nThe type of Casting is also important when dealing with\
+    \ floating point arithmetic; remember the decimal point. For example, enter:\n\
+    \n```\nfloat(19.99)\n```\n\n# STEP 6\n\nThis is a process known as Casting. The\
+    \ Python code is:\n\n```\nprint (\"age is \" + str(age) + \" years old.\")\n44\
+    \ years old.\n```\n\nor you can use:\nNotice that in the last example, you don't\
+    \ need the spaces between the words in quotes as the comma treats each part separately.\n\
+    \n```\nprint (\"name is \" + name + \", years old.\")\nThor is 44 years old.\n\
+    ```\n\n# STEP 9\n\nNow enter type(float) and you'll see that Python has converted\
+    \ the number as a 'float', which contains a decimal value.\n\n```\nPython 3 4\
+    \ 2\nEdit File Debug Options Windows Help\nPython 3.4.2 (default, Oct 19 2014,\
+    \ 13:31:11)\nage = float(input(\"Enter your age: \"))\nprint(type(age))\n<class\
+    \ 'float'>\nprint(age + 10)\n29.99\n```\n\n# STEP 7\n\nAnother example of Casting\
+    \ is when you need an input from the user, as for example:\n\n```\nage = input(\"\
+    How old are you?\")\n```\n\nAll data is stored as a string.\n\n```\nPython 3 4\
+    \ 2\nEdit File Debug Options Windows Help\nPython 3.4.2 (default, Oct 19 2014,\
+    \ 13:31:11)\nage = input(\"How old are you?\")\nprint(type(age))\n<class 'str'>\n\
+    How old are you? \n44\n```\n\n# STEP 10\n\nWhen combining integers and floats\
+    \ Python converts the integer to a float, but does not return the exact value.\
+    \ When converting to integer, Python will always round down to the nearest integer,\
+    \ called truncating; in case of 19.99 it becomes 19.\n\n```\nPython 3 4 2\nEdit\
+    \ File Debug Options Windows Help\nPython 3.4.2 (default, Oct 19 2014, 13:31:11)\\\
+    age = 19.99\nprint(int(age))\n<class 'int'>\n19\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# # User Input
+
+
+    We''ve seen some basic user interaction with the code from a few of the examples
+    earlier, so now would be a good time to focus solely on how you would get information
+    from the user then and present it.
+
+
+    # ## USER FRIENDLY
+
+
+    The type of input you want from the user will depend greatly on the type of program
+    you''re coding. For example, a game might ask for a character''s name, whereas
+    a database can ask for personal details.
+
+
+    +   - STEP 1 If it''s not already, open the Python 3 IDLE Shell, create a New
+    File in the Editor. Let''s begin with something simple, enter:
+
+
+    ```
+
+    print("Hello")
+
+    firstname=input("What is your name? ")
+
+    print("Thanks")
+
+    surname=input("What is your surname? ")
+
+    ```
+
+
+    +   - STEP 3 Now that we have the user''s name stored in a couple of variables
+    we can call them whenever we want:
+
+
+    ```
+
+    print("Welcome", firstName, surname, ". I hope you''re well today.")
+
+    ```
+
+
+    +   - STEP 2 Save and execute the code, and as you already no doubt suspected
+    it, in the IDLE Shell the program will ask for your first name, storing it as
+    the variable firstName, followed by your surname, stored in another variable:
+
+
+    +   - STEP 4 Run the code and you can see a slight issue, the full stop after
+    the surname leaves a blank space. To eliminate that we can add a plus sign instead
+    of the comma in the code:
+
+
+    ```
+
+    print("Welcome"
+
+    ```
+
+
+    ```
+
+    Python 3.4 Shell
+
+    Python 3.4.2 (default, Oct 19 2014, 13:31:17)
+
+    >>> print("Hello")
+
+    Hello
+
+    >>> firstName=input("What is your name? ")
+
+    David
+
+    >>> print("Thanks")
+
+    Thanks
+
+    >>> surname=input("What is your surname? ")
+
+    Hayward
+
+    >>> print("Welcome", firstName, surname)
+
+    Welcome David Hayward
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_35_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# STEP 5
+
+
+    You don''t always have to include quoted text within the input command. For example,
+    you can ask the user''s name, and have the input in the line below:
+
+
+    ```
+
+    print("Hello. What''s your name?")
+
+    name=input()
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_36_0.png)
+
+
+    ```
+
+    Edit File Format Run Options Windows Help
+
+    print("Hello. What''s your name?")
+
+    name=input()
+
+    ```
+
+
+    # STEP 8
+
+
+    What you''ve created here is a condition, which we will cover soon. In short,
+    we''re using the input from user and measuring it against a condition. So, if
+    the user enters David as their name, the guard will allow them to pass unharmed.
+    Else, if they enter a name other than David, the guard challenges them to a fight.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_36_1.png)
+
+
+    ```
+
+    Edit File Format Run Options Windows Help
+
+    print("Hello. What''s your name?")
+
+    name=input()
+
+    ```
+
+
+    # STEP 6
+
+
+    The code from the previous step is often criticized as being a little nessa than
+    having a lengthy amount of text in the input command, but it''s not a rule that''s
+    set in stone, so do you like in these situations. Expanding the code, this:
+
+
+    ```
+
+    print("Wait who goes there?")
+
+    name=input()
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_36_2.png)
+
+
+    ```
+
+    Edit File Format Run Options Windows Help
+
+    print("Wait who goes there?")
+
+    name=input()
+
+    ```
+
+
+    # STEP 9
+
+
+    Just as you learned previously, any input from is automatically a string, so you
+    need to apply TypeCast in order to turn it into something else. This creates interesting
+    aspects to the input command. For example:
+
+
+    # Code to calculate rate and distance
+
+
+    ```
+
+    print("Input a rate and a distance")
+
+    rate=float(input("Rate: "))
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_36_3.png)
+
+
+    ```
+
+    Edit File Format Run Options Windows Help
+
+    # Code to calculate rate and distance
+
+    print("Input a rate and a distance")
+
+    rate=float(input("Rate: "))
+
+    ```
+
+
+    # STEP 7
+
+
+    It''s a good start to take a text adventure game, perhaps?
+
+    Now you can expand it and use the raw input
+
+    to to flesh out the guard a little:
+
+
+    ```
+
+    if name=="David":
+
+    print("Welcome, good sir. You may pass.")
+
+    else:
+
+    print("I know not you. Prepare for battle!")
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_36_4.png)
+
+
+    ```
+
+    Edit File Format Run Options Windows Help
+
+    print("Wait who goes there?")
+
+    if name=="David":
+
+    print("Welcome, good sir. You may pass.")
+
+    else:
+
+    print("I know not you. Prepare for battle!")
+
+    ```
+
+
+    # STEP 10
+
+
+    To finalise the rate and distance, we can add:
+
+    distance = float(input("Distance: "))
+
+    print("Time: ", (distance / rate))
+
+
+    Save and execute the code and enter numbers. Using the
+
+    float element, we do ensure that anything entered is
+
+    a floating number rather than a string.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_36_5.png)
+
+
+    ```
+
+    Edit File Format Run Options Windows Help
+
+    # Code to calculate rate and distance
+
+    print("Input a rate and a distance")
+
+    rate=float(input("Rate: "))
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# Getting Started with Python
+
+
+    # Creating Functions
+
+
+    Now that you have mastered the use of variables and user input, the next step
+    is to tackle functions. You''ve already used a few functions, such as the print
+    command but Python enables you to define your own functions.
+
+
+    # FUNKY FUNCTIONS
+
+
+    A function is a command that you enter into Python to do something. It''s a little
+    piece of self-contained code that takes data, works on it and returns the result.
+
+
+    +   STEP 1 It''s not just a function that works. They can do all of useful things
+    in Python, such sort data, change items from one format to another and check the
+    length or type of items. It is a short word followed by brackets, len(), or type().
+
+
+    +   STEP 3 You can pass variables through functions in much the number of letters
+    in a person''s surname, you could use the following code (enter the text editor
+    for this example):
+
+
+    ```
+
+    name=input("Enter your surname: ")
+
+    count=len(name)
+
+    print("Your surname has", count, "letters in it.")
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_37_0.png)
+
+
+    +   STEP 2 A function takes data, using a variable, works on it depending on what
+    the function is programmed to do and returns the end value. For example, if you
+    wanted to know how many letters are in the word antestablishmentism, then you''d
+    need len("antestablishmentism") and the number 28
+
+
+    +   STEP 4 Python has tens of functions built into it, far too many to get into
+    the limited space available here. However, to view the list of built-in functions
+    available in Python 3, navigate to docs.python.org/3/library/functions.html. These
+    are the predefined functions, but since users have created many more, they''re
+    not the only ones available:
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_37_1.png)
+
+
+    ```
+
+    Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+
+    Type "copyright", "credits" or "license" for more information.
+
+    print(len("antestablishmentism")) 28
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_37_2.png)
+
+
+    ```
+
+    Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+
+    Type "copyright", "credits" or "license" for more information.
+
+    name=input("Enter your surname: ")
+
+    count=len(name)
+
+    print("Your surname has", count, "letters in it.")
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_37_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "# Creating Functions\n\nSTEP 5 Additional functions can be added to Python\
+    \ through modules. Python has a vast range of modules that can cover numerous\
+    \ programming duties. They can be added if needed and when required. For example,\
+    \ to use advanced mathematics functions:\n\nSTEP 6 To use a function from a module\
+    \ the name of the function followed by a full stop, for instance, using the math\
+    \ module, you've just imported it into Python, you can whilst the square root\
+    \ function.\n\n```\nimport math\n```\n\nOnce you have used all to the math functions.\n\
+    \n```\nmath.sqrt(16)\n```\n\n![](img/588364e02a77f179099fae91a1713f0a_38_0.png)\n\
+    \n# FORGING FUNCTIONS\n\nThere are many different functions you can import by\
+    \ other Python programmers and you will undoubtedly some excellent examples from\
+    \ the future; you can also create your own with the def command.\n\nEnter: Choose\
+    \ New File to the editor, let's create a function called Hello, that greets your\
+    \ user.\n\n```\ndef Hello():\n    print(\"Hello\")\n```\n\nTo modify it further,\
+    \ delete the Hello(\"David\") line, the last line in the script and press Ctrl+S\
+    \ to save the new script. Click the editor and create a new file (File -> New)\
+    \ File:\n\n```\nfrom Hello Import\nHello(\"David\")\n```\n\nPress FS to save and\
+    \ run the script. You will see Hello in the Shell, hello in Hello() and it returns\
+    \ the new function.\n\n![](img/588364e02a77f179099fae91a1713f0a_38_1.png)\n\n\
+    STEP 2 Let's expand the function to accept a variable, the user's name for example.\
+    \ Edit your script to:\n\nSTEP 4 What you've done is import the Hello function\
+    \ from the saved Hello.py and used it to say Hello David. This is how modules\
+    \ and functions work; you can import the module and then use the function. This\
+    \ one, and modify for extra credit:\n\n```\ndef Hello(name):\n    print(\"Hello\"\
+    , name)\n```\n\nHello(\"David\")nThis will now accept the variable name, otherwise\
+    \ it prints Hello David. In the Shell, enter: function can now pass parameters\
+    \ through type.\n\n```\ndef add(a, b):\n    result = a + b\n    return result\n\
+    ```\n\n![](img/588364e02a77f179099fae91a1713f0a_38_2.png)\n\n* www bdmpublications.com\
+    \ 39"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "# # Conditions and Loops\n\nConditions and loops are what makes a program interesting;\
+    \ they can be simple or rather complex. How you use them depends greatly on what\
+    \ the program is trying to achieve; they could be the number of lives left in\
+    \ a game or just displaying a countdown.\n\n# ## TRUE CONDITIONS\n\nKeeping conditions\
+    \ simple to begin with makes learning to program a more enjoyable experience.\
+    \ Let's start then by checking if something is TRUE, then doing something if it\
+    \ isn't.\n\n+   * STEP 1 We create a new Python program that will ask the user\
+    \ to input a word, then check to see if it's a four-letter word or not. Start\
+    \ with File -> New File, and begin with the input:\n\n```\n```python\nword=input(\"\
+    Please enter a four-letter word: \")\n```\n```\n\n![](img/588364e02a77f179099fae91a1713f0a_39_0.png)\n\
+    \n+   * STEP 2 We can create a new variable, then use the len function and pass\
+    \ the word through it to get the number of letters the user has entered:\n\n```\n\
+    ```python\nword=input(\"Please enter a four-letter word: \")\nword_length=len(word)\n\
+    ```\n```\n\n+   * STEP 3 Now you can use an if statement to check if the word\
+    \ is four-letter and print a friendly confirmation if it applies to the rule:\n\
+    \n```\n```python\nword=input(\"Please enter a four-letter word: \")\nword_length=len(word)\n\
+    if word_length == 4:\n    print(\"is a four-letter word. Well done.\")\n```\n\
+    ```\n\nThe double equals (==) means check if something is something else.\n\n\
+    +   * STEP 4 The colon at the end of if tells Python that the statement is true\
+    \ after the colon the word matches. Next, move the cursor to the beginning of\
+    \ the Editor:\n\n```\n```python\nword=input(\"Please enter a four-letter word:\
+    \ \")\nword_length=len(word)\nif word_length == 4:\n    print(\"is a four-letter\
+    \ word. Well done.\")\nelse:\n    print(\"is not a four-letter word.\")\n```\n\
+    ```\n\n![](img/588364e02a77f179099fae91a1713f0a_39_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "# STEP 5 F5 and save the code to execute. Enter a four-letter word in the Shell\
+    \ to begin with, you should have the returned message that it's word is four letters.\
+    \ Now F5 again and rerun the program this time enter a five-letter word. The Shell\
+    \ will display that it's not a four-letter word.\n\n# STEP 6 Now expand the code\
+    \ to include another condition. Eventually, it could become quite complex. We've\
+    \ added a condition for three-letter words:\n\nword=input(\"Please enter a four-letter\
+    \ word: \")\nif len(word) == 4:\n    print(word, \"is a four-letter word. Well\
+    \ done.\")\nelse:\n    print(word, \"is not a four-letter word. Try again.\")\n\
+    \n![](img/588364e02a77f179099fae91a1713f0a_40_0.png)\n\n![](img/588364e02a77f179099fae91a1713f0a_40_1.png)\n\
+    \n# LOOPS\n\nA loop looks quite similar to a condition but they are somewhat different\
+    \ in their operation. A loop will run through the block of code of times, usually\
+    \ with the support of a condition.\n\n# STEP 1 Let's start with a simple While\
+    \ statement. If, this will check to see if something is TRUE, then the indented\
+    \ code:\n\n```\nx = 10\nwhile x > 0:\n    print(x)\n    x = x - 1\n```\n\n# STEP\
+    \ 3 The loop is another example. For is used to loop over a range of data, usually\
+    \ a list stored in variables inside square brackets. For:\n\n![](img/588364e02a77f179099fae91a1713f0a_40_2.png)\n\
+    \n![](img/588364e02a77f179099fae91a1713f0a_40_3.png)\n\n# STEP 2 The difference\
+    \ between if and while is when the indented code it goes back to the end of the\
+    \ indented code, checks the statement is still true. In an example x is 10. With\
+    \ each loop it prints the current value of x, then adds one to that value. When\
+    \ x eventually equals 10 it\n\n# STEP 4 The loop can also be used in the countdown\
+    \ example by using the range function:\n\n```\nfor x in range(1, 10):\n    print(x)\n\
+    ```\n\nThe x=1 part isn't needed here because the range function creates a list\
+    \ from first and last numbers.\n\n![](img/588364e02a77f179099fae91a1713f0a_40_4.png)\n\
+    \n![](img/588364e02a77f179099fae91a1713f0a_40_5.png)\n\n![](img/588364e02a77f179099fae91a1713f0a_40_6.png)\n\
+    \n![](img/588364e02a77f179099fae91a1713f0a_40_7.png)"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# # Python Modules\n\nWe've mentioned modules previously, (The math module)\
+    \ is such a large part of getting the most from Python, it's worth delicating\
+    \ a little more time to them. In this instance we're using the Windows version\
+    \ of Python 3.\n\n# ## MASTERING MODULES\n\nThink of modules as an extension that's\
+    \ imported into your Python code to enhance and extend its capabilities. There\
+    \ are countless modules available as we've seen, you can even make your own.\n\
+    \n+   - STEP 1 Although the built-in functions within Python interact. The use\
+    \ of modules, however, allows us to make more sophisticated programs. As you are\
+    \ aware, modules are Python scripts that are imported, such as import math.\n\n\
+    +   - STEP 3 The result is an error in the IDLE Shell, as the module isn't recognised\
+    \ or installed in Python. To install a module we can use PIP (Pip Inst Packages)\
+    \ Close and drop into a command prompt or Terminal session. At an elevated admin\
+    \ command prompt, enter:\n\n```\npip install pygame\n```\n\n![](img/588364e02a77f179099fae91a1713f0a_41_0.png)\n\
+    \n+   - STEP 2 Some modules, especially on the Raspberry Pi, are included by default,\
+    \ the math module being a prime example. Sadly, others are not available. A good\
+    \ example on non-Pi platforms is the pygame module, which contains many functions\
+    \ to help create games. Try: `import pygame`\n\n+   - STEP 4 The PIP installation\
+    \ requires an elevated status due to installing components at different locations.\
+    \ Windows users can search for CMD via the Start button and right-click the result\
+    \ to Run as Administrator. Linux and Mac users use sudo pip install package.\n\
+    \n```\nMicrosoft Windows [Version 10.0.15063]\n(C) 2017 Microsoft Corporation.\
+    \ All rights reserved.\nCollecting pygame\n  Downloading pygame-2.0.1-py3-none-win_amd64.whl\
+    \ (2.1 MB)\nCollecting pygame\nInstalling collected packages: pygame\nSuccessfully\
+    \ installed pygame-2.0.1\n```\n\n![](img/588364e02a77f179099fae91a1713f0a_41_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "# Python Modules\n\nSTEP 5 Close the command prompt or Terminal or relaunch\
+    \ the IDLE Shell. When you now enter:\nimport pygame, the module will be imported\
+    \ into the code without any problems. You'll find that most code downloaded or\
+    \ copied from the Internet will maintain unique, usually the source of errors\
+    \ in execution due to them missing.\n\nSTEP 8 Multiple modules can be imported\
+    \ within your code. To extend your code, use:\n\n```\nimport random\nimport math\n\
+    \nfor i range(5):\n    print(random.randint(1, 25))\n\nprint(math.pi)\n```\n\n\
+    ![](img/588364e02a77f179099fae91a1713f0a_42_0.png)\n\n![](img/588364e02a77f179099fae91a1713f0a_42_1.png)\n\
+    \nSTEP 6 The modules contain the extra code needed to achieve a certain result\
+    \ within your own code, as we've previously encountered it. For example:\n\nSTEP\
+    \ 9 The result is a string of random numbers followed by the value of Pi pulled\
+    \ from the math module you can also pull in certain functions from a module using\
+    \ the from and import commands, such as:\n\nimport random\n\nrings from the code\
+    \ random number generator module.\nYou can use this module to create something\
+    \ like:\n\nfrom random import randint\nfor i in range(5):\n    print(randint(1,\
+    \ 25))\n\nfor i in range(10):\nprint(random.randint(1, 25))\n\n![](img/588364e02a77f179099fae91a1713f0a_42_2.png)\n\
+    \nSTEP 7 This code, when saved and executed, will display ten random numbers from\
+    \ 1 to 25. You can play more or less, and from a greater or lesser range.\n\n\
+    STEP 10 This helps create a more streamlined approach to programming. You can\
+    \ also import module*, which will import everything defined within the module.\
+    \ However, it's often regarded as a base of resources but it keeps nonetheless.\
+    \ modules can be imported as aliases:\n\n```\nimport random\n\nfor i in range(25):\n\
+    print(random.randint(1, 100))\n```\n\nimport math as m\nprint(m.pi)\nOf course,\
+    \ adding comments helps tell others what's going on.\n\n![](img/588364e02a77f179099fae91a1713f0a_42_3.png)\n\
+    \n![](img/588364e02a77f179099fae91a1713f0a_42_4.png)"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '![](img/588364e02a77f179099fae91a1713f0a_43_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# Say Hello to C++
+
+
+    C++ is a high level programming language that''s used in a multitude of technologies.
+    Everything from your favourite mobile app, console and PC game to entire operating
+    systems, all are developed using C++ and a collection of software development
+    kits and custom libraries.
+
+
+    C++ is the driving force behind most of what you use on a daily basis, which makes
+    it a complex and extraordinarily powerful language to get to grips with. In this
+    section, we look at how to install a C++ IDE and compiler on your computer.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "# Why C++?\n\nC++ is one of the most popular programming languages available\
+    \ today. Originally called C with Classes, the language was renamed C++ in 1983.\
+    \ It's an extension of the original C language and is a general purpose object-oriented\
+    \ OOP environment.\n\n# C EVERYTHING\n\nDue to how complex the language can be,\
+    \ and its power and performance, C++ is often used to develop games, device drivers\
+    \ and even entire operating systems.\n\nDating back 1970, the start of the era\
+    \ of home computing, C++, or rather with Classes, was the brainchild of Danish\
+    \ scientist Bjarne Stroustrup while working on his PhD thesis. Stroustrup's plan\
+    \ was to further the original C language, which was widely used since the early\
+    \ seventies.\n\ncomputing labs and by regular people who didn't have access to\
+    \ the mainframes and large computing data centres.\n\nC++ proved to be popular\
+    \ among the developers of the '80s, since it was a much easier environment to\
+    \ get grips with and more importantly, it was 99% compatible with the original\
+    \ C language. It meant that it could be used beyond the mainstream\n\nC++s impact\
+    \ in the digital world is immense. Many of the programs, applications, games and\
+    \ even operating systems are coded using C++. For example, all of Adobe's applications,\
+    \ Photoshop, InDesign and so on, are developed in C++. You will find that the\
+    \ browser you surf the Internet is written in C++, as well as Windows 10, Microsoft\
+    \ Office and the backbone to Google's search engine. Apple's macOS is written\
+    \ largely in C++ (with some\n\n+   C++ code is much faster than that of Python.\n\
+    \n```\n#include<iostream>\nusing namespace std;\nvoid main() {\n    char ch;\n\
+    \    cout<<\"Enter a character to check if it is vowel or not\";\n    switch (ch)\
+    \ {\n        case 'a': case 'A':\n            cout<<ch<<\" is a Vowel\";\n   \
+    \         break;\n        case 'e': case 'E':\n            cout<<ch<<\" is a Vowel\"\
+    ;\n            break;\n        case 'i': case 'I':\n            cout<<ch<<\" is\
+    \ a Vowel\"\\n            break;\n        case 'o': case 'O':\n            cout<<ch<<\"\
+    \ is a Vowel\"\\n            break;\n        case 'u': case 'U':\n           \
+    \ cout<<ch<<\" is a Vowel\"\\n            break;\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "Installing - Visual Studio Community 2017 (15.0.26223.1), an asynchronous\n\
+    \n# # Why C++?\n\n# Workloads Individual components Language packs\n\nWindows\
+    \ (3)\n\n+   - Universal Windows Platform development\nCreate applications for\
+    \ the Universal Windows Platform with C#, VB, or C++.\n\n+   - .NET development\n\
+    Build WPF, Windows Forms and console applications using the .NET Framework.\n\n\
+    +   - Desktop development with C++\nBuild classic Windows-based applications using\
+    \ the power of the Visual C++ boost, ATL and other libraries like MFC.\n\n# Summary\n\
+    \n# Desktop development with C++\n\n+   - C++ core features\n  Optional\n- VC++\
+    \ 2017 toolset (x86,x64)\n- C++ for Mobile\n- Windows SDK (10.0.15063.0)\n- Visual\
+    \ C++ ATL tools\n- Windows XP support for Windows UCRT SDK\n- CVC support\n- Optimizer\
+    \ (component)\n- Standard Libraries\n\nWeb & Cloud (4)\n\n+   - ASP.NET web development\n\
+    Build web applications using ASP.NET Core, HTML, JavaScript and CSS.\n\n+   -\
+    \ Azure development\nBuild and deploy projects for cloud apps and creating resources.\n\
+    \n+   - Node.js development\nBuild scalable networks using Node.js, an asynchronous\
+    \ event-driven architecture.\n\n+   - Data storage and processing\nConnect and\
+    \ test data solutions using SQL Server, Azure Data Lake, or Azure ML.\n\n![](img/588364e02a77f179099fae91a1713f0a_46_0.png)\n\
+    \nMicrosoft Visual Studio is a great, free environment to learn C++ in.\n\n![](img/588364e02a77f179099fae91a1713f0a_46_1.png)\n\
+    \nother languages are mixed in depth and the functions (like those of NASA, SpaceX\
+    \ and CERN use C++ for various applications, programs, controls and other computing\
+    \ tasks.\n\n![](img/588364e02a77f179099fae91a1713f0a_46_2.png)\n\nC++ is extremely\
+    \ efficient and performs as well as a base while being an easier addition to the\
+    \ core C language. This higher level of performance over other languages, such\
+    \ as Python, BASIC and such, makes it an ideal development environment for modern\
+    \ computing, the aforementioned companies using it so widely.\n\n![](img/588364e02a77f179099fae91a1713f0a_46_3.png)\n\
+    \nWhile Python is a great programming language to learn, by mastering C++, you\
+    \ can find yourself opening a wider world of coding. By mastering C++ for the\
+    \ likes of Microsoft, Apple and so on, C++ developers enjoy a higher salary than\
+    \ as of some other languages' versatility; the C++ programmer can move between\
+    \ jobs and companies without needing to learn anything specific. However, C++\
+    \ is an easier language to begin with. We recommend you begin with C++ and spend\
+    \ some time to get grips with programming structure and the many ways in which\
+    \ you find a solution to a problem. Once you are comfortable with computer programming\
+    \ and whip out a C++ program with one hand tied behind your back, then move on\
+    \ to++. Of course, there's nothing stopping you from jumping straight into C++,\
+    \ for you.\n\nIndeed, the operating system you are using is written in C++.\n\n\
+    Getting into C++ is as easy as Python, but you need the right set of tools to\
+    \ communicate with the computer in C++ and you can start your journey. A C++ IDE\
+    \ is free of charge, even Visual Studio from Microsoft is freely available to\
+    \ download and use. You can get into C++ from any operating system, be it macOS,\
+    \ Linux, or Windows mobile.\n\nJust like Python, to answer the question of Why\
+    \ C++ is the answer because it's fast, efficient, and developed by most of the\
+    \ applications you regularly use. It's cutting edge and a fantastic language to\
+    \ master.\n\n![](img/588364e02a77f179099fae91a1713f0a_46_4.png)\n\nwww.bdmpublications.com\
+    \ 47"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Equipment Needed
+
+
+    You don''t need to invest a huge amount of money in order to learn C++ and you
+    don''t need to invest an entire computer lab at your disposal either. Providing
+    you have a fairly modern computer, everything else is freely available.
+
+
+    # C++ SETUPS
+
+
+    Most, if not all, operating systems have C++ in their code, so it stands to reason
+    that you can learn to program in C++ no matter what OS''re currently using.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_47_0.png)
+
+
+    # COMPUTER
+
+
+    Unless you fancy writing out your C++ code by hand on a sheet of paper (which
+    is something many older coders used to do), a computer is an absolute must have
+    component. PC users can have any recent Linux distro or Windows OS; Mac users
+    the latest macOS.
+
+
+    # AN IDE
+
+
+    Just as with Python, an IDE is used to enter and execute your C++ code. Many IDEs
+    with extensions and plugins that help it work better, or add an extra level of
+    functionality. Often, an IDE provides enhancements depending on the core OS being
+    used, such as being enhanced for Windows 10.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_47_1.png)
+
+
+    # COMPILER
+
+
+    A compiler is a program that converts the C++ language into binary, while some
+    IDE come with a compiler built-in, others don''t. Blocks:our favourite IDE that
+    comes with a C++ compiler as part of the package. More on this later.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_47_2.png)
+
+
+    # TEXT EDITOR
+
+
+    Some programmers much prefer to use a text editor to assemble their C++ code before
+    running it through a compiler. Essentially you can use any text editor to write
+    code, just save it with a .cpp extension. However, Notepad++ is one of the best
+    text editors available.
+
+
+    # INTERNET ACCESS
+
+
+    While it''s entirely possible to learn to code on a computer that''s not attached
+    to the Internet, it''s extraordinarily difficult. You need to install reliable
+    software, keep it up to date, install any extras or extensions and for help when
+    coding. All of these require access to the Internet.
+
+
+    # TIME AND PACE
+
+
+    Yes, as with Python, you''re going to need to set significant time to spend on
+    learning how to code in C++. Sadly, unless you''re a genius, it''s not going to
+    happen overnight, even a week. A good C++ coder has spent many years honing their
+    craft, so be patient, start small and keep learning.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# OS SPECIFIC NEEDS
+
+
+    C++ will work in any operating system but getting all the necessary pieces together
+    can be confusing to a newcomer. Here are some OS specifics for C++.
+
+
+    # LINUX
+
+
+    Linux users are lucky in that they already have a compiler and text editor built
+    into their operating system. Any text editor allows you to type out your C++ code,
+    when it''s saved with a .cpp extension, use g++ to compile it.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_48_0.png)
+
+
+    # WINDOWS
+
+
+    We have mentioned previously that a good IDE is Microsoft’s Visual Studio. However,
+    a better IDE and compiler is Code::Blocks, which is regularly kept up to date
+    with a new release year. Otherwise Windows users can enter their code in Notepad++,
+    then compile it with MinGW as used
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_48_1.png)
+
+
+    # RASPBERRY PI
+
+
+    The Raspberry Pi’s operating system is Linux based. Therefore, you''re able to
+    write your code using a text editor, then compile it with g++ as you would in
+    any other Linux distro.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_48_2.png)
+
+
+    # MAC
+
+
+    Mac owners will need to download and install Xcode to be able to compile their
+    C++ code natively. Other options for the MacOS include NetBeans, Eclipse or Code::Blocks;
+    Note: the latest Code::Blocks isn''t available for Mac due to a lack of developers.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_48_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Say Hello to C++
+
+
+    # # How to Set Upn C++ in Windows
+
+
+    Windows users have a wealth of choice when it comes to programming in C++. There
+    are plenty of IDEs and compilers available, including Visual Studio from Microsoft.
+    However, in our opinion, the best C++ IDE to begin with is CodeBlocks.
+
+
+    # ## Code::BLOCKS
+
+
+    Code:Blocks is a free C++, C and Fortran IDE''s feature rich and easily extensible
+    with plug-ins. It''s easy to use, with a compiler and a vibrant community behind
+    it.
+
+
+    +   **STEP 1** Start by visiting the Code:Blocks site, at www.codeblocks.org/downloads.
+    From there, on the ''Download the binary releases'' link to be to the latest downloadable
+    version for Windows.
+
+
+    +   **STEP 3** When you''ve located the file, click on the Sourceforge.net link
+    at the end of the line and the download notification window appears; click Save
+    File to save the download and save the downloaded CodeBlocks installer and double-click
+    to start. Follow the on-screen instructions to begin the installation.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_49_0.png)
+
+
+    +   **STEP 2** You can see that three Windows versions available. One you want
+    to download ''mingw-setup.exe'' at the end of the version number. The time of
+    writing this is: Codeblocks-17.12-mingw-setup.exe. The difference is that mingw-setup
+    includes a C++ compiler and debugger from TDM-GCC (a compiler).
+
+
+    +   **STEP 4** Once you''ve reached to the licensing terms, there is a choice
+    of installation options available. You can opt for smaller install, leaving out
+    some of the components you want and we would recommend you the Full option as
+    default.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_49_1.png)
+
+
+    50 | www.bdmpublications.com'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# # How to Set Up C++ in Windows
+
+
+    **STEP 5** Next choose an installation location for Code:Blocks files. It''s your
+    choice, but the default will generally suffice, unless you have any specific requirements.
+    When you click Next, the install begins; if you finished a notification pop asks
+    up if you want to start Code:Blocks now, so yes.
+
+
+    **STEP 8** Before you start Code:Blocks it''s worth explaining exactly why you
+    needed a compiler. a separate program that reads your C++ code and checks it against
+    the least acceptable programming standards; this is why you need the most recent
+    compiler. This is currently C++, with C++20 under.
+
+
+    > Please wait while CodeBlocks installs
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_50_0.png)
+
+
+    | Extract gallery | Output field |
+
+    | --- | --- |
+
+    | exe-fun | Not Found |
+
+    | exe64.7 | Not Found |
+
+    | do you want to run Code:Blocks? | Yes |
+
+    | output field | Not Found |
+
+    | create unists | Not Found |
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_50_1.png)
+
+
+    **STEP 6** The first time Code:Blocks runs it auto-detect for C++ compilers you
+    may have installed on your system. If you don''t have any, click on the first
+    detected, GCC Compiler and click the Default to set it as your system C++ compiler.
+    Click OK when you''re ready to continue.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_50_2.png)
+
+
+    **STEP 9** Essentials, work and understand only binary, and zeros, or Machine
+    Language. Programming binary isn''t effective for human beings. For example, to
+    output "Hello World" to show in the screen will appear in binary
+
+
+    | Compiler | Status |
+
+    | --- | --- |
+
+    | MS Visual C++- 2003 | Not Found |
+
+    | Microsoft Visual C++ 2005 | Not Found |
+
+    | Microsoft Visual C++ 2008 | Not Found |
+
+    | Microsoft Visual C++ 6.0 | Not Found |
+
+    | Digital Home Compiler | Not Found |
+
+    | GCC Compiler | Not Found |
+
+    | LLC Compiler | Not Found |
+
+    | Intel C++ Compiler | Not Found |
+
+    | Tiny C | Not Found |
+
+
+    01100011 01101111 01110101 01100000
+
+    01101100 01101111 01100000 01101010
+
+    01100101 01101111 01100101 01110101
+
+    01101101 01101111 01100000 01101010
+
+    01101101 01101111 01110011 01101111
+
+    01101101 01101111 01100011 01101111
+
+    01101101 01101001 01000001 01100111
+
+
+    **STEP 7** When the program starts another message appears, informing you that
+    Code:Blocks is not the default compiler. You have a couple of options: to choose
+    everything as it is allowing Code:Blocks for C++ file types. Again, we would recommend
+    you for the last choice type to associate Code::Blocks with supported file type.
+
+
+    01100011 01101111 01110101 01100000
+
+    01101100 01101111 01100000 01101010
+
+    01100101 01101111 01100101 01110101
+
+    01101101 01101111 01100101 01101011
+
+    01101101 01101111 01110011 01101111
+
+    01101101 01101111 01100011 01101111
+
+    01101101 01101001 01000001 01100111
+
+
+    **STEP 10** The compiler takes what you''ve entered as C++ code and translates
+    it to Machine Language. execute C++, the IDE ''builds'' the code, checking for
+    errors, then runs it through the compiler to check standardisation and it uses
+    ones and zeros for the computer to act. It''s rather clever stuff, if you want
+    to think about it.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_50_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# How to Set Up C++ on a Mac
+
+
+    To begin C++ coding on a Mac you first need to install Apple’s Xcode. This is
+    a free, full featured IDE’s designed to create native Apple apps. However, you
+    can also use it to create C++ code relatively easily.
+
+
+    # Xcode
+
+
+    Apple’s Xcode is primarily designed for users to develop apps for macOS, iOS,
+    tvOS and watchOS applications in Swift and Objective-C but you can use it for
+    C++ too.
+
+
+    +   STEP 1 Start opening the App Store on your Mac, Menu -> App Store. In the
+    Search box enter ‘Xcode’ and press Return. There are many suggestions filling
+    the App Store window but it’s the first option, Xcode, that you need to click.
+
+
+    +   STEP 3 When you’re ready, click on the Get button which then turns into Install
+    App. Enter your Apple ID and Xcode begins to download and install. It may take
+    some time depending on the speed of your internet connection.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_51_0.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_51_1.png)
+
+
+    +   STEP 2 Take a moment to browse through the app’s information, including the
+    compatibility, to ensure you have the correct version of macOS. Xcode requires
+    macOS 10.12.6 or later to install and work.
+
+
+    +   STEP 4 When the installation is complete, click on the Open button to launch
+    Xcode. Click Agree to the licence terms and enter your password to allow Xcode
+    to make changes to the system. When that is done, Xcode begins to install additional
+    components.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_51_2.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_51_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# STEP 5 With everything now installed, including the additional components,
+    Xcode launches, displaying the version number among three choices and any recent
+    projects that''ve worked on; with a fresh install, this is blank.
+
+
+    # STEP 8 The next step asks where to create a Git Repository for all future code.
+    Choose a location on Mac, or a network location, and click the Create button.
+    When you''ve done all, you can start to code. The left-hand pane details the files
+    used in the C++ program you''re coding. Click on the main.cpp file in the list.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_52_0.png)
+
+
+    # STEP 6 Start by clicking on New Xcode Project; this opens a window to choose
+    which platform the macOS tab, then click the Command Line Tool option. Next to
+    continue.
+
+
+    # STEP 9 You can see that Xcode has automatically completed a basic Hello World
+    program for you. While it may not make sense at present, you will discover more
+    as you progress, the content is just Xcode utilising on the Mac
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_52_1.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_52_2.png)
+
+
+    # STEP 7 Fill in the various fields but ensure that the Language option at the
+    bottom is set to C++; choose it from the drop-down list. When you''ve filled in
+    the fields, and made sure that C++ is the chosen language, click on the Next button
+    to continue.
+
+
+    # STEP 10 When you want to run the code, click on Product > Run. On the Mac: you
+    may be asked to enable Developer Mode to perform functions without needing your
+    password every session. When the program executes, the output is displayed at
+    the bottom of the Xcode window.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_52_3.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_52_4.png)'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "# How to Set Up C++ in Linux\n\nLinux is a great C++ coding environment. Most\
+    \ Linux distros already have the essential components preinstalled, such as a\
+    \ compiler and the text editors are excellent for entering code into, including\
+    \ colour coding; and there's tons of extra software available to help you out.\n\
+    \n# LINUX++\n\nIf you're not familiar with Linux, we recommend taking a look at\
+    \ one of our Linux titles from the BDM Publications range. If you have the Raspberry\
+    \ Pi, the commands below work just fine and for this example we're using Linux\
+    \ Mint.\n\n+   * STEP 1 The first step is to ensure Linux is ready for your C++\
+    \ code, check the system and software are up to date. Open a terminal and use\
+    \ apt-get update && sudo apt-get upgrade. Then return and enter your password.\
+    \ These commands update the entire system and any installed software.\n\n+   *\
+    \ STEP 3 Amazingly, that's it. Everything is already ready for you to start coding.\
+    \ Here's how to get your first C++ program and running. In Linux Mint the main\
+    \ text editor is Xed which you can launch by clicking on the Menu and typing Xed\
+    \ into the search bar. Click on the Text editor in the right-hand pane to open\
+    \ it.\n\n![](img/588364e02a77f179099fae91a1713f0a_53_0.png)\n\n```\ndavid:mate:~\n\
+    david@mate~$ sudo apt-get update && sudo apt-get upgrade\n[sudo] password for\
+    \ david: _\n```\n\n+   * STEP 2 Most Linux distros come preinstalled with all\
+    \ C++; however, it's always worth checking to see if everything is present. Still\
+    \ within the terminal, enter sudo apt-get install-build-components if not, and\
+    \ press Return. If you have the rights you're missing them then they are installed\
+    \ by the command.\n\n+   * STEP 4 In Xed, or any other text editor you may be,\
+    \ enter the lines of code that make your C++ Hello World program. It's a little\
+    \ different from what the Mac produced:\n\n#include <iostream>\n\n```\nint main()\n\
+    {\n    // My first C++ program\n    std::cout << \"Hello World!\\n\";\n}\n```\n\
+    \n```\nFile Edit Search Terminal Help\ndavid@mate:~\ndavid@mate~$ sudo apt-get\
+    \ update && sudo apt-get upgrade\nReading package lists... Done\nReading package\
+    \ indexes... Done\nReading state information... Done\nBuilding dependency tree...\
+    \ Using the latest version (12.ubuntu)\nbuild-essential to be manually installed.\n\
+    build-essential is already installed, 0 to remove to upgrade.\ndavid@mate~$ _\n\
+    ```\n\n![](img/588364e02a77f179099fae91a1713f0a_53_1.png)\n\n#Unused Document!\n\
+    #include <iostream>\n\n// My first C++ Program\nstd::cout << \"Hello World!\\\
+    n\";"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# How to Set Up C++ in Linux
+
+
+    STEP 5 When you''ve entered your code, click Save As and choose a folder to save
+    your program. Name the file as helloworld.cpp (it can be any name as long as it
+    has a .cpp extension), Click Save to continue.
+
+
+    STEP 8 Before you execute the C++ file you need to compile it. In Linux it''s
+    common to use g++, an open source C++ compiler; you''re in the same folder as
+    the C++ file, enter: g++ helloworld.cpp in the Terminal and Return.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_54_0.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_54_1.png)
+
+
+    STEP 6 The first thing to notice is that Xed automatically recognises it as a
+    C++ file, the file extension is now set to .cpp. The colour coding is in the code
+    and if you open the file manager you can see that the file''s icon C++ stamped
+    on it.
+
+
+    STEP 9 It takes a short time while the code is compiled by g++ but providing there
+    are no mistakes or errors in the code you have created free to return to the command
+    prompt. If you enter: into the Terminal you can see alongside your C++ file is
+    out.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_54_2.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_54_3.png)
+
+
+    STEP 7 With your code now saved, drop into the Terminal again. You need to navigate
+    to the location of the C++ file you''ve just saved, so you can go to it by entering:
+    cd Documents. Remember, the Terminal is case sensitive, so any commands must be
+    entered correctly.
+
+
+    STEP 10 The file is compiled C++. To run the code enter: ./a and return. The words
+    ''Hello World'' appear on the screen. However, a out isn''t very friendly. To
+    make everything else recompile with: g++ helloworld.cpp -o helloworld This creates
+    an output file which can run from: ./helloworld.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_54_4.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_54_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Other C++ IDEs to Install
+
+
+    If you want to try a different approach to working with your C++ code, then there
+    are plenty of options available to you. Windows is the most prolific platform
+    for C++ IDEs but there are plenty for Mac and Linux users.
+
+
+    # DEVELOPING C++
+
+
+    Here are ten great C++ IDEs that are worth looking into. You can install one or
+    all of them if you like, but find the one that works best for you.
+
+
+    CLIPSE is a hugely popular C++ IDE that offers the programmer a wealth of features.
+    It has a clean interface, is easy to use and available for Windows, Linux and
+    Mac. Head over to https://www.eclipse.org/downloads/ to download the latest version.
+    If you''re stuck, click the Help link for more information.
+
+
+    CODELITE is free and open source IDE that''s regularly updated and available for
+    Windows, Linux and macOS; its lightweight, unanticipated and extremely powerful.
+    You can find more information online as well as how to download and install it
+    at https://www.codelite.org/.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_55_0.png)
+
+
+    GNAT The GNAT Programming Studio (GNPS) is a powerful and intuitive IDE that supports
+    testing, debugging and code analysis. The Community Edition is free, whereas the
+    Pro version costs; the Community Edition is available for Windows, Mac, Linux
+    and the Raspberry Pi. You can find it at www.adore.com/download.
+
+
+    NETBEANS Another program is NetBeans. This is an excellent IDE that''s packed
+    with features and a pleasure to use. NetBeans IDE includes project based features
+    for C++ that gives you the ability to build applications with dynamic and static
+    libraries. Find out more at www.netbeans.org/features/index.html.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_55_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# VISUAL STUDIO
+
+
+    Microsoft''s Visual Studio is a mammoth IDE that lets you create applications
+    for Windows, Android, iOS and the web. The Community version is free to download
+    and install but others offer a free trial period. Go to www.visualstudio.com/
+    to see what it can do for you.
+
+
+    # ANJUTA
+
+
+    The Anjuta DevStudio is a Linux-only IDE that features some of the more advanced
+    features you would normally find in a software development studio. There''s a
+    GUI designer, server editor, app wizard, interactive debugger and much more. Go
+    to www.anjuta.org/ for more information.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_56_0.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_56_1.png)
+
+
+    # QT Creator
+
+
+    This cross-platform IDE is designed to create desktop and mobile environments.
+    It comes with its own code editor and integrated tools for testing and debugging,
+    as well as a proven platform. It is not free but there is a trial period on offer
+    requiring: www.qt.io/qt-libraries-apis-tools-ide/
+
+
+    # MONODEVELOP
+
+
+    This excellent IDE develops desktop and web applications across all the major
+    platforms. There''s an advanced editor, integrated debugger and a debugger to
+    help you create your code. It''s available for Windows, Mac and Linux and free
+    to download: www.monodevelop.com/
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_56_2.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_56_3.png)
+
+
+    # DEV C+
+
+
+    Bloodeshed C++, despite its colourful name, is an IDE that is for Windows systems
+    only. However, many praise its clean interface and unanticipated way of coding
+    and compilation. It has not been much updated for some time, so you might want
+    to consider other if necessary: www.bloodhed.net/devcpp.
+
+
+    # U++
+
+
+    Ultimate is a cross-platform C++ IDE that boosts a rapid development of code through
+    the smart and ease. For the novice, it''s a bit of an IDE but behind its complexity,
+    a beauty that would make a developer''s knees wobbly. Find out more at www.ultimatecpp.org/index.html.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_56_4.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_56_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# C++ Fundamentals
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_57_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# C++
+
+    Fundamentals
+
+
+    Within this section you can begin to understand the structure of C++ code and
+    how to compile and execute that code. These are the fundamentals of C++, which
+    teach you the basics such as using comments, variables, data types, strings and
+    how to use C++ mathematics.
+
+
+    These are the building blocks of a C++ program. With them, you can form your own
+    code, produce an output to the screen and store and retrieve data.'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# # Your First C++ Program
+
+
+    You may haveed the Mac and Linux examples previously but you''re going to be working
+    exclusively in Windows and Code::Blocks from here on. Let''s begin by writing
+    your first C++ program and taking the first small step into a larger world.
+
+
+    # ## HELLO, WORLD!
+
+
+    it''s traditional in programming for the first code to be entered to output the
+    words ''Hello, World!'' to the screen. Interestingly, this dates back to 1968
+    using a language called BCPL.
+
+
+    +   **STEP 1** As mentioned, we use Windows 10 and the latest version of Code::Blocks
+    for the rest of the C++ code in this book. Begin by launching Code::Blocks When
+    click File > New > Empty File or press Ctrl+Shift+N on the keyboard.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_59_0.png)
+
+
+    +   **STEP 3** At the moment it doesn''t look like much, and it even feels less
+    sense, but we''ll get to that in due course. Now click File > Save As. Create
+    or find helloworld.cpp on your hard drive and in the File Name box, click the
+    Save as type box and select C++ files. Click the Save button.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_59_1.png)
+
+
+    +   **STEP 2** You can now see a blank screen, with the tab labelled Untitled1,
+    and the number in the top left of the main window Code::Blocks. Begin by clicking
+    in the main window, so the cursor is next to the number one, and entering:
+
+    #include <iostream>
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_59_2.png)
+
+
+    You can see that Code::Blocks has changed the colour coding, recognising that
+    the file is now C++ code. This means that code can be auto-selected from the Code::Blocks
+    repository. Delete the include <iostream line and re-enter it. You can see the
+    auto-select boxes appearing.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_59_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Your First C++ Program
+
+
+    STEP 5 Auto-selection of commands is extremely handy and cuts out potential mistyping.
+    Press Return to get to line 3, then enter:
+
+
+    STEP 8 Note again the colour coding change. Press Return at the end of the previous
+    step line, then enter:
+
+
+    ```
+
+    int main()"
+
+    ```
+
+
+    Note: there''s no space between the brackets.
+
+
+    ```
+
+    std::cout << "Hello, world!\n";
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_60_0.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_60_1.png)
+
+
+    STEP 6 On the next line below int main(), enter a curly bracket:
+
+
+    STEP 9 Just as before, Code-Blocks auto-completes the code you''re entering, including
+    placing a closing speech mark as soon as you type the semicolon at the end of
+    the line; Don''t forget the important elements to a C++ program and we''ll tell
+    you in this section. Now, move your cursor to the closing bracket and press Return.
+
+
+    {
+
+    This can be done by pressing Shift and the key to the right of P on an English
+    UK keyboard layout.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_60_2.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_60_3.png)
+
+
+    STEP 7 Notice that Code::Blocks has automatically created a closing curly bracket
+    couple of lines below, linking the pair, as well as a slight indent. This is due
+    to the structure of C++ and it''s where the meat of the code is entered.
+
+    Enter:
+
+
+    STEP 10 That''s all you need to do for the moment. It might not look terribly
+    amazing but C++ is best in small chunks. Don''t execute the code at the moment
+    you need to look at how a C++ program is structured first; then you can build
+    and run the code. For now, click on Save, the floppy disk icon.
+
+
+    /// My first C++ program
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_60_4.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_60_5.png)
+
+
+    www.bdmpublications.com 61'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "# Structure of a C++ Program\n\nC++ has a very well defined structure and way\
+    \ of doing things. Miss something out, even as small as a semicolon, and your\
+    \ entire program will fail to be compiled and executed. Many a professional programmer\
+    \ has fallen foul of sloppy structure.\n\n# #INCLUDE <C++ STRUCTURE\n\nLearning\
+    \ the basics of programming, you begin to understand the structure of a program.\
+    \ The commands may be different from one language to the next, but you will start\
+    \ to see how the code works.\n\n| C++ | #INCLUDE *helloworld.cpp |\n|---|---|\n\
+    | C++ was invented by Danish student Bjarne Stroustrup in 1979, as part of his\
+    \ Ph.D. thesis. Initially C++ was called C with Classes, which added features\
+    \ to the popular C language, while making it a more user-friendly environment\
+    \ through a new structure. | The structure of a C++ code is quite precise. Every\
+    \ C++ code begins with a directive: **#include** the pre-processor to include\
+    \ a section of the C++ code. For example: **#include <iostream>** includes the\
+    \ iostream header to support input/output operations. |\n 1 #include <iostream>\
+    \ |\n 2 |\n 3 |\n 4 |\n 5 |\n 6 |\n\nBjarne Stroustrup, inventor of C++.\n\n#\
+    \ INT MAIN()\n\nint main() initiates the declaration of a function, which is a\
+    \ group of code statements under the name 'main'. All C++ code begins at the main\
+    \ function, regardless of where it actually lies within the code.\n\n| Start here\
+    \ | *helloworld.cpp |\n|---|---|\n 1 #include <iostream> |\n 2 |\n 3 int main()\
+    \ |\n 4 |\n 5 |\n 6 |\n\n# BRACES\n\nThe open brace (curly brackets) is something\
+    \ that you may not come across before, especially if you're used to Python. The\
+    \ open brace indicates the beginning of the main function and contains all the\
+    \ code that belongs to that function.\n\n| #include <iostream> |\n 1 |\n 2 int\
+    \ main() |\n 3 |\n 4 { |\n 5 |\n 6 } |\n\n![](img/588364e02a77f179099fae91a1713f0a_61_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "# Structure of C++ Program\n\n# COMMENTS\n\nLines with a double slash are comments.\
+    \ This means they won't be executed in the code and are ignored by the compiler.\
+    \ Comments are designed to help you, or another programmer looking at your code,\
+    \ explain what's going on. There are two types of comment: // covers multiple\
+    \ line comments, // means they won't be executed and are ignored by the compiler.\n\
+    \n<< The chevrons used here are insertion operators. This means that whatever\
+    \ follows the chevrons is to be inserted into the std::cout statement. In this\
+    \ case they're 'Hello, world!' which are to be displayed on the screen when you\
+    \ compile and execute the code.\n\n```\n#include <iostream>\nint main() {\n  \
+    \  // My first C++ program\n}\n```\n\n![](img/588364e02a77f179099fae91a1713f0a_62_0.png)\n\
+    \nComments are designed to help you, or another programmer looking at your code,\
+    \ explain what's going on. There are two types of comment: // covers multiple\
+    \ line comments, // a single line.\n\n# STD\n\nwhile std stands for something\
+    \ different, C++ it means Standard. It's part of the Standard Namespace in C++,\
+    \ which covers a different number of statements and commands. We can leave that\
+    \ part of the std code must be declared at the start of your code: using namespace\
+    \ std; not both. For example:\n\n```\n#include <iostream>\nusing namespace std;\n\
+    ```\n\n# OUTPUTS\n\nLeading on, the \"Hello, world! is what we want to appear\
+    \ on the screen when the code is executed. You can enter whatever you like, as\
+    \ long as it's inside the quotation marks. The brackets are needed some insist\
+    \ on them. The \\n indicates a new line to be inserted.\n\n```\n// My first C++\
+    \ program\ncout << \"Hello, world!\\n\"\n```\n\n```\n#include <iostream>\nusing\
+    \ namespace std;\nint main() {\n    // My first C++ program\n    cout << \"Hello,\
+    \ world!\\n\";n}\n```\n\n# COUT\n\nIn this example we're using cout, which is\
+    \ part of a Standard Namespace, way why it's, as you're asking C++ to use it from\
+    \ that particular namespace. cout means Character Output, which displays characters,\
+    \ strings, or presents to the screen. If we leave std out; we have to declare\
+    \ it at the start of the code, as mentioned previously.\n\n# ; AND\n\nFinally\
+    \ you can see that lines within a function code block (except comments) end with\
+    \ a semicolon. This marks the end of the statement and all statements in C++ must\
+    \ have at least one at the end or the compiler fails to load the code. The very\
+    \ last line has the closing brace to indicate the end of the main function.\n\n\
+    ```\n#include <iostream>\nusing namespace std;\nint main() {\n    // My first\
+    \ C++ program\n    cout << \"Hello, world!\\n\";n}\n```\n\n* www.bdmpublications.com\
+    \ 63"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# C++ Fundamentals
+
+
+    # Compile and Execute
+
+
+    You''ve created your first C++ program and you now understand the basics behind
+    the structure of one. Let''s actually get moving and compile and execute, or run
+    if you prefer, the program and see how it looks.
+
+
+    # GREETINGS FROM C++
+
+
+    Compiling and executing C++ code from Code::Blocks is extraordinarily easy; just
+    a matter of clicking an icon and seeing the result. Here''s how it''s done.
+
+
+    +   * STEP 1 Open Code-Blocks, if you haven''t already, and load up the previously
+    saved Hello World code you created. Ensure that there are no errors, such as missing
+    semicolons at the end of std::cout line.
+
+
+    +   * STEP 3 Start by clicking on the Build icon, the yellow cow. At this point,
+    your code has now been run through the Code::Blocks compiler and checked for any
+    errors. You can see the results of the Build by looking to the bottom window pane.
+    Any messages regarding the code are displayed here.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_63_0.png)
+
+
+    +   * STEP 2 If you are looking similar to the one in our screenshot, look to
+    the menu bar at the top of the screen. For theing entry in the topmost menu you
+    can see a group of icons: yellow cow, green play button and a cog/play button.
+    These are Build, Run, Build and Run functions.
+
+
+    +   * STEP 4 Now click on the Run icon, the green button. displaying the works:
+    Hello, world! A command line box appears on your screen followed by the time it''s
+    to execute the code, and asking you to press a key to continue. Well done, you
+    just compiled and executed your first C++ program.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_63_1.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_63_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# Compile and Execute
+
+
+    STEP 5 Pressing any key in the command line closes out, slightly to your Code::Blocks.
+    Let''s alter the code Under the #include line, enter:
+
+
+    STEP 8 Create a deliberate error in the code. Remove the semicolon from the cut
+    line, so it reads:
+
+
+    cout << "Hello, world\n";
+
+
+    using namespace std;
+
+
+    Then, delete the std: part of the cut line, like so:
+
+
+    cout << "Hello, world\n";
+
+
+    ```
+
+    helloworld.cpp
+
+    1 #include <iostream>
+
+    2 using namespace std;
+
+    3
+
+    4 int main() {
+
+    5
+
+    6
+
+    7 // My first C++ program
+
+    8 cout << "Hello, world!\n";
+
+    9 }
+
+    10
+
+    ```
+
+
+    STEP 6 In order to apply the new changes to the code, to re-compile, build, and
+    run it. In this time, you can simply click the Build/Run icon, combined with the
+    yellow cog and green play button.
+
+
+    STEP 9 Now click the Build and Run again to apply the changes to the code. This
+    time Code::Blocks refuses to execute the code, due to the error you put. In the
+    Log pane at the bottom of the screen, you are informed of the error in this case:
+    Expected: '';'' before '']'' token, indicating the missing semicolon.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_64_0.png)
+
+
+    ```
+
+    helloworld.cpp
+
+    1 #include <iostream>
+
+    2 using namespace std;
+
+    3
+
+    4 int main() {
+
+    5
+
+    6 cout << "Hello, world!\n";
+
+    7 }
+
+    8
+
+
+    ```
+
+
+    STEP 7 Just as we mentioned in the previous pages, you don''t need to use std::cout
+    if you already declared using std:: at the beginning of the code. We could have
+    easily clicked the Build/Run icon, but it''s worth going through the available
+    options. You can also choose that building and running, the file has been saved.
+
+
+    STEP 10 Replace the semicolon and the cut line, enter a new line to the code:
+
+
+    cout << " Greetings from C++\n";
+
+
+    The \n adds a new line under the last line of output text. Build and Run the code,
+    to display your hardware.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_64_1.png)
+
+
+    ```
+
+    helloworld.cpp
+
+    1 #include <iostream>
+
+    2 using namespace std;
+
+    3
+
+    4 int main() {
+
+    5
+
+    6 cout << "Hello, world!\n";n7 }
+
+    8
+
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# # Using Comments
+
+
+    While comments may seem like a minor element in the many lines of code to combine
+    and make a game, application or even an entire operating system, in fact they''re
+    probably one of the most important factors.
+
+
+    # ## THE IMPORTANCE OF COMMENTING
+
+
+    Comments inside code are basically human readable descriptions of what the code
+    is doing at that particular point. They don''t sound especially important but
+    code without comments is one of the frustrating areas of programming unless you''re
+    a professional or just starting out.
+
+
+    In short, code should be commented in a manner to effectively describe the purpose
+    of a section, or individual elements. You should get in the habit of commenting
+    as much as possible so that someone who doesn''t know anything about programming
+    can pick up your code by simply reading your comments.
+
+
+    In a professional environment, comments are vital to the success of the code and
+    the company. In an organisation, managers work in teams alongside engineers, other
+    developers, hardware analysts and so on. If you''re part of the team that''s working
+    on your code, your comments help a lot of others to understand your work, another
+    team member has to pick up and follow the trail to pinpoint the issue.
+
+
+    Place yourself in shoes of someone whose job is to find in excess of 800,000 lines
+    of code, spread across several different modules. You can access the need for
+    a little help from the original programmers in the form of a good comment.
+
+
+    The best comments are concise and link the code, detailing what happens when the
+    program hits its line or section. You dont need to comment on every line. Something
+    along the lines if x=0 does require you to comment that if x equals zero then
+    do something:
+
+
+    that''s going to be obvious to the reader. However, if equaling zero is something
+    that drastically changes the program for the user, as you''ve run out of lines,
+    it certainly needs to be commented.
+
+
+    Even if you write comments as if you were sharing it with others. This way you
+    can return and always understand what you did or where you went wrong or what
+    worked brilliantly.
+
+
+    Comments are practice and once you understand how to add a comment when needed,
+    so soon it becomes your second nature.
+
+
+    ```
+
+    DEFF 240,23B,24B,25B,26B,27B,28B,29B,30B,31B,32B,33B
+
+    DEFF 320,33B,34B,35B,36B,37B,38B,39B,40B,41B,42B,43B
+
+    DEFF 390,40B,41B,42B,43B,44B,45B,46B,47B,48B,49B,50B
+
+    DEFF 420,43B,44B,45B,46B,47B,48B,49B,50B,51B,52B,53B
+
+    DEFF 510,52B,53B,54B,55B,56B,57B,58B,59B,60B,61B,62B
+
+    DEFF 610,62B,63B,64B,65B,66B,67B,68B,69B,70B,71B,72B
+
+    ```
+
+
+    ```
+
+    START
+
+    LD (5521)
+
+    LD (5522)
+
+    LD (5523)
+
+    LD (5549)
+
+    ; Initial code
+
+    LD (5526)
+
+    LD BC741C
+
+    LD HL-NBREER
+
+    LD (5528)
+
+    LD B17FF
+
+    ; Clear screen
+
+    LD (31-0)
+
+    ```
+
+
+    ```
+
+    DEFF 560,570B,570B,580B,580B,590B,590B,600B,600B,610B,610B,620B
+
+    DEFF 620,630B,630B,640B,640B,650B,650B,650B,660B,660B,670B,670B
+
+    DEFF 680,680B,680B,680B,690B,690B,690B,690B,700B,700B,710B,710B
+
+    DEFF 720,720B,730B,730B,740B,740B,750B,750B,760B,760B,770B,770B
+
+    ```
+
+
+    ```
+
+    Game restart
+
+    START
+
+    LD (5521)
+
+    LD (5522)
+
+    LD (5523)
+
+    LD (5549)
+
+    ; Attributes for the list screen
+
+    (top code)
+
+    LD (5526)
+
+    LD BC741C
+
+    LD HL-NBREER
+
+    LD (5528)
+
+    LD B17FF
+
+    ; Clear screen
+
+    LD (31-0)
+
+    ```
+
+
+    ```
+
+    LD (5550)
+
+    LD (5551)
+
+    LD (5552)
+
+    LD (5553)
+
+    ; Attributes for title screen
+
+    (Button two-three)
+
+    LD (5554)
+
+    LD (5555)
+
+    LD (5556)
+
+    LD (5557)
+
+    LD (5558)
+
+    LD (5559)
+
+    LD (5560)
+
+    LD (5561)
+
+    ```
+
+
+    ```
+
+    LD (5562)
+
+    LD (5563)
+
+    LD (5564)
+
+    LD (5565)
+
+    LD (5566)
+
+    LD (5567)
+
+    LD (5568)
+
+    LD (5569)
+
+    LD (5570)
+
+    LD (5571)
+
+    LD (5572)
+
+    LD (5573)
+
+    LD (5574)
+
+    LD (5575)
+
+    LD (5576)
+
+    LD (5577)
+
+    LD (5578)
+
+    LD (5579)
+
+    LD (5580)
+
+    LD (5581)
+
+    LD (5582)
+
+    LD (5583)
+
+    LD (5584)
+
+    LD (5585)
+
+    LD (5586)
+
+    LD (5587)
+
+    LD (5588)
+
+    LD (5589)
+
+    LD (5590)
+
+    LD (5591)
+
+    LD (5592)
+
+    LD (5593)
+
+    LD (5594)
+
+    LD (5595)
+
+    LD (5596)
+
+    LD (5597)
+
+    LD (5598)
+
+    LD (5599)
+
+    LD (5600)
+
+    LD (5601)
+
+    LD (5602)
+
+    LD (5603)
+
+    LD (5604)
+
+    LD (5605)
+
+    LD (5606)
+
+    LD (5607)
+
+    LD (5608)
+
+    LD (5609)
+
+    LD (5610)
+
+    LD (5611)
+
+    LD (5612)
+
+    LD (5613)
+
+    LD (5614)
+
+    LD (5615)
+
+    LD (5616)
+
+    LD (5617)
+
+    LD (5618)
+
+    LD (5619)
+
+    LD (5620)
+
+    LD (5621)
+
+    LD (5622)
+
+    LD (5623)
+
+    LD (5624)
+
+    LD (5625)
+
+    LD (5626)
+
+    LD (5627)
+
+    LD (5628)
+
+    LD (5629)
+
+    LD (5630)
+
+    LD (5631)
+
+    ```
+
+
+    ```
+
+    DEFF
+
+    LD (5600)
+
+    LD (5601)
+
+    LD (5602)
+
+    LD (5603)
+
+    LD (5604)
+
+    LD (5605)
+
+    LD (5606)
+
+    LD (5607)
+
+    LD (5608)
+
+    LD (5609)
+
+    LD (5610)
+
+    LD (5611)
+
+    LD (5612)
+
+    LD (5613)
+
+    LD (5614)
+
+    LD (5615)
+
+    LD (5616)
+
+    LD (5617)
+
+    LD (5618)
+
+    LD (5619)
+
+    LD (5620)
+
+    LD (5621)
+
+    LD (5622)
+
+    LD (5623)
+
+    LD (5624)
+
+    LD (5625)
+
+    LD (5626)
+
+    LD (5627)
+
+    LD (5628)
+
+    LD (5629)
+
+    LD (5630)
+
+    LD (5631)
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_65_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "# ## C++ COMMENTS\n\nCommenting in C++ involves using a double forward slash\
+    \ //, or a forward slash and an asterisk, /*. You've already seen some brief examples\
+    \ but this is how they work.\n\n+   STEP 1 Using the Hello World code as an example,\
+    \ you can easily comment on different sections of the code using the double forward\
+    \ slash:\n\n```\n//My first C++ program\ncout << \"Hello, world!\\n\";\n\n#include\
+    \ <iostream>\nusing namespace std;\n\nint main() {\n\n    // My first C++ program\n\
+    \    cout << \"Hello, world!\\n\";\n\n}\n```\n\n+   STEP 4 Be careful when commenting,\
+    \ especially with blocks. It's very easy to forget to add the asterisk and forward\
+    \ slash thus negate any code that falls inside the comment block.\n\n```\nHelloWorld.cpp\n\
+    #include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"Hello,\
+    \ world!\\n\";\n    cout << \"And greetings from C++\";\n\n    // cover lines\n\
+    \    cout << \"This line is now ignored by the compiler!\";\n\n}\n```\n\n+   STEP\
+    \ 2 You can also add comments to the end of a line of code, to describe in a better\
+    \ way what's going on:\n\ncout << \"Hello, world!\\n\"; //This line outputs the\
+    \ words 'Hello, world!'. The \\n denotes a new line.\n\nNote, you cannot put a\
+    \ semicolon at the end of a comment. This's because the line of code is then ignored\
+    \ by the compiler.\n\n```\nHelloWorld.cpp\n#include <iostream>\nusing namespace\
+    \ std;\n\nint main() {\n    // This line process\n    cout << \"Hello, world!\\\
+    n\"; //This compares the Hello, world. This is\n\n}\n```\n\n+   STEP 5 If you\
+    \ obviously try and add comment, complaining of a messy curly bracket ] off the\
+    \ block of code. If you need a few lines, then it can be time to go back and retry.\
+    \ Frankly, colouring the code in Code:Blocks helps identify comments.\n\n```\n\
+    HelloWorld.cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n  \
+    \  // My comment\n    cout << \"Hello, world!\\n\";\n    cout << \"And greetings\
+    \ from C++\";\n\n    // This comment can\n    without the need to add more lines\n\
+    \    cout << \"This line is now ignored by the compiler!\";\n\n}\n```\n\n+   STEP\
+    \ 3 You can comment out several lines by using the slash and asterisk:\n\n> *\
+    \ This comment can cover several lines without the need to add more lines /*\n\
+    \nJust remember to finish the comment block with the opposite asterisk and slash.\n\
+    \n```\nint main() {\n\n    // My first process\n    cout << \"Hello, world!\\\
+    n\";\n    cout << \"And greetings from C++\";\n\n    // This comment can\n   \
+    \ several lines\n    without the need to add more lines /*\n\n}\n```\n\n+   STEP\
+    \ 6 If you're using blocks, it's good practice in C++ to add an asterisk to each\
+    \ new line of the comment block. This also helps you to remember the comment block\
+    \ before continuing the code:\n\n> * This comment can cover several lines without\
+    \ the need to add more lines /*\n\n```\nint main() {\n\n    cout << \"Hello, world!\\\
+    n\";\n    cout << \"And greetings from C++\";\n\n    // cover lines\n    without\
+    \ the need to add more lines /*\n    cout << \"This line is now ignored by the\
+    \ compiler!\";\n\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# # Variables
+
+
+    Variables differ slightly when using C++ as opposed to Python. In Python, you
+    can simply state that ''a'' equals 10 and a variable is assigned. However, in
+    C++ a variable has to be declared with its type before it can be used.
+
+
+    # ## THE DECLARATION OF VARIABLES
+
+
+    You can declare a C++ variable by using statements in the code. There are several
+    distinct types of variables you can declare. Here is how it works.
+
+
+    +   **STEP 1** Open a new, blank C++ file and enter the usual code headers:
+
+
+    +   **STEP 3**  You can build and run code but it won''t much, other than store
+    the values 10 and 5 to the integers and a b. To output the contents of the variables,
+    add:
+
+
+    ```
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main() {
+
+    ```
+
+
+    ```
+
+    cout << a;
+
+    cout << "\n";ncout << b;
+
+    The "\n" part places a new line between the output of 10 and 5.
+
+    ```
+
+
+    ```
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main() {
+
+
+    int a;
+
+    int b;
+
+
+    a = 10;
+
+    b = 5;
+
+
+    cout << a;
+
+    cout << "\n";ncout << b;
+
+    ```
+
+
+    +   **STEP 2** Start simple by creating two variables, a and b, having one value
+    of 10 and the other S. Use the data type to declare these variables. With the
+    curly brackets:
+
+
+    ```
+
+    int a;
+
+    int b;
+
+    a = 10;
+
+    b = 5;
+
+    ```
+
+
+    +   **STEP 4** Naturally you can declare a new variable, call it and output some
+    simple arithmetic:
+
+
+    ```
+
+    int result;
+
+    result = a + b;
+
+    cout << result;
+
+    ```
+
+
+    Insert the above into the code as the screenshot.
+
+
+    ```
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main() {
+
+
+    int a;
+
+    int b;
+
+
+    a = 10;
+
+    b = 5;
+
+
+    int result = a + b;
+
+    cout << result;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# STEP 5
+
+
+    You can assign a value to a variable as soon as you declare it. The code you''ve
+    typed in could look like
+
+
+    ```
+
+    int a = 10;
+
+    int b = 5;
+
+    int result = a + b;
+
+
+    cout << result;
+
+    ```
+
+
+    # STEP 8
+
+
+    The previous step creates the variable StartLives, which is a global variable.
+    In a game, a player''s lives go up or down depending on how well or bad they''re
+    doing. When the player restarts the game, the StartLives returns to its default:
+    3. Here we have assigned 3 lines, subtracted 1, and leaves left:
+
+
+    ```
+
+    C:\Users\david\Document\Variables.exe
+
+    Process returned (0) execution time 0:00
+
+    Press any key to continue.
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_68_0.png)
+
+
+    ```
+
+    C:\Users\david\Document\Variables.exe
+
+    Process returned (0) execution time 0:00
+
+    Press any key to continue.
+
+    ```
+
+
+    # STEP 6
+
+
+    Specific to C++, you can also use the following to assign values to a variable
+    as soon as
+
+
+    ```
+
+    int a (10);
+
+    int b (5);
+
+    ```
+
+
+    Then, the C++ 2011 standard, using curly brackets:
+
+
+    ```
+
+    int result {a+b};
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_68_1.png)
+
+
+    ```
+
+    C:\Users\david\Document\Variables.exe
+
+    Process returned (0) execution time 0:00
+
+    Press any key to continue.
+
+    ```
+
+
+    # STEP 9
+
+
+    The modern C++ is far more intelligent than most programmers give it credit. While
+    there are declare for variables, you can use the auto feature:
+
+
+    > #include <iostream>
+
+    using namespace std;
+
+    auto pi = 3.141593;
+
+
+    ```
+
+    int main() {
+
+    ```
+
+
+    ```
+
+    double area, radius = 1.5;
+
+    area = pi * radius;
+
+    cout << area;
+
+    ```
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_68_2.png)
+
+
+    ```
+
+    C:\Users\david\Document\Variables.exe
+
+    Process returned (0) execution time 0:00
+
+    Press any key to continue.
+
+    ```
+
+
+    # STEP 7
+
+
+    You can create global variables, which are declared outside any function and used
+    within the entire code. What you''ve used so far are local variables: variables
+    used inside the function. For example:
+
+
+    > #include <iostream>
+
+    using namespace std;
+
+    StartLives = 3;
+
+
+    ```
+
+    int main() {
+
+    ```
+
+
+    ```
+
+    StartLives = StartLives - 1;
+
+    cout << StartLives;
+
+    ```
+
+
+    # STEP 10
+
+
+    A couple of new features here: first, auto won''t work until you go to Settings
+    -> Compiler and check the box labeled ''Have C++11 ISO C++ Language [-std=c++11]''.
+    Then, the new data type, double, will build and run code. The result is 7.06858.
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_68_3.png)
+
+
+    www.bdmppublications.com 69'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "# C++ Fundamentals\n\n# Data Types\n\nVariables, as we've seen, store information\
+    \ that the programmer can then call up, and manipulate if needed. Variables are\
+    \ simply reserved memory locations where the values the programmer assigns, depending\
+    \ on the data type used.\n\n# THE VALUE OF DATA\n\nThere are many different data\
+    \ types available for the programmer in C++, such as integer, floating point,\
+    \ Boolean, character and so on. It's widely accepted that there are seven basic\
+    \ data types, often called Built-in Types; however, you can create your own data\
+    \ types as need arise within the code.\nThe seven basic data types are:\n\n| TYPE\
+    \ | COMMAND |\n|---|---|n| Integer | Integer |\n| Floating Point | float |\n|\
+    \ Character | char |\n| Boolean | bool |\n| Double Floating Point | double |\n\
+    | Wide Character | char_t |\n| No Value | void |\n\nThese basic types can also\
+    \ be extended using the following modifiers: Long, Short, and Signed. Basically\
+    \ this means they can expand the minimum and maximum range for each data type.\
+    \ For example, the int data type has a default range of -2147483648 to 2147483647,\
+    \ a fair value, you would agree.\n\nNow, if you were to use one of the modifiers,\
+    \ the ranges alter:\nununsigned int = 0 to 4294967295\nint = -2147483648 to 2147483647\n\
+    short = -32768 to 32767\nunsigned short = 0 to 65535\nsigned short = -32768 to\
+    \ 32767\nint = -2147483648 to 2147483647\nunsigned int = 0 to 4294967295\n\nNaturally\
+    \ you can get away with using the basic type without the modifier, as there's\
+    \ plenty of range provided with each data type. However, it's good C++ programming\
+    \ practice to use the modifiers when needed.\n\nThere are issues when using the\
+    \ modifiers. Double represents a double-floating point, which you can use for\n\
+    \n```\n#include <iostream>\nusing namespace std;\ndouble PI = 3.14159265358979323463;\n\
+    int main() {\n    cout << PI;\n}\n```\n\n```\n#include <iostream>\nusing namespace\
+    \ std;\ndouble PI = 3.14159265358979323463;\nint main() {\n    cout << PI;\n}\n\
+    ```\n\n```\n/* C:\\Users\\Documents\\DataTypes.cpp */\nProcess returned (0) execution\
+    \ time: 0.054 s\nPress any key to continue.\n```\n\nBuild and run the code so\
+    \ you can see the output is 3.14159, representing double's limitations in precision.\n\
+    \nYou can also limit the code using the aforementioned cout.precision function,\
+    \ for greater accuracy. Precision all the way up to 22 decimal places, with the\
+    \ following code:\n\n```\n#include <iostream>\nusing namespace std;\ndouble PI\
+    \ = 3.14159265358979323463;\nint main() {\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "# Data Types\n\n```\ncout.precision(22);\ncout << PI;\n```\n\nThis is mainly\
+    \ due to the conversion from binary in the compiler and that the IEEE 754 double\
+    \ precision standard occupies 64-bits of data, with 52-bits dedicated to the significant\
+    \ (significant digits in a floating-point number) and roughly 3.5-bits are taken\
+    \ holding the values 0 to 9; if you divide 52 by 3.5, then you arrives at 14.857142,\
+    \ which is-15th decimal.\n\nTo be honest, if you are creating code that needs\
+    \ to be accurate to fifteen decimal places, then you would not using C++; you\
+    \ would use some scientific language with C++ as the connective tissue between\
+    \ the two languages.\n\nYou can create your own data types, using an alias-like\
+    \ system called typedef.\n\n```\n#include <iostream>\nusing namespace std;\ndouble\
+    \ PI = 3.141592653589793238463;\n\nint main() {\n\tcout.precision(22);\n\tcout\
+    \ << PI;\n}\n```\n\n```\n#include <iostream>\nusing namespace std;\ntypef int\
+    \ metres;\n\nint main() {\n\tmetres distance;\n\tdistance = 15;\n\tcout << \"\
+    distance in metres is: \" << distance;\n}\n```\n\n```\nC:\\Users\\david\\Documents\\\
+    C++\\DataTypes.exe\nProcessed (3.14159265358979311598) execution time : 0.047\
+    \ s\nPress any key to continue.\n```\n\nAgain, build and run the code; as you\
+    \ can see from the command line window, the number represented by the variable\
+    \ PI is different from the number you've got C++ as 3.14159265358979311598, with\
+    \ the numbers awry from the fifteenth decimal place.\n\n| | HYP | F-E | | |\n\
+    | MC | MR | M+ | - | MS | M' |\n| x² | y³ | sin | cos | tan |\n| ✓ | 10ª | log\
+    \ | Exp | Mod |\n| ↑ | CE | C | | ÷ |\n| π | 7 | 8 | 9 |  × |\n| n! | 4 | 5 |\
+    \ 6 | — |\n| ± | 1 | 2 | 3 | + |\n| ( | ) | 0 | = |\n\n```\n#include <iostream>\n\
+    using namespace std;\ntypef int metres;\nint main() {\n\tmetres distance;\ntdistance\
+    \ = 15;\n\tcout << \"distance in metres is: \" << distance;\n}\n```\n\n```\nC:\\\
+    Users\\david\\Documents\\C++\\DataTypes.exe\ndistance in metres is: 15 (exe)\n\
+    Processed (0) execution time : 0.041 s\nPress any key to continue.\n```\n\nThis\
+    \ code when executed creates a new data type called metres. Then, in the main\
+    \ block code, there's a new variable called distance, which is an integer; so\
+    \ you're basically telling the compiler that there's another name for int. You\
+    \ assigned the value 15 to distance and displayed the output: distance in metres\
+    \ is 15\n\nIt might sound a little confusing to begin with but the more you use\
+    \ C++ and create your own code, the easier it becomes."
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "# Strings\n\nStrings are objects that represent and hold sequences of characters.\
+    \ For example, you could have a universal greeting in your code 'Welcome' and\
+    \ assign that as a string to be called up wherever you like in the program.\n\n\
+    # STRING THEORY\n\nThere are different ways in which you can create a string of\
+    \ characters, which historically are all carried over from the original C language,\
+    \ and are still supported by C++.\n\n+   STEP 1 To create a string using the char\
+    \ function. Open a new C++ file and begin with the usual header:\n\n+   STEP 3\
+    \ Build and run the code, and 'Welcome' appears on the screen. While this is perfectly\
+    \ fine, it's not a string. A string is a class, which defines objects that can\
+    \ be represented as a stream of characters and doesn't need to be terminated by\
+    \ an array. The code can therefore be represented as:\n\n```\n#include <iostream>\n\
+    using namespace std;\n\nint main () {\n\n    char greet = \"Welcome\";\n    cout\
+    \ << greet << \"\\n\";\n}\n\n```\n\n![](img/588364e02a77f179099fae91a1713f0a_71_0.png)\n\
+    \n```\n#include <iostream>\nusing namespace std;\n\nint main () {\n\n    char\
+    \ greet = \"Welcome\";\n    cout << greet << \"\\n\";\n}\n\n```\n\n![](img/588364e02a77f179099fae91a1713f0a_71_1.png)\n\
+    \n+   STEP 2 It's easy to confuse a string with an array. Here's an array, which\
+    \ can be terminated with a null character:\n\n+   STEP 4 There's also a string\
+    \ function, which works in the same way. Using the string code again,\n\n```\n\
+    #include <iostream>\nusing namespace std;\n\nint main () {\n\n    char greet[8]\
+    \ = {'W', 'e', 'l', 'c', 'o', 'm', 'e', '\\0'};\n    cout << greet << \"\\n\"\
+    ;\n}\n\n```\n\n```\n#include <iostream>\nusing namespace std;\n\nint main () {\n\
+    \n    string greet = \"Welcome\";\n    cout << greet << \"\\n\";\n}\n\n```\n\n\
+    ![](img/588364e02a77f179099fae91a1713f0a_71_2.png)\n\n![](img/588364e02a77f179099fae91a1713f0a_71_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "# STEP 5\n\nThere are also many different operations that you\napply with the\
+    \ string function. For instance,\nget the length of a string you use:\n\n```\n\
+    #include <iostream>\nusing namespace std;\nint main() {\n    string greet = \"\
+    Welcome\";\n    cout << \"The length of the string is: \" <<\n    cout << greet.size()\
+    \ << \"\\n\";\n}\n```\n\n# STEP 8\n\nJust as you might expect, you can mix in\
+    \ an integer\nand store something to do with the string. In this\nexample, we\
+    \ created int length, which stores the result of string\nsize() and outputs it\
+    \ to the:\n\n```\n#include <iostream>\nusing namespace std;\nint main() {\n  \
+    \  int length;\n    string greet1 = \"Hello\";\n    string greet2 = \" world!\"\
+    ;\n    string greet3 = greet1 + greet2;\n    length = greet3.size();\n    cout\
+    \ << \"The length of the combined strings\nis: \" << length << \"\\n\";\n}\n```\n\
+    \n# STEP 6\n\nYou can see that with getsize() to output the\nlength, the number\
+    \ of characters there are, of\ncontents of the string. Naturally, if you call\
+    \ your string\nother than greet, then you need to change the command\nitname.\
+    \ Build and run the code to see\nthe results:\n\n```\nC:\\Users\\Document\\Document1.cpp\n\
+    The length of the string is: 7\nProcess returned (0x0) execution time : 0.004\
+    \ s\nPress any key to continue.\n```\n\n# STEP 9\n\nUsing the available operations\
+    \ that come with the\nstring, you can manipulate the contents of a\nstring. To\
+    \ remove characters from a string you could use:\n\n```\n#include <iostream>\n\
+    using namespace std;\nint main() {\n    string str = \"Here is a long sentence\
+    \ in a string\";\n    cout << str << \"\\n\";\n    str.erase(10,5);\n    cout\
+    \ << str << \"\\n\";\n    str.erase(str.begin()+8);\n    cout << str << \"\\n\"\
+    ;\n    str.erase(str.begin()+9, str.end()-9);\n    cout << str << \"\\n\";\n}\n\
+    ```\n\n# STEP 7\n\nYou can add strings together, or rather\ncombine them to form\
+    \ strings:\n\n```\n#include <iostream>\nusing namespace std;\nint main() {\n \
+    \   string greet1 = \"Hello\";\n    string greet2 = \" world!\";\n    string greet3\
+    \ = greet1 + greet2;\n    cout << greet3 << \"\\n\";\n}\n```\n\n# STEP 10\n\n\
+    It's worth spending some time around\nthe numbers, where the character positions\n\
+    in the string. It can be hit or miss whether you get it\nright, so practice makes.\
+    \ Take a look at the screenshot to\nthe result of code:\n\n```\nC:\\Users\\Document\\\
+    Document1.cpp\nHere is a long sentence in a string.\nHere is a sentence in a string.\n\
+    Here is a string.\nProcess returned (0x0) execution time : 0.051 s\nPress any\
+    \ key to continue.\n```"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "# C++ Maths\n\nProgramming is mathematical in nature and as you might expect,\
+    \ there is plenty of built-in scope for some quite intense maths. C++ has a lot\
+    \ to offer someone who is implementing mathematical models into their code. It\
+    \ can be extremely complex or relatively simple.\n\n# C++ = MC²\n\nThe basic mathematical\
+    \ symbols apply in C++ as they do in most other programming languages. However,\
+    \ by using the C++ Math Library, you can also calculate square roots, powers,\
+    \ trig and more.\n\n+   C++ mathematical operations follow the same patterns as\
+    \ taught in school, in that multiplication and division takes precedence over\
+    \ addition and subtraction. You can also alter that. For now, create a new file\
+    \ and enter.\n\n```\n#include <iostream>\nusing namespace std;\nint main() {\n\
+    \    float numbers = 100;\n    numbers = numbers + 10;  // This adds 10 to the\
+    \ initial\n    cout << \"\\n\";\n    numbers = numbers - 10;  // This subtracts\
+    \ 10 from the new\n    cout << \"\\n\"\n}\n```\n\n+   Multiplication and division\
+    \ can be applied as such:\n#include <iostream>\nusing namespace std;\nint main()\
+    \ {\n    float numbers = 100;\n    numbers = numbers * 10;  // This multiplies\
+    \ 100\n    cout << \"\\n\";\n    numbers = numbers / 10;  // And divides 1000\
+    \ by\n    cout << \"\\n\"\n}\n\nWhile simple, it does the old maths warmed up.\
+    \ We used a float for the variables. While you can use an integer, if you to use\
+    \ decimals, you would need to change it to a float or double, depending on the\
+    \ accuracy needed. Run the code and see.\n\nAgain, while not particularly interesting,\
+    \ the code and see the results. It's a start into C++ maths. We used a float,\
+    \ so you can play around with the code and multiply by decimal places, as well\
+    \ as divide, add and subtract.\n\n![](img/588364e02a77f179099fae91a1713f0a_73_0.png)\n\
+    \n```\n#include <iostream>\nusing namespace std;\nint main() {\n    float numbers\
+    \ = 100;\n    numbers = numbers * 10;  // This multiplies 100 by 10\ncout << \"\
+    \\n\"\n    numbers = numbers / 10;  // And divides 1000 by 10\ncout << \"\\n\"\
+    \n}\n```\n\n```\nProcess returned (0x) execution time : 0.043 s\nPress any key\
+    \ to continue.\n```\n\n```\nProcess returned (00) execution time : 0.050 s\nPress\
+    \ any key to continue.\n```\n\n![](img/588364e02a77f179099fae91a1713f0a_73_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# C++ Maths
+
+
+    STEP 5 The interesting maths content comes when you call upon the C++ Math Library.
+    In this header are dozens of mathematical functions along with other functions.
+    Everything from cosine to tangent with two parameters, to the value of Pi. You
+    can call the header with:
+
+
+    STEP 8 Calculating powers of numbers can be done with:
+
+
+    ```
+
+    #include <iostream>
+
+    #include <cmath>
+
+    using namespace std;
+
+    int main () {
+
+
+    }
+
+    ```
+
+
+    ```
+
+    #include <iostream>
+
+    #include <cmath>
+
+    using namespace std;
+
+    int main () {
+
+    float number = 12;
+
+    cout << number << " " to the power of 2 is " " << pow(number, 2) << " "\n";
+
+    cout << number << " " to the power of 3 is " " << pow(number, 3) << " "\n";
+
+    cout << number << " " to the power of .08 is " " << pow(number, 0.08) << " "\n";
+
+    }
+
+    ```
+
+
+    | | Startexe x Maths.cpp |
+
+    |---|---|
+
+    | 1 | #include <iostream> |
+
+    | 2 | #include <cmath> |
+
+    | 3 | using namespace std; |
+
+    | 5 | int main () |
+
+    | 10 |
+
+
+    STEP 6 Starting by the square root of a number:
+
+
+    ```
+
+    #include <iostream>
+
+    #include <cmath>
+
+    using namespace std;
+
+    ```
+
+
+    STEP 9 We have created a float variable with the value of 12, and 2 (power). Of
+    course, you can calculate powers and square roots using variables. For example,
+    pow(12, 2) as the first value in the code.
+
+
+    ```
+
+    int main {
+
+    float number = 134;
+
+    cout << "The square root of " << number << " is: " << sqrt(number) << "\n";n}
+
+    ```
+
+
+    | | Startexe x Maths.cpp |
+
+    |---|---|
+
+    | 1 | #include <iostream> |
+
+    | 2 | #include <cmath> |
+
+    | 3 | using namespace std; |
+
+    | 5 | int main () |
+
+    | 7 | float number = 134; |
+
+    | 8 | cout << "The square root of " << number << " is: " << sqrt(number) << "\n";
+    |
+
+    | 10 |
+
+
+    STEP 10 The value of Pi is also stored in the math library. It can be called with
+    the M_PI function. Enter M_PI; into the code and you get 3.14159 or you can use
+    it to:
+
+
+    ```
+
+    #include <iostream>
+
+    #include <cmath>
+
+    using namespace std;
+
+    int main () {
+
+    double double_area = 1.5;
+
+    area = M_PI * radius * radius;
+
+    cout << " << "\n";n}
+
+    ```
+
+
+    STEP 7 Here created a new float constant number and used the sqrt(function) to
+    display the square root of 134, the value of the variable. Build and run your
+    code, and you 11.5758.
+
+
+    | C:\Users\document\C++Maths.cpp |
+
+    The square root of 134 is: 11.5758
+
+    Process returned (0) execution time : 0.040s
+
+    Press any key to continue..
+
+
+    *www.bdpublications.com 75'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'Now you’ve got the basics down, you can improve and learn more essential skills
+    in our next guide...
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_75_0.png)
+
+
+    # Coming soon!'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Are you a Mac user?
+
+
+    Then don''t miss our latest macOS
+
+    Monterey user guide on Readly now!
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_76_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# Black Dog Media
+
+
+    # Master Your Tech
+
+    From Beginner to Expert
+
+
+    To continue learning more about your tech visit us at:
+
+    www.bdmpublications.com
+
+
+    # FREE Tech Guides
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_0.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_1.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_2.png)
+
+
+    Apple iPhone, iPad,
+
+    Mac, MacBook & Watch
+
+
+    Photography,
+
+    Photoshop & Lightroom
+
+
+    Coding Python,
+
+    Raspberry Pi & Linux
+
+
+    # EXCLUSIVE Offers on
+
+    our Tech Guidebooks
+
+
+    +   * Print & digital editions
+
+    * Featuring the very latest updates
+
+    * Step-by-step tutorials and guides
+
+    * Created by BDM experts
+
+    * Check out our latest titles today!
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_3.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_4.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_5.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_6.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_7.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_8.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_9.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_10.png)
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_11.png)
+
+
+    # PLUS
+
+
+    # SPECIAL DEALS
+
+    and Bonus Content
+
+
+    Sign up to our monthly newsletter
+
+    and get the latest updates, offers
+
+    and news from BDM. We are here to help you Master Your Tech!
+
+
+    ![](img/588364e02a77f179099fae91a1713f0a_77_12.png)
+
+
+    bdmpublications.com/ultimate-photoshop
+
+    Buy our Photoshop guides and download tutorial
+
+    images for free! Simply sign up and get creative.'
+  merge: -1
+  img_proc: true
