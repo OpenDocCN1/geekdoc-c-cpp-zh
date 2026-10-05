@@ -1,0 +1,9 @@
+# Preface
+
+The best way to learn new things is to do things. There are lots of concepts in C programming that are not easily available either on the internet or in textbooks. We tried our best to deliver concepts through explanations of C questions. Each and every question has a concept behind it. These concepts are damn important for students who are planning to appear for any multinational IT job. Every company needs programmers/coders who are good with logic and sound in fundamentals. This book is proved a diamond for genuine C programmers and for serious job seekers. The book contains more than 500 C programming questions. You only need a maximum of 25 days to complete the book. The guidelines for reading this book are given below. We recommend you to follow these guidelines and try to finish the book before the deadline. At the end of each group, some other important interview questions are present. To write write programs and execute . If you are having a lack of time and good programming skills then you to write at least an algorithm or pseudocode for them.
+
+All C codes are compiled and executed with gcc 4.8.2 compiler driver running on a Linux system with kernel 3.13.0-32-generic ubuntu-14.04 32-bit Operating system. We also recommend you to execute the given codes in your system for better understanding and let us know if there is any correction.
+
+# Organization of the Book
+
+The chapter-1 "A touch to C" describes conceptual understanding about C programs. It is highly recommend to the readers to go through this chapter before proceeding. After this chapter, the book is divided into 7 groups, each group contains around 60 C programming questions with explanations and other important interview questions. After completing all the groups, there are more
