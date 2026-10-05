@@ -1,0 +1,20 @@
+# All employees
+
+Id: 1, Name: Kim Abercrombie, Dept: IT
+Id: 2, Name: Jeff Hay, Dept: Marketing
+Id: 3, Name: Dave Barnett, Dept: Sales
+Id: 4, Name: Charlie Herb, Dept: IT
+Id: 5, Name: Tim Litton, Dept: Marketing
+Id: 6, Name: Chris Preston, Dept: Sales
+
+Employee added
+
+# All employees
+
+Id: 1, Name: Kim Abercrombie, Dept: IT
+Id: 2, Name: Jeff Hay, Dept: Marketing
+Id: 3, Name: Dave Barnett, Dept: Sales
+Id: 4, Name: Charlie Herb, Dept: IT
+Id: 5, Name: Tim Litton, Dept: Marketing
+Id: 6, Name: Chris Preston, Dept: Sales
+Id: 7, Name: David Simpson, Dept: IT

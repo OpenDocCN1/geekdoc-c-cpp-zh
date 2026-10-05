@@ -1,0 +1,12 @@
+```
+public void Dispose()
+{
+    if (!this.disposed)
+    {
+      Console.WriteLine("Calculator being disposed");
+    }
+
+    this.disposed = true;
+    GC.SuppressFinalize(this);
+}
+```

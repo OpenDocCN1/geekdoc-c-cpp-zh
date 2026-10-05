@@ -1,0 +1,13 @@
+In this final chapter of Part I, you'll learn how C# uses exceptions to signal that an error has occurred and how to use the try, catch, and finally statements to catch and handle the errors that these exceptions represent. By the end of this chapter, you'll have a solid foundation in all the fundamental elements of C#; and you'll build on that foundation in Part II.
+
+# Trying code and catching exceptions
+
+It's very difficult to ensure that a piece of code always works as expected. Failures can occur for numerous reasons, many of which are beyond your control as a programmer. Any applications that you write must be capable of detecting failures and gracefully handling them, either by taking the appropriate corrective actions or, if that's not possible, by reporting the reasons for the failure in the clearest possible way to the.
+
+Errors can happen at any time. Using traditional techniques to manually add error-detecting code around every statement is time-consuming, and itself-prone. You can also lose sight of the main flow of an application if each statement requires confronted error-handling logic to manage each possible error that can occur at every stage.
+
+Fortunately, C makes it easy to separate the error-handling code from the code that implements the primary logic of a program by using exceptions and exception handlers. To write exception-aware programs, you need to do two things:
+
++   Write your code within a try block (try is a C keyword). When the code runs, it attempts to catch all the statements in the try block, and if none of the statements generate an error, they all run, one after the other, to completion. If an error condition occurs, exception jumps out of the try block and into another piece of code designed to catch and handle the exception: a catch handler.
+
++   Write one or more catch handlers (catch is another C keyword) immediately after the try block to handle any possible error conditions. A catch handler is intended to capture and handle a specific type of exception. You can have multiple catch handlers after a try block, each one designed to trap and handle a specific exception. This enables you to provide different handlers for the different errors that could arise in the try block. If any one of the statements within the try block causes an error, the runtime throws an exception. The runtime then examines the catch handlers after the try block and transfers control directly to the first matching handler.

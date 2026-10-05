@@ -1,0 +1,3 @@
+```
+int pointsCreatedSoFar = Point.ObjectCount();
+```

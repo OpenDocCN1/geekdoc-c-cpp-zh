@@ -1,0 +1,6 @@
+| If you are | Follow these steps |
+| --- | --- |
+| Migrating from an object-oriented language such as C++ or Java | 1. Install the practice files as described in the upcoming section, "Code samples."<br>2. Skim the first seven chapters to get an overview of C# and Visual Studio 2022, and then concentrate on Chapters 8 through 22.<br>3. For information about building Universal Windows Platform applications, read Chapters 23 to 27. |
+| Switching from Visual Basic to C# | 1. Install the practice files as described in the upcoming section, "Code samples."<br>2. Work through Chapters 1 to 22 sequentially.<br>3. For information about building Universal Windows Platform applications, read Chapters 23 to 27.<br>4. Read the "Quick reference" sections at the end of the chapters for information about specific C# and Visual Studio 2022 constructs. |
+
+Most of the book’s chapters include hands-on samples that let you try out the concepts you just learned. No matter which sections you choose to focus on, be sure to download and install the sample applications on your system.

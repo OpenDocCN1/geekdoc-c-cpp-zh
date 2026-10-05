@@ -1,0 +1,440 @@
+
+
+```csharp
+struct Time {
+    private int hours, minutes, seconds;
+    ...
+
+    public Time(int hh, int mm) {
+        hours = hh;
+        minutes = mm;
+        seconds = 0;
+    }
+}
+```
+
+```csharp
+struct Date
+{
+    private int year;
+    private Month month;
+    private int day;
+
+    public Date(int ccyy, Month mm, int dd)
+    {
+        this.year = ccyy - 1900;
+        this.month = mm;
+        this.day = dd - 1;
+    }
+}
+```
+
+```csharp
+struct Date
+{
+    ...
+    public override string ToString()
+    {
+        string data = $"{this.month} {this.day + 1} {this.year + 1900}";
+        return data;
+    }
+}
+```
+
+```csharp
+static void doWork()
+{
+    ...
+    var defaultDate = new Date();
+    Console.WriteLine(defaultDate);
+}
+```
+
+```csharp
+static void doWork()
+{
+    ...
+    Date weddingAnniversary = new Date(2021, Month.July, 4);
+    Console.WriteLine(weddingAnniversary);
+}
+```
+
+```csharp
+Date now = new Date(2012, Month.March, 19);
+Date copy = now;
+```
+
+```csharp
+Date now;
+Date copy = now; // 编译错误：now 未未赋值
+```
+
+```csharp
+struct Date
+{
+    ...
+    public void AdvanceMonth()
+    {
+        this.month++;
+        if (this.month == Month.December + 1)
+        {
+            this.month = Month.January;
+            this.year++;
+        }
+    }
+}
+```
+
+```csharp
+static void doWork()
+{
+    ... 
+    Date weddingAnniversaryCopy = weddingAnniversary;
+    Console.WriteLine($"Value of copy is {weddingAnniversaryCopy}");
+}
+```
+
+```csharp
+static void doWork()
+{
+    ...
+    weddingAnniversary.AdvanceMonth();
+    Console.WriteLine($"New value of weddingAnniversary is {weddingAnniversary}");
+    Console.WriteLine($"Value of copy is still {weddingAnniversaryCopy}");
+}
+```
+
+July 4 2021
+Value of copy is July 4 2021
+New value of weddingAnniversary is August 4 2021
+Value of copy is still July 4 2021
+
+July 4 2021
+
+Value of copy is July 4 2021
+
+New value of weddingAnniversary is August 4 2021
+
+Value of copy is still August 4 2021
+
+```csharp
+struct BigStruct
+{
+    // 这里有许多字段！
+    ...
+}
+...
+var myData = new BigStruct();
+ProcessData(ref myData);
+...
+void ProcessData(ref BigStruct data)
+{
+    // data 是 myData 的引用，而不是副本
+    ...
+}
+```
+
+```csharp
+enum Season { Spring, Summer, Fall, Winter }
+```
+
+```csharp
+currentSeason = Season.Spring; // 正确
+但注意：
+currentSeason = Spring; // 错误
+```
+
+```csharp
+struct Time
+{
+    public Time(int hh, int mm, int ss)
+    { ... }
+    ...
+    private int hours, minutes, seconds;
+}
+```
+
+```csharp
+Time lunch = new Time(12, 30, 0);
+```
+
+```csharp
+int[] pins; // 个人识别码
+```
+
+```csharp
+int size = int.Parse(Console.ReadLine());
+int[] pins = new int[size];
+```
+
+```csharp
+int[] pins = new int[4]{ 9, 3, 7, 2 };
+```
+
+```csharp
+Random r = new Random();
+int[] pins = new int[4]{ r.Next() % 10, r.Next() % 10, r.Next() % 10, r.Next() % 10 };
+```
+
+```csharp
+int[] pins = new int[3]{ 9, 3, 7, 2 }; // 编译错误
+int[] pins = new int[4]{ 9, 3, 7 }; // 编译错误
+int[] pins = new int[4]{ 9, 3, 7, 2 }; // OK
+```
+
+```csharp
+Time[] schedule = { new Time(12,30), new Time(5,30) };
+```
+
+```csharp
+var names = new[]{"John", "Diana", "James", "Francesca"};
+```
+
+```csharp
+var bad = new[]{"John", "Diana", 99, 100};
+```
+
+```csharp
+var numbers = new[]{1, 2, 3.5, 99.999};
+```
+
+```csharp
+var names = new[] { new { Name = "John", Age = 57 },
+new { Name = "Diana", Age = 57 },
+new { Name = "James", Age = 30 },
+new { Name = "Francesca", Age = 26 } };
+```
+
+```csharp
+try
+{
+    int[] pins = { 9, 3, 7, 2 };
+    Console.WriteLine(pins[4]); // 错误，第四个元素的索引为 3
+}
+catch (IndexOutOfRangeException ex)
+{
+    ...
+}
+```
+
+```csharp
+var names = new[] { new { Name = "John", Age = 57 },
+new { Name = "Diana", Age = 57 },
+new { Name = "James", Age = 30 },
+new { Name = "Francesca", Age = 26 } };
+
+var subset = names[0..2];
+```
+
+```csharp
+int[] pins = { 9, 3, 7, 2 };
+for (int index = 0; index < pins.Length; index++)
+{
+    int pin = pins[index];
+    Console.WriteLine(pin);
+}
+```
+
+```csharp
+int[] pins = { 9, 3, 7, 2 };
+foreach (int pin in pins)
+{
+    Console.WriteLine(pin);
+}
+```
+
+```csharp
+var names = new[] { new { Name = "John", Age = 57 },
+new { Name = "Diana", Age = 57 },
+new { Name = "James", Age = 30 },
+new { Name = "Francesca", Age = 26 } };
+
+foreach (var familyMember in names)
+{
+    Console.WriteLine($"Name: {familyMember.Name}, Age: {familyMember.Age}");
+}
+```
+
+```csharp
+void ProcessData(int[] data)
+{
+    foreach (int i in data)
+    {
+        ...
+    }
+}
+```
+
+```csharp
+public int[] ReadData()
+{
+    Console.WriteLine("How many elements?");
+    string reply = Console.ReadLine();
+    int numElements = int.Parse(reply);
+
+    int[] data = new int[numElements];
+    for (int i = 0; i < numElements; i++)
+    {
+        Console.WriteLine($"Enter data for element {i}");
+        reply = Console.ReadLine();
+        int elementData = int.Parse(reply);
+        data[i] = elementData;
+    }
+    return data;
+}
+```
+
+```csharp
+static void Main(string[] args)
+{
+    ...
+}
+```
+
+```csharp
+static void Main(string[] args)
+{
+    foreach (string filename in args)
+    {
+        ProcessFile(filename);
+    }
+}
+```
+
+```csharp
+int[] pins = { 9, 3, 7, 2 };
+int[] alias = pins; // alias 和 pins 指同一个数组
+```
+
+```csharp
+int[] pins = { 9, 3, 7, 2 };
+int[] copy = new int[pins.Length];
+for (int i = 0; i < pins.Length; i++)
+{
+    copy[i] = pins[i];
+}
+```
+
+```csharp
+int[] pins = { 9, 3, 7, 2 };
+int[] copy = new int[pins.Length];
+pins.CopyTo(copy, 0);
+```
+
+```csharp
+int[] pins = { 9, 3, 7, 2 };
+int[] copy = new int[pins.Length];
+Array.Copy(pins, copy, copy.Length);
+```
+
+```csharp
+int[] pins = { 9, 3, 7, 2 };
+int[] copy = (int[])pins.Clone();
+```
+
+```csharp
+items[2, 3] = 99; // 将 (2,3) 处的元素设置为 99
+items[2, 4] = items[2,3]; // 将 (2,3) 处的元素复制到 (2,4)
+items[2, 4]++; // 增 (2,4) 处的整数值
+```
+
+```csharp
+int[,,] cube = new int[5, 5, 5];
+cube[1, 2, 1] = 101;
+cube[1, 2, 2] = cube[1, 2, 1] * 3;
+```
+
+```csharp
+int[,] items = new int[4, 40];
+```
+
+```csharp
+int[][] items = new int[4][];
+int[] columnRow0 = new int[3];
+int[] columnRow1 = new int[10];
+int[] columnRow2 = new int[40];
+int[] columnRow3 = new int[25];
+items[0] = columnRow0;
+items[1] = columnRow1;
+items[2] = columnRow2;
+items[3] = columnRow3;
+...
+```
+
+```csharp
+enum Value { Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, Ace }
+```
+
+```csharp
+enum Suit { Clubs, Diamonds, Hearts, Spades }
+```
+
+```csharp
+class PlayingCard
+{
+    private readonly Suit suit;
+    private readonly Value value;
+
+    public PlayingCard(Suit s, Value v)
+    {
+        this.suit = s;
+        this.value = v;
+    }
+
+    public override string ToString()
+    {
+        string result = $"{this.value} of {this.suit}";
+        return result;
+    }
+
+    public Suit CardSuit()
+    {
+        return this.suit;
+    }
+
+    public Value CardValue()
+    {
+        return this.value;
+    }
+}
+```
+
+```csharp
+class Pack
+{
+    public const int NumSuits = 4;
+    public const int CardsPerSuit = 13;
+    private PlayingCard[,] cardPack;
+    private Random randomCardSelector = new Random();
+    ...
+}
+```
+
+```csharp
+public Pack()
+{
+    this.cardPack = new PlayingCard[NumSuits, CardsPerSuit];
+}
+```
+
+```csharp
+public Pack()
+{
+    this.cardPack = new PlayingCard[NumSuits, CardsPerSuit];
+    for (var suit = Suit.Clubs; suit <= Suit.Spades; suit++)
+    {
+        for (var value = Value.Two; value <= Value.Ace; value++)
+        {
+            this.cardPack[(int)suit, (int)value] = new PlayingCard(suit, value);
+        }
+    }
+}
+```
+
+```csharp
+public PlayingCard DealCardFromPack()
+{
+    var suit = (Suit)randomCardSelector.Next(NumSuits);
+}
+```
+

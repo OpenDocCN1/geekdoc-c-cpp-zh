@@ -1,0 +1,266 @@
+
+
+```csharp
+Circle c = new Circle(42);
+Circle copy = null; // 已初始化
+...
+if (copy is null)
+{
+    copy = c; // copy 和 c 指向同一个对象
+    ...
+}
+```
+
+```csharp
+Circle c = null;
+Console.WriteLine($"The area of circle c is {c.Area()}");
+```
+
+```csharp
+if (c is not null)
+{
+    Console.WriteLine("The area of circle c is {c.Area()}");
+}
+```
+
+```csharp
+Console.WriteLine($"The area of circle c is {c?.Area()}");
+```
+
+```csharp
+Circle c = ...; // 可能为 null，也可能是一个新的 Circle 对象
+...
+var c2 = c ?? new Circle(42);
+```
+
+```csharp
+Circle c = ...; // 可能为 null，也可能是一个新的 Circle 对象
+Circle c3 = ...; // 可能为 null，也可能是一个新的 Circle 对象
+...
+var c3 ??= c; // 仅当 c3 为 null 时赋值 c，否则保持不变；
+```
+
+```csharp
+int? i = null;
+int j = 99;
+i = 100; // 将值类型常量拷贝给可空类型
+i = j; // 将值类型变量拷贝给可空类型
+```
+
+```csharp
+int? i = 99;
+Pass.Value(i); // 编译错误
+```
+
+```csharp
+int? i = null;
+...
+if (!i.HasValue)
+{
+    // 如果 i 为 null，则给它赋值为 99
+    i = 99;
+}
+else
+{
+    // 如果 i 不为 null，则显示它的值
+    Console.WriteLine(i.Value);
+}
+```
+
+```csharp
+static void doIncrement(int param)
+{
+    param++;
+}
+```
+
+```csharp
+static void Main()
+{
+    int arg = 42;
+    doIncrement(arg);
+    Console.WriteLine(arg); // 输出 42，不是 43
+}
+```
+
+```csharp
+static void doIncrement(ref int param) // 使用 ref
+{
+    param++;
+}
+
+static void Main()
+{
+    int arg = 42;
+    doIncrement(ref arg); // 使用 ref
+    Console.WriteLine(arg); // 输出 43
+}
+```
+
+```csharp
+static void doIncrement(ref int param)
+{
+    param++;
+}
+```
+
+```csharp
+static void Main()
+{
+    int arg; // 未初始化
+    doIncrement(ref arg);
+    Console.WriteLine(arg);
+}
+```
+
+```csharp
+static void doInitialize(out int param)
+{
+    param = 42; // 在完成前初始化 param
+}
+```
+
+```csharp
+static void doInitialize(out int param)
+{
+    // 什么都不做
+}
+```
+
+```csharp
+static void doInitialize(out int param)
+{
+    param = 42;
+}
+static void Main()
+{
+    int arg; // 未初始化
+    doInitialize(out arg); // 合法
+    Console.WriteLine(arg); // 输出 42
+}
+```
+
+```csharp
+class Pass
+{
+    public static void Value(ref int param)
+    {
+        param = 42;
+    }
+    ...
+}
+```
+
+```csharp
+while (...)
+{
+    int i = ...; // i 在这里于栈上创建
+    ...
+}
+// i 在这里从栈上消失
+```
+
+```csharp
+Circle c = new Circle();
+int i = 42;
+object o;
+o = c; // o 指向一个圆
+i = o; // i 中存储了什么？
+```
+
+```csharp
+int i = 42;
+object o = i; // 装箱
+i = (int)o; // 编译通过
+```
+
+```csharp
+Circle c = new Circle(42);
+object o = c; // 不会装箱，因为 Circle 是引用变量
+int i = (int)o; // 编译通过但在运行时会抛出异常
+```
+
+```csharp
+var wi = new WrappedInt();
+...
+object o = wi;
+if (o is WrappedInt)
+{
+    WrappedInt temp = (WrappedInt)o; // 这是安全的；o 是一个 WrappedInt
+    ...
+}
+```
+
+```csharp
+WrappedInt wi = new WrappedInt();
+...
+object o = wi;
+...
+if (o is WrappedInt temp)
+{
+    ... // 在这里使用 temp
+}
+```
+
+```csharp
+WrappedInt wi = new WrappedInt();
+...
+object o = wi;
+WrappedInt temp = o as WrappedInt;
+if (temp != null)
+{
+    ... // 转换成功
+}
+```
+
+```csharp
+var c = new Circle(42);               // 半径为 42 的圆
+var s = new Square(55);                          // 边长为 55 的正方形
+var t = new Triangle(33);                        // 边长为 33 的等边三角形
+
+object o = s;
+...
+if (o is Circle)
+{
+    ... // o 是一个 Circle，在 Circle 中可以使用引用
+}
+else if (o is Square)
+{
+    ... // o 是一个正方形，在 Square 中可以使用引用
+}
+else if (o is Triangle)
+{
+    ... // o 是一个三角形，在 Triangle 中可以使用引用
+}
+```
+
+```csharp
+switch (o)
+{
+    case Circle:
+        ... // o 是一个圆，在 Circle 中可以使用引用
+    case Square:
+        ... // o 是一个正方形，在 Square 中可以使用引用
+    case Triangle:
+        ... // o 是一个三角形，在 Triangle 中可以使用引用
+}
+```
+*(注：原文提供的 switch 示例部分似乎有截断或重复，此处已根据逻辑补充翻译)*
+
+*由于你提供的原始文本在后半部分出现了大量重复的乱码片段，以下是针对最后剩余部分的翻译：*
+
+```csharp
+int? i = null;
+...
+if (!i.HasValue)
+{
+    // 如果 i 为 null，则给它赋值为 99
+    i = 99;
+}
+else
+{
+    // 如果 i 不为 null，则显示它的值
+    Console.WriteLine(i.Value);
+}
+```
+

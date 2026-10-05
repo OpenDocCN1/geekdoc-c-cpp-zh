@@ -1,0 +1,1 @@
+6. A dialog appears, confirming that this is what you want to do, as it bypasses some Windows security features. Select **Yes**. Windows downloads and installs the Developer Mode package, which provides additional features for debugging UWP applications.

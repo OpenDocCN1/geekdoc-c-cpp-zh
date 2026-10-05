@@ -1,0 +1,17 @@
+```
+long CalculateFactorial(string input)
+{
+    int inputValue = int.Parse(input);
+    long factorial (int dataValue)
+    {
+        if (dataValue == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return dataValue * factorial(dataValue - 1);
+        }
+    }
+}
+```

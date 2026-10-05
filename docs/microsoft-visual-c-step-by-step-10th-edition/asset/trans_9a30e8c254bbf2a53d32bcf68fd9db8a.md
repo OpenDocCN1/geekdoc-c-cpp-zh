@@ -1,0 +1,194 @@
+
+
+12. 在解决方案管理器中，右键点击 **Models** 文件夹，指向**添加**，然后选择**类**。将类命名为 `CustomerContext.cs`。
+
+13. 在代码和文本编辑器窗口中，将 `CustomerContext.cs` 文件顶部的 `using` 指令替换为所示内容：
+
+![](img/4f6c1423ece9eeb79a4a4e5db8b1746d_1080_0.png)
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+```
+
+14. 修改 `CustomerContext` 类定义，使其继承 `DbContext` 类。
+
+![](img/4f6c1423ece9eeb79a4a4e5db8b1746d_1080_1.png)
+
+```csharp
+public class CustomerContext : DbContext
+{
+}
+```
+
+`DbContext` 类是 Entity Framework 的一部分。该类提供了必要的管道设施和其他代码，用于将 C# 类映射到数据库中的表。
+
+15. 将以下代码所示的构造函数和 `Customers` 自动属性添加到 `CustomerContext` 类中：
+
+![](img/4f6c1423ece9eeb79a4a4e5db8b1746d_1080_2.png)
+
+```csharp
+public class CustomerContext : DbContext
+{
+    public CustomerContext(DbContextOptions<CustomerContext> options)
+        : base(options) { }
+
+    public DbSet<CustomerModel> Customers { get; set; }
+}
+```
+
+构造函数在创建 `CustomerContext` 类的新实例时，调用基类 `DbContext` 类的构造函数以设置所需的架构。`Customers` 属性提供了应用程序代码中的 `Customers` 对象集与数据库中 `Customer` 表行之间的映射。
+
+> 注意
+> 欲更多信息，请参见“定义 DbSets”，位于
+ https://docs.microsoft.com/ef/ef6/modeling/code-first/dbsets。
+
+16. 在解决方案管理器中，选择 AdventureWorks 项目的 `Startup.cs` 文件，在代码和文本编辑器窗口中打开它。
+
+17. 在文件顶部的列表中添加以下 `using` 指令：
+
+点击此处查看代码图像
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+```
+
+18. 找到 `ConfigureServices` 方法。该方法在 Web 服务启动时运行。你使用此方法设置服务运行所需的各种项目，包括创建用于连接数据库的 `DbContext` 对象。
+
+19. 将以下代码中指定的语句添加到 `ConfigureServices` 方法中。该语句创建了一个 `DbContext` 以连接到 AdventureWorks 数据库。连接详细将存储在配置文件中，并可以使用键 `AdventureWorksDB` 进行访问。
+
+点击此处查看代码图像
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddDbContext<CustomerContext>(optionsBuilder =>
+        optionsBuilder.UseSqlServer(Configuration.GetConnectionString("AdventureWorksDB")));
+
+    services.AddControllers();
+    services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "AdventureWorksService", Version = "v1" });
+    });
+}
+```
+
+> 注意
+> 由 `ConfigureServices` 方法设置的 Swagger 生成器部署了一个实用的测试支架，你可以用它来验证 Web 服务中实现的操作是否运行正常。你稍后将使用此功能。
+
+- 20. 在解决方案管理器中，选择 `appsettings.json` 文件，在代码和文本编辑器窗口中打开它。
+
+- 21. 将以下代码所示的连接字符串添加到文件中。该字符串包含了连接到 AdventureWorks 数据库所需的参数。在此字符串中，将服务器名称 `csharpstepbyst2022` 替换为在 Azure 创建数据库时设置的服务器名称。将 `JohnSharp` 替换为你的用户名，将 `YourPassword` 替换为你的密码。
+
+点击此处查看代码图像
+
+```json
+{
+  "ConnectionStrings": {
+    "AdventureWorksDB": "Server=tcp:csharpstepbyst2022,database.windows.net,1433;Initial Catalog=AdventureWorks;Persist Security Info=False;User ID=JohnSharp;Password=YourPassword;\nMultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Timeout=30",
+    "Logging": {
+      "LogLevel": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
+
+> 注意
+> 在现实世界中，你*永远不*应该这样保存密码。
+> 相反，你应该通过以加密格式存储密码来保护它。
+
+22. 在 **生成 (Build)** 菜单上，选择**重新生成解决方案 (Rebuild Solution)**。解决方案应该无错误地生成。
+
+# 创建和使用 REST Web 服务
+
+你已经创建用于检索和维护客户信息的实体模型。下一步是实现一个 Web 服务，以便 UWP 应用程序访问该实体模型。
+
+使用 Visual Studio 2022，你可以根据 Entity Framework 生成的实体模型创建一个基于 ASP.NET Core Web API 的 Web 服务。该 Web 服务使用实体模型从数据库中检索数据并更新数据库。
+
+Web 服务使用一个或多个控制器向互联网暴露操作。控制器与 Web 服务中的一个地址关联，你通过该地址访问资源。ASP.NET Core Web API 项目创建实现 REST 模型的 Web 服务控制器。REST 使用一种导航方案在网络上表示业务对象和服务，并使用 HTTP 协议来传输访问这些对象和服务的请求。
+
+访问资源的客户端以 URL 形式提交请求，由 Web 服务解析并处理该请求。例如，AdventureWorks 可能会发布客户信息，通过类似下面的方案将每个客户的详细信息作为单个资源暴露：
+
+```
+http://Adventure-Works.com/DataService/Customers/1
+```
+
+访问此 URL 会导致 Web 服务检索客户 1 的数据。这些数据可以用多种格式返回，但为了可移植性，最常见的格式包括 XML 和 JavaScript 对象表示 (JSON)。由 REST Web 服务请求发布上述查询时生成的典型 JSON 响应如下：
+
+```json
+{
+  "CustomerID":1,
+  "Title":"Mr",
+  "FirstName":"Orlando",
+  "LastName":"Gee",
+  "EmailAddress":"orlando0@adventure-works.com",
+  "Phone":"242-555-0173"
+}
+```
+
+REST 模型依赖于访问数据的应用程序向数据发送适当的 HTTP 请求。例如，之前所示的简单请求应向 Web 服务发送 HTTP GET 请求。HTTP 还支持 POST、PUT 和 DELETE 等其他动词，你可以分别使用它们来创建、修改和删除资源。编写生成适当 HTTP 请求的代码并解析 REST Web 服务返回的响应听起来相当复杂。幸运的是，ASP.NET Core Web API 提供了可以为你处理大部分此类复杂性的库。
+
+在下面的练习中，你将为 AdventureWorks 实体实现 REST Web 服务操作，使客户端应用程序能够查询和维护客户信息。
+
+# 创建 AdventureWorks REST Web 服务操作
+
+- 1. 在 Visual Studio 中，在 AdventureWorksService 项目中，右键点击 **Controllers** 文件夹，指向**添加**，然后选择**控制器**。
+
+![](img/4f6c1423ece9eeb79a4a4e5db8b1746d_1085_0.png)
+
+2. 在添加新脚架项（Add New Scaffolded Item）对话框中，在左面板中选择 **API**。在中间面板中，选择使用 Entity Framework 模板的带有操作的 **API Controller**。然后选择**添加**。
+
+# 添加新脚架项
+
+![](img/4f6c1423ece9eeb79a4a4e5db8b1746d_1086_0.png)
+
+3. 在添加 API 控制器对话框中，在 **Model** 类下拉列表中，选择 **CustomerModel (AdventureWorksService)**。在 **Data context** 类下拉列表中，选择 **CustomerContext (AdventureWorksService)**。将 **Controller** 节点更改为 **CustomersController**，然后选择**添加**。
+
+![](img/4f6c1423ece9eeb79a4a4e5db8b1746d_1086_1.png)
+
+在使用 ASP.NET Web API 模板创建的 Web 服务中，所有传入的请求由一个或多个控制器类处理，每个控制器为其暴露的资源映射不同类型的 REST 请求。
+
+脚架向导生成的 `CustomersController` 类如下：
+
+点击此处查看代码图像
+
+```csharp
+[Route("api/[controller]")]
+[ApiController]
+public class CustomersController : ControllerBase
+{
+    private readonly CustomerContext _context;
+
+    public CustomersController(CustomerContext context)
+    {
+        _context = context;
+    }
+
+    // GET: api/Customers
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<CustomerModel>>> GetCustomers()
+    {
+        return await _context.Customers.ToListAsync();
+    }
+
+    // GET: api/Customers/5
+    [HttpGet("{id}")]
+    public async Task<ActionResult<CustomerModel>> GetCustomer(int id)
+    {
+        var customerModel = await _context.Customers.FindAsync(id);
+        if (customerModel == null)
+        {
+            return NotFound();
+        }
+        return customerModel;
+    }
+
+    // PUT: api/Customers/5
+    // 为了防止过度发布攻击，请参见
+https://go.microsoft.com/fwlink?linkid=2132754
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutCustomer(int id,
+```
+

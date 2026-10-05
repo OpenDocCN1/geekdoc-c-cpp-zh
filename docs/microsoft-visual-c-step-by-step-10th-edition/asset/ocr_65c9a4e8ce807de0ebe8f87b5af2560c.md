@@ -1,0 +1,20 @@
+```
+{
+  TextReader reader = new StreamReader(filename);
+try
+{
+    string line;
+    while ((line = reader.ReadLine()) is not null)
+    {
+      Console.WriteLine(line);
+    }
+}
+finally
+{
+  if (reader is not null)
+    {
+      ((IDisposable)reader).Dispose();
+    }
+}
+}
+```

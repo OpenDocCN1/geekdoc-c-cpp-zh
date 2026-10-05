@@ -1,0 +1,3 @@
+```
+private double calculateFee(double dailyRate, int noOfDays) => dailyRate * noOfDays;
+```

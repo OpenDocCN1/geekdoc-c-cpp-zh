@@ -1,0 +1,3 @@
+```
+public class Tree<TItem> : IEnumerable<TItem> where TItem : IComparable<TItem>
+```

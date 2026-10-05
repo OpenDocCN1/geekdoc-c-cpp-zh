@@ -1,0 +1,2 @@
+Part IV introduces you to the requirements of building UWP applications. 
+You'll see examples of the asynchronous model of programming developed as part of.NET. You'll also learn how to build a UWP application that connects to the cloud to retrieve and present complex information in a natural and easily navigable style.

@@ -1,0 +1,8 @@
+```
+public double DistanceTo(Point other)
+{
+    int xDiff = this.x - other.x;
+    int yDiff = this.y - other.y;
+    double distance = Math.Sqrt((xDiff * xDiff) + (yDiff * yDiff));
+}
+```
