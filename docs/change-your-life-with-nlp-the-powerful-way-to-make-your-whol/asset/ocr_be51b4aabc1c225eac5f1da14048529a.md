@@ -1,0 +1,9 @@
+# Step up with feedback
+
+‘Can I give you some feedback?’
+
+How many of us have experienced that uncomfortable feeling in the pit of our stomachs at the mere mention of the word 'feedback' or 'appraisal' or even 'performance review meeting'? Honest with yourself. If you had the choice of getting some feedback or cleaning your bathroom, which would you choose? Few of us enjoy hearing about our shortcomings and even fewer people enjoy describing others' shortcomings to them although some of you may have bosses in the past who seemed to relish hoarding all your feedback to a once-a-year event that left you reeling and still trying to remember most of the examples given as they happened so long ago.
+
+My goal in this chapter is to assist you to come to understand feedback as a gift – a gift that will catapult you to the next level of performance. Feedback is how we know what we are doing is. It's how we know whether we are on track. If we don't know how we are doing, we run the risk of investing time, energy and money into ineffective strategies – like the hamster running around in the hamster wheel. If we get feedback. we live in a world of instant feedback as far as email and text messages are concerned, yet few of us thrive on getting instant performance feedback. In fact, most of us have strategies for doing just the opposite, to keep personal performance at bay with well-developed avoidance strategies and smoke screens.
+
+I once witnessed a moment on a course when two best friends were asked to give each other feedback. One of the two told me that she felt very awkward about doing this. I was very curious at this point as I knew how long they had been friends. I asked

@@ -1,0 +1,8 @@
+that he had become rather stuck in his ways. He had been firmly in the Grey Zone. He trained hard for the trek and off he. At the airport he discovered that he was the oldest of about 20 years. He did his best to communicate with the others but was getting nowhere and felt on the outside. He began to feel that he had made a dreadful mistake and should have stayed with what he knew. He remembered learning the presuppositions of NLP and one in particular played on his mind ... the meaning of the communication is the response you get. Rather than moan about his fellow passengers being on a different planet, Ian decided to experiment with some different approaches. He began to spend time chatting to them about what they liked to do and slowly began to find some common ground, especially around music. He even discovered the beauty of iPads and bought himself one at the airport on the way home. When he got back he emailed me about this story and how he had almost blown him his chance to enjoy his trip. The next time he felt brave enough to travel alone, confident that he could along with anyone he met.
+
+Now's your chance to experiment with these presuppositions and notice the difference they make to your communication too.
+
+Exercise 23
+Act as if...
+For the next four weeks, take each of these and act if they are true for you. Notice how they begin to reframe your own thoughts and beliefs about your relationships with others. Summarise your learnings below.
+My lessons are:

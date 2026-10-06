@@ -1,0 +1,11 @@
+# RESULTS OR EXCERCISES? TAKING RESPONSIBILITY FOR WHAT YOU REALLY WANT
+
+threatened to leave him. He focused on what they both needed to make the relationship a success and took 100 per cent responsibility for doing whatever took to get things back on track. His wife agreed to give it a final. He found himself communicating with his wife more than he had done in years in order to work out what was important to both of them about the relationship. Things began to improve and they have just moved to France and celebrated their twenty-fifth wedding anniversary.
+
+# Questions are the answer
+
+People at cause live their lives in a different way. Essentially, they challenge themselves with a different set of questions. These questions are also great for assisting others to move to the cause side of life. Whatever happens in their lives, those at ask themselves:
+
+> How have I managed to create this in my life\and for what purpose?
+
+The power of this is that if you ask yourself a different question you'll get a different answer. When I ask myself and my clients this question it's amazing what pops into their minds to give them a new and empowering perspective on their situation. These answers often come directly from our unconscious minds. People at cause empower themselves because they keep hold of the problem. They do not give away the opportunity to find a solution by blaming others. You see, if you keep the problem inside yourself, then you will always have the opportunity to find a solution. Are you with me on this? This is the most empowering way to lead your life. Being at cause means that you have choices in your life. For example, if you are in a relationship that's not working for you and you blame the other person, because in your model of the world they never do anything, you are likely to stay in the Grey Zone and remain miserable. If, however, you are at cause, you take responsibility for the relationship, and if it's not working, you know you have the choice to do something different. There's

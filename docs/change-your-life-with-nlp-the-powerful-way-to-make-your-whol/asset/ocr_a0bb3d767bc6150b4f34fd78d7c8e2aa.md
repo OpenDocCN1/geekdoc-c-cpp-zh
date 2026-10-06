@@ -1,0 +1,11 @@
+# CHANGE YOUR LIFE WITH NLP
+
+Which cycle are you on at the moment? Do you spend your time focusing on your empowering or limiting beliefs about yourself?
+
+# The power of our beliefs
+
+Another dimension to the importance of beliefs is their potential impact on our health and ageing process. In Ageless Body, Timeless Mind, Deepak Chopra wrote that people grow old and die because they see others grow old and die. Norman Cousins, who developed ‘laughter therapy’, proposed that ‘belief creates biology’. Our inherited expectation is that our body will wear over time and that we are destined to suffer, grow old and die. Chopra estimates that, without negative influences from outside, our bodies could last between 115 and 130 years before the ageing process finally caused them to shut down.
+
+The Tarahum people in Mexico are an interesting example of what can happen when a tribe lives away from the rest of society and outside influences. There are about 40,000 of them scattered in small villages across remote mountains and canyons. Their name for themselves is ‘Rarámuri’ or foot runners. Running has always been a central part of their culture as it’s the only way for them to get around. In 1993, Victoriano Churro won the ultramarathon, the Leadville Trail 100. This is the most gruelling marathon in the US because nearly all of the race is run at elevations of 10,000 feet. He ran in sandals made of leather tough and nails. The interesting thing is that Victoriano was 55 when he won the race. The Tarahumara believe that runners do not reach their prime until they are approaching 60 and this is what they create in their tribe. The best runners are in their late 50s and 60s.
+
+This is in complete contrast to the Western model. In fact, in the UK and the US, mandatory retirement is set at age 65. After this date you are no longer socially useful and you become one of society’s dependants. Medically, the impact of this perception shift can be disastrous. Chopra talks of ‘early retirement death’ where, in the first few years after retirement, heart attacks and cancer rates soar. Maybe time for us to consider Mexico!

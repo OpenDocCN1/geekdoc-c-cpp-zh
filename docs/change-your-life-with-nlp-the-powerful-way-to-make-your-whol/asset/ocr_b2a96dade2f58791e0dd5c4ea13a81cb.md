@@ -1,0 +1,3 @@
+# About the author
+
+**Lindsey Agness** is a highly qualified and experienced NLP trainer, business consultant and owner of The Change Corporation. Lindsey uses her skills to train and coach both individuals and companies to transform themselves. She uses the techniques in this book on a daily basis, not only with her clients, but also on herself, to ensure that she is living the life she wants to live. She works with some of the biggest names in business as well as running many popular training seminars and motivational speaking assignments.

@@ -1,0 +1,11 @@
+# CHANGE YOUR LIFE with NLP
+
+as I was the one singled out to live out the life she had been able to experience. This has always been an important driving force in my life and has given me focus and determination and I thank her for that.
+
+She was proud when I was poached from my job in local government to be offered a role as change management consultant at one of the top global consulting firms. Whereas she'd been the first to go to grammar school, I was the first person in my family to have broken the mould of the normal round of working-class opportunities. It was a great job. I was often embarrassed to hear my mother boasting to her friends about my latest successes. If they had an offspring about the same age as me who was not doing well, all the better!
+
+Yet, as I said earlier, something was missing for me. All became clear when, through NLP, I learned about values. Our values are what is really important to us. They drive our motivation and what we choose to do and how we evaluate ourselves after an event. If our values are not satisfied in a key area of our lives, we are likely to feel stress and unhappy. Problems in relationships are often caused by a clash of values. Imagine in a relationship if one partner values spontaneity whilst the other values routine: there will come a time when there is a fundamental clash. In the beginning, a clash of values is less obvious as both partners make allowances and are more flexible than usual. However, once the dust has settled values will play a key role in whether the relationship survives long term. Similarly, with our careers, if our values are not being satisfied, unfulfilled and so on.
+
+I discovered that I had values around independence, innovation, risk taking and significance – and that meant I would never be completely fulfilled in my old role.
+
+The fastest way to find out your values in any area of your life is to ask yourself a simple question. For example, if you want to know about your relationship values, ask yourself: 'What's most important to me about my relationship?

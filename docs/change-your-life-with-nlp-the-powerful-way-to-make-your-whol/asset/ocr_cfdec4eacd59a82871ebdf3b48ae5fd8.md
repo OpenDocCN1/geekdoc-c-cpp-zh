@@ -1,0 +1,5 @@
+# What if you take action now?
+
+As soon you start to take action, you begin to create your future in the now. Your goal will feel more and more real as you move ahead. Tell people who you know will support you as pursue your goal. Write your goal down and stick it all over your house and your office. A friend of mine wanted to replace her fireplace in her lounge. She had bought a new house but the fireplace was brick built and old fashioned. She saw the picture of the fireplace she wanted in a home design magazine but it was hugely expensive as it had won many design awards. However, she fell in love with it and cut out the photograph. She stuck the photograph on the front of her fridge and every day she looked at it. One year later she was looking at the real thing in her living room.
+
+> **Tip: Whatever happens, stay in the ring. Winston Churchill said, 'Never give in. Never give in. Never, never - in nothing, great or small, large or petty – never give in, except to convictions of honour and good sense. Never yield to force. Never yield to the apparently overwhelming might of the enemy.'***
