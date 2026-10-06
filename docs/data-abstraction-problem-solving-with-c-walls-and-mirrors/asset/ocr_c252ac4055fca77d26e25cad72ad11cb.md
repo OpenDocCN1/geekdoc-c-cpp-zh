@@ -1,0 +1,21 @@
+# Achieving a Better Solution
+
+Like many object-oriented principles, cohesion can be described in human terms. A person with low cohesion has "too many irons in the fire." Such people need to get bogged down in everything they need to get done, and nothing they do gets well. They could become more cohesive by delegating their responsibilities to others.
+
+> Note: A guiding principle of OOD is that each class should have a single, well-defined responsibility. The methods of a class should be highly cohesive and related directly to supporting the responsibility of the class. The methods of a class are functionally equivalent to the tasks that the class needs to perform. If a class has too many responsibilities, it should be split into multiple classes, each with a single responsibility taken from the original class.
+
+# 1.2.2 Coupling
+
+Coupling is a measure of the dependence among methods. This dependence, for example, could involve sharing data structures or calling each other's methods. Ideally, the modules should be independent of one another. However, some degree of coupling is necessary to get work done. That is, modules should be loosely coupled, and highly coupled should be avoided.
+
+Loose coupling benefits a system in several ways. First, a module with loose coupling tends to create a system that is more easily adaptable. If class A depends on—that is, highly coupled to—class B and B is changed, it is very likely that these changes will affect class A and break it.
+
+Second, a module with loose coupling creates a system that is easier to understand. If class A depends on B, understanding how A works requires an understanding of class B. Thus, class A is difficult to understand in isolation. A solution with a high degree of coupling can become nearly impossible to understand.
+
+Third, a module with loose coupling increases the reusability of module. If class A depends on class B, reusing class A in another program is complicated by the need to include class B in that program as well. Reusing coupled modules requires reusing all of the modules as a unit. This is often not ideal, or possible.
+
+Fourth, a module with loose cohesion has increased cohesion. Moreover, highly cohesive modules tend to be coupled. As the level of cohesion with a module goal grows, the module does less unrelated, as we saw in the previous section. This has the side effect of causing the module to be coupled with many other modules from other areas in the program.
+
+Again, realize that coupling is required; coupling cannot and not be eliminated from objects to one another. Tasks that an object has delegated to other objects create coupling between these objects. This coupling is necessary, but it should be kept to a minimum. However, other factors may influence a design. Thus, some designs with more coupling are better than other designs with less coupling because of these factors.
+
+> Note: If, in the past, you have spent little or no time on analysis and design for your programs, you must change this habit! The result of OOD should be a modular solution that is easy to translate into the constructs of a particular programming language. By spending adequate time with analysis and design, you will spend less time writing and debugging your program.

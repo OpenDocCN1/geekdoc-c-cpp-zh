@@ -1,0 +1,20 @@
+# C++ for Java
+Programmers
+
+# Contents
+
++   - K.1 General Concepts 781
+- K.2 Data Types, Variables, Constants, and Arrays 782
+- K.3 Flow Control and Functions 783
+- K.4 Classes 785
+- K.5 Basic Input and Output 787
+
+This appendix covers some of the differences between Java and C++ that a beginning programmer may encounter. While there are many additional differences, they are not applicable to the code and examples used in this text or are explained when needed. This appendix should be used in conjunction with Appendix A to fully under-stand the features in C++.
+
+# K.1 General Concepts
+
+Transitioning from Java to C++ is not too difficult, since most of the syntax and may of the concepts are the same. C++ gives you much greater control of how and where you create variables and objects. A C++ programmer can create programs that are flexible and efficient in use and speed of use. This flexibility and greater control require you to take great care in managing data and memory, because C++ does not provide garbage collection.
+
+Both Java and C++ are compiled languages. While Java programs are compiled into byte-code for the Java Virtual Machine (JVM), C++ programs are compiled into object code that is specific to an operating system. This means that you need to recompile your C++ code for each operating system that you want your program to run on. The code in this book follows the recent ANSI C11 Standard, so you should be able to compile and run your programs on whichever operating system you choose if your compiler supports that.
+
+Java classes and interfaces can be grouped into packages that are stored in the same directory hierarchy. When your Java code is compiled, the compiler searches this hierarchy for classes that you use. Any class or method in the package is automatically

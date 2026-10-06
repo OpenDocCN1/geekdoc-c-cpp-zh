@@ -1,0 +1,45 @@
+# An Array-Based Implementation of the ADT List 267
+
+allocated array, the compiler-generated destructor and copy constructor will be sufficient. The only other detail that ListInterface does not specify is the behavior of the methods getInput and setter should clearly violate their protection. What is, what if these methods are given an out-of-bounds list position? We can throw an exception in this case, and to this end, we use the class PreconditionViolatedExcep as defined in Listings 7-5 and 7-6 of Chapter 7.
+
+> Note: By defining the data member maxItems for ArrayList, we enable the class member to allocate the array items dynamically instead of statically. Thus, the programmer could easily define a constructor that allows the client to choose the size of the array.
+
+# LISTING 9-1 The header file for the class ArrayList
+
+```
+/** ADT list: Array-based implementation.
+@file ArrayList.h */
+
+#ifndef _ARRAY_LIST
+#define _ARRAY_LIST
+
+#include "ListInterface.h"
+#include "PreconditionViolatedExcep.h"
+
+template<class ItemType>
+class ArrayList : public ListInterface<ItemType>{
+private:
+    static const INT DEFAULT_CAPACITY = 100;
+    ItemType items[DEFAULT_CAPACITY]; // Array of list items
+    int itemCount; // Current count of list items
+    int maxItems; // Maximum capacity of the list
+public:
+    ArrayList();
+    // Copy constructor and destructor are supplied by compiler
+    bool isEmpty() const;
+    int getLength() const;
+    bool insert(int newPosition, const ItemType& newEntry);
+    bool remove(int position);
+    void clear();
+    /** @throw PreconditionViolatedExcep if position < 1 or
+       position > getLength(). */
+    ItemType getEntry(int position) const throw(PreconditionViolatedExcep);
+    /** @throw PreconditionViolatedExcep if position < 1 or
+       position > getLength(). */
+    void setEntry(int position, const ItemType& newEntry)
+        throw(PreconditionViolatedExcep);
+};\ // end ArrayList
+
+#include "ArrayList.cpp"
+#endif
+```

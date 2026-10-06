@@ -1,0 +1,33 @@
+# 346 C++ INTERLUDE 4 Class Relationships and Reuse
+
+**FIGURE C4-11** UML class diagram of the family of box classes
+
+![](bbox=[0.318, 0.142, 0.775, 0.355])
+
+If we define several pointer variables of type BoxInterface, we can have them point to instances of any of the derived classes:
+
+```
+BoxInterface<string>* someBoxPtr = new PlainBox<string>("Ace")
+BoxInterface<string>* anotherBoxPtr = new JewelryBox<string>("Emerald")
+BoxInterface<string>* funBoxPtr = new MagicBox<string>("Stone")
+```
+
+For each of the objects created, we can call the setItem getItem method, and the implementation specific to the instantiated class will execute, even though the pointers are of type BoxInterface:
+
+```
+cout << someBoxPtr->getItem() << endl; // Uses PlainBox getItem
+cout << anotherBoxPtr->getItem() << endl; // Uses JewelryBox getItem
+cout << funBoxPtr->getItem() << endl; // Uses MagicBox getItem, which
+// Is PlainBox getItem
+```
+
+The key points about abstract base classes are summarized next.
+
+> **Note: Abstract base classes**
+
++   An abstract base class:
+- By definition is a class that contains at least one virtual method.
+- Is used only as a base for derived classes and defines a minimum interface for its descendants.
+- Has no instances.
+- Should, in general, omit implementations except for the destructor and methods that provide access to private data members. That is, virtual methods in an abstract base class usually should be pure.
+- Must implement any virtual method that is not pure, providing a default implementation if a derived class chooses not to supply its own.

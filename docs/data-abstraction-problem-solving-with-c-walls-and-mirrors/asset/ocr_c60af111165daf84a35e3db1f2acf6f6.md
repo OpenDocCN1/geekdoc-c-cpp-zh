@@ -1,0 +1,3 @@
++   12. A tail pointer is a pointer variable to the last node in a chain of linked nodes. Write a link-based implementation for a class of double-ended lists, as specified in Exercise 12, that uses both a head pointer and a tail pointer.
+
++   13. The solution to the HAir problem described in Programming Problem 11 of Chapter 6 uses an adjacency list to represent the flight map. Repeat the solution to this problem, but define the adjacency list as a list of lists instead of an array of linked chains. Use lists that have a link-based implementation.

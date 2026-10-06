@@ -1,0 +1,44 @@
+# 498 C++ INTERLUDE 6 Iterators
+
+```
+bool operator=(const LinkedIterator<ItemType>& rightHandSide) const;
+/** Inequality operator overload.
+ * @param LinkedList The iterator for comparison.
+ * @return True if this iterator does not reference the same
+ * list and the same position as rightHandSide,
+ * False otherwise. */
+bool operator!=(const LinkedIterator<ItemType>& rightHandSide) const;
+}; // end LinkedIterator
+#include "LinkedIterator.cpp"
+#endif
+```
+
+In the base class specification and class constructor, there are two other lines in this header file that differ from previous headers. Before the LinkedIterator class is declared, the following two lines provide a forward declaration of the class LinkedList:
+
+```
+template<class ItemType>
+class LinkedList;
+```
+
+These lines are necessary because LinkedList must instantiate an object of the class LinkedIterator<ItemType> in the begin and end methods, but the LinkedIterator class must have a complete declaration of LinkedList<ItemType> to instantiate it. To resolve these circular references, we include this forward declaration. When the compiler begins to compile the LinkedIterator class, it will read these statements and know that LinkedList<ItemType> is also a class. The compiler can then use placeholders for the details of LinkedList.
+The implementation of LinkedIterator is shown in Listing C6-2.
+
+LISTING C6-2 The implementation file for the class LinkedIterator
+#include "LinkedIterator.h"
+template <class ItemType>
+LinkedIterator<ItemType>:
+LinkedIterator(const LinkedList<ItemType>* someList,
+Node<ItemType>* nodePtr):
+{
+containerPtr(someList), currentItemPtr(nodePtr)
+}
+// end constructor
+template <class ItemType>
+const ItemType& LinkedIterator<ItemType>::operator()
+{
+return currentItemPtr->get();
+}
+// end operator*
+template <class ItemType>
+LinkedIterator<ItemType>::operator++()
+{

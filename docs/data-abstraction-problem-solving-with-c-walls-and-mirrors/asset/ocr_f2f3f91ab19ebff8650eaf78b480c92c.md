@@ -1,0 +1,24 @@
+# # Chapter 9 List Implementations
+
++   Contents
+- 9.1 An Array-Based Implementation of the ADT List 266
+  - 9.1.1 The Header File 266
+  - 9.1.2 The Implementation File 268
+- 9.2 A Link-Based Implementation of the ADT List 272
+  - 9.2.1 The Header File 272
+  - 9.2.2 The Implementation File 274
+  - 9.2.3 Using Recursion in LinkedList Methods 281
+- 9.3 Comparing Implementations 285
+
++   Summary 286
+Exercises 286
+Programming Problems 286
+
++   Prerequisites
+- Chapter 3 Array-Based Implementations
+- C++ Interlude 2 Pointers, Polymorphism, and Memory Allocation
+- Chapter 4 Link-Based Implementations
+- C++ Interlude 3 Exceptions
+- Chapter 8 Lists
+
+Having clearly specified the operations of an ADT list in the previous chapter, we now consider data structures for implementing it. This chapter explores two implementations of the list and compares their advantages and disadvantages.

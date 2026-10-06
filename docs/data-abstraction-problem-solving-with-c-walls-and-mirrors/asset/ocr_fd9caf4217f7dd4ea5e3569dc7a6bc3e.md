@@ -1,0 +1,25 @@
+# 532 CHAPTER 18 Dictionaries and Their Implementations
+
++   * Unsorted, array-based
+* Unsorted, link-based
+
+The unsorted implementations store the items in no particular order; they can insert a new item to any convenient location. Note that the add operation has two parameters: a data item and the item's search key. The sorted implementations must insert a new item into its proper position determined by the value of its search key. Whether sorted or unsorted, the dictionary must not store both pieces of data—search key and data item—but also form an association between the two. To do so, we encapsulate each item with its search key into an object of a new class, Entry, as pictured in Figure 18-3.
+
+FIGURE 18-3 A dictionary entry
+
+![](bbox=[0.497, 0.317, 0.659, 0.353])
+
+The array-based and link-based linear implementations have the basic structures shown in Figure 18-4. Both implementations maintain a count of the present number of items in the dictionary. The two implementations in this figure have to be sorted. As you will see, the unsorted and sorted implementations have their relative advantages and disadvantages.
+
+FIGURE 18-4 The data members for two sorted linear implementations of the ADT dictionary for the data in Figure 18-1: (a) array based; (b) link based
+
+| | | | | | |
+|---|---|---|---|---||}{
+| (a) 9 | Athens ... | Barcelona ... | ... | Venice ... | ... |
+| | | 0 | 1 | | size - 1 | MAX_SIZE - 1 |
+| (b) 9 | | Athens ... | Barcelona ... | ... | Venice ... / | |
+
+> Note: A linear array-based implementation of the ADT dictionary must shift data during an insertion in sorted order and when removing an entry. These shifts can be expensive, particularly for large dictionaries.
+Although a link-based implementation of the ADT dictionary eliminates the need to shift data, it does not support the insertion and removal operations any efficiently than an array-based implementation, because you cannot perform a binary search in a reasonable fashion.
+
+The header file for the class Entry is in Listing 18-2. Notice that, like DictionaryInterface, the class Entry specifies two data-type parameters. We leave Entry's implementation for you as an exercise.

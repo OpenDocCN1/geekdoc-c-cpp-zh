@@ -1,0 +1,125 @@
+
+# PROGRAMMING PROBLEMS
+
+- 1. Complete the implementation of the class LinkedSortedList.
+- 2. Define a class for an array-based implementation of the ADT sorted list. Consider a recursive implementation for getPosition. Should insertSorted and removeSorted call getPosition()?
+- 3. Complete the implementation of the class SortedListHasA.
+- 4. Complete the implementation of the class SortedListAsA.
+- 5. Consider the class List that Exercise 8 describes. Implement FrontList in each of the following ways:
+  a. Store the list's entries in an instance of LinkedList.
+  b. Derive FrontList from LinkedList using public inheritance.
+  c. Derive FrontList from LinkedList using private inheritance.
+- 6. The class LinkedList, as described in Sections 9.2.1 and 9.2.2 of Chapter 9, does not contain a method getPosition that returns the number of a given entry. Define a descendant of LinkedList that has a method getPosition as well as methods that insert and remove items by values instead of their positions. This new insertion method should always insert the new entry at the beginning of the list. Although the items in this list are not sorted, the new ADT is analogous to the sorted list, which contains the method getPosition.
+- 7. Consider an ADT circular list, which is like the ADT but treats its first entry as if it were immediately after its last. For example, if a circular list contains six items, retrieval or removal of the eighth item actually involves the list's second item. Let insertion into a circular list, however, behave exactly like insertion into a list. Define and implement the ADT circular list as a derived class of LinkedList.
+- 8. Programming Problem 13 in Chapter 6 describes the ADT traversable stack. In addition to the standard stack operations—isEmpty, push, pop, and peek—a traversable stack includes the operation traverse. This operation begins at the bottom of the stack and displays each item in the stack until it reaches the top of the stack. Define and implement the ADT traversable stack as a derived class of ArrayStack, as seen in Section 7.1 of Chapter 7.
+- 9. Define an interface for the sorted list that is derived from ListInterface. Then define the class SortedListHasA that is derived from your new interface.
+- 10. Because algebraic expressions are strings, you can derive a class of algebraic expressions from a class of strings. Define such a class. Include an isExpression operation that uses the recognition algorithm given in Programming Problem 8 of Chapter 5 and a valueOf operation that uses the evaluation algorithm given in Programming Problem 8 of Chapter 6.
+
+# Chapter 13
+## Queues and Priority Queues
+
+### Contents
+- 13.1 The ADT Queue 374
+- 13.2 Simple Applications of the ADT Queue 377
+  - 13.2.1 Reading a String of Characters 377
+  - 13.2.2 Recognizing Palindromes 377
+- 13.3 The ADT Priority Queue 379
+  - 13.3.1 Tracking Your Assignments 381
+- 13.4 Application: Simulation 381
+- 13.5 Position-Oriented and Value-Oriented ADTs 389
+
+Summary 390
+Exercises 390
+Programming Problems 390
+
+## Prerequisites
+
+- Chapter 6 Stacks
+- Chapter 8 Lists (incidental)
+- Chapter 12 Sorted Lists and Their Implementations (incidental)
+
+Whereas a stack's behavior is characterized as last in, first out, a queue's behavior is characterized as first in, first out. This chapter defines the queue's operations and discusses several uses of them. As you will see, queues are common in everyday life. Their first-in-first out make them appropriate ADTs for situations involving waiting. Queues are also important in simulation, a technique for analyzing the behavior of complex systems. This chapter uses a queue to model the behavior of people in a line.
+
+Sometimes the importance of an object depends on criteria other than what is placed into a container. In such cases, you can assign each object priority and organize them according to their priorities instead of chronologically. The priority queue will do for you.
+
+# 374 CHAPTER 13 Queues and Priority Queues
+
+This chapter explores the two ADTs queue and priority queue. We will consider their implementations in the next chapter.
+
+# 13.1 The ADT Queue
+
+![](img/d0cb86b2f18b2db569968ad7c743510e_400_0.png)
+
+A queue is like one of people. The first person to join a line is the first person served, that is, the first to leave the line. New items enter a queue at its back, rear, and items leave a queue from its front. Operations on a queue occur only at its ends. This characteristic gives a queue first-in, first-out (FIFO) behavior. In contrast, you can think of a stack as having only one end, because all operations are performed at the top of the stack. This characteristic gives a stack last-in, first-out behavior.
+
+As an abstract data type, the queue has the following operations:
+
+- Note: ADT queue operations
+- Test whether a queue is empty.
+- Add a new entry to the back of the queue.
+- Remove the entry at the front of the queue (the entry that was added earliest).
+- Get the entry that was added earliest to the queue.
+
+**The ADT queue**
+FIFO: The first item inserted into a queue is the first item out
+
+**Queues occur in everyday life**
+
+Queues are appropriate for many real-world situations. You wait in a queue—that is, a line—to buy a movie ticket, check out at the bookstore, or to use an automatic teller machine. The person at the front of the queue is served, while new people join the queue at its back. Even when you call an airline to check your status, call actually enters a queue while you wait for the next agent.
+
+**Queues have applications in computer science**
+
+Queues also have applications in computer science. When you print an essay, the computer sends lines faster than the printer can print them. The lines are held in a queue for the printer, which removes them in FIFO order. If you share the printer with other computers, your request to enter a queue waits to its turn.
+
+Since all of these applications involve waiting, people study how to reduce the wait. Such studies are called simulations, and they typically use queues. Later, this chapter examines a simulation of line of customers at a bank.
+
+The following operation contract specifies the ADT queue in more detail, and Figure 13-1 shows a UML diagram for the class. Note that the conventional names of the operations that add or remove an entry, respectively, enqueue (pronounced “N-Q”) and dequeue (pronounced “D-Q”).
+
+# FIGURE 13-1 UML diagram for the class queue
+
+| Queue |
+| --- |
+| isEmpty(): boolean |
+| enqueue(newEntry: ItemType): boolean |
+| dequeue(): boolean |
+| peekFront(): ItemType |
+
+# ABSTRACT DATA TYPE: QUEUE
+
+DATA
+
+- A finite number of objects, not distinct, having the same data type and ordered by when they added.
+
+OPERATIONS
+
+| PSEUDOCODE | DESCRIPTION |
+| --- | --- |
+| isEmpty() | Task: Sees whether this queue is empty.
+Input: None.
+Output: True if the queue is empty; otherwise false. |
+| enqueue(newEntry) | Task: Adds newEntry at the back of the queue.
+Input: newEntry.
+Output: True if the operation is successful; otherwise false. |
+| dequeue() | Task: Removes the front of this queue. That is, removes the item that was added earliest.
+Input: None.
+Output: True if the operation is successful; otherwise false. |
+| peekFront() | Task: Returns the front of this queue. That is, gets the item that was added earliest.
+Operation does not change the queue.
+Input: None.
+Output: True of the front of the queue. |
+
+Figure 13-2 illustrates the effect of these operations on a queue of integers. Notice that enqueue adds an item at the back of the queue and peekFront looks at the item at the front of the queue, whereas dequeue removes the item at the front of the queue.
+
+# FIGURE 13-2 Some queue operations
+
+| Operation | Queue after operation |
+| --- | --- |
+| aqueue = an empty queue | |
+| aqueue.enqueue(5) | 5 |
+| aqueue.enqueue(2) | 5 2 |
+| aqueue.enqueue(7) | 5 2 7 |
+| aqueue.peekFront() | 5 2 7 (Returns 5) |
+| aqueue.dequeue() | 2 7 |
+| aqueue.dequeue() | 7 |
+
+Question 1 If you add the letters A, B, C, and D in sequence to a queue of characters and then remove them, in what order will they leave the queue?

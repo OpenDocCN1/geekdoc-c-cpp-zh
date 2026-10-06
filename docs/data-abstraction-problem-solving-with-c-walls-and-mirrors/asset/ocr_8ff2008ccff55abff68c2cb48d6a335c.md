@@ -1,0 +1,36 @@
+To turn off testing, you comment out the definition of the macro (/#define TESTING) and recom-pile. Because the macro is no longer defined, the test code is not included in the executable. This has the advantage that the test code is completely removed from the executable, making it smaller. Again, you can define several different macros to enable you to turn different blocks of testing code "on" and "off".
+
+# B.7.5 Use of Stubs
+
+Testing a class before implementing all of its methods is often useful. Instead of simply omitting some methods, you partially implement them so that each one acknowledges it has been called. Such methods are called stubs. Stubs allow you to see that the method has been called in the correct place in the overall flow of a program.
+
+For example, suppose a class has a hash of integers as a data member and a method sortData. You could write the following stub for sortData:
+
+```
+void sortData() Stub {
+    cout << "sortData has been called\n"
+    data[0] = 1;
+    data[1] = 2;
+    data[2] = 3;
+} // end sortData
+```
+
+The stub sort not only indicates that it has been called, but also changes the data into a sorted form. Thus, this stub could be used for simple integration testing as well. Later, you could implement sortData using an appropriate sorting algorithm.
+
+# B.7.6 Use of Drivers
+
+Given the previous class—let's name it Example—the following main function creates an Example object and calls its methods:
+
+```
+int main() {
+    Example t;
+    t.dump();
+    t.sortData();
+    t.dump();
+    return 0;
+} // end main
+```
+
+Notice the use of Example's method, whose purpose is to display the data in an Example object. First, main dumps the object t, then it sorts t's data, and finally dumps t again. This main function is known as a driver. It does not do anything algorithmically interesting; it simply tests an object.
+
+As evident from the preceding discussion, testing takes a lot of planning and is not easy to do. Like many things in programming, testing takes some time and experience.

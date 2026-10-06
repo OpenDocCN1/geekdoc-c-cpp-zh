@@ -1,0 +1,43 @@
+This theorem leads to the following recursive definition:
+
+```
+$gcd(a,b) = \begin{cases} b & if(a \mod b) = 0 \ gcd(b, a \mod b) & \text{otherwise} \end{cases}$
+```
+
+The following function implements this recursive algorithm:
+
+```
+int gcd(int a, int b) {
+    if (a % b == 0) // Base case
+        return b;
+    else
+        return gcd(b, a % b);
+} // gcd
+```
+
++   a. Prove the theorem.
+b. What happens if $b > a$?
+c. How is the problem getting smaller? (That is, do you always approach a base case?) Why is the base case appropriate?
+
++   Let $c(n)$ be the number of different groups of integers that can be chosen from the integers 1 through $n-1$ so that the integers in each group add up to $n$ (for example, $n=4 = [1+1+1+1] = [1+1+2] = [2+2]$). Write recursive definitions for $c(n)$ under the following variations:
+
++   a. You count permutations. For example, 1, 2, 1 and 1, there are two groups that add up to 4.
+b. You ignore permutations.
+
+Consider the following recursive definition:
+
+```
+$Acker(m,n) = \begin{cases} n+1 & if=m=0 \ Acker(m-1,1) & if=n=0 \ Acker(m-1,Acker(m,n-1)) & \text{otherwise} \end{cases}$
+```
+
+This function, *Ackermann's function*, is interesting because it grows rapidly with respect to the sizes of $m$ and $n$. What is Acker(1,2)? Implement the function in C++ and do a box trace of Acker(1,2). (Caution: Even for modest values of $m$ and $n$, Ackermann's function requires *many recursive calls*.)
+
+# PROGRAMMING PROBLEMS
+
++   1. Implement a recursive function that computes $a^n$, where $a$ is a real number and $n$ is a nonnegative integer.
+
++   2. Implement the algorithm `maxArray`, discussed in Section 2.4.3, as a C++ function. What other recursive definitions of `maxArray` can you describe?
+
++   3. Implement the `binarySearch` algorithm presented in this chapter for an array of strings.
+
++   4. Implement the algorithm `kSmall`, discussed in Section 2.4.4, as a C++ function. Use the first value of the array as the pivot.

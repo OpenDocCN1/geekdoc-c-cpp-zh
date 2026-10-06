@@ -1,0 +1,30 @@
+# # Chapter 19
+# Balanced Search Trees
+
++   Contents
+19.1 Balanced Search Trees 568
+19.2 2-3 Trees 569
+19.2.1 Traversing a 2-3 Tree 572
+19.2.2 Searching for a 2-3 Tree 572
+19.2.3 Inserting Data into a 2-3 Tree 575
+19.2.4 Removing Data from a 2-3 Tree 579
+19.3 2-3-4 Trees 585
+19.3.1 Searching and Traversing a 2-3-4 Tree 587
+19.3.2 Inserting Data into a 2-3-4 Tree 587
+19.3.3 Removing Data from a 2-3-4 Tree 591
+19.4 Red-Black Trees 592
+19.4.1 Searching and Traversing a Red-Black Tree 594
+19.4.2 Inserting into and Removing from a Red-Black Tree 594
+19.5 AVL Trees 597
+
+Summary 600
+Exercises 600
+Programming Problems 600
+
+# ## Prerequisites
+
+Chapter 15 Trees
+Chapter 16 Tree Implementations
+Chapter 18 Dictionaries and Their Implementations
+
+Although Chapter 18 described the advantages of using the binary search tree to implement the ADT dictionary, the efficiency of this implementation suffers when the tree loses its balance. This chapter introduces other search trees, which remain balanced in all situations and thus enable dictionary operations whose efficiency is comparable to a binary search.

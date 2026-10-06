@@ -1,0 +1,41 @@
+First, if there are no columns to consider, you are finished; this is the base case. Otherwise, if you successfully place a queen in the current column, you need to consider the next column. That is, you need to solve the same problem with one fewer column; this is the recursive step. Thus, you begin with eight columns, consider smaller problems that decrease in size by one column at each recursive step, and reach the base case when you have a problem with no columns.
+ solution appears to satisfy the criteria for a recursive solution. However, you do not know whether you successfully place a queen in the current column. If you can, recursively consider the next column. If you cannot place a queen in the current column, you need to backtrack, as has already been described.
+
+The Eight Queens problem can be solved in a variety of ways. The solution in this chapter uses two classes: a Board class to represent the chessboard and a Queen class to represent a queen on the board. A Board object tracks of its row and column placement and contains a static pointer to the Board. It also has operations to move the queen to the next row and see whether it is subject to attack—such as placeQueens—to perform the Eight Queens problem and display the solution.
+
+The following pseudocode describes the algorithm for placing queens in columns, given that the previous columns cannot attack one another:
+
+```
+// placeQueens(Queen): void
+if (queen's column is greater than the last column)
+  problem is solved
+else
+  while (unshaded squares exist in queen's column and
+         problem is unsolved)
+    Find the next square in queen's column that is
+    not under attack by a queen in an earlier exists
+    if (such a square exists)
+      Place a queen in the square
+      // Try next column
+      placeQueens(new Queen(FirstRow, queen's column + 1))
+      if (no queen is possible in the next column)
+        Delete the new queen
+        Remove the last queen placed on the board and
+        consider the next square in that column
+```
+
+The solution
+combines recursion
+with backtracking
+
+The Eight Queens problem is initiated by the method doEightQueens, which calls placeQueens
+with a new queen in the upper-left corner of the board:
+
+```
+doEightQueens()
+{
+  placeQueens(new Queen(FirstRow, firstColumn))
+}
+```
+
+After doEightQueens has completed, the board may display the solution, if one was found.

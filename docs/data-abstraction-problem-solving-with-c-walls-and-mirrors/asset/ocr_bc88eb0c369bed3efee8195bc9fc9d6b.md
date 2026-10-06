@@ -1,0 +1,31 @@
+# FIGURE 12-1 UML diagram for the ADT sorted list
+
+| SortedList |
+| --- |
+| +isEmpty(): boolean |
+| +getLength(): integer |
+| +insertSorted(newEntry: ItemType): void |
+| +removeSorted(newEntry: ItemType): boolean |
+| +remove(position: integer): boolean |
+| +clear(): void |
+| +getEntry(position: integer): ItemType |
+| +getPosition(newEntry: ItemType): integer |
+
+Figure 12-1 shows the UML diagram for this ADT, and the following summary of the operations provides even more details for its operation contract:
+
+| ABSTRACT DATA TYPE: SORTED LIST |
+| --- |
+| DATA |
+| A finite number of objects, not necessarily distinct, having the same data type and ordered by their values. |
+| OPERATIONS |
+| PSEUDCODE | DESCRIPTION |
+| insertSorted(newEntry) | Task: Inserts an entry into this sorted list in its proper order so that the list remains sorted. Input: newEntry is the new entry. Output: None. |
+| removeSorted(anEntry) | Task: Removes the first or only occurrence of anEntry from this sorted list. Input: anEntry is the entry to remove. Output: Returns true if anEntry was located and removed, or false if not. In the latter case, the list remains unchanged. |
+| getPosition(anEntry) | Task: Gets the position of the first or only occurrence of anEntry in this sorted list. Input: anEntry is the entry to be located. Output: Returns the position of anEntry if it occurs in the sorted list, but as a negative integer the position where anEntry would occur in the list, but |
+
++   The following operations behave as they do for the ADT list and are described in Chapter 8:
+* isEmpty()
+* getLength()
+* remove(position)
+* clear()
+* getEntry(position)

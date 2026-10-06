@@ -1,0 +1,180 @@
+
+
+```cpp
+{
+public:
+    SortedListA();
+    SortedListA(const SortedListA::ItemType& sList);
+    virtual ~SortedListA();
+
+    void insertSorted(const ItemType& newEntry);
+    bool removeSorted(const ItemType& anEntry);
+    int getPosition(const ItemType& anEntry) const;
+
+    // 继承的方法 remove, clear, getEntry, isNotEmpty 和
+    // getLength 的规格说明与 ListInterface 中给出的相同。
+    //
+    // 以下方法必须被重写，以禁用它们对
+    // 排序列表的影响：
+    bool insert(int newPosition, const ItemType& newEntry);
+    void setEntry(int position, const ItemType& newEntry)
+    throw(PrecondViolatedExcep);
+}; // end SortedListA
+#include "SortedListA.cpp"
+#endif
+```
+
+方法定义。让我们检查排序列表方法的实现。默认构造函数和析构函数是直观的；拷贝构造函数通过初始化调用 LinkedList 的拷贝构造函数：
+
+```cpp
+template<class ItemType>
+SortedListA<ItemType>::SortedListA()
+{
+} // end default constructor
+```
+
+```cpp
+template<class ItemType>
+SortedListA<ItemType>(const SortedListA<ItemType>& sList)
+    : LinkedList<ItemType>(sList)
+{
+} // end copy constructor
+```
+
+```cpp
+template<class ItemType>
+SortedListA<ItemType>::~SortedListA()
+{
+} // end destructor
+```
+
+方法 `insertSorted` 首先get `getPosition` 获取新条目的位置，忽略该位置的符号，并使用结果以及 LinkedList 的 `insert` 方法来完成任务。注意，由于我们将在 SortedListA 中重写 `insert`，我们必须小心不要调用该实现，而是调用基类实现。
+
+```cpp
+template<class ItemType>
+void SortedListA<ItemType>::insertSorted(const ItemType& newEntry)
+{
+    int newPosition = fabs(getPosition(newEntry));
+```
+
+# 第364 页 第12 章 排序列表及其实现
+
+### 调用 LinkedList 版本的 insert
+
+方法 `removeSorted` 使用了与 `insertSorted` 类似的方法，但它没有忽略 `getPosition` 返回的位置的符号。无论新条目是否是排序列表中已有条目的重复，插入都会发生。然而，你无法移除列表中不存在的条目：
+
+```cpp
+template<class ItemType>
+bool SortedListIsA<ItemType>::removeSorted(const ItemType& anEntry)
+{
+    bool ableToRemove = false;
+    if (!LinkedList<ItemType>::isEmpty()) {
+        int position = getPosition(anEntry);
+        ableToRemove = position > 0;
+        if (ableToRemove)
+            ableToRemove = LinkedList<ItemType>::remove(position);
+        }
+    }
+    return ableToRemove;
+} // end removeSorted
+```
+
+方法 `getPosition` 使用列表的方法 `get` 访问列表序列中的每个条目，直到找到匹配项或到达待排序的条目如果在列表中应该所在的位置：
+
+```cpp
+template<class ItemType>
+int SortedListIsA<ItemType>::getPosition(const ItemType& anEntry) const
+{
+    int position = 1;
+    int length = LinkedList<ItemType>::getLength();
+    while ((position <= length) &&
+        (anEntry != LinkedList<ItemType>::entry(position))) {
+        position++;
+    } // end while
+    if ((position > length) ||
+        (anEntry != LinkedList<ItemType>::entry(position))) {
+        position = -position;
+    } // end if
+    return position;
+} // end getPosition
+```
+
+> **编程提示：** 注意，我们在调用从 LinkedList 继承的方法之前，加上了 `LinkedList<ItemType>::` 命名空间引用。当我们从 `insertSorted` 中调用 `insert` 时，我们必须确保调用的是 `insert` 而不是 SortedListIsA 中重写的版本。毕竟，后者方法仅仅是返回 `false`。然而，请注意我们没有重写 `remove`、`clear`、`getEntry`、`isEmpty` 和 `getLength` 方法。因为这些方法没有显式出现在 `LinkedList<Item>::` 中，如果你在没有 `LinkedList<Item>::` 限定符的情况下调用它们，C++ 编译器将认为它们是客户端函数而不是类方法。你会得到一个语法错误。
+
+调用这些方法的另一种方法是在它们的调用处在前面加上 `this->` 而不是 `LinkedList<Item>::`。例如，你可以写成
+
+```cpp
+if (this->isEmpty())
+```
+
+而不是
+
+```cpp
+if (LinkedList<Item>::isEmpty())
+```
+
+重写的方法。回想我们从 LinkedList 继承了两个方法——`insert` 和 `setEntry`，我们没有将它们作为 ADT 排序列表的公共方法发布。尽管我们在 `insertSorted` 的定义中，我们不希望客户端通过在排序列表中的任何特定位置插入条目来破坏条目的排序顺序。为了这一目的，我们重写了 `sort` 使其返回 `false`；
+
+```cpp
+template<class ItemType>
+SortedListA<ItemType>::
+insert(int newPosition, const ItemType& newEntry) {
+  return false;
+} // end insert
+```
+
+> **重写 insert 能够防止按位置向排序列表进行插入**
+
+这种方法确保了 SortedListA 的客户端永远无法通过位置向 SortedListA 对象插入并添加项。我们以类似的方式重写了 `setEntry`。
+
+> **注意：** 回想公有继承允许你可以在可以使用基类对象的地方使用派生类对象。但你不能像使用基类对象那样使用排序列表。排序列表并不是列表，因此不使用公有继承。
+
+> **编程提示：** 只有当两个类之间存在 is- 关系时才使用公有继承。
+
+> **问题15** 如果你在 `insertSorted` 方法中对 `insert` 的调用使用 `this->` 代替 `LinkedList<Item>::` 会发生什么？
+
+效率问题。如果你将 SortedListA 的实现与 SortedListAsA 进行比较，你会发现语法上的细微差异，但方法的逻辑是相同的。这两个类都使用 ADT 方法定义操作。相应方法的性能几乎相同。
+
+## 12.3.3 私有继承
+
+如果你的新类与现有类之间没有 is-a 关系，你不应该使用继承。相反，如果你想从现有类继承成员，可以使用私有继承。私有继承允许你使用基类的方法而不让客户端访问它们。
+
+列表 12-5 中的头文件声明了 SortedListA 类。注意它通过私有继承自 LinkedList 类。除了这里的添加和类名外，该头文件与列表 12-3 中的 SortedListA 完全相同。
+
+### 列表 12-5 SortedListA 类的头文件
+
+```cpp
+/** 使用列表的排序列表 ADT
+ * @File SortedListA.h */
+#ifndef SORTED_LIST_AS_A
+#define SORTED_LIST_AS_A
+
+#include "SortedListInterface.h"
+#include "LinkedList.h"
+#include "Node.h"
+#include "PrecondViolatedExec.h"
+
+template<class ItemType>
+class SortedListA : public SortedListInterface<ItemType>
+{
+public:
+    SortedListA();
+    SortedListA(const SortedListA<ItemType>& s);
+    virtual ~SortedListA();
+    // 公共部分的其余部分与 12-3 中的 SortedListA 相同
+    ...
+};
+// end SortedListA.cpp
+#endif
+```
+
+由于 SortedListAsA 无法访问基类 LinkedList 方法，你需要提供完整的排序列表操作。这在公有继承中是不必要的，然而，这种访问的缺失意味着我们不需要重写我们不希望客户端拥有的继承方法，例如 `setEntry`。
+
+SortedListAsA 的实现可以使用 LinkedList 的公共成员。事实上，`insertSorted`、`removeSorted` 和 `getPosition` 方法与使用公有继承时的实现相同。其余方法简单地调用 LinkedList 中相应的方法。例如，`getEntry` 方法执行操作：
+
+```cpp
+template<class ItemType>
+SortedListAsA<ItemType>::getEntry(int position) const
+ItemType throw (PrecondViolatedExcep)
+```
+
