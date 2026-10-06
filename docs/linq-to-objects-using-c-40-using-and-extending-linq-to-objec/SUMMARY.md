@@ -1,0 +1,2 @@
++   [C# 4.0 中的 LINQ to Objects 使用指南：使用和扩展 LINQ to Objects 以及并行 LINQ (PLINQ)](README.md)
++   [C# 4.0 中的 LINQ to Objects 使用指南：使用和扩展 LINQ to Objects 以及并行 LINQ (PLINQ)](linq-to-objects-using-c-40-using-and-extending-linq-to-objec.md)
