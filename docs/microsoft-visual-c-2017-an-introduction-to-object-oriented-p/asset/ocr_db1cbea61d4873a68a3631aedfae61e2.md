@@ -1,0 +1,12 @@
+# Exercises
+
+7. Create an application named RecoveringDemo that declares one of three types: Patient, Upholster, and FootballPlayer. Create an interface named IRecoverable that contains a single method Recover(). Create the classes named Patient, Upholster, and FootballPlayer so that each implements IRecoverable. Create each class's Recover() method to display an appropriate message. For example, the Patient's Recover() method might display "I am getting better."
+
+8. Create an application named TurningDemo that creates instances of four classes: Page, Corner, and Leaf. Create an interface ITurnable that contains a single method Turn(). The classes named Page, Corner, and Leaf implement ITurnable. Create each class's Turn() method to display an appropriate message. For example, the Page's Turn() method might display "You turn a page in a book."
+
+9. Write a program named SalespersonDemo that instances objects using class RealEstateSalesperson and Girl1Scout. Demonstrate that each object can use a Sale() method appropriately. Also, use a MakeSale() two or three times with each object, and display the final contents of each object's data fields. First, create an abstract class Salesperson. Include properties for the fields. Include a method that returns a string that holds the Salesperson's full name—the first and last names separated by a space. Then perform the following tasks:
+
++   * Create two child classes of Salesperson: RealEstateSalesperson and Girl1Scout. The RealEstateSalesperson class contains fields for total value in dollars and total commission earned (both of which are initialized to 0), and a commission rate field required by the class constructor. The Girl1Scout class includes a field to hold the number of boxes of cookies sold, which is initialized to 0. Include properties for every field.
+* Create an interface ISellable that contains two methods: SalesSpeech() and MakeSale(). In RealEstateSalesperson and Girl1Scout, implement SalesSpeech() to display an appropriate or two-sentence sentence that the object class could use.
+
+In the RealEstateSalesperson class, implement the MakeSale() method to accept an integer value for a house, add the value to the RealEstateSalesperson's total value sold, and compute the commission earned. In the Girl1Scout class, implement the MakeSale() method to accept an integer representing the number of boxes of cookies sold and add it to the total field.

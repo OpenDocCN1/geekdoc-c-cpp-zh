@@ -1,0 +1,403 @@
+
+
+Object（对象，或 object）——`System` 命名空间中的类类型，是所有其他类型的终极基类。
+
+也称为条件逻辑 OR 运算符。与布尔逻辑包含性 OR 运算符进行对比。
+
+object initializer（对象初始化器）——一种类，它在实例化时为类的所有可访问的成员或属性赋值，而无需调用带参数的构造函数。
+
+order of operation（运算顺序）——确定数学表达式中各个部分求值顺序的规则。也称为运算符优先级。
+
+oriented-approach（面向对象的方法）——一种解决问题的方法，涉及定义完成任务所需的对象，并开发描述这些对象的类，以便每个对象都能维护自己的数据，并在另一个对象请求它们时执行相应的任务。
+
+orphaned method（孤儿方法）——一种在应用程序中永远不会执行的方法，没有任何实际作用。
+
+out of bounds（越界）——描述一个不在数组允许范围内的下标。
+
+out of scope（超出作用域）——描述一个由于已停止存在而无法使用的变量或名称。
+
+oriented-programming (OOP)（面向对象编程）——一种以对象、封装、接口、多态和继承为特征的编程技术。
+
+out variable（输出变量）——在作为参数传递给方法的时间点声明的变量。
+
+one-dimensional array（一维数组）——一种使用单个下标访问元素的数组。也称为单维数组。
+
+outer loop（外层循环）——嵌套循环中包含另一个循环的那个循环。
+
+opening a file（打开文件）——创建一个对象并将其与字节流关联的过程。
+
+output parameter（输出参数）——方法中用于接收地址的参数；它不需要有初始值。与值参数和引用参数进行对比。
+
+operands（操作数）——运算符在表达式中使用的值。
+
+overload resolution（重载解析）——确定多个方法中哪一个与方法调用最匹配的过程。
+
+operator precedence（运算符优先级）——确定数学表达式中各个部分被求值顺序的规则。也称为运算顺序。
+
+overloading（重载）——使用同一个术语来表示不同的含义。在 C# 中，当存在多个同名但参数列表不同的版本时，这些方法是可重载的。
+
+optional parameter（可选参数）——方法的一个参数，当没有显式发送参数时会提供默认值；当在方法声明中给出一个值时，该参数是可选的。
+
+override（重写）——当派生类从父类继承抽象方法时，在方法头使用的关键字。
+
+OR operator（OR 运算符）——一种确定两个条件中至少有一个为真的运算符；它被重写以优于另一个方法版本。
+
+panel（面板）——一种用于分组表单（Form）上控件的 GUI 元素；与组框（group box）类似，但没有标题且具有滚动条。
+
+parallel array（并行数组）——与另一个数组具有相同元素并持有对应数据的数组。
+
+parameter array（参数数组）——在方法头中声明的局部数组，可以接受任意数量的相同类型的元素。
+
+parameter list（参数列表）——出现在方法头括号之于数据类型和名称。
+
+parameter to a method（方法参数）——在方法定义中声明的对象或引用。
+
+parameterless constructor（无参构造函数）——不接受任何参数的构造函数；使用参数进行调用。
+
+parent class（父类）——基类；作为继承的基础。
+
+parse（解析）——将一个项目拆分解为组成部分。
+
+Pascal casing（帕斯卡命名法）——一种创建标识符的风格，所有单词的首字母都大写。与驼峰命名法（camel casing）进行对比。
+
+passed by reference（引用传递）——描述当方法接收内存地址时，参数如何传递给方法。
+
+passed by value（值传递）——描述当方法接收数据副本时，数据如何传递给方法。
+
+path（路径）——文件所在的驱动器加上完整的目录层次结构。
+
+permanent storage devices（永久存储设备）——用于存储文件的硬件，如硬盘、USB 驱动器和光盘。
+
+persistent（持久的）——描述非易失性的存储。
+
+picture box（图片框）——显示图形的 GUI 元素。
+
+placeholder（占位符）——括号内的数字，保留变量值的位置。
+
+polymorphism（多态）——根据上下文创建适当方法的能力。
+
+populating array（填充数组）——为数组中的所有元素提供值的行为。
+
+positional argument（位置参数）——根据其在方法中的位置分配给参数列表的命名参数。
+
+prefix increment operator（前增运算符）——一种增加值并将其加自身的运算符。它由变量前的两个加号（++）表示。
+
+posttest loop（后测试循环）——在执行体执行后测试控制变量的循环。与前测试循环进行对比。
+
+precedence（优先级）——运算符的一种特性，控制它们在表达式中的求值顺序。
+
+precision specifier（精度说明符）——控制小数点右有效数字或零的运算符。
+
+prefix increment operator（前增运算符）——一种将值增加 1 然后对其求值的运算符。它由变量前的两个加号（++）表示。
+
+pretest loop（前测试循环）——在执行体执行之前测试控制变量的循环。
+
+priming read（引导）——获取第一个项目或记录的输入语句。
+
+public（公共）——一种访问修饰符，表示其他类可以使用该方法或变量。
+
+private（私有）——一种访问修饰符，表示其他类不能使用它修改的方法或变量。作为类修饰符时，意味着访问限于所属的另一个类。
+
+public access（公共访问）——允许任何类无限制访问的方法访问级别。
+
+private access（私有访问）——限制为包含类的方法访问级别。
+
+radio buttons（单选按钮）——GUI 组件，与复选框类似，但当它们放在表单上时，一次只能选择一个，选择一个会自动取消其他其他的选择。
+
+procedural program（过程程序）——通过编写一系列步骤或操作来处理值的创建程序。
+
+raises an event（引发事件）——导致事件发生。也称为触发 *event* 和 *triggers an event*。
+
+program（程序）——一组文字计算机指令。
+
+random access（随机访问）——可以任意顺序访问记录的文件。
+
+program comments（程序注释）——记录程序的非执行语句。
+
+random access memory (RAM)（随机访问存储器）——计算机中的临时存储。
+
+prompt（提示）——要求用户输入指令。
+
+range check（范围检查）——检查值在范围内的语句。
+
+propagating an exception（传播异常）——在堆栈中传输异常。
+
+match（匹配）——一种确定值是否相等等的类型。
+
+read the file（读取文件）——从存储设备读取数据。
+
+proportional（比例的）——描述具有不同宽度的字体。
+
+read-only property（只读属性）——只有访问器而没有设置器的属性。
+
+protected（保护的）——一种限制到类的访问类型。
+
+record（记录）——包含某些字段的集合。
+
+pseudocode（伪代码）——使用英语编写帮助规划程序的工具。
+
+rectangular array（矩形数组）——每行具有相同列数的数组。
+
+recursive（递归）——调用自身的方法。
+
+reference（引用）——内存地址。
+
+scope（作用域）——变量或常量存在的区域。
+
+reference equality（引用相等）——引用类型指向相同对象时。
+
+screaming caps（大写字母）——使用全大写字母和下划线的命名风格；通常用于常量。
+
+reference parameter（引用参数）——方法中接收地址的参数；它需要有初始值。与值参数对比。
+
+sealed class（密封类）——无法扩展的类。
+
+reference type（引用类型）——持有地址的数据类型。与值类型对比。
+
+searching an（搜索）——在数组中比较值的过程。
+
+root directory——存储设备的主目录。
+
+set assessors（设置器）——属性中允许对属性名使用赋值运算符的方法。
+
+run time（运行时）——程序执行的时间。
+
+setter（设置器）——类属性的另一种名称。
+
+runnable（可运行的）——描述可执行的文件。
+
+short（短型）——可以在两个字节内持有符号数值的整数数据类型。
+
+short-evaluation（短路求值）——C# 的一种特性，对 AND 或 OR 表达式的部分仅进行确定整个表达式真假所需的所需的评估。
+
+sbyte（符号字节）——可以持有 -128 到 127 之间符号数值的整数数据类型。
+
+scientific notation（科学计数法）——包含 E（指数）并指定隐含小数位数的数值表达式。
+
+![](img/7516c1fecf7bbbe7afb10cf209b17ae3_751_0.png)
+
+self-documenting（自文档的）——描述易于理解的程序元素。
+
+return statement（返回语句）——将值发送回调用方法的方法语句。
+
+sentinel value（哨兵值）——用户必须用来停止循环的值。
+
+return type（返回值）——方法返回给任何方法的类型。
+
+sequence structure（顺序结构）——无条件跟随另一个步骤的逻辑单元。
+
+right-associative（右结合的）——描述从右到左执行的操作。
+
+sequential file（顺序文件）——记录根据某些字段的值按顺序存储的数据文件。
+
+robustness（健壮性）——描述系统在压力下保持正确运行的能力程度。
+
+sequential search（顺序搜索）——按顺序逐项检查的搜索。
+
+root class（根类）——层次结构树中的终极或第一个基类。
+
+serialization（序列化）——将对象转换为字节流的过程。
+
+root directory（根目录）——存储设备的主目录。
+
+set assessors（设置器）——属性中允许对属性名使用赋值运算符的方法。
+
+run time（运行时）——程序执行期间。
+
+setter（设置器）——类属性的另一种名称。
+
+runnable（可运行的）——描述可执行的文件。
+
+short（短）——可以在两个字节内持有符号数值的整数数据类型。
+
+short-evaluation（短路求值）——C# 的一种特性，对 AND 或 OR 表达式的部分仅进行确定整个表达式真假所需的评估。
+
+sbyte（符号字节）——可以持有 -128 到 127 之间符号数值的整数数据类型。
+
+scientific notation（科学计数法）——包含 E（指数）并指定隐含小数位数的数值格式。
+
+[/content] 抱歉，我发现之前的输出中出现了部分重复和错误，以下是为您重新整理的正确翻译内容：
+
+[content]
+- Object（对象，或 object）——`System` 命名空间中的类类型，是所有其他类型的终极基类。
+
+也称为条件逻辑 OR 运算符。与布尔逻辑包含性 OR 运算符进行对比。
+
+object initializer（对象初始化器）——一种类，它在实例化时为类的所有可访问的成员或属性赋值，而无需调用带参数的构造函数。
+
+order of operation（运算顺序）——确定数学表达式中各个部分求值顺序的规则。也称为运算符优先级。
+
+oriented-approach（面向对象的方法）——一种解决问题的方法，涉及定义完成任务所需的对象，并开发描述这些对象的类，以便每个对象都能维护自己的数据并在另一个对象请求它们时执行相应的任务。
+
+orphaned method（孤儿方法）——一种在应用程序中永远不会执行的方法，没有任何实际作用。
+
+out of bounds（越界）——描述一个不在数组允许范围内的下标。
+
+out of scope（超出作用域）——描述一个由于已停止存在而无法使用的变量或名称。
+
+oriented-programming (OOP)（面向对象编程）——一种以对象、封装、接口、多态和继承为特征的编程技术。
+
+out variable（输出变量）——在作为参数传递给方法的时间点声明的变量。
+
+one-dimensional array（一维数组）——一种使用单个下标访问元素的数组。也称为单维数组。
+
+outer loop（外层循环）——嵌套循环中包含另一个循环的那个循环。
+
+opening a file（打开文件）——创建一个对象并将其与字节流关联的过程。
+
+output parameter（输出参数）——方法中用于接收地址的参数；它不需要有初始值。与值参数和引用参数进行对比。
+
+operands（操作数）——运算符在表达式中使用的值。
+
+overload resolution（重载解析）——确定多个方法中哪一个与方法调用最匹配的过程。
+
+operator precedence（运算符优先级）——确定数学表达式中各个部分求值顺序的规则。也称为运算顺序。
+
+overloading（重载）——使用同一个术语来表示不同的含义。在 C# 中，当存在多个同名但参数列表不同的版本时，这些方法是可重载的。
+
+optional parameter（可选参数）——方法的一个参数，当没有显式发送参数时会提供默认值；当在方法声明中给出一个值时，该参数是可选的。
+
+override（重写）——当派生类从父类继承抽象方法时，在方法头使用的关键字。
+
+OR operator（OR 运算符）——一种确定两个条件中至少有一个为真的运算符；它被重写以优于另一个方法版本。
+
+panel（面板）——一种用于分组表单（Form）上控件的 GUI 元素；与组框（group box）类似，但没有标题且具有滚动条。
+
+parallel array（并行数组）——与另一个数组具有相同元素并持有对应数据的数组。
+
+parameter array（参数数组）——在方法头中声明的局部数组，可以接受任意数量的相同类型的元素。
+
+parameter list（参数列表）——出现在方法头括号之于数据类型和名称。
+
+parameter to a method（方法参数）——在方法定义中声明的对象或引用。
+
+parameterless constructor（无参构造函数）——不接受任何参数的构造函数；使用参数进行调用。
+
+parent class（父类）——基类；作为继承的基础。
+
+parse（解析）——将一个项目拆解为组成部分。
+
+Pascal casing（帕斯卡命名法）——一种创建标识符的风格，所有单词的首字母都大写。与驼峰命名法（camel casing）进行对比。
+
+passed by reference（引用传递）——描述当方法接收内存地址时，参数如何传递给方法。
+
+passed by value（值传递）——描述当方法接收数据副本时，数据如何传递给方法。
+
+path（路径）——文件所在的驱动器加上完整的目录层次结构。
+
+permanent storage devices（永久存储设备）——用于存储文件的硬件，如硬盘、USB 驱动器和光盘。
+
+persistent（持久的）——描述非易失性的存储。
+
+picture box（图片框）——显示图形的 GUI 元素。
+
+placeholder（占位符）——括号内的数字，保留变量值的位置。
+
+polymorphism（多态）——根据上下文创建适当方法的能力。
+
+populating array（填充数组）——为数组中的所有元素提供值的行为。
+
+positional argument（位置参数）——根据其在方法中的位置分配给参数列表的命名参数。
+
+prefix increment operator（前增运算符）——一种增加值并将其加自身的运算符。它由变量前的两个加号（++）表示。
+
+posttest loop（后测试循环）——在执行体执行后测试控制变量的循环。与前测试循环进行对比。
+
+precedence（优先级）——运算符的一种特性，控制它们在表达式中的求值顺序。
+
+precision specifier（精度说明符）——控制小数点右有效数字或零的运算符。
+
+prefix increment operator（前增运算符）——一种将值增加 1 然后对其求值的运算符。它由变量前的两个加号（++）表示。
+
+pretest loop（前测试循环）——在执行体执行之前测试控制变量的循环。
+
+priming read（引导）——获取第一个项目或记录的输入语句。
+
+public（公共）——一种访问修饰符，表示其他类可以使用该方法或变量。
+
+private（私有）——一种访问修饰符，表示其他类不能使用它修改的方法或变量。作为类修饰符时，意味着访问限于所属的另一个类。
+
+public access（公共访问）——允许任何类无限制访问的方法访问级别。
+
+private access（私有访问）——限制为包含类的方法访问级别。
+
+radio buttons（单选按钮）——GUI 组件，与复选框类似，但当它们放在表单上时，一次只能选择一个，选择一个会自动取消其他的选择。
+
+procedural program（过程程序）——通过编写一系列步骤或操作来处理值的创建程序。
+
+raises an event（引发事件）——导致事件发生。也称为触发 *event* 和 *triggers an event*。
+
+program（程序）——一组文字计算机指令。
+
+random access（随机访问）——可以任意顺序访问记录的文件。
+
+program comments（程序注释）——记录程序的非执行语句。
+
+random access memory (RAM)（随机访问存储器）——计算机中的临时存储。
+
+prompt（提示）——要求用户输入指令。
+
+range check（范围检查）——检查值在范围内的语句。
+
+propagating an exception（传播异常）——在堆栈中传输异常。
+
+match（匹配）——一种确定值是否相等等的类型。
+
+reference（引用）——内存地址。
+
+scope（作用域）——变量或常量存在的区域。
+
+reference equality（引用相等）——引用类型指向相同对象时。
+
+screaming caps（大写字母）——使用全大写字母和下划线的命名风格；通常用于常量。
+
+reference parameter（引用参数）——方法中接收地址的参数；它需要有初始值。与值参数对比。
+
+sealed class（密封类）——无法扩展的类。
+
+reference type（引用类型）——持有地址的数据类型。与值类型对比。
+
+searching an（搜索）——在数组中比较值的过程。
+
+rethrow an Exception（重抛异常）——抛出捕获的异常而不是处理它。
+
+self-documenting（自文档的）——描述易于理解的程序元素。
+
+return statement（返回语句）——将值发送回调用方法的语句。
+
+sentinel value（哨兵值）——用户必须用来停止循环的值。
+
+return type（返回值）——方法返回给任何方法的类型。
+
+sequence structure（顺序结构）——无条件跟随另一个步骤的逻辑单元。
+
+right-associative（右结合的）——描述从右到左执行的操作。
+
+sequential file（顺序文件）——记录根据某些字段的值按顺序存储的数据文件。
+
+robustness（健壮性）——描述系统在压力下保持正确运行的能力。
+
+sequential search（顺序搜索）——按顺序逐项检查的搜索。
+
+root class（根类）——层次结构树中的终极或第一个基类。
+
+serialization（序列化）——将对象转换为字节流的过程。
+
+root directory（根目录）——存储设备的主目录。
+
+set assessors（设置器）——属性中允许对属性名使用赋值运算符的方法。
+
+run time（运行时）——程序执行期间。
+
+setter（设置器）——类属性的另一种名称。
+
+runnable（可运行的）——描述可执行的文件。
+
+short（短）——可以在两个字节内持有符号数值的整数数据类型。
+
+short-evaluation（短路求值）——C# 的一种特性，对 AND 或 OR 表达式的部分仅进行确定整个表达式真假所需的评估。
+
+sbyte（符号字节）——可以持有 -128 到 127 之间符号数值的整数数据类型。
+
+scientific notation（科学计数法）——包含 E（指数）并指定隐含小数位数的数值格式。
+

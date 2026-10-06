@@ -1,0 +1,326 @@
+` 标签内的英文文本不符。根据您提供的格式和要求，我将您提供的那段英文索引文本翻译成了中文：
+
+[content]
+- 面对象编程 (OOP), 4–6
+- 过程化, 4–6
+- 编程语言
+  - 汇编器, 3
+  - 驼峰命名法 (camel casing), 3
+- 命令提示提示符, 24–25
+- 高级编程语言, 2–3
+- IDE (集成开发环境), 28–29
+- 解释器, 3
+- 关键字, 2
+- 小驼峰命名法 (lower camel casing), 3
+- 半编译, 2
+- 语法, 3
+- 语法错误, 3
+- 词汇, 3
+- 程序, 2 另见
+  - 可选课程, 602
+  - 块, 140–141
+  - 代码块, 26
+  - 代码重构, 115
+  - 命令行, 26
+  - 命令行参数, 293
+  - 注释, 37
+  - 编译器, 3
+  - 编译, 23–31
+  - 调试, 3
+  - 决定使用哪种事件, 30–31
+  - 决策, 134–137
+  - 设计时间, 112
+  - 文档化, 18
+  - 事件, 598
+  - 执行, 23–31
+  - 在执行前未关闭, 118
+  - 容错性, 488
+  - 流程图, 134
+  - IDE (集成开发环境), 23
+  - 交互式, 84
+  - 中间语言 (IL), 23
+  - 逻辑, 3
+  - 逻辑错误, 3
+  - 逻辑规划工具, 134–137
+  - 机器语言, 3
+  - 魔数, 641
+  - 命名空间-类-点-格式, 12
+  - 多重后缀, 267
+  - 输出, 11–13
+  - 伪代码, 134
+  - 可重用模块, 6
+  - 在其他程序中运行, 551
+  - 运行时, 112, 598
+  - 自说明性, 337
+  - 源代码, 23
+  - 起点, 12
+  - 语句, 19
+  - 终止, 509
+  - 文本编辑器, 22
+  - 文本编辑器与 IDE (集成开发环境), 29–30
+  - 空格, 13
+- 项目
+  - 关闭, 123
+  - 列出文件, 101, 102
+  - 提示符, 84
+  - 传播异常, 515, 527
+  - 属性, 762, 540, 601
+    - 访问方法, 363
+    - 访问器, 362
+    - 自动实现属性, 366–367
+    - 自动属性, 366–367
+    - 后备字段, 363
+    - 按钮, 106, 122
+    - 创建, 363–367
+    - 大括号 (), 363
+    - 数据类型, 363
+    - 声明, 363
+    - 派生类, 439–441
+    - 描述, 103
+    - 展开或折叠, 104
+    - 标识符, 363
+    - 列表, 103
+    - 不是 as 或 out 参数, 365
+    - 保护私有数据, 362
+    - 读取, 363
+    - 只读属性, 363
+    - 获取字段值, 362
+    - set 访问器, 362–365
+    - 设置字段, 362
+    - 排序, 104
+    - 像关键字一样的值, 363
+    - 作为变量, 364
+    - 可见, 438
+    - 写入, 363
+    - 属性文件夹, 36
+  - 属性窗口, 101, 106, 118, 122, 540–541, 555
+    - 表单名称, 103
+    - 列出事件, 623–624
+    - 属性, 103, 104
+    - 比例字体, 114, 127
+    - 保护访问, 433–435, 472
+    - protected 访问修饰符, 354, 432–435
+    - protected 字段修饰符, 354
+    - 伪代码, 134, 175
+    - 公访问, 299, 294
+    - public 访问修饰符, 354, 371–374
+    - public 类, 409
+    - public 关键字, 285
+    - public 修饰符, 269, 355
+    - public set 访问器, 433
+    - purchase 变量, 208
+    - Button 控件, 16
+    - record 限制器, 659, 662
+    - recordIn string, 662
+    - records, 663, 698, 653, 655
+    - 矩形数组, 248, 256
+    - 递归, 472
+    - 递归方法, 444
+    - redButton_Click 方法, 635
+    - redButton 程序, 634
+    - reference, 299
+    - reference 等性, 449–450, 472
+    - reference 参数, 310–319, 343
+    - reference 类型, 358, 409
+    - ref 关键字, 310–311, 333
+    - ref return 方法, 319
+    - Regular 属性, 547
+    - remainder (modulus) 运算符, 63
+    - remove 标识符, 15
+    - Rename 命令, 115–116
+    - Render 程序, 250
+    - rentals 数组, 249, 251
+    - Quick Info, 308
+    - Quicksort 算法, 244
+    - 保留关键字, 14–15, 30
+    - resize 事件, 622
+    - response 变量, 194, 198
+    - result, 285
+    - resultLayout 方法, 243
+    - throwDemo 程序, 524–525
+    - rethrow 异常, 523–525, 527
+    - returning value, 243
+    - ReturnDemo 方法, 320
+    - return 语句, 282, 299
+    - return structure, 160
+    - return type, 271, 282, 299, 313
+    - 可重用代码, 324
+    - reverse-ray 方法, 244–247, 260, 290
+    - RadioButton 对象, 537, 559–563, 577, 586
+    - radio buttons, 559–562, 589–591
+    - group boxes, 577
+    - 默认选择, 562
+    - rising 事件, 538
+    - random access, 653
+    - random access 方法 (RAM), 653
+    - range 检查, 167–168, 177
+    - range match, 239–241, 243, 256
+    - RangeException 类, 485
+    - RATE 常量, 436–437
+    - rateLabel, 556, 581
+    - rate 参数, 338
+    - rate variable, 65, 287, 288
+    - rating variable, 154–156
+    - Read 访问, 666
+    - 读取文件, 661–667
+    - 顺序访问文件, 658–667
+    - ReadLine() 方法, 84–85, 119, 266, 282, 284, 315, 355, 666, 687
+    - Read Member, 656
+    - Read() 方法, 84, 655
+    - ReadFileName 程序, 666–667
+    - readonly 字段, 384
+    - readonly 修饰符, 355, 384
+    - readonly 属性, 363, 370, 410
+    - read-only 变量, 231, 256
+    - ReadSequenceIf2 程序, 662
+    - ReadWriteFile Member, 656
+    - read/write 属性, 561
+    - salary 字段, 379, 422–423, 427, 432–435
+    - salary 属性, 379, 383, 387, 433
+    - saleAmount 变量, 141–142, 151–168, 277, 278, 281, 606–607
+    - sales 数组, 225–226, 248–249
+    - salesArray, 225
+    - salesCodeVariable, 169–170
+    - salesListarray, 225
+    - salesobject, 427
+    - salesTablearray, 225
+    - salimiter, 383
+    - SatisfyGraduationRequirements() 方法, 436
+    - sageCheckbox_CheckedChanged() 方法, 561
+    - sageCheckbox_object, 560–561
+    - Save As (Ctrl+Shift+S) 快捷键, 35
+    - SaveMoney frame, 226
+    - paving 程序, 22
+    - byte 数据类型, 56–59, 72
+    - 自动转换, 279
+    - ScholarStudent 类, 438, 444–447
+    - Scientific 格式泛型, 61
+    - 科学计数法, 60, 91
+    - 范围, 273
+    - GUI 南, 296
+    - scores 数组, 245–247
+    - score 变量, 86, 315–316
+    - screen gaming, 81
+    - 显示输出的屏幕, 11–12
+    - scrollControl 类, 468
+    - Sculptor 类, 457
+    - sealed 类, 465
+    - Search 命令, 24
+    - searching 数组, 396–400
+    - 二进制搜索, 241–243
+    - for 循环, 234–236
+    - with 循环, 233–241
+    - 并行数组, 234
+    - range match, 239–244
+    - 顺序数据, 234
+    - while 循环, 603, 605, 607
+    - conDelete, 326
+    - seekObject imp, 390
+    - seek() 方法, 666, 670
+    - seek() 枚枚举, 667–668
+    - IndexChanged(), 566
+    - Indexes 属性, 566, 567, 569, 570
+    - SelectionEnd 属性, 571–572
+    - SelectionEnd 举器, 566
+    - SelectedMode 属性, 566, 571
+    - SelectionStart 属性, 571–572
+    - SelectResource窗口, 585
+    - 自说明性, 337
+    - 冒号 (;); 消息, 117
+    - sentinel 值, 192, 216, 660, 661
+    - 序列, 134, 176
+    - 顺序访问文件, 658–667
+    - 读取文件, 661–664
+    - 搜索, 667–670
+    - 写入数据, 658–661
+    - 顺序数据, 234
+    - 可序列化属性, 674
+    - Demonstration 方法, 675–777
+    - 序列化, 673–686
+    - Serialize() 方法, 365–369, 371, 410, 426, 433, 442–443, 521
+    - set_Account Member, 522
+    - set_Balance 数组, 522
+    - setLength() 方法, 361–362
+    - setSelected() 方法, 570
+    - setter, 363, 410
+    - Shift 键, 629
+    - cut, 152–153, 176, 285
+    - short 算术迭代器, 64–66
+    - 加赋值运算符 (=), 除以赋值运算符 (/), 65
+    - 乘赋值运算符 (*), 65
+    - 后置递减运算符 (--), 66
+    - 前置递减运算符 (--), 66
+    - 前置自增运算符 (++), 65
+    - 减赋值运算符 (-=), 65
+    - short 数据类型, 56–57, 79
+    - ShowAutomatic 转换, 279
+    - DialogLog() 方法, 583
+    - ShowDog 类, 9
+    - ShowTodayCircle 属性, 571
+    - ShowToday 属性, 571
+    - ShowMessage() 方法, 272–273
+    - 副作用, 153–154
+    - 显著日期, 59, 91
+    - 简单数据类型, 48, 90, 358
+    - SimpleMethod() 方法, 330–331
+    - 单参数方法, 276–280
+    - 单维数组, 247, 256
+    - 单引号序列 (\'), 75
+    - 属性, 563
+    - Size 属性, 103, 106, 110, 126, 406, 540, 543, 598, 601, 634
+    - snap 行, 575
+    - snapException 类, 484
+    - snapshot, 2
+    - oldItem 方法, 320
+    - Solution Explorer, 100, 406, 558, 586
+    - 当前项目部分, 101
+    - 表单名称, 102
+    - Solution Explorer (继续)
+    - 节点, 102
+    - 项目名称, 100
+    - someMoney 变量, 52–54
+    - someArray, 289
+    - someOtherClass 类, 273
+    - someValue 对象, 65
+    - someWorker 对象, 448
+    - SortArray 程序, 243
+    - sorted 属性, 566
+    - 源代码, 232
+    - 颜色, 710
+    - 语法错误, 25
+    - 源代码编辑器, 见 IDE Editor
+    - 源编辑器, 见 IDE Editor
+    - Speak(), 457–459
+    - specialButton 按钮, 点击
+    - specialButton_Click() 方法, 174
+    - Split(), 方法, 662
+    - spruce 类, 425
+    - spruce 对象, 425
+    - squiggle, 710
+    - StackOverflow 异常, 485
+    - StackTrace 属性, 514–519, 522
+    - Standard.$count() 方法, 607, 610
+    - 标准数值格式, 61, 91
+    - StartWith() 方法, 79
+    - 日期, 5, 353
+    - 语句, 19
+    - 注释掉, 18
+    - 以分号 () 结尾, 11
+    - 条件执行更多, 140
+    - body 方法, 272
+    - 自说明性, 81
+    - static 类, 469
+    - static 修饰符, 355
+    - static 关键字, 13, 13
+    - static 类型数据, 56–57, 79
+    - static 方法, 78, 108, 274, 285, 299, 356, 356, 370, 371, 410, 426, 433, 442–443, 521
+    - static 对象, 356
+    - static 标识符, 15
+    - 步值, 192, 216, 660, 661
+    - StreamReader 类, 655
+    - StreamReader 对象, 661
+    - 流, 624–658
+    - 暴露, 655
+    - 输入, 655
+    - 输出, 655
+    - StreamWriter 类, 655
