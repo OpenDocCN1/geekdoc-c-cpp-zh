@@ -1,0 +1,7 @@
+So with this example you might start with F. After one iteration you would have F-F++F-F-F. You would have F-F++F-F-F-F++F++F-F-F++F-F after the second iteration. The next iteration will be five times longer than that. The Strings in an L-system grow exponentially in length. As a result, you probably want to have the length of the turtle move for an F or f get exponentially shorter. Start with a good value like 100 pixels and divide by an appropriate value for each generation. For this example dividing by a factor of 3 is ideal. This one also works best with a turn angle of 60 degrees.
+
+The productions for an L-system can be implemented as a List[[Char,String]]. You can use the find method on the List and combine that with flatMap to run through generations of your String. You decide how elaborate you want your GUI to be and if users should be able to enter productions or if they will be hardcoded. Look in "The Algorithmic Beauty of Plants", Chapter 1 for examples of other production rules.
+
++   9. If you have done the box scores from any of the last chapters you can extend to use XML encoding for the box score. You probably want to do this by having functionality to load in a plain text box score and add it to an XML file with all the box scores. To really take advantage of the XML formatting, you should allow the user to add comments to whatever elements you feel are appropriate.
+
+Additional exercises and projects, along with data files, are available on the book's site.

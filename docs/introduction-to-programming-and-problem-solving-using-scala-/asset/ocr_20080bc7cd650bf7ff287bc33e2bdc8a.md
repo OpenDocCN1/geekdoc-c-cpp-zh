@@ -1,0 +1,19 @@
+# Conditionals
+
+63
+
+the option of 'cake or cookies', the parent is not intending for the child to take both. the inclusive of, or, 1, allows both. The exclusive of, ~, does not.
+
+Another example would be code that tells us if two rectangles intersect. Each square is defined by its top left x and y coordinates along the edge lengths of the two rectangles. We want a result that to do this, we need to figure out how we would do this independent of a program.
+
+Your first inclination might be to say that two rectangles it obvious whether or not they intersect. Novice programmers are tempted to give that type of description to many problems. This is not the solution really obvious, because novice programmers have not developed their skills at analyzing what they do when they solve a problem. This is something that develops over time, and it is a requirement for any real programmer.
+
+So what are you missing when you say that a problem like this is obvious? Given a set of four numbers as is the case here, most people would not find the solution. This use of visual processing is basically cheating and implicitly brings into play a large amount of processing that your brain does automatically. For reason, we will avoid any type of solution where your brain would be tempted to say you 'look at'
+
+Even if we took the approach of drawing the squares, that is not as straightforward as you might picture. When you picture squares, you likely squares of nearly the same size are to draw coordinates. Plotting gets a lot harder if one of the squares is millions of times larger than the other. If your program is to see if an has a building, that is not at all out of the question. We cannot settle for 'just look at it' or 'is obvious'. That means we have to figure out what it really means for squares to be intersecting just the numbers.
+
+While looking at it is not allowed as a solution, it can be to figure out what we might really. Draw a number of different squares on paper. Label the numbers with 1 and 2. What are different possible relative positions for the squares? What are cases when they do not intersect? What has to happen for them to intersect? These are not rhetorical questions. Through this exercise and come up with something before you read. The ability to break down a problem that is 'obvious' into the real steps that humans go through subconscious is a cornerstone of programming. It is also useful for those who do not intend to be programmers as it can help you to understand your thinking on all manner of topics.
+
+When you went through the process of drawing the squares, the ones that you might found that squares overlap in x and y direction, they only intersect if they overlap in either direction. This gives us something to work with. Our answer could be something like, overlapX && overlapY. We all have to figure out what it means to overlap in a given direction. This even has lot of different possibilities, but if you will with them you see any situation where an answer satisfies the following: the minimum of the first range has to be larger than the maximum of the second range and the maximum of the first range has to be greater than the minimum of the second range.
+
+At this point we have the ability to say what we want. There are many ways that we could do so. We are going to pick an approach which breaks the problem down into smaller pieces. This will be easier to read. We said above that the squares overlap if their ranges overlap in both x and y. So we can write code to checks if two overlap in one dimension, then we can combine these to see if the rectangles overlap.

@@ -1,0 +1,11 @@
+# GUIs
+
+![](bbox=[0.207, 0.07, 0.792, 0.396])
+
+Figure 11.15: This figure shows the window that results from running Layouts.scala after making the window slightly smaller.
+
+every one of the different panes and we do not want to duplicate that code. Making it a Pane to work with all of the panes by default. The preferred size of the TextArea was set so that it would not consume too much space in the GUI. All the other elements were left at their default sizes. The addControlsToPane function also takes a argument that gives the background color for Pane. This is done at the end of the function when Pane, background is set. There are many options for setting the background of Panes, apart in the ruling GUI and we will not be going into the details in this book.
+
+In the top we see the HBox, which has a dark gray background color, positions the controls horizontally with all of them aligned to the pane by default. Note that this can be changed by setting the alignment property. On the left is the VBox with a light gray background color, which behaves like the HBox, but stacks the elements vertically and aligned to the left. At the bottom is a FlowPane with a medium gray background, which looks like the HBox as far as what it produces, but there are significant differences to note. The controls are all centered vertically by default, and when the window gets too small to fit across a single row, the last is shifted down to a new row. If the window is smaller, the Slider would be cut off in the HBox. The two arguments passed to make the FlowPane are spacing values. The values represent the number of pixels that are between items vertically and horizontally. Spacing can be added to all the elements using Insets, but we will not be going into details about those.
+
+On the right is a StackPane. Its background is not seen as the TextArea covers the whole title and conceals not only the background, but the elements added before the TextArea. This produces very different results from the other panes as the controls are literally stacked on one top of the other. In the center is a TilePane with a black background. All the controls are given a space that is equal to the largest width and largest height of the
