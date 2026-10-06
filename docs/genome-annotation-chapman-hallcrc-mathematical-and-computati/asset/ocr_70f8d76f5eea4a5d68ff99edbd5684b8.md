@@ -1,0 +1,11 @@
+# 126 Genome Annotation
+
+In this chapter, we are focusing on three of these tools, which can handle both prokaryotic and eukaryotic genome annotations, as well as one tool that was specifically designed for the annotation of microbial genomes generated using next-generation DNA sequencing methods. The examples described here are typical in their design and function for the class of static genome annotation systems. Various approaches to job management, data filtering, and user interfaces in genome annotation are highlighted. These design principles and concepts are also applicable to many other genome annotation tools that are not specifically mentioned.
+
+# 8.2 MAGPIE
+
+MAGPIE is an automated system for the structural and functional annotation of genomes and transcriptomes. Its origins (Gaasterland and Sensen, 1996) are in the sequencing of the Sulfolobus solfataricus P2 archaeal genome (She et al., 2001), but it has constantly evolved and has been applied to numerous archaeal, bacterial, and eukaryotic data sets. It is available from http://sourceforge.net/projects/magpie09/. An overview of the major components of the annotation system is depicted in Figure 8.1.
+
+# 8.2.1 Analysis Management
+
+In any large-scale annotation system, a management system for tasks is a must. MAGPIE used a customized version of the simple Autoson queuing system (http://hdl.handle.net/1885/40815). This system allows jobs to be run in parallel, on multiple machines, and in a given order, for example, BLAST (Altschul et al., 1997) homolog searches before InterPro (Hunter et al., 2011) domain searches. Priorities can be assigned to different analysis steps to ensure rapid access to the most relevant results. Specific hosts can be defined for specific jobs based on required resources (e.g., memory intensive jobs to large-memory computers). Configuration of the available hosts and their priorities is managed through a simple text, while a small number of UNIX commands allow the user to pause, resume, and delete jobs as well as recreate failed ones. Pending analyses can be viewed through the MAGPIE Web interface. Privacy settings for the Web interface are controlled via standard Apache Web server (http://apache.org) access files. Data is stored in indexed flat files, meaning no database expertise is required.

@@ -1,0 +1,13 @@
+# 56 Genome Annotation
+
+a metabolic pathway. If all one of the genes coding for a reaction cascade are in an operon and a gene with unknown function is also found in the same operon, this location information can be used as circumstantial evidence that the gene with unknown function may perform the missing reaction. This can be a lead for follow-up biochemical validation. This form of functional annotation is independent of the other annotation techniques described in Chapter 7.
+
+Prediction of operon structure has traditionally been based on observing smaller-than-normal intergenic gaps. Cotranscription also implies only one ribosomal binding site (Shine-Dalgarno pattern from Chapter 2) with the most 5’ gene, and often a stem-loop structure to terminate at the 3’ end. Relatively high false-positive and false-negative rates for these signals (which are very short patterns) mean other techniques need to be used to improve the accuracy of operon prediction. Predictions can be measured against data such as coexpression analysis (e.g., microarrays) or RNA sequencing. The most accurate extant operon prediction software (~94%), called STRING (Tabaeda et al., 2010), use intrinsic data, functional clustering of genes based on protein interaction.
+
+# 4.3 METAGENOMICS
+
+Metagenomics is the study of genomic DNA extracted from a mixed population of microbial species, typically directly from the environment rather than cultured in a media in a lab. The principal purpose of such a data collection is to gain an understanding of the dynamics of microbial ecosystems in nature. For this reason, this technique is also known as ecogenomics (Oourg and Vriezen, 2007). The analysis and annotation of this mixed data requires several considerations: population statistics, data size, phylogenetic sorting, and quality of the assembly.
+
+# 4.3.1 Population Statistics
+
+Many of the sample mixture models used in metagenomics data analysis are naturally borrowed from are reshaping ecology, which has an established tradition of population statistics (Waples and Gaggiotti, 2006). Building on multiple existing programs, one of the most comprehensive tools for analyzing genetic data in ecology is mothur (Schloss et al., 2009). A fundamental concept for sequence-based analysis of microbial populations is setting aside the strict idea of distinct species, and instead clustering variable (but closely related) genomic data into so-called operational

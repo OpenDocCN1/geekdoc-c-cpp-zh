@@ -1,0 +1,7 @@
+# Visualization Techniques and Tools for Genomic Data
+
+# 6.1 INTRODUCTION
+
+Starting with the sequencing step, there are several stages involved in genome annotation including genome assembly, sequence alignment, phylogenetic analysis, and gene expression profiling, where the researcher might want to acquire a holistic, as well as detailed understanding of the genomic data that is currently being processed. Since human cognition capacity of any data presented in a textual format is relatively small, each stage in this sequence-annotation pipeline would undoubtedly benefit from the use of suitable visualization, which allows one to quickly receive a wealth of information, which is presented in a limited space (such as a computer screen). This is particularly true when one needs to compare and contrast multiple related sets or streams of data in a unifying context with valuable insight into the nature of the genomic data, a commonly required at all stages of gene annotation.
+
+Prior to discussing individual visualization techniques and tools available, we would like to note two overarching characteristics of genomic data that are highly relevant to their visualization. First, huge quantities of data need to be dealt with, as visualization tools are often deployed in large-scale genomic analysis. For example, high-throughput DNA sequencing produces large amounts of sequence data in a relatively short time. We also

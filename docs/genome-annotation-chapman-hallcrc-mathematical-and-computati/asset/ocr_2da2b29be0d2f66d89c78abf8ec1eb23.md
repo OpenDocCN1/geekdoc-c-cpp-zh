@@ -1,0 +1,13 @@
+# Characterization of Gene Function through Bioinformatics ■ 71
+
+1000 bp. One should not forget that it took several months to create even a 1000 bp sequence in the early days of DNA sequencing. As the main memory on personal computers, and even mainframes, were very limited initially (640 kilobytes was considered very large), the bioinformatics tool developers universally restricted the maximum size of a sequence that could be handled at once. For example, sequences in the GCG package were limited to 100,000 amino acids or base pairs. These very restrictions were unfortunately hardcoded, making it very difficult to modify these applications later on to enable the handling of complete genomes, which, in the case of complete microbial genomes, were of course much larger than this artificial cutoff. When the first microbial genomes were first presented in the year 1995, the only tools to handle the complete sequence were word processors, such as Microsoft Word or Wordstar. Once complete genome sequences existed, this limitation was overcome quickly through patches to existing programs and the creation of new software tools.
+
+# 5.2 STAND-ALONE TOOLS TOOLS FOR THE INTERNET
+
+Bioinformatics began with the creation of individual tools and evolved into the provision of complete packages, which could be used to analyze DNA and protein sequences. Several of the original stand-alone tools were so essential in bioinformatics that they are still used as individual tools today. We cannot make any attempt to list all of them, some, which were important for the creation of genome analysis pipelines, are discussed next.
+
+The FASTA and BLAST tools really opened up the ability to efficiently search the databases to almost anyone, as these tools allowed rapid searches on benign hardware and gave reasonable approximate answers within a short period of time.
+
+Two alignment tools really shine, and both were created by Des Higgins: Clustal (in its various incarnations up to the most recent ClustX) (Thompson et al., 1994) and T-Coffee (Notredame et al., 1998). The original publication describing Clustal remains one of the most cited bioinformatics publications of all time and both tools are still in use in many laboratories. Figure 5.1 shows an example of using Clustal to perform multiple sequence alignment.
+
+One problem, which began to haunt researchers early on, was the large number of different file formats, which were developed without coordination

@@ -1,0 +1,36 @@
+
+## 204 Genome Annotation
+
+contigs were again used as a reference and MIRA was used a second time to assemble the original 454 reads with a reference data set.
+
+## 11.3.3 Gene Prediction
+
+To search for better enzymes to decompose plant material into biofuel, there is a need to predict the accurate locations, exon structure, and functions of protein-coding genes in a newly sequenced as well as previously published fungal genomes. A gene prediction pipeline integrating ab initio prediction tools with RNA-Seq and homology evidence was developed to predict gene models in fungal genomes. The design of the pipeline results from individual prediction tools or evidence sources to be easily added or removed. By testing several possible combinations, a minimal set of components was selected that works together and produces high-quality gene models within a week, a genomic sequence and RNA-Seq reads.
+
+Two ab initio prediction tools with demonstrated good results for fungal genomes, GeneMark ES (Ter-Hhovanyan et al., 2008) and AUGUSTUS (Stanke et al., 2008), are used as the main tools in the gene prediction pipeline. These two tools are mutually complementary: GeneMark ES does not need a training set of genes from the target genome, whereas AUGUSTUS requires training models for genes from the target genome or a closely related genome. GeneMark ES uses an iterative training strategy on the genomic sequence to predict a set of gene models. The AUGUSTUS training set can be used to optimize the transition and emission probabilities of the HMM as well as several other parameters of the prediction tool. Experimental hints about gene locations can also be used in AUGUSTUS to improve its prediction accuracy, as as those from protein, EST, or RNA-Seq alignments. In fact, RNA-Seq information is used at several steps of the pipeline. It is used for the generation of the initial models, which are used for the training of the HMM in AUGUSTUS, as well as for providing additional hints to AUGUSTUS while creating a set of predicted gene models. The final step of the pipeline, where the output models are scored and the best ones are selected, also uses this information.
+
+Figure 11.3 shows the data flow in the pipeline. The pipeline uses full-length transcripts, which were assembled into contigs from RNA-Seq reads using Velvet (Zerbino and Birney, 2008) to generate a set of initial gene models (contig training set) for training the HMM-based gene predictor AUGUSTUS (Stanke and Waack, 2003). AUGUSTUS is trained using the alignment of RNA-Seq contigs to the genome by exonerate (Slater and Birney, 2005). A consensus set of predicted gene models is generated from
+
+![](img/7da802df4d7c0829a4a41adf9acaf30d_227_0.png)
+
+Figure 11.3 Gene prediction pipeline developed at the Visual Genomics Centre, University of Calgary. GeneMark-generated models and RNA-Seq read contigs are used to create prediction sets, which are used to train the *ab initio* gene predictor AUGUSTUS. The AUGUSTUS predictions are scored and selected to produce the final set of gene models. (Courtesy of Mostafa Abdallahee.)
+
+AUGUSTUS using the training set and the self-training predictor GeneMark. This set is used to train AUGUSTUS yet again, in preparation for the second stage of predictions. Hints based on RNA-Seq data are also used in this stage to improve the quality of AUGUSTUS predictions. Gene models produced in this stage are scored for agreement with intron locations, which were inferred from the RNA-Seq data. This scoring stage tests for transability into predicted proteins and for homology of the predicted proteins to known proteins. The set of nonoverlapping models with the highest score constitutes the final result of the pipeline.
+
+## 11.4 NEXT-GENERATION GENOME BROWSING
+
+## 11.4.1 Integration of Different Types of Genomic Data
+
+Most browsers described up to this point can only display genomic sequences and their various annotations from multiple sources. Although these browsers can visualize multiple tracks of information, there is an ever-increasing need to visualize different types of data simultaneously to gain intuitive understanding. For example, with the generation of large data sets from microarray experiments, there is an increasing need to generate views of both genomic and expression data within a common visual context and perform a visually guided interpretation of the data. Traditional gene expression visualization tools normally display expression values as a heat map using color gradients to represent the strengths or weaknesses of expression. For example, the TIGR MultiExperiment Viewer (MeV) (Saeed et al., 2003) is a publicly available gene expression analysis and visualization tool. With this type of visualization, however, it is difficult for the researcher to see and interpret the gene expression profile within a genomic context, as each gene is represented as a text symbol.
+
+In a similar vein, cancer genomics entails searching for the genes and their mutations that contribute to the development of a cancer cell in order to analyze the alterations that occur in the genome of a patient’s cells. Tumor samples are analyzed using microarray and high-throughput DNA sequencing technologies to generate genomic data with clinical significance, such as insertions, deletions, and the copy numbers of genes. Large clinical trials of this kind produce a huge amount of different types of molecular data that needs to be organized to provide a unified view for integrating genomic data with clinical data, especially gene expression data and cancer genomics data. These browsers are capable of simultaneously displaying genome-scale clinical measurement values for sets of samples in reference to genomic coordinates.
+
+For example, TIGR MeV has been integrated into Bluejay (Soh et al., 2012; Soh et al., 2008) at the source in order to extend its functionality to enable the display of gene expression within the genomic context. Bluejay internally represents the genomic data, along with expression values, as a document object. The results of the cluster analysis performed by TIGR MeV can also be displayed on the whole genome, with each cluster represented in a unique color.
+
+Figure 11.4 illustrates the interplay between visualizing genome sequence and gene expression data. Microarray data integration in Bluejay adds the capability of showing expression values and genes side by side within a whole genome, so that the association between genes and their expression is visually evident. For a biologist, it becomes much easier to interpret gene expression results than when the results were displayed outside of the genomic context, as in expression images, heat maps, or tables of numeric values.
+
+The University of California, Santa Cruz (UCSC) Cancer Genomics Browser (Zhu et al., 2009) is an extension of the UCSC Genome Browser, which displays data and annotations in parallel tracks.
+
+![](img/7da802df4d7c0829a4a41adf9acaf30d_229_0.png)
+
+FIGURE 11.4 Integration of gene expression analysis with genomic data in Bluejay. Gene expression and data analysis are combined with TIGR MeV to produce a unified visual representation, where the genes and their expression/analysis values are displayed side by side. (See color insert).

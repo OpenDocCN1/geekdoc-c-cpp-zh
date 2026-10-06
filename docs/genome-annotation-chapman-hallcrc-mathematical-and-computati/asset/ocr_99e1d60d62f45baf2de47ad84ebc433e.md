@@ -1,0 +1,7 @@
+# Analysis Pipelines for Next-Generation Sequencing Data
+
+# 11.1 INTRODUCTION
+
+The recent advance in high-throughput sequencing technologies and the availability of next-generation sequencing (NGS) machines have resulted in the creation of massive amounts of sequencing data in a relatively short period of time. As of early 2012, the three most widely used sequencing platforms were Roche 454 Life Sciences Genome Sequencer (www.454.com), the Illumina Solexa Genome Analyzer (GA) (www.illumina.com), and the Applied Biosystems (ABI) SOLID system (www.appliedbiosystems.com). There are also newer platforms, such as Polonator G007 (www.polonator.org), Helicos Biosciences Heliscope (www.helicosbio.com) and the Pacific Biosciences RS (www.pacificbiosciences.com), that are gaining popularity as yet another group of massively parallel sequencing machines. The sequencing methods of these in terms of their biochemistry, cost per base, processing speed, strengths, and weaknesses have been recently reviewed and compared (Mardis, 2008; Metzker 2010; Petterson et al., 2009; Sheure and Ji, 2008).
+
+There are several features of these new sequencing technologies that have significant implications in data analysis, starting with genome reconstruction. Most importantly, short reads are produced in the range of around 400 base pairs from 454 sequencers, and 100 base pairs or less
