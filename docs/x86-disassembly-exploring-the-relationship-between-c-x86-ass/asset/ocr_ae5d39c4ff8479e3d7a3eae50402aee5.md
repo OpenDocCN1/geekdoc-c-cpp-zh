@@ -1,0 +1,1 @@
+You can also use depends.exe to list imported and exported functions. Depends is a GUI tool and comes with Microsoft Platform SDK.
