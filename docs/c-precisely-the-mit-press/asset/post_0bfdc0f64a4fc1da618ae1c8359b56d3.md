@@ -1,0 +1,357 @@
+
+## 230 Index
+
+- logical, 62
+- method call, 74–83
+- object creation, 68
+- property access, 84
+- statement, 94
+- struct value creation, 70
+- type cast, 61, 88
+- extension method, 46
+- on on IEnumerable<T>, 202–208
+- on on IOOrderedEnumerable<T>, 208
+- on on non-generic IEnumerable, 209
+- with type constraint (example), 47
+- Extension property (FileInfo), 160
+- external module, 2
+- \f (form feed code, 18)
+- factorial (example), 145
+- faulted task, 141
+- field, 14, 40
+    - access, 61, 72
+    - declaration, 40
+    - default value, 40
+    - hiding, 40
+    - initialization, 40
+    - initializer, 40
+    - instance field access, 72
+    - modifier, 40
+    - read-only, 40
+- example, 29, 55
+    - shadowed, 14
+- example, 73
+    - static, 40
+        - access, 72
+        - example, 45
+- field-declaration, 40
+- field-modifier, 40
+- file, 160
+- extension, 160
+- .cs, 2
+- .dll, 2
+- .exe, 2
+- .module, 2
+- index (example), 187
+- name, 160
+- path (example), 161
+    - reading from, 150, 158
+    - example, 151
+    - source, 2
+    - writing to, 152, 158
+    - example, 153
+- FileAccess enum type, 158
+    - example, 65
+- FileInfo class, 160
+- FileMode enum type, 158
+- FileFoundException, 128, 150, 158
+- FileShare enum, 158
+- FileStream class, 158
+    - example, 157
+- finally, 106
+- finite state machine (example), 105
+- First extension method (IEnumerable<T>), 203
+- FirstDefault extension method (IEnumerable<T>), 203
+- fixed-point type, 6
+- Flags (attribute), 216
+    - example, 65
+- float (simple type), 7, 10, 144
+    - floating-point
+        - constant, 7
+        - division, 62
+        - overflow, 62
+        - remainder, 62
+        - type, 6
+- Floor method (Math), 144
+- Flush method, 148
+- BinaryWriter, 154
+- Stream, 156
+- TextWriter, 152
+- fn (Standard ML language), 90
+- For method (Parallel), 136
+- for statement, 98
+    - example, 33
+- ForEach method (Parallel), 136
+- foreach statement, 98
+    - example, 21, 55, 99, 103, 219
+- form feed code (\f), 18
+- formal parameter, 42
+- formal-list, 42
+- Format method (String), 22
+- format specification, 22
+- FormatException, 6, 22, 128
+- formatting
+    - code, 24
+    - data as string, 22–25
+    - date as string, 24
+    - number as string, 24
+    - time as string, 24
+- Frac class (example), 57, 71
+- frame (in stack), 58
+- from class Linq, 196
+- Fullname property (FileInfo), 160
+- Func generic delegate type, 122
+    - variance (example), 179
+- function member, 34
+
+- IEnumerator, 182
+    - example, 99
+- IEnumerator<T>, 182
+- GetHashCode method
+- IEqualityComparer<T>, 184
+- Object, 8
+    - simple type, 8
+- String, 8
+- ValueType, 8
+- GetLength method (Array), 32
+- GetType method (Object), 8
+- GetValue method (Array), 32
+- goto statement, 104
+    - example, 95
+- governing type, 96
+- graph traveler (operator), 61, 64
+- greater or equal to operator (>=), 61, 64
+- group by operator (Linq), 198
+- group join (Linq), 196
+
+- garbage collector, 58
+- Gaussian random numbers (example), 145
+- generic
+    - class, 164, 166–169
+        - constructor (no such thing), 164
+        - delegate type, 174–175
+        - type parameter variance, 178, 179
+    - event (no such thing), 164
+    - indexer (no such thing), 164
+    - interface, 170
+        - type parameter variance, 178–179
+    - method, 172–173
+    - operator (no such thing), 164
+    - property (no such thing), 164
+    - struct type, 176–177
+    - type, 164–171, 174
+    - generics, 164–179
+
+- GroupBy extension method (IEnumerable<T>), 203, 204
+- GroupJoin extension method (IEnumerable<T>), 204
+
+- hash code, 8
+    - and equals method, 8
+    - cached (example), 187
+    - element-based (example), 187
+    - hash table. See dictionary
+- HashSet<T> class, 190
+- heap, 58
+- hexadecimal integer constant, 6
+    - example, 65
+    - versus C++ templates, 176
+    - implementation, 176
+    - versus Java language generics, 176
+- get-accessor
+    - of indexer, 52
+    - of property, 52
+- GetCurrentDirectory property (Directory), 160
+- GetDirectories method (DirectoryInfo), 160
+- GetEnumerator method
+    - Array, 32
+    - hiding
+        - base class's indexer (example), 87
+        - field, 40
+        - indexer, 38
+        - member, 38
+        - method, 38
+- horizontal escape code (vt), 18
+- HTML output (example), 153
+
+- ICollection<T> interface, 180
+
+- IComparable interface, 184
+- IComparable<T> interface, 184
+    - contariance (example), 179
+    - example, 169
+- IComparer interface, 184
+- IComparer<T> interface, 184
+    - contariance (example), 179
+- IDictionary<K,V> interface, 186
+- IDisposable interface, 108
+    - example, 93, 183
+- IEEE754 floating-point, 6, 7, 144, 220
+- IEEender method (Math), 194
+- IEnumerable interface, 182
+    - extension methods, 209
+- IEnumerable<T> interface, 182
+    - extension methods, 202–208
+- IEnumerator interface, 182
+- IEnumerator<T> interface, 182
+    - covariance (example), 179
+- IEqualityComparer<T> interface, 184
+    - contariance (example), 179
+- Equatable<T> interface, 184
+    - contravariance (example), 179
+    - de-contravariance (example), 179
+- if statement, 96
+- if-else statement, 96
+- IGrouping<K,T> interface, 200
+- IList<T> interface, 186
+- implemented by array type, 98
+- ILookup<K,T> interface, 200
+- implementation of interface, 118
+- implied modifier (conversion), 56
+- implicit conversion, 10
+    - example, 67
+    - user-defined, 56
+- implied typed array, 92
+- IList interface (example), 171
+- in contravariance modifier, 178–179
+- increment operator (++), 61, 62
+- into array, 28
+- into string, 18
+- index, 52
+    - expression, 86–87
+    - compound assignment, 86
+    - declaration, 52
+    - generic (no such thing), 164
+    - get-access, 86
+    - hiding, 38
+    - IDictionary<K,V>, 186
+    - IList<T>, 186
+    - overloading, 52
+    - set-access, 86
+    - StringBuilder, 26
+    - type, 52
+- indexer-description, 116
+- IndexOf
+    - IList<T>, 186
+    - List<T>>, 188
+- IndexOutOfRangeException, 18, 28, 107, 128
+    - efficiency. Set efficiency
+    - constant, 6
+    - inheritance, 38
+    - example, 37, 45
+- initialization
+    - array, 28
+    - collection initializer, 68
+    - instance fields, 40, 48
+    - object initializer, 68
+    - static fields, 40
+    - struct values, 112
+- initializer collection, 68
+- field, 40
+- object, 68
+- inner class (Java), 50
+- inner join (Linq), 196, 197
+- InnerExceptions (AggregateException), 136, 148, 141
+- put, 144–164
+- byte-oriented, 156
+- character-oriented, 150
+- sequential, 150
+- type (variance), 178
+- input-output, 146–164
+- byte stream, 156–159
+- character stream, 150–153
+- examples, 149
+- socket, 162–164
+- thread safety, 148
+- interface-declaration, 116
+- interface-modifier, 116
+- intermediate code, 2
+- internal class, 50
+- member, 36
+- InternalBufferOverflowException, 128
+- Interrupt method (Thread), 134
+- Isect method (IEnumerable<T>), 204
+- Insert method
+    - IList<T>, 186
+    - StringBuilder, 26
+- InsertRange method (List<T>), 188
+- intersection closure (example), 193
+- intersection of sets, 190
+- IntersectWith method (ISet<T>), 190
+- into join clause (Linq), 196
+- to query continuation (Linq), 198
+- InvalidCastException, 12, 98, 128, 180
+- InvalidOperationException, 126, 128, 182, 192
+- InvalidProgramException, 128
+- invariant of field, 215
+- invariant type parameter, 178–179
+- invocation of delegate, 122
+- invocation of method. See method call
+- Invoke method (Parallel), 136
+- IOException, 128, 148, 150, 152, 158
+- OrderedEnumerable<T> interface
+    - extension methods, 208
+- OrderedEnumerable<T> interface, 200
+    - extension methods, 208
+- instance
+    - field, 40
+    - access, 72
+    - member, 34
+    - method, 44
+    - of of struct type, 58
+    - test expression, 70
+    - example, 71
+- int (simple type), 7, 10
+- Int16 struct type (short), 7
+- Int32 struct type (int), 7
+- Int64 struct type (long), 7
+- integer
+    - constant, 66
+    - division, 62
+    - overflow, 62
+    - checking, 62
+    - remainder, 62
+    - sequences, 51, 55, 111, 119
+    - square root (example), 215
+    - type, 6
+    - 116–120
+- IEndPoint class, 162
+- Printable interface, 169
+- is (instance test), 61, 70
+    - example, 113
+- IsCancellationRequested property
+    - CancellationToken, 140
+    - CancellationTokenSource, 140
+- IsCompleted property (ParallelLoopState), 136
+- Iseq interface (example), 119
+- ISetCT interface, 190
+- ISO-format, 24
+- IsProperSubset method (IEnumerable<T>), 190
+- IsProperSubsetOf method (IEnumerable<T>), 190
+- IsReadOnly property (IEnumerable<T>), 190
+- interface
+    - base, 118
+    - declaration, 116
+    - partial, 112
+    - generic, 170
+    - implementation, 118
+    - member, 116
+- Upserset method (IEnumerable<T>), 190
+- iterating over (example), 131
+- iterator block, 110
+- length of array, 28
+- Length property
+    - Array, 32
+    - FileInfo, 160
+    - Stream, 156
+    - String, 18
+    - StringBuilder, 26
+- jagged array, 30
+- less than operator (<), 61, 64
+- less than or to operator (<=), 61, 64
+- let clause (Linq), 196
+- lexicographic ordering (example), 131
+- strings, 218
+- join clause (Linq), 196
+- Join extension method (IEnumerable<T>), 204
+- Join method (Thread), 134
+- Joining (thread state), 130, 131

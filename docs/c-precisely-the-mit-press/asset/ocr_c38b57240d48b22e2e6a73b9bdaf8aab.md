@@ -1,0 +1,18 @@
+# Anonymous Method Expression
+
+Anonymous method expression is an expression that evaluates to a delegate, or nameless method. This is similar to nameless functions known from Lisp and Scheme (lambda), Standard ML (fn), and other functional languages. Anonymous methods are convenient for passing behaviors, such as comparers (example 153), to a library or similar; in Java this purpose is served by anonymous inner classes. An anonymous method expression has one of these forms:
+
++   - delegate-statement
+- delegate(formal-list) block-statement
+
+Formal-list is as a method (section 10.7), except that it cannot include a parameter array (params) or an optional parameter (section 10.10), and no formal parameter can have the same name as a variable of an enclosing method. The block-statement is the anonymous method's body. No goto or continue break statement can leave the block-statement. A return statement in the block-statement terminates the anonymous method, not any enclosing function. The block-statement cannot contain a yield statement.
+
+Anonymous method expression can use local variables as non-ref and out-parameters of any enclosing function, and static members of all enclosing classes or structs. In addition, anonymous method expression that appears in non-static code in a class C''s instances and the current object reference this. An anonymous method expression that appears in a struct cannot use the current instance reference this, which is assignable (section 14.2).
+
+Anonymous method can be implicitly converted to a delegate type (section 17). Anonymous method of the first is compatible with any delegate D whose formal-list contains no out parameter. Anonymous method of the second is compatible with a delegate type D if its formal-lists have the same parameters and ref/out modifiers; moreover, the delegate type D has a parameter array (params) that matches nothing in the anonymous method. In both cases, if D's return type is void, then no return statement directly in the block-statement can return a value. Conversely, if D's return type is t, then every return statement directly in the block-statement must have an argument that is implicitly convertible to t, and the end of the block-statement must be reachable.
+
+After an anonymous method has been converted to a delegate, it can be called like a delegate (section 17). The delegate call's arguments will be evaluated. In the first form of anonymous method, the argument values will be ignored; in the second form they will be bound to the anonymous method's formal parameters in call methods. The anonymous method will be evaluated, and if it executes a return statement, the anonymous method will terminate.
+
+The body of anonymous method may contain so-called captured variables: local variables and parameters that are bound in the enclosing function. It is possible for an anonymous method to persist after the enclosing function has returned. In that case, captured variables are stored in a closure rather than in the enclosing function's stack frame (section 11). A is a data structure allocated in the heap; its purpose is to make sure captured variables exist as long as the anonymous method needs them. Note that captured variables are shared between several anonymous methods and even between separate threads (section 21). This is the only way local variables can be shared between threads.
+
+If an anonymous method expression occurs within a loop and captures a local variable declared within the loop, then new closure and an instance of the local variable is created for each iteration of the loop.

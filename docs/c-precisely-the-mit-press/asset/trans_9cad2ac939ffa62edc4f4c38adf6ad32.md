@@ -1,0 +1,163 @@
+
+
+# Linq，语言集成查询查询 (C# 3.0) 195
+
+**示例 234** Linq 查询表达式，在源文件的开头必须引用 `System.Linq` 命名空间。
+
+```csharp
+using System.Linq;
+```
+
+接下来的 Linq 示例使用了数组 `xs` 和 `ys`，它们是枚举的，因此可以进行查询。
+
+```csharp
+int[] xs = new[] { 2, 3, 5 };
+String[] ys = new[] { "C", "BB", "BA" };
+```
+
+第一个查询表达式产生一个包含三个元素的流 (4, 9, 25)。第二个查询表达式产生一个包含两个组的流，第一组键为 2，有两个成员 (4, 25)，第二个组键为 0，有一个成员 (9)。
+
+```csharp
+Show(from x in xs select x*x);           // 4 9 25
+ShowGroups(from x in xs                   // 2: 4 0: 9
+    group x*x by x%3);
+```
+
+**示例 235** Linq 查询表达式被重写为方法调用
+编译器将源语法中的查询表达式重写为由对被查询流进行方法调用组成的 C# 表达式。示例 234 中的第一个查询被重写为 `Select` 和 `GroupBy`。这两个扩展方法都位于 `IEnumerable<T>`（第 28.5节）。Lambda 表达式（第 12.23节）用于将查询的计算和条件传递给扩展方法。注意，`from x in xs` 部分并没有被重写为自己的方法调用；它只是标识了查询作用于哪个流 `xs`，并为范围变量命名。
+
+```csharp
+Show(xs.Select(x => x*x));
+ShowGroups(xs.GroupBy(x => x%3, x => x*x));
+```
+
+**示例 236** 显示 Linq 查询的结果
+任何查询表达式的结果都是可枚举的，并且可以通过 `Show` 方法打印。以 `group` 结尾的查询结果是一个组的流，并且可以通过 `ShowGroups` 方法打印。
+
+```csharp
+private static void Show<T>(IEnumerable<T> xs) {
+    foreach (T x in xs) {
+        Console.Write(x + " ");
+    }
+}
+```
+
+```csharp
+private static void ShowGroups<K,T>(IEnumerable<IGroup<K,T>> gs) {
+    foreach (IGroup<K,T> g in gs) {
+        Console.Write(g.Key + " : ");
+        foreach (T x in g) {
+            Console.Write(x + " ");
+        }
+    }
+    Console.WriteLine();
+}
+```
+
+## 28.1.2 查询体子句
+
+来自 `x in xs` 子句定义了一个范围 `x`，该范围遍历流 `xs` 中的项，其中右侧的 `xs` 对已引入的范围变量的每个组合进行求值。`x` 的类型从 `xs` 的类型推断得出，`xs` 必须实现 `IEnumerable<T>` 或 `IQueryable<T>` 或查询表达式（第 28.2节）。也可以使用 `from type x in xs` 符号显式指定类型。与 `foreach`（第 13.6.2节）一起，这会导致 `xs` 的每个元素强制绑定到 `x`，并且对于查询实现非泛型 `IEnumerable<T>` 的旧版集合（第 27.2.2节）有用。
+
+`let y = e` 子句将变量 `y` 绑定到表达式 `e` 的值，其中 `e` 可以引用之前定义的顺序或范围变量。`y` 的类型从 `e` 的类型推断得出。
+
+`where b` 是一个过滤器，它对范围变量的每个组合评估布尔值 `b`。它会丢弃 `b` 为 `false` 的后续处理组合。
+
+连接子句有两种类型。第一种是内连接：
+
+```csharp
+join y in ys on e1 equals e2
+```
+
+它引入了一个遍历流 `xs` 的额外范围变量 `y`，然后生成一组满足 `e2` 的元组序列 `(x,y)`。`e1` 和 `e2` 的表达式必须满足等值比较，例如是实现了 `IEquatable<t>` 的某种类型 `t`。为了允许高效的连接，`y` 不能出现在表达式 `e1` 中，且 `x` 不能出现在表达式 `e2` 中。
+
+第二种是分组连接：
+
+```csharp
+join y in ys on e1 equals e2 into zs
+```
+
+它创建了一个变量 `zs`，对于 `xs` 中的每个项 `x`，其值是满足 `e1 equals e2` 的 `ys` 流。也就是说，结果是一个 `y` 值的流，每个值一个组；对于组内所有的 `y` 值，`e2` 的值都相同且等于 `e1`。这是一个左外连接：示例 242 展示了如何使用分组连接计算传统的左外连接。`e1` 和 `e2` 必须满足上述相同要求。
+
+在这两种类型的连接子句中，`y` 的类型都可以显式指定，如下所示：
+
+```csharp
+join type in ys on e1 equals e2
+join type in ys on e1 equals e2 into zs
+```
+
+它的的效果和用法与显式的 `from` 子句相同（见上文）。
+
+`orderby` Linq 子句的基本形式是 `orderby e1 ascending;`；它导致查询的其余部分按照表达式 `e1` 值的升序处理范围变量的值，或者如果使用了限定符，则按照 `e1` 值的降序处理。在 SQL 中，限定符 `ascending` 是默认的，可以省略。
+
+`orderBy e1, e2, ...` 的通用形式可以接受多个排序标准，每个标准可选地带有 `ascending` 或 `descending`。它导致查询的其余部分按照给定的顺序处理范围变量的值，以 `e1` 为主排序标准，`e2` 为次排序标准，以此此类推。这些类型必须实现 `IComparable<T>`。
+
+**示例 237** Linq from 子句
+使用示例 234 中的 `xs` 和 `ys`，这些示例展示了源表示法和对应的方法调用。对 `y` 的子句按顺序处理 `xs` 和 `ys` 中所有项的组合。
+
+```csharp
+Show(from x in xs from y in ys select new { x, y }); 
+```
+
+**示例 238** Linq let 子句
+`let` 子句为每个 `x` 值引入一个 `y` 值，供 `select` 使用。编译器重写此表达式，将 `x` 和 `y` 封装在一个匿名对象中（第 12.4节）。后续范围变量 `x` 和 `y` 的使用被重写为创建 `anonymous.x` 和 `anonymous.y`。
+
+```csharp
+Show(from x in xs let y = x*x select y);
+Show(xs.Select(x => new { y = x*x }).Select(xy => xy.x));
+```
+
+**示例 239** Linq where 子句
+`where` 子句导致 `select` 处理满足 `x` 的值。
+
+```csharp
+Show(from x in xs where x%2 select x*x);
+Show(xs.Where(x =>));
+```
+
+**示例 240** Linq join 子句
+第一个连接子句处理满足 `e1 equals e2` 的 `y` 组合。第二个连接子句为 `zs` 选择 `x`；这是一个*分组连接*。
+
+```csharp
+Show(from x in xs join y in ys on e1 equals e2 select new { y });
+Show(xs.GroupBy(x => x%3, x => x*x));
+
+```
+
+## 28.1.3 查询延续
+
+查询表达式可以有任意数量的查询延续，每个以 `into` 开头，如下：
+
+```csharp
+query-expression
+into
+    query-body-clauses
+select e
+```
+
+`into` 引入了一个新的范围变量 `z`。表达式 `e` 对每个 `z` 以及由查询体句引入的任何范围变量进行求值，以产生查询的项。`into` 的含义与 `group` 子句中的 `into` 不同（第 28.1节）。
+
+查询延续的重要用途是通过以 `group` 结尾的查询表达式产生组，以便进一步处理组（示例 243 和 245）。
+
+## 28.2 查询表达式模式
+
+任何类或 `C<T>` 都可以通过实现查询模式来支持 Linq，即通过具有所示的方法。由于 Linq 查询被重写为方法调用（示例 235-243）。注意 `IEnumerable<T>` 及其支持类型（第 28.4节）通过其扩展方法（第 28.5-28.8节）实现了查询模式。
+
+为了 Linq 查询有意义，查询表达式模式中的方法应该与 `IEnumerable<T>` 中的行为相似，但这无法通过 C# 编译器强制。
+
+```csharp
+class C {
+    public C<T>();
+}
+class C<T> : C {
+    public C<K, T> GroupBy<K>(Func<T, K> h);
+    public C<K, E> GroupBy<K, E>(Func<T, K> h, Func<T, E> f);
+    public C<K, V> GroupJoin<U, V>(Func<T, U> key, Func<U, K> fx, Func<T, V> fy, Func<T, U, V, U> g);
+    public C<U, V> Select<U, V>(Func<T, U> key, Func<U, K> fx, Func<U, K> fy, Func<T, U, V> g);
+    public C<U> Select<U>(Func<T, U> f);
+    public C<R> SelectMany<U, R>(Func<T, U> selector, Func<U, IEnumerable<R>> resultSelector);
+    public C<T> OrderBy<K>(Func<T, K> h);
+    public C<T> OrderByDescending<K>(Func<T, K> h);
+    
+    public C<T> Where(Func<T, bool> p);
+}
+```
