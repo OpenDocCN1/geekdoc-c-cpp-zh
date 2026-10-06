@@ -1,0 +1,9 @@
+# Solutions to Chapter 17 | Networking
+
+acknowledges that all the data has been received, then the sender is free to send another 64 KB. If the sender gets back an acknowledgment from the receiver that it received the first 32 KB (which could happen if the second 32 KB was still in transit or it could happen if the second 32 KB got lost), then the sender can only send another additional 32 KB since it can't have more than 64 KB of unacknowledged data outstanding (the second 32 KB of data plus the third).
+
+Congestion Control
+
+The TCP uses a network congestion avoidance algorithm that includes various aspects of additive-increase multiplicative-decrease scheme, with other schemes such as slow-start in order to achieve congestion avoidance.
+
+There are different algorithms to solve the problem; Tahoe and Reno are the most known. To avoid congestion collapse, TCP uses a multi-faceted congestion control strategy. For each connection, TCP maintains a congestion window, limiting the total number of unacknowledged packets that may be in transit end-to-end. This is somewhat analogous to TCP's sliding window after a connection is initialized and after a timeout. It starts with a window of two times the maximum segment size (MSS). Although the initial rate is low, the rate of increase is very rapid: for every packet acknowledged, the congestion window increases by 1 MSS so that for every round trip time (RTT), the congestion window has doubled. When the congestion window exceeds a threshold ssthresh the algorithm enters a snew state, called congestion avoidance. In some implementations (i.e., Linux), the initial ssthresh is large, and so the first slow start, and usually ends after a loss. However, ssthresh is updated at the end of each slow start, and will often affect subsequent starts triggered by timeouts.

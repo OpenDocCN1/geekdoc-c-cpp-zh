@@ -1,0 +1,17 @@
+# Solutions to Chapter 16 | Low Level
+
+16.7 What are the best practices to prevent reverse engineering of DLLs? pg 82
+
+# SOLUTION
+
+Best practices include the following:
+
++   - Use obfuscators.
+- Do not store any data (string, etc) in open form. Always compress or encode it.
+- Use a static link so there is no DLL to attack.
+- Strip all symbols.
+- Use a .DEF file and import library to have anonymous exports known only by their export ids.
+- Keep the DLL in a resource and expose it in the file system (under a suitably obscure name, perhaps even generated at run time) only when running.
+- Hide all real functions behind a factory method that exchanges a secret (better, proof of knowledge of a secret) for a table of function pointers to the real methods.
+- Use anti-debugging techniques borrowed from the malware world to prevent reverse engineering. (Note that this will likely get you false positives from AV tools.)
+- Use protectors.
