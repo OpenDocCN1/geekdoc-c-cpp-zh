@@ -1,0 +1,15 @@
+# 24 SAS Programming with Medicare Administrative Data
+
+As you can imagine, even this small set of data elements can be used to paint a very detailed story about the nature of a particular claim, like a visit to the doctor for a checkup. When combined with other final actions, this information can be used to draw broader conclusions about a particular beneficiary or provider.
+
+# Master Beneficiary Summary File
+
+We have reviewed seven files containing claims data, but our project also requires information about the beneficiaries we are studying. I started using Medicare data files, the most common source of data for beneficiary information was the Denominator file. The “Denominator file” may seem odd, but it is appropriate. In many applications of beneficiary demographic information, a calculated number (say, the number of visits to a doctor’s office) is divided by a count of beneficiaries (perhaps a sample population). For example, if we calculated the total utilization of emergency department (ED) services, we may wish to get the per capita utilization rate by dividing the total number of beneficiaries in our sample. In this equation for capita utilization of ED, the count of sample beneficiaries is the denominator! Information from the demographic file is often used as source of denominator in these kinds of equations. Therefore, the file containing this information for the full Medicare population for a given year is named the Denominator file.
+
+In March 2010, my beloved Denominator file was integrated into something called the Master Beneficiary Summary File (MBSF).¹ The MBSF contains demographic information for beneficiaries who were alive and eligible for Medicare at any time during the calendar year for which the file was created. This information includes the beneficiary’s identifier, sex, date of birth, and date of death (if applicable). In addition, it includes geographic information like the beneficiary’s state and county codes. Perhaps most importantly, it includes information pertaining to the beneficiary’s enrollment in the Medicare program, like data elements that can be used to determine the beneficiary’s enrollment status in Medicare Parts A, B, C, and D.
+
+# Provider Data
+
+For our research programming project, we assume that we have been given a list of the providers in our study (along with their associated beneficiaries), and we do not require information on those providers above and what is contained in the paid claims data. For example, the Part B file contains information such as a performing provider’s NPI, provider type (e.g., group, solo practitioner, independent lab, and institutional provider), specialty, state, zip code, and specialty code.
+
+CMS provides descriptive data on providers through the National Plan and Provider Enumeration System (NPPES), pronounced “in-pez” file. The NPPES file is a publicly-available dataset that can be downloaded from CMS’s website. The file contains data elements like the provider’s NPI, information on whether the provider is an individual or an organization (like an ambulatory care center), the Health

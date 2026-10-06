@@ -1,0 +1,17 @@
+# Chapter 7: Measuring Utilization of Services 71
+
+office, such as ambulatory surgical centers, hospitals, and hospital emergency rooms. In general, the carrier claims file is the largest Medicare data set used for research purposes.
+
++   - The DME file includes paid claims for wheelchairs and walkers, hospital beds, blood glucose monitors and related supplies, canes and crutches, splints, prosthetics, respiratory devices like oxygen equipment and related supplies, and dialysis equipment and supplies.
+
++   - The outpatient data set contains final action claims filed by institutional inpatient departments. However, the file also includes the claims of other types of institutional inpatient providers, like ambulatory surgical centers, outpatient rehabilitation facilities, rural health clinics, and community mental health centers.
+
++   - The inpatient data set contains final action claims submitted by long stay and short stay inpatient patients for the reimbursement of their facility costs, including things room charges and even some drugs provided during a beneficiary's hospital stay.
+
++   - The SNF file contains paid for skilled nursing and rehabilitative care in a SNF setting through specialists as registered nurses, physical therapists, occupational therapists, speech pathologists, and audiologists. The purpose of this care is to treat, observe, and manage beneficiaries' conditions, to help beneficiaries leaving an inpatient hospital to improve or maintain their current condition, and to assist beneficiaries in maintaining their independence. Medicare pays for beneficiary cope and counseling that can help a beneficiary cope for services up to 100 days following an inpatient stay of at least 3 days.
+
++   - The health data set contains final action claims filed by Home Health Agencies (HHAs). These agencies provide services to Medicare beneficiaries like occupational therapy, physical therapy, skilled nursing care, and speech therapy and medical social services like can help a beneficiary with the impacts of their illness on their mental health.
+
++   - The hospice file contains final action claims data that have been submitted by hospice providers. Hospice programs provide paid care for Medicare beneficiaries who are terminally ill. Hospice services include physical care provided by doctors and nurses, care provided by hospice aides, occupational therapy, physical therapy, medical equipment and supplies, drugs, and even grief counseling and respite care (care provided in a facility designed to give family members a break from care) for the beneficiary's family members. All hospice services are covered as long as they are related to the beneficiary's terminal illness (services not related to the terminal illness are covered by other Medicare benefits). Many of these services involve pain management, and may take place in a facility or the patient's home. Hospice care is insured in benefit periods, meaning that a Medicare beneficiary can get hospice care for ninety-day periods and an unlimited limit of 60-day benefit periods.
+
++   - At a minimum, the following elements are commonly required for research programming: Information that identifies the beneficiary, such as a BENE_ID; information about the provider of the service, like the NPI; information that describes when the services occurred (start and end dates); codes that describe the beneficiary (medical diagnosis codes), codes that describe the services (like procedure codes); and information on the amount paid for the services.

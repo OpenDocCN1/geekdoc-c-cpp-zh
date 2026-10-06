@@ -1,0 +1,15 @@
+# 14 SAS Programming with Medicare Administrative Data
+
+action claims and enrollment information are derived from systems that are used to administer the Medicare program. In other words, the primary purpose of these systems is not to create data for research, but to adjudicate and pay claims. This fact has implications for using the administrative data files and that the user must understand the Medicare program. We will explore this topic in detail throughout the remainder of this book. For now, let's get with some well-known examples of how particulars of the administration of the Medicare program influence the content of administrative data files.
+
++   - With about 47 million Medicare beneficiaries, we can expect the administrative data files we use to be quite large. As such, we will need to consider efficient programming techniques. Many of the exercises in later address efficiency topics.
+
++   - Some services that you want to study may not appear in Medicare administrative data or, the least, may require searching multiple files. For Part D prescription data contains information for prescription drug files. Prescription drugs administered during a hospital stay may not appear in the claims at all. Additionally, services paid for Medicare Part C may not appear in the administrative claims files because they are paid by managed care providers.¹12
+
++   - Medicare pays for some services (e.g., home health agencies, hospice, hospital inpatient, skilled nursing, or acute inpatient hospitals) using what are called prospective payment systems (PPS). In very terms, a PPS reimburses providers using a fixed amount derived from a predetermined classification system.¹13 We will discuss payment systems more in Chapter 8.
+
++   - As a social insurance program, Medicare coverage is provided regardless of medical history. Therefore, if you are to use working with commercial healthcare claims data, you will likely notice some unique characteristics of the Medicare population, such as a higher prevalence of chronic conditions.
+
++   - The administrative data we use for research purposes are updated on a regular basis, but only claims that have been received and adjudicated deemed final action. As such, the files we use at any given time do not contain all final claims submitted and up to the date of extraction of the data. It is common practice to wait at least three months for paid claims to appear in the files maintained by CMS. For example, a request for the full calendar year 2014 is best made on or after April 1, 2015.
+
++   - Depending on what you are studying, care be taken to determine the correct composition of your study population. For instance, our example research project will only show those beneficiaries continuously enrolled in fee-for-service Medicare over a defined timeframe. Other studies may wish to focus on beneficiaries entitled to Medicare based on being disabled. We will see in Chapter 6 that we can use enrollment data to determine a beneficiary’s reason for entitlement and define our study population.
