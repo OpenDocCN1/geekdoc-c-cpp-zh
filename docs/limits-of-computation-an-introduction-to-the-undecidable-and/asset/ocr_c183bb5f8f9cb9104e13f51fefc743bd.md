@@ -1,0 +1,13 @@
+# ■ Preface
+
+The Hopcroft, Motwani, and Ullman (2007) text is exemplary in many ways, and is another excellent reference; it is, however, more suitable to students in a doctoral program or those in an advanced course in complexity.
+
+And of course, there is the wonderful Garey and Johnson (1979) text on NP-completeness. We love to point out to our computer students that this book is still important and that every computer scientist should own a copy. Can you say that any other book of vintage? are good, older books available, although not at a level appropriate for an M.S. student without a strong background in automata. (See Brainerd and Landweber, Harrison, 1974; Lewis and Papadimitriou, 1997; and Papadimitriou, 1994.)
+
+We also think that the more popular books that mention Turing machines (such as those by Douglas Hofstadter, 1979 and Penrose, 1989) are nice supplemental extracurricular material, although students must become adept at reading different models of Turing machines.
+
+This book, is intended for advanced undergraduates and beginning graduate students who may not have a strong background in theoretical computer science and do not plan to become experts in the area.
+
+The book is designed so that essentially all of it can be covered in a one-quarter (4 hour/week) or one-semester (3 hour/week) course, with roughly half the course devoted to what is understandable, and half to what is intractable. To do this, it may be necessary to omit some proofs (such as proof that P ≠ NP, then there are problems in NP that are not NP-complete), but we feel that such proofs must be included in the text for the interested reader.
+
+The authors have included a wide range of exercises. There is no way to learn this material without doing it. We feel strongly that the student should read this book with pencil in hand, filling in any missing details (“it is easily shown that”). The student needs to test his or her understanding by doing a variety of exercises, and or she needs back by his her approach to solving the exercises (or was not) correct. We weekly graded written assignments, and either one or two midterm exams in a 10-week quarter, plus a final exam. We have read at least one study on pedagogy stating that something must be learned three times in doing a homework set, in studying for a midterm, and then again in studying for a final exam, we have forced our students into rethinking the material at least three times.

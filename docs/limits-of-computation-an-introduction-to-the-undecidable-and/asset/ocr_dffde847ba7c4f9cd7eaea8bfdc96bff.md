@@ -1,0 +1,1 @@
+There are several standard ways to write a machine configuration. The one used here will be to list the state followed by the tape contents, with the current location of the read/write head underlined.
