@@ -1,0 +1,15 @@
+# 204 Cloud Computing and Digital Media
+
+path $\{	heta_1,\theta_6,\theta_5,\theta_2\}$ between $R_1$ and $R_2$. In this example, notice that for every node, there exists a closed traversing path (or circuit) that covers all the edges exactly once, namely the Eulerian circuit. We use $e(G_{\mathfrak{x}})$ to denote a "Eulerian circuit" of $G_{\mathfrak{x}}$ in the figure. If we only care what edges are involved in a path, then any $e(G_{\mathfrak{x}}')$ would be sufficient. Notice that in the figure, edge weights and scheduling information are not presented. As a matter of fact, this information is incrementally computed during the generation of $G_{\mathfrak{x}}$, which will be illustrated in the later section.
+
+According to the definition of $G_{\mathfrak{x}}$, any edge $e'$ in $G_{\mathfrak{x}}$ is a collection of connecting edges in $G_{\mathfrak{J}}$. Thus, $e'$ implies a subgraph of $G_{\mathfrak{J}}$. $G_{\mathfrak{x}}$ edge set represent all the possible MRJs that can be employed to evaluate the original query $Q$. Let $T$ denote a set of MRJs that are selected from $G_{\mathfrak{x}}$ edge set. Intuitively, the MRJs in $T$ cover all the joins of the original query. Formally, we define that $T$ is "sufficient" as follows:
+
+> **Definition 4:** *$T$, a collection of MRJs, is sufficient to evaluate $Q$ iff $U \subseteq G_{\mathfrak{J}}, G_{\mathfrak{E}}$, where $M \in MRJs \neq Q$.
+
+Since it is trivial to check whether $T$ is sufficient, for the rest of this work, we only consider that $T$ is sufficient. Given, $T$, we define our execution plan as a specific execution sequence of MRJs, which minimizes the time span of using $T$ to evaluate the original query $Q$. Formally, we can define our problem as follows:
+
+**Problem definition:** Given an $N$-join query $Q$ and $k_p$ processing units, we want to create a join-path graph $G_{\mathfrak{J}}$ is built. We want to select a collection of edges from $G_{\mathfrak{x}}$ that correspondingly form a set of MRJs, denoted as $T_{opt}$, which minimizes the query evaluation time. Obviously, there are many different choices of $T$ to evaluate $Q$. With limited processing units, different execution plans yield different evaluation time spans. In fact, the determination of MRJ execution order is non-trivial; we give the detailed analysis of the hardness of our problem in the next subsection. As we shall elaborate later, given $T$ and $k_p$ available processing units, we adopt an approximation method to determine line in time.
+
+**Problem hardness:** According to the problem definition, we need two steps to find $T_{opt}$. (1) generate $G_{\mathfrak{J}}$ from $G_{\mathfrak{x}}$, and (2) select MRJs for $T_{opt}$. Neither of these two steps is easy to solve.
+
+For the first step, construct $G_{\mathfrak{J}}$ we need to enumerate all no-edge-repeating paths between any pair of vertices in $G_{\mathfrak{J}}$ Assume has

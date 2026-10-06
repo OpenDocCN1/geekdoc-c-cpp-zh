@@ -1,0 +1,23 @@
+# Research on Scene 3D Reconstruction ■ 257
+
+11.4.3 Conclusion 298
+
+11.5 Conclusion and Future Work 300
+
+11.5.1 Conclusion 300
+
+11.5.2 Future Work 300
+
+References 301
+
+# 11.1 INTRODUCTION
+
+11.1.1 Background
+
+With the great benefit of fast development of the Internet, people can now see the whole world by just sitting in front of a computer. Photos, pictures, and videos become the most important media that helps people open new eyes to the world. As more and more people have a desire to upload their photographs to large image hosting Websites, such as Flickr and Google Images or blogs, to store or show their experience and thousands, billions of images can be instantly accessible through image search engines provided by these image Websites. These pictures cover thousands of virtually famous places, which are taken from a multitude of viewpoints, at many different times of day, and under a variety of weather conditions. After typing some key words, as “the Great Wall,” the user can easily get millions of photographs gathered by the image search engine. The result set is often organized as thumbnails or lists, about 20 pictures appear on the screen and the users click the next or previous bottom to switch to another 20 pictures (Figure 11.1).
+
+Although it is the normal way to display large image size, there exist two weak points. The first one is that pictures are treated as independent of events or scenes; although they may be grouped together or labeled in meaningful ways, but still unconnected, the user can hardly attain the stature of the space as a whole. Another weak point is that when the users try to find specific viewpoints or a detail of a particular object, it can be very hard.
+
+11.1.2 Scene Reconstruction from Internet Photo Collections
+
+As described in the previous section, the vast, rich, and disconnected photo collections become a great challenge to get better user experience. How can we make use of them to effectively communicate the experience of being at a place—to give someone the ability to virtually move around

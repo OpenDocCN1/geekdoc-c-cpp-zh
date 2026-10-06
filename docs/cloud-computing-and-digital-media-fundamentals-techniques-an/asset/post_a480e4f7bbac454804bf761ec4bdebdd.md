@@ -1,0 +1,47 @@
+
+## Cloud Computing and Adult Literacy ■ 361
+
+unexposed to the potential benefits of technology-enhanced learning and cloud computing.
+
+The structures of adult learning and adult education organizations and learners in Canada make the use of cloud computing properly appropriate. Informal learning and semiform community-based learning are the dominant modes of adult learning within small businesses, trade unions, cooperatives, industrial and commercial enterprises, hospitals, prisons, and religious and cultural organizations. There are no statistics on the amount of informal learning that is occurring, but according to Cross [2], there is general agreement that it is growing rapidly. Cloud computing can be used to address the increasing cost and complexity of providing the state-of-the-art e-learning services that are beginning to outstrip the abilities and resources of adult education institutions and organizations. The degree of integration and interoperability required to provide seamless service is becoming too complex for smaller entities to manage efficiently. In addition, higher functions such as sophisticated analytics could be valuable tools in understanding adult education processes cannot be developed as quickly as necessary, if at all. Computer service departments struggle to keep up with the growing demand for information technology (IT) services on campuses. New approaches are required if adult education institutions and organizations are to effectively meet the demands of learners and other stakeholders for ever more sophisticated services, while still working within the growing budgetary constraints of both the organization and the adult learning sector as a whole. Cloud computing could form a major part of an effective solution to this problem.
+
+Many institutions and companies are moving rapidly to adopt cloud computing, a term that refers to accessing Information and Communications Technology (ICT) services across the Internet. The computers and software applications are housed on Web servers in large industrial-scale computing centers rather than produced locally. The first benefit of these commercial “computing utilities” is that they can harvest the economies of scale and offer services at a fee that is far lower than most organizations would require to implement and maintain their own computing infrastructure. To lower energy costs, cloud providers locate their data centers near power generation facilities; to staff per machine, cloud providers install vast numbers of computers in each server farm. Many institutions already benefit from these economies of scale by outsourcing e-mail to Google or Microsoft.
+
+## 362 Cloud Computing and Digital Media
+
+The second benefit of cloud computing is in having large-scale data processing resources available “on demand.” Scientists with analyses that might take hours or days to execute on a single computer can speed the processing by taxing the cloud to provide the equivalent of hundreds of computers for a few minutes. Lower costs and flexible computing on demand are the two key advantages of cloud computing. The impact is already being felt in some institutions and businesses; cloud computing will soon spread to other areas of the economy and to adult literacy organizations that become aware of its benefits.
+
+Cloud computing can be an industrial-scale replacement of the “cottage industry” approach to institutional computing that now exists within institutions and organizations. Much of the capital costs of institutional computing can be converted to lower operating costs. With the cloud, the physical space and the energy ICT consumes are reduced in-house, yet the available computing power is greatly increased. In addition, elasticity allows users to increase or decrease computing capacity as needed [3].
+
+At first blush, cloud computing seems to be an entirely technical issue since adult literacy educators, like most consumers, are blissfully unaware of the technologies they use. The search the Web or book airplane tickets with little thought to the layers of hardware and software that provides these services. However, a major paradigm shift will lead those using technology to rethink the services they offer and how they are offered. For example, the emergence of the World Web Mosaic Browser in 1995 made it possible to publish and retrieve information without having an intermediary, while also reducing the difficulty in publishing information quickly and at a much reduced cost. This had a huge impact on the world of distance learning that until then leaned toward “big media” publications and television. The “anyone-can-publish” environment brought on by the World Web meant that any institution could offer distance education, a capability they are now adopting in ever increasing numbers. By 2005, the integration of mobile phones with the Internet literally meant that anyone, almost anywhere, connect to the world’s information systems. This has been particularly beneficial to democratizing information access in developing countries, and mobile phones have become the main consumer channel for both voice and data services. The ability to “leapfrog” the millions of miles of copper wire and boxes that plug into electrical outlets has enabled emerging and developing countries to partake in the knowledge economy at a faster rate and to partially close the digital divide.
+
+## Cloud Computing and Adult Literacy ■ 363
+
+Piña and Rao [4] argue that cloud computing is creating “new IT [Information Technology]-enabled market constructs and it will have a profound effect on IT management. The cloud will challenge everyday business models from which the educational and economic sectors cannot escape. The shift to cloud computing provides an opportunity for adult literacy providers to implement and/or restructure their online operations and decide what choices will be provided. However, this will not happen automatically. The adult literacy sector in Canada faces endemic regionalization and programming challenges that have little to do with computing, and everything to do with politics, funding, community leadership, and professional collaboration.
+
+A symposium of e-learning experts sponsored by Contact North [5] identified a number of operational and technical challenges, all of which could be viably addressed using cloud computing. These include addressing content quality, learner support, the e-learning compatibility of administrative systems, ongoing IT management infrastructure, tools, broadband availability, support services (helpdesk), and the evergreen of IT.
+
+de Broucker and Myers [6] recommended the implementation of a public policy framework for adults that acknowledges the “right to learn.” This includes financial support, incentives for employers, and more government investment using a “coordinated approach to respond to adult learners’ needs. Support for cloud computing could go a long way in addressing these recommendations.
+
+While cloud computing can be used to lower the costs of providing adult infrastructure, there will be real costs–the economics of cloud provision have yet to be fully defined and understood. The cloud investment can only be realized with sufficient funding. Building a collaborative community around cloud computing might be a way to bring a large number of resources together to help low-literacy Canadians cope with text-laden society.
+
+364 ■ Cloud Computing and Digital Media
+
+This chapter is organized around four questions:
+
+- What is cloud computing and why is it important for adult literacy?
+- What is the current state of adult literacy in Canada and is a cohesive online literacy community feasible?
+- What is the current use of IT to support adult literacy?
+- What might a cloud computing strategy for adult literacy look like and what are the challenges to realize such a vision?
+
+Technical issues arise, the changes cloud computing brings may provide an unprecedented opportunity to revolutionize the way in which we offer adult literacy training and new services that can hasten the integration of low-literacy adults into society. There are legitimate reasons for institutional or organizational differences: size, programming, structure, and operational mandate, all of which provide significant reasons for differentiation. The initial benefits of an adult education cloud are outsourcing the infrastructure costs. However, the areas of significant gain can still be realized at the application level with, for example, e-mail and shared learning management systems, content management systems, automated assessment systems, and Web conferencing systems. These would represent the initial applications that would formulate a cloud provision.
+
+## 15.2 QUESTION 1: WHAT IS CLOUD COMPUTING AND IS IT IMPORTANT FOR ADULT LITERACY?
+
+> Cloud computing is a nebulous term
+
+> —Anonymous
+
+Wikipedia notes that the cloud originated among telephone networks and that “The first scholarly use of the term cloud computing was in a 1997 lecture by Ramnath Chellappa.”
+
+According to Pingdom [7], the term “cloud computing” was launched into the mainstream in 2006 when Eric Schmidt, CEO of Google, used describing Google’s own services during a search engine conference: “It starts with the premise that the data services and architecture should be on servers. We call it cloud computing—they should be in a ‘cloud’ somewhere.”

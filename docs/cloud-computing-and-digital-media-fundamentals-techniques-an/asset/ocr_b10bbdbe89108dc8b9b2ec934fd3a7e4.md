@@ -1,0 +1,11 @@
+organizations are already developing XML-based standards for the health-care domain, such as HL7 clinical document architecture (CDA). The EHR system will include an extensive indexing and query mechanism, much like the Web. This will help to convert the data collected from one EHR system to be linked and interpreted by another EHR system.
+
+13.1.3.1 Evaluation of DICOM Standard DICOM has many advantages and can play a critical role in health-care industry, when it comes to digital imaging and multimedia. But DICOM as well as all the other available EHR applications lacks in support for other multimedia content such as audio and video files and contents with waveform. In addition, one major disadvantage of DICOM standard is that it does not allow optional fields. Some image objects are incomplete because some fields are left blank and others have incorrect data. Another disadvantage of DICOM is limited point-to-point design for data forwarding. Any data-receiving device always becomes the end of the communication. It cannot be instructed to relay the received data elsewhere. The rest of this chapter is organized as follows: Section 13.2 discusses about image data. Section 13.3 describes the status of EHRs in cloud computing environment. Section 13.4 presents the issues related to multimedia data in EHRs in health care; such as bandwidth requirements. Section 13.5 represents summary and conclusion.
+
+# 13.2 IMAGE DATA AS PART OF EHRs
+
+Some of the studies, [16,17] have demonstrated the need to share images, seamlessly, in order to improve patients' care and disease management, and reduce unnecessary procedures. Noumeer and Renaud [16] have tried to come up with a new architecture of a Web application for testing the interoperability in health care; the provided software provides functionality to test groups involved in sharing images between different institutions, whereas Noumeer and Pambrun [17] described how the JPEG 2000 Interactive Protocol (JPIP) can be used to deliver images from EHRs to the workstation without importing rather than streaming. This also eliminates the problem of persistency and consistency associated with PACS.
+
+# 13.2.1 Image Data for Medical Needs
+
+Images are widely used in medical treatments from X-rays, dermatology photographs, pathology laboratory tests, and CT scans. Specialists

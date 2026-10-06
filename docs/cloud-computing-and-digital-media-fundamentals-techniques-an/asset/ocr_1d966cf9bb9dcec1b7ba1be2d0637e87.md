@@ -1,0 +1,5 @@
+# 372 Cloud Computing and Digital Media
+
+Adult education and literacy in Canada is also divided by different approaches and organizational types. In some regions
+
+Federal funding is generally targeted to assist newcomers to Canada to become functional in one or the other of the official languages, and there is a pattern of successful economic integration by the second generation in urban areas. The OECD [23] identifies Aboriginals and the working poor as the two populations least served by adult education programs. Many Aboriginals grow up in isolated areas and learn English from parents for whom English was an imperfectly learned second language. Many of the current generation also fails to master their native language and are caught between two cultures. The increasing urbanization of the Aboriginal population brings many within reach of targeted literacy programs, and there are a number of e-learning approaches that are being initiated to reach those in remote areas. However, low-literacy

@@ -1,0 +1,12 @@
+# 340 Cloud Computing and Digital Media
+
+legislators, researchers, and analysts also need to access these archives. The problems about information exchange arise, as these archives have different data storage representations. Similarly, the information exchange (among the various archival storages) also poses difficulties. These problems can be overcome by using some simple techniques, such as the following:
+
++   - Multimedia data are mostly archival and tend to be accessed in the read mode. This means that modifications of multimedia data objects, in many applications, are relatively few. This allows designers to read optimize the data.
+- Multimedia data also tend to show temporal locality. This allows easier management and optimization of cache buffers.
+
+Although these optimization methods are not universal, some applications may still benefit from them.
+
+# 13.4.3 MUIs for Different Needs
+
+Different specialists use image data in different forms, ranging from dental X-rays, dermatology photographs, and pathology slides to computerized tomography scans for oncologists and magnetic resonance images for cardiologists. Each specialty has different requirements for viewing and interpreting images. For cardiologists, multiple real-time images are required to correctly identify the disease and treat it. In case of neurosurgeons, intraoperative images are needed, along with the images taken in the past for the reference purpose. Similarly, obstetric and gynecnec physicians deal with a patient population that is mobile. For these, images must be taken and stored in such a manner that they can be transferable between providers and annotated in order to have consistent readings and interpretations. Primary care physicians also have their requirements and areas on which they focus. Radiologists have different requirements such as frequent viewing, electronic ordering of procedures, facilitation of report generation, and support for rapid notification of the ordering physician in case of time-sensitive critical findings. This widespread use of the images in health care requires portable datasets with metadata linked to the images that can be easily viewed and interpreted by other members of health-care team.

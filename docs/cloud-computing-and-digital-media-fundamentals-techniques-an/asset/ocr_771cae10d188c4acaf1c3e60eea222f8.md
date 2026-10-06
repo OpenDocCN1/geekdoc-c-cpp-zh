@@ -1,0 +1,13 @@
+# Cloud Computing and Adult Literacy ■ 381
+
+areas where many low-literacy adults reside and where free WiFi service is uncommon [32].
+
+The hardware/software paradigm suggests that anything could be done in hardware should be replicable by software. This is becoming true for low-cost assistive technologies as screen readers and talking typewriters that can now be configured on the small touch screen of the smartphone. Wearable and implantable technologies are also emerging, with the potential of being connected to an omnipresent cloud that monitors one's personal health and safety. The matrix of possibilities is so vast that it might be harder to guess when these trends will appear what will appear. Cloud computing makes it possible to augment the processing power of personal technologies in unprecedented ways.
+
+The practitioners of adult literacy are not rushing to adopt new technology practices. Best et al. [33] provide a recent compilation of promising practices for online literacy training, most of which are textladen and involve human rather than machine facility. While literacy is important for scholarly activity, small devices may soon help discretely accommodate language users by reading aloud and prompting textually appropriate actions.
+
+# 15.5.2 Shared Community Resources
+
+Google Docs was originally conceived as a shared space for collaboration in creating and revising documents. This application has potential for supporting shared professional development and educational resources (computer teaching, coaching). Miller [34] suggests that the shared cloud platform also offers greater opportunities for community and work collaboration. An advantage of cloud computing in education noted by the Seattle Project [35] is that students learning programming were no longer disadvantaged by differences in their workstations (although they might be affected by differences in bandwidth). Each student was provided a virtual computer to configure and program, and shared resources were available to all the involved.
+
+Since clouds have potentially unbounded elasticity, it is possible that millions of users can be interacting at once, giving rise to spontaneous communities and interactions. In a social networking environment, there is potential for communities of literacy learners to grow and for literacy providers to develop and test shared resources and enable volunteers working from home. The resulting analytics can also greatly facilitate the ability to evaluate the usage and effectiveness of any materials provided. This is

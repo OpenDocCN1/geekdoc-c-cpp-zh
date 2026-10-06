@@ -1,0 +1,13 @@
+# Cloud-Based Intelligent Tutoring Mechanism for Pervasive Learning ■ 137
+
+progress recording module will use this information to decide how to synchronize the learning progress.
+
+# 6.3.1.2 Learning Progress Recording Module
+
+This module is responsible for recording the learning progress of every user, using the details of the update of learning progress every time, such as account, materials, learning status, and transaction time, and synchronizing the course file to the learning assistant. Learning center uses this module to maintain the learning record; after user uploads the learning record and then another device access the learning center, the system will check the status of synchronization and start to synchronize it. The data of synchronization including the data of ongoing course data and learning progress, and the data also shares with course data management at the same time. Inquiry-related course can allow the user predownload the files. This module records the user’s of each course status. Teacher can check the progress of each student. When the learning of the student is behind the progress, the teacher can ask the student to learn the specific course first. This module will send the request to the device on the user’s hand when the device is requested to synchronize.
+
+As research needs to synchronize the course file on different devices, the instability of network is the first problem that is met. The learning assistant on the mobile devices and encounters the disconnection of the network. If the file is broken when disconnected, the incomplete file cannot be used normally. To solve this problem, we try to divide the file into several parts. The course file sends these parts to the learning center and learning assistant to store, and generates an association table. This table saves the name of the course file, the status, the access time, and the file name of each part in the XML format, and use universal unique identifier (UUID) to ensure the uniqueness of course file. The system controls the size of each part in a certain range. According to this, the learning assistant will download the course file to the learning center. When the user is in learning status, learning assistant will change the content of the table to monitor the status, and synchronize with the learning center in each connection.
+
+# 6.3.1.3 Course Data Access Module
+
+This module is responsible for storing the course files, deciding the format, and saving the path of the course data. When the learning assistant needs to access the course, it will get the association table from the learning progress recording module (Mikroyannidis et al. 2010). The table

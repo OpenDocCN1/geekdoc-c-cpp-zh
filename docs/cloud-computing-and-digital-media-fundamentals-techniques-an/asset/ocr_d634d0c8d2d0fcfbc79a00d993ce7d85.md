@@ -1,0 +1,13 @@
+# 74 Cloud Computing and Digital Media
+
+objects. Title, description, and keywords form the basic metadata of the multimedia.
+
+Augmented reality information, basic multimedia metadata, and semantic annotations are stored as XML documents. This design chooses the interoperability and the development of collaboration features. The synchronization is done by keeping a copy of the XML document at every client in the session and ensuring timely updates on the copies in case of edit operations or conflicts.
+
+The collaborative multimedia annotation system is based on the XMPP and MPEG-7 semantics. The work is mainly inspired by cultural heritage scenarios for digital documentation of historical sites, where the described mobile collaboration technology allows professional communities to transform their collaborative work practices in the field. Evaluation indicates that such solutions increase the awareness of community members for coworkers and the productivity in the field in general.
+
+# 3.5.4 Mobile Augmentation Cloud Services: Cloud-Aware Computation Offloading for Augmenting Devices’ Capabilities
+
+Offloading enables mobile applications to use external resources adaptively, that is, different portions of the application are executed remotely based on resource availability. For example, in case of unstable wireless Internet connectivity, the mobile applications can still be executed on the device. In contrast, client/server applications have static partitioning of code, and business logic between the server and the client, which is done in development phase. Actually, client/server applications can be seen as a special type of offloaded applications.
+
+We developed a framework that integrates with the established Android application model for “offloadable” applications, a lightweight application partitioning, and a mechanism for seamless adaptive computation offloading [38]. We propose Mobile Augmentation Cloud Services (MACS), a services-based mobile cloud computing middleware. Android applications that use the MACS middleware benefit from seamless offloading of computation-intensive parts of the application into nearby or remote clouds. First, from a developer's perspective, the application model stays the same as on the Android platform. The only requirement is that intensive parts are developed as Android services, each of which encapsulates specific functionality. Second, according to different conditions/parameters, the modules of program are divided into two groups: one group runs locally and the other group runs on the cloud side.
