@@ -1,0 +1,303 @@
+
+
+# ISO/IEC 14882:2017(E)
+
+```cpp
+template <class BiIter>
+bool operator<(const sub_match<BiIter>& lhs, const sub_match<BiIter>& rhs);
+template <class BiIter>
+bool operator==(const sub_match<BiIter>& lhs, const sub_match<BiIter>& rhs);
+template <class BiIter>
+bool operator>(const sub_match<BiIter>& lhs, const sub_match<BiIter>& rhs);
+template <class BiIter>
+bool operator>=(const sub_match<BiIter>& lhs, const sub_match<BiIter>& rhs);
+
+template <class Biter, Class SA>
+bool operator<(
+    const basic_string<typename iterator_traits<Biter>::value_type, SA>& lhs,
+    const sub_match<Biter>& rhs
+);
+template <class Biter, Class SA>
+bool operator==(
+    const basic_string<typename iterator_traits<Biter>::value_type, SA>& lhs,
+    const sub_match<Biter>& rhs
+);
+template <class Biter, Class SA>
+bool operator>(
+    const basic_string<typename iterator_traits<Biter>::value_type, SA>& lhs,
+    const sub_match<Biter>& rhs
+);
+template <class Biter, Class SA>
+bool operator>=(
+    const basic_string<typename iterator_traits<Biter>::value_type, SA>& lhs,
+    const sub_match<Biter>& rhs
+);
+template <class Biter, Class SA>
+bool operator<(
+    const basic_string<typename iterator_traits<Biter>::value_type, SA>& lhs,
+    const sub_match<Biter>& rhs
+);
+template <class Biter, Class SA>
+bool operator==(
+    const basic_string<typename iterator_traits<Biter>::value_type, SA>& lhs,
+    const sub_match<BIter>& rhs
+);
+template <class Biter, Class SA>
+bool operator>(
+    const basic_string<typename iterator_traits<Biter>::value_type, SA>& lhs,
+    const sub_match<BIter>& rhs
+);
+template <class Biter, Class SA>
+bool operator>=(
+    const basic_string<typename iterator_traits<Biter>::value_type, SA>& lhs,
+    const sub_match<BIter>& rhs
+);
+template <class Biter, Class SA>
+bool operator<(
+    const sub_match<BiIter>& lhs,
+    const basic_string<typename iterator_traits<BiIter>::value_type, SA>& rhs
+);
+template <class Biter, Class SA>
+bool operator==(
+    const sub_match<BiIter>& lhs,
+    const basic_string<typename iterator_traits<BiIter>::value_type, SA>& rhs
+);
+template <class Biter, Class SA>
+bool operator>(
+    const sub_match<BiIter>& lhs,
+    const basic_string<typename iterator_traits<BiIter>::value_type, SA>& rhs
+);
+template <class Biter, Class SA>
+bool operator>=(
+    const sub_match<BiIter>& lhs,
+    const basic_string<typename iterator_traits<BiIter>::value_type, SA>& rhs
+);
+template <class Biter, Class SA>
+bool operator>(
+    const sub_match<BiIter>& lhs,
+    const basic_string<typename iterator_traits<BiIter>::value_type, SA>& rhs
+);
+```
+
+# ISO/IEC 14882:2017(E)
+
+```cpp
+template <class BiIter, class ST, class SA>
+bool operator<<(
+const sub_match<BiIter>& lhs,
+const basic_string<typename iterator_traits<BiIter>::value_type, ST, SA>& rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator==(typename iterator_traits<BiIter>::value_type* lhs,
+const sub_match<BiIter>& rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator+(typename iterator_traits<BiIter>::value_type* lhs,
+const sub_match<BiIter>& rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator<(typename iterator_traits<BiIter>::value_type* lhs,
+const sub_match<BiIter>& rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator>(typename iterator_traits<BiIter>::value_type* lhs,
+const sub_match<BiIter>& rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator<=(typename iterator_traits<BiIter>::value_type* lhs,
+const sub_match<BiIter>& rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator>=(typename iterator_traits<BiIter>::value_type* lhs,
+const sub_match<BiIter>& rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator<<=(const sub_match<BiIter>& lhs,
+const iterator_traits<BiIter>::value_type* rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator+=(const sub_match<BiIter>& lhs,
+const iterator_traits<BiIter>::value_type* rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator<=(const sub_match<BiIter>& lhs,
+const iterator_traits<BiIter>::value_type* rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator>=(const sub_match<BiIter>& lhs,
+const iterator_traits<BiIter>::value_type* rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator>(const sub__<BiIter>& lhs,
+const iterator_traits
+BiIter>::value_type* rhs);
+```
+
+```cpp
+template <class BiIter>
+
+ operator!constconst iterator_traits<BiIter>::value_type* lhs,
+const sub_match<BiIter>& rhs);
+```
+
+```cpp
+template <class BiIter>
+bool operator>(const iterator_traits<BiIter>::value_type* lhs,
+const sub_match<BiIter>& rhs);
+```
+
+# ISO/IEC 14882:2017(E)
+
+```cpp
+template <class BIter>
+bool operator==(const iterator_traits<BIter>::value_type& lhs,
+const sub_match<BIter>& rhs);
+template <class BIter>
+bool operator==(const iterator_traits<BIter>::value_type& lhs,
+const sub_match<BIter>& rhs);
+```
+
+```cpp
+template <class BIter>
+bool operator==(const iterator_traits<BIter>::value_type& lhs,
+const sub_match<BIter>& rhs);
+```
+
+```cpp
+template <class BIter>
+bool operator!=(const sub_match<BIter>& lhs,
+const iterator_traits<BIter>::value_type& rhs);
+```
+
+```cpp
+template <class BIter>
+bool operator>=(const sub_match<BIter>& lhs,
+const iterator_traits<BIter>::value_type& rhs);
+```
+
+```cpp
+template <class BIter>
+bool operator!=(const sub_match<BIter>& lhs,
+const iterator_traits<BIter>::value_type& rhs);
+```
+
+```cpp
+template <class BIter>
+bool operator==(const sub_match<BIter>& lhs,
+const iterator_traits<BIter>::value_type& rhs);
+```
+
+```cpp
+template <class char, class ST, class BIter>
+basic_ostream<char, ST>& os,
+operator<<(const basic_ostream<char, ST>& os, const sub_match<BIter>& m);
+```
+
+```cpp
+// 11.6 match_results
+template <class BidirectionalIterator, class Allocator = allocator<sub_match<BidirectionalIterator>>>
+match_results;
+```
+
+```cpp
+using cmatch = match_results<const char*>;
+using wmatch = match_results<const wchar*>;
+using match = match_results<string>::const_iterator;
+using wmatch = match_results<wstring>::const_iterator;
+```
+
+```cpp
+// match_results comparisons
+template <class BidirectionalIterator, class Allocator>
+bool operator==(const match_results<BidirectionalIterator, Allocator>& m1,
+const match_results<BidirectionalIterator, Allocator>& m2);
+template <class BidirectionalIterator, class Allocator>
+bool operator!=(const match_results<BidirectionalIterator, Allocator>& m1,
+const match_results<BidirectionalIterator, Allocator>& m2);
+```
+
+```cpp
+// 11.10.7. match_results swap
+template <class BidirectionalIterator, class Allocator>
+void swap(match_results<BidirectionalIterator, Allocator>& m1,
+match_results<BidirectionalIterator, Allocator>& m2);
+```
+
+# ISO/IEC 14882:2017(E)
+
+```cpp
+// 31.11.2 function template regex_match
+template <class BidirectionalIterator, class Allocator, class charT, class traits>
+bool regex_match(BidirectionalIterator first, BidirectionalIterator last,
+                 match_results<Bidirectionaliterator, Allocator>& m,
+                 const basic_regex<charT, traits>& e);
+template <class BidirectionalIterator, class charT, class traits>
+bool regex_match(BidirectionalIterator first, BidirectionalIterator last,
+                 const basic_regex<charT, traits>& e,
+                 const regex_constants::match_flag_type flags = regex_constants::match_default);
+
+```cpp
+template <class charT, class Allocator>
+bool regex_match(const charT* str, match_results<const charT, Allocator>& m,
+                 const basic_regex<charT, traits>& e);
+template <class charT, class traits>
+bool regex_match(const charT* str, const basic_regex<charT, traits>& e,
+                 const regex_constants::match_flag_type flags = regex_constants::match_default);
+
+```cpp
+template <class ST, class SA, class Allocator, class charT, class traits>
+bool regex_match(const basic_string<charT, ST>& str,
+                 match_results<basic_string<charT, ST>::const_iterator, Allocator>& m,
+                 const basic_regex<charT, traits>& e,
+                 const regex_constants::match_flag_type flags = regex_constants::match_default);
+template <class charT, class traits>
+bool regex_match(const charT* str, const basic_regex<charT, traits>& e,
+                 const regex_constants::match_flag_type flags = regex_constants::match_default);
+
+template <class ST, class SA, class Allocator, class charT, class traits>
+bool regex_match(const basic_string<charT, ST>& str,
+                 match_results<basic_string<charT, ST>::const_iterator, Allocator>& m,
+                 const basic_regex<charT, traits>& e,
+                 const regex_constants::match_flag_type flags = regex_constants::match_default);
+```
+
+```cpp
+// 31.11.3. function template regex_search
+template <class BidirectionalIterator, class Allocator, class charT, class traits>
+bool regex_search(BidirectionalIterator first, BidirectionalIterator last,
+                 match_results<Bidirectionaliterator, Allocator>& m,
+                 const basic_regex<charT, traits>& e,
+                 const regex_constants::match_flag_type flags = regex_constants::match_default);
+template <class BidirectionalIterator, class charT, class traits>
+bool regex_search(BidirectionalIterator first, BidirectionalIterator last,
+                 const basic_regex<charT, traits>& e,
+                 const regex_constants::match_flag_type flags = regex_constants::match_default);
+
+```cpp
+template <class charT, class Allocator>
+bool regex_search(const charT* str, match_results<const charT, Allocator>& m,
+                 const basic_regex<charT, traits>& e,
+                 const regex_constants::match_flag_type flags = regex_constants::match_default);
+```

@@ -1,0 +1,319 @@
+
+
+# ISO/IEC 14882:2017(E)
+
+using-declarator, 182, 1421
+using-declarator-list, 182, 1421
+using-directive, 188–191
+using-directive, 188, 1421
+usual arithmetic arithmetics, *see* conversion, usual
+arithmetic
+usual deallocation function, 72
+UTF-8 character literal, 32
+
+implementation-defined, 167
+overloading and, 311
+volatile-qualified, 82
+
+waiting function, 1394
+<wchar_t>, 776
+wchar_t, *see* type, wchar_t
+<wctype>, 773
+weak result type, 1466
+weebly poorly formed forward progresses, 220
+weibull_distribution
+
+UTF-8 string literal, 35
+<utility>, 528
+<varray>, 1102
+valid, 44
+valid but unspecified state, 448
+valid, 77
+call by, 111
+
+probability density function, 1090
+weights
+discrete_constant, 1097
+piecewise_constant_distribution, 1008
+weights at boundaries
+piecewise_linear_distribution, 1100
+white space, 25
+wide string literal, 35
+wide-character literal, 32
+null, 24
+wide-character set, basic
+
+denormalized, *see* number, substantial
+indeterminate, 222
+null member pointer, 90
+null pointer, 90
+undefined unrepresentable integral, 90
+
+value computation, 14–15, 18, 113, 126, 135–137
+139, 262
+value representation, 77
+value-initialization, 221
+variable, 39
+terminated initialization, 221
+
+execution, 24
+writeable, 952
+
+template
+definition of, 342
+
+<variant>, 567
+variant member, 254
+<vector>, 867
+
+X(&), *see* constructor, copy
+value, 83
+
+vectorization-unsafe, 1008
+virt-pointer-spec, 242, 1425
+virtual base class, *see* base class, virtual
+virtual function, 261–265
+
+$V_n$ (spherical associated Legendre functions),
+1152
+
+zero
+division by undefined, 93
+remainder undefined, 93
+undefined division by, 131
+undefined initialization, 221
+zeta functions $\zeta$, 1151
+
+pure, 265, 266
+virtual function call, 265
+constructor and, 299
+destructor and, 299
+undefined pure, 266
+
+visibility, 50
+visible, 50
+void
+type, 82
+void&, 206
+volatile, 82
+
+constructor and, 247, 279
+destructor and, 247, 287
+
+# ISO/IEC 14882:2017(E)
+
+# 语法产生索引
+
+The first page for each entry is in the general text where the grammar production is defined. The second page is the corresponding page in the Grammar summary (Annex A).
+
+- abstract-declarator, 202, 1423
+- abstract-pack-declarator, 202, 1423
+- access-specifier, 255, 1426
+- additive-expression, 131, 1416
+- altdefs-class, 155, 1419
+- alignment-clause, 195, 1422
+- and-expression, 135, 1416
+- asm-definit, 191, 1421
+- assignment-specifier, 138, 1417
+- assignment-operator, 138, 1417
+- attribute, 194, 1421
+- attribute-clause, 195, 1422
+- attribute-declarator, 155, 1419
+- attribute-list, 194, 1422
+- attribute-space, 195, 1422
+- attribute-scoped, 194, 1422
+- attribute-specifier, 194, 1422
+- attribute-specifier-seq, 194, 1422
+- attribute-token, 194, 1422
+- attribute-using, 291, 1422
+- balanced-token, 195, 1422
+- balanced-token-seq, 195, 1422
+- base-class, 255, 1425
+- base-specifier, 255, 1425
+- base-specifier-list, 255, 1425
+- binary-digit, 29, 1410
+- binary-expression-port, 33, 1412
+- binary-literal, 29, 1410
+- block-declaration, 155, 1419
+- boolean-literal, 36, 1413
+- brace-or-equal-initializer, 220, 1420
+- braced-init, 220, 1422
+- c-char, 31, 1419
+- c-declaration-seq, 31, 1411
+- capture, 103, 1414
+- capture-default, 103, 1414
+- capture-list, 103, 1414
+- cast-expression, 129, 1416
+- character-literal, 31, 1411
+- class-head, 237, 1424
+- class-head-name, 237, 1424
+- class-key, 237, 1425
+- class-name, 237, 1424
+- class-or-decltype, 255, 1425
+- class-specifier, 237, 1424
+- class-visit-specifier, 237, 1425
+- compound-statement, 145, 1417
+- condition, 144, 1417
+- conditional-expression, 136, 1417
+- conditionally-supported-decl, 433, 1428
+- constant-expression, 139, 1417
+- constant-decl, 432, 1421
+- conversion-declarator, 285, 1426
+- conversion-function-id, 285, 1426
+- conversion-type-id, 285, 1426
+- ctor-initializer, 292, 1426
+- cv-qualifier, 202, 1423
+- cv-qualifier-seq, 202, 1423
+- d-char, 34, 1412
+- d-declaration-seq, 34, 1412
+- decimal-floating, 29, 1410
+- decimal-literal, 29, 1410
+- decl-specifier, 157, 1419
+- decl-specifier-seq, 157, 1419
+- declaration, 155, 1418
+- declaration-seq, 155, 1418
+- declaration-statement, 152, 1417
+- declarator, 201, 1422
+- declarator-id, 202, 1423
+- decltype-specifier, 167, 1420
+- deduction-guiding, 421, 1427
+- defined-macro-expression, 433, 1429
+- defining-type-id, 202, 1423
+- defining-type-specifier, 165, 1419
+- defining-type-specifier-seq, 165, 1420
+- delete-expression, 127, 1416
+- digit, 27, 1409
+- digit-sequence, 33, 1412
+- directory-separator, 124, 1416
+- elaborated-type-specifier, 170, 1420
+- if-group, 432, 1428
+- if-groups, 432, 1428
+- else-group, 432
+- empty-declaration, 155, 1419
+- enclosing-namespace-specifier, 178, 1421
+- encoding-prefix, 31, 1411
+- endif-line, 433, 1428
+- enum-base, 175, 1421
+- enum-body, 174, 1420
+- enum-brake, 174, 1420
+- enum-key, 175, 1427
+- enum-name, 174, 1427
+- enum-specifier, 174, 1420
+- enumerator, 175, 1421
+- enumerator-definition, 175, 1421
+- equality-expression, 133, 1416
+- escape-sequence, 31, 1411
+- exception-declaration, 422, 1427
+- exclusive-expression, 135, 1416
+- explicit-implicit-declaration, 392, 1427
+- explicit-specifier, 395, 1427
+- exponent-part, 33, 1422
+- exp-pr-or-braced-init-list, 220, 1424
+- expression, 139, 1417
+- expression-list, 109, 1415
+- expression-statement, 145, 1417
+- hex-cod, 23, 1408
+- hexadecimal-decimal-digit, 30, 1411
+- hexadecimal-escape-sequence, 30, 1410
+- hexadecimal-floating, 33, 1412
+- hexadecimal-fractional-constant, 33, 1412
+- hexadecimal-literal, 29, 1410
+- hexadecimal-prefix, 30, 1410
+- id-expression, 97, 1413
+- identifier, 27, 1409
+- identifier-list, 453, 1429
+- identifier-suffix, 27, 1409
+- if-group, 432, 1428
+- if-section, 432, 1428
+- inclusive-or-expression, 135, 1417
+- init-clause, 103, 1414
+- init-declarator, 201, 1422
+- init-declarator-list, 201, 1422
+- init-statement, 144, 1417
+- initializer, 220, 1424
+- initializer-clause, 220, 1424
+- initializer-list, 220, 1424
+- integer-literal, 20, 1410
+- integer-suffix, 30, 1411
+- iteration-statement, 148, 1418
+- fallback-specifier, 124, 1416
+- flename, 124
+- floating-list, 33, 1411
+- floating-suffix, 33, 1412
+- fold-expression, 108, 1414
+- fold-operator, 108, 1415
+- for-range, 148, 1418
+- for-range-initializer, 148, 1418
+- junction-constant, 33, 1412
+- function-body, 216, 154
+- function-definition, 216, 1424
+- function-specifier, 159, 1419
+- function-try-block, 422, 1427
+- group, 432, 1428
+- group-part, 432, 1428
+- hch-cod, 26, 1409
+- hch-sequence, 26, 1409
+- hch-pp-tokens, 434, 1429
+- hp-preprocessing, 333, 1429
+- handler, 422, 1427
+- hand-seq, 422, 1427
+- has-include-expression, 434, 1429
+- header-name, 26, 1409
+- labeled-statement, 145, 1417
+- lambda-clause, 103, 1414
+- lambda-declaration, 98, 1414
+- lambda-expression, 98, 1414
+- lambda-introducer, 98, 1414
+- linkage-specification, 191, 1421
+- liter, 29, 1410
+- literal-operator-id, 338, 1426
+- logical-and-expression, 135, 1417
+- logical-or-expression, 135, 1417
+- long-type, 30, 1411
+- long-suffix, 30, 1411
+- mem-initializer, 292, 1426
+- mem-initializer-id, 292, 1426
+- mem-initializer-list, 292, 1426
+- member-declaration, 241, 1425
+- member-declarator, 241, 1425
+- member-declarator-list, 241, 1425
+- member-specification, 241, 1425
+- multiplicative-expression, 131, 1416
+
+# ISO/IEC 14882:2017(E)
+
+named-namespace-definition, 178, 1421
+namespace-alias, 182, 1421
+namespace-alias-definition, 182, 1421
+namespace-body, 178, 1421
+namespace-definition, 178, 1421
+namespace-name, 178, 1421
+nested-namespace-specifier, 88, 1414
+nested-namespace-definition, 178, 1421
+new-declarator, 122, 1416
+new-expression, 122, 1415
+new-initializer, 122, 1416
+new-line, 433, 1429
+new-placement, 122, 1415
+new-type, 122, 1415
+nodeccept-function-declaration, 155, 1419
+noexcept-exception, 155, 1419
+noexcept-specifier, 427, 1428
+dondrift, 27, 1409
+dondrift-dict, 30, 1410
+noptr-abstract-declarator, 202, 1423
+optr-abstract-qualifiers, 203, 1423
+optr-specifier, 202, 1423
+optr-new-declarator, 122, 1416
+
+q-char, 26, 1409
+q-char-sequence, 26, 1409
+qualified-id, 27, 1414
+qualified-specifier, 182, 1421
+r-char, 34, 1412
+r-char-sequence, 34, 1412
+raw-string, 29, 1410
+relational-expression, 135, 1417
+relative-path, 136, 1426
+root-name, 178, 1421
+

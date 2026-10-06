@@ -1,0 +1,149 @@
+
+
+# ISO/IEC 14882:2017(E)
+
+2 Returns: do_scan_is(m, low, high)。
+
+```
+const charT* scan_do_not(mask mask, const charT* low, const charT* high) const;
+```
+
+3 Returns: do_scan_not(m, low, high)。
+
+```
+charT toupper(charT) const;
+const charT* toupper(charT* low, const charT* high) const;
+```
+
+4 Returns: do_tolower(c) 或 do_tolower(low, high)。
+
+```
+charT tolower(charT) const;
+const charT* tolower(charT* low, const charT* high) const;
+const charT* tolower(charT* c) or do_tolower(low, high) const;
+```
+
+5 Returns: do_wide(c) 或 do_wide(low, high)。
+
+```
+charT widen(charT) const;
+const charT* widen(const charT* low, const charT* high, charT* to) const;
+const charT* do_wide(c) or do_wide(low, high) const;
+char narrow(charT c, charT default) const;
+const charT* narrow(const charT* low, const charT* high, charT default, charT* to) const;
+```
+
+7 Returns: do_narrow(c) 或 do_narrow(low, high, default)。
+
+## 25.4.1.1.2 虚函数 [locale.ctype.virtuals]
+
+```
+bool do_is(mask, charT c) const;
+const charT* do_is(const charT* low, const charT* high, mask* vec) const;
+```
+
+Effects: 转换字符或字符序列。对于每个参数，识别 ctype_base:mask 的值 M；第二种形式识别 ctype_base:mask 的值 M 对应 *p（当 low <= p && p < high 时），并存 vec[p - low] 中。
+
+2 Returns: 第一种形式返回表达式 (M & m) != 0 的结果；如果字符具有该特征则返回 true。第二种形式返回 high。
+
+```
+const charT* do_scan_is(mask m, const charT* low, const charT* high) const;
+```
+
+3 Effects: 在缓冲区中定位符合分类 m 的字符。
+
+4 Returns: 范围 [low, high] 内的最小指针 p，使得 is(m, *p) 返回 true；否则返回 high。
+
+```
+const charT* do_scan_not(mask m, const charT* low, const charT* high) const;
+```
+
+5 Effects: 在缓冲区中定位不符合分类 m 的字符。
+
+6 Returns: 范围 [low, high] 内的最小指针 p（如果有），使得 is(m, *p) 返回 true；否则返回 high。
+
+```
+charT toupper(charT) const;
+const charT* toupper(charT* low, const charT* high) const;
+```
+
+7 Effects: 将字符或字符转换为大写。第二种形式将范围 [low, high] 内每个存在对应大写字符的字符 p 替换为该字符。
+
+8 Returns: 第一种形式如果已知存在则则返回大写字符，否则返回其参数。第二种形式返回 high。
+
+```
+charT tolower(charT) const;
+const charT* tolower(charT* low, const charT* high) const;
+```
+
+Effects: 将字符或字符转换为大小写。第二种形式将范围 [low, high] 内且存在对应小写字符的 p 替换为该字符。
+
+Returns: 第一种形式如果存在则返回对应的小写字符，否则返回参数。第二种形式返回 high。
+
+```
+charT widen(charT) const;
+const charT* widen(const charT* low, const charT* high) const;
+```
+
+Effects: 将字符值或字符序列转换为宽字符。对于范围 [low, high] 内的字符，对于任何命类型的 ctype_base:mask M，is(c, M) || !is(M, do_wide(c)) 为真。
+
+第二种形式将 p 位于范围 [low, high] 内转换为转换值。
+
+```
+char narrow(charT c, charT default) const;
+const charT* narrow(const charT* low, const charT* high, charT default, charT* to) const;
+```
+
+Effects: 将字符值或字符序列转换为窄字符。对于范围 [low, high] 内的字符，对于任何命名的 ctype_base:mask M，is(c, M) || !is(M, do_narrow(c)) 为真。
+
+第二种形式将 p 位于范围 [low, high] 内转换为转换值。
+
+Returns: 第一种形式返回转换值。第二种形式返回 high。
+
+## 25.4.1.2 类模板 type_typename [locale.ctype.typename]
+
+```cpp
+namespace std {
+  template<class char>
+  class type_typename : public type<char> {
+  public:
+    using mask = type<char>::mask;
+    explicit type_typename(const char*, size_t refs = 0);
+    explicit type_typename(const string&, size_t refs = 0);
+
+  protected:
+    ~type_typename();
+  };
+}
+```
+
+## 25.4.1.3 ctype 特化 [facet.ctype.special]
+
+```cpp
+namespace std {
+template <>
+    class ctype<char> : public locale::facet, public ctype_base {
+public:
+    using char* type = char;
+
+    explicit ctype(const mask* tab = nullptr, bool del = false, size_t refs = 0);
+    bool is(mask m, const char c) const;
+    const char* is(const char* low, const char* high, mask* vec) const;
+    const* scan(mask m, const char* low, const char* high) const;
+    const* scan(const char* not, mask m, const char* low, const char* high) const;
+
+    char toupper(char c) const;
+    const char* toupper(const char* low, const char* high) const;
+    char tolower(char c) const;
+    const char* tolower(const char* low, const char* high) const;
+
+    char widen(char c) const;
+    const char* widen(const char* low, const char* high, char* to) const;
+    char narrow(char c, char default) const;
+    const char* narrow(const char* low, const char* high, char default, char* to) const;
+
+    const mask* table() const;
+};
+}
+```
+

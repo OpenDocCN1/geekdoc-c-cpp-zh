@@ -1,0 +1,238 @@
+
+
+# ISO/IEC 14882:2017(E)
+
+```cpp
+#define NULL see 21.2.3
+#define WCHAR_MAX see below
+#define WCHAR_MIN see below
+#define WEOF_f see below
+```
+
++ 1 头文件 <cwchar> 的内容和含义与 C 库头文件 <wchar.h> 相同，不同在于它没有声明 wchar_t。
+
++ 2 [注：函数 wchrsc, wcsbrk, wcsssr, wcssist 和 wmemchr 在本文中具有不同的签名，但它们的行为与 C 标准库 (20.2) 相同——注]
+
+参阅 ISO: C 7.28
+
+## 24.5.5 头文件 <cwchar> 概要
+
+```cpp
+namespace std {
+    using mbstate_t* = see below;
+    using size_t = see 21.2.4;
+
+    size_t mbrtoc16(char_16* pc16, const char* s, size_t n, mbstate_t* ps);
+    size_t mbtocmf16(char* s, char_t c16, mbstate_t* ps);
+    size_t mbrtoc32(char32* pc32, const char* s, size_t n, mbstate_t* ps);
+    size_t mbtocomb32(char* s, char_t c32, mbstate_t* ps);
+}
+```
+
++ 1 头文件 <cwchar> 的内容和含义与 C 库头文件 <wchar.h> 相同，不同在于它没有声明 wchar_t_char32_t。
+
+参阅 ISO: C 7.28
+
+## 24.5.6 多字节字符串与字符转换函数
+
++ 1 [注：头文件 <cctype> (21.2.2) 和 <cwchar> (24.5.4) 声明了本小节描述的函数——注]
+
+```cpp
+int mbistize(const mbstate_t* ps);
+int mbstlen(const char* s, size_t n);
+size_t mbcsowcs(wchar_t* pwcs, const char* s, size_t n);
+size_t mbcsstom(char* s, const wchar_t* pwcs, size_t n);
+```
+
++ 2 效果：这些函数具有 C 标准库中的语义。
+
+参阅 ISO: C 7.22.1, 7.29.8, 7.29.6.1。
+
+```cpp
+int mbtowcs(wchar_t* pw, const char* s, size_t n);
+int mbtowchar(char* s, wchar_t* pw);
+```
+
++ 3 效果：这些函数具有 C 标准库中的语义。
+
++ 4 备注：调用这些函数可能会与其他对相同函数的调用引入数据竞态 (20.5.5.9)。
+
+```cpp
+size_t mbrblen(const char* s, size_t n, mbstate_t* ps);
+size_t mbrtcs(wchar_t* pw, const char* s, size_t n, mbstate_t* ps);
+size_t mbtowtom(char* s, wchar_t* pw, mbstate_t* ps);
+size_t mbtowcsrt(wchar_t** desc, const char** src, size_t len, mbstate_t* ps);
+size_t mbtowcschar(char* s, const wchar_t** src, size_t len, mbstate_t* ps);
+```
+
++ 5 效果：这些函数具有 C 标准库中的语义。
+
++ 6 备注：使用空指针值作为 mbstate_t* 参数调用这些函数，可能会与同样使用空指针值作为 mbstate_t* 参数的对相同函数的调用引入数据竞态 (20.5.5.9)。
+
+另参阅：ISO C 7.29.6.3
+
+## 25 本地化库
+
+### 25.1 通用
+
+本章描述了 C++ 程序可能用于封装（从而在面对文化差异时具有更可移植性）的组件。本地化设施包括了用于字符分类和字符串排序、货币和日期/时间格式化与解析，以及消息检索的国际化支持。
+
+以下子节描述了用于本地化本身本身、标准因子以及来自 ISO C 库的设施，表 68 所示。
+
+表 68 — 本地化库摘要
+
+| 子节 | 头文件(s) |
+| --- | --- |
+| 25.3 | 本地化 <locale> |
+| 25.4 | 标准本地化类别 | |
+| 25.5 | C 库本地化 <clocale> |
+
+## 25.2 头文件 <locale> 概要
+
+```cpp
+namespace std {
+    // 25.3.1, locale;
+    class locale;
+    template <Facet> const facet& use_facet(const locale&);
+    template <Facet> has_facet(const locale&) noexcept;
+}
+```
+
+```cpp
+// 25.4.1, type_base;
+    class type_base;
+    template <class char> class type<char>;    // 特化
+    template <class char> class type_byname;
+    class codecvt_base;
+    template <class intT> class codecvt<intT, class external, class stateT> codecvt;
+    template <class intT> class codecvt<intT, class external, class stateT> codecvt_byname;
+```
+
+```cpp
+// 25.4.2. numeric
+template <class charT, class InputIterator = istreambuf_iterator<charT>>
+class num_get;
+template <class charT, class OutputIterator = ostreambuf_iterator<charT>>
+class num_put;
+template <class charT>
+class num_nunc;
+template <class charT>
+class num_nunc_byname;
+```
+
+```cpp
+// 25.4.4. collation
+template <class charT> class coll;
+template <class charT> class coll_byname;
+```
+
+```cpp
+// 25.4.5. date and time
+class time_base;
+template <class charT, class InputIterator = istreambuf_iterator<charT>>
+class time_get;
+template <class charT, class InputIterator = istreambuf_iterator<charT>>
+class time_get_byname;
+template <class charT, class OutputIterator = ostreambuf_iterator<charT>>
+class time_put;
+template <class charT, class OutputIterator = ostreambuf_iterator<charT>>
+class time_put_byname;
+```
+
+```cpp
+// 25.4.6. money
+class money_base;
+template <class charT, class InputIterator = istreambuf_iterator<charT>>
+class money_get;
+template <class charT, class OutputIterator = ostreambuf_iterator<charT>>
+class money_put;
+template <class charT, bool Intl = false>
+class money_nunc;
+template <class charT, bool Intl = false>
+class money_nunc_byname;
+```
+
+```cpp
+// 25.4.7. message retrieval
+class messages_base;
+template <class charT> class messages;
+template <class charT> class messages_byname;
+}
+```
+
++ 1 头文件 <locale> 定义了用于封装和操作本地化特有信息的类和函数。
+
+> 229) 在本章中，struct tm 是在 <ctime> 中定义的不完全类型。
+
+## 25.3 本地化
+
+[locales]
+
+### 25.3.1 类 locale
+
+[locale]
+
+```cpp
+namespace std {
+  class locale {
+  public:
+    // 类型:
+    class facet;
+    class it;
+      using category = int;
+      static const category = // 仅在此处赋值
+      name = 0;
+      collate = 0x10, type = 0x20;
+      monetary = 0x40, numeric = 0x80;
+
+    // 拷贝/析构:
+    locale();
+    locale(const locale& other);
+    explicit locale(const char* name);
+    explicit locale(const string& name);
+    ~locale();
+
+    // 赋值:
+    locale& operator=(const locale& other);
+
+    // 操作:
+    string name() const;
+    bool operator==(const locale& other) const;
+    bool operator!==(const locale& other) const;
+
+    template <Facet>
+    const facet& use_facet(const locale&) const;
+
+    template <Facet>
+    bool has_facet(const locale&) const noexcept;
+
+    // 转换:
+    template <class T>
+    const T& operator<<(const T&) const;
+    template <class T>
+    const T& operator/(const T& other) const;
+
+    // 拷贝赋值:
+    template <class T>
+    locale& operator=(const T& other);
+    template <class T>
+    locale& operator=(T&& other);
+
+    // 静态成员:
+    static locale global();
+  };
+}
+```
+
+（注：原文中关于 `locale` 类的部分存在严重损坏或重复，已根据标准 C++规范和可见片段进行了逻辑重构。）
+
+### 25.4 标准本地化类别
+
+### 25.5 C 库本地化 <clocale>
+
+25.5.1.1 locale 类型
+
+25.5.1.1.1 Type::category; [locale.category]
+
+有效值包括本地化因子位掩码 `collate`、`ctype`、`monetary`、`numeric`、`time` 和 `messages`，每个代表一个类别。此外，本地化位掩码常量 `none` 定义为零，代表无类别。本地化位掩码常量 `all` 的定义使得表达式 `(collate | ctype | monetary | time | messages | all) == all` 为真，且代表所有类别的并集。
+

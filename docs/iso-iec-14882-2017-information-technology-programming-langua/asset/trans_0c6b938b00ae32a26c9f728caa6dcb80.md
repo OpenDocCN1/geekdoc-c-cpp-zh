@@ -1,0 +1,347 @@
+
+
+# ISO/IEC 14882:2017(E)
+
+- proj, 1056
+- promise, 1395
+- constructor, 1395, 1396
+- destructor, 1396
+- get_future, 1396
+- operator, 1396
+- set_exception_at_thread_exit, 1397
+- set_value, 1396
+- set_value_at_thread_exit, 1397
+- swap, 1396
+- propagate_on_container_copy_assignment
+- allocator_traits, 602
+- scoped_allocator_adaptor, 647
+- propagate_on_container_assignment
+- allocator_traits, 602
+- scoped_allocator_adaptor, 647
+- propagate_on_container_assignment
+- allocator_traits, 602
+- scoped_allocator_adaptor, 647
+- proximate, 1284
+- istreambuf_iterator, 981
+- ptr
+- from_chars_result, 531
+- to_chars_result, 531
+- ptr_fun
+- dombie, 469
+- ptrdiff_t, 476
+- pubbase
+- pubputhaise
+- basic_streambuf, 1179
+- pubsetekoff
+- basic_streambuf, 1179
+- pubseekepos
+- basic_streambuf, 1179
+- pubbuffer
+- basic_streambuf, 1179
+- pubsync
+- basic_streambuf, 1179
+- push
+- priority_queue, 948
+- push_back
+- basic_string, 745
+- deque, 874
+- push_front
+- deque, 874
+- forward_list, 878
+- push_heap, 1040
+- put
+- basic_ostream, 1205
+- money_put, 817
+- num_put, 802
+- time_put, 814
+- put_money, 1208
+- time_put, 1209
+- putback,
+- nbasic_istream, 1195
+- putc, 1288
+- putchar, 1288
+- putenv, 508
+- puts, 1288
+- putwc, 774
+- putchar, 774
+- word
+- ios_base, 1166
+- qsort, 477, 1046
+- <queue>, 943
+- queue, 943
+- swap, 946
+- quick_exit, 477, 492
+- quiet_NaN
+- numeric_limits, 486
+- quoted, 1209, 1210
+- radix
+- numeric_limits, 484
+- raise, 509
+- rand, 477, 1102
+- discouraged, 1102
+- RAND_MAX, 477
+- <random>, 1068-1070
+- random_access_iterator_tag, 963
+- random_device, 1079
+- constructor, 1079
+- entropy, 1080
+- operator(), 1080
+- random_shuffle
+- zombie, 469
+- range_error, 511, 514
+- constructor, 514
+- rank, 691
+- ranlux24, 1078
+- ranlux24_base, 1078
+- ranux48, 1079
+- ranux48_base, 1078
+- <ratio>, 699
+- ratio, 699, 700
+- ratio_equal, 701
+- ratio_greater, 702
+- ratio_greater_equal, 732
+# ISO/IEC 14882:2017(E)
+
+- ratio_less, 702
+- ratio_less_equal, 702
+- ratio_not_equal, 701
+- raw_storage_iterator, 1472
+- base, 1473
+- constructor, 1473
+- operator=, 1473
+- operator++, 1473
+- operator==, 1473
+- rbegin
+- basic_string, 742
+- basic_string_view, 767
+- rbegin(const), 984
+- rbegin(initializer_list<E>), 984
+- rbegin(T<E>), 984
+- basic_fstream, 1235
+- basic_istream, 1230
+- basic_ios, 1170
+- basic_istream, 1217
+- basic_ofstream, 1232
+- basic_ostream, 1219
+- basic_ostring, 1221
+- istreambuf, 1464
+- oostream, 1464
+- strerror, 1666
+- buffer_convert, 1480
+- rdstate
+- basic_ios, 1172
+- read
+- basic_istream, 1195
+- read_symlink, 1284
+- readome
+- basic_istream, 1195
+- ready
+- match_results, 1321
+- complex, 1053, 1054, 1056
+- realloc, 407, 655
+- rebind
+- pointer_traits, 598
+- rebind_alloc
+- allocator_traits, 603
+- recursion_pending
+- recursive_directory_iterator, 1273
+- recursive_directory_iterator, 1271
+- constructor, 1272, 1273
+- depth, 1273
+- disable_recursion_pending, 1274
+- increment, 1273
+- operator++, 1273
+- operator=, 1273
+- options, 1273
+- pop, 1274
+- recursion_pending, 1273
+- recursive_mutex, 1366
+- recursive_timed_mutex, 1368
+- deducce, 1127
+- reference_wrapper, 656
+- reference_wrapper, 655
+- argument_type, 1469
+- constructor, 655
+- first_argument_type, 1469
+- get, 656
+- operator&, 656
+- operator, 655
+- second_argument_type, 1469
+- weak_type, 1469
+- refresh
+- directory_entry, 1266
+- <regex>, 1295
+- regex, 1295
+- regex_constants, 1301
+- error_type, 1304, 1305
+- match_flag, 1302
+- syntax_option, 1301
+- regex_error, 1304, 1306, 1336
+- constructor, 1330
+- regex_iterator, 1329
+- constructor, 1330
+- ncre, 1330
+- operator=, 1330
+- operator, 1330
+- operator+, 1330, 1331
+- operator->, 1330
+- operator==, 1330, 1325
+- regex_match, 1324
+- regex_replace, 1228
+- regex_search, 1228
+- regex_iterator, 1331
+- constructor, 1333
+- end_of_sequence, 1331
+- operator=, 1334
+- operator+, 1334
+- operator++, 1334, 1335
+- operator->, 1334
+- operator==, 1332, 1334
+- regex_traits, 1305
+
+# ISO/IEC 14882:2017(E)
+
+- char_class_type, 1305
+- isctype, 1336
+- length, 1305
+- lookup_classname, 1306
+- lookup_colname, 1306
+- transform, 1305
+- transform_primary, 1306
+- transform, 1305
+- transform_nocase, 1305
+- value, 1307
+- regular_callback
+- ios_base, 1107
+- regular_expression_traits
+- isctype, 1336
+- lookup_classname, 1306
+- lookup_colname, 1336
+- transform_primary, 1336
+- reinterpoint_pointer_class
+- shared_ptr, 628
+- rel_ops, 528
+- relative, 1284
+- path, 1254
+- release
+- monotonic_buffer_resource, 644
+- shared_lock, 1382
+- synchronized_pool_resource, 642
+- unique_lock, 1378
+- unique_ptr, 614
+- unynchronized_pool_resource, 642
+- remainder, 1136
+- remainderf, 1288
+- remainder, 1136
+- remove, 1023, 1288
+- forward_list, 881
+- list, 887
+- path, 1285
+- remove_all, 1285
+- remove_all_extents, 695
+- remove_const, 693
+- remove_copy, 1023
+- remove_copy_if, 1023
+- remove_extension, 1252
+- remove_filename, 1266
+- directory_entry, 1266
+- path, 1252
+- replace_if, 1021
+- basic_string, 743
+- vector, 892
+- reset
+- any, 584
+- bitset, 590
+- optional, 563
+- packaged_ptr, 624
+- task, 1407
+- shared_ptr, 642
+- unique_ptr, 614
+- vector_ptr, 620
+- resets, 1206
+- resize
+- basic_string, 742, 743
+- ndeq, 879
+- forward_list, 879
+- list, 885
+- vallary, 1112
+- vector, 893
+- resize_file, 1286
+- resource
+- polymorphic_allocator, 639
+- result_type
+- binary_negate, 1471
+- bit_and, 1467
+
+# ISO/IEC 14882:2017(E)
+
+- bit_not, 1467
+- bit_or, 1467
+- bit_xor, 1467
+- divides, 1467
+- equal_to, 1467
+- function, 1467
+- greater, 1467
+- greater_equal, 1467
+- hash, 1470
+- lessless, 1467
+- less_equal, 1467
+- logical_and, 1467
+- logical_not, 1467
+- logical_or, 1467
+- map::value_compare, 1470
+- mem_fn, 1470
+- minus, 1467
+- modulus, 1467
+- multimap::value_compare, 1470
+- multiplied, 1467
+- negate, 1467
+- not_equal_to, 1467
+- owner_less, 1467
+- plus, 1467
+- unary_negate, 1471
+- rethrow_exception, 506
+- rethrow_if_nested, 507
+- nested_exception, 506
+- rethrow_nested, 506
+- return, temporary_buffer, 1474
+- reverse, 1025
+- forward_list, 882
+- list, 888
+- reverse_copy, 1025
+- reverse_iterator, 964
+- base, 961
+- constructor, 966
+- make_reverse_iterator_non-member
+- function, 969
+- operator*, 968
+- operator=, 966
+- operator+=, 969
+- operator++, 967
+- operator-=, 967
+- operator!=, 967
+- operator<, 967
+- operator<=, 967
+- operator>=, 968
+- operator=, 968
+- operator>=, 968
+- operator[], 968
+- rend, 1288
+- basic_string, 742
+- basic_string_value, 767
+- rend(&C), 984
+- rend(initializer_list<E>), 984
+- rend({Array<DJ>}), 984
+- system_clock, 717
+- replace, 1021
+- basic_string, 749-751
+- replace_copy, 1021
+- replace_copy_if, 1021
+- replace_extension, 1252
+- replace_filename, 1266
+- directory_entry, 1266
+- path, 1252
+- replace_if, 1021
+- basic_string, 743
+- vector, 892
+

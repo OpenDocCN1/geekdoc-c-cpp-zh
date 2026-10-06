@@ -1,0 +1,155 @@
+
+
+# ISO/IEC 14882:2017(E)
+
+>, 其中 Args 为零个或多个类型参数；则 rebind 的实例化是非法的。
+
+## 23.10.3 指针特性的成员函数
+
+```cpp
+static pointer_traits::pointer_to(见下文) noexcept;
+static pointer_traits<T>::pointer_to(见下文) noexcept;
+```
+
+- 备注：如果 element_type 为 void，则 t 的类型未指定；否则，为 element_type&。
+
+## 23.10.4 指针安全
+
+当带有引用该对象的参数的 undeclare_reachable 调用次数超过带有该对象参数的 undeclare_reachable 调用次数时，一个完整对象被声明为可达的。
+
+```cpp
+void declare_reachable();
+```
+
+```cpp
+template <class T> declare_reachable(T* p);
+```
+
+```cpp
+void declare_no_pointers(char* p, size_t n);
+```
+
+- 要求：指定范围内的指针当前已通过 declare_no_pointers() 注册。如果指定范围在一个已分配的对象中，则它应当位于单个已分配的对象内。该对象应持续到相应的 undeclare_no_pointers() 调用。在垃圾回收实现中，对象中的某个区域已通过 undeclare_no_pointers() 注册的事实不应阻止对象被收集。
+- 影响：从 p 开始的 n 不再包含可追踪的指针位置，无论其类型为何。因此，如果此处指向的内容由全局 operator new 创建且之前未声明为可达，则通过该处的指针进行感应是未定义的。[注：这可能用于通知垃圾回收器或泄漏检测器此内存可能无法被追踪。]
+- 抛出：无。
+- 注意：在某些条件下，实现可能需要分配内存。然而，如果内存分配失败，可以忽略该请求。
+
+```cpp
+13 void undeclare_no_pointers(char* p, size_t n);
+```
+
+14 要求：相同的范围之前已传递给 declare_no_pointers()。应在对象生命周期结束之前调用。
+
+15 抛出：无。
+
+```cpp
+16 pointer_safety get_pointer_safety() noexcept;
+17 返回：如果实现具有严格的指针安全（6.7.4.3），则返回 pointer_safety::strict。如果实现具有宽松的指针安全，则 get_pointer_safety 返回 pointer_safety::relaxed 还是 pointer_safety::preferred 取决于实现。
+```
+
+## 23.10.5 对齐 [ptr.align]
+
+```cpp
+1 void* align(size_t size, size_t alignment, void*& ptr, size_t space);
+2 影响：如果要在 ptr 指向的长度为 space 的缓冲区中修复 alignment 对齐的字节，则函数将更新 ptr 为第一个可能的存储地址，并根据用于对齐的字节数减少 space。否则，函数不执行任何操作。
+```
+
+3 要求：
+
+- (2.1) alignment 为 2 的幂
+- (2.2) ptr 应表示至少 space 字节的连续存储的地址
+
+4 返回：如果请求的对齐缓冲区无法放入可用空间，则返回空，否则调整 ptr 的值。
+
+> [注：该函数更新 ptr 和 space 参数，以便可以使用不同的对齐方式重复调用，并为同一个缓冲区使用 space。]
+
+## 23.10.6 分配器标记 [allocator.tag]
+
+```cpp
+namespace std {
+inline allocator_arg_t() = default;
+inline const allocator_arg_t allocator_arg_t() {};
+```
+
+1 allocator_t 结构体是一个空结构，用作唯一类型以区分构造函数和函数重载。具体而言，几种类型（见元组 23.5）具有构造函数，以 allocator_arg 为第一个参数，随后紧跟一个满足 Allocator 要求（23.5.5）的类型参数。
+
+## 23.10.7 uses_allocator [allocator.uses]
+
+```cpp
+template <class T, class Alloc> struct T 有一个嵌套的 allocator_type，该类型可转换为 Alloc。
+```
+
+备注：自动检测 T 是否可从 Alloc 转换。满足 BaseTypeRequires (23.15.1)。如果限定标识符 T::allocator_type 有效且表示一个类型 (17.8.2)，并且 is_convertible_v<T, T::allocator_type> != false，则实现应提供派生自 true_type 的定义，否则应派生自 false_type。程序可以特化此模板，以便对于一个没有嵌套 allocator_type 但尽管可以在任何地方使用分配器构造的用户定义的 T 派生自 true_type。
+
+> 可能会返回 pointer_safety::preferred 以指示检测器正在运行，这样程序就可以避免虚假的泄漏报告。
+
+- (1.1) 构造函数的第一个参数类型为 allocator_arg_t，第二个参数类型为 Alloc 或
+- (1.2) 构造函数的最后一个参数类型为 Alloc。
+
+## 23.10.7 分配器-使用 构造 [allocator.uses_construction]
+
+带有 Alloc 的 uses-allocator 构造根据以下规则，使用类型为 V1, V2, ... 的构造参数 v1, v2, ... 以及类型为 Alloc 的分配器来构造类型为 T 的对象 obj：
+
+- (1.1) 如果 uses_allocator<V, Alloc> 为 true 且 is_constructible_v<T, V1, V2, ...> 为 true，则 obj 初始化为 obj(v1, v2, ...);
+- (1.2) 如果 uses_allocator<V, Alloc> 为 true 且 is_constructible_v<T, V1, V2, ...> 为 true，则 obj 初始化为 obj(v1, v2, ...);
+- (1.3) 如果 uses_allocator<V, Alloc> 为 true 且 is_constructible_v<T, V1, V2, ...> 为 false，则 obj 初始化为 obj();
+- (1.4) 否则，uses_allocator<V, Alloc> 的请求是非法的。[注：如果 uses_allocator 为 true。]
+
+## 23.10.8 分配器特性 [allocator.traits]
+
+allocator_traits 为所有分配器提供了接口。
+
+```cpp
+namespace std {
+template <class Alloc>
+struct allocator_traits {
+  using value_type = typename Alloc::value_type;
+  using pointer = typename Alloc::pointer;
+  using const_pointer = typename Alloc::const_pointer;
+  using reference = typename Alloc::reference;
+  using const_reference = typename Alloc::const_reference;
+  using difference_type = typename Alloc::difference_type;
+  using size_type = typename Alloc::size_type;
+  using allocator_type = Alloc;
+
+  template <class U>
+  struct rebind {
+    using other = allocator_traits<U>;
+  };
+
+  static pointer allocate(size_type n);
+  static void deallocate(pointer p, size_type n);
+};
+```
+
+### 23.10.8.1 分配器特性类型 [allocator.traits.types]
+
+- 1 pointer = 见下文，如果 Alloc::pointer 有效且表示一个类型 (17.8.2)。
+- 2 const_pointer = 见下文，如果 Alloc::const_pointer 有效且表示一个类型 (17.8.2)。
+- 3 void_pointer = 见下文，如果 Alloc::void_pointer 有效且表示一个类型 (17.8.2)。
+- 4 const_void_pointer = 见下文，如果 Alloc::const_void_pointer 有效且表示一个类型 (17.8.2)。
+- 5 difference_type = 见下文，如果 Alloc::difference_type 有效且表示一个类型 (17.8.2)。
+- 6 size_type = 见下文，如果 Alloc::size_type 有效且表示一个类型 (17.8.2)。
+- 7 propagate_on_container_assignment = 见下文，如果 Alloc::propagate_on_container_assignment 有效且表示一个类型 (17.8.2)。
+- 8 propagate_on_container_move_assignment = 见下文，如果 Alloc::propagate_on_container_move_assignment 有效且表示一个类型 (17.8.2)。
+- 9 propagate_on_container_swap = 见下文，如果 Alloc::propagate_on_container_swap 有效且表示一个类型 (17.8.2)。
+- is_always_equal = 见下文，如果 Alloc::is_always_equal 有效且表示一个类型 (17.8.2)。
+
+```cpp
+template<class T, class... Args>
+static void construct(Allocator& a, T* p, Args&&... args);
+```
+
+```cpp
+template<class T>
+static void destroy(Allocator& a, T* p);
+```
+
+```cpp
+static size_type max_size(const Alloc& a) noexcept;
+```
+
+```cpp
+static bool select_on_container_construction(const Alloc& rhs);
+```
+

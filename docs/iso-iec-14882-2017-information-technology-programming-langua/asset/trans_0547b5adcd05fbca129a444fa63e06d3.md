@@ -1,0 +1,689 @@
+
+
+## ISO/IEC 14882:2017(E)
+
+- streambuf, 1217
+- string, 1217
+- swap, 1217
+- basic_istream<char>, 1221
+- basic_istream<char_t>, 1221
+- basic_ofstream, 1154, 1230
+- close, 1231, 1232
+- open, 1232
+- operator=, 1232
+- streambuf, 1232
+- swap, 1232
+- basic_ostream<char>, 1221
+- basic_ofstream<char_t>, 1221
+- constructor, 1198, 1218
+- destructor, 1200
+- flush, 1205
+- init, 1200
+- operator<<, 1202, 1204, 1206
+- operator=, 1200
+- put, 1205
+- seekp, 1201
+- swap, 1201
+- tell, 1201
+- write, 1205
+- basic_ostream::sentry, 1200
+- constructor, 1200
+- destructor, 1200
+- operator bool
+- basic_ostream<char>, 1185
+- basic_ostream<char_t>, 1185
+- basic_ostambuf::iterator, 1154
+- basic_ostream, 1154, 1217
+- constructor, 1218
+- operator=, 1219
+- streambuf, 1219
+- string, 1219
+- swap, 1219
+- basic_ostream<char>, 1221
+- basic_ostream<char_t>, 1221
+- basic_seekg, 1295, 1307, 1335
+- assign, 1312
+- constants, 1310
+- constructor, 1310, 1311
+- flag_type, 1312
+- getloc, 1313
+- imbue, 1313
+- mark_count, 1312
+- operator=, 1311, 1312
+- swap, 1313
+- basic_streambuf, 1154, 1176
+- constructor, 1178
+- destructor, 1178
+- eback, 1180
+- getptr, 1181
+- gptr, 1181
+- dump, 1181
+- getloc, 1179
+- gptr, 1181
+- imbue, 1181
+- in_avail, 1179
+- operators, 1180
+- overflow, 1184
+- packfail, 1183
+- pbase, 1181
+- dump, 1181
+- gptr, 1182
+- pubian, 1179
+- pubseekoff, 1179
+- pubseekpos, 1179
+- pubsetf, 1179
+- pubync, 1179
+- sbpc, 1179
+- seekf, 1182
+- seekpos, 1182
+- setbuf, 1182
+- setg, 1116
+- setp, 1181
+- sgetc, 1179
+- sgetn, 1179
+- howmanyc, 1182
+- snextx, 1179
+- sputbackc, 1180
+- sputc, 1180
+- sputn, 1180
+- suggepc, 1180
+- swap, 1180
+- sync, 1182
+- uflow, 1183
+- underflow, 1182
+- xgetset, 1182
+- xputbuf, 1184
+- basic_streambuf<char>, 1175
+- basic_streambuf<char_t>, 1175
+- basic_streambuf, 733, 756, 1211
+- append, 744, 745
+- assign, 745-747
+- at, 743
+- back, 744
+- begin, 742
+- c_str, 751
+- capacity, 743
+- cbegin, 742
+- cend, 742
+- clear, 743
+- compare, 755
+- constructor, 738-740
+- copy, 751
+- crbegin, 742
+- crend, 742
+- data, 751
+- empty, 743
+- and, 742
+- erase, 748, 749
+- find, 752
+- find_first_of, 753, 754
+- find_first_of, 752, 753
+- find_last_of, 753
+- find_last_of, 770
+- front, 743
+- get_allocator, 751
+- getline, 759, 760
+- insert, 747, 748
+- length, 742
+- max_size, 742
+- operator_basic_string_view, 751
+- operator!, 757, 758
+- operator*, 756, 757
+- operator==, 744
+- operator?, 708
+- operator<, 759
+- operator<, 741, 742
+- operator=, 757
+- operator>, 758
+- operator>=, 759
+- operator[], 743
+- pop_back, 749
+- push_back, 745
+- rbegin, 742
+- rend, 742
+- replace, 749, 751
+- reserve, 743
+- resize, 742, 743
+- rfind, 752
+- shrink_to_fit, 743
+- size, 742
+- subtr, 754
+- swap, 751, 759
+- basic_string_view, 764
+- at, 767
+- back, 767
+- begin, 766
+- cbegin, 766
+- cend, 766
+- compare, 768, 769
+- const_iterator, 766
+- constructor, 766
+- copy, 768
+- crbegin, 767
+- crend, 767
+- data, 768
+- empty, 767
+- end, 766
+- find, 769
+- find_first_of, 770
+- find_last_of, 770
+- find_last_of, 770
+- front, 767
+- length, 767
+- max_size, 767
+- operator!, 771
+- operator*, 771
+- operator<, 772
+- operator<=, 772
+- operator==, 771
+- operator>, 771
+- operator>=, 772
+- operator[], 767
+- rbegin, 767
+- remove_prefix, 768
+- remove_suffix, 768
+- rend, 769
+- rfind, 769
+- size, 767
+- ubstr, 768
+- swap, 768
+- basic_string_buf, 1154, 1211
+- constructor, 1213
+- operator==, 1213
+- overflow, 1214
+- backfault, 1214
+- seekoff, 1215
+- seekpos, 1215
+- str, 1213
+- swap, 1213
+- underflow, 1214
+- basic_string_buf<char>, 1211
+- basic_string_buf<wchar_t>, 1211
+- basic_string_stream, 1154, 1219
+- constructor, 1220
+- operator(), 1220
+- streambuf, 1221
+- string, 1221
+- swap, 1221
+- basic_string_stream<char>, 1271
+- basic_string_stream<wchar, 1221
+- before_type_info, 501
+- before_begin
+- forward_list, 878
+- begin(), 507
+- array, 868
+- basic_string, 742
+- basic_string_view, 766
+- directory_iterator, 1271
+- initializer_list, 508
+- match_result, 1322
+- path, 1275
+- recursive_directory_iterator, 1274
+- valarray, 1122
+- begin(), 984
+- begin(initializer_list<E>), 508
+- begin(T&& n), 984
+- bernoulli_distribution, 1084
+- constructor, 1085
+- p, 1085
+- beta, 1147
+- gamma_distribution, 1090
+- betaf, 1147
+- betall, 1147
+- bidirectional_iterator_tag, 963
+- binary_function
+- zombie, 468
+- binary_negate, 1471
+- first_argument_type, 1471
+- operator(), 1471
+- result_type, 1471
+- second_argument_type, 1471
+- binary_search, 1033
+- bind, 665-666
+- await_result_type, 1470
+- bindist
+- zombie, 468
+- bind2nd, 468
+- binderist
+- zombie, 468
+- binder2cnd
+- zombie, 468
+- binomial_distribution, 1085
+- constructor, 1086
+- p, 1086
+- t, 1086
+- bit_and, 662
+- first_argument_type, 1467
+- operator(), 662
+- result_type, 1467
+- second_argument_type, 1467
+- bit_and(), 662
+- operator(), 662
+- bit_not_argument_type, 1467
+- bit_not<, 663
+- operator(), 662
+- result_type, 1467
+- second_argument_type, 1467
+- bit_or<, 662
+- operator(), 662
+- result_type, 1467
+- second_argument_type, 1467
+- bit_or, 663
+- operator(), 662
+- result_type, 1467
+- second_argument_type, 1467
+- bit_xor, 663
+- operator(), 662
+- result_type, 1467
+- second_argument_type, 1467
+- bit<, 586
+- operator(), 586
+- bit_type, 586, 586
+- bitset, 586
+- all, 591
+- any, 591
+- constructor, 590
+- count, 590
+- flip, 590
+- none, 591
+- operator=, 591
+- operator<<, 591, 592
+- operator==, 589
+- operator>=, 591
+- operator>>,, 591, 592
+- operator[], 591
+- operator&, 592
+- operator=, 589
+- operator+=, 592
+- operator^, 580
+- operator~, 590
+- operator|=, 592
+- reset, 590
+- set, 589
+- size, 590
+- test, 501
+- to_string, 500
+- to_long, 590
+- bool_constant, 682
+- boolalpha, 113
+- boolalpha_pool_search, 673
+- constructor, 673
+- operator(), 674
+- boolalpha_pool_search, 672
+- constructor, 673
+- operator(), 673
+- bsearch, 777, 1046
+- btvc, 774
+- BUFSZ, 1288
+- byte, 176
+- operator<<, 479
+- operator<=, 479
+- operator>>,, 480
+- operator*, 480
+- operator>=, 480
+- operator-, 480
+- operator=, 480
+- operator|, 480
+- nto_integer, 480
+- byte_string
+- wstring_convert, 1478
+- c16rtomb, 776
+- c32rtomb, 776
+- c_str
+- basic_string, 751
+- path, 1252
+- cacos, 1056
+- cacocsh
+- complex, 1057
+- call_once, 1383
+- calloc, 477, 607, 1455
+- cancical, 1275
+- capacity, 157
+- basic_string, 743
+- vector, 892
+- casin
+- complex, 1057
+- casinh
+- complex, 1057
+- <cassert>, 457, 515, 825, 1454
+- catan
+- complex, 1057
+- catanh
+- complex, 1057
+- category, 523
+- error_code, 525
+- local, 781
+- dauchy_distribution, 1094
+- a, 1096
+- b, 1095
+- constructor, 1095
+- cbe_begin
+- forward_list, 878
+- cbegin
+- basic_string, 742
+- basic_string_view, 766
+- cbegin(const C&), 984
+- cbrt, 1136
+- cbrt, 1136
+- cbrt, 1136
+- <complex>, 1456
+- <ctype>, 772
+- cell, 1136
+- duration, 713
+- time_point, 717
+- cell, 1126
+- cell, 1136
+- cend
+- basic_string, 742
+- basic_string_view, 766
+- cend(const C&), 984
+- cerr, 1157
+- <cerrno>, 469, 515
+- <cfenv>, 1048
+- CHAR_BIT, 489
+- char_class_type
+- regex_traits, 1305
+- CHAR_MAX, 489
+- CHAR_MIN, 489
+- char_traits, 725-728
+- char_type, 725
+- int_type, 725
+- off_type, 725
+- pos_type, 725
+- state_type, 725
+- char_type
+
+## ISO/IEC 14882:2017(E)
+
+- c_str, 751
+- capacity, 743
+- cbegin, 742
+- cend, 742
+- clear, 743
+- compare, 755
+- constructor, 738-740
+- copy, 751
+- crbegin, 742
+- crend, 742
+- data, 751
+- empty, 743
+- and, 742
+- erase, 748, 749
+- find, 752
+- find_first_of, 753, 754
+- find_first_of, 752, 753
+- find_last_of, 753
+- find_last_of, 770
+- front, 743
+- get_allocator, 751
+- getline, 759, 760
+- insert, 747, 748
+- length, 742
+- max_size, 742
+- operator_basic_string_view, 751
+- operator!, 757, 758
+- operator*, 756, 757
+- operator==, 744
+- operator?, 708
+- operator<, 759
+- operator<, 741, 742
+- operator=, 757
+- operator>, 758
+- operator>=, 759
+- operator[], 743
+- pop_back, 749
+- push_back, 745
+- rbegin, 742
+- rend, 742
+- replace, 749, 751
+- reserve, 743
+- resize, 742, 743
+- rfind, 752
+- shrink_to_fit, 743
+- size, 742
+- subtr, 754
+- swap, 751, 759
+- basic_string_view, 764
+- at, 767
+- back, 767
+- begin, 766
+- cbegin, 766
+- cend, 766
+- compare, 768, 769
+- const_iterator, 766
+- constructor, 766
+- copy, 768
+- crbegin, 767
+- crend, 767
+- data, 768
+- empty, 767
+- end, 766
+- find, 769
+- find_first_of, 770
+- find_last_of, 770
+- find_last_of, 770
+- front, 767
+- length, 767
+- max_size, 767
+- operator!, 771
+- operator*, 771
+- operator<, 772
+- operator<=, 772
+- operator==, 771
+- operator>, 771
+- operator>=, 772
+- operator[], 767
+- rbegin, 767
+- remove_prefix, 768
+- remove_suffix, 768
+- rend, 769
+- rfind, 769
+- size, 767
+- ubstr, 768
+- swap, 768
+- basic_string_buf, 1154, 1211
+- constructor, 1213
+- operator==, 1213
+- overflow, 1214
+- backfault, 1214
+- seekoff, 1215
+- seekpos, 1215
+- str, 1213
+- swap, 1213
+- underflow, 1214
+- basic_string_buf<char>, 1211
+- basic_string_buf<wchar_t>, 1211
+- basic_string_stream, 1154, 1219
+- constructor, 1220
+- operator(), 1220
+- streambuf, 1221
+- string, 1221
+- swap, 1221
+- basic_string_stream<char>, 1271
+- basic_string_stream<wchar, 1221
+- before_type_info, 501
+- before_begin
+- forward_list, 878
+- begin(), 507
+- array, 868
+- basic_string, 742
+- basic_string_view, 766
+- directory_iterator, 1271
+- initializer_list, 508
+- match_result, 1322
+- path, 1275
+- recursive_directory_iterator, 1274
+- valarray, 1122
+- begin(), 984
+- begin(initializer_list<E>), 508
+- begin(T&& n), 984
+- bernoulli_distribution, 1084
+- constructor, 1085
+- p, 1085
+- beta, 1147
+- gamma_distribution, 1090
+- betaf, 1147
+- betall, 1147
+- bidirectional_iterator_tag, 963
+- binary_function
+- zombie, 468
+- binary_negate, 1471
+- first_argument_type, 1471
+- operator(), 1471
+- result_type, 1471
+- second_argument_type, 1471
+- binary_search, 1033
+- bind, 665-666
+- await_result_type, 1470
+- bindist
+- zombie, 468
+- bind2nd, 468
+- binderist
+- zombie, 468
+- binder2cnd
+- zombie, 468
+- binomial_distribution, 1085
+- constructor, 1086
+- p, 1086
+- t, 1086
+- bit_and, 662
+- first_argument_type, 1467
+- operator(), 662
+- result_type, 1467
+- second_argument_type, 1467
+- bit_and(), 662
+- operator(), 662
+- bit_not_argument_type, 1467
+- bit_not<, 663
+- operator(), 662
+- result_type, 1467
+- second_argument_type, 1467
+- bit_or<, 662
+- operator(), 662
+- result_type, 1467
+- second_argument_type, 1467
+- bit_or, 663
+- operator(), 662
+- result_type, 1467
+- second_argument_type, 1467
+- bit_xor, 663
+- operator(), 662
+- result_type, 1467
+- second_argument_type, 1467
+- bit<, 586
+- operator(), 586
+- bit_type, 586, 586
+- bitset, 586
+- all, 591
+- any, 591
+- constructor, 590
+- count, 590
+- flip, 590
+- none, 591
+- operator=, 591
+- operator<<, 591, 592
+- operator==, 589
+- operator>=, 591
+- operator>>,, 591, 592
+- operator[], 591
+- operator&, 592
+- operator=, 589
+- operator+=, 592
+- operator^, 580
+- operator~, 590
+- operator|=, 592
+- reset, 590
+- set, 589
+- size, 590
+- test, 501
+- to_string, 500
+- to_long, 590
+- bool_constant, 682
+- boolalpha, 113
+- boolalpha_pool_search, 673
+- constructor, 673
+- operator(), 674
+- boolalpha_pool_search, 672
+- constructor, 673
+- operator(), 673
+- bsearch, 777, 1046
+- btvc, 774
+- BUFSZ, 1288
+- byte, 176
+- operator<<, 479
+- operator<=, 479
+- operator>>,, 480
+- operator*, 480
+- operator>=, 480
+- operator-, 480
+- operator=, 480
+- operator|, 480
+- nto_integer, 480
+- byte_string
+- wstring_convert, 1478
+- c16rtomb, 776
+- c32rtomb, 776
+- c_str
+- basic_string, 751
+- path, 1252
+- cacos, 1056
+- cacocsh
+- complex, 1057
+- call_once, 1383
+- calloc, 477, 607, 1455
+- cancical, 1275
+- capacity, 157
+- basic_string, 743
+- vector, 892
+- casin
+- complex, 1057
+- casinh
+- complex, 1057
+- <cassert>, 457, 515, 825, 1454
+- catan
+- complex, 1057
+- catanh
+- complex, 1057
+- category, 523
+- error_code, 525
+- local, 781
+- dauchy_distribution, 1094
+- a, 1096
+- b, 1095
+- constructor, 1095
+- cbe_begin
+- forward_list, 878
+- cbegin
+- basic_string, 742
+- basic_string_view, 766
+- cbegin(const C&), 984
+- cbrt, 1136
+- cbrt, 1136
+- cbrt, 1136
+- <complex>, 1456
+- <ctype>, 772
+- cell, 1136
+- duration, 713
+- time_point, 717
+- cell, 1126
+- cell, 1136
+- cend
+- basic_string, 742
+- basic_string_view, 766
+- cend(const C&), 984
+- cerr, 1157
+- <cerrno>, 469, 515
+- <cfenv>, 1048
+- CHAR_BIT, 489
+- char_class_type
+- regex_traits, 1305
+- CHAR_MAX, 489
+- CHAR_MIN, 489
+- char_traits, 725-728
+- char_type, 725
+- int_type, 725
+- off_type, 725
+- pos_type, 725
+- state_type, 725
+- char_type
+

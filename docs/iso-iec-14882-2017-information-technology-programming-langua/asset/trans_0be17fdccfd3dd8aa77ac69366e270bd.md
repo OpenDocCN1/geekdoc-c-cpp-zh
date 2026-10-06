@@ -1,0 +1,141 @@
+
+
+# ISO/IEC 14882:2017(E)
+
+索引
+
+- 分配器 (Allocator), 461
+- 位域地址 (address of bit-field), 250
+- 模糊转换 (ambiguous conversion), 325
+- 匿名联合体 (anonymous union), 253
+- 位域 (bit-field), 250
+- 伯努利 (Bernoulli), 1084-1087
+- 块引擎 (block_engine), 1075
+- 字符 (char), 609
+- 字符类 (char_class), 1450
+- 字符类 (char_class_type), 1293
+- 容器 (container), 853, 856, 869, 1318
+- 关联容器 (associated containers), 863
+- 可赋值 (CopyAssignable), 458
+- 可拷贝 (CopyConstructible), 458
+- 可默认构造 (DefaultConstructible), 458
+- 可析构 (destructible), 458
+- 声明式 (declarative), 39, 44
+- 语法 (grammar), 1335
+- 声明 (declarations), 44–46
+- 定义 (definition), *参见宏*, 范围 (scope)
+- 定义 (definition), 47
+- 定义 (definition), 28
+- 定义 (definitions), 48
+- 丢弃引擎 (discard_engine), 1075
+- 丢弃 (discard), 5
+- 构造函数 (constructor), 279, 280
+- 析构函数 (destructor), 287
+- 析构函数 (destructor), 参见构造函数，参见赋值运算符
+- 空 (empty), 145
+- 可等比较 (EqualityComparable), 458
+- 枚举 (enumeration), 49
+- 异常声明 (exception declaration), 47
+- 异常处理 (exception handling), 抛出 (rethrow), 222
+- 外部 (extern), 158
+- 求值 (evaluation), 参见求安全 (evaluation-safe)
+- 求值 (evaluation), 151
+- 显式 (explicit), 159
+- 隐式转换 (implicit conversion), 324
+- 实现 (implementation), 1079
+- 实现定义 (implementation-defined), 133
+- 迭代器 (iterator), 952
+- 迭代语句 (iteration-statement), 48
+- 局部类 (local class), 254
+- 字符类 (char_class_type), 1293
+- 类模板 (class template), 348
+- 偏特泛化类模板 (class template partial), 364
+- 同余分布引擎 (congruential_engine), 1071
+- 拷贝 (copy), 458
+- 关系表达式 (relational-expression), 133, 1416
+- 相对路径 (relative path), 1237
+- 相对路径 (relative-path), 1236
+- 松弛的指针状态 (relaxed pointer state), 73
+- 释放序列 (release sequence), 16
+- 取模运算符 (remainder_operator), 运算符, remainder
+- 替换列表 (replacement-list), 433, 1429
+- 随机数分布 (random number distributions), 1059-1102
+- 随机数分布 (random number distribution), 1065–1068
+- 随机数分布 (random number distribution), 1066
+- 随机数引擎 (random number engine), 1062–1064
+- 随机数引擎要求 (random number engine requirement), 1062, 1063
+- 随机数生成器 (random number generator), 使用均匀 (use uniform)
+- 随机设备 (random_device), 103
+- 随机分布 (random_distribution), 1084-1087
+- 正态 (normal), 1092-1097
+- 正态 (normal), 1097-1102
+- 泊松 (poisson), 1088-1092
+- 采样 (sampling), 1083-1084
+- 采样分布 (sampling distributions), 1097-1102
+- 样本 (sample), 1027
+- 标量 (scalar), 78
+- 序列 (sequence), 1318
+- 种子序列 (seed sequence), 1060–1061
+- 种子序列要求 (seed sequence requirement), 1061
+- 均匀位生成器 (uniform bit generator), 1061–1062
+- 无序关联容器 (unordered associative container), 853
+- 标准 (standard), 86
+- 排序于之后 (sequenced after), 1060
+- 排序于之前 (sequenced before), 14
+- 排序运算符 (sequencing operator), 参见运算符, 逗
+- 移位表达式 (shift-expression), 132, 1416
+- 移位运算符 (shift operator), 左 (left), 参见运算符, 左；右 (right), 参见运算符, 右
+- 短 (short), 大小 (size)
+- size_t, 122
+- 智能指针 (smart pointers), 618–634
+- 源文件 (source file), 22, 457, 469
+- 源文件字符 (source file character), 参见源文件
+- 特化 (specialization), 1305
+- 特化 (specializations), 1305
+- 特殊成员 (special member), 参见构造函数，参见
+- 尾数 (significand), 34
+- 相似类型 (similar types), 88
+- 简单调用封装 (simple call wrapper), 654
+- 简单捕获 (simple-capture), 103, 1414
+- 简单声明 (simple-declaration), 155, 1419
+- 简单转义序列 (simple-escape-sequence), 31, 1411
+- 简单模板标识 (simple-template-id), 347, 1427
+- 简单类型说明符 (simple-type-specifier), 167, 1420
+- 有符号 (signed), 79
+- 有符号整数表示 (signed integer representation), 80, 176
+- 有符号数值 (signed magnitude), 80, 176
+- 有符号整数类型 (signed integer type), 79
+- 补码 (two's complement), 80, 89, 176, 700, 1350
+- 洗牌顺序序列 (shuffle_order_sequence), 1364
+- 洗牌引擎 (shuffle_engine), 1077
+- 状态 (state), 1077
+- 文本表示法 (textual representation), 1078, 1078
+- 转换算法 (transition algorithm), 1077
+- 副作用 (side effects), 11, 14, 16–18, 135, 145, 282, 294, 306, 430, 473
+- 签名 (signature), 4, 5
+- 信号 (signal), 510
+- signal.h, 509
+- 信号安全 (signal-safe), 33
+- 大小 (sizeof), 121
+- 静态 (static), 158
+- 静态成员 (static member), 254
+- 静态局部类 (static local class), 254
+- 静态数据成员 (static data member), 242
+- 静态初始化 (static initialization), 67
+- 静态存储类 (static storage class), 145
+- 静态类型 (static type), 类型, 静态
+- 存储类说明符 (storage-class-specifier), 158
+- 静态断言 (static_assert), 156
+- 静态断言声明 (static_assert-declaration), 155, 1419
+- 模板参数 (template parameter), 49
+- 显显式模板 (template explicit), 388, 395
+- 类型别名 (typedef), 160
+- 翻译 (translation), 参见编译，分离
+- 韦布分布 (weibull_distribution), 1090
+- 均匀位生成器 (uniform bit generator), 1061–1062
+- 均匀随机生成器 (uniform random generator), 使用均匀 (use uniform)
+- 联合体 (union), 252
+- 联合体类型 (union_type), 1294
+- 韦布分布 (weibull_distribution), 1090
+- 则迭代器 (regex_iterator)
+
