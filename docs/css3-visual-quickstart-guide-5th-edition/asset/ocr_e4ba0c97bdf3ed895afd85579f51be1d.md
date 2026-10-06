@@ -1,0 +1,15 @@
+# Use specificity for hierarchy
+
+Regardless of the overall organization scheme you choose, specificity (explained in Chapter 4) provides a natural organizational hierarchy for CSS rules (Code 15.4). Simply organizing your CSS rules using the selector specificity can make it a lot easier to find rules and track down problems.
+
+Code 15.4 CSS rules ordered by specificity hierarchy. This makes them easier to follow.
+
+```
+article {...}
+article .intro {...}
+article .intro figure {...}
+article .intro figure figcaption {...}
+article .intro p {...}
+article .intro em {...}
+article .intro p:firstline {...}
+```

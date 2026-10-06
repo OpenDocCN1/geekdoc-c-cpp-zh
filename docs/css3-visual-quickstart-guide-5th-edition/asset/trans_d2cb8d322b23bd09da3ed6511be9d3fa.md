@@ -1,0 +1,176 @@
+
+
+![](img/9cd61ac1d4015ed5688d0c411434a660_128_0.png)
+
+## 3. 链接到你的默认样式表。在 HTML 文档的 <head> 中，输入一个 <link> 标签引用默认版本的 CSS，并将 media 定义为 all。
+
+```html
+<link rel="stylesheet" href="default.css">
+```
+
+## 4. 链接到你的打印样式表。在 <link> 标签之后，紧添加另一个 <link> 标签，引用打印版本的 CSS，并将 media 定义为 print。
+
+```html
+<link rel="stylesheet" href="print.css">
+```
+
+## 5. 使用媒体查询链接到样式表。在上一个 <link> 标签之后，添加另一个 <link> 标签来引用特定媒体类型的样式表，并在括号中添加媒体查询（表 4.8），使用 and 连接多个查询。
+
+```html
+<link rel="stylesheet" media="screen and (max-device-width: 320px)" and href="iphone.css">
+```
+
+### 爱丽丝仙游记
+
+作者：路易斯·卡罗尔
+
+## 第一章 掉进兔子洞
+
+爱丽丝坐在岸边感到非常无聊，开始昏昏睡觉，如果她能进她正盯着的那个兔子洞就好了；那里既没有图片也没有对话，一本没有图片或对话的书又有什么用呢？
+
+她也好奇如何做到（尽她所能的力，因为炎热让她非常困倦），以及许一个奇异愿望的快乐是否值得费力去追求，尤其是当一只有着粉红色眼睛的白兔子直接从她身边跑过时。
+
+她没有时间感谢或溜走，也没有多少时间追上兔子说再见；但她就这样掉下去、掉下去、掉下去、掉了下去，想着多久才能到达井的底。
+
+![](img/9cd61ac1d4015ed5688d0c411434a660_128_1.png)
+
+## iPhone 上的代码 4.17
+
+一个为了适应 iPhone 宽度的特别定制版本使用了奇幻猫的自定义页眉。
+
+> 提示 在媒体查询引入之前，Web 开发人员使用 JavaScript 来检测浏览器尺寸和颜色。媒体查询让这些技术变得过时，至少在样式设置方面。
+
+> 提示 在此示例中，媒体查询被应用于 <link> 标签的 media 属性值上，但你可以同样轻松将它们应用 <style> 标签的 media 属性上。
+
+选择性样式化 105
+
+## 使用 @media 规则
+
+媒体查询允许你在 <link> 和 <style> 标签的 media 属性中指定样式，但 @media 规则允许你直接将媒体查询嵌入到样式中。
+
+### 使用 @media 指定样式：
+
+- 1. 创建你的样式表。创建一个外部样式表，或在文档的 body 中嵌入样式表（代码 4.18）。
+- 2. 使用 @media 规则通过媒体查询指定样式。在 HTML 文档的 <head> 中，输入 @media 和 media。然后为样式指定媒体类型（表 4.7）和任何媒体查询（表 4.8）。
+
+```css
+@media screen (max-device-width: 480px) and (min-device-width: 320px) {...}
+```
+
+例如，你可能指定这些样式在宽度于 320px 到 480px 之间是正确的。以花括号结束。在花括号之间添加任何媒体特定的样式。
+
+- 3. 根据需要添加其他样式。{...}
+
+```css
+h2 string {...}
+```
+
+你可以添加 @media 规则或其他非媒体特定的规则。然而，所有不在 @media、@font-face 和 import 等的 CSS 规则必须放在这些规则之后。
+
+- 4. 从你的 HTML 文档链接到样式表。放置一个 link 标签来添加外部 CSS 文件（代码 19）。 记住 @media 规则可以放在外部或嵌入的样式表中。
+
+```css
+/* @media 的通用语法 */
+@media screen and (width=480px) {
+  h1 { color: red; }
+}
+/* CSS 规则 */
+/* 4.18 的 iPhone 代码与更通用的 CSS 结合。 */
+
+*** 屏幕样式 ***
+@media screen and (max-device-width: 480px) and (min-device-width: 320px) {
+  body {
+    -webkit-text-size-adjust:none;
+    background: rgb(102,102,102) url('../images/alpha.gif') no-repeat center;
+    padding: 20px 20px 20px;
+  }
+  h1 {
+    color: rgb(153,125,125);
+    text-shadow: 0 0 1px rgba(0,0,0);
+    font: normal 1em/1.25em "helvetica", Arial, Sans-serif;
+  }
+  h2 {
+    display: block;
+    color: red;
+    font-size: .75em;
+    font-style: italic;
+  }
+}
+
+/* iPhone 样式 ***
+@media screen and (max-device-width: 480px) and (min-device-width: 320px) {
+  body {
+    color: rgb(255,255,255);
+  }
+}
+```
+
+## 4.19 HTML 代码链接到不同媒体类型的各种样式表。与之前的不同区别是 iPhone 特定的代码现在嵌入在 screen 中，而不是包含媒体查询。
+
+```html
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱丽丝仙游记</title>
+  <link rel="stylesheet" media="all" href="default.css">
+  <link rel="stylesheet" media="print" href="print.css">
+  <link rel="stylesheet" media="screen" href="screen.css">
+</head>
+<body>
+  <h1>爱丽丝仙游记</h1>
+  <p class="byline">作者 <span class="author">路易斯·卡罗尔</span></p>
+  <article>
+    <header>
+      <h2><strong>第一章。</strong>掉进兔子洞</h2>
+    </header>
+    <p>爱丽丝坐在岸边感到非常无聊...</p>
+  </article>
+</body>
+</html>
+```
+
+爱丽丝坐在岸边感到非常无聊...![](img/9cd61ac1d4015ed5688d0c411434a660_130_0.png) iPhone 上的代码 4.18。看起来一样，但代码现在位于 @media 规则中。
+
+## 打印样式
+
+随着激光打印机和喷墨打印机的出现，我们似乎被埋在了一堆打印纸中。即使 Web 似乎增加了我们的用纸量。如果 Web 上的文章超过两个滚动条，很多人就会打印它。
+
+但 Web 的创建是为了在屏幕上显示信息，而不是在纸上。Web 图片在打印时会有颗粒，而且 HTML 缺乏许多布局控制。尽管如此，你仍然改进打印 Web 页的外观。在打印和 Web 上都好看可能需要额外的努力，但从远来看，你的观众会感谢你的。
+
+以下是提高打印 Web 外观的六个简单方法：
+
+- 在页眉之前分页，以便它们与文本在一起。
+- 将内容与导航分离。将主要内容（观众感兴趣阅读的部分）在设计上与站点导航分开的独立区域。你可以使用 CSS 在打印版本中隐藏导航：
+
+```css
+nav { display: none }
+```
+包含在打印样式表中。
+- 避免在图像中使用透明颜色。如果图像位于白色以外的背景颜色，这一点尤为真实。GIF 图片的透明区域无论窗口背景是什么颜色，通常打印为白色。如果图像原本就在白色背景上，这种情况不是问题，但如果图像应该在深色背景上，结果就会很乱。
+- 避免在图像中使用文本。打印 Web 内容的讽刺在于，图像中的文本在窗口中看起来平滑，但在打印时可能有颗粒；但普通的 HTML 文本在某些 PC 屏幕上看起来可能有颗粒，但在任何良好的打印机上都可以打印得流畅。尽量坚持 HTML 文本。
+- 避免深色背景和浅色文本。通常你希望打印页的背景保持白色，文本保持黑色或深灰色。
+- 打印时不要依赖颜色传递信息。虽然现在彩色打印机非常常见，但很多人仍使用黑白打印机，或在彩色打印机上以黑白打印以节省费用。
+
+## 从父元素继承属性
+
+不，这本书并没有突然变成《房地产视觉快速上手》。子和后代 HTML 标签通常会其父元素的样式——继承它们，无论样式是使用 CSS 还是继承自浏览器样式。这被称为样式继承。
+
+例如，如果你使用一个 ID copy 并给它 font-family 值为 Times，那么它所有的后代元素都会继承 Times 字体样式。如果你用 CSS 将**粗体**标签设置为红色，它所有的后代元素都将继承应用的加粗样式。
+
+## CSS
+
+```css
+b { color : red; }
+.copy { font-family: times; }
+```
+
+![](img/9cd61ac1d4015ed5688d0c411434a660_132_0.png)
+
+## 结果
+真奇怪！
+
+应用和继承的样式的最终结果是 Times 字体的加粗、红色和斜体文本。
+

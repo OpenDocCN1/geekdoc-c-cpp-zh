@@ -1,0 +1,39 @@
+# TABLE A.1 HTML and UTF Character Encoding continued
+
+| HTML | Unicode | Glyph | Description |
+|---|---|---|---|
+| &yen; | &#165; | | yen sign |
+| &brkbar; | &#166; | | broken vertical bar |
+| &sect; | &#167; | § | section sign |
+| &uml; | &#168; | | umlaut |
+| &copy; | &#169; | © | copyright |
+| &ordf; | &#170; | a | feminine ordinal |
+| &laquo; | &#171; | « | left angle quote |
+| &not; | &#172; | | not sign |
+| &shy; | &#173; | | soft hyphen |
+| &reg; | &#174; | ® | registered trademark |
+| &macr; | &#175; | | macron accent |
+| &deg; | &#176; | ° | degree sign |
+| &plusmn; | &#177; | ± | plus or minus |
+| &sup2; | &#178; | 2 | superscript two |
+| &sup3; | &#179; | 3 | superscript three |
+| &acute; | &#180; | | acute accent |
+| &micro; | &#181; | μ | micro sign |
+| &para; | &#182; | ¶ | paragraph sign |
+| &middot; | &#183; | | middle dot |
+| &cedil; | &#184; | | cedilla |
+| &sup1; | &#185; | 1 | superscript one |
+| &ordm; | &#186; | o | masculine ordinal |
+| &rsquo; | &#187; | » | right angle quote |
+| &frac14; | &#188; | ¼ | one-fourth |
+| &frac12; | &#189; | ½ | one-half |
+| &frac34; | &#190; | ¾ | three-fourths |
+| &iquest; | &#191; | ¿ | inverted question mark |
+| &Agrave; | &#192; | Ä | uppercase A, grave accent |
+| &Aacute; | &#193; | Á | uppercase A, acute accent |
+| &Acirc; | &#194; | Â | uppercase A, circumflex accent |
+| &Atilde; | &#195; | Ã | uppercase A, tilde |
+| &Auml; | &#196; | Ä | uppercase A, uml |
+| &Aring; | &#197; | Ä | uppercase A, ring |
+
+table continues on next page
