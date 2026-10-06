@@ -1,0 +1,13 @@
+# Oracle SQL Developer Data Modeler for Database Design Mastery
+
+changing the model at the same time. It also gives you version control functionalities. When working with version control, the latest official version of your design is always on version control, and the one you are working with is in your local saved working directory.
+
++   - existing databases You can import designs to Data Modeler from existing databases, from other designing tools (for example, Oracle Designer or ERwin), or from DDL scripts.
+
++   - Reporting capabilities Data Modeler has built-in reporting functionalities, but you can also create your reports and templates and use the Search functionality as a base for a report. It is also possible to use a reporting repository if you want to report across all your designs and use SQL to query that information. You can also print the design layouts.
+
++   - Documentation tools, improving quality and efficiency Data Modeler helps you standardize the design and data documentation in your company. You can use naming standards, domains, glossaries, and design rules to achieve better quality in your database design. You can also compare models and designs to each other, and you can compare a design to a database. Different compares, transformations, and notations will give you a more cost-efficient working environment with better quality.
+
+# Designing Databases with Oracle SQL Developer Data Modeler
+
+The design process when using Data Modeler starts with designing a logical model. In the logical model, you define entities, attributes, and relationships. The next step is to create a relational model based on the logical model. You do this simply by clicking the Engineer To Relational Model icon. When you are done with the relational model, it is time to create the physical model. You do this simply by right-clicking Physical Model in the Browser and selecting New. When creating a physical model, you must know what you will use for your database (Oracle, SQL Server, or DB2) as well as its version. All the properties for the physical model depend on the chosen technology. After you have created a physical model, you should define the properties for the physical objects. After you've done that, you are ready to generate the DDLs (which are the SQL scripts for creating database objects). You can create DDLs by selecting File | Export | DDL File. Then just run these DDLs on your database to create the objects. And all this can be done in a multiuser environment and while using version control.

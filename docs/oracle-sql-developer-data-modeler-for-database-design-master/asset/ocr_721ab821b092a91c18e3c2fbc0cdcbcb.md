@@ -1,0 +1,9 @@
+# Chapter 8: Designing a Data Warehouse Database 187
+
+(Surrogate Key) and its column (Surrogate Key Column). After engineering, there are two things to do: you must set the constraint names correctly if they are not automatically set and associate the prefixes to the tables according to their classification type. If you do not want to have prefixes on the constraint names, go your relational model in the Browser pane, right-click, and choose Apply Naming Standards For Keys And Constraints; right-click the relational model again and Change Object Names Prefix. In the Change Object Names Prefix dialog, select Add Prefix. Figure 8-3 shows the snowflake example on the right; you can see that the classification prefixes are not in key and constraint names. If you want to the prefixes in constraint names, then Run Object Names Prefixes and only after that Run Applying Naming Standards For Keys And Constraints. Figure 8-3 shows the star schema on the left so you can see that classification prefixes are also in key and constraint names.
+
+Because the dimensional model is a standard framework, it includes templates or patterns for modeling situations for business needs, such as slowly changing dimensions (SCDs), fact table, heterogeneous products, pay-in-advance databases, event-handling databases (factless tables), snapshot fact tables, dimension table structure, periodic snapshot surrogate keys, degenerate dimensions, denormalized flattened dimensions, multiple hierarchies in dimensions, flags and indicators as textual dimension attributes, calendar date dimensions, role-playing dimensions, junk dimensions,
+
+![](bbox=[0.125, 0.555, 0.875, 0.845])
+
+FIGURE 8-3. A relational dimensional model for star schema and snowflake

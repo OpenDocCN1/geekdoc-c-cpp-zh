@@ -1,0 +1,14 @@
+# Chapter 6: Introducing Physical Database Design 153
+
+list); Logging: Storage (select the storage template from the list); Cache (NO/YES); Parallel (NO/YES); if YES, then Degree: Row Dependency (NO/YES); Partitioned (NO/YES); Row Movement (DISABLE/ENABLE); Data Compression (NO/YES); if YES, Compression Type (select the compression type from the list); Structures Type (if it is based on one), and Implement As Materialized View (select a view name from the list). If you have defined a cluster for the table (selected cluster name for the cluster), you can select the columns involved in that cluster on Cluster Columns tab. If you have Partitioned to YES, you can define the parameters on the Partitioning tab for the parameters of the partitioning clause. If you have set Organization to INDEX, on the IOT Properties tab you can set Organization to EXTERNAL, on the External Table Properties tab you can define the parameters for the external table clause. On the Supplemental Log tab, you can define the parameters for enabling the supplemental logging at the table level. Supplemental logging is used for having additional columns logged into redo logs.
+
+If the table is not a relational table, it can be either an object table or an XML-type table. If it is an object table, you can define the parameters needed for the object_table clause on the OID Properties tab, and if it is an XML-type table, you can define the parameters needed for the XMLType clause on the XMLProperties tab. Of course, an important thing is to define privileges for the table, which can be done, for instance, in the Permissions dialog opens when you click the Permissions button.
+
+In previous phases of the design process, you also defined columns for the tables. These columns can be found under Tables in the physical model's Browser pane. All the logical properties for the column have been defined in the relational model and can be changed only there (if you change any, the changed values will be immediately shown in the physical model), but in the physical model you define the physical properties for a column. On the General tab, you can define a default value for it and the Max Size As String setting. If you set Encryption to YES, you can define the encryption parameters on the Encryption tab.
+
+> NOTE
+If you change a logical property of a column in the relational model (data type, length, and so on), you can see the change in the physical model immediately.
+
+![](bbox=[0.165, 0.705, 0.26, 0.775])
+
+On the Column Not Null constraint, you can change the parameters for a possible Null constraint for this column or create a new one if there is no constraint. First you define the name for the constraint: Initially (Immediate, Deferred), Deferrable (yes/no), Enable (yes/no), Validate (yes/no). Then you select a table name from a list as an exceptions table. On the Column Check Options

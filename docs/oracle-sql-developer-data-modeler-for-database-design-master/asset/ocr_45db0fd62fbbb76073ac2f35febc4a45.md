@@ -1,0 +1,7 @@
+# 186 Oracle SQL Data Modeler for Database Design Mastery
+
+Then select the Attributes And Relations tab and select all the relationships for the primary key, as shown in Figure 8-2. Now the fact table will have a primary key. If you are using the automatically generated IDs and want to use this dimensional model as a base for a multidimensional model, select Relational Model as the Bound Model setting when creating the multidimensional model (more about this later in chapter). If you select Logical Model, you will not see the IDs (because they are created for the relational model) to be able to link the dimensional model entities and multidimensional model objects. If you want to base the multidimensional model on the logical model, define the logical model manually. Any other IDs except the primary surrogate key you must add manually (such as possible IDs for the entity you might want to use when mapping to the multidimensional model). And remember that in the Design Properties dialog on the Setting | Naming Standards | Templates you can define the name for the automatically generated surrogate key
+
+![](bbox=[0.136, 0.423, 0.833, 0.853])
+
+**Figure 8-2.** Defining a primary key for a fact entity

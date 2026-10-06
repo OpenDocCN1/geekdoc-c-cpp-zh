@@ -1,0 +1,9 @@
+# 22 Oracle SQL Developer Data Modeler for Database Design Mastery
+
+classification and object types, as shown in Figure 2-7 and Figure 2-8. Setting up standards for colors in the diagrams makes it easier for people to read them. In the Settings | Diagram | Logical Model plane, you can select either Domain Name or Used Logical Type to have shown for domains in a diagram (Domains Presentation).
+
+Naming standards making work easier and improve the quality of your designs. For instance, you can decide how names in logical models and relational models will be separated. In a logical model, separator can be space (camelCase) or a specified character. For example, if you select a space as a separator, the customer name would be “CustomerName.” If you select title case, the customer name would be underscore(_), the customer name would be Customer_name. In a relational model, you can select only a character as a separator, such as an underscore. In this example, the customer name would be Customer_name. For a relational model, you can also select Abbreviated Only, which means that only abbreviated words are used (see Figure 2-9). You can also define a separator for domains and add one or more for naming standard. The naming standards can be verified against the selected glossary or glossaries. You can find more information about glossaries in the “Introducing Glossaries” section. You can add, modify, and remove naming standards for attributes, columns, domains, entities, and tables, and these standards will be checked when you apply design rules.
+
+![](bbox=[0.134, 0.555, 0.833, 0.883])
+
+FIGURE 2-7. Classification types

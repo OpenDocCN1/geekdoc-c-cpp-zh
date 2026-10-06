@@ -1,0 +1,7 @@
+merge from the diagram. To the question “Are you sure you want to merge the selected tables?” click Yes. Then reply to the next questions, and your tables will be merged into one.
+
+# Summary
+
+Logical database design starts with the logical model from the conceptual design. With Data Modeler, the logical model will be transformed into a relational model using the Engineer To Relational Model functionality. The results of this phase of database design is the relational database schema: a set of relational objects and their constraints. The Engineer To Relational Model functionality is an easy and quick process, and it should be done whenever you have requests to the conceptual model.
+
+Designing a database is an iterative process. To have an efficient and reliable process, it is valuable to always follow the same procedures and in the same order: Change the logical model and forward engineer the changes to relational model using the Engineer To Relational Model functionality. It is also possible to reverse engineer a database. You can read more about that in Chapter 10. You can use both name abbreviations and prefix management to quickly change the naming of objects to meet your needs.
