@@ -1,0 +1,12 @@
+# 7.1 Inheritance and Derivation of Class — 263
+
+family, classes that derive a class directly are named the **direct base classes** of the child class; the upper-layer base classes of the direct base class are named the **in-direct base classes** of the derived class. For example, the class *Automobile* is derived from the class *Vehicle* and the class *Truck* is derived from the class *Automobile*, so the class *Automobile* is the direct base class of the class *Truck*, and the *Vehicle* class is the indirect base class of the *Truck*.
+
+In the definition of a derived class
+
+In the previous example, class *Base 1* is inherited publicly and *Base 2* is inherited privately. Besides, the derived class declares its own constructor and destructor. **Derived members represent the newly added data and function members in the derived class that are not inherited from the base class.** These new data and function members are the key elements by which the derived class differs from its base class, and they are the evidence of the development from the base class to the derived class. When we reuse and extend existing codes, we add new members in the derived class to gain new attributes and functions. This is the evolution and development of
+nclasses based on inheritance.
+
+# 7.1.3 The Generation Process of Derived Classes
+
+In C++ programming, a derived class is generated after the class has been declared and the member functions have been implemented. Once we have created the objects of a derived class, we can use them to deal with actual problems. The process of generating a new derived class involves three steps: accepting base class members, modifying base class members, and adding new members. The main purpose of the inheritance and derivation mechanism is to reuse and extend code. Here, accepting base class members are code reusing, while modifying base class members and adding new members are code extending, which supplement each other. We will use the personnel information system introduced in Section 7.1.1 as an example to illustrate these steps. The base class *employee* and the derived class *technician* are defined below. The function implementations of the classes are omitted temporarily, and the complete program of this example will be presented later in Section 7.7.
