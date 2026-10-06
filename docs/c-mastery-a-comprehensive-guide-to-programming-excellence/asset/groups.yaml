@@ -1,0 +1,2897 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # C++ MASTERY: A COMPREHENSIVE GUIDE TO PROGRAMMING EXCELLENCE
+
+
+    ![](img/3a138fd1d9560e365141ec84438c045b_0_0.png)
+
+
+    Unlock the Power of C++ with Expert Insights, Practical Examples, and Advanced
+    Techniques'
+  - '[PAGE 1]
+
+
+    # C++ MASTERY: A COMPREHENSIVE GUIDE TO PROGRAMMING EXCELLENCE
+
+
+    Unlock the Power of C++ with Expert Insights, Practical Examples, and Advanced
+    Techniques'
+  - "[PAGE 2]\n\n# # Contents\n\n+   - C++ MASTERY: A COMPREHENSIVE GUIDE TO PROGRAMMING\
+    \ EXCELLENCE\n- PREFACE TO PROGRAMMING\n- Beginning with C++\n  - Setting Up Your\
+    \ Improvement Climate\n  - Segment 2: Elements and Data Types\n  - Section 3:\
+    \ Info and Result\n  - Section 4: Control Stream\n  - Region 5: Control Stream\n\
+    \  - Part 6: Capabilities\n  - Section 8: Item Arranged\n  - Segment 7: Shows\
+    \ apart vectors\n  - Programming (OOP)\n  - Part 9: More on Article Situated Programming\n\
+    \  - Section 10: Working with Records\n  - Section 11: Investigating and Investigating\n\
+    \  - Part 12: Assembling Everything: Smaller than normal Undertakings\n  - Section\
+    \ 13: High level Subjects in C++\n  - Part 14: C++ Best Practices and Improvement\n\
+    \  - Section 15: High level C++ Subjects and Then some\n- End"
+  - '[PAGE 3]
+
+
+    # PREFACE TO PROGRAMMING
+
+
+    Welcome to the fascinating universe of programming! In this portion, we''ll lay
+    out the foundation for understanding what the deal with programming is really
+    and why it''s an especially significant skill to dominate. Whether you dream about
+    making your own PC games, arranging applications, or handling certifiable issues
+    with development, composing PC programs is the best approach to opening tremendous
+    possible results.
+
+
+    # What is Adjusting?
+
+
+    Composing PC programs is the art of cautiously directing a PC to perform unequivocal
+    endeavors. Consider it like giving requests to a robot - you let the PC in on
+    what you keep up with that it ought to do, little by little, and it complies to
+    your headings unequivocally.
+
+
+    # Why Get Programming?
+
+
+    Getting the hang of programming opens approaches to innovativeness, decisive reasoning,
+    and advancement. The following are a couple of inspirations driving why composing
+    PC programs is a crucial mastery:
+
+
+    Make Anything: With programming, you can make locales, games, convenient applications,
+    robots, and that is only the start. Your inventive brain is beyond what many would
+    consider possible!'
+  - '[PAGE 4]
+
+
+    Tackle Issues: Computer programmers look like high level issue solvers. They tackle
+    challenges by isolating them into additional unobtrusive, reasonable parts and
+    forming code to address each part.
+
+
+    Future-Proof Calling: In the present modernized age, advancement is everywhere.
+    By getting the hang of programming, you''ll be outfitted with a critical mastery
+    that is well known across organizations.
+
+
+    Put yourself out there: Composing PC programs is a kind of self-explanation. Especially
+    like experts use paint and craftsmen use notes, computer programmers use code
+    to restore their contemplations.
+
+
+    # Preface to C++
+
+
+    C++ is major areas of strength for a language that is used to build everything
+    from PC games to working structures. It''s known for its speed, versatility, and
+    adaptability, going with it a renowned choice for the two youngsters and experienced
+    engineers something very similar.
+
+
+    In the accompanying fragments, we''ll bounce into the universe of C++, starting
+    with setting up your headway environment and creating your most critical program.
+    Plan to set out on a captivating journey into the universe of programming with
+    C++!'
+  - '[PAGE 5]
+
+
+    # Beginning with C++
+
+
+    In this segment, we''ll move into the universe of C++ programming. We''ll cover
+    setting up your advancement climate, composing your most memorable program, and
+    seeing an essential sentence structure to make you ready.
+
+
+    # Setting Up Your Improvement Climate
+
+
+    Before you can begin composing C++ code, you''ll have to set up your improvement
+    climate. Here are the moves toward get everything rolling:
+
+
+    Pick a Content manager or IDE: You can compose C++ code in a straightforward word
+    processor like Scratch pad or pick a further developed Coordinated Improvement
+    Climate (IDE) like Visual Studio Code, Code::Blocks, or Dev-C++.
+
+
+    Introduce a C++ Compiler: A compiler is a program that deciphers your intelligible
+    C++ code into machine-coherent directions that the PC can comprehend and execute.
+    Famous C++ compilers incorporate GCC (GNU Compiler Assortment), Thump, and Microsoft
+    Visual C++ Compiler.'
+  - "[PAGE 6]\n\nDesign Your Current circumstance: Whenever you've picked your content\
+    \ manager or IDE and introduced a C++ compiler, ensure everything is designed\
+    \ accurately. Set up your current circumstance factors, ways, and compiler choices\
+    \ as per the guidelines furnished with your picked apparatuses.\n\n# Composing\
+    \ Your Most memorable C++ Program\n\nNow that your current circumstance is set\
+    \ up, we should compose your most memorable C++ program. Open your content tool\
+    \ or IDE and track:\n\ncpp\n\nDuplicate code\n\n```\n#include <iostream>\n\nint\
+    \ primary() {\n    std::cout << \"Hi, world!\" << std::endl;\n\n    return 0;\n\
+    }\n```"
+  - '[PAGE 7]
+
+
+    We should separate what''s going on here:
+
+
+    #iostream>: This line incorporates the Information/Result Stream Library, which
+    permits us to perform information and result tasks in our program.
+
+
+    int primary() { ... \}: Each C++ program begins by executing the primary() capability.
+    This is where the execution of your program starts.
+
+
+    std::cout << "Hi, world!" << std::endl; This line prints the message "Hi, world!"
+    to the control center. std::cout is the standard result stream, and << is the
+    addition administrator used to send information to the stream. std::endl is utilized
+    to embed another line and flush the result support.
+
+
+    return 0;; This line shows that our program has executed effectively and is returning
+    a number worth of 0 to the working framework, demonstrating no blunders.
+
+
+    Figuring out Fundamental Linguistic structure'
+  - '[PAGE 8]
+
+
+    C++, each assertion closes with a semicolon ;, and blocks of code are encased
+    in wavy supports {}. It''s vital for focus on subtleties like capitalization and
+    spelling, as C++ is case-touchy.
+
+
+    In the following segment, we''ll jump further into factors and information types
+    in C++, so remain tuned!'
+  - '[PAGE 9]
+
+
+    # Segment 2: Elements and Data Types
+
+
+    In this segment, we''ll research elements and data types in C++. Understanding
+    how to store and control data is major to programming, so we could make a dive!
+
+
+    # What are Variables?
+
+
+    A variable is a named storing region in the PC''s memory, used to store data that
+    can change during the execution of a program. Think about a variable a compartment
+    that holds different characteristics.
+
+
+    In C++, you can declare a variable by deciding its data type followed by its name.
+    For example:
+
+
+    cpp
+
+
+    Copy code
+
+
+    int age;//Articulates a variable named ''season'' of type ''int'' (entire number)
+
+
+    # Data Types in C++'
+  - '[PAGE 10]
+
+
+    C++ maintains a couple of innate data types, each expected to store different
+    sorts of data. The following are a couple of ordinary data types:
+
+
+    int: Used to store entire number numbers (e.g., 10, -5, 1000).
+
+
+    twofold: Used to store floating point numbers with decimal spots (e.g., 3.14,
+    - 0.5, 100.0).
+
+
+    sear: Used to store single characters (e.g., ''A'', ''b'', ''$'').
+
+
+    bool: Used to store Boolean characteristics (either self-evident or sham).
+
+
+    string: Used to store progressions of characters (e.g.
+
+
+    # Using Elements to Store Data
+
+
+    At the point when you''ve declared a variable, you can give out a value to it
+    using the undertaking chairman =. For example:'
+  - '[PAGE 11]
+
+
+    # cpp
+
+
+    Copy code
+
+
+    ```
+
+    int age;//Articulate a variable named ''age''
+
+    ```
+
+
+    ```
+
+    age = 10;//Delegate the value 10 to the variable ''age''
+
+    ```
+
+
+    You can moreover instate a variable at the hour of proclamation:
+
+
+    # cpp
+
+
+    Copy code
+
+
+    ```
+
+    int score = 100;//Articulate and instantiate a variable named ''score'' with the
+    value 100
+
+    ```
+
+
+    Variables can be used in explanations and assessments:
+
+
+    # cpp
+
+
+    Copy code
+
+
+    ```
+
+    int x = 5;
+
+    ```
+
+
+    ```
+
+    int y = 3;
+
+    ```'
+  - '[PAGE 12]
+
+
+    ```
+
+    int complete = x + y;//total will be 8 (5 + 3)
+
+    ```
+
+
+    End
+
+
+    In this segment, you''ve learned about elements and data types in C++. Factors
+    are used to store data, and data types decide the kind of data that can be taken
+    care of in a variable. Understanding how to articulate factors and work with different
+    data types is principal for making effective C++ programs.
+
+
+    In the accompanying part, we''ll explore data and result exercises in C++, allowing
+    you to help out your activities capably.'
+  md: "\n# C++ MASTERY: A COMPREHENSIVE GUIDE TO PROGRAMMING EXCELLENCE\n\n![](img/3a138fd1d9560e365141ec84438c045b_0_0.png)\n\
+    \nUnlock the Power of C++ with Expert Insights, Practical Examples, and Advanced\
+    \ Techniques\n\n# C++ MASTERY: A COMPREHENSIVE GUIDE TO PROGRAMMING EXCELLENCE\n\
+    \nUnlock the Power of C++ with Expert Insights, Practical Examples, and Advanced\
+    \ Techniques\n\n## Contents\n\n- C++ MASTERY: A COMPREHENSIVE GUIDE TO PROGRAMMING\
+    \ EXCELLENCE\n- PREFACE TO PROGRAMMING\n- Beginning with C++\n  - Setting Up Your\
+    \ Development Environment\n  - Segment 2: Elements and Data Types\n  - Section\
+    \ 3: Info and Result\n  - Section 4: Control Flow\n  - Region 5: Control Flow\n\
+    \  - Part 6: Capabilities\n  - Section 8: Item Arranged\n  - Segment 7: Shows\
+    \ arrays\n  - Programming (OOP)\n  - Part 9: More on Structured Programming\n\
+    \  - Section 10: Working with Records\n- Section 11: Investigating and Debugging\n\
+    - Part 12: Assembling Everything: Smaller normal Undertakings\n- Section 13: High\
+    \ level Subjects in C++\n- Part 14: C++ Best Practices and Improvement\n- Section\
+    \ 15: High level C++ Subjects and Then some\n- End\n\n## PREFACE TO PROGRAMMING\n\
+    \nWelcome to the fascinating universe of programming! In this portion, we'll lay\
+    \ out the foundation for understanding what the deal with programming is really\
+    \ and why it's an especially significant skill to dominate. Whether you dream\
+    \ about making your own PC games, arranging applications, or handling complex\
+    \ issues with development, composing PC programs is the best approach to opening\
+    \ tremendous possible results.\n\n## What is Programming?\n\nComposing PC programs\
+    \ is the art of cautiously directing a PC to perform unequivocal endeavors. Consider\
+    \ it like giving requests to a robot - you let the PC in on what you want that\
+    \ it ought to do, little by little, and it complies to your headings unequivocally.\n\
+    \n## Why Get Programming?\n\nGetting the hang of programming opens approaches\
+    \ to creativity, critical thinking, and advancement. The following are a couple\
+    \ of inspirations driving why composing PC programs is a crucial mastery:\n\n\
+    - Make Anything: With programming, you can make locales, games, convenient applications,\
+    \ robots, and that is only the start. Your inventive brain is beyond what many\
+    \ would consider possible!\n\n- Tackle Issues: Computer programmers look like\
+    \ high level problem solvers. They tackle challenges by isolating them into additional\
+    \ unobtrusive, reasonable parts and forming code to address each part.\n\n- Future-Proof\
+    \ Calling: In the present modernized age, advancement is everywhere. By getting\
+    \ the hang of programming, you'll be outfitted with a critical mastery that is\
+    \ well known across organizations.\n\n- Put yourself out there: Composing PC programs\
+    \ is a kind of self-expression. Especially like experts use paint and craftsmen\
+    \ use notes, computer programmers use code to restore their contemplations.\n\n\
+    ## Preface to C++\n\nC++ is a major area of strength for a language that is used\
+    \ to build everything from PC games to operating systems. It's known for its speed,\
+    \ versatility, and adaptability, making it a renowned choice for the two youngsters\
+    \ and experienced engineers alike.\n\nIn the accompanying fragments, we'll bounce\
+    \ into the universe of C++, starting with setting up your development environment\
+    \ and creating your first program. Plan to set out on a captivating journey into\
+    \ the universe of programming with C++!\n\n## Beginning with C++\n\nIn this segment,\
+    \ we'll move into the universe of C++ programming. We'll cover setting up your\
+    \ development environment, composing your first program, and seeing an essential\
+    \ sentence structure to make you ready.\n\n## Setting Up Your Development Environment\n\
+    \nBefore you can begin composing C++ code, you'll have to set up your development\
+    \ environment. Here are the moves toward get everything rolling:\n\n- Pick a Text\
+    \ editor or IDE: You can compose C++ code in a straightforward word processor\
+    \ like Notepad or pick a further developed Integrated Development Environment\
+    \ (IDE) like Visual Studio Code, Code::Blocks, or Dev-C++.\n\n- Introduce a C++\
+    \ Compiler: A compiler is a program that deciphers your intelligible C++ code\
+    \ into machine-coherent directions that the PC can comprehend and execute. Famous\
+    \ C++ compilers incorporate GCC (GNU Compiler Collection), Clang, and Microsoft\
+    \ Visual C++ Compiler.\n\n- Setup your current environment: Once you have your\
+    \ editor and compiler, you can create your first source file with a .cpp extension.\n\
+    \n## Composing Your First Program\n\nNow that your environment is set up, let's\
+    \ write our first program. Here is a basic example:\n\n```cpp\n#include <iostream>\n\
+    \nint main() {\n    std::cout << \"Hello, World!\" << std::endl;\n    return 0;\n\
+    }\n```\n\nIn this code:\n- `#include <iostream>`: This line includes the library\
+    \ header needed for input and output operations.\n- `int main()`: This is the\
+    \ starting point of every C++ program execution.\n- `std::cout`: This is used\
+    \ to print text to the screen.\n- `std::endl`: This inserts a new line after the\
+    \ output.\n\n## Segment 2: Elements and Data Types\n\nIn this segment, we'll explore\
+    \ elements and data types in C++. Understanding how to store and manipulate data\
+    \ is crucial for any programmer.\n\n## What are Variables?\n\nA variable is a\
+    \ named region in the PC's memory, used to store data that can change during execution.\
+    \ Think of a variable a container that holds information.\n\nIn C++, you can declare\
+    \ a variable by deciding its type followed by its name. For example:\n\n```cpp\n\
+    int age = 25;\n```\n\n## Data Types in C++\n\nC++ maintains a couple of native\
+    \ data types, each expected to store different kinds of data. The following are\
+    \ a couple of common types:\n\n- int: Used to store integer numbers (e.g., 10,\
+    \ -5, 1000).\n\n- double: Used to store floating point numbers with decimal places\
+    \ (e.g., 3.14, -0.5, 100.0).\n\n- char: Used to store single characters (e.g.,\
+    \ 'A', 'b', '$').\n\n- bool: Used to store Boolean characteristics (either true\
+    \ or false).\n\n- string: Used to store sequences of characters (e.g., \"Hello\"\
+    ).\n\n## Using Elements to Store Data\n\nAt the point you've declared a variable,\
+    \ you can give a value to it using the assignment operator =. For example:\n\n\
+    ```cpp\nint age; // Declare a variable named 'age'\nage = 10; // Assign the value\
+    \ 10 to the variable 'age'\n```\n\nYou can also instantiate a variable at the\
+    \ time of declaration:\n\n```cpp\nint score = 100; // Declare and instantiate\
+    \ a variable named 'score' with the value 100\n```\n"
+  mdcn: "\n\n# C++ 精通：编程卓越的全面指南\n\n![](img/3a138fd1d9560e365141ec84438c045b_0_0.png)\n\
+    \n通过专家见解、实战示例和高级技术解锁 C++ 的力量\n\n# C++ 精通：编程卓越的全面指南\n\n通过专家见解、实战示例和高级技术解锁 C++ 的力量\n\
+    \n## 目录\n\n- C++ 精通：编程卓越的全面指南\n- 编程序言\n- 从 C++ 开始\n  - 设置开发环境\n  - 第 2 部分：元素与数据类型\n\
+    \  - 第 3 节：信息与结果\n  - 第 4 节：控制流\n  - 第 5 区域：控制流\n  - 第 6 部分：能力\n  - 第 8 节：项目安排\n\
+    \  - 第 7 部分：显示数组\n  - 面对象编程 (OOP)\n  - 第 9 部分：深入理解结构化编程\n  - 第 10 节：处理记录\n- 第\
+    \ 11 节：调查与调试\n- 第 12 部分：汇总一切：较小的常规任务\n- 第 13 节：C++ 中的高级主题\n- 第 14 部分：C++ 最佳实践与改进\n\
+    - 第 15 节：高级 C++ 主题及其他\n- 结束\n\n## 编程序言\n\n欢迎迷人的编程世界！在这一部分，我们将为理解编程的本质以及为什么它是一项值得精通的尤为重要的技能奠定基础。无论你梦想着制作自己的\
+    \ PC 游戏、排列应用程序，还是通过开发处理复杂问题，编写电脑程序都是开启巨大可能性的最佳途径。\n\n## 什么是编程？\n\n编写电脑程序是谨慎地引导计算机执行明确任务的艺术。将其想象成给机器人下达指令——你一点点告诉计算机你想要让它做什么，而它会毫不疑问地遵守你的指令。\n\
+    \n## 为什么要学习编程？\n\n掌握编程开启了创造力、批判性思维和创新的途径。以下是为什么编写电脑程序是一项关键技能的几个动力：\n\n- 创造一切：通过编程，你可以制作网站、游戏、便捷应用程序、机器人等，这仅仅是一个开始。你的想象力远超许多人认为的可能！\n\
+    \n- 解决问题：计算机程序员看起来像高级问题解决者。他们通过将挑战分解为额外的不起眼的、合理的部分，并形成代码来解决每个部分来应对挑战。\n\n- 未来职业：在当今现代化的时代，技术无处不在。通过掌握编程，你将拥有一项跨企业认可的关键技能。\n\
+    \n- 展现自我：编写电脑程序是一种自我表达的方式。就像艺术家使用画笔、工匠使用笔记一样，计算机程序员使用代码来表达他们的思想。\n\n## C++ 序言\n\
+    \nC++ 是一项强大的语言，被用于构建从 PC 游戏到操作系统的各种内容。它以速度快、多功能和适应强闻名，是新手和资深工程师的著名选择。\n\n在随后的章节中，我们将进入\
+    \ C++ 的世界，从设置你的开发环境和创建第一个程序开始。准备好开启进入 C++ 编程世界的迷人旅程吧！\n\n## 从 C++ 开始\n\n在这一部分，我们将进入\
+    \ C++ 编程的世界。我们将涵盖设置开发环境、编写你的第一个程序以及查看基础语法结构，让你做好准备。\n\n## 设置开发环境\n\n在开始编写 C++\
+    \ 代码之前，你必须设置开发环境。以下是让一切运行起来的步骤：\n\n- 选择文本编辑器或 IDE：你可以在像记事本简单的文本处理器中编写 C++ 代码，也可以选择更高级的集成开发环境（IDE），如\
+    \ Visual Studio Code、Code::Blocks 或 Dev-C++。\n\n- 引入 C++ 编译器：编译器是一个程序，它将你易读的 C++\
+    \ 代码解释为计算机可以理解并执行的机器指令。著名的 C++ 编译器包括 GCC (GNU 编译器集）、Clang 和 Microsoft Visual C++\
+    \ 编译器。\n\n- 设置当前环境：一旦你有了编辑器和编译器，就可以创建一个扩展名为 .cpp 的第一个源文件。\n\n## 编写你的第一个程序\n\n\
+    现在环境已经准备好了，让我们来写第一个程序。这里有一个基础示例：\n\n```cpp\n#include <iostream>\n\nint main()\
+    \ {\n    std::cout << \"Hello, World!\" << std::endl;\n    return 0;\n}\n```\n\
+    \n在这段代码中：\n- `#include <iostream>`：这一行包含了输入输出操作所需的库头文件。\n- `int main()`：这是每个 C++\
+    \ 程序执行的起点。\n- `std::cout`：用于向屏幕打印文本。\n- `std::endl`：在输出后插入新行。\n\n## 第 2 部分：元素与数据类型\n\
+    \n在这一部分中，我们将探索 C++ 中的元素和数据类型。了解如何存储和处理数据对于任何程序员来说都是至关重要的。\n\n## 什么是变量？\n\n变量是计算机内存中的一个命名区域，用于存储在执行过程中变化的数据。将变量想象成一个存放信息的容器。\n\
+    \n在 C++ 中，你可以通过决定其类型及其名称来声明变量。例如：\n\n```cpp\nint age = 25;\n```\n\n## C++ 中的数据类型\n\
+    \nC++ 维护了几种原生数据类型，每种预期存储不同类型的数据。以下是常用类型：\n\n- int：用于存储整数（例如 10, -5, 1000）。\n\n\
+    - double：用于存储带有小数的浮点数（例如 3.14, -0.5, 100.0）。\n\n- char：用于存储单个字符（例如 'A', 'b', '$'）。\n\
+    \n- bool：用于存储布尔特征（真或假）。\n\n- string：用于存储字符序列（例如 \"Hello\"）。\n\n## 使用元素存储数据\n\n\
+    在声明变量后，你可以使用赋值运算符 `=` 给它赋值。例如：\n\n```cpp\nint age; // 声明一个名为 age 的变量\nage = 10;\
+    \ // 为变量 age 赋值值 10\n```\n\n你也可以在声明时同时实例化变量：\n\n```cpp\nint score = 100; // 声明并实例化一个值为\
+    \ 100 的变量 score\n```\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 13]
+
+
+    # Section 3: Info and Result
+
+
+    In this section, we''ll dig into info and result tasks in C++, which permit your
+    projects to connect with clients and show results. These tasks are critical for
+    making dynamic and intuitive projects. How about we investigate how to deal with
+    info and result in C++.
+
+
+    # Showing Result with cout
+
+
+    In C++, you can utilize the cout object from the <iostream> library to show result
+    to the control center. The << administrator is utilized to embed information into
+    the result stream. For instance:
+
+
+    cpp
+
+
+    Duplicate code
+
+
+    #incorporate <iostream>
+
+
+    int fundamental() {'
+  - '[PAGE 14]
+
+
+    ```
+
+    std::cout << "Hi, world!" << std::endl;//Show "Hi, world!" trailed by a newline
+
+
+    bring 0 back;
+
+
+    }
+
+    ```
+
+
+    In this model, std::cout addresses the standard result stream, and "Hi, world!"
+    is the information being shown. The << std::endl part embeds a newline character
+    to move to the following line in the wake of showing the text.
+
+
+    # Getting Contribution with cin
+
+
+    To get input from the client, you can utilize the cin object from <iostream> library.
+    The >> administrator is utilized to extricate information from the info stream.
+    For instance:
+
+
+    cpp
+
+
+    Duplicate code
+
+
+    #incorpor <iostream>
+
+
+    int fundamental() {
+
+
+    int age;'
+  - '[PAGE 15]
+
+
+    ```
+
+    std::cout << "Enter your age: ";
+
+
+    std::cin >> age;
+
+
+    std::cout << "You entered: " << age << std::endl;
+
+
+    ring 0 back;
+
+
+    }
+
+    ```
+
+
+    In this model, std::cin is utilized to get input from the client, which is put
+    away in the variable age. The << progress in years part then, at that point, shows
+    the entered esteem back to the client.
+
+
+    # Building Intuitive Projects
+
+
+    By consolidating information and result tasks, you can make intuitive projects
+    that answer client input. For instance:
+
+
+    cpp
+
+
+    Duplicate code
+
+
+    #incorporate <iostream>
+
+
+    ```
+
+    int fundamental() {
+
+    ```'
+  - '[PAGE 16]
+
+
+    ```
+
+    int num1, num2, aggregate;
+
+
+    std::cout << "Enter two numbers: ";
+
+    std::cin >> num1 >> num2;
+
+
+    total = num1 + num2;
+
+
+    std::cout << "The amount of " << num1 << " and " << num2 << " will be " << total
+    << std::endl;
+
+
+    return 0;
+
+    }}
+
+    ```
+
+
+    This program prompts the client to enter two numbers, adds them together, and
+    afterward shows the outcome.
+
+
+    End'
+  - '[PAGE 17]
+
+
+    In this section, you''ve figured out how to deal with info and result tasks in
+    C++ utilizing cin and cout. These tasks are fundamental for making intuitive projects
+    that can speak with clients. In the following section, we''ll investigate control
+    stream structures, for example, contingent explanations and circles, which permit
+    you to control the progression of execution in your projects.'
+  - '[PAGE 18]
+
+
+    # Section 4: Control Stream
+
+
+    In this part, we''ll examine control stream structures in C++, which grant you
+    to control the movement of execution in your undertakings. We''ll cover prohibitive
+    declarations (if, else if, else) and circles (for, while, do-while), which are
+    essential for building programs that basically choose and perform repetitive endeavors.
+
+
+    # Prohibitive Clarifications
+
+
+    Prohibitive clarifications grant your program to make decisions considering explicit
+    conditions. The most broadly perceived prohibitive affirmation in C++ is the if
+    clarification. This is the mystery:
+
+
+    cpp
+
+
+    Copy code
+
+
+    ```
+
+    #integrate <iostream>
+
+    ```
+
+
+    ```
+
+    int head() {
+
+    ```'
+  - "[PAGE 19]\n\n```\nint x = 10;\n\nif (x > 0) {\n    std::cout << \"x is positive\"\
+    \ << std::endl;\n}\n```\n\nreturn 0;\n\n\nIn this model, if the condition (x >\
+    \ 0) is legitimate (which it is, since x is 10), the message \"x is positive\"\
+    \ will be shown.\n\nYou can similarly use else if and else enunciations to manage\
+    \ different conditions:\n\ncpp\n\nCopy code\n\n#include <iostream>"
+  - "[PAGE 20]\n\n```\nint head() {\n    int x = 10;\n\n    if (x > 0) {\n       \
+    \ std::cout << \"x is positive\" << std::endl;\n    } else if (x < 0) {\n    \
+    \    std::cout << \"x is negative\" << std::endl;\n    } else {\n        std::cout\
+    \ << \"x is zero\" << std::endl;\n    }\n\n    return 0;\n}\n```\n\nIn this model,\
+    \ in case x is positive, the chief block will be executed. If x is negative, the\
+    \ resulting block will be executed. Differently, the third block will be executed."
+  - '[PAGE 21]
+
+
+    # Circles
+
+
+    Circles license you to go over a block of code on various events. There are three
+    central kinds of circles in C++: for, while, and do-while.
+
+
+    For Circle:
+
+
+    +   - cpp
+
+
+    Copy code
+
+
+    This circle will execute the block of code inside it on various occasions, with
+    I starting at 0 and expanding by 1 each time.
+
+
+    While Circle:
+
+
+    +   - cpp
+
+
+    Copy code
+
+
+    ```
+
+    int I = 0;
+
+    while (I < 5) {
+
+    ```'
+  - "[PAGE 22]\n\n```\ni++;\n```\n\nThis circle will execute the block of code inside\
+    \ it as long as the condition I < 5 is legitimate.\n\n# Do-While Circle:\n\ncpp\n\
+    \nCopy code\n\n```\nint I = 0;\ndo {\n  i++;\n} while (I < 5);\n```\n\nThis circle\
+    \ resembles some time circle, yet it for the most part executes the block of code\
+    \ something like once before truly investigating the condition.\n\n# End"
+  - '[PAGE 23]
+
+
+    In this part, you''ve learned about control stream structures in C++, including
+    prohibitive declarations and circles. These plans are crucial for building programs
+    that can basically choose and perform monotonous tasks. In the accompanying part,
+    we''ll dive further into capacities, which license you to organize and reuse code
+    in your activities.'
+  - "[PAGE 24]\n\n# Region 5: Control Stream\n\nControl stream structures in programming\
+    \ grant you to control the deals in which rules are executed in your program.\
+    \ In this piece, we'll examine different control stream structures in C++, including\
+    \ contingent statements and circles.\n\n# Prohibitive Clarifications\n\nProhibitive\
+    \ clarifications grant your program to go with decisions pondering unequivocal\
+    \ conditions. The most famous prohibitive declarations in C++ are:\n\nif Clarification:\
+    \ The if declaration outlines a condition and executes a block of code if the\
+    \ condition is veritable.\n\ncpp\n\nCopy code\n\n```\nint age = 18;\n\nin the\
+    \ event that (age >= 18) {\n\n  std::cout << \"You are an adult.\" << std::endl;\n\
+    ```"
+  - '[PAGE 25]
+
+
+    ```
+
+    }
+
+    ```
+
+
+    else Clarification: The else proclamation is used with if to execute a block of
+    code when the condition is fake.
+
+
+    cpp
+
+
+    Copy code
+
+
+    ```
+
+    int age = 16;
+
+    ```
+
+
+    ```
+
+    if (age >= 18) {
+
+    ```
+
+
+    ```
+
+    std::cout << "You are an adult." << std::endl;
+
+    ```
+
+
+    ```
+
+    } else {
+
+    ```
+
+
+    ```
+
+    std::cout << "You are a minor." << std::endl;
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    else if Clarification: The else expecting enunciation grants you to pick various
+    conditions to test.
+
+
+    cpp
+
+
+    Copy code
+
+
+    ```
+
+    int age = 16;
+
+    ```
+
+
+    ```
+
+    if (age >= 18) {
+
+    ```'
+  - '[PAGE 26]
+
+
+    ```
+
+    std::cout << "You are an adult." << std::endl;
+
+
+    } else if (age >= 13) {
+
+
+    std::cout << "You are a high schooler." << std::endl;
+
+    } else {
+
+
+    std::cout << "You are a youngster." << std::endl;
+
+    }
+
+    ```
+
+
+    # ## Circles
+
+
+    Circles are used to execute a block of code again and again up to a destined condition
+    is huge. There are three basic sorts of circles in C++:
+
+
+    for Circle: The for circle executes a block of code a predefined number of times.
+
+
+    cpp
+
+
+    Copy code
+
+
+    }
+
+
+    While Circle: The while circle goes over a block of code up to a foreordained
+    condition is critical.'
+  - "[PAGE 27]\n\n# cpp\n\nCopy code\n\n```\nint I = 0;\n\nwhile (I < 5) {\n  i++;\n\
+    }\n```\n\ndo-while Circle: The do-while circle is like the while circle, but it\
+    \ generally speaking executes the block of code some spot close once before genuinely\
+    \ checking the condition out.\n\n# cpp\n\nCopy code\n\n```\nint I = 0;\n\ndo {\n\
+    \  i++;\n} while (I < 5);\n```\n\nEnd"
+  - '[PAGE 28]
+
+
+    In this part, you''ve learned about control stream structures in C++, including
+    prohibitive statements and circles. These parts grant you to pick and repeat rehearses
+    in your tasks, making them more unprecedented and versatile. In the going with
+    part, we''ll take a gander at limits, which are central for gathering and reusing
+    code in C++.'
+  - '[PAGE 29]
+
+
+    # Part 6: Capabilities
+
+
+    In this part, we''ll plunge into the idea of capabilities in C++. Capabilities
+    are fundamental structure blocks of any C++ program, permitting you to coordinate
+    your code into reusable blocks and work on the general design and lucidness of
+    your projects.
+
+
+    # Prologue to Capabilities
+
+
+    A capability is a named block of code that plays out a particular undertaking.
+    Capabilities permit you to separate your program into more modest, more reasonable
+    pieces, making it more obvious, troubleshoot, and keep up with.
+
+
+    # Making and Calling Capabilities
+
+
+    To make a capability in C++, you really want to characterize its name, return
+    type (if relevant), boundaries (if any), and the code block that characterizes
+    what the capability does. Here is an illustration of a straightforward capability
+    that adds two numbers together:'
+  md: "\n## Section 3: Info and Result\n\nIn this section, we'll dig into info and\
+    \ result tasks in C++, which permit your projects to connect with clients and\
+    \ show results. These tasks are critical for making dynamic and intuitive projects.\
+    \ How about we investigate how to deal with info and result in C++.\n\n### Showing\
+    \ Result with cout\n\nIn C++, you can utilize the cout object from the <iostream>\
+    \ library to show result to the control center. The << administrator is utilized\
+    \ to embed information into the result stream. For instance:\n\n```cpp\n#include\
+    \ <iostream>\n\nint main() {\n    std::cout << \"Hi, world!\" << std::endl; //Show\
+    \ \"Hi, world!\" trailed by a newline\n    return 0;\n}\n```\n\nIn this model,\
+    \ std::cout addresses the standard result stream, and \"Hi, world!\" is the information\
+    \ being shown. The << std::endl part embeds a newline character to move to the\
+    \ following line in the wake of showing the text.\n\n### Getting Contribution\
+    \ with cin\n\nTo get input from the client, you can utilize the cin object from\
+    \ <iostream> library. The >> administrator is utilized to extricate information\
+    \ from the info stream. For instance:\n\n```cpp\n#include <iostream>\n\nint main()\
+    \ {\n    int age;\n    std::cout << \"Enter your age: \";\n    std::cin >> age;\n\
+    \    std::cout << \"You entered: \" << age << std::endl;\n    return 0;\n}\n```\n\
+    \nIn this model, std::cin is utilized to get input from the client, which is put\
+    \ away in the variable age. The << progress in years part then, at that point,\
+    \ shows the entered esteem back to the client.\n\n### Building Intuitive Projects\n\
+    \nBy consolidating information and result tasks, you can make intuitive projects\
+    \ that answer client input. For instance:\n\n```cpp\n#include <iostream>\n\nint\
+    \ main() {\n    int num1, num2, aggregate;\n    std::cout << \"Enter two numbers:\
+    \ \";\n    std::cin >> num1 >> num2;\n    aggregate = num1 + num2;\n    std::cout\
+    \ << \"The amount of \" << num1 << \" and \" << num2 << \" will be \" << aggregate\
+    \ << std::endl;\n    return 0;\n}\n```\n\nThis program prompts the client to enter\
+    \ two numbers, adds them together, and afterward shows the outcome.\n\nEnd\n\n\
+    In this section, you've figured out how to deal with info and result tasks in\
+    \ C++ utilizing cin and cout. These tasks are fundamental for making intuitive\
+    \ projects that can speak with clients. In the following section, we'll investigate\
+    \ control stream structures, for example, contingent explanations and circles,\
+    \ which permit you to control the progression of execution in your projects.\n\
+    \n## Section 4: Control Stream\n\nIn this part, we'll examine control stream structures\
+    \ in C++, which grant you to control the movement of execution in your undertakings.\
+    \ We'll cover prohibitive declarations (if, else if, else) and circles (for, while,\
+    \ do-while), which are essential for building programs that basically choose and\
+    \ perform repetitive endeavors.\n\n### Prohibitive Clarifications\n\nProhibitive\
+    \ clarifications grant your program to make decisions considering explicit conditions.\
+    \ The most broadly perceived prohibitive affirmation in C++ is the if clarification.\
+    \ This is the mystery:\n\n```cpp\n#include <iostream>\n\nint main() {\n    int\
+    \ x = 10;\n    if (x > 0) {\n        std::cout << \"x is positive\" << std::endl;\n\
+    \    }\n    return 0;\n}\n```\n\nIn this model, if the condition (x > 0) is legitimate\
+    \ (which it is, since x is 10), the message \"x is positive\" will be shown.\n\
+    \nYou can similarly use else if and else enunciations to manage different conditions:\n\
+    \n```cpp\n#include <iostream>\n\nint main() {\n    int x = 10;\n    if (x > 0)\
+    \ {\n        std::cout << \"x is positive\" << std::endl;\n    } else if (x <\
+    \ 0) {\n        std::cout << \"x is negative\" << std::endl;\n    } else {\n \
+    \       std::cout << \"x is zero\" << std::endl;\n    }\n    return 0;\n}\n```\n\
+    \nIn this model, in case x is positive, the chief block will be executed. If x\
+    \ is negative, the resulting block will be executed. Differently, the third block\
+    \ will be executed.\n\n### Circles\n\nCircles license you to go over a block of\
+    \ code on various events. There are three central kinds of circles in C++: for,\
+    \ while, and do-while.\n\nFor Circle:\n- cpp\n- This circle will execute the block\
+    \ of code inside it on various occasions, with I starting at 0 and expanding by\
+    \ 1 each time.\n\nWhile Circle:\n- cpp\n```cpp\nint I = 0;\nwhile (I < 5) {\n\
+    \    i++;\n}\n```\n\nThis circle will execute the block of code inside it as long\
+    \ as the condition I < 5 is legitimate.\n\n### Do-While Circle:\n\n```cpp\nint\
+    \ I = 0;\ndo {\n  i++;\n} while (I < 5);\n```\n\nThis circle resembles some time\
+    \ circle, yet it for the most part executes the block of code something like once.\n\
+    \nEnd\n\nIn this section, you've figured out how to deal with info and result\
+    \ tasks in C++ utilizing cin and cout. These tasks are fundamental for making\
+    \ intuitive projects that can speak with clients. (Wait, the OCR text repeats\
+    \ sections here, I will re-align based on logical flow).\n\n*Self-correction:\
+    \ The provided OCR text contains significant repetitions and garbled pages. I\
+    \ will provide the clean, merged version of the content provided.*\n\n## Section\
+    \ 3: Info and Result\n\nIn this section, we'll dig into info and result tasks\
+    \ in C++, which permit your projects to connect with clients and show results.\
+    \ These tasks are critical for making dynamic and intuitive projects. How about\
+    \ we investigate how to deal with info and result in C++.\n\n### Showing Result\
+    \ with cout\n\nIn C++, you can utilize the cout object from the <iostream> library\
+    \ to show result to the control center. The << administrator is utilized to embed\
+    \ information into the result stream. For instance:\n\n```cpp\n#include <iostream>\n\
+    \nint main() {\n    std::cout << \"Hi, world!\" << std::endl; //Show \"Hi, world!\"\
+    \ trailed by a newline\n    return 0;\n}\n```\n\nIn this model, std::cout addresses\
+    \ the standard result stream, and \"Hi, world!\" is the information being shown.\
+    \ The << std::endl part embeds a newline character to move to the following line\
+    \ in the wake of showing the text.\n\n### Getting Contribution with cin\n\nTo\
+    \ get input from the client, you can utilize the cin object from <iostream> library.\
+    \ The >> administrator is utilized to extricate information from the info stream.\
+    \ For instance:\n\n```cpp\n#include <iostream>\n\nint main() {\n    int age;\n\
+    \    std::cout << \"Enter your age: \";\n    std::cin >> age;\n    std::cout <<\
+    \ \"You entered: \" << age << std::endl;\n    return 0;\n}\n```\n\nIn this model,\
+    \ std::cin is utilized to get input from the client, which is put away in the\
+    \ variable age. The << progress in years part then, at that point, shows the entered\
+    \ esteem back to the client.\n\n### Building Intuitive Projects\n\nBy consolidating\
+    \ information and result tasks, you can make intuitive projects that answer client\
+    \ input. For instance:\n\n```cpp\n#include <iostream>\n\nint main() {\n    int\
+    \ num1, num2, aggregate;\n    std::cout << \"Enter two numbers: \";\n    std::cin\
+    \ >> num1 >> num2;\n    aggregate = num1 + num2;\n    std::cout << \"The amount\
+    \ of \" << num1 << \" and \" << num2 << \" will be \" << aggregate << std::endl;\n\
+    \    return 0;\n}\n```\n\nThis program prompts the client to enter two numbers,\
+    \ adds them together, and afterward shows the outcome.\n\nEnd\n\nIn this section,\
+    \ you've figured out how to deal with info and result tasks in C++ utilizing cin\
+    \ and cout. These tasks are fundamental for making intuitive projects that can\
+    \ speak with clients. In the following section, we'll investigate control stream\
+    \ structures, for example, contingent explanations and circles, which permit you\
+    \ to control the progression of execution in your projects.\n\n## Section 4: Control\
+    \ Stream\n\nIn this part, we'll examine control stream structures in C++, which\
+    \ grant you to control the movement of execution in your undertakings. We'll cover\
+    \ prohibitive declarations (if, else if, else) and circles (for, while, do-while),\
+    \ which are essential for building programs that basically choose and perform\
+    \ repetitive endeavors.\n\n### Prohibitive Clarifications\n\nProhibitive clarifications\
+    \ grant your program to make decisions considering explicit conditions. The most\
+    \ broadly perceived prohibitive affirmation in C++ is the if clarification. This\
+    \ is the mystery:\n\n```cpp\n#include <iostream>\n\nint main() {\n    int x =\
+    \ 10;\n    if (x > 0) {\n        std::cout << \"x is positive\" << std::endl;\n\
+    \    }\n    return 0;\n}\n```\n\nIn this model, if the condition (x > 0) is legitimate\
+    \ (which it is, since x is 10), the message \"x is positive\" will be shown.\n\
+    \nYou can similarly use else if and else enunciations to manage different conditions:\n\
+    \n```cpp\n#include <iostream>\n\nint main() {\n    int x = 10;\n    if (x > 0)\
+    \ {\n        std::cout << \"x is positive\" << std::endl;\n    } else if (x <\
+    \ 0) {\n        std::cout << \"x is negative\" << std::endl;\n    } else {\n \
+    \       std::cout << \"x is zero\" << std::endl;\n    }\n    return 0;\n}\n```\n\
+    \nIn this model, in case x is positive, the chief block will be executed. If x\
+    \ is negative, the resulting block will be executed. Differently, the third block\
+    \ will be executed.\n\n### Circles\n\nCircles license you to go over a block of\
+    \ code on various events. There are three central kinds of circles in C++: for,\
+    \ while, and do-while.\n\nFor Circle:\n- This circle will execute the block of\
+    \ code inside it on various occasions, with I starting at 0 and expanding by 1\
+    \ each time.\n\nWhile Circle:\n```cpp\nint I = 0;\nwhile (I < 5) {\n    i++;\n\
+    }\n```\n\nThis circle will execute the block of code inside it as long as the\
+    \ condition I < 5 is legitimate.\n\n### Do-While Circle:\n\n```cpp\nint I = 0;\n\
+    do {\n  i++;\n} while (I < 5);\n```\n\nThis circle resembles some time circle,\
+    \ yet it for the most part executes the block of code something like once.\n\n\
+    End\n"
+  mdcn: "\n\n## 第 3 部分：输入与输出\n\n在本节中，我们将深入探讨 C++ 中的输入和输出任务，这些任务允许你的项目与客户端连接并显示结果。这些任务对于创建动态且直观的项目至关重要。让我们来研究如何在\
+    \ C++ 中处理输入和输出吧。\n\n### 使用 cout 显示结果\n\n在 C++ 中，你可以利用来自 `<iostream>` 库的 `cout`\
+    \ 对象向控制台显示结果。`<<` 运算符用于将信息嵌入到输出流中。例如：\n\n```cpp\n#include <iostream>\n\nint main()\
+    \ {\n    std::cout << \"Hi, world!\" << std::endl; //显示 \"Hi, world!\" 后后续换行\n\
+    \    return 0;\n}\n```\n\n在此模型中，`std::cout` 指向标准输出流，而 \"Hi, world!\" 是正在显示的信息。`<<\
+    \ std::endl` 部分嵌入了一个换行符，在显示文本后移动到下一行。\n\n### 使用 cin 获取输入\n\n要从客户端获取输入，你可以利用 `<iostream>`\
+    \ 库中的 `cin` 对象。`>>` 运算符用于从输入流中提取信息。例如：\n\n```cpp\n#include <iostream>\n\nint main()\
+    \ {\n    int age;\n    std::cout << \"Enter your age: \";\n    std::cin >> age;\n\
+    \    std::cout << \"You entered: \" << age << std::endl;\n    return 0;\n}\n```\n\
+    \n在此模型中，`std::cin` 被用于从客户端获取输入，并存储在变量 `age` 中。随后，`<< age << std::endl` 部分将输入的数值回显显示给客户端。\n\
+    \n### 构建直观的项目\n\n通过整合输入和输出任务，你可以创建能够响应客户端输入的直观项目。例如：\n\n```cpp\n#include <iostream>\n\
+    \nint main() {\n    int num1, num2, aggregate;\n    std::cout << \"Enter two numbers:\
+    \ \";\n    std::cin >> num1 >> num2;\n    aggregate = num1 + num2;\n    std::cout\
+    \ << \"The amount of \" << num1 << \" and \" << num2 << \" will be \" << aggregate\
+    \ << std::endl;\n    return 0;\n}\n```\n\n该程序提示客户端输入两个数字，将它们相加，然后显示结果。\n\n结束\n\
+    \n在本节中，你已经学会了如何利用 `cin` 和 `cout` 处理 C++ 中的输入输出任务。这些任务是创建可以与客户端通信的直观项目的基础。在接下来的章节中，我们将研究控制流结构，例如条件语句和循环，它们允许你控制项目中执行流程。\n\
+    \n## 第 4 部分：控制流\n\n在这部分，我们将检查 C++ 中的控制流结构，它们允许你控制任务中执行的移动。我们将涵盖条件语句（if, `else\
+    \ if`, `else`）和循环（for, `while`, `do-while`），这些对于构建基本上能够选择并执行重复任务的程序至关重要。\n\n###\
+    \ 条件语句\n\n条件语句允许你的程序根据明确条件做出决策。C++ 中最常见的条件语句是 `if` 语句。其结构如下：\n\n```cpp\n#include\
+    \ <iostream>\n\nint main() {\n    int x = 10;\n    if (x > 0) {\n        std::cout\
+    \ << \"x is positive\" << std::endl;\n    }\n    return 0;\n}\n```\n\n在此模型中，如果条件\
+    \ `(x > 0)` 为真（它是确定的，因为 `x` 是 10），将显示消息 \"x is positive\"。\n\n你同样可以使用 `else if`\
+    \ 和 `else` 语句来管理不同的条件：\n\n```cpp\n#include <iostream>\n\nint main() {\n    int\
+    \ x = 10;\n    if (x > 0) {\n        std::cout << \"x is positive\" << std::endl;\n\
+    \    } else if (x < 0) {\n        std::cout << \"x is negative\" << std::endl;\n\
+    \    } else {\n        std::cout << \"x is zero\" << std::endl;\n    }\n    return\
+    \ 0;\n}\n```\n\n在此模型中，如果 `x` 为正数，将执行主代码块。如果 `x` 为负数，将执行相应的代码块。相反，将执行第三个块。\n\n\
+    ### 循环\n\n循环允许你在各种情况下重复执行一段代码块。C++ 中有三种主要的循环：`for`、`while` 和 `do-while`。\n\nfor\
+    \ 循环：\n- 该循环会在多次执行其内部的代码块，`I` 从 0 开始并每次增加 1。\n\nwhile 循环：\n- cpp\n```cpp\nint\
+    \ I = 0;\nwhile (I < 5) {\n    i++;\n}\n```\n\n只要条件 `I < 5` 为真，该循环就会执行其内部的代码块。\n\
+    \ndo-while 循环：\n\n```cpp\nint I = 0;\ndo {\n  i++;\n} while (I < 5);\n```\n\n\
+    该循环类似于某些时间循环，但它通常至少会执行一次内部代码块。\n\n结束\n\n在本节中，你已经学会了如何利用 `cin` 和 `cout` 处理 C++\
+    \ 中的输入输出任务。这些任务是创建可以与客户端通信的直观项目的基础。（等等，OCR 文本在此重复了章节，我将根据逻辑流重新对齐）。\n\n*自我纠正：提供的\
+    \ OCR 文本包含大量重复和乱码页面。我将提供所提供内容的、合并版本。*\n\n## 第 3 部分：输入与输出\n\n在本节中，我们将深入探讨 C++ 中的输入和输出任务，这些任务允许你的项目与客户端连接并显示结果。这些任务对于创建动态且直观的项目至关重要。让我们来研究如何在\
+    \ C++ 中处理输入和输出吧。\n\n### 使用 cout 显示结果\n\n在 C++ 中，你可以利用来自 `<iostream>` 库的 `cout`\
+    \ 对象向控制台显示结果。`<<` 运算符用于将信息嵌入到输出流中。例如：\n\n```cpp\n#include <iostream>\n\nint main()\
+    \ {\n    std::cout << \"Hi, world!\" << std::endl; //显示 \"Hi, world!\" 后后续换行\n\
+    \    return 0;\n}\n```\n\n在此模型中，`std::cout` 指向标准输出流，而 \"Hi, world!\" 是正在显示的信息。`<<\
+    \ std::endl` 部分嵌入了一个换行符，在显示文本后移动到下一行。\n\n### 使用 cin 获取输入\n\n要从客户端获取输入，你可以利用 `<iostream>`\
+    \ 库中的 `cin` 对象。`>>` 运算符用于从输入流中提取信息。例如：\n\n```cpp\n#include <iostream>\n\nint main()\
+    \ {\n    int age;\n    std::cout << \"Enter your age: \";\n    std::cin >> age;\n\
+    \    std::cout << \"You entered: \" << age << std::endl;\n    return 0;\n}\n```\n\
+    \n在此模型中，`std::cin` 被用于从客户端获取输入，并存储在变量 `age` 中。随后，`<< age << std::endl` 部分将输入的数值回显显示给客户端。\n\
+    \n### 构建直观的项目\n\n通过整合输入和输出任务，你可以创建能够响应客户端输入的直观项目。例如：\n\n```cpp\n#include <iostream>\n\
+    \nint main() {\n    int num1, num2, aggregate;\n    std::cout << \"Enter two numbers:\
+    \ \";\n    std::cin >> num1 >> num2;\n    aggregate = num1 + num2;\n    std::cout\
+    \ << \"The amount of \" << num1 << \" and \" << num2 << \" will be \" << aggregate\
+    \ << std::endl;\n    return 0;\n}\n```\n\n该程序提示客户端输入两个数字，将它们相加，然后显示结果。\n\n结束\n\
+    \n在本节中，你已经学会了如何利用 `cin` 和 `cout` 处理 C++ 中的输入输出任务。这些任务是创建可以与客户端通信的直观项目的基础。在接下来的章节中，我们将研究控制流结构，例如条件语句和循环，它们允许你控制项目中执行流程。\n\
+    \n## 第 4 部分：控制流\n\n在这部分，我们将检查 C++ 中的控制流结构，它们允许你控制任务中执行的移动。我们将涵盖条件语句（if, `else\
+    \ if`, `else`）和循环（for, `while`, `do-while`），这些对于构建基本上能够选择并执行重复任务的程序至关重要。\n\n###\
+    \ 条件语句\n\n条件语句允许你的程序根据明确条件做出决策。C++ 中最常见的条件语句是 `if` 语句。其结构如下：\n\n```cpp\n#include\
+    \ <iostream>\n\nint main() {\n    int x = 10;\n    if (x > 0) {\n        std::cout\
+    \ << \"x is positive\" << std::endl;\n    }\n    return 0;\n}\n```\n\n在此模型中，如果条件\
+    \ `(x > 0)` 为真（它是确定的，因为 `x` 是 10），将显示消息 \"x is positive\"。\n\n你同样可以使用 `else if`\
+    \ 和 `else` 语句来管理不同的条件：\n\n```cpp\n#include <iostream>\n\nint main() {\n    int\
+    \ x = 10;\n    if (x > 0) {\n        std::cout << \"x is positive\" << std::endl;\n\
+    \    } else if (x < 0) {\n        std::cout << \"x is negative\" << std::endl;\n\
+    \    } else {\n        std::cout << \"x is zero\" << std::endl;\n    }\n    return\
+    \ 0;\n}\n```\n\n在此模型中，如果 `x` 为正数，将执行主代码块。如果 `x` 为负数，将执行相应的代码块。相反，将执行第三个块。\n\n\
+    ### 循环\n\n循环允许你在各种情况下重复执行一段代码块。C++ 中有三种主要的循环：`for`、`while` 和 `do-while`。\n\nfor\
+    \ 循环：\n- 该循环会在多次执行其内部的代码块，`I` 从 0 开始并每次增加 1。\n\nwhile 循环：\n- cpp\n```cpp\nint\
+    \ I = 0;\nwhile (I < 5) {\n    i++;\n}\n```\n\n只要条件 `I < 5` 为真，该循环就会执行其内部的代码块。\n\
+    \ndo-while 循环：\n\n```cpp\nint I = 0;\ndo {\n  i++;\n} while (I < 5);\n```\n\n\
+    该循环类似于某些时间循环，但它通常至少会执行一次内部代码块。\n\n结束\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 30]
+
+
+    # cpp
+
+
+    Duplicate code
+
+
+    ```
+
+    #include <iostream>
+
+    ```
+
+
+    ```
+
+    // Capability announcement
+
+    ```
+
+
+    ```
+
+    int add(int a, int b) {
+
+
+    return a + b;
+
+
+    }
+
+    ```
+
+
+    ```
+
+    int primary() {
+
+    ```
+
+
+    ```
+
+    // Capability call
+
+    ```
+
+
+    ```
+
+    int result = add(5, 3);
+
+    ```
+
+
+    ```
+
+    std::cout << "The total is: " << result << std::endl;
+
+    ```
+
+
+    ```
+
+    bring 0 back;
+
+    ```
+
+
+    ```
+
+    }
+
+    ```'
+  - '[PAGE 31]
+
+
+    In this model:
+
+
+    We proclaim a capability named add that takes two boundaries an and b of type
+    int and returns their total.
+
+
+    Inside the fundamental() capability, we call the add capability with contentions
+    5 and 3, and store the outcome in the variable outcome.
+
+
+    At last, we print the outcome utilizing std::cout.
+
+
+    # Passing Boundaries and Bringing Values back
+
+
+    Capabilities can acknowledge boundaries (input values) and return values (yield
+    values). Boundaries permit you to pass information to a capability, while get
+    values permit a capability to send information once again to the guest.
+
+
+    cpp
+
+
+    Duplicate code
+
+
+    ```
+
+    #incorporate <iostream>
+
+    ```
+
+
+    ```
+
+    // Capability statement with boundaries and bring esteem back
+
+    ```
+
+
+    ```
+
+    int square(int num) {
+
+    ```'
+  - "[PAGE 32]\n\n```\nreturn num * num;\n}\nint primary() {\n    int x = 5;\n   \
+    \ int squared = square(x);\n    std::cout << \"The square of \" << x << \" will\
+    \ be: \" << squared << std::endl;\n    return 0 back;\n}\n```\n\nIn this model,\
+    \ the square capability acknowledges a whole number boundary num and returns the\
+    \ square of that number.\n\n# End\n\nCapabilities are amazing assets in C++ programming,\
+    \ permitting you to modularize your code, further develop code reuse, and upgrade\
+    \ the coherence of your projects. In this section, you've figured out how to make\
+    \ capabilities, and num."
+  - '[PAGE 33]
+
+
+    pass boundaries, and bring values back. In the following section, we''ll investigate
+    exhibits and vectors, which are fundamental for putting away and controlling assortments
+    of information in C++.'
+  - '[PAGE 34]
+
+
+    # Making with Using Vectors
+
+
+    To include vectors in your C++ programs, you need to consolidate the <vector>
+    header record. Here is an example of making and using vectors:
+
+
+    cpp
+
+
+    Copy code
+
+
+    ```
+
+    #consolidate <iostream>
+
+
+    #consolidate <vector>
+
+
+    int essential() {
+
+    // Making a vector of entire numbers
+
+    std::vector<int> numbers = {1, 2, 3, 4, 5};
+
+
+    // Getting to parts of the vector
+
+    std::cout << "First part: " << numbers[0] << std::endl;
+
+    ```'
+  - "[PAGE 35]\n\n```\nstd::cout << \"Second part: \" << numbers[1] << std::endl;\n\
+    ```\n\n```\n// Adding parts to the vector\n```\n\n```\nnumbers.push_back(6);\n\
+    ```\n\n```\n// Underscoring over the vector\n```\n\n```\nfor (int num : numbers)\
+    \ {\n```\n\n```\n    std::cout << num << \" \";\n```\n\n```\n}\n```\n\n```\nstd::cout\
+    \ << std::endl;\n```\n\n```\nbring 0 back;\n```\n\n```\n}\n```\n\nIn this model,\
+    \ we make a vector named numbers containing entire numbers, add one more part\
+    \ to the vector using push_back(), and a short time later recurrent over the vector\
+    \ to print its parts."
+  - '[PAGE 36]
+
+
+    End
+
+
+    Displays and vectors are essential data structures in C++ that license you to
+    store and control arrangements of data gainfully. In this part, you''ve sorted
+    out some way to make and access parts of displays, as well as how to use vectors
+    to effectively manage arrangements of data. In the accompanying part, we''ll research
+    object-organized programming (OOP) thoughts in C++, which are major for building
+    greater and seriously confusing programming structures.
+
+
+    # Section 8: Item Arranged'
+  - '[PAGE 37]
+
+
+    # Segment 7: Shows apart Vectors
+
+
+    In this component, we''ll go over shows and vectors in C++. Social get-together
+    and vectors are key data structure that grant you to store and control rider of
+    data proficiently.
+
+
+    What is show?
+
+
+    A put on view is a fixed-size get-together of parts of relative evaluations type,
+    set aside in living recall locale. all part in the pack jug is gotten to by benefit
+    of a record, which watches out for its detail in the put on act.
+
+
+    Get collectively as fighting fit as have the violate to show
+
+
+    In C++, you can set up a show by wrap up the data selection of parts and the size
+    of the assortment. Here is an occasion of progress with in escape of two piece
+    of a party:
+
+
+    cpp
+
+
+    Copy code'
+  - "[PAGE 38]\n\n```\n#join <iostream>\n\nint central() {\n    // Making asymmetrical\
+    \ entire snippets of data with size 5\n\n    // in receipt of to part of the social\
+    \ affair\n\n    std::cout << \"Introductory piece: \" << numbers[0] << std::endl;\n\
+    \n    std::cout << \"later part: \" << numbers[1] << std::endl;\n\n    bring 0\
+    \ back;\n}\n```\n\nIn this model, we make a party named consequently with five\
+    \ segments, and a short period of time later affirmation and print the first and\
+    \ following parts using their specific records.\n\nVectors in C++\n\nVectors are\
+    \ a noteworthy show like data structure given by the run of the mill plan Library\
+    \ (STL) in C++. Not by any stretch like get-togethers, vectors can logically resize\
+    \ themselves to oblige added parts."
+  - '[PAGE 39]
+
+
+    # Programming (OOP)
+
+
+    Object-Situated Programming (OOP) is a programming worldview in light of the idea
+    of "objects," which can contain information (traits) and code (strategies). In
+    this section, we''ll investigate the basics of OOP in C++, including classes,
+    objects, embodiment, legacy, and polymorphism.
+
+
+    # Prologue to OOP
+
+
+    OOP permits you to demonstrate certifiable elements as items with properties and
+    ways of behaving. This approach gives a measured and coordinated method for planning
+    and fabricate programming frameworks.
+
+
+    # Classes and Items
+
+
+    A class is a diagram for making objects. It characterizes the properties (qualities)
+    and ways of behaving (strategies) for objects having a place with that class.
+    An item is an example of a class. Here is an illustration of a basic class and
+    its use:
+
+
+    cpp'
+  - "[PAGE 40]\n\n# Duplicate code\n\n```\n#incorporate <iostream>\n\n// Class announcement\n\
+    class Vehicle {\n\npublic:\n    // Credits\n```\n\n// Class announcement\n\nclass\
+    \ Vehicle {\n\npublic:\n\n// Credits\n\nstd::string brand;\n\nint year;\n\n//\
+    \ Strategy to show vehicle data\n\nvoid displayInfo() {\n\nstd::cout << \"Brand:\
+    \ \" << brand << \", Year: \" << year << std::endl;\n\n}\n\n};"
+  - '[PAGE 41]
+
+
+    ```
+
+    int fundamental() {
+
+
+    // Make an object of the Vehicle class
+
+    Vehicle myCar;
+
+
+    // Set object ascribes
+
+    myCar.brand = "Toyota";
+
+
+    myCar.year = 2022;
+
+
+    // Call object strategy
+
+    myCar.displayInfo();
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    In this model, Vehicle is a class with credits brand and year, and a technique
+    displayInfo() to show the vehicle''s data. We then, at that point, make an article
+    myCar of the Vehicle class, set its ascribes, and call its technique.'
+  - '[PAGE 42]
+
+
+    # Epitome and Information Stowing away
+
+
+    Epitome is the packaging of information (properties) and techniques (ways of behaving)
+    that work on that information inside a solitary unit (class). It permits you to
+    control admittance to the information by making specific ascribes or strategies
+    private, in this way concealing the inside execution subties from the rest of
+    the world.
+
+
+    ```
+
+    cpp
+
+    ```
+
+
+    ```
+
+    Duplicate code
+
+    ```
+
+
+    ```
+
+    class BankAccount {
+
+
+    private:
+
+    twofold equilibrium;//Confidential quality
+
+
+    public:
+
+    // Public strategy to store cash
+
+    void deposit(double sum) {
+
+    if (sum > 0) {
+
+    ```'
+  - "[PAGE 43]\n\n```\nbalance += sum;\n}\n}\n```\n\n```\n// Public strategy to get\
+    \ balance (getter)\ntwofold getBalance() {\n    bring balance back;\n}\n;\n```\n\
+    \nIn this model, balance is a confidential quality of the BankAccount class, and\
+    \ the store() strategy is a public technique that permits you to store cash into\
+    \ the record. The getBalance() technique is a public getter strategy that permits\
+    \ you to recover the record balance.\n\nEnd"
+  - '[PAGE 44]
+
+
+    In this part, you''ve been acquainted with the nuts and bolts of Item Arranged
+    Programming (OOP) in C++. You''ve found out about classes, articles, epitome,
+    and information stowing away. In the following segment, we''ll dive further into
+    cutting edge OOP ideas, for example, legacy and polymorphism, which consider code
+    reuse and extensibility.'
+  - '[PAGE 45]
+
+
+    # Part 9: More on Article Situated Programming
+
+
+    In this part, we''ll investigate progressed ideas in Item Arranged Programming
+    (OOP) in C++, including legacy, polymorphism, constructors, and destructors.
+
+
+    # Legacy
+
+
+    Legacy is a strong element of OOP that permits a class (inferred class) to acquire
+    properties and ways of behaving from another class (base class). This advances
+    code reuse and works with the production of progressive connections between classes.
+
+
+    # cpp
+
+
+    Duplicate code
+
+
+    ```
+
+    // Base class
+
+    class Shape {
+
+    public:
+
+    ```'
+  md: "\n# cpp\n\nDuplicate code\n\n```cpp\n#include <iostream>\n```\n\n```cpp\n//\
+    \ Capability announcement\n```\n\n```cpp\nint add(int a, int b) {\n\nreturn a\
+    \ + b;\n\n}\n```\n\n```cpp\nint main() {\n```\n\n```cpp\n// Capability call\n\
+    int result = add(5, 3);\n\nstd::cout << \"The total is: \" << result << std::endl;\n\
+    \nreturn 0;\n}\n}\n```\n\nIn this model:\n\nWe proclaim a capability named add\
+    \ that takes two boundaries a and b of type int and returns their total.\n\nInside\
+    \ the main() capability, we call the add capability with arguments 5 and 3, and\
+    \ store the outcome in the variable outcome.\n\nAt last, we print the outcome\
+    \ utilizing std::cout.\n\n# Passing Boundaries and Bringing Values back\n\nCapabilities\
+    \ can acknowledge boundaries (input values) and return values (yield values).\
+    \ Boundaries permit you to pass information to a capability, while return values\
+    \ permit a capability to send information once again to the guest.\n\ncpp\n\n\
+    Duplicate code\n\n```cpp\n#include <iostream>\n```\n\n```cpp\n// Capability statement\
+    \ with boundaries and return value back\n```\n\n```cpp\nint square(int num) {\n\
+    ```\n\n```cpp\nreturn num * num;\n}\nint main() {\n    int x = 5;\n    int squared\
+    \ = square(x);\n    std::cout << \"The square of \" << x << \" will be: \" <<\
+    \ squared << std::endl;\n    return 0;\n}\n```\n\nIn this model, the square capability\
+    \ acknowledges a whole number boundary num and returns the square of that number.\n\
+    \n# End\n\nCapabilities are amazing assets in C++ programming, permitting you\
+    \ to modularize your code, further develop code reuse, and upgrade the coherence\
+    \ of your projects. In this section, you've figured out how to make capabilities,\
+    \ and pass boundaries, and bring values back. In the following section, we'll\
+    \ investigate arrays and vectors, which are fundamental for putting away and controlling\
+    \ collections of information in C++.\n\n# Making and Using Vectors\n\nTo include\
+    \ vectors in your C++ programs, you need to include the <vector> header file.\
+    \ Here is an example of making and using vectors:\n\ncpp\n\nCopy code\n\n```cpp\n\
+    #include <iostream>\n\n#include <vector>\n\nint main() {\n// Making a vector of\
+    \ entire numbers\nstd::vector<int> numbers = {1, 2, 3, 4, 5};\n\n// Getting to\
+    \ parts of the vector\nstd::cout << \"First part: \" << numbers[0] << std::endl;\n\
+    ```\n\n```cpp\nstd::cout << \"Second part: \" << numbers[1] << std::endl;\n```\n\
+    \n```cpp\n// Adding parts to the vector\n\nnumbers.push_back(6);\n```\n\n```cpp\n\
+    // Iterating over the vector\n\nfor (int num : numbers) {\n\n    std::cout <<\
+    \ num << \" \";\n\n}\n```\n\n```cpp\nstd::cout << std::endl;\n\nreturn 0;\n}\n\
+    ```In this model, we make a vector named numbers containing entire numbers, add\
+    \ one more part to the vector using push_back(), and a short time later iterate\
+    \ over the vector to print its parts.\n\nEnd\n\nArrays and vectors are essential\
+    \ data structures in C++ that license you to store and control arrangements of\
+    \ data gainfully. In this part, you've sorted out some way to make and access\
+    \ parts of displays, as well as how to use vectors to effectively manage arrangements\
+    \ of data. In the accompanying part, we'll research object-oriented programming\
+    \ (OOP) thoughts in C++, which are major for building greater and seriously confusing\
+    \ programming structures.\n\n# Section 8: Object Oriented\n\n# Part 7: Arrays\
+    \ and Vectors\n\nIn this component, we'll go over arrays and vectors in C++. Arrays\
+    \ and vectors are key data structure that grant you to store and control collections\
+    \ of data proficiently.\n\n### What is an array?\n\nAn array is a fixed-size collection\
+    \ of parts of relative evaluation type, set aside in contiguous memory location.\
+    \ Each part in the pack is accessed by benefit of an index, which watches out\
+    \ for its detail in the array.\n\n### Get array as array to have the index to\
+    \ show\n\nIn C++, you can set up an array by declaring the data selection of parts\
+    \ and the size of the assortment. Here is an example of declaration with initialization\
+    \ of two piece of a party:\n\ncpp\n\nCopy code\n\n```cpp\n#include <iostream>\n\
+    \nint main() {\n    // Making array of integers data with size 5\n    int numbers[5]\
+    \ = {10, 20, 30, 40, 50};\n\n    // access to part of the array\n\n    std::cout\
+    \ << \"Introductory piece: \" << numbers[0] << std::endl;\n\n    std::cout <<\
+    \ \"later part: \" << numbers[1] << std::endl;\n\n    return 0;\n}\n```In this\
+    \ model, we make a party named numbers with five segments, and a short time of\
+    \ later access and print the first and following parts using their specific records.\n\
+    \n### Vectors in C++\n\nVectors are a noteworthy array-like data structure given\
+    \ by the Standard Template Library (STL) in C++. Not by any stretch like arrays,\
+    \ vectors can logically resize themselves to oblige added parts.\n\n# Object-Oriented\
+    \ Programming (OOP)\n\nObject-Oriented Programming (OOP) is a paradigm based on\
+    \ the concept of \"objects\". In this section, we'll explore the basics of OOP,\
+    \ including classes and objects.\n\n### Classes and Objects\n\nA class is a blueprint\
+    \ for creating objects. It defines properties (attributes) and behaviors (methods)\
+    \ that the objects will have. Here is an example of declaration:\n\n```cpp\n#include\
+    \ <iostream>\n\n// Class declaration\nclass Vehicle {\n\npublic:\n    // Attributes\n\
+    \    std::string brand;\n\n    int year;\n\n    // Method to show data\n    void\
+    \ displayInfo() {\n        std::cout << \"Brand: \" << brand << \", Year: \" <<\
+    \ year << std::endl;\n    }\n};\n```\n\n```cpp\nint main() {\n    // Make an object\
+    \ of the Vehicle class\n    Vehicle myCar;\n\n    // Set attributes\n    myCar.brand\
+    \ = \"Toyota\";\n\n    myCar.year = 2022;\n\n    // Call method\n    myCar.displayInfo();\n\
+    \n    return 0;\n}\n```In this model, Vehicle is a class with brand and year,\
+    \ and a technique displayInfo() to show data.\n\n# Encapsulation and Information\
+    \ Stowing away\n\nEncapsulation is the packaging of information (properties) and\
+    \ techniques (methods) that work on that information inside a solitary unit (class).\
+    \ It permits you to control access to the information by making specific attributes\
+    \ or strategies private, in this way hiding implementation details from the rest\
+    \ of the world.\n\n```cpp\ncpp\n```\n\n```cpp\nDuplicate code\n```\n\n```cpp\n\
+    class BankAccount {\n\nprivate:\ndouble balance;//Private quality\n\npublic:\n\
+    // Public strategy to store cash\nvoid deposit(double sum) {\nif (sum > 0) {\n\
+    balance += sum;\n}\n}\n\n// Public strategy to get balance (getter)\ndouble getBalance()\
+    \ {\n    return balance;\n}\n};\n```In this model, balance is a private private\
+    \ quality of the BankAccount class, and the deposit() strategy is a public technique\
+    \ that permits you to store cash into the record. The getBalance() technique is\
+    \ a public getter strategy that permits you to recover the record balance.\n\n\
+    End\n\nIn this part, you've been acquainted with the nuts and bolts of Object-Oriented\
+    \ Programming (OOP) in C++. You've found out about classes, objects, encapsulation,\
+    \ and information stowing away. In the following segment, we'll dive further into\
+    \ cutting edge OOP ideas, for example, inheritance and polymorphism, which consider\
+    \ code reuse and extensibility.\n"
+  mdcn: "\n\n# cpp\n\n重复代码\n\n```cpp\n#include <iostream>\n```\n\n```cpp\n// 能力声明\n\
+    ```\n\n```cpp\nint add(int a, int b) {\n\nreturn a + b;\n\n}\n```\n\n```cpp\n\
+    int main() {\n```\n\n```cpp\n// 能力调用\nint result = add(5, 3);\n\nstd::cout <<\
+    \ \"The total is: \" << result << std::endl;\n\nreturn 0;\n}\n}\n```\n\n在数模型中：\n\
+    \n我们声明了一个名为 `add` 的能力，它接收两个类型为 `int` 的边界 `a` 和 `b` 并返回它们的总和。\n\n在 `main()` 能力内部，我们使用参数\
+    \ 5 和 3 调用了 `add` 能力，并将结果存储在变量 `outcome` 中。\n\n最后，我们利用 `std::cout` 打印结果。\n\n#\
+    \ 传递边界并返回值\n\n能力可以识别边界（输入值）并返回结果（产生值）。边界允许你向能力传递信息，而返回值允许能力再次向访客发送信息。\n\ncpp\n\
+    \n重复代码\n\n```cpp\n#include <iostream>\n```\n\n```cpp\n// 带有边界和返回值的能力语句\n```\n\n\
+    ```cpp\nint square(int num) {\n```\n\n```cpp\nreturn num * num;\n}\nint main()\
+    \ {\n    int x = 5;\n    int squared = square(x);\n    std::cout << \"The square\
+    \ of \" << x << \" will be: \" << squared << std::endl;\n    return 0;\n}\n```\n\
+    \n在此模型中，`square` 能力识别一个整数边界 `num` 并返回该数的平方。\n\n# 结束\n\n能力是 C++ 编程中惊人的资产，允许你将代码模块化、进一步开发代码复用并提高项目的一致性。在本节中，你已经学会了如何创建能力、传递边界以及返回值。在接下来的章节中，我们将研究数组和向量，它们是\
+    \ C++ 中存储和控制信息集合的基础。\n\n# 创建和使用向量\n\n若要在你的 C++ 程序中包含向量，你需要包含 `<vector>` 头文件。这是一个创建和使用向量的示例：\n\
+    \ncpp\n\n复制代码\n\n```cpp\n#include <iostream>\n\n#include <vector>\n\nint main()\
+    \ {\n// 创建一个整数向量\nstd::vector<int> numbers = {1, 2, 3, 4, 5};\n\n// 获取向量的部分内容\n\
+    std::cout << \"First part: \" << numbers[0] << std::endl;\n```\n\n```cpp\nstd::cout\
+    \ << \"Second part: \" << numbers[1] << std::endl;\n```\n\n```cpp\n// 向向量中添加部分\n\
+    \nnumbers.push_back(6);\n```\n\n```cpp\n// 遍历向量\n\nfor (int num : numbers) {\n\
+    \n    std::cout << num << \" \";\n\n}\n```\n\n```cpp\nstd::cout << std::endl;\n\
+    \nreturn 0;\n}\n``` 在此模型中，我们创建了一个名为 `numbers` 的包含整数的向量，使用 `push_back()` 向向量添加了一个新部分，并在稍后遍历向量以打印其各个部分。\n\
+    \n结束\n\n数组和向量是 C++ 中本质的数据结构，允许你高效地存储和控制数据排列。在这一部分，你已经理清了创建和访问显示部分的方法，以及如何使用向量来有效地管理数据排列。在随后的部分中，我们将研究\
+    \ C++ 中的面向对象编程（OOP）思想，这是构建更大、更复杂的程序结构的关键。\n\n# 第 8 ：面向对象\n\n# 第 7 部分：数组和向量\n\n\
+    在这个组件中，我们将介绍 C++ 中的数组和向量。数组和向量是关键的数据结构，允许你高效地存储和控制数据集。\n\n### 什么是数组？\n\n数组是具有相同评估类型的部分的固定大小集合，分配在连续的内存位置。包中的每个部分都通过索引访问，索引负责记录其在数组中的详细信息。\n\
+    \n### 获取数组以拥有索引进行显示\n\n在 C++ 中，你可以通过声明部分的类型选择和集合的大小来设置数组。这是一个带有两个部分初始化的示例：\n\n\
+    cpp\n\n复制代码\n\n```cpp\n#include <iostream>\n\nint main() {\n    // 创建一个大小为 5 的整数数据数组\n\
+    \    int numbers[5] = {10, 20, 30, 40, 50};\n\n    // 访问数组部分\n\n    std::cout\
+    \ << \"Introductory piece: \" << numbers[0] << std::endl;\n\n    std::cout <<\
+    \ \"later part: \" << numbers[1] << std::endl;\n\n    return 0;\n}\n``` 在此模型中，我们创建了一个包含五个部分的集合\
+    \ `numbers`，并在稍后通过它们特定的记录访问并打印第一部分和后续。\n\n### C++ 中的向量\n\n向量是 C++ 标准模板库（STL）提供的重要类数组数据结构。与数组完全不同，向量可以逻辑地调整自己的大小以适应添加的部分。\n\
+    \n# 面向对象编程 (OOP)\n\n面向对象编程（OOP）是一种基于“对象”概念的范式。在本节中，我们将探索 OOP 的基础，包括类和对象。\n\n###\
+    \ 类和对象\n\n类是创建对象的蓝图。它定义了对象将拥有的属性（特征）和行为（方法）。这是一个声明示例：\n\n```cpp\n#include <iostream>\n\
+    \n// 类声明\nclass Vehicle {\n\npublic:\n    // 属性\n    std::string brand;\n\n  \
+    \  int year;\n\n    // 显示数据的方法\n    void displayInfo() {\n        std::cout <<\
+    \ \"Brand: \" << brand << \", Year: \" << year << std::endl;\n    }\n};\n```\n\
+    \n```cpp\nint main() {\n    // 创建 Vehicle 类的对象\n    Vehicle myCar;\n\n    // 设置属性\n\
+    \    myCar.brand = \"Toyota\";\n\n    myCar.year = 2022;\n\n    // 调用方法\n    myCar.displayInfo();\n\
+    \n    return 0;\n}\n``` 在此模型中，`Vehicle` 是一个带有 `brand` 和 `year` 的类，以及一个显示数据的 `displayInfo()`\
+    \ 方法。\n\n# 封装和信息隐藏\n\n封装是将信息（属性）和处理这些信息的技术（方法）封装在单一单元（类）内部。它允许通过将特定属性或策略设置为私有来控制对信息的访问，从而从其他世界隐藏实现细节。\n\
+    \n```cpp\ncpp\n```\n\n```cpp\n重复代码\n```\n\n```cpp\nclass BankAccount {\n\nprivate:\n\
+    double balance;// 私有属性\n\npublic:\n// 存储现金的公共策略\nvoid deposit(double sum) {\n\
+    if (sum > 0) {\nbalance += sum;\n}\n}\n\n// 获取余额的公共策略 (getter)\ndouble getBalance()\
+    \ {\n    return balance;\n}\n};\n``` 在此模型中，`balance` 是 `BankAccount` 类的私有属性，而\
+    \ `deposit()` 策略是一个允许向记录中存储现金的公共技术。`getBalance()` 技术是一个公共 getter 策略，允许你获取记录余额。\n\
+    \n结束\n\n在这一部分中，你已经熟悉了 C++ 面向对象编程（OOP）的要素。你了解了类、对象、封装和信息隐藏。在接下来的部分中，我们将进一步研究先进的\
+    \ OOP 思想，例如继承和多态，这些考虑了代码复用和扩展性。\n\n"
+  merge: 0
+- raw:
+  - "[PAGE 46]\n\n```\n// Technique to compute region (virtual capability)\n\ntwofold\
+    \ calculateArea() = 0;//Unadulterated virtual capability\n\n};\n```\n\n```\n//\
+    \ Determined class\nclass Circle : public Shape {\nprivate:\n    twofold span;\n\
+    \npublic:\n    // Constructor\n    Circle(double r) : radius(r) {}\n\n// Technique\
+    \ to work out region (execution)\ntwofold calculateArea() abrogate {\n    return\
+    \ 3.14 * span * sweep;\n```"
+  - '[PAGE 47]
+
+
+    ```
+
+    }
+
+    ;
+
+    ```
+
+
+    In this model, Shape is the base class, and Circle is the gotten class that acquires
+    from Shape. The calculateArea() technique is proclaimed as an unadulterated virtual
+    capability in the base class, and it''s superseded in the determined class.
+
+
+    # Polymorphism
+
+
+    Polymorphism permits objects of various classes to be treated as objects of a
+    typical base class. This empowers you to compose code that can work with objects
+    of different kinds without knowing their particular class.
+
+
+    # cpp
+
+
+    Duplicate code
+
+
+    ```
+
+    // Capability to ascertain absolute area of shapes
+
+    twofold totalArea(Shape shapes[], int count) {
+
+    twofold aggregate = 0.0;
+
+    for (int I = 0; I < count; ++i) {
+
+    ```'
+  - '[PAGE 48]
+
+
+    ```
+
+    complete += shapes[i]->calculateArea();
+
+    }
+
+
+    ```
+
+
+    bring complete back;
+
+    }
+
+
+    In this model, the totalArea() capability takes a variety of Shape pointers and
+    works out the all out region, everything being equal, no matter what their particular
+    kinds.
+
+
+    # Constructors and Destructors
+
+
+    Constructors are exceptional part works that are called when an article is made.
+    They are utilized to instantiate the article''s state. Destructors, then again,
+    are called when an article is obliterated and are utilized to deliver assets or
+    perform cleanup undertakings.
+
+
+    cpp
+
+
+    Duplicate code
+
+    class MyClass {
+
+    public:'
+  - "[PAGE 49]\n\n```\n// Constructor\nMyClass() {\n    std::cout << \"Constructor\
+    \ called\" << std::endl;\n}\n```\n\n```\n// Destructor\n~MyClass() {\n    std::cout\
+    \ << \"Destructor called\" << std::endl;\n};\n```\n\nIn this model, the constructor\
+    \ prints a message when an object of MyClass is made, and the destructor prints\
+    \ a message when the item is obliterated.\n\n# End"
+  - '[PAGE 50]
+
+
+    In this section, you''ve found out about cutting edge ideas in Article Situated
+    Programming (OOP) in C++, including legacy, polymorphism, constructors, and destructors.
+    These elements empower you to compose more measured, extensible, and viable code.
+    In the following part, we''ll investigate working with records in C++, permitting
+    you to peruse from and keep in touch with outside documents.'
+  - '[PAGE 51]
+
+
+    # Section 10: Working with Records
+
+
+    In this section, we''ll investigate how to work with records in C++. Record input/yield
+    tasks permit you to peruse information from and compose information to outer documents,
+    empowering your projects to communicate with tenacious capacity.
+
+
+    # Perusing from Records
+
+
+    To peruse information from a record in C++, you want to play out the accompanying
+    advances:
+
+
+    Open the record utilizing an info document stream (ifstream).
+
+
+    Peruse information from the document.
+
+
+    Close the document.
+
+
+    Here is an instance of perusing information from a text document:
+
+
+    ```
+
+    cpp
+
+    ```'
+  - "[PAGE 52]\n\n```\nDuplicate code\n\n#include <iostream>\n#include <fstream>\n\
+    #include <string>\n\nint primary() {\n    std::ifstream inputFile(\"input.txt\"\
+    );//Open the document\n\n    if (inputFile.is_open()) {//Check assuming that the\
+    \ record is open\n        std::string line;\n\n        while (std::getline(inputFile,\
+    \ line)) {//Read each line from the document\n            std::cout << line <<\
+    \ std::endl;//Print the line\n        }\n        inputFile.close();//Close the\
+    \ record\n    } else {\n```"
+  - '[PAGE 53]
+
+
+    ```
+
+    std::cerr << "Unfit to open document!" << std::endl;//Mistake message on the off
+    chance that record can''t be opened
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    In this model, we open a document named "input.txt" utilizing an info record stream.
+    We then, at that point, read each line from the record utilizing std::getline()
+    and print it to the control center. At last, we close the record utilizing the
+    nearby() technique.
+
+
+    # Writing to Documents
+
+
+    To compose information to a record in C++, you really want to play out the accompanying
+    advances:
+
+
+    Open the document utilizing a result record stream (ofstream).
+
+
+    Compose information to the document.
+
+
+    Close the record.
+
+
+    Here is an instance of composing information to a text record:'
+  - "[PAGE 54]\n\n# cpp\n\nDuplicate code\n\n```\n#include <iostream>\n#include <fstream>\n\
+    \nint fundamental() {\n  std::ofstream outputFile(\"output.txt\");////Open the\
+    \ document\n\n  if (outputFile.is_open()) {//Check assuming the record is open\n\
+    \    outputFile << \"Hi, world!\" << std::endl;//Compose information to the document\n\
+    \    outputFile.close();//Close the document\n\n  std::cout << \"Information written\
+    \ to record effectively.\" << std::endl;\n} else {\n  std::cerr << \"Unfit to\
+    \ open document!\" << std::endl;//Mistake message on the off chance that record\
+    \ can't be opened\n}\n```"
+  - '[PAGE 55]
+
+
+    ```
+
+    bring 0 back;
+
+    }
+
+    ```
+
+
+    In this model, we open a document named "output.txt" utilizing a result record
+    stream. We then, at that point, compose the string "Hi, world!" to the document
+    utilizing the addition administrator (<<). At long last, we close the document
+    utilizing the nearby() strategy.
+
+
+    # End
+
+
+    In this part, you''ve figured out how to work with records in C++, including perusing
+    information from and composing information to outer documents. Document input/yield
+    tasks are fundamental for taking care of determined information and interfacing
+    with outer assets. In the following section, we''ll investigate investigating
+    and investigating methods in C++, helping you distinguish and fix mistakes in
+    your projects.'
+  - '[PAGE 56]
+
+
+    # Section 11: Investigating and Investigating
+
+
+    In this section, we''ll dig into investigating and investigating strategies in
+    C++. Troubleshooting is the most common way of distinguishing and fixing mistakes
+    (bugs) in your code, while investigating includes diagnosing and settling issues
+    that might emerge during program execution.
+
+
+    # Normal Mistakes and How to Fix Them
+
+
+    Understanding normal blunders in C++ can help you analyze and fix gives all the
+    more really. A few normal mistakes include:
+
+
+    Linguistic structure Mistakes: These happen when your code abuses the principles
+    of the C++ language. Models incorporate missing semicolons, unparalleled enclosures,
+    and incorrectly spelled catchphrases. The compiler will typically call attention
+    to punctuation mistakes and give blunder messages to assist you with distinguishing
+    them.
+
+
+    Rationale Mistakes: These happen when your code produces erroneous outcomes because
+    of imperfections in its rationale. Troubleshooting rationale blunders frequently
+    includes utilizing print explanations, investigating devices, or venturing through
+    the code line by line to recognize where the rationale is imperfect.'
+  - '[PAGE 57]
+
+
+    Runtime Mistakes: These happen when your program experiences a blunder during
+    execution, like division by nothing or getting to a too far out cluster component.
+    Runtime mistakes can be more difficult to investigate on the grounds that they
+    may not necessarily happen in every case. Utilizing troubleshooting devices like
+    debuggers or adding blunder checking code can help distinguish and fix runtime
+    mistakes.
+
+
+    # Troubleshooting Strategies
+
+
+    Here are a few strategies you can use to investigate your C++ programs really:
+
+
+    Print Articulations: Embedding print explanations in your code to show the upsides
+    of factors or the progression of execution can assist you with figuring out what''s
+    going on at various places in your program.
+
+
+    Troubleshooting Aparatuses: Coordinated improvement conditions (IDEs) like Visual
+    Studio, Code::Blocks, or CLion give worked in investigating devices that permit
+    you to set breakpoints, assess factors, and step through your code line by line.'
+  - '[PAGE 58]
+
+
+    Compiler Admonitions: Focus on compiler alerts, as they can frequently show expected
+    issues in your code that might prompt mistakes at runtime.
+
+
+    Code Survey: Having another person audit your code can give new experiences and
+    assist with recognizing mistakes or regions for development that you might have
+    neglected.
+
+
+    # End
+
+
+    In this part, we''ve investigated troubleshooting and investigating procedures
+    in C++, including normal mistakes and how to fix them, as well as different troubleshooting
+    strategies you can involve to distinguish and determine issues in your code. By
+    dominating these strategies, you''ll turn into a more capable C++ software engineer
+    equipped for composing vigorous and dependable code.'
+  md: "\n```cpp\n// Technique to compute region (virtual capability)\n\nvirtual double\
+    \ calculateArea() = 0; // Unadulterated virtual capability\n\n};\n```\n\n```cpp\n\
+    // Derived class\nclass Circle : public Shape {\nprivate:\n    double radius;\n\
+    \npublic:\n    // Constructor\n    Circle(double r) : radius(r) {}\n\n    // Technique\
+    \ to work out region (execution)\n    double calculateArea() override {\n    \
+    \    return 3.14 * radius * radius;\n    }\n};\n```\n\nIn this model, Shape is\
+    \ the base class, and Circle is the derived class that acquires from Shape. The\
+    \ calculateArea() technique is declared as an unadulterated virtual capability\
+    \ in the base class, and it's superseded in the derived class.\n\n# Polymorphism\n\
+    \nPolymorphism permits objects of various classes to be treated as objects of\
+    \ a typical base class. This empowers you to compose code that can work with objects\
+    \ of different kinds without knowing their particular class.\n\n# cpp\n\n```cpp\n\
+    // Capability to ascertain absolute area of shapes\ndouble totalArea(Shape shapes[],\
+    \ int count) {\n    double aggregate = 0.0;\n    for (int i = 0; i < count; ++i)\
+    \ {\n        aggregate += shapes[i]->calculateArea();\n    }\n    return aggregate;\n\
+    }\n```\n\nIn this model, the totalArea() capability takes a variety of Shape pointers\
+    \ and works out the total area, everything being equal, no matter what their particular\
+    \ kinds.\n\n# Constructors and Destructors\n\nConstructors are special member\
+    \ functions that are called when an object is created. They are utilized to instantiate\
+    \ the object's state. Destructors, then again, are called when an object is destroyed\
+    \ and are utilized to release resources or perform cleanup tasks.\n\n```cpp\n\
+    class MyClass {\npublic:\n    // Constructor\n    MyClass() {\n        std::cout\
+    \ << \"Constructor called\" << std::endl;\n    }\n\n    // Destructor\n    ~MyClass()\
+    \ {\n        std::cout << \"Destructor called\" << std::endl;\n    }\n};\n```\n\
+    \nIn this model, the constructor prints a message when an object of MyClass is\
+    \ made, and the destructor prints a message when the item is destroyed.\n\n# End\n\
+    \nIn this section, you've found out about advanced ideas in Object-Oriented Programming\
+    \ (OOP) in C++, including inheritance, polymorphism, constructors, and destructors.\
+    \ These elements empower you to compose more measured, extensible, and viable\
+    \ code. In the following part, we'll investigate working with records in C++,\
+    \ permitting you to read from and interact with external documents.\n\n# Section\
+    \ 10: Working with Records\n\nIn this section, we'll investigate how to work with\
+    \ records in C++. File input/output tasks permit you to read information from\
+    \ and write information to external documents, empowering your projects to communicate\
+    \ with persistent storage.\n\n# Reading from Records\n\nTo read information from\
+    \ a record in C++, you want to carry out the following steps:\n\n- Open the record\
+    \ using an input file stream (ifstream).\n- Read information from the document.\n\
+    - Close the document.\n\nHere is an instance of reading information from a text\
+    \ document:\n\n```cpp\n#include <iostream>\n#include <fstream>\n#include <string>\n\
+    \nint main() {\n    std::ifstream inputFile(\"input.txt\"); // Open the document\n\
+    \n    if (inputFile.is_open()) { // Check assuming that the record is open\n \
+    \       std::string line;\n\n        while (std::getline(inputFile, line)) { //\
+    \ Read each line from the document\n            std::cout << line << std::endl;\
+    \ // Print the line\n        }\n        inputFile.close(); // Close the record\n\
+    \    } else {\n        std::cerr << \"Unable to open document!\" << std::endl;\
+    \ // Error message on the off chance that record can't be opened\n    }\n\n  \
+    \  return 0;\n}\n```\n\nIn this model, we open a document named \"input.txt\"\
+    \ utilizing an input record stream. We then, at that point, read each line from\
+    \ the record utilizing std::getline() and print it to the control center. At last,\
+    \ we close the record utilizing the close() technique.\n\n# Writing to Documents\n\
+    \nTo write information to a record in C++, you really want to carry out the following\
+    \ steps:\n\n- Open the document using a result record stream (ofstream).\n- Write\
+    \ information to the document.\n- Close the record.\n\nHere is an instance of\
+    \ composing information to a text record:\n\n```cpp\n#include <iostream>\n#include\
+    \ <fstream>\n\nint main() {\n  std::ofstream outputFile(\"output.txt\"); // Open\
+    \ the document\n\n  if (outputFile.is_open()) { // Check assuming that the record\
+    \ is open\n    outputFile << \"Hi, world!\" << std::endl; // Write information\
+    \ to the document\n    outputFile.close(); // Close the document\n\n    std::cout\
+    \ << \"Information written to record effectively.\" << std::endl;\n  } else {\n\
+    \    std::cerr << \"Unable to open document!\" << std::endl; // Error message\
+    \ on the off chance that record can't be opened\n  }\n\n  return 0;\n}\n```\n\n\
+    In this model, we open a document named \"output.txt\" utilizing a result record\
+    \ stream. We then, at that point, compose the string \"Hi, world!\" to the document\
+    \ utilizing the insertion operator (<<). At long last, we close the document utilizing\
+    \ the close() strategy.\n\n# End\n\nIn this part, you've figured out how to work\
+    \ with records in C++, including reading information from and composing information\
+    \ to external documents. File input/output tasks are fundamental for taking care\
+    \ of determined data and interfacing with external assets. In the following section,\
+    \ we'll investigate troubleshooting and debugging methods in C++, helping you\
+    \ distinguish and fix mistakes in your projects.\n\n# Section 11: Troubleshooting\
+    \ and Debugging\n\nIn this section, we'll dig into troubleshooting and debugging\
+    \ strategies in C++. Troubleshooting is the most common way of distinguishing\
+    \ and fixing mistakes (bugs) in your code, while debugging includes diagnosing\
+    \ and settling issues that might emerge during program execution.\n\n# Normal\
+    \ Errors and How to Fix Them\n\nUnderstanding normal blunders in C++ can help\
+    \ you analyze and fix errors more effectively. A few normal mistakes include:\n\
+    \n- Syntax Errors: These happen when your code violates the rules of the C++ language.\
+    \ Examples include missing semicolons, unmatched brackets, and incorrectly spelled\
+    \ phrases. The compiler will typically call attention to punctuation mistakes\
+    \ and give error messages to assist you with distinguishing them.\n\n- Logic Errors:\
+    \ These happen when your code produces erroneous outcomes because of imperfections\
+    \ in its logic. Troubleshooting logic blunders frequently includes using print\
+    \ statements, debugging devices, or venturing through the code line by line to\
+    \ recognize where the logic is imperfect.\n\n- Runtime Errors: These happen when\
+    \ your program experiences a blunder during execution, like division by zero or\
+    \ accessing an out of bounds array element. Runtime mistakes can be more difficult\
+    \ to investigate on the grounds that they may not necessarily happen in every\
+    \ case. Utilizing troubleshooting devices like debuggers or adding error checking\
+    \ code can help distinguish and fix runtime mistakes.\n\n# Troubleshooting Strategies\n\
+    \nHere are a few strategies you can use to investigate your C++ programs effectively:\n\
+    \n- Print Statements: Embedding print statements in your code to show the values\
+    \ of factors or the progression of execution can assist you with figuring out\
+    \ what's going on at various places in your program.\n\n- Troubleshooting Tools:\
+    \ Integrated development environments (IDEs) like Visual Studio, Code::Blocks,\
+    \ or CLion give built-in investigating devices that permit you to set breakpoints,\
+    \ assess factors, and step through your code line by line.\n\n- Compiler Warnings:\
+    \ Focus on compiler alerts, as they can frequently show expected issues in your\
+    \ code that might prompt mistakes at runtime.\n\n- Code Review: Having another\
+    \ person audit your code can give new experiences and assist with recognizing\
+    \ mistakes or regions for development that you might have neglected.\n\n# End\n\
+    \nIn this part, we've investigated troubleshooting and debugging procedures in\
+    \ C++, including normal mistakes and how to fix them, as well as different troubleshooting\
+    \ strategies you can involve to distinguish and determine issues in your code.\
+    \ By mastering these strategies, you'll turn into a more capable C++ software\
+    \ engineer equipped for composing vigorous and dependable code.\n"
+  mdcn: "\n\n```cpp\n// 计算区域的技巧（虚拟能力）\n\nvirtual double calculateArea() = 0; // 纯粹的虚拟能力\n\
+    \n};\n```\n\n```cpp\n// 派生类\nclass Circle : public Shape {\nprivate:\n    double\
+    \ radius;\n\npublic:\n    // 构造函数\n    Circle(double r) : radius(r) {}\n\n   \
+    \ // 计算区域的方法（执行）\n    double calculateArea() override {\n        return 3.14 *\
+    \ radius * radius;\n    }\n};\n```\n\n在这个模型中，Shape 是基类，Circle 是继承自 Shape 的派生类。`calculateArea()`\
+    \ 技巧在基类中被声明为一种纯粹的虚拟能力，并在派生类中被重写。\n\n# 多态\n\n多态允许将各种类的对象被视为典型基类的对象。这赋予了你编写可以处理不同类型对象代码的能力，而无需了解它们的具体类类型。\n\
+    \n# cpp\n\n```cpp\n// 确定形状绝对面积的能力\ndouble totalArea(Shape shapes[], int count)\
+    \ {\n    double aggregate = 0.0;\n    for (int i = 0; i < count; ++i) {\n    \
+    \    aggregate += shapes[i]->calculateArea();\n    }\n    return aggregate;\n\
+    }\n```\n\n在这个模型中，`totalArea()` 能力接收各种 Shape 指针并计算总面积，无论它们的具体类型是什么，一切都是等等的。\n\n\
+    # 构造函数与析构函数\n\n构造函数是在对象创建时被调用的特殊成员函数。它们用于实例化对象的状态。而析构函数在对象销毁时被调用，用于释放资源或执行清理任务。\n\
+    \n```cpp\nclass MyClass {\npublic:\n    // 构造函数\n    MyClass() {\n        std::cout\
+    \ << \"Constructor called\" << std::endl;\n    }\n\n    // 析构函数\n    ~MyClass()\
+    \ {\n        std::cout << \"Destructor called\" << std::endl;\n    }\n};\n```\n\
+    \n在这个模型中，当创建 MyClass 对象时，构造函数会打印一条消息；当项被销毁时，析构函数会打印一条消息。\n\n# 结束\n\n在本节中，你了解了\
+    \ C++ 面对象编程 (OOP) 中的高级思想，包括继承、多态、构造函数和析构函数。这些元素赋予了你编写更严谨、可扩展且可行代码的能力。在后续部分，我们将研究\
+    \ C++ 中处理记录的操作，允许你从外部文档读取并与其进行交互。\n\n# 第 10 节：处理记录\n\n在本节中，我们将研究如何在 C++ 中处理记录。文件输入/输出任务允许你从外部文档读取信息并向其写入信息，使你的项目能够与持久化存储进行通信。\n\
+    \n# 从记录读取\n\n要在 C++ 中从记录中读取信息，你需要执行以下步骤：\n\n- 使用输入文件流 (ifstream) 打开记录。\n- 从文档中读取信息。\n\
+    - 关闭文档。\n\n这是一个从文本文档中读取信息的实例：\n\n```cpp\n#include <iostream>\n#include <fstream>\n\
+    #include <string>\n\nint main() {\n    std::ifstream inputFile(\"input.txt\");\
+    \ // 打开文档\n\n    if (inputFile.is_open()) { // 检查假设记录已打开\n        std::string\
+    \ line;\n\n        while (std::getline(inputFile, line)) { // 从文档读取每行\n      \
+    \      std::cout << line << std::endl; // 打印该行\n        }\n        inputFile.close();\
+    \ // 关闭记录\n    } else {\n        std::cerr << \"Unable to open document!\" <<\
+    \ std::endl; // 如果记录无法打开则打印错误消息\n    }\n\n    return 0;\n}\n```\n\n在这个模型中，我们利用输入记录流打开了一个名为\
+    \ \"input.txt\" 的文档。然后，我们利用 `std::getline()` 从记录中读取每行，并将其打印到控制中心。最后，我们利用 `close()`\
+    \ 技巧关闭记录。\n\n# 向文档写入\n\n要在 C++ 中向记录中写入信息，你确实需要执行以下步骤：\n\n- 使用结果记录流 (ofstream)\
+    \ 打开文档。\n- 向文档中写入信息。\n- 关闭记录。\n\n这是一个向文本记录中组合信息的实例：\n\n```cpp\n#include <iostream>\n\
+    #include <fstream>\n\nint main() {\n  std::ofstream outputFile(\"output.txt\"\
+    ); // 打开文档\n\n  if (outputFile.is_open()) { // 检查假设记录已打开\n    outputFile << \"\
+    Hi, world!\" << std::endl; // 向文档写入信息\n    outputFile.close(); // 关闭文档\n\n   \
+    \ std::cout << \"Information written to record effectively.\" << std::endl;\n\
+    \  } else {\n    std::cerr << \"Unable to open document!\" << std::endl; // 如果记录无法打开则打印错误消息\n\
+    \  }\n\n  return 0;\n}\n```\n\n在这个模型中，我们利用结果记录流打开了一个名为 \"output.txt\" 的文档。然后，我们在此处利用插入运算符\
+    \ << 向文档写入 \"Hi, world!\"。最后，我们利用 `close()` 技巧关闭记录。\n\n# 结束\n\n在本节中，你学会了如何在 C++\
+    \ 中处理记录，包括从外部文档读取和向其写入信息。文件输入/输出任务对于处理确定数据和外部交互至关重要。在接下来的章节，我们将研究 C++ 中的排查和调试方法，帮助你修复代码错误。\n\
+    \n# 第 11 节：排查与调试\n\n在本节中，我们将深入研究 C++ 中的排查和调试策略。排查是识别和修复代码错误（bug）的最常见方法，而调试包含了诊断并解决可能出现的问题。\n\
+    \n# 错误及其修复方法\n\n理解 C++ 中的常见错误可以帮助你更有效地分析和修复错误。一些常见错误包括：\n\n- 语法错误：当代码违反 C++ 规则时发生。示例包括缺少分号、括号不匹配和拼写错误。编译器通常会指出这些符号错误并提供错误消息。\n\
+    \n- 逻辑错误：当代码由于逻辑缺陷产生错误结果时发生。排查逻辑错误通常包括使用打印语句、调试设备以及逐行检查代码以识别逻辑缺陷。\n\n- 运行时错误：当程序在执行期间遇到错误时发生，例如除以零或访问越界数组元素。运行时错误可能难以排查，因为它们并不总是发生。利用调试工具或添加错误检查代码可以帮助修复运行时错误。\n\
+    \n# 排查策略\n\n以下是你有效排查 C++ 程序的一些策略：\n\n- 打印语句：在代码中嵌入打印语句以显示因子值或执行过程，可以帮你了解程序各个位置的情况。\n\
+    \n- 排查工具：集成开发环境 (IDE) 如 Visual Studio、Code::Blocks 或 CLion 提供了内置调查工具，允许你设置断点、评估因子并逐行执行代码。\n\
+    \n- 编译器警告：关注编译器警告，因为它们经常会显示代码中可能导致运行时错误的预期问题。\n\n- 代码审查：让他人审核你的代码可以提供新的视角，并协助识别你可能忽略的错误或改进区域。\n\
+    \n# 结束\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 59]
+
+
+    # Part 12: Assembling Everything: Smaller than normal Undertakings
+
+
+    In this part, we''ll apply the ideas we''ve advanced all through this book to
+    make a few smaller than normal undertakings in C++. These tasks will assist with
+    building up how you might interpret programming basics and permit you to rehearse
+    critical thinking abilities in a tomfoolery and intelligent way.
+
+
+    # Building Basic Games
+
+
+    Speculating Game: Make a program that produces an irregular number somewhere in
+    the range of 1 and 100 and requests that the client surmise the number. Give criticism
+    to the client (e.g., "Excessively high" or "Excessively low") and monitor the
+    quantity of endeavors. Permit the client to play once more assuming they need
+    it.
+
+
+    Rock, Paper, Scissors: Execute the exemplary round of Rock, Paper, Scissors. Brief
+    the client to pick one of the three choices, then, at that point, produce an irregular
+    decision for the PC. Decide the champ in light of the guidelines of the game and
+    show the outcome.'
+  - '[PAGE 60]
+
+
+    # Making Intuitive Projects
+
+
+    Plan for the day Director: Foster a program that permits clients to deal with
+    a plan for the day. Clients ought to have the option to add errands, mark undertakings
+    as finished, eliminate undertakings, and show the ongoing rundown of assignments.
+    Execute a menu-based interface for communicating with the plan for the day.
+
+
+    Straightforward Mini-computer: Construct an essential number cruncher program
+    that can perform math tasks like expansion, deduction, duplication, and division.
+    Permit clients to enter two numbers and pick an activity to perform. Show the
+    outcome to the client.
+
+
+    # Tackling Fun Issues with C++
+
+
+    Fibonacci Succession: Compose a program that produces the Fibonacci grouping up
+    to a predefined number of terms. Show the arrangement to the client and compute
+    the amount of the succession.
+
+
+    Palindrome Checker: Make a program that checks assuming a given string is a palindrome
+    (peruses similar advances and in reverse). Overlook spaces, accentuation, and
+    capitalization while deciding whether a string is a palindrome.'
+  - '[PAGE 61]
+
+
+    End
+
+
+    In this section, we''ve investigated a few scaled down projects that you can execute
+    to rehearse your C++ programming abilities. These activities range from straightforward
+    games to intelligent projects and critical thinking difficulties. By chipping
+    away at these undertakings, you''ll support how you might interpret programming
+    ideas as well as gain active involvement with building certifiable applications
+    with C++. Have a good time coding!'
+  - "[PAGE 62]\n\n# Section 13: High level Subjects in C++\n\nIn this part, we'll\
+    \ investigate a few high level subjects in C++ that go past the nuts and bolts\
+    \ canvassed before in this book. These points will develop how you might interpret\
+    \ the language and acquaint you with further developed ideas and procedures.\n\
+    \n# Formats\n\nFormats in C++ permit you to compose nonexclusive code that can\
+    \ work with any information type. They are especially valuable for making information\
+    \ designs and calculations that are autonomous of explicit information types.\n\
+    \ncpp\n\nDuplicate code\n\n```\ntemplate<typename T>\nT maximum(T a, T b) {\n\
+    \    return (a > b) ? a : b;\n```"
+  - '[PAGE 63]
+
+
+    ```
+
+    }
+
+    ```
+
+
+    # STL (Standard Format Library)
+
+
+    The Standard Format Library (STL) is a strong assortment of classes and works
+    that give normal information designs and calculations in C++. It incorporates
+    compartments like vectors, records, and guides, as well as calculations for arranging,
+    looking, and controlling information.
+
+
+    cpp
+
+
+    Duplicate code
+
+
+    ```
+
+    #incorporate <vector>
+
+    ```
+
+
+    ```
+
+    #incorporate <algorithm>
+
+    ```
+
+
+    ```
+
+    std::vector<int> numbers = {3, 1, 4, 1, 5, 9, 2, 6};
+
+    ```
+
+
+    ```
+
+    std::sort(numbers.begin(), numbers.end());
+
+    ```
+
+
+    # Lambda Articulations'
+  - '[PAGE 64]
+
+
+    Lambda articulations permit you to characterize unknown capabilities inline, making
+    it more straightforward to compose short, one-off capabilities without the requirement
+    for isolated capability announcements.
+
+
+    # cpp
+
+
+    Duplicate code
+
+
+    ```
+
+    auto total = [(int a, int b) { return a + b };
+
+
+    std::cout << sum(3, 5) << std::endl;//Result: 8
+
+    ```
+
+
+    # Simultaneousness
+
+
+    C++ offers help for multi-stringing and offbeat programming through libraries
+    like <thread> and <future>. These highlights permit you to make programs that
+    can play out various assignments at the same time, further developing execution
+    and responsiveness.
+
+
+    # cpp
+
+
+    Duplicate code
+
+
+    ```
+
+    #include <iostream>
+
+
+    #include <thread>
+
+    ```'
+  - "[PAGE 65]\n\n```\nvoid welcome() {\n\n    std::cout << \"Hi from string!\" <<\
+    \ std::endl;\n\n}\n```\n\n```\nint primary() {\n\n    std::thread t(hello);\n\n\
+    \    t.join();//Trust that the string will wrap up\n\n    bring 0 back;\n\n}\n\
+    ```\n\n# # Shrewd Pointers\n\nShrewd pointers are objects that act like pointers\
+    \ however give extra elements like programmed memory the executives and trash\
+    \ assortment. They assist with forestalling memory breaks and make memory the\
+    \ executives more secure and more proficient.\n\ncpp"
+  - '[PAGE 66]
+
+
+    ```
+
+    Duplicate code
+
+
+    #incorporate <memory>
+
+
+    std::shared_ptr<int> ptr = std::make_shared<int>(10);
+
+    ```
+
+
+    End
+
+
+    In this part, we\u201ve investigated a few high level subjects in C++ programming,
+    including formats, the Standard
+
+    Layout Library (STL), lambda articulations, simultaneousness, and shrewd pointers.
+    These points will extend your tool
+
+    compartment as a C++ developer and empower you to handle more mind boggling and
+    testing projects. As you proceed
+
+    with your excursion with C++, make sure to more profound into these subjects and
+    investigate considerably further
+
+    developed ideas and procedures.
+
+
+    # Part 14: C++ Best Practices and Improvement
+
+
+    In this part, we\u201ve dive into best practices and advancement methods for composing
+    effective and viable C++ code.
+
+    Following these practices will assist you with creating top notch programming
+    that is more obvious, troubleshoot, and
+
+    keep up with.
+
+
+    # 1. Utilize Significant Variable Names:
+
+
+    Pick elucidating names for factors, works, and classes to make your code more
+    obvious and keep up with.'
+  - '[PAGE 67]
+
+
+    # 2. Follow Coding Shows:
+
+
+    Stick to a steady coding style and organizing shows. This further develops code
+    coherence and makes coordinated effort simpler.
+
+
+    # 3. Limit Worldwide Factors:
+
+
+    Limit the utilization of worldwide factors, as they can prompt secret conditions
+    and make investigating really testing.
+
+
+    # 4. Stay away from Enchantment Numbers:
+
+
+    Supplant numeric literals with named constants or specifications to further develop
+    code meaningfulness and viability.
+
+
+    # 5. Blunder Taking care of:
+
+
+    Carry out appropriate blunder dealing with components, for example, exemptions
+    or mistake codes, to nimbly deal with startling circumstances and forestall crashes.
+
+
+    # 6. Memory The executives:'
+  - '[PAGE 68]
+
+
+    Utilize savvy pointers (e.g., std::unique_ptr and std::shared_ptr) to oversee
+    memory naturally and keep away from memory spills.
+
+
+    # 7. Stay away from Untimely Enhancement:
+
+
+    Center around composing clear and viable code first. Just advance execution basic
+    segments of code subsequent to profiling and distinguishing bottlenecks.
+
+
+    # 8. Utilize Standard Library:
+
+
+    Influence the highlights and calculations given by the C++ Standard Library (STL)
+    whenever the situation allows. It is all around tried, proficient, and compact.
+
+
+    # 9. Profile and Benchmark:
+
+
+    Recognize execution bottlenecks by profiling your code and use benchmarks to quantify
+    the effect of advancements.
+
+
+    # 10. Report Your Code:
+
+
+    Record clear and brief remark to archive your code, including clarifications of
+    calculations, capability conduct, and any non-clear plan choices.
+
+
+    # 11. Test Driven Improvement (TDD):'
+  - '[PAGE 69]
+
+
+    Take on a test-driven improvement way to deal with guarantee that your code acts
+    true to form and stays right after changes.
+
+
+    # 12. Modularize Your Code:
+
+
+    Figure out down your code into more modest, reusable modules (capabilities, classes,
+    or libraries) to advance code reusability and viability.
+
+
+    # 13. Consistent Reconciliation (CI) and Nonstop Organization (Disc):
+
+
+    Mechanize the form, test, and organization cycles to guarantee that changes to
+    your codebase are routinely tried and conveyed in a controlled way.
+
+
+    # 14. Gain from Others:
+
+
+    Concentrate on code composed by experienced C++ designers, partake in code audits,
+    and add to open-source undertakings to learn new methods and best practices.
+
+
+    End'
+  md: "\n# Part 12: Assembling Everything: Smaller than normal Undertakings\n\nIn\
+    \ this part, we'll apply the ideas we've advanced all through this book to make\
+    \ a few smaller than normal undertakings in C++. These tasks will assist with\
+    \ building up how you might interpret programming basics and permit you to rehearse\
+    \ critical thinking abilities in a tomfoolery and intelligent way.\n\n# Building\
+    \ Basic Games\n\nSpeculating Game: Make a program that produces an irregular number\
+    \ somewhere in the range of 1 and 100 and requests that the client surmise the\
+    \ number. Give criticism to the client (e.g., \"Excessively high\" or \"Excessively\
+    \ low\") and monitor the quantity of endeavors. Permit the client to play once\
+    \ more assuming they need it.\n\nRock, Paper, Scissors: Execute the exemplary\
+    \ round of Rock, Paper, Scissors. Brief the client to pick one of the three choices,\
+    \ then, at that point, produce an irregular decision for the PC. Decide the champ\
+    \ in light of the guidelines of the game and show the outcome.\n\n# Making Intuitive\
+    \ Projects\n\nPlan for the day Director: Foster a program that permits clients\
+    \ to deal with a plan for the day. Clients ought to have the option to add errands,\
+    \ mark undertakings as finished, eliminate undertakings, and show the ongoing\
+    \ rundown of assignments. Execute a menu-based interface for communicating with\
+    \ the plan for the day.\n\nStraightforward Mini-computer: Construct an essential\
+    \ number cruncher program that can perform math tasks like expansion, deduction,\
+    \ duplication, and division. Permit clients to enter two numbers and pick an activity\
+    \ to perform. Show the outcome to the client.\n\n# Tackling Fun Issues with C++\n\
+    \nFibonacci Succession: Compose a program that produces the Fibonacci grouping\
+    \ up to a predefined number of terms. Show the arrangement to the client and compute\
+    \ the amount of the succession.\n\nPalindrome Checker: Make a program that checks\
+    \ assuming a given string is a palindrome (peruses similar advances and in reverse).\
+    \ Overlook spaces, accentuation, and capitalization while deciding whether a string\
+    \ is a palindrome.\n\nEnd\n\nIn this section, we've investigated a few scaled\
+    \ down projects that you can execute to rehearse your C++ programming abilities.\
+    \ These activities range from straightforward games to intelligent projects and\
+    \ critical thinking difficulties. By chipping away at these undertakings, you'll\
+    \ support how you might interpret programming ideas as well as gain active involvement\
+    \ with building certifiable applications with C++. Have a good time coding!\n\n\
+    # Section 13: High level Subjects in C++\n\nIn this part, we'll investigate a\
+    \ few high level subjects in C++ that go past the nuts and bolts canvassed before\
+    \ in this book. These points will develop how you might interpret the language\
+    \ and acquaint you with further developed ideas and procedures.\n\n# Formats\n\
+    \nFormats in C++ permit you to compose nonexclusive code that can work with any\
+    \ information type. They are especially valuable for making information designs\
+    \ and calculations that are autonomous of explicit information types.\n\nDuplicate\
+    \ code\n\n```cpp\ntemplate<typename T>\nT maximum(T a, T b) {\n    return (a >\
+    \ b) ? a : b;\n}\n```\n\n# STL (Standard Format Library)\n\nThe Standard Format\
+    \ Library (STL) is a strong assortment of classes and works that give normal information\
+    \ designs and calculations in C++. It incorporates compartments like vectors,\
+    \ records, and guides, as well as calculations for arranging, looking, and controlling\
+    \ information.\n\nDuplicate code\n\n```cpp\n#include <vector>\n#include <algorithm>\n\
+    \nstd::vector<int> numbers = {3, 1, 4, 1, 5, 9, 2, 6};\n\nstd::sort(numbers.begin(),\
+    \ numbers.end());\n```\n\n# Lambda Articulations\n\nLambda articulations permit\
+    \ you to characterize unknown capabilities inline, making it more straightforward\
+    \ to compose short, one-off capabilities without the requirement for isolated\
+    \ capability announcements.\n\nDuplicate code\n\n```cpp\nauto total = [](int a,\
+    \ int b) { return a + b; };\n\nstd::cout << total(3, 5) << std::endl; //Result:\
+    \ 8\n```\n\n# Simultaneousness\n\nC++ offers help for multi-stringing and offbeat\
+    \ programming through libraries like <thread> and <future>. These highlights permit\
+    \ you to make programs that can play out various assignments at the same time,\
+    \ further developing execution and responsiveness.\n\nDuplicate code\n\n```cpp\n\
+    #include <iostream>\n#include <thread>\n\nvoid welcome() {\n    std::cout << \"\
+    Hello!\" << std::endl;\n}\n\nint main() {\n    std::thread t(welcome);\n    t.join();\n\
+    \    return 0;\n}\n```\n\n# Shrewd Pointers\n\nShrewd pointers are objects that\
+    \ act like pointers however give extra features like memory management. They help\
+    \ with preventing memory leaks.\n\n```cpp\n#include <memory>\n\n#::shared_ptr<int>\
+    \ ptr = std::make_shared<int>(10);\n```\n\nEnd\n\nIn this part, we've investigated\
+    \ a few high level subjects in C++, including formats, Standard Format Library\
+    \ (STL), lambda articulations, simultaneousness, and shrewd pointers. These points\
+    \ will develop how you might interpret the language and de testing. As you proceed\
+    \ with your journey with C++, make sure to explore further developed ideas and\
+    \ techniques.\n\n# Part 14: C++ Best Practices and Improvement\n\nIn this part,\
+    \ we've dive into best practices and advancement methods for writing effective\
+    \ and viable C++ code. Following these practices will assist you with creating\
+    \ top notch programming that is obvious, maintainable, and robust.\n\n# 1. Utilize\
+    \ Significant Variable Names\n\nPick descriptive names for factors, works, and\
+    \ classes to make your code more obvious.\n\n# 2. Follow Coding Standards\n\n\
+    Stick to a steady coding style and organizing patterns. This further develops\
+    \ code coherence and makes collaboration easier.\n\n# 3. Limit Global Factors\n\
+    \nLimit the utilization of global factors, as they can create hidden dependencies\
+    \ and make testing difficult.\n\n# 4. Avoid Magic Numbers\n\nReplace numeric literals\
+    \ with named constants or specifications to further develop code meaningfulness\
+    \ and maintainability.\n\n# 5. Error Handling\n\nImplement appropriate error handling\
+    \ with components, for example, exceptions or error codes, to nimbly handle unexpected\
+    \ circumstances and prevent crashes.\n\n# 6. Use Smart Pointers\n\nUse smart pointers\
+    \ (e.g., std::unique_ptr and std::shared_ptr) to manage memory naturally and avoid\
+    \ memory leaks.\n\n# 7. Avoid Premature Optimization\n\nCenter around writing\
+    \ clear and viable code first. Just advance execution segments of code after profiling\
+    \ and identifying bottlenecks.\n\n# 8. Use Standard Library\n\nUse the features\
+    \ and calculations provided by the C++ Standard Library (STL) whenever the situation\
+    \ allows. It is widely tested, efficient, and compact.\n\n# 9. Profile and Benchmark\n\
+    \nIdentify execution bottlenecks by profiling your code and use benchmarks to\
+    \ quantify the effect of advancements.\n\n# 10. Document Your Code\n\nWrite clear\
+    \ and brief comments to archive your code, including explanations of logic, behavior,\
+    \ and any non-obvious design choices.\n\n# 11. Test Driven Development (TDD)\n\
+    \nAdopt a test-driven development approach to ensure that your code acts true\
+    \ to form and stays right after changes.\n\n# 12. Modularize Your Code\n\nBreak\
+    \ down your code into smaller, reusable modules (functions, classes, or libraries)\
+    \ to advance code reusability and viability.\n\n# 13. Continuous Integration and\
+    \ Continuous Deployment (CI/CD)\n\nAutomate the build, test, and deployment cycles\
+    \ to ensure that changes to your codebase are routinely tested and delivered in\
+    \ a controlled way.\n\n# 14. Learn from Others\n\nFocus on code written by experienced\
+    \ C++ designers, participate in code reviews, and contribute to open-source projects\
+    \ to learn new methods and best practices.\n"
+  mdcn: "\n\n# 第 12 部分：总装一切：比常规模更小的任务\n\n在这一部分，我们将应用贯穿全书的思想，在 C++ 中完成一些比常规模更小的任务。这些任务将帮助你建立对编程基础知识的理解，并允许你以一种既有趣又智能的方式练习批判性思维能力。\n\
+    \n# 编写基础游戏\n\n猜数字游戏：编写一个程序，在 1 到 100 之间随机生成一个数字，并要求用户猜出该数字。给用户提供反馈（例如，“太高了”或“太低了”），并记录尝试的次数。如果用户需要，允许他们再次游戏。\n\
+    \n剪刀石头石头布：执行一个经典的剪刀石头石头布游戏回合。让用户从三个选项中选择一个，然后为电脑生成一个随机决定。根据游戏规则判断胜负并显示结果。\n\n\
+    # 直观项目\n\n每日计划规划器：开发一个允许用户处理每日计划的程序。用户应该能够添加任务、标记任务为已完成、删除任务以及显示正在进行的任务列表。实现一个基于菜单的界面来与计划进行交互。\n\
+    \n简易微型计算机：构建一个基础的数字处理程序，可以执行加、减、乘、除等数学任务。允许用户输入两个数字并选择一个要执行的操作。向用户显示结果。\n\n# 用\
+    \ C++ 解决趣味问题\n\n斐波那契数列：编写一个程序，生成到指定项数的斐波那契数列。向用户显示该序列并计算该数列的总和。\n\n回文检查器：编写一个程序检查给定字符串是否为回文（正读反读都相同）。在判断字符串是否为回文时，忽略空格、标点和大小写。\n\
+    \n结束\n\n在这一节中，我们研究了一些你可以执行以练习 C++ 编程能力的小型项目。这些活动涵盖了从简单的游戏到智能项目以及批判性思维挑战。通过完成这些任务，你将加强对编程概念的理解，并积极参与构建可靠的\
+    \ C++ 应用程序。祝编码愉快！\n\n# 第 13 部分：C++ 高级主题\n\n在这一部分，我们将探讨一些超越书中之前讨论的基础知识的 C++ 高级主题。这些点将提升你对语言的理解，并让你熟悉更先进的概念和技术。\n\
+    \n# 泛型 (Templates)\n\nC++ 中的泛型允许你编写可以与任何数据类型工作的非特定代码。它们对于创建独立于显式数据类型的数据设计和计算特别有用。\n\
+    \n重复代码\n\n```cpp\ntemplate<typename T>\nT maximum(T a, T b) {\n    return (a >\
+    \ b) ? a : b;\n}\n```\n\n# STL (标准模板库)\n\n标准模板库（STL）是一组强大的类和函数，提供了 C++ 中通用的数据结构和算法。它包含了向量、记录和指南等容器，以及用于排序、查找和控制信息的算法。\n\
+    \n重复代码\n\n```cpp\n#include <vector>\n#include <algorithm>\n\nstd::vector<int>\
+    \ numbers = {3, 1, 4, 1, 5, 9, 2, 6};\n\nstd::sort(numbers.begin(), numbers.end());\n\
+    ```\n\n# Lambda 表达式\n\nLambda 表达式允许你内联定义匿名函数，使得编写短小的、一次性的功能更加简单，而不需要独立的函数声明。\n\
+    \n重复代码\n\n```cpp\nauto total = [](int a, int b) { return a + b; };\n\nstd::cout\
+    \ << total(3, 5) << std::endl; //结果: 8\n```\n\n# 并发性\n\nC++ 通过 `<thread>` 和 `<future>`\
+    \ 等库提供了多线程和异步编程的支持。这些特性允许你创建可以同时执行多个任务的程序，进一步提高执行和响应速度。\n\n重复代码\n\n```cpp\n#include\
+    \ <iostream>\n#include <thread>\n\nvoid welcome() {\n    std::cout << \"Hello!\"\
+    \ << std::endl;\n}\n\nint main() {\n    std::thread t(welcome);\n    t.join();\n\
+    \    return 0;\n}\n```\n\n# 智能指针\n\n智能指针是像指针一样的对象，但提供了内存管理等额外功能。它们有助于防止内存泄漏。\n\
+    \n```cpp\n#include <memory>\n\nstd::shared_ptr<int> ptr = std::make_shared<int>(10);\n\
+    ```\n\n结束\n\n在这一部分，我们研究了几个 C++ 高级主题，包括泛型、标准模板库 (STL)、Lambda 表达式、并发和智能指针。这些点将提升你对语言的理解和测试能力。当你继续\
+    \ C++ 之之旅时，请确保探索更先进的概念和技术。\n\n# 第 14 部分：C++ 最佳实践与改进\n\n在这一部分，我们深入探讨了编写高效 C++ 代码的最佳实践和改进方法。遵循这些实践将帮助你创建清晰、可维护且健壮的代码。\n\
+    \n# 1. 使用有意义的变量名\n\n为变量、函数和类选择描述性的名称。\n\n# 2. 遵循编码规范\n\n坚持一致的代码风格和组织模式。\n\n# 3.\
+    \ 限制全局变量\n\n限制全局变量的使用，因为它们会创建隐藏依赖并增加测试难度。\n\n# 4. 避免魔数\n\n用命名常量或规范替换数字字面量，以提高代码的可读性。\n\
+    \n# 5. 错误处理\n\n使用适当的错误处理（例如异常或错误代码），以灵活处理意外情况并防止崩溃。\n\n# 6. 使用智能指针\n\n使用智能指针（如\
+    \ `std::unique_ptr` 和 `std::shared_ptr`）管理内存，避免内存泄漏。\n\n# 7. 避免过早优化\n\n优先编写清晰高效的代码。仅在通过性能分析并识别瓶颈后再对代码执行部分进行优化。\n\
+    \n# 8. 使用标准库\n\n在情况允许的情况下使用 C++ 标准库（STL）提供的功能和算法。它是经过充分测试、高效且紧凑的。\n\n# 9. 性能分析与基准测试\n\
+    \n通过性能分析识别执行瓶颈，并使用基准测试量化改进的效果。\n\n# 10. 代码注释\n\n编写清晰的注释来记录代码，包括逻辑、行为以及任何非明显设计选择的说明。\n\
+    \n# 11. 测试驱动开发 (TDD)\n\n采用测试驱动开发方法，确保代码在更改后仍然符合预期。\n\n# 12. 代码模块化\n\n将代码拆分为更小的、可重用的模块（函数、类或库），以提高代码的可重用性和活力。\n\
+    \n# 13. 持续集成与持续部署 (CI/CD)\n\n自动化构建、测试和部署周期，确保代码库的更改经过测试并以受控的方式交付。\n\n# 14. 从他人学习\n\
+    \n关注经验 C++ 设计师的代码，参与代码审查并贡献开源项目，以学习新的方法和最佳实践。\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 70]
+
+
+    By following these prescribed procedures and advancement strategies, you can compose
+    cleaner, more effective, and more viable C++ code. Consistently endeavor to further
+    develop your coding abilities and remain refreshed with the most recent improvements
+    in the C++ people group to turn into a capable and viable software engineer.'
+  - '[PAGE 71]
+
+
+    # Section 15: High level C++ Subjects and Then some
+
+
+    In this last section, we''ll investigate some high level C++ subjects and examine
+    roads for additional learning and investigation. These points go past the basics
+    and give a brief look into the tremendous scene of conceivable outcomes and applications
+    in the realm of C++ programming.
+
+
+    # 1. High level Information Designs and Calculations:
+
+
+    Jump further into the investigation of information structures (e.g., trees, charts,
+    hash tables) and calculations (e.g., arranging, looking, powerful programming)
+    to really handle complex computational issues.
+
+
+    # 2. Layout Metaprogramming:
+
+
+    Investigate the domain of layout metaprogramming, which use C++ formats to perform
+    accumulate time calculations and produce code at order time.
+
+
+    # 3. Equal and Simultaneous Programming:
+
+
+    Find out about equal and simultaneous programming methods utilizing libraries
+    like OpenMP, Intel Stringing Building Blocks (TBB), or C++ Standard Library (since
+    C++11) to exploit multi-center processors and further develop execution.'
+  - '[PAGE 72]
+
+
+    # Designs and Game Turn of events:
+
+
+    Try different things with designs programming utilizing libraries like OpenGL
+    or DirectX, and investigate game advancement structures, for example, Incredible
+    Motor or Solidarity to make intelligent and vivid encounters.
+
+
+    # 5. Frameworks Programming:
+
+
+    Dive into frameworks programming to foster low-level programming parts, working
+    framework pieces, gadget drivers, or organization conventions utilizing C++.
+
+
+    # 6. Inserted Frameworks and IoT (Web of Things):
+
+
+    Investigate the universe of inserted frameworks and IoT by programming microcontrollers,
+    sensors, and actuators utilizing C++ and structures like Arduino or Raspberry
+    Pi.
+
+
+    # 7. Elite Execution Registering (HPC):
+
+
+    Find out about HPC procedures and libraries like MPI (Message Passing Connection
+    point) or CUDA (Process Bound together Gadget Engineering) to foster elite execution
+    logical figuring applications for undertakings like recreation, demonstrating,
+    or information investigation.
+
+
+    # 8. AI and Man-made brainpower:
+
+
+    Plunge into the field of AI and computer based intelligence by utilizing libraries
+    like TensorFlow or PyTorch from C++ to construct and send AI models for different
+    applications.'
+  - '[PAGE 73]
+
+
+    # Web Advancement with C++:
+
+
+    Try different things with web advancement utilizing systems like C++ REST SDK
+    (Casablanca) or Wt (Web Tool stash) to make web applications or APIs in C++.
+
+
+    # 10. Quantum Processing:
+
+
+    Investigate the arising field of quantum processing and examine how C++ can be
+    utilized to foster quantum calculations and reproductions for quantum figuring
+    stages.
+
+
+    # End
+
+
+    The excursion of learning C++ is a continuous interaction, and there are in every
+    case new points and regions to investigate. By diving into these high level subjects
+    and then some, you''ll grow your insight and range of abilities as a C++ software
+    engineer and open new open open doors for development and imagination. Continue
+    testing, learning, and pushing the limits of what''s conceivable with C++!'
+  - '[PAGE 74]
+
+
+    # End
+
+
+    All in all, C++ is a strong and flexible programming language that offers a great
+    many capacities and applications. All through this book, we''ve covered the essentials
+    of C++ programming, including information types, control structures, capabilities,
+    object-arranged programming, record dealing with, and that''s only the tip of
+    the iceberg.
+
+
+    By dominating these essentials, you''ve acquired the abilities important to compose
+    strong, productive, and viable C++ code. Furthermore, we''ve investigated progressed
+    points like layouts, STL, simultaneousness, improvement, and then some, furnishing
+    you with a strong starting point for handling more perplexing difficulties and
+    investigating specific spaces inside C++ programming.
+
+
+    As you proceed with your excursion with C++, make sure to rehearse routinely,
+    try different things with various procedures and instruments, and learn constantly.
+    The universe of C++ writing computer programs is immense and continually developing,
+    offering vast open doors for inventiveness, advancement, and critical thinking.
+
+
+    Whether you''re keen on programming improvement, game programming, frameworks
+    programming, or some other field, C++ gives the instruments and capacities to
+    transform your thoughts into the real world. Embrace the difficulties, remain
+    inquisitive, and continue to push the limits of what you can accomplish with C++.'
+  - '[PAGE 75]
+
+
+    Much thanks to you for going along with me on this excursion through the universe
+    of C++ programming. I hope everything turns out great for you of karma in your
+    future undertakings, and may you proceed to develop and flourish as a C++ software
+    engineer. Cheerful coding!'
+  md: '
+
+    By following these prescribed procedures and advancement strategies, you can compose
+    cleaner, more effective, and more viable C++ code. Consistently endeavor to further
+    develop your coding abilities and remain refreshed with the most recent improvements
+    in the C++ people group to turn into a capable and viable software engineer.
+
+
+    ## Section 15: High level C++ Subjects and Then some
+
+
+    In this last section, we''ll investigate some high level C++ subjects and examine
+    roads for additional learning and investigation. These points go past the basics
+    and give a brief look into the tremendous scene of conceivable outcomes and applications
+    in the realm of C++ programming.
+
+
+    ## 1. High level Information Designs and Calculations:
+
+
+    Jump further into the investigation of information structures (e.g., trees, charts,
+    hash tables) and calculations (e.g., arranging, looking, powerful programming)
+    to really handle complex computational issues.
+
+
+    ## 2. Layout Metaprogramming:
+
+
+    Investigate the domain of layout metaprogramming, which use C++ formats to perform
+    accumulate time calculations and produce code at order time.
+
+
+    ## 3. Equal and Simultaneous Programming:
+
+
+    Find out about equal and simultaneous programming methods utilizing libraries
+    like OpenMP, Intel Stringing Building Blocks (TBB), or C++ Standard Library (since
+    C++11) to exploit multi-center processors and further develop execution.
+
+
+    ## 4. Designs and Game Turn of events:
+
+
+    Try different things with designs programming utilizing libraries like OpenGL
+    or DirectX, and investigate game advancement structures, for example, Incredible
+    Motor or Solidarity to make intelligent and vivid encounters.
+
+
+    ## 5. Frameworks Programming:
+
+
+    Dive into frameworks programming to foster low-level programming parts, working
+    framework pieces, gadget drivers, or organization conventions utilizing C++.
+
+
+    ## 6. Inserted Frameworks and IoT (Web of Things):
+
+
+    Investigate the universe of inserted frameworks and IoT by programming microcontrollers,
+    sensors, and actuators utilizing C++ and structures like Arduino or Raspberry
+    Pi.
+
+
+    ## 7. Elite Execution Registering (HPC):
+
+
+    Find out about HPC procedures and libraries like MPI (Message Passing Connection
+    point) or CUDA (Process Bound together Gadget Engineering) to foster elite execution
+    logical figuring applications for undertakings like recreation, demonstrating,
+    or information investigation.
+
+
+    ## 8. AI and Man-made brainpower:
+
+
+    Plunge into the field of AI and computer based intelligence by utilizing libraries
+    like TensorFlow or PyTorch from C++ to construct and send AI models for different
+    applications.
+
+
+    ## 9. Web Advancement with C++:
+
+
+    Try different things with web advancement utilizing systems like C++ REST SDK
+    (Casablanca) or Wt (Web Tool stash) to make web applications or APIs in C++.
+
+
+    ## 10. Quantum Processing:
+
+
+    Investigate the arising field of quantum processing and examine how C++ can be
+    utilized to foster quantum calculations and reproductions for quantum figuring
+    stages.
+
+
+    ## End
+
+
+    The excursion of learning C++ is a continuous interaction, and there are in every
+    case new points and regions to investigate. By diving into these high level subjects
+    and then some, you''ll grow your insight and range of abilities as a C++ software
+    engineer and open new open open doors for development and imagination. Continue
+    testing, learning, and pushing the limits of what''s conceivable with C++!
+
+
+    ## End
+
+
+    All in all, C++ is a strong and flexible programming language that offers a great
+    many capacities and applications. All through this book, we''ve covered the essentials
+    of C++ programming, including information types, control structures, capabilities,
+    object-arranged programming, record dealing with, and that''s only the tip of
+    the iceberg.
+
+
+    By dominating these essentials, you''ve acquired the abilities important to compose
+    strong, productive, and viable C++ code. Furthermore, we''ve investigated progressed
+    points like layouts, STL, simultaneousness, improvement, and then some, furnishing
+    you with a strong starting point for handling more perplexing difficulties and
+    investigating specific spaces inside C++ programming.
+
+
+    As you proceed with your excursion with C++, make sure to rehearse routinely,
+    try different things with various procedures and instruments, and learn constantly.
+    The universe of C++ writing computer programs is immense and continually developing,
+    offering vast open doors for inventiveness, advancement, and critical thinking.
+    Whether you''re keen on programming improvement, game programming, frameworks
+    programming, or some other field, C++ gives the instruments and capacities to
+    transform your thoughts into the real world. Embrace the difficulties, remain
+    inquisitive, and continue to push the limits of what you can accomplish with C++.
+
+
+    Much thanks to you for going along with me on this excursion through the universe
+    of C++ programming. I hope everything turns out great for you of karma in your
+    future undertakings, and may you proceed to develop and flourish as a C++ software
+    engineer. Cheerful coding!
+
+    '
+  mdcn: '
+
+
+    通过遵循这些规定的流程和进阶策略，你可以编写出更整洁、更高效且更实行的 C++ 代码。不断努力提升你的编码能力，并关注 C++ 社区的最新进展，以成为一名胜任且高产的软件工程师。
+
+
+    ## 第 15 节：高级 C++ 主题及其他
+
+
+    在最后一个章节中，我们将研究一些高级 C++ 主题，并探索进一步学习和研究的途径。这些点超越了基础知识，带你简要了解 C++ 编程领域中可能的结果和应用的广阔前景。
+
+
+    ## 1. 高级数据结构与算法：
+
+
+    进一步深入研究数据结构（例如树、图、哈希表）和算法（例如排序、查找、高效性编程），以真正处理复杂的计算问题。
+
+
+    ## 2. 模板元编程：
+
+
+    探索模板元编程领域，该领域利用 C++ 模板在编译时进行计算并在编译期间生成代码。
+
+
+    ## 3. 并行与并发编程：
+
+
+    学习利用 OpenMP、Intel Threading Building Blocks (TBB) 或 C++ 标准库（C++11 及以后）等库的并行与并发编程方法，以利用多核处理器并提高执行效率。
+
+
+    ## 4. 图形与游戏开发：
+
+
+    利用 OpenGL 或 DirectX 等库尝试不同的图形编程，并探索游戏开发框架（例如 Unreal Engine 或 Unity），以创建明智能且生动的体验。
+
+
+    ## 5. 框架编程：
+
+
+    深入研究框架编程，以使用 C++ 开发底层编程组件、工作框架部件、小工具驱动程序或组织规范。
+
+
+    ## 6. 嵌入式框架与物联网 (IoT)：
+
+
+    通过使用 C++ 微控制器、传感器和执行器，结合 Arduino 或树莓派等结构，探索嵌入式框架和物联网的世界。
+
+
+    ## 7. 高性能计算 (HPC)：
+
+
+    学习 HPC 流程和库，如 MPI（消息传递接口）或 CUDA（计算统一设备架构），以为模拟、可视化或数据分析等任务开发高性能并行计算应用程序。
+
+
+    ## 8. AI 与人工智能：
+
+
+    通过在 C++ 中使用 TensorFlow 或 PyTorch 等库，深入 AI 和计算机智能领域，构建并部署用于不同应用程序的 AI 模型。
+
+
+    ## 9. 使用 C++ 进行 Web 开发：
+
+
+    尝试使用 C++ REST SDK (Casablanca) 或 Wt (Web Toolset) 等系统进行 Web 开发，用 C++ 创建 Web 应用程序或
+    API。
+
+
+    ## 10. 量子计算：
+
+
+    探索新兴的量子计算领域，并研究如何利用 C++ 为量子计算阶段开发量子计算和模拟。
+
+
+    ## 结束
+
+
+    学习 C++ 的旅程是一个持续的过程，总有新的点和领域等待探索。通过深入学习这些高级主题等，你将扩展作为 C++ 软件工程师的洞察力和技能范围，并为开发和创新开启新的大门。继续测试、学习并挑战
+    C++ 的边界！
+
+
+    ## 结束
+
+
+    总而言，C++ 是一种强大且灵活的编程语言，提供了许多功能和应用。在本书中，我们涵盖了 C++ 编程的基础，包括数据类型、控制结构、函数、对象编程、记录处理等，这只是冰山一角。
+
+
+    通过掌握这些基础知识，你已经具备了编写健壮、高效且可行 C++ 代码所需的能力。此外，我们还探讨了模板、STL、并发、优化等高级要点，为你处理更复杂的挑战和探索
+    C++ 编程中的特定领域提供了一个坚实的起点。
+
+
+    在你继续你的 C++ 旅程时，请确保经常练习，尝试不同的程序和工具，并不断学习。C++ 编程的世界是巨大的且不断发展的，为创造力、创新和批判性思维提供了广阔的空间。无论你热衷于程序开发、游戏编程、框架编程还是其他领域，C++
+    都提供了将你的想法变为现实的工具和能力。接受挑战，保持好奇，并继续突破你用 C++ 所能成就的极限。
+
+
+    感谢你与我一起完成这段穿越 C++ 编程世界的旅程。希望你未来的事业一切顺利，愿你作为一名 C++ 软件工程师不断成长、茁壮发展。编码愉快！
+
+
+    '
+  merge: 0
