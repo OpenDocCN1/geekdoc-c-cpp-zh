@@ -1,0 +1,249 @@
+
+
+# 第 5 章 重复结构
+
+图 5-21 时钟模拟器流程图
+
+![](img/c939132f78787c7f339c6977b3fc8c85_242_0.png)
+
+## 5.6 嵌套循环
+
+时钟模拟示例引入了关于嵌套循环的几点：
+
+- 在外层循环的每一次迭代中，内层循环都会完成其所有的迭代。
+- 内层循环完成迭代的速度比外层循环快。
+- 要获取嵌套循环的总迭代次数，请将所有循环的迭代次数相乘。
+
+程序 5-20 显示了另一个伪代码示例。这是一个老师可能用它来计算每个学生测试成绩平均分的程序。第 13 行的语句获取每个学生的测试次数。从第 20 行开始的 For 循环为每个学生迭代一次。第 27 到 31 行的嵌套循环为每个测试分数迭代一次。
+
+## 程序 5-20
+
+```
+// 此程序计算测试分数的平均值。它要求用户输入
+// 学生人数以及每个学生的测试分数个数。
+Declare Integer numStudents
+Declare Integer numTestScores
+Declare Integer total
+Declare Integer student
+Declare Integer testNum
+Declare Real score
+Declare Real average
+
+// 获取学生人数。
+Display "你有多少个学生?"
+Input numStudents
+
+// 获取每个学生的测试分数个数。
+Display "每个学生有多少个测试分数?"
+Input numTestScores
+
+// 计算每个学生的平均测试分数。
+For student = 1 To numStudents
+// 初始化测试分数的累加器。
+Set total = 0
+
+// 获取学生的测试分数。
+Display "学生编号 ", student
+Display ""
+For testNum = 1 To numTestScores
+Display "输入测试编号 ", testNum, ":"
+Input score
+Set total = total + score
+// 计算该学生的平均测试分数。
+Set average = total / numTestScores
+// 显示平均分。
+Display "学生 ", student, " 的平均分是 ", average
+Display
+End For
+```
+
+## 程序输出（输入部分已**加粗**）
+
+你有多少个学生?
+3 [Enter]
+每个学生有多少个测试分数?
+3 [Enter]
+
+```
+学生编号 1
+-----------------
+输入测试编号 1:
+100 [Enter]
+输入测试编号 2:
+95 [Enter]
+输入测试编号 3:
+90 [Enter]
+学生编号 1 的平均分是 95.0
+```
+
+```
+学生编号 2
+-----------------
+输入测试编号 1:
+80 [Enter]
+输入测试编号 2:
+81 [Enter]
+输入测试编号 3:
+82 [Enter]
+学生编号 2 的平均分是 81.0
+```
+
+```
+学生编号 3
+-----------------
+输入测试编号 1:
+75 [Enter]
+输入测试编号 2:
+85 [Enter]
+输入测试编号 3:
+80 [Enter]
+学生编号 3 的平均分是 80.0
+```
+
+## 复习题
+
+### 单选题
+
+- 1. 一个 ________ 控制的循环使用真/假条件来控制重复的次数。
+  a. 布尔 (Boolean)
+  b. 条件 (condition)
+  c. 决策 (decision)
+  d. 计数 (count)
+
+- 2. 一个 ________ 控制的循环重复特定的次数。
+  a. 布尔 (Boolean)
+  b. 条件 (condition)
+  c. 决策 (decision)
+  d. 计数 (count)
+
+- 3. 循环的每一次重复被称为一个(n) ________。
+  a. 周期 (cycle)
+  b. 旋转 (revolution)
+  c. 轨道 (orbit)
+  d. 迭代 (iteration)
+
+- 4. While 循环是一种 ________ 类型的循环。
+  a. 先测试 (pretest)
+  b. 后测试 (posttest)
+  c. 预判 (prequalified)
+  d. 后迭代 (post iterative)
+
+- 5. Do-While 循环是一种 ________ 类型的循环。
+  a. 先测试 (pretest)
+  b. 后测试 (posttest)
+  c. 预判 (prequalified)
+  d. 后迭代 (post iterative)
+
+- 6. For 循环是一种 ________ 类型的循环。
+  a. 先测试 (pretest)
+  b. 后测试 (posttest)
+  c. 预判 (prequalified)
+  d. 后迭代 (post iterative)
+
+- 7. 一个(n) ________ 循环没有结束的方法，直到程序被中断。
+  a. 不确定的 (indeterminate)
+  b. 无终止的 (interminable)
+  c. 无限的 (infinite)
+  d. 无时的 (timeless)
+
+- 8. 一个 ________ 循环至少执行一次。
+  a. 先测试 (pretest)
+  b. 后测试 (posttest)
+  c. 条件控制 (condition-controlled)
+  d. 计数控制 (count-controlled)
+
+- 9. 一个(n) ________ 变量保持运行总和。
+  a. 哨兵 (sentinel)
+  b. 总和 (sum)
+  c. 总计 (total)
+  d. 累加器 (accumulator)
+
+- 10. 一个(n) ________ 是一个特殊值，用于信号列表中没有更多项目待处理了。此值不会被误认为是列表中的项目。
+  a. 哨兵 (sentinel)
+  b. 标志位 (flag)
+  c. 信号 (signal)
+  d. 累加器 (accumulator)
+
+### 判断对错
+
+条件控制的循环总是重复特定的次数。
+
+- 1. While 循环是先测试循环。
+2. Do-While 循环是先测试循环。
+3. 你不应该在 For 循环体中编写修改计数器变量内容的。
+4. 你不能在循环体中显示计数器变量的内容。
+5. 不可能通过除1以外的值来增加计数器变量。
+6. 下述语句声明了变量 x: Set x
+7. 没有必要初始化累加器变量。
+8. 在嵌套循环中，内层循环在外层循环的每一次迭代中运行。
+9. 为了计算嵌套循环的迭代次数。
+
+### 简答题
+
+- 1. 为什么要在循环体内进行计数？
+2. 先测试循环和后测试循环的区别是什么？
+3. 什么是条件控制循环？
+4. 什么是计数控制循环？
+5. 计数控制循环通常执行哪些操作？
+6. 什么是无限循环？
+7. For 循环看起来像什么循环？
+8. 为什么必须初始化累加器变量？
+9. 使用哨兵的意义是什么？
+10. 为什么哨兵值必须仔细选择？
+
+### 算法设计
+
+- 1. 设计一个循环，让用户输入数字。数字将被累加并存储在 product 中。
+2. 设计一个循环，只要 product 小于 100，它就会运行。
+3. 设计一个 For 循环，显示 10, 20, ... 100。
+4. 设计一个循环，让用户输入数字。数字将被累加并显示。
+5. 设计一个 For 循环，显示 30 + 29 + ... + 1。
+6. 设计一个嵌套循环，显示 10 行。
+7. 将以下 While 循环转换为 Do-While 循环：
+   Declare Integer x = 1
+   While x > 0
+       Display "输入数字。"
+       Input x
+8. 将以下 Do-While 循环代码转换为 While 循环：
+   Declare String sure
+   Do
+       Display "确定要退出吗?"
+       Input sure
+   While sure != "Y" AND sure != "y"
+9. 将以下 While 循环转换为 For 循环：
+   Declare Integer count = 0
+   While count < 50
+       Display "计数为 ", count
+       Set count = count + 1
+10. 将以下 For 循环转换为 While 循环：
+    Declare count
+
+### 调试练习
+
+- 1. 找出以下伪代码中的错误：
+   Declare Boolean finished = False
+   Declare Integer value, cube
+   While NOT finished
+       Display "输入立方的值。"
+       Input value
+       Set cube = value^3
+       Display value, "立方是 ", cube
+- 2. 程序员想要通过以下伪代码显示 1 到 60，然后显示消息“时间到了！”但功能不符合预期。找出错误。
+   Declare Integer counter = 1
+   Const Integer TIME_LIMIT = 60
+   ```
+   While counter < TIME_LIMIT
+       Display counter
+       Set counter = counter + 1
+   End While
+   Display "Time's up!"
+   ```
+- 3. 程序员想要获取五组数字，计算每组的总和，并计算所有数字的总和。但功能不符合预期。找出错误。
+
+### 编程练习
+
+- 1. **昆虫收集**：昆虫每天收集七天。设计一个程序，记录七天收集的昆虫总数。循环应该询问每天收集的数量，循环结束后，程序应显示收集的昆虫数量。
+- 2. **卡路里消耗**：在特定的跑步机上跑步每分钟消耗 3.9 卡路里。设计一个程序，使用循环显示 10、15、20、25 和 30 分钟后的卡路里数。
+- 3. **预算分析**：设计一个程序让用户输入预算金额。循环提示用户输入每月各项支出，并保持总和。循环结束后，程序显示超出或低于预算的金额。
+- 4. **数字和**：设计一个带有循环的程序，让用户输入一组正数。用户输入负数来表示序列结束。在输入所有正数后，程序应显示它们的和。
+

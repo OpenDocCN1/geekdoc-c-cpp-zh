@@ -1,0 +1,1 @@
+This statement displays the contents of the counter variable

@@ -1,0 +1,213 @@
+
+# Index 631
+
+- software development, 21
+- software requirements, 29
+- algorithms for, 327–364
+    - ascending order, 339, 340–349
+    - bubble, 333–359
+    - descending order, 339, 351–353
+    - insertion, 359–364
+    - selection, 332–359
+    - of string arrays, 349–351
+- source code, 18
+- specialization, generalization, and handy, 549–550
+- specify access, 528
+- spell-checkers, 477
+- spreadsheets, 327
+- sage function, 251–252
+    - date value allocation, 589
+- start terminal, 31
+- state abbreviations, validating, 278
+- statements, defined, 217
+    - See also specific statements
+- step up, 198
+- step refinement, 89
+- storage devices, data store
+    - storage devices, secondary (drives), 5–6
+- string array
+    - searching, 300–302
+    - sorting, 349–351
+- string comparisons, 133–136
+- string type set, 58
+- string functions
+    - pend, 257
+    - contains, 260, 478
+    - is2Integer, 261, 478
+    - isaEqual, 261, 277, 483
+    - nlength, 257, 478, 491
+    - overview of, 257, 478
+    - stringInteger, 260, 261, 478
+    - stringTo, 260, 261, 478
+    - substring, 258–259
+    - tower, 257–258, 276
+    - zooplen, 257–258, 276
+- string literal, 37
+- strings
+    - See also text processing
+    - comprising, 139–142
+    - defined, 260
+    - formatting/unformatting, 488–492
+    - as input as, 41
+    - Input validation of, 276–277
+    - partial matches, 301
+    - returning, 249
+    - stringInteger function, 260–261, 478
+    - stringTo function, 260–261, 478
+- structure charts. See hierarchy charts
+- structure
+    - case, 150–155
+    - combining, 125–126
+    - control, 37, 123, 143
+    - sequence, 37, 123–126
+    - structures, defined. See decision structures
+    - structures, selection. See decision structures
+- style conventions, programming, 59, 66–67, 85, 134
+- subclasses (derived classes)
+    - defined, 550
+    - irreversibility of, 556
+    - polymorphism and, 557–561
+    - using, 550, 554–561
+- submenus, 466–467
+- subroutines, 282
+- subtroutines, 382
+- scripts, array, 287, 288, 293, 294, 299, 301, 317
+    - 318, 323, 324, 331, 345, 366, 369
+    - defined, 385
+    - invalid, 479
+- abstracting function, 258–258, 473
+- subtraction operator, 151–146
+- sun function, 233–259
+- summing, of array elements, 506–507
+- Sun Microsystems (Oracle)
+    - defined, 217
+    - Java, 156, 65, 68, 128, 156, 371
+    - NetBeans, 19, 572
+- superclasses (based)
+    - defined, 556
+    - polymorphism and, 557–561
+    - using, 550, 554–561
+- swapping, array elements. 340–340, 354–359
+- syntax
+    - syntax errors, 17, 19, 27, 30, 44
+- system software, 20–21
+- T
+- tan function, 253
+- tasks, program, 28–29
+- telephone numbers, formatting/unformatting of, 488–492
+- terminal signs, 31, 38, 82, 83
+- testing
+    - of characters, 481–486
+    - of counters, 192
+    - of modules, 82
+    - post, 182, 189
+    - prec, 177–179
+    - of series of contents, 146–148
+    - text boxes, 573
+    - text editors, 18, 257, 379
+    - text files, 379
+    - text messaging programs, 477
+- text processing
+    - See also strings
+    - character-by, 479–481
+    - character library functions, 487–492
+    - deleting/inserting strings in a, 487–492
+    - formatting/unformatting, 488–492
+    - functions for, 478
+    - digit function, 483
+    - letter function, 481
+    - lower function, 481
+    - upper function, 481, 482, 485
+    - loops and, 479–480
+    - view of, 477
+- text processing (continued)
+    - password validation, 482–486
+    - pseudocode, in 79–492
+    - three-dimensional arrays, 330–331
+    - time measurements, 278
+    - lower function, 257–258, 276
+    - top-down design, 88–89
+- translation
+    - assembler, 15
+    - interpreters and compilers, 17–18, 27
+    - pseudocode and, 29, 30, 57
+    - translation of Hanoi, 512–515
+- two-dimensional arrays
+    - accessing elements in, 324–325
+    - declaring, 523, 592
+    - using of, 321–329
+- two's complement, 11
+- type file extension, 380
+- type mismatch error, 254
+- assignment of, 43–45
+- Boolean, 162–163, 298, 489
+- class, 531–532
+- data types and, 57–58
+- declaring of, 57–62, 530–531
+- duplicate, 96
+- global, 111–112
+- initial of, 60, 105–107, 175, 177, 185, 192, 204–205, 208, 211, 263
+- local, 95–96
+- mathematical operations on numerical, 45–55
+- named, 39–40, 96
+- (VB), 19, 30, 62, 65, 128, 533, 571
+- GUI design and, 574
+- Visual Studio, 191
+- volatile member, 5
+- underscore (_), character, 40
+- formatting of, 487–492
+- Unicode, 10, 579
+- Unified Modeling Language (UML)
+    - defined, 536
+    - declaration, 536–537, 546, 547, 551, 553, 556
+    - declaration and, 551–553, 576
+    - uninitialized variables, 57, 60–62, 177, 184, 481
+- uppercase characters, 10, 140, 180, 527
+- case method name, 40
+- case-insensitive comparisons, 238
+- case-sensitive comparisons, 258
+- cast to function, 481, 482, 485
+- pass by reference, 483–486
+- passwords and, 477, 484–485
+- lower function, 257–258, 276
+- top function, 257–258, 276
+- arrays (with stack), drives, 6
+- user interfaces
+    - See also graphical interfaces
+    - defined, 57
+    - designing for, GUI programs, 570–577
+    - flow diagrams, 569–570
+    - user prompts, 42–43
+    - users, 38–43
+- utility programs, 20
+- W
+- Web browsers, 257, 378, 477
+- while loops, 184, 185, 188, 271, 296, 399–593–596
+    - designing, 177–179, 204–208
+    - initial of, 60
+    - logic of, 173
+- in-driven programs, 450
+    - modularizing the code, in 180–182
+    - overlay of, 172–173
+    - perfection with, 177–179
+    - selecting, 191
+    - widgets, 573
+    - window editors, 571
+    - windows, GUI, 574–577
+- Windows, Microsoft, 16, 21, 569
+    - Explorer, 380
+- Word, Microsoft, 1, 21, 257, 380
+- word processors, 377
+- write statement, 35, 381, 382
+- writing
+    - data of, 375–383–389, 391–399, 599
+    - of functions, 236–250, 598–599
+    - of records of records, 400–402
+- V
+- validation, input. See input validation
+- values
+
+- Z
+- ZIP codes, 278
+
+*

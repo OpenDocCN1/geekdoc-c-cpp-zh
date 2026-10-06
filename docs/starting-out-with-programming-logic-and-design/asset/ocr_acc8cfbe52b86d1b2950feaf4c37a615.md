@@ -1,0 +1,2 @@
++   * If the problem can be solved without recursion, then the module solves it and returns
+* If the problem cannot be solved now, then the module reduces it to a smaller but similar problem and calls itself to solve the smaller problem
