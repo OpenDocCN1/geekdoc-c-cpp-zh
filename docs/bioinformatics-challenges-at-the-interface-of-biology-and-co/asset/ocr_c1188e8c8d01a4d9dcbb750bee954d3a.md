@@ -1,0 +1,7 @@
+# References
+
+Bairoch, A., Boeckmann, B., Ferro, S. and Gasteiger, E. (2004) Swiss-Prot: juggling between evolution and stability. Briefings in Bioinformatics, 5(1), 39–55.
+ilder, G. (2014) Mind the Gap: scholarly cyberinfrastructure is the trail rail of funds, institutions and researchers. Why do we keep getting it wrong and what can we do about it? The Shaking up: how to thrive in and change – the research ecosystem workshop, Microsoft New England R&D Center, 24 November 2014. Available at https://www.digital-science.com/events/shaking-it-up-how-to-thrive-in-and-change-the-research-ecosystem accessed 5 May 2016.
+Hutchins, J.R.A. (2014) What’s that gene (or protein?) Online resources for exploring functions of genes, transcripts and proteins. Molecular Biology of the Cell, 25, 1187–1201.
+Kennard, O. (1997) From private data to public knowledge. In The Impact of Electronic Publishing on the Academic Community, an International Workshop organised by the Academia Europe and the Wentworth Green Center, Stockholm, 16–20 April 1997 (ed. Ian Butterworth), Portland Press Ltd, London.
+Margolis, R., Derr, L., Dunn, M. et al. (2014) The National Institutes of Health’s Big Data to Knowledge (BD2K) initiative: capitalizing on biomedical big data. Journal of the American Medical Informatics Association, 21(6), 957–958. Available at http://www.ncbi.nlm.nih.gov/pmc/articles/PMC215061 accessed 5 May 2016.

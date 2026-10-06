@@ -1,0 +1,32 @@
+
+# Chapter 3 Biological databases
+
+staff are providing accession numbers at a rate of ~3,500 per day – allowing for sleep, that means more than one accession number every eight seconds (Benson et al., 2015). Like all sequence databases, GenBank is growing¹⁵ at an alarming rate.
+
+Perhaps not surprisingly, the initial funding for GenBank was insufficient to adequately maintain this amass of accumulating data; responsibility for its maintenance, with increased funding under a new contract, formerly passed to IntelliGenetics in 1987; then, in 1992, it became the responsibility of the NCBI, where it remains today (Benson et al., 1993; Benson et al., 2015; Smith, 1990).
+
+## 3.6 The PIR-PSD
+
+To some extent, the gathering momentum of nucleic acid sequence-collection efforts were beginning to overshadow the steady progress that was being made in the world of protein sequences, with Dayhoff’s Atlas. By October 1981, the Atlas had run into its fifth volume, a large book with three supplements, listing more than 1,600 proteins. With all collections, this information required constant updating and revision in light of new knowledge and new data appearing in the literature – and all of this becoming increasingly difficult to maintain and by hand.
+
+Perhaps more importantly, the community had become increasingly keen to harness the efficiency gains of central, electronic data repositories. Inevitably, as more databases began appearing on the horizon, making and maintaining cross-references between them had to become part of annotation and data-update processes, allow scientists to exploit and use sequence data to the full. Under the circumstances, continued publication of the Atlas in paper form simply became untenable: the time was ripe to exploit the advances in computer that had given rise to the CDS, the PDB, the EMBL data library and GenBank. Consequently, in 1984, the Atlas was available for the first time on computer as the Protein Sequence Database (PSD)¹⁶.
+
+Later, to facilitate protein sequence analysis more broadly, the NBRF established the Protein Identification Resource (PIR) (George et al., 1986). This new online system included the PSD, several query and analysis tools (e.g., the Protein Sequence Query (PSY), SEARCH and ALLEN programs), and a new, efficient search program, FAST. The latter was a modification of an earlier algorithm for searching protein and nucleic acid sequences (Wilbur and Lipman, 1983). Interestingly, given the number of deduced sequences by then, grown into the thousands, the great advantage of Wilbur and Lipman’s method was considered to be their speed; their paper reported a ‘substantial reduction in the time required to search a data bank’. Upon improving on this, the FAST algorithm could compare a 200-amino acid sequence to the 2,677 sequences of the PSD in less than 2 minutes on a computer, and 10 minutes on a microcomputer (IBM PC)’ (Lipman and Pearson, 1985). Looking back, such times at such small numbers of sequences seemed incredibly slow; at the time (when a contemporary algorithm required eight hours for the same search), they were revolutionary.
+
+The PIR was built on NBRF’s existing resources. This means, in addition to the PSD, it made available its DNA database (Dayhoff et al., 1981a) and associated software tools, together with copies of GenBank and the EMBL data library. In
+
+> ¹⁵ http://ftp.ncbi.nih.gov/genbank/gbrel.txt
+
+> ¹⁶ http://pir.georgetown.edu/pirww/dblino/pir_psd.shtml
+
+attempt to cover the cost of providing comprehensive services, the PIR exploited the NBRF's cost-recovery model, levying a charge for distributing copies of its data on magnetic tape and an annual subscription for use of its online services: in 1988, these amounted to $200 per tape release and $350 per annum respectively (Dayoff, 1988; 1981b; Sidman et al., 1988) – that would be like $400 and $700 today.
+
+By 1992, the PIR-PSD had shown steady growth, with increasing contributions from European and Asian protein sequences, most notably from the Munich Center for Protein Sequences (MIPS) and from the Japan Protein Information Database (JIPID). To reflect this situation, a tripartite collaboration was established, termed PIR-PSD.
+
+## Bioinformatics challenges at the interface of biology and computer science
+
+## 3.7 Swiss-Prot
+
+With these events, Bairoch realized that coupling the two would give him access to a powerful resource. His innovation was to convert the PSD's manually annotated data into something like EMBL's semi-structured format, producing a resource with the strengths of both – called Swiss-Prot, and released side-by-side with PC/Gene, by which time it had commercialised through *IntelliGenics* (Bairoch, 2000).
+
+Since its inception, the guiding philosophy of Swiss-Prot has been to provide high-level annotations describing, amongst other things, protein functions, their domain
