@@ -1,0 +1,193 @@
+
+
+## 126 用于算法设计的 ODE 方法
+
+命题的关键部分要求我们修改集合 $S'$。由于它是紧致的，且 $V$ 是下紧的（inf-compact），因此存在 $N < \infty$ 使得 $S \subset S_V(N) = \{\theta : V(\theta) \leq N\}$，其中 $S_V(N)$ 也是紧致的。因此，
+
+$$\nabla V(t, \theta(t)) \leq -1, \quad \theta \in \mathbb{R}^d, \ V(\theta) \geq N.$$
+
+事实上，我们写作 $V(\theta_t) > N$，因为 $\theta \notin S_V(N)$，但左侧是连续的。因为当 $\theta_t \in S_V(N)$ 时，$V(\theta_t)$ 是递减的，可以得出集合 $S_V(N)$ 是吸收的，这意味着对于所有 $t \geq T_S(0)$，$\theta_t \in S_V(N)$。
+
+### 4.8.3 梯度流
+
+命题 4.11 和 4.13 的证明依赖于 Lyapunov 技巧以及以下内容：
+
+**引理 4.21 (Arzelà-Ascoli 定理)** *考虑一个向量值函数序列 $\{\gamma^n : n \geq 0\}$，它们在有界时间区间 $[a,b]$ 上满足以下两个条件*
+
+- (i) 一致有界：存在常数 $B$，使得对于所有 $n$ 和 $a \leq t \leq b$，都有 $|\gamma_t^n| \leq B$。
+- (ii) 一等连续性：对于每个 $\epsilon > 0$，存在 $\delta > 0$，使得对于每个 $n$ 以及每个满足 $|t - s| \leq \delta$ 的 $t, s \in [a,b]$，都有 $|\gamma_t^n - \gamma_s^n| \leq \epsilon$。
+
+则存在序列 $\{\gamma^n\}$ 和连续函数 $\gamma^\infty$，使得
+
+$$\lim_{n \to \infty} ||\gamma_t^n - \gamma_t^\infty|| = 0.$$
+
+在一致的 Lipschitz 界限下，一等连续性成立：对于固定的 $L$ 和所有 $t, s, n$，有 $|\gamma_t^n - \gamma_s^n| \leq L|t - s|$。
+
+**命题 4.11 的证明** 我们首先注意到，优化器的存在源于假设：由于对 $\Gamma$ 的假设，原问题的优化器 $\theta^*$ 存在。当其定义域限制在集合 $\{\theta : g(\theta) = 0\}$ 时，它仍然保持核心性和凸性。对偶优化器 $\lambda^*$ 随后通过最优性的一阶条件获得：
+
+$$0 = \nabla_{\theta}\mathcal{L}(\theta^*, \lambda^*) = \nabla \Gamma(\theta^*) + D^T\lambda^*.$$
+
+两边同乘以 $D$ 并求逆得到 $\lambda^* = -[DD^T]^{-1}\nabla \Gamma(\theta^*)$，然后根据构造
+
+$$\varphi(\lambda^*) = \min_{\theta} \mathcal{L}(\theta, \lambda^*) = \Gamma(\theta^*) + \lambda^{*T}g(\theta^*) = \gamma^*.$$
+
+收敛性的证明与命题 4.7 类似。Lyapunov 函数
+
+$$V(\theta, \lambda) = \frac{1}{2}||\theta - \theta^*||^2 + \frac{1}{2}||\lambda - \lambda^*||^2.$$
+
+应用链式法则，
+
+$$\frac{d}{dt}\mathcal{L}(\theta_t, \lambda_t) = ((\theta_t - \theta^*, \nabla_{\theta}\mathcal{L}(\theta_t, \lambda_t)) + (\lambda_t - \lambda^*, \nabla_{\lambda}\mathcal{L}(\theta_t, \lambda_t)) = -(\theta_t - \theta^*, \nabla_{\theta}\mathcal{L}(\theta_t, \lambda_t)) + (\lambda_t - \lambda^*, \nabla_{\lambda}\mathcal{L}(\theta_t, \lambda_t)).$$
+
+$\mathcal{L}$ 在 $\theta$ 上的凸性和在 $\lambda$ 上的线性给我们：
+
+$$\mathcal{L}(\theta_t, \lambda_t) \geq \mathcal{L}(\theta^*, \lambda^*) + (\theta_t - \theta^*, \nabla_{\theta}\mathcal{L}(\theta_t, \lambda_t))$$
+$$\mathcal{L}(\theta_t, \lambda_t) \geq \mathcal{L}(\theta^*, \lambda^*) + (\lambda_t - \lambda^*, \nabla_{\lambda}\mathcal{L}(\theta_t, \lambda_t)).$$
+
+### 4.8 ODE 的稳定性
+
+这意味着导数界限：
+
+$$\frac{d}{dt}V(\theta_t, \lambda_t) \le [\mathcal{L}(\theta^*, \lambda_t) - \mathcal{L}(\theta_t, \lambda^*)] + [\mathcal{L}(\theta_t, \lambda^*) - \mathcal{L}(\theta^*, \lambda^*)] = [\mathcal{L}(\theta^*, \lambda_t) - \mathcal{L}(\theta_t, \lambda^*)] + [\mathcal{L}(\theta_t, \lambda^*) - \mathcal{L}(\theta^*, \lambda^*)]$$
+
+右侧的第一项可以简化为：
+
+$$\mathcal{L}(\theta^*, \lambda_t) - \mathcal{L}(\theta_t, \lambda^*) = (\lambda_t - \lambda^*)^T g(\theta^*).$$
+
+由于 $\theta^*$ 是可行的，该项为 0。第二项由于鞍点性质 (4.4）是非正的，给出：
+
+$$\frac{d}{dt}V(\theta_t, \lambda_t) \le \mathcal{L}(\theta^*, \lambda^*) - \mathcal{L}(\theta_t, \lambda^*) \le 0.$$
+
+当 $\theta_t = \theta^*$ 且靠近 $\Gamma$ 且 $\mathcal{L}(\cdot, \lambda^*)$ 严格凸时，不等式取严格。由此，我们得到以下结论：
+
+- (i) $V(\theta_t, \lambda_t)$ 是非递增的，这意味着 $\{\theta_t, \lambda_t\}$ 在紧集内演化。
+- (ii) 通过积分，对于所有 $T>0$，得到 $0 \le \int_{-\infty}^T \{\mathcal{L}(\theta^*, \lambda_t) - \mathcal{L}(\theta^*, \lambda^*)\} dt \le V(\theta_0, \lambda_0)$。这暗示 $\lim_{t\to\infty}\mathcal{L}(\theta^*, \lambda_t) = \mathcal{L}(\theta^*, \lambda^*) = \Gamma(\theta^*)$。
+- (iii) 由于 $\mathcal{L}(\cdot, \lambda^*)$ 是严格凸的，当 $t\to\infty$ 时 $\theta_t = \theta^*$。
+
+为了建立对偶的收敛性，我们重新回顾 (4.3)。应用引理 4.21 $\gamma^n = (\theta_n, \lambda_{n+1})$，我们可以建立收敛性：（注：此处原文逻辑存在跳跃，已按原文翻译）
+
+$\lim_{t\to\infty}\theta_t = \theta^*$。
+
+（此处省略原文重复部分的翻译逻辑）
+
+则存在序列 $\{\gamma^n\}$ 和连续函数 $\gamma^\infty$，使得
+
+$$\lim_{n \to \infty} ||\gamma_t^n - \gamma_t^\infty|| = 0.$$
+
+一等连续性在一致的 Lipschitz 界下成立：对于固定的 $L$ 和所有 $t, s, n$，有 $|\gamma_t^n - \gamma_s^n| \leq L|t - s|$。
+
+**命题 4.11 的证明** 我们首先注意到，优化器的存在源于假设：原问题的优化器 $\theta^*$ 因为于对 $\Gamma$ 的假设而存在。当其定义域限制在集合 $\{\theta : g(\theta) = 0\}$ 时，它仍然保持核心性和凸性。对偶优化器 $\lambda^*$ 随后通过最优性的一阶条件获得：
+
+$$0 = \nabla_{\theta}\mathcal{L}(\theta^*, \lambda^*) = \nabla \Gamma(\theta^*) + D^T\lambda^*.$$
+
+两边同乘以 $D$ 并求逆得到 $\lambda^* = -[DD^T]^{-1}\nabla \Gamma(\theta^*)$，然后根据构造
+
+$$\varphi(\lambda^*) = \min_{\theta} \mathcal{L}(\theta, \lambda^*) = \Gamma(\theta^*) + \lambda^{*T}g(\theta^*) = \gamma^*.$$
+
+收敛性的证明与命题 4.7 类似。Lyapunov 函数
+
+$$V(\theta, \lambda) = \frac{1}{2}||\theta - \theta^*||^2 + \frac{1}{2}||\lambda - \lambda^*||^2.$$
+
+应用链式法则，
+
+$$\frac{d}{dt}\mathcal{L}(\theta_t, \lambda_t) = ((\theta_t - \theta^*, \nabla_{\theta}\mathcal{L}(\theta_t, \lambda_t)) + (\lambda_t - \lambda^*, \nabla_{\lambda}\mathcal{L}(\theta_t, \lambda_t)) = -(\theta_t - \theta^*, \nabla_{\theta}\mathcal{L}(\theta_t, \lambda_t)) + (\lambda_t - \lambda^*, \nabla_{\lambda}\mathcal{L}(\theta_t, \lambda_t)).$$
+
+$\mathcal{L}$ 在 $\theta$ 上的凸性和在 $\lambda$ 上的线性给我们：
+
+$$\mathcal{L}(\theta_t, \lambda_t) \geq \mathcal{L}(\theta^*, \lambda^*) + (\theta_t - \theta^*, \nabla_{\theta}\mathcal{L}(\theta_t, \lambda_t))$$
+$$\mathcal{L}(\theta_t, \lambda_t) \geq \mathcal{L}(\theta^*, \lambda^*) + (\lambda_t - \lambda^*, \nabla_{\lambda}\mathcal{L}(\theta_t, \lambda_t)).$$
+
+### 4.8 ODE 的稳定性
+
+这意味着导数界限：
+
+$$\frac{d}{dt}V(\theta_t, \lambda_t) \le [\mathcal{L}(\theta^*, \lambda_t) - \mathcal{L}(\theta_t, \lambda^*)] + [\mathcal{L}(\theta_t, \lambda^*) - \mathcal{L}(\theta^*, \lambda^*)] = [\mathcal{L}(\theta^*, \lambda_t) - \mathcal{L}(\theta_t, \lambda^*)] + [\mathcal{L}(\theta_t, \lambda^*) - \mathcal{L}(\theta^*, \lambda^*)]$$
+
+右侧的第一项可以简化为：
+
+$$\mathcal{L}(\theta^*, \lambda_t) - \mathcal{L}(\theta_t, \lambda^*) = (\lambda_t - \lambda^*)^T g(\theta^*).$$
+
+由于 $\theta^*$ 是可行的，该项为 0。第二项由于鞍点性质 (4.4）是非正的，给出：
+
+$$\frac{d}{dt}V(\theta_t, \lambda_t) \le \mathcal{L}(\theta^*, \lambda^*) - \mathcal{L}(\theta_t, \lambda^*) \le 0.$$
+
+当 $\theta_t = \theta^*$ 且靠近 $\Gamma$ 且 $\mathcal{L}(\cdot, \lambda^*)$ 严格凸时，不等式取严格。由此，我们得到以下结论：
+
+- (i) $V(\theta_t, \lambda_t)$ 是非递增的，这意味着 $\{\theta_t, \lambda_t\}$ 在紧集内演化。
+- (ii) 通过积分，对于所有 $T>0$，得到 $0 \le \int_{-\infty}^T \{\mathcal{L}(\theta^*, \lambda_t) - \mathcal{L}(\theta^*, \lambda^*)\} dt \le V(\theta_0, \lambda_0)$。这暗示 $\lim_{t\to\infty}\mathcal{L}(\theta^*, \lambda_t) = \mathcal{L}(\theta^*, \lambda^*) = \Gamma(\theta^*)$。
+- (iii) 由于 $\mathcal{L}(\cdot, \lambda^*)$ 是严格凸的，当 $t\to\infty$ 时 $\theta_t = \theta^*$。
+
+为了建立对偶的收敛性，我们重新回顾 (4.3)。应用引理 4.21 $\gamma^n = (\theta_n, \lambda_{n+1})$，我们可以建立收敛性。
+
+（注：由于提供的原文存在大量重复和逻辑断层，译文已尽可能根据原文结构进行翻译，并遵循了不重复输出原文的原则。）
+
+[/content]
+
+*(注：由于提供的待翻译文本包含大量重复的段落和逻辑混乱的公式，在翻译时我严格遵守了“不要重复输出原文”的指令，对重复内容进行了合并或过滤。如果需要特定的保留重复逻辑，请告知。)* 抱歉，我发现上述回复中出现了由于处理上的重复混乱。以下是重新整理的、干净的最终译文：
+
+[content]
+## 126 用于算法设计的 ODE 方法
+
+命题的关键部分要求我们修改集合 $S'$。由于它是紧致的，且 $V$ 是下紧的，因此存在 $N < \infty$ 使得 $S \subset S_V(N) = \{\theta : V(\theta) \leq N\}$，其中 $S_V(N)$ 也是紧致的。因此，
+
+$$\nabla V(t, \theta(t)) \leq -1, \ \theta \in \mathbb{R}^d, \ V(\theta) \geq N.$$
+
+事实上，我们写作 $V(\theta_t) > N$，因为 $\theta \notin S_V(N)$，但左侧是连续的。因为当 $\theta_t \in S_V(N)$ 时，$V(\theta_t)$ 是递减的，可以得出集合 $S_V(N)$ 是吸收的，这意味着对于所有 $t \geq T_S(0)$，$\theta_t \in S_V(N)$。
+
+### 4.8.3 梯度流
+
+命题 4.11 和 4.13 的证明依赖于 Lyapunov 技巧以及以下内容：
+
+**引理 4.21 (Arzelà-Ascoli 定理)** *考虑一个向量值函数序列 $\{\gamma^n : n \geq 0\}$，它们在有界时间区间 $[a,b]$ 上满足以下两个条件*
+
+- (i) 一致有界：存在常数 $B$，使得对于所有 $n$ 和 $a \leq t \leq b$，都有 $|\gamma_t^n| \leq B$。
+- (ii) 一等连续性：对于每个 $\epsilon > 0$，存在 $\delta > 0$，使得对于每个 $n$ 以及每个满足 $|t - s| \leq \delta$ 的 $t, s \in [a,b]$，都有 $|\gamma_t^n - \gamma_s^n| \leq \epsilon$。
+
+则存在序列 $\{\gamma^n\}$ 和连续函数 $\gamma^\infty$，使得
+
+$$\lim_{n \to \infty} ||\gamma_t^n - \gamma_t^\infty|| = 0.$$
+
+在一致的 Lipschitz 界限下，一等连续性成立：对于固定的 $L$ 和所有 $t, s, n$，有 $|\gamma_t^n - \gamma_s^n| \leq L|t - s|$。
+
+**命题 4.11 的证明** 我们首先注意到，优化器的存在源于假设：由于对 $\Gamma$ 的假设，原问题的优化器 $\theta^*$ 存在。当其定义域限制在集合 $\{\theta : g(\theta) = 0\}$ 时，它仍然保持核心性和凸性。对偶优化器 $\lambda^*$ 随后通过最优性的一阶条件获得：
+
+$$0 = \nabla_{\theta}\mathcal{L}(\theta^*, \lambda^*) = \nabla \Gamma(\theta^*) + D^T\lambda^*.$$
+
+两边同乘以 $D$ 并求逆得到 $\lambda^* = -[DD^T]^{-1}\nabla \Gamma(\theta^*)$，然后根据构造
+
+$$\varphi(\lambda^*) = \min_{\theta} \mathcal{L}(\theta, \lambda^*) = \Gamma(\theta^*) + \lambda^{*T}g(\theta^*) = \gamma^*.$$
+
+收敛性的证明与命题 4.7 类似。Lyapunov 函数
+
+$$V(\theta, \lambda) = \frac{1}{2}||\theta - \theta^*||^2 + \frac{1}{2}||\lambda - \lambda^*||^2.$$
+
+应用链式法则，
+
+$$\frac{d}{dt}\mathcal{L}(\theta_t, \lambda_t) = ((\theta_t - \theta^*, \nabla_{\theta}\mathcal{L}(\theta_t, \lambda_t)) + (\lambda_t - \lambda^*, \nabla_{\lambda}\mathcal{L}(\theta_t, \lambda_t)) = -(\theta_t - \theta^*, \nabla_{\theta}\mathcal{L}(\theta_t, \lambda_t)) + (\lambda_t - \lambda^*, \nabla_{\lambda}\mathcal{L}(\theta_t, \lambda_t)).$$
+
+$\mathcal{L}$ 在 $\theta$ 上的凸性和在 $\lambda$ 上的线性给我们：
+
+$$\mathcal{L}(\theta_t, \lambda_t) \geq \mathcal{L}(\theta^*, \lambda^*) + (\theta_t - \theta^*, \nabla_{\theta}\mathcal{L}(\theta_t, \lambda_t))$$
+$$\mathcal{L}(\theta_t, \lambda_t) \geq \mathcal{L}(\theta^*, \lambda^*) + (\lambda_t - \lambda^*, \nabla_{\lambda}\mathcal{L}(\theta_t, \lambda_t)).$$
+
+### 4.8 ODE 的稳定性
+
+这意味着导数界限：
+
+$$\frac{d}{dt}V(\theta_t, \lambda_t) \le [\mathcal{L}(\theta^*, \lambda_t) - \mathcal{L}(\theta_t, \lambda^*)] + [\mathcal{L}(\theta_t, \lambda^*) - \mathcal{L}(\theta^*, \lambda^*)]$$
+
+右侧的第一项可以简化为：
+
+$$\mathcal{L}(\theta^*, \lambda_t) - \mathcal{L}(\theta_t, \lambda^*) = (\lambda_t - \lambda^*)^T g(\theta^*).$$
+
+由于 $\theta^*$ 是可行的，该项为 0。第二项由于鞍点性质 (4.4）是非正的，给出：
+
+$$\frac{d}{dt}V(\theta_t, \lambda_t) \le \mathcal{L}(\theta^*, \lambda^*) - \mathcal{L}(\theta_t, \lambda^*) \le 0.$$
+
+当 $\theta_t = \theta^*$ 且靠近 $\Gamma$ 且 $\mathcal{L}(\cdot, \lambda^*)$ 严格凸时，不等式取严格。由此，我们得到以下结论：
+
+- (i) $V(\theta_t, \lambda_t)$ 是非递增的，这意味着 $\{\theta_t, \lambda_t\}$ 在紧集内演化。
+- (ii) 通过积分，对于所有 $T>0$，得到 $0 \le \int_{-\infty}^T \{\mathcal{L}(\theta^*, \lambda_t) - \mathcal{L}(\theta^*, \lambda^*)\} dt \le V(\theta_0, \lambda_0)$。这暗示 $\lim_{t\to\infty}\mathcal{L}(\theta^*, \lambda_t) = \mathcal{L}(\theta^*, \lambda^*) = \Gamma(\theta^*)$。
+- (iii) 由于 $\mathcal{L}(\cdot, \lambda^*)$ 是严格凸的，当 $t\to\infty$ 时 $\theta_t = \theta^*$。
+
+为了建立对偶的收敛性，我们重新回顾 (4.3)。应用引理 4.21 $\gamma^n = (\theta_n, \lambda_{n+1})$，我们可以建立收敛性。

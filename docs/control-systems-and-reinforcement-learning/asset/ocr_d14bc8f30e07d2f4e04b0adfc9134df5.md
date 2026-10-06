@@ -1,0 +1,17 @@
+# Value Function Approximations
+
+introductions, and MacKay's survey [233] is fast-paced but also good. References [262, 290] contain awesome treatments of kernels with statistical interpretations (and much more). See also the classics [80, 97, 35] for ways of quantifying model complexity and overfitting over various perspectives.
+
+# 5.9.2 TD-Learning
+
+A full history of temporal difference methods can be found in the second edition of the monograph of Sutton and Barto [338]. While these authors are considered major stars in RL and in particular TD methods, they are the first to point out an older history going back to Shannon in the 1950s. TD(0) algorithm was introduced by Witten in the 1970s [377]. See chapter 1 of [338] for a scholarly and entertaining survey of the origins of the field.
+
+The promise of TD-learning took a leap following Sutton's dissertation [339], 340 (based on part collaboration with Charles Anderson and his advisor Andrew Barto [26, 342]). This early work contains substantial intuition regaining TD(λ) algorithms and their application, with emphasis on neural network approximation architecture for reinforcement learning. The end of the decade was crowned by Watkins's dissertation that introduced the Q-learning algorithm [346, 371, 372].
+
+It is surprising that so little synergy in the 1980s and 1990s between RL and adaptive control was significant in one direction: Notable examples include the surveys by Sutton et al.: Learning and Decision Making [27], and 'Reinforcement Learning Is Direct Adaptive Control' by Frank Lewis [183, 222], who remains in the control systems research community remains a leader at the intersection of RL and control systems, and John Tsitsiklis, whose contributions are surveyed in sections 9.11 and 10.10. An early example of off-policy TD learning is [74], which treats the LQR problem and is written for a control theory audience.
+
+The TD-learning algorithm (5.34) is more similar to the (off-policy) LSQ algorithm of [206] than the original LSTD algorithm of [75]. The common acronym LSTD is used for both on- and off-policy implementations throughout the book.
+
+The objective function Γ in (5.3) is known as the mean-square Bellman residual in Baaird's 1995 paper [21]. It is pointed out that the resulting SA approximation of the gradient flow is slow to converge. The paper goes on to investigate compromises between TD(0) and gradient descent to accelerated convergence. This paper also introduced the famous counterexample based on Figure 5.5. At the same time, Gordon [146] presented examples of unstable approximations for Q-learning.
+
+The theoretical foundations of temporal difference methods took a significant leap after Sutton's dissertation, following the realization that TD-learning can be cast as a approximation algorithm [169, 352]. This sparked Tsitsiklis's research program on reinforcement learning that has had enormous impact on the field and on my own appreciation of the discipline. Two dissertations supervised by Tsitsiklis were truly ground breaking in this domain: Ben Van Roy [363] and Vijaymohan Konda [188] provide elegant theory that explains the success (and potential failure) of TD learning and actor-critic algorithms for stochastic control systems. Much of this theory is a foundation for material in Part II of this book.
