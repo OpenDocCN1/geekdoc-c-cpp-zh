@@ -1,0 +1,7 @@
+minimal amount of time. Less experienced AOs, on the other hand, may take a less efficient path, but will, in the process, develop a better under-standing of the legal conditions they are applying.
+
+On-line guidance plays a major part throughout the interaction. The system makes the whole right-hand side of the screen available for guidance and source texts to aid the AO. The sources include the Act, Regulations and Adjudicator Officer's Guide, each of which are indexed the original source material as closely as possible. The user of the system may access any part of the source text during the interaction with the system. More importantly, when they are involved in a specific part of the interaction — either filling in a form or working through a particular set of relevant condition or field on the form. In some circumstances the guidance might need to appear automatically — for example as a means of warning the AO that the conditions relating to this type of case have recently been changed by a commissioners decision and that theiy should therefore consider the newly available guidance with which they may not be familiar.
+
+# 7.13. ACKNOWLEDGEMENT
+
+The project gave us a rare opportunity to address a wide variety of issues relating to legal decision support, with the help of people from a wide variety of backgrounds. We thank the Alvey Directorate and the collaborators for their support, and all the project members for the parts they played in the development of LOD3 and its precursors.

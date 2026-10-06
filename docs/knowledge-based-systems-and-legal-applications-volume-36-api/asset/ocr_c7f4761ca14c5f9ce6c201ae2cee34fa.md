@@ -1,0 +1,15 @@
+# Legal Applications of KBS
+
+arise in this area.
+
+# 4.2. POLICY MAKERS AND WHAT THEY DO
+
+A major role of the UK government departments is to advise ministers and other government officials regarding changes in policy and the development of new legislation to achieve these policy objectives. This work is carried out by the policy divisions, staffed by senior civil servants. The work centres around the formulation of new policy — which takes many years to develop and implement. Policy divisions also have a responsibility for providing explanations of the existing policy to any other government officials or members of the general public who may require this information. Such queries often arise in the form of parliamentary questions put to the minister, or government, through the House of Commons.
+
+One of the problems in describing what policy makers do is that there is no clear consensus on what the process involves. In particular there is the danger of adopting an ‘over-rational’ account of the policy process. In fact, policy making is an extremely complex process without beginning or end, and whose boundaries remain uncertain. Somehow a complex set of forces together effects called “policies”. In order to identify the genuine potential of KBS support policy it is necessary to impose boundaries on the scope of the support in such a way that it is relevant for the environment within which policy is carried out and for the conceptual tasks which actually require support.
+
+# 4.2.1. The policy environment.
+
+The environment within which policy is developed is the result of a complex interaction, on the one hand, certain structural, historical, almost ‘objective’ features of the policy process and, on the other, the cultural, personal and ‘idiosyncratic’ characteristics of the policy makers themselves. Among the structural aspects there are four major factors.
+
+Firstly, the policy divisions are not themselves responsible for decision-making: all decisions are made by the government minister based on the advice of the policy divisions. The policy worker is responsible for producing submissions to which outline the options available along with various evaluations of these options. Secondly, the staff in the policy divisions are typically generalists, requiring a breadth of understanding of the whole of the policy and legislation, drawing on the services of expert statisticians, solicitors or economic advisers as and when they needed. Partly in order to maintain this general appreciation, a policy worker will typically be moved into another area of policy work within three to four years. Thirdly, policy development has been seen as a group decision process, with any proposals for change needing the involvement of those policy workers responsible for any of the areas

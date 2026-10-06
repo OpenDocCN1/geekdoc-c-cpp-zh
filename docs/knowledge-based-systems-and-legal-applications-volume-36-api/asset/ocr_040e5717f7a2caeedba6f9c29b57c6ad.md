@@ -1,0 +1,13 @@
+# 1.6. ALGORITHMIC REPRESENTATIONS OF LAW
+
+This section describes a class of systems, all of which represent some fragment of the law by means of an algorithmic programming language (often BASIC) or a formalism, like flowcharts, which can be directly implemented in such a language. These systems normally operate by presenting a series of pre-programmed questions to the user. The answers given by the user determine what additional questions must be asked, until the program has enough information to compute and display 'its' analysis.
+
+# 1.7. Algorithmic programs
+
+The examples cited most of this approach are a series of programs implemented by Robert Hellaway treating aspects of tax legislation. These programs are CORPTAX [Hellaway 1980], CHOOSE [Hellaway 1981] and SEARCH [Hellaway 1982]. All are implemented in BASIC. Bellord [1980] has also implemented a similar program in BASIC to represent a section of the UK's tax legislation.
+
+Programs such as Hellaway's are also classified as a simple kind of legal analysis system (see, for example, [McCarty 1983a]). Typically, it is the limitations of the approach that are stressed in order to provide some motivation for adopting artificial intelligence techniques for similar purposes. As Hellaway points out, the difficulty in writing such a program lies in analysing the legislation to a level of detail that it can be cast into the required form. It is necessary for the author to anticipate all possible answers to all questions, and all possible interactions among these answers, and then to provide an explicit branch within the program for every combination of answers. In effect, what Hellaway is describing is the construction of a flowchart where the answers to questions determine which branch of the flowchart followed.
+
+# 1.7.1. Flowcharts
+
+The idea that one can better understand the intended effects of a complicated statute by constructing a flowchart is a natural. In a text intended primarily for lawyers, Twining and Miers [1982] propose flowcharts as a practical aid to understanding, and applying, the provisions of a complex statute. (This suggestion appears in the first edition of the book by Twining and Miers, and not in the second edition which is the reference given here.) Many explanatory leaflets and booklets use of flowcharts too. And if one can construct a flowchart to represent the application of some statute or set of regulations, then it is sometimes worth the extra effort of mechanizing the flowchart by means of a simple program. This is precisely what Hellaway and Bellord have done in constructing their programs. It is also the method normally used to produce the simple tax calculators and other advisory programs that can be

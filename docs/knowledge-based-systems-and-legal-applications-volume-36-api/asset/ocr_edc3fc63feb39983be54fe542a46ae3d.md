@@ -1,0 +1,1 @@
+The glossary did increase our understanding of welfare provision, but did not identify a single compelling underlying structure which could be cited as the imperative for building the Advice System knowledgebase. Far more compelling, as it turned out, there were the features and

@@ -1,0 +1,14 @@
+# Legal Applications of KBS
+
+We refer to the process of determining the essential structure of the [knowledge] source contents, and representing it in a semi-formal form, as 'knowledge analysis', and to the process of taking such a semi-formal product and representing it in the chosen knowledge-representation scheme [e.g. the toolkit language] as 'knowledge encoding'.
+
+[Alvey DHSS Demonstrator 1984—1989 Final Report, p.23]
+Most analysts were involved in a range of activities and naming them or apportioning our work between categories of activities was not usually necessary. The conception of 'knowledge analysis' used here, therefore, may differ in three ways from the way I understand large software development teams use the term: it was formative rather than summative; it often included synthesis as well as analysis; and the scope of knowledge examined was broader than typically used for knowledge base development.
+
+# 11.4.1. Analysis as formative
+
+The first difference is worth noting because of the potential confusion with the term analysis used by software developers with a background in, say, mathematics or logic. Analysis, in use of the term, is what happens to an artifact such as a knowledge base or a requirements specification after it has been developed. Analysis in this sense, may for, example, include checks for internal consistency, incompleteness, or ambiguity. There are similarities to this understanding of analysis and the summative approach to evaluation in that it takes after the artefact is created. Analysis in the sense I am using it here happens before that. It helps to formulate the product in the same way that formative evaluation feeds back into the process of creating whatever is being evaluated. The analyst will look for patterns and gaps in the undigested material and will try to clarify it. These activities are not unlike those undertaken by analysts who are checking for completeness and inconsistencies, so the distinction may seem unnecessary. Analysis of the kind undertaken on this project and by knowledge engineers working to capture requirements for a system, is typically performed on material relatively less digested for its purpose than used by taking a summative approach, and the analytical techniques are less mature. Analysis of the kind that I am referring to is still more of an art than a science.
+
+# 11.4.2. Analysis including synthesizing
+
+Our 'analysis' involved the activities associated with the dictionary definition of the term — taking apart complex phenomenon distinguishing its elements by, for example, decomposition, critical examination, tracing things to their sources, and/or discovering general principles

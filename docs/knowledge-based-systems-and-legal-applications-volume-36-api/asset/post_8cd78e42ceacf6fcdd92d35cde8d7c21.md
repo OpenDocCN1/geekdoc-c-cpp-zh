@@ -1,0 +1,40 @@
+
+260 Knowledge Representation for Legal Applications
+
+## 12.9. POSSIBLE FUTURE WORK
+
+The Toolkit developed in the DHSS Demonstrator project supported many of the features that we identified as being desirable for a legal application. It was not a radical departure from existing knowledge representation paradigms, but rather represented the imposition of a discipline to the use of existing paradigms as to enforce the declarative reading and avoid some of the problems that would occur when declarativeness was violated.
+
+It was not, however, the initial decision to implement only facilities we were clear about inevitably meant that limits of expressiveness were encountered. This section describes additional lines of work that could be pursued to remedy some of the shortcomings.
+
+### 12.9.1. Backward chaining
+
+Despite an intention to combine forward and backward chaining, difficulties in combining backward-chaining and hypothetical reasoning resulted in only the former being implemented, since an ATMS sits far more naturally with this style of inference, Backward chaining is useful for restricting the input data to those required to determine a given conclusion, but if hypothetical input data may be entered, and inference is restricted to paths leading to the goal (as is usual in backward chaining systems), inconsistencies in the input data (which are by definition hypothetical) may go unnoticed. One remedy, which takes particular account of the focusing nature of backward reasoning, would be to use a backward search from the goal to select the relevant input data, and to allow forward inference to occur when the data is input. The advice application implemented this strategy outside the Toolkit, and it would seem a useful extension for a variety of applications.
+
+### 12.9.2. Rules, constraints and definitions
+
+The limitations on the syntax of rules, though reasonable at first sight, led to unanticipated problems in their interpretation and use. While constraints did not suffer from these problems, when used for definitions they could not show the distinction between the term being defined and the terms being used in the definition. This distinction is not important to the inference mechanism, but it could be important to the user interface, and is important to the builders, validators and maintainers of the knowledge base. The ability to annotate clauses to show these distinctions would be valuable.
+
+## Legal Applications of KBS
+
+### 12.9.3. Multiple use of rule/constraint components
+
+Legislation commonly contains cross-references to small substructures in remote pieces of legislation, e.g. ‘A person who satisfies paragraph 3 of Regulation 11...’. While the Toolkit generally allowed the representation of rules or constraints with the same grain size as the original legislation, in cases such as this we have either to duplicate the cross-referenced material, or to decompose into multiple rules the structure containing the cross-referenced item. The first approach introduces undesirable redundancy, while the second is clumsy and requires an awareness of what cross-references exist (or may come into existence). More work is needed only on the representation aspects but also on the tools to support maintenance of heavily cross-referenced structures.
+
+### 12.9.4. Existence, identity and migration within the class lattice
+
+Frame-based systems are generally not good at handling existential states (e.g. ‘Some of Mary’s children are under 6’), having multiple representations which turn out to represent the same individual (e.g. ‘the person claiming child benefit for Jimmy and ‘Mary’), or at allowing an individual to be represented and reasoned about before its type is fully known (e.g. ‘the animal that bit Henry’). These problems are all related, and are compounded when hypothetical reasoning is allowed. The Toolkit was limited to using ‘rigid designers’ of individuals of fixed classes. These are important problems, but they are so closely coupled that all of them need to be solved before the full benefit of solving any of them can be felt.
+
+### 12.9.5. Temporal reasoning
+
+All applications would have benefited from temporal reasoning facilities, but we were no such facilities provided by the Toolkit. Some work was done on a variant of the event calculus of [Kowalski and Sergot 1986] using explicit assumptions of persistence rather than negation as failure, but there was not time to assess its appropriateness for the applications or to attempt to mechanize it efficiently. There is as yet no consensus in the AI community with regard to the appropriate handling of time; promising representations exist, but control of inference remains a serious problem.
+
+### 12.9.6. Modal reasoning
+
+The policy application would have found valuable to be able to perform some limited amount of modal reasoning, so that the desirability of states could be reasoned about as well as their truth, and so that conclusions to what should be the case could be drawn, as well as conclusions to what is the case. The need was not felt in the other applications, because in those applications the user has no control over what the law is, but is charged only to apply it. The rights and wrongs of the matter are therefore no concern of his, and he must treat the law ought to be true as if it really were, and he does not engage in any specifically normative reasoning. See [Bench-Capon 1989] for a fuller discussion of this point. No such facilities have been provided, but investigation of how they might be incorporated into is valuable.
+
+## 12.10. CONCLUSION
+
+In this chapter we have described some of the features that we need to be taken into account when choosing how to do the knowledge representation for a legal KBS, and we have described a formalism produced for that purpose. The example formalism is to some extent justification for some of the points made in the early stages of the chapter, and some extent their source. In conclusion we would like to make a distinction between two aspects: expressiveness and what could be termed engineering principles, the first concerning what can be built, and second how it should be built. The first determines what can be represented in a formalism: the formalism of the Toolkit is for example inadequate in its treatment of time and modal knowledge. Given this inadequacy, applications can still be built, but their functionality will be limited: thus in the policy application all the modal reasoning must be performed by the user, although he is supported in this by the non-modal reasoning of the system. The system will tell him that Q follows from P, but he must himself conclude the undesirability of P from the undesirability of Q. The legal domain does make certain demands on the expressiveness of a representation, and the nature of the application to be built will depend on how well these demands are met. This explains why a technically unambiguous system such as the Retirement Pension Forecast Advisor [Spiegel-Sinclair 1988] can be built using the very restricted representation provided by ADS, while the highly ambitious TAXMAN III of McCarthy requires his extensively elaborated language for legal discourse. In terms the facilities offered by the Toolkit fall between the two, and match the ambition of the applications supported. In terms of engineering considerations, which concern how the application is built rather than what is built, the legal domain also makes demands. We suggested above that these suggest that the representation be truly declarative and support an isomorphic representation of source material. Our belief is that the Toolkit scores well with regard to these points. But should be noted that these considerations do not determine the range or styles of applications that can be built, but rather the utility they will have in practice.
+
+Legal applications will doubtless continue to be built using a variety of knowledge representation paradigms: what we have done here is to offer issues for some consideration, and some pointers to how we feel they should be resolved.

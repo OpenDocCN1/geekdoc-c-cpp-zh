@@ -1,0 +1,5 @@
+development of prototypes which do demonstrate the effectiveness of knowledge based systems for assisting communication over organizational boundaries. The evidence is that the public could use the systems in their present form to help with claiming social security, and that they would be welcomed and be popular. However, whether these systems or their descendants are actually put into use by the DSS depends inevitably not only on the quality of their design, but on political decisions which have yet to be taken.
+
+# 5.6. ACKNOWLEDGEMENTS
+
+The Forms Helper and the Advice System were designed and built by Sarah Buckland, Betsy Cordingley, Leo Crossfield, Shashi Dave, Patrick Dawson, David Frohlich, Nigel Gilbert, David Goodwin, Michael Hardey, Marina Jirot, Kevin Johnstone, Alison Mill-Ingen, Hilary Minor, Paul Luff, Mike Pappas, Nick Perry and Peter Robinson over the period 1984 to 1989.
