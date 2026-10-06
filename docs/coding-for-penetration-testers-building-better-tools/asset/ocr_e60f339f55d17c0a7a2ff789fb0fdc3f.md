@@ -1,0 +1,11 @@
+Beginning with MySQL Version 5, the information_schema database was introduced. This database is a metadatabase that contains information about all the elements in the MySQL database. We can consult information_schema to find out any information that we have access to the database. We have seen the code to the applications we're exploiting, but assuming we hadn't, we wouldn't know the name of the login table. By using the information_schema database, we can find that information.
+
+The query that we are exploiting looks like this:
+`select from wordlist where word like '%${POST['word']}'`
+
+What we really need to do is massage this query into a query that will show us information from the information_schema databases. There is a table within the database that contains all the information about tables that we can access. This table, called TABLES, contains all metadata about the databases and tables we can access, including the database that a table is in, and the name of the table itself. We are going to build a query to force the select statement to return that information. One is that our output is only printing the first element of the data that is returned. We want two pieces and only one field to put it in, so we will have to do some additional magic to join the data from the fields into one for proper output.
+
+We don't much care about the data in the wordlist table, so we want to modify our query so that it won't return any of that information, just the information we want. We do a normal search for the word qqqq. It returns nothing, so for that is a good way to ensure that no wordlist data is returned. We are going to use a UNION statement to join two queries together, and have their output returned at the same time. When performing SQLi, the UNION keyword is very important as it allows us to return additional information from tables that we would not have normally access to in our query. Let's use the UNION statement to start getting information from the information_schema database.
+
+We issue the query:
+qqqq' union select TABLE_NAME from information_schema.TABLES --

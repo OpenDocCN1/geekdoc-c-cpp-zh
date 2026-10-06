@@ -1,0 +1,11 @@
+In our simple batch file, we first turn echo off, in order to not output the mechanics of the script as it executes; we don’t want to see the commands that the script is using, only the output of the commands. Then we set EnableDelayedExpansion so that the variables will function properly and only be expended inside our for loop. Next we enter the loop, and for each line in hosts.txt, we ping the host. A very simple script indent, but one that gets the job done. Go to File and choose Save and save this as “runping,bat”.
+
+Now if we have a file called hosts.txt with a single IP address on each line, our batch file will march through all of them. We could obviously add quite bit of formatting, logic and flow controls, and many other features to our little program, but we might be better off using a different scripting language if we wanted to develop a more robust tool. Those who are truly interested in learning the ins and outs of batch files can check out the batch file reference on the Microsoft TechNet [4].
+
+# PowerShell
+
+PowerShell is a very versatile text-based shell, supporting a great number of functions accessible from the command line, and through the use of scripts or compiled executables. PowerShell also has access to the majority of the functionality which any of Microsoft’s .NET-capable languages are able to access. There are different versions of PowerShell that were released alongside-side different operating system releases. This ranges from Version 1.0 that was released with Windows 2008 to PowerShell 5.0 that was released with Windows 10. We will be focusing on PowerShell 4.0 because it will work on Windows 7, the most common Windows operating system in use, as well as most recent Windows versions.
+
+From a shell perspective, PowerShell is a great improvement over Microsoft’s legacy shells, command.com and CMD.exe. Both of these shells are designed largely for backward compatibility, with a common set of commands, many of which date back to the original versions of Microsoft DOS on which they are based.
+
+One of the features that will become quickly apparent to users

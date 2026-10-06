@@ -1,0 +1,10 @@
+Metasploit the ability to exploit RFI vulnerabilities as well, with Metasploit we get the power of the Metasploit payloads. We are going to take the Autonomous LAN Party vulnerability and leverage the power of the php_include Metasploit module to gain a more advanced PHP Meterpreter shell. The PHP Meterpreter shell will allow us to route traffic, execute shell commands, and execute Meterpreter scripts under the context of the Web server.
+
+To use the php_include exploit module, we launch msconsole and type use exploit/unix/webapp/php_include. Once we have entered the context of the php_include module, we will see a number of additional options that we have used to before. The PHPDB holds the RFI DB that guesses about different ways to overcome common problems with RFI. The PHPURI option holds the URI where our RFI exists. We work along with the PHPDB we insert XXpathXX where we want our RFI to occur, and Metasploit will run a number of ways to make it work effectively. This helps us with difficult RFI vulnerabilities and takes the burden of making sure that intricacies of the exploit are handled.
+
+We provide our variables. For this example, RHOST will be 127.0.0.1, PHPURI will be /alp/include/_bot.php?master[currentskin]=XXpathXX, and our payload will be php/meterpreter/reverse_tcp. The only thing left is to set LHOST (in this case, 127.0.0.1). Now we run it by typing exploit.
+
+Fig.9.13 shows the successful exploit of Autonomous LAN Party with the PHP Meterpreter payload. From here, we have the ability to do much of the postexploitation we would do with regular Meterpreter.
+
+> Note
+While PHP Meterpreter does have much of the functionality of the standard Windows Meterpreter, some things are platform-dependent. Some features may not be available and others may not work the same way. Trial and error is the best solution to determine

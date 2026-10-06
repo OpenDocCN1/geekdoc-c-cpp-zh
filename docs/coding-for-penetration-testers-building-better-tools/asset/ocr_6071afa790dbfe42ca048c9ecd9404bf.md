@@ -1,0 +1,11 @@
+networks and systems of our targets by interrogating the publicly available domain name system (DNS) records, looking over the records kept on the domain names in use, and other similar information. Here we can put tools such as dig to use, as well as online informational sites, of which a great number exist for any given purpose, such as which lookups, domain ownership history, and other similar interesting bits of information.
+
+On the nonpublic side, when we are on a system or in an environment already, we may have access to quite a few bits of information as well. We may be able to see stored data from browsers, such as cache, history, or bookmarks, which can often make for interesting reading. If we have access to stored email or an account, we have a potential gold mine of information, if we are able to search it for the information we seek.
+
+We may also have access to files—public, nonpublic, or both. Depending on the files in question, they may contain data of interest in a direct and immediately viewable fashion, or we may have to dig for it a bit, a topic we will discuss later in this section where we cover metadata in documents and in files.
+
+# Patterns in Information
+
+When we are searching for information, whether in plain text from documents or Web pages, metadata in files, compiled code in application binaries, or nearly any other source, we can often look for particular patterns that relate to the information we are looking for. Particularly in the case of searching for specific information—an IP address or a credit card number, instance—the search for this type of information can be greatly simplified, and can save us a great deal of pain.
+
+As we discussed in Chapter 3, Introduction to Perl, when we covered Perl, regular expressions (regex) are very handy for searching for these patterns, at least when we have something specific which we would like to find. If we can put together a regex for email addresses, credit card numbers, serial numbers, and so on, and so on, we can often take a task that would require extensive manual drudgery and hand it off to

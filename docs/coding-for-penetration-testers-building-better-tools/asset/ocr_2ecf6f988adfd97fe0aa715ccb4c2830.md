@@ -1,0 +1,1 @@
+This is easy enough to correct, if we like, by editing the file. In order to get things working a bit better for the actual problems, we will need to place an entry in nmap-services-probes. We can tell that the response came from RPCCheck probe, so this is where we need
