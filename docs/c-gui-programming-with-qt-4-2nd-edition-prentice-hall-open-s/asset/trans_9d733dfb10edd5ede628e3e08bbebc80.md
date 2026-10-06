@@ -1,0 +1,171 @@
+
+
+![](img/5a524abdf0b0d58fa99d30abb4463611_96_0.png)
+
+GUI 应用程序背后是一系列提供底层功能的代码——例如读取和写入文件或处理用户界面中显示的数据的代码。在第 4 章中，我们将学习如何实现此类功能，再次以 Spreadsheet 应用程序作为示例。
+
+## 子化 QMainWindow
+
+应用程序的主窗口是通过子化 QMainWindow 来创建的。我们在第 2 章中看到的创建对话框的许多技术也适用于创建主窗口，因为 QDialog 和 QMainWindow 都派自 QWidget。
+
+主窗口可以使用 Qt Designer 创建，在本章中，我们将通过代码完成所有操作，以演示它是如何操作的。如果你更倾向于可视化的方法，请参 Qt Designer 在线手册中的“在 Qt Designer 中创建主窗口”章节。
+
+Spreadsheet 主窗口源代码分布在 `mainwindow.h` 和 `mainwindow.cpp` 中。让我们从头文件开始：
+
+```cpp
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+
+class QAction;
+class QLabel;
+class FindDialog;
+class Spreadsheet;
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    MainWindow();
+
+protected:
+    void closeEvent(QCloseEvent *event);
+```
+
+`closeEvent()` 函数是 QWidget 中的一个虚函数，当用户关闭窗口时会自动调用。我们在 `MainWindow` 中重新实现了了它，以便我们可以询问用户标准问题“您想保存更改吗？”，并将用户偏好保存到磁盘。
+
+```cpp
+private slots:
+    void newFile();
+    void open();
+    bool save();
+    bool saveAs();
+    void find();
+    void gotoToCell();
+    void sort();
+    void about();
+```
+
+一些菜单选项（如 File|New 和 Help|About）被实现为 `MainWindow` 中的私有槽。大多数槽的返回值为 `void`，但 `save()` 和 `saveAs()` 返回 `bool`。如果是在响应信号时执行，返回值会被忽略；当我们作为函数返回值调用一个槽时，返回值对我们是可用的，就像我们调用任何普通 C++ 函数一样。
+
+```cpp
+void openRecentFile();
+    void updateStatusBar();
+    void spreadsheetModified();
+```
+
+```cpp
+private:
+    void createActions();
+    void createMenus();
+    void createContextMenu();
+    void createToolBars();
+void createStatusBar();
+void readSettings();
+void writeSettings();
+bool okToContinue(const QString& fileName);
+bool loadFile(const QString& fileName);
+bool saveFile(const QString& fileName);
+void setCurrentFile(const QString& fileName);
+void updateRecentFileActions();
+QString strippedName(const QString& fullName);
+```
+
+主窗口还需要一些私有槽和几个私有函数来支持用户界面。
+
+除了私有槽和私有函数外，MainWindow 还有许多私有变量。我们将在使用时解释所有这些变量。
+
+现在我们回顾实现：
+
+```cpp
+#include <QtGui>
+#include "finddialog.h"
+#include "gotocelldialog.h"
+#include "mainwindow.h"
+#include "sortdialog.h"
+#include "spreadsheet.h"
+```
+
+我们包含了 `<Gui>` 头文件，它包含了子类中使用的所有 Qt 类的定义。我们还包含了一些自定义头文件，特别是来自第 2 章的 `finddialog.h`、`gotocelldialog.h` 和 `sortdialog.h`。
+
+```cpp
+MainWindow::MainWindow()
+{
+    spreadsheet = new Spreadsheet;
+    setCentralWidget(spreadsheet);
+
+    createActions();
+    createMenus();
+    createContextMenu();
+    createToolBars();
+    createStatusBar();
+
+    readSettings();
+
+    findDialog = 0;
+    setWindowIcon(QIcon(":/images/icon.png"));
+    setCurrentFile("");
+}
+```
+
+在构造函数中，我们首先创建一个 Spreadsheet 小部件并将其设置为主窗口的中心部件。中心部件占据主窗口的中间部分（见图 3.2）。Spreadsheet 类是 QWidget 子类，具有一些电子表格功能，例如支持表格公式。我们将在第 4 章中实现它。
+
+## 图 3.2.QMainWindow 的区域
+
+![](img/5a524abdf0b0d58fa99d30abb4463611_100_0.png)
+
+我们调用私有函数 `createActions()`、`createMenus()`、`createContextMenu()`、`createToolBars()` 和 `createStatusBar()` 来设置主窗口的其余部分。我们还调用私有函数 `readSettings()` 来读取应用程序存储的设置。
+
+我们将 `findDialog` 指针初始化为空指针。当第一次调用 `MainWindow::find()` 时，我们将创建 `FindDialog` 对象。
+
+在构造函数结束处，我们将窗口的图标设置为 `icon.png`（一个 PNG 文件）。Qt 支持许多图像格式，包括 BMP、GIF、JPEG、PNG、PNM、SVG、TIFF、XBM 和 XPM。调用 `QWidget::setIcon()` 设置窗口左上角显示的图标。遗憾的是，没有一种平台无关的方法来设置出现在桌面上的应用程序图标。GUI 应用程序通常使用许多图像。有几种方法为应用程序提供图像：
+
+- 在运行时存储图像。
+- 在源代码中包含图像。
+- 使用 Qt 的资源机制。
+
+要使用 Qt 的系统，我们必须创建一个资源文件并将其添加到项目文件中。资源文件本身使用简单的 XML 格式。这是我们使用的一个提取：
+
+```xml
+<RCC>
+<qresource>
+  <file>images/icon.png</file>
+  ...
+  <file>images/cell.png</file>
+</qresource>
+</RCC>
+```
+
+资源文件被编译到应用程序的可执行文件中，因此它们不会丢失。当我们引用资源时，使用前缀 `:/`（冒号斜杠），这就是为什么指定为 `:/images/icon.png`。我们在第 12 章详细介绍它们。
+
+## 创建菜单和工具栏
+
+大多数现代 GUI 应用程序提供菜单、右键菜单和工具栏。菜单使用户探索应用程序并学习新操作，而右键菜单和工具栏提供了常用功能的快捷访问。图 3.3 显示了 Spreadsheet 应用程序的菜单。
+
+## 图 3.3. Spreadsheet 应用程序的菜单
+
+![](img/5a524abdf0b0d58fa99d30abb4463611_102_0.png)
+
+Qt 通过其动作概念简化了菜单和工具栏的编程。动作是可以添加到任意数量菜单和工具栏中的项目。在 Qt 中创建菜单和工具栏涉及以下步骤：
+
+- 创建并设置动作。
+- 创建菜单并填充动作。
+- 创建工具栏并填充动作。
+
+在 Spreadsheet 应用程序中，动作是在 `createActions()` 中创建的：
+
+```cpp
+void MainWindow::createActions()
+{
+    newAction = new QAction(tr("New"), this);
+    newAction->setIcon(QIcon(":images/new.png"));
+    newAction->setShortcut(QKeySequence::New);
+    newAction->setStatusTip(tr("Create a new spreadsheet file"));
+    connect(newAction, SIGNAL(triggered()), this, SLOT(newFile()));
+}
+```
+
+我们将动作的 `triggered()` 信号连接到主窗口的私有
+

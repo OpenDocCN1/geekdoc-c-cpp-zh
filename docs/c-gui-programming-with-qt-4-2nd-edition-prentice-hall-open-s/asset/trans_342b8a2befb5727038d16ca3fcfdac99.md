@@ -1,0 +1,228 @@
+
+对于 typesObject，我们可以使用 `querySubObject()` 来替代：
+
+```
+QAObject session = outlook.querySubObject("Session");
+QAObject defaultContacts =
+session->querySubObject("GetDefaultFolder(OlDefaultFolders)");
+```
+
+如果我们想在参数列表中处理不支持的数据类型，可以使用 `QABase::queryInterface()` 来获取 COM 接口并直接调用该方法。按照 COM 的惯例，在使用完成接口后，必须调用 `Release()`。如果经常需要调用此类方法，可以为 `QAObject` 或 `QAWidget` 的子类，并提供封装 COM 接口调用的成员函数。请注意，`QAObject` 和 `QAWidget` 的子类不能定义自己的属性、信号或槽。
+
+我们现在来审查 `QAServer` 模块。该模块允许我们将一个标准的 Qt 程序转换为 ActiveX 服务器。服务器可以是共享库，也可以是独立应用程序。构建为共享库的服务器通常称为进程内服务器（in-process servers）；独立应用程序称为进程外服务器（out-of-process servers）。
+
+我们的第一个 `QAServer` 示例是一个进程内服务器，它提供了一个显示球左右跳动的小部件。我们还将看到如何将该小部件嵌入 Internet Explorer 中。
+
+这里是 `AxBouncer` 小部件类定义的开头：
+
+```
+class AxBouncer : public QWidget, public QABindable
+{
+    Q_OBJECT
+    Q_ENUMs(SpeedValue)
+    Q_PROPERTY(QColor color READ color WRITE setColor)
+    Q_PROPERTY(SpeedValue speed READ speed WRITE setSpeed)
+    Q_PROPERTY(int radius READ radius WRITE setRadius)
+    Q_PROPERTY(bool running READ isRunning)
+```
+
+如图 23.6 所示`AxBouncer` 同时继承自 `QWidget` 和 `QABindable`。`QABindable` 类提供了小部件与 ActiveX 客户端之间的接口。任何 `QWidget` 都可以通过派生 `QABindable` 导出为 ActiveX 控制，通过这种方式我们可以在属性值变化时通知客户端，并且可以实现 COM 接口来补充 `QAServer` 已经实现的接口。
+
+## 图 23.6. Internet Explorer 中的 AxBouncer 小部件
+
+![](img/5a524abdf0b0d58fa99d30abb4463611_909_0.png)
+
+在进行涉及 `Qobject` 派生类的多继承时，我们必须将 `Qobject` 派生类放在第一，以便 `moc` 能够识别它。
+
+我们声明了三个读写属性和一个只读属性。`Q_ENUMS()` 宏是必要的，它告诉 `moc` `SpeedValue` 类型是一个枚举类型。枚举声明在类的公共部分：
+
+```
+public:
+    enum SpeedValue { Slow, Normal, Fast };
+
+    AxBouncer(QWidget parent = 0);
+
+    void setSpeed(SpeedValue newSpeed);
+    SpeedValue speed() const { return ballSpeed; }
+    void setRadius(int newRadius);
+    int radius() const { return ballRadius; }
+    void setColor(const QColor &new);
+    QColor color() const { return ballColor; }
+    bool isRunning() const { return myTimer != 0; }
+    QSize sizeHint() const;
+    QAAggregated createAggregate();
+```
+
+```
+public slots:
+    void start();
+```
+
+```
+void stop();
+
+signals:
+  void bouncing();
+```
+
+`AxBouncer` 构造函数是一个标准的小部件构造函数，带有一个父对象参数。我们用于导出组件的 `QAXFACTORY_DEFAULT()` 宏期望一个具有此签名的构造函数。
+
+`createAggregate()` 函数是从 `QAxBindable` 重实现的。我们稍后会解释它。
+
+protected:
+
+```
+  void paintEvent(QPaint event);
+  void timerEvent(QTimer event);
+```
+
+private:
+
+```
+  int intervalInMilliseconds() const;
+
+  QColor ballColor;
+  SpeedValue ballSpeed;
+  int ballRadius;
+  int myTimerId;
+  int x;
+  int delta;
+```
+
+```
+};
+```
+
+该类的保护和私有部分与我们编写标准 Qt 小部件时完全相同。
+
+```
+AxBouncer::AxBouncer(QWidget *parent)
+  : QWidget(parent)
+{
+  ballColor = Qt::blue;
+  ballSpeed = Normal;
+  ballRadius = 15;
+  myTimerId = 0;
+  x = 20;
+  delta = 2;
+}
+```
+
+`AxBouncer` 构造函数初始化了类的私有变量。
+
+```
+void AxBouncer::setColor(const QColor&newColor)
+{
+    if (newColor != ballColor && requestPropertyChange("color")) {
+        ballColor = newColor;
+        update();
+        propertyChanged("color");
+    }
+}
+```
+
+`setColor()` 函数设置颜色属性的值。它调用 `update()` 来重绘小部件。
+不同之处在于 `requestPropertyChange()` 和 `propertyChanged()` 的调用。这些函数继承自 `QAxBindable`，理想情况下在每次更改属性时都应该调用它们。`requestPropertyChange()` 请求客户端允许更改属性，如果客户端允许更改，则返回 `true`。
+`propertyChanged()` 通知客户端属性已更改。
+`setSpeed()` 和 `setRadius()` 设置器也遵循这种模式，`start()` 和 `stop()` 槽也是如此，因为它们改变了 `running` 属性的值。
+
+这里留下了一个有趣的 `AxBouncer` 成员函数：
+
+```
+QAxAggregated *AxBouncer::createAggregate()
+{
+    return new ObjectSafetyImpl();
+}
+```
+
+`createAggregate()` 函数是从 `QAxBindable` 重实现的。它允许我们实现 `QAServer` 模块尚未实现的 COM 接口，或者绕过 `QAServer` 的默认 COM 接口。在这里，我们提供了 `IObjectSafety` 接口，Internet Explorer 使用它访问组件的安全选项。这是消除 Internet Explorer 臭名昭彰的“Object not safe for scripting”错误消息的标准技巧。
+此处是实现 `IObjectSafety` 接口的类定义：
+
+```
+class ObjectSafetyImpl : public QAxAggregated, public IObjectSafety
+{
+public:
+    long queryInterface(const QUuid &iid, void **iface);
+
+QAXAGG_IUNKNOW
+```
+
+```
+HRESULT WINAPI GetInterfaceSafetyOptions(REFIID riid,
+    DWORD pdwSupportedOptions, DWORD pdwEnabledOptions);
+HRESULT WINAPI SetInterfaceSafetyOptions(REFIID riid,
+    DWORD pdwSupportedOptions, DWORD pdwEnabledOptions);
+```
+
+`ObjectSafetyImpl` 类派自 `QAggregated` 和 `IObjectSafety`。`QAggregated` 类是实现额外 COM 接口的抽象基类。由 `QAggregated` 扩展的 COM 对象可以通过 `controllingUnknown()` 访问。`QAxServer` 模块在后台创建此 COM 对象。
+
+`QAXAGG_IKNOWN` 宏提供了 `QueryInterface()`、`AddRef()` 和 `Release()` 的标准实现。这些实现简单地调用 COM 对象上的相同函数。
+
+```
+long ObjectSafetyImpl::queryInterface(const QUuid &iid, void **iface)
+{
+    iface = 0;
+    if (iid == IID_IObjectSafety) {
+        iface = static_cast<IObjectSafety *>(this);
+    } else {
+        return E_NOINTERFACE;
+    }
+    AddRef();
+    return S_OK;
+}
+```
+
+`queryInterface()` 函数是 `QAggregated` 的纯虚函数。它由控制 COM 对象调用，以访问由 `QAggregated` 子类提供的接口。对于我们没有实现的接口以及 `IUnknown`，我们必须返回 `E_NOINTERFACE`。
+
+```
+HRESULT WINAPI ObjectSafetyImpl::GetInterfaceSafetyOptions(
+    REFIID /* riid */, DWORD pdwSupportedOptions,
+    DWORD pdwEnabledOptions)
+{
+    pdwSupportedOptions = INTERFACESAF_FOR_UNTRUSTED_DATA
+        | INTERFACESAF_FOR_UNTRUSTED_CALLER;
+    pdwEnabledOptions = pdwSupportedOptions;
+    return S_OK;
+}
+```
+
+```
+WINAPI ObjectSafetyImpl::SetInterfaceSafetyOptions(
+REFIID /* riid, DWORD pdwSupportedOptions ,
+DWORD pdwEnabledOptions */)
+{
+  return S_OK;
+}
+```
+
+`GetInterfaceOptions()` 和 `SetInterfaceSafetyOptions()` 函数在 `IObjectSafety` 中声明。我们实现它们是为了告诉世界我们的对象对于脚本是安全的。
+
+现在让我们查看 `main.cpp`：
+
+```
+#include <QaFactory>
+#include "axbouncer.h"
+```
+
+```
+QAXFACTORY_DEFAULT(
+  "{52461aa-a3e8-4f7a-8b04-307459a4c8c}",
+  "{533af11f-4899-43de-8b7f-2ddff58d1015}",
+  "{772c14a5-a840-4023-b79d-19549ece029d}",
+  "{dbce1e56-70dd7-47a4-85e0-95c65d83c29d}",
+  "{3f3db5e0-78ff-4e35-8a5d-3d3b96c83e09}"
+)
+```
+
+`QAXFACTORY_DEFAULT()` 宏导出 ActiveX 控制。我们可以用于导出控制的 ActiveX 服务器。本节的下一个示例将展示如何导出多个 ActiveX 控制。
+
+这里是我们的进程内 ActiveX 服务器的 .pro 文件：
+
+```pro
+TEMPLATE      = lib
+CONFIG        += dll qaxserver
+HEADERS       = axbouncer.h \
+               objectsafetyimpl.h
+SOURCES       = axbouncer.cpp \
+               main.cpp
+```

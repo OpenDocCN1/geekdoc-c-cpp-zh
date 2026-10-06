@@ -1,0 +1,7 @@
+Preferred Expanding are the same way. When a form contains both Preferred and Expanding is resized, extra space is given to the Expanding widgets, while the Preferred widgets stay at their size hint.
+
+There are two other size policies: MinimumExpanding and Ignored. The former was necessary in a few cases in versions of Qt, but it isn't anymore; the preferred approach is to use Expanding and reimplement minimumSizeHint(). The latter is similar to Expanding, except that it ignores the widget's size hint and minimum size hint.
+
+In addition to the size policy's horizontal and vertical components, the QSizePolicy class stores a horizontal and a vertical stretch factor. These stretch factors can be used to indicate that different child widgets grow at different rates when the form expands. For example, if we have a Qtree above a QTextEdit and we want the QTextEdit to be twice as tall as the Qtree, we can set the QTextEdit's vertical stretch factor to 2 and the Qtree's vertical stretch factor to 1.
+
+Yet another way of influencing a layout is to set a minimum size, a maximum size, or a fixed size on the child widgets. The layout manager will respect these constraints when laying out the widgets. And if this isn't sufficient, we can always derive from the child widget's class and reimplement sizeHint() to obtain the size hint we need.

@@ -1,0 +1,162 @@
+
+`readEntryElement()` 函数在每次遇到 `<entry>` 开始标签时都会被调用。我们希望为每个索引条目创建一个树部件项，因此我们创建一个新的 `QTreeWidgetItem`，并将其第一列的文本设置为条目的属性文本。
+
+一旦条目被添加到树中，就会读取下一个标记。如果它是结束标签，我们跳过该标签并跳出循环。如果遇到起始标签，它可能是 `<entry>` 标签（表示子条目）、`<page>` 标签（该条目的页码）或未知标签。如果起始标签是子条目，我们 递归地调用 `readEntryElement()`。如果标签是 `<page>` 标签，我们调用 `readPageElement()`。
+
+```cpp
+void XmlStreamReader::readPageElement(QTreeWidgetItem *parent) {
+    QString page = reader.readElementText();
+    if (reader.isEndElement())
+        reader.readNext();
+
+    QString allPages = parent->text(1);
+    if (!allPages.isEmpty())
+        allPages += ", ";
+    allPages += page;
+    parent->setText(1, allPages);
+}
+```
+
+`readPageElement()` 函数在每次获取 `<page>` 标签时都会被调用。它接收与该页面所属条目对应的树项。我们从开始读取 `<page>` 和 `</page>` 标签之间的文本。如果成功，`readElementText()` 函数会将解析器停留在 `</page>` 标签处，我们必须跳过它。
+
+页面存储在树项的第二列中。我们首先提取已存在的文本。如果文本不为空，我们会在后面添加一个逗号，为新的页面文本做好准备。然后我们添加新文本并相应地更新列的文本。
+
+```cpp
+void XmlStreamReader::skipUnknownElement() {
+    reader.readNext();
+    while (!reader.atEnd()) {
+        if (reader.isEndElement()) {
+            reader.readNext();
+            break;
+        }
+
+        if (reader.isStartElement()) {
+            skipUnknownElement();
+        } else {
+            reader.readNext();
+        }
+    }
+}
+```
+
+最后，当遇到未知标签时，我们会继续读取直到获取未知元素的结束标签，我们同样会跳过它。这意味着我们将跳过格式良好但未识别的元素，并从 XML 文件中读取尽可能多的可识别数据。
+
+这里展示的示例可以作为类似的 XML 递归下降解析器的基础。尽管如此，如果缺失了 `readNext()` 或其位置不正确，实现这样的解析器可能会很困难。一些程序员通过在代码中使用断言（assertions）来解决这个问题。例如，在 `readCreateIndexElement()` 的开头，我们可以添加该行：
+
+```cpp
+Q_ASSERT(reader.isStartElement() && reader.name() == "bookindex");
+```
+
+在 `readEntryElement()` 和 `readPageElement()` 函数中也可以进行类似的断言。对于 `skipUnknownElement()`，我们只需断言我们有一个元素。
+
+`QXmlStreamReader` 可以从 `QIODevice` 获取输入，包括 `QFile`、`QBuffer`、`QProcess` 和 `QtcpSocket`。某些输入源可能无法提供解析器的数据——例如由于网络延迟。在这种情况下仍然可以使用；关于这方面的更多信息请参阅 `QXmlStreamReader` 参考文档中的“增量解析（Incremental Parsing）”章节。
+
+在本应用程序中使用的 `QXmlStreamReader` 类是 `QtXml` 库的一部分。要链接到此库，我们必须在 .pro 文件中添加此行：
+
+```pro
+QT += xml
+```
+
+在接下来两个节中，我们将看到如何使用 DOM 和 SAX 编写相同的应用程序。
+
+# 使用 DOM 读取 XML
+
+DOM 是由 W3C 开发的用于解析 XML 的标准 API。Qt 提供了一个非验证的 DOM Level 2 实现，用于读取、操作和写入 XML 文档。
+
+DOM 将 XML 文件表示为内存中的一棵树。我们可以随意地遍历 DOM 树，并可以修改树将其保存回磁盘并作为 XML 文件。
+
+让我们考虑以下 XML 文档：
+
+```xml
+<doc>
+  <quote>Scio me nihil scire</quote>
+  <translation>I know that I know nothing</translation>
+</doc>
+```
+
+它对应于 DOM 树：
+
+![](img/5a524abdf0b0d58fa99d30abb4463611_634_0.png)
+
+DOM 树包含不同类型的节点。例如，元素节点（Element node）对应于起始标签及其匹配的结束标签。标签之间的内容显示为元素节点的子节点。在 Qt 中，类型（与其他所有 DOM 相关类一样）都带有 `Q` 前缀；因此，`QDomElement` 代表元素节点，`QDomText` 代表文本节点。
+
+不同类型的节点可以有不同的子节点。例如，元素节点可以包含其他元素节点，以及实体引用（EntityReference）、文本（Text）、CDATA 段（CDATASection）、处理指令（ProcessingInstruction）和注释（Comment）节点。图 16.3 显示了哪些节点具有哪些子节点。灰色显示的节点不能拥有任何自己的子节点。
+
+# 图 16.3. DOM 节点之间的父子关系
+
+[查看全尺寸图像]
+
+![](img/5a524abdf0b0d58fa99d30abb4463611_635_0.png)
+
+为了说明如何使用 DOM 读取 XML 文件，我们将为上一节描述的书籍索引文件格式编写一个解析器（第 389 页）。
+
+```cpp
+class DomParser {
+public:
+    DomParser(QTreeWidget* tree);
+
+    bool readFile(const QString &fileName);
+
+private:
+    void parseindexElement(const QDomElement &element);
+    void parseEntryElement(const QDomElement &element, QTreeWidgetItem *parent);
+    void parsePageElement(const QDomElement &element, QTreeWidgetItem *parent);
+
+    QTreeWidget *treeWidget;
+};
+```
+
+为了说明如何使用 DOM 读取 XML 文件，我们将为上一节描述的书籍索引文件格式编写一个解析器（第 389 页）。
+
+我们定义了一个名为 `DomParser` 的类，它将解析书籍索引文件并显示在 `QTreeWidget` 中。
+
+```cpp
+DomParser::DomParser(QTreeWidget* tree) {
+    treeWidget = tree;
+}
+```
+
+在构造函数中，我们将给定的树赋值给成员变量。所有的解析都在 `readFile()` 函数中完成。
+
+```cpp
+bool DomParser::readFile(const QString &fileName) {
+  QFile file(fileName);
+  if (!file.open(QFile::ReadOnly)) {
+    qDebug() << "无法打开文件" << fileName;
+    return false;
+  }
+
+  QString errorStr;
+  int errorLine;
+  int errorColumn;
+
+  QDomDocument doc;
+  if (!doc.setContent(&file, &errorStr, &errorLine, &errorColumn)) {
+    qDebug() << "解析错误:" << errorStr << "位于行" << errorLine << ",列" << errorColumn;
+    return false;
+  }
+
+  QDomElement root = doc.documentElement();
+  if (root.tagName() != "bookindex") {
+    qDebug() << "错误：不是 bookindex";
+    return false;
+  }
+
+  parseindexElement(root);
+  return true;
+}
+
+void DomParser::parseindexElement(const QDomElement &element) {
+    QDomNode child = element.firstChild();
+    while (!child.isNull()) {
+        if (child.toElement().tagName() == "entry") {
+            parseEntryElement(child.toElement(), treeWidget->invisibleRootItem());
+        }
+        child = child.nextSibling();
+    }
+}
+```
+
+在 `parseindexElement()` 中，我们遍历所有子节点。我们期望每个节点都是 `<entry>`，对于每一个节点，我们调用 `parseEntryElement()` 来解析它。我们忽略未知节点，以便未来扩展书籍索引格式而不影响旧的解析器工作。
+
+`QDomNode` 可以存储任何类型的节点。如果我们想处理一个节点，必须先将其转换为正确的类型。在示例中，我们只关心元素节点，并对 `QDomNode` 调用 `toElement()` 将其转换为 `QDomElement`，然后调用 `tagName()` 获取元素的标签。如果节点不是元素类型，`toElement()` 函数将返回一个空的 `QDomElement` 且名称为空。

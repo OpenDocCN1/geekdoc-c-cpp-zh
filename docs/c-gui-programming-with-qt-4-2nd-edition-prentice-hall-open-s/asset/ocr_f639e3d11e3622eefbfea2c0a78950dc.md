@@ -1,0 +1,5 @@
+built-in 2nd 3rd coordinate system custom disabled 2nd 3rd dynamic properties 2nd 3rd fixed size focus policy geometry hidden 2nd 3rd in multithreaded applications minimum and maximum size 2nd namesGL palette 2nd parent-child mechanism 2nd 3rd platform-specific ID properties 2nd 3rd 4th 5th 6th 7th 8th 9th reparenting 2nd 3rd size hint 2nd 3rd 4th 5th 6th 7th size policy 2nd 3rd
+
+styles 2nd 3rd 4th [See also objects; windows.]
+
+width() (QPaintDevice) 2nd wildcard patterns 2nd 3rd Win32 API 2nd win32 condition (.pro files) winEvent() (QWidget) winEventFilter((QApplication) winID() (QWidget) 2nd Window (X11) window managers windowMenuAction() (Editor) Window menus (MDI) 2nd windowModified property (QWidget) 2nd 3rd 4th windows active 2nd 3rd closing 2nd decorations icon MDI children of painters 2nd 3rd platform-specific ID

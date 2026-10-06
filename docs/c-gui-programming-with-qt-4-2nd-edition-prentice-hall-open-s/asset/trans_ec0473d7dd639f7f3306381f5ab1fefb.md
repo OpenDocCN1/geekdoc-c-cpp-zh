@@ -1,0 +1,164 @@
+
+
+```cpp
+void slots:
+void startOrStopThreadA();
+void startOrStopThreadB();
+```
+
+```cpp
+private:
+Thread threadA;
+Thread threadB;
+QPushButton threadAButton;
+QPushButton threadBButton;
+QPushButton *quitButton;
+;
+```
+
+ThreadDialog 类声明了两个 `Thread` 类型的变量和一些按钮，用于提供用户界面。
+
+```cpp
+ThreadDialog::ThreadDialog(QWidget *parent)
+ : QDialog(parent)
+{
+    threadA.setMessage("A");
+    threadB.setMessage("B");
+
+    threadAButton = new QPushButton(tr("Start A"));
+    threadBButton = new QPushButton(tr("Start B"));
+    quitButton = new QPushButton(tr("Quit"));
+    quitButton->setDefault(true);
+
+    connect(threadAButton, SIGNAL(clicked()),
+           this, SLOT(startOrStopThreadA()));
+    connect(threadBButton, SIGNAL(clicked()),
+           this, SLOT(startOrStopThreadB()));
+    ...
+```
+```
+
+在构造函数中，我们调用 `setMessage()` 让第一个线程重复打印 'A'，第二个线程打印 'B'。
+
+```cpp
+void ThreadDialog::startOrStopThreadA()
+{
+    if (threadA.isRunning()) {
+        threadA.stop();
+        threadAButton->setText(tr("Start A"));
+    } else {
+        threadA.start();
+        threadAButton->setText(tr("Stop A"));
+```
+
+当用户点击线程 A 的按钮时，`startOrStopThreadA()` 会在线程运行时停止它，否则会启动它。它还会更新按钮的文本。
+
+```cpp
+void ThreadDialog::startOrStopThreadB()
+{
+  if (threadB.isRunning()) {
+    threadB.stop();
+    threadBButton->setText(tr("Start B"));
+  } else {
+    threadB.start();
+    threadBButton->setText(tr("Stop B"));
+  }
+}
+```
+`startOrStopThreadB()` 的代码在结构上完全相同。
+
+```cpp
+void ThreadDialog::closeEvent(QCloseEvent *event)
+{
+  threadA.stop();
+  threadB.stop();
+  threadA.wait();
+  threadB.wait();
+  event->accept();
+}
+```
+如果用户点击退出或关闭窗口，我们会停止任何正在运行的线程，并等待它们完成（使用 `QThread::wait()`），然后调用 `QCloseEvent::accept()`。这确保了应用程序以干净的状态退出，尽管在这个示例中这并不重要。
+
+如果你运行应用程序并点击 Start A，控制台将填满 'A'。如果你点击 Start B，它现在将填满 'A' 和 'B' 的交替序列。点击 Stop A，现在它将只打印 'B'。
+
+# 线程同步
+
+多线程应用程序的一个常见需求是线程同步。Qt 提供了以下同步类：`QMutex`、`QReadWriteLock`、`QSemaphore` 和 `QWaitCondition`。
+
+`QMutex` 类用于保护变量或代码段，一次只有一个线程可以访问它。该类提供了 `lock()` 函数来锁定互斥锁。如果互斥锁未解锁，当前线程将立即获取并锁定它；否则，当前线程将被阻塞，直到持有互斥锁的线程将其解锁。无论何种情况，当 `lock()` 返回时，当前线程都持有互斥锁，直到它调用 `unlock()`。`QMutex` 类还提供了一个 `tryLock()` 函数，如果互斥锁已锁定，它将立即返回。
+
+例如，假设我们想用 `QMutex` 保护上一节中 Thread 的 `stopped` 变量。那么我们可以在 `Thread` 中添加以下成员变量：
+
+private:
+
+```cpp
+...
+QMutex mutex;
+};
+```
+`run()` 函数将变为如下：
+
+```cpp
+void Thread::run()
+{
+    forever {
+        mutex.lock();
+        if (stopped) {
+            stopped = false;
+            mutex.unlock();
+            break;
+        }
+        mutex.unlock();
+
+        std::cerr << qPrintable(messageStr);
+    }
+    std::cerr << std::endl;
+}
+```
+`stop()` 函数将变为：
+
+```cpp
+void Thread::stop()
+{
+    mutex.lock();
+    stopped = true;
+    mutex.unlock();
+}
+```
+
+由于锁定和解锁互斥锁，为了方便起见，将互斥锁替换为 `QWriteLock` 是没有的。互斥锁的一个问题是同一时间只有一个线程可以访问变量，这可能成为瓶颈。在这种情况下，我们可以使用 `QReadLock`，它允许多个线程同时读取数据，但只有一个线程可以写入。`QSemaphore` 是互斥锁的另一种泛化，但与读写锁不同，信号量可以保护特定数量的资源。以下两个片段显示了 `QSemaphore` 与 mutex 的对应关系：
+
+```cpp
+QSemaphore semaphore(1);
+semaphore.acquire();
+semaphore.release();
+```
+
+```cpp
+QMutex mutex;
+mutex.lock();
+mutex.unlock();
+```
+通过向构造函数传递 1，我们告诉信号量它控制单个资源。使用信号量的优势在于向构造函数传递除1以外以外的数字，然后多次调用 `acquire()`。在使用大小指定的循环缓冲区在线程之间传输数量的数据时，信号量的应用：
+
+```cpp
+const int DataSize = 100000;
+const int BufferSize = 4096;
+char buffer[BufferSize];
+```
+生产者线程向缓冲区写入数据直到到达末尾，然后从头重新开始，覆盖现有数据。消费者线程在数据生成时读取数据。图 14.2 展示了这一点，假设有一个极小的 16 字节缓冲区。
+
+# 图 14.2. 生产者-消费者模型
+
+![](img/5a524abdf0b0d58fa99d30abb4463611_549_0.png)
+
+生产者-消费者示例中同步的需求是双向的：如果生产者生成数据太快，它将覆盖消费者尚未读取的数据；如果消费者读取数据太快，它将超过生产者并读到垃圾数据。
+
+解决此问题的一种粗暴方法是让生产者填充缓冲区，等待消费者读取整个缓冲区，以此此类推。然而，在多处理器机器上，这不如让生产者和消费者线程同时操作缓冲器的不同部分要快。一种高效解决问题的方法涉及两个信号量：
+
+```cpp
+QSemaphore freeSpace(BufferSize);
+QSemaphore usedSpace(0);
+```
+`freeSpace` 信号量控制生产者可以填充数据的缓冲区部分。`usedSpace` 信号量控制消费者读取的区域。这两个区域是互补的。`freeSpace` 信号量初始化为 `BufferSize`，意味着它有许多可以获取的资源。当应用程序启动时，读取器将开始获取“空”字节并将其转换为“用”字节。`usedSpace` 信号量初始化为 0，以确保消费者在启动时不会读取垃圾数据。
+

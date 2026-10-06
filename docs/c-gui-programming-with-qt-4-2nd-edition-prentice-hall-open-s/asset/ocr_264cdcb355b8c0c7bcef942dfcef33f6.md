@@ -1,0 +1,1 @@
+"Type Conversions" section of Appendix D for an overview of the different C++ casts.

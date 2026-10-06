@@ -1,0 +1,11 @@
+To make Qt Jambi and Qt Designer available inside Eclipse, it is necessary to install the Qt Jambi Eclipse integration package. Once the package is unpacked in the right location, Eclipse must be run with the -clean option for it to look for new plugins, rather than relying on its cache. The Preferences dialog will now have an extra option "Qt Jambi Preference Page". It is necessary to go to this page and set Qt Jambi's location, as explained in http://doc.trolltech.com/qtjambi-4.3.2_01/comtech/qtjambi-eclipse.html. Once the path has been set, Eclipse should be closed and restarted for the changes to take effect.
+
+The next time you start Eclipse and click File|New Project, the New Project dialog that pops up will offer two kinds of Qt Jambi project: Qt Jambi Project and Qt Jambi Project (Using Designer Form). In this section, we will discuss both of these project types by presenting a Qt Jambi version of the C++ developed in Chapter 2.
+
+To create a Qt Jambi application purely in code, click File|New Project, choose "Qt Jambi Project", and go through each page of the wizard. At the end, Eclipse will create a project with a skeleton .java file with a main() method and a constructor. The application can be run from within Eclipse using the Run menu. Eclipse shows syntax errors in the left margin of the editor, and shows any errors that occur at run-time in a console window.
+
+Creating a Qt Jambi application that uses Qt Designer is very similar to creating a pure code application. Click File|New Project, and then choose "Qt Jambi Project (Using Designer Form). Again, a wizard will appear. Call the project "ToGoCellDialog", and on the last page, specify "ToGoCellDialog" as the class name and choose "Dialog" as the form type.
+
+Once the wizard has finished, it will have created GoToCellDialog.java and also a Java user interface file GoToCellDialog.jui. Double-click the .jui file to make the Qt Designer editor visible. A form with OK and Cancel buttons will be shown. Access Qt Designer's functionality, click Window|OpenPerspective|Other, then double-click Qt UI. This perspective shows Qt Designer's signal-slot editor, action editor, property editor, widget box, and more, as shown in Figure C.2.
+
+# Figure C.2. The Go to Cell dialog in Eclipse

@@ -1,0 +1,483 @@
+
+
+- 支持自定义类型
+- 支持变体 2nd
+- value()
+- QSharedData
+- QSharedDataPointer
+- QShortcut
+- QSignalEmitter (Java)
+- QSizePolicy 2nd
+- 扩展 2nd
+- 固定
+- 忽略
+- 最大
+- 最小 2nd
+- MinimumExpanding
+- 优先 2nd
+- 伸缩因子
+- QSlider 2nd
+- setRange()
+- setValue()
+- valueChanged()
+- SoftMenuBar 2nd
+- qSort() 2nd
+- QSortFilterProxyModel 2nd
+- setFilterKeyColumn()
+- setFilterRegExp()
+- setSourceModel()
+- QSpinBox 2nd 3rd
+- setRange()
+- 使用 QStyle 设置输入
+- 子类化
+- textFromValue()
+- validate()
+- valueChanged()
+- valueFromText()
+- QSplashScreen
+- QSplitter 2nd
+- addWidget()
+- 保持尺寸
+- restoreState()
+- saveState()
+- setSizes()
+- setStretchFactor()
+- sizes()
+- SqlDatabase
+- addDatabase() 2nd
+- commit() 2nd
+- database()
+- driver()
+- open()
+- rollback() 2nd
+- setDatabaseName()
+- setHostName()
+- setPassword()
+- setUserName()
+- transaction() 2nd
+- SqlDriver 2nd
+- SqlDriverPlugin
+- SqlLite
+- SqlQuery 2nd
+- addBindValue()
+- bindValue()
+- exec()
+- first()
+- isActive()
+- last()
+- next()
+- numRowsAffected()
+- prepare()
+- previous()
+- seek()
+- setForwardOnly()
+- value()
+- QSqlQueryModel 2nd
+- SqlRecord
+- SqlRelation 2nd 3rd
+- SqlRelationalDelegate 2nd 3rd
+- SqlRelationalTableModel 2nd 3rd 4th 5th
+- insertRow() / setData()
+- setRelation()
+- SqlTableModel 2nd 3rd 4th
+- beforeDelete()
+- beforeInsert()
+- beforeUpdate()
+- fieldIndex()
+- insertRow()
+- record()
+- removeRows()
+- select() 2nd 3rd 4th
+- setData() 2nd
+- setFilter() 2nd
+- HeaderData()
+- setSort()
+- setTable() 2nd
+- submitAll()
+- qSqlSocket 2nd
+- qStableSort() 2nd
+- QStack<T>
+- QStackedLayout
+- addWidget()
+- indexOf()
+- setCurrentIndex() 2nd
+- QStackedWidget 2nd 3rd 4th
+- QStandardItemModel
+- QStatusBar
+- addWidget()
+- showMessage()
+- String 2nd 3rd
+- append()
+- arg() 2nd 3rd 4th
+- 大写敏感性 2nd
+- contains()
+- 与 const char * 之间的转换
+- endsWith()
+- fromAscii()
+- fromLatin1()
+- 在 Qt Jambi 中
+- indexOf()
+- insert()
+- isEmpty()
+- left()
+- length() 2nd
+- localeAwareCompare() 2nd
+- mid() 2nd
+- number() 2nd 3rd
+- operator+()
+- operator+=()
+- remove()
+- replace() 2nd
+- right()
+- setNum()
+- simplified()
+- split() 2nd 3rd 4th
+- sprintf()
+- startsWith()
+- toAscii()
+- toDouble() 2nd
+- toInt() 2nd 3rd 4th
+- toLatin1()
+- toLongLong()
+- toLower() 2nd
+- toStdString()
+- toUpper() 2nd
+- trim()
+- truncate()
+- Unicode 支持 2nd
+- QStringList 2nd 3rd
+- join() 2nd
+- removeAll()
+- takeFirst()
+- QStringListStyleModel 2nd 3rd
+- QStyle 2nd 3rd 4th 5th
+- 与窗口装饰对比
+- drawComplexControl()
+- drawControl()
+- drawPrimitive() 2nd 3rd
+- PE_FrameFocusRect
+- pixelMetric()
+- polish() 2nd
+- standardIcon()
+- standardIconImplementation() 2nd
+- standardPixmap()
+- styleHint()
+- subControlRect()
+- unpolish() 2nd
+- visualRect()
+- QStyledItemDelegate
+- QStyleHintReturn
+- QStyleOption 2nd 3rd
+- qstyle_option_cast<T>() 2nd 3rd
+- QStyleOptionButton 2nd
+- QStyleOptionFocusRect
+- QStyleOptionFrame
+- QStyleOptionGraphicsItem 2nd
+- QStylePainter
+- QStylePlugin
+- qSwap() 2nd
+- QSyntaxHighlighter
+- QSysInfo
+- Qt Assistant 2nd 3rd
+- Qt Designer
+- jui files 2nd
+- 创建对话框
+- 创建主窗口
+- Eclipse 集成
+- 启动
+- 布局 2nd 3rd
+- 预览 2nd 3rd
+- 分割器
+- 模板 2nd 3rd 4th 5th 6th
+- .ui files 2nd 3rd 4th 5th 6th
+- 使用自定义控件
+- Qt 版本
+- Qt 项目 (.pro 文件) 2nd 3rd 4th 5th 6th 7th 8th
+- Qt Jambi
+- Qt Jambi 生成器
+- Qt Linguist 2nd
+- Qt 空间
+- AlignHCenter
+- BackgroundColorRole 2nd
+- BDiagPattern
+- BevelJoin
+- CopyAction
+- CrossPattern
+- DashDotLine
+- DashLine
+- DensePattern
+- DiagCrossPattern
+- DisplayRole 2nd 3rd 4th 5th
+- DotLine
+- EditRole 2nd 3rd 4th 5th
+- escape() 2nd 3rd
+- FDiagPattern
+- FlatCap
+- FontRole 2nd
+- HorPattern
+- IconRole
+- IgnoreAction
+- ItemIsEditable
+- ItemIsEnabled
+- ItemIsSelectable
+- LinkAction
+- LocalDate
+- MoveAction
+- selectedRanges()
+- selectRow()
+- setColumnCount()
+- setCurrentCell()
+- setHeaderLabels()
+- setItem()
+- setItemPrototype() 2nd
+- setSelectionMode() 2nd
+- setShowGrid()
+- verticalHeader()
+- verticalScrollBar()
+- viewport()
+- QTableWidgetItem 2nd
+- clone()
+- data() 2nd 3rd
+- ownership
+- setData() 2nd
+- text() 2nd 3rd
+- QTableWidgetSelectionRange 2nd
+- QTabWidget 2nd 3rd 4th
+- QtAlgorithms header
+- QtCore module
+- QtServer 2nd 3rd
+- QTSocket 2nd 3rd
+- canReadLine()
+- close() 2nd
+- connected() 2nd
+- connectToHost() 2nd
+- disconnected() 2nd
+- write() 2nd
+- QtDebug header
+- qtdemo example
+- QTDIR variable
+- QTemporaryFile 2nd 3rd 4th
+- QBrowser 2nd 3rd
+- QCodec 2nd
+- codecForLocale()
+- codecForName()
+- setCodecForStrings()
+- setCodecForTr() 2nd
+- toUnicode()
+- QTextPlugin
+- QTextDocument 2nd 3rd
+- contentsChanged() 2nd
+- print()
+- Html()
+- setModified()
+- QTextEdit 2nd
+- append()
+- copy()
+- copyAvailable()
+- cut()
+- paste()
+- QTextStream 2nd 3rd
+- AlignXxx
+- codings 2nd 3rd
+- FixedNotation
+- ForcePoint
+- ForceSign
+- on file
+- on socket
+- on string
+- readAll()
+- ReadLine() 2nd
+- ScientificDetect()
+- AutoDetectUnicode()
+- setCodec() 2nd 3rd
+- setFieldAlignment()
+- setFieldWidth()
+- setByteOrder()
+- setIntegerBase() 2nd
+- setNumberFlags() 2nd
+- setPadChar()
+- setRealNumber() 2nd
+- setRealPrecision() 2nd 3rd 4th
+- 2nd 3rd 4th 5th 6th
+- ShowBase
+- SmartNotation
+- syntax
+- UppercaseBase
+- UppercaseDigits
+- qtgfx-vnc option (configure) header
+- QtGlobal header
+- QtGui module 2nd 3rd 4th
+- QThread 2nd
+- currentThread()
+- exec()
+- run() 2nd 3rd 4th 5th 6th
+- start()
+- subclassing 2nd
+- terminate()
+- wait() 2nd
+- QThreadStorage<T>
+- Qticker
+- QTime
+- QtEdit 2nd 3rd 4th
+- QtTimeline
+- QTimer
+- 0-millisecond directives
+- compared with timer events
+- setSingleShot()
+- single-shot 2nd 3rd
+- singleShot()
+- timeout() 2nd 3rd
+- QtmlWidget
+- QtNetwork module 2nd
+- QtBar 2nd
+- QtToolBox
+- QtButton
+- QtOpenGL module 2nd
+- Qtopia 2nd
+- Qtopia Core
+- Qtopia PDA
+- Qtopia 2nd
+- Qtopia Platform
+- QTOPIA_APPLICATION()
+- QTOPIA_MAIN
+- qtopia_project (.pro files) 2nd 3rd
+- QtopiaApplication 2nd
+- qtopiamake
+- QtopiaRequest
+- @QtPropertyReader() (Java)
+- @QtPropertyWriter() (Java)
+- QtTransform
+- QTranslator 2nd 3rd
+- TreeView 2nd 3rd 4th
+- expand()
+- scrollTo()
+- TreeWidget 2nd 3rd 4th 5th 6th
+- QTreeWidgetItem 2nd
+- setData() 2nd
+- setText() 2nd
+- subclassing
+- QtScript module 2nd 3rd 4th
+- QtService
+- qt-sql option (configure)
+- QtSql module 2nd 3rd
+- QtSvg module 2nd
+- QtXml module 2nd
+- QtXmlPatterns module
+- qualified name (XML)
+- QUdpSocket 2nd
+- bind() 2nd
+- pendingDatagramSize()
+- readDatagram()
+- readyRead()
+- writeDatagram() 2nd
+- queries
+- queryInterface() / QAxAggregated
+- QAxBase
+- QueryInterface() (IUnknown)
+- querySubObject() (QAxBase)
+- question() (QMessageBox)
+- queues
+- QuiLoader 2nd
+- quintN 2nd
+- Quit example
+- quit() (QCoreApplication) 2nd
+- quitLastClosed property (QApplication)
+- uncompress()
+- QUrl 2nd
+- port()
+- setFragment()
+- Scheme() 2nd
+- QUrlInfo
+- QValidator 2nd
+- QVariant 2nd
+- for action's "data" item 2nd
+- databases
+- for drag and drop
+- for item views
+- for properties 2nd
+- in QtJambi
+- isValid()
+- tToString()
+- value<T>()
+- VariantCanConvert<T>()
+- VariantFromValue()
+- VariantValue<T>()
+- QVarLengthArray<T,Prealloc>
+- QBoxLayout 2nd
+- addLayout()
+- addStretch()
+- addWidget()
+- QVector<T> 2nd 3rd 4th 5th
+- QIterator<T>
+- qvfb 2nd
+- qvfb option (configure)
+- WaitCondition
+- wait()
+- wakeAll()
+- wakeOne()
+- WhatsThis
+- QWheelEvent
+- QWidget
+- activateWindow() 2nd
+- addAction() 2nd
+- adjustSize()
+- changeEvent() 2nd
+- close() 2nd 3rd
+- closeEvent() 2nd 3rd 4th 5th 6th 7th
+- contextMenu()
+- dragEnterEvent() 2nd
+- dragLeaveEvent()
+- dragMoveEvent() 2nd 3rd
+- dropEvent() 2nd 3rd
+- find()
+- focusChild() 2nd
+- fontMetrics() 2nd
+- handle()
+- height()
+- hide() 2nd
+- hideEvent()
+- KeyPressEvent() 2nd 3rd
+- keyReleaseEvent()
+- macSizeHint()
+- minimumSizeHint() 2nd 3rd
+- mouseDoubleClick()
+- mouseMoveEvent() 2nd 3rd 4th 5th 6th
+- mousePressEvent() 2nd 3rd 4th 5th 6th
+- mouseReleaseEvent() 2nd 3rd 4th
+- in multithreaded applications
+- paintEvent() 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th
+- palette()
+- performDrag()
+- Event()
+- raise()
+- repaint()
+- resize()
+- resizeEvent() 2nd
+- scroll()
+- setAcceptDrops() 2nd 3rd
+- setAttribute()
+- setAutoFillBackground() 2nd
+- setBackgroundRole() 2nd
+- setContextMenuPolicy()
+- setCursor()
+- setEnabled() 2nd
+- setHeight()
+- setFixedSize()
+- setFocus()
+- FocusPolicy()
+- setGeometry()
+- setLayout() 2nd
+- setMinimumSize() 2nd 3rd
+- setMouseTracking()
+- setSizePolicy() 2nd 3rd 4th
+- setStyle() 2nd
+- StyleSheet()
+- setTabOrder()
+- setToolTip()
+- setVisible()
+- setWhatsThis()
+- setWindowIcon()
+- setWindowModified() 2nd 3rd
+- setWindowTitle() 2nd 3rd 4th
+- show() 2nd 3rd 4th
+- showEvent()

@@ -1,0 +1,5 @@
+For deleting, we begin by noting the current row. Then we delete the row and submit the change. We must manually submit deletions since the automatic submitter's current index the row following the deleted row—or the last row if it was the last row that was deleted.
+
+The QDataMapper class makes it easy to develop data-aware forms that display information from a data model. In the example, we used QSqlTableModel as the underlying data model, but QDataMapper can be used with any data model, including non-SQL models. An alternative would have been to use QSqlQuery directly to fill in the form with data and to update the database. This approach requires more work, but it is also more flexible.
+
+In the next section, we will review the rest of the Staff Manager application, including the code that uses the EmployeeForm class developed in this section.

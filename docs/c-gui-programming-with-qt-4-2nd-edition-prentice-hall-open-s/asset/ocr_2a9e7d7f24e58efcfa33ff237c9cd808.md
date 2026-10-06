@@ -1,0 +1,1 @@
+If the user's locale is es (Español), :italic.png becomes a reference to the cursivo.png image. If the locale is sv (Svenska), kursiv.png image is used. For other locales, italic.png is used.
