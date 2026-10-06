@@ -1,0 +1,169 @@
+
+已经是优美的 LINQ 代码了。管道运算符（pipe-forward operator）将结果从 `Seq.sum` 传递给 `printfn`。这不简单吗？
+
+**列表 1-31** 解决奇数求和函数式方法
+
+```csharp
+// C# code
+var sum = dataFromTo100
+    .Where(n=>n%2!=0) //过滤掉奇数
+    .Sum(); // 求和
+
+//输出结果
+Console.WriteLine("the sum of the odd number from 00 to 100 is {0}", sum);
+```
+
+```fsharp
+// F# code
+seq { 0..100 } // 给从 0 到 100 的数据
+|> Seq.Filter (fun n -> n%2<>0) // 数据子集仅包含奇数
+|> Seq.sum // 求和
+|> printfn "the sum of odd number from 0 to 100 is %A" // 输出结果
+```
+
+当 F# 代码与等价 C# 代码并排显示时，很容易看出 `Seq.filter` 是一个用于过滤数据的内置函数，而 `Seq.sum` 是一个求和提供序列中元素的函数。因为 `printfn` 原本需要两个参数，它通过管道运算符（`||>`）获取第二个参数，因此它只需要一个显式提供的参数。Seq 模块函数将在“Seq/List/Array Module functions”中进行详细讨论。
+
+从编码体验和可读性的角度来看，函数式方法比命令式方法好得多。F# 作为一种函数优先的语言，清晰地展示了这种优势。它更自然地链联函数。
+
+LINQ 开发人员的一个头疼问题是 LINQ 代码的调试。如果没有 FSI，这对 F# 同样如此。FSI 允许你执行一些代码来设置测试环境，然后发送需要测试的代码。在之前的示例中，如果你不确定 filter 是否给出了前两行，可以将它们发送到 FSI。完成一个测试后，Reset Interactive Session（重置交互式）是重置环境的方便方法。这不不错吗！
+
+如果你仍在纠结管道运算符，可以将运算符的左侧看作右部分结尾的后缀。列表 1-32 中接下来显示的两个语句基本上是相同的。
+
+**列表 1-32** 使用管道运算符
+
+```fsharp
+mySeq |> Seq.length // 获取序列的长度
+Seq.length mySeq // 与上面的表达式相同，只是没用 |>
+```
+
+> 提示 FSI 不仅是调试程序和运行单元测试的好方法，它还是检查函数定义的快速方法。例如，你可以在 FSI 窗口中输入 `Seq.filter`。FSI 会向你显示函数定义，节省了查阅 MSDN 文档的秒时间。
+
+# Sequence, List 和 Array 模块函数
+
+现在你可能在好奇哪里找到像 `Seq.filter` 和 `Seq.sum` 这样的函数。它们位于三个模块内部：Seq、List 和 Array 模块。模块（Module）组织 F# 代码的特殊方式，将在本章讨论。为了方便起见，我们将 `seq`、`list` 和 `array` 称为集合。下面列出的函数是最常用的。完整的函数列表请参考 MSDN 文档 http://msdn.microsoft.com/en-us/library/ee353413。
+
+# length
+
+使用 `length` 函数很容易获取列表或数组的长度。LINQ 扩展方法提供了相同的功能。列表 1-33 显示了一个示例。
+
+列表 1-33 length 函数
+
+```fsharp
+let myList = [1..10]
+let listLength = myList |> List.length // 长度为 10
+let myArray = [1..10]
+let arrayLength = myArray |> Array.length //arrayList 为 10
+let mySeq = seq { 1..10 }
+let seqLength = mySeq |> Seq.length //10
+```
+
+> 注意 Seq 有一个 `length` 函数，但请记住序列可以是无限长度的。无限长度的序列会导致许多函数不可、不安全或两者兼有。
+
+# exists 和 exists2
+
+Seq、list 和 array 提供相同的函数来检查元素是否存在，以及查看两个集合在相同位置是否包含相同的元素。`exists` 用于检查单个元素，而 `exists2` 用于检查两个集合。列表 1-34 显示了如何使用 `Seq.exists` 和 `Seq.exists2`。
+
+# 列表 1-34 exists exists2 函数
+
+```fsharp
+let mySeq = seq { 1..10 }
+let mySeq2 = seq { 10..-1..3 }
+```
+
+```fsharp
+// 如果 mySeq 包含 3，将使得 "fun n -> n = 3" 返回 TRUE
+if mySeq |> Seq.exists (fun n -> n = 3) then printf "mySeq contains 3"
+
+// 简洁版本检查是否包含 3
+if mySeq |> Seq.exists (= 3) then printf "mySeq contains 3"
+
+// 检查两个序列在相同位置是否有相同元素
+if Seq.exists2 (fun n1 -> n1 = n2) mySeq then printf "two sequences contain element"
+```
+
+你可能对理解之前代码中的 `(= 3)` 有些困难。在 F# 中，`Everything` 是一个函数，而等号 `(=)` 是异常。如果你想看它的定义，可以在 FSI 中运行。列表 1-35。定义如下：
+
+```fsharp
+'a -> bool
+```
+
+这是一个接收一个参数并返回一个函数的定义。`'a` 并不熟悉，将通过类型推断确定，并在本章稍后介绍。列表 1-35 等号函数
+
+```fsharp
+let f = (=);
+```
+
+你可能在想，“`(>)` 呢？它相等吗？”好问题！再次让我们 FSI。列表 1-36 显示了结果。第一个语句定义了函数，第二个语句将其传递给函数。如果 `f` 在等式的左侧，最终结果应该是 TRUE。因为最终结果是 FALSE，它必须在右侧。列表 1-36 带有固定参数的等号函数
+
+```fsharp
+let f = (>);
+val f : (int -> bool)
+f 3 // result is false
+```
+
+使用 `=` 或 `>` 可以让你的代码更短。然而，过度使用可以让你的代码更易读。
+
+# forall and all
+
+`forall` 函数用于检查集合中的所有元素是否符合某些标准。LINQ All 扩展方法提供了相同的功能。列表 1-37 显示了如何使用 `Seq.forall` 的示例。列表 1-37 forall 函数
+
+```fsharp
+let myEvenNumberSeq = { 2..10 }
+// 检查 seq 中的元素是否都是偶数
+myEvenNumberSeq |> Seq.forall (fun n -> n % 2 = 0)
+```
+
+`exists2` 提供了类似于 `forall` 的功能，但它是跨两个集合提供的。如果只有两个元素对相等，`exists2` 返回 TRUE。列表 1-38 显示了此操作。列表 1-38 forall 函数
+
+```fsharp
+let myEvenNumberSeq = { 2..10 }
+let myEvenNumber2 = { 12..20 }
+if Seq.forall2 (fun n -> n+10) myEvenNumberSeq myEvenNumber2 then printfn "forall2 // TRUE"
+```
+
+# find
+
+`find` 函数更像 IEnumerable 的 `First` 扩展方法。如果元素不存在，它会抛出 `KeyNotFoundException`。列表 1-39。列表 1-39 find 函数
+
+```fsharp
+// 使用 let 定义函数
+let isDivBy number elem = elem % number = 0
+
+let result = Seq.find (fun n -> isDivBy 5 n) [ 1 ..10 ]
+printf "%d" result //result is 5
+```
+
+`findIndex` 函数用于快速查找元素的索引。你可以在 MSDN 文档（http://msdn.microsoft.com/en-us/library/ee3568）中找到示例代码。
+
+# map
+
+`map` 函数通过对集合中的每个元素应用指定函数，根据给定集合创建一个新集合。LINQ Select 扩展方法提供了相同的功能。查看列表 1-40。列表 1-40 map 函数
+
+```fsharp
+let mySeq = seq { 1..10 }
+let result = mySeq |> Seq.map (fun n -> n * 2) // 通过乘以2映射每个元素
+Seq.forall (=) = seq { 2..20 } // 检查结果
+```
+
+# filter
+
+`filter` 函数返回一个新的集合，其中包含集合中泛型谓词返回 TRUE 的元素。LINQ Where 扩展方法提供了相同的功能。查看列表 1-41。列表 1-41 filter 函数
+
+```fsharp
+let mySeq = { 1..10 }
+let result = mySeq |> Seq.filter (fun n -> n % 2 = 0) //过滤奇数
+printf "%A" result
+```
+
+# fold
+
+`fold` 函数将集合聚合为单个值。来自 MSDN 的定义显示 `fold` 对集合的每个元素应用函数并将累加参数贯穿计算。LINQ Aggregate 扩展方法执行此功能。列表 1-42 显示了一个求序列中所有元素的示例。列表 1-42 fold 函数
+
+```fsharp
+let mySeq = { 1..10 }
+let result = Seq.fold (fun acc n -> acc + n) 0 mySeq
+printf "the sum of 1..10 is %d" result //sum = 55
+```
+
+`fold` 函数的一个应用是获取集合的长度。内置函数 `length` 支持32位整数。如果序列长度是一个很大的数字，例如 `int64` 或 `bigint`，可以使用 `fold` 函数来获取长度。下面的示例获取 `bigint` 类型的序列长度。查看列表 1-43，它显示了实现此目的的代码。
+

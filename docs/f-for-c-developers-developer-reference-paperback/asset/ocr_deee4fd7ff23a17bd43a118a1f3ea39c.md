@@ -1,0 +1,5 @@
+![](bbox=[0.118, 0.048, 0.712, 0.353])
+
+We are now ready to start development-related tasks. There are a few options for interacting with Azure code. The easiest approach for .NET developer is to use the Windows Azure Software Development Kit (SDK) for .NET. The Windows Azure SDK for .NET can be downloaded from the .NET section download page (http://www.windowsazure.com/en-us/downloads/), which is shown in Figure 8-7. The Windows Azure SDK for .NET can work with Microsoft Visual Studio 2010 and Visual Studio 2012. In this chapter, I will use Visual Studio 2012 to demonstrate how to develop Azure applications. The Azure SDK is independent from Visual Studio, so all the functionalities are the same in Visual Studio 2010. Figure 8-5 shows installation page for the Windows Azure SDK for .NET.
+
+Windows Azure SDK for .NET is installed by using Microsoft Web Platform Installer 4.5. If installed Visual Studio 2012, the Web Platform Installer has already been installed on your computer. The standalone version can be downloaded from http://www.microsoft.com/web/downloads/platform.aspx.
