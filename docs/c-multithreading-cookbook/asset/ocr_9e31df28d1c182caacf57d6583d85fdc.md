@@ -1,0 +1,15 @@
+# Introduction to C++ Concepts and Features
+
+As commands are executed one after another inside iteration of the while loop, the operating system doesn't have the required time to properly update the user interface (in this case, the progress bar), so we would see an empty progress bar. After the function returns, a fully filled progress bar appears. The solution for this is to create a progress bar on the main thread. A separate thread should execute the calculate function; in each step of iteration, it should somehow signal the main thread to update the progress bar step by step. As we said, threads are switched extremely fast on the CPU, so we can get the impression that the progress bar is updated at the same time as the calculation is performed.
+
+To conclude, each time we have to make a parallel task, for some kind of user, or for an external dependency such as response from a remote server, we create a separate thread so that our program won't hang and unresponsive.
+
+In future examples, we will discuss static and dynamic libraries, let's say a few words about static. A static library (*lib) is usually some code placed in separate files and already compiled for use. We will add it to the project when we want to use some of its features. When we include <iostream>, the compiler will include a static library which implements input stream functions. A static library is built into the executable at compile time before actually run the program. A dynamic library (.dll) is similar to a static library, but the difference is that it is not resolved during compilation; it is linked later when we start the program, or at-runtime. Dynamic libraries are very useful when we have functions that a lot of programs will use. So, we don't need to include dynamic library. A good example is User32.dll, where the Windows OS placed a majority of GUI functions. So, if we create two programs where both have a window (GUI form), we do not need to include CreateWindow in both programs. We will simply link User32.dll at runtime, the CreateWindow API will be available.
+
+# The structural programming approach
+
+As we said before, there are four programming paradigms. Both structural and object-oriented paradigms can be used making programs in C++. Even though C++ is an object-oriented language, you can make programs with a structural approach. Usually, a program contains one or more functions because every program must have a main routine; so we can place all our code into the main function. However, in that way, any large program will be very hard to read. Then, we will have to split the code in certain program units that we call functions. Let's give an example of a program that needs to calculate the sum of two numbers in the following sections.
+
+# Getting ready
+
+Make sure Visual Studio is up and running.

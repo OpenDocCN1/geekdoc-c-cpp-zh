@@ -1,0 +1,44 @@
+```
+InitializeComponent();
+this->Load += gcnew System::EventHandler(this,
+&MyForm::OnLoad);
+protected:
+-MyForm()
+{
+    if (components)
+    {
+        delete components;
+    }
+private:
+    System::ComponentModel::Container ^components;
+    Label^ label;
+    ProgressBar^ progress;
+    static const int N = 25;
+
+System::Void Form_OnLoad(System::Object^ sender,System::EventArgs^ e)
+{
+    InitializeApp();
+}
+
+System::Void InitializeApp(void)
+{
+    label = gcnew Label();
+label->Location = Point(2, 25);
+
+progress = gcnew ProgressBar();
+progress->Location = Point(2, 235);
+progress->Width = 280;
+progress->Height = 25;
+progress->Stop = 1;
+progress->Maximum = MyForm::N;
+progress->Value = 0;
+
+this->Controls->Add(label);
+this->Controls->Add(progress);
+
+Task^ task = gcnew Task(gcnew Action<Object^>
+(&MyForm::StartAddress), this);
+task->Start();
+
+static System::Void StartAddress(Object^ parameter)
+```

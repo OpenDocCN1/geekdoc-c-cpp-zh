@@ -1,0 +1,40 @@
+
+[content]
+The CBankAccount class implemented in CBankAccount.h along with Clock and CParameters remains the same. The Transfer method is changed in a way that at the beginning of the method, a sleep time of 0.1 second is added. This is intentionally added in order to create a situation with deadlock. After two threads are started, if we were to remove the sleep time probably deadlock would not occur; the system would give enough time to the CPU to thread it not request for lock in the same time as another.
+
+Furthermore, in CThread.h we've implemented a smarter CThread class. Using the CThread object in the thread pool as an abstraction of a working object. The object has the lpThreadStart attribute for the thread start address, hThread used for the thread handle, dvThreadId used for the thread id, dvExitCode used for thread exit, and pThreadContext used for the context thread. As illustrated in earlier diagram, creating another thread will gain more control over execution. The context implementation is assembled as an internal structure consisting of the following attributes: lpThreadStart is used for the user-defined start address; lpParameter is passed by the user for the start context; hThread is used for the context handle; dvThreadId is used for the context id; dvMaxWaitTime is used for setting the timeout for waiting for the context thread. The CThread class implements one where the exit code is set to zero. Constructor arguments are slightly changed, lpDispatcherId is added to create a STARTCONTEXT object where we set lpThreadStart with a user-defined start address. The dvDispatcherId is used to pass the actual manager to identify the thread. In constructor, we pass as well, as dvMaxWaitTime with MAX_TIME default value and we return a worker with the CONTEXT_SUSPENDED flag. In the destructor, we delete the first used by pThreadContext and then we query if still using the StillAlive method and then close the thread handle. The Start method sets the lpThread attribute by the user and resumes the worker thread. The StillAlive method returns the STILL_ACTIVE macro with the return value of ExitStatus. The Handle and ThreadId methods return a handle to the worker and thread id respectively. The ContextHandle and Contextmethods return a handle to the context and the context thread respectively. The ExitStatus method calls the GetExitCodeThread to obtain its exit code or ACTIVE. The SetWaitTime sets the maximum waiting time attribute. The StartAddress method is added in order to perform task execution by creating another thread and the completion, in the worst case, a maximum of the pThreadContext-dvMaxWait interval. Either the interval has passed or returned. Then, the context thread handle is closed and the MSG_ENDTASK message is posted to the dispatcher queue.
+
+The CParameters class remains the same. Instead of searching through the list with a specified wait time, we'll block the dispatcher and wait for the MSG_ENDTASK message posted from the first worker thread.
+
+![](img/412b0f5bbb36adcce2ddd2d5b7416516_381_0.png)
+
+## Advanced Thread Management
+
+In the CThreadPool class, we include an additional header file called Wct.h. We also add the Advapi32 library in order to use the API that related to the thread-wait chains, which we'll explain below. The CThreadPool class has four attributes: a handle to the hProblemSolver thread that will occasionally check for potential problems; the hEvent handle to manually reset the exit, used for alerting the problem solver to exit; the threadlist pointer to the list of items; and dwMaxCount for the maximum number of threads that can be managed by it. The class implements two constructors: the first where the thread count is set by default using the number of machine processors that the pool can instantiate. The second constructor takes one argument--the actual number of threads that the pool can manage. Both constructors implement the InitializePool method that creates the message queue for the dispatcher, also create an event, a problem solver, and a new list of threads. In the destructor, we first set the event to the signaled state and wait for MAX_WAIT_TIME for the problem solver to safe exit. If the time has passed without thread completion, we close both handles and wait for the RemoveAll method to finish the execution of the thread properly. Finally we clear theMessage queue.
+
+The Count method returns the count of the items in the list. The RemoveThread method searches for the thread specified by dwThreadId and if found, removes it. The WaitAll method creates an array of threads that will be used in the WaitForMultipleObjects API specifying TRUE for the BOOL bWait parameter in order to wait for all threads to finish their tasks. After WaitForMultipleObjects returns the list using the RemoveAll method for each thread. The MaxCount method returns a reference to the dwMaxCount attribute in order to get or set its value. Again, the pool size can be increased or decreased if necessary. The ReleaseThread method searches for the thread specified by the dwThreadId parameter and if found, terminates the thread.
+
+The RequestThread method is used for obtaining free thread. If the number of threads is not reached, the method creates a new item and inserts it into the list. If the maximum number of threads is reached, RequestThread iterates through the entire list and queries the code for each. If all threads are still active, the dispatcher blocks using the GetMessage until an available worker thread posts the message. We then search for the thread using the passed thread ID and if found, we remove it and create a new thread with the start address provided by the user. The ProblemSolver method is used as a monitoring thread for the thread pool.
+
+As shown in the following diagram, it that the problem solver is another thread executing in parallel:
+
+![](img/412b0f5bbb36adcce2ddd2d5b7416516_382_0.png)
+
+![](img/412b0f5bbb36adcce2ddd2d5b7416516_383_0.png)
+
+If a problem occurs and the pool is blocked for some reason, this thread will
+
+> Wait Chain Traversal (WCT) enables diagnosing eventual hangs and deadlocks. A wait chain is an alternating sequence of threads and synchronization objects; each thread waits for the object that follows it, which is owned by the subsequent thread in the chain (MSDN).
+
+## Advanced Thread Management
+
+Next, a call to GetWaitChain follows. This API retrieves the wait chain for the specified thread. If any subset of nodes in the array forms a cycle, the function sets the IsCycle parameter to TRUE (from MSDN). So, if a cycle is formed, bDeadlock will be set to TRUE. If we terminated the deadlock and closed the session using CloseThreadChain API. We then suspend the thread for one second and continue monitoring the pool. In the entry point, we create two bank accounts with certain amounts of money. After we've created the pool, we request for thread to transfer funds from the first to the second account, and we request for another thread to transfer funds from the second to the first account, creating a problematic situation. We perform this in a loop that iterates ten times to ensure that a deadlock will occur. If a deadlock is found, the problem solver will
+
+One situation with a deadlock is shown in the following screenshot:
+
+![](img/412b0f5bbb36adcce2ddd2d5b7416516_384_0.png)
+
+## There's more...
+
+The explained example targets a certain possible scenario where a problem can occur. This situation is known as the Banker's algorithm, by Edsger Dijkstra, that a given pool implementation, with along solving, could be used for any scenario where a deadlock or a similar problem can occur. Our intention was to teach the user how to carefully design the objects that will help develop the program more easily, at the same time giving the ability to control the execution, respect the resources used, and perform advanced management and monitoring of program execution. In general, as we said so many times, it is important to carefully design the application, and if necessary, to include advanced mechanisms to support such a design.
+[/content]

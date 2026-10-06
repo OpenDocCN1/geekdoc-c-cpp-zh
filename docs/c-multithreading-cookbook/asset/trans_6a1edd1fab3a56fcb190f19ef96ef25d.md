@@ -1,0 +1,180 @@
+
+变慢通常意味着在这种情况下，顺序执行的方法会有更好的性能，但并非总是如此。它也可能意味着并行代码设计不当，或者存在过多的不必要的同步点。也可能指向某些实现错误。在理论上，此类算法本身可以转换为并行算法，但还有另一个问题：硬件是否支持这种执行？如果你在四个 CPU 上进行测试并并了满意的结果，然后尝试在单个 CPU 上执行，你会发现应用程序的执行速度要慢得多，例如，使用在单个 CPU 核心上执行顺序算法。在决定选择什么以及你的应用程序如何从中受益之前，应该检查所有这些因素。你有两个需要考虑的重大因素：
+
+- 应用程序如何在更短的时间内完成更多工作？
+- 应用程序如何在不影响系统其他或其他应用程序的情况下使用更多资源？
+
+在我们的示例中，我们将再次计算 Schwefel 之和。我们将派生 Schwefel 基类，并创建一个新的 `CSwefelP` 类，该类将仅使用 OpenMP 特性，以演示另一种你可以用于提高应用程序性能的技术，同时始终考虑潜在的改进可能性。
+
+为了使用 OpenMP 指令，你必须正确设置 Visual Studio 的属性页。运行以下代码所需的详细设置可以在附录中找到。
+
+## 准备工作
+
+确保 Visual Studio 正在运行。
+
+## 如何操作...
+
+现在，让我们创建程序并解释其结构。执行以下步骤：
+
+1. 打开解决方案 `ConcurrentDesign`。
+2. 打开解决方案资源管理器，右键点击“头文件”。添加一个名为 `CSwefelP` 的新头文件。打开 `CSwefelP.h`。
+3. 向以下位置添加代码：
+
+```cpp
+#ifndef __CSWEFELP__
+#define __CSWEFELP__
+
+#include "stdafx.h"
+
+class CSwefelP : public CSchwefel
+```
+
+## 理解并发代码设计
+
+```cpp
+public:
+    CSwefelP() : CSchwefel() {}
+    CSwefelP(unsigned uSize) : CSchwefel(uSize) { }
+    virtual ~CSwefelP(void) { }
+    virtual double Evaluate(void* lpParameters = 0);
+protected:
+    CSwefelP(const CSchwefel&) {}
+    CSwefelP& operator = (const CSchwefel&) { return *this; }
+    virtual TCHAR* ObjectName(void) const { return _T("SchwefelP"); }
+private:
+    //
+};
+
+#endif
+```
+
+4. 打开解决方案资源管理器，右键点击“源文件”。添加一个名为 `CSwefelP` 的新源文件。打开 `CSwefelP.cpp`。
+
+```cpp
+double CwefelP::Evaluate(void* lpParameters)
+{
+    GetSystemTime(&StartTime());
+
+    double sum = 0;
+    double score = 0;
+    double min = DBL_MAX;
+    double best = DBL_MAX;
+    int iSize = (int)iSize();
+
+    #pragma omp parallel firstprivate(min) firstprivate(score)
+    {
+        #pragma omp for reduction(+: sum) reduction(+: score) nowait
+        for (int i = 0; i < iSize; i++)
+            sum += Allele(i);
+
+        if (min > Allele(i))
+        {
+            min = Allele(i);
+        }
+    }
+
+    double dInnerSum = 0;
+    for (int j = 0; j < i; j++) {
+        dInnerSum += Allele(j);
+    }
+    double dTmp = dInnerSum * dInnerSum;
+    score += dTmp;
+    if (i != 0 && best > dTmp) {
+        best = dTmp;
+    }
+    #pragma omp critical
+    {
+        if (Best() > best) {
+            Best() = best;
+        }
+        if (Min() > min) {
+            Min() = min;
+        }
+    }
+    Sum() = sum;
+    Score() = score;
+    GetSystemTime(&EndTime());
+    return Score();
+}
+```
+
+6. 打开解决方案资源管理器，双击 `stdafx.h`。
+
+## 理解并发代码设计
+
+7. 向其添加代码：
+
+```cpp
+#pragma once
+
+#include "targetver.h"
+
+#include <stdio.h>
+#include <char.h>
+#include <Windows.h>
+#include <float.h>
+#include <time.h>
+#include <omp.h>
+
+#include "Schwefel.h"
+#include "SchwefelMT.h"
+#include "SchwefelP.h"
+```
+
+8. 打开解决方案资源管理器，双击 `ConcurrentDesign.cpp`。
+
+9. 向 `ConcurrentDesign.cpp` 添加以下代码：
+
+```cpp
+#include "staf.h"
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    Schwefel Schwefel(100000);
+    Schwefel.Evaluate();
+
+    _printf_s(Schwefel.Elapsed());
+
+    SchwefelMT SchwefelMT(100000);
+    SchwefelMT.Evaluate();
+
+    _printf_s(SchwefelMT.Elapsed());
+
+    SchwefelP SchwefelP(100000);
+    SchwefelP.Evaluate();
+
+    _printf_s(SchwefelP.Elapsed());
+
+    #ifdef _DEBUG
+    return system("pause");
+    #endif
+
+    return 0;
+}
+```
+
+## 工作原理...
+
+首先，让我们解释 `CSwefel` 派生类。我们必须实现构造函数、析构函数以及虚方法 `Evaluate`。构造函数和析构函数的实现非常直观。现在，让我们看看 `Evaluate` 方法的实现。首先，我们将获取当前系统时间。然后，通过 `CSwefelMT` 类，我们将实例化用于私有对象以及共享对象的线程本地存储对象。请注意，我们必须严格遵循并发逻辑。所有并行访问的属性必须始终受到保护。因此，`ds`、`dscore` 和 `dbest` 必须免受并发访问。我们还将使用局部变量 `isize` 来仅分配一次数组大小，将 `i < Size` 语句放在并行循环中将是无效的，并会导致对共享对象的产生不一致的访问。
+
+现在，我们将使用 OpenMP 的 `#pragma omp parallel`、`firstprivate(min)` 和 `firstprivate(best)`。`omp parallel` 指令指示编译器定义一个并行结构（区域），该区域的代码将由多个线程并行执行。`firstprivate` 子句指定每个线程都有该变量的私有副本，并用进入并行区域的值进行初始化。`firstprivate` 指定的是让每个线程拥有该变量的实例，并使用在并行结构之前的值进行初始化（MSDN）。为了确保变量是私有的，`firstprivate` 子句指定了在并行区域结束时的操作。
+
+现在，我们将使用 `#pragma omp parallel`、`firstprivate(min)` 和 `firstprivate(best)`。`omp parallel` 指令指示编译器定义一个并行结构（区域），该区域的代码将由多个线程并行执行。`firstprivate` 子句指定每个线程都有该变量的私有副本，并用进入并行区域之前的值进行初始化。为了确保变量是私有的，`firstprivate` 子句指定的是让每个线程拥有该变量的实例，并用进入并行区域之前的值进行初始化（MSDN）。为了确保变量是私有的，`firstprivate` 子句指定了在并行区域结束时的操作。
+
+下一语句是 `#pragma omp for reduction(+: sum) reduction(+: score)`，后面跟着 `for` 循环。`omp parallel for` 指令将 `for` 循环中的工作分配给并行线程（MSDN）。`reduction(operation, variable)` 子句指定在并行区域结束时执行归约操作。这意味着在底层，编译器将使用归约子句指定的变量作为每个线程的私有，但在并行区域结束时，将通过互斥执行必要的归约，在我们的例子中是 `sum`。当并行循环执行时，线程将独立工作。在循环结束时，所有线程的 `sum` 将相加并在一个中。我们现在需要做的是设置类属性。关于 `nowait` 子句还有一点：它指示编译器，如果线程已完成循环中的工作，它就不需要等待其他线程完成相同的循环。你可以将 `nowait` 认为是一个没有屏障的线程无需等待所有其他线程到达该点。
+
+## 理解并发代码设计
+
+在并行循环完成后，我们将添加另一个并行结构：`#pragma omp critical`。它指示编译器结构内部的语句必须以排他方式访问任何对象来执行。每个线程都有自己的最小值和最佳分数。由于同步访问，我们必须顺序执行比较和赋值。在根并行结构结束后，我们将对 `dsum` 和 `dscore` 进行必要的赋值，并再次获取系统时间以便计算通过时间。
+
+## 更多内容...
+
+我们之前提到过测量性能。我们将使用上一个示例的输出，如下截图所示：
+
+412b0f5bbb36adcce2ddd2d5b7416516_352_0
+
+我们正在使用 Intel i7-3820 处理器。它具有 8 个逻辑核心并带有超线程技术，能够运行 8 个并行硬件支持线程。
+
+超线程技术更高效地使用处理器资源，允许在内核上运行多个线程。作为一种性能特性，Intel HT 技术也增加了处理器的吞吐量，尽管取决于线程软件。要了解更多关于 Intel HT 的信息，请访问以下链接：
+
+http://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html

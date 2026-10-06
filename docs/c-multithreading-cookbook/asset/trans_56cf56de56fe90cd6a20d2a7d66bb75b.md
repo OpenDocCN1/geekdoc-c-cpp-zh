@@ -1,0 +1,332 @@
+
+
+# 线程同步与并发操作
+
+```cpp
+return 2L;
+}
+```
+
+```cpp
+if (ConnectNamedPipe(hPipe, NULL))
+{
+    void* params[2] = { hPipe, hWndResult };
+    HANDLE hThread = CreateThread(NULL, 0,
+    (LPTHREAD_START_ROUTINE)StartAddress, params, 0, NULL);
+    Sleep(100);
+    CloseHandle(hThread);
+}
+```
+
+```cpp
+SendMessage(hWndProgress, PBM_STEPIT, 0, 0);
+}
+```
+
+```cpp
+CloseHandle(hEvent);
+return 0L;
+```
+
+```cpp
+DWORD WINAPI StartAddress(LPVOID lpParameter)
+{
+    void** lpParameters = (void**)lpParameter;
+    HANDLE hPipe = (HANDLE)lpParameters[0];
+    HWND hWndResult = (HWND)lpParameters[1];
+```
+
+```cpp
+char* szRequest = (char*)HeapAlloc(GetProcessHeap(), 0,
+    BUFFER_SIZE = sizeof(char);
+    char* szReply = (char*)HeapAlloc(GetProcessHeap(), 0,
+    BUFFER_SIZE = sizeof(char));
+```
+
+```cpp
+DWORD dwBytesRead = 0;
+DWORD dwReplyBytes = 0;
+DWORD dwReplyWritten = 0;
+```
+
+```cpp
+memset(szRequest, 0, BUFFER_SIZE * sizeof(char));
+memset(szReply, 0, BUFFER_SIZE * sizeof(char));
+```
+
+```cpp
+if (!ReadFile(hPipe, szRequest, BUFFER_SIZE * sizeof(char),
+    &dwBytesRead, NULL))
+{
+    return 2L;
+}
+```
+
+```cpp
+char szBuffer[1024] = { 0 };
+```
+
+# 第5章
+
+```cpp
+wsprintfA(szBuffer, " PID: [%s] connected.\n", szRequest);
+strcat(szResult, szBuffer);
+SetWindowTextA(hWndText, szResult);
+```
+
+```cpp
+HANDLE hMutex = OpenMutex(MUTEX_ALL_ACCESS, FALSE, MUTEX_NAME);
+```
+
+```cpp
+WaitForSingleObject(hMutex, INFINITE);
+```
+
+```cpp
+QueueElement* pElement = (QueueElement*) Dequeue();
+
+HANDLE mapping = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE,
+MAPPING_NAME);
+QueueElement* pMapping = (QueueElement*)MapViewOfFile(hMapping,
+FILE_MAP_ALL_ACCESS, 0, 0, 0);
+```
+
+```cpp
+memcpy(pMapping, pElement, sizeof(Queue));
+```
+
+```cpp
+UnmapViewOfFile(pMapping);
+CloseHandle(hMapping);
+```
+
+```cpp
+ReleaseMutex(hMutex);
+CloseHandle(hMutex);
+```
+
+```cpp
+sprintf_s(szReply, strlen(szReply) * sizeof(char), "OK%s", nszRequest);
+dwReplyBytes = (DWORD)(strlen(szReply) + 1) * sizeof(char));
+```
+
+```cpp
+if (!WriteFile(hPipe, szReply, dwReplyBytes, &dwBytesWritten)
+{
+    return 2L;
+}
+```
+
+```cpp
+memset(szRequest, 0, BUFFER_SIZE * sizeof(char));
+```
+
+```cpp
+if (!ReadFile(hPipe, szRequest, BUFFER_SIZE * sizeof(char),
+    &dwBytesRead, NULL))
+{
+    return 2L;
+}
+```
+
+```cpp
+wsprintfA(szBuffer, "%s", szRequest);
+strcat(szResult, szBuffer);
+```
+
+![](img/412b0f5bbb36adcce2ddd2d5b7416516_239_0.png)
+
+# 线程同步与并发操作
+
+```cpp
+SetWindowTextA(hWndResult, szResult);
+
+delete pElement;
+
+FlushFileBuffers(hPipe);
+DisconnectNamedPipe(hPipe);
+CloseHandle(hPipe);
+HeapFree(GetProcessHeap(), 0, szRequest);
+HeapFree(GetProcessHeap(), 0, szReply);
+```
+
+```cpp
+return 0L;
+
+BOOL FileDialog(HWND hWnd, LPSTR szFileName)
+{
+    OPENFILENAME ofn;
+
+    char szFile[MAX_PATH];
+
+    ZeroMemory(&ofn, sizeof(ofn));
+
+    ofn.structSize = sizeof(ofn);
+    ofn.hwndOwner = hWnd;
+    ofn.lpstrFile = szFile;
+    ofn.lpstrFile[0] = '\0';
+    ofn.nMaxFile = sizeof(szFile);
+    ofn.lpstrFilter = "All Files\0*.txt\0";
+    ofn.lpstrFilterIndex = 1;
+    ofn.lpstrTitle = NULL;
+    ofn.nMaxTitle = 0;
+    ofn.lpstrInitialDir = NULL;
+    ofn.nFlags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
+```
+
+```cpp
+if (GetOpenFileName(&ofn) == TRUE)
+{
+    strncpy_s(szFile, szFileName, MAX_PATH - 1);
+    return TRUE;
+}
+
+return FALSE;
+}
+
+BOOL StartProcess(HWND hWndResult)
+```
+
+```cpp
+{
+    STARTUPINFO startupInfo = { 0 };
+    PROCESS_INFORMATION processInformation = { 0 };
+
+    BOOL bSuccess = CreateProcess(
+        ("\\Debug\\ClientProcess.exe"), NULL, NULL,
+        FALSE, 0, NULL, &startupInfo, &processInformation);
+
+    if (!bSuccess) {
+        char szBuffer[MAX_PATH];
+        sprintfA(szBuffer, " Process creation fails: [%u]\n",
+        GetLastError());
+
+        SetWindowTextA(hWndResult, szBuffer);
+    }
+    return bSuccess;
+}
+
+- 7. 打开解决方案管理器并右键点击 concurrent_operations。添加一个名为 ClientProcess 的项目。现在右键点击 ClientProcess 项目。添加一个名为 main.cpp 的源文件。
+- 8. 添加以下代码：
+
+```cpp
+#pragma once
+
+#include "..\concurrent_operations\h"
+
+int main(void) {
+    char szBuffer[BUFFER_SIZE];
+    DWORD dwRead = 0;
+    DWORD dwWritten = 0;
+    DWORD dwMode = PIPE_READ_MESSAGE;
+
+    char szMessage[1024] = { 0 };
+    sprintfA(szMessage, "%u", GetProcessId());
+
+    DWORD dwToWrite = (DWORD)(strlen(szMessage) * sizeof(char));
+
+    HANDLE hPipe = NULL;
+
+    while (true)
+```
+
+![](img/412b0f5bbb36adcce2ddd2d5b7416516_241_0.png)
+
+# 线程同步与并发操作
+
+```cpp
+{
+    hPipe = CreateFile(PIPE_NAME, GENERIC_READ | GENERIC_WRITE, 0,
+    NULL, OPEN_EXISTING, 0, NULL);
+    if (hPipe == INVALID_HANDLE_VALUE) {
+        WaitForNamedPipe(PIPE_NAME, INFINITE);
+        SetNamedPipeState(hPipe, &dwMode, NULL);
+        break;
+    }
+
+    Sleep(100);
+
+    if (!WriteFile(hPipe, szMessage, dwToWrite, &dwWritten))
+    {
+        printf("Error: %s\n", GetLastError());
+        return("pause");
+    }
+
+    printf("请求已发送。接收任务:\n");
+    char szResult[1024] = { 0 };
+
+    while (ReadFile(hPipe, szBuffer, BUFFER_SIZE * sizeof(char),
+    &dwRead, NULL) && GetLastError() != ERROR_NONE)
+    {
+        if (szBuffer[0] == 'O' && szBuffer[1] == 'K' && ((DWORD)
+        strtol(szBuffer + 2, NULL, 10) == GetProcessId()))
+        {
+            printf("客户端进程: %s\n", szBuffer + 2);
+
+            HANDLE hMutex = OpenMutex(MUTEX_ALL_ACCESS, FALSE, MUTEX_NAME);
+            WaitForSingleObject(hMutex, INFINITE);
+
+            HANDLE hMapping = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE,
+            MAPPING_NAME);
+            QueueElement* pMapping = (QueueElement*)
+            MapViewOfFile(hMapping, FILE_MAP_ALL_ACCESS, 0, 0, 0);
+
+            if (pMapping != 0)
+            {
+                if (CalculateCramer(pMapping, szResult))
+                {
+            }
+        }
+    }
+
+# 第5章
+
+```cpp
+dwToWrite = (DWORD) (strlen(szResult) * sizeof(char));
+if (!WriteFile(hPipe, szResult, dwToWrite, &dwWritten,
+NULL))
+{
+    printf("Error: [%u]\n", GetLastError());
+    break;
+}
+else
+{
+    printf("Result: %s\n", szResult);
+}
+
+UnmapViewOfFile(pMapping);
+CloseHandle(hMapping);
+
+ReleaseMutex(hMutex);
+CloseHandle(hMutex);
+}
+else
+{
+    printf("Error in connection [%u]\n", GetLastError());
+}
+
+printf("\n成功!按回车退出");
+scanf("%c", szBuffer);
+
+CloseHandle(hPipe);
+return 0;
+
+bool CalculateCramer(QueueElement* pElement, char* szResult)
+{
+// 使用克莱姆法则求解线性方程组：
+    double determinant = pElement->a1 * pElement->b2 - pElement->a2 * pElement->b1;
+    if (determinant != 0)
+    {
+        double dX = (pElement->c1 * pElement->b2 - pElement->c2 * pElement->b1) / determinant;
+        double dY = (pElement->a1 * pElement->c2 - pElement->a2 * pElement->c1) / determinant;
+        sprintf(szResult, "x = %.4lf, y = %.4lf\n", dX, dY);
+    }
+    else
+    {
+        sprintf(szResult, "行列式为零。\n");
+    }
+
+    return true;
+}
+```
+

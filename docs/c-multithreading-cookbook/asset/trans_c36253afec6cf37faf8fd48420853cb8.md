@@ -1,0 +1,397 @@
+
+
+# D
+- 公用语言运行时 (CLR) 234
+- 编译后的应用程序 (*.exe) 234
+- ComplexXAdd 函数 16
+- 复合操作场景 312
+- 并发
+  - 守护任务 216
+- 数据库管理系统 (DBMS) 88
+- 数据竞态场景 310
+- 死锁
+  - 关于 260
+  - 避免 260
+- DebugView 
+  - 安装 392
+  - 使用 392
+- DestroyWindow API 33
+- 析构函数 (dtor) 42
+- 哲学家就问题
+  - 解决 66-74
+- 调度器 (dispatcher)
+  - 关于 175, 176, 343
+  - 定制 355-366
+  - 工作 366-370
+- dValue 11
+- 动态绑定 28
+- 动态库 (*.dll) 14
+- 动态优先级 169, 170
+  - 正性问题 310
+  - 活跃性问题 310
+- 构造函数 (ctor) 42
+- ContinueWith 方法 291
+-正确性问题
+  - 关于 310
+  - 发生实例 314
+- Count 方法 42
+- cout 对象 12
+- CParameters 类 352
+- C++ 程序
+  - #include <iostream> 头文件 11
+  - 创建 11-14
+  - 示例 13
+- C++ 项目
+  - 创建 9, 10
+- CPU 多任务系统 46
+- Create 方法 120
+- CreateNamedPipe API
+  - 引用，URL 165
+- CreateProcess 函数
+  - 关于 49
+  - 在 MDN 上，URL 47
+- CreateThread API
+  - 非 MDN，URL 81
+- CreateWindow API 32
+- 临界区域 56
+- 临界区 (critical section)
+  - 关于 56, 139, 206
+  - 使用 206-215
+- CSchwefelMT 类
+  - 创建 325-327
+  - 工作 328
+- CShapePair 生类
+  - 工作 337-340
+- Cthread 类 120
+- ThreadPool 类 353
+- CWorker 类, CPerson 22
+
+# E
+- EAP
+  - 关于 269
+  - 优势 275
+  - 缺点 275
+  - 示例 275, 276
+  - 程序，创建 269-275
+  - 工作 275
+- Elapsed(TCHAR*) 方法 323
+- Elapsed(void) 方法 323
+- Evaluate 方法 328
+- Evaluate(void*) 方法 323
+- 事件 (event)
+  - 使用 197-206
+  - 事件的异步模式 (EAP)。参见 EAP
+  - 事件驱动系统 141
+- 事件处理程序 (event handler)
+  - 关于 29
+  - 针对 Windows 29
+- 事件对象 136-138
+- 事件同步对象 197
+- 最终问题解决功能 343
+- 事件等待句柄 (event wait handles)
+  - 信号 263-268
+- ExitProcess 函数 50
+
+# F
+- 斐那契序列 339
+- 文件映射 64
+- FindMainWindow 方法 378
+- Find 方法 42
+- 先进先出 (FIFO) 34
+- 前台线程
+  - 区分，与后台线程
+  - 线程 243-247
+- 傅里叶集 175
+- 全线程 293
+
+# G
+- 垃圾回收器 (GC) 242
+- new 运算符 242
+- GetAsyncState 方法 321
+- GetFirst 方法 42
+- GetHandle 方法 121
+- Getid 方法 121
+- GetLast 方法 42
+- GetMessage API 32
+- GetNext 方法 42
+- GetUserData 方法 121
+- GET_X_LPARAM 宏 147
+- GET_Y_LPARAM 宏 147
+- 图形用户界面 (GUI) 9
+- GWLP_USERDATA 宏 155
+
+# H
+- 半栅（volatile 内存对象） 293
+- 硬件抽象层 (HAL) 234
+- Head 方法 42
+- hprev 参数 30
+- hThis 参数 30
+- hhThread 属性 367
+- 超线程技术 (Hyper-Threading Technology) 338
+
+# I
+- ICount 11
+- 不一致同步场景 311
+- 继承 (Inheritance)
+  - 关于 19
+  - 示例，复 20-22
+  - 工作 22
+- Initialize 方法 40
+- Insert 方法 42
+- 安装
+  - MySQL Connector/C 381-384
+  - WinDK 384-386
+- IntelliSense 引擎 9
+- 进程间通信。参见
+- Interrupt 方法 281
+- int _main(int argc, char *argv[]) argc 参数 12
+- int_main(void) 原型 12
+- IPC
+  - 关于 55, 230
+  - 示例 55-59
+  - 工作 63-65
+- IPCDemo 64
+- IPC 问题
+  - 哲学家就问题，解决。65-67
+- IPCWorker 63
+
+# J
+- Java 环境 (JRE) 235
+- Join 方法 121
+
+# K
+- 内核 (kernel)
+  - 线程，实现 99-104
+
+# L
+- LABEL_TEXT 宏 146
+- 后进先出 (LIFO) 34
+- 线性链表
+  - 使用 35-41
+- 线性列表 34
+- 监听线程
+  - 创建 230
+- 列表视图 (list view) 121, 310, 314
+- 活跃性问题 291
+- LoadLibrary API 379
+- 锁 (lock)
+  - 实现 254-260
+- Lock 类 254
+- LockName 方法 352
+- 互斥锁 (mutex)
+  - 关于 67, 134, 177
+  - 使用 177-187
+- MySQL Connector/C
+  - 实现 381-384
+- MySQL 数据库
+  - 使用，用于线程 81-88
+
+# M
+- 主函数
+  - 原型 12
+  - 主线程 8, 105
+- 托管代码
+  - 优势 234
+  - 缺点 235
+- ManualEventSlim 268
+- ManifestEvent 类 234, 235
+- MemoryBarrier 291
+- 消息 141
+- 消息传递 (message passing)
+  - 演示 142-147
+- 消息传递接口 (MPI) 141, 142
+- 消息队列
+  - 关于 147
+  - 实现 148-155
+- Microsoft.NET
+  - 框架 234
+- Monitor 对象
+  - Monitor::Pulse 方法 294
+  - Monitor::Wait 方法 294
+  - MonitorWait 方法 294
+  - 信号 294-299
+- MSDN 参考 9
+- MSI
+  - 多任务 46
+  - 多线程 8
+
+# N
+- 命名空间 (namespaces) 12
+- 非阻塞同步 291-293
+
+# O
+- 对象管理器 (Object Manager) 111
+- 面向对象 (OOP)
+  - 关于 17
+  - 示例，复 17
+  - 继承 19
+  - 工作 19
+- OpenMP (多处理器) 关于 332
+- OpenThread 函数 49
+- OVERLAPPED 对象 166
+- 覆盖功能 24
+
+# P
+- 并行应用
+  - 设计 310-316
+- 并行方法
+  - 转换 324-331
+- 并行性
+  - 添加到代码 323, 324
+  - 并行编程 309
+- PCB
+  - 关于 51, 52
+- Peek API 161
+- 性能因素 332-336
+- 协作性多任务与抢占式多任务 110
+- 信号
+  - 终止 281-286
+  - 中断 281-286
+  - 安全取消 281-290
+  - 信号 Monitor::Wait pulse 294-299
+  - 信号 Monitor::Wait 方法 294
+- 哲学家应用 74
+- 客户端 (client) 161
+- 管道对象
+  - 关于 216
+  - 用于进程通信 161-266
+- 管道服务器 161
+- PLDATAobject 155
+- 多态 24
+- PostAction 委托 307
+- PostMessage API 142
+- PostQueue API 33
+- 主线程 8
+- 进程与线程优先级 170-176
+- 进程控制块。PCB
+  - 关于 46
+  - 实现 52-54
+- 进程模型
+  - 阻塞状态 50
+  - 事件 47
+  - 创建 48-51
+  - 运行状态 50
+- 生产者-消费者问题 98
+- 程序
+  - 创建，Schweifel 函数计算 317-322
+- 编程范式
+  - 声明式 10
+  - 函数式 10
+  - 命令式 10
+  - 面向对象
+  - 伪并行 8, 168
+- 纯虚函数 27
+
+# Q
+- 量 177
+- 伪并行概念 8
+- 队列 34
+
+# R
+- 竞态条件 56
+- Rand 函数 16
+- 就绪进程 50
+- 就绪线程 176
+- 释放栅栏 293
+- ReleaseThread 方法 353
+- RemoteLibrary 方法 379
+- 远程线程
+  - 关于 371
+  - 使用 371-375
+  - 工作 377-399
+- RemoveAll 方法 353
+- RemoveThread 方法 353, 368
+- 请求处理 166
+- RequestThread 方法 353, 168
+- ResetEvent 138
+- Resume 方法 121
+- 运行进程 50
+- 运行线程 176
+
+# S
+- 调度器 (Scheduler) 46, 51
+- 操作系统调度 98
+- Schweifel 函数 317
+- 信号量 (semaphore)
+  - 关于 135, 136, 187
+  - 使用 187-196
+- SendMessage API 155
+- 顺序式编程方法
+- 终止状态 176
+- 重要性 310
+- Thread::Abort 方法 281
+- SetEvent API 161
+- 线程执行
+- SetUserData 方法 121
+- 单线程单元 (STA) 242
+- .NET 线程
+  - Sleep 方法 247, 248
+  - 关于 235-242
+- 套字 216
+- 并行任务，执行 235
+- 栈 24
+  - 工作 237-242
+- 待备状态 176
+- Thread::interrupt 方法 281
+- StartAddress 方法 241, 328
+- Thread::Join 方法 247
+- STATE_ALIVE 宏 120
+- 线程消息队列
+- STATE_BLOCKED 宏 120
+  - 使用 156-161
+- STATE_CONTINUOUS 宏 120
+- 线程模型
+- STATE_READY 宏 120
+  - 实现 75-80
+- STATE_RUNNING 宏 120
+- 线程对象属性
+- static_SYNC 宏 120
+- 基础优先级 169
+- 静态库 (*lib) 314
+- 动态优先级 169
+- ScheduleAction 方法 352
+- 线程池
+- 结构化编程方法
+  - 关于 342
+  - 关于 14
+  - 调度器，定制 354-366
+- Suspend 方法 121
+  - 使用 343-350
+- 同步 188
+- 工作 352, 353
+- .NET 同步机制
+- ThreadPool 类 236
+  - 添加 47
+  - 工作 253
+  - 使用 MySQL 数据库演示 81-88
+- Win32 同步对象
+  - 在内核中实现 99-104
+- 临界区 133
+  - 在用户空间实现 89-98
+- 事件 133
+  - 无锁实现
+- 互斥锁 133
+- 同步 121-127
+- 同步线程
+  - 管理 112-121
+  - 使用 127-132
+- 终止 168
+- szCmdLine 参数 300
+- 时间控制 168
+
+# T
+- Task 类
+  - 进程 107-109
+  - 视图 290
+- 线程安全
+  - 关于 261
+- Task::Wait 方法 247
+- 在 .NET 263
+- TCHAR* Object(void) 方法 323
+- Thread::Sleep 方法 247
+- T_ENDTASK 消息
+- ThreadStart 方法 81
+- 时间控制，线程
+  - 优先级 168
+- 同步 168
+
