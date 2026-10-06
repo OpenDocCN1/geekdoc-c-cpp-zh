@@ -1,0 +1,13 @@
+synthesized method A setter or getter method that the compiler automatically creates for you. It was added to the Objective C 2.0 language.
+
+UIKit A framework for developing applications for iOS devices. In addition to providing classes for working with usual UI elements such as windows, buttons, and labels, it defines classes for dealing with device-specific features such as the accelerometer and the touch interface. UIKit is part of Cocoa Touch.
+
+Unicode character A standard for representing characters sets containing up to millions of characters. The NSString and NSMutableString classes work with strings containing Unicode characters.
+
+union An aggregate data type, such as a structure containing members that share the storage area. Only one of those members can occupy the storage area at any point in time.
+
+Xcode A compiling and debugging tool for program development with Mac OS X and iOS.
+
+XML Extensible Markup Language. The default format for property lists generated on Mac OS X.
+
+zone A designated area of memory for allocating data and objects. A program can work with multiple zones to more efficiently manage memory.

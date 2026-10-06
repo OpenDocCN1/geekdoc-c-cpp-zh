@@ -1,0 +1,11 @@
+When working with this view hierarchy, the parent view certainly will want to hold a reference to its subview. But it's also useful when working with a subview for it to know whose parent view is as well. So the parent view will hold a reference to the subview, and the subview will in turn hold a reference to the parent view. This circular reference could create problems. For example, what happens when we destroy the parent view? The reference from the subview to the parent would no longer be valid. In fact, trying to reference that nonexistent parent view could cause the application to crash.
+
+When two objects have strong references to each other, you create what's known as a retain cycle. The system will not destroy an object if there's still a reference to it. So if two objects have strong references to each other, neither can ever be destroyed.
+
+The way this problem can be resolved is by creating another type of object variable that allows a different type of reference, known as a weak reference, to be made between two objects. In this case, the weak reference would be made from the child to the parent. Why? Because we consider an object that owns another object (in this case the parent view) to be the strong reference, and the other object to be the weak reference.
+
+By making the parent view hold a strong reference to its subview, and the subview a weak reference to its parent view, no retain cycle is created. A weak variable does not prevent deallocation of the object it references.
+
+When you declare a weak variable few things happen; the system tracks the reference that is made on assignment to that variable. And when that referenced object gets deallocated, the weak variable gets automatically set to nil. That prevents any crashes that might occur by inadvertently sending a message to that variable. Because the variable will be set nil, sending a message to a nil object gets nothing, thus preventing a crash.
+
+To declare a weak variable you use the __weak keyword:
