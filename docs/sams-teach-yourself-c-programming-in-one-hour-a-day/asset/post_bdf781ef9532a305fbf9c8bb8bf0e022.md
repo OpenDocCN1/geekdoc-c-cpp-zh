@@ -1,0 +1,220 @@
+
+# substitution macros
+
+substitution macros, 567-568, 572
+- subtasks/tasks, structured programming, 98
+- subtraction operator (-), 65
+- switch statements, 312, 590
+- break statements and, 302, 313-314
+- case statements, 319-320
+- exit() function, 311
+- menu systems, executing, 314-317
+- symbolic constants, 215
+- symbolic constants, 48, 60
+- conditional compilation, 573
+- creating, 567-568, 572
+- declaring arrays, 174
+- #define directive, 49
+- defining, 49
+- defining with const keyword, 50-52
+- errno header file, 518
+- external variables, 283
+- synonyms, creating for structs, 274-275
+- syntax (functions), calling, 95-96
+- functions calling, 95-96
+- test-mode streams, 327
+- text literal, 146
+- asctime() files
+- character input, 428-429
+- character output, 423, 430-431
+- CR-LF, 418
+- detecting EOF, 443-444
+- formatted input, 427-428
+- formatted output, 423-426
+- streams, 327, 418
+- third() function, 110
+- Thompson, Ken, 6
+- time functions, 509
+- asctime(), 511, 515
+- clock(), 513-515
+- time(), 511
+- difftime(), 513-515
+- localtime(), 510
+- mktime(), 511-515
+- time(), 510, 515
+- usage examples, 513-515, 509-511
+- tm structures, 450-452
+- str tm() macro, 481-483
+- tolower() macro,
+- top-down address, structured programming, 99
+- toupper() macro, 481-483
+- trigonometric functions
+- acos(), 506
+- asin(), 506
+- atan(), 506
+- atan2(), 506
+- cos(), 506
+- sin(), 506
+- tan(), 506
+- trigraph sequences, 161
+- ANSI standards, 162
+- codes, 162
+- true/false values (logical operators), 81-82
+- two-dimensional arrays, 173-176, 364
+- type conversions
+- automatic conversion by assignment, 535-536
+- type promotion in expressions, 534-535
+- explicit conversions via typecasts, 536
+- arithmetic expressions, 536
+- pointers, 538
+- type names: See tags
+- typecasts
+- arithmetic expressions, 536-537
+- explicit type conversions
+- arithmetic expressions, 536-537
+- pointers, 538
+- void pointers, 493
+- typedef keyword, 590
+- structures, 274-275
+- variables, 45
+- unary. 63-64
+- unary increment operator (++), 62-65, 264
+- unary operator (-), 62
+- unbuffered character input functions, 330
+- unconditional jumps. See branching statements
+- ungetc(), 335, 480
+- uninitialized pointers, 202-203
+- union keyword, 271-274, 590
+
+# T
+
+- tags, 242
+- tan() function, 506
+- tanh() function, 507
+- tasks and tasks, structured programming, 98
+- temporary files, 450-452
+- terminating constant, strcat() function, 462
+- terminating programs, 320-321
+- ternary operator, 85
+
+# U
+
+# variables 671
+
+- unions
+- displaying with printf(), 151
+- accessing members, 271
+- defining, 268-269
+- initializing, 269
+- members, accessing, 269-271
+- declaring, 283
+- external, 282
+- register, 289-290
+- scope, 280
+- errors, 281
+- external variables, 283-285
+- automatic variables, 285-288
+- external static variables, 289
+- modular independence, 291
+- modular programming, 555-566
+- memory allocation, 539
+- source code editors, 9
+- strings, comparing, 466
+- symbiotic constants, 283
+- when use, 283
+- external static, 289
+- floating-point, 441
+- integer in functions, 94
+- accessing members, 243-244
+- arrays of, 255
+- arrays of structures, 252-258, 264-266
+- arrays within structures, 250-252
+- uppercase/lowercase characters, ANSI support for, 24, 91-93
+- user-defined functions, 24,
+- usleep() function, 311
+- var arg(), 497
+- end mark(), 497-499
+- list mark, 497
+- var start(), 497-499
+- lifetime, 280
+- local, 94
+- blocks, and 291-293
+- main function, 290-291
+- static variables, 285-288
+- writing lists, 103-105
+- complex structures, 242-245
+- defining, 241-245
+- initializing, 256-258
+- members of, 242
+- passing as arguments to functions, 267
+- pointers and arrays of structure members, 259-261
+- pointers as structure values, passing by, 488-491
+- returning, writing functions, 106-108
+- variables, 26, 39-52
+- accessibility, 280-281
+- approximate rate, 42
+- arguments, passing variables as, 488
+- automatic variables versus static variables, 285-288
+- memory addresses, 188
+- naming, 39-40
+- numeric, 404
+- integer, 41
+- register keyword, 290
+- void pointers, 492
+- pointers, 191-192
+- creating, 188-189
+- data types, 193-194
+- declaring, 190-197
+- initializing, 190
+- struct keyword, 245-246
+- structures within, 246-249
+- tags, 242
+- typed keyword, 45, 274-275
+- members, 269-271
+- declaring, 269
+- defining, 268-269
+- initializing, 269
+- char data type, 214
+- character variables, 215-218
+- counter variables, 124
+- declaring, 44
+
+# variables
+
+- union keyword, 271-274
+- visibility, 280
+- visibility, variables, 280
+- void pointers, 492-496, 521, 538, 590
+- void return type, 112
+- volatile, 590
+
+# X - Y - Z
+
+- XOR operator (^), 550-551
+
+# W
+
+- while loops, 132, 150, 591
+- break statement, 300-302
+- continue statement, 302-304
+- copying files, 450
+- detecting EOF, 444
+- infinite loops, 307-310
+- linked lists, 412
+- partial string comparisons, 468
+- random file access, 444
+- strings, converting to double type numeric values, 477
+- while statements, 131-133
+- nesting, 134-136
+- structure, 130
+- white space, 58-59, 156
+- Windows, source code editors, 9
+- writing data to disk files, 423
+- functions arguments, 103-105
+- body, 106-108
+- headers, 103
+- local variables, 103
+- names, 103
+- prototypes, 106
+- returning values, 108
+- statements, 106

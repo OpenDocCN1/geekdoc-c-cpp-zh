@@ -1,0 +1,228 @@
+
+
+# 应当 (DO)
+
+如果你在 `for` 语句中使用空语句（null statement），请记住加上分号。将分号占位符单独放在一行，或者在它与 `for` 语句结束之间留一个空格。将其单独放在一行会更清晰。
+
+# 不要 (DON'T)
+
+不要在 `for` 语句中放置过多的处理逻辑。虽然可以使用逗号，但将部分功能放入循环体中通常更清晰。
+
+```
+for (count = 0; count < 1000;
+array[count] += 50);
+/* 注意空格！ */
+```
+
+# while 语句
+
+`while` 语句也称为 while 循环，只要指定的条件为真，就会执行语句块。`while` 语句具有如下形式：
+
+```
+while (condition)
+statement
+```
+
+`condition` 是任何 C 表达式，`statement` 是单个或复合 C 语句。当程序执行到 `while` 语句时，会发生以下事件：
+
+- 1. 求值表达式 `condition`。
+- 2. 如果 `condition` 结果为假（即为零），则 `while` 语句终止，执行跳转到 `statement` 之后的第一个语句。
+- 3. 如果 `condition` 结果为真（即非零），则执行 `statement` 中的 C 语句。
+- 4. 执行返回步骤 1。
+
+`while` 语句的操作原理如图 6.3 所示。
+
+![](img/d572877e6f876c745d39250550bf01c5_151_0.png)
+
+列表 6.3 是一个简单的程序，它使用 `while` 语句打印 1 到 20 的数字。（这与列表 6.1 中 `for` 语句执行的任务相同。）
+
+# 输入
+
+## **列表 6.3** wildest.c: 一个简单的 while 语句
+
+```
+1: // 演示一个简单的 while 语句
+2:
+3: #include <stdio.h>
+4: #define MAXCOUNT 20
+5: int count;
+6:
+7: int main( )
+8: {
+9: // 打印 1 到 20 的数字
+10:
+11: count = 1;
+12:
+13: while (count <= MAXCOUNT)
+14: {
+15: printf("%d\n", count);
+16: count++;
+17: }
+18: return 0;
+19: }
+```
+
+# 输出
+
+- 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+# 分析
+
+检查列表 6.3 并与列表 6.1 进行对比，列表 6.1 使用 `for` 语句执行相同任务。在第 11 行中，`count` 被初始化为 1。由于 `while` 语句不包含初始化部分，你必须在开始 `while` 循环之前负责初始化任何变量。第 13 行是 `while` 语句的实际部分，它包含了与列表 6.1 相同的条件语句 `count <= 20`。在 `while` 循环中，第 16 行负责递增 `count`。你认为如果在程序中忘记第 16 行会发生什么？你的程序将不知道何时停止，因为 `count` 将始终为 1，而它永远小于 20。
+
+你可能已经注意到 `while` 语句本质上是一个没有初始化和递增部分的 `for` 语句。因此，
+
+```
+for ( ; condition ; ) {
+```
+
+等同于
+
+```
+while (condition)
+```
+
+由于这种等价性，任何用 `for` 语句可以完成的任务都可以用 `while` 语句完成。当你使用 `while` 语句时，任何必要的初始化必须先在单独语句中执行，而更新必须由 `while` 循环内部的语句执行。
+
+# 语法
+
+> 记住在 `while` 循环内部的代码块中包含一个可以改变条件值的语句，否则你将创建一个无限循环。这是初学者（甚至是资深老手）经常犯的常见错误。
+
+当需要初始化和更新时，大多数经验丰富的 C 程序员更倾向于使用 `for` 语句而不是 `while` 语句。这种偏好主要基于源代码的可读性。当你使用 `for` 语句时，初始化、测试和递增表达式位于一起，易于查找和修改。使用 `while` 语句时，初始化和更新表达式分开位于，可能没那么直观。
+
+# while 语句
+
+```
+while (condition)
+statement
+```
+
+`condition` 是任何 C 表达式，通常是关系表达式。当 `condition` 结果为假（零）时，`while` 语句终止，执行跳转到 `statement` 之后的第一个语句；否则，执行 `statement` 中的第一个语句。
+
+`statement` 是一个 C 循环语句。只要条件保持（非零），它就允许重复执行语句块。如果在执行 `while` 命令时条件不成立，则该语句永远不会执行。
+
+# 示例 1
+
+```
+int x = 0;
+while (x < 10)
+{
+    printf("The value of x is %d", x);
+    x++;
+}
+```
+
+# 示例 2
+
+```c
+/* 获取数字直到大于 99 为止 */
+int nbr=0;
+while (nbr <= 99)
+    scanf("%d", &nbr);
+```
+
+# 示例 3
+
+```c
+/* 让用户输入最多 10 个整数值
+ 值 存储在名为 value 的数组中。如果输入 99，循环停止 */
+int value[10];
+int ctr = 0;
+int nbr;
+while (ctr < 10 && nbr != 99)
+{
+    puts("Enter a number, 99 to quit ");
+    scanf("%d", &nbr);
+    value[ctr++] = nbr;
+}
+```
+
+# 嵌套 while 语句
+
+像 `for` 和 `if` 语句一样，`while` 语句也可以嵌套。列表 6.4 显示了嵌套语句的示例。虽然这不是 `while` 语句的最佳用法，但该示例提供了一些新思路。
+
+# 输入
+
+## 列表 6.4 nestfile.c: 嵌套 while 语句
+
+```c
+1:    /* 演示嵌套的 while 语句 */
+2:
+3:    #include <stdio.h>
+4:
+5:    int array[5];
+6:
+7:    int main(void )
+8:    {
+9:        int ctr = 0,
+10:       nbr = 0;
+11:
+12:       printf("This program prompts you to enter 5 numbers\n");
+13:       printf("Each number should be from 1 to 10\n");
+14:
+15:
+16:       while (ctr < 5)
+17:       {
+18:           nbr = 0;
+19:           while (nbr < 10 || nbr > 10)
+20:               {
+21:                   printf("\n number %d of 5: ", ctr + 1);
+22:                   scanf("%d", &nbr);
+23:               }
+24:           array[ctr] = nbr;
+25:           ctr++;
+26:    }
+27:
+28:    for (ctr = 0; ctr < 5; ctr++)
+29:        printf("Value %d is %d\n", ctr + 1, array[ctr] );
+30:
+31:    return 0;
+32: }
+```
+
+# 输出
+
+This program prompts you to enter 5 numbers
+Each number should be from 1 to 10
+
+Enter number 1 of 5: **3**
+
+Enter number 2 of 5: **6**
+
+Enter number 3 of 5: **3**
+
+Enter number 4 of 5: **9**
+
+Enter number 5 of 5: **2**
+
+Value 1 is 3
+Value 2 is 6
+Value 3 is 3
+Value 4 is 9
+Value 5 is 2
+
+# 分析
+
+与列表一样，第 1 行包含一个描述程序的注释，第 3 行包含标准输入输出头文件的 `#include` 语句。第 5 行包含一个可以存储五个整数值的数组（名为 array）。`main()` 函数包含了两个额外的局部变量 `ctr` 和 `nbr`（第 9 和第 10 行）。注意这些变量在声明的同时被初始化为零。还要注意第 9 行结尾使用的逗号运算符作为分隔符，允许声明 `nbr` 而无需重新开始 `int` 类型命令。以这种方式陈语句是许多 C 程序员的常用做法。第 12 行和第 13 行打印消息，说明程序的功能以及对用户的要求。第 15 行到第 26 行包含第一个 `while` 命令及其语句。第 18 行到第 22 行包含一个嵌套的 `while` 循环，其语句都是外部 `while` 的部分。
+
+外部循环在 `ctr` 小于 5 时继续执行（第 15 行）。只要 `ctr` 小于 5，第 17 行将 `nbr` 设置为 0，第 18 到第 22 行（嵌套 `while` 语句）获取一个数字变量 `nbr`，第 24 行将其放入数组，第 25 行递增 `ctr`。循环再次开始。因此，外部循环
+

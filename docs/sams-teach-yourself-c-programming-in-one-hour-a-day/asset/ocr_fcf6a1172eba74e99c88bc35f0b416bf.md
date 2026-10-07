@@ -1,0 +1,19 @@
+# We Want to Hear from You!
+
+As the reader of this book, **you** are our most important critic and commentator. We value your opinion and want to know what we're doing right, what we could do better, what areas you'd like to publish in, and any other words of wisdom you're willing to pass our way.
+
+We welcome your comments. You can email or write to let us know what you did or didn’t like about this book—as well as what we can do to make our books better.
+
+*Please note that we cannot help you with technical problems related to the topic of this book* and may not be able to reply personally to every message we receive.*
+
+When you write, please be sure to include this book’s title, edition number, and authors as well as your name and contact information. We will carefully review your comments and share them with the authors and editors who worked on the book.
+
+Email: feedback@sampublishing.com
+
+Mail: Sams Publishing
+201 West 103rd Street
+Indianapolis, IN 46290 USA
+
+# Reader Services
+
+Visit our website and register this book at informit.com/register for convenient access to any updates, downloads, or errata that might be available for this book.
