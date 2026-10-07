@@ -1,0 +1,6 @@
+# Unsteady, Non-Linear, and Chaotic Systems
+
+![](bbox=[0.163, 0.125, 0.836, 0.737])
+
+**Figure 4.8**
+ example of non-linear restoring force (Figure 4.7) is a hard (soft) spring that adds (a) to (subtracts) from the linear restoring force of a harmonic oscillator, a center term leading to an anharmonic oscillator. The corresponding potential adds to (b) [subtracts from (d)] the quadratic of a harmonic oscillator a quartic term corresponding to the anharmonic oscillator. For the hard spring the potential has a minimum at the origin (b) that is a center (Figure 4.1f) of closed periodic paths (c). For the soft spring the potential has (d) a minimum at the origin (two maxima) corresponding (Figure 4.1e) to a center (two saddle points) from periodic paths in the potential winds around the separators S1, and S2, and four families of open semi-infinite paths outside. The example of cubic (quadratic) terms in the restoring force that is quartic (cubic) terms in the potential is shown in Figure 4.9.
