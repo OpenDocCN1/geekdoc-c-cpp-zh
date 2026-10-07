@@ -1,0 +1,472 @@
+- pgno: 0
+  md: '# Chapter 1: First Steps with CMake
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_0_0.png)
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_0_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/e6336a3dbaf851248da5111d0f386cb1_1_0.png)
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_1_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Chapter 2: The CMake Language
+
+
+    ```
+
+    message("hello" world)
+
+    name      arguments
+
+    ```
+
+
+    ```
+
+    argument\ent\1 arg;ume nts
+
+    a single argument three arguments
+
+    ```
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_2_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # Chapter 3: Using CMake in Popular IDEs
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_3_0.png)
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_3_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/e6336a3dbaf851248da5111d0f386cb1_4_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "# # Visual Studio Installer\n\nVisual Studio Community 2022 - 17.8\nWorkloads\n\
+    Individual components\nLanguage packs\nInstallation locations\n\n+   - Desktop\
+    \ development with C++\n- Build, run and debug Windows apps using tools of your\
+    \ choice, including MSVC, Clang, MSBuild.\n- Mobile development with C++\n- Build\
+    \ cross-platform applications for iOS, Android or using C++\n\n+   - Universal\
+    \ Windows Platform development\n- Build Windows Platform apps with C#, VB, or\
+    \ optionally C++.\n\nInstallation details\n\n+   - Visual Studio core editor\n\
+    - ASPNET and web development\n- .NET development\n- Desktop development with C++\n\
+    \  - C++ core features\n  - MSVC v143 - VS 2022 C++ x64/x86 build tools...\n \
+    \ - Security Analysis\n  - Just-In-Time debugger\n  - C++ tools for Windows\n\
+    - Git Adapter\n\n# Gaming (2)\n\n+   - Game development with C++\n- Build games\
+    \ with Unity, a powerful cross-platform development environment.\n\n+   - Game\
+    \ development with C++\nUse the full power of C++ to build professional games\
+    \ powered by DirectX, Unreal, or Cocos2d.\n\n![](img/e6336a3dbaf851248da5111d0f386cb1_5_0.png)\n\
+    \n# Other Tools (5)\n\nLocation\nC:\\Program Files\\Microsoft Visual Studio\\\
+    2022\\Community\nThis is the location for the Visual Studio edition you selected.\
+    \ We also offer the ability to install other features with Visual Studio. This\
+    \ software is licensed separately, as noted in the License Notice or its accompanying\
+    \ license. By continuing, you agree to these terms.\n\n![](img/e6336a3dbaf851248da5111d0f386cb1_5_1.png)\n\
+    \nRemove out de-supported components\n\nTotal space required: 2.8 GB\n\ninstall\
+    \ while downloading Close"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Chapter 4: Setting Up Your First CMake Project
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_6_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/e6336a3dbaf851248da5111d0f386cb1_7_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/e6336a3dbaf851248da5111d0f386cb1_8_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "# Chapter 5: Working with Targets\n\n![](img/e6336a3dbaf851248da5111d0f386cb1_9_0.png)\n\
+    \n```\ndigraph \"BankApp\" {\n  node = \"\n  fontsize = 1;\n  [\n    node0 [label\
+    \ = \"calculations\", shape = octagon];\n    node1 [label = \"checksum\", shape\
+    \ = box];\n    node2 [label = \"calculation\", shape = egg];\n    node3 [label\
+    \ = \"node0\", style = dotted];\n    node4 [label = \"drawing\", shape = octagon];\n\
+    \    node5 [label = \"node3\", style = dotted];\n    node6 [label = \"node5\"\
+    , style = dotted];\n    node7 [label = \"terminal_app\", shape = egg];\n    node8\
+    \ [label = \"node0\", style = dotted] // terminal_app -> calc\n    node9 [label\
+    \ = \"checksum\" -> terminal_app];\n  ];\n  node1 -> \"node4\"\n}\n```\n\n![](img/e6336a3dbaf851248da5111d0f386cb1_9_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/e6336a3dbaf851248da5111d0f386cb1_10_0.png)
+
+
+    # Chapter 6: Using Generator Expressions
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_10_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Chapter 8: Linking Executables and Libraries
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_11_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '![](img/e6336a3dbaf851248da5111d0f386cb1_12_0.png)
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_12_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '| executable file | |
+
+    |--- | --- |
+
+    | ELF Header | General file description |
+
+    | Program Header | Information for loader |
+
+    | .text | |
+
+    | .data | |
+
+    | .rodata | Sections relocated from all translation units (with resolved references)
+    |
+
+    | ... (and many more) | |
+
+    | Section Headers | Sections table of contents |
+
+
+    # Chapter 9: Managing Dependencies in CMake
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_13_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Chapter 10: Using the C++20 Modules
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_14_0.png)
+
+
+    # Chapter 11: Testing Frameworks
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_14_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# # LCOV - code coverage report
+
+
+    | Hit | Total | Coverage |
+
+    | --- | --- | --- | --- |
+
+    | Current view: top level - arc | Lines: | 20 | 21 | 95.2% |
+
+    | Test: coverage.info | Functions: | 6 | 8 | 75.0% |
+
+    | Date: 2021-08-30 16:33:33 | | | |
+
+    | Legend: Rating | medium: 75% | high: 90% | | |
+
+
+    | Filename | Line Coverage | 9 / 9 | 100.0% | 4 / 4 |
+
+    | --- | --- | --- | --- | --- |
+
+    | calc.cpp | 100.0% | | | |
+
+    | rng.h | 0.0% | 0/1 | 0.0% | 0/2 |
+
+    | rng_mt19937.cpp | 100.0% | 5/5 | 100.0% | 1/1 |
+
+    | run.cpp | 100.0% | 6/6 | 100.0% | 1/1 |
+
+
+    Generated by: LCOV version 1.14
+
+
+    # # LCOV - code coverage report
+
+
+    | Hit | Total | Coverage |
+
+    | --- | --- | --- | --- |
+
+    | Current view: top level - arc - calc.cpp (source / functions) | Lines: | 9 |
+    9 | 100.0% |
+
+    | Test: coverage.info | Functions: | 4 | 4 | 100.0% |
+
+    | Date: 2021-08-30 16:33:33 | | | |
+
+    | Legend: hit | not hit | | |
+
+
+    | Line data | Source code |
+
+    | --- | --- |
+
+    | 1 | #include "calc.h" |
+
+    | 2 | |
+
+    | 3 | 4 : Calc::Calc(RandomNumberGenerator* rng) { |
+
+    | 4 | rng = rng; |
+
+    | 5 | |
+
+    | 6 | 4 : } |
+
+    | 7 | |
+
+    | 8 | 1 : int : int Calc::Sum(int a, int b) { |
+
+    | 9 | return a + b; |
+
+    | 10 | } |
+
+    | 11 | |
+
+    | 12 | 1 : int : int Calc::Multiply(int a, int b) { |
+
+    | 13 | return a * b; |
+
+    | 14 | } |
+
+    | 15 | |
+
+    | 16 | 2 : int : int Calc::AddRandomNumber(int a) { |
+
+    | 17 | return a + rng_->Get(); |
+
+    | 18 | } |
+
+
+    Generated by: LCOV version 1.14'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# Chapter 12: Program Analysis Tools\n\nValgrind's memcheck report\n\nResult\
+    \ summary:\n\n```\n==1== ERROR: Command: unit_tests\n==1==    summary: memory\
+    \ detectors\n==1==    Copyright C 2002-2017, Julian Seward et al.\n==1==    Valgrind\
+    \ is free software licensed under LGPL for copyright info\n==1==    Command: /tmp/unit_tests/unit_tests\n\
+    ==1==\n==1==n==1==    HEAP SUMMARY:\n==1==    in use at: 1 bytes in 1 blocks\n\
+    ==1==    total heap: 208 frees, 215,555 bytes allocated\n==1==    1 bytes in 1\
+    \ blocks are definitely lost in loss record 1 of 1\n==1==  definitely by 0x4C29F73:\
+    \ (usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)\n==1==\
+    \    at operator new (unsigned long) (vg_replace_malloc:334)\n==1==    by 0x483B6D3:\
+    \ run (run.cpp:25)\n==1==    testing:unit_tests\n==1==    by 0x483B9D3: run (internal::HandleExceptionsInMethodSupported(testing::Test::void\
+    \ (void, testing::Test*, void), void))\n==1==    \n==1==    by 0x483B9D3: testing\
+    \ (internal::HandleExceptionsInMethodSupported(testing::Test::void (void, testing::Test*,\
+    \ void), void))\n==1==    by 0x483B211: testing::internal::TestInfo::run() (test.cpp:292)\n\
+    ==1==    by 0x483C128: testing::internal::Run::AllTests() (test.cpp:5652)\n==1==\
+    \    by 0x483B5A4: testing (internal::HandleExceptionsInMethodSupported(testing::internal::UnitTestImpl::bool\
+    \ (internal::UnitTestImpl*, bool)))\n==1==    by 0x483B5A4: testing::internal::UnitTestImpl::run(char\
+    \ const*) (test.cpp:264)\n==1==    by 0x483B600: testing::internal::UnitTestImpl::run()\
+    \ (test.cpp:5420)\n==1==    by 0x4011B4: main (test_main.cpp:22)\n==1==\n==1==ERROR\
+    \ SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\ndefinitely lost: 1\
+    \ bytes in 1 blocks\n==1==    indirectly lost: 0 bytes in 0 blocks\n==1==    possibly\
+    \ lost: 0 bytes in 0 blocks\n==1==    suppressed: 0 bytes in 0 blocks\n==1==\n\
+    ==1==For lists of leaked and suppressed errors, rerun with: --leak-check=full\n\
+    ==1==1 errors from 1 contexts (suppressed: 0 from 0)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Chapter 13: Generating Documentation
+
+
+    # # Doxygen
+
+
+    Main Page | Classes ▼ | Files
+
+
+    # ## Calc Class Reference
+
+
+    ```
+
+    #include <calc.h>
+
+    ```
+
+
+    # ### Public Member Functions
+
+
+    ```
+
+    Calc (Random/NumberGenerator *rng)
+
+    int Sum(int a, int b)
+
+    int Multiply(int a, int b)
+
+    int AddRandomNumber(int a)
+
+    ```
+
+
+    # ### Detailed Description
+
+
+    This class does some simple calculations
+
+
+    # ### Member Function Documentation
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_17_0.png)
+
+
+    Adds randomly generated number to the parameter
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_17_1.png)
+
+
+    Multiply... Who would have thought?
+
+
+    # Parameters
+
+
+    +   - a the first factor
+
+    - b the second factor
+
+
+    # Returns
+
+
+    The product'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# # Doxygen
+
+
+    Main Page Classes Files Search
+
+
+    # # RandomNumberGeneratorMt19937n Class Reference
+
+
+    Inheritance diagram for RandomNumberGeneratorMt19937:
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_18_0.png)
+
+
+    Collaboration diagram for RandomNumberGeneratorMt19937:
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_18_1.png)
+
+
+    # # Public Member Functions
+
+
+    int Get ( ) override
+
+
+    The documentation for this class was generated from the following files:
+
+
+    +   * src/rng_mt19937.h
+
+    * src/rng_mt19937.cpp
+
+
+    Generated by doxygen 1.9.1'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# # Calc Class Reference
+
+
+    `#include <calc.h>`
+
+
+    # ## Public Member Functions
+
+
+    +   * Calc(RandomNumberGenerator *mg)
+
+    * Set(int a, int b)
+
+    * Multiply(int a, int b)
+
+    * AddRandomNumber(int a, int b)
+
+
+    # ## Detailed Description
+
+
+    This class does some simple calculations
+
+
+    # ## Member Function Documentation
+
+
+    +   * AddRandomNumber()
+
+    * Calc::AddRandomNumber(int a, int b)
+
+
+    Adds randomly generated number to the parameter
+
+
+    # # Chapter 14: Installing and Packaging
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_19_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# Chapter 15: Creating Your Professional Project
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_20_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '![](img/e6336a3dbaf851248da5111d0f386cb1_21_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/e6336a3dbaf851248da5111d0f386cb1_22_0.png)
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_22_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '![](img/e6336a3dbaf851248da5111d0f386cb1_23_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Chapter 16: Writing CMake Presets
+
+
+    ![](img/e6336a3dbaf851248da5111d0f386cb1_24_0.png)'
+  merge: -1
+  img_proc: true
