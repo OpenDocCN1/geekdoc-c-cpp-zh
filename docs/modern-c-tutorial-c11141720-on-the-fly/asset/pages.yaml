@@ -1,0 +1,3276 @@
+- pgno: 0
+  md: http://creativecommons.org/licenses/by-nc-nd/4.0/
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Everything is compiler.
+
+
+    # Modern C++ Tutorial
+
+
+    C++11/14/17/20 On the Fly
+
+
+    The Fastest Guide towards Modern C++
+
+
+    ![](img/e38a3926c5c51066839ec75b97aea207_1_0.png)
+
+
+    Ou Changkun
+
+
+    github.com/changkun/modern-cpp-tutorial'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # Contents
+
+
+    +   - Preface .....................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+    - Introduction ........................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . 8
+
+    - Targets .......................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+    - Purpose ...................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+    - Code ........................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+    - Exercises ...................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+    - Chapter 01: Towards Modern C++ .....................................................................................................................................................
+    9
+
+    - 1.1 Deprecated Features ................................................................................................................................................................
+    10
+
+    - 1.2 Compatibilities with C .....................................................................................................................................................................
+    11
+
+    - Further Readings ........................................................................................................................................................................................
+    13
+
+    - Chapter 02: Language Usability Enhancements ............................................................................................................................................
+    13
+
+    - 2.1 Constants .....................................................................................................................................................................................................
+    13
+
+    - nullptr ..........................................................................................................................................................................................................................................
+    13
+
+    - constexpr .....................................................................................................................................................................................................................................................
+    15
+
+    - 2.2 Variables and initialization ...................................................................................................................................................................................
+    17
+
+    - if-switch ...................................................................................................................................................................................................................................................
+    17
+
+    - Initializer list ..........................................................................................................................................................................................................................
+    18
+
+    - Structured binding ...................................................................................................................................................................................................................................
+    20
+
+    - 2.3 Type inference .......................................................................................................................................................................................................................................
+    20
+
+    - auto ................................................................................................................................................................................................................................................................................................................................
+    20
+
+    - decltype .....................................................................................................................................................................................................................................................................................................................
+    22
+
+    - tail type inference ..........................................................................................................................................................................................................................................................
+    23
+
+    - decltype(auto) ....................................................................................................................................................................................................................................................................................
+    24
+
+    - 2.4 Control flow ............................................................................................................................................................................................................................................................................................
+    25
+
+    - if constexpr ...................................................................................................................................................................................................................................................................................................
+    25
+
+    - Range-based for loop ................................................................................................................................................................................................................................................................
+    25
+
+    - 2.5 Templates .............................................................................................................................................................................................................................................................................'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# CONTENTS
+
+
+    +   Extern templates ................................................................................................................
+    26
+
+    nThe “>” .....................................................................................................................................................
+    26
+
+    Type alias templates ...................................................................................................................................
+    27
+
+    Default template parameters ..........................................................................................................
+    28
+
+    Variadic templates ............................................................................................................................
+    28
+
+    Fold expression ................................................................................................................................
+    31
+
+    Non-type template parameter deduction ................................................................................
+    31
+
+    2.6 Object-oriented ............................................................................................................................
+    32
+
+    Delegate constructor ........................................................................................................................
+    32
+
+    Inheritance constructor ...................................................................................................................
+    33
+
+    Explicit virtual function overwrite ...............................................................................................
+    33
+
+    override ...................................................................................................................................................
+    34
+
+    final ...........................................................................................................................................................
+    34
+
+    Explicit delete default function ................................................................................................
+    34
+
+    Strongly typed enumerations ........................................................................................................
+    35
+
+    Conclusion ......................................................................................................................................
+    36
+
+    Exercises .......................................................................................................................................
+    36
+
+
+    # Chapter 03: Language Runtime Enhancements ............................................................
+    37
+
+
+    +   3.1 Lambda Expression ...................................................................................................................
+    37
+
+    Basics .......................................................................................................................................................
+    37
+
+    Generic Lambda ................................................................................................................................
+    39
+
+    3.2 Function Object Wrapper ................................................................................................
+    40
+
+    std::function ...............................................................................................................................
+    40
+
+    std::bind and std::placeholder ................................................................................
+    41
+
+    3.3 rvalue Reference .......................................................................................................................
+    41
+
+    lvalue, rvalue, prvalue, xvalue ................................................................................
+    42
+
+    rvalue reference and lvalue reference ............................................................................
+    43
+
+    Move semantics ................................................................................................................................
+    45
+
+    Perfect forwarding .................................................................................................................
+    46'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'Conclusion .................................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . 50
+
+
+    Further Readings ............................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+
+
+    # Chapter 04 Containers ..........................................................................................................................................
+    50
+
+
+    4.1 Linear Container ...................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . . 50
+
+
+    std::array .................................................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . . 50
+
+
+    std::forward_list ........................................................................................................................................
+    52
+
+
+    4.2 Unordered Container .......................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . . 52
+
+
+    4.3 Tuples .....................................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . . . 54
+
+
+    Basic Operations ........................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . 54
+
+
+    Runtime Indexing ...................................................................................................................................
+    . . . . . . . . . . . . . . . . . . 55
+
+
+    Merge and Iteration ................................................................................................................................
+    . . . . . . . . . . . . . . . . 56
+
+
+    Conclusion ...................................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . 56
+
+
+    # Chapter 05 Smart Pointers and Memory Management ................................................................................
+    57
+
+
+    5.1 RAII and Reference Counting .....................................................................................................
+    . . . . . . . . . . . . . . . 57
+
+
+    5.2 std::shared_ptr ......................................................................................................................................
+    . . . . . . . . . . . . . . . . . 57
+
+
+    5.3 std::unique_ptr .....................................................................................................................
+    . . . . . . . . . . . . 59
+
+
+    5.4 std::weak_ptr ....................................................................................................................................
+    . . . . . . . . . . . 60
+
+
+    Conclusion ...................................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . 62
+
+
+    Further Readings ............................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . 62
+
+
+    # Chapter 06 Regular Expression ...................................................................................................................
+    62
+
+
+    6.1 Introduction ........................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . 62
+
+
+    Ordinary characters .....................................................................................................................
+    . . . . . . . . . . . . . . . . 63
+
+
+    Special characters ....................................................................................................................
+    . . . . . . . . . . . . . 63
+
+
+    Quantifiers ...................................................................................................................................
+    . . . . . . . . . . . . 63
+
+
+    6.2 std::regex and Its Related ...............................................................................................
+    . . . . . . . . 64
+
+
+    Conclusion ...................................................................................................................................
+    . . . . . . . . . . . . . . . . . . . . . . . . 66
+
+
+    Exercise ...................................................................................................................................................
+    . . . . . . . . . . . . 66
+
+
+    Further Readings ............................................................................................................................
+    . . . . . . . . . . . 68'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# CONTENTS
+
+
+    +   Chapter 07 Parallelism and Concurrency .................................................................................
+    . . . . 68
+
+
+    +   7.1 Basic of Parallelism .................................................................................
+    . . . . . . . . . . . . . 68
+
+
+    +   7.2 Mutex and Critical Section ...................................................................................................................
+    68
+
+
+    +   7.3 Future ......................................................................................................................................................................................................................
+    70
+
+
+    +   7.4 Condition Variable ................................................................................................................................................................
+    71
+
+
+    +   7.5 Atomic Operation and Memory Model ...............................................................................................
+    73
+
+
+    +   Atomic Operation ........................................................................................................................................................................
+    74
+
+
+    +   Consistency Model ...................................................................................................................................................................................
+    76
+
+
+    +   Memory Orders ...................................................................................................................................................................................................
+    78
+
+
+    +   Conclusion .......................................................................................................................................................................................................
+    81
+
+
+    +   Exercises ..................................................................................................................................................................................................................
+    81
+
+
+    +   Further Readings ..........................................................................................................................................................................................................
+    81
+
+
+    # Chapter 08 File System .................................................................................................................................................
+    81
+
+
+    +   8.1 Document and Link ......................................................................................................................................................................................
+    81
+
+
+    +   8.2 std::filesystem ..........................................................................................................................................................................................................
+    82
+
+
+    +   Further Readings ..................................................................................................................................................................................................................
+    82
+
+
+    # Chapter 09 Minor Features ............................................................................................................................................................
+    82
+
+
+    +   9.1 New Type ..........................................................................................................................................................................................................................................
+    82
+
+
+    +   long long int ..........................................................................................................................................................................................................................................
+    82
+
+
+    +   9.2 noexcept and Its Operations ................................................................................................................................................................
+    82
+
+
+    +   9.3 Literal ................................................................................................................................................................................................................................................................
+    84
+
+
+    +   Raw String Literal .................................................................................................................................................................................................................................................
+    84
+
+
+    +   Custom Literal .......................................................................................................................................................................................................................................................
+    84
+
+
+    +   9.4 Memory Alignment ........................................................................................................................................................................................................................................
+    85
+
+
+    +   Conclusion .....................................................................................................................................................................................................................................................................
+    86
+
+
+    # Chapter 10 Outlook: Introduction of C++20 ................................................................................................
+    86
+
+
+    +   Concept ............................................................................................................................................................................................................................................................................................
+    86
+
+
+    +   Module ............................................................................................................................................................................................................................................................................................
+    87'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '+   Contract . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    87
+
+
+    +   Range . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+
+
+    +   Coroutine . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+
+
+    +   Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+
+
+    +   Further Readings . . . . . . . . . . . . . . . . . . . . . . . 87
+
+
+    # Appendix 1: Further Study Materials 88
+
+
+    # Appendix 2: Modern C++ Best Practices 88
+
+
+    +   Common Tools . . . . . . . . . . . . . . . . . . . . . . . 88
+
+
+    +   Coding Style . . . . . . . . . . . . . . . . . . . . . . 88
+
+
+    +   Overall Performance . . . . . . . . . . . . 88
+
+
+    +   Code Security . . . . . . . . . . . . . . . . . . 88
+
+
+    +   Maintainability . . . . . . . . . . . . . . 89
+
+
+    +   Portability . . . . . . . . . . . . . . . . . . 89'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Preface
+
+
+    # Introduction
+
+
+    C++ user group is fairly large. From the advent of C++98 to the official finalization
+    of C++11, it has accumulated over a decade. C++14/17 is an important complement
+    and optimization for C++11, and C++20 brings this language to the door of modernization.
+    The extended features of all these new standards are given to the C++ language.
+    Infused with new vitality. C++ programmers, who are still using traditional C++
+    (this book refers to C++98 and its previous C++ standards as traditional C++),
+    may even be amazed by the fact that they are not using the same language while
+    reading modern C++ code.
+
+
+    Modern C++ (this book refers to C++11/14/17/20) introduces a lot of features into
+    traditional C++, which makes the whole C++ language modernized. Modern C++ not
+    only enhances the usability of the C++ language itself, but the modification of
+    the auto keywords gives us more confidence in manipulating extremely complex template
+    types. At the same time, a lot of enhancements have been made to the language
+    runtime. The emergence of Lambda expressions has made C++ have the "closure" feature
+    of "anonymous functions", which is almost in modern programming languages (such
+    as Python/Swift). It has become commonplace, and the emergence of reference has
+    solved the problem of temporary object efficiency that C++ has been criticized.
+
+
+    C++17 is the direction that has been promoted by the C++ community in the past
+    three years. It also points out an important development direction of modern C++
+    programming. Although it does not appear as much as C++11, it contains a large
+    number of small and beautiful languages and features (such as structured binding),
+    and the appearance of these features again corrects our programming paradigm in
+    C++.
+
+
+    Modern C++ also adds lot of tools and methods to orient its standard library,
+    such as std::thread at the level of the language itself, which supports concurrent
+    programming and no longer depends on the underlying system on different platforms.
+    The APIs implement cross-platform support at the language level; std::regex provides
+    full regular expression support and more. C++98 has been proven to be a very successful
+    "paradigm", and the emergence of modern C++ further promotes this paradigm, making
+    C++ a better language for system programming and library development. Concepts
+    verification on the compile-time of parameters, enhancing the usability of the
+    language
+
+
+    In conclusion, as an advocate and practitioner of C++, we always maintain an open
+    mind to accept new things, and we can promote the development of C++ faster, making
+    this old and new language more vibrant.
+
+
+    # Targets
+
+
+    +   * This book assumes that readers are already familiar with traditional C++
+    (i.e. C++98 or earlier), at least they do not have any difficulty in reading traditional
+    C++ code. In other words, those who have long experience in traditional C++ and
+    people who desire to quickly understand the features'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# CHAPTER 01: TOWARDS MODERN C++
+
+
+    of modern C++ in a short period of time are well suited to read the book;
+
+
+    +   - This book introduces to a certain extent of the dark magic of modern C++.
+    However, these magics are very limited, they are not suitable for readers who
+    want to learn advanced C++. The purpose of this book is offering a quick start
+    for modern C++. Of course, advanced readers can also use this book to review and
+    examine themselves on modern C++.
+
+
+    # Purpose
+
+
+    The book claims "On the Fly". Its intent is to provide a comprehensive introduction
+    to the relevant features regarding modern C++ (before 2020s). Readers can choose
+    interesting content according to the following table of content to learn and quickly
+    familiarize the new features you would learn. Readers should be aware that all
+    of these features are not required. It should be learnt when you need it.
+
+
+    At the same time, instead of grammar-only, the book introduces the historical
+    background as simple as possible of its technical requirements, which provides
+    great help in understanding why these features come out.
+
+
+    In addition, the author would like to encourage that readers should be able to
+    use modern C++ directly in their new projects and migrate their old projects to
+    modern C++ gradually after read the book.
+
+
+    # Code
+
+
+    Each chapter of this book has a lot of code. If you encounter problems when writing
+    your own code with the introductory features of the book, you might as well read
+    the source code attached to the book. You can find the book here. All the code
+    organized by chapter, the folder name is the chapter number.
+
+
+    # Exercises
+
+
+    There are few Exercises at the end of each chapter of the book. It is for testing
+    whether you can use the knowledge points in your chapter. You can find the possible
+    answer to the problem here. The folder name is the chapter number.
+
+
+    # Chapter 01: Towards Modern C++
+
+
+    Compilation Environment: This book will use clang as the only compiler used, and
+    always use the -std=c++2a compilation flag in your code.
+
+
+    ```
+
+    > clang++ -v
+
+    Apple LLVM version 10.0.1 (clang-1001.0.46.4)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 1.1 Deprecated Features
+
+    CHAPTER 01: TOWARDS MODERN C++
+
+
+    Target: x86_64-apple-darwin18.6.0
+
+
+    Thread model: posix
+
+
+    InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+
+    # 1.1 Deprecated Features
+
+
+    Before learning modern C++, let''s take a look at the main features that have
+    been deprecated
+
+    C++11:
+
+
+    > **Note:** Deprecated is not completely unusable, it is only intended to imply
+    that features will disappear from future standards and should be avoided. However,
+    the deprecated features are still part of the standard library, and many of the
+    features are actually “permanently” reserved for compatibility reasons.
+
+
+    +   * The string literal is no longer allowed to be assigned to a char *. If you
+    need to assign and initialize a char * with a string literal, you should use char
+    * or auto.
+
+
+    ```
+
+    char *str = "hello world"; // A deprecation warning will appear
+
+    ```
+
+
+    +   * C++98 exception description, unexpected_handler, set_unexpected() and other
+    related features are deprecated and should use noexcept.
+
+
+    +   * auto_ptr is deprecated and unique_ptr should be used.
+
+
+    +   * register keyword is deprecated and can be used but longer has any practical
+    meaning.
+
+
+    +   * The ++ operation has a destructor, the properties for which it generates
+    copy constructors and copy assignment operators are deprecated.
+
+
+    +   * C language type conversion is deprecated (ie using convert_type)) before
+    variables, static_cast, reinterpret_cast, const_cast should be used for type conversion.
+
+
+    +   * In particular, some of the C standard libraries are deprecated in the latest
+    C++17 standard, such as <complex>, <cstdalign>, <cstdlib> and <cmath>
+
+
+    +   * and many more
+
+
+    There are other features such as parameter binding (C++11 provides std::bind and
+    std::function), export, and etc. are also deprecated. These features mentioned
+    above If you have never used or heard of it, please don''t try to understand them.
+    You should move closer to the new standard and learn new features directly. After
+    all, technology is moving forward.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 1.2 Compatibilities with C
+
+
+    ![](img/e38a3926c5c51066839ec75b97aea207_10_0.png)
+
+
+    Figure 1.2: Compatabilities between ISO C and ISO C++
+
+
+    # 1.2 Compatibilities with C
+
+
+    For some force majeure and historical reasons, we had to use some C code (even
+    old C code) in C++, for example, Linux system calls. Before the advent of modern
+    C++, most people talked about “what is the difference between C and C++”. Generally
+    speaking, in addition to answering the object-oriented class features and the
+    template features of generic programming, there is no other opinion, or even a
+    direct answer. “Almost” is also a lot of people. The Venn diagram in Figure 1.2
+    roughly answers the C and C++ compatibility.
+
+
+    From now on, you should have the idea that “C++ is not a superset of C” in your
+    mind (and not from the beginning, later [References for further reading] (# further
+    references) The difference between C++98 and C99 is given). When writing C++,
+    you should also avoid using program styles such as *void* whenever possible. When
+    you have to use C, you should pay attention to the use of **extern** “C”, separate
+    the C language code from the C++ code, and unify the link, for instance:
+
+
+    ```
+
+    // foo.h
+
+    #ifdef __cplusplus
+
+    extern "C" {
+
+    #endif
+
+
+    add(int x, int y);
+
+
+    #ifdef __cplusplus
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "# 1.2 Compatibilities with C\n\nCHAPTER 01: TOWARDS MODERN C++\n\n```\n}\n\
+    #endif\n```\n\n```\n// foo.c\nint add(int x, int y) {\n    return x+y;\n}\n```\n\
+    \n```\n// 1.1.cpp\n#include \"foo.h\"\n#include <iostream>\n#include <functional>\n\
+    ```\n\n```\nint main() {\n    [out = std::ref(std::cout << \"Result from C code:\
+    \ \" << add(1,2))]](){\n        out.get() << \"\\n\";\n    return 0;\n}\n```\n\
+    \nYou should first compile the C code with gcc\n\n```\ngcc -c foo.c\n```\n\nCompile\
+    \ and output the foo.o file, and link the C++ code to the .o file using clang++\
+    \ (or both compile to .o and then link them together)\n\n```\nclang++ 1.1.cpp\
+    \ -std=c++2a -o 1.1\n```\n\nOf course, you can use Makefile to compile the above\
+    \ code:\n\n```\nC = gcc\nCXX = clang++\nSOURCE_C = foo.c\nOBJECTS_C = foo.o\n\
+    ```\n\n```\nSOURCE_CXX = 1.1.cpp\nTARGET = 1.1\nLDFLAGS_COMMON = -std=c++2a\n\
+    ```\n\n12"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Further Readings
+
+
+    all:
+
+
+    ```
+
+    $($C) -c $(SOURCE_C)
+
+    $(CXX) $(SOURCE_CXX) $(OBJECTS_C) $(LDFLAGS_COMMON) -o $(TARGET)
+
+    ```
+
+
+    clean:
+
+
+    ```
+
+    rm -rf *. $(TARGET)
+
+    ```
+
+
+    Note: Indentation in Makefile is a tab instead of a space character. If you copy
+    this code into your editor, the tab may be automatically replaced. Please ensure
+    the indentation in the Makefile. It is done by tabs.
+
+
+    If you don''t know the use of Makefile, it doesn''t matter. In this tutorial,
+    you won''t build code that is too complicated. You can also read this book by
+    simply using clang++-std=c++2a on the command line.
+
+
+    If you are new to modern C++, you probably still don''t understand the following
+    small piece of code, above:
+
+
+    ```
+
+    [out std::ref(std::cout << "Result from C code: " << add(1, 2))(){
+
+    out.get() << "\n";
+
+    }()
+
+    ```
+
+
+    Don''t worry at the moment, we will come to meet them in our later chapters.
+
+
+    # Further Readings
+
+
+    +   - A Tour of C++ (2nd Edition) Bjarne Stroustrup History of C++
+
+    - C++ compiler support
+
+    - Incompatibilities Between ISO C and ISO C++
+
+
+    # Chapter 02: Language Usability Enhancements
+
+
+    When we declare, define a variable or constant, and control the flow of code,
+    object-oriented functions, template programming, etc., before the runtime, it
+    may happen when writing code or compiler compiling code. This we usually talk
+    about language usability, which refers to the language behavior that occurred
+    before the runtime.
+
+
+    # 2.1 Constants
+
+
+    nullptr
+
+
+    The purpose of nullptr appears to replace NULL. In a sense, traditional C++ treats
+    NULL and 0 as the same thing, depending on how the compiler defines NULL, and
+    some compilers define NULL as'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "# 2.1 Constants    CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\n((void*)0\
+    \ Some will define it directly as 0.\n\nC++ does not allow to implicitly convert\
+    \ void * to other types. But if the compiler tries to define NULL as ((void*)0),\
+    \ then in the following code:\n\n```\nchar *ch = NULL;\n```\n\nC++ without the\
+    \ void * implicit conversion to define NULL as 0. This still creates a problem.\
+    \ Defining NULL to 0 will cause the overloading feature in C++ to be confusing.\
+    \ Consider the two following functions:\n\n```\nvoid foo(char*);\nvoid foo(int);\n\
+    ```\n\nThen the foo(NULL) statement will call foo(int), which will cause the code\
+    \ to be counterintuitive.\n\nTo solve this problem, C++11 introduced the nullptr\
+    \ keyword, which is specifically used to distinguish null pointers. The type of\
+    \ nullptr is nullptr_t, which can be implicitly converted to any pointer or pointer\
+    \ type, and can be compared equally or unequally with them.\n\nYou can try to\
+    \ compile the following code using clang++:\n\n```\n#include <iostream>\n#include\
+    \ <type_traits>\n\nvoid foo(char *);\nvoid foo(int);\n\nint main() {\n    if (std::is_same<decltype(NULL),\
+    \ decltype(0)>::value)\n        std::cout << \"NULL = 0\" << std::endl;\n    if\
+    \ (std::is_same<decltype(NULL), decltype((void*)0)>::value)\n        std::cout\
+    \ << \"NULL = (void*)0\" << std::endl;\n    if (std::is_same<decltype(NULL), std::nullptr_t>::value)\n\
+    \        std::cout << \"NULL = nullptr\" << std::endl;\n\n    foo(0);        \
+    \      // will call foo(int)\n    // foo(NULL);      // doesn't compile\n    foo(nullptr);\
+    \      // will call foo(char*)\n    return 0;\n}\n\nvoid foo(char*) {\n    std::cout\
+    \ << \"foo(char*) is called\" << std::endl;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# 2.1 Constants
+
+
+    ```
+
+    }
+
+    void foo(int i) {
+
+    std::cout << "foo(int) is called" << std::endl;
+
+    }
+
+    ```
+
+
+    The outputs are:
+
+
+    ```
+
+    foo(int) is called
+
+    foo(char*) is called
+
+    ```
+
+
+    From the output we see that NULL is different from 0 and nullptr. So, develop
+    the habit of using nullptr directly.
+
+
+    In addition, in the code, we used decltype and std::is_same which are modern C++
+    syntax. In simple terms, decltype is used for type derivation, and std::is_same
+    is used to compare the equality of the two types. We will discuss this in detail
+    in the decltype section.
+
+
+    # constexpr
+
+
+    C++ itself already has the concept of constant expressions, such as 1+2, 3*4.
+    Such expressions always produce the same result without any side effects. If the
+    compiler can directly optimize and embed these expressions into the program at
+    compile time, it will increase the performance of the program. A very obvious
+    example is in the definition phase of an array:
+
+
+    ```
+
+    #include <iostream>
+
+    #define LEN 10
+
+    ```
+
+
+    ```
+
+    int len_foo() {
+
+    int i = 2;
+
+    return i;
+
+    }
+
+    constexpr int len_foo_constexpr() {
+
+    return 5;
+
+    }
+
+    ```
+
+
+    ```
+
+    constexpr int fibonacci(const int n) {
+
+    return n == 1 || n == 2 ? 1 : fibonacci(n-1) + fibonacci(n-2);
+
+    }
+
+    ```
+
+
+    ```
+
+    int main() {
+
+    char arr_1[10]; // legal
+
+    char arr_2[LEN]; // legal
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "# 2.1 Constants CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\n```\nint len\
+    \ = 10;\n// char arr_3[len];               // illegal\n\nconst int len_2 = len\
+    \ + 1;\nconstpr int len_2_constpr = 1 + 2 + 3;\n// char arr_4[len_2];        \
+    \      // illegal, but ok for most of the compilers\nchar arr_4[len_2_constpr];\
+    \         // legal\n\n// char arr_5[len_foo]+5);          // illegal\nchar arr_6[len_foo_constpr]\
+    \ = 2 ? 1];  // legal\n\n// 1, 2, 3, 5, 8, 13, 21, 34, 55\nstd::cout << fibonacci(10)\
+    \ << std::endl;\n\nreturn 0;\n\n```\n\nIn the example above, arr_4[len_2] may\
+    \ be confusing because len_2 has been defined as a constant. Why is arr_4[len_2]\
+    \ illegal? This is because the length of the array in the C++ standard must be\
+    \ a constant expression, and for len_2, this is a const constant, not a constant\
+    \ expression, even if this is supported by most compilers, but it is an illegal\
+    \ behavior, we need to use the constexpr feature introduced in C++11, which will\
+    \ be introduced next, to solve this problem; for arr_5 before C++98 The compiler\
+    \ cannot know that len_foo() actually returns a constant at runtime, which causes\
+    \ illegal production.\n\nNote that most compilers now have their own compiler\
+    \ optimizations. Many illegal behaviors become legal under the compiler's optimization.\
+    \ If you need to reproduce the error, you need to use the older version of the\
+    \ compiler.\n\nC++11 provides to let the user explicitly declare the function\
+    \ or object constructor will become a constant expression at compile time. This\
+    \ keyword explicitly tells the compiler that it should verify that len_foo should\
+    \ be a compile time expression. Constant expression.\n\nIn addition, the function\
+    \ of constexpr can use recursion:\n\n```\nconstpr int fibonacci(const int n) {\n\
+    \    return n == 1 || n == 2 ? 1 : fibonacci(n-1) + fibonacci(n-2);\n}\n\n```\n\
+    \nStarting with C++14, the constexpr function can use simple statements as local\
+    \ variables, loops, and branches internally. For example, the code cannot be compiled\
+    \ under the C++11 standard.\n\n16"
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# 2.2 Variables and initialization\n\n```\nconstexpr int fibonacci(const int\
+    \ n) {\nif(n == 1) return 1;\nif(n == 2) return 1;\n  return fibonacci(n-1) +\
+    \ fibonacci(n-2);\n}\n```\n\nTo this, we can write a simplified version of this\
+    \ to make the function available from C++11:\n\n```\nconstexpr int fibonacci(const\
+    \ int n) {\n  return n == 1 || n == 2 ? 1 : fibonacci(n-1) + fibonacci(n-2);\n\
+    }\n```\n\n# 2.2 Variables and initialization\n\nif-switch\n\nIn Traditional C++,\
+    \ the declaration of the variable can declare a temporary int even though it can\
+    \ be located anywhere, even for a statement, but there is no way to declare a\
+    \ temporary variable in the if and switch statements. E.g:\n\n```\n#include <iostream>\n\
+    #include <vector>\n#include <algorithm>\n```\n\n```\nint main() {\n  std::vector<int>\
+    \ vec = {1, 2, 3, 4};\n\n  // since c++17, can be simplified by using `auto`n\
+    \  const std::vector<int>::iterator itr = std::find(vec.begin(), vec.end(), 2);\n\
+    \  if (itr != vec.end()) {\n    *itr = 3;\n  }\n\n  if (const std::vector<int>::iterator\
+    \ itr = std::find(vec.begin(), vec.end(), 3);\n  itr != vec.end()) {\n    *itr\
+    \ = 4;\n  }\n\n  // should output: 1, 4, 3, 4. can be simplified using `auto`n\
+    \  for (std::vector<int>::iterator element = vec.begin(); element != vec.end();\
+    \ ++element) {\n    std::cout << *element << std::endl;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "# 2.2 Variables and initialization    CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\
+    \nIn the above code, we can see that the itr variable is defined in the scope\
+    \ of the entire main(), which causes us to rename the other when a variable needs\
+    \ to traverse the std::vectors again. C++17 eliminates this limitation so we can\
+    \ do this in if(or switch):\n\n```\nif (const std::vector<int>::iterator itr =\
+    \ std::find(vec.begin(), vec.end(), 3);\n    itr = vec.end()) {\n    *itr = 4;\n\
+    }\n```\n\nIt is similar to the Go?\n\n# Initializer list\n\nInitialization is\
+    \ a very important language feature, the most common one is when the object is\
+    \ initialized. In traditional C++, different objects have different initialization\
+    \ methods, such as ordinary arrays, PODs (Plain Old Data, classes without constructs,\
+    \ destructors, and virtual functions) Or struct type can be initialized with {},\
+    \ which is what we call the initialization list. For the initialization of the\
+    \ class object, you need to use the copy constructor, or you need to use (). These\
+    \ different methods are specific to each other and cannot be generic. E.g:\n\n\
+    ```\n#include <iostream>\n#include <vector>\n```\n\n```\nclass Foo {\npublic:\n\
+    \    int value_a;\n    int value_b;\n    Foo(int a, int b) : value_a(a), value_b(b)\
+    \ {}\n};\n\nint main() {\n    // before C++11\n    int arr[3] = {1, 2, 3};\n \
+    \   Foo foo(1, 2);\n    std::vector<int> vec = {1, 2, 3, 4, 5};\n\n    std::cout\
+    \ << \"arr[0]:\" << arr[0] << std::endl;\n    std::cout << \"foo:\" << foo.value_a\
+    \ << \", \" << foo.value_b << std::endl;\n    for (std::vector<int>::iterator\
+    \ it = vec.begin(); it != vec.end(); ++it) {\n        std::cout << *it << std::endl;\n\
+    \    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "# 2.2 Variables and initialization\n\nreturn 0;\n}\n\nTo solve this problem,\
+    \ C++11 first binds the concept of the initialization list to the type and calls\
+    \ it std::initializer_list, allowing the constructor or other function to use\
+    \ the initialization list as a parameter, where the initialization of class objects\
+    \ provides a unified bridge between normal arrays and POD initialization methods,\
+    \ as such:\n\n```\n#include <initializer_list>\n#include <vector>\nclass MagicFoo\
+    \ {\npublic:\n    std::vector<int> vec;\n    MagicFoo(std::initializer_list<int>\
+    \ list) {\n        for (std::initializer_list<int>::iterator it = list.begin();\
+    \ it != list.end(); ++it) {\n            vec.push_back(*it);\n        }\n    }\n\
+    };\nint main() {\n    // after C++11\n    MagicFoo magicFoo = {1, 2, 3, 4, 5};\n\
+    \    std::cout << \"MagicFoo: \";\n    for (std::vector<int>::iterator it = magicFoo.vec.begin();\
+    \ it != magicFoo.vec.end(); ++it) std::cout << *it << \"\";\n}\n```\n\nThis constructor\
+    \ can initialize the list constructor, and with the type with this constructor\
+    \ will be specially taken care of during initialization.\n\nIn addition to the\
+    \ object construction, the initialization list can also be used as a formal parameter\
+    \ of a normal function, for example:\n\n```\npublic:\n    void foo(std::initializer_list<int>\
+    \ list) {\n        for (std::initializer_list<int>::iterator it = list.begin();\
+    \ it != list.end(); ++it) {};\n    }\nmagicFoo.foo({6,7,8,9});\n```\n\nSecond,\
+    \ C++11 also provides a uniform syntax for initializing arbitrary objects, such\
+    \ as:\n\nFoo foo {3, 4};"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# 2.3 Type inference\n\n# CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\n#\
+    \ Structured binding\n\nStructured bindings provide functionality similar to the\
+    \ multiple return values provided in other languages. In the chapter on containers,\
+    \ we will learn that C++11 has added a std::tuple container for constructing a\
+    \ tuple that encompasses multiple return values. But the flaw is that C++11/14\
+    \ does not provide a simple way to get and define the elements in the tuple directly\
+    \ from the tuple, although we can unpack the tuple using std::tie We still have\
+    \ to be very clear about how many objects the tuple contains, what each object\
+    \ is, very troublesome.\n\nC++17 completes this, and the structured bindings let\
+    \ us write code like:\n\n```\n#include <iostream>\n#include <tuple>\n\nstd::tuple<int,\
+    \ double, std::string> f() {\n    return std::make_tuple(1, 2.3, \"456\");\n}\n\
+    \nint main() {\n    auto [x, y, z] = f();\n    std::cout << x << \" \" << y <<\
+    \ \" \" << z << std::endl;\n    return 0;\n}\n```\n\nThe auto type derivation\
+    \ is described in the auto type inference section.\n\n# 2.3 Type inference\n\n\
+    In traditional C and C++, the types of parameters must be clearly defined, which\
+    \ does not help us to quickly encode, especially when we are faced with a large\
+    \ number of complex template types, we must clearly indicate the type of variables\
+    \ in order to proceed. Subsequent coding, which not only slows down our development\
+    \ efficiency, but also makes the code tiring and long.\n\nC++11 introduces two\
+    \ keywords auto and dectype to implement type derivation, letting the compiler\
+    \ worry about the type of the variable. This makes C++ the same as other modern\
+    \ programming languages, in a way that provides the habit of not having to worry\
+    \ about variable types.\n\nauto\n\nauto has been in C++ for a long time, but it\
+    \ always exists as an indicator of a storage type, coexisting with register. In\
+    \ traditional C++, if a variable is not declared as a register variable, it is\
+    \ automatically treated as an auto variable. And with register being deprecated\
+    \ (used as a reserved"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "# 2.3 Type inference CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\nkeyword\
+    \ in C++17 and later used, it doesn't currently make sense), the semantic change\
+    \ to auto is very natural.\n\nOne of the most common and notable examples of type\
+    \ derivation using auto is the iterator. One should see the lengthy iterative\
+    \ writing in traditional C++ in the previous section:\n\n```\n// before C++11\n\
+    // cbegin() returns vector<int>::const_iterator\n// and therefore it is iter type\
+    \ vector<int>::const_iterator\nfor(vector<int>:const_iterator it = vec.cbegin();\
+    \ itr != vec.end(); ++it);\n```\n\nWhen we have:\n\n```\n#include <initializer_list>\n\
+    #include <vector>\n#include <iostream>\n\nclass MagicFoo {\npublic:\n    std::vector<int>\
+    \ vec;\n    MagicFoo(std::initializer_list<int> list) {\n        for (auto it\
+    \ = list.begin(); it != list.end(); ++it) {\n            vec.push_back(*it);\n\
+    \        }\n    }\n};\n```\n\n```\nint main() {\n    MagicFoo magicFoo = {1, 2,\
+    \ 3, 4, 5};\n    std::cout << \"MagicFoo: \" <<;\n    for (auto it = magicFoo.vec.begin();\
+    \ it != magicFoo.vec.end(); ++it) {\n        std::cout << *it << \" \", \";\n\
+    \    }\n    std::cout << std::endl;\n    return 0;\n}\n```\n\nSome common uses:\n\
+    \n```\nauto i = 5; // as int\nauto arr = new auto(10); // arr as int *\n```\n\n\
+    Note: auto cannot be used for function arguments, so the following is not possible\
+    \ to compile (considering overloading, we should use templates):"
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# 2.3 Type inference\n\n# CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\n```\n\
+    int add(auto x, auto y);\n\n2.6.auto.cpp:16:9: error: 'auto' not allowed in function\
+    \ prototype\nint add(auto x, auto y) {\n---\n```\n\nIn addition, auto cannot be\
+    \ used to derive array types:\n\n```\nauto auto_arr2[10] = {arr}; // illegal,\
+    \ can't infer array type\n```\n\n```\n2.6.auto.cpp:30:19: error: 'auto_arr2' declared\
+    \ as array of 'auto'\nauto auto_arr2[10] = {arr};\n```\n\ndecltype\n\nThe decltype\
+    \ keyword is used to solve the defect that the auto keyword can only type the\
+    \ variable. Its usage is very similar to typeof:\n\n```\ndecltype(expression)\n\
+    ```\n\nSometimes we may need to calculate the type of an expression, for example:\n\
+    \n```\nauto x = 1;\nauto y = 2;\ndecltype(x+y) z;\n```\n\nYou have seen in the\
+    \ previous example that decltype is used to infer the usage of the type. The following\
+    \ example is to determine if the above variables x, y, z are of the same type:\n\
+    \n```\nif (std::is_same<decltype(x), int>::value)\n  std::cout << \"type x ==\
+    \ \"int\"\" << std::endl;\nif (std::is_same<decltype(y), float>::value)\n  std::cout\
+    \ << \"type y == \"float\"\" << std::endl;\nif (std::is_same<decltype(x), decltype(z)>::value)\n\
+    \  std::cout << \"type z == \"type x\"\" << std::endl;\n```\n\nAmong them, std::is_same<T,\
+    \ U> is used to determine whether the two types T and U are equal.\nThe output\
+    \ is:\n\n```\ntype x == int\ntype z == type x\n```"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# 2.3 Type inference\nCHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\ntail type\
+    \ inference\n\nYou may think that when we introduce auto, we have already mentioned\
+    \ that auto cannot be used for function arguments for type derivation. Can auto\
+    \ be used to derive the return type of a function? Still consider an example of\
+    \ an add function, which we have to write in traditional C++:\n\n```\ntemplate<typename\
+    \ R, typename T, typename U>\nR add(T x, U y) {\n  return x+y;\n}\n```\n\nNote:\
+    \ There is no difference between typename and class in the template parameter\
+    \ list. Before the keyword typename appears, class is used to define the template\
+    \ parameters. However, when defining a variable with nested dependency type in\
+    \ the template, you will need to use typename to eliminate ambiguity.\n\nSuch\
+    \ code is actually very ugly, because the programmer must explicitly indicate\
+    \ the return type when using this template function. In fact we don't know what\
+    \ kind of operation the add() function will do, and what kind of return type to\
+    \ get.\n\nThis problem was solved in C++11. Although you may immediately react\
+    \ to using decltype to derive the type of x+y, we write something like this:\n\
+    \n```\ndecltype(x+y) add(T x, U y)\n```\n\nBut in fact, this writing of it cannot\
+    \ be compiled. This is because x and y have not been defined when the compiler\
+    \ reads decltype(x+y). To solve this problem, C++11 also introduces a trailing\
+    \ return type, which uses the auto to post the return type:\n\n```\ntemplate<typename\
+    \ T, typename U>\nadd2(T x, U y) -> decltype(x+y){\n  return x + y;\n}\n```\n\n\
+    The good news is from C++14 it is possible to directly derive the return value\
+    \ of a normal function, so the following way becomes legal:\n\n```\ntemplate<typename\
+    \ T, typename U>\nadd3(T x, U y) {\n  return x + y;\n}\n```\n\nYou can check if\
+    \ the type derivation is correct:"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "# 2.3 Type inference CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\n```\n//\
+    \ after c++11\nauto w = add2<int, double>(1, 2.0);\nif (std::is_same<decltype(w),\
+    \ double>::value) {\n    std::cout << \"w is double: \";\n}\nstd::cout << w <<\
+    \ w << std::endl;\n```\n\n```\n// after c++14\nauto q = add3<double, int>(1.0,\
+    \ 2);\nstd::cout << \"q: \" << q << std::endl;\n```\n\ndecltype(auto)\n\ndecltype(auto)\
+    \ is a slightly more complicated use of C++14.\n\nTo understand it you know the\
+    \ concept of parameter forwarding in C++, which we will cover in detail the Language\
+    \ Runtime Hardening chapter, and you can come back to the contents of this section\
+    \ later.\n\nIn simple terms, decltype(auto) is mainly used to derive the type\
+    \ of a forwarding function or package, which does not require us to explicitly\
+    \ specify the parameter expression of decltype. Consider the following example,\
+    \ when we need to wrap the following functions:\n\n```\nstd::string lookup1();\n\
+    std::string& lookup2();\n```\n\n```\nIn C++11:\nstd::string look_up_a_string_1()\
+    \ {\n    return lookup1();\n}\n```\n\n```\nstd::string& look_up_a_string_2() {\n\
+    \    return lookup2();\n}\n```\n\nWith decltype(auto), we can let the compiler\
+    \ do this annoying parameter forwarding:\n\n```\ndecltype(auto) look_up_a_string_1()\
+    \ {\n    return lookup1();\n}\ndecltype(auto) look_up_a_string_2() {\n    return\
+    \ lookup2();\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "# 2.4 Control flow\n\nif constexpr\n\nAs we saw at the beginning of this chapter,\
+    \ we know that C++11 introduces the constexpr keyword, which compiles expressions\
+    \ or functions into constant results. A natural idea is that if we introduce this\
+    \ feature into the conditional judgment, let the code complete the branch judgment\
+    \ at compile time, can it make the program more efficient? C++17 introduces the\
+    \ constexpr keyword into the if statement, allowing you to declare the condition\
+    \ of an expression in your code. Consider the following code:\n\n```\n#include\
+    \ <iostream>\n```\n\n```\ntemplate<typename T>\nauto print_type_info(const T&\
+    \ t) {\n    if constexpr(std::is_integral<T>::value) {\n        return t + 1;\n\
+    \    } else {\n        return t + 0.001;\n    }\n}\nint main() {\n    std::cout\
+    \ << print_type_info(5) << std::endl;\n    std::cout << print_type_info(3.14)\
+    \ << std::endl;\n}\n```\n\nAt compile time, the actual code will behave as:\n\n\
+    ```\nint print_type_info(const int& t) {\n    return t + 1;\n}\ndouble print_type_info(const\
+    \ double& t) {\n    return t + 0.001;\n}\nint main() {\n    std::cout << print_type_info(5)\
+    \ << std::endl;\n    std::cout << print_type_info(3.14) << std::endl;\n}\n```\n\
+    \n# Range-based for loop\n\nFinally, C++11 introduces a range-based iterative\
+    \ method, and we have the ability to write loops that are as concise as Python,\
+    \ and we can further simplify the previous example:"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "# 2.5 Templates\n\n```\n#include <iostream>\n#include <vector>\n#include <algorithm>\n\
+    \nint main() {\n    std::vector<int> vec = {1, 2, 3, 4};\n    if (auto itr = std::find(vec.begin(),\
+    \ vec.end(), 3); itr != vec.end()) *itr = 4;\n    for (auto element : vec) {\n\
+    \        std::cout << element << std::endl; // read only\n        for (auto element\
+    \ : vec) {\n            element += 1; // writeable\n        }\n        std::cout\
+    \ << element << std::endl; // read only\n    }\n}\n```\n\nC++ templates have always\
+    \ been a special art of the language, and templates can even be used independently\
+    \ as a new language. The philosophy of the template is to throw all the problems\
+    \ that can be processed at compile time into the compile time, and only deal with\
+    \ those dynamic services at runtime, so as to greatly optimize the performance\
+    \ of the runtime. Therefore, templates are also regarded by many one of the black\
+    \ magic of C++.\n\n# External templates\n\nIn traditional C++, templates are instantiated\
+    \ by the compiler only when they are used. In other words, as long as a fully\
+    \ defined template is encountered in the code compiled each compilation unit (file),\
+    \ it will be instantiated. This results in an increase in compile time due to\
+    \ repeated instantiations. We have no way to tell the compiler not to trigger\
+    \ the instantiation of the template.\n\nTo this end, C++11 introduces an external\
+    \ template that extends the syntax of the original mandatory to instantiate a\
+    \ template at a specific location, allowing us to explicitly tell the compiler\
+    \ when to instantiate the template:\n\n```\ntemplate class std::vector<bool>;\
+    \ // force instantiation\nextern class std::vector<double>; // should not instantiation\
+    \ in current file\n```\n\nThe \\\"\n\nIn the traditional C++ compiler, >> is always\
+    \ treated as a right shift operator. But actually we can easily write the code\
+    \ for the nested template:"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "# 2.5 Templates                               CHAPTER 02: LANGUAGE USABILITY\
+    \ ENHANCEMENTS\n\nstd::vector<std::vector<int>> matrix;\n\nThis is not compiled\
+    \ under the traditional C++ compiler, and C++11 starts with continuous right brackets\
+    \ that become legal and can be compiled successfully. Even the following writing\
+    \ can be compiled by:\n\n```\ntemplate<bool T>\nclass MagicType {\n    bool magic\
+    \ = T;\n};\n```\n\n```\n// in main function\nstd::vector<MagicType<i>>2>>; //\
+    \ legal, but not recommended\n```\n\n# Type alias templates\n\nBefore you understand\
+    \ the type alias template, you need to understand the difference “template” and\
+    \ “type”. Carefully understand this sentence: Templates are used to generate types.\
+    \ In traditional C++, typedef can define a new name for the type, but there is\
+    \ no way to define a new name for the template. Because the template is not a\
+    \ type. E.g:\n\n```\ntemplate<typename T, typename U>\nclass MagicType {\npublic:\n\
+    \    T dark;\n    U magic;\n};\n```\n\n```\n// not allowed\ntemplate<typename\
+    \ T>\ntypef MagicType<std::vector<T>, std::string> FakeDarkMagic;\n```\n\nC++11\
+    \ uses using to introduce the formula of writing, and at the same time supports\
+    \ the same effect as the traditional typedef:\n\nWe usually use typedef to define\
+    \ the alias syntax: typedef original name new name;, but the definition syntax\
+    \ for aliases such as function pointers is different, which usually causes a degree\
+    \ of difficulty for direct reading.\n\n```\ntypedef int (*process)(void);\nusing\
+    \ NewProcess = int(*)(void);\ntemplate<typename T>\n```\n\n27"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# 2.5 Templates CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\n```\nusing TrueDarkMagic\
+    \ = MagicType<std::vector<T>, std::string>;\n```\n\n```\nint main() {\n    TrueDarkMagic<bool>\
+    \ you;\n}\n```\n\n# Default template parameters\n\nWe may have defined an addition\
+    \ function:\n\n```\ntemplate<typename T, typename U, typename V>\nauto add(T x,\
+    \ U y) -> decltype(x+y) {\n    return x+y;\n}\n```\n\nWhen, used, it is found\
+    \ that to add, you must specify the type of its template parameters each time.\n\
+    \nA convenience is in C++11 to specify the default parameters of the template:\n\
+    \n```\ntemplate<typename T = int, typename U = int>\nauto add(T x, U y) -> decltype(x+y)\
+    \ {\n    return x+y;\n}\n```\n\n# Variadic templates\n\nThe template has always\
+    \ been one of C++’s unique Black Magic. In traditional C++, both a class template\
+    \ and a function template could only accept a fixed set of template parameters\
+    \ as specified; C++11 added a new representation, allowing any number, template\
+    \ parameters of any category, and there is no need to fix the number of parameters\
+    \ when defining.:\n\n```\ntemplate<typename... Ts> class Magic;\n```\n\nThe class\
+    \ Magic object can accept unrestricted number of typename as a formal parameter\
+    \ of the template, such as the following definition:\n\n```\nclass Magic<int>\n\
+    \    std::vector<int>,\n    std::map<int, std::string>,\n    std::vector<std::vector<int>>>\
+    \ darkMagic;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# 2.5 Templates CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS
+
+
+    Since it is arbitrary, a template parameter with a number of 0 is also possible:
+    class Magic<> nothing;
+
+
+    If you do not want to generate 0 template parameters, you can manually define
+    at least one template parameter:
+
+
+    ```
+
+    template<typename Require, typename... Args class Magic;
+
+    ```
+
+
+    The variable length template parameter can also be directly adjusted to the template
+    function. The printf function in the classical C, it can also reach the call of
+    an indefinite number of formal parameters, is not class safe. In addition to the
+    variable-length functions that define class safety, C++11 can also make print-like
+    functions handle objects that are not self-contained. In addition to the use of
+    ... in the template parameters to indicate the indefinite length of the template
+    parameters, the function also uses the same representation to represent the indefinite
+    length parameters, which provides a convenient means us to simply write variable
+    length parameter functions, such as:
+
+
+    ```
+
+    template<typename...> Args> void printf(const std::string &str, Args... args);
+
+    ```
+
+
+    Then we define variable length template parameters, how to unpack the parameters?
+
+
+    First, we can use sizeof(...) to calculate the number of arguments:
+
+
+    ```
+
+    #include <iostream>
+
+    template<typename... Ts>
+
+    void magic(Ts... args) {
+
+    std::cout << sizeof...(args) << std::endl;
+
+    }
+
+    ```
+
+
+    We can pass any number of arguments to the magic function:
+
+
+    ```
+
+    magic(); // 0
+
+    magic(1); // 1
+
+    magic(1, ""); // 2
+
+    ```
+
+
+    Second, the parameters are unpacked. So far there is no simple way to process
+    the parameter package, but there are two classic processing methods:
+
+
+    # 1. Recursive template function
+
+
+    Recursion is a very easy way to think of and the most classic approach. This method
+    continually recursively passes template parameters to the function, thereby achieving
+    the purpose of recursively traversing all template parameters:'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "# 2.5 Templates\nCHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\n```\n#include\
+    \ <iostream>\ntemplate<typename T0>\nvoid print1(T0 value) {\n    std::cout <<\
+    \ value << std::endl;\n}\n\ntemplate<typename T, typename... Ts>\nvoid print1(T\
+    \ value, Ts... args) {\n    std::cout << value << std::endl;\n    print1(args...);\n\
+    }\n\nint main() {\n    print1(1, 2, \"123\", 1.1);\n    return 0;\n}\n```\n\n\
+    # 2. Variable parameter template expansion\n\nYou should feel that this is very\
+    \ cumbersome. Added support for variable template expansion in C++17, so you can\
+    \ write printf in a function:\n\n```\ntemplate<typename T0, typename... T>\nvoid\
+    \ print2(T0 t, T... t) {\n    std::cout << t << std::endl;\n    if constexpr (sizeof...(t)\
+    \ > 0) print2(t...);\n}\n```\n\nIn fact, sometimes we use variable parameter templates,\
+    \ but we do not necessarily need to traverse the parameters by one one. We can\
+    \ use the features of std::bind and perfect forwarding to achieve the binding\
+    \ of functions and parameters, thus achieving success. The purpose of the call.\n\
+    \n# 3. Initialize list expansion\n\nRecursive template functions are a standard\
+    \ practice, but the obvious drawback is that you must define a function that terminates.\n\
+    \nHere is a description of the black magic that is expanded using the initialization\
+    \ list:\n\n```\ntemplate<typename T, typename... Ts>\nauto print3(T value, Ts...\
+    \ args) {\n    std::cout << value << std::endl;\n    (void) std::initializer_list<T>({&args}\
+    \ {\n        std::cout << args << std::endl;\n    }(), value)...;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "# 2.5 Templates                               CHAPTER 02: LANGUAGE USABILITY\
+    \ ENHANCEMENTS\n\nIn this code, the initialization list provided in C++11 and\
+    \ the properties of the Lambda expression (mentioned in the next section) are\
+    \ additionally used.\n\nBy initializing the list, (lambda expression, value)...\
+    \ will be expanded. Due to the appearance of the comma expression, the previous\
+    \ lambda expression is executed first, and the output of the parameter is completed.\
+    \ To avoid compiler warnings, we can explicitly convert std::initializer_list\
+    \ to void.\n\n# Fold expression\n\nIn C++ 17, this feature of the variable length\
+    \ parameter is further brought to the expression, consider the following example:\n\
+    \n```\n#include <iostream>\ntemplate<typename ... T>\nauto sum(T ... t ...) {\n\
+    \    return (t + ...);\n}\nint main() {\n    std::cout << sum(1, 2, 3, 4, 5, 6,\
+    \ 7, 8, 9, 10) << std::endl;\n}\n```\n\n# Non-type template parameter deduction\n\
+    \nWhat we mainly mentioned above is a form of template parameters: type template\
+    \ parameters.\n\n```\ntemplate <typename T, typename U>\nauto add(T t, U u) {\n\
+    \    return t+u;\n}\n```\n\nThe parameters of the template T and U are specific\
+    \ types. But there is also a common form of template parameter that allows different\
+    \ literals to template parameters, is non-type template parameters:\n\n```\ntemplate\
+    \ <typename T, int BufSize>\nclass buffer_t {\npublic:\n    T& alloc();\n    void\
+    \ free(T& item);\nprivate:\n    T data[BufSize];\n```\n\n31"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# 2.6 Object-oriented\n\n```\nbuffer_t<int, 100> buf; // 100 as template parameter\n\
+    ```\n\nIn this form of template parameters, we can pass 100 as a parameter to\
+    \ the template. After C++11 introduced the feature of type derivation, we will\
+    \ naturally ask, since the templates here Passing with a specific literal, the\
+    \ compiler can assist in type derivation. By using the placeholder auto, there\
+    \ is no longer a need to explicitly specify the type? Fortunately, C++17 introduces\
+    \ this feature, and we can use the auto keyword to let the compiler assist in\
+    \ the completion of specific types of derivation. E:\n\n```\ntemplate <auto value>\
+    \ void foo() {\n    std::cout << value << std::endl;\n    return;\n}\n\nint main()\
+    \ {\n    foo<10>(); // value as int\n}\n```\n\n# 2.6 Object-oriented\n\n# Delegate\
+    \ constructor\n\nC++11 introduces the concept of a delegate construct, which allows\
+    \ a constructor to call another constructor in the same class, simplifying the\
+    \ code:\n\n```\n#include <iostream>\nclass Base {\npublic:\n    int value1;\n\
+    \    int value2;\n    Base() {\n        value1 = 1;\n    }\n    Base(int value)\
+    \ : Base() { // delegate Base() constructor\n        value2 = value;\n    }\n\
+    }\n\nint main() {\n    Base b(2);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# 2.6 Object-oriented\n\n# CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\n\
+    ```\nstd::cout << b.value1 << std::endl;\nstd::cout << b.value2 << std::endl;\n\
+    }\n```\n\n# Inheritance constructor\n\nIn traditional C++, constructors need to\
+    \ pass arguments one by one if they need inheritance, which leads to inefficiency.\
+    \ C++11 introduces the concept of inheritance constructors using the keyword:\
+    \ \n\n```\n#include <iostream>\nclass Base {\npublic:\n  int value1;\n  int value2;\n\
+    \  Base() {\n    value1 = 1;\n  }\n  Base(int value) : Base() // delegate delegate()\
+    \ constructor\n    value2 = value;\n  }\n};\nclass Subclass : public Base {\n\
+    public:\n  using Base::Base; // inheritance constructor\n};\nint main() {\n  Subclass\
+    \ s(3);\n  std::cout << s.value1 << std::endl;\n  std::cout << s.value2 << std::endl;\n\
+    }\n```\n\n# Explicit virtual function overwrite\n\nIn traditional C++, it is often\
+    \ prone to accidentally overloading virtual functions. E.g: \n\n```\nstruct Base\
+    \ {\n  virtual void foo();\n};\nstruct SubClass: Base {\n  void foo();\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# 2.6 Object-oriented CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\nSubClass::foo\
+    \ may not be a programmer trying to overload a virtual function, just adding a\
+    \ function with the same name. Another possible scenario is when the virtual function\
+    \ of the base class is deleted, the subclass owns no function and no longer overloads\
+    \ the virtual function and turns it into a normal class method, which has catastrophic\
+    \ consequences.\n\nC++11 introduces the two keywords override and final to prevent\
+    \ this from happening.\n\noverride\n\nWhen overloading a virtual function, introducing\
+    \ the override keyword will explicitly tell the compiler to overload, and the\
+    \ compiler will check if the base function has such a virtual function, otherwise\
+    \ it will not compile:\n\n```\nstruct Base {\n    virtual void foo(int);\n};\\\
+    struct SubClass : Base {\n    virtual void foo(int) override; // legal\n    virtual\
+    \ void foo(float) override; // illegal, no virtual function in super class\n};\n\
+    ```\n\nfinal\n\nfinal is to prevent the class from being continued to inherit\
+    \ in and terminate the virtual function to be overloads.\n\n```\nstruct Base {\n\
+    \    virtual void foo() final;\n};struct SubClass1 final: Base {\n}; // legal\n\
+    struct SubClass2 : SubClass1 {\n}; // illegal, SubClass1 has final\nstruct SubClass3:\
+    \ Base {\n    void foo(); // illegal, foo has final\n};\n```\n\nExplicit delete\
+    \ default function\n\nIn traditional C++, if the programmer does not provide it,\
+    \ the compiler will default to generating default constructors, copy constructors,\
+    \ assignment operators, and destructors for the object. In addition,"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# 2.6 Object-oriented CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS
+
+
+    C++ also defines operators as new delete for all classes. This part of the function
+    can be overridden when the programmer needs it.
+
+
+    This raises some requirements: the ability to accurately control the generation
+    of default functions cannot be controlled. For example, when copying a class is
+    prohibited, the copy constructor and the assignment operator must be declared
+    as private. Trying to use these undefined functions will result in compilation
+    or link errors, which is a very unconventional way.
+
+
+    Also, the default constructor generated by the compiler cannot exist at the same
+    time as the user-defined constructor. If the user defines any constructor, the
+    compiler will no longer generate the default constructor, but sometimes we want
+    to have both constructors at the same time, which is awkward.
+
+
+    C++11 provides a solution to the above requirements, allowing explicit declarations
+    to take or reject functions that come with the compiler. E.g:
+
+
+    ```
+
+    class Magic {
+
+    public:
+
+    Magic() = default; // explicit let compiler use default constructor
+
+    Magic& operator=(const Magic&) = delete; // explicit declare refuse constructor
+
+    Magic(int magic_number);
+
+    }
+
+    ```
+
+
+    # Strongly typed C++
+
+
+    In traditional C++, enumerated types are not type-safe, and enumerated types are
+    treated as integers, which allows two completely different enumerated types to
+    be directly compared (although the compiler gives them check, but not all), **
+    Even the enumeration value names of different enum types in the same namespace
+    cannot be the same*, which is usually not what we want to see.
+
+
+    C++11 introduces an enumeration class and declares it using the syntax of enum
+    class:
+
+
+    ```
+
+    enum class new_enum = unsigned int {
+
+    value1,
+
+    value2,
+
+    value3 = 100,
+
+    value4 = 100
+
+    ;
+
+    ```
+
+
+    The enumeration thus defines type safety. First, it cannot be implicitly converted
+    to an integer, nor can it be compared to integer numbers, and it is even less
+    likely to compare values of different enumerated types. If the values specified
+    are the same between the same enumerated values, you can compare:
+
+
+    ```
+
+    if (new_enum::value3 == new_enum::value4) { // true
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# Conclusion CHAPTER 02: LANGUAGE USABILITY ENHANCEMENTS\n\n```\nstd::cout\
+    \ << \"new_enum::value3 == new_enum::value4\" << std::endl;\n}\n```\n\nIn this\
+    \ syntax, the enumeration type is followed by a colon and a type keyword to specify\
+    \ the enumeration value in the enumeration, which allows us to assign a value\
+    \ to the enumeration (int is used by default when not specified).\n\nAnd we want\
+    \ to get the value of the enumeration value, we will have to explicitly type conversion,\
+    \ but we can overload the << operator to output, you can collect the following\
+    \ code snippet:\n\n```\n#include <iostream>\ntemplate<typename T>\nstd::ostream&\
+    \ operator<<(typename std::enable_if<std::is_enum<T>>::type& std::ostream& stream,\
+    \ T value) {\n    return stream << static_cast<typename std::underlying_type<T>::type>(value);\n\
+    }\n```\n\nAt this point, the following code will be able to be compiled:\n\n```\n\
+    std::cout << new_enum::value3 << std::endl\n```\n\n# Conclusion\n\nThis section\
+    \ introduces the enhancements to language usage in modern C++, which I believe\
+    \ the most important features that almost everyone needs to know and use:\n\n\
+    +   1. auto type derivation\n2. Scope for iteration\n3. Initialization list\n\
+    4. Variable parameter template\n\n# Exercises\n\n1. Using structured binding,\
+    \ implement the functions with just one line of function code:\n\n```\n#include\
+    \ <string>\n#include <map>\n#include <iostream>\n\template <typename Key, typename\
+    \ Value, typename F>\nvoid update(std::map<Key, Value>& m, F foo) {\n    // TODO:\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "```\n}\nint main() {\n    std::map<std::string, long long int> m {\n      \
+    \  {\"a\", 1},\n        {\"b\", 2},\n        {\"c\", 3}\n    };\n\n    update(m,\
+    \ [] (std::string key) {\n        return std::hash<std::string>{}(key);\n    });\n\
+    \    for (auto& [key, value] : m) {\n        std::cout << key << \" : \" << value\
+    \ << std::endl;\n    }\n}\n```\n\n+   2. Try to implement a function for calculating\
+    \ the mean with Fold Expression, allowing any arguments to be passed in.\n\nRefer\
+    \ to the answer see this.\n\n# # Chapter 03: Language Runtime Enhancements\n\n\
+    # 3.1 Lambda Expression\n\nLambda expressions are one of the most important features\
+    \ in modern C++, and Lambda expressions provide a feature like anonymous functions.\
+    \ Anonymous functions are used when a function is needed, but you don't want to\
+    \ use name to call a function. There are actually many, many scenes this. So anonymous\
+    \ functions are almost standard on modern programming languages.\n\n# Basics\n\
+    \nThe basic syntax of a Lambda expression is as follows:\n\n```\n[capture list]\
+    \ (parameter list) mutable(optional) exception attribute -> return type {\n//\
+    \ function body\n}\n```\n\nThe above grammar rules are well understood except\
+    \ for the things in [capture list], except the function name of the general function\
+    \ is omitted. The return value is in the form of a -> (we have already mentioned\
+    \ this in the tail return type earlier in the previous section).\n\nThe-called\
+    \ capture list can be understood as a type of parameter. The internal function\
+    \ body of a lambda expression cannot use variables outside the body of the function\
+    \ by default. At this time,"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# 3.1 Lambda Expression
+
+
+    capture list can serve to transfer external data. According to the behavior passed,
+    the capture list is also divided into the following types:
+
+
+    +   1. Value capture Similar to parameter passing, the value capture is based
+    on the fact that the variable can be copied, except that the captured variable
+    is copied when the lambda expression is created, not when it is called:
+
+
+    ```
+
+    void lambda_value_capture() {
+
+    int value = 1;
+
+    auto copy_value = [value] {
+
+    return value;
+
+    }
+
+    value = 100;
+
+    auto stored_value = copy_value();
+
+    std::cout << "stored_value = " << stored_value << std::endl;
+
+    // At this moment, stored_value == 1, and value == 100.
+
+    // Because copy_value has been copied when it was created.
+
+    n
+
+    ```
+
+
+    +   2. Reference capture Similar to a reference pass, the reference capture saves
+    the reference and the value changes:
+
+
+    ```
+
+    void lambda_reference_capture() {
+
+    int value = 1;
+
+    auto copy_value = [&value] {
+
+    return value;
+
+    }
+
+    value = 100;
+
+    auto stored_value = copy_value();
+
+    std::cout << "stored_value = " << stored_value << std::endl;
+
+    // At this moment, stored_value == 100, value == 100.
+
+    // Because copy_value stores reference
+
+    n
+
+    ```
+
+
+    +   3. Implicit capture Manually writing a capture list is sometimes complicated.
+    This mechanical work can be handled by the compiler. At this point, you can write
+    & or = to the compiler to declare the reference or value capture.
+
+
+    To summarize, capture provides the ability for lambda expressions to use external
+    values. The four common forms of capture lists can be:
+
+
+    +   - empty capture list'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "# 3.1 Lambda Expression\nCHAPTER 03: LANGUAGE RUNTIME ENHANCEMENTS\n\n+   *\
+    \ [name1,name2, ...] captures a series of variables\n* [&] reference capture,\
+    \ let the compiler deduce the reference list by itself\n* [=] value capture, let\
+    \ the compiler deduce the value list by itself\n\n# 4. Expression capture\n\n\
+    This section needs to understand the rvalue references and smart pointers that\
+    \ will be mentioned later.\n\nThe value captures and reference captures mentioned\
+    \ above are variables that have been declared in the outer scope, so these methods\
+    \ capture the lvalue and not capture the rvalue.\n\nC++14 gives the convenience\
+    \ of allowing the captured members to be initialized with arbitrary expressions,\
+    \ which allows the capture of rvalues. The type of the captured variable being\
+    \ declared is according to the expression, and the judgment is the same using\
+    \ auto:\n\n```\nvoid lambda_expression_capture() {\n    auto important = std::make_unique<int>(1);\n\
+    \    auto add = [v1 = 1, v2 = std::move(important)](int x, int y) -> int {\n \
+    \       return x+v1+(v2);\n    };\n    std::cout << add(3,4) << std::endl;\n}\n\
+    ```\n\nIn this code, **important** is an exclusive pointer that cannot be caught.\
+    \ At this time we need to transfer it to the rvalue and initialize it in the expression.\n\
+    \n# Generic Lambda\n\nIn the previous section we mentioned that the auto keyword\
+    \ cannot be used in the parameter list because it would conflict with the functionality\
+    \ of the template. But Lambda expressions are not ordinary functions, so Lambda\
+    \ expressions are not templated. This has caused us some trouble: the parameter\
+    \ table cannot be generated, and the parameter type must be clarified.\n\nFortunately,\
+    \ this trouble only exists in C++11, starting with C++14. The formal parameters\
+    \ of the Lambda function can use the **auto** keyword to generate generic meanings:\n\
+    \n```\nvoid lambda_generic() {\n    auto generic = [](auto x, auto y) {\n    \
+    \    return x+y;\n    };\n    std::cout << generic(1, 2) << std::endl;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "# 3.2 Function Object Wrapper CHAPTER 03: LANGUAGE RUNTIME ENHANCEMENTS\n\n\
+    ```\nstd::cout << generic(1.1, 2.2) << std::endl;\n}\n```\n\n# 3.2 Function Object\
+    \ Wrapper\n\nAlthough the features are part of the standard library and not found\
+    \ in runtime, it enhances the runtime capabilities of the C++ language. This part\
+    \ of the content is also very important, so put it here for introduction.\n\n\
+    std::function\n\nThe essence of a Lambda expression is an object of a class type\
+    \ (called a closure type) that is similar to a function object type (called a\
+    \ closure object). When the capture list of a Lambda expression is empty, the\
+    \ closure object can also be converted to a function pointer value for delivery,\
+    \ for example:\n\n```\n#include <iostream>\nusing foo = void(*int); // function\
+    \ pointer\nvoid functional(foo f) {\n  f(1);\n}\nint main() {\n  auto f = [](int\
+    \ value) {\n    std::cout << value << std::endl;\n  };\n  functional(f); // call\
+    \ by function pointer\n  f(1); // call by lambda expression\n  return 0;\n}\n\
+    ```\n\nThe above code gives two forms of invocation, one is to call Lambda as\
+    \ a function type, and the other is to directly call a Lambda expression. In C++11,\
+    \ these concepts are unified. The type of object that can be collectively called\
+    \ the callable type. This type is introduced by std::function.\n\nC++11 std::function\
+    \ is a generic, polymorphic function wrapper whose instances can store, copy,\
+    \ and any target entity that can be called. It is also existing callable to C++.\
+    \ A type-safe package of entities (relatively, the call to a function pointer\
+    \ is not type-safe), in other words, a container of functions. When we have a\
+    \ container for functions, we can more easily handle functions and function pointers\
+    \ as objects. e.g:\n\n```\n#include <functional>\n#include <iostream>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "```\nint foo(int para) {\n  return para;\n}\n```\n\n```\nint main() {\n  //\
+    \ std::function wraps a function that take int parameter and returns int value\n\
+    \  std::function<int(int)> func = foo;\n\n  int important = 10;\n  std::function<int<int)>\
+    \ func2 = [&](int value) -> int {\n    return 1+value+important;\n  };\n\n  std::cout\
+    \ << func(10) << std::endl;\n  std::cout << func2(10) << std::endl;\n}\n```\n\n\
+    std::bind and std::placeholder is used to bind the parameters of the function\
+    \ call. It solves the requirement that we may not be able to get all the parameters\
+    \ of a function at one time. Through this function, we can Part of the call parameters\
+    \ are bound to the function in advance to become a new object, and then complete\
+    \ the call after the parameters are complete. e.g:\n\n```\nint foo(int a, int\
+    \ b, int c) {\n  ;\n}\nint main() {\n  // bind parameter 1, 2 on function foo,\
+    \ and use std::placeholders::_1 as placeholder\n  // for the first parameter.\n\
+    \  auto bindFoo = std::bind(foo, std::placeholders::_1, 1,2);\n  // when call\
+    \ bindFoo, we only need one param left\n  bindFoo();\n}\n```\n\n> Tip: The magic\
+    \ of the auto keyword. Sometimes we may not be familiar with the return type of\
+    \ a function, but we can circumvent this problem using auto.\n\n# 3.3 rvalue Reference\n\
+    \nrvalue references are one of the important features introduced by C++11 that\
+    \ are synonymous with Lambda expressions. Its introduction solves a large number\
+    \ of historical issues in C++. Eliminating extra"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# 3.3 rvalue Reference\nCHAPTER 03: LANGUAGE RUNTIME ENHANCEMENTS\n\noverhead\
+    \ such as std::vector, std::string, and making the function object container std::function\
+    \ possible.\n\n# lvalue, rvalue, prvalue, xvalue\n\nTo understand what the rvalue\
+    \ reference is all about, you must have a clear understanding of the lvalue and\
+    \ the rvalue.\n\nlvalue, left value, as the name implies, the value to the left\
+    \ of the assignment symbol. To be precise, an lvalue is a persistent object that\
+    \ still exists after an expression (not necessarily an assignment expression).\n\
+    \nRvalue, right value, the value on the right refers to the temporary object that\
+    \ no longer exists after the expression ends.\n\nIn C++11, in order to introduce\
+    \ powerful rvalue references, the concept of rvalue values is further divided\
+    \ into: prvalue, and xvalue.\n\npvalue, pure rvalue, purely rvalue, either purely\
+    \ such as 10, true; either the result of the evaluation is equivalent to a literal\
+    \ or anonymous temporary, for example 1+2. Temporary variables returned by non-references,\
+    \ temporary variables generated by operation expressions, original literals, and\
+    \ Lambda expressions are all pure rvalue values.\n\nNote that string literal becomes\
+    \ rvalue in a class, and remains an lvalue in other cases (e.g., in a function)\n\
+    \n```\nclass Foo {\n  const char*& right = \"this is a rvalue\";\n\npublic:\n\
+    \  void bar() {\n    right = \"still rvalue\"; // the string literal is a rvalue\n\
+    \  }\n};\n\nint main() {\n  const char* const &left = \"this is an lvalue\"; //\
+    \ the string literal is an lvalue\n}\n```\n\nxvalue, expiring rvalue is the concept\
+    \ proposed by C++11 to introduce rvalue references (so in traditional C++, prvalue\
+    \ and rvalue are the same concept), a value that is destroyed but can be moved.\n\
+    \nIt would be hard to understand the xvalue, let's look at the code like this:\n\
+    \n```\nstd::vector<int> foo() {\n  std::vector<int> temp = {1, 2, 3, 4};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "# 3.3 rvalue Reference\n\n```\nreturn temp;\n}\n```\n\n```\nstd::vector<int>\
+    \ v = foo();\n```\n\nIn code, as far the traditional understanding is concerned,\
+    \ the return value temp of the function is internally created and assigned to\
+    \ v, whereas v gets this object, the entire temp is copied. And then destroy temp,\
+    \ if this temp is very large, which will cause a lot of extra overhead (this is\
+    \ the problem that traditional C++ has been criticized for). In the last line,\
+    \ v is the lvalue, and the value returned by foo() is the rvalue (which is also\
+    \ a pure rvalue). However, v can be caught by other variables, and the return\
+    \ value generated by foo() is used as a temporary value. Once v, it will be destroyed\
+    \ immediately, and cannot be obtained or modified. The xvalue defines a behavior\
+    \ which temporary values can be identified while still being able to be moved.\n\
+    \nAfter C++11, the compiler does some work for us, where the lvalue is subjected\
+    \ to this implicit rvalue conversion, equivalent to static_cast<std::vector<int>&&>(temp),\
+    \ where here v moves the value returned by foo locally. This is the semantics\
+    \ we will mention later.\n\n# rvalue reference and lvalue reference\n\nTo create\
+    \ an xvalue, you need the declaration of the rvalue reference: T&&, where T is\
+    \ the type. The statement of the rvalue reference extends the lifecycle of this\
+    \ temporary value, and as long as the variable is alive, the xvalue will continue\
+    \ to.\n\nC++11 provides the std::move method to unconditionally convert lvalue\
+    \ parameters to rvalues. With it we can get a temporary rvalue object, for example:\n\
+    \n```\n#include <iostream>\n#include <string>\n\nvoid reference(std::string& str)\
+    \ {\n    std::cout << \"lvalue\" << std::endl;\n}\nvoid reference(std::string&&\
+    \ str) {\n    std::cout << \"rvalue\" << std::endl;\n}\n\nint main() {\n    std::string\
+    \ l1 = \"string\"; // l1 is a lvalue\n    std::string&& r1 = l1; // illegal, rvalue\
+    \ can't ref to lvalue\n    std::string&& rv1 = std::move(l1); // legal, std::move\
+    \ can convert lvalue to rvalue\n    std::cout << rv1 << std::endl; // string,\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# 3.3 rvalue Reference    CHAPTER 03: LANGUAGE RUNTIME ENHANCEMENTS\n\n```\n\
+    const std::string& lv2 = lv1 + lv1; // legal, const lvalue reference can extend\
+    \ temp variable's\nlv2 += \"Test\"; // illegal, const ref can't be modified\n\
+    std::cout << lv2 << std::endl; // string,string\n```\n\n```\nstd::string& rv2\
+    \ = lv1 + lv2; // legal, rvalue reference for extend lifecycle\nrv2 += \"string\"\
+    ; // illegal, non-const reference can be modified\nstd::cout << rv2 << std::endl;\
+    \ // string,string,string,string\n```\n\n```\nreference(rv2); // output: lvalue\n\
+    ```\n\n```\nreturn 0;\n}\n```\n\nrv2 refers to an rvalue, but since it is a reference,\
+    \ rv2 is still an lvalue.\n\nNote that there is a very interesting historical\
+    \ issue, let's look at the following code:\n\n```\n#include <iostream>\n\nint\
+    \ main() {\n    int &a = std::move(1); // illegal, non-const lvalue reference\
+    \ cannot ref rvalue\n    const int &b = std::move(1); // legal, const lvalue reference\
+    \ can\n\n    std::cout << b << std::endl;\n}\n```\n\nThe first question, why not\
+    \ non-linear references to bind to non-values? This is because there is a logic\
+    \ error in this approach:\n\n```\nvoid increase(int &v) {\n    v++;\n}\n```\n\n\
+    ```\nvoid foo() {\n    double s = i;\n    increase(s);\n}\n```\n\nSince int& can't\
+    \ reference a parameter of type double, you must generate a temporary value to\
+    \ hold the value of s. Thus, when increase() modifies this temporary value, s\
+    \ itself is not modified after the call is completed.\n\nThe second question,\
+    \ why do constant references allow binding to non-values? The reason is because\
+    \ Fortran needs it."
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "# 3.3 rvalue Reference\n\nTraditional C++ has designed the concept of copy/copy\
+    \ for class objects through copy constructors and assignment operators, in order\
+    \ to implement the management of resources, The caller must use the method of\
+    \ copying and then destroying first, otherwise you need to implement the interface\
+    \ of the mobile object yourself. Moving your home directly to your new home instead\
+    \ of copying everything (rebuy) to your new home. Throwing away (destroying) all\
+    \ the originals is a very anti-human thing.\n\nTraditional C++ does not distinguish\
+    \ between the concepts of \"mobile\" and \"copy\", resulting in a large amount\
+    \ of data copying, wasting time and space. The appearance of rvalue references\
+    \ solves the confusion of these cases, for example:\n\n```\n#include <iostream>\n\
+    class A {\npublic:\n    int *pointer;\n    A():pointer(new int()) {\n        std::cout\
+    \ << \"construct\" << pointer << std::endl;\n    }\n    A(A& a):pointer(new int(*a.pointer))\
+    \ {\n        std::cout << \"copy\" << pointer << std::endl;\n        // meaningless\
+    \ object copy\n    }\n    A(A&& a):pointer(a.pointer) {\n        a.pointer = nullptr;\n\
+    \        std::cout << \"move\" << pointer << std::endl;\n    }\n    -A() {\n \
+    \       std::cout << \"destruct\" << pointer << std::endl;\n        delete pointer;\n\
+    \    }\n};\nn// avoid compiler optimization\nA return_rvalue(bool test) {\n  \
+    \  A a,b;\n    if(test) return a; // equal to static_cast<A>(a);\n    else return\
+    \ b; // equal to static_cast<A>(b);\n}\nint main() {\n    A obj = return_rvalue(false);\n\
+    \    std::cout << \"obj:\" << obj.pointer << std::endl;\n    std::cout << obj.pointer\
+    \ << std::endl;\n    std::cout << *obj.pointer << std::endl;\n    return 0;\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "+   1. First construct two A objects return_rvalue, and get the output of the\
+    \ two constructors;\n2. After the function returns, it will generate an xvalue,\
+    \ which is referenced by the moving structure of A (A&&), thus extending the life\
+    \ cycle, and taking the pointer in the rvalue and saving it to obj. In move, the\
+    \ pointer to the value is set to nullptr, which prevents the area from being destroyed.\n\
+    \nThis avoids meaningless copy constructs and enhances performance. Let's take\
+    \ a look at an example involving a standard library:\n\n```\n#include <iostream>\
+    \ // std::cout\n#include <utility> // std::move\n#include <vector> // std::vector\n\
+    #include <string> // std::string\n\nint main() {\n\n    std::string str = \"Hello\
+    \ world.\";\n    std::vector<std::string> v;\n\n    // push_back(const T&), copy\n\
+    \    v.push_back(str);\n    // \"str: Hello world.\"\n    std::cout << \"str:\
+    \ \" << str << std::endl;\n\n    // push_back(const T&), no copy\n    // the string\
+    \ will be moved to vector, and therefore std::move can reduce copy cost\n    v.push_back(std::move(str));\n\
+    \    // str is empty now\n    std::cout << \"str: \" << str << std::endl;\n\n\
+    \    return 0;\n}\n```\n\n# Perfect forwarding\n\nAs we mentioned earlier, the\
+    \ rvalue reference of a declaration is actually an lvalue. This creates problems\
+    \ for us to parameterize (pass):\n\n46"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "# 3.3 rvalue Reference\n\n```\n#include <iostream>\n#include <utility>\nvoid\
+    \ reference(int& v) {\n    std::cout << \"lvalue reference\" << std::endl;\n}\n\
+    void reference(int& v) {\n    std::cout << \"rvalue reference\" << std::endl;\n\
+    }\ntemplate <typename T>\nvoid pass(T& v) {\n    std::cout << \" normal param\
+    \ passing: \";\n    reference(v);\n}\nint main() {\n    std::cout << \"rvalue\
+    \ pass:\" << std::endl;\n    pass(1);\n\n    int l = 1;\n    pass(1);\n\n    return\
+    \ 0;\n}\n```\n\nFor pass(1), although the value is the rvalue, v is a reference,\
+    \ it is also an lvalue. Therefore reference(v) will call reference(int&) and output\
+    \ lvalue. For pass(1), 1 is an lvalue, why is it successfully passed to pass T(T&)?\n\
+    \nThis is based on the reference collapsing rule: In traditional C++, we are not\
+    \ able to continue to reference reference type. However, C++ has relaxed this\
+    \ with the advent of rvalue references, resulting in a reference collapse rule\
+    \ that allows us to use references, both lvalue and rvalue. But follow the rules\
+    \ below:\n\n| Function parameter type | Argument parameter type | Post-derivation\
+    \ function parameter type |\n|---|---|---|\n| T& | lvalue ref | T& |\n| T& | rvalue\
+    \ ref | T& |\n| T&& | lvalue ref | T& |\n| T&& | rvalue ref | T& |\n\nThe use\
+    \ of T&& in a template function may not be able to make an rvalue reference, and\
+    \ when an lvalue is passed, a reference to this function will be derived as an\
+    \ lvalue. More precisely, ** no matter what type of reference the template parameter\
+    \ is, the template parameter can be derived as a"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "# 3.3 value Reference    CHAPTER 03: LANGUAGE RUNTIME ENHANCEMENTS\n\nright\
+    \ reference type** if and only if the argument type is a right reference. This\
+    \ makes v a successful of deliveries.\n\nPerfect forwarding is based on the above\
+    \ rules. The so-called forwarding is to let us pass the parameters, keep the original\
+    \ parameter type (value reference keeps lvalue, rvalue reference keeps rvalue\
+    \ reference). To solve this problem, we should use std::forward (pass) the parameters:\n\
+    \n```\n#include <iostream>\n#include <utility>\nvoid reference(int& v) {\n   \
+    \ std::cout << \"lvalue reference\" << std::endl;\n}\nvoid reference(int&& v)\
+    \ {\n    std::cout << \"rvalue reference\" << std::endl;\n}\ntemplate <typename\
+    \ T>\nvoid pass(T v) {\n    std::cout << \" normal param passing: \" <<\n    reference(v);\n\
+    \    std::cout << \" std::move param passing: \" <<\n    reference(std::move(v));\n\
+    \    std::cout << \" std::forward param passing: \" <<\n    reference(std::forward<T>&>(v));\n\
+    \    std::cout << \" _static_cast<T&> param passing: \" <<\n    reference(static_cast<T&&>(v));\n\
+    }\nint main() {\n    std::cout << \"rvalue pass:\" << std::endl;\n    pass(1);\n\
+    \    int l = 1;\n    std::cout << \"lvalue pass:\" << std::endl;\n    pass(l);\n\
+    \    return 0;\n}\n```\n\nThe outputs are\n\nrvalue pass:\nnormal param passing:\
+    \ lvalue reference\nstd::move param passing: rvalue reference"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "# 3.3 rvalue Reference    CHAPTER 03: LANGUAGE RUNTIME ENHANCEMENTS\n\n```\n\
+    std::forward param passing: rvalue reference\nstatic_cast<T&&> param passing:\
+    \ rvalue reference\nlvalue pass:\nnormal param passing: lvalue reference\nstd::move\
+    \ param passing: rvalue reference\nstd::forward param passing: lvalue reference\n\
+    static_cast<T&&> param passing: lvalue reference\n```\n\nRegardless of whether\
+    \ the parameter is an lvalue or an rvalue, the normal pass argument will forward\
+    \ the argument as an lvalue. So std::move will always accept an lvalue, which\
+    \ forwards the call to reference(int&&) to output the rvalue.\n\nOnly std::forward\
+    \ does not cause any extra copies, and ** perfectly ** (passes) the arguments\
+    \ of the function to other functions that are called internally.\n\nstd::forward\
+    \ is the same as std::move, and nothing more. std::move simply converts the parameters.\
+    \ From the point of view of the phenomenon, std::forward<T>(v) is exactly the\
+    \ same as static_cast<T>(v).\n\nReaders may be curious as to why a statement value\
+    \ can return for two types of returns. Let's take a quick look at the concrete\
+    \ implementation of std::forward. std::forward contains two overloads:\n\n```\n\
+    template<typename Tp>\nconstexpr Tp&& forward(typename std::remove_reference<Tp>::type&\
+    \ _t) noexcept\n  return static_cast<Tp&&>(_t);\n```\n\n```\ntemplate<typename\
+    \ Tp>\nconstexpr Tp&& forward(typename std::remove_reference<Tp>::type&& _t) noexcept\n\
+    {\n  static_assert(std::is_lvalue_reference<Tp>::value, \"template argument \\\
+    \n    substituting Tp is not an lvalue reference type\");\n  return static_cast<Tp&&>(_t);\n\
+    ```\n\nIn this implementation, the function of std::remove_reference is to eliminate\
+    \ references in the type. And std::is_lvalue_reference is used to check if the\
+    \ type derivation is correct, in the second implementation of std::forward. Check\
+    \ that the received value is indeed an lvalue, which reflects the collapse rule.\n\
+    \nWhen std::forward accepts an lvalue, Tp is deduced to the lvalue, so the return\
+    \ value is the lvalue; and when it accepts the rvalue, Tp is derived as an rvalue\
+    \ reference, and based on the collapse rule, the return value becomes the value\
+    \ of &&&&. It can be seen that the principle of std::forward is to make clear\
+    \ one of the differences in template type derivation.\n\nAt this point we can\
+    \ answer the question: Why is auto&& the safest way to use looping statements?\n\
+    \n49"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Conclusion
+
+
+    Because when auto is pushed to a different value and rvalue reference, the collapsed
+    combination with k&&k is perfectly forwarded.
+
+
+    # Conclusion
+
+
+    This chapter introduces the most important runtime enhancements in modern C++,
+    and I believe that all the features mentioned in this section are worth knowing:
+
+
+    Lambda expression 1. Function object container std::function 2. rvalue reference
+
+
+    # Further Readings
+
+
+    +   - Bjarne Stroustrup, The Design and Evolution of C++
+
+
+    # Chapter 04 Containers
+
+
+    # 4.1 Linear Container
+
+
+    std::array
+
+
+    When you see this, std::array instead of std::vector directly:
+
+
+    +   1. Why introduce std::array instead of std::vector directly?
+
+    2. Already have a traditional array, why use std::array?
+
+
+    First answer the first question. Unlike std::vector, the size of the std::array
+    object is fixed. If the container size is fixed, then the std::array container
+    can be used first. In addition, since std::vector is automatically expanded, when
+    a large amount of data is stored, and the container is deleted, The container
+    does not automatically returning the corresponding memory of the deleted element.
+    In this case, you need to manually shrink_to_fit() to release this part of the
+    memory.
+
+
+    ```
+
+    std::vector<int> v;
+
+    std::cout << "size" << v.size() << std::endl; // output 0
+
+    std::cout << "capacity" << v.capacity() << std::endl; // output 0
+
+    ```
+
+
+    // As you can see, the storage of std::vector is automatically managed and
+
+    // automatically expanded as needed.
+
+    // But if there is not enough space, you need to redistribute more memory,
+
+    // and reallocating memory is usually a performance-intensive operation.
+
+
+    ```
+
+    v.push_back(1);
+
+    v.push_back(2);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "# 4.1 Linear Container\n\n# CHAPTER 04 CONTAINERS\n\n```\nv.push_back(3);\n\
+    ```\n\n```\nstd::cout << \"size\" << v.size() << std::endl; // output 3\nstd::cout\
+    \ << \"capacity\" << v.capacity() << std::endl; // output 4\n```\n\n```\n// The\
+    \ auto-expansion logic here is very similar to Golang's slice.\nv.push_back(5);\n\
+    ```\n\n```\nstd::cout << \"size\" << v.size() << std::endl; // output 5\nstd::cout\
+    \ << \"capacity\" << v.capacity() << std::endl; // output 8\n```\n\n```\n// As\
+    \ can be seen below, although the container empties the element,\n// the memory\
+    \ of the emptied element is not returned.\nv.clear();\n```\n\n```\nstd::cout <<\
+    \ \"size\" << v.size() << std::endl; // output 0\nstd::cout << \"capacity\" <<\
+    \ v.capacity() << std::endl; // output 8\n```\n\n```\n// Additional memory can\
+    \ be returned to the system via the shrink_to_fit() call\nv.shrink_to_fit();\n\
+    ```\n\n```\nstd::cout << \"size\" << v.size() << std::endl; // output 0\nstd::cout\
+    \ << \"capacity\" << v.capacity() << std::endl; // output 0\n```\n\nThe second\
+    \ problem is much simpler. Using std::array can make the code more \"modern\"\
+    \ and\ncapsulate some manipulation functions, such as getting the array size and\
+    \ checking if it is not empty,\nand also using the standard friendly. Container\
+    \ algorithms in the library, such as std::sort.\n\nUsing std::array is as simple\
+    \ as specifying its type and size:\n\n```\nstd::array<int, 4> arr = {1, 2, 3,\
+    \ 4};\n```\n\n```\narr.empty(); // check if container is empty\narr.size(); //\
+    \ return the size of the container\n```\n\n```\n// iterator support\nfor (auto\
+    \ &i : arr)\n{\n```\n\n```\n  // ...\n```\n\n```\n// use lambda expression for\
+    \ sort\nstd::sort(arr.begin(), arr.end(), [](int a, int b) {\n  return b < a;\n\
+    });\n```"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# 4.2 Unordered Container\n\n```\n// array size must be constexpr\nconstexpr\
+    \ len = 4;\nstd::array<int, len> arr = {1, 2, 3, 4};\n```\n\n```\n// illegal,\
+    \ different than C-style array, std::array will not deduce to T*\nint *arr_p =\
+    \ arr;\n```\n\nWhen we used std::array, it was inevitable that we would encounter\
+    \ a C-style compatible interface. There are three ways to do this:\n\n```\nvoid\
+    \ foo(int *p, int len) {\n    return;\n}\nstd::array<int, 4> arr = {1,2,3,4};\n\
+    ```\n\n```\n// C-style parameter passing\n// foo(arr, arr.size()); // illegal,\
+    \ cannot convert implicitly\nfoo(&arr[0], arr.size());\nfoo(arr.data(), arr.size());\n\
+    ```\n\n```\n// use 'std::sort'\nstd::sort(arr.begin(), arr.end());\n```\n\n# std::forward_list\n\
+    \nstd::forward_list is a list container, and the usage is basically similar to\
+    \ std::list, so we don't spend a lot of time introducing it.\n\nNeed to know that,\
+    \ unlike the implementation of the doubly linked list of std::list, std::forward_list\
+    \ is implemented using a singly linked list. Provides element insertion of O(1)\
+    \ complexity, does not support fast random access (this is also a feature of linked\
+    \ lists), It is the only container in the standard library container that does\
+    \ not provide the size() method. It has a higher space utilization than std::list\
+    \ when bidirectional iteration is not required.\n\n# 4.2 Unordered Container\n\
+    \nWe are already familiar with the unordered container std::map/std::set in traditional\
+    \ C++. These elements are internally implemented by red-black trees. The average\
+    \ complexity of inserts and searches is O(log(size)). When inserting an element,\
+    \ the element size is compared according to the < operator and the element is\
+    \ determined to be the same. Select the appropriate location to insert into the\
+    \ container. When traversing the elements in this container, the output will be\
+    \ traversed one by one in the order of the < operator."
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "# 4.2 Unordered Container\n\nThe elements in the unordered container are not\
+    \ sorted, and the elements are implemented by the\nHash table. The average complexity\
+    \ of inserting and searching for elements is O(constant), Significant\nperformance\
+    \ gains can be achieved without concern for the order of the elements inside the\
+    \ container.\n\nC++11 introduces two sets of unordered containers: std::unordered_map/std::unordered_multimap\\\
+    and std::unordered_set/std::unordered_multiset.\n\nTheir usage is basically similar\
+    \ to the original std::map/std::multimap/std::set/std::multiset\nSince these containers\
+    \ are already familiar to us, we will not compare them by one one. Let's compare\n\
+    std::map and std::unordered_map directly.\n\n```\n#include <iostream>\n#include\
+    \ <string>\n#include <unordered_map>\n#include <map>\n```\n\n```\nint main() {\n\
+    \    // initialized in same order\n    std::unordered_map<int, std::string> u\
+    \ = {\n        {1, \"1\"},\n        {3, \"3\"},\n        {2, \"2\"}\n    };\n\n\
+    \    std::map<int, std::string> v = {\n        {1, \"1\"},\n        {3, \"3\"\
+    },\n        {2, \"2\"}\n    };\n\n    // iterates in the same way\n    std::cout\
+    \ << \"std::unordered_map\" << std::endl;\n    for(const auto & n : u) {\n   \
+    \     std::cout << \"Key:[\" << n.first << \"] Value:[\" << n.second << \"]\\\
+    n\";\n    }\n\n    std::cout << std::endl;\n    std::cout << \"std::map\" << std::endl;\n\
+    \    for(const auto & n : v) {\n        std::cout << \"Key:[\" << n.first << \"\
+    ] Value:[\" << n.second << \"]\\n\";\n    }\n}\n```\n\nThe final output is:\n\n\
+    std::unordered_map\nKey:[2] Value:[2]"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "# 4.3 Tuples\n\nCHAPTER 04 CONTAINERS\n\nKey: [3] Value: [3]\nKey: [1] Value:\
+    \ [1]\n\n```\nstd::map\nKey: [1] Value: [1]\nKey: [2] Value: [2]\nKey: [3] Value:\
+    \ [3]\n```\n\n# 4.3 Tuples\n\nProgrammers who have known Python should be aware\
+    \ of the concept of tuples. Looking at the containers in traditional C++, except\
+    \ for std::pair seems to be no ready-made-structure to store different types of\
+    \ data (usually we will define the structure ourselves). But the flaw of std::pair\
+    \ is obvious, only two elements can be saved.\n\n# Basic Operations\n\nThere are\
+    \ three core functions for the use of tuples:\n\n+   1. std::make_tuple: construct\
+    \ tuple\n2. std::get: Get the value of a position in the tuple\n3. std::tie: tuple\
+    \ unpacking\n\n```\n#include <tuple>\n#include <iostream>\n\nauto get_student(int\
+    \ id) {\n    if (id == 0) {\n        return std::make_tuple(3.8, 'A', \"John\"\
+    );\n    }\n    if (id == 1) {\n        return std::make_tuple(2.9, 'C', \"Jack\"\
+    );\n    }\n    if (id == 2) {\n        return std::make_tuple(1.7, 'D', \"Ive\"\
+    );\n    }\n\n    // it is not allowed to return 0 directly\n    // return type\
+    \ is std::tuple<double, char, std::string>\n    return std::make_tuple(0.0, 'D',\
+    \ \"null\");\n}\n\nint main() {\n    auto student = get_student(0);\n    std::cout\
+    \ << \"ID: 0, \"\n```\n\n54"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "# 4.3 Tuples\n\n# CHAPTER 04 CONTAINERS\n\n```\n<< \"GPA: \" << std::get<0>(student)\
+    \ << \",\"\n<< \"Grade: \" << std::get<1>(student) << \",\"\n<< \"Name: \" <<\
+    \ std::get<2>(student) << \" \\\\n'\\\";\"\n```\n\ndouble grade;\nchar grade;\n\
+    std::string name;\n\n```\n// unpack tuples\nstd::tie(gpa, grade, name) = get_student(1);\n\
+    std::cout << \"ID: 1, \"\n  << \"GPA: \" << gpa << \",\"\n  << \"Grade: \" <<\
+    \ grade << \",\"\n  << \"Name: \" << name << \" \\\\n'\";\n```\n\nstd::get in\
+    \ using constants to get type objects, C++14 adds usage to get objects in tuples:\n\
+    \n```\nstd::tuple<std::string, double, double, int> t(\"123\", 4.5, 6.7, 8);\n\
+    std::cout << std::get<std::string>(t) << std::endl;\nstd::cout << std::get<double>(t)\
+    \ << std::endl; // illegal, runtime error\nstd::cout << std::get<3>(t) << std::endl;\n\
+    ```\n\n# Runtime Index\n\nIf you think about it, you might find the problem with\
+    \ the above code. std::get<T> depends on a compile-time constant, so the following\
+    \ is not legal:\n\n```\nint index = 1;\nstd::get<int>(index);\n```\n\nSo what\
+    \ do you do? The answer is to use std::variant<...> (introduced by C++ 17) to\
+    \ provide template parameters for variant<T> which can have a variant to accommodate\
+    \ several types of variables (in other languages, such as Python/JavaScript, etc.,\
+    \ as dynamic types):\n\n```\n#include <variant>\ntemplate <size_t n, typename...>\
+    \ T>\nconstexpr std::tuple<T...>& _tuple_index(const std::tuple<T...>& tpl, size_t\
+    \ i) {\n  if constexpr (n >= sizeof...(T)) {\n    throw std::out_of_range(\\(\"\
+    \ \\.\");\n  }\n  if (i == n) n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "# Conclusion\n\n```\nreturn std::variant<T...>{ std::in_place_index<n>, std::get<n>(tpl)\
+    \ };\nreturn _tuple_index<n>(sizeof...(T)-1 ? n+1 : 0>(tpl, i);\n\ntemplate <typename...\
+    \ \\u T...> T\nconstexpr std::variant<T...> tuple_index(const std::tuple<T...>&\
+    \ tpl, size_t i) {\n    return _tuple_index<0>(tpl, i);\n}\n\ntemplate <typename\
+    \ T0, typename Ts>\nstd::ostream& operator<<(std::ostream& s, const std::variant<T0,\
+    \ Ts...> const& v) {\n    std::visit([&](auto&& k,&& x) { s << x; }, v);\n   \
+    \ return s;\n}\n```\n\nSo we can:\n\n```\nint i = 1;\nstd::cout << tuple_index(t,\
+    \ i) << std::endl;\n```\n\n# Merge and Iteration\n\nAnother common requirement\
+    \ is to merge two tuples, which can be done with std::tuple_cat;\nauto new_tuple\
+    \ = std::tuple_cat(get_student(i), std::move(tpl));\n\nYou can immediately see\
+    \ how quickly you can traverse a tuple? But we just introduced how to index a\
+    \ tuple by a very number at runtime, the traversal becomes simpler. First we need\
+    \ to know the length of a tuple, which can:\n\n```\ntemplate <typename T>\nauto\
+    \ tuple_len(const T& tpl) {\n    return std::tuple_size<T>::value;\n}\n```\n\n\
+    This will iterate over the tuple:\n\n```\nfor(int i = 0; i!=tuple_len(new_tuple);\
+    \ ++i)\n    // runtime indexing\nstd::cout << tuple_index(i, new_tuple) << std::endl;\n\
+    ```\n\n# Conclusion\n\nThis chapter briefly introduces the new containers in modern\
+    \ C++. Their usage is similar to that of the existing containers in C+. It is\
+    \ relatively simple, and you can choose the containers you need to"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# CHAPTER 05 SMART POINTERS AND MEMORY MANAGEMENT
+
+
+    use according to the actual scene, so as to get better performance.
+
+
+    Although std::tuple is efficient, the standard library provides limited functionality
+    and there is no way to meet the requirements of runtime indexing and iteration.
+    Fortunately, we have other methods that we can implement on our own.
+
+
+    # Chapter 05 Smart Pointers and Memory Management
+
+
+    # 5.1 RAII and Reference Counting
+
+
+    Programmers who understand Objective-C/Swift/JavaScript should know the concept
+    of reference counting. The reference count is counted to prevent memory leaks.
+    The basic idea is to count the number of dynamically allocated objects. Whenever
+    you add a reference to the same object, the reference count of the referenced
+    object incremented once. Each time a reference is deleted, the reference count
+    is decremented by one. When the reference count of an object is reduced to zero,
+    the pointed heap memory is automatically deleted.
+
+
+    In traditional C++, “remembering” to manually release resources is not always
+    a best practice. Because we are likely to forget to release resources and lead
+    to leakage. The usual practice is that for an object, we allocate space when constructor,
+    and free space when the destructor (called when leaving the scope). That is, we
+    often say that the RAII resource acquisition is the initialization technique.
+
+
+    There are exceptions to everything, we use **new** and **delete** to “remember”
+    to release resources. C++11 introduces the concept of smart pointers, using the
+    idea of reference counting, so that programmers no longer need to care about manually
+    releasing memory. These smart pointers include std::shared_ptr/unique_ptr/weak_ptr,
+    which include in the header file <memory>.
+
+
+    Note: The reference count is not garbage collection. The reference count can recover
+    the objects that are no longer used soon as possible, and will not cause waits
+    during the recycling process. More clearly and clearly indicate the life cycle
+    of resources.
+
+
+    # 5.2 std::shared_ptr
+
+
+    std::shared_ptr is a smart pointer that tracks how many shared_ptr points to an
+    object, eliminating the call delete, which automatically deletes the object when
+    the reference count becomes zero.
+
+
+    But not enough, using std::shared_ptr still needs to be called with new, which
+    makes the code a certain degree of asymmetry.
+
+
+    std::make_shared can be used to eliminate the explicit use of new, so std::make_shared
+    will allocate the objects in the generated parameters. And return the std::shared_ptr
+    pointer of this object type. For example:'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# 5.2 std::shared_ptr CHAPTER 05 SMART POINTERS AND MEMORY MANAGEMENT\n\n```\n\
+    #include <iostream>\n#include <memory>\nvoid foo(std::shared_ptr<int> i) {\n \
+    \   (*i)++;\n}\nint main() {\n    // auto pointer = new int(10); // illegal, no\
+    \ direct assignment\n    // Constructed a std::shared_ptr\n    auto pointer =\
+    \ std::make_shared<int>(10);\n    foo(pointer);\n    std::cout << *pointer <<\
+    \ std::endl; // 11\n    // The shared_ptr will be destroyed before leaving the\
+    \ scope\n    return 0;\n}\n```\n\nstd::shared_ptr can get the raw pointer through\
+    \ the get() method and reduce the reference count by reset(). And see the count\
+    \ of an object by use_count(). E.g:\n\n```\nauto pointer = std::make_shared<int>(10);\n\
+    auto pointer2 = pointer; // reference count+1\nauto pointer3 = pointer; // reference\
+    \ count+1\nint *p = pointer.get(); // no increase of reference count\nstd::cout\
+    \ << \"pointer.use_count() = \" << pointer.use_count() << std::endl; // 3\nstd::cout\
+    \ << \"pointer2.use_count() = \" << pointer2.use_count() << std::endl; // 3\n\
+    std::cout << \"pointer3.use_count() = \" << pointer3.use_count() << std::endl;\
+    \ // 3\n\npointer2.reset();\nstd::cout << \"reset pointer 2:\" << std::endl;\n\
+    std::cout << \"pointer2.use_count() = \" << pointer2.use_count() << std::endl;\
+    \ // 2\nstd::cout << \"pointer2.use_count() = \" << pointer2.use_count() << std::endl;\
+    \ // 0, pointer2 has reset\nstd::cout << \"pointer3.use_count() = \" << pointer3.use_count()\
+    \ << std::endl; // 2\npointer3.reset();\nstd::cout << \"reset pointer 3:\" <<\
+    \ std::endl;\nstd::cout << \"pointer.use_count() = \" << pointer.use_count() <<\
+    \ std::endl; // 1\nstd::cout << \"pointer2.use_count() = \" << pointer2.use_count()\
+    \ << std::endl; // 0\nstd::cout << \"pointer3.use_count() = \" << pointer3.use_count()\
+    \ << std::endl; // 0, pointer3 has reset\n```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "5.3 std::unique_ptr CHAPTER 05 SMART POINTERS AND MEMORY MANAGEMENT\n\n# 5.3\
+    \ std::unique_ptr\n\nstd::unique_ptr is an exclusive smart pointer that prohibits\
+    \ other pointers from sharing the same object, thus keeping the code safe\n\n\
+    ```\nstd::unique_ptr<int> pointer = std::make_unique<int>(10); // make_unique\
+    \ was introduced in C++14\nstd::unique_ptr<int> pointer2 = pointer; // illegal\n\
+    ```\n\nmake_unique is not complicated. C++11 does not provide std::make_unique,\
+    \ which can be implemented by itself:\n\n```\ntemplate<typename T, typename ...Args>\n\
+    std::unique_ptr<T> make_unique(Args&&... args) ) {\n    return std::unique_ptr<T>(new\
+    \ T(std::forward<Args>(args)...));\n}\n```\n\nAs for why it wasn't provided, Herb\
+    \ Sutter, chairman of the C++ Standards Committee, mentioned in his blog that\
+    \ it was because they were forgotten.\n\nSince it is movable, in other words it\
+    \ cannot be copied. However, we can use std::move to transfer it to other unique_ptr,\
+    \ for example:\n\n```\n#include <iostream>\n#include <memory>\n```\n\n```\nstruct\
+    \ Foo {\n    Foo() { std::cout << \"Foo\" << std::endl; }\n    ~Foo() { std::cout\
+    \ << \"-Foo\" << std::endl; }\n    void foo() { std::cout << \":foo\" << std::endl;\
+    \ }\n};\n```\n\n```\nvoid f(const Foo&) {\n    std::cout << \"f(const Foo&)\"\
+    \ << std::endl;\n}\n```\n\n```\nint main() {\n    std::unique_ptr<Foo> p1(std::make_unique<Foo>());\n\
+    \n    // p1 is not empty, prints\n    if (p1) p1->foo(); {\n        std::unique_ptr<Foo>\
+    \ p2(std::move(p1));\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "# 5.4 std::weak_ptr\n\n```\n// p2 is not empty, prints\nf(*p2);\n\n// p2 is\
+    \ not empty, prints\nif(p2) p2->foo();\n\n// p1 is empty, no prints\nif(p1) p1->foo();\n\
+    \np1 = std::move(p2);\n\n// p2 is empty, no prints\nif(p2) p2->foo();\nstd::cout\
+    \ << \"p2 was destroyed\" << std::endl;\n\n// p1 is not empty, prints\nif (p1)\
+    \ p1->foo();\n\n// Foo instance will be destroyed when leaving the scope\n```\n\
+    \n# 5.4 std::weak_ptr\n\nIf you think about std::shared_ptr carefully, you will\
+    \ still find that there is still a problem that resources cannot be released.\
+    \ Look at the following example:\n\n```\n#include <iostream>\n#include <memory>\n\
+    \nclass A;\nclass B;\n\nclass A {\npublic:\n    std::shared_ptr<B> pointer;\n\
+    \    ~A() {\n        std::cout << \"A was destroyed\" << std::endl;\n    }\n};\n\
+    \nclass B {\npublic:\n    std::shared_ptr<A> pointer;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "# 5.4 std::weak_ptr CHAPTER 05 SMART POINTERS AND MEMORY MANAGEMENT\n\n![](img/e38a3926c5c51066839ec75b97aea207_60_0.png)\n\
+    \n```\n-B() {\n  std::cout << \"B was destroyed\" << std::endl;\n}\nint main()\
+    \ {\n  std::shared_ptr<A> a = std::make_shared<A>();\n  std::shared_ptr<B> b =\
+    \ std::make_shared<B>();\n  a->pointer = b;\n  b->pointer = a;\n\n  return 0;\n\
+    }\n```\n\nThe result is that A and B will not be destroyed. This is because the\
+    \ pointer inside a, b also references a, b, which makes the reference count of\
+    \ a, b become 2, leaving the scope. When the a, b smart pointer is destroyed,\
+    \ it can only cause the reference count of this area to be decremented by one.\
+    \ This causes the memory reference count pointed to the a, b object to be non-zero,\
+    \ but the external has no way to find this, and also caused a memory leak, as\
+    \ shown in Figure 5.1.\n\nThe solution to this problem is to use the weak reference\
+    \ std::weak_ptr, which is a weak reference (compared to std::shared_ptr is a strong\
+    \ reference). A weak reference does not cause an increase in reference count.\
+    \ When a weak reference is used, the final release process is shown in Figure\
+    \ 5.2.\n\nIn the above figure, B is left in the last step, and B does not have\
+    \ any smart pointers to it, this memory resource will also be released.\n\nstd::weak_ptr\
+    \ has no * and -> operator, so it can't operate on resources. Its only function\
+    \ is to check if std::shared_ptr exists, expired() method can return false when\
+    \ the resource is not released, otherwise it returns true."
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '![](img/e38a3926c5c51066839ec75b97aea207_61_0.png)
+
+
+    # # Conclusion
+
+
+    The technology of smart pointers is not novel. It is a common technology in many
+    languages. Modern C++ introduces this technology, which eliminates the abuse of
+    new/delete to a certain extent. It is a more mature technology. Programming paradigm.
+
+
+    # ## Further Readings
+
+
+    +   - Why does C++11 have make_shared but not make_unique
+
+
+    # ## Chapter 06 Regular Expression
+
+
+    # ### 6.1 Introduction
+
+
+    Regular expressions are not part of the C++ language and therefore we only briefly
+    introduced it here.
+
+
+    Regular expressions describe a pattern of string matching. The general use of
+    regular expressions is mainly to achieve the following three requirements:
+
+
+    +   1. Check if a string contains some form of substring;
+
+    2. Replace the matching substrings;
+
+    3. Take the eligible substring from a string.
+
+
+    Regular expressions are text patterns consisting of ordinary characters (such
+    as a to z) and special'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# 6.1 Introduction
+
+
+    # CHAPTER 06 REGULAR EXPRESSION
+
+
+    characters. A pattern describes one or more strings to match when searching for
+    text. Regular expressions act as a template to match a character pattern to the
+    string searched.
+
+
+    # Ordinary characters
+
+
+    Ordinary characters include all printable and unprintable characters that are
+    not explicitly specified as metacharacters. This includes all uppercase and lowercase
+    letters, all numbers, all punctuation, and some other symbols.
+
+
+    # Special characters
+
+
+    A special character is a character with special meaning in a regular expression,
+    and is also the matching syntax of a regular expression. See the table below:
+
+
+    | Special characters | Description |
+
+    |---|---|n| $ | Matches the end position of the input string. |
+
+    | () | Matches the start and end of a subexpression. Subexpressions can be obtained
+    for later use. |
+
+    | * | Matches the previous subexpression zero or more times. |
+
+    | + | Matches the previous subexpression one or more times. |
+
+    | . | Matches any single character except the newline character \n. |
+
+    | [ | Marks the beginning of a bracket expression. |
+
+    | ? | Matches the previous subexpression zero or one time, or indicates a non-greedy
+    qualifier |
+
+    | \ | Marks the next character as either a special character, or a literal character,
+    or a backward reference. For example, n Matches the character. The sequence \n
+    Matches the \ character, while \( matches the \''. |
+
+    | '' | Matches newline characters. |
+
+    | { | Marks the beginning of a qualifier expression. |
+
+    | \ | Indicates a choice between the two. |
+
+
+    # Quantifiers
+
+
+    The qualifier is used to specify how many times a given component of a regular
+    expression must appear to satisfy the match. See the table below:
+
+
+    | Character | Description |
+
+    |---|---|n| * | matches the previous subexpression zero or more times. For example,
+    foo* matches fo and foooo. * is equivalent to {0,}. |'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# 6.2 std::regex and Its Related
+
+
+    Character Description
+
+
+    +   + matches the previous subexpression one or more times. For example, foo+
+    matches foo
+
+    and fooo but does not match fo. + is equivalent to {1}.
+
+    ? matches the previous subexpression zero or one time. For example, Your(s)? can
+    match
+
+    Your in or Yours. ? is equivalent to {0,1}.
+
+    {n} is a non-negative integer. Matches the n times. For example, o{2} cannot
+
+    match o in for, but can match two o in foo.
+
+    {n,} is a non-negative integer. Matches at least n times. For example, o{2} cannot
+    match o
+
+    in for, but matches all o in foooooo. o{1} is equivalent to o+. o{0} is equivalent
+    to
+
+    *:
+
+    {n,m} m and n are non-negative integers, n is less or equal to m. For, o{1,3}
+    will match the first three o in
+
+    fooooo. o(0,1) is equivalent to?. Note that there are no spaces between the
+
+    comma and the two numbers.
+
+
+    With these tables, we can read almost all regular expressions.
+
+
+    # 6.2 std::regex and Its Related
+
+
+    The most common way to match string content is to use regular expressions. Unfortunately,
+    in
+
+    traditional C++, expressions have not been supported by the language level, and
+    are not included
+
+    in the standard library. C++ is a high-performance language. In the development
+    of backend services,
+
+    t use of regular expressions is also used when joining URL links. The most mature
+    and
+
+    common practice in today.
+
+
+    The general solution is to use the regular expression library of boost. C++11
+    officially incorporates
+
+    t processing of regular expressions into the standard library, providing standard
+    support from the
+
+    language level and no longer relying on third parties.
+
+
+    The regular expression provided by C++11 operates on the std::regex object, and
+    the
+
+    pattern std::regex (essentially std::basic_regex) is initialized and matched by
+    std::regex_match
+
+    Produces std::match (essentially the std::match_results object).
+
+
+    We use a example to briefly introduce this use library. Consider the following
+    regular
+
+    expression:
+
+
+    +   [az].txt: In this expression, [az] means matching a lowercase letter, + can
+    match the
+
+    previous expression multiple times, so [az]+ matches a string of lowercase letters.
+    In the
+
+    regular expression, a means to match any character, and \ means to match the character
+    ,
+
+    and the last txt means to match exactly three letters. So the content of this
+    regular expression
+
+    to is a test file containing pure lowercase letters.
+
+
+    std::regex_match is used to match strings and regular expressions, and there are
+    many different'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "# 6.2 std::regex and Its Related\n\noverloaded forms. The simplest form is\
+    \ to pass std::string and std::regex to match. When the match is successful, it\
+    \ will return true, otherwise it will return false. For example:\n\n```\n#include\
+    \ <iostream>\n#include <string>\n#include <regex>\n```\n\n```\nint main() {\n\
+    \    std::string fname[] = {\"foo.txt\", \"bar.txt\", \"test\", \"a0.txt\"};\n\
+    \    // In C++, \\\\' will be used as an escape character in the string. In order\
+    \ for \\\\' to be passed\n    std::regex txt(\"[a-z]+\\.txt\");\n    for (const\
+    \ auto &fname : fname) {\n        std::cout << fname << \" << \" << std::regex_match(fname,\
+    \ txt) << std::endl;\n    }\n}\n}\n```\n\nAnother common form is to pass in the\
+    \ three arguments std::string/std::match/std::regex. The essence of std::smatch\
+    \ is actually std::match_results. In the standard library, std::match_results<std::string,const_iterator>,\
+    \ which means match_results of a substring iterator. Use std::match to easily\
+    \ get the matching results, for example:\n\n```\nstd::regex base_regex(\"([a-z]+\\\
+    .txt\");\nstd::smatch base_match;\nfor(const auto &fname : fname) {\n    if (std::regex_match(fname,\
+    \ base_match, base_regex)) {\n        // the first element of std::smatch matches\
+    \ the entire string\n        // the second element of std::smatch matches the\
+    \ first expression with brackets\n        if (base_match.size() == 2) {\n    \
+    \        std::string base = base_match[1].str();\n            std::cout << \"\
+    sub-match[0]:\" << base_match[0].str() << std::endl;\n            std::cout <<\
+    \ fname << \" << \" sub-match[1]:\" << base << \" << \" << std::endl;\n      \
+    \  }\n    }\n}\n```\n\nThe output of the above code snippets is:\n\n```\nfoo.txt:\
+    \ 1\nbar.txt: 1\ntest: 0\na0.txt: 0\nAAA.txt: 0\nsub-match[0]: foo.txt\n```"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "# Conclusion\n\nfoo.txt sub-match[1]: foo\nsub-match[0]: bar.txt\nbar.txt sub-match[1]:\
+    \ bar\n\n# Conclusion\n\nThis section briefly introduces the regular expression\
+    \ itself, and then introduces the use of the regular expression library through\
+    \ a practical example based on the main requirements of regular expressions.\n\
+    \n# Exercise\n\nIn web server development, we usually want to serve some routes\
+    \ that satisfy a certain condition. Regular expressions are one of the tools to\
+    \ accomplish this. Given the following request structure:\n\n```\nstruct Request\
+    \ {\n    // method, POST, GET; path; HTTP version\n    std::string method, path,\
+    \ http_version;\n    // use smart pointer for reference counting of content\n\
+    \    std::shared_ptr<std::istream> content;\n    // hash container, key-value\
+    \ dict\n    std::unordered_map<std::string, std::string> header;\n    // use regular\
+    \ expression for path match\n    std::smatch path_match;\n};\n```\n\nRequested\
+    \ resource type:\n\n```\ntypedef std::unordered_map<std::string, std::vector<std::function<void(std::ostream&,\
+    \ Request&)>>> resource_type;\n```\n\nAnd server template:\n\n```\ntemplate <typename\
+    \ socket_type>\nclass ServerBase {\npublic:\n    resource_type resource;\n   \
+    \ resource_type default_resource;\n\n    void start() {\n    // TODO\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "# Exercise CHAPTER 06 REGULAR EXPRESSION\n\n}\nprotected:\n\n```\nRequest parse_request(std::istream&\
+    \ stream) const {\n    // TODO\n}\n```\n\n\nnPlease implement the member functions\
+    \ start() and parse_request. Enable server template users\nto specify routes as\
+    \ follows:\n\n```\ntemplate<typename SERVER_TYPE>\nvoid start_server(SERVER_TYPE\
+    \ &server) {\n```\n\n```\n// process GET request for /match/[digit+numbers], e.g.\
+    \ GET request is /match/abc123, will return\nserver.resource[\"fill_your_reg\"\
+    ][\"GET\"] = (ostream& response, Request& request) (\n    string number_request\
+    \ = request.path_match[1];\n    response << \"HTTP/1.1 200 OK\\r\\nContent-Length:\
+    \ \" << number.length() << \"\\r\\n\\r\\n\" << number\n);\n\n// peocell GET request;\
+    \ anonymous function will be called if no other matches\n// response files in\
+    \ folder web/\n// default: index.html\nserver.default_resource[\"fill_your_reg\"\
+    ][\"GET\"] = (ostream& response, Request& request) (\n    string filename = \"\
+    www/\";\n    string path = request.path_match[i];\n\n// forbidden use `.` access\
+    \ content outside folder web/\nsize_t last_pos = path.find(\".\");\nsize_t current_pos\
+    \ = 0;\nsize_t pos;\nwhile((pos=path.find(\\'.', current_pos)) != string::npos\
+    \ && pos != last_pos) {\n    current_pos = pos;\n    path.erase(pos, 1);\n   \
+    \ last_pos--;\n}\n\n// (...)\n}\n```\n\n```\nserver.start();\n```"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "# CHAPTER 07 PARALLELISM AND CONCURRENCY\n\nAn suggested solution can be found\
+    \ here.\n\n# Further Readings\n\n+   1. Comments from std::regex's author\n2.\
+    \ Library document of Regular Expression\n\n# Chapter 07 Parallelism and Concurrency\n\
+    \n# 7.1 Basic of Parallelism\n\nstd::thread is used to execute a thread instance,\
+    \ so it is the basis for all concurrent programming. It needs to include the <thread>\
+    \ header file when using it. It provides a number of basic thread operations,\
+    \ as as get_id() to get the thread ID of the thread being created, use join()\
+    \ to join a thread, etc., for example:\n\n```\n#include <iostream>\n#include <thread>\n\
+    ```\n\n```\nint main() {\n    std::thread t([()]{\n        std::cout << \"hello\
+    \ world.\" << std::endl;\n    });\n    t.join();\n    return 0;\n}\n```\n\n# 7.2\
+    \ Mutex and Critical Section\n\nWe have already learned the basics of concurrency\
+    \ technology in the operating system, or in the database, and mutex is one of\
+    \ the cores. C++11 introduces a class related to mutex, with all related functions\
+    \ in the <mutex> header file.\n\nstd::mutex is the most basic mutex class in C++11,\
+    \ and you can create a mutex by instantiating std::mutex. It can be locked by\
+    \ its lock(), and unlock() can be unlocked. But in the process of writing the\
+    \ code, it is not to directly call the member function. Because calling member\
+    \ functions, you need to call unlock() at the exit of each critical section, and\
+    \ of course, exceptions. At this time, C++11 also provides a template class std::lock_guard\
+    \ for the RAII syntax for the mutex.\n\nRAII guarantees the exceptional security\
+    \ of the code while keeping the simplicity of the code."
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "# 7.2 Mutex and Critical Section\n\n```\n#include <iostream>\n#include <thread>\n\
+    ```\n\n```\nint v = 1;\n\nvoid critical_section(int change_v) {\n    static std::mutex\
+    \ mtx;\n    std::lock_guard<std::mutex> lock(mtx);\n\n    // execute contention\n\
+    \    v = change_v;\n\n    // mtx will be released after leaving the scope\n}\n\
+    \nint main() {\n    std::thread t1(critical_section, 2), t2(critical_section,\
+    \ 3);\n    t1.join();\n    t2.join();\n\n    std::cout << v << std::endl;\n  \
+    \  return 0;\n}\n```\n\nC++ guarantees that all stack objects will be destroyed\
+    \ at the end of the declaration period, such code is also extremely safe. Whether\
+    \ critical_section() returns normally or if an exception is thrown in the middle,\
+    \ a stack rollback is thrown, and unlock() is automatically called.\n\nAnd std::unique_lock\
+    \ is more flexible than std::lock_guard, std::unique_lock is more flexible. Objects\
+    \ of std::unique_lock manage the locking and unlocking operations on the mutex\
+    \ object with exclusive ownership (no other unique_lock objects owning the ownership\
+    \ of a mutex object). So in concurrent programming, it is recommended to use std::unique_lock.\n\
+    \nstd::lock_guard cannot explicitly call lock and unlock, and std::unique_lock\
+    \ can be called anywhere after the declaration. It can reduce the scope of the\
+    \ lock and provide higher concurrency.\n\nIf you use the condition variable std::condition_variable::wait\
+    \ you must use std::unique_lock as a parameter.\n\nFor instance:\n\n```\n#include\
+    \ <iostream>\n#include <thread>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "# 7.3 Future\n\n```\nint v = 1;\n\nvoid critical_section(int change_v) {\n\
+    \    static std::mutex mtx;\n    std::unique_lock<std::mutex> lock(mtx);\n   \
+    \ // do contention operations\n    v = change_v;\n    std::cout << v << std::endl;\n\
+    \    // release the lock\n    unlock();\n\n    // during this period,\n    //\
+    \ others are allowed to acquire v\n\n    // start another group of contention\
+    \ operations\n    // lock again\n    lock();\n    v += 1;\n    std::cout << v\
+    \ << std::endl;\n}\n\nint main() {\n    std::thread t1(critical_section, 2), t2(critical_section,\
+    \ 3);\n    t1.join();\n    t2.join();\n    return 0;\n}\n```\n\n# 7.3 Future\n\
+    \nThe Future is represented by std::future, which provides a way to access the\
+    \ results of asynchronous operations. This sentence is very difficult to understand.\
+    \ In order to understand this feature, we need to understand the multi-threaded\
+    \ behavior before C++11.\n\nImagine if main thread A wants to open a new thread\
+    \ B to perform some of our expected tasks and return a result. At this time, thread\
+    \ A may be busy with other threads, and have no time to take into account the\
+    \ results of B. So naturally hope to get the result of thread B at a certain time.\n\
+    \nBefore the introduction of std::future in C++11, the usual practice is: Create\
+    \ a variable, start task B in thread A, start an event when it is ready, and save\
+    \ the result in a global variable. The main function A doing other things. When\
+    \ the result is needed, a thread is called to wait for the function to get the\
+    \ result of the execution."
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "# 7.4 Condition Variable CHAPTER 07 PARALLELISM AND CONCURRENCY\n\nThe std::future\
+    \ provided by C++11 simplifies this process and can be used to get the results\
+    \ of asynchronous tasks. Naturally, we can imagine it as a simple means of thread\
+    \ synchronization, namely the barrier.\n\nTo see an example, we use extra std::packaged_task,\
+    \ which can be used to wrap any target that can be called for asynchronous calls.\n\
+    \n```\n#include <iostream>\n#include <thread>\n#include <future>\n\nint main()\
+    \ {\n    // a lambda expression that returns 7 into a std::packaged_task\n   \
+    \ std::packaged_task<int> task([](){return 7;});\n    // get the future of task\n\
+    \    std::future<int> result = task.get_future(); // run task in a thread\n  \
+    \  std::thread(std::move(result)).detach();\n    std::cout << \"waiting...\";\
+    \ // block until future has arrived\n    result.wait();\n    // output result\n\
+    \    std::cout << \"done!\" << std::endl << \"future result is \" << result.get()\
+    \ << std::endl;\n\n    return 0;\n}\n```\n\nAfter encapsulating the target to\
+    \ be, you can use get_future() to get a std::future object to implement thread\
+    \ synchronization later.\n\n# 7.4 Condition Variable\n\nThe condition variable\
+    \ std::condition_variable was born to solve the deadlock and was introduced when\
+    \ the mutex operation was not enough. For example, a thread may need to wait for\
+    \ a condition to be true to continue execution. A dead wait loop can cause all\
+    \ threads to fail to enter the critical section so when the condition is true,\
+    \ a deadlock. Therefore, the condition_variable instance is created primarily\
+    \ to wake up a thread and avoid deadlocks. notify_one() of std::condition_variable\
+    \ is is to notify all threads. Below is an example of a producer and consumer\
+    \ model:\n\n```\n#include <queue>\n#include <chrono>\n#include <mutex>\n#include\
+    \ <thread>\n#include <iostream>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "# 7.4 Condition Variable\n\n```\n#include <condition_variable>\n```\n\n```\n\
+    int main() {\n    std::queue<int> produced_nums;\n    std::mutex mtx;\n    std::condition_variable\
+    \ cv;\n    bool notified = false; // notification sign\n\n    auto producer =\
+    \ [&]() {\n        for (int i = 0; i; i++) {\n            std::thread::sleep_for(std::chrono::milliseconds(500));\n\
+    \            std::unique_lock<std::mutex> lock(mtx);\n            std::cout <<\
+    \ \"producing \" << i << std::endl;\n            produced_nums.push(i);\n    \
+    \        notified = true;\n            cv.notify_all();\n        }\n    };\n\n\
+    \    auto consumer = [&]() {\n        while (true) {\n            std::unique_lock<std::mutex>\
+    \ lock(mtx);\n            while (!notified) // avoid spurious wakeup\n       \
+    \         cv.wait(lock);\n\n            // temporal unlock to allow producer produces\
+    \ more rather than\n            // let consumer hold the lock until its. consumed.\n\
+    \            lock.unlock();\n            std::thread::sleep_for(std::chrono::milliseconds(1000));\
+    \ // consumer is slower\n            lock.lock();\n            if (!produced_nums.empty())\
+    \ {\n                std::cout << \"consuming \" << produced_nums.front() << std::endl;\n\
+    \                produced_nums.pop();\n            }\n            notified = false;\n\
+    \        }\n    };\n\n    std::thread p(producer);\n    std::thread cs[2];\n \
+    \   for (int i = 0; i < 2; ++i) \n```"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "# 7.5 Atomic Operation and Memory Model\n\n```\ncs[i] = std::thread(consumer);\n\
+    }\nfor (int i = 0; i < 2; ++i) {\n    cs[i].join();\n}\nreturn 0;\n```\n\nIt is\
+    \ worth mentioning that although we can use notify_one() in the producer, it is\
+    \ not really recommended to use it. Because in the case of multiple consumers,\
+    \ our consumer implementation simply gives up the lock holding, which makes it\
+    \ possible for other consumers to compete for this lock, so as to utilize the\
+    \ concurrency between multiple consumers. Having said that, but in fact because\
+    \ of existence of std::mutex, we simply can't expect multiple consumers to be\
+    \ able to produce content in a parallel consumer queue, and we still need a more\
+    \ granular approach.\n\n# 7.5 Atomic Operation and Memory Model\n\nCareful readers\
+    \ may be tempted by the fact that the example of the producer consumer model in\
+    \ the previous section may have compiler optimizations that cause program errors.\
+    \ For example, the boolean **notified** is not modified by *volatile*, and the\
+    \ compiler has optimizations for this variable, as the value of a register. As\
+    \ a result, the consumer thread can never observe the change of this value. This\
+    \ is a good question. To explain this problem, we need to further discuss the\
+    \ concept of memory model introduced from C++11. Let's first look at a question.\
+    \ What is the output of the following code?\n\n```\n#include <thread>\n#include\
+    \ <iostream>\n\nint main() {\n    int a = 0;\n    volatile int flag = 0;\n\n \
+    \   std::thread t1([&]() {\n        while (flag != 1) {\n            int b = a;\n\
+    \            std::cout << \"b = \" << b << std::endl;\n        }\n    });\n\n\
+    \    std::thread t2([&]() {\n    a = 5;\n    flag = 1;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '7.5 Atomic Operation and Memory Model CHAPTER 07 PARALLELISM AND CONCURRENCY
+
+
+    ));
+
+
+    t1.join();
+
+
+    t2.join();
+
+
+    return 0;
+
+
+    }
+
+
+    Intuitively, a = 5; seems in t2 seems to always execute before flag = 1;, and
+    while (flag != 1) in t1 seems std::cout << "b" << b << std::endl; will not be
+    executed before the mark is changed. Logically, it seems that the value of b should
+    be equal to 5. But the actual situation is much more complicated than this, or
+    the code itself is undefined behavior, because for a flag, they are read and written
+    in two parallel threads. There has been competition. Again, even if we ignore
+    competing reading and writing, it is still possible to receive out-of-order execution
+    of the CPU, and the impact of the compiler on the rearrangement of instructions.
+    Cause a = 5 to occur after flag = 1. Thus b may output 0.
+
+
+    # Atomic Operation
+
+
+    std::mutex can solve the problem of concurrent read and write, but the mutex is
+    an operating system level function. This is because the implementation of a mutex
+    usually contains two basic principles:
+
+
+    +   1. Provide automatic state transition between threads, that is, "lock" state
+
+    2. Ensure that the memory of the manipulated variable is isolated from the critical
+    section during the whole mutex operation
+
+
+    This is a very strong set of synchronization conditions, in other words, when
+    it is finally compiled into a CPU instruction, it will behave as a lot of instructions
+    (we will look at how to implement a simple mutex later). This seems too harsh
+    for a variable that requires only atomic operations (no intermediate state).
+
+
+    The research on synchronization conditions has a very long history, and we will
+    not get into details here. Readers should understand under the modern CPU architecture,
+    atomic operations at the CPU instruction level are provided. Therefore, in the
+    C + 11 multi-threaded thread safe variable reading and writing, the introduction
+    of the std::atomic template, so that we instantiate an atomic type, will be a
+    Atomic type read and write operations are minimized from a set of instructions
+    to a single CPU instruction. E.g:
+
+
+    ```
+
+    std::atomic<int> counter;
+
+    ```
+
+
+    And provides basic member functions for atomic types of integers or floating-point
+    numbers, for example, Including fetch_add, fetch_sub, etc., and the corresponding
+    +, - version is provided by overload. For example, the following example:
+
+
+    74'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "# 7.5 Atomic Operation and Model CHAPTER 07 PARALLELISM AND CONCURRENCY\n\n\
+    ```\n#include <atomic>\n#include <thread>\n#include <iostream>\n```\n\n```\nstd::atomic<int>\
+    \ count = {0};\n```\n\n```\nint main() {\n    std::thread t1([](){\n        count.fetch_add(1);\n\
+    \    });\n    std::thread t2([](){\n        count++; // identical to fetch_add\n\
+    \        count += 1; // identical to fetch_add\n    });\n    t1.join();\n    t2.join();\n\
+    \    std::cout << count << std::endl;\n    return 0;\n}\n```\n\nOf course, not\
+    \ all types provide atomic operations because the feasibility of atomic operations\
+    \ depends on the architecture of the CPU and whether the type structure being\
+    \ instantiated satisfies the memory alignment requirements of the architecture,\
+    \ so we can always pass std::atomic<T>::is_lock_free to check if the atom type\
+    \ needs to support atomic operations, for example:\n\n```\n#include <atomic>\n\
+    #include <iostream>\n```\n\n```\nstruct A {\n    float x;\n    int y;\n    long\
+    \ long z;\n}\n```\n\n```\nint main() {\n    std::atomic<A> a;\n    std::cout <<\
+    \ std::boolalpha << a.is_lock_free() << std::endl;\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "# 7.5 Atomic Operation and Memory Model CHAPTER 07 PARALLELISM AND CONCURRENCY\n\
+    \n# Consistency Model\n\nMultiple threads executing in parallel, discussed at\
+    \ some macro level, can be roughly considered a distributed system. In a distributed\
+    \ system, any communication or even local operation takes a certain amount of\
+    \ time, and even unreliable communication.\n\nIf we force the operation of a variable\
+    \ v between multiple threads to be atomic, that is, any thread after the operation\
+    \ of v Others can synchronize to changes in v, for the variable v, which appears\
+    \ as a sequential execution of the program, it does not have any efficiency gains\
+    \ due to the introduction of multithreading. Is there any way to accelerate this\
+    \ properly? The answer is to weaken the synchronization conditions between processes\
+    \ in atomic operations.\n\nIn principle, each thread can correspond to a cluster\
+    \ node, and communication between threads is almost equivalent to communication\
+    \ between cluster nodes. Weakening the synchronization conditions between processes,\
+    \ usually we consider four different consistency models:\n\n+   1. Linear consistency:\
+    \ Also known as strong consistency or atomic consistency. It requires that any\
+    \ read operation can read the most recent write of a certain data, and the order\
+    \ of operation of all threads is consistent with the order under the global clock.\n\
+    \n```\nx.store(1)           x.load()\nT1          -------+----------->\n\nT2--------------------------->\n\
+    \            x.store(2)\n```\n\nIn this case, thread T1, T2 is twice atomic to\
+    \ x, and x.store(1) is strictly before x.store(2). x.store(2) strictly occurs\
+    \ before x.load(). It is worth mentioning that linear consistency requirements\
+    \ for global clocks are difficult to achieve, which is why people continue to\
+    \ study other consistent algorithms under this weaker consistency.\n\n+   2. Sequential\
+    \ consistency: It is also required that any read operation can read the last data\
+    \ written by the data, but it is not required to be consistent with the order\
+    \ of the global clock.\n\n```\nx.store(1)   x.store(3)   x.load()\nT1        \
+    \  -------+----------+------->\nT2--------------------------->\n            x.store(2)\n\
+    ```\n\nor"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# 7.5 Atomic Operation and Memory Model CHAPTER 07 PARALLELISM AND CONCURRENCY
+
+
+    x.store(1) x.store(3) x.load()
+
+    T1 ----------+-------+-----------+----->
+
+
+    T2 -------------------------------------
+
+    x.store(2)
+
+
+    Under order consistency requirement, x.load() must read the last written data,
+    so x.store(2) and x.store(1) do not have any guarantees, as x.store(2) of T2 occurs
+    before x.store(3).
+
+
+    3. Causal consistency: its requirements are further reduced, so only the sequence
+    of causal operations is guaranteed, and the order of non-causal operations is
+    not required.
+
+
+    a = 1 b = 2
+
+    T1 ----------+----------------->
+
+
+    T2 -------------------------------------
+
+    x.store(3) c = a + b y.load()
+
+
+    or
+
+    a = 1 b = 2
+
+    T1 ----------+--------------------
+
+
+    T2 ----------+---------------------
+
+    x.store(3) y.load() c = a + b
+
+
+    or
+
+    b = 2 a = 1
+
+    T1 ----------+--------------------
+
+
+    T2 -------------------------------------
+
+    y.load() c = a + b x.store(3)
+
+
+    The three examples given above are all causal consistent, because in the whole
+    process, only c has a dependency on a and b, and x and y are not related in this
+    example. (But in actual situations we need more detailed information to determine
+    that x is not related to y)'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "# 7.5 Atomic Operation and Memory Model CHAPTER 07 PARALLELISM AND CONCURRENCY\n\
+    \n4. Final Consistency: It is the weakest consistency requirement. It only guarantees\
+    \ that an operation will be observed at a certain point in the future, but does\
+    \ not require the observed time. So we can even strengthen this condition a bit,\
+    \ for example, to specify that the time observed for an operation is always bounded.\
+    \ Of course this is no longer within our discussion.\n\n```\nx.store(3)   x.store(4)\n\
+    T1--------------------------------------------------------------------->\nT2--------------------------------------------------------------------->\n\
+    x.read()      x.read()      x.read()      x.read()\n```\n\nIn the case above,\
+    \ if we assume the initial value of x is 0, then the four 'x.read()' in T2 may\
+    \ not be limited to the following:\n\n```\n3 4 4 4 // The write operation of x\
+    \ was quickly observed\n0 3 3 4 // There is a delay in the observed time of the\
+    \ x write operation\n0 0 0 4 // The last read read the final value of x, but the\
+    \ previous changes were not observed.\n0 0 0 0 // The write operation of x is\
+    \ not observed in the current time, but the situation\n```\n\n# Memory Orders\n\
+    \nTo achieve the ultimate performance and achieve consistency of various strength\
+    \ requirements, C++11 defines six different memory sequences for atomic operations.\
+    \ The option std::memory_order specifies synchronization models between multiple\
+    \ threads:\n\n1. Relaxed model: Under this model, atomic operations within a single\
+    \ thread are executed sequentially, and instruction ordering is not allowed, but\
+    \ the order of atomic operations between threads is arbitrary. The type is specified\
+    \ by std::memory_order_relaxed. Let's look at an example:\n\n```\nstd::atomic<int>\
+    \ counter = {0};\nstd::vector<std::thread> vt;\nfor (int i = 0; i < 100; ++i)\
+    \ {\n    vt.emplace_back([&]{\n        counter.fetch_add(i, std::memory_order_relaxed);\n\
+    \    });\n}\nfor (auto& t : vt) {\n    t.join();\n}\nstd::cout << \"current counter:\
+    \ \" << counter << std::endl;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "# 7.5 Atomic Operation and Model      CHAPTER 07 PARALLELISM AND CONCURRENCY\n\
+    \n2. Release/consumption model: In this model, we begin to limit the order of\
+    \ operations between processes. If a thread needs to modify a value, but another\
+    \ thread has a dependency on that operation of the value, that is, the latter\
+    \ depends. Specifically, A has completed three writes to x, and B releases only\
+    \ on the third write operation, regardless of the first two writes of x, A when\
+    \ calling x.release() (ie use std::memory_order_release), the option std::memory_order_consume\
+    \ ensures that B observes when calling x.load()) Three writes to x. Let's look\
+    \ at an example:\n\n```\n// initialize as nullptr to prevent consumer load a dangling\
+    \ pointer\nstd::atomic<int*> ptr(nullptr);\nint v;\nstd::thread producer([&]()\
+    \ {\n    int* p = new int(42);\n    ptr.store(p, std::memory_order_release);\n\
+    });\n\nstd::thread consumer([&]() {\n    int* p;\n    while (!(p = ptr.load(std::memory_order_consume)))\
+    \ {\n        std::cout << \"x: \" << *p << std::endl;\n        std::cout << \"\
+    y: \" << v << std::endl;\n    }\n});\n\nproducer.join();\nconsumer.join();\n```\n\
+    \n3. Release/Acquire model: Under this model, we can further tighten the order\
+    \ of atomic operations between different threads, specifically specifying the\
+    \ timing between releasing std::memory_order_acquire and getting std::memory_order_acquire.\
+    \ All writes before the release operation are visible to any other thread, ie,\
+    \ happens-before.\n\nAs you can see, std::memory_order_release ensures that the\
+    \ write behavior does not occur before the release operation, which is a forward\
+    \ barrier, std::memory_order_acquire ensures that its previous write behavior\
+    \ does not occur after this acquisition operation, which is a backward barrier.\
+    \ For the std::memory_order_acq_rel option, it combines the characteristics of\
+    \ two and defines a memory barrier, so that the current thread's reading and writing\
+    \ of memory will not be rearranged before and after this operation.\n\nLet's check\
+    \ out an example:\n\n```\nstd::vector<int> v;\nstd::atomic<int> flag = {0};\n\
+    std::thread release([&]() {\n    v.push_back(42);\n    flag.store(1, std::memory_order_release);\n\
+    });\n```"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "# 7.5 Atomic Operation and Memory Model CHAPTER 07 PARALLELISM AND CONCURRENCY\n\
+    \n```\n));\nstd::thread acquire([&]() {\n    int expected = 1; // must before\
+    \ compare_exchange_strong\n    while (!flag.compare_exchange_strong(expected,\
+    \ 2, std::memory_order_acq_rel)) {\n        expected = 1; // must after compare_exchange_strong\n\
+    \    }\n    // flag has changed to 2\n});\nstd::thread acquire([&]() {\n    while\
+    \ (flag.load(std::memory_order_acquire) < 2) {\n        std::cout << v.at(0) <<\
+    \ std::endl; // must be 42\n    }\n});\nrelease.join();\nacqrel.join();\nacquire.join();\n\
+    ```\n\nIn this case use compare_exchange_strong, which is the Compare-and-swap\
+    \ primitive, which has a weaker version, compare_exchange_weak, which allows a\
+    \ failure to be returned if the exchange is unsuccessful. The reason is due to\
+    \ a false failure on some platforms, specifically, when the CPU performs a context\
+    \ switch, another thread loads the address to produce an inconsistency. In addition,\
+    \ the performance of compare_exchange_strong may be slightly worse than compare_exchange_weak,\
+    \ but in most cases, compare_exchange_strong should be limited.\n\n4. Sequential\
+    \ Consistent Model: Under this model, atomic operations satisfy consistency, which\
+    \ in turn can cause performance loss. It can be specified explicitly by std::memory_order_seq_cst.\
+    \ Let's look at a simple example:\n\n```\nstd::atomic<int> counter{0};\nstd::vector<std::thread>\
+    \ vt;\nfor (int i = 0; i < 100; ++i) {\n    vt.emplace_back([&](){\n        counter.fetch_add(1,\
+    \ std::memory_order_seq_cst);\n    });\n}\n\nfor (auto & t : vt) {\n    t.join();\n\
+    }\nstd::cout << \"current counter:\" << counter << std::endl;\n```\n\nThis example\
+    \ is essentially the same as the first loose example. Just change the memory order\
+    \ of the atomic operation to memory_order_seq_cst. Interested readers can write\
+    \ their own programs to measure the performance difference caused by these two\
+    \ memory sequences."
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "# Conclusion\n\n# Conclusion\n\nThe C++11 language layer provides support for\
+    \ concurrent programming. This section introduces `std::thread/mutex/std::future`,\
+    \ an important tool that can't be avoided in concurrent programming. In addition,\
+    \ we also introduced the `memory model` as one of the most important features\
+    \ of C++11. They provide a critical foundation for standardized high performance\
+    \ computing of C++.\n\n# Exercises\n\n+   1. Write a simple thread pool that provides\
+    \ the following features:\n\n```\nThreadPool p(4); // specify four work thread\n\
+    \n// enqueue a task, and return a std::future\nauto f = pool.enqueue([](int life)\
+    \ {\n    return meaning;\n}, 42);\n\n// fetch result from future\nstd::cout <<\
+    \ f.get() << std::endl;\n```\n\n+   2. Use std::atomic<bool> to implement a mutex.\n\
+    \n# Further Readings\n\n+   - C++ ( )\n- Thread document\n- Herlihy, M. P., &\
+    \ Wing, J. M. (1990). Linearizability: a correctness condition for concurrent\
+    \ objects. ACM Transactions on Programming Languages and Systems, 12(3), 463–492.\
+    \ https://doi.org/10.1145/78969.78972\n\n# Chapter 08 File System\n\nThe file\
+    \ system library provides functions related to the operation of the file system,\
+    \ path, files, directories, and so on. Similar to the regular expression library,\
+    \ he was one of the first libraries launched by boost and eventually merged into\
+    \ the C++ standard.\n\n# 8.1 Document and Link\n\nTODO:"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: "# 8.2 std::filesystem\n\nTODO:\n\n# Further Readings\n\n# Chapter 09 Minor\
+    \ Features\n\n# 9.1 New Type\n\nlong long int\n\nlong long int is not the first\
+    \ to be introduced in C++11. In fact, as early as C99, long long int has been\
+    \ included in the C standard, so most compilers already support it. C++11 formally\
+    \ incorporate it into the standard library, specifying a long long int type with\
+    \ at least 64 bits.\n\n# 9.2 noexcept and Its Operations\n\nOne of the big advantages\
+    \ of C++ over C is that C++ itself defines a complete set of exception handling\
+    \ mechanisms. However, before C++11, almost no one used to write an exception\
+    \ declaration after the function name. Starting from C++11, this mechanism was\
+    \ deprecated, so we will not discuss or introduce the previous mechanism. How\
+    \ to work and how to use it, you should not take the initiative to understand\
+    \ it.\n\nC++11 simplifies exception declarations into two cases:\n\n+   1. The\
+    \ function may throw any exceptions\n2. The function can't throw any exceptions\n\
+    \nAnd use noexcept to limit these two behaviors, for example:\n\n```\nvoid may_throw();\
+    \      // May throw any exception\nvoid no_throw() noexcept; // Cannot throw any\
+    \ exception\n```\n\nIf a function is modified with noexcept, the compiler will\
+    \ use std::terminate() to immediately terminate the program.\n\nnoexcept can also\
+    \ be used as an operator to manipulate an expression. When the expression has\
+    \ no exception, it returns true, otherwise it returns false.\n\n```\n#include\
+    \ <iostream>\nvoid may_throw() {\n    throw;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "# 9.2 noexcept and Its Operations\n\n```\n}\nauto non_block_throw = []() {\n\
+    \    may_throw();\n}\nvoid no_throw() noexcept {\n    return;\n}\nauto block_throw\
+    \ = []() noexcept {\n    no_throw();\n}\nint main() {\n\n```\n\n```\nstd::cout\
+    \ << std::boolalpha\n    << \"may_throw() noexcept?\" << noexcept(may_throw())\
+    \ << std::endl\n    << \"no_throw() noexcept?\" << noexcept(no_throw()) << std::endl\n\
+    \    << \"lmay_throw() noexcept?\" << noexcept(non_block_throw()) << std::endl\n\
+    \    << \"Inno_throw() noexcept?\" << noexcept(block_throw()) << std::endl;\n\
+    \    return 0;\n}\n```\n\nnoexcept can modify the function of blocking exceptions\
+    \ after modifying a function. If an exception is generated internally, we will\
+    \ not trigger. For instance:\n\n```\ntry {\n    may_throw();\n} catch (...) {\n\
+    \    std::cout << \"exception captured from may_throw()\" << std::endl;\n}\ntry\
+    \ {\n    non_block_throw();\n} catch (...) {\n    std::cout << \"exception captured\
+    \ from non_block_throw()\" << std::endl;\n}\ntry {\n    block_throw();\n} catch\
+    \ (...) {\n    std::cout << \"exception captured from block_throw()\" << std::endl;\n\
+    }\n```\n\nThe final output is:\nexception captured, from may_throw()"
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "# 9.3 Literal\n\nexception captured, from non_block_throw()\n\n# 9.3 Literal\n\
+    \nRaw String Literal\n\nIn traditional C++, it is very painful to write a string\
+    \ full of special characters. For example, a string containing HTML ontology to\
+    \ add a large number of escape characters. For example, a file path on Windows\
+    \ often as: C:\\\\Path\\\\To\\\\File.\n\nC++11 provides the original string literals,\
+    \ which can be decorated with R in front of a string, and the original string\
+    \ is wrapped in parentheses, for example:\n\n```\n#include <iostream>\n#include\
+    \ <string>\n\nint main() {\n    std::string str = R\"(C:\\\\Path\\\\To\\\\File)\"\
+    ;\n    std::cout << str << std::endl;\n    return 0;\n}\n```\n\n# Custom Literal\n\
+    \nC++11 introduces the ability to customize literals by overloading the double\
+    \ quotes suffix operator:\n\n```\n// String literal customization must be set\
+    \ to the following parameter list\nstd::string operator\"\"_wow1(const char *wow1,\
+    \ size_t len) {\n    return std::string(wow1)+\"woooooooow, amazing\";\n}\n\n\
+    std::string operator\"\"_wow2(unsigned long long i) {\n    return std::to_string(i)+\"\
+    woooooooow, amazing\";\n}\n\nint main() {\n    auto str = \"abc\"_wow1;\n    auto\
+    \ num = 1_wow2;\n    std::cout << str << std::endl;\n    std::cout << num << std::endl;\n\
+    \    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "# 9.4 Memory Alignment\n\nCustom literals support literals:\n\n+   - Integer\
+    \ literal: When overloading, you must use unsigned long long, const char *, and\
+    \ template literal operator parameters. The former is used in the above code;\n\
+    - Floating-point literals: You must use long double, const char *, and template\
+    \ literals when overloading;\n- String literals: A parameter table of the form\
+    \ (const char *, size_t) must be used;\n- Character literals: Parameters can only\
+    \ be char, wchar_t, char16_t, char32_t.\n\n# 9.4 Memory Alignment\n\nC++ 11 introduces\
+    \ two new keywords, alignof and alignas, to support control of memory alignment.\
+    \ The alignof keyword can get a platform-dependent value of type std::size_t to\
+    \ query the alignment of the platform. Of course, we are sometimes not satisfied\
+    \ with this, and even want to customize the alignment of the structure. Similarly,\
+    \ C++ 11 aligns. To reshape the alignment of a structure. Let's look at two examples:\n\
+    \n```\n#include <iostream>\n\nstruct Storage {\n    char a;\n    int b;\n    double\
+    \ c;\n    long long d;\n};\n\nstruct alignas(std::max_align_t) AlignasStorage\
+    \ {\n    char a;\n    int b;\n    double c;\n    long long d;\n};\n\nint main()\
+    \ {\n    std::cout << alignof(Storage) << std::endl;\n    std::cout << alignof(AlignasStorage)\
+    \ << std::endl;\n    return 0;\n}\n```\n\nwhere std::max_align_t requires exactly\
+    \ the same alignment for each scalar type, so it has no difference in maximum\
+    \ scalars. In turn, the result on most platforms is long double, so the alignment\
+    \ requirement for AlignasStorage we get is 8 or 16."
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: "# Conclusion\n\nSeveral of the features introduced in this section are those\
+    \ that use more frequent features from modern C++ features that have not yet been\
+    \ introduced. noexcept is the most important feature. One of its features is to\
+    \ prevent the spread of anomalies, effective Let the compiler optimize our code\
+    \ to the maximum extent possible.\n\n# Chapter 10 Outlook: Introduction of C++20\n\
+    \nC++20 seems to be an exciting update. For example, as early as C++11, the Concept,\
+    \ which was eager to call for high-altitude but ultimately lost, is now on the\
+    \ line. The C++ Organizing Committee decided to vote to finalize C++20 with many\
+    \ proposals, such as Concepts/Module/Coroutine/Ranges/ and so on. In this chapter\
+    \ we'll take a look at some of the important features that C++20 will introduce.\n\
+    \n# Concept\n\nConcept is a further enhancement to C++ template programming. In\
+    \ simple terms, the concept is a compile-time feature. It allows the compiler\
+    \ to evaluate template parameters at compile time, greatly enhancing our experience\
+    \ with template programming in C++. When programming with templates, we often\
+    \ encounter a variety of heinous errors. This is because we have so far been unable\
+    \ to check and limit template parameters. For example, the following two lines\
+    \ of code can cause a lot of almost unreadable compilation errors:\n\n```\n#include\
+    \ <list>\n#include <algorithm>\nint main() {\n    std::list<int> l = {1, 2, 3};\n\
+    \    std::sort(l.begin(), l.end());\n    return 0;\n}\n```\n\nThe root cause of\
+    \ this code error is that std::sort must provide a random iterator for the sorting\
+    \ container, otherwise it will not be used, and we know that std::list does not\
+    \ support random access. In the conceptual language, the iterator in std::list\
+    \ does not satisfy the constraint of the concept of random iterators in std::sort.\
+    \ After introducing the concept, we can constrain the template parameters like\
+    \ this:\n\n```\ntemplate <typename T>\nrequires Sortable<T> // Sortable is a concept\n\
+    void sort(T& c);\n```\n\nabbreviate as:"
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# Module CHAPTER 10 OUTLOOK: INTRODUCTION OF C++20
+
+
+    template<Sortable T> // T is a Sortable typename
+
+
+    void sort(T& c);
+
+
+    Even use it directly as a type:
+
+
+    ```
+
+    sort(Sortable& c); // c is a Sortable type object
+
+    ```
+
+
+    Let''s look at a practical example.
+
+
+    TODO:
+
+
+    # Module
+
+
+    TODO:
+
+
+    # Contract
+
+
+    TODO:
+
+
+    # Range
+
+
+    TODO:
+
+
+    # Coroutine
+
+
+    TODO:
+
+
+    # Conclusion
+
+
+    In general, I finally saw the exciting features of Concepts/Ranges/Modules in
+    C++20. This is still full of charm for a programming language that is already
+    in its thirties.
+
+
+    # Further Readings
+
+
+    +   - Why Concepts didn''t make C++17
+
+    - C++11/14/17/20 Compiler Support
+
+    - C++ History'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# APPENDIX 2: MODERN C++ BEST PRACTICES
+
+
+    # Appendix 1: Further Study Materials
+
+
+    First of all, congratulations on reading this book! I hope this book has raised
+    your interest in modern C++.
+
+
+    As mentioned in the introduction to this book, this book is just a book that takes
+    you quickly to the new features of modern C++ 11/14/17/20, rather than the advanced
+    learning of C++ “Black Magic.” The author of course also thinks about this book,
+    but the content is very difficult and there are few audiences. Here, the author
+    lists some materials that can help you learn more about modern C++ based on this
+    book. I hope I can help you:
+
+
+    +   - C++ Reference
+
+    - CppCon YouTube Channel
+
+    - Ulrich Drepper. What Every Programmer Should Know About Memory. 2007
+
+    - to be added
+
+
+    # Appendix 2: Modern C++ Best Practices
+
+
+    In this appendix we will briefly talk about the best practices of modern C++.
+    In general, the author’s thoughts on C++’s best practices are mainly absorbed
+    from Effective Modern C++ and C++ Style Guide. In this appendix, we will briefly
+    discuss and use the actual examples to illustrate the methods, and introduce some
+    of the author''s personal, non-common, non-sensible best practices, and how to
+    ensure the overall quality of the code.
+
+
+    # Common Tools
+
+
+    TODO:
+
+
+    # Coding Style
+
+
+    TODO:
+
+
+    # Overall Performance
+
+
+    TODO:
+
+
+    # Code Security
+
+
+    TODO:'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# Maintainability
+
+
+    TODO:
+
+
+    # Portability
+
+
+    TODO:'
+  merge: -1
+  img_proc: true
