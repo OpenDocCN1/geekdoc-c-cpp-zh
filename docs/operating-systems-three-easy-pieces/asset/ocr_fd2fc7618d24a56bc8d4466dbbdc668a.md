@@ -1,0 +1,5 @@
+Because the ideas are relatively obvious — no Einsteinian leap is required to come up with the idea of letting the CPU do something else while a I/O is pending — perhaps our focus on “who first?” is misguided. What is certainly clear: as people built these early machines, Interrupts, DMA, and related ideas are all direct outcomes of the nature of fast CPUs and slow devices; if you were there at the time, you might have had similar ideas.
+
+# 36.10 Summary
+
+You should now have a very basic understanding of how an OS interacts with a device. Two techniques, the interrupt and DMA, have been introduced to help with device efficiency, and two approaches to access device registers, explicit I/O instructions and memory-mapped I/O, have been described. Finally, the notion of a device driver has been presented, showing how the OS itself can encapsulate low-level details and thus make it easier to build the rest of the OS in a device-neutral fashion.

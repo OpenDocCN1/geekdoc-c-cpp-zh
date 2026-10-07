@@ -1,0 +1,12 @@
+# PAGING: FASTER TRANSLATIONS (TLBs)
+
+> TIP: RAM Isn’t Always RAM (CULLER’S LAW)
+The term random-access memory, or RAM, implies that you can access any part of RAM just as quickly as another. While it is generally good to think of RAM in this way, because of hardware/OS features such as the TLB, accessing a particular page of memory may be costly, if that page isn't currently mapped by your TLB. Thus, it is always good to remember the implementation tip: RAM isn't always. Sometimes randomly accessing your address space, particularly if the number of pages exceeds the TLB coverage, can lead to severe performance penalties. Because one of our advisors, David Culler, used to point to the TLB as the reason of many performance problems, we name this in his honor: Culler’s Law.
+
+described above. One question for you: what should the OS do if there are more than 256 (2⁸ pages) running at a time? Finally, we have 3 Coherence (C) bits, which determine how a page is cached by the hardware (a bit beyond the scope of these notes); a dirty bit is marked when the page has been written to (we will see the use of this later); a valid bit tells the TLB if there is a valid translation in the entry. There is also a mask field (not shown), which supports multiple page sizes; we’ll see having larger pages might be useful. Finally, many of the 64 bits are unused (shaded gray in the diagram).
+
+MIPS TLB software is managed, there needs to be instructions to update the TLB. The MIPS TLB provides four instructions: TLBP, which probes the TLB if a particular translation is in; TLBLR, which reads the contents of a TLB entry into registers; TLBI, which replaces a special TLB entry; and TLWI, which replaces a random TLB entry. The OS uses these instructions to manage the TLB’s contents. It is of crucial fact that these instructions are privileged; imagine what a user process could do if it modify the contents of the TLB (hint: just about anything, including taking over the machine, run its malicious “OS”, or even make the Sun disappear).
+
+# 19.8 Summary
+
+We have seen how hardware can make us address translation faster. By providing a small, dedicated on-chip TLB as an address-translation cache, most memory references will hopefully be handled without having to access the page table in main memory. Thus, in the common case,

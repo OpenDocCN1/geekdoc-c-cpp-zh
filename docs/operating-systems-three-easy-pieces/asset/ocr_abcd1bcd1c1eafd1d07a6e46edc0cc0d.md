@@ -1,0 +1,9 @@
+# Mechanism: Address Translation
+
+In developing the virtualization of the CPU, we focused on a general mechanism known as limited direct execution (or LDE). The idea behind LDE is simple: for the most part, let the program run directly on the hardware; however, at certain key points in time (such as when a process issues a system call, or a timer interrupt occurs), arrange so the OS gets involved and makes sure "right" thing happens. Thus, the OS, with a little hardware support, tries its best to get out of the way of the running program, to deliver an efficient virtualization; however, by interposing at those critical points in time, the OS ensures that it maintains control and together are two of the main goals of any modern operating system.
+
+In virtualizing memory, we will pursue a similar strategy, attaining both efficiency and control while producing the desired virtualization. Efficiency dictates that we make use of hardware support, which at first will be quite rudimentary (e.g., just a few registers) but will grow to be fairly complex (e.g., TLBs, page-table support, and so forth, as you will see). Control implies that the OS ensures that no application is allowed to access any memory but its own; thus, to protect applications from one another, and the OS from applications, we will need help from the hardware here too. Finally, to provide flexibility, we'd like for programs to be able to use their address spaces in whatever way they would like, making the system easier to program. And thus we arrive at the refined crux:
+
+> THE CRUX:
+HOW TO EFFICIENTLY AND FLEXIBLY VIRTUALIZE MEMORY
+How can we build an efficient virtualization of memory? How do we provide the flexibility needed by applications? How do we maintain control over which memory locations an application can access, and thus ensure that application accesses are properly restricted? How do we do all of this efficiently?

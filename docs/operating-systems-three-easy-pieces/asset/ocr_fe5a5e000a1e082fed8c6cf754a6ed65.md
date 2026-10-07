@@ -1,0 +1,11 @@
+ple, if an OS froze once a year, you would just reboot it and get happily (or grumpily) on your work. If deadlocks are rare, such a non-solution is indeed quite pragmatic.
+
+Many database systems employ deadlock detection and recovery techniques. A deadlock detector runs periodically, building a resource graph and checking it for cycles. In the event of a cycle (deadlock), the system needs to be restarted. If more intricate repair of data structures is required, a human being may be involved to ease the process.
+
+More detail on database concurrency, and related issues can be found elsewhere [B+87, K87]. Read these works, or better yet, take a course on databases to learn more about this and interesting topic.
+
+# 32.4 Summary
+
+In this chapter, we have studied the types of bugs that occur in concurrent programs. The first type, non-deadlock bugs, are surprisingly common, but often easier to fix. They include atomicity violations, in which a sequence of instructions that should have been executed together was not, and order violations, in which the needed order between threads was not enforced.
+
+We have also discussed deadlock: why it occurs, and what can be done about it. The problem is as old as concurrency itself, and hundreds of papers have been written about the topic. The best solution in practice is to be careful, develop a lock acquisition order, and thus prevent deadlock from occurring in the first place. Wait-free approaches also have promise, as some wait-free data structures are now including Linux. Finding their way into commonly-used libraries and critical systems, however, their lack of generality and the complexity to develop a new wait-free data structure will limit the overall utility of this approach. Perhaps the best solution is to develop new concurrent programming models: in systems such as MapReduce (from Google) [GD02], programmers can describe certain types of parallel computations without locks whatsoever. Locks are problematic by their very nature; perhaps we should seek to avoid using them unless we truly must.

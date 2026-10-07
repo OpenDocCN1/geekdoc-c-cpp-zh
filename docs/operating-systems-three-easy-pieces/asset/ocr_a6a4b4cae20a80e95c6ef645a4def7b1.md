@@ -1,0 +1,15 @@
+# COMPLETE VIRTUAL MEMORY SYSTEMS
+
+to disk in one full swoop (thus making them clean). Clustering is used in most modern systems, as the freedom to place pages anywhere within swap space lets the OS groups perform, fewer and bigger writes, and thus improve performance.
+
+# Other Neat Tricks
+
+VMS had two other now-standard tricks: demand zeroing and copy-onwrite. We now describe these lazy optimizations. One form in VMS (and most modern systems) is demand zeroing of pages. To understand this, let's consider the example of adding a page to your address space, in your heap. In a naive implementation, the OS responds to a request to add a page to your heap by finding a page in physical memory, zeroing it for security; otherwise you'd be able to see what was on the page from some other process used it!), then mapping it into your address space (i.e., setting the page table to refer to that page as desired). The naive implementation can be costly, if the page does not get used by the process.
+
+With demand zeroing, the OS instead does little work when the page is added to your address space; it puts an entry in the page table that marks the page inactive. If the process then reads or writes the page, a trap into the OS takes. When handling the trap, the OS notices (usually through some bits marked in the "reserved for OS" portion of the page table) that this is a demand-zero page; at this point, the OS does the needed work of finding a physical page, zeroing it, and mapping it into the process address. If the process never accesses the page, all work is avoided by virtue of demand zeroing.
+
+Another cool optimization found in VMS (and in virtually every modern OS) is copy-write (COW for for), which goes at least to the TENEX operating system [BB+72], is simple: the OS needs to copy a page from one address space to another, instead of copying it, it can map it into the target address space and read it in both spaces. If both addresses read only the page, no further action is taken, and thus the OS has realized a fast copy without actually moving any data.
+
+If, however, one of the address spaces does indeed try to write to the page, it will trap into the OS. The OS will then (lazily) allocate a new page, fill it with the data, and map this new page into the address space of the faulty process. The process then continues and now has its own private copy of the page.
+
+COW is useful for number of reasons. Certainly any sort of shared library can be mapped copy-write on the address spaces of many processes, saving valuable memory. In UNIX systems, COW is even more critical, due to the semantics of fork() and exec(). As you might recall, fork() creates an exact copy of the address space of the caller; with a large address space, making such a copy is slow and data-intensive. Even worse, the address space is immediately
