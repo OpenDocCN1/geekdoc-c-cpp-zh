@@ -1,0 +1,1 @@
+for $e_j$ as the $j$-th column of the $n$-dimensional identity matrix consists of all zeros except for one in the first row. Then, $h_j(\lambda)$ is the $j$-th component of $b_j$. It turns out that all $n$ diagonal elements $h_1(\lambda), \dots, h_n(\lambda)$ can actually be obtained in $O(n)$ operations through

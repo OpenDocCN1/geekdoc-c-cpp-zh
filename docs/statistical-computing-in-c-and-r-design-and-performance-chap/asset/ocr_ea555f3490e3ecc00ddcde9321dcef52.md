@@ -1,0 +1,1 @@
+The basic ideas behind the simpleTemp class are readily generalized to construction of

@@ -1,0 +1,47 @@
+
+## Chapter 1
+## Introduction
+
+It is not uncommon to find that a book on computational statistics will be absent of an explicit definition of what comprises its subject matter area. This may be due, in part, to the amorphous nature of the field that stems from its broad scope. Here we will venture to give a definition of the topic that will at least be applicable to the subsequent pages of this text. Specifically,
+
+Definition 1.1. Computational statistics is the development and application of computational methods for problems in statistics.
+
+A somewhat refined notion of computational statistics might view it as the translation of intractable, as well as tractable in many cases, mathematical problems that arise from the statistics genre into a form where they are amenable (mostly approximate) using computers. This translation generally takes the form of an *algorithm* that represents a step-by-step description of the calculations that must be undertaken to provide the desired solution. But, there is more than just development involved in computational statistics where *exact* cannot be expected from computers' calculations. This is by design in many instances where the intent is to actually compute an approximation to an *exact* that agrees with the target value to within some specified tolerance. There is also the issue of round-off error that arises from the fact that irrational numbers cannot be stored in their entirety in the finite amount of memory available in a computer. The fact that approximations are employed means that some type of error analysis is needed and, as a result, this is an aspect of numerical analysis as well as computational statistics.
+
+To carry out scientific computing one needs to be “conversant” in an effective programming language. For statistics, a popular language is provided by R. This furnishes an open source computing with strong ties to the S language developed at Bell Labs. A commercial implementation of S is available under the name of S-Plus. R is not to be confused with many packages that provide computational tools for calculating various statistical quantities of interest for specific data sets. R is capable of working in that capacity. R is a powerful language in its own right that is ideal for addressing many computational statistics problems in the sense of our definition.
+
+R is very good at what it has been designed to. But, not every statistical problem is amenable to solution using R and even with another approach. There are many compiled languages that can be used as a supplement to R and conversely. Standard choices include C, C++, Fortran and Java. Much of the R language relies on calling C code and, surprisingly, it is relatively straightforward to import C programs into R. The same is true for C++ and this latter option has the additional feature, of R itself having object-oriented structure. As a result, it seems natural to use R and C++ individually or in tandem to provide the computer interface component for computational statistics. That is the path that will be pursued here.
+
+## 2 Programming paradigms
+## INTRODUCTION
+
+The purpose of a computer language is to provide an avenue of “communication” between (typically human) user and a computer. There are many ways such avenues can be created and each language will differ in terms of the specific way it performs this task. Rather than focus on implementational details, the differences and similarities between computer languages can be more readily appreciated by taking the broader view of this section that examines languages in the context of their relation to common programming paradigms.
+
+Computer programming languages are sometimes characterized as imperative or declarative. The distinction is on whether the program specifies a sequence of statements to be executed or a sequence of definitions and requirements without directly specifying how to achieve them. Imperative languages are usually procedural, allowing one to build processes as executable statements that can be executed repeatedly from various points within a program. Examples of procedural languages are C, C++, Java, COBOL and Fortran.
+
+Historically, computer programming began with the use of machine code instructed to the computer in its native binary format. This was followed by assembly language that provided specific binary instructions with shortcut symbols that were translated to machine code through an assembler. Procedural languages provided the next big advance by allowing code to be developed using standard words, phrases and mathematical expressions that are related to a desired action of the program. Languages of this nature (notably Fortran) use compilers to translate commands into binary sequences that could be understood by the computer.
+
+Procedural programming decomposes a problem into component parts that can be solved using one or more subprograms, usually called functions or subroutines, that act on variables that are defined in the program. A general subroutine has no return value. Functions, on the other hand, take arguments and return information after they have completed their task. In C/C++, the void type allows functions to bypass the return step which enables them to serve in a subroutine capacity.
+
+Procedural programming is algorithmic by each subprogram or procedure in a set of code corresponding to a single step in a global algorithm that has been designed to solve the problem at hand. This approach allows itself to code reuse in subroutines and functions can be employed when simple subproblems arise. A disadvantage is that, unlike safeguards are placed in place, code can move freely across subprograms in a manner that allows for improperly access or use.
+
+Declarative languages are further divided into functional and goal-oriented. In general, functional languages express the computation as the evaluation of a function. In evaluation, of course, may be divided into smaller pieces, each involving the evaluation of a single function. Common Lisp, Mathematica and R are functional languages. In a goal-oriented language, the program specifies definitions and rules and lets the system find a “solution” satisfying the constraints using a built-in search loop. A goal-oriented language is Prolog.
+
+A different categorization may be based on the how a programming language deals with data. In this context, a frequently used paradigm is object-oriented programming. Regardless of whether they are otherwise procedural or functional. For example, C++ and Java are object-oriented, procedural languages while Common LISP and R are functional languages that also have extensive object-oriented features.
+
+The basic notion underlying the object-oriented approach is that both data and the methods are packaged into a single object. OBJECT-ORIENTED PROGRAMMING that work individually or in combination to carry out a task. An instance of a class for which members have been given specific values is called an object. It encapsulates its own internal data and methods/subroutines that are appropriate for use. This "encapsulation" feature has the benefit of data protection
+
+### 1.2 Object-oriented programming
+
+This section gives a high-level introduction to object-oriented programming (OOP) concept. These ideas recur in later chapters and will be helpful to have a common dialect with which to discuss them.
+
+The focus of OOP is creation of classes. A class provides an abstract description of a concept through specification of its attributes and its behavior. For scientific computing the "concept" will usually represent a mathematical operation as solving a system of equations, generating a random number or finding the minimum of a function. In this respect a class should be designed with a single meta-task in mind. The construction of focused classes has the benefit of simplifying development as well as enhancing the opportunities for code reuse.
+
+The attributes of a class are its members and its member functions. Methods often belong to primitive data types in the sense of being integer, floating-point or other types of variables that are inherent to the programming language. However, they can be more abstract in the sense of deriving from other user-created types or classes. As noted in the previous section, an instance of a class for which members have been given values is called an object.
+
+The behavior of a class depends on the class methods that determine the type of actions it can perform as well as the ways the object can be altered. In combination the data and function methods provide answer to the essential questions:
+
+- What are objects of the class supposed to do?
+- What data or object will be provided with different levels of protection. Specifically, class members can be classified as private, public or protected. The private designation has the consequence that such members and methods can be used only within the class itself. Members and methods are open to use outside the class by other functions and objects. Protected class member and methods are only available to derived class objects that inherit from the class in a sense to be described shortly.
+
+The OOP approach provides us with various types of polymorphism. The word "polymorphism" means that a single thing can take different forms. In the context of OOP this translates to functions and classes that act or behave in different ways depending on
