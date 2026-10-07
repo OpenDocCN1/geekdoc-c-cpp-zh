@@ -1,0 +1,3727 @@
+- raw:
+  - '[PAGE 0]
+
+
+    Robert Matthew
+
+
+    # # C#
+
+
+    Easy Beginner''s Guide To Learning C#
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_0_0.png)'
+  - '[PAGE 1]
+
+
+    # C#
+
+
+    # Easy Beginner''s Guide to Learning C#
+
+
+    Robert Matthew'
+  - '[PAGE 2]
+
+
+    # Copyright 2021 - All rights reserved.
+
+
+    The contents of this book may not be reproduced, duplicated, or transmitted without
+    the author''s express written permission.
+
+
+    Under no circumstances will the publisher be held legally responsible for any
+    reparation, damages, or monetary loss caused by the information contained herein,
+    whether directly or indirectly.
+
+
+    # Legal Notice:
+
+
+    You may not change, distribute, sell, use, quote, or paraphrase any part of this
+    book without the author''s permission.
+
+
+    # Disclaimer Notice:
+
+
+    Please keep in mind that the information in this document is solely for educational
+    purposes. There are no express or implied guarantees of any kind. Readers understand
+    that the author is not providing legal, economic, medical, or other professional
+    advice. Before attempting any of the strategies described in this book, please
+    seek the advice of a licensed professional.
+
+
+    Through reading this text, the reader acknowledges that the author is not responsible
+    for any damages, direct or indirect, incurred due to using the information contained
+    within it, including, but not limited to, errors, omissions, or inaccuracies.'
+  - '[PAGE 3]
+
+
+    # # Table of contents
+
+
+    +   - Table of contents
+
+    - The Fundamental Concepts of C#
+
+    - Variables, Literals, and Data Types of C#
+
+    - C# Language Operators
+
+    - The Conversion of Data Types
+
+    - Console
+
+    - C# Conditional Statements
+
+    - The Loop Statements
+
+    - C# Language Methods
+
+    - Conculusion'
+  - '[PAGE 4]
+
+
+    # The Fundamental Concepts of C#
+
+
+    Programming languages are best learned by writing and analyzing code, according
+    to computer experts. Therefore, before you learn the language, you will have to
+    write your computer program. Understanding C# in this way will make the process
+    easier for you.
+
+
+    Additionally, you will gain an understanding of the syntax and structure of this
+    programming language.
+
+
+    # Introducing an initiative to you
+
+
+    Please type the following code:
+
+
+    This program will print the "Hello, C#" output device set on your computer. You
+    cannot run it because it is still a "raw" program. At this point, let us look
+    at its structure. Using programming environment and command prompt, you will complete
+    the following section by compiling and running your programs.
+
+
+    What is the Process?
+
+
+    There are three parts to this sample program:
+
+
+    +   1. The definition of the class;
+
+
+    +   2. The definition of the method; and
+
+
+    +   3. The contents of the method.
+
+
+    Here is a breakdown of each part:
+
+
+    This program starts by defining a class called HelloCSharp in the first line.
+    Class definitions are usually divided into two sections: (1) the name of the class
+    and (2) its description. As seen here, the class is named HelloCSharp. There are
+    a couple of braces separating the contents of this class (i.e. { }).
+
+
+    On the third line of the program, you will find the method definition. This is
+    the Main() method. Every C# program starts with this() method. It would be best
+    if you use the following syntax:
+
+
+    The Main() method must be static and void. In either case, the arguments (parts
+    between parentheses) are optional. In other words, it can be formulated'
+  - "[PAGE 5]\n\nas:\n\n```\n```csharp\nclass HelloCSharp{static void Main()}{System.Console.WriteLine(\"\
+    Hello C#!\");}\n\nclass HelloCSharp{\n    static void Main(){\n        System.Console.WriteLine(\"\
+    Hello C#!\");\n    }\n}\n```\n```\n\nPutting in the Main() method incorrectly\
+    \ will cause your program to crash.\n\nThe contents of the method –\n\nUpon clicking\
+    \ on a method's name, you will see its contents. The contents of a brace are generally\
+    \ enclosed within it. As seen in the preceding line, the fifth line displays a\
+    \ message on your computer’s console by using an object (i.e., System. Console)\
+    \ and a method (i.e., WriteLine()). The message is \"Hello, C#!\" as mentioned\
+    \ earlier.\n\nThe C# expressions and statements in Main() can be arranged in any\
+    \ way according to your preference. It will not matter how you arrange the expressions\
+    \ or statements. You will, however, run these entries based on their placement\
+    \ inside the method’s body.\n\n# Write Code by Remembering These Rules\n\nC# –\
+    \ Case-sensitive programming language\n\nThe case is essential in this language.\
+    \ When typing C# code, you must be careful to capitalize all letters. The three\
+    \ objects \"power,\" \"power,\" and POWER in C# are considered separately.\n\n\
+    Note: This rule is essential to remember. All C# program elements (e.g., variables,\
+    \ constants, classes, etc.) must follow this rule.\n\nFormat your document correctly\n\
+    \nIf you want your code to be more readable, you should add tabs, spaces, and\
+    \ newlines. Your source codes will be much more structured if you use these characters,\
+    \ which are not interpreted by the C# compiler.\n\nThe HelloCSharp code: for example,\
+    \ might benefit from having the newlines removed. An alternative might be to remove\
+    \ the tab characters."
+  - '[PAGE 6]
+
+
+    In terms of compiling and executing the last two examples, everything works fine.
+
+
+    The complexity of an analyzable, modifiable, understandable, and maintainable
+    script is high.
+
+
+    It would be best if you formatted your codes in all of your programs. That way,
+    you can guarantee that your codes are readable.
+
+
+    # The Proper Formatting of Codes
+
+
+    Code formatting allows you to indent methods within class definitions. The Tab
+    key on your keyboard can be used to format source codes in C# so that you can
+    use any number of tab characters.
+
+
+    Within the method definition, you should indent its contents.
+
+
+    Under the class or method it belongs to, place an opening brace (i.e. {). As well,
+    if it is the only character in the line, it will be the most effective. The closing
+    brace (i.e. {) must be aligned vertically with the opening brace.
+
+
+    It is recommended that all class names begin with an uppercase letter.
+
+
+    It would be best if you named your variables in lowercase.
+
+
+    Your method names should start with an uppercase letter.
+
+
+    Codes written within another code are indented.
+
+
+    # Types of Classes
+
+
+    Each C# program consists of at least one class definition. In programming, class
+    definitions are typically stored inside separate files corresponding to the class
+    names. File extensions should also include ".cs". There are no technical issues
+    involved in compiling different classes into one file. However, finding your codes
+    will be difficult.
+
+
+    # C#: Additional Information
+
+
+    C# is an advanced, modern, multipurpose, and object-oriented programming language.
+    The language is similar in many ways to C, C++, and Java. C# offers a simplified
+    syntax and more accessible programming.
+
+
+    Data types and class definitions are contained in one or more .cs files in a C#
+    program. To generate executable code (i.e. files ending in .dll or .exe), these'
+  - "[PAGE 7]\n\n.cs files need to be compiled.\n\nCompiling the HelloCSharp program\
+    \ yields an executable file named\n\"HelloCSharp.exe\".\n\n# C# Programming Requires\
+    \ These Things\n\nYou need two things to write programs in C#-a text editor (e.g.,\
+    \ Notepad) and\nthe .NET framework. Text editors make it easy to write and edit\
+    \ code. On\nthe other hand, you will compile and execute your programs with the\
+    \ .NET\nframework.\n\nThe .NET framework is what?\n\nAs a framework, .NET is used\
+    \ to create and run programs. .NET is a built-\nframework for almost all Windows\
+    \ systems.\n\nIn this case, Microsoft's modern operating systems will allow you\
+    \ to use your\ncomputer without installing any software.\n\nInstalling the .NET\
+    \ framework is required on old Windows operating\nsystems.\n\n```\nHelloCSharp.cs\n\
+    class HelloCSharp\n{\n    static void Main()\n{\n        Console.WriteLine(\"\
+    Hello C#!\");\n    }\n}\n```\n\nBefore reading the rest of this book, please make\
+    \ sure your computer has\n.NET installed. You will not be able to compile and\
+    \ run the sample programs\nlater if you do not have these prerequisites.\n\n#\
+    \ The Text Editor\n\nFor writing, editing, and saving source codes, you should\
+    \ use a text editor.\nAlmost every computer comes a text editor installed. If\
+    \ you do not want\nto download additional programs, it is possible to use \"Notepad\"\
+    \ (the default\ntext editor of a Windows computer).\n\n# Executing programs and\
+    \ compiling them\n\nThe HelloCSharp program you saw earlier needs to be compiled\
+    \ and run\nnow. Please follow these steps:\n\n+   1. Please create a \".cs\" file\
+    \ and name it \"HelloCSharp\"."
+  md: "\nRobert Matthew\n\n# C#\n\n# Easy Beginner's Guide To Learning C#\n\n![](img/a36030d08eb553093e54e93e07543b0a_0_0.png)\n\
+    \n# C#\n\n# Easy Beginner's Guide to Learning C#\n\nRobert Matthew\n\n# Copyright\
+    \ 2021 - All rights reserved.\n\nThe contents of this book may not be reproduced,\
+    \ duplicated, or transmitted without the author's express written permission.\n\
+    \nUnder no circumstances will the publisher be held legally responsible for any\
+    \ reparation, damages, or monetary loss caused by the information contained herein,\
+    \ whether directly or indirectly.\n\n# Legal Notice:\n\nYou may not change, distribute,\
+    \ sell, use, quote, or paraphrase any part of this book without the author's permission.\n\
+    \n# Disclaimer Notice:\n\nPlease keep in mind that the information in this document\
+    \ is solely for educational purposes. There are no express or implied guarantees\
+    \ of any kind. Readers understand that the author is not providing legal, economic,\
+    \ medical, or other professional advice. Before attempting any of the strategies\
+    \ described in this book, please seek the advice of a licensed professional.\n\
+    \nThrough reading this text, the reader acknowledges that the author is not responsible\
+    \ for any damages, direct or indirect, incurred due to using the information contained\
+    \ within it, including, but not limited to, errors, omissions, or inaccuracies.\n\
+    \n## Table of contents\n\n- Table of contents\n- The Fundamental Concepts of C#\n\
+    - Variables, Literals, and Data Types of C#\n- C# Language Operators\n- The Conversion\
+    \ of Data Types\n- Console\n- C# Conditional Statements\n- The Loop Statements\n\
+    - C# Language Methods\n- Conclusion\n\n## The Fundamental Concepts of C#\n\nProgramming\
+    \ languages are best learned by writing and analyzing code, according to computer\
+    \ experts. Therefore, before you learn the language, you will have to write your\
+    \ computer program. Understanding C# in this way will make the process easier\
+    \ for you.\n\nAdditionally, you will gain an understanding of the syntax and structure\
+    \ of this programming language.\n\n## Introducing an initiative to you\n\nPlease\
+    \ type the following code:\n\nThis program will print the \"Hello, C#\" output\
+    \ device set on your computer. You cannot run it because it is still a \"raw\"\
+    \ program. At this point, let us look at its structure. Using programming environment\
+    \ and command prompt, you will complete the following section by compiling and\
+    \ running your programs.\n\n### What is the Process?\n\nThere are three parts\
+    \ to this sample program:\n\n- 1. The definition of the class;\n- 2. The definition\
+    \ of the method; and\n- 3. The contents of the method.\n\nHere is a breakdown\
+    \ of each part:\n\nThis program starts by defining a class called HelloCSharp\
+    \ in the first line. Class definitions are usually divided into two sections:\
+    \ (1) the name of the class and (2) its description. As seen here, the class is\
+    \ named HelloCSharp. There are a couple of braces separating the contents of this\
+    \ class (i.e. { }).\n\nOn the third line of the program, you will find the method\
+    \ definition. This is the Main() method. Every C# program starts with this() method.\
+    \ It would be best if you use the following syntax:\n\nThe Main() method must\
+    \ be static and void. In either case, the arguments (parts between parentheses)\
+    \ are optional. In other words, it can be formulated as:\n\n```csharp\nclass HelloCSharp{static\
+    \ void Main()}{System.Console.WriteLine(\"Hello C#!\");}\n\nclass HelloCSharp{\n\
+    \    static void Main(){\n        System.Console.WriteLine(\"Hello C#!\");\n \
+    \   }\n}\n```\n\nPutting in the Main() method incorrectly will cause your program\
+    \ to crash.\n\n### The contents of the method –\n\nUpon clicking on a method's\
+    \ name, you will see its contents. The contents of a brace are generally enclosed\
+    \ within it. As seen in the preceding line, the fifth line displays a message\
+    \ on your computer’s console by using an object (i.e., System. Console) and a\
+    \ method (i.e., WriteLine()). The message is \"Hello, C#!\" as mentioned earlier.\n\
+    \nThe C# expressions and statements in Main() can be arranged in any way according\
+    \ to your preference. It will not matter how you arrange the expressions or statements.\
+    \ You will, however, run these entries based on their placement inside the method’s\
+    \ body.\n\n## Write Code by Remembering These Rules\n\n### C# – Case-sensitive\
+    \ programming language\n\nThe case is essential in this language. When typing\
+    \ C# code, you must be careful to capitalize all letters. The three objects \"\
+    power,\" \"power,\" and POWER in C# are considered separately.\n\nNote: This rule\
+    \ is essential to remember. All C# program elements (e.g., variables, constants,\
+    \ classes, etc.) must follow this rule.\n\n### Format your document correctly\n\
+    \nIf you want your code to be more readable, you should add tabs, spaces, and\
+    \ newlines. Your source codes will be much more structured if you use these characters,\
+    \ which are not interpreted by the C# compiler.\n\nThe HelloCSharp code: for example,\
+    \ might benefit from having the newlines removed. An alternative might be to remove\
+    \ the tab characters.\n\nIn terms of compiling and executing the last two examples,\
+    \ everything works fine.\n\nThe complexity of an analyzable, modifiable, understandable,\
+    \ and maintainable script is high.\n\nIt would be best if you formatted your codes\
+    \ in all of your programs. That way, you can guarantee that your codes are readable.\n\
+    \n## The Proper Formatting of Codes\n\nCode formatting allows you to indent methods\
+    \ within class definitions. The Tab key on your keyboard can be used to format\
+    \ source codes in C# so that you can use any number of characters.\n\nWithin the\
+    \ method definition, you should indent its contents.\n\n## Types of Classes\n\n\
+    Each C# program consists of at least one class definition. In programming, class\
+    \ definitions are typically inside separate files corresponding to the class names.\
+    \ File extensions should also include \".cs\".\n\n## C#: Additional Information\n\
+    \nC# is an advanced, modern, multipurpose, and object-oriented language. The language\
+    \ is similar in many ways to C, C++, and Java. C# offers a simplified syntax and\
+    \ more accessible.\n\nData types and class definitions are contained in one or\
+    \ more .cs files. To generate executable code (i.e. files ending in .dll or .exe),\
+    \ these .cs files need to be compiled.\n\n## C# Programming Requires These Things\n\
+    \nYou need two things to write programs in C#-a text editor (e.g., Notepad) and\
+    \ the .NET framework. Text editors make it easy to write and edit code. On the\
+    \ other hand, you will compile and execute your programs with the .NET framework.\n\
+    \n### The .NET framework is what?\n\nAs a framework, .NET is used to create and\
+    \ run programs. .NET is a built-framework for all Windows systems.\n\nIn this\
+    \ case, Microsoft's modern operating systems will allow you to use your computer\
+    \ without installing any software.\n\nInstalling the .NET framework is required\
+    \ on old Windows operating systems.\n\n```csharp\nHelloCSharp.cs\nclass HelloCSharp\n\
+    {\n    static void Main()\n{\n        Console.WriteLine(\"Hello C#!\");\n    }\n\
+    }\n```\n\n## The Text Editor\n\nFor writing, editing, and saving source codes,\
+    \ you should use a text editor. Almost every computer comes a text editor installed.\
+    \ If you do not want to download additional programs, it is possible to use \"\
+    Notepad\" (the default text editor of a Windows computer).\n\n## Executing programs\
+    \ and compiling them\n\nThe HelloCSharp program you saw earlier needs to be compiled\
+    \ and run now. Please follow these steps:\n\n- 1. Please create a \".cs\" file\
+    \ and name it \"HelloCSharp\".\n"
+  mdcn: "\n\nRobert Matthew\n\n# C#\n\n# C# 初学者简单入门指南\n\n![](img/a36030d08eb553093e54e93e07543b0a_0_0.png)\n\
+    \n# C#\n\n# C# 初学者简单入门指南\n\nRobert Matthew\n\n# 版权所有 2021 - 保留所有权利\n\n未经作者明确书面许可，不得复制、复制或传输本书的内容。\n\
+    \n在任何情况下，出版商对因本书所包含的信息（无论是直接还是间接）导致的任何赔偿、损害或金钱损失均不承担法律责任。\n\n# 法律声明：\n\n未经作者许可，您不得更改、分发、销售、使用、引用或转述本书的任何部分。\n\
+    \n# 免责声明通知：\n\n请记住，本文档中的信息仅供教育目的。不提供任何形式的明示或隐含保证。读者理解，作者不提供法律、经济、医疗或其他专业建议。在尝试此书中描述的任何策略之前，请寻求执业人士的建议。\n\
+    \n通过阅读本文，读者承认作者对由于使用其中包含的信息（包括但不限于错误、遗漏或不准确）而导致的任何直接或间接的损害不负责。\n\n## 目录\n\n- 目录\n\
+    - C# 的基本概念\n- C# 的变量、字面量和数据类型\n- C# 语言运算符\n- 数据类型的转换\n- 控制台\n- C# 条件语句\n- 循环语句\n\
+    - C# 语言方法\n- 结论\n\n## C# 的基本概念\n\n根据计算机专家的说法，学习编程语言最好的方法是通过编写和分析代码。因此，在学习这种语言之前，你必须编写计算机程序。通过这种方式理解\
+    \ C# 将使过程变得更容易。\n\n此外，你将理解这种编程语言的语法和结构。\n\n## 向你介绍一个初始化\n\n请输入以下代码：\n\n此程序将在你的计算机设置的输出设备上打印“Hello,\
+    \ C#”。你无法运行它，因为它仍然是一个“原始”程序。此时，让我们看看它的结构。使用编程环境和命令提示符，你将通过编译和运行程序来完成以下部分。\n\n\
+    ### 流程是什么？\n\n这个示例程序包含三个部分：\n\n- 1. 类的定义；\n- 2. 方法的定义；以及\n- 3. 方法的内容。\n\n以下是每个部分的详细说明：\n\
+    \n该程序从第一行开始定义一个名为 HelloCSharp 的类。类定义通常分为两个部分：(1) 类名和(2) 它的描述。如下所示，类名为 HelloCSharp。有两个括号分隔了该类的内容（即\
+    \ `{ }`）。\n\n在程序的第三行，你将找到方法定义。这是 `Main()` 方法。每个 C# 程序都从这个 `Main()` 方法开始。使用以下语法最好：\n\
+    \n`Main()` 方法必须是 `static`（静态）和 `void`（空）。在任何情况下，参数（括号之间的部分）都是可选的。换句话说，它可以表述为：\n\
+    \n```csharp\nclass HelloCSharp{static void Main()}{System.Console.WriteLine(\"\
+    Hello C#!\");}\n\nclass HelloCSharp{\n    static void Main(){\n        System.Console.WriteLine(\"\
+    Hello C#!\");\n    }\n}\n```\n\n错误地放置 `Main()` 方法会导致程序崩溃。\n\n### 方法的内容 –\n\n点击方法名后，你将看到它的内容。括号内的内容通常包含在其中。如前一行所示，第五行通过使用对象（即\
+    \ `System.Console`）和方法（即 `WriteLine()`）在你的计算机控制台上显示一条消息。消息是“Hello, C#”。\n\n##\
+    \ 编写代码的规则\n\n### 大小写敏感语言\n\nC# 代码是大小写敏感的。在编写 C# 时，必须注意大小写。\n\n### 正确格式化代码\n\n\
+    如果你想让代码更易读，你应该这样做。\n\n## 代码的正确格式化\n\n代码格式化允许你在类定义中进行缩进。\n\n## 类的类型\n\n每个 C# 程序至少包含一个类定义。在编程中，类定义通常位于类名对应的文件中。文件扩展名也应该是\
+    \ `.cs`。\n\n## C# 附加信息\n\nC# 是一种高级的、现代的、多功能的面向对象的语言。该语言在许多方面与 C、C++ 和 Java 相似。\n\
+    \n数据类型和类定义包含在多个 .cs 文件中。为了生成可执行代码（例如以 `.dll` 或 `.exe` 结尾的文件），这些 `.cs` 文件需要编译。\n\
+    \n## C# 编程需要这些\n\n编写 C# 程序需要两样东西：文本编辑器（例如记事本）和 .NET 框架。文本编辑器让编写和编辑代码变得简单。另一方面，你将使用\
+    \ .NET 框架编译和运行你的程序。\n\n### .NET 框架是什么？\n\n作为一个框架，.NET 用于创建和运行程序。.NET 是所有 Windows\
+    \ 系统的内置框架。在这种情况下，微软现代操作系统允许你在无需安装任何软件的情况下使用。\n\n旧的 Windows 操作系统需要安装 .NET 框架。\n\
+    \n```csharp\nHelloCSharp.cs\nclass HelloCSharp\n{\n    static void Main()\n{\n\
+    \        Console.WriteLine(\"Hello C#!\");\n    }\n}\n```\n\n## 文本编辑器\n\n为了编写、编辑和保存源代码，你应该使用文本编辑器。几乎每台计算机都自带了文本编辑器。如果你不想下载额外的程序，可以使用“记事本”（Windows\
+    \ 默认文本编辑器）。\n\n## 运行和编译程序\n\n你之前看到的 HelloCSharp 程序现在需要编译和运行。请按照以下步骤操作：\n\n- 1.\
+    \ 请创建一个 \".cs\" 文件并将其命名为 \"HelloCSharp\"。\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 8]
+
+
+    2. Inside that .cs file, you should write the source code.
+
+    3. Make a .exe file by compiling the code.
+
+    4. Run the program you created.
+
+
+    Let us start by turning on your computer.
+
+    It would be best if you use a Windows computer in order to use this eBook.
+
+    The HelloCSharp program code is as follows:
+
+
+    # Command Prompt for Writing C# Programs
+
+
+    As a first step, you should launch the "Command Prompt" (also called the "Command
+    Console").
+
+    You can run a search for "cmd" using the Start button to use Windows 7 or Windows
+    8. Find the program named "Command Prompt" in the search results. To run the program
+    as an administrator, right-click the program and select "Run as administrator".
+
+
+    The following screenshots you how it looks:
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_8_0.png)
+
+
+    Please take note that if you double-click on the Command Prompt, you will'
+  - '[PAGE 9]
+
+
+    not be able to access "C# access some of its essential features.
+
+
+    Create a directory to store the resulting program after you create the file.
+
+    After you select the directory, type "md". Press "cd" to go to the newndirectory.
+
+
+    The following screenshot shows how it looks:
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_9_0.png)
+
+
+    It is named "C#Programs" in this example.
+
+    C:/Windows/System32/C#Programs became the active directory by using
+
+    "cd". The C# file is now ready to be created. You will see this on your screen
+
+    er you run this command in the Command Prompt
+
+
+    CSharp does not exist on your computer. Additionally, it will ask if
+
+    you want to create a new file. To copy the program''s code, click on the "Yes"
+
+    button and paste it into Notepad.
+
+
+    The following screenshot shows how you looks:
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_9_1.png)
+
+
+    Save the file by pressing CTRL+S. Press ALT+F4 or the red X to close the
+
+    text editor. It appears under the "C#Programs" directory now.
+
+
+    Composing the code
+
+
+    Once the code is compiled, you can run it using "csc" (the language''s built-in
+
+    compiler). Open the Command Prompt and enter "csc HelloCSharp.cs". You
+
+    might receive a message similar to this, as this is the first time you have
+
+    used the C# compiler: To overcome this issue, specify the location of the C#ncompiler.
+    For Windows 7, the location is as follows:
+
+
+    C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+
+    Note: You may see different numbers at the end of the directory depending'
+  - '[PAGE 10]
+
+
+    on your OS version.
+
+
+    Therefore, the following command should be issued:
+
+
+    Here is the C# source for HelloCSharp.cs:
+
+    ```csharp
+
+
+    ```cs
+
+    C:/Windows/Microsoft.NET/Framework/v4.0.30319/csc The C# compiler will convert
+    your .cs file into an executable. In the Command Prompt, type the name of your
+    first program.
+
+
+    # Windows System Path Change
+
+
+    When you create a program, surely you do not want to type the entire directory
+    path for the compiler. Throughout this chapter, you will be taught how to configure
+    your computer to find the compiler automatically.
+
+    The following things need to be done:
+
+
+    +   1. In the Control Panel, select "System".
+
+    2. A new window will appear. Click on "Advanced System Settings".
+
+    3. You can find the variable "Path" by clicking on "Environment Variables".
+
+    4. Then select the directory for the compiler by clicking the "Edit..." button.
+    Here is the path again:
+
+    C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+    5. Save the changes by clicking "OK".
+
+    6. Launch a new Command Prompt after closing the current one. Enter the command
+    "csc".
+
+    7. This error message should appear on your screen:
+
+
+    ```
+
+    Fatal error CS2008: No inputs specified
+
+    ```
+
+
+    +   8. This means that your computer can automatically initiate the compiler.
+    Your computer will create .exe files from the source code when you specify it.'
+  - '[PAGE 11]
+
+
+    # # Variables, Literals, and Data Types of C#
+
+
+    The purpose of this chapter is to cover the variables and data types used in C#.
+    After reading this material, you will learn what these objects are and how to
+    write your programs.
+
+
+    # ## Variables
+
+
+    Different values are used during the execution of specific programs. Mathematical
+    problems can be solved with a program. When you use such a program, you must enter
+    different values. Programmers do not know what values users will enter. Therefore,
+    they should make sure that any input that users provide is included in the resulting
+    programs.
+
+
+    It is possible to temporarily store a user''s value in the machine''s RAM (i.e.,
+    random access memory). These values may change over time. Programmers call such
+    values "variables" because of this.
+
+
+    # ## Data Types
+
+
+    A data type consists of a group of values whose attributes are similar. As an
+    example,
+
+
+    Among the "0 to 255" range of values, these are referred to as "byte" data. Attributes
+
+
+    These are the attributes of data types:
+
+
+    The name of the type of data (i.e., int, char, bool, etc.).
+
+
+    The size of the file (e.g., 1 byte)
+
+
+    This is the default value (for example, 1, 2, 3, etc.).
+
+
+    # ## C# Data Types
+
+
+    The following data types are supported by C#:
+
+
+    +   - Boolean
+
+
+    +   - Characters
+
+
+    +   - Objects
+
+
+    +   - Floating-Point'
+  - "[PAGE 12]\n\nDecimals\n\nIntegers\n\nStrings\n\nProgrammers refer to these data\
+    \ types as \"primitive types\" since they are built into the C# programming language.\
+    \ Let us look at each type individually:\n\n# Boolean\n\nDeclaring this type of\
+    \ data in C# requires the keyword \"bool\" (i.e., a keyword). As a boolean value,\
+    \ a value can either be \"true\" or \"false\". By default, Boolean values in C#\
+    \ are set to \"false\". Logic statements are stored in this data type by programmers.\n\
+    \n# Characters\n\nSingle characters can be stored in this data type. You must\
+    \ use \"char\" (i.e., another C# keyword) to declare this type. Use apostrophes\
+    \ to separate your \"char\" values (e.g., \"I'\").\n\n# Objects\n\nData in C#\
+    \ is classified as objects by programmers. A .NET object is essentially the parent\
+    \ of other data types. The \"object\" keyword is required during the declaration\
+    \ of this data type, which may accept any value from other data types.\n\nA computer\
+    \ object is an address that points to a location in your computer's memory.\n\n\
+    # Real Type – Floating Points\n\n\"Real type\" in the C# language refers to the\
+    \ actual numbers a student has learned in mathematics. There are two floating-point\
+    \ real data types: \"float\" and \"double\".\n\n+   1. A float is a single-precision\
+    \ integer which is called a real integer by programmers. A float has a default\
+    \ value of 0.0F (the \"f\" at the end is not case-sensitive). If the value is\
+    \ \"float\", the letter \"f\" indicates that. \n\n+   2. When referring to this\
+    \ subtype, programmers refer to it as a \"double-precision real integer.\" It\
+    \ is set to 0.0D by default (which does not refer"
+  - '[PAGE 13]
+
+
+    to the case of the letter "d" at the end. You do not need to add "d" to real numbers
+    because C# automatically tags them as "doubles".
+
+
+    # Real Type – Decimals
+
+
+    As these programs use decimal arithmetic to represent numbers, they support "decimal
+    arithmetic". This approach has the advantage that it maintains its accuracy regardless
+    of the value being used.
+
+
+    C# represents this kind of real number with the "decimal" data type. It is 128
+    bits long and accurate to the 29th decimal place. Programmers use these due to
+    their excellent financial calculations (e.g., payments, taxes, interest, etc.).
+
+
+    # Integers
+
+
+    There are eight subtypes of this data type:
+
+
+    SBYTE - A signed 8-bit integer. Therefore, it has a 256-value maximum (i.e., 28).
+    Sbytes can also be positive or negative.
+
+
+    BYTE - This subtype consists of unsigned 8-bit integers. It is almost the same
+    as sbyte. A byte cannot be negative.
+
+
+    SHORT – These are 16-bit signed integers.
+
+
+    INT – The most popular C# data type. These data types are popular because they
+    are compatible with 32-bit processors and are large enough for typical calculations.
+    They are signed integers of 32 bits.
+
+
+    UINT – This is 32-bit unsigned integers. Thus, it must be positive.
+
+
+    LONG – This is a 64-bit integer. Whether it is positive or negative is important.
+
+
+    ULONG – Like "long" integers. However, "ulong" may only receive positive values.
+
+
+    # Strings
+
+
+    Strings are sets or sequences of characters. Whenever you declare values of this
+    data type in C#, you must use the keyword "string" (i.e., a keyword). The "string"
+    part must be enclosed in quotation marks. Various operations can be performed
+    on strings using this language (e.g., concatenation, character replacement, character
+    search, etc.).'
+  md: '
+
+    2. Inside that .cs file, you should write the source code.
+
+    3. Make a .exe file by compiling the code.
+
+    4. Run the program you created.
+
+
+    Let us start by turning on your computer.
+
+    It would be best if you use a Windows computer in order to use this eBook.
+
+    The HelloCSharp program code is as follows:
+
+
+    # Command Prompt for Writing C# Programs
+
+
+    As a first step, you should launch the "Command Prompt" (also called the "Command
+    Console").
+
+    You can run a search for "cmd" using the Start button to use Windows 7 or Windows
+    8. Find the program named "Command Prompt" in the search results. To run the program
+    as an administrator, right-click the program and select "Run as administrator".
+
+
+    The following screenshots show how it looks:
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_8_0.png)
+
+
+    Please take note that if you double-click on the Command Prompt, you will not
+    be able to access "C# access some of its essential features."
+
+
+    Create a directory to store the resulting program after you create the file.
+
+    After you select the directory, type "md". Press "cd" to go to the new directory.
+
+
+    The following screenshot shows how it looks:
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_9_0.png)
+
+
+    It is named "C#Programs" in this example.
+
+    C:/Windows/System32/C#Programs became the active directory by using "cd". The
+    C# file is now ready to be created. You will see this on your screen after you
+    run this command in the Command Prompt. CSharp does not exist on your computer.
+    Additionally, it will ask if you want to create a new file. To copy the program''s
+    code, click on the "Yes" button and paste it into Notepad.
+
+
+    The following screenshot shows how it looks:
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_9_1.png)
+
+
+    Save the file by pressing CTRL+S. Press ALT+F4 or the red X to close the text
+    editor. It appears under the "C#Programs" directory now.
+
+
+    Composing the code
+
+
+    Once the code is compiled, you can run it using "csc" (the language''s built-in
+    compiler). Open the Command Prompt and enter "csc HelloCSharp.cs". You might receive
+    a message similar to this, as this is the first time you have used the C# compiler:
+    To overcome this issue, specify the location of the C# compiler. For Windows 7,
+    the location is as follows:
+
+
+    C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+
+    Note: You may see different numbers at the end of the directory depending on your
+    OS version.
+
+
+    Therefore, the following command should be issued:
+
+
+    Here is the C# source for HelloCSharp.cs:
+
+    ```csharp
+
+
+    ```cs
+
+    C:/Windows/Microsoft.NET/Framework/v4.0.30319/csc The C# compiler will convert
+    your .cs file into an executable. In the Command Prompt, type the name of your
+    first program.
+
+
+    # Windows System Path Change
+
+
+    When you create a program, surely you do not want to type the entire directory
+    path for the compiler. Throughout this chapter, you will be taught how to configure
+    your computer to find the compiler automatically.
+
+    The following things need to be done:
+
+
+    - 1. In the Control Panel, select "System".
+
+    2. A new window will appear. Click on "Advanced System Settings".
+
+    3. You can find the variable "Path" by clicking on "Environment Variables".
+
+    4. Then select the directory for the compiler by clicking the "Edit..." button.
+    Here is the path again:
+
+    C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+    5. Save the changes by clicking "OK".
+
+    6. Launch a new Command Prompt after closing the current one. Enter the command
+    "csc".
+
+    7. This error message should appear on your screen:
+
+
+    ```
+
+    Fatal error CS2008: No inputs specified
+
+    ```
+
+
+    - 8. This means that your computer can automatically initiate the compiler. Your
+    computer will create .exe files from the source code when you specify it.
+
+
+    # Variables, Literals, and Data Types of C#
+
+
+    The purpose of this chapter is to cover the variables and data types used in C#.
+    After reading this material, you will learn what these objects are and how to
+    write your programs.
+
+
+    ## Variables
+
+
+    Different values are used during the execution of specific programs. Mathematical
+    problems can be solved with a program. When you use such a program, you must enter
+    different values. Programmers do not know what values users will enter. Therefore,
+    they should make sure that any input that users provide is included in the resulting
+    programs.
+
+
+    It is possible to temporarily store a user''s value in the machine''s RAM (i.e.,
+    random access memory). These values may change over time. Programmers call such
+    values "variables" because of this.
+
+
+    ## Data Types
+
+
+    A data type consists of a group of values whose attributes are similar. As an
+    example, among the "0 to 255" range of values, these are referred to as "byte"
+    data. These are the attributes of data types:
+
+
+    - The name of the type of data (i.e., int, char, bool, etc.).
+
+
+    ## C# Data Types
+
+
+    - Boolean
+
+    - Characters
+
+    - Objects
+
+    - Floating Points
+
+    - Decimals
+
+    - Integers
+
+    - Strings
+
+    '
+  mdcn: '
+
+    2. 在该 `.cs` 文件中，你应该编写源代码。
+
+    3. 通过编译代码生成一个 `.exe` 文件。
+
+    4. 运行你创建的程序。
+
+
+    让我们先从启动电脑开始。
+
+    为了使用这本电子书，使用 Windows 电脑是最好的。
+
+    HelloCSharp 程序代码如下：
+
+
+    # 编写 C# 程序的命令提示符
+
+
+    第一步，你应该启动“命令提示符”（Command Prompt，也称为“命令控制台”）。
+
+    如果你使用的是 Windows 7 或 Windows 8，可以使用开始按钮搜索“cmd”。在搜索结果中找到名为“命令提示符”的程序。如需以管理员身份运行该程序，请右键点击该程序并选择“以管理员身份运行”。
+
+
+    以下截图显示了它的样子：
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_8_0.png)
+
+
+    请注意，如果你双击命令提示符，你将无法访问“C# 访问某些核心功能”。
+
+
+    在创建文件后，创建一个目录来存储生成的程序。
+
+    选择好目录后，输入 "md"。按下 "cd" 进入新目录。
+
+
+    以下截图显示了它的样子：
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_9_0.png)
+
+
+    在此示例中，它被命名为 "C#Programs"。
+
+    通过 "cd"，`C:/Windows/System32/C#Programs` 变成了活动目录。现在可以准备好创建 C# 文件了。在命令提示符中运行此命令后，你将在屏幕上看到此。你的电脑上并不存在
+    CSharp。此外，它会询问你是否想要创建一个新文件。要复制程序代码，点击“是”按钮并将其粘贴到记事本中。
+
+
+    以下截图显示了它的样子：
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_9_1.png)
+
+
+    按下 CTRL+S 保存文件。按下 ALT+F4 或红色的 X 关闭文本编辑器。它现在出现在 "C#Programs" 目录下。
+
+
+    编写代码
+
+
+    一旦代码完成编译，你就可以使用 "csc"（该语言内置编译器）运行它。打开命令提示符并输入 "csc HelloCSharp.cs"。由于这是你第一次使用
+    C# 编译器，你可能会收到类似下面的消息：要解决此问题，请指定 C# 编译器的位置。对于 Windows 7，位置如下：
+
+
+    C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+
+    注意：根据你的操作系统版本，你可能会在目录末尾看到不同的数字。
+
+
+    因此，应该执行以下命令：
+
+
+    这里是 HelloCSharp.cs 的 C# 源代码：
+
+    ```csharp
+
+
+    ```
+
+
+    ```cs
+
+    C:/Windows/Microsoft.NET/Framework/v4.0.30319/csc  C# 编译器将把你的 .cs 文件转换为可执行文件。在命令提示符中，输入你第一个程序的名称。
+
+
+    # Windows 系统路径的更改
+
+
+    当你创建一个程序时，你肯定不想为编译器输入整个目录路径。在本章中，你将学习如何配置你的电脑以自动查找编译器。
+
+    需要完成以下操作：
+
+
+    - 1. 在控制面板中，选择“系统”。
+
+    2. 将出现一个新窗口。点击“高级系统设置”。
+
+    3. 你可以通过点击“环境变量”找到变量 "Path"。
+
+    4. 然后通过点击“编辑...”按钮选择编译器的目录。路径再次如下：
+
+    C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+    5. 点击“确定”保存更改。
+
+    6. 关闭当前命令提示符后启动一个新的命令提示符。输入命令 "csc"。
+
+    7. 屏幕上应该出现此错误消息：
+
+
+    ```
+
+    Fatal error CS2008: No inputs specified
+
+    ```
+
+
+    - 8. 这意味着你的电脑可以自动启动。当你指定它时，电脑将从源代码创建 .exe 文件。
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 14]\n\n# Variables\n\nChangeable data can be stored, retrieved, and modified\
+    \ with variables. Variables are essential to the storage and processing of information\
+    \ as a programmer.\n\n# What Characterizes Variables\n\nThe characteristics of\
+    \ a variable are:\nName (also called \"Identifier\")\n\n# Type of data\n\nStore\
+    \ information of value (also called value). A variable is a name given to a section\
+    \ of computer memory. Values are stored and can be accessed by computer programs.\
+    \ Your computer's working memory (or stack) or dynamic memory is where variables\
+    \ can be stored.\n\nBecause their data resides within the program's stack, character\
+    \ types, booleans, and integers are called value types. By contrast, strings,\
+    \ arrays, and objects are termed \"reference types\" since they do not contain\
+    \ values. Rather, they serve as identifiers of the location of where the data\
+    \ is stored in computer memory.\n\n# Choosing a Variable Name\n\nVariables must\
+    \ be named before they can be used. Variable names serve as identifiers: they\
+    \ help the program locate and specify the variable. In C#, you have complete freedom\
+    \ in naming variables. In C#, you must follow some rules for naming variables\
+    \ as in any other language. Here are the rules:\n underscore (i.e., \"_\\_\"),\
+    \ letters, and numbers can be used to name variables.\nA number cannot be used\
+    \ to begin a name. In this case, FirstSample is valid, whereas 1Sample is not.\n\
+    \nYou cannot name variables with C# keywords. You can prevent compilation errors\
+    \ with this simple rule. Using keywords for your variables is possible if you\
+    \ use the \"@\" symbol (e.g., @bool, @int, @char, etc.).\n\n# Declaring variables\n\
+    \nIt is a good idea to declare variables before using them. In order to declare\
+    \ a"
+  - '[PAGE 15]
+
+
+    variable, you must do the following:
+
+
+    +   1. Type the variable''s data type (for example, char)
+
+
+    +   2. Specify the variable name (for example, sample).
+
+
+    +   3. Initialize the variable. Choosing this step is completely up to you.
+
+
+    | Data Type | Default Value | Default Value |
+
+    |---|---|--|
+
+    | byte | float | 0.0 |
+
+    | byte | double | 0.00 |
+
+    | short | decimal | 0.0m |
+
+    | ushort | bool | false |
+
+    | int | char | \u0000 |
+
+    | uint | string | null |
+
+    | long | 0L | null |
+
+    | unsigned | | |
+
+
+    Variable declarations should be formatted as follows:
+
+
+    ```
+
+    data_type name = initial_value;
+
+    ```
+
+
+    Here are some samples of valid variable declarations:
+
+
+    ```
+
+    int year = 2000;
+
+    ```
+
+
+    ```
+
+    string = yearname;
+
+    ```
+
+
+    ```
+
+    char = test;
+
+    ```
+
+
+    It is important to end every C# statement with a semicolon. The results of your
+    programs will be undesirable and/or unexpected if you forget to add a single semicolon.
+
+
+    The Value Assigning Process
+
+
+    A variable in C# can be assigned a value just like any other computer language.
+    You must use the equals sign in this process called "value assignment". It is
+    called the "assignment operator" by programmers. On the left side, write the name
+    of the variable. On the right side, write the value you want to assign. See examples
+    below:
+
+
+    ```
+
+    test = x;
+
+    ```
+
+
+    ```
+
+    yourname = "John Doe";
+
+    ```
+
+
+    How to Initialize a Variable
+
+
+    In coding, "initialization" refers to assigning a value to a variable.
+
+
+    When you declare a variable, you will set the "initial value".'
+  - '[PAGE 16]
+
+
+    # Default Values of Variables
+
+
+    If you do not assign one, no value will be assigned to the variable (i.e., A default
+    value will be assigned to the variable). Here are the default values for each
+    data type:
+
+
+    Here is an example of declaring variables and assigning values.
+
+
+    ```
+
+    // This is an example
+
+    byte years = 10;
+
+    short days = 31;
+
+    decimal pi = 3.14;
+
+    bool isentity = true;
+
+    char sample = x;
+
+    string animal = "dog";
+
+    ```
+
+
+    The lines starting with a forward slash (i.e.,//) are considered "comments". The
+    purpose of comments in programming is to make the code easier to read. Language
+    compilers ignore these lines. This means comments will not interfere with your
+    program''s functionality.
+
+
+    # Values and References
+
+
+    There are two types of C# data: value types and reference types.
+
+
+    In an executable program, a value type exists. In addition, the value type contains
+    the value entered by the programmer. Booleans, Characters, and Integers comprise
+    the Value Type category. After a program has completed executing its code, the
+    memory assigned to these types will become available. When you close your program,
+    the variables in the Main() method will be emptied.
+
+
+    Alternatively, a reference type stores an address in the program''s stack (i.e.,
+    a reference). It points to a value located somewhere on the stack. Reference types
+    essentially assign dynamic memory while they are declared. When the program no
+    longer needs them, they free up some memory.
+
+
+    # The Literals
+
+
+    An application''s source code specifies values for its literals. The following'
+  - '[PAGE 17]
+
+
+    example illustrates the concept:
+
+
+    ```
+
+    bool isitdelicious = false;
+
+    short income = 22000;
+
+    char firstletter = ''c'';
+
+    byte ten = 10;
+
+    int prize = 250000;
+
+    ```
+
+
+    The literals in this example are false, 22000, ''c'', and 10 and 250000. You will
+    directly add these values to the program''s code.
+
+
+    There are different kinds of literals
+
+
+    The following literals are supported in C#:
+
+
+    +   - Real
+
+    - Integer
+
+    - String
+
+    - Character
+
+    - Boolean
+
+
+    The following literals will be discussed in detail:
+
+
+    Real
+
+
+    Real literals contain a sign (e.g., + or -), a prefix, a suffix, and a decimal
+    point. Double, float, and decimal values should all be represented by this kind
+    of literal. The real literal in C# is written as an exponent. You can apply the
+    following suffixes to real literals: F - This suffix represents float values.
+
+
+    D – Double values are indicated with this suffix.
+
+
+    M – Decimal values are indicated by this letter.
+
+
+    E – Exponential values should be written in this manner. An integer multiplied
+    by 104 is "e4".
+
+
+    Integer
+
+
+    There are four parts to an integer literal: a prefix, a suffix, a sign (i.e.,
+    + or -), and a set of digits. In your code, you can add decimal or hexadecimal
+    numbers using prefixes. You can use the prefixes and suffixes in'
+  - '[PAGE 18]
+
+
+    # C#
+
+
+    0X (e.g., 0XA6F2) – This prefix can indicate a hexadecimal value.
+
+
+    U (e.g., 119U) – Associated with unsigned integer (uint) and unsigned long (ulong)
+    values.
+
+
+    L (e.g., 360L) – This suffix indicates that the value is "long".
+
+
+    The integer literal will be tagged as an "int" in C# if there is no suffix on
+    the literal. There is no case difference between the letters L, U, and X.
+
+
+    # String
+
+
+    String values should be represented by this literal. On the other hand, literals
+    are characters enclosed in a pair of double quotes (e.g., "sample").
+
+
+    It is important to note that you can create quoted (or verbatim) strings in C#
+    by using the "@" symbol. Programmers commonly use such strings to name files.
+
+
+    # Character
+
+
+    You can use character literals to set values of the "char" type by enclosing the
+    character within a pair of single quotes (e.g., "z"). Another way to express a
+    character literal is:
+
+
+    An individual character (e.g. ''X'')
+
+
+    An encoding for a special character (e.g. "u0067")
+
+
+    Here is the escape code (see below)
+
+
+    Code escapes add characters to your source code. Characters such as those involved
+    cannot be added directly to the program code.
+
+
+    Some characters cannot be added directly to programs in C#. There are various
+    escape codes in C#, such as tabs, newlines, backslashes, quotation marks, etc.
+    Here is a list of the most popular escape codes in C#:
+
+
+    +   - Newline character
+
+
+    +   \t – Tab Character
+
+
+    +   \'' – Single Quotation Mark
+
+
+    +   \" – Double Quotation Mark'
+  - '[PAGE 19]
+
+
+    # Boolean
+
+
+    Boolean literals are divided into two types: true and false. The only value you
+    can assign to a "bool" (i.e., Boolean) variable is one. Following is a sample
+    code snippet that example of declaring a Boolean literal:
+
+
+    ```
+
+    bool answer = false;
+
+    ```'
+  - '[PAGE 20]
+
+
+    # # C# Language Operators
+
+
+    The operators of C# will be discussed in this chapter. You will learn how these
+    operators work and use them in your source codes by reading this material.
+
+
+    # ## Basics of Operators
+
+
+    Operators process objects and data types. Operands and inputs are processed to
+    produce results. Special characters (such as "", \+", "*", etc.) are used as operators
+    in C#. It is also possible to execute the C# code with three different operands.
+
+
+    # ## Operators of Different Types
+
+
+    According to C# programmers, there are three types of operators:
+
+
+    Assignment Operator
+
+
+    C# requires an equals sign (i.e., =) for assigning values. To assign a value,
+    you need to use the following syntax:
+
+
+    ```
+
+    name_of_operand = expression, literal, or second_operand
+
+    ```
+
+
+    Several examples are given below:
+
+
+    Using the assignment operator cascades (using the operator multiple times within
+    one expression) in C#. Therefore, if you create multiple variables of the same
+    data type, you will not enter multiple equal signs. Here are some examples:
+
+
+    ```
+
+    int d = 1, e = 2, f = 3;
+
+    string hi = "Good Morning.", bye = "Farewell.", thanks = "Thank you.";
+
+    ```
+
+
+    Logical Operators
+
+
+    The logical (also called "Boolean") operator accepts and returns Boolean values
+    (i.e., true or false). C# provides four logical operators:'
+  md: '
+
+    # Variables
+
+
+    Changeable data can be stored, retrieved, and modified with variables. Variables
+    are essential to the storage and processing of information as a programmer.
+
+
+    ## What Characterizes Variables
+
+
+    The characteristics of a variable are:
+
+    - Name (also called "Identifier")
+
+
+    ### Type of data
+
+
+    Store information of value (also called value). A variable is a name given to
+    a section of computer memory. Values are stored and can be accessed by computer
+    programs. Your computer''s working memory (or stack) or dynamic memory is where
+    variables can be stored.
+
+
+    Because their data resides within the program''s stack, character types, booleans,
+    and integers are called value types. By contrast, strings, arrays, and objects
+    are termed "reference types" since they do not contain values. Rather, they serve
+    as identifiers of the location of where the data is stored in computer memory.
+
+
+    ## Choosing a Variable Name
+
+
+    Variables must be named before they can be used. Variable names serve as identifiers:
+    they help the program locate and specify the variable. In C#, you have complete
+    freedom in naming variables. In C#, you must follow some rules for naming variables
+    as in any other language. Here are the rules:
+
+    - Underscore (i.e., "_"), letters, and numbers can be used to name variables.
+
+    - A number cannot be used to begin a name. In this case, FirstSample is valid,
+    whereas 1Sample is not.
+
+    - You cannot name variables with C# keywords. You can prevent compilation errors
+    with this simple rule. Using keywords for your variables is possible if you use
+    the "@" symbol (e.g., @bool, @int, @char, etc.).
+
+
+    ## Declaring variables
+
+
+    It is a good idea to declare variables before using them. In order to declare
+    a variable, you must do the following:
+
+
+    - 1. Type the variable''s data type (for example, char)
+
+    - 2. Specify the variable name (for example, sample).
+
+    - 3. Initialize the variable. Choosing this step is completely up to you.
+
+
+    | Data Type | Default Value | Default Value |
+
+    |---|---|---|
+
+    | byte | float | 0.0 |
+
+    | byte | double | 0.00 |
+
+    | short | decimal | 0.0m |
+
+    | ushort | bool | false |
+
+    | int | char | \u0000 |
+
+    | uint | string | null |
+
+    | long | 0L | null |
+
+    | unsigned | | |
+
+
+    Variable declarations should be formatted as follows:
+
+
+    ```
+
+    data_type name = initial_value;
+
+    ```
+
+
+    Here are some samples of valid variable declarations:
+
+
+    ```
+
+    int year = 2000;
+
+    ```
+
+
+    ```
+
+    string yearname = "";
+
+    ```
+
+
+    ```
+
+    char test = ''t'';
+
+    ```
+
+
+    It is important to end every C# statement with a semicolon. The results of your
+    programs will be undesirable and/or unexpected if you forget to add a single semicolon.
+
+
+    ## The Value Assigning Process
+
+
+    A variable in C# can be assigned a value just like any other computer language.
+    You must use the equals sign in this process called "value assignment". It is
+    called the "assignment operator" by programmers. On the left side, write the name
+    of the variable. On the right side, write the value you want to assign. See examples
+    below:
+
+
+    ```
+
+    test = x;
+
+    ```
+
+
+    ```
+
+    yourname = "John Doe";
+
+    ```
+
+
+    ## How to Initialize a Variable
+
+
+    In coding, "initialization" refers to assigning a value to a variable.
+
+
+    When you declare a variable, you will set the "initial value".
+
+
+    ## Default Values of Variables
+
+
+    If you do not assign one, no value will be assigned to the variable (i.e., A default
+    value will be assigned to the variable). Here are the default values for each
+    data type:
+
+
+    Here is an example of declaring variables and assigning values.
+
+
+    ```
+
+    // This is an example
+
+    byte years = 10;
+
+    short days = 31;
+
+    decimal pi = 3.14;
+
+    bool isentity = true;
+
+    char sample = ''x'';
+
+    string animal = "dog";
+
+    ```
+
+
+    The lines starting with a forward slash (i.e., //) are considered "comments".
+    The purpose of comments in programming is to make the code easier to read. Language
+    compilers ignore these lines. This means comments will not interfere with your
+    program''s functionality.
+
+
+    ## Values and References
+
+
+    There are two types of C# data: value types and reference types.
+
+
+    In an executable program, a value type exists. In addition, the value type contains
+    the value entered by the programmer. Booleans, Characters, and Integers comprise
+    value types. By contrast, strings, arrays, and objects are termed "reference types"
+    since they do not contain values. Rather, they serve as identifiers of the location
+    of where the data is stored in computer memory.
+
+    '
+  mdcn: '
+
+
+    # 变量
+
+
+    可以使用变量来存储、检索和修改可更改的数据。对于程序员来说，变量是存储和处理信息至关重要的。
+
+
+    ## 变量的特征
+
+
+    变量的特征如下：
+
+    - 名称（也称为“标识符”）
+
+
+    ### 数据类型
+
+
+    存储值的信息（也称为“值”）。变量是赋予计算机内存某区域的名称。值被存储并可以供计算机程序访问。你的计算机工作内存（或栈）或动态内存是存储变量的地方。
+
+
+    由于它们的数据存储在程序的栈中，字符类型、布尔类型和整数被称为“值类型”。相比之下，字符串、数组和对象被称为“引用类型”，因为它们不包含值。相反，它们作为数据在计算机内存中存储位置的标识符。
+
+
+    ## 选择变量名
+
+
+    变量在使用之前必须命名。变量名用作标识符：它们帮助程序定位并指定该变量。在 C# 中，你可以完全自由地命名变量。在 C# 中，你必须遵循与其他任何语言相同的变量命名规则。以下是这些规则：
+
+    - 使用下划线（即 `_`）、字母和数字来命名变量。
+
+    - 名称不能以数字开头。在这种情况下，`FirstSample` 是有效的，而 `1Sample` 是无效的。
+
+    - 你不能使用 C# 关键字命名变量。通过这个简单的规则可以防止编译错误。如果你使用 `@` 符号，就可以为变量使用关键字（例如 `@bool`、`@int`、`@char`
+    等）。
+
+
+    ## 声明变量
+
+
+    在使用之前声明变量是一个良好的习惯。要声明变量，你必须执行以下操作：
+
+
+    - 1. 输入变量的数据类型（例如 `char`）
+
+    - 2. 指定变量名（例如 `sample`）。
+
+    - 3. 初始化变量。这一步完全取决于你的决定。
+
+
+    | 数据类型 | 默认值 | 默认值 |
+
+    |---|---|---|
+
+    | byte | float | 0.0 |
+
+    | byte | double | 0.00 |
+
+    | short | decimal | 0.0m |
+
+    | ushort | bool | false |
+
+    | int | char | \u0000 |
+
+    | uint | string | null |
+
+    | long | 0L | null |
+
+    | unsigned | | |
+
+
+    变量声明的格式应如下：
+
+
+    ```
+
+    data_type name = initial_value;
+
+    ```
+
+
+    以下是一些有效的变量声明示例：
+
+
+    ```
+
+    int year = 2000;
+
+    ```
+
+
+    ```
+
+    string yearname = "";
+
+    ```
+
+
+    ```
+
+    char test = ''t'';
+
+    ```
+
+
+    每个 C# 语句都以分号结尾是非常重要的。如果你忘记添加单个分号，你的程序结果将是不符合预期和/或出意之外的。
+
+
+    ## 赋值过程
+
+
+    C# 中的变量可以像其他计算机语言一样被赋值。在被称为“值赋值”的过程中，你必须使用等号。程序员将其称为“赋值运算符”。在左侧编写变量名。在右侧编写你想要赋值的值。请下方的示例：
+
+
+    ```
+
+    test = x;
+
+    ```
+
+
+    ```
+
+    yourname = "John Doe";
+
+    ```
+
+
+    ## 如何初始化变量
+
+
+    在编码中，“初始化”是指给变量分配一个值。
+
+
+    当你声明变量时，你将设置“初始值”。
+
+
+    ## 变量的默认值
+
+
+    如果你不赋值，则变量将不会分配任何值（即：变量将分配一个默认值）。以下是每种数据类型的默认值：
+
+
+    这是一个声明变量并赋值的示例。
+
+
+    ```
+
+    // 这是一个示例
+
+    byte years = 10;
+
+    short days = 31;
+
+    decimal pi = 3.14;
+
+    bool isentity = true;
+
+    char sample = ''x'';
+
+    string animal = "dog";
+
+    ```
+
+
+    以正斜杠（即 `//`）开头的行被视为“注释”。编程中注释的目的是让代码更易读。语言编译器会忽略这些行。这意味着注释不会干扰你的程序功能。
+
+
+    ## 值与引用
+
+
+    C# 数据有两种类型：值类型和引用类型。
+
+
+    在可执行程序中，值类型是值的。此外，值类型包含了程序员输入的值。布尔值、字符和整数构成了值类型。相比之下，字符串、数组和对象被称为“引用类型”，因为它们不包含值。相反，它们作为数据在计算机内存中存储位置的标识符。
+
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 21]\n\n\"&&\" – This operator is called \"Logical AND\" by programmers.\
+    \ When both operands are true, it will give you \"true\".\n\n\"||\\ – It is called\
+    \ the \"Logical OR\" operator. When both operands are true, you will get true.\n\
+    \n\"!\" – By using this \"Logical Negation\" operator, an operand is reversed.\n\
+    \nYou can use these operators in the code:\n\n![](img/a36030d08eb553093e54e93e07543b0a_21_0.png)\n\
+    \n```\nclass Test\n{\n  static void Main()\n{\n    bool x = true, y = false;\n\
+    \n    System.Console.WriteLine(x && y);\n    System.Console.WriteLine(x || y);\n\
+    \    System.Console.WriteLine(!x);\n    System.Console.WriteLine(x ^ y);\n\n \
+    \   // A good example is shown here.\n  }\n}\n```\n\nAfter compiling and running\
+    \ this code, the following results will be displayed: Arithmetic Operators\n\n\
+    You can perform math operations using these operators. The following"
+  - "[PAGE 22]\n\noperators are included in this category:\n\"+\" - This operator\
+    \ can be used to add two values (e.g. int x = 1 + 1)\n\nIn your code, you can\
+    \ use the \"-\" operator to do subtraction. It subtracts thenvalue of the right\
+    \ operand from the left operand (for example, int x = 2 - 1)\n\n+   * The \"*\"\
+    \ operator allows you to multiply two operands (for example, int r =\n6 * 6)\n\
+    \nIn C#, you can divide numbers using the \"/\" operator. The \"/\" operator\n\
+    divides the left-hand operand by the right-hand operand.\n\nThe increment operator\
+    \ \"++\" is called the \"increment operator\". By using\nthis operator, an operand\
+    \ is incremented by one. These operators work on\nonly one operand, as opposed\
+    \ to the ones discussed above. The operator may\nalso be written before or after\
+    \ the operand. (For example, 99++, 1++, ++5,\netn\n\nA \"-\" operator is the exact\
+    \ opposite of an increment symbol. It decreases the\nvalue of the operand by one.\
+    \ It can be written before or after the operand\nbeing modified.\n\n```\nint a\
+    \ = 5;\nint b = 5;\nint c = 10;\n```\n\nThe code given below will show you how\
+    \ these operators work:\n\n```\nclass Test\n{\n    static void Main()\n    {\n\
+    \        double d = 100, e = 3;\n\n        System.Console.WriteLine(d + e);\n\
+    \        System.Console.WriteLine(d - e);\n        System.Console.WriteLine(d\
+    \ / e);\n        System.Console.WriteLine(d * e);\n```"
+  - '[PAGE 23]
+
+
+    ```
+
+    System.Console.WriteLine(++d);
+
+    System.Console.WriteLine(--e);
+
+
+    // This is an example.
+
+
+    }
+
+    ```
+
+
+    After compiling and executing this code, you will see the following at the command
+    prompt: Binary Operators
+
+
+    Operators that operate on binary numbers are called binary operators. All information
+    in the IT world is represented as a sequence of zeroes and ones. This means that
+    if you wish to become a successful programmer, you must master binary operators.
+
+
+    Binary operators function similarly to logical operators. Although binary and
+    logical operators utilize different inputs, they perform the same operations.
+    When using a logical operator, Boolean values are used to determine the result.
+    Binary operators, on the other hand, work with numbers expressed as binary digits.
+    The following are examples of binary operators you will encounter while working
+    with C#:
+
+
+    "&" - This is known as "Binary AND". Both operands must have "1" at the same position/s.
+
+
+    "^" - This operator is sometimes called "Binary Exclusive OR". Where two values
+    differ, it places a "1" there.
+
+
+    The binary operator "OR" is represented by this "|" symbol. It indicates which
+    operand/s have "1".
+
+
+    "~" - Binary values are negated by this operator. The value of a variable is reversed
+    just like "!".
+
+
+    "<<" - The operator is called "Binary Left Shift". A binary number is shifted
+    left by this operation. You should assign a value to this movement (e.g., 4 <<
+    3, 4 << 2, etc.).'
+  - '[PAGE 24]
+
+
+    # Comparison Operators
+
+
+    These operators allow you to compare the values inside two operands. Each of these
+    operators gives a Boolean value as the final output. Here are the comparison operators
+    of the C# language:
+
+
+    +   "===" – This is the Equality operator. It checks whether the two operands
+    are equal (e.g., x == y)
+
+
+    +   "> – This operator checks whether the left-operand''s value is greater than
+    that of the right-hand operand (e.g., x > y)
+
+
+    +   "<\ – This operator compares the values of the two operands. It will give
+    you
+
+
+    +   "true" if the left-operand''s value is less than that of the right-hand operand
+    (e.g., y < x).
+
+
+    +   ">=" – With this operator, you can determine whether the value of the hand
+    operand is greater than or equal to that of the right-hand operand.
+
+
+    +   "<=" – This operator will give you true if the value of the left-hand operand
+    is less than or equal to that of the right-hand operand.
+
+
+    +   \=! – Use this operator to check the equality of two operands. If the values
+    are not equal (e.g., x != y).
+
+
+    # Conditional Operator
+
+
+    C# users refer to "?" as the conditional operator. This operator uses the result
+    of a Boolean expression to determine which states should be processed. This is
+    called the "ternary operator" because it works on three operands. The first value
+    should be Boolean, while the remaining values belong to the same data type (e.g.,
+    characters, strings, numbers, etc.).
+
+
+    The syntax of this operator is:
+
+
+    ```
+
+    first_operand?second_operand : third_operand;
+
+    ```
+
+
+    Here is how it works: If "first_operand" is true, the program will work on
+
+
+    "second_operand". If "first_operand" is false, however, the program will work
+    on'
+  - '[PAGE 25]
+
+
+    "third_operand".'
+  - '[PAGE 26]
+
+
+    # The Conversion of Data Types
+
+
+    It is generally the case that operators work with similar types of arguments.
+    However, the C# language gives you a wide range of data types to use for various
+    situations. Whenever you operate on variables that have different types, you must
+    convert one of those variables first. You can do this implicitly or explicitly
+    in C#.
+
+
+    There is a data type for every C# expression. Within the expression, literals,
+    variables, values, and structures form this data type. This is because your expression
+    might be incompatible with the situation. Consequently, you will see one of the
+    following results:
+
+
+    A compile-time error will occur.
+
+
+    The program will perform the automated conversion. It will thus receive the right
+    expression type.
+
+
+    If you change a "s" into a type "t" during program execution, you can treat the
+    "s" type as "t". The type conversion may require validation by the programmer.
+    Take a look at the examples below:
+
+
+    The conversion of "objects" to "strings" will need to be verified during program
+    execution. By doing so, you ensure the values should be used as strings.
+
+
+    Validation of "string" values is not necessary when converting to "object" values.
+    That is because the "string" type is one of the "object" types. It is possible
+    to convert strings to their "parent" classes without losing data or getting errors.
+
+
+    When you convert int to long values, you will not have to perform any verification.
+
+
+    All possible values of the "int" type can be represented in the "long" data type.
+    Data transformations cannot produce errors because of this.
+
+
+    A "double" value is converted to a "long" value using validation. Your data may
+    be lost, depending on the values you are working with.
+
+
+    There are some restrictions regarding the changing of data types in C#.'
+  - "[PAGE 27]\n\nlanguage supports the following type conversions:\n\n# Explicit\
+    \ Conversion\n\nIf there is a risk of information loss, use this conversion. The\
+    \ fractional portion of floating-point values will disappear when you convert\
+    \ them to integer values (i.e., you will lose information). The conversion of\
+    \ a wide-range type to a narrow-range type may also result in data loss (e.g.,\
+    \ long to int, double to float, etc.). You can complete the conversion by using\
+    \ the \"type\" operator. See the examples below:\n\n```\nclass Example\n{\n  \
+    \  double yourDouble = 2.1d;\n    System.Console.WriteLine(yourDouble);\n\n  \
+    \  long yourLong = (long)yourDouble;\n    System.Console.WriteLine(yourLong);\n\
+    \n    yourDouble = 2e9d;\n    System.Console.WriteLine(yourDouble);\n\n    int\
+    \ yourInt = (int)yourDouble;\n    System.Console.WriteLine(yourInt);\n}\n```\n\
+    \nWhen you compile and run that program correctly, you will see the following\
+    \ results:"
+  md: "\n\"&&\" – This operator is called \"Logical AND\" by programmers. When both\
+    \ operands are true, it will give you \"true\".\n\n\"||\" – It is called the \"\
+    Logical OR\" operator. When both operands are true, you will get true.\n\n\"!\"\
+    \ – By using this \"Logical Negation\" operator, an operand is reversed.\n\nYou\
+    \ can use these operators in the code:\n\n![](img/a36030d08eb553093e54e93e07543b0a_21_0.png)\n\
+    \n```c\nclass Test\n{\n  static void Main()\n{\n    bool x = true, y = false;\n\
+    \n    System.Console.WriteLine(x && y);\n    System.Console.WriteLine(x || y);\n\
+    \    System.Console.WriteLine(!x);\n    System.Console.WriteLine(x ^ y);\n\n \
+    \   // A good example is shown here.\n  }\n}\n```\n\nAfter compiling and running\
+    \ this code, the following results will be displayed: Arithmetic Operators\n\n\
+    You can perform math operations using these operators. The following operators\
+    \ are included in this category:\n\n- \"+\" - This operator can be used to add\
+    \ two values (e.g. int x = 1 + 1)\n\nIn your code, you can use the \"-\" operator\
+    \ to do subtraction. It subtracts the value of the right operand from the left\
+    \ operand (for example, int x = 2 - 1)\n\n- \"*\" The \"*\" operator allows you\
+    \ to multiply two operands (for example, int r = 6 * 6)\n\nIn C#, you can divide\
+    \ numbers using the \"/\" operator. The \"/\" operator divides the left-hand operand\
+    \ by the right-hand operand.\n\nThe increment operator \"++\" is called the \"\
+    increment operator\". By using this operator, an operand is incremented by one.\
+    \ These operators work on only one operand, as opposed to the ones discussed above.\
+    \ The operator may also be written before or after the operand. (For example,\
+    \ 99++, 1++, ++5, etc.)\n\nA \"-\" operator is the exact opposite of an increment\
+    \ symbol. It decreases the value of the operand by one. It can be written before\
+    \ or after the operand being modified.\n\n```csharp\nint a = 5;\nint b = 5;\n\
+    int c = 10;\n```\n\nThe code given below will show you how these operators work:\n\
+    \n```csharp\nclass Test\n{\n    static void Main()\n    {\n        double d =\
+    \ 100, e = 3;\n\n        System.Console.WriteLine(d + e);\n        System.Console.WriteLine(d\
+    \ - e);\n        System.Console.WriteLine(d / e);\n        System.Console.WriteLine(d\
+    \ * e);\n        System.Console.WriteLine(++d);\n        System.Console.WriteLine(--e);\n\
+    \n        // This is an example.\n\n    }\n}\n```\n\nAfter compiling and executing\
+    \ this code, you will see the following at the command prompt: Binary Operators\n\
+    \nOperators that operate on binary numbers are called binary operators. All information\
+    \ in the IT world is represented as a sequence of zeroes and ones. This means\
+    \ that if you wish to become a successful programmer, you must master binary operators.\n\
+    \nBinary operators function similarly to logical operators. Although binary and\
+    \ logical operators utilize different inputs, they perform the same operations.\
+    \ When using a logical operator, Boolean values are used to determine the result.\
+    \ Binary operators, on the other hand, work with numbers expressed as binary digits.\
+    \ The following are examples of binary operators you will encounter while working\
+    \ with C#:\n\n- \"&\" - This is known as \"Binary AND\". Both operands must have\
+    \ \"1\" at the same position/s.\n\n- \"^\" - This operator is sometimes called\
+    \ \"Binary Exclusive OR\". Where two values differ, it places a \"1\" there.\n\
+    \n- The binary operator \"OR\" is represented by this \"|\" symbol. It indicates\
+    \ which operand/s have \"1\".\n\n- \"~\" - Binary values are negated by this operator.\
+    \ The value of a variable is reversed just like \"!\".\n\n- \"<<\" - The operator\
+    \ is called \"Binary Left Shift\". A binary number is shifted left by this operation.\
+    \ You should assign a value to this movement (e.g., 4 << 3, 4 << 2, etc.).\n\n\
+    ## Comparison Operators\n\nThese operators allow you to compare the values inside\
+    \ two operands. Each of these operators gives a Boolean value as the final output.\
+    \ Here are the comparison operators of the C# language:\n\n- \"===\" – This is\
+    \ the Equality operator. It checks whether the two operands are equal (e.g., x\
+    \ == y)\n\n- \">\" – This operator checks whether the left-operand's value is\
+    \ greater than that of the right-hand operand (e.g., x > y)\n\n- \"<\" – This\
+    \ operator compares the values of the two operands. It will give you \"true\"\
+    \ if the left-operand's value is less than that of the right-hand operand (e.g.,\
+    \ y < x).\n\n- \">=\" – With this operator, you can determine whether the value\
+    \ of the left-hand operand is greater than or equal to that of the right-hand\
+    \ operand.\n\n- \"<=\" – This operator will give you true if the value of the\
+    \ left-hand operand is less than or equal to that of the right-hand operand.\n\
+    \n- \"!=\" Use this operator to check the equality of two operands. If the values\
+    \ are not equal (e.g., x != y).\n\n## Conditional Operator\n\nC# users refer to\
+    \ \"?\" as the conditional operator. This operator uses the result of a Boolean\
+    \ expression to determine which states should be processed. This is called the\
+    \ \"ternary operator\" because it works on three operands.\n\nThe syntax of this\
+    \ operator is:\n\n```csharp\nfirst_operand ? second_operand : third_operand;\n\
+    ```\n\nHere is how it works: If \"first_operand\" is true, the program will return\
+    \ \"second_operand\". If \"first_operand\" is false, the program will return \"\
+    third_operand\".\n\n## The Conversion of Data Types\n\nIt is generally the case\
+    \ that work with similar types. However, the C# language gives you wide range\
+    \ of data types. Whenever you operate on different types, you must convert one\
+    \ first. You can do this implicitly or explicitly.\n\nThere are some restrictions\
+    \ regarding the changing of data types in C#. The language supports the following\
+    \ type conversions:\n\n### Explicit Conversion\n\nIf there is a risk of information\
+    \ loss, use this conversion. The fractional portion of floating-point values will\
+    \ disappear when you convert them to integer values (i.e., you will lose information).\
+    \ The conversion of a wide-range type to a narrow-range type may also result in\
+    \ data loss (e.g., long to int, double to float, etc.). You can complete the conversion\
+    \ by using the \"type\" operator. See the examples below:\n\n```csharp\nclass\
+    \ Example\n{\n    double yourDouble = 2.1d;\n    System.Console.WriteLine(yourDouble);\n\
+    \n    long yourLong = (long)yourDouble;\n    System.Console.WriteLine(yourLong);\n\
+    \n    yourDouble = 2e9d;\n    System.Console.WriteLine(yourDouble);\n\n    int\
+    \ yourInt = (int)yourDouble;\n    System.Console.WriteLine(yourInt);\n}\n```\n\
+    \nWhen you compile and run that program correctly, you will see the following\
+    \ results:\n"
+  mdcn: "\n\n\"&&\" – 程序员将此运算符称为“逻辑与”。当两个操作数都为真时，它将返回“true”。\n\n\"||\" – 它被称为“逻辑或”运算符。当两个操作数都为真时，它将返回“true”。\n\
+    \n\"!\" – 使用此“逻辑非”运算符，操作数的值会被取反。\n\n你可以在代码中使用这些运算符：![](img/a6030d08eb55309e54e7543b0a_21.png)\n\
+    \n```c\nclass Test\n{\n  static void Main()\n{\n    bool x = true, y = false;\n\
+    \n    System.Console.WriteLine(x && y);\n    System.Console.WriteLine(x || y);\n\
+    \    System.Console.WriteLine(!x);\n    System.Console.WriteLine(x ^ y);\n\n \
+    \   // 这里是一个示例\n  }\n}\n```\n\n编译并运行后将显示以下结果：算术运算符\n\n你可以使用这些运算符执行数学运算。该类别包含运算符：\n\
+    \n- \"+\" – 此运算符用于相加两个值（例如，int x = 1 + 1）。\n\n- \"-\" 在代码中，你可以使用此运算符进行减法。它从左操作数中减去右操作数的值（例如，int\
+    \ x = 2 - 1）。\n\n- \"*\" 运算符允许你乘两个操作数（例如，int r = 6 * 6）。\n\n在 C# 中，可以使用 \"/\"\
+    \ 运算符进行除法。该运算符将左操作数除以右操作数。\n\n\"++\" 运算符被称为“递增运算符”。使用此运算符，操作数加一。与上述运算符不同，这些运算符只作用于一个操作数。该运算符也可以写在操作数之前或之后（例如，9++,\
+    \ ++5）。\n\n\"--\" 运算符是递增符号的反。它将操作数的值减一。可以写在被修改的操作数之前或之后。\n\n```csharp\nint a =\
+    \ 5;\nint b = 5;\nint c = 10;\n```\n\n下面的代码将向你展示这些运算符的工作：\n\n```csharp\nclass\
+    \ Test\n{\n    static void Main()\n    {\n        double d = 10, e = 3;\n\n  \
+    \      System.Console.WriteLine(d + e);\n        System.Console.WriteLine(d -\
+    \ e);\n        System.Console.WriteLine(d / e);\n        System.Console.WriteLine(d\
+    \ * e);\n        System.Console.WriteLine(++d);\n        System.Console.WriteLine(--e);\n\
+    \n        // 这是一个示例\n    }\n}\n```\n\n编译并执行此代码后，你将在提示符中看到以下：位运算符\n\n操作二进制数的运算符被称为位运算符。二进制表示为\
+    \ 0 和 1 的序列。这意味着如果你想成为成功的程序员，必须掌握位运算符。\n\n位运算符的功能与逻辑运算符类似。虽然位运算符和逻辑运算符使用的输入不同，但它们执行的操作相同。使用逻辑运算符，使用布尔值来确定结果。在\
+    \ C# 中，你会遇到以下位运算符示例：\n\n- \"&\" – 这是“位与”。两个操作数在相同位置都为“1”。\n\n- \"^\" – 此运算符有时被称为“位异或”。当两个值不同时，它放置“1”。\n\
+    \n- \"|\" – 位运算符“或”由此符号表示。它指示哪些操作数具有“1”。\n\n- \"~\" – 位值由此运算符取反。变量的值取反，就像 \"!\"\
+    \ 一样。\n\n- \"<<\" – 此运算符被称为“左移”。二进制数通过此操作左移。你应该移动一个值（例如，4 << 3, 4 << 2 等）。\n\n\
+    ## 比较运算符\n\n这些运算符允许你比较两个操作数的值。这些运算符的输出都是布尔值。以下是 C# 语言的比较运算符：\n\n- \"==\" – 这是相等运算符。它检查两个操作数是否相等（例如，x\
+    \ == y）。\n\n- \">\" – 此运算符检查左操作数的值是否大于右操作数（例如，x > y）。\n\n- \"<\" – 此运算符比较两个操作数的值。如果左操作数的值小于右操作数，它将返回“true”（例如，y\
+    \ < x）。\n\n- \">=\" – 通过此运算符，你可以判断左操作数的值是否大于或等于右操作数。\n\n- \"<=\" – 如果左操作数的值小于或等于右操作数，此运算符将返回\
+    \ true。\n\n- \"!=\" 使用此运算符检查两个操作数的相等性。如果值不相等（例如，x != y）。\n\n## 条件运算符\n\nC# 用户将\
+    \ \"?\" 称为条件运算符。该运算符使用布尔表达式的结果来确定应该处理哪些状态。这被称为“三元运算符”，因为它作用于三个操作数。\n\n该运算符的语法为：\n\
+    \n```csharp\nfirst_operand ? second_operand : third_operand;\n```\n\n工作原理如下：如果\
+    \ \"first_operand\" 为真，程序将返回 \"second_operand\"。如果 \"first_operand\" 为假，程序将返回\
+    \ \"third_operand\"。\n\n## 数据类型的转换\n\n通常操作的是相似类型。然而，C# 语言提供了广泛的数据类型。当你对不同类型进行操作时，必须先进行转换。你可以隐式或显式地这样做。\n\
+    \n关于 C# 中数据类型的更改有一些限制。语言支持以下类型转换：\n\n### 显式转换\n\n如果存在丢失信息的风险，请使用这种转换。将浮点值转换为整数时，小数部分将会消失（即你会丢失信息）。从宽范围类型到窄范围类型的转换也导致数据丢失（例如从\
+    \ long 到 int，double 到 float 等）。你可以通过“类型”运算符完成转换。参见下面的示例：\n\n```csharp\nclass Example\n\
+    {\n    double yourDouble = 2.1d;\n    System.Console.WriteLine(yourDouble);\n\n\
+    \    long yourLong = (long)yourDouble;\n    System.Console.WriteLine(yourLong);\n\
+    \n    yourDouble = 2e9d;\n    System.Console.WriteLine(yourDouble);\n\n    int\
+    \ yourInt = (int)yourDouble;\n    System.Console.WriteLine(yourInt);\n}\n```\n\
+    \n"
+  merge: 0
+- raw:
+  - '[PAGE 28]
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_28_0.png)
+
+
+    # Implicit Conversion
+
+
+    Data loss cannot occur when performing this conversion. Because it does not require
+    an operator, it is referred to as implicit conversion. The C # compiler will perform
+    an implicit conversion whenever you assign a narrow-range value to a variable
+    with a wide range; the C# compiler will perform an implicit conversion.
+
+
+    # String Conversion
+
+
+    In C#, any type of data can be converted to a string. The compiler will automatically
+    perform this conversion by using "+" and at least one non-string argument.
+
+
+    The non-string argument will be converted to a string with this operation, and
+    the "+" operator will create a new value.'
+  - '[PAGE 29]
+
+
+    # Console
+
+
+    This chapter aims to teach you how to use the console to collect and provide data.
+    Using this tool, you will learn to perform I/O (Input/Output) operations in C#.
+
+
+    # Console – The Basics
+
+
+    You can connect to your computer''s console to interact with its programs. For
+    this reason, consoles are viewed as a crucial part of any operating system.
+
+
+    Users and programs interact in C# using standard output (e.g., screen) and/or
+    input (e.g., keyboard strokes). They are referred collectively as I/O operations.
+    A computer program''s text within the console provides useful data.
+
+
+    I/O devices on the computer are linked to every console program installed through
+    your computer''s OS (i.e., operating system). The default input and output devices
+    on most computers are screens and keyboards. If you wish, you can easily redirect
+    these channels to a particular file or device.
+
+
+    # Programming Interfaces and User Interactions
+
+
+    Users interact with most computer programs. Whenever a user interacts with a program,
+    they must provide input and instructions. These days, there are many ways to interact:
+    console-based, browser-based, internet-based, graphical, etc. As a result, the
+    number of people using consoles to interact with programs is steadily decreasing.
+    This is because the alternative options (e.g., browser-based) are more user-friendly
+    and convenient.
+
+
+    # Using the Console
+
+
+    ```
+
+    C:\Windows\system32\cmd.exe
+
+    Microsoft Windows Version [6.1.7601]
+
+    (C) 2009 Microsoft Corporation. All rights reserved.
+
+    C \Users\Sam>
+
+    ```
+
+
+    Consoles can be very important for user interactions with programs.
+
+
+    When creating simple computer programs, you will need to use the console. For
+    these programs, you will have to concentrate on the problems you need to'
+  - '[PAGE 30]
+
+
+    fix. It will take more than attractive GUIs (i.e., graphical user interfaces)
+    to succeed in this endeavor.
+
+
+    The console can also test a small code block before adding it to a complex program.
+    It is very easy to isolate code blocks using the console since it is a simple
+    tool. You will not have to use any buttons. In a few seconds, the console will
+    provide you with the results that you need.
+
+
+    # How to access the console
+
+
+    Depending on the operating system you are using, you will have different ways
+    to access the console. Here is what you need to do if you are using a Windows
+    computer:
+
+
+    +   1. Press the Start button.
+
+
+    +   2. Click "Programs" and select "Accessories".
+
+
+    +   3. Click the "Command Prompt" option.
+
+
+    Your home directory will appear in the console, which is represented by your username.
+    Let us look at an example: SARAH
+
+
+    You can run the console by searching for "cmd" in Windows Vista, Windows 7, or
+    Windows 8.
+
+
+    # Here are some additional details regarding the console
+
+
+    Consoles display text-based information in a black window. The cursor blinks,
+    and characters appear in a string. Whenever you type a character, the cursor moves.
+
+
+    Windows programs can run on desktops, browsers, Internet browsers, or consoles.
+    These programs utilize consoles for input and output.
+
+
+    For user-program interactions, desktop-based programs rely on their GUIs. Throughout
+    this book, you will be entering data using your keyboard, and you will see the
+    results in the command prompt.
+
+
+    While working with a console-based program, you will use your keyboard a lot because
+    some applications require text, numbers, characters, etc.
+
+
+    # Basic Commands
+
+
+    We will discuss the basic commands you will issue from the command prompt in this
+    section. If you are interested in becoming a great C#'
+  - '[PAGE 31]
+
+
+    programmer, you should study this material carefully.
+
+
+    Using the console commands
+
+
+    You can change the active directory by using the command cd name_of_directory.
+
+
+    The following command will take you to the Users folder in C::
+
+
+    cd:\Users
+
+
+    dir – This command allows you to view the files contained in an active directory.
+
+
+    rmdir name_of_directory – You can delete a directory using this command. The command
+    rmdir Sample, for example, deletes all files within the directory named "Sample".
+
+
+    mkdir name_of_directory – It allows you to create a new directory in the active
+    directory. When you run mkdir John inside the Users directory, a folder named
+    "John" will be created.
+
+
+    type_name_of_file – The contents of an existing file can be viewed by using this
+    command. To see what is inside a .cs file, you might type "type HelloCSharp.cs".
+
+
+    # Standard I/O
+
+
+    For UNIX computers, Standard I/O is a mechanism. Special devices handle input
+    and output.
+
+
+    A cursor will appear on the console when a program waits for the user to provide
+    information. When this happens, the system is in "waiting mode".
+
+
+    # Input and Output
+
+
+    User-program interactions require the definition of standard I/O mechanisms in
+    operating systems. When launching a console application, the initialization code
+    in the program must use I/O mechanisms assigned by the operating system. This
+    code permits communication between the user and console-based program.
+
+
+    The code in this program consists of a function that can read user input from
+    a stream called a console.In, send information to a stream called console.Out,
+    and report problematic situations using console.Error (the standard C# error'
+  - '[PAGE 32]
+
+
+    stream).
+
+    C streams will be discussed later in this book. I/O mechanisms in C# will be discussed
+    in this chapter.
+
+
+    # I/O Devices
+
+
+    Some programs accept Non-keyboard input. Creating programs in C# that use text
+    files, barcode readers, microphones, and other data input sources are possible.
+    Programs can also send their output to a screen, a hard drive, or a printer.
+
+
+    # System.Console
+
+
+    Text-based information can be read, displayed, or formatted using the system.Console
+    class. Data entry and data visualization are three of the most popular attributes
+    of the system.Console class. Console.In, Console.Out, Console.Error are these
+    attributes.
+
+
+    Data display, information reading, and error reporting are made possible by these
+    attributes. They can be directly used in C#. There are other methods and attributes
+    in the system.Console that has the potential to assist you in I/O operations.
+
+
+    Note: Program streams can be modified in the C# language. Use the following methods
+    to do this: Console.SetOut (for the Output stream), Console.SetIn (for the Input
+    stream), and console.SetError (for the Error stream).
+
+
+    # Console Input
+
+
+    Computers have a console for entering information when programming languages are
+    used.
+
+
+    For example, the C# language uses "Console.In" to control its input stream.
+
+    Using Console.In directly is not necessary. There are two methods in the Console
+    class (i.e., Console.ReadLine and Console.Read) that work with Console.In. These
+    methods allow you to read data from your command prompt.
+
+
+    # Console.ReadLine Method'
+  - "[PAGE 33]\n\nSimple and convenient, this method makes reading data from a console\
+    \ easy. Your program stops and waits for the user's input when you call this method.\
+    \ An individual can then enter a character or string and press \"Enter\". When\
+    \ the Enter key is pressed, the user tells the program that the necessary input\
+    \ has been entered using the console.ReadLine method, you can read the user's\
+    \ input.\n\nYou can see how console.ReadLine works by looking at the code given\
+    \ below:\n\n```\nclass Test\n{\n    static void Main()\n    {\n        System.Console.WriteLine(\"\
+    What is your first name?\\\"); string yourfirstName = System.Console.ReadLine();\n\
+    ```\n\n```\nSystem.Console.WriteLine(\"Please enter your last name?\\\"); string\
+    \ yourLastName = System.Console.ReadLine();\"\n```\n\n![](img/a36030d08eb553093e54e93e07543b0a_33_0.png)\n\
+    \n```\nSystem.Console.WriteLine(\"Hi, {0} {1}!\", firstName, lastName);\n}\n}\n\
+    ```\n\nThe following message will appear if you enter \"John\" and \"Smith\" into\
+    \ the command prompt:"
+  md: "\n![](img/a36030d08eb553093e54e93e07543b0a_28_0.png)\n\n# Implicit Conversion\n\
+    \nData loss cannot occur when performing this conversion. Because it does not\
+    \ require an operator, it is referred to as implicit conversion. The C# compiler\
+    \ will perform an implicit conversion whenever you assign a narrow-range value\
+    \ to a variable with a wide range; the C# compiler will perform an implicit conversion.\n\
+    \n# String Conversion\n\nIn C#, any type of data can be converted to a string.\
+    \ The compiler will automatically perform this conversion by using \"+\" and at\
+    \ least one non-string argument.\n\nThe non-string argument will be converted\
+    \ to a string with this operation, and the \"+\" operator will create a new value.\n\
+    \n# Console\n\nThis chapter aims to teach you how to use the console to collect\
+    \ and provide data. Using this tool, you will learn to perform I/O (Input/Output)\
+    \ operations in C#.\n\n# Console – The Basics\n\nYou can connect to your computer's\
+    \ console to interact with its programs. For this reason, consoles are viewed\
+    \ as a crucial part of any operating system.\n\nUsers and programs interact in\
+    \ C# using standard output (e.g., screen) and/or input (e.g., keyboard strokes).\
+    \ They are referred collectively as I/O operations. A computer program's text\
+    \ within the console provides useful data.\n\nI/O devices on the computer are\
+    \ linked to every console program installed through your computer's OS (i.e.,\
+    \ operating system). The default input and output devices on most computers are\
+    \ screens and keyboards. If you wish, you can easily redirect these channels to\
+    \ a particular file or device.\n\n# Programming Interfaces and User Interactions\n\
+    \nUsers interact with most computer programs. Whenever a user interacts with a\
+    \ program, they must provide input and instructions. These days, there are many\
+    \ ways to interact: console-based, browser-based, internet-based, graphical, etc.\
+    \ As a result, the number of people using consoles to interact with programs is\
+    \ steadily decreasing. This is because the alternative options (e.g., browser-based)\
+    \ are more user-friendly and convenient.\n\n# Using the Console\n\n```\nC:\\Windows\\\
+    system32\\cmd.exe\nMicrosoft Windows Version [6.1.7601]\n(C) 2009 Microsoft Corporation.\
+    \ All rights reserved.\nC \\Users\\Sam>\n```\n\nConsoles can be very important\
+    \ for user interactions with programs.\n\nWhen creating simple computer programs,\
+    \ you will need to use the console. For these programs, you will have to concentrate\
+    \ on the problems you need to fix. It will take more than attractive GUIs (i.e.,\
+    \ graphical user interfaces) to succeed in this endeavor.\n\nThe console can also\
+    \ test a small code block before adding it to a complex program. It is very easy\
+    \ to isolate code blocks using the console since it is a simple tool. You will\
+    \ not have to use any buttons. In a few seconds, the console will provide you\
+    \ with the results that you need.\n\n# How to access the console\n\nDepending\
+    \ on the operating system you are using, you will have different ways to access\
+    \ the console. Here is what you need to do if you are using a Windows computer:\n\
+    \n- 1. Press the Start button.\n- 2. Click \"Programs\" and select \"Accessories\"\
+    .\n- 3. Click the \"Command Prompt\" option.\n\nYour home directory will appear\
+    \ in the console, which is represented by your username. Let us look at an example:\
+    \ SARAH\n\nYou can run the console by searching for \"cmd\" in Windows Vista,\
+    \ Windows 7, or Windows 8.\n\n# Here are some additional details regarding the\
+    \ console\n\nConsoles display text-based information in a black window. The cursor\
+    \ blinks, and characters appear in a string. Whenever you type a character, the\
+    \ cursor moves.\n\nWindows programs can run on desktops, browsers, Internet browsers,\
+    \ or consoles. These programs utilize consoles for input and output.\n\nFor user-program\
+    \ interactions, desktop-based programs rely on their GUIs. Throughout this book,\
+    \ you will be entering data using your keyboard, and you will see the results\
+    \ in the command prompt.\n\nWhile working with a console-based program, you will\
+    \ use your keyboard a lot because some applications require text, numbers, characters,\
+    \ etc.\n\n# Basic Commands\n\nWe will discuss the basic commands you will issue\
+    \ from the command prompt in this section. If you are interested in becoming a\
+    \ great C# programmer, you should study this material carefully.\n\n# Using the\
+    \ console commands\n\nYou can change the active directory by using the command\
+    \ cd name.\n\n- cd name: You can change the active directory by using the command\
+    \ cd name.\n- dir: This command shows the contents of the directory.\n- rmdir:\
+    \ This command deletes a directory.\n- mkdir: This command allows you to create\
+    \ a new directory.\n- type: This command displays the contents of a file.\n\n\
+    # Standard I/O\n\nFor example, the C# language uses \"Console.In\" to control\
+    \ its input stream, \"Console.Out\" to send information, and \"Console.Error\"\
+    \ to report situations.\n\n# Input and Output\n\nComputers have a console for\
+    \ entering information. For example, the C# language uses \"Console.In\" to control\
+    \ its input stream.\n\n# I/O Devices\n\nSome programs accept keyboard input, barcode\
+    \ readers, microphones, and other data sources. Programs can also send their output\
+    \ to a screen, hard drive, or printer.\n\n# System.Console\n\nText-based information\
+    \ can be read, displayed, or formatted using System.Console. Console.In, Console.Out,\
+    \ Console.Error are these attributes.\n\nData entry, information reading, and\
+    \ error reporting are made possible by these attributes.\n\n# Console Input\n\n\
+    Using Console.In directly is not necessary. There are two methods in the Console\
+    \ class (i.e., Console.ReadLine and Console.Read) that work with Console.In.\n\
+    \n# Console.ReadLine Method\n\nSimple and convenient, this method makes reading\
+    \ data from a console easy. Your program stops and waits for the user's input\
+    \ when you call this method. An individual can then enter a character or string\
+    \ and press \"Enter\". When the Enter key is pressed, the user tells the program\
+    \ that the necessary input has been entered using the console.ReadLine method,\
+    \ you can read the user's input.\n\nYou can see how console.ReadLine works by\
+    \ looking at the code given below:\n\n```csharp\nclass Test\n{\n    static void\
+    \ Main()\n    {\n        System.Console.WriteLine(\"What is your first name?\"\
+    ); string yourfirstName = System.Console.ReadLine();\n        System.Console.WriteLine(\"\
+    Please enter your last name?\"); string yourLastName = System.Console.ReadLine();\n\
+    \        System.Console.WriteLine(\"Hi, {0} {1}!\", firstName, lastName);\n  \
+    \  }\n}\n```\n\nThe following message will appear if you enter \"John\" and \"\
+    Smith\" into the command prompt:\n"
+  mdcn: "\n\n![](img/a36030d08eb553093e54e93e07543b0a_28_0.png)\n\n# 隐式转换\n\n执行此转换时不会发生数据丢失。因为不需要运算符，所以它被称为隐式转换。每当你将窄范围的值赋值给宽范围变量时，C#\
+    \ 编译器将执行隐式转换。\n\n# 字符串转换\n\n在 C# 中，任何类型的数据都可以转换为字符串。编译器将通过使用 `\"+\"` 和至少一个非字符串参数来自动执行此转换。\n\
+    \n通过此操作，非字符串参数将转换为字符串，并且 `\"+\"` 运算符将创建一个新值。\n\n# 控制台\n\n本章旨在教你如何使用控制台收集和提供数据。通过这个工具，你将学习在\
+    \ C# 中执行 I/O（输入/输出）操作。\n\n# 控制台 – 基础\n\n你可以连接到计算机的控制台以与其程序交互。出于如此，控制台被视为任何操作系统的关键部分。\n\
+    \n用户和程序在 C# 中通过标准输出（例如屏幕）和/或输入（例如键盘击键）进行交互。它们被统称为 I/O 操作。计算机程序在控制台内的文本提供了有用数据。\n\
+    \n计算机上的 I/O 设备通过你的计算机 OS（即操作系统）连接到每个安装的控制台程序。大多数计算机的默认输入输出设备是屏幕和键盘。如果你愿意，可以轻松将这些通道重定向到特定的文件或设备。\n\
+    \n# 编程接口与用户交互\n\n用户与大多数计算机程序交互。每当用户与程序交互时，他们必须提供输入和指令。如今有许多交互方式：基于控制台的、基于浏览器的、基于互联网的、图形等的。因此，使用控制台与程序交互的人数正在减少。这是因为替代方案（例如基于浏览器的）更加用户友好且方便。\n\
+    \n# 使用控制台\n\n```\nC:\\Windows\\system32\\cmd.exe\nMicrosoft Windows Version [6.1.7601]\n\
+    (C) 2009 Microsoft Corporation. All rights reserved.\nC \\Users\\Sam>\n```\n\n\
+    控制台对于用户与程序的交互非常重要。\n\n在创建简单的计算机程序时，你将需要使用控制台。对于这些程序，你必须专注于需要解决的问题。要在这一项工作中取得成功，不仅仅需要吸引人的\
+    \ GUI（即图形用户界面）。\n\n控制台还可以在将代码块添加到复杂程序之前对其进行小范围测试。由于控制台是一个简单的工具，使用它来隔离代码块非常容易。你不需要使用任何按钮。在几秒钟内，控制台将为你提供所需的结果。\n\
+    \n# 如何访问控制台\n\n取决于你正在使用的操作系统，你会有不同的方法访问控制台。如果你使用的是 Windows 计算机，需要执行以下操作：\n\n-\
+    \ 1. 点击“开始”按钮。\n- 2. 点击“程序”并选择“辅助工具”。\n- 3. 点击“命令提示符”选项。\n\n你的主目录将控制台中，由你的用户名表示。让我们来看一个例子：SARAH\n\
+    \n你可以在 Windows Vista、Windows 7 或 Windows 8 中搜索“cmd”来运行控制台。\n\n# 以下是关于控制台的一些额外细节\n\
+    \n控制台在黑色窗口中显示文本信息。光标闪烁，字符出现在字符串中。每当你输入一个字符时，光标就会移动。\n\nWindows 程序可以在桌面、浏览器、浏览器浏览器或控制台上运行。这些程序利用控制台进行输入和输出。\n\
+    \n对于用户-程序交互，基于桌面的程序依赖它们的 GUI。在整本书中，你将使用键盘输入数据，并在命令提示符中查看结果。\n\n在操作基于控制台的程序时，你会频繁使用键盘，因为某些应用程序需要文本、数字、字符等。\n\
+    \n# 基本命令\n\n我们将在本节中讨论从命令提示符发出的基本命令。如果你感兴趣成为一名优秀的 C# 程序员，你应该仔细学习这些材料。\n\n# 使用控制台命令\n\
+    \n你可以通过使用 `cd name` 命令来更改活动目录。\n\n- cd name: 你可以通过使用 `cd name` 命令来更改活动目录。\n- dir:\
+    \ 此命令显示目录的内容。\n- rmdir: 此命令删除目录。\n- mkdir: 此命令允许你创建一个目录。\n- type: 此命令显示文件的内容。\n\
+    \n# 标准 I/O\n\n例如，C# 语言使用 `Console.In` 控制其输入流，使用 `Console.Out` 发送信息，并使用 `Console.Error`\
+    \ 报告情况。\n\n# 输入与输出\n\n计算机有一个输入信息的控制台。例如，C# 语言使用 `Console.In` 控制其输入流。\n\n# I/O\
+    \ 设备\n\n某些程序接受键盘输入、条形码读取器、麦克风和其他数据源。程序还可以将其输出到屏幕、硬盘或打印机。\n\n# System.Console\n\
+    \n可以使用 `System.Console` 读取、显示或格式化文本信息。`Console.In`、`Console.Out`、`Console.Error`\
+    \ 是这些属性。\n\n这些属性使得数据输入、信息读取和错误报告成为可能。\n\n# 控制台输入\n\n直接使用 `Console.In` 不是必要的。`Console`\
+    \ 类中有方法（即 `Console.ReadLine` 和 `Console.Read`）与 `Console.In` 配合。\n\n# Console.ReadLine\
+    \ 方法\n\n这种方法简单方便，使得从控制台读取数据变得容易。当你调用此方法时，你的程序会停止并等待用户的输入。个人可以输入一个字符或字符串并按“回车”。当按下回车键时，用户告诉程序已通过\
+    \ `Console.ReadLine` 方法输入了必要的输入，你可以读取用户的输入。\n\n你可以通过查看下提供的代码来了解 `console.ReadLine`\
+    \ 是如何工作的：\n\n```csharp\nclass Test\n{\n    static void Main()\n    {\n       \
+    \ System.Console.WriteLine(\"What is your first name?\"); string yourfirstName\
+    \ = System.Console.ReadLine();\n        System.Console.WriteLine(\"Please enter\
+    \ your last name?\"); string yourLastName = System.Console.ReadLine();\n     \
+    \   System.Console.WriteLine(\"Hi, {0} {1}!\", firstName, lastName);\n    }\n\
+    }\n```\n\n如果你在命令提示符中输入“John”和“Smith”，将出现以下消息：\n\n"
+  merge: 0
+- raw:
+  - "[PAGE 34]\n\n# Console.Read Method\n\nConsole.Read and Console.ReadLine differs\
+    \ significantly. First of all, Console.Read only reads a single character, whereas\
+    \ Console.ReadLine reads the entire expression. Secondly, Console.Read does not\
+    \ return the accepted input but rather a code. The output can be utilized as an\
+    \ ordinary character if you do any of the following: Convert the output to a character\n\
+    \nConvert the result to a character using Convert.ToChar\n\nNote: The user must\
+    \ press \"Enter\" to make Constant.Read read a character. The program will transfer\
+    \ the input to the standard string's buffer and invoke the console upon pressing\
+    \ this key.Read method.\n\nSee the example below:\n\n```\nclass UsingRead\n  \
+    \  static void Main()\n    {\n        int codeRead = 0;\n        do\n        {\n\
+    \            codeRead = Console.Read();\n            if (codeRead != 0)\n    \
+    \        {\n                Console.Write((char)codeRead);\n            }\n  \
+    \      } while (codeRead != 10);\n    }\n```\n\n# How to Read a Number\n\nC# programs\
+    \ do not directly read numbers. By using the console.ReadLine method, the inputs\
+    \ needs to be converted into numbers. It is known as parsing to convert strings\
+    \ to different data types. In the C# language, this is supported by all primitive\
+    \ data types.\n\n# The Console Output\n\nTwo methods will be covered in this chapter:\
+    \ Console.WriteLine and Console.Write."
+  - '[PAGE 35]
+
+
+    The C# language supports both methods for printing all data types. Messages can
+    be displayed on a user''s console that way.
+
+
+    How these methods work can be learned by looking at the following code snippets:
+
+
+    If you enter "John" and "Smith" into the command prompt, the following message
+    will appear:Console.WriteLine("I want to learn the C# programming language.");
+
+
+    ```
+
+    // This line prints the string within the parentheses.
+
+    ```
+
+
+    ```
+
+    Console.WriteLine(100);
+
+    //Upon typing this line, the user''s command prompt will display "100".
+
+    ```
+
+
+    ```
+
+    Console.WriteLine(3.14);
+
+    ```
+
+
+    //In this line, the user''s console will display the value 3.14.
+
+    Different types of data can be displayed on the user''s screen using the Console.WriteLine
+    method. Each data type is built into the Console class.
+
+
+    In contrast to console.WriteLine, the latter simply displays the information inside
+    the parentheses where the former prints the value inside the parentheses and adds
+    a newline character. The use of a console.WriteLine in your code is analogous
+    to hitting the "Enter" key after showing the message (i.e., The cursor will move
+    to the next line).
+
+
+    # String Concatenation
+
+
+    C# prohibits programmers from operating on strings.'
+  - '[PAGE 36]
+
+
+    You cannot perform arithmetic operations on actual words (e.g., fish - dog, power
+    * humans, land/people, etc.). C#, however, allows you to concatenate (i.e., combine)
+    multiple string objects. Use the "+" symbol to add to your strings. The following
+    example explains how to do this.
+
+
+    ```
+
+    string gadget = "smartphone";
+
+    string example = "I use my " + gadget + "to access " + "the internet.";
+
+    Console.WriteLine(example);
+
+    ```
+
+
+    If you execute that code, the console will display this:
+
+
+    I use my smartphone to access the internet.'
+  - '[PAGE 37]
+
+
+    # # C# Conditional Statements
+
+
+    You will learn how conditional statements work in C# in this chapter. Conditions
+    are code blocks that allow you to perform a series of actions based on conditions.
+    This guide will help you learn C# in just seven days if you read it carefully.
+
+
+    # ## Operators
+
+
+    C# comparison operators are discussed in this section. You can use these operators
+    to set conditions for your conditional statements.
+
+
+    The Comparison Operators
+
+
+    To compare values of the same type in C#, you can use different operators. Here
+    are some examples:
+
+
+    +   <
+
+
+    +   >
+
+
+    +   <=
+
+
+    +   >=
+
+
+    +   !=
+
+
+    +   ==
+
+
+    In addition to these operators, you may also use the following to compare C# expressions
+    (e.g., two integers, two variables, two constants, etc.). Each of these operators
+    will always return a Boolean value. Examine the following examples:
+
+
+    ```
+
+    int height = 170;
+
+    Console.WriteLine(height < 180); // This will give you “true”.
+
+    ```
+
+
+    ```
+
+    string gender = "Male";
+
+    Console.WriteLine(gender == "Female"); // This will give you “false".
+
+    ```'
+  - '[PAGE 38]
+
+
+    ```
+
+    double valueOfPi = 3.14;
+
+    Console.WriteLine(valueOfPi > 100); // This will give you “true”.
+
+    ```
+
+
+    # The Logical Operators
+
+
+    There are some logical operators in C#. Programmers use these operators to construct
+    Boolean (also known as "logical") statements. Listed below are the logical operators
+    in detail:
+
+
+    The AND and OR Operators
+
+
+    You can only use the logical AND (i.e., &&) & logical OR (i.e., ||) operators
+    on expressions that involve Boolean values. The logical AND operator will give
+    you “true" if both of the operands are true. For example:
+
+
+    ```
+
+    bool sample = (1 < 2) && (10 == 10);
+
+    ```
+
+
+    The expression will be true because one is less than 2, and 10 is equal to 10.
+    Programmers refer to the logical AND operator as a "short-circuit operator" since
+    it produces quick results without performing unnecessary analyses. This evaluation
+    ends immediately if it is false. Due to the false operand, the expression can
+    no longer be true.
+
+
+    The logical OR (i.e., ||) operator, on the other hand, will give you true if at
+    least one of your operands evaluates to true. For instance:
+
+
+    ```
+
+    bool sample = (1 < 2) || (10 > 100);
+
+    ```'
+  - '[PAGE 39]
+
+
+    The left-hand operand is true in this example, so that you will get true. As well
+    as giving a result without checking the entire C# statement, the logical OR operator
+    is a "short-circuit operator". The second operand will not be analyzed in the
+    present example since the first is already true. As a result, the condition is
+    already satisfied.
+
+
+    # The Exclusive OR and Negation Operators
+
+
+    The exclusive OR (i.e., ^) is a full-circuit operator since it needs to check
+    both operands before giving the result. It will give you true ONLY IF one of the
+    operands evaluates to true. Thus, you will get false if both of the operands are
+    true. Check the following example: bool sample = (1 < 2) ^ (2 == 2);
+
+
+    Since the two expressions are true, exclusive OR will give you false.
+
+
+    However, the negation operator (i.e. !) reverses the Boolean value to which it
+    is attached. For instance:
+
+
+    ```
+
+    bool sample = !(1 < 2);
+
+    ```
+
+
+    One is less than two. However, since "!" is attached to the Boolean expression,
+    the result will be reversed. That means this expression evaluates to "false".'
+  - "[PAGE 40]\n\n# The Statements\n\nNow that you know how to use the comparison\
+    \ and logical operators, it is time to discuss the creation of conditional statements.\
+    \ These statements are powerful tools that can help you achieve programming logic.\n\
+    \n# The If Statement\n\nThe syntax of an if statement is:\n\n```\nif (the conditional\
+    \ expression)\n{\n  The if statement's body;\n}\n```\n\nAs you can see, this syntax\
+    \ has three different parts:\n\n+   1. The \"if\" clause – This part indicates\
+    \ the start of the \"if\" statement.\n\n+   2. The Boolean expression – This part\
+    \ can hold a logical expression or a variable that holds Boolean data. Unlike\
+    \ C, C# does not accept integer expressions for its conditional statements.\n\n\
+    +   3. The statement's body – You need to enclose this part using a pair of curly\
+    \ braces. C# allows you to place multiple statements inside this section.\n\n\
+    The program will run the statement's body if the Boolean expression evaluates\
+    \ to true. If the evaluation is false, the program will ignore the statement's\
+    \ body and control the next code blocks. The example given below will show you\
+    \ how \"if.\""
+  - '[PAGE 41]
+
+
+    statements work:
+
+
+    ```
+
+    Console.WriteLine("Please enter a number.");
+
+    int number1 = int.Parse(Console.ReadLine());
+
+    ```
+
+
+    ```
+
+    int number2 = 0;
+
+    if (number1 > number2)
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    Console.WriteLine("C# is an excellent programming language.");
+
+    }
+
+    ```
+
+
+    This code requires the user to provide a number. If the user''s input is higher
+    than zero, the program will print "C# is an excellent programming language." in
+    the command prompt.
+
+
+    Important Note: You may omit the curly braces if the body of your conditional
+    statement is just a single line. Check the example below:
+
+
+    ```
+
+    int x = 10;
+
+    if (x > 0)
+
+    System.Console.WriteLine("This variable holds a positive number.");
+
+    ```
+
+
+    # The If-Else Statement
+
+
+    Just like other programming languages, C# supports "if-else" conditional statements.'
+  md: "\n# Console.Read Method\n\nConsole.Read and Console.ReadLine differs significantly.\
+    \ First of all, Console.Read only reads a single character, whereas Console.ReadLine\
+    \ reads the entire expression. Secondly, Console.Read does not return the accepted\
+    \ input but rather a code. The output can be utilized as an ordinary character\
+    \ if you do any of the following:\n\n- Convert the output to a character\n- Convert\
+    \ the result to a character using Convert.ToChar\n\nNote: The user must press\
+    \ \"Enter\" to make Console.Read read a character. The program will transfer the\
+    \ input to the standard string's buffer and invoke the console upon pressing this\
+    \ key method.\n\nSee the example below:\n\n```csharp\nclass UsingRead\n    static\
+    \ void Main()\n    {\n        int codeRead = 0;\n        do\n        {\n     \
+    \       codeRead = Console.Read();\n            if (codeRead != 0)\n         \
+    \   {\n                Console.Write((char)codeRead);\n            }\n       \
+    \ } while (codeRead != 10);\n    }\n}\n```\n\n# How to Read a Number\n\nC# programs\
+    \ do not directly read numbers. By using the console.ReadLine method, the inputs\
+    \ needs to be converted into numbers. It is known as parsing to convert strings\
+    \ to different data types. In the C# language, this is supported by all primitive\
+    \ data types.\n\n# The Console Output\n\nTwo methods will be covered in this chapter:\
+    \ Console.WriteLine and Console.Write.\n\nThe C# language supports both methods\
+    \ for printing all data types. Messages can be displayed on a user's console that\
+    \ way.\n\nHow these methods work can be learned by looking at the following code\
+    \ snippets:\n\nIf you enter \"John\" and \"Smith\" into the command prompt, the\
+    \ following message will appear: Console.WriteLine(\"I want to learn the C# programming\
+    \ language.\");\n\n```csharp\n// This line prints the string within the parentheses.\n\
+    ```\n\n```csharp\nConsole.WriteLine(100);\n// Upon typing this line, the user's\
+    \ command prompt will display \"100\".\n```\n\n```csharp\nConsole.WriteLine(3.14);\n\
+    // In this line, the user's console will display the value 3.14.\n```\n\nDifferent\
+    \ types of data can be displayed on the user's screen using the Console.WriteLine\
+    \ method. Each data type is built into the Console class.\n\nIn contrast to console.WriteLine,\
+    \ the latter simply displays the information inside the parentheses where the\
+    \ former prints the value inside the parentheses and adds a newline character.\
+    \ The use of a console.WriteLine in your code is analogous to hitting the \"Enter\"\
+    \ key after showing the message (i.e., The cursor will move to the next line).\n\
+    \n# String Concatenation\n\nC# prohibits programmers from operating on strings.\n\
+    \nYou cannot perform arithmetic operations on actual words (e.g., fish - dog,\
+    \ power * humans, land/people, etc.). C#, however, allows you to concatenate (i.e.,\
+    \ combine) multiple string objects. Use the \"+\" symbol to add to your strings.\
+    \ The following example explains how to do this.\n\n```csharp\nstring gadget =\
+    \ \"smartphone\";\nstring example = \"I use my \" + gadget + \"to access \" +\
+    \ \"the internet.\";\nConsole.WriteLine(example);\n```\n\nIf you execute that\
+    \ code, the console will display this:\n\nI use my smartphone to access the internet.\n\
+    \n# C# Conditional Statements\n\nYou will learn how conditional statements work\
+    \ in C# in this chapter. Conditions are code blocks that allow you to perform\
+    \ a series of actions based on conditions. This guide will help you learn C# in\
+    \ just seven days if you read it carefully.\n\n## Operators\n\nC# comparison operators\
+    \ are discussed in this section. You can use these operators to set conditions\
+    \ for your conditional statements.\n\n### The Comparison Operators\n\nTo compare\
+    \ values of the same type in C#, you can use different operators. Here are some\
+    \ examples:\n\n- <\n- >\n- <=\n- >=\n- !=\n- ==\n\nIn addition to these operators,\
+    \ you may also use the following to compare C# expressions (e.g., two integers,\
+    \ two variables, two constants, etc.). Each of these operators will always return\
+    \ a Boolean value. Examine the following examples:\n\n```csharp\nint height =\
+    \ 170;\nConsole.WriteLine(height < 180); // This will give you “true”.\n```\n\n\
+    ```csharp\nstring gender = \"Male\";\nConsole.WriteLine(gender == \"Female\");\
+    \ // This will give you “false\".\n```\n\n```csharp\ndouble valueOfPi = 3.14;\n\
+    Console.WriteLine(valueOfPi > 100); // This will give you “true”.\n```\n\n# The\
+    \ Logical Operators\n\nThere are some logical operators in C#. Programmers use\
+    \ these operators to construct Boolean (also known as \"logical\") statements.\
+    \ Listed below are the logical operators in detail:\n\n### The AND and OR Operators\n\
+    \nYou can only use the logical AND (i.e., &&) & logical OR (i.e., ||) operators\
+    \ on expressions that involve Boolean values. The logical AND operator will give\
+    \ you “true\" if both of the operands are true. For example:\n\n```csharp\nbool\
+    \ sample = (1 < 2) && (10 == 10);\n```\n\nThe expression will be true because\
+    \ one is less than 2, and 10 is equal to 10. Programmers refer to the logical\
+    \ AND operator as a \"short-circuit operator\" since it produces quick results\
+    \ without performing unnecessary analyses. This evaluation ends immediately if\
+    \ it is false. Due to the false operand, the expression can no longer be true.\n\
+    \nThe logical OR (i.e., ||) operator, on the other hand, will give you true if\
+    \ at least one of your operands evaluates to true. For instance:\n\n```csharp\n\
+    bool sample = (1 < 2) || (10 == 10);\n```\n\nThe expression will be true because\
+    \ one is less than 2, or 10 is equal to 10. Programmers refer to the logical OR\
+    \ operator as a \"short-circuit operator\" since it produces quick results without\
+    \ performing unnecessary analyses. This evaluation ends immediately if it is true.\
+    \ Due to the true operand, the expression can no longer be false.\n\n# The XOR\
+    \ and Negation Operators\n\nThe XOR operator (i.e., ^) returns true only if exactly\
+    \ one of the operands is true. If both are true or both are false, it returns\
+    \ false. This is used when you want two conditions to differ. For instance:\n\n\
+    ```csharp\nbool sample = (1 < 2) ^ (10 == 10);\n```\n\nThe expression will be\
+    \ false because both operands are true.\n\nThe negation operator (i.e., !) reverses\
+    \ the Boolean value to which it is attached. For instance:\n\n```csharp\nbool\
+    \ sample = !(1 < 2);\n```\n\nThe expression will be false because one is less\
+    \ than two.\n\n# The Statements\n\nNow that you know how to use comparison and\
+    \ logical operators, it is time to discuss the creation of conditional statements.\
+    \ These are powerful tools that can help you achieve logic.\n\n# The If Statement\n\
+    \nThe syntax of an if statement is:\n\n```csharp\nif (the conditional expression)\n\
+    {\n  The statement's body;\n}\n```\n\nAs you can see, this syntax has three different\
+    \ parts:\n\n- The \"if\" clause – This part indicates the start of the \"if\"\
+    \ statement.\n- The Boolean expression – This part can hold a logical expression\
+    \ or a variable that holds Boolean data. Unlike C, C# does not accept integer\
+    \ expressions for its conditional statements.\n- The statement's body – You need\
+    \ to enclose this part using a pair of curly braces. C# allows you to place multiple\
+    \ statements inside this section.\n\nThe program will run the statement's body\
+    \ if the Boolean expression evaluates to true. If the evaluation is false, the\
+    \ program will ignore the statement's body and control the next code blocks. The\
+    \ example below will show you how statements work:\n\n```csharp\nConsole.WriteLine(\"\
+    Please enter a number.\");\nint number1 = int.Parse(Console.ReadLine());\n\nint\
+    \ number2 = 0;\nif (number1 > number2)\n{\n    Console.WriteLine(\"C# is an excellent\
+    \ programming language.\");\n}\n```\n\nThis code requires the user to provide\
+    \ a number. If the user's input is higher than zero, the program will print \"\
+    C# is an excellent programming language.\" in the command prompt.\n\nImportant\
+    \ Note: You may omit the curly braces if the body of your conditional statement\
+    \ is just a single line. Check the example below:\n\n```csharp\nint x = 10;\n\
+    if (x > 0)\n    System.Console.WriteLine(\"This variable holds a positive number.\"\
+    );\n```\n\n# The If-Else Statement\n\nJust like other programming languages, C#\
+    \ supports \"if-else\" conditional statements.\n"
+  mdcn: "\n\n# Console.Read 方法\n\nConsole.Read 和 Console.ReadLine 之间有显著差异。首先，`Console.Read`\
+    \ 只读取单个字符，而 `Console.ReadLine` 读取整个表达式。其次，`Console.Read` 返回的不是接收到的输入，而是一个代码。如果你执行以下任何操作，则可以将输出作为普通字符使用：\n\
+    \n- 将输出转换为字符\n- 使用 `Convert.ToChar` 将结果转换为字符\n\n注意：用户必须按下“回车”键才能让 `Console.Read`\
+    \ 读取到一个字符。程序会将输入传输到标准字符串缓冲区，并在按下此键后调用控制台。\n\n请下方的示例：\n\n```csharp\nclass UsingRead\n\
+    \    static void Main()\n    {\n        int codeRead = 0;\n        do\n      \
+    \  {\n            codeRead = Console.Read();\n            if (codeRead != 0)\n\
+    \            {\n                Console.Write((char)codeRead);\n            }\n\
+    \        } while (codeRead != 10);\n    }\n}\n```\n\n# 如何读取数字\n\nC# 程序不直接读取数字。通过使用\
+    \ `console.ReadLine` 方法，需要将输入转换为数字。这种将字符串转换为不同数据类型的行为被称为“解析”（parsing）。在 C# 语言中，所有原始数据类型都支持这种操作。\n\
+    \n# 控制台输出\n\n本章将两种方法：`Console.WriteLine` 和 `Console.Write`。\n\nC# 语言支持这两种方法来打印所有数据类型。以此可以在用户的控制台上显示消息。\n\
+    \n可以通过查看以下代码段学习这些方法的工作原理：\n\n如果你在命令提示符中输入 \"John\" 和 \"Smith\"，将出现以下消息：Console.WriteLine(\"\
+    I want to learn the C# programming language.\");\n\n```csharp\n// 这一行打印括号内的字符串。\n\
+    ```\n\n```csharp\nConsole.WriteLine(100);\n// 输入此行后，用户的命令提示符将显示 \"100\"。\n```\n\
+    \n```csharp\nConsole.WriteLine(3.14);\n// 在这一行中，用户的控制台将显示值 3.14。\n```\n\n使用 `Console.WriteLine`\
+    \ 方法可以在用户的屏幕上显示不同类型的数据。每种数据类型都内置在 `Console` 类中。\n\n与 `console.WriteLine` 不同，后者仅显示括号内的信息，而前者打印括号内的值并添加一个换行符。在代码中使用\
+    \ `console.WriteLine` 类似于在显示消息后按下“回车”键（即：光标将移动到下一行）。\n\n# 字符串拼接\n\nC# 禁止程序员对字符串进行操作。\n\
+    \n你不能对实际的单词进行算术运算（例如 fish - dog、power * humans、land/people 等）。然而，C# 允许你拼接（即组合）多个字符串对象。使用\
+    \ \"+\" 符号来添加你的字符串。以下示例解释了如何这样做。\n\n```csharp\nstring gadget = \"smartphone\"\
+    ;\nstring example = \"I use my \" + gadget + \"to access \" + \"the internet.\"\
+    ;\nConsole.WriteLine(example);\n```\n\n如果你执行该代码，控制台将显示：\n\nI use my smartphone\
+    \ to access the internet.\n\n# C# 条件语句\n\n在本章中，你将学习 C# 中的条件语句是如何工作的。条件是允许你根据条件执行一系列操作的代码块。如果你仔细阅读，本指南将帮助你在七天内学会\
+    \ C#。\n\n## 运算符\n\n本节将讨论 C# 的比较运算符。你可以使用这些运算符为你的条件语句设置条件。\n\n### 比较运算符\n\n在 C#\
+    \ 中，要比较相同类型的值，可以使用不同的运算符。以下是一些示例：\n\n- <\n- >\n- <=\n- >=\n- !=\n- ==\n\n除了这些运算符外，你还可以使用以下运算符来比较\
+    \ C# 表达式（例如，两个整数、两个变量、两个常量等）。这些运算符中的每一个将始终返回一个布尔值。查看以下示例：\n\n```csharp\nint height\
+    \ = 170;\nConsole.WriteLine(height < 180); // 这将给你“true”。\n```\n\n```csharp\n\
+    string gender = \"Male\";\nConsole.WriteLine(gender == \"Female\"); // 这将给你“false”。\n\
+    ```\n\n```csharp\ndouble valueOfPi = 3.14;\nConsole.WriteLine(valueOfPi > 100);\
+    \ // 这将给你“true”。\n```\n\n# 逻辑运算符\n\nC# 中包含一些逻辑运算符。程序员使用这些运算符来构建布尔语句（也称为“逻辑”语句）。在下面详细列出了逻辑运算符：\n\
+    \n### AND 和 OR 运算符\n\n你只能在涉及布尔值的表达式上使用逻辑与（即 `&&`）和逻辑或（即 `||`）运算符。如果两个操作数都为真，逻辑与运算符将给你“true”。例如：\n\
+    \n```csharp\nbool sample = (1 < 2) && (10 == 10);\n```\n\n该表达式将为真，因为 1 小于 2，且\
+    \ 10 等于 10。程序员将逻辑与运算符称为“短路运算符”，因为它可以在不进行不必要分析的情况下产生快速结果。如果结果为假，评估将立即结束。由于假操作数的存在，表达式不再可能为真。\n\
+    \n另一方面，逻辑或（即 `||`）运算符如果你的操作数中至少有一个为真，则将给你真。例如：\n\n```csharp\nbool sample = (1\
+    \ < 2) || (10 == 10);\n```\n\n该表达式将为真，因为 1 小于 2，或者 10 等于 10。程序员将逻辑或运算符称为“短路运算符”，因为它可以在不进行不必要分析的情况下产生快速结果。如果结果为真，评估将立即结束。由于真操作数的存在，表达式不再可能为假。\n\
+    \n# 异或和取反运算符\n\n异或运算符（即 `^`）仅当两个操作数中恰有一个为真时才返回真。如果两个为真或都为假，它将返回假。这在你希望两个条件存在差异时使用。例如：\n\
+    \n```csharp\nbool sample = (1 < 2) ^ (10 == 10);\n```\n\n该表达式将为假，因为两个操作数均为真。\n\
+    \n取反运算符（即 `!`）反转其所在的布尔值。例如：\n\n```csharp\nbool sample = !(1 < 2);\n```\n\n该表达式将为假，因为一个数小于二。\n\
+    \n# 语句\n\n现在你已经知道如何使用比较运算符和逻辑运算符，，时候讨论条件语句的创建了。这些是帮助你实现逻辑强大工具。\n\n# If 语句\n\n\
+    if 语句的语法为：\n\n```csharp\nif (条件表达式)\n{\n  语句体;\n}\n```\n\n如你所示，该语法有三个部分：\n\n-\
+    \ \"if\" 子句 – 这部分表示 \"if\" 语句的开始。\n- 布尔表达式 – 这部分可以包含逻辑表达式或持有布尔数据的变量。与 C 不同，C#\
+    \ 不在条件语句中接受整数表达式。\n- 语句体 – 你需要使用一对大括号来封装这部分。C# 允许在该部分内放置多个语句。\n\n如果布尔表达式评估为真，程序将运行语句体。如果评估为假，程序将忽略语句体并控制后续代码块。下面的示例将向你展示语句是如何工作的：\n\
+    \n```csharp\nConsole.WriteLine(\"Please enter a number.\");\nint number1 = int.Parse(Console.ReadLine());\n\
+    \nint number2 = 0;\nif (number1 > number2)\n{\n    Console.WriteLine(\"C# is an\
+    \ excellent programming language.\");\n}\n```\n\n此代码需要用户提供数字。如果用户的输入大于零，程序将在命令提示符中打印“C#\
+    \ is an excellent programming language.”。\n\n重要注意：如果条件语句体只有单行，你可以省略大括号。查看下面的示例：\n\
+    \n```csharp\nint x = 10;\nif (x > 0)\n    System.Console.WriteLine(\"This variable\
+    \ holds a positive number.\");\n```\n\n# If-Else 语句\n\n与其他编程语言一样，C# 支持 \"if-else\"\
+    \ 条件语句。\n\n"
+  merge: 0
+- raw:
+  - "[PAGE 42]\n\nWhen writing an if-else statement, you should use the following\
+    \ syntax: if (the Boolean variable or expression)\n\n```\n{\n  The conditional\
+    \ statement's body;\n}\nelse{\n  The else statement's body;\n}\n```\n\nThe syntax\
+    \ is given above consists of the following parts:\nThe \"if\" clause – This part\
+    \ begins the conditional statement.\n\nThe Boolean expression or variable – The\
+    \ value of this expression determines the codes that the program will use.\n\n\
+    The conditional statement's body – This can be a single statement or group of\
+    \ statements. If you are using multiple statements, enclose them inside a pair\
+    \ of curly braces.\n\nThe \"else\" keyword is a C# keyword that triggers the \"\
+    else\" clause.\n\nThe else clause's body is identical to the conditional statement's\
+    \ body (see above).\n\nWhen working on an if-else statement, the computer program\
+    \ analyzes the value within the parentheses. The value needs to be Boolean (i.e.,\
+    \ either true or false).\n\n\"true\", the program will execute the conditional\
+    \ statement's body and ignore"
+  - "[PAGE 43]\n\nthe \"else\"\nclause. If the value is false, however, the program\
+    \ will run the else statement's body.\n\nAnalyze the following example:\n\n```\n\
+    int a = 100;\nif (a != 50)\n{\n    Console.WriteLine(\"The variable is not equal\
+    \ to 50\");\n}\nelse\n{\n    Console.WriteLine(\"The variable is equal to 50\"\
+    );\n}\n```\n\nYou can interpret this code as if a != 50, the console will print:\
+    \ \"The variable is not equal to 50\". On the other hand, if a = 50, the console\
+    \ will show: \"The variable is equal to 50\".\n\nSince the variable named a holds\
+    \ 100, your command prompt will give you this:\n\n![](img/a36030d08eb553093e54e93e07543b0a_43_0.png)\n\
+    \n# Nested Statements\n\nIn some cases, you need to write an \"if\" statement\
+    \ inside another \"if\" statement.\n\nProgrammers refer to this process as \"\
+    nesting\". That means you are \"nesting\""
+  - "[PAGE 44]\n\na conditional statement if you are writing it inside another conditional\
+    \ statement.\n\nclause points to the \"if\" clause that comes before it. This\
+    \ simple rule can help you analyze nested conditional statements, which can be\
+    \ extremely complex.\n\nAccording to expert programmers, you should not create\
+    \ more than three levels of nested statements. If you need to use four or more\
+    \ conditional structures, export them to a different method (You will learn about\
+    \ methods later.).\n\nThe code given below will show you how nested \"if\" statements\
+    \ work:\n\n```\nint a = 10;\nint b = 20;\n\nif (a > b)\n{\n    Console.WriteLine(\"\
+    a is greater than b\");\n}\nelse\n{\n    if (a < b)\n{\n    Console.WriteLine(\"\
+    a is less than b\");\n    }\n```"
+  - "[PAGE 45]\n\n```\nelse\n{\n    Console.WriteLine(\"a is equal to b\");\n}\n```\n\
+    \nThe Switch-Case Statement\\Programmers use a switch-case statement in situations\
+    \ where the possible answers are numerous. Here is the syntax of a switch-case\
+    \ statement:\n\n```\nswitch (selector)\n{\n    case first_integer:\n        statements;\n\
+    \        break;\n    case second_integer:\n        statements;\n        break;\n\
+    \    default:\n        statements;\n        break;\n}\n```\n\nSelectors are expressions\
+    \ that return usable values (i.e., values that you can compare or process). The\
+    \ \"switch\" keyword compares the selector's value against the \"cases\". If the\
+    \ value of the selector matches that of a case, the statements-"
+  - '[PAGE 46]
+
+
+    assigned to that case run. However, if there is no match, the program will
+
+    execute the default statement/s (if any). That means the program will analyze
+
+    the selector first before running any statement.
+
+
+    Important Note: Make sure that the cases have unique values. If two or more
+
+    cases share the same value, your program will produce undesirable results.
+
+
+    As you can see, each case has a "break" clause. The "break" clause terminates
+
+    body of the case to which it belongs. C# requires you to add this clause to
+
+    all of your switch statements.
+
+
+    You do not have to place the "default" part at the end of your switch-case
+
+    statement.
+
+
+    However, this position is recommended if you want to keep your codes
+
+    readable.'
+  - '[PAGE 47]
+
+
+    # The Loop Statements
+
+
+    This chapter will teach you how to use loop statements. As a programmer, you will
+    use a loop statement to run certain code blocks repeatedly. Loops play an important
+    part in C#
+
+
+    Hence, you should study this material carefully if you want to master this language
+    in 7 days.
+
+
+    # Loops – The Basics
+
+
+    While creating programs, you often need to execute code sequences multiple times.
+
+
+    Typing the same blocks of code several times can be extremely boring. Thus, you
+    need to find a quick and simple way to repeat codes. Fortunately, the C# language
+    supports loop statements.
+
+
+    A loop is a tool that runs code fragments repeatedly. You can use it to run codes
+    a certain number of times or as long as a given condition is fulfilled. C# offers
+    different types of loop statements. Let us analyze each type in detail:
+
+
+    ![](img/a36030d08eb553093e54e93e07543b0a_47_0.png)
+
+
+    # The While Loop
+
+
+    This is the simplest loop statement in C#. Its syntax is:'
+  - "[PAGE 48]\n\n```\nwhile (the_assigned_condition)\n{\n  the_loop's_body;\n}\n\
+    ```\n\nIn this syntax, \"the_assigned_condition\" is an expression that produces\
+    \ a Boolean value.\n\nThis condition dictates how many times the \"body\" will\
+    \ run. The \"body\", on the other hand, is the statement (or group of statements)\
+    \ that you want to execute.\n\nThe diagram given below will illustrate how while\
+    \ loops work:\n\nWhen working on a \"while\" loop, a C# program checks the value\
+    \ of the Boolean expression. If the value is \"true\", the program will run all\
+    \ the statements within the loop's body. Then, the program will check the Boolean\
+    \ expression to see its value. If the value is true, the program will rerun the\
+    \ loop's body and go back to the first step (i.e., Check the expression's value).\
+    \ This process will go on until the Boolean expression evaluates to false. Once\
+    \ this happens, the program will process the code blocks right after the loop.\n\
+    \nImportant Note: Your C# program will not run the while loop's body if the Boolean\
+    \ expression is false. Thus, your in-loop statements will never be executed if\
+    \ the Boolean value is false when you launched the program.\n\n```\nTime remaining:\
+    \ 10\nTime remaining: 9\nTime remaining: 8\nTime remaining: 7\nTime remaining:\
+    \ 6\nTime remaining: 5\nTime remaining: 4\nTime remaining: 3\nTime remaining:\
+    \ 2\nTime remaining: 1\nTime remaining: 0\n```"
+  - "[PAGE 49]\n\nThe following example will illustrate how loops work:\n\n```\nint\
+    \ timer = 10;\n\nwhile (timer >= 0)\n{\n    System.Console.WriteLine(\"Time remaining:\
+    \ \" + timer);\n\n    timer--;\n}\n```\n\nIf you compile and execute this code,\
+    \ your command prompt will print this data: **The Break Operator**\n\nYou can\
+    \ use \"break\" (a C# operator) to exit a loop prematurely. Programmers use this\
+    \ operator if they do not want to wait for the loop's natural termination. A loop\
+    \ will end once once it encounters a break operator. This situation forces the\
+    \ program to jump to the code fragments right after the loop.\n\nIn C#, you can\
+    \ only use this operator inside the loop's body. That \"break\" will only work\
+    \ while the loop is running.\n\n# The Do-While Loop\n\nA do-while loop is almost\
+    \ identical to a while loop. The only difference between these"
+  - "[PAGE 50]\n\n![](img/a36030d08eb553093e54e93e07543b0a_50_0.png)\n\nloops are\
+    \ that the former analyzes the Boolean value after running the loop's body. Thus,\
+    \ you can rest assured that your codes will run at least once, even if the Boolean\
+    \ expression is false. Here is the syntax of the do-while loop:\n\n```\ndo\n{\n\
+    \  statements;\n} while (Boolean expression)\n```\n\nDo-while loops work according\
+    \ to this pattern:\n\nThe program will execute all of the statements within the\
+    \ loop's body. Then, it will check the condition (i.e., the Boolean expression).\
+    \ If the condition evaluates to true, the program will execute the loop's body\
+    \ again and perform the \"value inspection\". This process will go on until the\
+    \ condition becomes false. Thus, your codes might run forever if your assigned\
+    \ condition always evaluates true.\n\n# The For Loop\n\nIn general, \"for\" loops\
+    \ are more complex than do-while and while loops. However, loops can help you\
+    \ perform difficult tasks using fewer C# codes. The syntax of a \"for\"\n\nloop\
+    \ is:"
+  md: "\nWhen writing an if-else statement, you should use the following syntax: if\
+    \ (the Boolean variable or expression)\n\n```csharp\n{\n  The conditional statement's\
+    \ body;\n}\nelse\n{\n  The else statement's body;\n}\n```\n\nThe syntax given\
+    \ above consists of the following parts:\n\n- The \"if\" clause – This part begins\
+    \ the conditional statement.\n- The Boolean expression or variable – The value\
+    \ of this expression determines the codes that the program will use.\n- The conditional\
+    \ statement's body – This can be a single statement or group of statements. If\
+    \ you are using multiple statements, enclose them inside a pair of curly braces.\n\
+    - The \"else\" keyword is a C# keyword that triggers the \"else\" clause.\n- The\
+    \ else clause's body is identical to the conditional statement's body (see above).\n\
+    \nWhen working on an if-else statement, the computer program analyzes the value\
+    \ within the parentheses. The value needs to be Boolean (i.e., either true or\
+    \ false).\n\nIf \"true\", the program will execute the conditional statement's\
+    \ body and ignore the \"else\" clause. If the value is false, however, the program\
+    \ will run the else statement's body.\n\nAnalyze the following example:\n\n```csharp\n\
+    int a = 100;\nif (a != 50)\n{\n    Console.WriteLine(\"The variable is not equal\
+    \ to 50\");\n}\nelse\n{\n    Console.WriteLine(\"The variable is equal to 50\"\
+    );\n}\n```\n\nYou can interpret this code as if a != 50, the console will print:\
+    \ \"The variable is not equal to 50\". On the other hand, if a = 50, the console\
+    \ will show: \"The variable is equal to 50\". Since the variable named a holds\
+    \ 100,\n\n## Nested Statements\n\nIn some cases, you need to write an \"if\" statement\
+    \ inside another \"if\" statement. Programmers refer to this process as \"nesting\"\
+    . That means you are \"nesting\" a conditional statement by writing it inside\
+    \ another conditional statement clause points to the \"if\" clause that comes\
+    \ before it. This simple rule can help you analyze nested statements, which can\
+    \ be extremely complex. According to experts, you should not create more than\
+    \ three levels of nested statements. If you need to use four or more conditional\
+    \ structures, export them to a different method. The code given below will show\
+    \ how nested \"if\" statements work:\n\n```csharp\nint a = 10;\nint b = 20;\n\n\
+    if (a > b)\n{\n    Console.WriteLine(\"a is greater than b\");\n}\nelse\n{\n \
+    \   if (a < b)\n    {\n        Console.WriteLine(\"a is less than b\");\n    }\n\
+    \    else\n    {\n        Console.WriteLine(\"a is equal to b\");\n    }\n}\n\
+    ```\n\n## Switch-Case Statement\n\nProgrammers use a switch-case statement in\
+    \ situations where possible answers are numerous. Here is the syntax of a switch-case:\n\
+    \n```csharp\nswitch (selector)\n{\n    case first_integer:\n        statements;\n\
+    \        break;\n    case second_integer:\n        statements;\n        break;\n\
+    \    default:\n        statements;\n        break;\n}\n```\n\nSelectors are expressions\
+    \ that return usable values (i.e., values you can compare). The \"switch\" keyword\
+    \ compares the selector's value against the \"cases\". If the value of the selector\
+    \ matches a case, the statements assigned to that case run. However, if there\
+    \ is no match, the program will execute the default statement. Important Note:\
+    \ Make sure that cases have unique values. If two or more cases share the same\
+    \ value, your program will produce undesirable results. As you can see, each case\
+    \ has a \"break\" clause which terminates the body of the case to which it belongs.\
+    \ C# requires you to add this \"break\" clause to the end of your switch-case\
+    \ statement if you want to keep your codes readable.\n\n## Loops\n\nWhen creating\
+    \ programs, you often need to execute sequences multiple times. Typing the same\
+    \ blocks of code several times can be boring. Thus, you need to find a quick and\
+    \ simple way to repeat codes. A loop is a tool that runs code fragments repeatedly.\
+    \ You can use it to run codes a certain number of times or as long as a condition\
+    \ is fulfilled. C# offers different types of loop. Let us analyze each type in\
+    \ detail:\n\nimg/a36030d08eb55309e54e07543b0a_43_0.png\n\n## While Loop\n\nThis\
+    \ is the simplest loop statement in C#. Its syntax is:\n\n```csharp\nwhile (assigned_condition)\n\
+    {\n  loop_body;\n}\n```\n\nIn this syntax, \"assigned_condition\" is an expression\
+    \ that produces a Boolean value. This condition dictates how many times the \"\
+    body\" will run. The \"body\", on the other hand, is the statement (or group of\
+    \ statements) that you want to execute. The diagram given below will illustrate\
+    \ how loops work:\n\nWhen working on a \"while\" loop, a C# program checks the\
+    \ value of the Boolean expression. If the value is \"true\", the program will\
+    \ run all the statements within the loop's body. Then, the program will check\
+    \ the expression to see its value. If the value is true, the program will rerun\
+    \ the loop's body and go back to the first step (i.e., the expression's value).\
+    \ This process will go on until the Boolean expression evaluates to false. Once\
+    \ this happens, the program will process the code blocks after the loop. Important\
+    \ Note: Your C# program will not run the while loop's body if the Boolean expression\
+    \ is false. Thus, your loop statements will never be executed if the Boolean value\
+    \ is false when you launched the program.\n\nThe following example will illustrate\
+    \ how loops work:\n\n```csharp\nint timer = 10;\n\nwhile (timer >= 0)\n{\n   \
+    \ System.Console.WriteLine(\"Time remaining: \" + timer);\n    timer--;\n}\n```\n\
+    \nIf you compile and execute this code, your command prompt will print this data:\n\
+    Time remaining: 10\nTime remaining: 9\nTime remaining: 8\nTime remaining: 7\n\
+    Time remaining: 6\nTime remaining: 5\nTime remaining: 4\nTime remaining: 3\nTime\
+    \ remaining: 2\nTime remaining: 1\nTime remaining: 0\n\n## The Break Operator\n\
+    \nYou can use \"break\" (a C# operator) to exit a loop prematurely. Programmers\
+    \ use this operator if they do not want to wait for the loop's natural termination.\
+    \ A loop will end once it encounters a break operator. This situation forces the\
+    \ program to jump to the code fragments after the loop. In C#, you can only use\
+    \ this operator inside the loop's body. That \"break\" will only work while the\
+    \ loop is running.\n\n## Do-While Loop\n\nA do-while loop is almost identical\
+    \ to a while loop. The only difference between these loops are that the former\
+    \ analyzes the Boolean value after running the loop's body. Thus, you can rest\
+    \ assured that your codes will run at least once, even if the Boolean expression\
+    \ is false. Here is the syntax of the do-while loop:\n\n```csharp\ndo\n{\n  statements;\n\
+    } while (Boolean expression)\n```\n\nimg/a36030d08eb55309e54e07543b0a_50_0.png\n\
+    \nDo-while loops work according to this pattern:\n\nThe program will execute all\
+    \ of the statements within the loop's body. Then, it will check the condition\
+    \ (i.e., the Boolean expression). If the condition evaluates to true, the program\
+    \ will execute the loop's body again and perform the \"value inspection\". This\
+    \ process will go on until the condition becomes false. Thus, your codes might\
+    \ run forever if your assigned condition always evaluates to true.\n\n## The For\
+    \ Loop\n\nIn general, \"for\" loops are more complex than do-while and while loops.\
+    \ However, loops can help you perform difficult tasks using fewer C# codes. The\
+    \ syntax of a \"for\" loop is:\n"
+  mdcn: "\n在编写 if-else 语句时，你应该使用以下语法：`if (布尔变量或表达式)`\n\n```csharp\n{\n  // 条件语句的主体;\n\
+    }\nelse\n{\n  // else 语句的主体;\n}\n```\n\n上述语法由以下部分组成：\n\n- \"if\" 子句 – 这部分是条件语句的开始。\n\
+    - 布尔表达式或变量 – 该表达式的值决定了程序将使用的代码。\n- 条件语句的主体 – 这可以是一个单独的语句，也可以是一组语句。如果你使用多条语句，请将它们封装在花括号内。\n\
+    - \"else\" 关键字 这是一个 C# 关键字，用于触发 \"else\" 子句。\n- else 子句的主体与条件语句的主体相同（见上上文）。\n\n\
+    在处理 if-else 语句时，计算机程序会分析括号内的值。该值需要是布尔值（即 true 或 false）。\n\n如果为 \"true\"，程序将执行条件语句的主体并忽略\
+    \ \"else\" 子句。然而，如果值为 false，程序将运行 else 语句的主体。\n\n分析以下示例：\n\n```csharp\nint a =\
+    \ 100;\nif (a != 50)\n{\n    Console.WriteLine(\"The variable is not equal to\
+    \ 50\");\n}\nelse\n{\n    Console.WriteLine(\"The variable is equal to 50\");\n\
+    }\n```\n\n你可以将此代码解释为如果 `a != 50`，控制台将打印：“The variable is not equal to 50”。另一方面，如果\
+    \ `a = 50`，控制台将显示：“The variable is equal to 50”。由于名为 a 的变量持有 100，\n\n## 嵌套语句\n\
+    \n在某些情况下，你需要在另一个 \"if\" 语句内部编写 \"if\" 语句。程序员将此过程称为“嵌套”。这意味着你通过将一个条件语句写另一个条件语句子句内部来“嵌套”它，这指向它之前的\
+    \ \"if\" 子句。这个简单的规则可以帮助你分析嵌套语句，嵌套语句可能极其复杂。根据专家建议，你不应该创建超过三层的嵌套语句。如果你需要使用四个层或更多条件结构，请将其导出到不同的方法。下面的代码将展示嵌套的\
+    \ \"if\" 语句是如何工作的：\n\n```csharp\nint a = 10;\nint b = 20;\n\nif (a > b)\n{\n \
+    \   Console.WriteLine(\"a is greater than b\");\n}\nelse\n{\n    if (a < b)\n\
+    \    {\n        Console.WriteLine(\"a is less than b\");\n    }\n    else\n  \
+    \  {\n        Console.WriteLine(\"a is equal to b\");\n    }\n}\n```\n\n## Switch-Case\
+    \ 语句\n\n在可能答案很多的情况下，程序员使用 switch-case 语句。以下是 switch-case 的语法：\n\n```csharp\nswitch\
+    \ (selector)\n{\n    case first_integer:\n        statements;\n        break;\n\
+    \    case second_integer:\n        statements;\n        break;\n    default:\n\
+    \        statements;\n        break;\n}\n```\n\n选择器（Selectors）是返回可用值的表达式（即你可以进行比较的值）。\"\
+    switch\" 关键字将选择器的值与 \"cases\" 进行比较。如果选择器的值匹配某个 case，则分配给该 case 的语句将运行。然而，如果没有匹配，程序将执行默认语句（default）。重要提示：确保\
+    \ cases 具有唯一值。如果两个或多个 case 共享相同的值，你的程序将产生不理想的结果。如你所见，每个 case 都有一个 \"break\" 子句，它会终止所属\
+    \ case 的主体。C# 要求你将 \"break\" 子句添加到 switch-case 语句末尾，以保持代码的可读性。\n\n## 循环\n\n在创建程序时，你通常需要多次执行序列。多次输入相同的代码块可能会很无聊。因此，你需要找到一种快速简单的方法重复代码。循环是一种重复运行代码片段的工具。你可以用它运行特定次数，或者只要满足条件就运行。C#\
+    \ 提供了不同类型的循环。让我们详细分析每个类型：\n\nimg/a36030d08eb55309e54e07543b0a_43_0.png\n\n## While\
+    \ 循环\n\n这是 C# 中最简单的循环语句。它的语法是：\n\n```csharp\nwhile (assigned_condition)\n{\n \
+    \ loop_body;\n}\n```\n\n在此语法中，\"assigned_condition\" 是一个产生布尔值的表达式。该条件决定了“主体”运行的次数。而“主体”是你想要执行的语句（或一组语句）。下面的图表将说明循环是如何工作的：\n\
+    \n在处理 \"while\" 循环时，C# 程序会检查布尔表达式的值。如果值为 \"true\"，程序将运行循环主体内的所有语句。然后，程序将检查表达式以查看其值。如果值为\
+    \ true，程序将重新运行循环主体并返回第一步（即表达式的值）。这个过程将一直持续直到布尔表达式求值为 false。一旦发生这种情况，程序将处理循环之后的代码块。重要提示：如果布尔表达式为\
+    \ false，你的 C# 程序将不会运行 while 循环的主体。因此，如果启动程序时布尔值为 false，你的循环语句将永远不会被执行。\n\n以下示例将说明循环是如何工作的：\n\
+    \n```csharp\nint timer = 10;\n\nwhile (timer >= 0)\n{\n    System.Console.WriteLine(\"\
+    Time remaining: \" + timer);\n    timer--;\n}\n```\n\n如果你编译并执行此代码，你的命令提示符将打印以下数据：\n\
+    Time remaining: 10\nTime remaining: 9\nTime remaining: 8\nTime remaining: 7\n\
+    Time remaining: 6\nTime remaining: 5\nTime remaining: 4\nTime remaining: 3\nTime\
+    \ remaining: 2\nTime remaining: 1\nTime remaining: 0\n\n## Break 运算符\n\n你可以使用\
+    \ \"break\"（一种 C# 运算符）提前退出循环。当程序员不想等待循环自然结束时，会使用此运算符。一旦遇到 break 运算符，循环就会结束。这种情况强制程序跳转到循环后的代码片段。在\
+    \ C# 中，你只能在循环主体内部使用此运算符。\"break\" 只有在循环运行时有效。\n\n## Do-While 循环\n\ndo-while 循环与\
+    \ while 循环几乎相同。这些循环之间的唯一区别是前者在运行循环主体之后分析布尔值。因此，你可以确保即使布尔表达式为 false，你的代码至少也会运行一次。以下是\
+    \ do-while 循环的语法：\n\n```csharp\ndo\n{\n  statements;\n} while (Boolean expression)\n\
+    ```\n\nimg/a36030d08eb55309e54e07543b0a_50_0.png\n\ndo-while 循环按照此模式工作：\n\n程序将执行循环主体内的所有语句。然后，它将检查条件（即布尔表达式）。如果条件求值为\
+    \ true，程序将再次执行循环主体并执行“值检查”。这个过程将一直持续直到条件变为 false。因此，如果你的赋值条件始终求值为 true，你的代码可能会无限运行。\n\
+    \n## For 循环\n\n通常，“for\" 循环比 do-while 和 while 循环更复杂。然而，循环可以帮助你使用更少的 C# 代码完成困难的任务。\"\
+    for\" 循环的语法为：\n"
+  merge: 0
+- raw:
+  - "[PAGE 51]\n\nfor (initializer; Boolean_expression; update)\n\n```\n{\nthe_loop's_body;\n\
+    }\nfor (; ; )\n{\n  // Loop body\n}\n```\n\nA \"for\" loop has an initializer\
+    \ (i.e., the initial value of the counter), a Boolean expression, a C# statement\
+    \ that updates the counter, and the loop's body.\n\nThe \"counter\" (i.e., the\
+    \ initial value assigned to the loop) serves as a \"for\" loop's most distinctive\
+    \ feature. In most cases, the counter's value increases until it reaches the final\
+    \ value (e.g., 1 to 10). Also, programmers usually know how many times the \"\
+    for\" loop will iterate.\n\nYou may include one or more variables in your \"for\"\
+    \ loops. These variables may move in descending or ascending order. When writing\
+    \ programs, you may combine ascending and descending variables in a single \"\
+    for\" loop. In addition, an ascending variable can go from 1 to 1024 because \"\
+    for\" loops support arithmetic operations (e.g., addition, multiplication, etc.).\n\
+    \nImportant Note: All of the parts of a \"for\" loop are optional. You can create\
+    \ an infinite \"for\" loop by leaving blank spaces on the syntax. Here is an example:\
+    \ At this point, you are ready to learn more about the different sections of the\
+    \ \"for\" loop.\n\n# The Initialization"
+  - '[PAGE 52]
+
+
+    A "for" loop can possess an initializing fragment:
+
+
+    ```
+
+    for (double sample = 1; ...; ...)
+
+    {
+
+    // You can use the "sample" variable here.
+
+    // You cannot use the variable here.
+
+    ```
+
+
+    C# programs execute this fragment once, right before running the "for" loop. Often,
+    programmers use an initializing fragment to create a counter (also known as "loop
+    variable") and assign its initial value. This counter is available and usable
+    when inside the loop''s body. C# allows you to declare multiple variables using
+    a single initializing fragment.
+
+
+    # The Condition
+
+
+    Obviously, a "for" loop needs a conditional expression. Here''s a sample: for
+    (double sample = 1; sample < 5; ...)
+
+
+    ```
+
+    {
+
+    // This is the loop''s body.
+
+    }
+
+    ```
+
+
+    Computer programs evaluate the conditional expression before running the loop''s
+    body. If the result is "true", the loop''s body will run; otherwise, the involved
+    program will jump to the statements written after the current loop.'
+  - "[PAGE 53]\n\n# The Update Statement\n\nThis is the final part of a \"for\" loop.\
+    \ An update statement updates the loop’s counter. Let us use the code snippet\
+    \ given below:\n\n```\nfor (double sample = 10; sample > 1; sample—)\n{\n// This\
+    \ is the loop's body.\n}\n```\n\nThe program executes this part after running\
+    \ the loop's body. Keep in mind that this statement updates the counter's value.\n\
+    \n# The Loop's Body\n\n```\nint n = int.Parse(Console.ReadLine());\nint sum =\
+    \ 0;\nfor (int i = 1; i < n; i += 2)\n{\n  if (i % 7 == 0)\n{\n    continue;\n\
+    \  }\n  sum += i;\n}\nConsole.WriteLine(\"sum = \" + sum);\n```\n\nThis part consists\
+    \ of C# statements. It can utilize the variables you declared in the loop's initializing\
+    \ fragment. Check the example below:\n\n```\nfor (double sample = 10; sample >\
+    \ 1; sample—)\n{\nSystem.Console.WriteLine(sample);\n}\n```\n\n# The Continue\
+    \ Operator"
+  - '[PAGE 54]
+
+
+    In some cases, you need to stop the active iteration without ending the loop itself.
+    You can accomplish this task using the C# operator called "continue".
+
+    The example given below will illustrate how this operator works:
+
+
+    This code computes all the odd numbers within the range (1 to n), which produce
+    remainders when divided by 7.
+
+
+    # The "Foreach" Loop
+
+
+    Just recently, C# introduced the concept of "foreach" loops (i.e., extended "for"
+    loops).
+
+    This concept is also available in other programming languages such as C, VB, C++,
+    PHP, etc. With this programming tool, you can run all elements of a list, array,
+    or other groups of values. A "foreach" loop takes all of the existing elements,
+    even in non-indexed data groups.
+
+
+    When writing this kind of loop, use the following syntax:
+
+
+    ```
+
+    foreach (type name_of_variable in name_of_group)
+
+    {
+
+    the_statements;
+
+    }
+
+    ```
+
+
+    As you can see, this loop is much simpler than a typical "for" loop. A "foreach"
+    loop can help you scan all of the objects inside a collection. It is no surprise
+    that countless programmers use this loop in writing their codes.
+
+
+    # The Nested For Loop'
+  - "[PAGE 55]\n\nC# allows you to place a \"for\" loop inside another \"for\" loop.\
+    \ The loop at the innermost part of the code runs the most number of times. The\
+    \ one at the outermost section, on the other hand, gets the least number of repetitions.\
+    \ You should use the following syntax when\n\n\"nesting\" for loops:\n\n```\n\
+    for (initializing_fragment, condition, update_statement)\n{\n  for (initializing_fragment,\
+    \ condition, update_statement)\n    statements\n  }\n}\n```\n\nHere, the program\
+    \ runs the initial \"for\" loop, executes its body, and triggers the nested loop.\
+    \ The program will check the second loop's condition and execute the codes inside\
+    \ it until the evaluation becomes false. Then, the program will make the necessary\
+    \ adjustments on the loops counters. The program will repeat the entire process\
+    \ until all of the conditions evaluate to false."
+  - '[PAGE 56]
+
+
+    # C# Language Methods
+
+
+    This chapter will focus on the C# methods. Here, you will learn how to declare
+    and utilize methods in your programs. You need to memorize the lessons in this
+    chapter if you want to be an effective C# programmer in just seven days.
+
+
+    # Methods – The Basics
+
+
+    For most programmers, methods are core aspects of any program. Methods can solve
+    problems, accept user inputs (known as parameters), and produce results.
+
+
+    Methods complete their tasks by representing the data conversions done by the
+    program. Additionally, methods are the areas where the actual processes are completed.
+    This is why C# programmers consider methods as the basic units of any computer
+    program.
+
+
+    # The Benefits Offered by Methods
+
+
+    In this section, you will discover the major benefits offered by C# methods. After
+    reading this material, you will know why you should use these tools in writing
+    your programs.
+
+
+    Better Structure and Code Readability
+
+
+    Programming experts claim that you should use methods while writing computer programs.
+    Even the simplest ones, can improve the structure and readability of your C# codes.'
+  - '[PAGE 57]
+
+
+    You need to know an important fact: programmers spend 20% of their time writing
+    and checking their computer programs. The remaining 80% is spent on maintaining
+    and improving the software. You will have an easy time working on your program
+    if your codes are readable and well-structured.
+
+
+    # Prevention of Redundant Codes
+
+
+    Methods can help you avoid redundant codes in your programs. Redundant or duplicated
+    codes often produce undesirable results in computer applications.
+
+
+    # Better Code Repetition
+
+
+    This benefit is closely related to the previous one. If your program needs to
+    use a certain code fragment multiple times, it is an excellent idea to transfer
+    the said fragment into a C#
+
+
+    method. You can invoke methods multiple times, which means you can repeat important
+    codes without retyping them.
+
+
+    # Declaring, Implementing, and Invoking C# Methods
+
+
+    At this point, you need to know the processes that you can perform on an existing
+    method.
+
+
+    These processes are:
+
+
+    Declaration – In this process, you will link a method to a program. This process
+    allows you to call the method in any part of your program.'
+  - "[PAGE 58]\n\nImplementation – This process involves entering codes to complete\
+    \ a certain task.\n\nThe codes involved here exist inside the method you are using.\n\
+    \nInvocation – This is the process of calling a declared method. Here, you will\
+    \ use the method to solve a problem or perform an action.\n\n# Method Declarations\n\
+    \nIn C#, you need to declare methods inside a class. Additionally, you are not\
+    \ allowed to\n\n\"nest\" methods (i.e., write a method inside the body of another\
+    \ method). The perfect example for this is Main(), the method you have used multiple\
+    \ times. The code given below will illustrate this:\n\n```\nclass DeclaringMethods\n\
+    {\n  static void Main()\n{\n    System.Console.WriteLine(\"Hi C#!\");\n  }\n}\n\
+    ```\n\n# The Syntax\n\nUse the following syntax when declaring a method:"
+  - '[PAGE 59]
+
+
+    static data_type_of_the_result name_of_method (list_of_parameters) Let’s analyze
+    this syntax using the Main() method (i.e. static void Main()). Main uses
+
+
+    "void" as its return type since it does not generate any result. The word "Main"
+    serves as its name. On the other hand, the parentheses act as containers for the
+    parameters that the programmer will provide.
+
+
+    Important Note: You have to follow this syntax when writing a C# program. Do not
+    change the placement of the method''s parts.
+
+
+    C# does not require you to include parameters in your declarations. That means
+    you cannot leave the parentheses empty (e.g., Main()).
+
+
+    # The Method''s Name
+
+
+    You need to indicate the method''s name during declarations, invocations, or implementations.
+    Here are the rules that you need to remember when naming your methods:
+
+
+    Make sure that the initial letter is in uppercase.
+
+
+    Begin each word with an uppercase letter (e.g., SampleMethod, NewMethod, MainLine,
+    etc.).
+
+
+    Use verbs and nouns as names of your methods.
+
+
+    Important Note: The rules discussed above are completely optional. Follow these
+    rules if you want to have excellent structure and readability in your C# codes.'
+  md: "\nfor (initializer; Boolean_expression; update)\n\n```\n{\n  the_loop's_body;\n\
+    }\nfor (; ; )\n{\n  // Loop body\n}\n```\n\nA \"for\" loop has an initializer\
+    \ (i.e., the initial value of the counter), a Boolean expression, a C# statement\
+    \ that updates the counter, and the loop's body.\n\nThe \"counter\" (i.e., the\
+    \ initial value assigned to the loop) serves as a \"for\" loop's most distinctive\
+    \ feature. In most cases, the counter's value increases until it reaches the final\
+    \ value (e.g., 1 to 10). Also, programmers usually know how many times the \"\
+    for\" loop will iterate.\n\nYou may include one or more variables in your \"for\"\
+    \ loops. These variables may move in descending or ascending order. When writing\
+    \ programs, you may combine ascending and descending variables in a single \"\
+    for\" loop. In addition, an ascending variable can go from 1 to 1024 because \"\
+    for\" loops support arithmetic operations (e.g., addition, multiplication, etc.).\n\
+    \nImportant Note: All of the parts of a \"for\" loop are optional. You can create\
+    \ an infinite \"for\" loop by leaving blank spaces on the syntax. Here is an example:\
+    \ At this point, you are ready to learn more about the different sections of the\
+    \ \"for\" loop.\n\n## The Initialization\n\nA \"for\" loop can possess an initializing\
+    \ fragment:\n\n```\nfor (double sample = 1; ...; ...)\n{\n  // You can use the\
+    \ \"sample\" variable here.\n  // You cannot use the variable here.\n}\n```\n\n\
+    C# programs execute this fragment once, right before running the \"for\" loop.\
+    \ Often, programmers use an initializing fragment to create a counter (also known\
+    \ as \"loop variable\") and assign its initial value. This counter is available\
+    \ and usable when inside the loop's body. C# allows you to declare multiple variables\
+    \ using a single initializing fragment.\n\n## The Condition\n\nObviously, a \"\
+    for\" loop needs a conditional expression. Here's a sample: for (double sample\
+    \ = 1; sample < 5; ...)\n\n```\n{\n  // This is the loop's body.\n}\n```\n\nComputer\
+    \ programs evaluate the conditional expression before running the loop's body.\
+    \ If the result is \"true\", the loop's body will run; otherwise, the involved\
+    \ program will jump to the statements written after the current loop.\n\n## The\
+    \ Update Statement\n\nThis is the final part of a \"for\" loop. An update statement\
+    \ updates the loop’s counter. Let us use the code snippet given below:\n\n```\n\
+    for (double sample = 10; sample > 1; sample--)\n{\n  // This is the loop's body.\n\
+    }\n```\n\nThe program executes this part after running the loop's body. Keep in\
+    \ mind that this statement updates the counter's value.\n\n## The Loop's Body\n\
+    \n```sharp\nint n = int.Parse(Console.ReadLine());\nint sum = 0;\nfor (int i =\
+    \ 1; i < n; i += 2)\n{\n  if (i % 7 == 0)\n  {\n    continue;\n  }\n  sum += i;\n\
+    }\nConsole.WriteLine(\"sum = \" + sum);\n```\n\nThis part consists of C# statements.\
+    \ It can utilize the variables you declared in the loop's initializing fragment.\
+    \ Check the example below:\n\n```csharp\nfor (double sample = 10; sample > 1;\
+    \ sample--)\n{\n  System.Console.WriteLine(sample);\n}\n```\n\n## The Continue\
+    \ Operator\n\nIn some cases, you need to stop the active iteration without ending\
+    \ the loop itself. You can accomplish this task using the C# operator called \"\
+    continue\".\nThe example given below will illustrate how this operator works:\n\
+    \nThis code computes all the odd numbers within the range (1 to n), which produce\
+    \ remainders when divided by 7.\n\n## The \"Foreach\" Loop\n\nJust recently, C#\
+    \ introduced the concept of \"foreach\" loops (i.e., extended \"for\" loops).\n\
+    This concept is also available in other programming languages such as C, VB, C++,\
+    \ PHP, etc. With this programming tool, you can run all elements of a list, array,\
+    \ or other groups of values. A \"foreach\" loop takes all of the existing elements,\
+    \ even in non-indexed data groups.\n\nWhen writing this kind of loop, use the\
+    \ following syntax:\n\n```csharp\nforeach (type name_of_variable in name_of_group)\n\
+    {\n  // loop body\n}\n```\n\n## The Nested Loop\n\nIn some cases, you need to\
+    \ place a loop inside another loop. This is known as a nested loop. Nested loops\
+    \ are used to perform complex operations that require iterating through multiple\
+    \ collections.\n\n```csharp\nfor (int i = 0; i < 5; i++)\n{\n  for (int j = 0;\
+    \ j < 5; j++)\n  {\n    Console.WriteLine(i + \", \" + j);\n  }\n}\n```\n"
+  mdcn: "\n\nfor (initializer; Boolean_expression; update)\n\n```\n{\n  the_loop's_body;\n\
+    }\nfor (; ; )\n{\n  // Loop body\n}\n```\n\n一个 \"for\" 循环包含一个初始化部分（即计数器的初始值）、一个布尔表达式、一个更新计数器的\
+    \ C# 语句以及循环体。\n\n“计数器”（即分配给循环的初始值）是 \"for\" 循环最显著的特征。在大多数情况下，计数器的值会一直增加，直到达到最终值（例如从\
+    \ 1 到 10）。此外，程序员通常知道 \"for\" 循环将迭代多少次。\n\n你可以在 \"for\" 循环中包含一个或多个变量。这些变量可以按降序或升序移动。在编写程序时，你可以将升序和降序变量组合在一个的\
+    \ \"for\" 循环中。此外，升序变量可以从 1 变 1024，因为 \"for\" 循环支持算术运算（例如加法、乘法等）。\n\n**重要备注**：\"\
+    for\" 循环的所有部分都是可选的。你可以通过在语法中留空来创建一个无限的 \"for\" 循环。这是一个示例：此时，你已经准备好学习更多关于 \"for\"\
+    \ 循环的不同部分了。\n\n## 初始化\n\n一个 \"for\" 循环可以拥有一个初始化片段：\n\n```\nfor (double sample\
+    \ = 1; ...; ...)\n{\n  // 你可以在这里使用 \"sample\" 变量。\n  // 你不能在这里使用该变量。\n}\n```\n\
+    \nC# 程序在运行 \"for\" 循环之前会执行一次此片段。通常，程序员使用初始化片段创建一个计数器（也称为“循环变量”）并为其分配初始值。在循环体内部，该计数器是可用且可的。C#\
+    \ 允许你使用单个初始化片段声明多个变量。\n\n## 条件\n\n显然，\"for\" 循环需要一个条件表达式。这里有一个示例：for (double sample\
+    \ = 1; sample < 5; ...)\n\n```\n{\n  // 这是循环体。\n}\n```\n\n计算机程序在运行循环体之前会评估条件表达式。如果结果为“true”，则运行循环体；否则，相关程序将跳转到写在当前循环之后的语句。\n\
+    \n## 更新语句\n\n这是 \"for\" 循环的最后部分。更新语句更新循环的计数器。让我们使用下面的代码片段：\n\n```\nfor (double\
+    \ sample = 10; sample > 1; sample--)\n{\n  // 这是循环体。\n}\n```\n\n程序在运行循环体之后执行此部分。请记住，此语句更新了计数器的值。\n\
+    \n## 循环体\n\n```sharp\nint n = int.Parse(Console.ReadLine());\nint sum = 0;\nfor\
+    \ (int i = 1; i < n; i += 2)\n{\n  if (i % 7 == 0)\n  {\n    continue;\n  }\n\
+    \  sum += i;\n}\nConsole.WriteLine(\"sum = \" + sum);\n```\n\n这部分由 C# 语句组成。它可以利用你在循环初始化片段中声明的变量。查看下面的示例：\n\
+    \n```csharp\nfor (double sample = 10; sample > 1; sample--)\n{\n  System.Console.WriteLine(sample);\n\
+    }\n```\n\n## Continue 运算符\n\n在某些情况下，你需要停止当前的迭代而不结束循环本身。你可以使用 C# 中名为 \"continue\"\
+    \ 的运算符来完成这项任务。\n下面的示例将说明该运算符如何工作：\n\n此代码计算范围 (1 到 n) 内所有在被 7 整除时余数的奇数。\n\n## \"\
+    Foreach\" 循环\n\nC# 最近引入了 \"foreach\" 循环的概念（即扩展的 \"for\" 循环）。\n该概念也存在于其他编程语言中，如\
+    \ C、VB、C++、PHP 等。通过这个编程工具，你可以运行列表、数组或其他值值组的所有元素。\"foreach\" 循环会获取所有现有元素，即使在非索引数据组中也是如此。\n\
+    \n编写这种循环时，使用以下语法：\n\n```csharp\nforeach (type name_of_variable in name_of_group)\n\
+    {\n  // 循环体\n}\n```\n\n## 嵌套循环\n\n在某些情况下，你需要将一个循环放在另一个循环内部。这被称为嵌套循环。嵌套循环用于执行需要遍历多个集合的复杂操作。\n\
+    \n```csharp\nfor (int i = 0; i < 5; i++)\n{\n  for (int j = 0; j < 5; j++)\n \
+    \ {\n    Console.WriteLine(i + \", \" + j);\n  }\n}\n```\n\n"
+  merge: 1
+- raw:
+  - '[PAGE 60]
+
+
+    # Method Implementations
+
+
+    Declaring a method is not enough. You also need to implement your methods if you
+    want
+
+    them to run inside your programs. Programmers use the term "body" when referring
+    to the implementation of a method.
+
+
+    # The Body
+
+
+    You will find the method''s body inside a pair of curly braces. This body consists
+    of commands, expressions, and statements that you want to execute. Thus, the body
+    is an important part of any method.
+
+
+    Important Note: Keep in mind that you cannot nest methods in C#. Do not write
+    methods inside other methods.
+
+
+    # Method Invocations
+
+
+    This is the process of running the statements within the method''s body. Invoking
+    a method is easy and simple: you have to indicate its name, add a pair of curly
+    braces, and terminate the line using a semicolon. Here is the syntax that you
+    should use: name_of_method();'
+  - "[PAGE 61]\n\nThe sample code given below will show you how to invoke a method:\n\
+    \n```\nclass Animals\n{ static void Main()\n{\n    Console.WriteLine(\"I love\
+    \ dogs.\");\n}\n\n```\n\nIf you compile and execute that code, your command prompt\
+    \ will print the following message:\n\nI love dogs.\n\n# The Places Where You\
+    \ Can Invoke a Method\n\nC# allows you to invoke methods in the following areas:\n\
+    \nInside the program’s main method (i.e. Main()).\n\nInside another method.\n\n\
+    Inside the method’s own body. This technique is called \"recursion\"."
+  - '[PAGE 62]
+
+
+    # # Conculusion
+
+
+    Well done! This is your first step mastering the C# programming language after
+    reading the entire book. The purpose of this book is to provide the basic knowledge
+    you need in order to start evolving with C# and the .NET framework. It is important
+    to understand all of the examples presented. If you achieve this level of understanding,
+    you will have obtained highquality knowledge. It is recommended that you revisit
+    the examples if you did not understand all of them. Afterward, you will be able
+    to begin learning the advanced level of C# programming language as well as algorithmic
+    thinking.
+
+
+    As one of the most modern and popular programming languages, this is one of the
+    most widely used. As long as you follow step by step and try to comprehend everything
+    with a high level of concentration and hard work, it is not difficult to learn.
+    A wide range of support for the C# A programming language makes everything more
+    convenient, since you will be able to find many solutions for different problems
+    on the internet, therefore allowing you to progress faster. Almost any kind of
+    software can be developed with the C# programming languages such as Console Applications,
+    Mobile Applications, Web Services, Windows Applications, Blockchain Development,
+    Cloud Applications, Artificial Intelligence, Machine Learning. You will have to
+    choose what you love and begin specializing in that field. I hope that you enjoyed
+    the book, don''t stop and keep up the good work!'
+  md: "\n# Method Implementations\n\nDeclaring a method is not enough. You also need\
+    \ to implement your methods if you want\nthem to run inside your programs. Programmers\
+    \ use the term \"body\" when referring to the implementation of a method.\n\n\
+    # The Body\n\nYou will find the method's body inside a pair of curly braces. This\
+    \ body consists of commands, expressions, and statements that you want to execute.\
+    \ Thus, the body is an important part of any method.\n\nImportant Note: Keep in\
+    \ mind that you cannot nest methods in C#. Do not write methods inside other methods.\n\
+    \n# Method Invocations\n\nThis is the process of running the statements within\
+    \ the method's body. Invoking a method is easy and simple: you have to indicate\
+    \ its name, add a pair of curly braces, and terminate the line using a semicolon.\
+    \ Here is the syntax that you should use: name_of_method();\n\nThe sample code\
+    \ given below will show you how to invoke a method:\n\n```csharp\nclass Animals\n\
+    { static void Main()\n{\n    Console.WriteLine(\"I love dogs.\");\n}\n```\n\n\
+    If you compile and execute that code, your command prompt will print the following\
+    \ message:\n\nI love dogs.\n\n# The Places Where You Can Invoke a Method\n\nC#\
+    \ allows you to invoke methods in the following areas:\n\n- Inside the program’s\
+    \ main method (i.e. Main()).\n\n- Inside another method.\n\n- Inside the method’s\
+    \ own body. This technique is called \"recursion\".\n\n# Conclusion\n\nWell done!\
+    \ This is your first step mastering the C# programming language after reading\
+    \ the entire book. The purpose of this book is to provide the basic knowledge\
+    \ you need in order to start evolving with C# and the .NET framework. It is important\
+    \ to understand all of the examples presented. If you achieve this level of understanding,\
+    \ you will have obtained high-quality knowledge. It is recommended that you revisit\
+    \ the examples if you did not understand all of them. Afterward, you will be able\
+    \ to begin learning the advanced level of C# programming language as well as algorithmic\
+    \ thinking.\n\nAs one of the most modern and popular programming languages, this\
+    \ is one of the most widely used. As long as you follow step by step and try to\
+    \ comprehend everything with a high level of concentration and hard work, it is\
+    \ not difficult to learn. A wide range of support for the C# programming language\
+    \ makes everything more convenient, since you will be able to find many solutions\
+    \ for different problems on the internet, therefore allowing you to progress faster.\
+    \ Almost any kind of software can be developed with the C# programming languages\
+    \ such as Console Applications, Mobile Applications, Web Services, Windows Applications,\
+    \ Blockchain Development, Cloud Applications, Artificial Intelligence, Machine\
+    \ Learning. You will have to choose what you love and begin specializing in that\
+    \ field. I hope that you enjoyed the book, don't stop and keep up the good work!\n"
+  mdcn: "\n\n# 方法实现\n\n仅声明方法是不够的。如果你想让方法在程序中运行，还需要实现你的方法。程序员在指代方法的实现时会使用“体”（body）这一术语。\n\
+    \n# 方法体\n\n你会在大括号内部找到方法体。该体由你想要执行的命令、表达式和语句组成。因此，方法体是任何方法的重要组成部分。\n\n重要提示：请记住，在\
+    \ C# 中你不能嵌套方法。不要在另一个方法内部编写方法。\n\n# 方法调用\n\n这是运行方法体内语句的过程。调用方法非常简单直接：你只需要明方法的名称，添加一对大括号，并使用分号结束行即可。以下是你应该使用的语法：`name_of_method();`\n\
+    \n下面提供的示例代码将向你展示如何调用方法：\n\n```csharp\nclass Animals\n{ static void Main()\n{\n\
+    \    Console.WriteLine(\"I love dogs.\");\n}\n```\n\n如果你编译并执行该代码，你的命令行提示符将打印以下信息：\n\
+    \nI love dogs.\n\n# 你可以调用方法的地方\n\nC# 允许你在以下区域调用方法：\n\n- 在程序的主方法内部（即 `Main()`）。\n\
+    \n- 在另一个方法内部。\n\n- 在方法自身的体内部。这种技术被称为“递归”。\n\n# 结论\n\n做得好！在读完整本书后，这是你掌握 C# 编程语言的第一步。本书的目的是为你提供所需的的基础知识，以便你开始随着\
+    \ C# 和 .NET 框架共同进阶。理解所演示的所有示例至关重要。如果你达到了这种理解水平，你就已经了高质量的知识。如果你没有理解所有的示例，建议重新复习它们。之后，你将能够开始学习\
+    \ C# 编程语言的高级内容以及算法思维。\n\n作为最现代且最流行的编程语言之一，它是使用最广泛的语言之一。只要你按部就班地进行，并尝试以高度专注和努力来理解一切，学习它并不困难。对\
+    \ C# 编程语言的广泛支持让一切变得更加方便，因为你可以在互联网上找到解决不同问题的方案，从而让你进步得更快。使用 C# 编程语言可以开发几乎任何软件，例如控制台应用程序、移动应用程序、Web\
+    \ 服务、Windows 应用程序、区块链开发、云应用程序、人工智能、机器学习。你必须选择你喜爱的领域并在该领域深耕。我希望你喜欢这本书，不要停下，继续努力！\n\
+    \n"
+  merge: 0
