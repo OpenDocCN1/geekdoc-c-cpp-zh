@@ -1,0 +1,17 @@
+# # 5. Use the Tools: Compiler Warnings
+
+There are many warnings you are not using, most of them beneficial.-Wall is not all warnings on GCC and Clang. -Wextra is still barely scratching the surface!
+
+> /Wall on MSVC is all of the warnings. Our compiler writers do not recommend using /Wall on MSVC or -everything on Clang, because many of these are diagnostic warnings. GCC does not provide an equivalent.
+
+Strongly consider -Wpedantic (GCC/Clang) and /permissive-(MSVC). These command line options disable language extensions and get you closer to the C++ standard. The more warnings you enable today, the easier time you will have with porting to another platform in the future.
+
+# ## Exercise: Enable More Warnings
+
++   1. Explore the set of warnings available with your compiler. Enable as many as you can.
+2. Fix the new warnings generated.
+3. Goto 1.
+
+> MSVC has an excellent set of warnings that can be enabled by warning level. You can start with /w1 and work your way up to /w4 as you fix each set of warnings.
+
+This process will feel tedious and meaningless, but these warnings will catch real bugs.

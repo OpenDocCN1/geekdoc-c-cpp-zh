@@ -1,0 +1,3532 @@
+- pgno: 0
+  md: '# C++ Best Practices
+
+
+    45ish Simple Rules with Specific Action Items for Better C++
+
+
+    Full COLOR Syntax Highlighting
+
+
+    Jason Turner
+
+
+    ![](img/c882530931fce4e9ed96c0621b6ce632_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# C++ Best Practices
+
+
+    45ish Simple Specific Rules with Specific Action Items for Better C++
+
+
+    Jason Turner
+
+
+    This book is for sale at http://leanpub.com/cppbestpractices
+
+
+    This version was published on 2021-01-14
+
+
+    ![](img/c882530931fce4e9ed96c0621b6ce632_1_0.png)
+
+
+    This is a Leanpub book. Leanpub empowers authors and publishers with the Lean
+    Publishing process. Lean Publishing is the act of publishing an in-progress ebook
+    using lightweight tools and many iterations to get reader feedback, pivot until
+    you have the right book and build traction once you do.
+
+
+    © 2020 - 2021 Jason Turner'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'For my wife Jen, and her love of silly alpaca.
+
+    The cover picture was taken by my wife while visiting Red Fox Alpaca Ranch in
+    Evergreen, Colorado.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Contents
+
+
+    +   1. Introduction .....................................................................................
+    1
+
+
+    +   2. About Best Practices ................................................................................
+    2
+
+
+    +   3. Use the Tools: Automated Tests ........................................................
+    5
+
+
+    +   4. Use the Tools: Continuous Builds ...................................................
+    7
+
+
+    +   5. Use the Tools: Compiler Warnings ...................................................
+    9
+
+
+    +   6. Exercise: Use the Tools: Static Analysis ........................................
+    11
+
+
+    +   7. Use the Tools: Sanitizers .......................................................................
+    12
+
+
+    +   8. Slow Down ................................................................................
+    14
+
+
+    +   9. C++ Is Not Magic ........................................................................
+    15
+
+
+    +   10. C++ Is Not Object-Oriented ...................................................
+    17
+
+
+    +   11. Learn Another Language ........................................................
+    19
+
+
+    +   12. const Everything That’s Not constexpr ...................................
+    21
+
+
+    +   13. constexpr Everything Known at Compile Time ..........................
+    23
+
+
+    +   14. Prefer auto in Many Cases. ................................................
+    26
+
+
+    +   15. Prefer ranged-for Loop Syntax Over Old Loops ................... 32
+
+
+    +   16. Use auto in ranged for loops ..........................................
+    34'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# CONTENTS
+
+
+    +   17. Prefer Algorithms Over Loops ................................................................
+    36
+
+
+    +   18. Don’t Be Afraid of Templates ................................................................
+    38
+
+
+    +   19. Don’t Copy and Paste Code .......................................................................
+    40
+
+
+    +   20. Follow the Rule of 0 ...................................................................................
+    42
+
+
+    +   21. If You Must Do Manual Resource Management, Follow the Rule of 5 ...............
+    44
+
+
+    +   22. Don’t Invoke Undefined Behavior ............................................................
+    47
+
+
+    +   23. Never Test for this To Be nullptr, It’s UB ........................................
+    49
+
+
+    +   24. Never Test for A Reference To Be nullptr, It’s UB ................................
+    52
+
+
+    +   25. Avoid default In switch Statements ..........................................................
+    54
+
+
+    +   26. Prefer Scoped enums ............................................................................
+    58
+
+
+    +   27. Prefer if constexpr ov SFINAE ...................................................
+    61
+
+
+    +   28. Constrain Your Template Parameters With Concepts (C++20) ................
+    64
+
+
+    +   29. De-template-ize Your Generic Code ...................................................
+    68
+
+
+    +   30. Use Lippincott Functions ........................................................
+    71
+
+
+    +   31. Be Afraid of Global State ............................................................
+    74
+
+
+    +   32. Make your interfaces hard to use wrong ..........................................
+    75
+
+
+    +   33. Consider If Using the API Wrong Invokes Undefined Behavior ... 76
+
+
+    +   34. Use [[nodiscard]] Liberally ...................................................
+    78
+
+
+    +   35. Use Stronger Types ................................................................
+    81
+
+
+    +   36. Don’t return raw pointers ......................................................
+    85
+
+
+    +   37. Prefer Stack Over Heap ............................................................
+    86'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# CONTENTS
+
+
+    +   38. No More new! . . . . . . . . . . . . . . . . . . . . . . . 89
+
+
+    +   39. Know Your Containers . . . . . . . . . . . . . . . . . . . . 91
+
+
+    +   40. Avoid std::bind and std::function . . . . . . . . . . 93
+
+
+    +   41. Skip C++11 . . . . . . . . . . . . . . . . . . . . . . . 97
+
+
+    +   42. Don''t Use initializer_list For Non-Trivial Types . . . 100
+
+
+    +   43. Use the Tools: Build Generators . . . . . . . . . 102
+
+
+    +   44. Use the Tools: Package Managers . . . . . . 105
+
+
+    +   45. Improving Build Time . . . . . . . . . . . . . 106
+
+
+    +   46. Use the Tools: Multiple Compilers . . . 108
+
+
+    +   47. Fuzzing and Mutating . . . . . . . . . . . . 110
+
+
+    +   48. Continue Your C++ Education . . . . . . . 115
+
+
+    +   49. Thank You . . . . . . . . . . . . . . . . . . . . 118
+
+
+    +   50. Bonus: Understand The Lambda . . . . . . . 120'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # 1. Introduction
+
+
+    My goal as a trainer and a contractor (seems to be) to work me out of a job. I
+    want everyone to:
+
+
+    +   1. Learn how to experiment for themselves
+
+    2. Not just believe me, but test it
+
+    3. Learn how the language works
+
+    4. Stop making the same mistakes of the last generation
+
+
+    I’m thinking about changing my title from “C++ Trainer” to “C++ Guide.” I always
+    adapt my courses and material to the class I currently have. We might agree on
+    X, but I change it to Y halfway through the first day to meet the organization’s
+    needs.
+
+
+    Along the way, we experiment and learn as a group. I often also learn teaching.
+    Every group is unique; every class has new questions.
+
+
+    But a lot of the questions are still the ones over and over (to the point where
+    I get to look like a mind reader, that bit is fun
+
+
+    Hence, this book (and the twitter thread that it came from) to spread the word
+    on the long-standing best practices.
+
+
+    > I wrote the book I wanted to read. It’s intentionally straightforward, short,
+    to the point, and has specific action items.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# 2. About Best Practices
+
+
+    Best Practices, quite simply, are about
+
+
+    +   1. Reducing common mistakes
+
+    2. Finding errors quickly
+
+    3. Without sacrificing (and often improving) performance
+
+
+    # Why Best Practices?
+
+
+    First and foremost, let''s get this out of the way:
+
+
+    # Your Project Is Not Special
+
+
+    If you are programming in C++, you, or someone at your company, cares performance.
+    Otherwise, they''d probably be using some other programming language. I''ve been
+    to many companies who all tell me they are special because they need to do things
+    fast!
+
+
+    Spoiler alert: they are all making the same decisions for the same reasons.
+
+
+    There are very few exceptions. The outliers who make different decisions: they
+    are the organizations that are already following the advice in this book.
+
+
+    # What''s The Worst Than Can Happen?
+
+
+    I don''t want to be depressing, but let''s take a moment to ponder the worst-case
+    scenario if your project has a critical flaw.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Game
+
+
+    Serious flaws lead to remote vulnerability or attack vector.
+
+
+    # Financial
+
+
+    Serious flaws lead to large amounts of lost money, accelerating trades, market
+    crash¹.
+
+
+    # Aerospace
+
+
+    Serious flaws lead to space spacecraft or human life².
+
+
+    # Your Industry
+
+
+    Serious flaws lead to... Lost money? Lost jobs? Remote hacks? Worse?
+
+
+    # Examples
+
+
+    Examples throughout this book use struct instead of class. The only difference
+    between struct and class is that struct has all members by default public. Using
+    struct makes examples shorter and easier to read.
+
+
+    # Exercises
+
+
+    Each section has one or more exercises. Most do not have a right or wrong answer.
+
+
+    # Exercise: Look for exercises
+
+
+    Throughout the following chapters, you''ll see exercises like this one. Look for
+    them!
+
+
+    Exercises are:
+
+
+    +   - Practical, and apply to your current code base to see immediate value.
+
+
+    > ¹https://en.wikipedia.org/wiki/2010_flash_crash
+
+    ²https://spectrum.ieee.org/aerospace/aviation/how-boeing-737-max-disaster-looks-to-a-software-developer'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '+   • Make you think and understand the language a little bit deeper by doing
+    your own research.
+
+
+    # # Links and References
+
+
+    I''ve made an effort to reference those who I learned from and link to their talks
+    where possible. If I''ve missed something, please let me know.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# # 3. Use the Tools: Automated Tests
+
+
+    You need a single command to run tests.
+
+    If you don''t have that, no one will run the tests.
+
+
+    +   - Catch2¹ - popular and well supported testing framework from Phil Nash²
+
+    and Martin Hořeňovský³
+
+    - doctest⁴ - similar to catch2, but trimmed for compile-time performance
+
+    - Google Test⁵
+
+    - Boost.Test⁶ - testing framework, boost style.
+
+
+    ctest⁷ is a test runner for CMake that can be used with any of the frame-works.
+    It is utilized via the add_test⁸ feature of CMake.
+
+
+    You need to be familiar with these tools, what they do, and pick from them.
+
+    Without automated tests, the rest of this book is pointless. You cannot apply
+    the practical exercises if you cannot verify that you did not break the existing
+    code.
+
+    Oleg Rabaev of CppCast stated:
+
+
+    +   - If a component is hard to test, it is not properly designed.
+
+    - If a component is easy to test, it is a good indication that it is properly
+    designed.
+
+
+    > ¹https://github.com/catchorg/Catch2
+
+    ²https://twitter.com/phil_nash
+
+    ³https://twitter.com/horenmar_ctu
+
+    ⁴https://github.com/onctam/doct
+
+    ⁵https://github.com/google/googletest
+
+    ⁶https://www.boost.org/libs/1_74_0/libs/test/doc/html/index.html
+
+    ⁷https://cmake.org/cmake/cmake/help/latest/manual/ctest.1.html
+
+    ⁸https://cmake.org/cmake/cmake/help/latest/command/add_test.html'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "If a component is properly designed, it is easy to test.\n\n# Exercise: Can\
+    \ you run a single command to run a suite of tests?\n\n+   - Yes: Excellent! Run\
+    \ the tests and make sure they all pass!\n\n+   - No: Does your program produce\
+    \ output?\n  - Yes: Start with “Approval Tests9,” which will give you the foundation\
+    \ you need to start started with testing.\n  - No: Develop a strategy for how\
+    \ to implement some minimal form of testing.\n\n# Resources\n\n+   - CppCon 2018:\
+    \ Phil Nash “Modern C++ Testing with Catch2”10\n- CppCon 2019: Clare Macrae “Quickly\
+    \ Testing Legacy C++ Code with Approval Tests”11\n- C++ on Sea 2020: Clare Macrae\
+    \ “Quickly and Effectively Testing Legacy C++ Code with Approval Tests”12\n\n\
+    > 9https://cppcast.com/clare-macrae/\n10https://youtube.be/ob5_XZRFQHO\n11https://youtube.be/3GZHvcd32s\n\
+    12https://youtube.be/tXEuf_3VzRE"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# 4. Use the Tools: Continuous Builds
+
+
+    Without automated tests, it is impossible to maintain project quality.
+
+
+    In the C++ projects I have worked on throughout my career, I''ve had to support
+    some combination of:
+
+
+    +   * x86
+
+    * x64
+
+    * SPARC
+
+    * ARM
+
+    * MIPSEL
+
+
+    On
+
+
+    +   * Windows
+
+    * Solaris
+
+    * MacOS
+
+    * Linux
+
+
+    When you start to combine multiple compilers across multiple platforms and architectures,
+    it becomes increasingly likely that a significant change on one platform will
+    break one or more other platforms.
+
+
+    To solve this problem, enable continuous builds with continuous tests for your
+    projects.
+
+
+    +   * Test all possible combinations of platforms that you support'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '+   * Test Debug and Release separately
+
+    * Test all configuration options
+
+    * Test against newer compilers than you support or require
+
+
+    > If you don’t require 100% tests passing, you will never know the code’s state.
+
+
+    # ## Exercise: Enable continuous builds
+
+
+    Understand your organization’s current continuous build environment. If one does
+    not exist, what are the barriers to getting it set up? How hard would it be to
+    get something like GitLab, GitHub actions, Appveyor, or Travis set up for your
+    your projects?'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# # 5. Use the Tools: Compiler Warnings
+
+
+    There are many warnings you are not using, most of them beneficial.-Wall is not
+    all warnings on GCC and Clang. -Wextra is still barely scratching the surface!
+
+
+    > /Wall on MSVC is all of the warnings. Our compiler writers do not recommend
+    using /Wall on MSVC or -everything on Clang, because many of these are diagnostic
+    warnings. GCC does not provide an equivalent.
+
+
+    Strongly consider -Wpedantic (GCC/Clang) and /permissive-(MSVC). These command
+    line options disable language extensions and get you closer to the C++ standard.
+    The more warnings you enable today, the easier time you will have with porting
+    to another platform in the future.
+
+
+    # ## Exercise: Enable More Warnings
+
+
+    +   1. Explore the set of warnings available with your compiler. Enable as many
+    as you can.
+
+    2. Fix the new warnings generated.
+
+    3. Goto 1.
+
+
+    > MSVC has an excellent set of warnings that can be enabled by warning level.
+    You can start with /w1 and work your way up to /w4 as you fix each set of warnings.
+
+
+    This process will feel tedious and meaningless, but these warnings will catch
+    real bugs.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Resources
+
+
+    +   * C++ Best Practices website curated list of warnings
+
+    * GCC''s full warning list
+
+    * Clang''s full warning list
+
+    * MSVC''s Compiler warnings that are off by default
+
+    * C++ Weekly Ep 168 - Discovering Warnings You Should Be Using
+
+
+    > ¹https://github.com/leafleticus/cppbestpractices/blob/master/02-Use_the_Tools_Available.md#compilers
+
+    ²https://gcc.gnu.org/linedocs/gcc/Warning-Options.html
+
+    ³https://clang.llvm.org/docs/DiagnosticsReference.html
+
+    ⁴https://docs.microsoft.com/en-us/cpp/preprocessor/compiler-warnings-that-are-off-by-default?view=vs-2019
+
+    ⁵https://youtube.com/IOo8gTDMfKM'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# #6. Exercise: Use the Tools: Static Analysis
+
+
+    Static analysis tools are tools that analyze your code without compiling or executing
+    it. Your compiler is one such tool and your first line of defense.
+
+
+    Many such tools are free and some are free for open source projects.
+
+
+    cppcheck and clang-tidy are two popular and free tools with major IDE and editor
+    integration.
+
+
+    # ## Enable More Static Analysis
+
+
+    Visual Studio: look into Microsoft''s static analyzer that ships with it. Consider
+    using Clang Power Tools. Download cppcheck''s addon for visual studio
+
+
+    CMake: Enable cppcheck and clang-tidy integration
+
+
+    # ## Resources
+
+
+    +   - cppbestpractices list of static analyzers¹
+
+
+    > > ^¹https://github.com/lefticus/cppbestpractices/blob/master/02-Use_the_Tools_Available.md#static-analyzers'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# 7. Use the Tools: Sanitizers
+
+
+    The sanitizers are runtime analysis tools for C++ and are built into GCC, Clang,
+    and MSVC.
+
+
+    If you are familiar with Valgrind, the sanitizers provide similar functionality
+    many orders of magnitude faster than Valgrind.
+
+
+    Available sanitizers are:
+
+
+    +   * Address (ASan)
+
+    * Undefined Behavior (UBSan) (More on Undefined Behavior later)
+
+    * Thread
+
+    * DataFlow (use for code analysis, not finding bugs)
+
+    * Lib Fuzzer (addressed in a later chapter)
+
+
+    Address sanitizer, UB Sanitizer, Thread sanitizer can find many issues almost
+    like magic. Support is currently increasing in MSVC at the time of this book''s
+    writing, while GCC and Clang have more established support for the sanitizers.
+
+
+    John Regehr recommends always enabling ASan and UBSan during development.
+
+
+    When an error such as an out of bounds memory access occurs, the sanitizer will
+    give you a report of what conditions led to the failure, often with suggestions
+    for fixing the problem.
+
+
+    > ¹https://twitter.com/johnregehr'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'Use the Tools: Sanitizers
+
+
+    You can enable Address and Undefined Behavior sanitizers with a command similar
+    to:
+
+
+    ```
+
+    gcc -fsanitize=address,undefined <filecompile>
+
+    ```
+
+
+    Sanitizers must also be enabled during the linking phase of the project.
+
+
+    > Examples for how to use sanitizers with CMake exist in the C++ Starter Project²
+
+
+    # Exercise: Enable Sanitizers
+
+
+    +   * Investigate how to add sanitizer support for your existing project
+
+    * Enable ASan first
+
+    * Run the full test suite and investigate any problems found
+
+    * Enable UBSan second
+
+    * Run full test suite again
+
+
+    End goal: get all tests running with ASan, and UBSan enabled on your continuous
+    build environment.
+
+
+    # Resources
+
+
+    +   * AddressSanitizer (ASan) for Windows with MSVC³
+
+    * Sanitizers source and documentation on GitHub⁴
+
+    * Clang AddressSanitizer documentation⁵
+
+    * Clang UndefinedBehaviorSanitizer documentation⁶
+
+
+    ²https://github.com/leficus/cpp_starter_project
+
+    ³https://devblogs.microsoft.com/cppblog/addresssanitizer-asan-for-windows-with-msvc/
+
+    ⁴https://github.com/google/sanitizers
+
+    ⁵https://clang.llvm.org/docs/AddressSanitizer.html
+
+    ⁶https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# 8. Slow Down
+
+
+    Dozens of solutions exist in C++ for any given problem. Dozens of more opinions
+    exist for which of these solutions are the best. Copying and pasting from one
+    application to another is easy. Forging ahead with the solutions you are comfortable
+    with is easy.
+
+
+    How many times have you said, “wow, this is going to take a complicated class
+    hierarchy to implement this solution?” Or what about “I guess I need to add macros
+    here to implement these common functions.”
+
+
+    +   - If the solution seems large or complex, stop.
+
+    - Now is a good time to go for a walk and ponder the solution.
+
+    - When you''re done with your walk, discuss the design with a coworker, pet, or
+    rubber duck¹.
+
+
+    Still haven''t found a more straightforward solution you are happy with? Ask on
+    Twitter or Slack if you can.
+
+
+    The key point is to not forge ahead blindly with the solutions with which you
+    are comfortable. Being willing to stop for a minute. The older I get, the less
+    time I spend programming, and the more time I spend thinking. In the end, I implement
+    the solution as fast or faster than I used to and with less complexity.
+
+
+    > ¹https://rubberduckdebugging.com/'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "# 9. C++ Is Not Magic\n\nThis section is just a reminder that we can reason\
+    \ about all aspects of C++. It's not a black box, and it's not magic.\n\nIf you\
+    \ have a question, it's usually easy to construct an experiment that helps you\
+    \ answer the question for yourself.\n\nA favorite tool of mine is this simple\
+    \ class that prints a debug message whenever a special member function is called.\n\
+    \nUnderstanding object lifetime tool\n\n```\n#include <stdio>\n\nstruct S {\n\
+    S(){ puts(\"S\"); };\nS(const S&){ puts(\"S const S&\"); };\nS(S &&){ puts(\"\
+    S S &&\"); };\nS &operator=(const S&){\n    puts(\"operator=(const S&)\");\n \
+    \   return +this;\n}\nS &operator=(S&&){\n    puts(\"operator=(S &&)\");\n   \
+    \ return +this;\n}\n~S() { puts(\"~S()\"); };\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Exercise: Build your first C++ experiment.
+
+
+    Do you have a question about C++ that''s been nagging you tou? Can you design
+    an experiment to test it? Remember that Compiler Explorer now allows you to execute
+    code.
+
+
+    # Exercise: Start collecting your experiments.
+
+
+    Once you have created an experiment and test, be sure to save it. Consider using
+    GitHub gists as a simple way to save and share your tests with others.
+
+
+    # Resources
+
+
+    +   - A quick start example with Compiler Explorer.¹
+
+
+    > ¹https://godbolt.org/z/3eGP56'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# 10. C++ Is Not Object-Oriented
+
+
+    Bjarne Stroustrup in The C++ Programming Language 3rd Edition states:
+
+
+    C++ is a general-purpose programming language with a bias towards systems programming
+    that
+
+
+    +   * is a better C,
+
+    * supports data abstraction,
+
+    * supports object-oriented programming, and
+
+    * supports generic programming.
+
+
+    You must understand that C++ is a multi-discipline programming language to make
+    the most of the language. C++ supports effectively all of the programming paradigms
+    that exist today.
+
+
+    +   * Procedural
+
+    * Functional
+
+    * Object-Oriented
+
+    * Generic
+
+    * Compile-Time (constexpr and template metaprogramming)
+
+
+    Knowing when it is appropriate to use each of these tools is the key to writing
+    good C++. Projects that rigidly stick to one paradigm miss out on the best features
+    of the language.
+
+
+    > Don''t try to use every technique possible all the time. You will end up with
+    a mess of difficult to maintain and read code. Appropriately using the appropriate
+    techniques at the appropriate times takes discipline and practice.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Exercise: Question your current design.
+
+
+    If you could break out of the current design your project is using, what would
+    you do differently?
+
+
+    # Resources
+
+
+    +   - Functional Programming in C++¹
+
+    - C++ Weekly Ep 137: C++ Is Not an Object Oriented Language²
+
+
+    > ¹https://www.manning.com/books/functional-programming-in-c-plus-plus?a_aid=FPinCXX&a_bid=441f12cc
+
+    ²https://youtu.be/AUT201AXeJg'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# # 11. Learn Another Language
+
+
+    Considering that C++ is not an object-oriented language, you have to know many
+    different techniques to make the most of C++.
+
+
+    The following exercises will help expose you to other languages. But the fact
+    that currently, few languages are pure single paradigm languages.
+
+
+    Every language has its preferred way of doing things that work within the language''s
+    preferred paradigm.
+
+
+    Ben Deane recommends this set of languages that all programmers should learn¹:
+
+
+    +   * ALGOL family (C and descendants)
+
+    * Forth
+
+    * Lisp and dialects
+
+    * Haskell
+
+    * Smalltalk
+
+    * Erlang
+
+
+    # ## Exercise: Pick a functional language to learn
+
+
+    Can you find a pure functional language?'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Exercise: Pick an object-oriented language to learn
+
+
+    Finding a pure object-oriented language is even harder! Even Java has lambda functions
+    these days.
+
+
+    # Exercise: Pick a language with a different syntax
+
+
+    Languages that look like C-family languages will likely be more comfortable for
+    you. Try to find a language that looks different and stretches your mind.
+
+
+    # Resources
+
+
+    +   - Execution in the Kind of Nouns² - gets you thinking about different programming
+    paradigms
+
+
+    > ²https://steve-ygge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# 12. const Everything That’s Not constexpr
+
+
+    Many people (like Kate Gregory and James McNellis) have said this many times.
+
+    Making objects const does two things:
+
+
+    +   1. It forces us to think about the initialization and lifetime of objects,
+    which affects performance.
+
+    2. Communicates meaning to the readers of our code.
+
+
+    And as an aside, if it''s a static object, the compiler is now free to move it
+    into the constants portion of the binary, which can affect the optimizer.
+
+
+    > Exercise: Look for const opportunities.
+
+
+    As you read through your code, you should look for variables that are not const
+    and make them const.
+
+
+    +   - If a variable is not const, ask why not?
+
+    - Would using a lambda or adding a named function allow you to make the value
+    const?'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'const Everything That''s Not constexpr
+
+
+    Using a lambda to initialize a const object.
+
+
+    ```
+
+    const auto data = [](){}; // no parameters
+
+    std::vector<int> result;
+
+    // fill result with things.
+
+    return result;
+
+    }(); // immediately invoked
+
+    ```
+
+
+    ![](img/c882530931fce4e9ed96c0621b6ce632_27_0.png)
+
+
+    Because of RVO, using a lambda will likely not add any overhead and may increase
+    performance.
+
+
+    Did you make any static variables const in the process?
+
+    Then go to the constexpr exercise.
+
+
+    ![](img/c882530931fce4e9ed96c0621b6ce632_27_1.png)
+
+
+    > You probably don''t want to make class members const; it can break essential
+    things, and sometimes silently.
+
+
+    # Resources
+
+
+    +   - CppCon 2014: James McNellis & Kate Gregory "Modernizing Legacy C++ Code"1
+
+    - CppCon 2019: Jason Turner "C++ Code Smells"2
+
+    - The implication of const or reference member variables in C++3
+
+    - C++Now 2018: Ben Deane "Easy to Use, Hard to Misuse: Declarative Style in C++"4
+    (Builds on techniques that make applying const easier.)
+
+
+    ^1https://youtube.be/LdxAgMe6DI8
+
+    2https://youtube.be/f_tLIQ0wLUM
+
+    3https://lesleylai.info/en/const-and-reference-member-variables/
+
+    4https://youtube.be/2ouxET5R4'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# 13. constexpr Everything Known at Compile Time
+
+
+    Gone are the days of #define. constexpr should be your new default! Unfortunately,
+    people over-complicate constexpr, so let''s break down the simplest thing.
+
+
+    If you see something like (I''ve seen in real code):
+
+
+    ```
+
+    static const data known at compile time.
+
+    static const std::vector<int> angles{-90,-45,0,45,90};
+
+    ```
+
+
+    This really needs to be:
+
+
+    ```
+
+    Moving static const static constexpr.
+
+    static constexpr std::array<int, 5> angles{-90,-45,0,45,90};
+
+    ```
+
+
+    > static constexpr here is to make sure the object is not reinitialized each time
+    the function / declaration is encountered. With static the variable lasts for
+    the lifetime of the program, and we know it will be initialized exactly once.
+
+
+    The difference is threefold.
+
+
+    +   - The size of the array is now known at compile time
+
+    - We''ve removed dynamic allocations
+
+    - We no longer pay the cost of accessing a static'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'The main gains come from the first two, but we need a constexpr mindset looking
+    for this kind of opportunity. We also need constexpr knowledge to see how to apply
+    it in the more complex cases.
+
+
+    The difference can be significant.
+
+
+    #  Exercise: constexpr Your const Values
+
+
+    While reading code, look at all const values. Ask, “is this value known at compile
+    time?” If it is, what would it take to make the value constexpr?
+
+
+    #  Exercise: static constexpr Your static const Values
+
+
+    Go through your current code base and look for code that is currently static const.
+    You probably have something, somewhere.
+
+
+    +   - If it''s currently static const, it''s likely the size and data are known
+    at compile time.
+
+    - Can this code become constexpr?
+
+    - What is preventing it from being constexpr?
+
+    - How much work would it take to modify the functions populating the static const
+    data so that they are also constexpr?
+
+
+    # Resources
+
+
+    +   - C++Now 2017: Ben Deane & Jason Turner “constexpr ALL the things”¹ (a bit
+    out of date with modern constexpr techniques)
+
+    - C++ Weekly Eb 233: constexpr map vs std::map²
+
+
+    > ¹https://youtube.be/HMB9oxFobJc
+
+    ²https://youtube.be/INn3xa4pMFg'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'constexpr Everything Known at Compile Time
+
+
+    +   - Meeting C++ 2017: Jason Turner “Practical constexpr”3
+
+    - C++ Russia 2019: Hana Dusíková “A state of compile time regular expressions”4
+
+
+    3https://youtube.be/xtf9qkDTrZE
+
+    4https://youtube.be/r_ZASJFQGQI'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# 14. Prefer auto in Many Cases.
+
+
+    I''m not an Almost Always Auto (AAA) person, but let me ask you this: What is
+    the result type of std::count?
+
+
+    My answer is, “I don’t care.”
+
+
+    ```
+
+    const auto
+
+    const auto result = std::count( /* stuff * / );
+
+    ```
+
+
+    or, if you prefer:
+
+
+    auto const
+
+
+    ```
+
+    auto const result = std::count( /* stuff * / );
+
+    ```
+
+
+    Using auto avoids unnecessary conversions and data loss. Same as ranged-for loops.
+    auto requires initialization, the same as const, the same reasoning for why that’s
+    good.
+
+
+    Example:
+
+
+    Possible expensive conversion.
+
+
+    ```
+
+    const std::string value = get_string_value();
+
+    ```
+
+
+    What is the return type of get_string_value()? If it is std::string_view or const
+    char *, we will get a potentiallyially costly conversion on all compilers with
+    no diagnostic.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "Prefer auto in Many Cases.\n\nNo possible expensive conversion.\n\n```\n//\
+    \ avoids conversion\nconst auto value = get_string_value();\n```\n\nFurthermore,\
+    \ auto return types can actually significantly simplify generic code.\n\nC++ 98\
+    \ template usage.\n\n```\n// our example from \"Don't Be Afraid of Templates\"\
+    \ntemplate<typename> Arithmetic\ndivide(Arithmetic numerator, Arithmetic denominator)\
+    \ {\n    return numerator / denominator;\n}\n```\n\nThis code forces us to use\
+    \ the same type for both the numerator and denominator (play with this and see\
+    \ the weird compile errors you get).\n\nC++ 98 template made more generic?\n\n\
+    ```\ntemplate<typename Numerator, typename Denominator>\n/*what's the return type*/\n\
+    ddivide(Numerator numerator, Denominator denominator) {\n    return numerator\
+    \ / denominator;\n}\n```\n\nC++98 provides no solution to this problem, but C++11\
+    \ does."
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "Prefer auto in Many Cases.\n\nC++11 trailing return types.\n\n```\n// use trailing\
+    \ return type\ntemplate<typename Numerator, typename Denominator>\nauto divide(Numerator\
+    \ numerator, Denominator denominator)\n-> decltype(numerator / denominator)\n\
+    {\n  return numerator / denominator;\n}\n```\n\nBut in C++14, we can leave off\
+    \ the return type altogether (remember to Skip C++11).\n\nC++14 auto return types.\n\
+    \n```\ntemplate<typename Numerator, typename Denominator>\nauto divide(Numerator\
+    \ numerator, Denominator denominator)\n{\n  return numerator / denominator;\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# Exercise: Become familiar with auto deduction.\n\nEx1: what is the type of\
+    \ val?\n\n```\nconst int *get();\n\nint main() {\n    const auto val = get();\n\
+    }\n```\n\nEx2: what is the type of val?\n\n```\nconst int &get();\n\nint main()\
+    \ {\n    const auto val = get();\n}\n```\n\nEx3: what is the type of val?\n\n\
+    ```\nconst int *get();\n\nint main() {\n    const auto *val = get();\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "Prefer auto in Many Cases.\n\nEx4: what is the type of val?\n\n```\nconst int\
+    \ &get();\n\nint main() {\n    const auto &val = get();\n}\n```\n\nEx5: what is\
+    \ the type of val?\n\n```\nconst int *get();\n\nint main() {\n    const auto &val\
+    \ = get();\n}\n```\n\nEx6: what is the type of val?\n\n```\nconst int &get();\n\
+    \nint main() {\n    const auto &&val = get();\n}\n```\n\n# Exercise: Build your\
+    \ experiment library\n\nThe above exercise is perfect for building into a set\
+    \ of experiments that are saved in your GitHub gists mentioned in C++ Is Not Magic"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Exercise: Understand how auto and template deduction relate
+
+
+    Understand the rules for type deduction of templates and how they relate to auto.
+
+
+    Read the section in the C++ Programming Language Standard [dcl.spec.auto].
+
+
+    # Resources
+
+
+    +   - clang-tidy modernize-use-auto¹
+
+    - Almost Always Auto²
+
+
+    > ¹https://clang.llvm.org/extra/clang-tidy/modernize-use-auto.html
+
+    ²https://herbsutter.com/2013/08/12/gotw-94-solution-aaa-style-almost-always-auto/'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "# 15. Prefer ranged-for Loop Syntax Over Old Loops\n\nWe'll illustrate this\
+    \ point with a series of examples.\n\n```\nint std::size_t i = 0; i < container.size();\
+    \ ++i) {\n  // oops mismatched types\n}\n```\n\nMismatched containers while looping.\n\
+    \n```\nfor (auto itr = container.begin();\n  itr != container2.end();\n  ++itr)\
+    \ {\n  // oops, most of us have done this at some point\n}\n```\n\nExample of\
+    \ ranged-for loop.\n\n```\nfor(const auto &element : container) {\n  // eliminates\
+    \ both other problems\n}\n```\n\n> Never mutate the container itself while iterating\
+    \ inside of a ranged-for loop."
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "# Exercise: Modernize Your Loops\n\nYou probably have old-style loops in your\
+    \ code.\n\n+   1. Apply clang-tidy’s modernize-loop-convert check.\n2. Look for\
+    \ loops that could not be converted.\n   * Loops that could not be converted might\
+    \ represent bugs in the code\n   * Loops that could not be converted, but do not\
+    \ have bugs, are good candidates for simplification\n\n# Resources\n\n+   - clang-tidy\
+    \ modernize-loop-convert¹\n\n> https://clang.llvm.org/extra/clang-tidy/checks/modernize-loop-convert.html"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "# 16. Use auto in ranged for loops\n\nNot using auto can make it easier to\
+    \ have silent mistakes in your code.\n\nAccidental conversions\n\n```\nfor (const\
+    \ int value : container_of_double) {\n    // accidental conversion, possible warning\n\
+    }\n```\n\nAccidental slicing\n\n```\nfor (const base value : container_of_derived)\
+    \ {\n    // accidental silent slicing\n}\n```\n\nNo problem\n\n```\nfor (const\
+    \ auto &value : container) {\n    // no possible accidental conversion\n}\n```\n\
+    \nPrefer:\n\n+   - const auto & for non-mutating loops\n- auto & for mutating\
+    \ loops\n- auto &&only when you have to work with weird types like std::vector<bool>,\
+    \ or if moving elements out of the container"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# Exercise: Understand std::map and ranged for loops
+
+
+    Understand what this code is doing. Is it making a copy? Why and how?
+
+
+    Accidental copy?
+
+
+    ```
+
+    std::map<std::string, int> get_map();
+
+
+    using element_type = std::pair<std::string, int>;
+
+
+    for (const element_type & : get_map())
+
+    {
+
+    }
+
+    ```
+
+
+    # Exercise: Enable ranged-loop related warnings
+
+
+    Make sure -Wrange-loop-construct is enabled in your code, which is automatically
+    included with -Wall.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# 17. Prefer Algorithms Over Loops\n\nAlgorithms communicate meaning and help\
+    \ us apply the “const All The Things” rule. In C++20, we get ranges, which make\
+    \ algorithms more comfortable to use.\n\nIt’s possible, taking a functional approach\
+    \ and using algorithms, that we can write C++ that reads like a sentence.\n\n\
+    Algorithms end game\n\n```\nconst auto has_value\n= std::any_of(begin(container),\
+    \ end(container),\n  greater_than(12));\n```\n\nAlgorithms end game (C++20)\n\n\
+    ```\nconst auto has_value\n= std::any_of(container, greater_than(12));\n```\n\n\
+    Note that in some rare cases¹, your static analysis tools might be able to suggest\
+    \ an algorithm to use.\n\n# Exercise: Study existing loops\n\nNext time you are\
+    \ reading a loop in your codebase, cross-reference it with the C++ <algorithm>\
+    \ header² and try to find an algorithm that applies instead.\n\n¹https://sourceforge.net/p/cppcheck/wiki/ListOf/\n\
+    ²https://en.cppreference.com/w/cpp/algorithm"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: 'This book only barely mentions C++20''s ranges. Compilers are just now getting
+    support for ranges as of the publication of this book. Ranges can be composed
+    and have full support for constexprr.
+
+
+    # # Resources
+
+
+    +   - GoingNative 2013: Sean Parent “C++ Seasoning”3
+
+    - CppCon 2018: Jonathan Boccara “105 Algorithms in Less Than an Hour”4
+
+    - C++ Now 2019: Connor Hoekstra “Algorithm Intuition”5
+
+    - Code:Dive 2019: Connor Hoekstra “Better Algorithm Intuition”6
+
+    - C++ Weekly Ep 187 “C++20’s constexpr Algorithms”7
+
+    - C++ Weekly Ep 105 “Learning “Modern” C++ 5: Looping And Algorithms”8
+
+
+    3https://channel9.msdn.com/Events/GoingNative/2013/Cpp-Seasoning
+
+    4https://youtube.be/2olsGf6JIKU
+
+    5https://youtube.be/48gv1sNm3WA
+
+    6https://youtube.be/0z-cv3gartw
+
+    7https://youtube.be/9YWXSXr2onY
+
+    8https://youtube.be/A0-x-Djey-Q'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# 18. Don’t Be Afraid of Templates\n\nTemplates are the ultimate DRY principle\
+    \ in C++. Templates can be complicated, daunting, and Turing complete, but they\
+    \ don't have to be. Fifteen years ago, it seemed the prevailing attitude was “templates\
+    \ aren’t for normal people.”\n\nFortunately, this is less true today. And we have\
+    \ more tools today, concepts, generic lambdas, etc.\n\nWe’re going to build up\
+    \ an example over a few chapters. Let’s say we want to write a function that can\
+    \ divide any two values.\n\nDivide doubles.\n\n```\ndouble divide(double numerator,\
+    \ double denominator) {\n    return numerator / denominator;\n}\n```\n\nBut you\
+    \ don’t want all of your divisions to be promoted to double.\n\nDivide floats.\n\
+    \n```\nfloat divide(float numerator, float denominator) {\n    return numerator\
+    \ / denominator;\n}\n```\n\nAnd of course, you want to handle some kind of integer\
+    \ values."
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "Don't Be Afraid of Templates\n\nDivide ints.\n\n```\nint divide(int numerator,\
+    \ int denominator) {\n  return numerator / denominator;\n}\n```\n\nTemplates were\
+    \ designed for just this scenario.\n\nBasic template usage.\n\n```\ntemplate<typename\
+    \ T>\nT divide(T numerator, T denominator) {\n  return numerator / denominator;\n\
+    }\n```\n\nMost examples on the internet use T, like I just did. Don't do that.\
+    \ Give your type a meaningful name.\n\ntemplate parameters with actual names.\n\
+    \n```\ntemplate<typename Arithmetic>\nArithmetic divide(Arithmetic numerator,\
+    \ Arithmetic denominator) {\n  return numerator / denominator;\n}\n```\n\n# Exercise:\
+    \ Keep this chapter in mind while moving on to the next chapter and looking at\
+    \ its exercises."
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# 19. Don’t Copy and Paste Code
+
+
+    If you find yourself going to select a block of code and copy it: stop!
+
+    Take a step back and look at the code again.
+
+
+    +   - Why are you copying it?
+
+    - How similar will the source be to to the destination?
+
+    - Does it make sense to make a function?
+
+    - Remember, Don’t Be Afraid of Templates
+
+
+    I have found that this simple rule has had the most direct influence on my code
+    quality.
+
+    If the result of the paste operation was going in the current function, consider
+    using a lambda.
+
+
+    C++14 style lambdas, with generic (aka auto) parameters, give you a simple and
+    easy to use method of creating reusable code that can be shared with different
+    data types while not having to deal with template syntax.
+
+
+    # Exercise: Try CPD.
+
+
+    There are a few different copy-paste-detectors that look for duplicated code in
+    your codebase.
+
+    For this exercise, download the PMD CPD tool and run it on your codebase.
+
+
+    > https://pmd.github.io/latest/pmd_userdocs_cpd.html'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Don''t Copy and Paste Code
+
+
+    If you use Arch Linux, this tool can be installed with AUR. The package is pmd;
+    the tool is pmd-cpd.
+
+
+    Can you identify critical parts of your code that have been copied and pasted?
+    What happens if you find a bug in one version? Will you be to see all of the locations
+    that also need to be updated?
+
+
+    # Resources
+
+
+    +   * Copy-Paste Programming²
+
+    * The Last Line Effect³
+
+    * i will not copy-paste code⁴
+
+
+    > ²https://www.viva64.com/en/t/0068/
+
+    ³https://www.viva64.com/en/b/0260/
+
+    ⁴https://twitter.com/bjorn_fahler/status/107243225779987200'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "# #20. Follow the Rule of 0\n\nNo destructor is always better when it's the\
+    \ correct thing to do. Empty destructors can destroy performance:\n\n+   - They\
+    \ make the type no longer trivial\n- Have no functional use\n- Can affect inlining\
+    \ of destruction\n- Implicitly disable move operations\n\n> If you need a destructor\
+    \ because you are doing resource management or defining a base class with virtual\
+    \ functions, you need to follow the Rule of 5.\n\nstd::unique_ptr can help you\
+    \ apply the Rule of 0 if you provide a custom deleter.\n\n# Exercise: Find Rule\
+    \ of 0 Violations in Your Code\n\nLook for code like this (I guarantee you will\
+    \ find it):\n\nEmpty meaningless destructor.\n\n```\nstruct S {\n  // a bunch\
+    \ of other things\n  ~S() {}\n};\n```\n\nor worse:"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "Follow the Rule of 0\n\nForward declared empty meaningless destructor.\n\n\
+    ```\n// file.hpp\nstruct S {\n    ~S();\n}\n```\n\n```\n// file.cpp\nS::~S() {\n\
+    ```\n\nAre these destructors necessary? Remove them if they are not.\n\nIf these\
+    \ destructors exist in types used in many places, you will likely be able to measure\
+    \ smaller binary sizes and better performance by taking this simple action.\n\n\
+    > Some of the pimpl idiire require you to define a destructor. In this case, be\
+    \ sure to follow the Rule of 5.\n\n# Resources\n\n+   * C++ Reference: The rule\
+    \ of three/five/zero¹\n* C++ Weekly Ep 154: “One Simple Trick for Reducing Code\
+    \ Bloat”\"\n* CppCon 2019: Jason Turner “Great C++ is_trivial”³\n\n¹https://en.cppreference.com/w/cpp/language/rule_of_three\n\
+    ²https://youtube.be/D8eCPL2zit4o\n³https://youtube.be/ZxWjii99yao"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "# 21. If You Must Do Manual Resource Management, Follow the Rule of 5\n\nIf\
+    \ you provide a destructor because std::unique_ptr doesn’t make sense for your\
+    \ use case, you must must =delete, =default, or implement the other special member\
+    \ functions.\n\nThis rule was initially known as the Rule of 3 and is known as\
+    \ the Rule of 5 after C++11.\n\nThe special member functions.\n\n```\nstruct S\
+    \ {\n    S(); // default constructor\n    // does not affect other special member\
+    \ functions\n\n    // If you define any of the following, you must deal with\n\
+    \    // all the others.\n    S(const S&); // copy constructor\n    S(S&&); //\
+    \ move constructor\n    S&operator=(const S&); // copy assignment operator\n \
+    \   S&operator=(S&&); // move assignment operator\n};\n```\n\n> =delete is a safe\
+    \ way of dealing with the special member functions you don’t know what to do with\
+    \ them!\n\nYou should also follow the Rule of 5 when declaring base classes with\
+    \ virtual functions."
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "If You Must Do Manual Resource Management, Follow the Rule of 5\n\nRule of\
+    \ 5 with polymorphic types.\n\n```\nstruct Base {\n    virtual void do_stuff();\n\
+    ```\n\n```\n// because of the virtual function we know this class\n// is intended\
+    \ for polymorphic use, therefore our\n// tools will tell us to define a virtual\
+    \ destructor\nvirtual ~Base(Base&) = default;\n```\n\n```\n// and now we need\
+    \ to declare the other special members\n// a good safe bet is to delete them,\
+    \ because properly and safely\n// copying or assigning an object via a reference\
+    \ or pointer\n// to a base class is hard / impossible\n```\n\n```\nS(S&&) = delete;\n\
+    S(const&) = delete;\nS &operator=(const S&) = delete;\nS &operator=(S &&) = delete;\n\
+    ;\n```\n\n```\nstruct Derived : Base {\n// We don't need to define any of the\
+    \ special members\n// here, they are all inherited from `Base`.\n;\n```\n\n> Instead\
+    \ of = delete you can consider making these special members protected."
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# Exercise: Implement your unique_ptr<> template
+
+
+    It''s hard to get 100% right. Write tests. Understand why the defaulted special
+    member functions don''t work.
+
+
+    Bonus points: implement it with C++20''s constexpr dynamic allocation support.
+
+
+    # Exercise: Look for Rule of 5 violations in your code
+
+
+    You are likely not providing consistent lifetime semantics in your existing code
+    when you are defining the special member functions. To assess the impact, you
+    can quickly = delete; any missing special member functions and see what breaks.
+
+
+    # Resources
+
+
+    +   - C++ Reference: The rule of three/five/zero¹
+
+
+    > ¹https://en.cppreference.com/w/cpp/language/rule_of_three'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# 22. Don’t Invoke Undefined Behavior
+
+
+    Ok, there''s a lot that''s Undefined Behavior (UB), and it''s hard to keep track
+    of, so we''ll give some examples in the following sections. The critical thing
+    that you need to understand is UB''s existence breaks the entire program.
+
+
+    [intro.abstract¹]
+
+
+    A conforming implementation executing a well-formed program shall produce the
+    same observable behavior as one of the possible executions of the corresponding
+    instance of the abstract machine with the same program and the same input.
+
+    However, if any such execution contains an undefined operation, this document
+    places no requirement on the implementation executing that program with that input
+    (not even with regard to operations preceding the first undefined operation).
+
+
+    Note the sentence “this document places no requirement on the implementation executing
+    that program with that input (not even with regard to operations preceding the
+    first undefined operation)”
+
+
+    If you have UB, the entire program is suspect.
+
+
+    > The next several items discuss ways to reduce the risk of undefined behavior
+    in your project.
+
+
+    ¹http://eel.is/c++draft/intro.compliance#intro.abstract-5'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# Exercise: Using UBSan, ASan and Warnings
+
+
+    Understanding all of Undefined Behavior is likely impossible. Fortunately, we
+    have tools that help. Hopefully, you already have your code enabled for UBSan,
+    ASan, and have your warnings enabled. Now is a great time to go back and evaluate
+    what options you have and see if there is anything new you can discover.
+
+
+    # Resources
+
+
+    +   - C++Now 2018: John Regehr “Closing Keynote: Undefined Behavior and Compiler
+    Optimizations”^2
+
+    - CppCon 2018: Barbara Geller & Ansel Sermersheim “Undefined Behavior is Not an
+    Error”^3
+
+
+    > 2https://youtube.be/AeWxtEOOgH0
+
+    3https://youtube.be/XEXpwis_deQ'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "# 23. Never Test for this To Be nullptr, It’s UB\n\n*Invalid check for this\
+    \ to be nullptr.*\n\n```\nint Class::member() {\n    if (this == nullptr) {\n\
+    \        // removed by the compiler, it would be UB\n        // if this were ever\
+    \ null\n        return 42;\n    } else {\n        return 0;\n    }\n}\n```\n\n\
+    Technically it isn't the check that is Undefined Behavior (UB). But it’s impossible\
+    \ for the check ever to fail. If the this were to be equal to nullptr, you would\
+    \ be in a state of Undefined Behavior.\nPeople used to do this all the time, but\
+    \ it’s always been UB. You cannot access an object outside its lifetime. Compilers\
+    \ today will always remove this check.\nThe only way it’s theoretically possible\
+    \ for this to be null is when you call a member directly on a null object."
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "Never Test for this Be nullptr, It's UB\n\nBad examples lie ahead, do not repeat\
+    \ them.\n\nBad call of member on nullptr.\n\n```\nType *obj = nullptr;\nobj->do_thing();\
+    \ // never do this\n```\n\nEven in the (technically OK, but never do this) scenario\
+    \ of calling delete this.\n\nBad example of delete this.\n\n```\nstruct S {\n\
+    \    std::string data;\n}\n\nvoid delete_yourself() {\n    // do things\n    delete\
+    \ this; // technically OK\n\n    if (this) {\n        // this block will always\
+    \ be executed, nothing changed\n        // our view of 'this'\n    }\n\n    //\
+    \ never do this\n    data.size(); // UB, data's lifetime has ended\n};\n```\n\n\
+    There is no scenario in which a check for if (this) will return false on a modern\
+    \ compiler."
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# Exercise: Do you check for this to be nullptr?
+
+
+    A check for nullptr can hide a check for NULL or a check against 0. A check for
+    this to be NULL is likely to only exist in very old code bases. Make sure you
+    have your warnings enabled, then look for these cases.
+
+
+    It''s probably interesting in general to search for this == in your codebase and
+    see what weird things are there.
+
+
+    # Resources
+
+
+    +   - Porting to GCC-6 Optimizations remove null pointer checks for this¹
+
+
+    > ¹https://www.gnu.org/software/gcc/gcc-6/porting_to.html#this-cannot-be-null'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# 24. Never Test for A Reference\nTo Be nullptr, It’s UB\n\nTests for null\
+    \ references are removed\n\n```\nint get_value(int &thing) {\n  if (&thing ==\
+    \ nullptr) {\n    // removed by compiler\n    return 42;\n  } else {\n    return\
+    \ thing;\n  }\n}\n```\n\nIt’s UB to make a null reference, don’t try it. Always\
+    \ assume a reference refers to a valid object. Use this fact to your advantage\
+    \ when designing API’s.\n\n# Exercise: Check for checking the address of an object\n\
+    \nThere are many valid use cases for &thing == to check for a specific address\
+    \ of an object, but there are also ways this check can be wrong.\n\nSearch through\
+    \ your code for statements that check an object’s memory address and understand\
+    \ what they are doing and how (or if) they work.\n\n> What other ways might the\
+    \ address of an object be checked besides ====\n\nThis exercise gives you some\
+    \ great experience working with various searching / grepping tools and playing\
+    \ with regex."
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Resources
+
+
+    +   - -Wtautological-undefined-compare¹
+
+
+    > https://clang.llvm.org/docs/DiagnosticsReference.html#wtautological-undefined-compare'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "# 25. Avoid default In switch Statements\n\nThis is an issue that is best described\
+    \ with a series of examples. Starting from this one:\n\n```\nswitch with warnings\n\
+    enum class Values {\n    val1,\n    val2\n};\n\nstd::string_view get_name(Values\
+    \ value) {\n    switch (value) {\n    case val1: return \"val1\";\n    case val2:\
+    \ return \"val2\";\n    }\n}\n```\n\nIf you have enabled all of your warnings,\
+    \ then you will likely get a “not all code paths return a value” warning here.Which\
+    \ is technically correct. We could call get_name(static_cast<Values>(15)) and\
+    \ not violate any part of C++[dcl.enum/5] except for the Undefined Behavior of\
+    \ not returning a value from a function."
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "Avoid default In switch Statements\n\nYou'll be tempted to fix this code like\
+    \ this:\n\nswitch with default to avoid warnings\n\n```\nenum class Values {\n\
+    \    val1,\n    val2\n};\n\nstd::string_view get_name(Values value) {\n    switch\
+    \ (value) {\n        case Values::val1: return \"val1\";\n        case Values::val2:\
+    \ return \"val2\";\n        default: return \"unknown\";\n    }\n}\n```\n\nBut\
+    \ this introduces a new problem\n\nUnhandled case\n\n```\nenum class Values {\n\
+    \    val1,\n    val2,\n    val3 // added a new value\n};\n\nstd::string_view get_name(Values\
+    \ value) {\n    switch (value) {\n        case Values::val1: return \"val1\";\n\
+    \        case Values::val2: return \"val2\";\n        default: return \"unknown\"\
+    ;\n    }\n// no compiler diagnostic that `val3` is unhandled\n```\n\nInstead,\
+    \ prefer code like this:"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "# Avoid default In switch Statements\n\nPreferred version\n\n```\nenum class\
+    \ Values {\n    val1,\n    val2,\n    val3 // added a new value\n}\n\nstd::string_view\
+    \ get_name(Values value) {\n    switch (value) {\n        case Values::val1: return\
+    \ \"val1\";\n        case Values::val2: return \"val2\";\n    } // unhandled enum\
+    \ value warning now\n\n    return \"unknown\";\n}\n```\n\n> You shouldn't ever\
+    \ get an “unreachable code” warning in the above example because the range of\
+    \ valid values is nearly larger than the values you have defined.\n\nSome modern\
+    \ tools can detect these uses of default for you.\n\n# Exercise: Look for default:.\n\
+    \nWhat do you find in your code base? Did enabling warnings in previous exercises\
+    \ find uses of default: for you already?"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# Resources
+
+
+    +   - CppCon 2018: Jason Turner "Applied Best Practices"\¹
+
+    - -Wswitch-enum²
+
+    - -Wswitch³
+
+
+    > ¹https://youtube.be/DHOlEd0eDE
+
+    ²https://clang.llvm.org/docs/DiagnosticsReference.html#wswitch-enum
+
+    ³https://clang.llvm.org/docs/DiagnosticsReference.html#wswitch'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "# #26. Prefer Scoped enums\n\nC++11 introduced scoped enumerations, intended\
+    \ to solve many of the common problems with enum inherited from C.\n\n```\nC++98\
+    \ enums\nenum Choices {\n    option1 // value in the global scope\n};\n\nenum\
+    \ OtherChoices {\n    option2\n};\n\nint main() {\n    int val = option1;\n  \
+    \  val = option2; // no warning\n}\n```\n\n+   - enum Choices;\n- enum OtherChoices;\n\
+    \nThese two can easily get mixed up, and they each introduce identifiers in the\
+    \ global namespace.\n\n+   - enum class Choices;\n- enum class OtherChoices;\n\
+    \nThe values in these enumerations are scoped and more strongly typed."
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "Prefer Scoped enums\n\nC++11 scoped enumeration.\n\n```\nenum class Choices\
+    \ {\n  option1\n};\n\nenum class OtherChoices {\n  option2\n};\n\nint main() {\n\
+    \  int val = option1; // cannot compile, need scope\n  int val2 = Choices::option1;\
+    \ // cannot compile, wrong type\n  Choices val = Choices::option1; // compiles\n\
+    \  val = OtherChoices::option2; // cannot compile, wrong type\n}\n```\n\nThese\
+    \ enum class versions cannot get mixed up without much effort, and their identifiers\
+    \ are now scoped, not global.\n\n> enum struct and enum class are equivalent.\
+    \ Logically enum struct makes more sense since they are public names. Which do\
+    \ you prefer?\n\n# Exercise: enum struct Or enum class\n\nDecide if you prefer\
+    \ enum struct or enum class and develop a well-reasoned answer as to why."
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# Exercise: clang-tidy modernize
+
+
+    Clang-tidy’s modernizer can add class to your enum declarations. Try putting it
+    to use.
+
+
+    > clang-tidy''s scoped enumeration modernizer will probably find many bugs in
+    your code!
+
+
+    # Resources
+
+
+    +   - CppCon 2018: Victor Ciura “Better Tools in Your Clang Toolbox”1 (Discusses
+    bugs found by moving to enum class)
+
+    - cppreference.com Enumeration Declaration^2
+
+
+    ^1https://youtu.be/4X_fzkl7kkU
+
+    2https://en.cppreference.com/w/cpp/language/enum'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "# 27. Prefer if constexpr over SFINAE\n\nSFINAE is kind-of-write-only code.\
+    \ if constexpr doesn't have the same flexibility, but use it when you can.\n\n\
+    Let's take our divide example last seen in Prefer auto in Many Cases:\n\nC++14\
+    \ divides template.\n\n```\ntemplate<typename Numerator, typename Denominator>\n\
+    auto divide(Numerator numerator, Denominator denominator)\n{\n    return numerator\
+    \ / denominator;\n}\n```\n\nWe now want to add different behavior if we are doing\
+    \ integral division. Before C++17, we would have used SFINAE (“Substitution Failure\
+    \ Is Not An Error”). Essentially this means that if a function fails to compile,\
+    \ then it is removed from overload resolution."
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "# SFINAE divide function.\n\n```\n#include <stdexcept>\n#include <type_traits>\n\
+    #include <utility>\n\ntemplate <typename Numerator, typename Denominator>\n  \
+    \  std::enable_if_t<std::is_integral_v<Numerator> &&\n    std::is_integral_v<Denominator>>,\n\
+    \    int> = 0\nnauto divide(Numerator numerator, Denominator denominator) {\n\
+    \  // is integer division\n  if (denominator == 0) {\n    throw std::runtime_error(\"\
+    divide by 0!\");\n  }\n  return numerator / denominator;\n}\n\ntemplate <typename\
+    \ Numerator, typename Denominator>\n    std::enable_if_t<std::is_floating_point_v<Numerator>\
+    \ ||\n    std::is_floating_point_v<Denominator>>,\n    int> = 0\n\nauto divide(Numerator\
+    \ numerator, Denominator denominator) {\n  // is floating point division\n  return\
+    \ numerator / denominator;\n}\n```\n\nThe if constexpr construct in C++17 can\
+    \ simplify this code:"
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "Prefer constexpr over SFINAE 63\n\nif constexpr option for compile time behavior\
+    \ change.\n\n```\n#include <stdexcept>\n#include <type_traits>\n#include <utility>\n\
+    \ntemplate <typename Numerator, typename Denominator>\nauto divide(Numerator numerator,\
+    \ Denominator denominator) {\n    if constexpr(std::is_integral_v<Numerator> &&\n\
+    \                 std::is_integral_v<Denominator>) {\n        // is integral division\n\
+    \        if (denominator == 0) {\n            throw std::runtime_error(\"divide\
+    \ by 0!\");\n        }\n    }\n    return numerator / denominator;\n}\n```\n\n\
+    Note that the code inside the if constexpr block must still be syntactically correct.\
+    \ if constexpr is not the same as a #define.\n\n# Resources\n\n+   - C++ Weekly\
+    \ Special Edition: Using C++17's constexpr if¹\n- C++ Weekly Ep 122: constexpr\
+    \ with optional and variant²\n-CppCon 2017: Jason Turner “Practical C++17”³\n\
+    - C++17 In Tiny Tables: constexpr if⁴\n\n> ¹https://youtube.be/nY6Qbm_uMI\n²https://youtube.be/zeCV_udkP_o\n\
+    ³https://youtube.be/nnY4e4faNp0\n⁴https://github.com/tvaneerd/cpp17_in_TTs/master/blob/if_constexpr"
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "# 28. Constrain Your Template Parameters With Concepts (C++20)\n\nConcepts\
+    \ will result in better error messages (eventually) and better compile times than\
+    \ SFINAE. Besides much more readable code than SFINAE.\n\nIf we continue to build\
+    \ on our divide example, we can take this if constexpr version from the Prefer\
+    \ if constexpr over SFINAE chapter.\n\nif constexpr version of divide function.\n\
+    \n```\n#include <stdexcept>\n#include <type_traits>\n#include <utility>\n\ntemplate\
+    \ <typename Numerator, typename Denominator>\nauto divide(Numerator numerator,\
+    \ Denominator denominator) {\n    if constexpr (std::is_integral_v<Numerator>\
+    \ &&\n                 std::is_integral_v<Denominator>) {\n        // is integral\
+    \ division\n        if (denominator == 0) {\n            throw std::runtime_error(\"\
+    divide by 0!\");\n        }\n    }\n    return numerator / denominator;\n}\n```\n\
+    \nAnd we can split it back out as two different functions using concepts.\nConcepts\
+    \ can be used in several different contexts. This version uses a simple requires\
+    \ clause after the function declaration."
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "# Concepts in requires clause.\n\n```\n#include <stdexcept>\n#include <type_traits>\n\
+    #include <utility>\n```\n\n```\n// overload resolution will pick the most specific\
+    \ version\ntemplate <typename Numerator, typename Denominator>\nauto divide(Numerator\
+    \ numerator, Denominator denominator) requires\n(std::integral_v<Numerator> &&\
+    \ std::integral_v<Denominator>) {\n// is integral division\nif (denominator ==\
+    \ 0) {\n    throw std::runtime_error(\"divide by 0!\");\n}\nreturn numerator /\
+    \ denominator;\n}\n```\n\n```\ntemplate <typename Numerator, typename Denominator>\n\
+    auto divide(Numerator numerator, Denominator denominator) {\nreturn numerator\
+    \ / denominator;\n}\n```\n\nThis version uses concepts as function parameters.\
+    \ C++20 even has an “auto concept,” which is an implicit template function.\n\n\
+    Terse concepts requirement syntax.\n\n```\n#include <stdexcept>\n#include <concepts>\n\
+    ```\n\n```\nauto divide(std::integral auto numerator,\n  std::integral auto denominator)\
+    \ {\n// is integer division\nif (denominator == 0) {\n    throw std::runtime_error(\"\
+    divide by 0!\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "Constrain Your Template Parameters With Concepts (C++20)\n\n```\nreturn numerator\
+    \ / denominator;\n}\nauto divide(auto numerator, auto denominator) {\n  // is\
+    \ floating point division\nreturn numerator / denominator;\n}\n```\n\n> Concepts\
+    \ can define complex requirements, including expected members. This section only\
+    \ barely touches the possibilities.\n\n# Exercise: Understand what concepts are\
+    \ provided with C++20.\n\nAs usual, cpprefence helps by providing a list of concepts¹.\n\
+    \n# Exercise: Create your own concept.\n\nDoes this example give you some idea\
+    \ for an example of a concept that you would want, but isn't provided by <concepts>?\n\
+    \nLook at the implementation of the very simple std::integral concept on cpprefence²\
+    \ and see if it inspires you.\n\n¹https://en.cppreference.com/w/cpp/concepts\n\
+    ²https://en.cppreference.com/w/cpp/concepts/integral"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# # Resources
+
+
+    +   - C++ Weekly Ep 194: From SFINAE To Concepts With C++20³
+
+    - C++ Weekly Ep 196: What is requires requires⁴
+
+
+    ³https://youtu.be/dR64GQb4AGo
+
+    ⁴https://youtu.be/tc0hVIOJk_U'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "# 29. De-template-ize Your Generic Code\n\nMove things outside of your templates\
+    \ when you can. Use other functions. Use base classes. The compiler is still to\
+    \ inline them or leave them out of line.\n\nDe-template-ization will improve compile\
+    \ times and reduce binary sizes. Both are helpful. IMO is still free to inline\
+    \ or leave them out of line. It also eliminates the thing that people think of\
+    \ as “template code bloat” (which IMO [doesn't exist'](https://articles.emptycrate.com/2008/05/06/nobody_understands_c_part_5_template_code_bloat.html))\
+    \ (article formatting got broken at some point, sorry).\n\nA new lambda for each\
+    \ function instantiation.\n\n```\ntemplate<typename T>\nvoid do_things()\n{\n\
+    \    // this lambda must be generated for each\n    // template instantiation\n\
+    \    auto lambda = [](){/* some lambda that doesn't capture */ };\n    auto value\
+    \ = lambda();\n}\n```\n\nCompared to:\n\n> https://articles.emptycrate.com/2008/05/06/nobody_understands_c_part_5_template_code_bloat.html"
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "# De-template-ize Your Generic Code\n\nShared logic between template instantiations.\n\
+    \n```\nauto some_function() { /* do things*/ }\n\ntemplate<typename T>\nvoid do_things()\n\
+    {\n    auto value = some_function();\n}\n```\n\nNow only one version of the inner\
+    \ logic is compiled, and it's up to the compiler to decide if they should be inlined.\n\
+    \nSimilar techniques apply to base classes and templated derived classes.\n\n\
+    # Exercise: Bloaty McBloatface and -ftime-trace.\n\nWe're getting more and more\
+    \ tools available to look for bloat in our binaries and analyze compile times.\
+    \ Look into these tools and other tools available on your platform.\n\nRun them\
+    \ against your binary and see what you find.\n\nWhen using clang's -ftime-trace,\
+    \ also look into ClangBuildAnalyzer.\n\n# Resources\n\n+   * Templight²\n* C++\
+    \ Weekly Ep 89: “Overusing Lambdas”³\n\n> ²https://github.com/mikael-s-persson/templight\n\
+    ³https://youtube.be/OmKMNQX_8Y"
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '+   * C++ Weekly Christmas Class 2019 - Chapter 3⁴ (This is the first episode
+    of chapter 3, and it introduces the question of how and why two different options
+    differ⁵. The next several episodes in that playlist give some background, and
+    the start of chapter 4 gives the answers. It is very much related to template
+    bloat questions.)
+
+
+    +   * Effective C++ (3rd Edition) Item 44 - Factor parameter-independent code
+    out of templates
+
+
+    > ⁴https://www.youtube.com/watch?v=VEqQOKU8RJQ&list=PLs3KjaCtOwSY_Awylwm-fRJEOa-SRbs&index=16
+
+    ⁵https://godbolt.org/z/b4znvK'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "# # 30. Use Lippincott Functions\n\nSame arguments as de-template-izing your\
+    \ code: This is a do-not-repeat-yourself principle for exception handling routines.\n\
+    \nIf you have many different exception types to handle, you might have code that\
+    \ looks like this:\n\nDuplicated exception handling.\n\n```\nvoid use_thing()\
+    \ {\n  try {\n    do_thing();\n  } catch (const std::runtime_error &) {\n    //\
+    \ handle it\n  } catch (const std::exception&) {\n    // handle it\n  }\n}\n```\n\
+    \n```\nvoid use_other_thing() {\n  try {\n    do_other_thing();\n  } catch (const\
+    \ std::runtime_error &) {\n    // handle it\n  } catch (const std::exception&)\
+    \ {\n    // handle it\n  }\n}\n```\n\nA Lippincott function (named after Lisa\
+    \ Lippincott) provides a centralized exception handling routine."
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "# Use Lippincott Functions\n\nLippincott de-duplicated exception handling.\n\
+    \n```\nvoid handle_exception() {\n  try {\n    throw; // re-throw exception already\
+    \ in flight\n  } catch (const std::runtime_error&) {\n  } catch (const std::exception&)\
+    \ { }\n}\n\nvoid use_thing() {\n  try {\n    do_thing();\n  } catch (...) {\n\
+    \    handle_exception();\n  }\n}\n\nvoid use_other_thing() {\n  try {\n    do_other_thing();\n\
+    \  } catch (...) {\n    handle_exception();\n  }\n}\n```\n\nThis technique is\
+    \ not new - it has been available since the pre-C++98 days.\n\n# Exercise: Do\
+    \ You Use Exceptions?\n\nIf your project uses exceptions, there's probably some\
+    \ ground for simplifying and centralizing your error handling routines. If it\
+    \ does not use exceptions, then you likely have other types of error handling\
+    \ routines that are duplicated. Can these be simplified?"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# Resources
+
+
+    +   - C++ Secrets: Using a Lippincott Function for Centralized Exception Handling¹
+
+    - C++ Weekly Ep 91: Using Lippincott Functions²
+
+
+    > ¹https://cppsecrets.blogspot.com/2013/12/using-lippincott-function-for.html
+
+    ²https://youtu.be/-amJL3AyADI'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# 31. Be Afraid of Global State
+
+
+    Reasoning about global state is hard.
+
+
+    Any non-const static value, or std::shared_ptr<> could potentially be global state.
+    It is never known who might update the value or if it is thread-safe to do.
+
+
+    Global state can result in subtle and difficult to trace bugs where one function
+    changes global state, and another function either relies on that change or is
+    adversely affected by it.
+
+
+    # Exercise: Global State, What''s Left?
+
+
+    If you''ve done the other exercises, you''ve already made all of your static variables
+    const. This is great! You''ve possibly even made some of them constexpr, which
+    is even better!
+
+
+    But you probably have global state still lurking. Do you have a global singleton
+    logger? Could the logger accidentally sharing state between the modules of your
+    system?
+
+
+    What about other singletons? Can they be eliminated? Do they have threading initialization
+    issues (what happens two threads try to access one of the objects for the first
+    time at the same time)?
+
+
+    # Resources
+
+
+    +   - Retiring the Singleton Pattern - Peter Muldoon - Meeting C++ 2019''
+
+
+    > https://youtube.be/f46jmm7r8Yg'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# #32. Make your interfaces hard to use wrong.
+
+
+    Your interface is your first line of defense. If you provide an interface that
+    is easy to use wrong, your users *will* use it wrong.
+
+
+    If you provide an interface that''s hard to use wrong, your users have to work
+    harder to use it wrong. But this is still C++; they will always find a way.
+
+
+    Interfaces hard to use wrong will sometimes result in more verbose code that we
+    would maybe like more terse code. You have to choose what is most important. Correct
+    code or short code?
+
+
+    This is a high-level concept; specific ideas will follow.
+
+
+    # Resources
+
+
+    +   * [The Little Manual of API Design](https://people.mpi-inf.mpg/~jblanche/api-design.pdf)'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# # 33. Consider If Using the API Wrong Invokes Undefined Behavior
+
+
+    Do you accept a raw pointer? Is it an optional parameter? What happens if nullptr
+    is passed to your function?
+
+
+    What happens if a value out of the expected range is passed to your function?
+
+
+    Some developers make the distinction between "internal" and "external" APIs. They
+    allow unsafe APIs for internal use only.
+
+
+    > Is there any guarantee that an external user will never invoke the "internal"
+    API?
+
+
+    > Is there any guarantee that your internal users will never misuse the API?
+
+
+    # ## Exercise: Investigate Checked Types
+
+
+    The C++ Guideline Support Library (GSL) has a not_null pointer type that guarantees,
+    because of zero cost abstractions, the pointer passed is never nullptr. Would
+    that work for your APIs that currently pass raw pointers (rearchitecting the API
+    is not an option)?
+
+
+    ```
+
+    std::string_view (C++17) and std::span (C++20) are great alternatives to pointer
+
+    / length pairs passed to functions."
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# Resources
+
+
+    +   - boost::safe_numerics¹
+
+
+    > ^¹https://github.com/boostorg/safe_numerics'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "# 34. Use [[nodiscard]] Liberally\n\n[[nodiscard]] (C++17) is a C++ attribute\
+    \ that tells the compiler to warn if a return value is ignored. It can be used\
+    \ on functions:\n\n[[nodiscard]] example usage.\n\n```\n[[nodiscard]] int get_value();\n\
+    \nint main()\n{\n  // warning, [[nodiscard]] value ignored\n  get_value();\n}\n\
+    ```\n\nAnd on types:\n\n[[nodiscard]] on types.\n\n```\nstruct [[nodiscard]] ErrorCode{};\n\
+    \nErrorCode get_value();\n\nint main()\n{\n  // warning, [[nodiscard]] value ignored\n\
+    \  get_value();\n}\n```\n\nC++20 adds the ability to provide a description."
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "Use [[nodisccard]] Liberally\n\nC++20's [[nodisccard]] with description.\n\n\
+    [[nodisccard(\"Ignoring this result leaks resources\")]]\n\nOur divide example\
+    \ is a straightforward application of [[nodiscard]].\n\n[[nodiscard]] applied\
+    \ to divide function.\n\n```\n#include <stdexcept>\n#include <concepts>\n```\n\
+    \n```\n[[nodiscard]] auto divide(std::integral auto numerator,\n    std::integral\
+    \ auto denominator) {\n    // is integer division\n    if (denominator == 0) {\n\
+    \        throw std::runtime_error(\"divide by 0!\");\n    }\n    return numerator\
+    \ / denominator;\n}\n```\n\n```\n[[nodiscard]] auto divide(auto numerator, auto\
+    \ denominator) {\n    // floating point division\n    return numerator / denominator;\n\
+    }\n```\n\n# Exercise: Determine a set of rules for using [[nodiscard]]\n\nRead\
+    \ the Reddit discussion \"An Argument Pro Liberal Use Of nodiscard\". Consider\
+    \ your types and functions. Which values should be [[nodiscard]]?\n\nShould it\
+    \ be a compiler error or warning to call these functions and ignore the result?\n\
+    \n> ¹https://www.reddit.com/r/cpp/comments/9us7f3/an_argument_pro_liberal_use_of_nodiscard/"
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: 'Use [[nodiscard]] Liberally
+
+
+    +   * vector.size()
+
+    * vector.empty()
+
+    * vector.insert()
+
+
+    # # Resources
+
+
+    +   * “An Argument Pro Liberal Use Of nodiscard”2
+
+    * C++ Weekly Ep 30: C++17''s [[nodiscard]] Attribute3
+
+    * C++ Weekly Ep 199: C++20''s [[nodiscard]] Constructors And Their Uses4
+
+
+    > 2https://www.reddit.com/r/cpp/comments/9us7f3/an_argument_pro_liberal_use_of_nodiscard/
+
+    3https://youtu.be/l_5PF3GQLKc
+
+    4https://youtube.be/E_ROB_xUQQQ'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# 35. Use Stronger Types
+
+
+    Consider the API for POSIX socket:
+
+
+    POSIX socket API.
+
+
+    ```
+
+    socket(int, int, int);
+
+    ```
+
+
+    The parameters (in some order) represent:
+
+
+    +   * type
+
+    * protocol
+
+    * domain
+
+
+    This design is problematic, but there are less obvious ones lurking in our code.
+
+
+    Poorly defined constructor.
+
+
+    ```
+
+    Rectangle(int, int, int, int);
+
+    ```
+
+
+    This function could be (x, y, width, height), or (x1, y1, x2, y2). Less likely,
+    but still possible, is (width, height, x, y).
+
+
+    What do you think about an API that looks like this?
+
+
+    Strongly typed constructor.
+
+
+    ```
+
+    Rectangle(Position, Size);
+
+    ```
+
+
+    In many cases, it only takes a little effort to make more strongly typed APIs.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "# Use Stronger Types\n\nStronger typed definitions.\n\n```\nstruct Position\
+    \ {\n    int x;\n    int y;\n}\n```\n\n```\nstruct Size {\n    int width;\n  \
+    \  int height;\n}\n```\n\n```\nstruct Rectangle {\n    Position position;\n  \
+    \  Size size;\n}\n```\n\nWhich can then lead to other, logically composable statements\
+    \ with operator overloads such as:\n\nCoupled type operator overload.\n// Return\
+    \ a new rectangle that has been\n// moved by the offset amount passed in\nRectangle\
+    \ operator+(Rectangle, Position);\n\n> It's possible that making structs increase\
+    \ performance in some cases C++ Weekly Ep 119, Negative Cost Structs'.\n\n# Avoid\
+    \ Boolean Arguments\n\nThis chapter's pre-release reader pointed out that Steve\
+    \ Maguire, says,”Make code intelligible at the point of call. Avoid Boolean arguments,”\
+    \ in Chapter 5 of his book Writing Solid Code.\n\nhttps://youtu.be/FwsO12x8nyM"
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "# Use Stronger Types\n\nIn C++, an enum class gives you an easy way to add\
+    \ stronger typing, avoid boolean parameters, and make your API harder to use wrong.\n\
+    \nConsider:\n\n+   Non-obvious order of parameters.\n\n```\nstruct Widget {\n\
+    \  // this constructor is easy to use wrong, we\n  // can easily transpose the\
+    \ parameters\n  Widget(bool visible, bool resizable);\n}\n```\n\nCompared to:\n\
+    \n+   Stronger typing with scoped enumerations.\n\n```\nstruct Widget {\n  enum\
+    \ struct Visible { True, False };\n  enum struct Resizable { True, False };\n\n\
+    ```\n\n```\n// still possible to use this wrong, but MUCH harder\nWidget(Visible\
+    \ visible, Resizable resizable);\n```\n\n# Identify the problematic APIs in your\
+    \ existing code.\n\nWhat function call do you regularly get out of order? How\
+    \ can it be fixed?\n\n# Exercise: Research strong typedef libraries for C++.\n\
+    \nThere are existing libraries that can simplify some of the boilerplate code\
+    \ for you when making a strongly typed int. Jonathan Muller, Bjorn Fahlherr, and\
+    \ Peter Sommerlad have each written one, and others are available."
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# Exercise: Consider =deleting problematic conversions.
+
+
+    Simple function declaration.
+
+
+    ```
+
+    double high_precision_thing(double);
+
+    ```
+
+
+    What if calling the above with a float is likely to be a bug?
+
+
+    Deleting a problematic accidental promotion from float to double.
+
+
+    ```
+
+    double high_precision_thing(double);
+
+    double high_precision_thing(float) = delete;
+
+    ```
+
+
+    Any function or overload can be =deleted in C++11.
+
+
+    # Resources
+
+
+    +   * C++ Weekly Ep 107: “The Power of =delete”2
+
+    * Adi Shavit and Björn Fahller “The Curiously Recurring Pattern of Coupled Types”3
+
+    * Research “Affine space types.”
+
+    * C++Now 2017: Jonathan Müller “Type-safe Programming”4
+
+
+    > 2https://youtube.be/aVjUU0m6AU
+
+    3https://youtube.be/msI4WNQZYWs
+
+    4https://youtube.be/iihlo9A2Ezw'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# 36. Don’t return raw pointers
+
+
+    Returning a raw pointer makes the reader of the code and user of the library think
+    too hard about ownership semantics. Prefer a reference, smart pointer, non owning
+    pointer wrapper, or consider an optional reference.
+
+
+    Function returning a raw pointer.
+
+
+    ```
+
+    int *get_value();
+
+    ```
+
+
+    Who owns this return value? Do I? Is it my job to delete it when I’m done with
+    it?
+
+    Or even worse, what if the memory was allocated by malloc and I need to call free
+    instead?
+
+
+    Is it a single int or an array of int?
+
+
+    This code has far too many questions, and not even [[nodiscard]] can help us.
+
+
+    # Exercise: You know the drill
+
+
+    By now, you’ve done enough of these API related exercises to know what to do.
+    Go and look for these in your code! See if there’s a better way! Can you return
+    a value, reference, or std::unique_ptr instead?'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "# 37. Prefer Stack Over Heap\n\nStack objects (locally scoped objects that\
+    \ are not dynamically allocated) are much more optimizer friendly, cache-friendly,\
+    \ and may be entirely eliminated by the optimizer. As Björn Feller has said, “assume\
+    \ any pointer redirection is a cache miss.\n\nIn the most simple terms:\n\nOK\
+    \ idea, uses stack and can be optimized.\n\n```\nstd::string make_string() { return\
+    \ \"Hello World\"; }\n```\n\nBad idea, uses the heap.\n\n```\nstd::unique_ptr<std::string>\
+    \ make_string() {\n  return std::make_unique<std::string>(\"Hello World\");\n\
+    }\n```\n\nOK idea.\n\n```\nvoid use_string() {\n  // This string lives on the\
+    \ stack\n  std::string value(\"Hello World\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: 'Prefer Stack Over Heap
+
+
+    Really bad idea, uses the heap and leaks memory.
+
+
+    ```
+
+    void use_string() {
+
+    // The String lives on the heap
+
+    std::string *value = new std::string("Hello World");
+
+    }
+
+    ```
+
+
+    > Remember, std::string itself might allocate internally, and use the heap. If
+    no heap usage at all is your goal, you will need to take other measures. The goal
+    is unnecessary heap allocations.
+
+
+    Generally speaking, objects created with new expressions (or via make_shared)
+    are heap objects, and have Dynamic Storage Duration. Objects created in a local
+    space are stack objects and have Automatic Storage Duration.
+
+
+    # Exercise: Look for heap usage
+
+
+    Sometimes developers with C and Java backgrounds have a hard time with this. For
+    Java, it''s because new is required to create objects. For C, it is because the
+    C compiler cannot perform the same kinds of optimizations that the C++ compiler
+    can because because of differences in the language.
+
+
+    So some of this unnecessary heap usage may have ended up in your current code.
+
+
+    # Exercise: Run a heap profiler
+
+
+    There are several heap profiling tools, and there may even be built into your
+    IDE. Examine your heap usage and look for potential abuses of the heap in your
+    project.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# Resources
+
+
+    +   - Code::Dive 2018: Björn Fahller “What Do You Mean By Cache Friendly?”¹
+
+
+    ^1https://youtu.be/Fzbotzi1gYs'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# #38. No More new!
+
+
+    You''re already avoiding the heap and using std smart pointers for resource management,
+    right?!
+
+
+    Take this to the next level and be sure to use std::make_unique<>() (C++14) in
+    the rare cases that you need the heap.
+
+
+    In the very rare cases you need shared ownership, use std::make_shared<>() (C++11).
+
+
+    # Exercise: Do you use Qt or some other widget library?
+
+
+    Have you ever thought about writing your own make_qobject helper? Give it the
+    semantics you need and be sure to use [[nodiscard]].
+
+
+    In any case, you can limit your use of new to a few core library helper functions.
+
+
+    # Exercise: Use clang-tidy modernize fixes.
+
+
+    With clang-tidy, you can automatically convert new statements into make_unique<>()
+    and make_shared<>() calls. Be sure to use -fix to apply the change after it''s
+    discovered.
+
+
+    > https://en.cppreference.com/w/cpp/memory/unique_ptr/make_unique
+
+    https://en.cppreference.com/w/cpp/memory/shared_ptr/make_shared'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# Resources
+
+
+    +   - clang-tidy modernize-make-shared³
+
+    - clang-tidy modernize-make-unique⁴
+
+
+    ³https://clang.llvm.org/extra/clang-tidy/checks/modernize-make-shared.html
+
+    ⁴https://clang.llvm.org/extra/clang-tidy/checks/modernize-make-unique.html'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# 39. Know Your Containers
+
+
+    Prefer your containers in this order:
+
+
+    +   - std::array<>
+
+    - std::vector<
+
+
+    std::array<>
+
+
+    A fixed-size stack-based contiguous container. The data size must be known at
+    compile-time, and you must have enough stack space to hold the data. This container
+    helps us prefer stack over heap. Known location and contiguous results in std::array<>
+    becoming a “negative cost abstraction.” The compiler can perform an extra set
+    of optimizations because it knows the data’s size and location.
+
+
+    std::vector<>
+
+
+    A dynamically-sized heap-based contiguous container. While the compiler does not
+    know where the data will ultimately reside, it does know that the elements are
+    likely to laid out adjacent to each other in RAM. Contiguity gives the compiler
+    more optimization opportunities and is more cache-friendly.
+
+
+    Almost anything needs a comment and justification for why. A flat map with linear
+    search is likely better than an std::map for small containers.
+
+
+    But don’t be too enthusiastic about this. If you need key lookup, use std::map
+    and evaluate if it has the performance and characteristics you want.'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# Exercise: Replace vector With array
+
+
+    Look for fixed-size vectors and replace them with array where possible. C++17’s
+    Class Template Argument Deduction, this can be easier.
+
+
+    ```
+
+    const std::vector with fixed-size data.
+
+    ```
+
+
+    ```
+
+    const std::vector<int> data{n+1, n+2, n+3, n+4};
+
+    ```
+
+
+    can become
+
+
+    const std::array for fixed-size data.
+
+
+    | const std::array<int, 4> data{n+1, n+2, n+3, n+4}; // C++11 |
+
+    | const std::array data{n+1, n+2, n+3, n+4}; // C++17 |
+
+
+    You already made these const, go back to constexpr them if you can.
+
+
+    # Resources
+
+
+    +   - Bjarne Stroustrup “Are lists evil?”^1
+
+
+    > ^1https://www.stroustrup.com/bs_faq.html#list'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "# #40. Avoid std::bind and std::function\n\nWhile compilers continue to improve\
+    \ and the optimizers work around these types' complexity, it's still very possible\
+    \ for either to add considerable compile-time and runtime overhead.\n\nC++14 lambdas,\
+    \ with generalized capture expressions, are capable of the same things that std::bind\
+    \ is capable of.\n\nstd::bind to change parameter order\n\n```\n#include <functional>\n\
+    \ndouble divide(double numerator, double denominator) {\n    return numerator\
+    \ / denominator;\n}\n\nauto inverted_divide = std::bind(divide,\n    std::placeholders::_2,\n\
+    \    std::placeholders::_1);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: "Avoid std::bind and std::function\n\nLambda to change parameter order\n\n```\n\
+    #include <functional>\n\ndouble divide(double numerator, double denominator) {\n\
+    \    return numerator / denominator;\n}\n\nauto inverted_divide = [](const auto\
+    \ numerator,\n                           const auto denominator) {\n    return\
+    \ divide(denominator/numerator);\n}\n```\n\n# Exercise: Compare the possibilities.\n\
+    \nTake these options in Compiler Explorer. How do the compile times and resulting\
+    \ assembly look?\n\nstd::function and std::bind\n\n```\n#include <functional>\n\
+    \ntemplate<typename Func>\nstd::function<int(int)> bind_3(Func func) {\n    return\
+    \ std::bind(func, std::placeholders::_1, 3);\n}\n\nint main(int argc, const char\
+    \ *[]) {\n    return bind_3(std::plus<>{})(argc);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "Avoid std::bind and std::function\n\nstd::bind only, for bonus points, what\
+    \ type is returned from the function bind_3?\n\n```\n#include <functional>\n```\n\
+    \n```\ntemplate<typename Func>\nauto bind_3(Func func)\n{\n    return std::bind(func,placeholders::_1,\
+    \ 3);\n}\n```\n\n```\nint main(int argc, const char *[])n{\n    return bind_3(std::plus<>()(argc);\n\
+    }\n```\n\nOnly lambdas, no std library wrappers.\n\n```\n#include <functional>\n\
+    ```\n\n```\ntemplate<typename Func>\nauto bind_3(Func func)\n{\n    return [func](const\
+    \ int value){ return func(value, 3); };n}\n```\n\n```\nint main(int argc, const\
+    \ char *[])n{\n    return bind_3(std::plus<>()(argc);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# # Resources
+
+
+    +   - CppCon 2015: Stephan T. Lavavej “<functional>: What’s New, And Proper Usage”1
+
+    - C++ Weekly Ep 16: “Avoiding std::bind”2
+
+
+    ^1https://youtube.be/zt7Wvfap0
+
+    2https://youtube.be/ZlHi8txU4aQ'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# # 41. Skip C++11
+
+
+    If you''re currently looking to move to “modern” C++, finally, please skip C++11.
+
+    C++14 fixes several holes in C++11.
+
+
+    Language Features
+
+
+    +   - C++11''s version of constexpr implies const for member functions, this is
+    changed in C++14
+
+    - C++11 is missing return type deduction for regular functions (lambdas have it)
+
+    - C++11 does not have auto or variadic lambda parameters
+
+    - C++14 adds [[deprecated]] attribute
+
+    - C++14 adds '' digit separator, example: 1''000''000
+
+    - constexpr functions can be more than just a single return statement in C++14
+
+
+    Library Features
+
+
+    +   - std::make_unique was added in C++14, which enables the “no raw new” standard
+
+    - C++11 doesn''t have std::exchange
+
+    - C++14 adds some constexpr support for std::array
+
+    - cbegin, cend, crbegin and crend free functions added for begin and end free
+    functions and member functions added to standard containers in C++11.'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# Exercise: Can you use C++14 today?
+
+
+    Even if your project is currently stuck on an older compiler released before C++14,
+    it is highly likely that you can use C++14 features if you enable -std=c++1y or
+    -std=c++14 mode.
+
+
+    Compare the C++14 language feature chart¹ from cppreference.com to the compiler
+    you currently require for your project. How many features could you be taking
+    advantage of today?
+
+
+    As of GCC 5, all of C++14 is supported, but as early as 4.9 provided many C++14
+    features.
+
+
+    # Exercise: Can you go beyond C++14?
+
+
+    Ask if it''s possible to upgrade your current compiler requirements. With very
+    rare exceptions, each new compiler version brings:
+
+
+    +   * Better performance
+
+    * Fewer bugs
+
+    * Better warnings
+
+    * Better standards conformance
+
+
+    > A few features were removed from C++17 such as std::auto_ptr, std::unary_function
+    and std::binary_function. You may run into these issues when moving your project
+    to C++17 mode. Most uses of std::unary_function and std::binary_function can be
+    removed with no change to the rest of the code.
+
+
+    ¹https://en.cppreference.com/cpp/w/compiler_support/14'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# Resources
+
+
+    +   * C++ Weekly Ep 173: The Important Parts of C++98 in 13 Minutes²
+
+    * C++ Weekly Ep 176: The Important Parts of C++11 in 12 Minutes³
+
+    * C++ Weekly Ep 178: The Important Parts of C++14 in 9 Minutes⁴
+
+    * C++ Weekly Ep 190: The Important Parts of C++17 in 10 Minutes⁵
+
+
+    ²https://youtu.be/T8Y_LZPVRg
+
+    ³https://youtube.be/D5n6xMUKU3A
+
+    ⁴https://youtube.be/mXxNvaEdNHI
+
+    ⁵https://youtube.be/QpFJOlzg1r4'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "# 42. Don’t Use initializer_list\nFor Non-Trivial Types\n\n\"Initializer List\"\
+    \ is an overloaded term in C++. \"Initializer Lists\" are used to directly initialize\
+    \ values. `initializer_list` is used to pass a list of values to a function or\
+    \ constructor.\n\n# Exercise: Understand the overhead\ninitializer_list can bring\n\
+    \nUse Andreas Fertig's awesome cppinsights.io¹ to understand what these two examples\
+    \ do\n\ninitializer_list constructor with shared_ptr.\n\n```\n#include <vector>\n\
+    #include <memory>\n\nstd::vector<std::shared_ptr<int>> vec{\n    std::make_shared<int>(40),\
+    \ std::make_shared<int>(2)\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: "Don’t Use initializer_list For Non-Trivial Types\n\nstd::array construction\
+    \ with shared_ptr.\n\n```\n#include <array>\n#include <memory>\n```\n\n```\nstd::array<std::shared_ptr<int>,\
+    \ 2> data{\n    std::make_shared<int>(40), std::make_shared<int>(2)\n};\n```\n\
+    \nAnd explain the difference. If you can do this, you understand more than most\
+    \ C++ developers.\n\n# Exercise: Understand why doesn’t compile\n\ninitializer_list\
+    \ construction with unique_ptr.\n\n```\n#include <vector>\n#include <memory>\n\
+    ```\n\n```\nstd::vector<std::unique_ptr<int>> data{\n    std::make_unique<int>(40),\
+    \ std::make_unique<int>(2)\n};\n```\n\n# Resources\n\n+   - C++ Now 2018: Jason\
+    \ Turner “Initializer Lists Are Broken, Let’s Fix Them”² (deep dive into the issues\
+    \ around these topics)\n- C++ Insights³\n\n> ²https://youtu.be/sSlmmZMMFXsQ\n\
+    ³https://cppinsights.io/"
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '# 43. Use the Tools: Build Generators
+
+
+    +   - CMake¹
+
+    - Meson²
+
+    - Bazel³
+
+    - Others⁴
+
+
+    Raw make files or Visual Studio project files make each of the things listed above
+    too tricky to implement. Use a build tool to help you with maintaining portability
+    across platforms and compilers.
+
+
+    Treat your build scripts like any other code. They have their own set of best
+    practices, and it''s just as easy to write unmaintainable build scripts as it
+    is to write unmaintainable C++.
+
+
+    Build generators also help abstract and simplify your continuous build environment
+    with tools like cmake --build, which does the correct thing regardless of the
+    platform in use.
+
+
+    > ¹https://cmake.org
+
+    ²https://mesonbuild.com/
+
+    ³https://bazel.build/
+
+    ⁴https://github.com/lefticus/cpppractices/blob/master/02-Use_the_Tools_Available.md'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# Exercise: Investigate your build system.
+
+
+    +   - Does your project currently use a build generator?
+
+    - How old are your build scripts?
+
+
+    See if there are current best practices you need to apply. Are there tidy-like
+    formatting tools you can run on your build scripts?
+
+
+    Read back over the previous best practices from this book and see how they apply
+    to your build scripts.
+
+
+    +   - Are you repeating yourself?
+
+    - Are there higher-level abstractions available?
+
+
+    > Recent versions of CMake have added tools like --profiling-output to help you
+    see where the generator is spending its time.
+
+
+    # Resources
+
+
+    +   - Professional CMake: A Practical Guide⁵
+
+    - cmake-tidy⁶
+
+    - C++ Now 2017: Daniel Pfeiffer “Effective CMake”⁷
+
+    - CopCon 2017: Mathieu Roper “Using Modern CMake Patterns to Enforce a Good Modular
+    Design”⁸
+
+
+    ⁵https://crascit.com/professional-cmake/
+
+    ⁶https://github.com/MaciejPatro/cmake-tidy
+
+    ⁷https://youtube.be/bsXLMQ6Wg
+
+    ⁸https://youtube.be/eC9-iRN2b04'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: 'Use the Tools: Build Generators
+
+
+    +   * CppCon 2018: Jussi Pakkanen "Compiling Multi-Million Line C++ Code Bases
+    Effortlessly with the Meson Build System"9
+
+    * Bazel 2019¹10
+
+    * CppCon 2019: Mathieu Rupert "Cato the Elder"¹11 - Short rant about build script
+    quality
+
+    * C++ Weekly Ep 218 - The Ultimate CMake / C++ Quick Start¹12
+
+    * Twitter Discussion on CMake Resources¹13
+
+
+    > ⁹https://youtu.be/SCZLnopmYBM
+
+    ¹⁰https://www.youtube.com/playlist?list=PLNXygaZ8Rsf-7g43Z8LyXct9ax6egdSj
+
+    ¹¹https://youtu.be/D07I4L4P4Km
+
+    ¹²https://youtu.be/YbGH7yat-Jo
+
+    ¹³https://twitter.com/Cor3ntin/status/1310990444915032067'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# 44. Use the Tools: Package Managers
+
+
+    Recent years have seen an explosion of interest in package managers for C++. These
+    two have become the most popular:
+
+
+    +   - Vcpkg¹
+
+    - Conan²
+
+
+    There is a definite advantage to using a package manager. Package managers help
+    with portability and reducing maintenance load on developers.
+
+
+    # Exercise: What are your dependencies?
+
+
+    Take time to inventory your project’s dependencies. Compare your dependencies
+    with what is available with the package managers above. Does any package manager
+    have all of your dependencies? How out of date are your current packages? What
+    security fixes are you currently missing?
+
+
+    > ¹https://github.com/Microsoft/vcpkg
+
+    ²https://conan.io/'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '# # 45. Improving Build Time
+
+
+    A few practical considerations for making build time less painful
+
+
+    +   - De-template-ize your code where possible
+
+    - Use forward declarations where it makes sense to
+
+    - Enable cache (precompiled) in your build system
+
+    - Use ccache or similar (many other options that change regularly, Google for
+    them)
+
+    - Be aware of unity builds
+
+    - Know the possibilities and limitations of extern template
+
+    - Use a build analysis tool to see where build time is spent
+
+
+    # # Use an IDE
+
+
+    This is the most surprising side effect of using a modern IDE that I have observed:
+    IDE’s de realtime analysis of the code. Realtime analysis means that you know
+    as you are typing if the code is going to compile. Therefore, you spend less time
+    waiting for builds.
+
+
+    > > Exercise: What are build times costing you?
+
+
+    Try to figure out how much build times are costing in developer time and see how
+    much could be saved if build times were lessened.'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '# Resources
+
+
+    +   - A guide to unity builds¹
+
+    - Unity builds with Meson²
+
+    - Unity builds with CMake³
+
+    - PCH with Meson⁴
+
+    - PCH with CMake⁵
+
+    - ccache⁶
+
+    - CMake Compiler Launcher⁷
+
+    - Clang Build Analyzer⁸
+
+    - Getting started with C++ Build Insights⁹
+
+    - Introducing vcperf/timetrace for C++ build time analysis¹⁰
+
+
+    ¹https://onqtam.com/programming/2018-07-07-unity-builds/
+
+    ²https://mesonbuild.com/Unity-builds.html
+
+    ³https://cmake.org/cmake/help/latest/prop_tgt/UNITY_BUILD.html
+
+    ⁴https://mesonbuild.com/Precompiled-headers.html
+
+    ⁵https://cmake.org/cmake/help/latest/command/target_precompile_headers.html
+
+    ⁶https://ccache.dev/
+
+    ⁷https://cmake.org/cmake/help/latest/prop_tgt/LANG_COMPILER_LAUNCHER.html?highlight=ccache
+
+    ⁸https://github.com/aras-p/ClangBuildAnalyzer
+
+    ⁹https://docs.microsoft.com/en-us/cpp/build-insights/get-started-with-cpp-build-insights?view=vs-2019
+
+    ¹⁰https://devblogs.microsoft.com/cppblog/introducing-vcperf-timetrace-for-cpp-build-time-analysis/'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '# # 46. Use the Tools: Multiple Compilers
+
+
+    Support *at least 2* compilers on your platform. Each compiler does different
+    analyses and implements the standard in a slightly different way.
+
+
+    If you use Visual Studio, you should be able to switch between clang and cl.exe
+    relatively easily. You can also use WSL and enable remote Linux Builds.
+
+
+    If you use Linux, you should be able to switch between GCC and Clang.
+
+
+    > > On MacOS, be sure the compiler you are using is what you think it is. The
+    gcc command is likely a symlink to clang installed by Apple.
+
+
+    For installing newer or different compilers on your platform, the following is
+    available:
+
+
+    Ubuntu / Debian
+
+
+    Windows
+
+
+    +   - GCC MinGW³
+
+    - Clang official downloads⁴
+
+
+    ```
+
+    ¹https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/ppa
+
+    ²https://apt.llvm.org/
+
+    ³http://mingw.org/
+
+    ⁴https://releases.llvm.org/download.html
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: 'Use the Tools: Multiple Compilers
+
+
+    109
+
+
+    MacOS
+
+
+    +   - Homebrew / MacPorts
+
+
+    # Exercise: Add Another Compiler
+
+
+    Since you have already enabled continuous builds of your system, it''s time to
+    add another compiler.
+
+
+    A new version of the compiler you currently require is always a good idea. But
+    if you only support GCC, consider adding Clang. Or if you only support Clang,
+    consider adding GCC. If you''re on Windows, add MinGW or Clang in addition to
+    MSVC.
+
+
+    # Exercise: Add Another Operating System
+
+
+    Hopefully, at least some portion of your project can be ported to another operating
+    system. The exercise of getting parts of the project compiling on another operating
+    system and toolchain will teach you a lot about your code''s nature.
+
+
+    # Resources
+
+
+    +   - C++ Now 2015: Jason Turner "Thinking Portable: How and Why to make your
+    C++ Cross Platform"5
+
+
+    > 5https://youtu.be/cb3WIL96N-o'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# #47. Fuzzing and Mutating
+
+
+    Your imagination limits the tests that you can create. Do you try to be malicious
+    when calling your APIs? Do you intentionally pass malformed data to your inputs?
+    Do you process inputs from unknown or untrusted sources?
+
+
+    Generating all possible inputs to all possible function calls in all possible
+    combinations is impossible. Fortunately, tools exist to solve this problem.
+
+
+    # Fuzzing
+
+
+    Fuzz testers generate strings of random data of various lengths. The test harness
+    you write consumes these strings of data and processes them in some way that is
+    appropriate for your application. The fuzz tester analyzes coverage data generated
+    from your test''s execution and uses information to remove redundant tests and
+    generate new unique and tests.
+
+
+    In theory, a fuzz test will eventually reach 100% code coverage of your tested
+    code, if left to run long enough. Combined with AddressSanitizer, this makes a
+    powerful tool for finding bugs in your code. One interesting article from 2015
+    describes how the combination of a fuzzer and AddressSanitizer could have found
+    the security flaw "heartbeat" in OpenSSL in less than 6 hours.
+
+
+    > Fuzz testing primarily finds memory and security flaws.
+
+
+    Many different fuzzing tools exist. For the sake of this section, I am going to
+    cover only LLVM’s libFuzzer. All fuzzers operate under the same premise.
+
+
+    ¹https://blog.hboeck.de/archives/868-How-Heartbleed-couldve-been-found.html
+
+    ²https://www.llvm.org/docs/LibFuzzer.html'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: "Fuzzing and Mutating\n\nYou must provide some sort of entry point. The entry\
+    \ point generally takes the form of a function like:\n\nlibFuzzer entry point.\n\
+    \n```\nextern \"C\" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size);\n\
+    ```\n\nThe Data pointer is always valid, and the Size parameter is >=0.\nIf your\
+    \ library merely parses input files (think libpng) then your job is quite easy:\n\
+    \nlibFuzzer data being used.\n\n```\nextern \"C\" int LLVMFuzzerTestOneInput(const\
+    \ uint8_t *Data, size_t Size)\n{\n    parseInput(Data, Size);\n}\n```\n\nIf your\
+    \ functions take data structures instead of input strings, your job is slightly\
+    \ more complicated but doable.\n\nAdvanced libFuzzer usage.\n\n```\ntemplate<typename\
+    \ Type>\nstd::pair<const uint8_t *, size_t, Type>\ncreateStruct(const uint8_t\
+    \ *Data, size_t Size)\n{\n    // we're only allowed to do this with trivial types\n\
+    \    static_assert(std::is_trivial_v<Type>); // default initialize\n    Type result{};\n\
+    \    const auto bytesToRead = std::min(sizeof(Type), Size);\n    std::memcpy(&result,\
+    \ Data, bytesToRead);\n    return {std::next(Data, bytesToRead), bytesToRead,\
+    \ result};\n}\n```\n\n```\nextern \"C\" int LLVMFuzzerTestOneInput(const uint8_t\
+    \ *Data,\n```"
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: "# Fuzzing Mutating\n\n# size_t Size)\n\n```\n{\n// This example is meant as\
+    \ inspiration, it has not been\n// tested in a real test\nauto [newDataPtr, remainingSize,\
+    \ Obj1]\n= createStruct<Type1>(Data,Size);\nauto [lastDataPtr, lastSize, Obj2]\n\
+    = createStruct<Type2>(newDataPtr,remainingSize);\n\nfunctionToTest(Obj1, Obj2);\n\
+    }\n```\n\nThe fuzzer will quickly learn that any new data input where Size > sizeof(Type1)\
+    \ + sizeof(Type1) does not generate new code paths and will focus on the appropriate\
+    \ amount of data.\n\n# Mutating\n\nMutation testing works by modifying conditionals\
+    \ and constants in the code tested.\n\nPseudo code example.\n\n```\nbool greaterThanFive(const\
+    \ int value) {\n  return value > 5; // comparison\n}\n```\n\n```\nvoid tests()\
+    \ {\n  assert(greaterThanFive(6));\n  assert(!greaterThanFive(4));\n}\n```\n\n\
+    A mutation tester could modify the constant 5 or the > so the resulting code might\
+    \ become"
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: "Fuzzing and Mutating\n\nMutated code.\n\n```\n```bool greaterThanFive(const\
+    \ int value) {\n  return value < 5; // mutated\n}\n```\n```\n\nAny test that continues\
+    \ to pass is a \"mutant that has survived\" and may indicate either a flawed test\
+    \ or a bug in the code.\n\n# Exercise: Create a fuzz test harness.\n\nApply the\
+    \ examples demonstrated here to create fuzz testers for your code. What challenges\
+    \ do you hit?\n\n+   - Look at FuzzedDataProvider.h³ for more helper functions\n\
+    \n# Exercise: Investigate mutation testing.\n\nThe author of this book has no\
+    \ direct experience with mutation testing. It is something you can use in your\
+    \ project? What interesting resources do you find?\n\n# Resources\n\n+   - C++Now\
+    \ 2018: Marshall Clow “Making Your Library More Reliable with Fuzzing”⁴\n\n> ³https://github.com/llvm-mirror/compiler-rt/master/blob/include/fuzzer/FuzzedDataProvider.h\n\
+    ⁴https://youtube.be/LILJRHToyUk"
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# Fuzzing and Mutating
+
+
+    +   - C++ Weekly Ep 85: Fuzz Testing5
+
+    - CppCast: Alex Denisov “Mutation Testing With Mull”6
+
+    - NDC TechTown 2019: Seph De Busser “Testing The Tests: Mutation Testing for C++”7
+
+    - CppCon 2017: Kostya Serebryany “Fuzz or lose...”8
+
+    - CppCon 2020: Barnabás Bágyi “Fuzzing Class Interfaces for Generating and Running
+    Tests with libFuzzer”9 - Inspirational talk about using fuzzing in novel ways.
+    Video is not yet on YouTube, but look for it after this book is published.
+
+    - Autotest10 - Library associated with “Fuzzing Class Interfaces for Generating
+    and Running Tests with libFuzzer” talk.
+
+
+    5https://youtube.be/g00KBqKooU
+
+    6https://cppcast.com/alex-denisov/
+
+    7https://youtube.be/M-5_M8qZXa
+
+    8https://youtube.be/k-Cv8Q3zNWQ
+
+    9https://cppcon2020.sched.com/event/e7An/fuzzing-class-interfaces-for-generating-and-running-tests-with-libfuzzer?iframe=no
+
+    10https://gitlab.com/wilzegers/autotest/'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: '# 48. Continue Your C++ Education
+
+
+    You must continually learn if you want to become better at what you do, and many
+    resources are available to you to continue your C++ education.
+
+
+    # ## Know How To Ask Questions
+
+
+    Kate Gregory has published an [excellent article on how to ask questions](1).
+    Some key points are:
+
+
+    +   - Don''t use screenshots
+
+    - Use good variable names
+
+    - Add some tests
+
+    - Listen to what people are telling you
+
+
+    # ## Conferences And Local User Groups
+
+
+    There is almost certainly one near you. Check out the [ISO C++ Conferences Worldwide
+    List](2) and [Meeting C++ User Groups List](3).
+
+
+    I am finishing this book during the global COVID-19 pandemic. So conferences and
+    user groups are mostly held on right now. But this presents an attractive opportunity
+    for many.
+
+
+    > ^1http://www.regcons.com/KateBlog/HowToAskForCodingHelp.aspx
+
+    2https://isocpp.org/wiki/faq/conferences-worldwide
+
+    3https://meetingcpp.com/usergroups/'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: 'Continue Your C++ Education
+
+
+    116
+
+
+    Many of those conferences and user groups are now meeting online. It’s now possible
+    for us all to attend each other’s user groups. The North Denver Metro C++ Meetup⁴
+    for example, regularly has one attendee from Thailand each month.
+
+
+    > Note from the author: when interacting with the C++ community member to treat
+    others with dignity and respect; be patient; take time to understand the rules
+    and norms of the particular community which you are interacting.
+
+
+    # C++ Weekly
+
+
+    This book references C++ Weekly throughout as a resource to go back to more information
+    and examples to share with your coworkers. At this moment, the show has been going
+    for 235 weeks straight with many special editions, extras, and live streams.
+
+
+    # cpppreference.com
+
+
+    The website is fantastic, but you might not know that you can create an account
+    and customize the content to the version of C++ you are using. Also, you can execute
+    examples and download an offline version⁵!
+
+
+    # Hire a Trainer to Come Onsite for Your Company
+
+
+    Team training gets your team thinking in a new direction, improves morale, and
+    boosts employee retention. Since you made it this far, I’m going to offer you
+    a coupon.
+
+
+    ⁴https://www.m.com/North-Denver-Metro-C-Meetup/
+
+    ⁵https://en.cpppreference.com/w/Cppreference'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: 'If you mention this book, you''ll get 10% off onsite training costs at your
+    company from me. (travel costs not discounted). Hopefully, travel restrictions
+    will not last much longer.
+
+
+    # YouTube
+
+
+    +   - Andreas Fertig’s Channel^6
+
+    - C++ Weekly (Author’s Channel)^7
+
+    - CopperSpice^8
+
+
+    > ^6https://www.youtube.com/channel/UCxJflfPGHS3_nRDv1u-Qu8g
+
+    ^7https://www.youtube.com/c/JasonTurner-lefticus
+
+    ^8https://www.youtube.com/cospice'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# # 49. Thank You
+
+
+    # ## Sponsors
+
+
+    Thank you to all of my Book Supporter patrons who helped make this book possible!
+
+
+    +   - Adam Albright
+
+    - Adam P Shield
+
+    - Alejandro Lucena
+
+    - Alexander Roper
+
+    - Andrei Sebastian Cîmpean
+
+    - Anton Smyk
+
+    - Arman Imani
+
+    - Bill Baker
+
+    - Björn Fahller
+
+    - Brendan Nolan
+
+    - Clint Rajaniemi
+
+    - Corentin Gay
+
+    - David C Black
+
+    - Dennis Börm
+
+    - Emyr Williams
+
+    - Fedor Alekseev
+
+    - Florian Sommer
+
+    - Gwendolyn Hunt
+
+    - Ivan Pakhomov
+
+    - Jack Glass
+
+    - Jaewon Jung
+
+    - Jeff Bakst
+
+    - Kacper Kołodziej
+
+    - Lars Ove Larsen
+
+    - Magnus Westin'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: 'Thank You
+
+
+    Martin Hammerchmidt
+
+    Matt Godbolt
+
+    Matthew Guidry
+
+    Michael Pearce
+
+    Michael Pettit
+
+    Natalya Kochanova
+
+    Olafur Waage
+
+    Panos Gourgaris
+
+    Ralph Jeffrey Steinhagen
+
+    Reiner Eiteljoerge
+
+    Sebastian Raaphorst
+
+    Sergii Zaiets
+
+    Tim Butler
+
+    Tobias Dieterich
+
+    Tomasz Cwik
+
+    Yacob Cohen-Arazi
+
+
+    # Reviewers
+
+
+    Craig Scott and Alexander Roper, thank you for extensive notes and feedback during
+    prerelease.'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: "# 50. Bonus: Understand The Lambda\n\nA surprising complexity hides behind\
+    \ the simple lambda of C++. Initially added in C++11, it was initially constrained.\
+    \ With each version of C++, the lambda becomes more flexible and powerful.\n\n\
+    Lambdas reverse some of the defaults from the rest of C++. Default const and automatically\
+    \ constexpr when possible; they give us some of what we wish the rest of the language\
+    \ could have.\n\nLambda grammar:\n\n```\nlambda-expression:\nlambda-introducer\
+    \ lambda-declarator(opt) compound-statement\nlambda-introducer < template-parameter-list\
+    \ > requires-clause(opt)\nlambda-declarator(opt) compound-statement\n```\n\n```\n\
+    lambda-introducer:\n  [ lambda-capture(opt) ]\nlambda-declarator:\n  ( parameter-declaration-clause\
+    \ ) decl-specifier-seq(opt)\n  noexcept-specifier(opt) attribute-specifier-seq(opt)\n\
+    \  trailing-reverse-type(opt) requires-clause(opt)\n```\n\nIf you can read standard-eze',\
+    \ you can dig into all of the features of C++20's lambdas yourself."
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# Bonus: Understand The Lambda
+
+
+    Allowed lambdas as of C++20.
+
+
+    ```
+
+    // valid empty lambda, does nothing
+
+    []{}
+
+
+    // optional to have parameter list
+
+    [](){}
+
+
+    // C++17 explicit constexpr and return void
+
+    []() constexpr -> void {};
+
+    // immediately invoked lambda
+
+    auto i = [](){{ return 42; }();
+
+    // Not allowed before C++17, because constexpr
+
+    constexpr auto j = [](){{ return 42; }();
+
+    // generic lambda, C++14
+
+    [](auto x){ return x + 42; };
+
+    // variadic lambda, C++14
+
+    [](auto... x){ return std::vector<int>(x...) }; };
+
+    // capture by copy, C++11
+
+    [i](){ return i + 42; };
+
+    // generalized capture, C++14 (what''s the type of i)
+
+    [i = 42]{ return i + 42; };
+
+    // stateful lambda, C++11
+
+    [i]() mutable { return ++i; };
+
+    // explicit template, C++20
+
+    <typename T>(T x){ return x + 42; };
+
+
+    // generic lambda returning a C++20 lambda with variadic
+
+    // capture expression which returns a fold expression summation
+
+    // of the captured values.
+
+    [](auto... val){ return [...= val]{{ return (val + ...); }; };; };
+
+    ```
+
+
+    If you understand every aspect of C++''s lambdas and how the implement them, you
+    know everything about C++.
+
+
+    This is why I put together my C++ class on YouTube about lambdas.
+
+
+    > https://www.youtube.com/playlist?list=PLs3KjaCtOwSY_Awyliwm-frJEa-SRBs-'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: 'In 2018 when compilers first started supporting C++20''s new lambdas, I implemented
+    this mostly standards-compliant version of std::bind using lambdas.
+
+
+    (Continued on next page.)'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: "# Bonus: Understand The Lambda\n\nstd::bind implemented with C++20 lambdas.\n\
+    \n```\ntemplate <std::size_t Idx>\nstruct Placeholder {};\n```\n\n```\ntemplate\
+    \ <typename T>\nstruct Bound {\n    constexpr decltype(auto) operator()(auto &&...param)\
+    \ const {\n        return t(std::forward<decltype(param)>(param)...);\n    }\n\
+    \    T t;\n};\n```\n\n```\ntemplate <typename T>\nBound(T) -> Bound<T>;\n```\n\
+    \n```\ntemplate <std::size_t Idx>\nconstexpr decltype(auto) get_param(const Placeholder<Idx>&,\n\
+    \ T&&) {\n    return std::get<Idx>(t);\n}\n```\n\n```\ntemplate <typename Param,\
+    \ typename T>\nconstexpr decltype(auto) get_param(Param &&param, T&&) {\n    return\
+    \ std::forward<Param>(param);\n}\n```\n\n```\ntemplate <typename Param, typename\
+    \ T>\nconstexpr decltype(auto) get_param(const Bound<Param>&b,\n T&&) {\n    return\
+    \ std::apply(b, std::forward<T>(t));\n}\n```\n\n```\nconstexpr decltype(auto)\
+    \ bind(auto &&callable, auto &&...param) {\n    return Bound{\n```"
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: "# Bonus: Understand The Lambda\n\n```\n[callable = std::forward<decltype(callable)>(callable),\n\
+    ... xs = std::forward<decltype(param)>(param)\n(auto &&...values) {\n    auto\
+    \ passed_params =\n        std::forward_as_tuple<decltype(values)>(values)...;\n\
+    \    return std::invoke(callable,\n        get_param(xs, passed_params)...);\n\
+    }\n};\n```\n\nI haven't looked at this code in 2 years, but here is a Compiler\
+    \ Explorer link for you to play with.\nhttps://godbolt.org/z/hhde3P3\n\n# Exercise:\
+    \ Understand the given example and critique it.\n\nWhat should I have done differently\
+    \ with the above example? Can it be constrained with concepts? Does it need better\
+    \ names? What would you do differently?\n\n³https://godbolt.org/z/hhde3P3"
+  merge: -1
+  img_proc: true
