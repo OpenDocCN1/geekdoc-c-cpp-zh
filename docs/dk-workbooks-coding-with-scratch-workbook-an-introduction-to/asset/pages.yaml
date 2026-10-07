@@ -1,0 +1,2489 @@
+- pgno: 0
+  md: '# DK WORKBOOKS
+
+    CODING WITH SCRATCH WORKBOOK
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_0_0.png)
+
+
+    AN INTRODUCTION TO COMPUTER PROGRAMMING'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/c8b294ee7af329f5e2b96cede7af2ab1_1_0.png)
+
+
+    https://archive.org/details/codingwithscratc0000wood_i8b8'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # CODINGnWITH SCRATCH WORKBOOK
+
+
+    Author and Consultant Dr. Jon Woodcock
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_2_0.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_2_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Written by
+
+    Dr. Jon Woodcock
+
+    Editor Steve Watford
+
+    Editors Jenny Siklos, Allison Singer
+
+    Designer Peter Radcliffe
+
+    Publisher Laura Buller
+
+    Art Director & Jacket Designer Martin Wilson
+
+    Producer, Pre-Production Francesca Wardell
+
+    Producer Christine Ni
+
+    Publishing Director Sophie Mitchell
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_3_0.png)
+
+
+    First American Edition, 2015
+
+    Published in the United States by DK Publishing
+
+    345 Hudson Street, New York, New York 10014
+
+
+    © 2015 Dorling Kindersley Limited
+
+    DK, a division of Penguin Random House LLC
+
+    16 17 18 19 20 8 7 6 5 4 3
+
+    003-288352-Nov/2015
+
+
+    All rights reserved.
+
+    Without limiting the rights copyright reserved above,
+
+    part of this publication may be reproduced, stored in or
+
+    introduced into a retrieval system, or transmitted, in any form,
+
+    or or by any means (electronic, mechanical, photocopying,
+
+    recording, or otherwise), without the prior written
+
+    permission of the copyright owner.
+
+    Published in Great Britain by Dorling Kindersley Limited.
+
+
+    A catalog record for this book
+
+    av available from the Library of Congress.
+
+    ISBN: 978-1-4654-4392-2
+
+
+    DK books are available at special discounts when purchased
+
+    b for sales purposes, premiums, fund-raising, or
+
+    educational use. For details, contact DK Publishing Special
+
+    Markets, 345 Hudson Street, New York, New York 10014
+
+    SpecialSales@dk.com
+
+
+    Printed in USA
+
+
+    All images © Dorling Kindersley Limited
+
+    For further information see: www.dkimages.com
+
+
+    A WORLD OF IDEAS:
+
+    SEE ALL THERE IS TO KNOW
+
+    www.dk.com
+
+
+    They named
+
+    Scratch
+
+    after me.
+
+
+    It should\have been
+
+    called Pinch!
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_3_1.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_3_2.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_3_3.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_3_4.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_3_5.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_3_6.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_3_7.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_3_8.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# # Contents
+
+
+    +   4 What is Scratch?
+
+    What, Why, How?
+
+
+    +   6 Getting Scratch
+
+    Using Scratch Online and Offline
+
+
+    +   8 Scratch Tour
+
+    Getting to Know Your Way Around Scratch
+
+
+    +   10 Your First Project
+
+    Make Scratch Cat Talk
+
+
+    +   12 Move It!
+
+    Taking Steps, Bouncing Back
+
+
+    +   14 Which Way?
+
+    Giving Directions to Sprites
+
+
+    +   16 Loops
+
+    Making Things Happen—Again and Again
+
+
+    +   18 Animation
+
+    Walking and Dancing
+
+
+    +   20 Party Time!
+
+    Adding Scenery and Music
+
+
+    +   22 if-then
+
+    Making Decisions in Scratch
+
+
+    +   24 Variables
+
+    Boxes for Storing Data
+
+
+    +   26 Math
+
+    Doing Equations with Scratch
+
+
+    +   28 Inputs and Events
+
+    Questions, Answers, and Triggering Scripts
+
+
+    +   30 if-then-else
+
+    Using "True or False?" Questions
+
+
+    +   32 A Game: Dragon!
+
+    Have Fun with This Simple Game
+
+
+    +   34 Solutions
+
+
+    +   40 Glossary and Note for Parents
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_4_0.png)
+
+
+    > I like this page best.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_4_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# What is Scratch?
+
+
+    A computer doesn''t have a smart brain like you, so everything you want to do
+    must be broken down into lists of simple instructions called programs. Giving
+    instructions to the computer is known as programming, or coding.
+
+
+    +   What You''ll Learn:
+
+    * To do tasks, computers need simple instructions called programs
+
+    * Scratch is a great place to start programming
+
+    * What the ingredients of a Scratch project are
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_5_0.png)
+
+
+    # What Does a Computer Understand?
+
+
+    Instructions for computers have to be written following special rules and using
+    only words the computer understands. These words and rules make up a “programming
+    language.” There are lots of different programming languages. Many have funny
+    names, such as JavaScript, C++, and Python.
+
+
+    A program is a list of instructions for the computer
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_5_1.png)
+
+
+    # What is Scratch?
+
+
+    Scratch is a computer programming language that''s easy for beginners to use.
+    In Scratch, programs are made by joining together colored blocks using the mouse.
+    These groups of blocks (called scripts) tell characters on the screen (called
+    sprites) what to do. Scratch is free, safe, and fun to experiment with.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_5_2.png)
+
+
+    The blocks fit together like jigsaw pieces
+
+
+    # Scratch Projects
+
+
+    With Scratch, you can make your own interactive stories, animations, games, and
+    art. Scratch has large collections (or “libraries”) of cool graphics and fun sounds
+    you can play around with. Let your imagination run wild—you’ll soon pick up the
+    coding skills you need!
+
+
+    > We can make lots of sounds!
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_5_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# What Makes Up a Scratch Project?
+
+
+    Here''s a Scratch project. Think of it like a play. The action takes place in
+    an area called the stage. The “actors” (the sprites) are controlled by lists of
+    instructions (the scripts). Behind is the backdrop—the “scenery,” which can be
+    changed.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_6_0.png)
+
+
+    Backdrop
+
+    (background picture)
+
+
+    Click the green flag
+
+    nto run (start) a
+
+    program
+
+
+    Add a script to
+
+    make the shark
+
+    sprite move
+
+
+    Click the red
+
+    button to stop
+
+    a program
+
+
+    Sprites are used
+
+    for all the objects
+
+    we want to move
+
+    or control
+
+
+    This is the
+
+    stage
+
+
+    ```
+
+    when clicked
+
+    forever
+
+    next costume
+
+    wait 0.25 secs
+
+    move 10 steps
+
+    if on edge, bounce
+
+    ```
+
+
+    # Scripts for Sprites
+
+
+    This is an example of a script. It makes the shark bounce around the stage, opening
+    and closing its mouth. Each block gives an instruction to the sprite. A block
+    might tell a sprite to move, change how it looks, in speech bubbles, react to
+    other sprites, or make a sound.
+
+
+    # Show What You Know
+
+
+    Fill in the spaces to practice the key language of Scratch.
+
+
+    +   1. A ............................................ is a set of instructions
+    (program) in Scratch.
+
+
+    +   2. Objects that perform actions in a project are called .................................................
+
+
+    +   3. In a Scratch program, the action takes place on the .................................
+
+
+    +   4. Starting a program is called .................................................
+    it.
+
+
+    +   5. A collection of sounds or graphics is called a .........................................'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Getting Scratch
+
+
+    You can code online at the Scratch website, but if you aren''t always connected
+    to the Internet, you can install it on your computer. Ask a grown-up to help you.
+    You will need the newer Scratch 2.0 for this book, not the old Scratch 1.4.
+
+
+    +   What You''ll Learn:
+
+    * You need Scratch 2.0
+
+    * How to use Scratch on a computer
+
+    * How to join the Scratch website
+
+    * How to save your projects
+
+
+    # Using Scratch Online
+
+
+    If you register for a Scratch account, you will be able to save your projects
+    online and share them with friends.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_7_0.png)
+
+
+    +   Sign Up for Scratch
+
+    Go to scratch.mit.edu and select Join Scratch for instructions on how to register.
+    You will need to get permission from an adult with an e-mail address.
+
+
+    +   Create in Scratch
+
+    When you want to use Scratch, go to the Scratch website and click on Create. This
+    will open the Scratch editor window.
+
+
+    Click on this file to see your saved projects
+
+
+    +   Save in Scratch
+
+    Projects save automatically if you''re logged in your Scratch account. You can
+    see your saved projects by clicking the file with “S” at the top right of the
+    screen.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_7_1.png)
+
+
+    > Top Tip from Scratch Cat
+
+    Need to “right click” but only have one button on your mouse? Usually you can
+    hold down the CTRL key on the keyboard as you click. Not working? Then ask the
+    owner of the computer.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_7_2.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_7_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Installing Scratch on a Computer
+
+
+    If you don''t have access to the Internet or you want to work offline, you''ll
+    need the Scratch installer. Go to scratch.mit.edu/scratch2download and just follow
+    the installation instructions.
+
+
+    To start Scratch, double-click the Scratch 2.0 icon on your desktop.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_8_0.png)
+
+
+    Double-click the Scratch 2.0 icon to start
+
+
+    # Operating Systems
+
+
+    Check that your computer''s operating system is able to run Scratch.
+
+
+    +   - The online version of Scratch 2.0 will run on Windows (PC), OS X (Macs),
+    and some Linux computers.
+
+    - The offline version might not work with some Linux computers.
+
+    - The Raspberry Pi can''t run Scratch 2.0 at the moment.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_8_1.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_8_2.png)
+
+
+    > You''re not in this book.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_8_3.png)
+
+
+    # Scratch Online Community
+
+
+    On the Scratch website you can share your projects and try out other coders''
+    Scratch creations. Even better, you can explore how every project works and even
+    change (“remix”) them. Look out for the buttons shown below.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_8_4.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_8_5.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_8_6.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_8_7.png)'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Scratch Tour
+
+
+    Open Scratch on your computer and this is what you''ll see. All you need to create
+    and run your Scratch projects on this screen. Take a look around.
+
+
+    > Experiment!
+
+    Click the buttons and tabs to experiment with Scratch. Don''t worry, you won''t
+    break the computer!
+
+
+    +   - Change language
+
+    - Save projects here
+
+    - Delete sprite or script
+
+    - Help tool
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_9_0.png)
+
+
+    Click here for full-screen view
+
+
+    This is the stage-run the project and see the action here
+
+
+    The sprites are controlled by scripts
+
+
+    Click these to start (run) and stop projects
+
+
+    Click on the stage or in the sprite list to select it
+
+
+    Click on for detailed Sprite information
+
+
+    You can also select the stage and edit (change) its scripts, backdrops, and sounds
+
+
+    Buttons add new backdrops (background pictures)
+
+
+    A blue box appears around the sprite you have selected
+
+
+    Buttons to add new sprites'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Scratch Map
+
+
+    The stage is where projects are run. The sprite list shows all the project''s
+    sprites. Script blocks can be found in the blocks palette. Build scripts in the
+    scripts area.
+
+
+    Costumes tab—use this to change a sprite''s appearance
+
+
+    Scripts tab
+
+
+    Sounds tab—use this to change the sounds a sprite makes
+
+
+    Click here for step-by-step guides and tips
+
+
+    • Saved
+
+
+    stilton181
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_10_0.png)
+
+
+    +   Scripts
+
+    Costumes
+
+    Sounds
+
+
+    Motion
+
+    Looks
+
+    Sound
+
+    Pen
+
+    Data
+
+    Events
+
+    Control
+
+    Sensing
+
+    Operators
+
+    More Blocks
+
+
+    Select different types of blocks
+
+
+    ```
+
+    when clicked
+
+    forever
+
+    go to [cursor]
+
+    move 10 steps
+
+    ```
+
+
+    +   move 10 steps
+
+    turn 15 degrees
+
+    turn 15 degrees
+
+    point in direction 90
+
+    point toward
+
+    go go to x: 0 y: 0
+
+    glide 1 secs to x: 0 y: 0
+
+
+    Blocks snap together—use the mouse to move them
+
+
+    Each block is a different Scratch instruction
+
+
+    ```
+
+    forever
+
+    next costume
+
+    play sound [hoot] until done
+
+    ```
+
+
+    These scripts control the owl sprite
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_10_1.png)
+
+
+    Backpack is used to copy sprites, costumes, scripts, and sounds between projects
+
+
+    Drag blocks from here into the scripts area to make scripts
+
+
+    Build scripts here'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Your First Project
+
+
+    Time for our first Scratch project. We''re going to create some simple instructions
+    to make the cat talk. By moving the colored blocks around with the mouse, we can
+    build a simple computer program called a script.
+
+
+    +   What You''ll Learn:
+
+    - Sprites are controlled by scripts
+
+    - How to build a script from Scratch blocks
+
+    - Things in scripts happen one at a time from the top
+
+    - You can read Scratch to find out what it does
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_11_0.png)
+
+
+    # Scratch—The Friendly Cat
+
+
+    First, open the Scratch editor: either choose Create on the Scratch website, or
+    click the Scratch icon on your computer. You''ll see the cat sprite standing on
+    the stage. Let''s make a script to tell the cat what to do.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_11_1.png)
+
+
+    Click on the Looks label
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_11_2.png)
+
+
+    +   1 Start a New Script
+
+    We''ll begin by getting the cat to say a friendly "Hello! Click on the purple
+    Looks label under the Scripts in the center of the editor.
+
+
+    +   2 Select a Say Block
+
+    The list of blocks in the middle of the editor will change. Click with the mouse
+    on the top say Hello! block and drag it to the right, into the scripts areas.
+
+
+    ```
+
+    Hello! for 2 secs
+
+    ```
+
+
+    +   3 Do It Again!
+
+    Drag a second say Hello! block into the scripts area. Release the button when
+    the blocks overlap, so that they lock together like jigsaw pieces.
+
+
+    ```
+
+    Hello! for 2 secs
+
+    Hello! for 2 secs
+
+    ```
+
+
+    +   4 Change What the Cat Says
+
+    We can tell the cat to saying something different. Click on the lower say Hello!
+    box in the stack. Type in a new message, such as "Nice day!"
+
+
+    ```
+
+    Hello! for 2 secs
+
+    Nice day! for 2 secs
+
+    ```
+
+
+    New message goes here'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Completing Your Script
+
+
+    Click on the brown Events tab. Drag the brown block in the list to the right,
+    into the scripts area. Hover over it the top say block, then let go of the mouse
+    button. The brown block will clip on to the two purple say blocks.
+
+
+    Clicking the flag runs the script
+
+
+    # Read the Whole Script
+
+
+    The script tells us that to start off we need to click on the green flag in the
+    top right corner of the stage. This is called "running" the script.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_12_0.png)
+
+
+    # Watch the Action
+
+
+    When you click on the flag, Scratch Cat will say "Hello!" for two seconds. Then
+    it will say "Nice day!" for two seconds.
+
+
+    > See how the blocks work in order—the cat does each action in turn.
+
+
+    # Save It!
+
+
+    Good job! You''ve built your first Scratch project. Save it by clicking on the
+    File menu and choose Save or Save All.
+
+
+    # Scratch Puzzle
+
+
+    We''ve picked some blocks for our cat to try out. Draw a line from each block
+    to the correct picture of what the cat will do.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Move It!
+
+
+    ### You''ll Learn:
+
+    * How to make a sprite
+
+    * That Scratch measures distance in steps
+
+    * How to keep sprites the right way up
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_13_0.png)
+
+
+    Now for some action. Let''s get our cat moving using the dark blue Motion blocks.
+    Scratch measures distances in “steps.” The stage is 480 steps wide and 360 steps
+    tall. There is a block to stop sprites from getting stuck to the walls. They just
+    bounce off them!
+
+
+    +   Let''s Move the Cat
+
+
+    Start a new project. Click on File above the stage and select New. Add this script
+    and think about what the blocks do.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_13_1.png)
+
+
+    Click the green flag to run the script. The cat will move a short way to the right.
+    Try it a few times.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_13_2.png)
+
+
+    Click on the 10 in the move block and type 100. The cat now moves much further
+    each time. Experiment by trying different numbers of steps.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_13_3.png)
+
+
+    +   Bouncing Off the Walls
+
+
+    Now change your script to this. Read the script. What do you think it does? The
+    forever block repeats the blocks inside—forever! The if on edge, bounce block
+    turns the cat around the edge of the stage.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_13_4.png)
+
+
+    Run the new script. The cat will now run right, then left, across the stage. Experiment—the
+    more steps there are in each move, the faster the cat goes.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_13_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "# Stop Standing on Your Head, Cat!\n\nThe poor cat spends half its time upside\
+    \ down—how awful! To stop this, click on the blue i in the corner of the cat in\
+    \ the sprite list. Extra information about the sprite appears. Change rotation\
+    \ style to <-> Try the other rotation styles to see what the cat does.\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_14_0.png)\n\
+    \n![](img/c8b294ee7af329f5e2b96cede7af2ab1_14_1.png)\n\nThe cat faces the direction\
+    \ it's walking in, sometimes upside down\n\nRight way up going right\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_14_2.png)\n\
+    \n| Cat | x: 84 y: 69 direction: -90° |\n rotation style: [] drag in player: []\
+    \ show: |\n\nClick here to get information about the sprite\n\nThe cat faces left\
+    \ or right and is always the right way up\n\nThe cat doesn't rotate at all\n\n\
+    # Show What You Know\n\nHow far can you go with this quiz? All the way to the\
+    \ end?\n\n+   1. What color are the Motion blocks? ....................................................................................\n\
+    2. Scratch measures distances in units called ....................................................................................\n\
+    2a. How many of these units wide is the stage? ....................................................................\n\
+    2b. How many of these units tall is the stage? ....................................................................\n\
+    3. A mistake in a program is known as a “bug”. .....................................................................................\n\
+    \nThis script should make the cat move across the stage slowly, but when I click\
+    \ the green flag to run it, nothing happens! What’s wrong?\n...................................................................................................\n\
+    \n```\nforever\nmove 2 steps\nif edge, bounce\n```\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_14_3.png)\n\
+    \nWe love bugs!"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Which Way?
+
+
+    When you want to move a sprite, you need to know two things: how far and which
+    way. Every sprite has a built-in direction arrow. When a script gets to a dark
+    blue move block, that''s the direction in which the sprite will go.
+
+
+    +   What You''ll Learn:
+
+    * How to point a sprite in different directions
+
+    * How to make a sprite
+
+
+    # Cat Follows Mouse!
+
+
+    Let''s spin our cat in every possible direction. Open a new project in the Scratch
+    editor. Build this script for the cat sprite. Read the script. What do you think
+    it does? Click the green flag to see if you guessed correctly.
+
+
+    From brown Events blocks
+
+    From yellow Control blocks
+
+    From dark blue Motion blocks
+
+
+    ```
+
+    when clicked
+
+    forever
+
+    point toward cursor
+
+    ```
+
+
+    The cat will follow the cursor
+
+
+    Move the cursor around the stage and watch the cat turn around so it always looks
+    towards the pointer. The forever block runs the point toward cursor block over
+    and over.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_15_0.png)
+
+
+    If it doesn''t work, check rotation style
+
+
+    # Sprites Know Where to Go!
+
+
+    direction: -90
+
+
+    Every sprite knows what direction it''s pointing. A sprite''s direction is shown
+    in the sprite information panel when you click the blue i.
+
+
+    Direction circle shown on sprite information panel
+
+
+    Direction -90° means "left"
+
+
+    Direction 0° means "up"
+
+
+    As the cat spins around, you''ll see its direction value change and the blue line
+    pointer move around the circle.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_15_1.png)
+
+
+    Direction 180° means "down"
+
+
+    Direction 90° means "right"
+
+
+    Use the "compass" shown here to decode the direction number.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Choosing a Sprite''s Direction
+
+
+    We can also set a sprite''s direction using the window with the **point in direction**
+    block. You can click on the little triangle beside the number for useful directions,
+    or just click on the window and type in a number.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_16_0.png)
+
+
+    # Bouncing Off the Walls Again
+
+
+    Add the **point in direction 45** block to the “bouncing off the walls” script
+    from page 12. Put it after the **when green flag clicked** block but before the
+    **forever** block. Run the script. The cat will set off diagonally. Try using
+    different directions and rotation styles.
+
+
+    # Show What You Know
+
+
+    Know your way around Scratch? Then try these brain teasers!
+
+
+    +   1. What number should replace the ? in this block to set the sprite''s direction
+    to:
+
+
+    Up = .................................................nDown = .................................................
+
+
+    Left = .................................................nRight = .................................................
+
+
+    +   2. Test your Scratch script reading powers! What does this script do? Read
+    it carefully and try to act out each block in your mind.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_16_1.png)
+
+
+    ................................................................................................n................................................................................................n................................................................................................'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Loops
+
+
+    In computer programs, we often want to carry out the same instructions more than
+    once. To avoid having to put down the same blocks many times, we can wrap them
+    in a loop instruction that repeats the blocks. Meet forever and repeat loops!
+
+
+    +   What You''ll Learn:
+
+    - How to repeat a group of blocks using a loop
+
+    - The difference between forever and repeat loops
+
+    - How to make some noise in Scratch
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_17_0.png)
+
+
+    # Running Down the Blocks
+
+
+    Start a new project and make this script. Read, understand, and run it. It runs
+    very quickly and doesn''t do much.
+
+
+    Blocks run in this order.
+
+
+    When we run the script, each block is run in from top to bottom. First the cat
+    turns a little, then the cat''s color changes to green.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_17_1.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_17_2.png)
+
+
+    # Forever Loops
+
+
+    A loop instruction runs a script in the normal order from top to bottom, but then
+    loops back to the top. The loop runs the blocks inside and over again. Try wrapping
+    a forever loop around the blocks from the last script.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_17_3.png)
+
+
+    When the actions finish, the program always goes back to the start of the loop
+
+
+    Now the cat turns more and changes color each time the blocks in the forever loop
+    are repeated.
+
+
+    Press the red button to stop the loop.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_17_4.png)
+
+
+    The red button stops a program'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Repeat Loops
+
+
+    If we want to repeat a group of blocks only a few times and then move on to the
+    rest of the script, we can use the repeat loop block.
+
+
+    Try this script for a siren that annoys the cat. The repeat loop runs the two
+    play note blocks 10 times and only runs the think block. Try changing the number
+    of repeats.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_18_0.png)
+
+
+    # Show What You Know
+
+
+    What do you know about loops? Test yourself with this quiz.
+
+
+    +   1. Loops are used to ............................................................
+    groups of blocks.
+
+    2. Two types of scratch loops are ......................................... and
+    ....................................
+
+    3. You can stop a forever loop by clicking the .................................................
+
+    4. In which section do you find the pink blocks? .........................................
+
+    5. Which block section has the loops in it?
+
+
+    6. Bug hunt! This script should draw the four sides of a square, but nothing happens
+    when it''s run. Can you spot and suggest a fix for the bug? Programmers call this
+    “debugging.”
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_18_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# Animation\n\nThe characters in cartoons seem to move, but really you are\
+    \ just watching lots of slightly different pictures that fool your brain into\
+    \ seeing movement. This is called animation. Sprites can be animated in the same\
+    \ way.\n\n+   What You'll Learn:\n- How to animate sprites\n- Sprites can change\
+    \ how they look\n- How to use costumes\n- How to load new sprites from the Scratch\
+    \ library\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_19_0.png)\n\nChanging Costumes\n\
+    Our cat sprite has two different pictures, or \"costumes,\" it can show. Start\
+    \ a new scratch project and click on the Costumes tab just above the block list.\
+    \ You will then see the two costumes the cat sprite can \"wear\".\n\nTo animate\
+    \ the cat, build and run this script. The forever loop repeats the next costume\
+    \ block. The picture of the sprite changes every half second, and this makes the\
+    \ cat look like it's walking. Try adding a move block in the loop to improve the\
+    \ animation.\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_19_1.png)\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_19_2.png)\n\
+    \n> Sprite's costumes are listed in order\n\nThis picks the next costume.\nQuickly\
+    \ swapping costumes makes it look as if the cat is walking.\n\n```\nwhen clicked\n\
+    forever\n  next costume\n  wait 0.5 secs\n```\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_19_3.png)\n\
+    \nPause stops the costumes from changing too quickly"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# Dancing Ballerina
+
+
+    You can use this same script to get other sprites dancing! Let''s add the ballerina
+    sprite to the project. Click on **Choose sprite from library** at the top of the
+    sprite list. Then select the ballerina and click OK.
+
+
+    Add the costume-changing script to the ballerina''s scripts area. She has four
+    costumes. Click on the **Costumes** tab to see them. When you run the script,
+    she uses them all as she dances on the stage.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_20_0.png)
+
+
+    Click on the first icon to see all the sprites
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_20_1.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_20_2.png)
+
+
+    # Sprite Party!
+
+
+    Try adding lots of dancing sprites to your project. Choose sprites with two or
+    more costumes. Try Dinosaur1 or some of the dancing kids.
+
+
+    # Show What You Know
+
+
+    You can make sprite dance. Can you solve these problems too?
+
+
+    +   1. A different picture a sprite can show on the stage is a ....................................................
+
+
+    +   2. ............................................ is showing pictures with slight
+    differences in order to make a sprite appear to move.
+
+
+    +   3. Can you rearrange the sprites below to animate a jumping pony?
+
+    Write the numbers 1 to 5 in the boxes to show the correct order.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_20_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Party Time!
+
+
+    We''ve learned a lot about making sprites to do things, but a project isn''t complete
+    if it happens on a silent, white stage! Let''s see how to give a project some
+    scenery and music from the Scratch libraries to liven things up.
+
+
+    +   What You''ll Learn:
+
+    - How to change the background picture
+
+    - How to add effects to the backdrop
+
+    - How to add music to your project
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_21_0.png)
+
+
+    # Adding Scenery—Backdrops
+
+
+    Just as a sprite can have many costumes, the stage too can have more than one
+    background picture, or backdrop. Click on the **Add new backdrop from library**
+    button at the bottom left of the **Stage info** area.
+
+
+    It''s Scratch Cat''s birthday, so choose the "party" stage. You''ll see the cat
+    on the stage! You can load more than one backdrop. Try loading "underwater2."
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_21_1.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_21_2.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_21_3.png)
+
+
+    # Light Show!
+
+
+    We can add scripts to the stage: click on the small picture of the stage area
+    at the top of the **Stage info** area. Then try running this script with your
+    party backdrop to bring it to life.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_21_4.png)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Music
+
+
+    A party isn''t a party without music!
+
+    Sounds can be loaded into a sprite the stage. But you must make scripts to play
+    them in the Scripts area.
+
+
+    Clicking on the speaker under the Sounds tab will take you to the Sound Library
+
+
+    # Load Some Music
+
+
+    Click on the stage again. Then click on the Sounds tab above the blocks and select
+    Choose sound from library (the speaker symbol).
+
+
+    New sound:
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_22_0.png)
+
+
+    # Select a Tune
+
+
+    Choose one of the music loops, such as “dance funky,” and click OK in the bottom
+    right corner to load. The sound will appear on the list of sounds.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_22_1.png)
+
+
+    # Make, Read, and Run a Script
+
+
+    Click on the Scripts tab and make this script. Read the script and run it. You
+    should have never-ending music!
+
+
+    # Show What You Know
+
+
+    The cat’s in the mood for a party. Are you in the mood for a quiz?
+
+
+    +   1. A background picture on the stage is called a ....................................
+
+    2. Circle the block that plays a whole sound before continuing: .........................
+
+
+    ```
+
+    play sound [pop ▼]
+
+    play sound [pop ▼] until done
+
+    ```
+
+
+    +   3. True or False?
+
+    a. A project can have only one backdrop loaded. ....................................
+
+    b. Only the sprite that loaded a sound can play it. ....................................................
+
+    c. The stage can have sounds and scripts. ....................................................
+
+    d. Once you’ve chosen a backdrop for a script, you can’t change it. .....................
+
+    a. A sprite can use a script to change the stage’s backdrop. .................................'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# if-then
+
+
+    If it''s raining, we decide to wear a raincoat. We can make this kind of decision
+    in Scratch using the if-then blocks from the yellow Control section. Like loops,
+    they wrap around other blocks and control when they are run.
+
+
+    +   What You''ll Learn:
+
+    * About if-then blocks
+
+    * How to control when blocks are run or skipped
+
+    * How to sense when keys are pressed
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_23_0.png)
+
+
+    # Spin Control
+
+
+    Let''s use if-then blocks to decide when our cat spins. We''ll use some light
+    blue Sensing blocks, which ask a “true or false?” question. Find them under the
+    Scripts tab.
+
+
+    +   Start a New Project
+
+    Add this script. What do you think it does? The block inside each if-then block
+    is only run if the answer to the question at the top of the block is “true.”
+
+
+    Cat turns 15 degrees to the left
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_23_1.png)
+
+
+    +   Run the Script
+
+    What happens? Nothing! Press the “a” key and the cat turns backward. Let the key
+    go and it stops. The turn block inside the first if-then block is only run when
+    the answer to the question key a pressed? is “true.”
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_23_2.png)
+
+
+    Cat turns 15 degrees to the right
+
+
+    +   Now Press the “d” Key
+
+    The cat turns the other way. The turn block inside the second if-then block is
+    only run when the answer to the question key d pressed? is “true.” If neither
+    key is pressed, then both blocks are skipped.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_23_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# A Closer Look at the if-then Block
+
+
+    Look at this if-then block taken from a script.
+
+    Read carefully and think about what it does.
+
+
+    If answer''s "false," blocks are skipped
+
+
+    Condition
+
+    (answer is "true" or "false")
+
+
+    If answer''s "true," blocks are run
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_24_0.png)
+
+
+    +   - The if-then block is a yellow Control block, because it controls blocks
+    inside it are run.
+
+
+    +   - An if-then block has a question known as a condition. The question must
+    have a true/false answer.
+
+
+    +   - The blocks inside the if-then block are only run when the answer to the
+    question is "true."
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_24_1.png)
+
+
+    +   - If the answer to the question is "false," then the blocks inside the if-then
+    block are ignored.
+
+
+    +   - Add this if-then to your script so the cat meows when you press the "s"
+    key. Put the if-then block inside the loop but outside the other if-then blocks.
+
+
+    # Show What You Know
+
+
+    If you''re a Scratch expert, then you''ll find this bug hunt easy!
+
+
+    This script should make the sprite change color when you press the space key,
+    but the sprite changes color all the time. Can you spot the "bug"?
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_24_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Variables
+
+
+    Computers are excellent at storing information, or "data." This data could be
+    someone''s name or the weight of a cake in a competition. A variable is like a
+    labeled box in which you can store data until your program needs it.
+
+
+    +   What You''ll Learn:
+
+    * Variables store data in programs
+
+    * How to make and use Scratch variables
+
+    * Using variables makes code clearer
+
+
+    # A Box with a Label
+
+
+    A variable can store a number or some words (programmers call words a "string\
+    The thing stored in a variable is called its value. You can change the value of
+    a variable. Give variables helpful names to make the code easy to read.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_25_0.png)
+
+
+    Follow these instructions to create your first variable in Scratch.
+
+
+    +   1 **Start with Data**
+
+    Select **Data** under the **Scripts** tab. Then click on **Make a Variable** button.
+    The **New Variable** window will pop up.
+
+
+    +   2 **Name It, Check It, Click It!**
+
+    First, give your variable a useful name. Check *For all sprites*, and click **OK**.
+    (You can ignore *For this sprite only* and *Cloud variable boxes*.)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_25_1.png)
+
+
+    +   3 **Get to Know Your Blocks!**
+
+    Blocks for this variable will then appear in the blocks area. Make sure you know
+    what each of the blocks does.
+
+
+    Check to show the variable on the stage
+
+
+    The variable block can be used inside other blocks
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_25_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Countdown Cat
+
+
+    Time to see some variables in action. Start a new project.
+
+
+    In the orange Data section, create two variables called count and message. Always
+    give your variables names that explain what''s stored in them.
+
+
+    Add this script. Make sure you drag the little orange blocks with count and message
+    on them into the windows of the say blocks. Don''t type the words into the say
+    windows. If you do, the cat will say the variable''s name rather than what''s
+    stored in the variable.
+
+
+    Read the script. Can you work out what''s going to happen? Now run the script.
+
+
+    Experiment with the numbers and text in the script. Can you make the cat count
+    up instead of down?
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_26_0.png)
+
+
+    ```
+
+    when clicked
+
+    set [count] to [10]
+
+    set [message] to Blast off!
+
+    repeat (10)
+
+    say [count] for 1 secs
+
+    change [count] by -1
+
+    ```
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_26_1.png)
+
+
+    # See What You Know
+
+
+    Test how much Scratch data you''ve stored in your brain-box.
+
+
+    +   1. A variable has a name and a ....
+
+    2. Make a Variable button is found in the orange ... blocks section.
+
+    3. Fill in the speech bubbles for these sets of blocks:
+
+
+    ```
+
+    set [name] to Spot!
+
+    say [name]
+
+    set [name] to Spot!
+
+    say [name]
+
+    ```
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_26_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Math
+
+
+    Scratch can do all the math you know about. But some of the symbols it uses are
+    different, to fit with what''s on your computer''s keyboard. We can do equations
+    in Scratch and use variables in them. Scratch can even roll dice for us.
+
+
+    +   What You''ll Learn:
+
+    * How to do math in Scratch
+
+    * What math symbols computers use
+
+    * How to do equations with variables
+
+    * How to "roll dice" using the computer
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_27_0.png)
+
+
+    # Math Tools
+
+
+    To do math you need the green Operators blocks. Each block does a different problem
+    with the numbers in the two windows.
+
+
+    Add (+)
+
+    The "+" block adds the two numbers in block together.
+
+
+    Subtract (-)
+
+    The "-" block takes the second number away from the first.
+
+
+    # Placing Operators
+
+
+    Wherever you put an operator block, it will put the answer to the problem. So
+    if you put it into the window of a say block, the cat will say the answer.
+
+
+    Multiply (*)
+
+    Scratch uses the "*" symbol, because "x" looks like a letter.
+
+
+    Divide (/\)
+
+    The keyboard has no division sign. Scratch uses "/" instead.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_27_1.png)
+
+
+    Add (+) block put into say window
+
+
+    Smart cat!
+
+
+    # Math and Variables
+
+
+    We can use operator blocks to solve problems with variables. For example, to find
+    the total number of pets, we can use the add (+) block to add up the values of
+    the variables dogs and cats, and store the answer in a variable called pets.
+
+
+    Add (+) block put into window of set block
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_27_2.png)
+
+
+    Cat will think of 15'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# ► Throwing Dice
+
+
+    A random number is one we can''t predict. It''s like a number we get when we roll
+    dice—we don''t know what the numbers will be before we roll. Scratch can act like
+    dice and “roll” for us. Try this script in a new project.
+
+
+    Read the script, then run it. The cat will show you four random numbers as it
+    thinks of them. Random numbers are useful in games, because they make the action
+    difficult to guess.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_28_0.png)
+
+
+    # Show What You Know
+
+
+    Try these mathematical mind-bogglers.
+
+
+    +   1. You are the computer! Calculate the values of these blocks.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_28_1.png)
+
+
+    +   2. These blocks use variables. Can you work out the answers?
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_28_2.png)
+
+
+    +   3. Write down the values stored in these variables.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_28_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "# Inputs and Events\n\nThe data put into a program, such as\nthe answer you\
+    \ type when Scratch\nasks a question, is called input. Events\nare actions, like\
+    \ clicking a sprite or\npressing a chosen key, that Scratch\ncan use to run scripts.\n\
+    \n+   What You'll Learn:\n* How to ask questions\nand use the answers\n* What\
+    \ an **Event** block is\n* How to run a script with\na key press or click\n\n\
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_29_0.png)\n\n# ▼ Just Ask\n\nSprites\
+    \ can use questions and answers using\nt light blue **ask** and **answer** blocks\
+    \ under\nthe **Sensing** tab. Start a new project and add\nthis script. Read the\
+    \ script. What do you think\nit it does? Run the script to test your ideas.\n\n\
+    The cat asks\nthe question.\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_29_1.png)\n\
+    \nWhat's for\nlunch?\n\nYou type in\n\"Cat food\"\n\n```\nwhen ask What's for\
+    \ lunch? wait\nthink join Yum! answer for 2 secs\n```\n\nQuestion goes\nin here\n\
+    \n```\nCat food! \n```\n\nFrom Operators\nsection\n\nTyped reply stored\nin **answer**\
+    \ block\n\nThen press **enter**\nclick the blue check\n\n# Lunchtime for Scratch!\n\
+    \nThe cat asks the question and waits for\ntoype in your reply using the keyboard.\n\
+    When you press **enter**, what you typed in\ncomes the value of the **answer**\
+    \ block.\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_29_2.png)\n\nYum!\nCat food!\n\
+    \n# Answers are Like Variables\n\nThe **answer** block works just like a variable.\n\
+    Wherever you put the **answer** block it will\nbe replaced by your answer to the\
+    \ question.\nThe green **join** block in the script above just\ntakes what's in\
+    \ its two windows and links\nthem together as a single item.\n\nHe's always\n\
+    hungry!\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_29_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Events Trigger Scripts
+
+
+    Events are things that happen that the computer can tell Scratch about, such as
+    key presses and mouse clicks. The brown Events “header” blocks start to run a
+    script when a chosen event happens, in the same way that the green flag button
+    can start a script when you click on it.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_30_0.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_30_1.png)
+
+
+    # Build a Drum Kit
+
+
+    Create lists of scripts like these. Select a different key and a different drum
+    for each version of the script. The blocks below an Events header are run when
+    you press the correct key. Play an epic drum solo using your selected keys!
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_30_2.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_30_3.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_30_4.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_30_5.png)
+
+
+    # Show What You Know
+
+
+    Can you answer these questions about inputs and Events?
+
+
+    +   1. Which blue Sensing block makes a sprite ask a question? ............................
+
+    2. Which block holds the reply given to the question? ....................................
+
+    3. Something that happens to the computer, like a mouse click or a key press,
+    is called an ....................................
+
+    4. What happens if I click a sprite with this script? ....................................................
+
+    5. Can more than one script be running at once? ....................................
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_30_6.png)'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# if-then-else
+
+
+    Let''s meet the if-then-else block. This block uses a question, or condition,
+    to choose between two groups of blocks to run. We''ll also look at some handy
+    condition blocks that use variables and values to ask “true or false?”
+
+
+    +   What You''ll Learn:
+
+    * How to compare numbers, replies, and variables to make decisions
+
+    * How an if-then-else block works
+
+
+    # Comparing Things
+
+
+    There is another kind of block that asks a “true or false?” question. In the green
+    Operators section there are 3 blocks that compare what''s in their two windows.
+    To read them, you need to know what these symbols mean: =, <, and >.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_31_0.png)
+
+
+    # Password Checker
+
+
+    An if-then-else block has two groups of blocks inside. It runs the first group
+    if the condition is true, and the second group if the condition is false. We can
+    use it to check a password.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_31_1.png)
+
+
+    Block runs if answer is “dragon”
+
+
+    Block runs if answer is NOT “dragon”
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_31_2.png)
+
+
+    Equals (=) block compares answer with password'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Friend or Foe?
+
+
+    Read and run the script. Only one of the two say blocks is run. The other is skipped.
+    We get just one of the replies. If we type in the correct password
+
+
+    If condition is TRUE, then else
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_32_0.png)
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_32_1.png)
+
+
+    # Free Ice Cream!
+
+
+    The if-then-else block can be used to check if you''re under 10 and so get free
+    ice cream. One say block gets run, but the other doesn''t. Read the script. Run
+    it a few times with different ages.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_32_2.png)
+
+
+    Is age less than 10? TRUE—under 10 FALSE—10 and over
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_32_3.png)
+
+
+    # Show What You Know
+
+
+    Answer the questions to prove you''re a smooth Scratch operator
+
+
+    +   1. What shape blocks go into the condition window of an if-then or if-then-else
+    block?
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_32_4.png)
+
+
+    +   2. Look at the variables below, then circle the green operator blocks that
+    have the value "true."
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_32_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# A Game: Dragon!\n\nWe’ve learned a lot about Scratch so far. Now let’s put\
+    \ it all together into a game. You are the cat. You can control where you are\
+    \ on the stage using the computer mouse. Avoid the ferocious dragon for as long\
+    \ as you can!\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_33_0.png)\n\n+   Enter\
+    \ the Dragon\nAdd the “Dragon” sprite to the project. Add a variable for all sprites,\
+    \ and give it the name speed.\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_33_1.png)\n\
+    \n+   Get the Dragon Bouncing\nChoose the dragon in the sprite list and add this\
+    \ script. This is the bouncing script we used before, but with a slight change.\
+    \ We control the dragon’s speed with a variable and set the dragon off in a different\
+    \ direction each game. Read and run the script. The dragon bounces around the\
+    \ stage.\n\n```\nwhen clicked\nset [speed] to [10]\npoint toward [cursor]\nforever\n\
+    \  move [speed] steps\n  if on edge, bounce\n```\n\nPoints dragon in a new direction\
+    \ when run\n\n+   Mouse Controls Cat!\nNow select the cat in the sprite list and\
+    \ add this script. Carefully read the script. It “sticks” to the cat to the cursor.\
+    \ Inside the loop it checks if we’re touching the dragon. If we are, it stops\
+    \ the project—game over! Run the script to check that it works.\n\n```\nwait block\
+    \ lets dragon move away\nIf true, then scripts stop\nwhen clicked\nwait [1] secs\n\
+    forever\n  go [cursor]\n  if [touching Dragon ?] then\n    stop [all]\n```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# Score\n\nA proper game needs a score and a challenge. Add a new variable\
+    \ for all sprites called score. Leave it checked so that it shows on the stage.\n\
+    \nAdd this script to the cat. Read it. For every 3 seconds you drag the dragon,\
+    \ you score a point. But every time you score, the dragon's game speed goes up\
+    \ one!\n\nRun the game to see that it works as you expect. If it doesn't, check\
+    \ everything from the beginning. Compete with your friends to get the best score.\
+    \ Why not add a backdrop and some music?\n\n```\nwhen clicked\nset score to 0\f\
+    orever\nwait 3 secs\nchange score by 1\nchange speed by 1\n```\n\nLeave this box\
+    \ checked\n\nThe more you score, the faster the dragon moves\n\n![](img/c8b294ee7af329f5e2b96cede7af2ab1_34_0.png)\n\
+    \nDo you like Scratch?\n\nOnly when I itch!\n\n# Show What You Know\n\nAnswer\
+    \ the quiz—will it be a high score or “game over?”\n\n+   1. Why do we leave the\
+    \ check box on the score variable checked?\n\n+   2. How could you make the dragon\
+    \ go to half speed at the start?\n\n+   3. Which block could you add inside the\
+    \ cat’s forever loop to make it look like it’s walking?\n\n+   4. How many costumes\
+    \ does the dragon have?\n\n+   5. What would happen if you right-clicked the dragon\
+    \ on the sprite list and chose duplicate?"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Solutions
+
+
+    Well done, you''ve completed all the tasks! Time to check your “Show What You
+    Know” answers. How did you do? Are you a Scratch genius now?
+
+
+    pages 4–5 What is Scratch?
+
+
+    +   1. A **script** is a set of instructions (program) in Scratch.
+
+    2. Objects that perform actions in a project are called **sprites**.
+
+    3. In a Scratch program, the action takes place on the **stage**.
+
+    4. Starting a program is called **running** it.
+
+    5. A collection of sounds or graphics is called a **library**.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_35_0.png)
+
+
+    pages 10–11 Your First Project
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_35_1.png)
+
+
+    pages 12–13 Move It!
+
+
+    +   1. What color are the **Motion** blocks? **dark blue**
+
+    2. Scratch measures distances in units called **steps**.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# 2a. How many of these units wide is the stage?
+
+
+    480
+
+
+    # 2b. How many of these units tall is the stage?
+
+
+    360
+
+
+    # 3. A mistake in a program is known as a “bug.”
+
+
+    This script should make the cat move across the stage slowly, but when I click
+    the green flag to run it, nothing happens! What’s wrong?
+
+
+    The “when green flag clicked” block is missing.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_36_0.png)
+
+
+    # pages 14–15 Which Way?
+
+
+    +   1. What number should replace the ? in this block to set the sprite’s direction
+    to:
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_36_1.png)
+
+
+    Up = 0
+
+
+    Left = -90
+
+
+    Down = 180
+
+
+    Right = 90
+
+
+    +   2. Test your Scratch script reading powers! What does this script do? Read
+    it carefully and try to act each block out in your mind.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_36_2.png)
+
+
+    The script makes the cat run toward the cursor on the stage.
+
+
+    # pages 16–17 Loops
+
+
+    +   1. Loops are used to repeat groups of blocks.
+
+
+    +   2. Two types of Scratch loops are forever and repeat.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# 36
+
+
+    3. You can stop a forever loop by clicking the red button.
+
+    4. In which section do you find the pink blocks? Sound
+
+    5. Which block section has the loops in it? Control
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_37_0.png)
+
+
+    6. Bug hunt! This script should draw the four sides of a square, but nothing happens
+    when it’s run. Can you spot and suggest a fix for the bug? Programmers call this
+    “debugging.”
+
+    The repeat loop doesn’t say how many repeats to do. Type “4” into its window to
+    fix the bug.
+
+
+    pages 18–19 Animation
+
+
+    1. A different picture sprite can show on the stage is a costume.
+
+    2. Animation is showing pictures with slight differences in order to make a sprite
+    appear to move.
+
+    3. Can you rearrange the sprites below to animate a jumping pony? Write the numbers
+    1 to 5 in the boxes to show the correct order.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_37_1.png)
+
+
+    pages 20–21 Party Time!
+
+
+    1. A background picture on the stage is called a backdrop.
+
+    2. Circle the block that plays a whole sound before continuing:
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_37_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# 3. True or False?
+
+
+    +   a. A project can have only one backdrop loaded. False
+
+
+    +   b. Only the sprite that loaded a sound can play it. True
+
+
+    +   c. The stage can have sounds and scripts. True
+
+
+    +   d. Once you''ve chosen a backdrop for a script, you can''t change it. False
+
+
+    +   e. A sprite can use a script to change the stage''s backdrop. True
+
+
+    pages 22–23 if-then
+
+
+    This script should make the sprite change color when you press the space key,
+    but the sprite changes color all the time. You can spot the “bug?” The “change
+    color effect by 25” block needs to go inside the “if-then” block.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_38_0.png)
+
+
+    pages 24–25 Variables
+
+
+    +   1. A variable has a name and a value.
+
+
+    +   2. Make a Variable button is found in the orange Data blocks section.
+
+
+    +   3. Fill in the speech bubbles for these sets of blocks:
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_38_1.png)
+
+
+    Orange variable block makes the dog say “Spot!” (the value of the variable name)
+
+
+    If you type in “name?” he''ll just say “name!
+
+
+    (Always use the orange variable block to get a variable’s value.)'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# 38
+
+
+    pages 26–27 Math
+
+
+    1. You are the computer! Calculate the values of these blocks.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_39_0.png)
+
+
+    2. These blocks use variables. Can you work out the answers?
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_39_1.png)
+
+
+    3. Write down the values stored in these variables.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_39_2.png)
+
+
+    pages 28–29 Input and Events
+
+
+    +   1. Which blue Sensing block makes a sprite ask a question? ask
+
+    2. Which block holds the reply to the question? answer
+
+    3. Something that happens to the computer, like a mouse click or a key press,
+    is called an event.
+
+    4. What happens if I click a sprite with this script?
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_39_3.png)
+
+
+    The sprite says: “You clicked me!”
+
+
+    +   5. Can more than one script be running at once? Yes. (Many scripts can run
+    on many sprites—all at once.)'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# pages 30–31 if-then-else
+
+
+    +   1. What shape blocks go into
+
+    the condition window of an
+
+    if-then or if-then-else block.
+
+
+    +   2. Look at the variables below,
+
+    then circle the green operator
+
+    blocks that have the value “true.”
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_40_0.png)
+
+
+    # pages 32–33 A Game: Dragon!
+
+
+    +   1. Why do we leave the check box on the score variable checked?
+
+    The box is checked so the score is shown on the stage.
+
+
+    +   2. How could you make the dragon go at half speed at the start?
+
+    Change “set speed 10” to “set speed 5.”
+
+
+    +   3. Which block could you add inside the cat’s forever loop to make it
+
+    it it’s walking? The “next costume” block from “Looks.”
+
+
+    +   4. How many costumes does the dragon have? 2 (You might want to try
+
+    altering the game script so that the dragon changes costumes when it
+
+    touches the cat.)
+
+
+    +   5. What would happen if you right-clicked the dragon on the sprite list and
+
+    chose duplicate?
+
+    You find yourself being chased by TWO dragons, and that would
+
+    make the game very hard!'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# Glossary
+
+
+    animation
+
+    Changing pictures quickly to make something appear to move on the screen.
+
+
+    Stuck in Scratch? Click on Tips on the menu bar for advice. Or use the Help tool
+    ?—click on it, and then click a block to bring up the help page for that block.
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_41_0.png)
+
+
+    backdrop
+
+    The picture behind the sprites on the stage.
+
+
+    debug
+
+    To remove bugs; to find and fix the errors in a program.
+
+
+    operating system (OS)
+
+    The program that controls everything on your computer, such as OS or Windows.
+
+
+    backpack
+
+    A way to copy things between Scratch projects.
+
+
+    event
+
+    Something that happens on the computer, like a mouse click.
+
+
+    run
+
+    To start a program.
+
+
+    block
+
+    An instruction in Scratch. Blocks can be joined together.
+
+
+    input
+
+    Data that goes into the program; for example, from the keyboard.
+
+
+    script
+
+    A stack of instructions that are run in.
+
+
+    bug
+
+    A mistake in a program. A bug because insects got into the wiring of the first
+    computers, causing errors.
+
+
+    library
+
+    A collection of sprites, sounds, or costumes.
+
+
+    sprite
+
+    A picture on the stage that can move and change.
+
+
+    condition
+
+    A ‘true’ or false?’ question that is used to make a decision in a computer program.
+
+
+    loop
+
+    An instruction that makes instructions repeat.
+
+
+    stage
+
+    The area containing the sprites, where a Scratch project runs.
+
+
+    costume
+
+    The picture sprite shows on the stage.
+
+
+    program
+
+    A list of instructions that tell a computer to do.
+
+
+    string
+
+    The word used by programmers for data that contains words.
+
+
+    data
+
+    Information—for example, numbers or words.
+
+
+    operator
+
+    A block that works out from data, such as adding two numbers together.
+
+
+    variable
+
+    A place to store data in a program. A variable always has a name and a value.
+
+
+    > Note for Parents
+
+    Help your child work logically through any difficulties. Check for obvious errors,
+    such as swapping similar blocks in scripts. Also check that scripts are controlling
+    the correct sprites. Don''t forget that Scratch should be fun. The Scratch website
+    is run by Massachusetts Institute of Technology (MIT) and is intended to be safe
+    for children to use. Try it yourself!
+
+
+    ![](img/c8b294ee7af329f5e2b96cede7af2ab1_41_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# Get ready to learn a whole new language: computer coding!
+
+
+    Get inspired, learn how to code, and practice the basics of working with Scratch
+    in this computer programming workbook.
+
+
+    A playful introduction to working with Scratch, the free online coding platform
+    used by millions of people around the world
+
+
+    Helps develop the essential skills needed to work with code, including problem
+    solving and critical thinking
+
+
+    Perfect for beginners, with clear instructions, helpful illustrations, and no
+    complicated jargon
+
+
+    # Get ready, get set, get coding!'
+  merge: -1
+  img_proc: true
