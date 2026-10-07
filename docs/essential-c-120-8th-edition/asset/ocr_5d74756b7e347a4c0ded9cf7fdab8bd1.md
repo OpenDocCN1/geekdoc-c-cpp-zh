@@ -1,0 +1,1 @@
+The IntelliTect team is committed to devoting a significant portion of the company’s profits to the fight against extreme poverty around the world. Their goal is to give freedom to those without hope through their partnership with organizations fighting to eliminate poverty and injustice both locally and worldwide.

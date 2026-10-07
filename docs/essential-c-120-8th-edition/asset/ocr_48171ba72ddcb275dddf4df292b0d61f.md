@@ -1,0 +1,11 @@
+Hello, World
+
+C#, the compiler output is an intermediate language that a second compiler translates to machine language. This is discussed further in the “Managed Execution and Common Language Infrastructure” section later in this chapter. Source code is simply the text that makes up a program, so Listing 1.1 is considered source code to our HelloWorld Program. The word code is often used interchangeably with source code.
+
+# Creating, Editing, Compiling, and Running C# Source Code
+
+Once you have written your C# code, it is time to compile and run it. Based on your operating system, you have a choice of which compiler to download. Generally, the implementation is packaged into a software development kit (SDK). The SDK includes the compiler, the runtime execution engine, the framework of pragmatically accessible functionality that the runtime can access (“Application Programming Interface” later in the chapter), and any added tooling (such as a build engine for automating build steps) that must be bundled with the SDK. Given that there are compilers for multiple platforms and C# has been publicly available since 2000 (see “Multiple .NET Frameworks” later in the chapter), there are several options to choose from.
+
+For each operating system the installation instructions vary. For this reason, we recommend you visit https://dotnet.microsoft.com/download for download and installation instructions, selecting the package to download based on which operating system you are developing on. Furthermore, you have a choice of .NET implementation(s) to use—sometimes referred to as .NET framework(s). While we could provide further details here, the .NET download site has the most updated instructions for each combination supported. While there are multiple framework versions available, the easiest is to download the default one, which corresponds to the latest fully released.
+
+There are also numerous ways to edit your source code, including the most rudimentary of tools, such as Notepad on Windows, TextEdit on Mac/macOS, or on Linux. However, you’re likely to want something more advanced so that at least your code is colorized. Any programming editor that supports C# will suffice. developing on Linux, we recommend you consider the open source editor Visual

@@ -1,0 +1,11 @@
+prior to running the program. This pre-execution-time compilation needs to take place on the computer on which the program will be executing because evaluate the machine characteristics (processor, memory, and so on) as part of its effort to generate more efficient code. The advantage of using NGEN at installation (at any time prior to execution) is that you reduce the need for the jitter to run at startup, decreasing startup time.
+
+As of Visual Studio 2015 and later, the C# compiler supports .NET native compilation, whereas the C# code is compiled into native machine code when creating a deployed version of the application, much like using the NGEN tool. Universal Windows Applications make use of this feature.
+
+# Runtime
+
+Even after the runtime converts the CIL code to machine code and starts to execute it, it continues to maintain control of the execution. The code that executes under the control of an agent as the runtime is managed code, and the process of executing under control of the runtime is managed execution. The control over execution transfers to the data; this makes managed data memory for the data is automatically allocated and de-allocated by the runtime.
+
+Somewhat inconsistently, the term Common Language Runtime is not technically a generic term that is part of the CLI. Rather, CLR is the Microsoft-specific implementation of the runtime for the .NET framework. Regardless, CLR is casually used as a generic term for runtime, and the technically accurate term, Virtual Execution System, is seldom outside the context of the CLI specification.
+
+Because an agent controls program execution, it is possible to inject additional services into a program, even though programmers did not explicitly code for them. Managed code, therefore, provides information to allow these services to be attached. Among other items, managed code enables the location of metadata about a type member, exception handling, access to security information, and the capability to walk the stack. The remainder of this section includes a description of some additional services made available via the runtime and managed execution. The CLI does not explicitly require of all, but the established CLI frameworks have an implementation of each.

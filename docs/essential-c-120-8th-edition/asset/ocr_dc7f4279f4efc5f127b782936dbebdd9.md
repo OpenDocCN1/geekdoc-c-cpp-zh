@@ -1,0 +1,10 @@
+cleanup was done in the Dispose() method rather than waiting for the finalizer to execute.
+
+Without the call to SuppressFinalize(), the instance of the object will be included in the f-reachable queue—a list of all the objects that are mostly ready for garbage collection, except they have have implementations. The runtime cannot garbage-collect objects with finalizers until after their finalization methods have been called. However, garbage collection itself does not call the finalization method. Rather, references to finalization objects are added to the f-reachable queue and are processed by an additional thread at a time deemed appropriate based on the execution context. In an ironic twist, this approach delays garbage collection for the managed resources—when it is most likely that these resources should be cleaned up earlier. The reason for the delay is that the f-reachable queue is a list of “references”; as so, the objects are not considered garbage until after their finalization methods are called and the object references are removed from the f-reachable queue.
+
+> NOTE
+Objects with finalizers that are not explicitly disposed will end up with an extended object lifetime. Even after all explicit references have gone out of scope, the f-reachable queue will have references, keeping the object alive until the f-reachable queue processing is complete.
+
+For this reason, `Dispose()` invokes `SuppressFinalize` (which is `System.GC.SuppressFinalize`). Invoking this method informs the runtime that it should not add this object to the finalization queue, but instead should allow the garbage collector to de-allocate the object when it no longer has any references (including any f-reachable references).
+
+Second, `Dispose()` calls `Dispose(bool disposing)` with an argument of true. The result is that the `Dispose()` method on Stream is invoked (cleaning up its resources and suppressing its finalization). Next, the temporary file itself is deleted immediately upon calling `Dispose()`. This important call eliminates the need to wait for the finalization queue to be processed before cleaning up potentially expensive resources.

@@ -1,0 +1,1 @@
+In summary, the nullability of reference types by default was a frequent source of defects in the form of System.NullReferenceExceptions, and the behavior of the compiler led developers astray unless they took explicit actions to avoid the pitfall.

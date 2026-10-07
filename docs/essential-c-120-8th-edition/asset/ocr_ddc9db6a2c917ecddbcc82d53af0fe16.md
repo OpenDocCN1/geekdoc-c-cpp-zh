@@ -1,0 +1,5 @@
+# Chapter 3: More with Data Types
+
+TABLE 3.1: Sample Code for Tuple Declaration and Assignment (continued)
+
+In the first four examples, although the right-hand side represents a tuple, the left-hand side represents individual variables that are assigned together using tuple syntax, a syntax involving two or more elements separated by commas and associated with parentheses.(The term tuple syntax is used here because the underlying data type that the compiler generates on the left-hand side isn't technically a tuple.) The result is that we start with values combined as a tuple on the right, the assignment to deconstructs the tuple into its constituent parts. In Example 2, the left-hand side assignment is to pre-declared variables. However, in Examples 1, 3, and 4, the variables are declared within the tuple syntax. Given that we are only declaring variables, the naming and casing convention follows the guidelines discussed in Chapter 1—“DO use camelCase variable names,” for example.

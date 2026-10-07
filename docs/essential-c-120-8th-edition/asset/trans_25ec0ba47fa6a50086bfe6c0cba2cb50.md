@@ -1,0 +1,186 @@
+
+
+# 重新抛出封装的异常 621
+
+要将整个项目更改为未检查或检查模式，请分别将 `CheckForOverflowUnder` 属性设置为 `false` 或 `true`。
+
+```xml
+<PropertyGroup>
+  <CheckForOverflowUnder>true</CheckForOverflowUnder>
+</PropertyGroup>
+```
+
+C# 还支持 `unchecked` 块，它会对数据进行截断而不是为该块抛出异常（参见列表 11.8 及其输出 11.3）。
+
+# 列表 11.8：未检查块示例
+
+```csharp
+using System;
+public class Program
+{
+    public static void Main()
+    {
+        unchecked
+        {
+            // int.MaxValue 等于 2147483647
+            int n = int.MaxValue;
+            n = n + 1;
+            Console.WriteLine(n);
+        }
+    }
+}
+```
+
+# 输出 11.3
+
+```
+-2147483648
+```
+
+即使在编译期间开启了检查（checked）选项，列表 11.8 中代码中的 `unchecked` 关键字也会阻止运行时在执行期间抛出异常。
+
+在不允许使用语句的情况下，可以使用等价的 `checked` 和 `unchecked` 表达式。例如，字段初始化器可能由表达式而非语句组成：
+
+```csharp
+int number = unchecked(int.MaxValue + 1);
+```
+
+# 总结
+
+抛出异常会产生巨大的性能影响。单个异常会导致加载和处理大量的运行时栈信息——这些数据在其他情况下是不会加载的——而且处理这些信息需要大量的时间。正如第 5 章所示，你应该只使用异常来处理特殊情况；API 应该提供机制来检查是否会抛出异常，而不是强制调用特定的 API 来判断是否会抛出异常。
+
+下一章将介绍泛型.¹10 事实上，它基本上废弃了对 `System.Collections` 命名空间的所有使用，该命名空间以前几乎用于每个项目。
+
++ 10. 从 C# 2.0 开始引入的功能。
+
+# 12 泛型
+
+随着项目变得越来越复杂，你需要一种更好的方法来重用和自定义现有软件。为了促进代码重用，C# 包含了一个名为泛型的特性。
+
+泛型在词法上类似于 Java 中的泛型和 C++ 中的模板。在所有三种语言中，这些特性都允许实现一次算法和模式，而不需要为算法或模式操作的每种类型单独单独实现。然而，C# 泛型在实现细节以及对各自语言类型系统的影响方面，与 Java 泛型和 C++ 模板都有很大不同。正如方法之所以强大是因为它们可以接受参数一样，接受参数的类型和方法也具有多得的功能。
+
+![](img/ffe0f34eac7523830420733690014d17_657_0.png)
+
+泛型在 2.0 版本中被添加到运行时和 C# 中。
+
+# 不使用泛型的 C#
+
+我们通过检查一个没有使用泛型的类来开始对泛型的讨论。该类 `System.Collections.Stack` 表示一个对象集合，其中最后添加到集合的项是第一个从集合中检索的项（后进先出 [LIFO]）。`Push()` 和 `Pop()` 是 `Stack` 类的两个主要方法，分别向栈中添加项和从栈中删除项。`Stack` 类上的方法声明出现在列表 12.1 中。
+
+列表 12.1：System.Collections.Stack 的方法签名
+
+```csharp
+public class Stack
+{
+    public virtual object Pop()
+    {
+        // ...
+    }
+    public virtual void Push(object obj)
+    {
+        // ...
+    }
+}
+```
+
+程序频繁使用栈类型集合来方便多次撤销操作。例如，列表 12.2（结果如输出 12.1 所示）使用 `System.Collections.Stack` 类在模拟扭画板（Etch A Sketch）玩具的程序执行撤销操作。
+
+列表 12.2：在类似扭画板玩具的程序支持撤销
+
+```csharp
+using System.Collections.Generic;
+
+public class Program
+{
+    // ...
+    public static void Sketch()
+    {
+        Stack<Cell> path = new();
+    }
+```
+
+```csharp
+Cell currentPosition;
+ConsoleInfo key;
+// ...
+
+do {
+    // 根据用户输入的方向键
+    // 指向进行绘图
+    key = Move();
+
+    switch(key.Key) {
+        case ConsoleKey.Z:
+            // 撤销上一次 Move
+            if(path.Count >= 1)
+            {
+                currentPosition = (Cell)path.Pop();
+                Console.SetCursorPosition(
+                    currentPosition.X, currentPosition.Y
+                    // ...
+                );
+                Undo();
+            }
+            break;
+        case ConsoleKey.DownArrow:
+            // ...
+        case ConsoleKey.UpArrow:
+            // ...
+        case ConsoleKey.LeftArrow:
+            // ...
+        case ConsoleKey.RightArrow:
+            // SaveState();
+            if(Console.CursorLeft < Console.WindowWidth - 2)
+            {
+                currentPosition = new Cell(
+                    Console.CursorLeft + 1, Console.CursorTop);
+            }
+            path.Push(currentPosition);
+            // ...
+            break;
+
+        default:
+            Console.Beep();
+            break;
+    }
+} while(key.Key != ConsoleKey.X); // 使用 X 退出。
+```
+
+# 626 第 12 章：泛型
+
+```csharp
+// ...
+}
+public struct Cell
+{
+    public int X {get; }
+    public int Y {get; }
+
+    public Cell(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+```
+
+OUTPUT 12.1
+
+![](img/ffe0f34eac7523830420733690014d17_660_0.png)
+
+使用 `path` 变量（它声明为 `System.Collections.Stack`），通过向 `Stack.Push()` 方法传递 `Cell` 类型来保存状态。如果用户输入 Z（或按下 Ctrl+Z），通过从栈中检索来撤销上一次移动。
+
+尽管这段代码是可行的，但 `System.Collections.Stack` 类有一个致命缺陷。如列表 12.1 所示，`Stack` 类收集 `object` 类型的值。因为公共运行时（CLR）中的每个对象都派生自 `object`。无法验证你放入的元素是同质或预期的类型。此外，当从 `Pop()` 方法检索数据时，你必须将返回值强制转换为 `Cell`。但如果 `Pop()` 方法返回的值类型不是 `Cell`，则会抛出异常。通过在运行时使用强制转换来推迟检查，你会使程序变得脆弱。创建可以处理多种数据类型的类的根本问题在于，它们必须与公共基类（或接口）工作，通常是 `object`。
+
+使用值类型（如 `struct` 或 `int`）会加剧这个问题。例如，当你将值传递给 `Stack.Push()` 方法时，运行时会自动对其装箱。同样，当你检索值时，你需要将从 `Pop()` 方法获取的对象引用拆箱为值类型。将引用强制转换为基类或接口对性能的影响微乎其微，但值类型的装箱操作会引入额外的开销，因为它必须分配内存并在以后进行垃圾回收。
+
+C# 是一门鼓励类型安全的语言：该语言的设计使得许多错误（例如将整数赋值给字符串类型的变量）可以在编译时捕获。根本问题是 `Stack` 类并不像人们预期的 C# 程序那样具有类型安全性。为了通过将栈的内容限制为特定数据类型来强制类型安全（不使用泛型），你必须创建一个专门的栈类，如列表 12.3 所示。
+
+# 12.3：定义专门的栈类
+
+```csharp
+public class CellStack
+{
+    public Cell Pop() { return new Cell(); } // 返回
+    // 最后一个单元
+}
+```

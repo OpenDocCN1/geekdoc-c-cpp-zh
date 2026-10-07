@@ -1,0 +1,3 @@
+you get there, however, you need to consider another programming paradigm that builds on object-oriented programming: interfaces. This is the subject of Chapter 8.
+
+The chapter ended with an examination of pattern matching with the is operator and both the switch statement and C# 8.0's switch expression/statement. While C# 7.0 provided the initial pattern matching support, all versions through C# 11 have expanded these capabilities.

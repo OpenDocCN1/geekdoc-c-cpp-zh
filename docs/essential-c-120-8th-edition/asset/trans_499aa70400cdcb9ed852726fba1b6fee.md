@@ -1,0 +1,219 @@
+
+
+# 索引 1181
+
+- ToEnumerable() 方法, 766, 774-776, 867-881
+- ToList() 方法, 770, 774-776
+- ToLookup() 方法, 538, 774-778, 800
+- ToLower() 方法, 17-18, 80-538
+- 读 (Torn reads), 672, 941, 1041
+- ToString() 转换, 89, 532, 538
+- 描述, 89, 513-514, 532
+- 枚举 (enum), 532-538, 539-539, 543
+- FlagsAttribute, 543, 906-908, 910-911
+- 重写 (overriding), 408, 513-514, 532
+- 全排序集合 (Total ordering collections), 113, 754-756, 832-834
+- ToUpper() 方法, 17-18, 80-518
+- TPL, 943, 1023-1025
+- TRACE 预处理器索引, 19, 207-214, 354
+- Trace() 方法, 417, 514, 577
+- 异常处理 (Trapping errors), 114, 274-275, 604-605
+- Trim() 方法, 227-228, 288, 325
+- TrimEnd() 方法, 122, 325, 514
+- TrimStart() 方法, 29-32, 288, 325
+- ToSize() 方法
+- 列表 (lists), 129, 770, 835-839
+- 队列 (queues), 538, 166-171, 554
+- true/false 值, 63, 147, 166-171
+- Try 块, 162, 275, 605
+- TryParse() 方法
+- 属性 (attributes), 90-931, 538-890
+- 转换 (conversions), 89-931, 290, 538-539
+- 动态调用 (dynamic invocation), 90-931, 538-539, 888-910
+- 枚举 (enum), 90-931, 538-539, 880
+- 声明与包含, 106-108, 112-359
+- 泛型 (generics), 111, 642-805
+- GetHashCode() 和 Equals() 重写, 515-520, 850-852
+- 组 (groups), 106-108, 644, 807
+- 模式匹配 (pattern matching), 106-108, 433-435, 438
+- 元组 (Tuples)
+- 投影 (projections), 770, 800, 815
+- 查询表达式 (query expressions), 106-108, 796, 814-815
+- 返回值, 111, 254, 644
+- System.ValueTuple 类型, 170-111, 643-645, 803
+- 匿名类型 (anonymous type), 111, 803, 807
+- 泛型 (generics), 111, 642-645, 803
+- 补码法法 (Two's complement notation), 138-139, 182, 183-187
+- 二维数组 (Two-dimensional arrays), 115-120, 124-123, 130-132
+- 类型检查 (Type checking), 419-421, 651, 1119
+- 类型类 (Type class)
+- 泛型参数, 635, 653-664, 891-893
+- 元数据 (metadata), 655, 882-885, 1127-1127
+- 类型参数 (type parameters), 655-656, 872
+- 类型参数 (Type parameters)
+- 级联 (cascading), 635, 642-646, 656
+- 约束 (Constraints)。见 逆变 (contravariance), 651, 660, 672-675
+- 协变 (covariance), 664, 669, 672-675
+- 泛型 (generics), 635, 663-666, 892
+- 列表 (lists), 631-635, 642, 664
+- 多个 (multiple), 635, 642, 663-664
+- 名字 (names), 228, 635, 664
+- null 修饰符 (null modifier), 82-83, 97, 654-656
+- 获取 (obtaining), 644, 664-666, 891-892
+- 的类型 (type of), 635, 663-666, 891-893
+- 类型安全 (Type safety)
+- 匿名类型 (anonymous types), 703, 707-805
+- CLI, 1109, 1119-1121, 1125
+- 泛型 (generics), 638, 664, 681
+- 管理执行 (managed execution), 922, 1093-1095, 1120
+- typeof()
+- 属性 (attributes), 885, 896-898, 901-903
+- 锁 (locks), 828, 885, 1053-1057
+- 反射 (reflection), 883, 885-888, 1119
+- 类型 (Types)
+- 匿名类型 (anonymous types)。见 匿名类型 (Anonymous types)
+- 数组 (arrays)。见 数组 (Arrays)
+- 布尔 (Boolean), 63, 166, 170
+- 字符 (character), 64-66, 134, 144
+- 转换概述 (conversion overview), 84, 88-539, 523
+- CTS, 134, 1125, 1126
+
+# 索引 1182
+
+- 十进制 (decimal), 54-60, 145
+- 声明 (declarations), 547, 885, 1125
+- 默认值 (default), 52-53, 269, 640
+- 定义 (definitions), 93, 1145
+- 委托 (delegates), 690-694, 726-328
+- 描述 (description), 93, 1125
+- 动态 (dynamic), 664, 920-922, 926
+- 异常 (exceptions), 280, 599-601, 605
+- 浮点类型 (floating-point types), 53-56, 145-148
+- 泛型 (generics), 623, 631-635, 677
+- 硬编码值 (hardcoding values), 57, 94-96, 373
+- 十六进制表示 (hexadecimal notation), 60-61, 64-66, 144
+- 隐式类型变量 (implicitly typed local variables), 249, 488-798-799
+- 整数 (integers), 56, 97, 144
+- lambda 表达式 (lambda expressions), 699-702, 710-720
+- 地变量 (local variables), 25-27, 164-165, 714
+- 方法 (methods), 134, 295-297, 664
+- 嵌套 (nested), 221, 570, 643-646
+- 允许 null (null allowed), 82-83, 100, 173
+- null 检查 (null checks), 83, 96-97, 100-102
+- 可空引用 (nullable reference), 83, 96-97, 100-102
+- 可空值 (nullable values), 96, 907, 525, 629
+- 概述 (overview), 93, 134, 832-837
+- 参数 (parameters), 635, 664, 891-893
+- 解析 (parsing), 88, 91, 833-880
+- 模式匹配 (pattern matching), 423-424, 433-438, 635
+- 引用 (reference), 93-96, 134, 491-492
+- 获取 (retrieving), 134, 800, 883-885
+- 返回值 (return values), 84, 229-231, 254
+- 字符串元组 (String tuples), 106-108, 111, 642-644
+- Unicode 标准 (Unicode standard), 64, 1078-1083, 1093
+- 非托管 (unmanaged), 654, 1078-1083, 1093
+- 非托管结构 (unmanaged structures), 654, 1078-1084, 1097
+- 值 (value)。见 值和类型 (Values and value types)
+- 验证 (verifying), 421, 651, 1119
+- 一元操作 (Unary operations)
+- 重写 (overriding), 138-143, 548, 552
+- 加和减法 (plus and minus), 138-139, 141-149, 150
+- UnauthorizedAccessException, 315-316, 618, 1119
+- 解箱操作 (Unboxing operation), 6, 523-527, 531-532
+- 未检查转换 (Unchecked conversions), 88-89, 391-392, 523
+- 未检查键 (unchecked key), 15-16, 19, 701
+- 解压缩 (Uncompress(it)), 246-248, 357-358, 445
+- 数字 (digit), 59, 66, 138-139
+- 字段名 (field names), 17-19, 59, 323
+- 标识符名 (identifier names), 17-19, 59, 323
+- 可空变量 (nullable variables), 17-19, 59, 323
+- 换延续 (line continuation), 59, 65-70, 213
+- 撤销操作 (Undo operations)
+- 泛型 (generics for), 624-623, 631-634, 681
+- 栈 (stacks for), 624-626, 631-634, 1100
+- 任务 (tasks), 604, 622, 958-964
+- 线程 (threads), 622, 958-959, 962-964
+- 未处理异常 (Unhandled exceptions), 604, 618, 962
+- 并行循环 (parallel loops), 962-964, 1028-1030
+- 端口迁移 (porting), 274, 604, 622-958
+- 任务 (tasks), 604, 622, 958-964
+- UnhandledException 类型, 604, 610, 614, 958-962
+- Unicode 标准表示 (Unicode standard representation), 64-65, 66, 144
+- 序列 (sequence), 64-69, 143-144
+- 本地化应用 (localized applications), 64-66, 1113, 1128
+- Union() 运算符, 139-143, 169, 788
+- .NET 框架 (.NET frameworks), 44-47, 1109-1113, 1128
+- 非托管代码和类型 (Unmanaged code and types)
+- uint 类型, 56, 96, 1081
+- ulong 类型, 53, 95-96, 1097
+- 溢出 (overflows), 1080-1095, 1120
+- 进入 (into), 1077-1080, 1083, 1120
+- 约束 (constraints), 652-655, 1080-1093, 1090
+- 结构 (structs), 1078-1080, 1083-1097
+- 未观察任务类型 (UnobservedTask type), 958-961, 964
+
+# 索引 1183
+
+- 验证 (Validation), 324-325, 393, 478
+- 值键属性 (value key for properties), 309, 318-320, 333
+- 值和类型 (Values and value types)
+- 装箱 (boxing), 523-524, 530-532, 545
+- CTS, 92-93, 1125
+- 描述 (description), 93, 134, 494
+- 枚举 (enums)。见 枚举值 (values)
+- 泛型实例化 (generic instantiation), 494, 630, 677-679
+- 硬编码 (hardcoding), 75, 94-96, 487-489
+- 不变 (immutable), 96, 488-489, 507
+- 继承和接口 (inheritance and interfaces), 482, 487, 636
+- 迭代器 (iterators), 488, 545, 863-868
+- 锁机制 (lock mechanism), 97, 487-528
+- 新运算符 (new operator), 494, 511, 548
+- 概述 (overview), 134, 437-489
+- 参数 (parameters), 134, 487-494
+- 模式匹配 (pattern matching), 423-424, 433-438, 635
+- 引用 (reference), 93-96, 134, 491-492
+- 获取 (retrieving), 134, 800, 883-885
+- 返回值 (return values), 84, 229-231, 254
+- 字符串元组 (String tuples), 106-108, 111, 642-644
+- Unicode 标准 (Unicode standard), 64, 1078-1083, 1093
+- 非托管 (unmanaged), 654, 1078-1083, 1093
+- 非托管结构 (unmanaged structures), 654, 1078-1084, 1097
+- 值 (value)。见 值和类型 (Values and value types)
+- 验证 (verifying), 421, 651, 1119
+- 一元操作 (Unary operations)
+- 重写 (overriding), 138-143, 548, 552
+- 加和减法 (plus and minus), 138-139, 141-149, 150
+- UnauthorizedAccessException, 315-316, 618, 1119
+- 解箱操作 (Unboxing operation), 6, 523-527, 531-532
+- 未检查转换 (Unchecked conversions), 88-89, 391-392, 523
+- 未检查键 (unchecked key), 15-16, 19, 701
+- 解压缩 (Uncompress(it)), 246-248, 357-358, 445
+- 数字 (digit), 59, 66, 138-139
+- 字段名 (field names), 17-19, 59, 323
+- 标识符名 (identifier names), 17-19, 59, 323
+- 可空变量 (nullable variables), 17-19, 59, 323
+- 换延续 (line continuation), 59, 65-70, 213
+- 撤销操作 (Undo operations)
+- 泛型 (generics for), 624-623, 631-634, 681
+- 栈 (stacks for), 624-626, 631-634, 1100
+- 任务 (tasks), 604, 622, 958-964
+- 线程 (threads), 622, 958-959, 962-964
+- 未处理异常 (Unhandled exceptions), 604, 618, 962
+- 并行循环 (parallel loops), 962-964, 1028-1030
+- 端口迁移 (porting), 274, 604, 622-958
+- 任务 (tasks), 604, 622, 958-964
+- UnhandledException 类型, 604, 610, 614, 958-962
+- Unicode 标准表示 (Unicode standard representation), 64-65, 66, 144
+- 序列 (sequence), 64-69, 143-144
+- 本地化应用 (localized applications), 64-66, 1113, 1128
+- Union() 运算符, 139-143, 169, 788
+- .NET 框架 (.NET frameworks), 44-47, 1109-1113, 1128
+- 非托管代码和类型 (Unmanaged code and types)
+- uint 类型, 56, 96, 1081
+- ulong 类型, 53, 95-96, 1097
+- 溢出 (overflows), 1080-1095, 1120
+- 进入 (into), 1077-1080, 1083, 1120
+- 约束 (constraints), 652-655, 1080-1093, 1090
+- 结构 (structs), 1078-1080, 1083-1097
+- 未观察任务类型 (UnobservedTask type), 958-961, 964
+
