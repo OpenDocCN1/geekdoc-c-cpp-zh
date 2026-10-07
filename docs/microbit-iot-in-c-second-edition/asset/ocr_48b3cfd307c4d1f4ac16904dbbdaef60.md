@@ -1,0 +1,13 @@
+The two extremes are 100% duty cycle, i.e. the line is always high; and 0% duty cycle, i.e. the line is always low. What this means is that generally you select a repeat rate and stick to it and what you change as the program runs is the duty cycle.
+
+In many cases PWM is implemented using special PWM generation hardware that is built into the processor chip or provided by an external chip. The processor simply sets the repeat rate by writing to a register and changes the duty cycle by writing to another register. This generally provides the best sort of PWM with no load on the processor and generally glitch-free operation. You can easily use add-on boards that will provide additional channels of PWM without adding to the load on the processor.
+
+The alternative to dedicated PWM hardware is to implement in software. You can quite easily work out how to do this. All you need a timing loop to set the line at the repetition rate and then set it according to the duty cycle. You can implement this using either interrupts or a polling loop.
+
+In the case of microbit, the PWM lines are not implemented using special PWM hardware. Instead two general purpose facilities - the GPIOTE and the PPI – are used to allow the GPIO lines to trigger events and respond to tasks. The software sets up so that the system timer automatically toggles the specified GPIO line at the selected repetition rate and duty cycle. This saves the processor's time, but it is sophisticated and, at times, a little difficult to use.
+
+You can use the “main” GPIO lines, P0, P1 and P2, for PWM. You can also use other GPIO lines, but these have other uses as well as PWM. For the moment we will concentrate on using P0, P1 and P2. As a single timer is used, the repetition rate is shared between all of the GPIO lines being used as PWM outputs. That is, all PWM lines operate at the same frequency - i.e. the last set frequency.
+
+You, however, set different duty cycles for each of the PWM lines by setting the repetition rate in multiples of 4µs, i.e. the timer tick is 4µs. The fastest repetition rate you can specify is 1µs, but this actually gives a 27-microsecond repeat rate. The slowest is 0.262 seconds which means you can't use a PWM line to flash an LED every second.
+
+As you can guess, there are no PWM inputs, just six outputs. If for some reason you need to decide or respond to a PWM input then you need to program it using the GPIO input lines and the pulse measuring techniques introduced in the previous chapters. If you are really ambitious you could use the GPIOTE and PPI facilities to automatically analyze the incoming PWM signal. Again, you would use the timer to record the repetition rate and duty cycle.
