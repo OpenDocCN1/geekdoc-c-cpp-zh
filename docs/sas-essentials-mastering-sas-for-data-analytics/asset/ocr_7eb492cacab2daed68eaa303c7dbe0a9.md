@@ -1,0 +1,1 @@
+Suppose you broke into your piggy bank and made stacks of the coins you found. In this case, your data are already summarized into counts. To analyze this type of data using SAS, use the WEIGHT statement to indicate the variable that represents the counts.
