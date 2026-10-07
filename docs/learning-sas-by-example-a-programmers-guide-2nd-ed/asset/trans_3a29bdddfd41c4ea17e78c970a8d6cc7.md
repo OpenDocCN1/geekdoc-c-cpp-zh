@@ -1,0 +1,148 @@
+
+
+## 第 4 章：创建永久 SAS 数据集
+
+创建 `AveScore` 变量的赋值语句使用 `MEAN` 函数计算三个 `Score` 变量的平均值。你可以在第 11 章阅读更多关于 `MEAN` 函数的信息。目前，你应该注意到变量列表 `Score1–3` 之前有一个单词 `of`。这是许多可以接受变量列表作为参数的 SAS 统计函数的典型特征。如果没有 `of` 字，`MEAN` 函数将返回 `Score1` 和 `Score3` 之间的差（即破折号将被解释为减号）。
+
+以下是 Data Set New 的列表：
+
+图 4.11：程序 4.7 的输出
+
+![](img/e9e15d853989558188e1c83b0ae655b0_69_0.png)
+
+## 4.9 DATA_NULL：一个不存在的数据集
+
+在许多应用程序中，你想要处理 SAS 数据集中的观测值，可能是为了打印数据错误或生成报告，而你不需要创建一个新的数据集。
+
+你可以在这些应用程序中使用数据集名称 `_NULL_`。保留的数据集名称 `_NULL_` 告诉 SAS 不要创建数据集。它允许你处理来自原始数据或现有数据集的观测值，而无需创建新数据集的开销。这里有一个示例：
+
+你有一个成员 SAS 数据集（`Test_Scores`），你想创建一个在任何测试中获得 95 分或以上分数的学生 ID 列表。你可以创建一个新的 SAS 数据集并使用 `PROC PRINT` 来列出这些学生，也可以使用 `DATA_NULL_` 步骤更高效地完成，如下：
+
+程序 4.8：演示 `DATA_NULL_` 步骤
+
+```
+title "Scores Greater Than or Equal to 95"
+data _null;
+set Learn.Test_Scores;
+if Score1 ge 95 or Score2 ge 95 or Score3 ge 95 then
+put ID= Score1= Score2= Score3=;
+run;
+```
+
+`IF` 语句检查三个测试分数是否有任何一个大于或等于 95。如果是，`PUT` 语句将写入 `ID` 和三个测试分数的值。`PUT` 语句将文本写入你选择的位置：外部文本文件、SAS 日志或输出 窗口。在程序 4.8 中，没有指定输出位置，因此使用了默认位置 SAS 日志。以下是运行该程序后的 SAS 日志列表：
+
+**图 4.12：**运行程序 4.8 后的 SAS 日志列表
+
+```
+15  title "Scores Greater Than or Equal to 95";
+16  data _null_;
+17      set Learn.Test_Scores;
+18      if Score1 ge 95 or Score2 ge 95 or Score3 ge 95 then
+19          put ID Score=1 Score=2 Score=3;
+20  run;
+21 ID=1 Score1=90 Score2=95 Score3=98
+ID=2 Score1=78 Score2=77 Score3=99
+NOTE: There are 3 observations read from the data set
+LEARN.TEST_SCORES.
+NOTE: a statement used (Total process time):
+      real time           0.00 seconds
+      cpu time             0.00 seconds
+```
+
+在 `DATA` 步骤中放置 `put` 语句是调试 SAS 程序的极佳方法。你可以在 `DATA` 步骤的任何地方检查变量的结果。（你也可以使用 PC 平台上提供的 SAS 调试器为此目的。）
+
+如果你想将输出发送到 `C:\books\learning\HighScores.txt` 的文件，你需要在 `PUT` 语句之前放置 `FILE` 语句，如下：
+
+```
+file 'C:\books\learning\HighScores.txt';
+```
+
+`FILE` 语句类似于 `INFILE` 语句——它与 `PUT` 语句协同工作，告诉 SAS 你正在输出的文本的目的地。
+
+如果你将 `PUT` 语句的结果写入输出设备（在 PC 上将是 OUTPUT 窗口），你可以保留文件引用 `PRINT`，如下：
+
+```
+file print;
+```
+
+`DATA_NULL` 步骤有时用于创建自定义报告。事实上，这种报告被称为 DATA_NULL 报告。为了控制 SAS 如何写入此输出，你可以使用指针和格式来精确指定要写入哪些列以及如何格式化值。有了了更强大的处理器（如 `PROC REPORT`），很少需要使用 `DATA_NULL` `DATA` 步骤编写你的自定义报告。
+
+## 4.10 问题
+
+奇数题的解答位于书的末尾。所有问题的解答供教授使用。如果你是教授，请访问书籍的辅助网站 support.sas.com/cody 获取有关如何获取所有问题解答的信息。
+
+- 1. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据集。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+```
+libname learn `C:\your-folder-name`;
+
+data learn.Perm;
+ ID : $3. Gender : $1. DOB : mmddyy10.
+ Weight;
+label DOB = 'Date of Birth'
+ Height = 'Height in inches'
+ Weight = 'Weight in pounds'
+format DOB date;
+datalines;
+001 M 10/21/1946 68 150
+002 F 05/26/1950 63 122
+003 M 11/11/1981 72 175
+004 F 07/04/1983 70
+128
+005 F 12/25/2005 40
+```
+- 2. 在数据集上运行 `PROC CONTENTS` 以列出这些学生。使用 `PROC PRINT` 来列出这些学生或查看它们之间的差异。
+- 3. 运行程序创建一个名为 `Survey` 的数据集。使用 `IF` 语句，并计算这些变量的平均值。
+```
+libname learn `C:\your-folder-name`;
+
+data learn.Perm;
+ ID : $3. Gender : $1. DOB : mmddyy10.
+ Weight;
+label DOB = 'Date of Birth'
+ Height = 'Height in inches'
+ Weight = 'Weight in pounds'
+format DOB date;
+datalines;
+001 M 10/21/1946 68 150
+002 F 05/26/1950 63 122
+003 M 11/11/1981 72 175
+004 F 07/04/1983 70
+128
+005 F 12/25/2005 40
+```
+- 4. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 5. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 6. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 7. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 8. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 9. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 10. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 11. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 12. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 13. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 14. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 15. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 16. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 17. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 18. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 19. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 20. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 21. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 22. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 23. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 24. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 25. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 26. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 27. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 28. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 29. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+- 30. 运行程序以创建一个名为 `Perm` 的永久 SAS 数据。你需要修改程序以指定你想要放置此数据集的文件夹。在此数据集上运行 `PROC CONTENTS`。
+
+## 5.2 使用格式增强你的输出
+
+SAS 提供了内置格式来改进打印输出的外观。例如，你可以在打印数据时带有美元符号，或为大数字添加逗号。你已经在程序 3.8 中见过这种示例。
+
+你也可以创建自己的自定义格式。例如，如果你有一个名为 `Gender` 的变量，值为 `M` 和 `F`，你可以将它们格式化为 `Male` 和 `Female`。如果你有一个表示年龄的变量，你可以使用格式显示年龄段而不是实际年龄。你可以为每个变量使用一种格式，也可以为一组变量使用一种格式。
+
+一个名为 `Survey` 的 SAS 数据集展示了如何使用格式。以下是该数据集在没有任何格式下的列表：
+
