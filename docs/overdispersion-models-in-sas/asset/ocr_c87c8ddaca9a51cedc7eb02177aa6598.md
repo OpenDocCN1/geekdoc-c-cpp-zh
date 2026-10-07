@@ -1,0 +1,1 @@
+Morel, Jorge, and Nagaraj Neeraraj. Overdispersion Models in SAS®. Copyright © 2011, SAS Institute Inc., Cary, North Carolina, USA: ALL RIGHTS RESERVED. For additional SAS resources, visit support.sas.com/publishing.

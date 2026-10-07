@@ -1,0 +1,9 @@
+# Plot 5.1: QQ-Plots for the Induced Mutagenic Example
+
+![](bbox=[0.197, 0.137, 0.871, 0.545])
+
+Sutradhar (2001) and Sutradhar et al. (2008) provided the theoretical properties of the GOF test given in the previous section. It is shown that the GOF test enjoys asymptotic properties similar to those of the usual Pearson's GOF. In particular, it is shown that the Chi-square distribution provides an adequate approximation to the null distribution. As will be elaborated in the next section, the appropriate degrees of freedom the approximating Chi-square distribution need some adjustment, especially when there are a large number of parameters to be estimated. A practical approach to this issue is to use adaptive bootstrapping to obtain the p-value. We will present the results of a simulation which will illustrate this approach and also demonstrate that the test statistic is quite powerful in distinguishing between the Beta-binomial and Random-clumped Binomial distributions.
+
+The two simulations discussed here were first presented in Sutradhar et al. (2008). They are designed to investigate the properties of the omnibus GOF test discussed in the previous section. Two questions were addressed in their simulations, namely, the distributional aspect of the GOF test, and its characteristics as measured via the Type I error rates and power. We provide in this section some results with the latter. In the simulation, three values of $\pi = 0.1, 0.3, 0.5$ were considered along the three values of $\rho = 0.3, 0.5, 0.7$. These generating of the cluster sizes were considered, namely, the cluster size constant
+
+Morel, and Nagaraj Neeraj. *Overdispersion Models in SAS*. Copyright ©2011, SAS Institute Inc., Cary, North Carolina, USA. ALL RIGHTS RESERVED. For additional resources, visit support.sas.com/publishing.
