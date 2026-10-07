@@ -1,0 +1,1 @@
+We hope by reading this book, we've helped you get started on your first hapi project. You can use hapi to make your dreams come true and build all sorts of interesting web applications.
