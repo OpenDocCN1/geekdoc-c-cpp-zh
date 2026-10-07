@@ -1,0 +1,10 @@
+# Underlying C Language Features
+
+This chapter describes features of the Objective-C language that you don't necessarily need to write Objective-C programs. In fact, most of these features come from the underlying C programming language. Features such as functions, structures, pointers, unions, and arrays are best learned on a need-to-know basis. Because C is a procedural language, some of these features go against the grain of object-oriented programming. They can also interfere with some of the strategies implemented by the Foundation framework, such as the memory allocation methodology or work with character strings containing multibyte characters.
+
+> Note
+There are ways to work with multibyte characters at the C level, but Foundation provides a much more elegant solution with its NSString class.
+
+On the other hand, some applications require you to use a lower-level approach, perhaps for the sake of optimization. If you're working with large arrays of data, you might want to use the built-in data structures of C instead of the array objects of Foundation (which are described in Chapter 15, "Numbers, Strings, and Collections"). Functions also come handy if used properly to group repetitive operations and modularize a program.
+
+Skip this chapter to get an overview of the material, and come back after you've finished reading Part II, "The Foundation Framework." Or you can skip it altogether and go to Part II, which covers the Foundation framework. If you end up supporting some else's code or encounter some of the structures constructed in this chapter. Several of the Foundation data types, such as NSRange, NSPoint, and NSR, require a rudimentary understanding of structures, which are described here. In such cases, you can return to this chapter and read the appropriate section to gain an understanding of the concepts.

@@ -1,0 +1,26 @@
+# # Appendix B
+
+# # Address Book Source Code
+
+For your reference purposes, here are the complete interface and implementation files for the address book example you worked with throughout Part II,"The Foundation Framework."This includes the definitions for the AddressCard, and AddressBook classes. You should implement these classes on your system; extend the class definitions to make them more practical and powerful.This is an excellent way for you to learn the language and become familiar with building programs, working with classes and objects, and working with the Foundation framework.
+
+# # AddressCard Interface File
+
+```
+@import <Foundation/Foundation.h>
+
+@interface AddressCard : NSObject <NSCopying, NSCoding> {
+    NSString *name;
+    NSString *email;
+}
+
+@property (nonatomic, copy) NSString *name, *email;
+
+-(void)setName:(NSString *)theNameAndEmail:(NSString *)theEmail;
+-(void)retainName:(NSString *)theNameAndEmail:(NSString *)theEmail;
+-(NSComparisonResult)compareNames:(id)id:(id)element;
+
+-(void)print;
+
+@end
+```

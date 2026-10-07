@@ -1,0 +1,12 @@
+```
+int answer, result;
+
+answer = 100;
+result = answer - 10;
+
+NSLog("@The result is %i\n", result + 5);
+
+[pool drain];
+return 0;
+}
+```

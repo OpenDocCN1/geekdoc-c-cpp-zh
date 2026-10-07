@@ -1,0 +1,314 @@
+
+
+## 510 个成员
+
+## 成员, 191
+
+## 内存
+- add: 方法, 142
+地址, 指针, 291
+- 分配, 19, 39, 423
+- 事件循环, 411–413
+- 继承, 157–158
+- 自动释放池, 311, 397–398
+- 另见 自动释放池
+- 缓冲区, 绘制文件, 369
+- 清理, 41
+- dArray, 418
+- 垃圾回收, 413–414.
+- 另见 垃圾回收
+- 内存泄漏, 413
+- 管理, 397
+- 引用, 计数, 398–409
+- 规则 410–411
+- + addCard., 340
+- 添加, 219
+- AddressCard 类, 合成, 337–339
+- addSubView:, 401
+- allKeys, 358
+- alloc, 153, 204
+- 参数, 36–37, 136–137
+- 数组, 412
+- arrayWithObjects:, 330
+- attributesOfThemPath:, 371
+- 自动释放池, 311
+- availableData, 389
+- changeCurrentDirectoryPath:, 438
+- Circle, 234
+- 类, 191
+- 多个参数的, 130–135
+- 无参数名, 133
+- clickDigit:, 472
+- clickEquads, 472
+- closeFile, 390
+- compare:, 313
+- compareNames:, 351
+- conformsToProtocol:, 227
+- contentsPath:, 371
+- contentsEqualPath:, 371
+- contentsOfDirectoryPath:, 376
+- convertToString, 472
+- copy, 418–424
+- copyItemPath:, 371
+- copyWithZone:, 423
+- createdDirectoryPath:, 376
+- createFileAtPath:, 371
+- 当前目录, 382
+- currentDirectoryPath, 376
+- dealloc, 171–172, 336, 408
+- 声明, 36
+- + XYPoint 类, 164
+
+## 菜单, 新文件 (Xcode), 124
+
+## 消息
+- + alloc, 39
+- 编译器错误, 166
+- defaultManager, 371
+- drain, 398
+- 表达式, 40
+- release, 398, 410
+- 引用计数, 399
+- skipDescendants, 378
+- uppercaseString, 发送, 319
+
+## 方法, 27
+- + @implementation 部分, 37–38
+- @interface 部分, 35–37
+
+### 访问器
+- + 事件循环, 412
+- 合成, 128–130
+- add: 133, 140–142, 182, 220
+
+### 方法 511
+- 解码, 433–440
+- 定义, 35
+- deleteCharactersInRange; 325
+- description, 315–316, 362
+- dictionaryWithObjectsKeys; 357
+- 目录, 376
+- 绘制, 184
+- 动态类型, 187
+- encodeObject; 435
+- encodeWithCoder; 433
+- 编码, 433–440
+- enumeratorAtPath; 376
+- 环境, 386
+- 执行, 182
+- fileExistsPath; 371
+- fileHandleForReadingAtPath; 371
+- fileHandleForWritingAtPath; 389
+- forwardInvocation; 189
+- Foundation 框架, 309
+- 函数, 301
+- getter, 48, 203
+- globallyUniqueString, 386
+- hostName, 386
+- indexesOfObjectsPassingTest; 365
+- 继承, 151, 154–167
+- init, 39, 153
+- initialize, 205
+- initVar, 150
+- initWith; 198
+- initWithCoder; 433
+- 实例和, 28–30
+- intersect; 362
+- intWithName; 341
+- isEqualToNumber; 313
+- isEqualToString; 318
+- isReadableFileAtPath; 371
+- isWritableFileAtPath; 371
+- lastPathComponent, 382
+- length, 318
+- 列表, 342
+- lookup; 344–346
+- lookupAll; 365
+- mainBundle, 386
+- moveItemAtPath; 371
+- multiply, 66
+- mutableCopy, 418–420
+- name, 182
+- names, 182
+- newObject, 54
+- NSArray 类, 354
+- NSDictionary 类, 359
+- NSFileHandle, 389
+- NSFileManager, 370
+- NSIndex 类, 366
+- NSMutableArray 类, 355
+- NSMutableDictionary 类, 359
+- MutableSet 类, 363
+- MutableString 类, 328
+- NSProcessInfo 类, 386
+- NSSet 类, 363
+- NSString 类, 326
+- numberWithInt; 313
+- numberWithInteger; 313
+- 对象
+- 分配, 141–146, 413
+- 返回, 141–146
+- 文件偏移量, 389
+- 操作系统, 386
+- operatingSystemName, 386
+- operatingSystemVersionString, 386
+
+### 512 方法
+- 大纲, 测试, 227
+- 覆盖, 167–172, 224
+- pathComponents, 382-383
+- pathExtension, 382-383
+- pathResource; 395
+- paths, 384–385
+- pathWithComponents, 383
+- performSelector, 188
+- 指针, 279–280
+- print, 35, 182, 335
+- printVar, 170
+- processIdentifier, 386
+- processInfo, 386
+- processName, 386
+- rangeOfString; 325
+- readDataOfLength; 389–391
+- readDataToEndFile, 389
+- decode, 135, 140
+- release, 171, 410
+- removeCard; 346–349
+- removeItemAtPath; 374–376
+- removeObjectIndex; 401
+- respondsSelector; 189
+- retain, 408
+- values, 36, 311
+- saveFilePath, 384
+- seekToEndFile, 389
+- seekOffset; 389
+- selecting, 153–154, 169–171
+- set; 133
+- setAttributesPath; 371
+- setDenominator; 41
+- setEmail, 334
+- setName, 334, 425
+- setOrigin; 164, 171
+- setReal; 184
+- setSide; 156
+- setStr; 405, 408
+- setToOver; 188
+- setWidth; 156
+- setWithObjects; 362
+- sortUsingFunction; 350
+- sortUsingSelector; 350
+- stringByLastComponent, 383
+- stringByDeletingExtension, 383
+- stringByTildePath, 383
+- stringByResolvingSymlinksPath, 383
+- stringByStandardizingPath, 383
+- stringByAppendingPathComponent, 383
+- stringByAppendingExtension, 383
+- stringWithString; 324
+- substringFromString; 321
+- substringWithRange; 321
+- syntax, applying to classes, 28
+- tests, 204, 423
+- truncateFile; 390
+- union; 362
+- wrapper, 355
+- writeData; 388
+- writeToFile; 430
+- conversions, 240
+- minus sign (-), 35, 55
+- labels, 461
+- order of evaluation, 375
+- window colors, 459
+
+## string 对象 513
+- modularization, 219
+- NSCopying 协议, 225
+- modulus operator (%), 60–61
+- implementation, 422–423
+- moveItemAtPath:, 371
+- NSCountedSet 类, 362
+- 多维数组, 252–254
+- NSData 类
+- 多个参数, 130–135
+- 应用, 374
+- 多次操作, , 57
+- archiving, 440–443
+- 分数, 30, 465
+- NSDictionary 类方法, 359
+- multiply 方法, 66
+- NException 对象, 193
+- mutablecopy 方法, 418–420
+- NSFileManager, 369, 389–391
+- 可变对象, 316–322
+- NSFileFullName, 384
+- 可变字符串, 322–326
+- NSHomeDirectoryForUser, 382–384
+
+## N
+- NSHomeDirectory, 382–384
+- name 方法, 387
+- NSIndexSet 类, 363
+- names
+- NSKeyedArchiver, 431–433
+- + alternative, 赋值给数据类型, 208
+- + arguments, 无参数, 133
+- + NSLog 函数, 314–315
+- + folders, 8
+- NSLog语句, 19, 22, 47, 59, 267
+- + 方法, 182
+- for 语句, 74
+- while 语句, 84
+- + pathnames to files, 370
+- NSMutableArray 类, 329
+- + selecting, 33–35
+- 方法, 355
+- NSMutableCopying 协议, 418
+- 嵌套 for 循环, 78–80
+- 嵌套 if 语句, 101–102
+- 新文件, Xcode, 124
+- NSMutableSet 类, 363
+- newObject, 54
+- NSMutableString 类, 328
+- 方法, 355
+- nil, 336, 356
+- NSAttributes, 311
+- NSObject 类, 149
+- 多维数组, 252
+- NSPath, 383
+- NSProcessInfo 类, 386
+- NSString 类, 326
+- NSString 方法, 328
+- NSString 对象, 513
+- NSValue 类, 315
+
+## O
+- objectAtIndex: 方法, 330
+- 面对象编程, 273
+- 对象, 27
+- 其中的动作, 28
+- 分配, 141–146, 413
+- 数组, 328–356
+- 地址簿, 332–337
+- 引用, 419
+- 排序, 350–355
+- 自动释放池, 311–364, 398
+- 另见 自动释放池
+- 复合, 229–230
+- 拷贝, 417, 443–444
+- C 编程语言, 295
+- 字典, 356–359
+- 编码, 441
+- Foundation 框架, 309
+- 生成, 188
+- getter/setter 方法, 425–427
+- 实例, 197
+- 方法, 355
+- 分配, 141–146
+- 返回, 141–146
+- nil, 336, 356
+- Exception, 193
+- NSNumber, 311–312
+- NSString, 314
+- 数字, 309–314
+- 概述, 27–28
+

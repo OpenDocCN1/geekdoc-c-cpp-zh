@@ -1,0 +1,264 @@
+
+
+# 第 19 章归档
+
+同样，由于我们的 `AddressCard` 类直接继承自 `NSObject`，你不需要担心解码继承的实例变量。如果你确实需要这样做，可以在解码器方法的开头插入类似下面的一行（假设你的类的父类符合 `NSCoding` 协议）：
+
+```
+self [super initWithCoder];
+```
+
+每个实例变量都是通过调用 `decodeObject:forKey:` 并传递与你编码该变量时相同的键（key）来解码的。
+
+与你的 `AddressCard` 类类似，你为 `AddressBook` 类添加了编码和解码方法。你在接口文件中唯一需要更改的行是 `@interface` 声明，用于声明 `AddressBook` 类符合 `NSCoding` 协议。更改如下：
+
+```
+@interface AddressBook NSObject <NSCoding, NSCopying>
+```
+
+以下是要包含在实现文件中的方法：
+
+```
+-(void)encodeEncoder:(Encoder *) encoder
+{
+    [encoder encodeObject:bookName forKey:@"AddressBookName\];
+    [encoder encodeObject:book forKey:@"AddressBook\];
+}
+```
+
+```
+-(id)initWith:(NSCoder *) decoder
+{
+    bookName [[decodeObjectForKey:@"AddressBookName"] retain];
+    book [[decodeObjectForKey:@"AddressBook"] retain];
+
+    return self;
+}
+```
+
+测试程序将在下面的程序 19.6 中所示。
+
+# 程序 19.6 Test AddressBook.h
+
+```
+#import "AddressBook.h"
+
+int main(int argc, char *argv[])\{
+    NSAutleasePool *pool = [NSAutoreleasePool alloc];
+
+    NSString *name = @"Julia Kochan";
+    NSString *email = @"jewls37@axic.com";
+    NSString *bName = @"Tony Iannino";
+    NSString *bEmail = @"tony.iannino@techfitness.com";
+    NSString *cName = @"Stephen Kochan";
+    NSString *cEmail = @"steve@steve_kochan.com";
+    NSString *dName = @"Jamie Baker";
+    NSString *dEmail = @"jbaker@hotmail.com";
+
+    AddressCard *card1 = [[AddressCard alloc];
+    AddressCard *card2 = [[AddressCard alloc];
+```
+
+# 编写编码和解码方法 437
+
+```
+AddressCard *card3 [[AddressCard alloc] init];
+AddressCard *card4 [[AddressCard alloc] init];
+```
+
+```
+AddressBook *myBook [AddressBook alloc];
+```
+
+```
+// 首先是四个地址卡
+```
+
+```
+[card1 setName:aName andEmail:aEmail];
+[card2 setName:bName andEmail:bEmail];
+[card3 setName:cName andEmail:cEmail];
+[card4 setName:dName andEmail:dEmail];
+```
+
+```
+myBook [myBook initWithName:@"Steve's Address Book"];
+```
+
+```
+// 向地址录中添加一些卡片
+```
+
+```
+[myBook addCard:card1];
+[myBook addCard:card2];
+[myBook addCard:card3];
+[myBook addCard:card4];
+```
+
+```
+[myBook sort];
+```
+
+```
+if ([NSKeyedArchiver archiveRootObject:myBook toFile:
+"@addrbook.arch" NO)
+NSLog("@archiving failed");
+```
+
+```
+[card1 release];
+[card2 release];
+[card3 release];
+[card4 release];
+[myBook release];
+```
+
+```
+[pool drain];
+return 0;
+}
+```
+
+该程序创建了地址录，然后将其归档到文件 `addrbook.arch`。在创建归档的过程中，请注意 `AddressBook` 和 `AddressCard` 类的编码方法都被调用了。如果你愿意，可以在这些方法中添加一些 `NSLog` 调用。程序19.7 显示了如何将归档文件读入内存以便从文件中设置地址录。
+
+程序 19.7
+
+```
+#import "AddressBook.h"
+#import <Foundation/NSAutleasePool.h>
+```
+
+```
+int main (int argc, char *argv[])
+{
+  AddressBook *myBook;
+  NSAutleasePool *pool = [[NSAutleasePool alloc] init];
+  myBook = [NSKeyedArchiver unarchiveObjectFromFile:@"addrbook.arch"];
+  [myBook list];
+```
+
+```
+[pool drain];
+return 0;
+}
+
+# 程序 19.7 输出
+
+Contents of: Steve's Address Book
+Jamie Baker jaker@hotmail.com
+Julia Kochan jewls37@axic.com
+Stephen Kochan steve@steve_kochan.com
+Tony Iannino tony.iannino@techfitness.com
+
+在归档地址录的过程中，你的类的解码方法被自动调用了。注意你可以轻松地读取地址录。如所述，`encodeObject:forKey:` 方法适用于内置类以及你根据协议编写了编码解码方法的类。如果你的实例包含整数或浮点数等基本类型，你将知道如何编码和解码它们。这里是一个简单的定义，包含三个实例变量：一个 `NSString`，一个 `int` 和一个 `float`。该类有一个 setter 方法、两个 getter 方法以及两个用于归档的方法：
+
+```
+@interface Foo: NSObject<Coding>
+{
+NSString *strVal;
+int intVal;
+float floatVal;
+}
+
+@property (copy, nonatomic) NSString *strVal;
+@property int intVal;
+@property float floatVal;
+@end
+```
+
+实现如下：
+
+@implementation Foo
+
+@synthesize strVal, intVal, floatVal;
+
+-(void)encodeWithCoder:(NSCoder *)encoder
+{
+    [encoder encodeObject:strVal forKey:@"strVal\];
+    [encoder encodeInt:intVal forKey:@"intVal\];
+    [encoder encodeFloat:floatVal forKey:@"floatVal\]];
+}
+
+# 编写编码和解码方法
+
+```
+-(id)initWith:(NSCoder *)decoder {
+  strVal [[decodeObjectForKey:@"strVal"] retain];
+  intVal [decodeForKey:@"intVal"];
+  floatVal [decodeForKey:@"floatVal"];
+
+  return self;
+}
+```
+
+编码程序首先如前所示使用 `encodeObject:forKey:` 方法编码 `strVal`。在程序 19.8 中，创建了一个 `Foo` 对象，将其归档到文件，解归档并显示。
+
+# 程序 19.8 测试程序
+
+```
+#import <Foundation/Foundation.h>
+#import "Foo.h"
+// 我们 Foo 类的定义
+
+int main (int argc, char *argv[]) {
+  NSAutleasePool *pool = [[NSAutleasePool alloc] init];
+  Foo *myFoo = [[Foo alloc] init];
+  Foo *myFoo2;
+
+  [myFoo setString:@"This is the string"];
+  [myFoo setIntVal:12345];
+  [myFoo setFloatVal:98.6];
+
+  [NSKeyedArchiver archiveRootObject:myFooToFile:@"foo.arch"];
+  myFoo2 = [NSKeyedUnarchiver unarchiveObjectToFile:@"foo.arch"];
+  NSLog("%s\n%d\n%f", myFoo strVal, myFoo intVal, myFoo2 floatVal);
+  [myFoo release];
+  [pool drain];
+  return 0;
+}
+```
+
+# 程序 19.8 输出
+
+This is the string
+12345
+98.6
+
+以下消息归档了对象的三个实例变量：
+[encoder encodeObject:strVal forKey:@"strVal\];
+[encoder encodeInt:ForKey:@"intVal\];
+[encoder encodeFloat:floatVal forKey:@"floatVal\];
+
+某些基本数据类型（如 `char`、`short`、`long` 和 `long long`）未列在表 19.1 中；你必须确定数据对象的大小并将其分配给相应的程序。例如，`short int` 通常为 16 位，`int` 和 `long` 可以是 32 或 64 位，而 `long` 是 64 位（使用第 13 章“C语言底层特性”中描述的 `sizeof` 运算符来确定数据类型的大小）。要归档 `short int`，首先将其存储在 `int` 中并使用 `encodeForKey:` 归档。反转过程以获取它：使用 `decodeForKey` 并将其赋值给 `short int` 值。
+
+# 使用 NSData 创建自定义归档
+
+你可能不想像之前的示例那样使用 `archiveRootObject:ToFile` 方法将对象写入文件。例如，你可能会收集部分或所有对象并将它们存储在一个文件中。你可以使用 Objective-C 中的数据类 `NSData` 来此，我们在第 16 章“处理文件”中简要访问过它。
+
+如第 16 章所述，`NSData` 对象可以预留一块内存，你可以在其中存储数据。该数据区域的典型用途可能是为写入文件的数据提供临时存储，或者可能持有从磁盘读取的文件内容。创建一个可变数据区域最简单的方法是
+
+```
+这创建了一个空缓冲区，其大小随着程序的执行按需要扩大。
+
+作为一个简单的示例，让我们假设你想在同一个文件中归档你的地址录和其中一个 `Foo` 对象。假设在这个示例中，你已经为程序 19.9 中的 `AddressBook` 和 `AddressCard` 类中添加了键值方法。
+
+程序 19.9
+
+```
+#import "AddressBook.h"
+#import "Foo.h"
+
+int main(int argc, char *argv[]) {
+[NSAutleasePool [[NSAutleasePool alloc] init];
+Foo *myFoo=[Foo alloc] init];
+Data *dataArea=nil;
+NSKeyedArchiver *archiver=nil;
+AddressBook *myBook=nil;
+
+// 插入来自程序 19.7 的代码以在 myBook 中创建一个
+//包含四个地址卡的地址录
+
+[myFoo setString:@"This is the string\]];
+```
+
