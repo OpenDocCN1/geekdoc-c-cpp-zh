@@ -1,0 +1,198 @@
+
+
+# 固定文档 | 371
+
+```xml
+<PageContent Width="850" Height="1100">
+<FixedPage>
+<Grid Margin="100" Width="650" Height="900" Background="LightBlue">
+<Rectangle Stroke="Blue" Fill="Yellow" StrokeThickness="10" />
+<Label Content="Rectangle" Style="StaticResource styleLabel"/>
+</Grid>
+</FixedPage>
+</PageContent>
+<PageContent Width="850" Height="1100">
+<FixedPage>
+<Grid Margin="100" Width="650" Height="900" Background="Yellow">
+<Polygon Stroke="Red" Fill="LightBlue" StrokeThickness="10" 
+Points="325.0,650.0 900,0" />
+<Label Content="Triangle" Style="StaticResource styleLabel"/>
+</Grid>
+</FixedPage>
+</PageContent>
+<PageContent Width="850" Height="1100">
+<FixedPage>
+<Grid Margin="100" Width="650" Height="900" Background="Orange">
+<Polygon Stroke="Red" Fill="Pink" StrokeThickness="10" 
+Points="325.0,650.0 325,900.0 0,450.0" />
+<Label Content="Diamond" Style="StaticResource styleLabel"/>
+</Grid>
+</FixedPage>
+</PageContent>
+</FixedDocument>
+```
+
+# SimpleFixedDocument
+
+可以看出这段代码相对直观，它包含了嵌套对象：DocumentViewer、FixedDocument、PageContent、FixedPage 以及其他对象。它非常简单但相当冗长，使用 50 行代码就绘制了四个简单的形状。
+
+# 保存 XPS 文件
+
+既然你已经费力在 XAML 或后置代码中构建了一个固定文档，你可能可能将其将其保存为 XPS 文件。
+
+要将固定文档保存为 XPS 文件，请在 Visual Studio 中保存项目并添加 `ReachFramework` 和 `System.Printing` 库的引用。为了方便使用这些库，你可以在程序中添加以下语句：
+
+```csharp
+using System.Windows.Xps;
+using System.Windows.Xps.Packaging;
+```
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_408_0.png)
+
+图 21-2
+
+# 372 | 第 21 章 文档
+
+接下来，创建一个 `XpsDocument` 对象写入你想要创建的文件。创建一个与文档对象关联的 `XpsDocumentWriter`，并使用其 `Write` 方法将 `FixedDocument` 写入文件。
+
+`SaveFixedDocument` 使用以下代码保存其名为 `fdContents` 的 `FixedDocument` 对象。
+
+```csharp
+// 保存为 XPS 文件。
+private void SaveAsXps_Click(System.Object sender,System.Windows.RoutedEventArgs args) {
+    // 获取文件名。
+    Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
+    dlg.DefaultExt = "*.xps";
+    dlg.Filter = "XPS Documents (*.xps)|All Files (*.*)";
+    if (dlg.ShowDialog() == true) {
+        // 保存文档。
+        // 创建 XPS 文档。
+        XpsDocument xps_doc = new XpsDocument(dlg.FileName);
+        System.IO.FileAccess.Write;
+        // 创建 XPS 文档写入器。
+        XpsDocumentWriter doc_writer = XpsDocumentWriter.CreateXpsDocumentWriter(xps_doc);
+        doc_writer.Write(fdContents);
+        xps_doc.Close();
+    }
+}
+```
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_409_0.png)
+
+可在 Wrox.com 下载
+
+SavedFixedDocument
+
+程序使用 `SaveFileDialog` 请求用户保存文件。用户选择一个文件并点击确定，程序为该文件创建一个 `XpsDocument` 对象并创建一个关联的 `XpsDocumentWriter` 对象。最后，它将 `fdContents` 写入文件。
+
+# 流式文档
+
+流式文档根据需要重新排列其内容，以适应持有它的容器。如果你正在将视图控件做得高而窄，文档将重新组织其内容以适应。从这个意义上说，这种文档类似于简单的网页，当你调整浏览器大小时时，它会重新排列内容。
+
+WPF 程序在三种查看器之一中显示文档：`FlowDocumentPageView`、`FlowDocumentReader` 或 `FlowDocumentScrollView`。关于这些查看器的更多信息，请参见第 5 章。
+
+`FlowDocument` 代表流式文档本身。`FlowDocument` 的子元素必须是派自 `Block` 类的对象。这些包括 `BlockUIContainer`、`List`、`Paragraph`、`Section` 和 `Table`。
+
+# 流式文档 | 373
+
+以下章节提供了这些类的更多细节。它们还展示了 `ShowDocument` 示例程序中用于演示每个类的代码，并包含了显示结果的图。
+
+# BlockUIContainer
+
+`BlockUIContainer` 可以包含单个用户界面 (UI) 作为子元素。例如，它可以包含 `Button`、`CheckBox`、`StackPanel` 或 `Grid`。如果你想让控件持有多个元素，请将 `StackPanel` 或 `Grid` 等容器放在控件内部，并向容器添加其他控件。
+
+以下 XAML 代码创建了一个包含 `GroupBox` 的 `BlockUIContainer`，该 `GroupBox` 包含一个 `StackPanel`，而 `StackPanel` 又包含一个 `TextBlock` 和多个 `CheckBox`：
+
+```xml
+<BlockUIContainer>
+  <GroupBox Header="BlockUIContainer" Width="250" HorizontalAlignment="Left">
+    <StackPanel Margin="30,0,10">
+      <TextBlock FlowDocument can hold:</
+      <CheckBox Content="BlockUIContainer" Margin="50,0,5" />
+      <CheckBox Content="List" Margin="50,0,5" />
+      <CheckBox Content="Paragraph" Margin="50,0,5" />
+      <CheckBox Content="Section" Margin="50,0,5" />
+      <CheckBox Content="Table" Margin="50,0,5" />
+    </StackPanel>
+  </GroupBox>
+</BlockUIContainer>
+```
+
+图 21-3 显示了结果。
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_410_0.png)
+
+图 21-3
+
+# List
+
+`List` 对象包含 `ListItem` 对象。每个 `ListItem` 应该包含如 `Paragraph` 之类的块元素。
+
+# 374 | 第 21 章 文档
+
+`ShowDocument` 示例程序使用以下代码显示图 21-4 中的列表：
+
+```xml
+<List MarkerStyle="Decimal">
+  <ListItem><Paragraph>Item one</Paragraph></ListItem>
+  <ListItem><Paragraph>Item two</Paragraph></ListItem>
+  <ListItem>
+    <Paragraph>Item three. The sub-list has MarkerStyle=LowerLatin.</Paragraph>
+    <List MarkerStyle="LowerLatin">
+      <ListItem><Paragraph>Sub-item a</Paragraph></ListItem>
+      <ListItem><Paragraph>Sub-item b</Paragraph></ListItem>
+    </List>
+  </ListItem>
+</List>
+```
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_411_0.png)
+
+# Paragraph
+
+`Paragraph` 将内容分组为段。`Paragraph` 在自身与前一个元素之间添加一些垂直空间。`Paragraph` 通常包含内联元素，包括：
+
+- Text — 纯文本
+- Bold — 使其文本加粗
+- Figure — 在 `ParagraphUIContainer` 中嵌入一个区域，你可以在其中放置块元素。`Anchor` 和 `offset` 属性允许你确定 Figure 在段中的位置。
+- Floater — 与 Figure 相似，但你无法控制位置。相反，FlowDocument 将 Floater 移动到合适的位置。
+
+# 流式文档 | 375
+
+- Hyperlink — 显示链接。`NavigateUri` 属性持有要跳转的 URI。只有当它位于 NavigationWindow、Frame 或浏览器等宿主机中时，Hyperlink 才能自动跳转。
+- InlineUIContainer — 可以包含 Buttons、CheckBox 和 RadioButtons。
+- Italic — 使倾斜
+- LineBreak — 使文本换行。这不会在行之间添加额外的垂直空间。
+- Run — 包含一段文本，其外观与段的其他部分不同。你可以使用 `Run` 的属性更改文本背景颜色、文本颜色、字体、大小等。
+- Span — 与 `Run` 相似，但它还可以包含内联元素（如 `Bold`、`Italic`）和 UI 元素（如 `Button`、`Ellipse`、`Polygon`）。
+- Underline — 使文本下划。
+
+以下代码展示了 `ShowFlowDocument` 如何生成图 21-5 中的段落：
+
+```xml
+<Paragraph>
+这包含一个 Floater。
+注意 Floater 如何整合到段中。
+<Floater Width="120" Background="White" HorizontalAlignment="Left">
+<BlockContainer>
+<Image Source="Bird.jpg" Stretch="Uniform" Width="100" Height="60"/>
+<Paragraph Alignment="Center">Fig 3. Chirp.</Paragraph>
+</BlockContainer>
+</Floater>
+<Paragraph>段落还有一个
+<Run Background="Pink">粉色背景上的蓝色文本 Run</Run>
+<Span 包含了各种样式的文本：
+<Ellipse Width="30" Height="10" Style="Red"/>
+<Bold>Bold</Bold>, <Italic>Italic</Italic>,
+一个 <Underline>Underline</Underline>.</Span>
+你可以使用 Run 来制作方程和公式，例如：
+E=MC<Run BaselineAlignment="Superscript">2</Run> 和 C<Run BaselineAlignment="Superscript">8</Run>H<Run BaselineAlignment="Superscript">10</Run>N<Run BaselineAlignment="Superscript">4</Run>O-Run
+</Paragraph>
+```
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_412_0.png)
+
+图 21-5
+
+ShowFlowDocument
+

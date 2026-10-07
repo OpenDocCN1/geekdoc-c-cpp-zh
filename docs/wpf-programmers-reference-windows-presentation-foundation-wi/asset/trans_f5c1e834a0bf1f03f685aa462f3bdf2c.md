@@ -1,0 +1,155 @@
+
+
+# 第 5 章 内容控件
+
+```
+<Separator/>
+<MenuItem Header="Exit"/>
+</MenuItem>
+...
+</Menu>
+```
+
+## UseSeparator
+
+此程序在底部有两个工具栏（ToolBar）。顶部的工具栏直接包含系列按钮，在第二个和第三个按钮之间有一个分隔符（Separator）。结果就是图 5-19 中的浅色垂直线。
+
+底部的工具栏包含一个持有按钮的工具面板（ToolPanel）。通常情况下，工具栏会改变按钮的外观，导致分隔符变得不可见。要让分隔符再次可见，可以使用以下代码为分隔符设置宽度，并移除其通常的垂直线样式：
+
+```
+<Separator Width="10" Margin="0,0,0,0" Background="x:Null"/>
+```
+
+注意，你可以使用任何块对象作为工具栏中的分隔符。例如，以下标签（Label）也会在工具栏中留出水平间隙：
+
+```
+<Label Width="10"/>
+```
+
+# TreeView
+
+TreeView 显示分层级数据。例如，图 5-20 中的 UseTreeView 示例程序显示了一家虚拟公司的组织架构图。董事会、总裁/CEO 以及其他项目旁深色三角形表示这些项目已展开，显示了它们包含的子项目。首席财务官（CFO）项目旁边的浅灰色三角形表示该 CFO 项目已折叠，隐藏了其子项目。
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_135_0.png)
+
+TreeView 对象持有在控件上显示的值。TreeItem 可以包含其他对象，但如果你只想像图 5-20 那样显示文本，可以将 TreeView 的 Header 属性设置为你想要显示的文本。
+
+你通过将 TreeItems 放在其他 TreeViews 内部来为 TreeView 提供分层级结构。
+
+以下 XAML 代码展示了 UseTreeView 程序如何构建其 TreeView 控件：
+
+```
+<TreeView Margin="5">
+<TreeView.Background>
+<RadialGradientBrush>
+<GradientStop Color="#FFFFFF" Offset="0"/>
+<GradientStop Color="#FFFF3030" Offset="1"/>
+```
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_135_1.png)
+
+```
+</RadialGradientBrush>
+<TreeView.Background>
+  <TreeView Header="Board of Directors" IsExpanded="True">
+    <TreeView Header="President/CEO" IsExpanded="True">
+      <TreeView Header="CIO" IsExpanded="True">
+        <TreeView Header="VP Information Systems"/>
+        <TreeView Header="VP Digital Assets and Paranoia"/>
+        <TreeView Header="VP Networks and Grosswalks"/>
+      </TreeView>
+      <TreeView Header="VP Administration" IsExpanded="True">
+        <TreeView Header="Human Resources"/>
+        <TreeView Header="Inhuman Resources"/>
+      </TreeView>
+      <TreeView Header="Advertising
+```
+
+与 ListView 控件一样，TreeView 控件具有高级数据绑定能力。第 18 章将解释了一些 TreeView 数据绑定技术。
+
+# 总结
+
+本章涵盖了 WPF 最实用的内容控件。这些控件是程序用于向用户显示内容而非用于修改或操纵内容的控件。
+
+本章提供了这些控件的简要概述，并提供了足够的细节让你开始使用它们。然而，某些控件极其复杂。例如，ListView 和 TreeView 控件提供了各种功能，让你自定义它们绑定和显示的方式。只要投入足够的工作，你可以自定义这些控件到让它们几乎无法认知的程度。
+
+遗憾的是，单本书不足以涵盖所有这些高级技术。关于特定控件的更多信息，请参阅微软的文档：mdn.microsoft.com/ms752324.aspx。
+
+下一章将描述另一组控件：布局控件（layout controls）。
+
+# 6 布局控件
+
+布局控件主要用于布局。它们是像 Grid 和 StackPanel 这样的控件，通过排列子控件来帮助你设计界面。布局控件并不是完全相同的容器，它们通过排列子控件来帮助你设计界面。布局控件的设计初衷是排列子控件。通常情况下，布局控件会决定子控件的大小。布局控件并不是完全相同的容器，布局控件的设计初衷是是排列子控件。
+
+# 概述
+
+下表简要列出了本章描述的控件及其用处。
+
+| 控件 | 用途 |
+|--- | --- |
+| Canvas | 允许你通过定义控件相对于画布边缘的距离来精确放置控件。 |
+| DockPanel | 将其固定到其边缘。 |
+| Expander | 将其固定到其边缘。 |
+| Grid | 允许你以不同的方式排列子控件。 |
+| ScrollViewer | 创建一个滚动区域。 |
+| TabControl | 显示用户可以选择的标签。 |
+| ToolBar | 显示垂直或水平区域。 |
+| UniformGrid | 控件具有相同的大小。 |
+| Viewbox | 伸缩其内容。 |
+| WindowsHost | 包含窗口。 |
+| WrapPanel | 按行/列排列子控件。 |
+
+# CANVAS
+
+Canvas 允许你通过定义控件相对于左、右、上下边缘的距离来精确放置控件。例如，以下代码创建了一个距离边缘 20 像素的 Canvas。图 6-1 显示了结果。
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_139_0.png)
+
+```
+<Canvas>
+  <Button Content="TopLeft" Width="85" Height="30"
+    Canvas.Top="20" Canvas.Left="20"/>
+  <Button Content="TopRight" Width="85" Height="30"
+    Canvas.Top="20" Canvas.Right="20"/>
+  <Button Content="BottomLeft" Width="85" Height="30"
+    Canvas.Bottom="20" Canvas.Left="20"/>
+  <Button Content="BottomRight" Width="85" Height="30"
+    Canvas.Bottom="20" Canvas.Right="20"/>
+</Canvas>
+```
+
+UseCanvas
+
+Canvas 总是给子控件提供它们想要的空间。如果子控件选择了 Left 和 Right 或 Top 和 Bottom 附加属性，Left 或 Top 值具有优先，而 Right 或 Bottom 值会被忽略。
+
+# EFFECTS
+
+由于附加属性的作用，Canvas 子控件在 Canvas 调整大小时会固定在其边缘并保持原始大小。如果你希望子控件在容器调整大小时进行伸缩，请考虑不同的容器，如 Grid。
+
+# DOCKPAN
+
+DockPanel 将子控件固定到其边缘。该控件定义了附加属性 Dock，它可以取 Left、Right、Top 和 Bottom 等值。
+
+在布局期间，DockPanel 循环遍历其子控件并检查它们的 Dock 值。它将每个子控件附加到 DockPanel 中当前未使用的区域边缘。
+
+如果 DockPanel 的 LastChildFill 属性为 True，那么它会让最后一个子控件填充剩余空间。
+
+例如，以下代码创建了一系列固定到 DockPanel 边缘 Border 控件：
+
+```
+<DockPanel LastChildFill="True">
+<Border DockPanel.Dock="Top" Background="LightGreen">
+<Label Content="1, Top"/>
+</Border>
+<Border DockPanel.Dock="Left" Background="#FFF00FF">
+<Label Content="2, Left">
+<RotateTransform Angle="-90"/>
+</RotateTransform>
+</Label>
+</Border>
+<Border DockPanel.Dock="Right" Background="#FFFFB400">
+<Label Content="3, Right" />
+</Border>
+</DockPanel>
+```
+

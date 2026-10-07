@@ -1,0 +1,149 @@
+
+
+# FILLRULE 详情
+
+为了更好地理解 FillRule 的工作原理及其取值的含义，请在图 10-12 中任意选择一个点，并在脑中从该点向右侧无限延伸一条射线（在本示例中，超出页面就足够远了）。
+
+对于**奇偶规则（EvenOdd rule）**，计算射线与形状线段交叉的次数。如果交叉次数为奇数，则该点位于“形状内部并填充颜色”。如果交叉次数为偶数，则该点位于形状的“外部”且不填充颜色。
+
+对于**非零规则（Nonzero rule）**，你需要考虑形状线段跨越射线的方向。每当线段从左到右跨越射线（从射线的视角）时，计数器加 1。每当线段从右到左跨越射线时，计数器减 1。完成后，如果计数器不为零，则该点位于形状“内部”并填充颜色。如果计数器为零，则该点位于形状的“外部”且不填充颜色。
+
+尝试图 10-12 中形状内部和外部的后续点，观察会发生什么。
+
+图 10-13 的 SpreadMethods 示例演示了使用三种 SpreadMethod 取值的线性渐变画刷（LinearGradientBrushes）和径向渐变画刷（RadialGradientBrushes）。注意当 SpreadMethod 为 Repeat 时颜色发生的突变。
+
+# SolidColorBrush（单色画刷）
+
+SolidBrush 类表示单一的纯色。在 XAML 中，你可以通过名称（例如 Red 或 HotPink）或十六进制值（例如 #FFF0000 或 #FFF69B4）来指定画刷的颜色。
+
+通常使用颜色的名称更容易，你也可以根据需要显式地构建一个 SolidColorBrush 对象。
+
+UseColorBrush 示例使用以下 XAML 代码演示了两种方法。首先，它使用颜色 Margin 绘制了一个蓝色椭圆。然后它绘制了第二个椭圆，并用显式创建的 SolidColorBrush 进行填充。
+
+```xml
+<Ellipse Margin="10,20" StrokeThickness="5" Stroke="Black"
+  Fill="Blue"/>
+<Ellipse Margin="75,0" StrokeThickness="5" Stroke="Black"
+  Fill="SolidColorBrush Color="Red"/>
+</Ellipse>
+```
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_208_0.png)
+
+# LinearGradientBrush（线性渐变画刷）
+
+LinearGradientBrush 使用一系列颜色填充区域，这些颜色在线性方向上从一种平滑地过渡到另一种。例如，画刷在左侧可能是蓝色，向右侧逐渐变为白色。
+
+LinearGradientBrush 的 StartPoint 和 EndPoint 属性决定了渐变的开始和结束。这些点的坐标使用比例放值，其中 (0, 0) 是画刷的左上角，(1, 1) 是右下角。
+
+画刷包含一个 GradientStop 对象的集合，决定了它如何填充区域。GradientStop 的 Color 属性定义了画刷在特定点应使用的颜色。其 Offset 属性决定了该颜色在画刷从 StartPoint 到 EndPoint 之间的位置（0 到 1 比例放值）。
+
+画刷可以包含许多 GradientStop 对象来定义渐变中的中间颜色。
+
+图 10-14 的 LinearGradientBrush 示例程序使用以下代码绘制其矩形：
+
+```xml
+<Rectangle Margin="5" Width="100" Height="100" Stroke="Black">
+  <Rectangle.Fill>
+    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+      <GradientStop Color="White" Offset="0" />
+      <GradientStop Color="Blue" Offset="1" />
+    </LinearGradientBrush>
+  </Rectangle.Fill>
+</Rectangle>
+<Rectangle Margin="5" Width="100" Height="100" Stroke="Black">
+  <Rectangle.Fill>
+    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+      <GradientStop Color="White" Offset="0" />
+      <GradientStop Color="White" Offset="0.5" />
+      <GradientStop Color="Blue" Offset="1" />
+    </LinearGradientBrush>
+  </Rectangle.Fill>
+</Rectangle>
+<Rectangle Margin="5" Width="100" Height="100" Stroke="Black">
+  <Rectangle.Fill>
+    <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+      <GradientStop Color="Blue" Offset="0" />
+      <GradientStop Color="White" Offset="0.5" />
+      <GradientStop Color="Red" Offset="1" />
+    </LinearGradientBrush>
+  </Rectangle.Fill>
+</Rectangle>
+```
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_209_0.png)
+
+FIGURE 10-14
+
+```xml
+<Rectangle.Fill>
+  <LinearGradientBrush EndPoint="0.25,0.5" StartPoint="0,0.5"
+    SpreadMethod="Reflect">
+    <GradientStop Color="White" Offset="0"/>
+    <GradientStop Color="Blue" Offset="1"/>
+  </LinearGradientBrush>
+</Rectangle.Fill>
+```
+
+第一个矩形从顶部 (0.5, 0) 垂直渐变到底部 (0.5, 1)。
+
+第二个矩形添加了一个额外的 GradientStop 对象，使渐变在通过画刷一半之前保持白色后再变为蓝色。
+
+第三个矩形的画刷使用不同的 StartPoint 和 Endpoint 值，使渐变从左上角 (0, 0) 移动到右下角 (1, 1)。它使用 GradientStop 对象使颜色从蓝色混合到绿色。
+
+最后一个矩形的画刷 Endpoint 为 (0.25, 0.5)，因此画刷只覆盖了矩形的四分之一。画刷的 SpreadMethod 设置为 Reflect，以便画刷反射覆盖矩形的剩余部分。
+
+# RadialGradientBrush（径向渐变画刷）
+
+RadialGradientBrush 使用从中心点发散颜色填充区域。画刷不使用 StartPoint 和 Endpoint，而是使用 GradientOrigin、RadiusX 和 RadiusY。
+
+GradientOrigin 决定颜色发散点。默认是 (0.5, 0.5)，因此颜色从画刷的中心 (0, 0) 发散到 (1, 1)。
+
+RadiusX 和 RadiusY 决定了画刷从中心水平和垂直方向延伸的距离，使用的是 (0, 0) 到 (1, 1) 坐标系。
+
+记住半径（RADIUS）
+
+记住矩形的宽度是圆的两倍，因此 RadiusX 和 RadiusY 值为 0.5 会使渐变填充整个画刷。注意 0.5 值使得渐变只到达画刷的侧边。这意味着例如，矩形的角没有被渐变覆盖，它们如何填充取决于 SpreadMethod 属性。
+
+图 10-15 的 RadialGradientBrush 示例绘制了几个填充了 RadialGradientBrush 的矩形。从左到右、从上到下，这些画刷具有以下属性：
+
+- 从白色到红色的默认渐变
+- RadiusX = 0.25 RadiusY = 0.25
+- RadiusX = 0.5 RadiusY = 0.25
+- 一个额外的 GradientStop 对象，使画刷在通过画刷一半之前保持白色-GradientOrigin = 0.25, 0.25
+- 一个额外的 GradientStop 对象，使画刷从红色到白色渐变
+- RadiusX = 0.1, RadiusY = 0.1, SpreadMethod = Reflect
+- SpreadMethod = Repeat（你可以看到渐变没有到达矩形的角）
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_211_0.png)
+
+FIGURE 10-15
+
+# TileBrush（平画刷）
+
+TileBrush 是一个基类，表示用重复图案填充区域的画刷。ImageBrush、DrawingBrush 和 VisualBrush 子类分别用图片、图形和用户界面元素填充区域。第 3 章中的“Tile Brushes”部分及其后续章节描述了你可以用于定义这些类型画刷的属性。后续章节提供了更多关于其中一些画刷的信息。
+
+# ImageBrush（图像画刷）
+
+ImageBrush 类用图片填充区域。请参见第 3 章中的“Image Brush”，获取该类属性的通用描述以及在 Expression Blend 中构建 ImageBrush 的说明。
+
+图 10-16 的 ImageBrushModes 示例程序演示了控件的 TileMode 属性值。该属性决定了画刷必要时如何重复，类似于 SpreadMethod 属性决定渐变画刷如何填充它们未覆盖的区域的方式。
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_211_1.png)
+
+FIGURE 10-16
+
+# DrawingBrush（图形画刷）
+
+DrawingBrush 类用图形填充区域。图形可能包含标签、线条、多边形或其他。不幸的是，在 XAML 代码中绘制 DrawingBrush 是相当困难的。画刷应该包含一个定义图形的 Drawing 元素。Drawing 元素可以包含图形对象，如 GeometryDrawing、GlyphRunDrawing 或 ImageDrawing。这些对象定义了它们包含对象的属性。例如，GeometryBrush 和 Pen 属性适用于任何你绘制的对象。
+
+如果你想包含多个对象，可以绘制 DrawingGroup 子，它可以包含其他图形对象，如 GeometryDrawing、GlyphRunDrawing 或 ImageDrawing。
+
+在 DrawingBrush 中创建复杂的图片是一项辛苦工作。事实上，它是如此困难，以至于你可能会怀疑为什么不使用简单的 ImageBrush。但 DrawingBrush 的优势在于它定义了其命令，因此当你放大 DrawingBrush 时，仍然能看到平滑的曲线。相反，如果你放大 ImageBrush，画刷会变得像素化并模糊。
+
+图 10-17 的 MagnifiedDrawing 程序显示了一系列用相同 DrawingBrush 填充的矩形。每个矩形都显示在一个 Viewbox 内部，Viewbox 会拉伸其内容，以便你以不同的比例查看画刷。
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_212_0.png)
+
+FIGURE 10-17
+

@@ -1,0 +1,202 @@
+
+
+如果你使用脊线键（spine key），该属性将遵循类似于图 14-7 所示的橙色脊线的路径。在这个示例中，在图表的左侧，值随着时间的推移变化很小；在图表中间，值变化很快；在图右侧，值再次减少。结果是，值开始缓慢移动，加速，最后在达到最终值之前减速。
+
+你使用 `KeySpine` 属性来指定带样线（splines）的关键帧的控制点。此属性应包含两个点，提供归一化系统（0 ≤ X ≤ 1，且 0 ≤ Y ≤ 1）中的控制点坐标。
+
+`RovingButtonWithSplines` 示例使用以下代码使其 `Button` 遵循 `RovingButton` 和 `RovingButtonWithKeyFrames` 的矩形路径。程序是相同的，但 `Button` 移动的速度不同。在之前的程序中，`Button` 以恒速越过 `Rectangle` 的每一边。在这个程序中，这实际上是一个非常棒的效果。从书的网站下载程序并亲眼观察吧。
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_287_0.png)
+
+```
+<Storyboard X:Key="moveButton" RepeatBehavior="Forever">
+  <DoubleAnimationUsingKeyFrames
+    Storyboard.TargetName="btnM"
+    Storyboard.TargetProperty="Canvas.Left">
+    <SpineDoubleKeyFrame Value="370" KeyTime="0:0:1.5" KeySpine="0.5,0.5,0.5,1"/>
+    <SpineDoubleKeyFrame Value="370" KeyTime="0:0:2.5"/>
+    <SpineDoubleKeyFrame Value="10" KeyTime="0:0:4"/>
+    <SpineDoubleKeyFrame Value="10" KeyTime="0:0:5"/>
+    <SpineDoubleKeyFrame Value="160" KeyTime="0:0:2.5"/>
+    <SpineDoubleKeyFrame Value="160" KeySpine="0.5,0.5,0.5,1"/>
+  </DoubleAnimationUsingKeyFrames>
+  <DoubleAnimationUsingKeyFrames
+    Storyboard.TargetName="btnM"
+    Storyboard.TargetProperty="Canvas.Top">
+    <SpineDoubleKeyFrame Value="10" KeyTime="0:0:1.5"/>
+    <SpineDoubleKeyFrame Value="160" KeyTime="0:0:2.5"/>
+    <SpineDoubleKeyFrame Value="160" KeyTime="0:0:4"/>
+    <SpineDoubleKeyFrame Value="160" KeyTime="0:0:5"/>
+  </DoubleAnimationUsingKeyFrames>
+</Storyboard>
+```
+
+RovingButtonWithSplines
+
+# 离散关键帧
+
+线性关键帧和脊线关键帧将属性连续从一个值移动到另一个值。离散关键帧（discrete key frame）使属性突然从一个值跳跃到另一个值。
+
+`RovingButtonDiscrete` 示例使用以下代码来此此 `Button`：
+
+```
+<Storyboard x="sbButton" RepeatBehavior="Forever">
+  <DoubleAnimationUsingKeyFrames>
+    <Storyboard.TargetName="move" Target="Canvas.Left">
+      <DiscreteKeyFrame Value="130" KeyTime="0:0:0.5"/>
+      <DiscreteKeyFrame Value="250" KeyTime="0:0:1.0"/>
+      <DiscreteKeyFrame Value="370" KeyTime="0:0:1.5"/>
+      <DiscreteKeyFrame Value="370" KeyTime="0:0:2.5"/>
+      <DiscreteKeyFrame Value="250" KeyTime="0:0:3.5"/>
+      <DiscreteKeyFrame Value="130" KeyTime="0:0:4.0"/>
+    </Storyboard.TargetName>
+  </DoubleAnimationUsingKeyFrames>
+  <DoubleAnimationUsingKeyFrames>
+    <Storyboard.TargetName="move" Target="Canvas.Top">
+      <DiscreteKeyFrame Value="85" KeyTime="0:0:0.2"/>
+      <DiscreteKeyFrame Value="160" KeyTime="0:0:2.5"/>
+      <DiscreteKeyFrame Value="85" KeyTime="0:0:4.5"/>
+      <DiscreteKeyFrame Value="10" KeyTime="0:0:5.0"/>
+    </Storyboard.TargetName>
+  </DoubleAnimationUsingKeyFrames>
+</Storyboard>
+```
+
+该示例与之前的程序一样沿矩形路径移动 `Button`，但 `Button` 是以离散跳跃而不是平滑移动的。因为离散帧不产生任何中间值，因此代码必须列出你想要的每一个值。
+
+# 路径动画
+
+路径动画遵循路径的坐标或角度。例如，你可以使用路径动画沿椭圆边界或一系列曲线移动。图 14-8 所示的 `RovingButtonWithPath` 示例沿黑色所示的路径移动 `Button`。随着它的移动，`Button` 会旋转以匹配该点处曲线的角度。`RovingButtonWithPath` 程序使用以下代码来此此 `Button` 添加动画：
+
+```
+<PathGeometry x="pathMove"
+  Figures="M10 85 A 100,70 0 1 210,85 A 100,70 0 1 10,150"/>
+```
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_288_0.png)
+
+图 14-8
+
+# 触发器与动画
+
+```
+<Storyboard x:Key="sbMoveButton" RepeatBehavior="Forever">
+  <DoubleAnimationUsingPath Duration="0:0:0:4">
+    Storyboard.TargetName="btnMover"
+    Storyboard.TargetProperty="Canvas.Left"
+    Source="X"
+    <PathGeometry x="StaticResource pathMove"/>
+  </DoubleAnimationUsingPath>
+  <DoubleAnimationUsingPath Duration="0:0:0:4">
+    Storyboard.TargetName="btnMover"
+    Storyboard.TargetProperty="Canvas.Top"
+    Source="Y"
+    <PathGeometry x="StaticResource pathMove"/>
+  </DoubleAnimationUsingPath>
+  <DoubleAnimationUsingPath Duration="0:0:0:4">
+    Storyboard.TargetName="btnMover"
+    Storyboard.TargetProperty="RenderTransform.Angle"
+    Source="Angle"
+    <PathGeometry x="StaticResource pathMove"/>
+  </DoubleAnimationUsingPath>
+</Storyboard>
+```
+
+`RovingButtonWithPath` 代码创建了一个 `PathGeometry` 对象来定义路径。然后 `sbMoveButton` Storyboard 的第一个 `DoubleAnimationUsingPath` 随着动画进行将 `Button` 的 `Canvas.Left` 属性设置为路径的 X 坐标。同样，第二个 `DoubleAnimationUsingPath` 对象随着动画进行将 `Button` 的 `Canvas.Top` 属性匹配路径的 Y 坐标。最后一个动画对象旋转 `Button` 90 度。
+
+# 混合与匹配关键帧
+
+之前的关键帧示例都使用单一类型的关键帧，但你可以对它们进行混合和匹配。例如，单个 storyboard 可以包含线性关键帧和离散关键帧。Storyboard 甚至包含路径动画。图 14-9 所示的 `RovingButtonKeyFrames` 示例演示了线性、离散以及路径动画的混合。当你点击按钮时，`Button` 沿黑色绘制的路线移动。
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_289_0.png)
+
+图 14-9
+
+`RovingButtonKeyFrames` 程序使用以下代码来此此 `Button` 添加动画：
+
+```
+<PathGeometry key="pathMove"
+  Figures="M 30,10 A 50 0 1 150,170"/>
+<Storyboard x="sbButton" RepeatBehavior="Forever">
+  <!-- 向右移动 -->
+  <DoubleAnimationUsingKeyFrames BeginTime="0:0:0:0">
+    Storyboard.TargetName="btnMover"
+    Storyboard.TargetProperty="(Canvas.Left)"
+    <LinearKeyFrame KeyTime="0:0:1" Value="190"/>
+    <DiscreteKeyFrame KeyTime="0:0:1" Value="350"/>
+  </DoubleAnimationUsingKeyFrames>
+  <!-- 向下移动 -->
+  <DoubleAnimationUsingKeyFrames BeginTime="0:0:0:1" Duration="0:0:0:1">
+    Storyboard.TargetName="btnMover"
+    Storyboard.TargetProperty="(Canvas.Left)"
+    Source="X"
+    <PathGeometry Source="StaticResource pathMove"/>
+  </DoubleAnimationUsingKeyFrames>
+  <DoubleAnimationUsingKeyFrames BeginTime="0:0:0:1" Duration="0:0:0:1">
+    Storyboard.TargetName="btnMover"
+    Storyboard.TargetProperty="(Canvas.Top)"
+    Source="Y"
+    <PathGeometry Source="StaticResource pathMove"/>
+  </DoubleAnimationUsingKeyFrames>
+  <!-- 向左移动 -->
+  <DoubleAnimationUsingKeyFrames BeginTime="0:0:0:2">
+    Storyboard.TargetName="btnMover"
+    Storyboard.TargetProperty="(Canvas.Left)"
+    <DiscreteKeyFrame KeyTime="0:0:0" Value="190"/>
+    <LinearKeyFrame KeyTime="0:0:1" Value="10"/>
+  </DoubleAnimationUsingKeyFrames>
+  <!-- 向右旋转 -->
+  <DoubleAnimationUsingKeyFrames BeginTime="0:0:0:3" Duration="0:0:0:1">
+    Storyboard.TargetName="btnMover"
+    Storyboard.TargetProperty="RenderTransform.Angle"/>
+  </DoubleAnimationUsingKeyFrames>
+  <!-- 向上移动 -->
+  <DoubleAnimationUsingKeyFrames BeginTime="0:0:0:4">
+    Storyboard.TargetName="btnMover"
+    Storyboard.TargetProperty="(Canvas.Top)"
+    <LinearKeyFrame KeyTime="0:0:1" Value="10"/>
+  </DoubleAnimationUsingKeyFrames>
+</Storyboard>
+```
+
+# 特殊情况
+
+WPF 为大多数数据类型提供了以下动画类型：
+
+- 简单（线性）
+- 带线性帧的关键帧动画
+- 带脊线帧的关键帧动画
+- 带离散帧的关键帧动画
+
+它还为 `Double`、`Matrix` 和 `Point` 提供了路径动画。少数类型不提供标准的动画类型，通常是因为这些动画类型没有意义。例如，使用线性插值或脊线来动画 `String` 并没有真正的意义。你会如何定义位于“Time”和“banana”中间的字符串？
+
+对于 `String`、`Boolean` 和 `Char` 数据类型，WPF 只提供离散动画。
+
+图 14-10 所示的 `AnimatedText` 示例演示了字符串动画。当你点击 Quote 按钮时，程序逐逐字母显示引言文本。引言出现后，温斯顿·丘吉会逐渐消失。
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_291_0.png)
+
+图 14-10
+
+以下代码显示了 `AnimatedText` 程序用于显示引言和属性的 Storyboard：
+
+```
+<Storyboard x:Key="sbShowQuote">
+  Display the quote
+    <StringAnimationUsingKeyFrames
+      <Storyboard.TargetProperty="Content">
+        <DiscreteKeyFrame KeyTime="0:0:0.1" Value="A j"/>
+        <DiscreteKeyFrame KeyTime="0:0:0.2" Value="A jok"/>
+        <DiscreteKeyFrame KeyTime="0:0:0.3" Value="A joke i"/>
+        <DiscreteKeyFrame KeyTime="0:0:0.4" Value="A joke is a"/>
+        <DiscreteKeyFrame KeyTime="0:0:0.5" Value="A joke is a ve"/>
+        <DiscreteKeyFrame KeyTime="0:0:0.6" Value="A joke is a very"/>
+      </Storyboard.TargetProperty>
+    </StringAnimationUsingKeyFrames>
+  </Display>
+  ...
+  其他关键帧省略
+  <DiscreteKeyFrame KeyTime="0:0:1.2" Value="A joke is a very serious thing"/>
+</Storyboard>
+```
+
