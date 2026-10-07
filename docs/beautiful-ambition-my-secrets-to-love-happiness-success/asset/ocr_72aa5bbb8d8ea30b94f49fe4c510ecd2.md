@@ -1,0 +1,11 @@
+have the grace extend forgiveness where none is asked, we may find the burden of anger lifted from our hearts more readily.
+
+That might, however, still be much easier said than done. Anger and resentment are easy to generate and maintain. Forgiveness requires effort and imagination. If you can imagine a future devoid of the anger, you can begin to feel forgiveness. A heart free of hurt and anger is more open to accepting and expressing positive emotions.
+
+That is not to say you should never feel free or express anger. If you feel wronged, you will benefit from expressing your feelings—if not to the offender, then to a third party willing to listen. Getting the feelings out is called venting, as in letting off the steam, releasing the pressure. If you cannot bring yourself to speak to someone, consider writing your feelings down, or speaking into a tape or voice-recorder (for your ears ONLY!).
+
+Forget the adage, "Forgive and forget." No one expects you to forget what happened. Nor the offending party forget what they did. You both have to remember the circumstances of the problem, so you can avoid repeating the incident over and over again. *Remember what went wrong and remember how you got past the hurt.*
+
+The important thing is to say what you are feeling, that the emotions do not get bottled up inside. Denying a problem does not contribute to a solution. Denial only leads to repressed emotions, which contribute to physical and psychological problems in the long-run. For one thing, you risk casting yourself in the role of the victim in perpetuity. You also taint your relationships, which cannot be healthy and productive, if you refuse to let go of negative emotions. If you want to increase your odds of living a long and healthy life, you have to address each and every issue that threatens your wellbeing.
+
+Once you have given voice to your feelings, you are ready to tackle the more difficult task of forgiveness. It all comes down to making a conscious choice to forgive. Letting go of negative emotions is a healing process that releases internal pressures and literally lightens the mind.

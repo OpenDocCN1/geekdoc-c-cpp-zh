@@ -1,0 +1,9 @@
+# BEAUTIFUL AMBITION 167
+
+Play-offs, Superbowl! and such related activities. That means college games are on every Saturday afternoon. Monday night football is like religion to them so respect it! Here is what you do: Get to know his favorite team and go online to check out who the star players are for that team. You may hate football, but your man loves it, so it would behoove you to learn about it just a bit. You may have to fake it.
+
+Then he will find it really sweet and cute that you know the star players. You will gain major points and if you look at the schedule a week at a time, you can schedule events that are important to you around the games.
+
+It does not cost or take much, a little effort all-in-all, but it will do wonders for you both! Let him come over to your place with a few buddies. Get them some great food and beer, leave for the day to go that chicklick with your girl friends and hit the mall. You see, everyone wins! If you really want to score major points, take a look at who is winning while you are out then call him and say “YAY, your team scored! Just thinking of you, go have fun with the boys.” He will be eating out of your hand in no time flat!
+
++   When he asks you if something is wrong and you say no, that is good enough for him. Men do not like getting into long drawn-out conversations as women. They are not wired like women and do not work or think that way. YES or NO usually works well for them and they typically DO NOT make decisions that are “emotional” like we do. Try to understand the basics of how men think and tick, because it will serve you all around, every time!

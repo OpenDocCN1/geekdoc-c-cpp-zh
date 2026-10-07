@@ -1,0 +1,3 @@
++   * **visualization** to create your future. Focus on the things that you want to achieve and spend time thinking about them. Find time each day to be still and think about all the things that you want in life and use this precious time to help guide you through the steps it will take, to get the results you want
+
+Now let's continue...
