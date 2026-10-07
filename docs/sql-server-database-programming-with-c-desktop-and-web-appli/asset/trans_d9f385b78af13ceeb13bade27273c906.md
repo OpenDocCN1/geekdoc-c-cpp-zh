@@ -1,0 +1,92 @@
+
+
+# 使用 Visual C#.NET 进行数据选择查询
+
+D. 存储过程 `dbo.StudentInfo` 的唯一输入参数是 `StudentName`，它由用户在程序运行时从学生名称组合框（`ComboBox.Text`）中选择。在执行存储过程之前，必须使用 `Add()` 方法将此动态参数添加到该类的属性 `Parameters` 集合中。随后，将初始化的 `Command` 对象 `cmdStudent` 赋值给 `DataAdapter` 的 `SelectCommand` 属性，以便为下一步做好准备。
+
+E. 如果用户选择 `SqlCommand` 方法，则会调用 `DataAdapter` 的 `Fill()` 方法通过你的第一个存储过程来填充表格。
+
+F. 如果执行成功，`Count` 属性应大于 0，这意味着至少有一行数据被填充到 `Table` 中，并且调用用户定义方法 `FillStudentTextBox()` 将存储过程检索的列填充到表单（Form）的七个文本框中。否则，如果失败，将显示错误消息。
+
+G. 调用用户定义方法 `SqlCommand()` 来初始化我们的 Command 对象 `cmdStudentCourse`。赋值给 Command 对象属性的值如下：
+
+- Connection = loginForm.SqlConnection
+- CommandType = CommandType.StoredProcedure
+- CommandText = "dbo.StudentCourseInfo"
+
+`CommandText` 的内容必须与上一步中开发的存储过程名称相等。
+
+H. 存储过程 `dbo.StudentCourseInfo` 的唯一输入参数是 `StudentID`，它从第一个存储过程中获取并存储在学生 ID 文本框 `txtStudentID` 中。在执行存储过程之前，必须使用 `Add()` 方法将此动态参数添加到该类的属性 `Parameters` 集合中。随后，将初始化的 Command 对象 `cmdStudentCourse` 赋值给另一个 `DataAdapter` 的 `SelectCommand` 属性，以便为下一步做好准备。
+
+I. 调用 `DataAdapter` 的 `Fill` 方法来填充 `Course` 表，这实际上是调用我们的第二个存储过程来填充 `Student` 表。
+
+J. 如果执行成功，`Count` 属性应大于 0，这意味着至少有一行数据被填充到 `Student` 表中，并且调用用户定义方法 `FillList()` 将从存储过程检索的所有课程（`course_id`）填充到表单的 `CourseList` 框中。否则，如果该操作失败，将显示错误消息。
+
+K. 由于我们不再需要该对象，因此使用 `Dispose()` 方法移除使用的对象 `cmdStudentCourse`。
+
+L. 如果用户选择 `DataReader` 方法，首先我们需要创建两个本地对象：一个 Command 对象 `cmdStudentCourse_dr` 和一个 DataReader 对象 `cmdStudentReader`。前者作为一个独立的 Command 对象，通过我们的第二个存储过程对 `Student` 表执行查询，以获取所选学生的所有 `course_id`；后者作为 DataReader 以获取所有检索到的 `course_id`。
+
+M. 调用 `ExecuteReader()` 方法来检索与所选学生相关的所有信息并赋值给 `StudentReader`。
+
+N. 如果此执行成功，意味着至少读取了一行数据并赋值给了 `DataReader`，此时 `DataReader` 的 `HasRows` 属性将为 `true`，并执行用户定义方法 `FillStudentReader()` 将相关信息填充到 Student 表单的七个文本框中。
+
+O. 否则，将显示错误消息以指示此情况。
+
+P. 调用 `BuildCommand()` 方法使用我们的第二个存储过程构建 `StudentCourse` Command 对象。需要注意的是这第一个输入参数，它是一个引用（`ref`）。这意味着该 Command  地址被传递到该方法中。
+
+# 使用 C# 进行 SQL Server 数据库编程
+
+这种类型的目的是我们需要获取一个初始化的 Command 对象并返回给此方法。如果不使用 `ref`，则只会将 Command 对象的拷贝到此方法，且返回的对象将无法初始化。
+
+- 该存储过程的唯一输入参数是 `StudentID`，它被添加到 Command 对象的属性 `Parameters` 集合中。
+
+- 调用 `ExecuteReader()` 方法运行我们的存储过程，成功读取该学生所修的所有课程，并将它们赋值给 `StudentCourse` DataReader 对象。
+
+- 如果方法 `Execute()` 成功，则执行 `DataReader` 对象的 `HasRows` 属性将所有课程（`course id`）填充到 `CourseList` 列表框。否则，如果此方法失败，将显示错误消息。
+
+- 在退出此方法之前，会释放两个 DataReader 对象和一个 Command 对象。
+
+- 执行一些清理工作，以释放此方法中使用的所有其他对象。
+
+`BuildCommand()` 方法的代码如图 5.97 所示。
+这段代码直观且易于理解。首先，将来自 `LoginForm` 类的类级对象 `sqlConnection` 的有效数据库对象赋值给 Command 对象的 `Connection` 属性。然后，通过将相关属性 `CommandType` 和 `CommandText` 赋值来初始化 Command 对象。关键在于，赋值给 `CommandType` 的值必须是 `StoredProcedure`，赋值给 `CommandText` 的值必须是我们在上一节中开发的存储过程名称。
+
+两个用户定义方法 `FillTextBox()` 和 `FillCourseList()` 的代码如图 5.98 所示。让我们来看看这些代码是如何操作的：
+
+- 对于第一个方法 `FillTextBox()`，声明了两个本地变量。整数变量 `pos` 可作为内层循环的计数器，用于从检索到的行中提取每个查询列。一个 `TextBox` 数组 `textBox[]`（涉及 Student 表单中的所有 TextBox）用于存储和显示从 `Student` 表中检索的关联数据列。
+
+- 使用一个嵌套循环从返回的行中检索每个查询列。在这种情况下，循环只使用了一次，因为我们从 `Student` 表中检索回了一行数据。每个检索到的列都被赋值给关联的 TextBox。
+
+- 使用嵌套循环从返回的行中检索每个查询列。在本例中，由于我们只从 `Student` 表中检索回了一行数据，因此循环仅使用了一次。每个检索到的列都被赋值给关联的 TextBox。
+
+- 总共检索了 8 个列，其中 7 个列的信息被填充到 Student 表单的文本框中，最后一个是学生 ID。
+
+- 循环计数器 `pos` 用于后续操作。
+
+| SPSelect Project | BuildCommand() |
+|---|---|
+
+```csharp
+private void BuildCommand(ref SqlCommand cmdObj, string cmdString)
+{
+    cmdObj.Connection = loginForm.SqlConnection;
+    cmdObj.CommandType = CommandType.StoredProcedure;
+    cmdObj.CommandText = cmdString;
+}
+```
+图 5.97 `BuildCommand()` 方法的代码。
+
+# 使用 Visual#.NET 进行数据选择查询
+
+| SPSSelect Project | FillTextBox(DataTable StudentTable) |
+|---|---|
+| A | private void FillTextBox(DataTable StudentTable) |
+| B | int pos = 0; TextBox[] sTextBox = (TextBox[])txtStudentName, txtGPA, txtCredits, txtMajor, txtSchoolYear, txtEmail); foreach (DataRow row in StudentTable.Rows) |
+| C | foreach (DataColumn column in StudentTable.Columns) { |
+| D | if (pos <= 6) { sTextBox[pos].Text = row[column].ToString(); pos++; } |
+| E | else { byte[] image = (byte[])row["image"]; PhotoBox.Image = Image.FromStream(new System.IO.MemoryStream(image)); } } |
+| F | private void FillCourseList(DataTable StudentCourse) { |
+| G | CourseList.Items.Clear(); foreach (DataRow row in StudentTable.Rows) { CourseList.Items.Add(row[0]); //第一列是course_id - strStudentCourse } |
+
+图 5.98 两个用户定义方法的代码。
+

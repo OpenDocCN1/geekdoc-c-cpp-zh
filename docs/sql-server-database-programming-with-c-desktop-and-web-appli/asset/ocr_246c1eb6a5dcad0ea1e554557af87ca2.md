@@ -1,0 +1,21 @@
+# SQL Server Database Programming with C#
+
+data retrieved in answer to queries become information that can be used to make decisions. The datas may consist of a single table or related multiple tables. The computer programs used to, manage and query databases are known as a DataBase Management Systems (DBMS). Just as is the case with the databases the DBMS's vary in complexity. Depending on the need of a user one can use either a application or a robust system. Some examples of these programs were earlier.
+
+# 2.1.1 FILE PROCESSING SYSTEM
+
+File Processing System (FPS) is a precursor of the integrated database approach. The records for a particular application are stored in a file. An application program is needed to retrieve or manipulate data in this file. various departments in an organization will have their own file processing systems with their individual programs to store and retrieve data. Data in various files may be duplicated and unavailable to other applications. Data redundancy may lead to inconsistency, meaning that various files that supposedly contain the same information may actually contain different values, the duplication of such data creates problems with data integrity. Moreover, it is difficult to access multiple users with the file processing systems without granting them access to the respective application programs, which manipulate the data in those
+
+The FPS may be advantageous under certain circumstances. For example, if data is static and a simple application will solve the problem, more expensive DBMS is not needed. For example, in a small business everyone may want to keep track of the inventory of the office purchased only once or twice a year. The data can be kept in an spreadsheet and manipulated with ease from time to time. This avoids the need to purchase an expensive database program, and to hire a knowledgeable database administrator. Before the DBMS's became popular, data was kept in files and application programs were developed to delete, insert or modify records in the files specific application programs were developed for specific data. Programs lasted for months or years before modifications were necessitated by business needs.
+
+# 2.1.2 INTEGRATED DATABASES
+
+A better alternative to a file processing system is an integrated database approach. In this environment all data belonging to an organization is stored in a single database. The database is not a mere collection of files; there is a relation between the files. Integration implies a logical relationship, provided through a common column in the table. The relationships are also stored within the database. A set of sophisticated programs known as a Database Management System (DBMS) is used to store, access and manipulate the data in the database. The details of data storage and maintenance are hidden from the user. The user interacts with the database through the DBMS. A user may interact directly with the DBMS or via a program written in a programming language such as Visual C++, Java, Visual Basic or C#. Only the DBMS can access the database. Large organizations employ Database Administrators (DBA's) to design and maintain large databases.
+
+There are many advantages to using an integrated database approach rather than a file processing approach:
+
++   1) Data sharing: The data in the database is available to a large number of users who can access the data simultaneously and create reports, manipulate the data given proper authorization and rights.
+
++   2) Minimizing redundancy: Since all the data exists in a single database, there is a minimal need for data duplication. The duplication is needed to maintain relationship between various data items.
+
++   3) Data consistency and data integrity: Reducing redundancy will lead to data consistency. Since data is stored in a single database, enforcing data integrity becomes much easier. Furthermore, the inherent functions of the DBMS can be used to enforce the integrity with minimum programming.
