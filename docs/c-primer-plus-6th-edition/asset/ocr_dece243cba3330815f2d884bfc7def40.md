@@ -1,0 +1,46 @@
+Listing 17.14 uses two approaches to read and echo input up to, but not including, a # character. The first approach reads through the # character and then uses putback() to insert the character into the input. The second approach uses peek() to look ahead
+
+# Listing 17.14 peeker.cpp
+
+```
+// peeker.cpp -- some istream methods
+#include <iostream>
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+
+// read and echo input up to a # character
+char ch;
+
+while (cin.get(ch)) // terminates on EOF
+{
+    if (ch != '#')
+        cout << ch;
+    else
+        {
+            cin.putback(ch); // reinsert character
+            break;
+        }
+}
+
+if (!cin.eof())
+{
+    cin.get(ch);
+    cout << endl << ch << " is next input character.\n";
+}
+else
+{
+    cout << "End of file reached.\n";
+    std::exit(0);
+}
+
+while (cin.peek() != '#') // look ahead
+{
+    cin.get(ch);
+    cout << ch;
+}
+if (!cin.eof())
+```

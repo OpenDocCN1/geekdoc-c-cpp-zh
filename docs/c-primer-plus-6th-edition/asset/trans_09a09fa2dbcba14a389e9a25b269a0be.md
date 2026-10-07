@@ -1,0 +1,365 @@
+
+
+# 代码列表 1377
+
+- cubes.cpp, 390
+- defaults.cpp, 1077
+- delete.cpp, 181, 185
+- ddivide.cpp, 100
+- dma.cpp, 762-764
+- dma.h, 761-762
+- dowhile.cpp, 232
+- enum.cpp, 279
+- equal.cpp, 219
+- error1.cpp, 897-898
+- error2.cpp, 899
+- error3.cpp, 901
+- error4.cpp, 906-907
+- error5.cpp, 910, 913
+- exceed.cpp, 75
+- exceptions,newexc.cpp, 920
+- ec_mean.cpp, 905-906
+- express.cpp, 200
+- external.cpp, 465
+- file1.cpp, 451
+- file2.cpp, 452
+- filefunc.cpp, 406–407
+- fileio.cpp, 1117
+- fill.cpp, 1082
+- strefb.cpp, 383
+- floatnam.cpp, 95
+- fladd.cpp, 96
+- forloop.cpp, 203–204
+- forstr1.cpp, 206
+- forser2.cpp, 215
+- fowl.cpp, 973
+- frnd2mip.cpp, 860-861
+- fun ptr.cpp, 364, 368
+- dfundap.cpp, 1034
+- function overloading,leftover.cpp, 418
+- functions,tempor.cpp, 433–437
+- functions, arguments,twoarg.cpp, 316
+- functions, recursion, recurr.cpp, 359
+- functor.cpp, 1028
+- functemp.cpp, 420
+- getinfo.cpp, 45
+- get_fun.cpp, 1107
+- hangman.cpp, 962-965
+- hextoc2.cpp, 79
+- if/cpp, 255
+- elelse.cpp, 257
+- elseifself.cpp, 259
+- ilist.cpp, 1053
+- limit ptr.cpp, 158
+- inline functions.cpp, 381
+- inserts.cpp, 1006
+- instr1.cpp, 125
+- instr2.cpp, 127
+- instr3.cpp, 129
+- nomanip.cpp, 1092
+- jump.cpp, 280–281
+- lambda0.cpp, 1186
+- lambda1.cpp, 1190
+- left.cpp, 410–411
+- leftover.cpp, 416–417
+- lexcast.cpp, 1206
+- limits.cpp, 70
+- list.cpp, 1015
+- listruv.cpp, 1039–1040
+- lotto.cpp, 319
+- manip.cpp, 1079
+- manyfrd.cpp, 865
+- memb_pt.cpp, 1244–1245
+- modulus.cpp, 102
+- morechar.cpp, 822
+- more_and.cpp, 266
+- multmap.cpp, 1024-1025
+- myfirst.cpp, 258
+- mytime0.cpp, 566
+- mytime1.cpp, 569–570
+- mytime1.cpp, 569
+- my2.cpp, 575
+- namescp.cpp, 493
+- namesh.cpp, 493
+- namespaces,static.cpp, 479
+- nested.cpp, 247
+- newstruct.cpp, 179
+- not.cpp, 267–268
+- numstr.cpp, 130
+- num_test.cpp, 198
+- operator overloading
+- mytime0.cpp, 566
+- mytime3.cpp, 585
+- mytime3.cpp, 584
+- usetime.cpp, 568
+- usetime.cpp, 587
+- orc.cpp, 261
+- ourfununc.cpp, 54
+- outfile.cpp, 290
+- pairs.cpp, 848
+- cker.cpp, 1111
+
+# 代码列表 1378
+
+- placen1.cpp, 671-673
+- placen2.cpp, 674-675
+- plus_one.cpp, 207
+- pointer.cpp, 155
+- precise.cpp, 1082
+- protos.cpp, 310
+- ptrstr.cpp, 174-175
+- queue.cpp, 692-694
+- queue.h, 691-692
+- queuept.h, 893-895
+- random.cpp, 1138-1139
+- randwalk.cpp, 603
+- recur.cpp, 355,358
+- reference variables as
+- swaps.cpp, 395
+- rtti1.cpp, 936-938
+- rtti2.cpp, 939-941
+- ruler.cpp, 360
+- rvref.cpp, 1163
+- sales.cpp, 924
+- sales.h, 922
+- sales1.cpp, 656
+- sales2.cpp, 665
+- esecref.cpp, 385
+- setf.cpp, 1085
+- setf2.cpp, 1088
+- setops.cpp, 1021-1022
+- showpt.cpp, 1084
+- somedf.h, 1192
+- sqrt.cpp, 551
+- stack.cpp, 554-555
+- stack.h, 553-558
+- stacker.cpp, 555-557
+- stacktem.cpp, 835-836
+- stackpt.cpp, 833-838
+- static.cpp, 470-471
+- stcktp1.cpp, 841-842
+- stcktp1.h, 839-840
+- dmove.cpp, 1174
+- stock00.h, 510
+- stock1.cpp, 531
+- stock1.h, 530
+- stock2.cpp, 543
+- stock2.h, 543
+- stocks.cpp, class functions
+- stone1.cpp, 615
+- stone.cpp, 610
+- stonewt.cpp, 608
+- stonewrt.cpp, 607
+- stonewrt.cpp, 614-615
+- stonewrt.h, 613
+- str1.cpp, 953
+- str2.cpp, 966-967
+- strctfun.cpp, 348
+- strctptr.cpp, 352-353
+- strfile.cpp, 958-959
+- strfun.cpp, 340
+- strglstl.cpp, 1038-1039
+- strin.cpp, 1144
+- string1.cpp, 653-656
+- string1.h, 653
+- strings, numeric input,
+- numstr.cpp, 135
+- strings, returning, strback.cpp, 341
+- strings.cpp, 123
+- strgbad.cpp, 630-631
+- strgbad.h, 629
+- strout.cpp, 1143
+- strquote.cpp, 402-403
+- strref.cpp, 395
+- strype1.cpp, 132
+- strype2.cpp, 134
+- strtype4.cpp, 137
+- strctur.cpp, 142
+- studentc.cpp, 793
+- studentc.h, 789-790
+- studenti.cpp, 802-803
+- studenti.h, 799
+- sumafile.cpp, 294-295
+- swaps.cpp, 387-388
+- switch.cpp, 276-277
+- tabenn0.cpp, 709
+- tabenn0.h, 708
+- tabenn1.cpp, 717
+- tabenn1.h, 716
+- tempmbepp.cpp, 852
+- tempparm.cpp, 856-857
+- textin1.cpp, 234
+- textin2.cpp, 236
+- text3.cpp, 239
+- text4.cpp, 242
+- tmp2mp.cpp, 862-864
+- topfive.cpp, 353
+- travel.cpp, 344-345
+- truncate.cpp, 1113
+- tv.cpp, 880-882
+
+# 复合类型
+
+- tv.h, 879-880
+- tvfmn.h, 885-886
+- twoarg.cpp, 316
+- wood.cpp, 846-847
+- twofile1.cpp, 469
+- twofile2.cpp, 469
+- twoswap.cpp, 427-428
+- towempts.cpp, 422
+- typecast.cpp, 108
+- use new.cpp, 161
+- usage.cpp, 1043-1044
+- usebrase1.cpp, 732-733
+- usebrase2.cpp, 734
+- usedma.cpp, 765
+- unless.cpp, 1165
+- usumap.cpp, 494-495
+- useok2.cpp, 547
+- useok1.cpp, 533
+- usetime1.cpp, 571-572
+- usetime2.cpp, 577
+- sett.cpp, 710
+- sett.cpp, 717-718
+- use_sales.cpp, 925-927
+- use_stuc.cpp, 795-797
+- use_stui.cpp, 804-805
+- use_tv.cpp, 882
+- useok0.cpp, 519
+- valvect.cpp, 1048
+- variadic1.cpp, 1199
+- tvect.cpp, 593
+- tvect.cpp, 980
+- tvect2.cpp, 984-985
+- tvect3.cpp, 988
+- vegnes.cpp, 634
+- vlice.cpp, 1049-1050
+- waiting.cpp, 229
+- while.cpp, 225
+- width.cpp, 1080
+- work0.cpp, 811-812
+- work0.h, 810-811
+- workermi.cpp, 823-825
+- workermi.h, 821-822
+- worknni.cpp, 826-827
+- worktest.cpp, 813
+- write.cpp, 1073-1074
+- code style, 40
+- colon scope-resolution (::), 514
+- combination assignment operators, 211-212
+- comma operator, 214-217
+- example, 214-216
+- command-line processing, 1119-1120
+- comments, 27, 33
+- /** notation, 32
+- compare(method), 1264-1265
+- comparing arrays, vector objects, and array objects, 188-189
+- strings, 960,1263-1265
+- C-style strings, comparing, 220-223
+- class strings, comparing. 223-224
+- comparison members (String class), 648-649
+- compile time, 155
+- complex time, 1009-1010
+- compilers, 21
+- CC (UNIX), 21-22
+- g++ (Linux), 22
+- troubleshooting, 23-24
+- compiling files separately, 447-449, 453
+- class template, 1045
+- complex, 785
+- compound statements (blocks), 212-214
+- compound types, 115-116
+- enumerations, 150-152
+- enumerators, 150-151
+- value range, 153
+- values, 152
+- assigning values to, 171
+- C++ philosophy, 155
+- causions, compared to pointed-values, 172
+- declaring, 159-171
+- dnferencing, 171-172
+- delete operator, 163-164
+- example, 154
+- initializing, 157-159
+- nintegers, 160
+- new operator, 160-162
+- pointer arithmetic, 167-172
+- pointer notation, 173
+
+# 复合类型
+
+- pointers to objects, 665-670
+- strings, 173-178
+- structures, 140-142
+- arrays, 147-148
+- assignment, 145-146
+- bit fields, 148
+- dynamic structures, 178–180
+- example, 142-144
+- members, 141
+- string class members, 144-145
+- unions, 149
+- anonymous unions, 150
+- declaring, 149
+- compstr1.cpp, 221
+- compstr2.cpp, 223
+- concatenating strings, 122, 128, 1266
+- concatenating output, 46-47
+- concatenation output, 1071-1072
+- string class, 133–134
+- concatenation operator (+), 133-134
+- concepts
+- container, 1007
+- container methods compared to functions, 1039–1041
+- properties, 1008–1010
+- sequence requirements, 1011–1011
+- functors, 1027–1030
+- iterators, models, 1000–1001
+- concurrent programming, 1202
+- condlit.cpp, 273
+- conditional operator (?:), 273-274
+- const ref, reference to, 400
+- const keyword, 90-92, 473-474, 771-772
+- arrays, 327–328
+- pointers, 333–346
+- reference variables, 401
+- temporary variables, 392–394
+- const member functions, 537
+- const modifier as alterative to #define, 1327-1329
+- const objects, returning to, 662-665
+- constant time, 1009
+- constant time complexity, 1009-1010
+- constants, 78-80. See strings
+- char constants. See char data type
+- const keyword, 90-92
+- file modes, 1122
+- floating-point constants, 96
+- representing bit values, 1085
+- size_type, 1251
+- symbolic constants, 72
+- symbolic names, 90–92
+- constcast.cpp, 944
+- constructors, 524, 742, 768
+- calling, 526–527
+- class, 524
+- conversion, 769–770
+- copy constructors, 639, 767
+- deep copying, 642–644
+- limitations, 640–642
+- shallow copying, 640
+- when to use, 639–640
+- declaring, 525–526
+- default constructors, 527–528, 638–639, 776–767
+- defining, 525–526
+- deleating, 1180–1181
+- inheritance, 713–715
+- initialization list, C++11, 1258
+- new operator, 659, 667–678
+- Rvalue reference, C++11, 1256
+- string class, 1253
+- structors that use arrays, 1254
+- structors that use n copies of character, 1257
+- structors that use parts of arrays, 1254–1255
+- structors that use ranges, 1257
+

@@ -1,0 +1,214 @@
+
+
+# 介绍结构
+
+for the new type. Thus, you can now create variables of type inflatable just as you create variables of type char or int. Next, between braces are the list of data types to be held in the structure. Each list item is a declaration statement. You can use any of the C++ types here, including arrays and other structures. This example uses an array of char, which is suitable for storing a string, a float, and a double. Each individual item in the list is called a structure member, so the inflatable structure has three members (see Figure 4.6). In short, the structure definition defines the characteristics of a type—in this case, the inflatable type.
+
+```
+the struct         the tag becomes the name
+keyword             for the new type
+
+struct inflatable
+opening and {char name[20];   structure
+closing braces  float volume;   members
+                 double price;};
+terminates the structure declaration
+```
+
+Figure 4.6 Parts of a structure description.
+
+After you defined the structure, you can create variables of that type:
+inflatable hat;               // hat is a structure variable of type inflatable
+inflatable woopie-cushion;  // type inflatable variable
+inflatable mainframe;      // type inflatable variable
+
+If you're familiar with C structures, you'll notice (with pleasure) that C++ allows you to drop the keyword struct when you declare structure variables:
+struct inflatable goat;   // keyword struct required in C
+inflatable vincent;        // keyword struct not required in C++
+
+In C++, the tag is used just like a fundamental type name. This change emphasizes that structure declaration defines a new type. It allows omitting struct from the list of curse-inducing errors.
+
+Given that hat is type inflatable, you use the membership operator (.) to access individual members. For example, hat.volume refers to the volume member of the structure, and hat.price refers to the price member. Similarly, vincent.price is the price member of vincent. In short, names enable you to access members of a structure which indices enable you to access elements of an array. Because the price member is declared as type double, hat.price and vincent.price are both equivalent to type double variables and can be used in any manner an ordinary double variable can be used. In short, hat is a structure, but hat.price is a double.
+
+the way, the method used to access class member functions such as cin.getline() has its origins in the method used to access structure member variables such as vincent.price.
+
+## Using a Structure in a Program
+
+Now that we've covered some of the main features of structures, it's time to put the ideas together in a structure-using program. Listing 4.11 illustrates these points about a structure. It also shows how to initialize one.
+
+Listing 4.11 struct.cpp
+
+```
+// struct.cpp -- a simple structure
+#include <iostream>
+struct inflatable // structure declaration
+{
+    char name[20];
+    float volume;
+    double price;
+};
+
+int main()
+{
+    using namespace std;
+    inflatable guest = {
+        "Glorious Gloria", // name value
+        1.88, // volume value
+        29.99 // price value
+    }; // guest is a structure variable of type inflatable
+    // It's initialized to the indicated values
+    inflatable pal = {
+        "Audacious Arthur",
+        3.12,
+        32.99
+    }; // pal is a second variable of type inflatable
+    // NOTE: some implementations require using
+    // static guest =
+
+    cout << "Expand your guest list with " << guest.name;
+    cout << " and " << pal.name << "!\n";
+    // pal.name is the name member of the pal variable
+    cout << "You can have both for $";
+    cout << guest.price + pal.price << "!\n";
+    return 0;
+}
+```
+
+Here is the output from the program in Listing 4.11:
+
+Expand your guest list with Glorious Gloria and Audacious Arthur!
+You can have both for $62.98!
+
+## Program Notes
+
+One important matter related to the program in Listing 4.11 is where to place the structure declaration. There are two choices for structure.cpp. You could place the declaration inside the main() function, just after the opening brace. The second choice, and the one made here, is to place it outside and preceding main(). When a declaration occurs outside any function, it can be an external declaration. There is no practical difference between the two choices. But for programs consisting of two or more functions, the difference can be crucial. The external declaration can be used by all the functions following, whereas the internal declaration can be used only by the function in which it is found. Most often, you want an external structure declaration so that all the functions can use structures of that type (see Figure 4.7).
+
+```
+#include <iostream>
+using namespace std;
+struct parts
+    unsigned long part_number;
+    float part_cost;
+};
+void main();
+int main()
+{
+    struct perks
+        int key_number;
+        char car[12];
+    };
+    parts chicken;
+    perks mr_brug;
+    ...
+}
+void mail()
+{
+    parts studebaker
+    ...
+}
+```
+
+external declaration—can be used in all functions in
+
+local declaration—can be used only in this function
+
+type parts variable
+type perks variable
+
+type parts variable
+can’t declare a type
+ks variable here
+
+Figure 4.7 Local and external structure declarations.
+
+Variables, too, can be defined internally or externally, with external variables shared among functions. (Chapter 9, "Memory Models and Namespaces," looks further into this topic) C++ practices discourage the use of external variables but encourage the use of
+
+## Chapter 4 Compound Types
+
+external structure declarations. Also it often makes sense to declare symbolic constants extern.
+
+Next, notice the initialization procedure:
+
+```
+inflatable guest =
+{
+  "Glorious Gloria", // name value
+  1.88, // volume value
+  29.99 // price value
+};
+```
+
+As with arrays, use a comma-separated list of values enclosed in a pair of braces. The program expects one value per line, but you can place them all on the same line. Just remember to separate items with:
+
+```
+inflatable duck = {"Daphne", 0.12, 9.98};
+```
+
+You can initialize each member of the structure to the appropriate kind of data. For example, the name member is a character array, so you can initialize it to a string.
+Each member is treated as a variable, and pal.name is an array of char. Thus, pal.price is a double variable, and when the program uses cout to display pal.name, it displays as a string. By the way, pal.name is a character array, we can use subscripts to access individual characters in the array. For example, pal.name[0] is the character A. But pal[0] is meaningless because pal is a structure, not an array.
+
+## C++11 Structure Initialization
+
+As with, C++11 extends the features of list-initialization. The sign is optional:
+inflatable duck {"Daphne", 0.12, 9.98}; // can omit the = in C++11
+
+Next, empty braces result in the members being set to 0. For example, the following declaration results in major.volume and major.price being set to 0 and all the bytes in major.name being set to 0:
+
+```
+inflatable major {};
+```
+
+Finally, nesting is not allowed.
+
+## Can a Structure use a string Class Member?
+
+Can you use a string object instead of a character array for the name member? That is, can you declare a structure like this:
+
+```
+#include <string>
+struct inflatable // structure definition
+{
+  std::string name;
+  float volume;
+  double price;
+};
+```
+
+The answer is yes unless you are using an obsolete compiler that does not support initialization of structures with string class members.
+
+Make sure that the structure definition has access to the std namespace. You can do this by using the using directive that it is above the structure definition. The better choice, as previously shown, is to declare name as having type std::string.
+
+## Other Structure Properties
+
+C++ may use user-defined types as similar as possible to built-in types. For example, you can pass structures as arguments to a function, and you can have a function use as a return value. Also you can use the assignment operator (=) to assign one to another of the same. Doing so causes each member of one structure to be set to the value of the corresponding member in the other structure, even if it is an array. This kind of assignment is called member assignment. We'll defer passing and returning structures until we discuss functions in Chapter 7, "Functions: C++ Programming Modules," but we can take a quick look at structure assignment now. Listing 4.12 provides an example.
+
+- Listing 4.12 assgn_st.cpp
+
+```
+// assgn_st.cpp -- assigning structures
+#include <iostream>
+struct inflatable
+{
+    char name[20];
+    float volume;
+    double price;
+};
+int main()
+{
+    using namespace std;
+    inflatable bouquet =
+        "sunflowers",
+        0.20,
+        12.49
+    ;
+    inflatable choice;
+    cout << "bouquet: " << bouquet.name << " for $";
+    cout << bouquet.price << endl;
+
+    choice = bouquet; // assign one structure to another
+    cout << "choice: " << choice.name << " for $";
+    cout << choice.price << endl;
+    return 0;
+}
+```
+

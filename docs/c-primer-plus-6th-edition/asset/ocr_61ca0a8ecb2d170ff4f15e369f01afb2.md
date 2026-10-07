@@ -1,0 +1,21 @@
+# Input, Output, and Files
+
+In this chapter you'll learn about the following:
+
++   - The C++ view of input and output
+- iostream family of classes
+- Redirection
+- ostream class methods
+- Formatting output
+- istream class methods
+- Stream states
+- File I/O
+- Using the ifstream class for input from files
+- Using the ofstream class for output to files
+- Using the fstream class for file input and output
+- Command-line processing
+- Binary files
+- Random file access
+- Incore formatting
+
+Discussing C++ input and output (I/O) poses a problem. On the one hand, practically every program uses input and output, and learning to use them is one of the tasks facing someone learning a computer language. On the other hand, C++ uses many of its more advanced language features to implement input and output, including classes, derived classes, function overloading, virtual functions, templates, and multiple inheritance. Thus, to really understand C++ I/O, you must know a lot of C++. To get started, the early chapters of this book outline the basic ways for using the ifstream class object cin and the ostream class object cout for input and output, and, to a lesser degree, using ifstream and ofstream objects for file input and output. This chapter takes a

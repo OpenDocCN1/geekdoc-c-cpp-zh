@@ -1,0 +1,10 @@
+# C++ Primer Plus
+
+Sixth Edition
+
+Stephen Prata
+
+Addison-Wesley
+Upper Saddle River, NJ • Boston • Indianapolis • San Francisco
+New York • Toronto • Montreal • London • Munich • Paris • Madrid
+Cape Town • Sydney • Tokyo • Singapore • Mexico City

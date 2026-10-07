@@ -1,0 +1,49 @@
+Summary 442
+Chapter Review 443
+Programming Exercises 444
+
+# 9 Memory Models and Namespaces 447
+
++   Separate Compilation 447
+Storage Duration, Scope, and Linkage 453
+Namespaces 482
+Summary 497
+Chapter Review 498
+Programming Exercises 501
+
+# 10 Objects and Classes 505
+
++   Procedural and Object-Oriented Programming 506
+Abstraction and Classes 507
+Class Constructors and Destructors 524
+Knowing Your Objects: The this Pointer 539
+Array of Objects 546
+Class Scope 549
+Abstract Data Types 552
+Summary 557
+Chapter Review 558
+Programming Exercises 559
+
+# 11 Working with Classes 563
+
++   Operator Overloading 564
+Time on Our Hands: Developing an Operator
+Overloading Example 565
+Introducing Friends 578
+Overloaded Operators: Member Versus Nonmember
+Functions 587
+Overloading: A Vector Class 588
+Automatic Conversions and Type Casts for Classes 606
+Summary 621
+Chapter Review 623
+Programming Exercises 623
+
+# 12 Classes and Dynamic Memory Allocation 627
+
++   Dynamic Memory and Classes 628
+The New, Improved String Class 647
+Things to Remember When using new Constructors 659
+Observations About Returning Objects 662
+Using Pointers to Objects 665
+Reviewing Techniques 676
+A Queue Simulation 678

@@ -1,0 +1,49 @@
+# 5 Loops and Relational Expressions 195
+
++   Introducing for Loops 196
+nThe while Loop 224
+The do while Loop 231
+The Range-Based for Loop (C++11) 233
+Loops and Text Input 234
+Nested Loops and Two-Dimensional Arrays 244
+Summary 249
+Chapter Review 250
+Programming Exercises 251
+
+# 6 Branching Statements and Logical Operators 253
+
++   The if Statement 254
+Logical Expressions 260
+The ctype Library of Character Functions 270
+The ?: Operator 273
+The switch Statement 274
+The break and continue Statements 280
+Number-Reading Loops 283
+Simple File Input/Output 287
+Summary 298
+Chapter Review 298
+Programming Exercises 301
+
+# 7 Functions: C++'s Programming Modules 305
+
++   Function Review 306
+Function Arguments and Passing by Value 313
+Functions and Arrays 320
+Functions and Two-Dimensional Arrays 333
+and C-Style Strings 339
+Functions and Structures 343
+Functions and string Class Objects 353
+Functions and array Objects 355
+Recursion 357
+Pointers to Functions 361
+Summary 371
+Chapter Review 372
+Programming Exercises 374
+
+# 8 Adventures in Functions 379
+
++   C++ Inline Functions 379
+Reference Variables 383
+Default Arguments 409
+Function Overloading 412
+Function Templates 419

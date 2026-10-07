@@ -1,0 +1,58 @@
+# Move Semantics and the Rvalue Reference 1175
+
+```
+Useless::Useless(int k, char ch) : n(k)
+{
+  ++ct;
+  pc = new char[n];
+  for (int i = 0; i < n; i++)
+    pc[i] = ch;
+}
+```
+
+```
+Useless::Useless(const Useless & f) : n(f.n)
+{
+  ++ct;
+  pc = new char[n];
+  for (int i = 0; i < n; i++)
+    pc[i] = f.pc[i];
+}
+```
+
+```
+Useless::Useless(Useless && f) : n(f)
+{
+  ++ct;
+  pc = f.pc; // steal address
+  f.pc = nullptr; // give old object nothing in return
+  f.n = 0;
+}
+```
+
+```
+Useless::~Useless()
+{
+  delete [] pc;
+}
+```
+
+```
+Useless & Useless::operator=(const Useless & f) // copy assignment
+{
+  std::cout << "copy assignment operator called:\n";n  if (this != &f)
+    return *this;
+  delete [] pc;
+  n = f.n;
+  pc = new char[n];
+  for (int i = 0; i < n; i++)
+    pc[i] = f.pc[i];
+  return *this;
+}
+```
+
+```
+Useless & Useless::operator=(Useless && f) // move assignment
+{
+  std::cout << "move assignment operator called:\n";n  if (this == &f)
+```

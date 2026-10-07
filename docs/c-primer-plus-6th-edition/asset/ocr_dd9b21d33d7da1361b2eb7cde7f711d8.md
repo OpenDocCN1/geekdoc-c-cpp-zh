@@ -1,0 +1,20 @@
+That is, instead of storing characters, the computer stores the (typically) 64-bit double representation of the value. For a character, the binary representation is the same as the text representation—the binary representation of the character's ASCII code (or equivalent). For numbers, however, the binary representation is much different from the text representation (see Figure 17.7).
+
+![](bbox=[0.22, 0.29, 0.78, 0.48])
+
+Figure 17.7 Binary and text representations of a floating-point number.
+
+Each format has advantages. The text format is easy to read. With it, you can use an ordinary editor or word processor to read and edit a text file. You can easily transfer a text file from one computer system to another. The binary format is more accurate for numbers because it stores the exact internal representation of a value. There are no conversion errors or round-off errors. Saving data in binary format can be faster because there is no conversion and because you may be able to save data in larger chunks. And the binary format usually takes less space, depending on the nature of the data. Transferring to another system can be a problem, however, if the new system uses a different internal representation for values. Even different compilers on the same system may use different internal representations for structure layouts. In these cases, you (or someone) may have to write a program to translate one data format to another.
+
+Let's look at a more concrete example. Consider the following structure definition and declaration:
+
+```
+const int LIM = 20;
+struct planet
+{
+    char name[LIM];      // name of planet
+    double population;   // its population
+    double g;            // its acceleration of gravity
+};
+planet p1;
+```

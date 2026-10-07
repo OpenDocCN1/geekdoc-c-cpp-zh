@@ -1,0 +1,330 @@
+
+files 1385
+
+- + exception specifications, C++11, 908
+- exceptions, 1158
+- exceptions() stream state method, 1098-1102
+- exclamation point (!), logical NOT operator, 267-269
+- alternative representations, 270
+  - precedence, 269
+- exc_main.cpp, 905-906
+- executable code, 118
+- exit() function, 930
+- explicit, 1159-1160
+- explicit instantiations, 428-430, 850
+- explicit keyword, 610
+- explicit specializations, 425, 850-851
+  - example, 426-428
+  - third-generation specialization, 425-426
+- exporting templates, 1162
+- express.cpp, 200
+- expression arguments, 844
+  - 97, 200-202
+  - combining with comma operator, 214
+  - compared to statements, 201
+- conditional operator (;), 273-274
+- declaration-statement expressions, 202
+- logical AND (&&), 262
+  - alternative representations, 270
+  - example, 263-265
+  - precedence, 269-270
+  - ranges, 265-269
+- logical NOT (!), 267-269
+  - alternative representations, 270
+  - precedence, 269
+- logical OR (||), 260-262
+  - alternative representations, 270
+  - example, 261-262
+  - precedence, 269
+- relational operators, 217-218, 220
+- C-style strings, comparing, 220-223
+- equality operator (==), 218-220
+- string class strings, comparing, 223-224
+  - table of, 217
+- sequence points, 201, 208-209
+- side effects, 201, 208-209
+- type conversions, 105-106
+- extern keyword, 467-472
+- functions, 474
+  - + external declarations, 143
+- external linkage, 454
+- external variables, 463, 466-467
+- extral.cpp, 465
+- ext_permutation() algorithm, 1038
+- factorials, calculating, 203-205
+- fail() method, 296, 1101
+- fail() stream state method, 1098-1102
+- filebuf stream state, 1097-1102
+- filebuf, 130
+- fields
+  - bit fields, 148
+    - width, 1080-1081
+- file extensions, 20
+- file /0, 1114
+- checking stream states, 1118-1119
+- command-line processing, 1119-1120
+- file modes, 1122
+- ending data to files, 1125-1127
+  - binary, 1127
+  - constants, 1122-1123
+  - opening files, 1124-1125
+  - text, 1129
+- files, random access, 1133-1134
+- opening multiple files, 1119
+- reading, 1116-1118
+- writing, 1115-1118
+- file scope, 454
+- file1.cpp, 451
+- file2.cpp, 452
+- filefun.cpp, 406-407
+- fileio.cpp, 1117
+- files, 1129
+  - associating objects with, 289
+- client files, creating, 533-536
+- limits, 71
+- compiling separately, 447-449, 453
+- cpp file line extension, 28
+- ctime, 229
+- EOF(end-of-file) conditions, 237-240
+- header files, 34
+- header files, 448-449
+- converting to standard C++, 1331
+- creating, 530
+- extring, 123-124
+- managing, 451
+- implementation files, creating, 530
+- include files, 96
+- iostream, 33-34, 289, 1064, 1067
+- text files, 277-288
+  - reading, 292-298
+  - writing to, 288-292
+- flush() function, 1076
+- flushing buffers, 1063
+- for loops
+  - + blocks, 212-214
+  - body, 196-197
+  - combination assignment operators, 211-212
+- comma operator, 214-217
+  - example, 214-216
+  - precedence, 217
+  - compared to while loops, 227-228
+- decrement operator (--), 207-208
+  - pointers, 210-211
+  - postfix, 209-210
+  - prefix, 209-210
+  - example, 196-197
+- + file_lt() function, 408
+- fill characters, 1081-1082
+- fill() function, 1081, 1294, 999
+- array objects, 357
+- filling arrays, 326-327
+- fill_arr() function, 325-321, 331
+- fill_clear() function, 1121
+- + file_lt() function, 1183-1184
+- find() function, 1287-1289
+- find() method, 960-961, 961, 1260-1261, 1283
+- finding, 1260
+- find_arr() function, 994
+- find_end() function, 1287-1290
+- find_not_of() method, 961, 1262-1263
+- find_first_of() method, 1287, 1290
+- find_first_of() method, 961, 1262
+- find_lt() function, 1287-1289
+- find_last_of() method, 962, 1263
+- find_last_of() method, 961, 1262
+- + first_crep, 383
+- fixed manipulator, 1091
+- flags, 1083
+- float data type, 94-96
+- floating-points, display precision, 1082-1087, 1090
+- floating-point data types, default
+- floating-point numbers, 92
+- advantages/disadvantages, 96-97
+- constants, 96
+- dec-point notation, 92
+- double data type, 94-96
+- E, 92-93
+- float data type, 94-96
+- long data type, 94-96
+- floatnum.cpp, 95
+- fitadd.cpp, 96
+- + expressions, 200-202
+- compared to statements, 201
+- declaration-statement expressions, 202
+- factorials, calculating, 203-205
+- increment operator (++), 207-208
+- pointers, 210-211
+- postfix, 209-210
+- prefix, 209-210
+- initialization, 196-197
+- loop test, 196-197
+- loop updates, 196-198, 205
+- nested loops, 244-249
+- nonexpressions, 202
+- range-based, 1161
+- sequence points, 208-209
+- side effects, 201-208
+- step size, 205-206
+- strings, 206-207
+- syntax, 197-199
+- for statements, declaration-statement expressions, 203
+- in-for-statement, 203
+- forcing moves, 1173-1174, 1177-1178
+- free loop, 232
+- forfloorop.cpp, 196
+- formal arguments, 314
+- formatted input functions, 1094
+- formatting
+- if else statement, 257-258
+- incore, 1142-1145
+# functions 1387
+- source code, 39
+- friend member functions, 578-580, 883
+- source code style, 40
+- compared to friend classes, 886
+- tokens, 39
+- example, 885-886
+- white space, 39
+- forward declaration, 884
+- with cout, 1076-1077
+- shared friends, 888-889
+- field width display, 1080-1081
+- frmd2ttp.cpp, 8861
+- fill characters, 1081-1082
+- front insertators, 1005-1007
+- floating-point display precision, 1082-1083
+- front() method, 1278
+- manipulators, 1090-1091
+- funadap.cpp, 1034-1035
+- number base display, 1078-1079
+- function idioms, 341
+- function objects, 126
+- trailing zeros/decimals, 1083-1090
+- function parameter packs, 1197-1198
+- with iomanip header file
+- unpacking, 1198-1199
+- manipulators, 1091
+- function reference, variables,
+- formore, 203-204
+- 386-390
+- forstr1.cpp, 206
+- forstr2.cpp, 215
+- function pointers, 1184-1188
+- on, 365-370
+- forward declaration, 884
+- function polymorphism, 412
+- for iterators, 998
+- for_each() function, 987-988, 1287-1289
+- for_each STL function, 991
+- function prototypes, 309-311, 1330
+- benefits, 312-313
+- C++ to ANSI, 312
+- fowl.cpp, 973
+- memory storage, 182
+- free store, 454
+- fixing problems, 1194-1196
+- delete operator, 163-164
+- freeing memory, options, 196-197
+- friend classes, 578-580, 888
+- base-class friends, accessing, 801-804
+- functional polymorphism, 564
+- specific functions, 818-821
+- templates, 858-861
+- non-template friend functions, 864-865
+- arguments, 31, 49, 53
+- arrays, 322-325
+- class example, 878-879, 883
+- multiple, 314
+- tv.cpp, 880
+- tv.h, 879-880
+- tfvn.h, 885-886
+- use_tv.cpp, 882
+- const keyword, 327-328
+- friend functions, 578-580
+- design decisions, 325-326
+- creating, 579-580
+- displaying contents of, 327-328
+- type conversion, 618-621
+- examples, 328-331
+- filling, 326-327
+- modifying, 328
+- friend keyword, 579-580
+- pointers, 321-322
+- ranges, 332-334
+- two-dimensional arrays, 337-399
+- binary, 1027, 1030
+- body, 29
+- passing as arguments, 339-341
+- returning, 341-343
+- calling, 30, 49, 309, 311
+- case sensitivity, 27
+- cin.get(), 317
+- cin.get(ch), 317
+- class member functions
+  - const member functions, 537
+  - constructors, 524-528, 538-539, 638-639, 659-661, 677-678
+  - copy constructors, 639-644
+  - definitions, 509, 514-516, 523, 29
+  - destructors, 528-529, 538-539
+  - friend member functions, 883-889
+  - implicit member functions, 637-638
+  - inline functions, 517-518
+  - invoking, 523
+  - object membership, 518
+  - private, 513
+  - properties, 777-778
+  - public, 513
+  - qualified names, 514
+  - this pointer, 539-546
+  - unqualified names, 514
+- compared to const methods, 1039-1041
+- conversion functions, 677
+- defining, 306-309
+- formatted input, 1094
+- friend functions, 578-590
+- creating, 579-580
+- type conversion, 618-621
+- function prototypes, 1330
+- headers, 29-31
+- inline functions, 379-382
+- compared to macros, 382
+- square(), 381-382
+- input, unformatted, 1102
+- lambda functions, 1184
+- language linking, 475-476
+- library functions, 52
+- linkage properties, 474-475
+- non-member, 968-988, 991
+- objects, returning, 662-664
+- const objects, 662-665
+- non-const objects, 587-588
+- operator overloading, 528
+- overloading, 237, 412-414, 564
+- example, 415-418
+- function signatures, 413
+- name decoration, 418
+- overload resolution, 431-438
+- when to use, 418
+- pointers, 361-362
+- addresses of functions, obtaining, 362
+- const keyword, 334-336
+- declaring, 362-363
+- example, 364
+- invoking functions with, 363-364
+- pointers to, 335-350
+- types, 50-52
+- qualified names, 514
+- recursion, 357
+- multiple recursive calls, 359-361
+- single recursive call, 358-359
+- return addresses, 909
+- return types, 30
+- return values, 49
+- set_union(), 1020
+- signatures, 413
+- string class objects, 353-354
+- structures, 343-346
+- passing/returning, 344-351
+- polar coordinates, 347
+- rectangular coordinates, 346
+- structure addresses, passing, 351-353

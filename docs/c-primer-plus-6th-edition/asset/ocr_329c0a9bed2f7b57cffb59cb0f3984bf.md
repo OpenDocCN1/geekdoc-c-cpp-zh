@@ -1,0 +1,38 @@
+# Chapter 4 Compound Types
+
+more input on that line. Chapter 17 investigates this technique. In short, getline() is a little simpler to use, but get() makes error checking simpler.You can use either to read a line of input; just keep the slightly different behaviors in mind.
+
+# Empty Lines and Other Problems
+
+What happens after getline() or get() reads an empty line? The original practice was that the next input statement picked up where the last getline() or get() left off. However, the current practice is that after get() (but not getline()) reads an empty line, it sets something called failbit.The implications of this act are that further input is blocked, but you can restore input with the following command:
+
+```
+cin.getline();
+```
+
+Another problem is that the input string could be longer than the allocated space. If the input is longer than the number of characters specified, getline() and get() leave the remaining characters in the input queue. However, getline() additionally sets the failbit and turns off further input.
+
+Chapters 5, 6, and 17 investigate these properties and how to program around them.
+
+# Mixing String and Numeric Input
+
+Mixing numeric input with line-oriented string input can cause problems. Consider the simple program in Listing 4.6.
+
+Listing 4.6 numstr.cpp
+
+```
+// numstr.cpp -- following number input with line input
+#include <iostream>
+int main()
+{
+    using namespace std;
+    cout << "What year was your house built?\\n";n    int year;
+    cin >> year;
+    cout << "What is its street address?\\n";n    char address[80];
+    cin.getline(address, 80);
+    cout << "Year built: " << year << endl;
+    cout << "Address: " << address << endl;
+    cout << "Done!\n";
+    return 0;
+}
+```

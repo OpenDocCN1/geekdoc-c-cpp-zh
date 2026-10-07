@@ -1,0 +1,48 @@
+```
+long gone = (double) poppins;   // use double conversion
+long gone = int (poppins);    // use int conversion
+```
+
+The first of these statements converts poppins to a double value, and then assignment converts the double value to type long. Similarly, the second statement converts poppins first to type int and then to long.
+
+Like constructors, conversion functions can be a mixed blessing. Problem with providing functions that make automatic, implicit conversions is that they may make conversions when you don't expect them. Suppose, for example, that you happen to write the following code when you're sleep deprived:
+
+```
+int ar[20];
+```
+
+```
+Stonew temp(14, 4);
+```
+
+```
+int Temp = 1;
+```
+
+```
+cout << ar[temp] << "!\n";   // use temp instead of Temp
+```
+
+Normally, you'd expect the compiler to catch a blunder such as using an object instead of an integer as an array index. The Stonew class defines an operator int(),so the Stonew object temp is converted to the int 200 and be used as an array index. The moral is often it's best to use explicit conversions and exclude the possibility of implicit conversions. In C++98, the keyword explicit doesn't work with conversion functions, but C++11 removes that limitation. So with C++11, you can declare a conversion as explicit:
+
+```
+class Stonew
+{
+  // conversion functions
+  explicit operator int() const;
+  explicit operator double() const;
+};
+```
+
+With these declarations in place, you would use a type cast to invoke the operators. Another approach is to replace a conversion function with a nonconversion function that does the same task—but only if explicitly. That is, you can replace Stonew::operator int() { return int (pounds + 0.5); }
+
+```
+with
+int Stonew::Stone_to_Int() { return int (pounds + 0.5); }
+```
+
+This disallows the following:
+
+```
+int plb = poppins;
+```

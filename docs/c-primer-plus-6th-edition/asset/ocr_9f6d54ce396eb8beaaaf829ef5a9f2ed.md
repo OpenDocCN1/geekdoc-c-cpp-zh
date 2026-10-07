@@ -1,0 +1,42 @@
+```
+exit(5);
+}
+```
+
+Finally, at the start of the program, you designate this function as your chosen termination action:
+
+```
+set_terminate(myQuit);
+```
+
+Now, if an exception is thrown and not caught, the program calls terminate(), and terminate() calls MyQuit().
+
+Next, let's look at unexpected exceptions. By using exception specifications for a function, you provide the means for users of the functions to know which exceptions to catch. That is, suppose you have the following prototype:
+
+```
+double Argh(double, double) throw(out_of_bounds);
+```
+
+Then you might use the function this way:
+
+```
+try {
+    x = Argh(a, b);
+}
+catch(out_of_bounds & ex)
+{
+    ...
+}
+```
+
+It's good to know which exceptions to catch; recall that an uncaught exception, by default, aborts the program.
+
+However, there's a bit more to the story. In principle, the exception specification should include exceptions thrown by functions called by the function in question. For example, if Argh() calls a Duh() function that can throw a retort object exception, then retort should appear in the Argh() exception specification as well as in the Duh() exception specification. Unless you write all the functions yourself and are careful, there's no guarantee that this will get done correctly. You might, for example, use an older commercial library whose functions don't have exception specifications. This suggests that you should look more closely at what happens if a function throws an exception that is not in its exception specification. (It also suggests that the whole exception specification mechanism might be unwieldy, which is part of the reason C++11 deprecates it.)
+
+The behavior is much like that for uncaught exceptions. If there is an unexpected exception, the program calls the unexpected() function. (You didn't expect the unexpected() function? No one expects the unexpected() function!) This function, in turn, calls terminate(), which, by default, calls abort(). Just as there is a set_terminate() function that modifies the behavior of terminate(), there is a set_unexpected() function that modifies the behavior of unexpected(). These new functions are also declared in the exception header file:
+
+```
+typedef void (*unexpected_handler)();
+unexpected_handler set_unexpected(unexpected_handler f) throw();  // C++98
+unexpected_handler set_unexpected(unexpected_handler f) noexcept;  // C++11
+```

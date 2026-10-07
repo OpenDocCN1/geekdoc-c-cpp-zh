@@ -1,0 +1,34 @@
+```
+int main() {
+  Stock fluffy_the_cat;
+  fluffy_the_cat.acquire("NanoSmart", 20, 12.50);
+  fluffy_the_cat.show();
+  fluffy_the_cat.buy(15, 18.125);
+  fluffy_the_cat.show();
+  fluffy_the_cat.sell(400, 20.00);
+  fluffy_the_cat.show();
+  fluffy_the_cat.buy(300000,40.125);
+  fluffy_the_cat.show();
+  fluffy_the_cat.sell(300000,0.125);
+  fluffy_the_cat.show();
+  return 0;
+}
+```
+
+Here is the output of the program in Listing 10.3:
+
+Company: NanoSmart Shares: 20
+Share Price: $12.5 Total Worth: $250
+Company: NanoSmart Shares: 35
+Share Price: $18.125 Total Worth: $634.375
+You can't sell more than you have! Transaction aborted.
+Company: NanoSmart Shares: 35
+Share Price: $18.125 Total Worth: $634.375
+Company: NanoSmart Shares: 300035
+Share Price: $40.125 Total Worth: $1.20389e+007
+Company: NanoSmart Shares: 35
+Share Price: $0.125 Total Worth: $4.375
+
+# The Client/Server Model
+
+OOP programmers often discuss program design in terms of a client/server model. In this conceptualization, the client is a program that uses the class. The class declaration, including the class methods, constitute the server, which is a resource that is available to the programs that need it. The client uses the server through the properly defined interface. This means the client's only responsibility, and by extension, the client's programmer's only responsibility, is to know that interface. The server designer's responsibility is to see that the server reliably and accurately performs according to that interface. Any changes the server designer makes to the class design should be details of implementation, not to the interface. This program allows programmers to improve the client and the server independently of each other, without changes in the server having unforeseen repercussions on the client's behavior.

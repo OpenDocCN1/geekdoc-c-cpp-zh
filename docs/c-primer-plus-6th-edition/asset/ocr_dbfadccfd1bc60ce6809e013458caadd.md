@@ -1,0 +1,38 @@
+```
+operator int() const;
+explicit operator double() const;
+...
+};
+```
+
+Plebe a, b;
+int n = a; // int-Plebe automatic conversion
+double x = b; // not allowed
+x = double(b); // explicit conversion, allowed
+
+# Member In-Class Initialization
+
+Many first-users of C++ have wondered why they can't initialize members simply by providing values in the class definition. Now they (and you) can. The syntax looks like this:
+
+```
+class Session
+{
+    int mem1 = 10; // in-class initialization
+    double mem2{1966.54}; // in-class initialization
+    short mem3;
+public:
+    Session() // #1
+    Session(short s) : mem3(s) // #2
+    Session(int n, double d, short s) : mem1(n), mem2(d), mem3(s) {} // #3
+};
+```
+
+You can use the equal sign or the braces of initialization to provide the first two constructors but not the parenthesis-sized version. The result is the same as if you provided the first two with member initialization list entries for mem1 and mem2.
+
+Note using in-class initialization avoids having to duplicate code in the constructors, reducing work and the number of opportunities for error and boredom for the programmer.
+
+These default values are overridden by a constructor that supplies values in the member initialization list, so the third constructor overrides the in-class member initialization.
+
+# Template and STL Changes
+
+C++11 makes several changes extending the usability of templates in general and the Standard Template Library in particular. Some are in the library itself; others relate to ease of use. In this chapter we've already mentioned template aliases and the STL-friendly smart pointers.

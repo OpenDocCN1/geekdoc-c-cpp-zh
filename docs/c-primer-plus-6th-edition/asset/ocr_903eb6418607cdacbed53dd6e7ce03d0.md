@@ -1,0 +1,41 @@
+# Function Templates
+
+envisionary powers on the topic.) But clever and dedicated programmers pushed the lim-its of template techniques and expanded the ideas of what was possible. Feedback from those who developed familiarity with templates led to changes that were incorporated into the C++98 Standard as well the addition of the Standard Template Library. Since then, template programmers have continued to explore the possibilities offered by the genre, and occasionally bump up against limitations. Their feedback has led to some changes in the C++11 Standard. We'll look at a couple of related problems now and their solutions.
+
+# What's That Type?
+
+One problem is when you write a template function, it's not always possible in C++98 to know what type to use in a declaration. Consider this partial example:
+
+```
+template<class T1, class T2>
+void ft(T1 x, T2 y)
+{
+  ...
+  ?type xpy = x + y;
+  ...
+}
+```
+
+What should be the type for xpy? We don't know in advance how ft() might be used. The proper type might be T1 or T2 or some other type altogether. For example, T1 could be double and T2 could be int, in which case the type of the sum is double. Or T1 could be short and T2 could be int, in which case the type of the sum is int. Or suppose T1 is short and T2 is char.Then addition invokes automatic integer promotions, and the result type is int. Also the operator can be overloaded for structures and classes, complicating the options further. Therefore, in C++98 there is no obvious choice for the type of xpy.
+
+# The decltype Keyword (C++11)
+
+The C++11 solution is a new keyword: decltype. It can be used in this way:
+
+```
+int x;
+decltype(x) y; // make y the same type as x
+```
+
+The argument to decltype be an expression, in the ft() example, we could use this code:
+
+```
+decltype(x + y) xpy; // make xpy the same type as x + y
+xy = x + y;
+```
+
+Alternatively, we could combine these two statements into an initialization:
+
+```
+decltype(x + y) xpy = x + y;
+```

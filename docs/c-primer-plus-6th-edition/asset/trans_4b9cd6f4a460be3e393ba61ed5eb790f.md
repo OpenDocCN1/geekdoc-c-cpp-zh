@@ -1,0 +1,235 @@
+
+
+# 第 17 章 输入、输出与文件
+
+从文件开始。你可以将 `streampos` 视为从文件开始计算的字节数的文件位置，其中第一个字节是字节 0。以下语句将文件指针置于第 112 字节处，这将是文件中的第 113 个字节：
+
+```cpp
+fin.seekg(112);
+```
+
+如果你想检查文件指针的当前位置，可以使用用于输入流的 `tellg()` 方法和用于输出流的 `tellp()` 方法。每个方法都返回一个 `streampos`，表示从文件开始计算的当前位置（字节数）。当你创建一个 `ifstream` 对象时，输入和输出指针是同步移动的，`tellg()` 和 `tellp()` 返回相同的值。但如果你使用 `amream` 对象管理输入流，并使用 `ostream` 对象管理到文件的输出流，那么输入和输出指针将相互独立移动，`tellg()` 和 `tellp()` 可能会返回不同的值。
+
+然后你可以使用 `seek()` 跳到文件开头。这里有一段打开文件、跳转到开头并显示文件内容的代码：
+
+```cpp
+fstream finout; // 读写流
+finout.open(file, ios::in | ios::out | ios::binary);
+//注意：某些 Unix 系统可能需要省略 | ios::binary
+int ct = 0;
+{
+    finout.seekg(0); // 跳到开头
+    cout << "Here are the current contents of the " << file << "\n";
+    while (finout.read((char *)pl, sizeof(pl))) {
+        cout << ct++ << ": " << setw(LIM) << pl.name << ":"
+        << setprecision(0) << setw(12) << pl.population
+        << setprecision(2) << setw(6) << pl.g << endl;
+    }
+    if (finout.eof()) {
+        finout.clear(); // 清除 eof 标志
+    }
+    else {
+        cerr << "Error in reading " << file << ".\n";
+        exit(EXIT_FAILURE);
+    }
+}
+else {
+    cerr << file << " could not be opened -- bye.\n";
+    exit(EXIT_FAILURE);
+}
+```
+
+# 文件输入与输出
+
+这与列表 17.19 的开头相似，但进行了一些更改和添加。首先，如前所述，程序使用了一个带有读写模式的 `fstream` 对象，并使用 `seekg()` 将文件指针置于文件开头。（这在这个示例中并不是必须的，但它展示了如何使用 `seekg()`）。接下来，程序进行了一个微小的更改，在显示时对记录进行编号。然后，它进行了以下重要的添加：
+
+```cpp
+if (finout.eof())
+    finout.clear(); // 清除 eof 标志
+else {
+    cerr << "Error in reading " << file << ".\n";
+    exit (EXIT_FAILURE);
+}
+```
+
+这段代码解决的问题是：当程序完成读取并显示整个文件时，它会设置 `eofbit`。这会让程序认为已经处理完文件，并禁用对文件的任何进一步读写。使用 `clear()` 方法可以重置状态，关闭 `eofbit`。现在程序可以再次访问该文件。`else` 部分处理了程序由于达到文件末尾以外的其他原因（例如硬件故障）而读取文件的情况。
+
+下一步是识别被修改的记录并对其进行修改。为了做到这一点，程序要求用户输入记录编号。将该数字乘以每个记录的字节数，即可识别出当前记录的位置。如果 `record` 是记录编号，则所需的字节数 = `record * sizeof pl`：
+
+```cpp
+cout << "Enter the record number you wish to change: ";
+long rec;
+cin >> rec; // 忽略换行符
+if (rec < 0 || rec == ct) {
+    cerr << "Invalid record number --\n";
+    exit (EXIT_FAILURE);
+}
+```
+
+```cpp
+streampos place = rec * sizeof pl; // 转换为 streampos
+finout.seekg(place); // 随机访问
+```
+
+变量 `ct` 代表记录数；如果你尝试超出文件的限制，程序将退出。
+接下来的程序显示当前记录：
+
+```cpp
+finout.read((char *) &pl, sizeof pl);
+cout << "Your selection:\n";
+cout << rec << " : " << setw(LIM) << pl.name << " : ";
+<< setprecision(0) << setw(12) << pl.population
+<< setprecision(2) << setw(6) << pl.g << endl;
+if (finout.eof())
+    finout.clear(); // 清除 eof 标志
+```
+
+![](img/cd111a87c1db9aff4db4b18834327463_1151_0.png)
+
+# 第 17 章 输入、输出与文件
+
+显示记录后，程序允许你修改记录：
+
+```cpp
+cout << "Enter planet name: ";
+cin.get(pl.name, LIM);
+eatline();
+cout << "Enter planetary population: ";
+cin >> pl.population;
+cout << "Enter planet's acceleration of gravity: ";
+cin >> pl.g;
+finout.seekp(place); // 跳回
+finout.write((char *)pl, sizeof(pl)) << flush;
+```
+
+```cpp
+if (finout.fail())
+{
+    cerr << "Error on write\n";
+    exit(EXIT_FAILURE);
+}
+```
+
+程序在进入下一个阶段之前刷新输出，以确保文件已更新。最后，为了显示修改后的文件，程序使用 `seekg()` 将文件指针重置到开头。不要忘记假设 `planets.dat` 文件是可用的。列表 17.20 显示了完整的程序。
+> 注意：旧的实现中，C++ 标准不识别 `binary` 标志、`fixed` 和 `right` 操纵符。
+
+# 列表 17.20 random.cpp -- 随机访问二进制文件
+
+```cpp
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <cstdlib>
+
+const int LIM = 20;
+struct planet
+{
+    char name[LIM]; // 名字
+    double population; // 人口
+    double g; // 重力加速度
+};
+
+const char * file = "planets.dat"; // 假设存在
+
+inline void eatline() {
+    while (cin.get()) != '\n') continue;
+}
+
+int main()
+{
+    using std;
+    planet pl;
+    fstream finout; // 读写流
+    finout.open(file, ios_base::in | ios_base::out | ios_base::binary);
+    //注意：某些 Unix 系统可能需要省略 | ios::binary
+    int ct = 0;
+    if (finout.is_open()) {
+        finout.seekg(0); // 跳到开头
+        cout << "Here are the current contents of the " << file << ":\n";
+        while (finout.read((char*) &pl, sizeof(pl))) {
+            cout << ct++ << ": " << setw(LIM) << pl.name << ":"
+            << setprecision(0) << setw(12) << pl.population
+            << setprecision(2) << setw(6) << pl.g << endl;
+        }
+        if (finout.eof())
+            finout.clear(); // 清除 eof 标志
+        else {
+            cerr << "Error in reading " << file << ".\n";
+            exit(EXIT_FAILURE);
+        }
+    }
+    else {
+        cerr << file << " could not be opened -- bye.\n";
+        exit(EXIT_FAILURE);
+    }
+    // 修改记录
+    cout << "Enter the record number you wish to change: ";
+    long rec;
+    cin >> rec;
+    if (rec < 0 || rec >= ct) {
+        cerr << "Invalid record number --\n";
+        exit(EXIT_FAILURE);
+    }
+    streampos place = rec * sizeof(pl); // 转换为 streampos
+    finout.seekg(place); // 随机访问
+    if (finout.fail()) {
+        cerr << "Error on seek\n";
+        exit (EXIT_FAILURE);
+    }
+    finout.read((char *) &pl, sizeof(pl));
+    cout << "Your selection:\n";
+    cout << rec << " : " << setw(LIM) << pl.name << " : ";
+    << setprecision(0) << setw(12) << pl.population
+    << setprecision(2) << setw(6) << pl.g << endl;
+    if (finout.eof())
+        finout.clear(); // 清除 eof 标志
+    // 显示修改后的文件
+    ct = 0;
+    finout.seekg(0); // 跳到文件开头
+    cout << "Here are the new contents of the " << file << ":\n";
+    while (finout.read((char *) &pl, sizeof(pl))) {
+        cout << ct++ << ": " << setw(LIM) << pl.name << ": "
+        << setprecision(0) << setw(12) << pl.population
+        << setprecision(2) << setw(6) << pl.g << endl;
+    }
+    finout.close();
+    cout << "Done.\n";
+    return 0;
+}
+```
+
+这是列表 17.20 中程序的示例运行，基于一个自你上次看到之后增加了几个条目的 `planets.dat` 文件：
+
+这是 planets.dat 文件的当前内容：
+
+```
+0: Earth: 692819253 9.81
+1: Jenny's World: 321556848 8.93
+2: Tramor: 8900000000 15.03
+3: Tellan: 5214000 9.62
+4: Freestone: 3945851000 8.68
+5: Taanagot: 3610000004 10.23
+6: Marin: 252409 9.79
+```
+
+输入你想修改的记录编号：
+Your selection:
+
+```
+2: Tramor: 89000000000 15.03
+Enter planet name: 89521844777
+Enter planet's acceleration of gravity: 10.53
+```
+
+这是 planets.dat 文件的新内容：
+
+```
+0: Earth: 692819253 9.81
+1: Jenny's World: 321556848 8.93
+2: Tramor: 89521844777 15.53
+3: Tellan: 5214000 9.62
+4: Freestone: 3945851000 8.68
+5: Taanagot: 3610000004 10.23
+6: Marin: 252409 9.79
+```
+

@@ -1,0 +1,160 @@
+
+
+表达式 std::move(one) 是一个右值，因此赋值语句将调用 Chunk 的移动赋值运算符，前提是 one 已被定义。但如果 Chunk 类没有定义移动赋值运算符，编译器将使用拷贝赋值运算符。而如果连拷贝赋值运算符也没有定义，那么赋值就完全不被允许。
+右值引用给大多数程序员带来的主要好处，并不是使用它们的机会。相反，它是使用利用值引用来实现移动语义的库代码的机会。例如，STL 类现在拥有拷贝构造函数、移动构造函数、拷贝赋值运算符和移动赋值运算符。
+
+## 新的类特性
+
+C++11 在本章中我们已经提到的特性之外还增加了若干特性——即隐式转换运算符和类内成员初始化。
+
+## 特殊成员函数
+
+C++11 将两个特殊成员函数（移动构造函数和移动赋值运算符）增加到之前的四个（默认构造函数、拷贝构造函数、拷贝赋值运算符和析构函数）中。这些是编译器在各种条件下自动提供的函数。
+
+默认构造函数顾名思义，是在你没有为类定义任何构造函数时可以调用的构造函数。这种默认版本的默认构造函数称为默认的默认构造函数。默认的默认构造函数会使内置类型的成员保持未初始化状态，并为类对象成员调用默认构造函数。
+
+同样，如果你没有提供默认构造函数且代码需要它，编译器会提供一个默认构造函数；如果没有提供且代码需要它，现在也会提供一个移动构造函数。如果名称为 Someclass，那么这两个默认的构造函数具有以下原型：
+
+```
+Someclass::Someclass(const Someclass&);   // defaulted copy constructor
+Someclass::Someclass(Someclass&&);          // defaulted move constructor
+```
+
+在类似的情况下，编译器会提供默认的拷贝赋值运算符和默认的移动赋值运算符，其原型如下：
+
+```
+Someclass &Someclass::operator=(const Someclass&); // defaulted copy assignment
+Someclass &Someclass::operator=(Someclass&&);     // defaulted move assignment
+```
+
+最后，如果你没有提供，编译器会提供一个析构函数。
+对此描述存在各种例外。如果你提供了析构函数或拷贝构造函数或拷贝赋值运算符，编译器不会自动提供移动构造函数或移动赋值运算符。如果你提供了移动构造函数或移动赋值运算符，编译器不会自动提供拷贝构造函数或拷贝赋值运算符。
+
+## 新的类特性
+
+默认的移动构造函数和默认的赋值运算符的工作方式也与它们的拷贝对应物类似，对内置类型进行逐成员初始化和拷贝。对于类对象成员，则像参数是右值一样使用这些类的构造函数和赋值运算符。这反过来会调用已定义的移动构造函数和赋值运算符，如果未定义则调用拷贝构造函数和赋值运算符。
+
+## 默认和删除的方法
+
+C++11 提供了对哪些方法被使用的更多控制。假设你希望使用一个由于情况而未自动创建的默认函数。例如，如果你提供了移动构造函数，则默认构造函数、拷贝构造函数和拷贝赋值运算符都不会被提供。在这种情况下，你可以使用关键字 default 来显式声明这些方法的默认版本：
+
+```
+class Someclass{
+public:
+    Someclass(Someclass &&);
+    Someclass() = default; // use compiler-generated default constructor
+    Someclass(const Someclass &) = default;
+    Someclass &operator=(const Someclass&) = default;
+    
+};
+```
+
+编译器提供的构造函数与你在未提供移动构造函数时它会自动提供的构造函数相同。
+另一方面，delete 关键字可用于阻止编译器使用特定方法。例如，要防止对象被拷贝，可以禁用拷贝构造函数和拷贝赋值运算符：
+
+```
+class Someclass{
+public:
+    Someclass() = default; // use compiler-generated default constructor
+// delete copy constructor and copy assignment operator:
+    Someclass(const Someclass &) = delete;
+    Someclass &operator=(const Someclass &) = delete;
+// use compiler-generated move constructor and move assignment operator:
+    Someclass(Someclass &&) = default;
+    Someclass &operator=(Someclass &&) = default;
+    Someclass &operator+(const Someclass &) = default;
+};
+```
+
+## 第 18 章 访问新的 C++ 标准
+
+你可能还记得（来自第 12 章），你可以通过将拷贝构造函数和赋值运算符放在类的私有部分来禁用拷贝。但使用 delete 是一种更不狡猾、更容易理解的实现这一目的的方法。
+
+禁用拷贝方法同时启用移动方法的效果是什么？请记住，移动操作中使用的右值引用只绑定到右值表达式。这意味着以下内容：
+
+```
+SomeClass one;
+SomeClass two;
+SomeClass three (one); // not allowed, an lvalue
+SomeClass four (one + two); // allowed, expression is an rvalue
+```
+
+只有六个特殊成员函数可以被默认，但你可以用任何成员函数进行删除。一个可能的用途是禁用某些转换。假设例如 SomeClass 类有一个类型为 double 的参数的方法：
+
+```
+class SomeClass {
+public:
+
+	void redo(double);
+
+
+}
+```
+
+然后假设我们有以下代码：
+
+```
+SomeClass sc;
+sc.redo(5);
+```
+
+int 值 5 将被提升为 5.0，并且 redo() 方法将被执行。现在假设 SomeClass 定义被修改如下：
+
+```
+class SomeClass {
+public:
+
+	void redo(double);
+	void redo(int) = delete;
+
+}
+```
+
+在这种情况下，方法调用 sc.redo(5) 匹配 redo(int) 原型。编译器稍后会找到并检测到 redo(int) 已被删除，并将该调用标记为编译时错误。这说明了已删除函数的一个重要事实。它们在函数查找方面起作用，但使用它们是错误的。
+
+## 委托构造函数
+
+如果你为类提供了多个构造函数，你可能会发现自己一遍又一遍地编写相同的代码。也就是说，一些构造函数可能要求你重复其他构造函数中已有的代码。为了使编码更简单、更可靠，C++11 允许使用一个构造函数作为另一个构造函数定义的一部分。此过程称为委托，因为一个构造函数将责任委托给另一个构造函数来处理它正在构造的对象。委托使用成员初始化列表语法的变体：
+
+```
+class Notes {
+    int k;
+    double x;
+    std::string st;
+public:
+    Notes();
+    Notes(int);
+    Notes(int, double);
+    Notes(int, double, std::string);
+};
+Notes::Notes(int kk, double xx, std::string stt) : k(kk),
+    x(xx), st(stt) {/*/ do other stuff*/}
+Notes::Notes() : Notes(0, "0") {/*/ do other stuff*/}
+Notes::Notes(int kk) : Notes(kk, 0.01, "Ah") {/*/ do other stuff*/ }
+Notes::Notes(int kk, double xx) : Notes(kk, kk, "Uh") {/*/ ditto stuff*/}
+```
+
+例如，默认构造函数使用列表中的第一个构造函数来初始化数据成员，并执行该构造函数体要求执行的任何操作。然后它完成其自身函数体要求执行的任何操作。
+
+## 继承构造函数
+
+为了进一步简化编码，C++11 提供了派生类继承基类构造函数的机制。C++98 已经有一种使命名空间中的函数可用的语法：
+
+```
+namespace Box {
+    int fn(int) { ... }
+    int fn(double) { ... }
+    int fn(const char*) { ... }
+}
+using Box::fn;
+```
+
+这使所有重载的 fn 函数可用。相同的技术也适用于使基类的非本地成员函数对派生类可用。例如，考虑以下代码：
+
+```
+class Cl {
+    ...
+public:
+    ...
+```
+

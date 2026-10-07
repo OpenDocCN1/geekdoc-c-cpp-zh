@@ -1,0 +1,48 @@
+```
+Singer(const std::string &s, long n, int v = other)
+    : Worker(s, n), voice(v) {}
+Singer(const Worker &wk, int v = other)
+    : Worker(wk), voice(v) {}
+void Set();
+void Show() const;
+
+#endif
+```
+
+The class declarations in Listing 14.7 include some internal constants that represent voice types. An enumeration makes alto, centralto, and so on symbolic constants for voice types, and the static array pv holds pointers to the C-style string equivalents. The implementation file, shown in Listing 14.8, initializes this array and provides method definitions.
+
+# Listing 14.8 worker0.cpp
+
+```
+// worker0.cpp -- working class methods
+#include "worker0.h"
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+// Worker methods
+
+// must implement virtual destructor, even if pure
+Worker::Worker() {}
+
+void Worker::Set()
+{
+    cout << "Enter worker's name: ";
+    getline(cin, fullname);
+    cout << "Enter worker's ID: ";
+    cin >> id;
+    while (cin.get() != '\\n')
+        continue;
+}
+
+
+void Worker::Show() const
+{
+    cout << "Name: " << fullname << "\n";
+    cout << "Employee ID: " << id << "\n";
+}
+
+
+// Waiter methods
+void Waiter::Set()
+```

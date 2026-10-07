@@ -1,0 +1,49 @@
+Note that you can use find() to find the positions used in replace:
+
+```
+string s1 = "old";
+string s2 = "mature";
+string s3 = "The old man and the sea";
+string::size_type pos = s3.find(s1);
+if (pos != string::npos)
+    s3.replace(pos, s1.size(), s2);
+```
+
+This example would replace old with mature.
+
+# Other Modifying Methods: copy() and swap()
+
+The copy() method copies a string object, or part thereof, to a designated character array:
+
+```
+size_type copy(charT* s, size_type n, size_type pos = 0) const;
+```
+
+In this case, s points to the destination array, n indicates the number of characters to copy, and pos indicates the position in the string object from which copying begins. Copying proceeds for n characters or until the last character in the string object, whichever comes first. The function returns the number of characters copied. The method does not append a null character, and it is up to the programmer to see that the array is large enough to hold the copy.
+
+**Caution**
+The copy() method does not append a null character, nor does it check whether the destination array is large enough.
+
+The swap() method swaps the contents of two string objects by using a constant time algorithm:
+
+```
+void swap(basic_string& str);
+```
+
+# Output and Input
+
+The string class overloads the << operator to display string objects. It returns a reference to the istream object so that output can be concatenated:
+
+```
+string claim("The string class has many features.");
+cout << claim << endl;
+```
+
+The string class overloads the >> operator so that you can read input into a string:
+
+```
+string who;
+cin >> who;
+```
+
+Input terminates on the end-of-file, on reading the maximum number of characters allowed in a string, or on reaching a white-space character. (The definition of white space depends on the character set and on the type that charT represents.)

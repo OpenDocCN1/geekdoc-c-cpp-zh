@@ -1,0 +1,47 @@
+# Listing 9.11 namesp.h.
+
+```
+// namesp.h
+#include <string>
+// create the pers and debts namespaces
+namespace pers
+{
+  struct Person
+  {
+    std::string fname;
+    std::string lname;
+  };
+  void getPerson(Person &);
+  void showPerson(const Person &);
+}
+```
+
+```
+namespace debts
+{
+  using namespace pers;
+  struct Debt
+  {
+    Person name;
+    double amount;
+  };
+  void getDebt(Debt &);
+  void showDebt(const Debt &);
+  double sumDebts(const Debt ar[], int n);
+}
+```
+
+The second file in this example (see Listing 9.12) follows the usual pattern of having a source code file provide definitions for functions prototyped in a header file. The function names, which are declared in a namespace, have namespace scope, so the definitions need to be in the same namespace as the declarations. This is where the open of namespaces comes in handy. The original namespaces are brought in by including namesp.h (refer to Listing 9.11). The file then adds the function definitions to the two namespaces, as shown in Listing 9.12. Also the namesp.cpp file illustrates bringing in elements of the std namespace with the declaration and the scope-resolution operator.
+
+# Listing 9.12 namesp.cpp
+
+```
+// namesp.cpp -- namespaces
+#include <iostream>
+#include "namesp.h"
+```
+
+```
+namespace pers
+{}
+```

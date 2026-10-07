@@ -1,0 +1,64 @@
+```
+    return true;
+else
+    return false;
+}
+```
+
+Because the built-in < operator already returns a type bool value, you can simplify the code further to this:
+
+```
+bool operator<(const String &st1, const String &st2)
+{
+    return (std::strcmp(st1.str, st2.str) < 0);
+}
+```
+
+Similarly, you can code the other two comparison functions like this:
+
+```
+bool operator>(const String &st1, const String &st2)
+{
+    return st2 < st1;
+}
+```
+
+```
+bool operator==(const String &st1, const String &st2)
+{
+    return (std::strcmp(st1.str, st2.str) == 0);
+}
+```
+
+The first definition expresses the > operator in terms of the < operator and would be a good choice for an inline function.
+
+Making the comparison functions friends facilitates comparisons between String objects and regular C strings. For example, suppose answer is a String object and that you have the following code:
+
+```
+if ("love" == answer)
+```
+
+This gets translated to the following:
+
+```
+if (operator==("love", answer))
+```
+
+The compiler then uses one of the constructors to convert the code, in effect, to this:
+
+```
+if (operator==(String("love"), answer))
+```
+
+And this matches the prototype.
+
+# Accessing Characters by Using Bracket Notation
+
+With a standard C-style string, you can use brackets to access individual characters:
+
+```
+char city[40] = "Amsterdam";
+cout << city[0] << endl; // display the letter A
+```
+
+In C++ the two bracket symbols constitute a single operator, the bracket operator, and you can overload this operator by using a method called operator[](). Typically, a binary C++ operator (one with two operands) puts the operator between the two operands, as in 2 + 5. But the bracket operator places one operand in front of the first bracket and the

@@ -1,0 +1,41 @@
+# Exceptions 931
+
+Next, at the start of the program, you designate this function as your chosen unexpected-exception action:
+set_unexpected(myUnexpected);
+
+Finally, you include the bad_exception type in exception specifications and catch block sequences:
+
+```
+double Argh(double, double) throw(out_of_bounds, bad_exception);
+...
+try {
+    x = Argh(a, b);
+}
+catch(out_of_bounds & ex)
+{
+    ...
+}
+catch(bad_exception & ex)
+{
+    ...
+}
+```
+
+# Exception Cautions
+
+From the preceding discussion of using exceptions, you might gather (and correctly) that exception handling should be designed into a program rather than tacked on. Doing this has some disadvantages, though. For example, using exceptions adds to the size and subtracts from the speed of a program. Exception specifications do not work well with templates that template functions hit different kinds of exceptions, depending on the particular specialization used. Exceptions and dynamic memory allocation don't always work that well together.
+
+Let's look a little further at dynamic memory allocation and exceptions. First, consider the following function:
+
+```
+void test1(int n)
+{
+    string msg("I'm trapped in an endless loop");
+    if (ob_no)
+        throw exception();
+    ...
+    return;
+}
+```
+
+The string class uses dynamic memory allocation. Normally, the string destructor for mesg would be called when the function reached return and terminated. Thanks to stack unwinding, the throw statement, even though it terminates the function prematurely, still allows the destructor to be called. So in this case, memory is managed properly.

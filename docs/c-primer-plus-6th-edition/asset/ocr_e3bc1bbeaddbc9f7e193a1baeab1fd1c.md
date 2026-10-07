@@ -1,0 +1,100 @@
+# V
+
+valarray class, 786-787, 1045-1046,
+1049-1051
+
+templates, 1162
+value, passing by, 313-314, 770
+value_comp() method, 1282
+value_compare type, 1281, 1284
+value_type type, 1273
+values
+
+assigning to pointers, 171
+indirect, 155
+valvect.cpp, 1048
+variable arrays, 1329
+variable, 66
+
++   assigning values to, 43
+automatic, 182, 453–457
+example, 455–457
+initializing, 458
+stacks, 458–459
+automatic values, 314
+declaring, 41–43
+dynamic, 454
+dynamic memory, 476–479, 482
+enum, 150–152
+enumerators, 150–151
+value ranges, 153
+values, setting, 152
+floating-point numbers, 92
+advantages/disadvantages, 96–97
+constants, 96
+decimal-point notation, 92
+double data type, 94–96
+E notation, 92–93
+float data type, 94–96
+long double data type, 94–96
+global, compared to
+variables, 467
+ndetermininate values, 73
+initializing, 52, 73
+integers, 68
+bool, 90
+char, 80–89
+choosing integer types, 76–77
+climits header file, 71–73
+constants, 78–80, 92
+initializing, 73
+
+int, 68–70
+long, 68–70
+short, 68–70
+sizeof operator, 71–73
+unsigned, 74–76
+width of, 68
+keywords, static, 183
+local variables, 314–315
+
+compared to global variables, 467
+naming conventions, 66–68
+pointers, 153
+assigning values to, 171
+C++ philosophy, 175
+cautions, 195
+compared to pointed-to values, 172
+declaring, 155–179
+deferferencing, 171–172
+delete operator, 163–164
+example, 154
+initializing, 157–159
+integers, 160
+new operator, 160–162
+pointer arithmetic, 167–172
+pointer notation, 173
+strings, 173–178
+reference variables, 383
+arguments, 408–409
+class objects, 401–405
+creating, 383–386
+function parameters, 386, 389–390
+initance, 405–408
+properties, 390–391
+structure, 397–401
+scope, 454
+global, 454
+local, 454–457
+namespace, 454
+static, 453, 459–462
+external, 466
+external linkage, 463, 466–467
+internal linkage, 467–470
+no linkage, 470–472
+temporary variables, 392–394
+type conversions, 102
+in arguments, 106
+in expressions, 105–106
+on assignment, 103–104
+type casts, 107–109

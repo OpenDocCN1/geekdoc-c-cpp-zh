@@ -1,0 +1,71 @@
+# Chapter 8 Adventures in Functions
+
+What about the return value? The function call we just discussed didn't use it; as far as
+t use, the function could have been type void. But look at this function call:
+
+```
+display(accumulate(team, two));
+```
+
+What's going on here? Let's follow the structure object team. First, team is passed to
+accumulate() as its first argument. That means the target object in accumulate (
+really team. The accumulate() function modifies team, then it returns it as a reference.
+Note that the actual return statement looks like this:
+
+```
+return target;
+```
+
+Nothing in this statement indicates that a reference is being returned.That information\comes from the function header (and, also, from the prototype):
+free_throws & accumulate(free_throws & target, const free_throws & source)
+
+If the return type was declared free_throws instead of free_throws &, the same
+return statement would return a copy of target (and hence a copy of team). But the
+return type is a reference, so that means the return value is the original team object
+passed to accumulate().
+
+What happens next? The accumulate() return value is the first argument to
+display(), so that means team is the first argument to display().Because the
+display() parameter is a reference, that means the ft object in display() is really the team.
+Therefore, the contents of team get displayed. The net effect of
+
+```
+display(accumulate(team, two));
+```
+
+is the same as that of the following:
+
+```
+accumulate(team, two);
+display(team);
+```
+
+The same logic applies to this statement:
+
+```
+accumulate(accumulate(team, three), four);
+```
+
+This has the same effect as the following:
+
+```
+accumulate(team, three);
+accumulate(team, four);
+```
+
+Next, the program uses an assignment statement:
+
+```
+dup = accumulate(team, five);
+```
+
+As you might expect, this copies the values in team to do.
+Finally, the program uses accumulate() in a manner for which it was not intended:
+
+```
+accumulate(dup, five) = four;
+```
+
+This statement—that is, assigning a value to a function call—works because the return
+value is a reference. The code won't compile if accumulate() returns by value. Because
+the return value is a reference to dup, this code has the same effect as the following:
