@@ -1,0 +1,17 @@
+```
+int main() {
+    Base b;
+    Derived d;
+
+    Base* bp = &b;
+    Base* bq = &d;
+    Derived* dp = &d;
+    bp->f();
+    bp->g();
+    bq->f();
+    bq->g();
+    dp->f();
+    dp->g();
+    return 0;
+}
+```

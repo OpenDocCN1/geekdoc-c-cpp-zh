@@ -1,0 +1,38 @@
+In each case the member function that gets invoked:
+
+```
+Base::show()
+```
+
+producing the following output:
+
+```
+Base
+Base
+```
+
+The compiler simply ignores the contents of the pointer, bptr, and chooses the member function that matches the type of the pointer itself.
+
+We can again change this behavior by placing the keyword virtual in front of the declaration for the show() member function in the Base class, and optionally in the derived classes.
+
+```
+// virtual3.cpp
+
+#include <iostream>
+using namespace std;
+
+class Base {
+    public:
+    virtual void show() { cout << "Base" << endl; }
+};
+
+class Derived1 : public Base {
+    public:
+    virtual void show() { cout << "Derived1" << endl; }
+};
+
+class Derived2 : public Base {
+    public:
+    virtual void show() { cout << "Derived2" << endl; }
+};
+```

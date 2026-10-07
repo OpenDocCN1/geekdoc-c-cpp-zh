@@ -1,0 +1,407 @@
+
+如果同时也分配了该成员，那么实际上我们就是在头文件中分配了数据，这是我们永远不应该做的事情。
+
+# 访问静态数据成员
+
+现在假设你想读取或修改一个静态数据成员。你可以像访问任何其他数据成员一样访问静态数据成员：
+
+```cpp
+// word5.h
+
+#ifndef WORD5_H
+#define _WORD5_H
+
+class Word {
+private:
+    char *buf;
+    static int wordCount;
+public:
+    Word(char *s);
+    int getCount();
+};
+
+#endif
+```
+
+```cpp
+// word5.cpp
+
+#include <string.h>
+#include "word5.h"
+
+int Word::wordCount = 0;
+
+Word::Word(char *s) {
+    buf = strdup(s);
+    wordCount++;
+}
+
+int Word::getCount() {
+    return wordCount;
+}
+```
+
+```cpp
+// word5drv.cpp
+
+#include <iostream>
+#include "word5.h"
+
+using namespace std;
+
+int main() {
+    Word w1("Red");
+    Word w2("White");
+    Word w3("Blue");
+
+    cout << w1.getCount() << endl;
+    cout << w2.getCount() << endl;
+    cout << w3.getCount() << endl;
+    return 0;
+}
+```
+
+# // word5 输出
+
+- 3
+3
+3
+
+如果 `wordCount` 是一个普通的自动变量或局部变量而不是静态数据成员，那么每个构造函数都会对其自己的 `wordCount` 私有拷贝增加一次，所有三个对象的输出都将是 1，而不是 3。
+
+# 另一个示例
+
+假设一个对象需要知道程序中有多少个同类的其他对象。例如，在一个道路赛车游戏中，赛车可能可能想知道还有多少辆车在比赛中。在这种情况下，可以将静态变量作为类的成员包含进来：
+
+- 所有对象都可以访问它
+- 对于所有对象来说，它是同一个变量
+- 每个对象看到的都是同一个变量
+
+每个对象都可以访问静态数据成员中的信息，因此你可以使用静态数据成员允许对象之间进行通信。因此，静态数据成员可以被视为类对象之间通信的一种方式。
+
+# 使用 C++ 关注面向对象编程
+
+# 静态成员函数
+
+假设你想读取或修改一个静态数据成员。你可以像使用普通成员函数一样，通过像下面这样方式访问静态数据成员：
+
+```cpp
+// word6.h
+#ifndef WORD6_H
+#define WORD6_H
+
+class Word {
+private:
+    char *buf;
+    static int wordCount;
+public:
+    Word(char *s);
+    int getCount();
+};
+
+#endif
+```
+
+```cpp
+// word6.cpp
+#include <string.h>
+#include "word6.h"
+
+int Word::wordCount = 0;
+
+Word::Word(char *s) {
+    buf = strdup(s);
+    wordCount++;
+}
+
+int Word::getCount() {
+    return wordCount;
+}
+```
+
+```cpp
+// word6drv.cpp
+#include <iostream>
+#include "word6.h"
+
+using namespace std;
+
+int main() {
+    Word w1("Red");
+    cout << w1.getCount() << endl;
+    return 0;
+}
+
+// word6 输出
+1
+```
+
+然而，当你调用 `getCount()` 时，你必须对一个对象调用它，并且对象的地址会被秘密地传递给成员函数。虽然这个指针的额外开销可能不是问题，但在某些情况下，效率的降低是不可接受的。这对于仅访问静态成员的函数成立，但对于任何代表整个类而不需要访问特定对象成员的操作都是如此。
+
+我们可以通过将 `getCount()` 函数定义为友元函数来消除传递此指针的额外开销：
+
+```cpp
+// word7.h
+#ifndef WORD7_H
+#define WORD7_H
+
+class Word {
+private:
+    char *buf;
+    static int wordCount;
+public:
+    Word(char *s);
+    friend int getCount();
+};
+
+#endif
+```
+
+```cpp
+// word7.cpp
+#include <string.h>
+#include "word7.h"
+
+int Word::wordCount = 0;
+
+Word::Word(char *s) {
+    buf = strdup(s);
+    wordCount++;
+}
+
+int getCount() {
+    return Word::wordCount;
+}
+```
+
+```cpp
+// word7drv.cpp
+#include <iostream>
+#include "word7.h"
+
+using namespace std;
+
+int main() {
+    Word w1("Red");
+    Word w2("White");
+    Word w3("Blue");
+
+    cout << getCount() << endl;
+    return 0;
+}
+
+// word7 输出
+```
+
+我们现在在类外定义了 `getCount()`：
+
+```cpp
+int getCount() {
+    return Word::wordCount;
+}
+```
+
+`getCount()` 是一个全局函数，它可以访问静态数据，但它没有开销。然而，该函数不再处于 `Word` 类的作用范围内。因此，如果有人通过引入另一个库引入了 `getCount()` 名称（例如），将会发生冲突。
+
+C++ 允许你以优雅的方式解决这些问题。你可以将成员函数定义为静态的！这种含义与静态数据成员很接近。静态成员函数可以被看作类的方法，但它们不需要 `this` 指针。由于静态成员函数不能访问非静态成员，因此它们只能访问静态成员。静态成员函数可以被看作类的方法的一种方式，但它们独立于类的任何实例。
+
+# 访问静态成员函数
+
+你可以通过两种方式调用静态成员函数：
+
+1. 通过对象调用（就像普通成员函数一样）。
+2. 通过类名和作用域运算符调用。
+
+```cpp
+// word8.h
+#ifndef WORD8_H
+#define WORD8_H
+
+class Word {
+private:
+    char *buf;
+    static int wordCount;
+public:
+    Word(char *s);
+    static int getCount();
+};
+
+#endif
+```
+
+```cpp
+// word8.cpp
+#include <string.h>
+#include "word8.h"
+
+int Word::wordCount = 0;
+
+Word::Word(char *s) {
+    buf = strdup(s);
+    wordCount++;
+}
+
+int Word::getCount() {
+    return wordCount;
+}
+```
+
+```cpp
+// word8drv.cpp
+#include <iostream>
+#include "word8.h"
+
+using namespace std;
+
+int main() {
+    Word w1("Red");
+    Word w2("White");
+    Word w3("Blue");
+
+    cout << w1.getCount() << endl;
+    cout << Word::getCount() << endl;
+    cout << w3.getCount() << endl;
+    return 0;
+}
+
+// word8 输出
+3
+3
+3
+```
+
+# 调用静态函数
+
+你可以通过两种方式调用静态函数：
+
+1. 通过对象调用（就像普通成员函数一样）。
+2. 通过类名和作用域运算符调用。
+
+```cpp
+// word9.h
+#ifndef WORD9_H
+#define WORD9_H
+
+class Word {
+private:
+    char *buf;
+    static int wordCount;
+public:
+    Word(char *s);
+    static int getCount();
+};
+
+#endif
+```
+
+```cpp
+// word9.cpp
+#include <string.h>
+#include "word9.h"
+
+int Word::wordCount = 0;
+
+Word::Word(char *s) {
+    buf = strdup(s);
+    wordCount++;
+}
+
+int Word::getCount() {
+    return wordCount;
+}
+```
+
+```cpp
+// word9drv.cpp
+#include <iostream>
+#include "word9.h"
+
+using namespace std;
+
+int main() {
+    Word w1("Red");
+    Word w2("White");
+    Word w3("Blue");
+
+    cout << w1.getCount() << endl;
+    cout << Word::getCount() << endl;
+    cout << w3.getCount() << endl;
+    return 0;
+}
+
+// word9 输出
+3
+3
+3
+```
+
+# 静态成员
+
+如果一个静态成员需要访问类的成员数据，它需要传递一个显式的对象指针：
+
+```cpp
+// word10.h
+#ifndef WORD10_H
+#define WORD10_H
+
+class Word {
+private:
+    char *buf;
+    static int wordCount;
+public:
+    Word(char *s);
+    static int getCount(Word *w);
+};
+
+#endif
+```
+
+```cpp
+// word10.cpp
+#include <iostream>
+#include <string.h>
+#include "word10.h"
+
+using namespace std;
+int Word::wordCount = 0;
+
+Word::Word(char *s) {
+    buf = strdup(s);
+    wordCount++;
+}
+
+int Word::getCount(Word *w) {
+    cout << w->buf << endl;
+    return wordCount;
+}
+```
+
+```cpp
+// word10dr.cpp
+#include <iostream>
+#include "word10.h"
+
+using namespace std;
+
+int main() {
+    Word w1("Red");
+    Word w2("White");
+    Word w3("Blue");
+
+    cout << w1.getCount(&w1) << endl;
+    cout << w2.getCount(&w2) << endl;
+    cout << w3.getCount(&w3) << endl;
+    return 0;
+}
+
+// word10 输出
+Red
+3
+White
+3
+Blue
+3
+```
+
+在这个示例中，我们在函数调用中传递了一个显式的对象指针。下一个示例显示，为了发生这种情况，使用引用也是合适的。
+

@@ -1,0 +1,38 @@
+```
+// word11.h
+
+#ifndef WORD11_H
+#define WORD11_H
+
+class Word {
+private:
+    char *buf;
+    static int wordCount;
+public:
+    Word(char *s);
+    static int getCount(Word &w);
+};
+
+#endif
+```
+
+```
+// word11.cpp
+
+#include <iostream>
+#include <string.h>
+#include "word11.h"
+
+using namespace std;
+int Word::wordCount = 0;
+
+Word::Word(char *s) {
+    buf = strdup(s);
+    wordCount++;
+}
+
+int Word::getCount(Word &w) {
+    cout << w.buf << endl;
+    return wordCount;
+}
+```

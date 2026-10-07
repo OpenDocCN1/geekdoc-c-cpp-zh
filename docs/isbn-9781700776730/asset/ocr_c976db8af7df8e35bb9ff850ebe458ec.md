@@ -1,0 +1,44 @@
+Below is a program to show how an argument can be passed into a base class constructor function and traces the order of the calls to the constructor and destructor functions of both classes.
+
+```
+// constructor.cpp
+
+#include <iostream.h>
+
+class Base {
+protected:
+    int bNum;
+public:
+    Base(int n = 0) : bNum(n) {
+        cout << "Base constructor." << endl;
+    }
+    ~Base() {
+        cout << "Base destructor." << endl;
+    }
+    int getBaseNum() {
+        return bNum;
+    }
+};
+
+class Derived : public Base {
+private:
+    int dNum;
+public:
+    Derived(int a = 0, int b = 0) : Base(a), dNum(b) {
+        cout << "Derived constructor." << endl;
+    }
+    ~Derived() {
+        cout << "Derived destructor." << endl;
+    }
+    int getDerivedNum() const {
+        return dNum;
+    }
+};
+
+int main() {
+    Derived d(1,2);
+
+    cout << d.getBaseNum() << " " << d.getDerivedNum() << endl;
+    return 0;
+}
+```

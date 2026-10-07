@@ -1,0 +1,13 @@
+C++ makes polymorphism possible with the application of a rule we've seen before:
+
+![](bbox=[0.139, 0.213, 0.86, 0.393])
+
+A base class pointer may address objects of the base class or of any derived class. However, this rule is a one-way street. A pointer to a derived class object may not address an object of a base class.
+
+Recall, however, that this presented some difficulties. When we used pointers of type Base class, the only member function (or data) that could be referenced were those belonging to the Base class, even if this pointer pointed to a Derived class object!
+
+This is not polymorphism because the object being pointed at never received the message being sent! The reason is that the compiler only knows about the type of the pointer itself, and nothing about the object that the pointer eventually point to during execution time.
+
+The goal of an object-oriented programming language is to send a message to whatever object happens to be pointed at by the pointer, as opposed to the type of the pointer itself.
+
+Why is this important? Because you can control the content (or address) of the pointer at execution time, whereas the type of the pointer variable itself cannot be changed once it is hard-coded. In this fashion, the object itself can “figure out” what to do with the message and thereby implement the concept of polymorphism.

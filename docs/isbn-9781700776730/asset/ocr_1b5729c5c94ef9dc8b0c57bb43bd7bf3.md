@@ -1,0 +1,29 @@
+```
+Counter operator++() (
+    ++count;
+    return Counter(count);
+}
+```
+
+This code:
+
++   * creates an object of type Counter that has no name (it won't be around long enough to need one)
+
++   * this unnamed object is initialized to the value provided by the argument count.
+
++   * C++ treats this as a constructor call for a temporary object with no name and a very brief lifetime. However, the code does require a constructor that takes one argument:
+
+```
+Counter(int c) { count = c; }
+```
+
+Once the unnamed object is initialized to the value of count, it can then be returned
+
+We can do the same with decrement operators:
+
+```
+Counter operator--() (
+    --count;
+    return Counter(count); // or return *this;
+}
+```

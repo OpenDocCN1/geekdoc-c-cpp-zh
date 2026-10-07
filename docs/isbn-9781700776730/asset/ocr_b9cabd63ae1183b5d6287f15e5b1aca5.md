@@ -1,0 +1,37 @@
+```
+// window.cpp
+class Window {
+public:
+    enum windowState {opened, closed, locked};
+private:
+    windowState state;
+    int xPos, yPos, width, height;
+public:
+    void open();
+    void close();
+    void lock();
+    void getState() const;
+    void getXpos() const;
+    void getYpos() const;
+    int getHeight() const;
+    int getWidth() const;
+};
+class Door {
+public:
+    enum doorState {opened, closed, locked};
+private:
+    doorState state;
+    int xPos, yPos, width, height;
+public:
+    void open();
+    void close();
+    void lock();
+    void getState() const;
+    void getXpos() const;
+    void getYpos() const;
+    int getHeight() const;
+    int getWidth() const;
+};
+```
+
+These two classes are horribly redundant and cry for some form of unification. That unification is supplied by creating an abstract base class. We can describe both classes as inheriting from a common abstract class, Portal, which contains all the common features of their interface.

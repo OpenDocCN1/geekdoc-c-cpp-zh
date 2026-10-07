@@ -1,0 +1,13 @@
+# Operator Overloading
+
+Operator overloading enables you to give new meanings to most of the C++ operators when you use them on instances of ADTs. Note that we used operator overloading to define the meaning of + when applied to BigInts in the C++ example.
+
+# Constructors
+
+C++ classes may have two special kinds of member functions: constructors and destructors. Constructors create new instances of ADTs (classes) and are responsible for initializing them correctly. Since C++ automatically uses a constructor to initialize any instances of ADTs required by client programs, this feature eliminates this common programming error.
+
+C++ can also use constructors to automatically perform type conversions. For, if we define a constructor for the BigInt ADT that has an argument of type int, C++ will use a constructor automatically whenever it needs to convert a variable of type int to a BigInt.
+
+# Destructors
+
+Destructors destroy instances of ADTs. We can use destructors together with constructors to hide the details of managing storage for ADTs from client programs.

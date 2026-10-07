@@ -1,0 +1,24 @@
+# Operator Precedence
+
+In the following table of operator precedence, C++ operators are divided into 13 categories. The #1 category has the highest precedence, category #2 (Unary operators) takes second precedence, and so on to the Comma operator, which has lowest precedence. The operators within each category have equal precedence. The Unary (category #2), Conditional (category #11), and Assignment (category #12) operators associate right-to-left; all other operators associate left-to-right.
+
+| # | Category | Operator | What it is (or does) |
+|---|---|---|--|
+| 1 | Highest | () | Function call |
+| | | [] | Array subscript |
+| | | -> | C++ indirect component selector |
+| | | :: | C++ scope access/resolution |
+| | | | C++ direct component selector |
+| 2 | Unary | ! | Logical negation (NOT) |
+| | | ~ | Bitwise (1's) complement |
+| | | + | Unary plus |
+| | | - | Unary minus |
+| | | ++ | Preincrement or postincrement |
+| | | -- | Predecrement or postdecrement |
+| | | & | Address |
+| | | * | Induction |
+| | | sizeof | returns size of operand, in bytes |
+| | | new | dynamically allocates C++ storage |
+| | | delete | dynamically deallocates C++ storage |
+| 3 | Member access | * | C++ dereference |
+| | | ->* | C++ dereference |
