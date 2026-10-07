@@ -1,0 +1,36 @@
+
+© ISO/IEC 2011 – All rights reserved
+
+ISO/IEC 9899:2011 (E)
+
+width, 6.2.6.2
+WINT_MAX macro, 7.20.3
+WINT_MIN macro, 7.20.3
+wint_t type, 7.20.3, 7.21.1, 7.29.1, 7.29.2.1, 7.30.1
+mchr function, 7.29.4.5.8
+wmemcmp function, 7.29.4.4.5
+wmemcpy function, 7.29.4.2.3
+wmempy_s function, K.3.9.2.1.3
+memmove function, 7.20.4.2.4
+memmove_s function, K.3.9.2.1.4
+wmemset function, 7.29.4.6.2
+printf function, 7.21.1, 7.29.2.9, 7.29.11, K.3.9.1.13
+printf_s function, K.3.9.1.13
+scanf function, 7.21.1, 7.29.2.10, 7.29.12, 7.29.3.10
+scanf_s function, K.3.9.1.12, K.3.9.1.14
+xor macro, 7.9
+xor_eq macro, 7.9
+
+# Index
+
+683
+
+# ISO/IEC 9899:2011(E)
+
+# ICS 35.060
+
+Price based on 457 pages
+
+Copyright International Commission for Standardization reserved
+Provided by IRS under license with ISO
+No reproduction or networking permitted without license from ISO

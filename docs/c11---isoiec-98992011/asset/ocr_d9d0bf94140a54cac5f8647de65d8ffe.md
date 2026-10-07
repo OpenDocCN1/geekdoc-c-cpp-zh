@@ -1,0 +1,5 @@
+# 7.7 Characteristics of floating types <float.h>
+
++   1 The header <float.h> defines several macros that expand to various limits and parameters of the standard floating-point types.
+
++   2 The macros, their meanings, and the constraints (or restrictions) on their values are listed in 5.2.4.2.2.

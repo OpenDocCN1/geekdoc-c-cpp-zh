@@ -1,0 +1,15 @@
+# ISO/IEC 9899:2011 (E)
+
+# 72.1.3 Files
+
+A stream is associated with an external file (which may be a physical device) by opening a file, which may involve creating a new file. Creating an existing file causes its contents to be discarded, if necessary. If a file can support positioning requests (such as a disk file, as to a terminal), then a file position indicator associated with the stream is positioned at the start (character number zero) of the file, unless the file is opened with append mode in which case it is implementation-defined whether the file position indicator is initially positioned at the beginning or the end of the file. The file position indicator is maintained by subsequent reads, writes, and positioning requests, to facilitate orderly progression through the file.
+
+Binary files are not truncated, except as defined in 7.21.5.3. Whether a text stream causes the associated file to be truncated beyond that point is implementation-defined.
+
+When a stream is unbuffered, characters are intended to appear from the source or the destination as soon as possible. Otherwise characters may be accumulated and transmitted to or from the host environment as a block. When a stream is fully buffered, characters are intended to be transmitted to or from the host environment as a block when a buffer is filled. When a stream is line buffered, characters are intended to be transmitted to or from the host environment as a block when a new-line character is encountered. Furthermore, characters are intended to be transmitted as a block to the host environment when a buffer is filled, when input is requested on an unbuffered stream, or when input is requested on a line buffered stream requires transmission of characters from the host environment. Support for these characteristics is implementation-defined, and may be affected by the setbuf and setvbuf functions.
+
+A file may be disassociated from a controlling stream by closing the file. Output streams are flushed (unless unbuffered content are transmitted to the host environment) before the stream is disassociated from the file. The value of a pointer to a FILE object is indeterminate after the associated file is closed (including the standard text streams). Whether a file of zero length (on which no characters have been written by an output stream) actually exists is implementation-defined.
+
+The file may be subsequently reopened, by the same or another program execution, and its contents reclaimed or modified (if it can be repositioned at the start). If the main function returns to its original caller, or if the exit function is called, all open files are closed before program termination. Other paths to program termination, such as calling the abort function, do not close all files properly.
+
+The address of the FILE object used to control a stream may be significant; a copy of the FILE object may not exist in place of the original.

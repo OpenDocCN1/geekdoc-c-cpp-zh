@@ -1,0 +1,1 @@
++   3 The strlen function returns the number of characters that precede the terminating null character.

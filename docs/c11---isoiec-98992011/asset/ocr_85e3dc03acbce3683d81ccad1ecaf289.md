@@ -1,0 +1,42 @@
+# 6.4.4.3 Enumeration constants
+
+Syntax
+
+```
+enumeration-constant:
+  identifier
+```
+
+An identifier declared as an enumeration constant has type int.
+
+Forward references: enumeration specifiers (6.7.2.2).
+
+# 6.4.4.4 Character constants
+
+Syntax
+
+```
+' c-char-sequence ' 
+L' c-char-sequence ' 
+u' c-char-sequence ' 
+U' c-char-sequence ' 
+c-char-sequence:
+  c-char
+  c-char-sequence c-char
+c-char:
+  any member of the source character set except
+  the single-quote ', backslash \, or new-line character
+  escape-sequence
+escape-sequence:
+  simple-escape-sequence
+  octal-escape-sequence
+  hexadecimal-escape-sequence
+  universal-character-name
+simple-escape-sequence: one of
+  \' ' \ \
+a \b \f \n \t \v
+octal-escape-sequence:
+  \octal-digit
+  \octal-digit octal-digit
+  \octal-digit octal-digit octal-digit
+```

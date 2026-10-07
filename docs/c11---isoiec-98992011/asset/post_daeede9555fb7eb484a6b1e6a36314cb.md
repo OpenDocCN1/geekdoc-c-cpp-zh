@@ -1,0 +1,179 @@
+
+# ISO/IEC 9899:2011 (E)
+
+© ISO/IEC 2011 – All rights reserved
+
+- toward self function, 70.30.3.1, 70.30.2.1
+- toward upper function, 70.30.3.1, 70.30.2.1
+- translation environment, 5.5.1
+- translation limits, 5.2.1
+- translation phases, 5.2.1.1
+- translation unit, 5.1.1.1, 6
+- trap, see per trap
+- trap representation, 31.9.4, 6.2.6.1, 6.2.6.2, 6.2.6.3, 6.2.6.5
+- trigonometric functions
+    - complex, 7.3, G.6.1
+    - real, 72.4.E10.1
+- trigraph sequences, 5.1.1.2, 5.2.1.1
+- true true, 7.16
+- trunc functions, 72.1.9.E10.6
+- type-generic macro, 72.5
+- truncation, 6.3.1.4, 72.1.9.8, 72.21.3, 72.1.5
+- truncation toward zero, 6.5
+- nts_create function, 72.6.1
+- nts_delete function, 72.6.6.2
+- nts_DTOR_ITERations macro, 72.6.1
+- nts_dtor_type, 72.6.1
+- nts_get_function, 72.6.6
+- nts_set_function, 72.6.6.2
+- ts_5_type, 72.1
+- uchar.h header, 6.4.4, 6.4.5, 7.28
+- CHAR_MAX macro, 5.2.4.1
+- UINT_FAST_MAX macros, 70.20.2.3
+- uint_FAST_N_type, 70.20.2.3
+- uint_least16_t type, 72.18
+- uint_least32_t type, 72.18
+- UINT_LEAST_N_MAX macros, 70.20.2.2
+- uint_least_N_t type, 70.20.2.1
+- UINT_MAX macro, 5.2.4.1
+- UINT_C_MAX macro, 70.20.2.4
+- UINT_MAX macro, 78.3, 72.8.4, 72.20.5
+- uint_max_type, 72.20.1, 72.21.6.1, 72.21.6.2, 72.29.1, 72.29.2.
+- UINT_N_C_ macros, 72.20.4.1
+- UINT_MAX macros, 72.20.2.1
+- uint_n_type, 72.20.1.1
+- UINT_PTR_MAX macro, 72.20.4.2
+- int_ptr_type, 72.20.4.1
+- ULLONG_MAX macro, 5.2.4.1, 72.22.1.4, 72.29.4.1.
+- ULONG_MAX macro, 5.2.4.1, 72.22.1.4, 72.29.4.1.
+- unary arithmetic operators, 6.5.3.3
+- unary expression, 6.5.3
+- unary minus operator (-), 6.5.3, F.3
+- unary operators, 6.5.3
+- unary plus operator (+), 6.5.3.3
+- unbuffered stream, 72.213
+- ndef preprocessing directive, 60.10.5, 7.1.3, 7.1.4
+- undefined behavior, 3.4.3, 4.2
+- underscore character, 6.4.2.1
+- underscore leading, identifier, 7.2.1
+- getc function, 72.21.1, 72.21.10, 72.21.9.2, 72.21.9
+- getwc function, 72.21.1, 72.29.3.10
+- two's complement, 6.2.6.2, 72.20.1.1
+- type category, 6.2.5
+- type conversion, 6.5.3
+- type definitions, 6.7.8
+- type domain, 6.2.5, 6.2
+- type names, 6.7.7
+- type punning, 6.5.2.3
+- type qualifiers, 6.7.3
+- type specifies, 6.7.2
+- type-generic macro, 72.5, G.7
+- typedef declaration, 6.7.8
+- typedef_storage-class, 6.7.1, 6.7.8
+- type types, 6.2.5
+- atomic, 7.2.1.3, 6.2.5, 6.2.6.1, 6.2.3.1, 6.2.5.5, 6.2.5.4.16, 6.2.4, 70.10.3.717
+- character, 6.7.9
+- compatible, 6.2.7, 6.2.7, 6.7.3, 6.7.6
+- complex, 6.2.5, G
+- composite, 6.2.7
+- const qualified, 6.7.3
+- conversions, 6.3
+- imaginary, G
+- restrict qualified, 6.7.3
+- volatile qualified, 6.7.3
+- Unicode, 72.28, see also char16_t type, char32_t type, char_t type
+- Unicode required set, 6.10.8.2
+- unicode literals, 7.28
+- un arrow operator (->), 6.5.2.3
+- content, 6.2.73
+- dot operator (.), 6.5.2.3
+- initialization, 6.7.9
+- member alignment, 6.7.2.1
+- member name space, 6.2.7.2
+- member operator (,), 6.5.2.1, 6.5.2.3
+- pointer operator (->), 6.5.2.3
+- specifier, 6.7.2.1
+- tag, 6.2.3, 6.7.2.3
+- type, 6.2.5, 6.7.2.1
+- universal character name, 6.4.3
+- unormalized floating-point numbers, 5.2.4.2
+- unqualified type, 6.2.5
+- unqualified version of type, 6.2.5
+- unsequenced, 5.1.2.3, 6.5.1, 6.5.16, see also independently sequenced, before
+- unigned char type, 6.3.3, 3.5.3, 3.9.1
+- unassigned integer suffix, or U, 6.4.1
+- unassigned integer types, 6.2.5, 6.3.1, 6.4.1
+- unassigned type conversion, 6.3.1, 6.3.1, 6.3.4, 6.3.8
+- unspecified types, 6.2.5, 7.2.1, 7.2.1.1, 72.21.6, 72.9.2
+- unspecified behavior, 3.4.4, J.1
+- unspecified value, 3.19.3
+- uppercase letter, 5.2.1
+- use of library functions, 7.4.1
+- UCHAR_max macro, 5.2.4.1
+- usual arithmetic expressions, 6.3.1, 6.3.5, 6.5, 6.5.8, 6.5.10, 6.5.11, 6.5.12
+- UTF-16, 6.10.8.2
+- UTF-32, 6.10.8.2
+- UTF-8 string literal, *see string literal*
+- utilities, general, 7.2.1, 7.31.2
+- wide string, 7.29.4, 3.9.2
+- wide code, 72.28
+- value, 3.19
+- value bits, 6.2.2
+- variable arguments, 6.10.3
+- variable headers, 7.16
+- variable length argument, 6.7.6, 6.7.6.2, 6.10.2
+- modified type, 6.7.6, 6.7.7.2, 6.10.8
+- vertical-tab character, 5.2.1
+- vertical-tab escape sequence, 5.2.2, 6.4.4, 7.4.10
+- vsprintf_function, 7.21.1, 7.21.6, 3.5.8, 3.5.3, 3.5.9
+- vsscanf function, 7.21.1, 7.21.6, 6.3.9
+- vsscanf_s function, 6.3.5, 3.5.33, 3...4
+- vsswprintf function, 7.21.1, 7.21.6, 6.3.9
+- vsswprintf_function, 5.2.2, 3.9.1
+- vsswprintf function, 7.21.1, 7.21.6, 7.29.3.3.10
+- vssnprintf_s function, 6.3.5, 3.5.3,, 3.....4
+- vssnprintf_f function, 7.21.1, 7.21.6, 6.3.9, 3.5.31, 3..13
+- vssnprintf function, 7.21.1, 7.21.6, 7.21.8, 3.5.12, 3.5.14
+- vssnprintf_f function, 7.21.1, 7.21.6, 7.21.10, 3.5.13, 3.5.14
+- vsprintf function, 7.21.1, 7.21.6, 6.3.9, 3.5.33, 3..14
+- vsprintf_s function, 7.21.1, 7.21.6, 6.3.9, 3.5.33, 3..14
+- vssnprintf_f function, 7.21.1, 7.21.6, 7.21.10, 3.5.13, 3.5.14
+- vssnprintf_function, 7.21.1, 7.21.6, 6.3.9, 3.5.33, 3..14
+- vsswprintf function, 7.21.1, 7.21.6, 6.3.9, 3.5.33, 3..14
+- vsswprintf_function, 7.21.1, 7.21.6, 6.3.9, 3.5.33, 3..14
+- vssnprintf_function, 7.21.1, 7.21.6, 7.21.10, 3.5.13, 3.5.14
+- va_arg macro, 7.16.1, 7.16.1.1, 7.16.1.6, 7.16.4, 7.16.6.8, 7.21.9, 7.21.9, 7.21.1, 7.21.6, 7.21.1, 7.2.2, 7.21.4, 7.29.5, 7.29.6, 7.29.7, 7.29.7, 7.29.8, 7.29.9, 7.29.10, 3.5.9, 3.5.31, 3.5.13, 3.5.19, 3.9.1, 3.9.12
+- va_copy macro, 7.16.3, 7.16.1.1, 7.16.1.6, 7.16.2, 7.16.13
+- end_macro, 7.16.1, 7.16.3, 7.16.1.3, 7.16.4, 7.16.6.8, 7.21.9, 7.21.9, 7.21.1, 7.21.6, 7.21.13, 7.21.14, 7.29.5, 7.29.6, 7.29.7, 7.29.8, 7.29.9, 7.29.10, 3.5.9, 3.5.31, 3.5.13, 3.5.19, 3.9.1, 3.9.12
+- va_list type, 7.16, 7.16.3
+- va_start macro, 7.16.1, 7.16.1, 7.16.2, 7.16.13, 7.16.4, 7.16.6.8, 7.21.9, 7.21.9, 7.21.1, 7.21.6, 7.21.1, 7.2.2, 7.21.4, 7.29.5, 7.29.6, 7.29.7, 7.29.7, 7.29.8, 7.29.9, 7.29.1, 7.2.2, 7.1
+- while statement, 6.8.5.1
+- white space, 5.112.2, 6.4, 10.7.4.1, 7.30.2.1.10
+- white-characters, 6
+- wide character, 7.3.7
+- case mapping functions, 7.30.3.1, extensible, 7.30.3.2
+- classification functions, 7.30.2.1, extensible, 7.30.2.2
+- constant, 6.4.4.4
+- formatted input/output functions, 7.29.2, 3.9.1
+- input functions, 7.21.1, 7.29.3
+- input/output functions, 7.29.1
+- single-conversion functions, 7.29.6.1
+- wide character classification and mapping utilities
+    - header, 7.30.1.17
+- wide string, 7.29.1
+- wide string comparison, 7.29.4.4
+- wide string concatenation, 7.29.4.3, 3.9.2
+- wide string copying functions, 7.29.4.2, 3.9.2.1
+- wide string literal, _str literal
+- wide miscellaneous functions, 7.29.4.6, 3.9.4
+- wide numeric conversion functions, 7.28.2.4, 7.29.4.1
+- wide search functions, 7.29.4.5, 3.9.2.3
+- wide-oriented stream, 7.21.2
+
+682
+
+Index
+
+Copyright Organization for Standardization
+Provided by IEEE with under license from ISO
+No reproduction networking permitted without license from ISO

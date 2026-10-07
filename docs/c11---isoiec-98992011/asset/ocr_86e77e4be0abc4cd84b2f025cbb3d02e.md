@@ -1,0 +1,18 @@
+# L.3 Requirements
+
+If the program performs a trap (3.19,5), the implementation is permitted to invoke a runtime-constraint handler. Any such semantics are implementation-defined.
+
+All undefined behavior shall be limited to bounded undefined behavior, except for the following which are permitted to result in critical undefined behavior:
+
++   - An object is referred to outside of its lifetime (6.2.4).
+- A store is performed to an object that has two incompatible declarations (6.2.7).
+- A pointer is used to call a function whose type is not compatible with the referenced type (6.2.7, 6.3.2.3, 6.5.2.2).
+- An value does not designate an object when evaluated (6.2.3.1).
+- The program attempts to modify a string literal (6.4.5).
+- The operand of the unary * operator has an invalid value (6.5.3).
+- Addition or subtraction of a pointer into, or just beyond, an array object and an integer type produces a result that points just beyond the array object and is used as the operand of the unary * operator that is evaluated (6.5.6).
+- An attempt is made to modify an object defined with a const-qualified type through an lvalue with non-const-qualified type (6.7.3).
+- An argument to a function or macro defined in the standard library has an invalid value or is not expected by a function with variable number of arguments (7.1.4).
+- The longjump function is called with a jmp_buf argument where the most recent invocation of the set jmp macro in the same invocation of the program with the corresponding jmp_buf argument is nonexistent, or the invocation was from another thread of execution, or the function containing the invocation has terminated execution in the interim, or the invocation was within the scope of an identifier with variably modified type and execution has left that scope in the interim (7.13.2.1).
+- The value of a pointer that refers to space deallocated by a call to the free or realloc function is used (7.22.3).
+- A string or wide string utility function accesses an array beyond the end of an object (7.24.1, 7.29.4).

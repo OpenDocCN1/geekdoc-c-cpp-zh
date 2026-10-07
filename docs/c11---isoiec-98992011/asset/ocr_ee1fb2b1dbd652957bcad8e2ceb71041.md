@@ -1,0 +1,49 @@
+# ISO/IEC 9899:2011 (E)
+
+© ISO/IEC 2011 – All rights reserved
+
+# 7.28 Unicode utilities <uchar.h>
+
++   1. The header <uchar.h> declares types and functions for manipulating Unicode characters.
+
++   2. The types declared are mbstate_t (described in 7.29.1) and size_t (described in 7.19);
+
+```
+char16_t
+```
+
+which is an unsigned integer type used for 16-bit characters and is the same type as uint_least16_t (described in 7.20.1.2); and
+
+```
+char32_t
+```
+
+which is an unsigned integer type used for 32-bit characters and is the same type as uint_least32_t (also described in 7.20.1.2).
+
+# 7.28.1 Restartable multibyte/wide conversion functions
+
++   1. These functions have a parameter, ps, of type pointer mbstate_t that points to an object that can completely describe the current state of the associated multibyte character sequence, the functions alter as necessary. If ps is a null pointer, each function uses its own internal mbstate_t object instead, which is initialized at program startup to the initial conversion state; the functions are not required to avoid data races with other calls to the same function in this case. The implementation behaves as if no library function calls these with a null pointer ps.
+
+# 7.28.1.1 The mbrtoc16 function
+
+Synopsis
+
+```
+#include <uchar.h>
+size_t mbrtoc16(char16_t * restrict pc16,
+const char * restrict s, size_t n,
+mbstate_t * restrict ps);
+```
+
+Description
+
++   2. If s is a null pointer, the mbrtoc16 function is equivalent to the following:
+mbrtoc16(NULL, "", 1, ps)
+
+In this value, of the parameters pc16 and n are ignored.
+
++   3. If s is not a null pointer, the mbrtoc16 function inspects n bytes beginning with the byte pointed to by s to determine the number of bytes needed to complete the next multibyte character (including any shifts). If the function determines that the next multibyte character is complete and valid, it determines the values of the corresponding characters and returns, if pc16 is not a null pointer, stores the value of the first (or only) such character in the object pointed to by pc16. Subsequent calls will
+
+Library
+
+398 §7.28.1.1

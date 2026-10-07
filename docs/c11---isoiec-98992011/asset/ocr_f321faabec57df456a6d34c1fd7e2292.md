@@ -1,0 +1,48 @@
+ISO/IEC 9899:2011 (E)
+
+© ISO/IEC 2011 – All rights reserved
+
+# F.10.3.6 The 1dexp functions
+
++   On a binary system, 1dexp(x, exp) is equivalent to scalbn(x, exp).
+
+# F.10.3.7 The log functions
+
++   - log(±0) returns −∞ and raises the “divide-by-zero” floating-point exception.
+- log(1) returns +0.
+- log(x) returns a NaN and raises the “invalid” floating-point exception for x < 0.
+- log(+∞) returns +∞.
+
+# F.10.3.8 The log10 functions
+
++   - log10(±0) returns −∞ and raises the “divide-by-zero” floating-point exception.
+- log10(1) returns +0.
+- log10(x) returns a NaN and raises the “invalid” floating-point exception for x < 0.
+- log10(+∞) returns +∞.
+
+# F.10.3.9 The log1p functions
+
++   - log1p(±0) returns ±0.
+- log1p(-1) returns −∞ and raises the “divide-by-zero” floating-point exception.
+- log1p(x) returns a NaN and raises the “invalid” floating-point exception for x < -1.
+- log1p(+∞) returns +∞.
+
+# F.10.3.10 The log2 functions
+
++   - log2(±0) returns −∞ and raises the “divide-by-zero” floating-point exception.
+- log2(1) returns +0.
+- log2(x) returns a NaN and raises the “invalid” floating-point exception for x < 0.
+- log2(+∞) returns +∞.
+
+# F.10.3.11 The logb functions
+
++   - logb(±0) returns −∞ and raises the “divide-by-zero” floating-point exception.
+- logb(±∞) returns +∞.
+
++   The returned value is exact and is independent of the current rounding direction mode.
+
+522
+
+IEC 60559 floating-point arithmetic
+
+§F.10.3.11
