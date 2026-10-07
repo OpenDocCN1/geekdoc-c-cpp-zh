@@ -1,0 +1,55 @@
+
+- [106] M. Schur, 企业应用的实证挖掘, in Proc: 19th European Software Engineering (ESEC)/ACM Symposium on Software Engineering (ESSE), 5–9 Sept 2011, Szeged, Hungary, 2011, pp. 388–391.
+- [107] A.M. Memon, I. Banerjee, A. Nagarajan, 用于测试的图形接口逆向工程, in Proc: 10th Working Conf. on Reverse Engineering (WCRE03), 13–16 Nov 2003, Victoria, Canada, 2003, pp. 260–269.
+- [108] L. Mariani, S. Papagnannis, M. Zette, 基于 CTS 的软件兼容性与回归, in Proc: 29th Int. Conf. on Software Engineering (ICSE'07), 19–27 July 2007, Minneapolis, MN, USA, 2007, pp. 85–95.
+- [109] T. Xie, D. Norfolk, 基于操作抽象的工具辅助生成与选择, Autom. Soft. Eng. 13 (3) (2006) 345–371, Springer, Kluwer.
+- [110] M.D. Ernst, J. Cockrell, W.G. Griswold, D. Notion, 软件演化的动态不变性发现, IEEE Trans. Soft. Eng. 27 (2) (2001) 1–25, IEEE Computer.
+- [111] G. Fraser, N. Walkishaw, 适当软件测试, in: 2012 IEEE Soft. Conf. on Software Testing, Verification and Validation (ICST), 17–22 Apr 2012, Montreal, Canada, 2012, pp. 202–309.
+- [112] weka, 用于数据挖掘任务的机器学习算法集. `http://www.weikato.ac.nz/ml/`
+- [113] M. Pradel, T.R. Green, 利用测试生成和规格挖掘实现无误报自动检测, in Proc: 34th Int. Conf. on Software Engineering (ICSE), 2–9 June 2012, Zurich, Switzerland, 2012, pp. 288–298.
+- [114] M. Pradel, C. Japan, J. Aldrich, T.R. Gross, 多对象规格下的 API 协议静态检查, in Proc: 34th Int. Conf. on Software Engineering (ICSE), 2–9 June 2012, Zurich, Switzerland, 2012, pp. 925–935.
+- [115] W. Zheng, H. Ma, M.R. Ly, T. Xie, I. King, Web 引擎测试断言挖掘, in: Proc: 26th IEEE/ACM Int. Conf. on Automated Software Engineering (ASE) '11), 6–12 Nov 2011, California, USA, 2011, pp. 408–411.
+- [116] Q. Xie, A. Memon, 设计与比较基于 GUI 的软件应用, ACM Trans. Soft. Eng. Method. 16 (1) (2007), article no. 4. ACM, New York, NY.
+- [117] M. d'Amour, C. Papagnannis, D. Markov, T. Xie, M.D. Ernst, 针对面向对象单元测试的自动单元测试生成与分类技术的实证比较, in Proc: 21st Int. Conf. on Automated Software Engineering (ASE'06), 18–22 Sep 2006, Tokyo, Japan, 2006, pp. 59–68.
+- [118] P. Abo, N. T. Ray, K. Schackeder, 用于模型测试目的的自动化 GUI 建模, in Proc: 8th Int. Conf. on Information Technology: New Generations (ITNG2011), 11–13 Apr 2011, Vegas, NV, USA, 2011, pp. 268–273.
+- [119] Q. Xie, A. Memon, 持续基于 GUI 的应用程序的快速测试, in Proc: 21st IEEE Int Conf. on Software Maintenance (ICSM'05), 25–30 Sep 2005, Budapest, Hungary, 2005, pp. 473–482.
+- [120] A. Mesbah, A. De Vers, 基于不变性的 AJAX 用户界面自动测试，in: Proc. 31st Int. Conf. on Software Engineering (ICSE'09), 2009年5月16–24日, 加拿大温哥，2009, pp. 210–220.
+- [121] K. Menke, N. Walkinson, 基于模型的测试与模型推理，in: Proc. 5th Int. Symposium on Leveraging of Formal Methods (ISOLA 2012), 2012年10月15–18日, 希腊哈克拉克, 2012, pp. 440–443.
+- [122] L. Bouillon, Q. Limbourg, J. Vanderdonckt, B. Michotte, 基于推导和变换的网页逆向工程，in: Proc. 3rd Latin American Web Congress (LA-WEB 2005), 2005年10月31日, 阿根廷布宜诺斯艾利斯, 2005, pp. 3–13.
+- [123] S. Staiger, 使用静态分析的图形用户界面逆向工程，in: Proc. 14th Conf. on Reverse Engineering (WCRE2007), 2007年10月28–31日, 加拿大温哥， 2007, pp. 189–198.
+- [124] A. Guha, S. Krishnamurthy, T. Jum, 使用静态分析进行 AJAX 侵入检测，in: Proc. 18th Int. World Web Conf (WWW '09), 2009年4月20–24日, 西班牙马德里, 2009, pp. 561–570.
+- [125] A. Ko, X. Zhang, Web 应用中获取缺失的反馈，in: Proc. SIGCHI Conference on Human Factors in Computing Systems (CHI '11), 2011年7月7–12日, 加拿大温哥, 2011, pp. 217–218.
+- [126] F. Bellucci, G. Ghiani, F. Paterno, 支持跨平台适应的活跃动态 Web 应用逆向工程，in: Proc. 2012 ACM Int. Conf. on User Interfaces (UI'12), 2012年2月14–17日, 葡萄牙利斯本, 2012, pp. 217–228.
+- [127] Bauhaus 工具，程序管理项目。`http://www.uni-stuttgart.de/en/project-bauhaus.html`。
+- [128] Ó.S. Ramón, J. van Deerven, J. Vanderdonckt, G. Molina, 带有 UIResource 资源的图形用户界面逆向工程，in: Proc. 2013 IEEE Seventh Int. Conf. on Research in Information Science (RICS), 2013年5月29–31日, 法国巴黎, 2013, pp. 1–12.
+- [129] A. Mesbah, E. Bozdag, A. van Deersen, 通过状态变化爬取基于 AJAX 的应用程序，in: Proc. 18th Int. Conf. on Web Engineering (ICWE '08), 2008年7月14–18日, 美国新泽西约敦高, 2008, pp. 122–134.
+- [130] A. Mesbah, A. van Deersen, 用户界面变化的动态分析，ACM Trans. 6 (2012), 纽约纽约。
+- [131] H. Samir, A. Kamel, 用于迁移的图形用户界面自动逆向工程，in: Proc. IT 5th Int. Conf. on Information and Communications Technology (ICICT), 2007年12月16–18日, 埃及开罗, 2007, pp. 157–162.
+- [132] E. Stroulia, M. El-Ramy, P. Ilginski, P. Sorenson, 支持到 Web 的逆向工程，Softw. Eng. 10 (3) (2003) 271–301, Kluwer Academic, 比格明姆。
+- [133] P. Li, E. Holistic, 基于 Webster 的图形用户界面管理，in: 7th Int. Conf. on Aspect-Oriented Software Development (AOSD '08), 2008年3月31日, 比时鲁塞尔, 2008, pp. 156–167.
+- [134] A. Ginharth, H. Thompson, 接口发现：一种通用方法，in: Proc. ACM SIGCHI Symposium on Interactive Systems (EICS '10), 2010年6月19–23日, 德国柏林, 2010, pp. 145–154.
+- [135] M.I. Mukhai, R.E. Al-Qutaishi, B. Athena, 领域类的图形用户界面：J. Ther. Appl. Technol. 24 (1) (2011) 28–40, 巴基斯坦伊斯兰巴德。
+- [136] W. Yang, M.R. Prasad, T. Xie, 移动应用程序自动 GUI 的灰盒方法，in: Proc. 16th Int. Conf. on Fundamental Approaches to Software Engineering (FASE'13), 2013年3月16–24日, 意大利罗马, 2013, pp. 250–265.
+## 106
+## Pekka Aho 等
+- [137] T. J. Watson, 分析库 (WALA)。`http://wala.sourceforge.net/wiki/index.php/Main_Page`。
+- [138] Robotium, 一个 Android 测试自动化框架。`https://code.google.com/p/robotium`。
+- [139] T. Azimi, I. Neamtu, Android 应用系统测试的目标深度探索；Proc. 2013 ACM SIGPLAN Int. Conf. on Object-Oriented Programming, Languages & Applications (OOPSLA), 2013年10月26–31日, 美国印第纳州印第纳波利斯, 2013, pp. 641–660.
+- [140] D. J. Richardson, S.L. Aha, T. OMalley, 响应式系统的基于规格的断言，in: Proc. 14th Int. Conf. on Software Engineering (ICSE ’92), 1992年5月11–15日, 澳大利亚墨尔本, 1992, pp. 105–118.
+- [141] A.M. Memon, I. Banerjee, A. Nagaran, 测试测试应该用什么工具？Proc. 18th Int. Conf. on Automated Software Engineering (ASE), 2003年6月6–10日, 加拿大蒙特利尔, 2003, pp. 164–173.
+- [142] A.M. Memon, Felix, M.L. Soffa, 生成 GUI 用例的目标驱动方法，in: Proc. 14th Int. Conf. on Software Engineering (ICSE), 1992年5月16–22日, 美国加州洛杉矶, 1992, pp. 255–266.
+- [143] A.M. Memon, Q. Xie, 开发事件驱动系统断言的瞬态执行，in: Proc. 19th Int. Conf. on Automated Software Engineering (ASE), 2004年9月20–24日, 奥地利林茨, 2004, pp. 186–195.
+- [144] A.M. Memon, M.E. Pollack, M.L. Soffa, GUI 测试计划，in: Proc. 13th Int. Conf. on Software/Internet Quality (WQ2000), 2000年6月30日, 美国加州旧金山, 2000。
+- [145] A.M. Memon, M.E. Pollack, M.L. Soffa, 使用自动编程的分层级 GUI 生成，in: Proc. 5th Int. Conf. on Artificial Intelligence and Scheduling (AIPS), 2000年4月14–17日, 美国加州伯克利, 2000, pp. 226–235.
+- [146] A.M. Memon, M.L. Soffa, Xie, GUI 的自动测试断言，in: Proc. 8th ACM SIGSOFT Symposium on Foundations of Software Engineering (FSE-8): 21世纪的应用，IEEE Trans. Soft. Eng. 27 (2001) 144–155.
+- [147] A.M. Memon, I. Banerjee, A. Nagaran, DART: 用于 GUI 每日/ nightly构建的框架，in: Proc. 10th Int. Conf. on Software Maintenance (ICSM), 2003年9月22–26日, 荷兰阿姆斯特丹, 2003, pp. 410–420.
+- [148] A.M. Memon, Q. Xie, GUI 软件烟雾测试用例有效性的实证评估，in: Proc. 20th IEEE Int. Conf. on Software Maintenance (ICSM), 2004年9月11–14日, 美国伊利诺伊州芝加哥, 2004, pp. 8–17.
+- [149] GITAR, 一个 GUI 测试框架。`http://guitar.sourceforge.net`。
+- [151] A.M. Memon, M.L. Soffa, GUI 回归测试，in: Proc. 9th European Software Engineering Conf. (ESSE-11), 2003年9月1–5日, 芬兰赫尔辛基, 2003, pp. 118–127.
+- [152] A.M. Memon, 使用任务生成基于扩展式的 GUI 测试框架，in: Proc. IASTED Int. Conf. on Artificial Intelligence and Applications (AIA04), 2004年2月16–18日, 奥地利因斯布鲁克, 2004。
+- [153] S. McMaster, A.M. Memon, 基于扩展式的 GUI 测试框架，in: Proc. 1st Int. Workshop on TESTING-Techniques & Experimental Benchmarks for Event-Driven Software (TESTBEDS), 2009年4月1–4日, 美国科罗拉州丹佛, 2009, pp. 251–254.
+- [154] M. Cohen, S. Huang, A.M. Mem, AutoSpec: 使用测试覆盖率改进 GUI 规格，in: Proc. 23rd IEEE Int. Symposium on Software Reliability Engineering (ISSRE’12), 2012年11月27–30日, 美国德克萨斯州达拉斯, 2012, pp. 251–260.
+- [155] A.M. Memon, I. Banerjee, B. Nguyen, R. Robbins, GUI GUI：扩展、应用和更广泛的影响，in: Proc. 20th Conf. on Software Engineering (WCRE), 2013年10月14–17日, 德国柏林, 2013, pp. 11–20.
+- [156] A.M Memon, Q. Xie, 快速演进软件 GUI 测试用例的故障检测有效性研究，IEEE Trans. Softw. 31 (10) (2005) 884–896, 美国新泽西州皮斯卡塔。
+- [157] B. Nguyen, B. Banerjee, A.M. Memon, GUITAR: 一种 GUI 软件自动测试创新工具，Softw. Eng. 21 (1) (2013) 65–110, Springer, 美国。
+- [158] D. Hacker, A.M. Memon, GUITAR 测试生成器，in: Proc. of 30th Int. Conf. on Software Engineering (ICSE Companion ’08), 2008年5月10–18日, 德国莱比锡, 2008, pp. 959–960.
