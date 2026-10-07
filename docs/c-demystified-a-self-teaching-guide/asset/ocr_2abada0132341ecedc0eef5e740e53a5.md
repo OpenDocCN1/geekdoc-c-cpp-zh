@@ -1,0 +1,3 @@
+These examples illustrate that the switch statement can be employed as an alternative to if / else or if / else /else structure in programs that evaluate Boolean expressions using logical operators. However, it is not common for the switch statement to be employed in this manner because, with Boolean expressions, there are always just two alternatives, true and false, and switch statements generally are used when there are many more alternatives than two.
+
+![](bbox=[0.139, 0.201, 0.88, 0.219])

@@ -1,0 +1,5 @@
+# Summary
+
+Computer programs usually do not take a preord path from beginning to end. Instead, different code executes based on choices made by the user. Relational operators are used to compare the user's choice with various alternatives. The if, if/else, if /else / else, and switch statements are used to structure the code so different code executes depending on which choice was made. You also learned about flowcharts, which help make programs more understandable by visually depicting the program components and flow.
+
+In this chapter, only one comparison was made at a time. However, sometimes more than one comparison needs to be made. For example, if you are a citizen and are at least 18 years old. You cannot vote unless both are true. However, you may get into a movie free if you are either a senior citizen (65 years or older) or a child (12 or under). Thus, you get in free if either is true. In the next chapter, you will learn how to use logical operators to combine comparisons.
