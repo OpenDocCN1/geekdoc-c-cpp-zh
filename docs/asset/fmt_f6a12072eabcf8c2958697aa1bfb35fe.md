@@ -1,0 +1,344 @@
+
+# 作者索引
+
+## 296
+
+- Campos, J.C., 50–51, 55, 56, 57, 58–59, 70–71, 73, 78–88
+- Canfora, G., 228
+- Canny, J., 50–51, 55–56, 61
+- Caprile, B., 220–221
+- Carmine, S., 90
+- Carrington, D., 130–131, 137, 163–168, 171r
+- Canzar, A., 31
+- Castro, L.M., 57, 64–65, 95
+- Cecatto, M., 163
+- Cerny, P., 71
+- Cerulo, L., 228
+- Chaikalis, T., 204r, 212–213, 220, 226, 227
+- Chan, F.T., 25, 34
+- Chan, W.K., 36, 122, 124, 126–127, 162–169–170
+- Chandra, S.H.–143
+- Chang, T., 62
+- Chartieorgou, A., 203, 204–206, 209, 212–213, 220, 226
+- Chazelle, B., 251
+- Chef, B., 71, 72
+- Chen, D.Y., 71, 72
+- Chen, H.Y., 25, 34, 117–168
+- Chen, J., 94–95, 124–125, 163–168, 169, 171r
+- Chen, L., 171r
+- Chen, M., 171r
+- Chen, N.-W., 28, 41, 143, 163
+- Chen, Q., 171r
+- Chen, R., 163
+- Chen, S., 142
+- Chen, T., 228
+- Chen, T.Y., 8, 25, 30, 34, 36, 141–143, 162
+- Chen, X., 163
+- Chen, Y., 129–130, 171r
+- Chen, Z., 163–168
+- Cheng, M., 162–163
+- Cheon, Y., 12, 16–17, 73, 136, 163–171r
+- Cheung, S.C., 30, 36–141, 162–163
+- Chikodamber, S.R., 200
+- Chikofsky, A.M., 163
+- Callahan, S. ., 114,11,,
+- Cook, R., 8
+- Cook, L.A., 163, 171
+- Cook, D., 124–125
+- Cook, S., 263
+- Cook, S., 169
+
+- Feitelson, D.G., 233
+- Girba, T., 233
+- Felder, M., 140
+- Girouard, A., 56
+- Feng, B., 163
+- Glasser, U., 38
+- Feng, J., 142, 174t
+- Glondu, S., 204t, 211–212
+- Fenner, S., 262
+- Glover, C., 262
+- Ferenc, R., 227
+- Goffi, A., 31
+- Ferrante, J., 241t
+- Goldberg, A., 171t
+- Ferrari, F., 117
+- Gonçalo, R.D., 86–87
+- Ferreira, R.D.F., 88–89
+- Gondow, K., 228
+- Figiredo, E., 203
+- Gopinathan, M., 124–125
+- Fink, S.J., 71, 73
+- Gorla, A., 31
+- Fischer, G., 204t
+- Gotieb, A., 171t
+- Fischer, M., 278
+- Gou, Z.-J., 28, 141, 163–163
+- Flanagan, C., 6–7
+- Goyal, A., 136
+- Floyd, R., 251
+- Gradel, E., 276
+- Fokaeš, M., 206–208
+- Grady, L., 28–29, 41, 171t
+- Fowler, M., 202–203, 205–208–213, 214, 215, 226, 228, 232, 233
+- Grama, A., 71
+- Frankl, P.G., 23, 25–33–34
+- Ranade, C., 241
+- Fraser, J., 11, 26, 27, 72, 75, 96, 171t
+- Grandpierre, C., 18, 34
+- Grey, Y., 95
+- Gechanik, M., 61
+- Frounchi, K., 28–29, 41t
+- Grieskamp, W., 8
+- Fu, C., 61
+- Griesmay, A., 124–125
+- Nuchs, E., 38
+- Grilo, A.M.P., 51, 52, 53, 61, 70–71, 78–79, 88
+- Fujiwara, S., 19, 40
+- Griswold, W.G., 75
+- Furnas, W.G., 227
+- Gross, F., 72, 97
+- Gross, T.R., 18–19, 75–76
+
+### G
+
+- Gabel, M., 73
+- Grothoff, C., 71
+- Hall, G., 228
+- Grubb, P.A., 220–203, 204, 205, 205, 206–208, 216–217, 217f, 218f, 219, 220, 221, 222, 223b, 224, 226, 233
+- Gangopadhay, D., 25
+- Guderlei, R., 38–124
+- Gannon, J., 22–23, 33–34, 114
+- Guéeneux, Y.-G., 202–203
+- Garcia, A., 203
+- Guha, A., 77–78
+- Sarg, S., 117
+- Gargantini, A., 20–21, 34t, 163–168
+- Gu, G., 226
+- Garous, V., 55, 86
+- Garrett, T., 119
+- Jullet, J., 139
+- Guo, P.J., 73
+- Gasch, W., 255, 250, 261, 262
+- Guo, S.-T., 163, 171t
+- Gauf, B., 119
+- Gupta, A., 130
+- Gay, G., 16, 26, 27, 32, 124–128
+- Gurevich, Y., 38
+- Geters, M., 204t, 218, 220, 227–228
+- Gimothy, T., 204t, 205–207, 208, 210, 213–215, 227, 233
+- Ghedamsi, A., 19, 40
+- Ghani, G., 77–78
+- Giannakoulou, D., 124–125, 171t
+- Hackner, D., 84–85
+- Gibson, J., 171t
+- Gill, J., 263
+- Gimlett, A., 80
+
+### H
+
+- Hagenbuch, M., 30, 36
+- Hallem, S., 71, 72, 74
+- Hamet, D., 25, 33, 163
+- Hamlet, R., 22–23, 33–34, 36–37, 121–122, 126–127
+- Hammoud, D., 143
+- Hamadj, A., 73
+- Hamzah, R., 143
+- Harman, M., 8, 114, 120, 122, 124–125, 128–129, 132–135, 136–137, 144, 163, 170, 180–181
+- Harrington, L., 276
+- Harrison, M.D., 86
+- Harsman, R., 227
+- Hartman, J., 241, 244
+- Harty, J., 64–65
+- Hashim, S.Z., 29, 114, 126, 163, 168–169
+- Hashmi, N., 163, 171
+- Hassan, A., 228
+- Hastad, J., 263
+- Havelund, K., 171t
+- Hayes, J.H., 68
+- Haselwood, B., 25–38, 171t
+- Hearst, M.A., 114, 118–119
+- Heart, T., 143
+- Heer, K., 124–125
+- Heimdahl, M.P.E., 11, 26, 27, 32, 124–125, 126–129, 171t
+- Heyeyer, C., 20–21, 21t, 34
+- Helm, R., 25
+- Henry, S., 226
+- Herons, R., 163–168
+- Hill, E., 163
+- Hirshfield, L.M., 56
+- Ho, I., 140, 163
+- Ho, J., 122, 142, 162–163
+- Ho, J.W., 142
+- Hofer, B., 163–168
+- Hoffman, D., 114, 119–120, 124–125, 128–129, 130, 163–168, 171t
+- Holl, K., 67
+- Holland, I.M., 25
+- Holzmann, G.J., 21
+- Holzmann, G.Z., 61, 74
+- Hong, S., 11
+- Hook, D., 124–125
+- Hörcher, H.-M., 13–14
+- Horn, M.S., 56
+- Hou, K., 36–37
+- Howden, W., 114, 126–127, 128
+- Hu, L., 36–37, 142
+- Hu, P., 127
+- Hu, X., 142
+- Huang, C.-H., 143
+- Huang, D.H., 36
+- Huang, H., 36, 171t
+- Huang, S., 83, 85
+- Hudson, S.E., 51
+- Hughes, M., 32
+- Humble, J., 119
+- Hummel, B., 210–211
+- Hummel, O., 130, 144, 161
+- Hunter, C., 117, 130, 163
+- Huse, T., 174
+
+### I
+
+- Ibrahim, S., 28, 29, 41, 124–125
+- Iglesias, D., 57, 64–95
+- Iglinski, P., 79
+- Imbriano, C., 142
+- Imielinski, C.
+- Imparato, G., 90
+- Imperatore, F., 163
+- Inoue, C., 204t, 211
+- Inverde, P., 61
+- Itkonen, C., 169
+- Itov, M.Y., 114, 118–119
+
+### J
+
+- Jacob, R.J., 56
+- Janath, V.S., 11, 27, 33, 174t
+- Janathan, S., 71
+- Janic, W., 163
+- Hansen, T., 124–125, 171t
+- Jaspan, C., 75–76
+- Javed, A., 125–126
+- Javi, M., 228
+- Java, A., 233
+- Jenkins, W., 171t
+- Jeron, T., 171t
+- Jiang, G., 163
+- Jiang, L., 204t, 211–212
+- Jiang, M., 127
+- Jim, T., 77–78
+- Jin, H., 28, 41, 143, 163
+- Johnsen, E., 124–125
+- Joes, C., 122
+- Jorgensen, M., 140, 180
+- Juergens, E., 210–211
+- Just, R., 124–125, 130, 163
+- Kir, J.R., 12, 16–73
+- Kirby, L., 280
+- Kitchenham, B., 140, 146, 180
+- Klaus, A., 67
+- Knight, J.C., 144
+- Ko, A.J., 51, 55–56, 77–78
+- Kollmann, R., 53, 71
+- Kong, L., 25, 34
+- Korel, B., 30–31, 36–37
+- Kossmann, D., 95
+- Korie, D., 144
+- Krajewski, J., 228
+- Kramer, R., 15–16
+
+### K
+
+- Kacker, R., 163–168
+- Kadir, W., 114, 124–125, 126, 128, 168–169
+- Kaiser, G.E., 30–31, 126–127, 130, 136, 142, 162–163, 171t
+- Kamel, A., 79
+- Kamiya, T., 204t
+- Kandel, A., 28, 29, 41, 124–125, 143, 163
+- Canewala, U., 114, 142–163
+- Kanj, L., 257
+- Canstrën, T., 52, 60, 73–74, 66–67, 93–94
+- Kapheimer, G., 163
+- Karmark, N., 251
+- Katara, M., 63, 64–65, 64f, 66–73–74
+- Kaur, A., 163
+- Kayal, N., 252
+- Kazmeier, M., 66
+- Kelly, D., 124–125
+- Kemerer, C.F., 205, 226
+- Kervinen, A., 63, 64f, 66–67
+- Khachian, L., 251
+- Khamissi, E., 143
+- Khendek, F., 19, 40
+- Khom, F., 202–203, 204t, 208, 226, 233
+- Khurshid, S., 72–73
+- Killijian, M.-O., 163
+- Kim, M., 11
+- Kim, S., 136–137
+- Kim-Park, D.S., 37–38, 124–125
+- King, A., 142
+- King, I., 28, 40, 76
+- King, T., 204t, 208
+- Krishnamurthi, S., 77–78
+- Kruskal, J., 251
+- Udari, S., 174
+- Kuhn, D., 163–168
+- Kuhn, R., 163–168
+- Kuhn, T., 257
+- Kull, A., 52–53, 54
+- Kumar, M., 72–73
+- Kumar, A., 163
+- Kusumoto, S., 204t
+- Kutty, G.
+
+### L
+
+- Labiche, Y., 17, 28–29, 35, 72–73, 138, 163
+- Ladner, R., 259
+- Lahiri, S.K., 6–7
+- Lakhotia, K., 136
+- Lalet, E., 171
+- Lam, M.S., 73
+- Landauer, T.K., 227
+- Larus, J.R., 73
+- Lasalle, J., 139
+- Lassius, C., 169
+- Last, M., 28, 29, 41, 124–125, 128, 163
+- Lautemann, C., 269
+- Lawler, K., 263
+- Lawrie, D., 220–221
+- Le, W., 163–168
+- Leavens, G., 136, 171
+- Leavens, G.T., 16, 73
+- Ledru, Y., 163
+- Leduc, J., 66, 72–73
+- Lee, I., 142
+- Lee, L.D., 144
+- Lee, M.K.O., 12
+- Lee, Y., 226
+- Legeard, B., 18, 34, 52, 59, 60
+- Lehman, M.M., 202
+- Lee, I., 161–168
+- Leino, K.R., 73
+- Leino, M., 6–7, 12, 16–17
+- Leitner, A., 163–168
+- Lenselsk, S., 79
+- Loetta, M., 117
+- Lethridge, T., 73
+- Leung, K.R.P., 36
+- Leveson, N., 204r, 128, 171
+- Leveson, N.G., 144
+- Li, G., 118
+- Li, K., 52, 57, 62
+- Li, P., 80
+- Li, S., 140
+- Li, W., 202–203, 226
+- Li, X., 163
+- Li, Z., 143, 163
+- Liang, B., 226
+- Ligu, E., 204–213, 226, 227
+- Lillibridge, M., 6–7
+- Limney, N., 249
+- Lindell, S., 249
+- Lindig, C., 71
