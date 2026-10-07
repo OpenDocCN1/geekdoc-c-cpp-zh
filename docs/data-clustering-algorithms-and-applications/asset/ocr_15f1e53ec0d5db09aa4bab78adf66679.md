@@ -1,0 +1,19 @@
+# Data Clustering: Algorithms and Applications
+
+There are a few more things regarding HPStream worth mentioning. First, the data set should be normalized for meaningful comparison between different dimensions. Also, Manhattan Distance is used to find the distance along the projected dimensions. This is a normalized version of Manhattan Distance that can compute the difference of dimensionality. In terms of the empirical evaluation of HPStream, [2] conducted several experiments on real-world and synthetic datasets. HPStream was also able to perform ClStream [1], as a clustering method for evolving data streams. Also, it was shown to be stable in terms of processing speed and scale in terms of dimensionality.
+
+# 2.2.4 Algorithms for Linked Data
+
+Linked data has become ubiquitous in real-world applications such as in Twitter (tweets linked through hyperlinks), social networks in Facebook, and biological networks (protein interaction networks). Typically linked data have the following three characteristics: (1) high-dimensional such as tens of thousands of tweets; (2) linked, providing an important source of information between attributes, like link information; and (3) unlabeled due to the large size and the expensive cost for labeling. Properties pose challenges to the clustering task, and feature selection is an effective way to prepare high-dimensional data for effective and efficient clustering [35]. In this section, we first introduce the challenges and opportunities of linked data for traditional feature selection, then present an embedded unsupervised feature selection framework for linked data, and finally follow with a discussion about feature selection for linked data.
+
+# 2.2.4.1 Challenges and Opportunities
+
+Linked instances are related to each other via different types of links (e.g., hyperlinks, friendships, and interactions). Thus linked data is distinct from traditional attribute value data (or "flat") data. Figure 2.4(a) illustrates a typical example of linked data and its representations. Figure 2.4(b) shows 8 linked instances (u₁ to u₈), while Figure 2.4(c) is a conventional representation of attribute value: rows are instances and columns. As mentioned above, besides, linked data provide extra information in the form of links, represented in Figure 2-4(c). These differences present both challenges and opportunities for traditional feature selection and machine learning [43, 57].
+
+Linked data is not independent and identically distributed (i.i.d.), which is among the most enduring and deeply buried assumptions of traditional machine learning methods [27, 66]. Due to the absence of class labels that guide the search for relation information, unsupervised feature selection is particularly difficult [9]. The linked property further exacerbates the difficulty of unsupervised feature selection for linked data. On the other hand, linked data provides opportunities to advance research. For example, linked data allows collective inference, inferring interrelated values simultaneously [43], and enables clustering, finding a more accurate pattern [39].
+
+Many linked-related learning tasks are proposed as collective classification [43, 57] and relational clustering [40, 39], but the task of feature selection for linked data is rarely touched due to its unique challenges for feature selection: (1) how to exploit relations among data instances and (2) how to take advantage of these relations for feature selection. Until recently, feature selection for linked data has attracted attention. In [63], a unsupervised feature selection algorithm, LinkedFS, is proposed for linked data in social media. Various relations (coPost, coFollowing, coFollowing) are extracted following social correlation theories. LinkedFS significantly improves
+
+> 1http://www.twitter.com/
+
+> 2https://www.facebook.com/

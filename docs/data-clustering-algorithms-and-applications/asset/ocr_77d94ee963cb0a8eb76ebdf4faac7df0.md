@@ -1,0 +1,21 @@
+# Document Clustering: The Next Frontier
+
+segment-based document clustering leads to cluster descriptions that are more “useful” according to a number of aspects, including higher coherence of terms within a description, higher presence of discriminating terms, and wider coverage of topics.
+
+Clustering legal documents. Lu et al. [70] apply a similar clustering strategy in the legal domain, where documents with multiple topics are very common. They develop a highly scalable soft clustering system centered around a topic segmentation-based clustering framework that also incorporates metadata information. The process of identifying issue-based clusters is broken down into three logical steps: (1) build a universe of legal issues (topics) to search, (2) identify relevant documents for each issue in the topic universe, and (3) associate each document in the collection with one or more issues.
+
+The document segmentation leverages available metadata for the document collection. In particular, the algorithm represents a headnote, a brief summary of points within a document, as a compound vector with four different features: a frequency vector for the text in the headnote, a frequency vector of noun phrases, a vector of codes for legal taxonomy, and a citation network for the headnote. The similarity between two headnotes is computed as the weighted sum of their respective feature vectors, with historically determined weights. The cosine similarity with tf-idf weighting is used for comparing the first two features, and an analogous method is used for the third. Citation features are compared in terms of co-citations.
+
+```
+cite\sim(h_i, h_j) = cite(h_i\cap h_j)
+```
+
+where cite(h_i\cup h_j) is the number of documents containing at least one headnote, and cite(h_i\cap h_j) is the number of documents in which both h_i and h_j are cited. The use of noun phrases as a feature set is motivated by an in-house study that found to be closely related to legal concepts, which form the basis for topics in this domain.
+
+Headnotes in each document are clustered using an agglomerative clustering algorithm employing an automatic stopping procedure. The algorithm merges clusters by maximizing the ratio of intracluster and intercluster similarity, dubbed the intraparticle similarity threshold, and does not require the number of clusters as input. The intraparticle similarity threshold is determined heuristically. The resulting clusters are considered topics within the document.
+
+Given the large size of the topic set, the authors use dimensionality reduction to reduce the computational complexity of the next. To obtain a unique set of collection documents, document topics are clustered using a “canopy”-based soft clustering technique. A document classification engine and a support vector machine (SVM) are used to retrieve topics to some seed, the top rank of which are merged with the seeds. Similarity is extended for this step in the framework to include inclusion scores and co-similarity. The algorithm is executed recursively, using the output of each round after the first execution of the next, until intercluster similarity between any two clusters is below a threshold. The resulting clusters represent the most important topics within the collection.
+
+The last step associates the collection documents with the discovered topics. For this, the main document text is segmented and documents are assigned to clusters based on their similarity with the clusters. The quality of the resulting-based clustering was validated by human legal experts in multiple test cases.
+
+A statistical model. Clustering segmented documents is not limited to VSM techniques. Ponti et al. [84] describe a statistical model for topically segmented documents and provide a clustering strategy for documents modeled this way. The key idea of their work is a generative model that exploits the decomposition of documents into segments is to better capture dependencies among terms, alleviating some of the problems related to the bag-of-words assumption in

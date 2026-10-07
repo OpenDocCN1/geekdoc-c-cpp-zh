@@ -1,0 +1,18 @@
+# 15.1 Introduction
+
+Time-series data is one of the most common forms of data encountered in a wide variety of scenarios as such as the stock markets, sensor data, fault monitoring, machine state monitoring, environmental applications, or medical data. The problem of clustering finds numerous applications in the time-series domain, such as the determination of groups of entities with similar trends. Time-series clustering has numerous applications in diverse domains:
+
++   - **Financial Markets**: In financial markets, the values of the stocks represent time series which continuously vary with time. The clustering of such time series can provide numerous insights into the underlying data.
+- **Medical Data**: Different kinds of medical data such as EEG readings are in the form of time series. The clustering of such time-series can provide understanding of the common shapes in data. These common shapes can be related to different kinds of diseases.
+- **Earth Science Applications**: Numerous applications in earth science, such as temperature or pressure, corresponds to series, which can be mined in order to determine the frequent trends in the data. These can provide an idea of the common climatic trends in the data.
+- **Machine State Monitoring**: Numerous forms of machines create sensor data, which provides a continuous idea of the states of these objects. These can be used in order to produce an idea of the underlying trends.
+- **Spatio-temporal data**: Trajectory data can be considered a form of multivariate time-series data, in which the X-coordinates and Y-coordinates of objects correspond to continuously varying series. The trends in these series can be used in order to determine the important trajectory clusters in the data.
+
+Time-series data falls within the context of contextual data representations. Many kinds of data such as time-series data, discrete sequences, and spatial data in this class. Contextual data contains two kinds of attributes:
+
++   - Contextual Attribute: For the case of time-series data, this corresponds to the time dimension. These attributes provide the reference points at which the behavioral values are measured. The time-stamps could correspond to actual values at which the data points are measured, or they could correspond to indices at which these values are measured.
+- Behavioral Attribute: This could correspond to any kind of behavior which is measured as the reference point. Some examples include stock ticker values, sensor measurements such as temperature, and other medical time series.
+
+The determination of clusters of time series is extremely challenging because the difficulty in defining similarity across different time series which may be scaled and translated differently on both the temporal and behavioral dimensions. However, the concept of similarity is a very important one for time-series data clustering, and this chapter will devote a section to the problem of time-series similarity measures. Note that if a similarity measure has been defined for timeseries data, it can be treated as an abstract object on which variety of similarity-based methods such as spectral methods or partitioning methods can be used.
+
+Time-series data allow various formulations for the clustering, depending upon whether the series are clustered on the basis of online correlations, or whether they are clustered on the basis of their shapes. The former is usually performed with an online approach based on a small

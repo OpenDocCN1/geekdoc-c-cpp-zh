@@ -1,0 +1,21 @@
+# An Introduction to Cluster Analysis
+
+21
+
+is used in order to supervise the clustering process. For example, a very simple form of supervision would be to use seeding, in which the documents of the appropriate categories are provided as (some of) the seeds to a representative clustering algorithm as k-means. In recent years, spectral methods have also been heavily adapted for the problem of semisupervised clustering. In these methods, Laplacian smoothing is used on the labels to generate the clusters. This allows the learning of the lower dimensional data surface in a semisupervised way, as it relates to the underlying clusters. The area of semisupervised clustering is also sometimes referred to as constrained clustering. An excellent discussion on constrained algorithms for semisupervised clustering may be discussed in Chapter 20, with a special focus on the graph-based algorithms.
+
+# 1.4.3 Multiew and Ensemble-Based Insights
+
+As discussed above, one of the major issues in the clustering process is that different kinds of clusters are possible. When no supervision is available, the bewildering number of possibilities in the clustering process can sometimes be problematic for the analyst, especially from the perspective of interpretability. These are referred to as alternative clusters, technically represent the behavior from different perspectives. In many cases, the ability to provide different clustering solutions that are significantly different provides insights to the analyst about the key clustering properties of the underlying data. This area is also referred to as multiew clustering.
+
+The most naive method for multiple clustering is to simply run the clustering algorithm multiple times, and then examine the different clustering solutions to determine which are different. Somewhat different approach is to use spectral methods in order to create approximately orthogonal cuts. Recall that the eigenvectors of the Laplacian matrix represent alternative cuts in the graph and that the smallest represent the best. Thus, by using a 2-means algorithm to embed each encoder, it is possible to create a clustering which is different from the clustering created by other (orthogonal) eigenvectors. The orthogonality of the eigenvectors is important, because it implies that the embedded representations are very different. Furthermore, the smallest eigenvectors represent the best clusters, whereas clusters differing from successively larger eigenvectors represent successively suboptimal solutions. Thus, this approach not only provides alternative clusterings that are quite different from one another, but also provides a ranking of the quality of the different solutions. A discussion of alternative methods is provided in Chapter 21.
+
+In many cases, the alternative clustering methods can be combined to create more robust solutions using the use of ensemble-based techniques. The idea is that a combination of the output of the different clusters provides a more robust picture of how the properties are related to one another. Whether, the outputs of the different alternatives can be used as input to a meta-algorithm which combines the results from the different algorithms. Such an approach provides a more robust clustering solution. A discussion of ensemble-based methods for clustering is provided in Chapter 22.
+
+# 1.4.4 Validation-Based Insights
+
+Given a particular clustering, how do we know what the quality of the clustering is really? While one possible approach is to use synthetic data to determine the matching between the input and output clusters, it is not fully satisfying to rely only on synthetic data. The result is that synthetic data may be specific to a particular algorithm and may not be easily generalizable to arbitrary data.
+
+Therefore, it is desirable to use validation criteria on the basis of real data sets. In the context of the clustering problem is that the criteria for quality is not as crisp as many other data problems such as classification, where external validation criteria are available in
+
+© 2014 by Taylor & Francis Group, LLC

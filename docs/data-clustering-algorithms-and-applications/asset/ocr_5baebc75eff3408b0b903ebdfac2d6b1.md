@@ -1,0 +1,15 @@
+# Concepts of Visual and Interactive Clustering
+
+# Monotonic
+
+![](bbox=[0.303, 0.073, 0.703, 0.335])
+
+**FIGURE 19.2:** Biplot of nine scagnostic measures with a subset of the two-dimensional projections of the mtcars-dataset.
+
+the navigational graph, if it has top scores in any of the measures with respect to the total set of projections. This strategy helps to cope with multidimensional data. However, as the number of projections to be evaluated with scagnostic measures grows quadratically with dimensionality of the data, this approach is not suitable for very high-dimensional data such as images or documents. Oldford and Wadell [33] suggest in this case to use some dimensionality reduction method first.
+
+The IPCLUS-system [2] combines dimensionality reduction and cluster specification within those clusters. It represents two-dimensional projections to the user and asks for manual cluster specification with a polarizing anchor. Projections are explained by an iterative process that starts with the full-dimensional space and reduces the dimensionality by cycling through the following: (i) sampling a small subset of potential cluster anchors, (ii) computing neighbor sets for each polarization, (iii) centering each neighbor with respect polarization and (iv) retain the principal components with variance preservation of the union of the centered neighbor sets. The number of principal components retains is reduced by a constant factor in each iteration until a two-dimensional subspace is reached. The assignments of the data to clusters that the user might have specified within a projection are stored. The cluster specifications from all projections are combined to final clusters.
+
+A related approach is by the HD-Eye system [23]. It evaluates one and two-dimensional projections to see whether they yield a potential separation of clusters. The potential separation is visually encoded into a row of icons, one icon for each potential cluster. The colors and the shapes of the icons show cluster sizes and degrees of separation. Thus, the user can choose, which projections are most interesting to examine further in more detail. However, in contrast to RGraph, IPCLUS and HD-Eye offer the user limited options to navigate and explore the space of projections.
+
+In all cases, clusters are specified in scatterplots by selecting and coloring points. As not all dimensions are shown in a two-dimensional projection, RGraph can show star-plot graphs of individual data objects that visualize the full data vectors. The idea of icons and clusters for visualization was developed in [9]. The new icon technique—Dicon overcomes the problem of cluster visualization when a set of data objects has been interactively grouped. Star-plot graphs could show only a centroid or a medoid of the newly created cluster.

@@ -1,0 +1,19 @@
+# 238 Data Clustering: Algorithms and Applications
+
+Whenever a new data point $X_i$ arrives, the microclusters are updated to reflect the changes. Each data point needs to be absorbed by a microcluster or into a cluster of its own. The first preference is to absorb the data point into a existing microcluster. The distance of each point to the microcluster centroids $M_1...M_k$ is determined. The distance value of the data point $X_i$ to the centroid of the microcluster $M_j$ is denoted by $dist(M_j, X_i)$. Since the centroid of the microcluster is in the cluster feature vector, this value can be computed relatively easily. This distance is used to compare the distance of the cluster $M_p$ to the data point $X_i$. In many cases, the point $X_i$ does not naturally belong to the cluster $M_p$. These cases are as follows:
+
++   - The data point $X_i$ corresponds to an outlier.
+
++   - The data point $X_i$ corresponds to the beginning of a new cluster because of evolution of the data stream.
+
+While the two cases cannot be distinguished until more data points arrive, the data point $X_i$ needs to be assigned to microcluster of its own with a unique id. In order to make this decision, the cluster feature vector of $M_p$ is used to decide if this data point falls within the maximum boundary of the microcluster $M_p$. If so, then the data point $X_i$ is added to the microcluster $M_p$ using the CF affinity property. This is defined as a factor of $1/m$ of the RMS deviation of the data points in $M_p$, from the centroid. We define this as the maximum boundary factor. For a cluster with more than one previous point, the maximum boundary is a heuristic value. Specifically, it is chosen to be 3 times that of the closest cluster.
+
+If the data point does not lie within the boundary of the nearest microcluster, a new microcluster will be created and assigned a new id which can identify it at any future stage of the data stream process. However, in order to create this microcluster, the number of other clusters must be reduced by one in order to delete an old cluster or joining two of the old clusters. Our management algorithm first determines if it is safe to delete the outliers. If not, any of the microclusters are possibly outliers which can be deleted by the algorithm. While it might be simply picking the microcluster with the fewest number of points as the microcluster to be deleted, this may often lead to misleading results.
+
+In cases, a given microcluster might correspond to a point of considerable past in the history of the stream, but may no longer be an active cluster in the current view of point. An ideal goal would be to estimate the average timestamp of the $m$ lists in each cluster and delete the microcluster with the least recent timestamp. While this increase can be achieved by simply storing the $m$ points in each microcluster, this increases the memory requirements of the microcluster by a factor of $m$. Such an approach would limit the number of microclusters that can be stored by the available memory and reduces the effectiveness of the algorithm.
+
+It is also necessary to approximate the average timestamp of the $m$ last points of the cluster $M$. Note that the timestamp allows the calculation of the mean and standard deviation of the arrival times of points in a given microcluster $M$. Let these values be denoted by $\mu M$ and $\sigma M$ respectively. Then the arrival of the $m/(2-n)$-th point in $M$ is computed under the assumption that the timestamps are normally distributed. This timestamp is used to assess the approximate value of the recency. We will call this value the relevance stamp of cluster $M$. When the smallest timestamp of any microcluster is below a user-defined threshold $\delta$, it can be
+
+> $^1The mean is equal to $CF^1/n$. The standard deviation is equal to $\sqrt{CF^2/n-(CF^1/n)^2}$.
+
+© 2014 by Taylor & Francis Group, LLC

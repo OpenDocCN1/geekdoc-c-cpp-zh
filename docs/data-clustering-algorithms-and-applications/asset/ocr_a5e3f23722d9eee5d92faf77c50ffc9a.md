@@ -1,0 +1,19 @@
+# Concepts of Visual and Interactive Clustering
+
+497
+
+# 19.4.2 Visualization
+
+The space of clusters is visualized as a scatter plot. The names of the clustering methods are placed at the locations $\{v_m\}_{m=1}^M$ by the embedding algorithm. The user can continuously move a point like cursor over the scatter plot and the respective clustering is shown in a separate window. In principle, every clustering visualization method can be used to show the clustering. When the user examines example clusters from different parts of the space of clusters, or he learns about the structure of the space. As the space of clusters is visualized as a map with meaningful distances not to be examined. Looking at examples could help to understand the nearby clusters as well.
+
+A crucial assumption of the visualization of the space of clusters is that the visualization of an individual cluster can be intuitively understood by the user and facilitates a rapid interpretation of the single clusters as the total clustering. The example application shown in [17] meets that precondition. The data objects in the example are biographies of US presidents. Each document has a short and meaningful title, namely, the president's name. Therefore, a clustering consists of groups of president names that often can be interpreted. Furthermore, the number of clusters is rather small, which allows nearly interactive exploration of the space of clusters. In general, such ideal circumstances are rarely met in practice, even in the case of document clustering. Document titles may be less expressive in the case of large inhomogeneous corpora. Even showing groups of many documents on a limited display in ways that helps the user to deduce an interpretation is a nontrivial task. Thus, many visualization problems with respect to scaling to large data as well as transferring computer-assisted clustering to other application remain unfolved. Furthermore, there is plenty of room to study the use of brushing-and-linking techniques in combination with the visualization of the space of clusters.
+
+# 19.4.3 Discussion
+
+The idea of visualizing the space of clusters corresponds to the model selection task, which is heavily studied in machine learning and statistics [39, 18, 46]. Instead of relying on some statistical or information-theoretical criteria that could be computed in some way, computer-assisted clustering delegates this task to the user. The success of this approach depends heavily on the effectiveness of the used visualization of the individual clusters.
+
+# 19.5 Visualization of Clusters for Sense-Making
+
+Clusters are created using quite abstract concepts such as data between objects living in some feature spaces. Users do not easily understand these concepts. Therefore, clustering results are not easily accessible, and it is difficult to find out whether they can trust the clusters with respect to the application at hand. Once a clustering is built, the ultimate goal of a user is to interpret the clusters and make sense of them. Visualization can support such a sensemaking process. We discuss document clustering as an example.
+
+Document clustering [12] as well as topic models [8] represent clusters/topics as distributions over vocabulary. When ordered by decreasing probability with respect to a cluster/topic, users often recognize a semantic topic, if general terms describing the topic are not mentioned among the top-words. However, naming a cluster/topic is very difficult to do automatically; even humans who know the document well, have problems with this task. Thus, visualizations of clusters/topics are demanded to support the sense-making. The task becomes even more challenging in the case of temporal document inclus
