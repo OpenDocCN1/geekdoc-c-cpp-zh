@@ -1,0 +1,3 @@
+another solution of x with better cost (or report that none exists, and thus s is optimum). For example, in TSP IMPROVEMENT we are given a distance matrix and a tour, and we are asked to find a better tour. It turns out TSP IMPROVEMENT is NP-complete, and so is SET COVER IMPROVEMENT. Prove the latter.
+
++   (e) We say that a local search algorithm has polynomial iteration if each execution of the loop requires polynomial time. For example, the obvious implementations of the (n - 1)-change local search algorithm for the TSP defined above do not have polynomial iteration. Show that, unless P = NP, there is no exact local search algorithm with polynomial iteration for the TSP and SET COVER problems.
