@@ -1,0 +1,432 @@
+
+
+# 698 计算系统的性能、可靠性与可用性评估
+
+修改于：
+
+2005年6月6日
+
+作者：
+
+John Burkardt
+
+```
+参数：
+
+输出，double CPU_TIME，当前 CPU
+时钟的读数，单位为秒。
+*/
+double value;
+
+value = ( double ) clock ( )
+/ ( double ) CLOCKS_PER_SEC;
+
+return value;
+}
+```
+
+```c
+****************************************************************
+void daxpy ( int n, double da, double dx[], int incx,
+double dy[], int inc )
+```
+
+****************************************************************
+目的：
+
+DAXPY 计算常数乘以向量加上向量。
+
+讨论：
+
+该例程在增量等于 1 时使用了循环展开技术。
+
+修改于：
+
+2007年3月30日
+
+作者：
+
+由 Jack Dongarra, Cleve Moler, Jim Bunch, Pete Stewart 编写的 FORTRAN77 原版。
+C 版本由 John Burkardt 编写。
+
+参考：
+
+Jack Dongarra, Cleve Moler, Jim Bunch, Pete Stewart,
+# Linpack_Bench
+
+LINPACK User's Guide,
+SIAM, 1979.
+
+Charles Lawson, Richard Hanson, David Kincaid, Fred Krogh,
+Basic Linear Algebra Subprograms for Fortran Usage,
+Algorithm 539,
+ACM Transactions on Mathematical Software,
+Volume 5, Number 3, September 1979, pages 308–323.
+
+参数：
+
+输入，N，DX 和 DY 中的元素个数。
+
+输入，double DA，DX 的乘因子。
+
+输入，double DX[*], 第一个向量。
+
+输入，int INCX，DX 连续元素之间的增量。
+
+输入/输出，double DX[*], 第二个向量。
+输出时，DY[*] 已被替换为 DY[*] + DA * DX[*]。
+
+输入，int INCY，DY 连续元素之间的增量。
+
+```c
+
+/*
+int i;
+int ix;
+int iy;
+int m;
+
+if ( n <= 0 )
+{
+  return;
+}
+
+if ( da == 0.0 )
+{
+  return;
+}
+/*
+针对不相等增量或不等于 1 的相等增量的代码。
+*/
+if ( incx != 1 || incy != 1 )
+{
+  if ( 0 <= incx )
+{
+    ix = 0;
+}
+```
+
+# 700 计算系统的性能、可靠性与可用性评估
+
+```c
+else
+{
+ix = ( - n + 1 ) * incx;
+}
+if ( 0 <= incy )
+{
+iy = 0;
+}
+else
+{
+y = ( - n + 1 ) * incy;
+}
+for ( i = 0; i < n; i++ )
+{
+dy[i] = dy[i] + da * dx[ix];
+ix = ix + incx;
+yi = iy + incy;
+}
+/*
+针对两个增量均等于 1 的代码。
+*/
+else
+{
+m = n % 4;
+}
+for ( i = 0; i < m; i++ )
+{
+dy[i] = dy[i] + da * dx[i];
+}
+for ( i = m; i < n; i = i + 4 )
+{
+dy[i] = dy[i] + da * dx[i];
+dy[i+1] = dy[i+1] + da * dx[i+1];
+dy[i+2] = dy[i+2] + da * dx[i+2];
+dy[i+3] = dy[i+3] + da * dx[i+3];
+}
+return;
+}
+************************************************************************************/
+
+double ddot ( int n, double dx[], int incx, double dy[],
+		int incy )
+********************************************************************/
+/*
+目的：
+
+# Linpack_Bench
+
+DDOT 形成两个向量的点积。
+
+讨论：
+
+该例程在增量等于 1 时使用了循环展开。
+
+修改于：
+
+2007年3月30日
+
+作者：
+
+由 Jack Dongarra, Cleve Moler, Jim Bunch, Pete Stewart 编写的 FORTRAN77 原版。
+C 版本由 John Burkardt 编写。
+
+参考：
+
+Jack Dongarra, Cleve Moler, Jim Bunch, Pete Stewart,
+LINPACK User's Guide,
+SIAM, 1979.
+
+Charles Lawson, Richard Hanson, David Kincaid, Fred Krogh,
+Basic Linear Algebra Subprograms for Fortran Usage,
+Algorithm 539,
+ACM Transactions on Mathematical Software,
+Volume 5, Number 3, September 1979, pages 308–323.
+
+参数：
+
+输入，int N，向量中的元素个数。
+
+输入，double DX[], 第一个向量。
+
+输入，int INCX，DX 连续元素之间的增量。
+
+输入，double DY[], 第二个向量。
+
+输入，int INCY，DY 连续元素之间的增量。
+
+输出，double DDOT，DX 和 DY 对应元素的乘积和。
+
+```c
+/*
+double dtemp;
+int i;
+int ix;
+int iy;
+int m;
+``` 702 计算系统的性能、可靠性与可用性
+
+```c
+dtemp = 0.0;
+
+if ( n <= 0 ) {
+    return dtemp;
+}
+/*
+针对不相等增量或不等于 1 的相等增量的代码。
+*/
+if ( incx != 1 || incy != 1 ) {
+  if ( 0 <= incx ) {
+    ix = 0;
+  } else {
+    ix = ( - n + 1 ) * incx;
+  }
+
+  if ( 0 <= incy ) {
+    iy = 0;
+  } else {
+    iy = ( - n + 1 ) * incy;
+  }
+
+  for ( i = 0; i < n; i++) {
+    dtemp = dtemp + dx[ix] * dy[iy];
+    ix = iy + incy;
+  }
+}
+/*
+针对两个增量均等于 1 的代码。
+*/
+else {
+  m = n % 5;
+  for ( i = 0; i < m; i++) {
+    dtemp = dtemp + dx[i] * dy[i];
+  }
+
+  for ( i = m; i < n; i = i + 5 ) {
+    dtemp = dx[i] * dy[i]
+    + dx[i+1] * dy[i+1]
+    + dx[i+2] * dy[i+2]
+    + dx[i+3] * dy[i+3]
+    + dx[i+4] * dy[i+4];
+  }
+  return dtemp;
+}
+************************************************************************************/
+
+int dgefa ( double a[], int lda, int n, int ipvt[])
+/****************************************************************//*
+目的：
+
+DGEFA 分解通用矩阵。
+
+修改于：
+
+2005年5月16日
+
+作者：
+
+John Burkardt 编写 C 版本。
+
+参考：
+
+Jack Dongarra, Cleve Moler, Jim Bunch and Pete Stewart,
+LINPACK User's Guide,
+SIAM, (Society for Industrial and Applied Mathematics),
+3600 University City Center,
+Philadelphia, PA, 19104-2688.
+ISBN 0-88971-172-X
+
+参数：
+
+输入/输出，double A[LDA]，要分解的矩阵。
+输出为上三角矩阵以及用于获取它的乘因子。分解可以写为 A=L*U，其中 L 是置换矩阵和单位下矩阵，U 是上三角矩阵。
+
+输入，int LDA，A 的主维维度。
+
+输入，int N，矩阵 A 的阶。
+
+输出，int IPVT[N]，主元索引。
+
+输出，int DGEFA，奇异性指示。
+0，正常值。
+K，如果 U(K,K) == 0。这不是此例程的错误条件，但指示如果调用 DGESL 或 DGEDI 将除以零。
+
+使用 DGECO 中的 RCOND 进行可靠的奇异性指示。
+
+```c
+/*
+int info;
+int j;
+int k;
+int l;
+double t;
+/*
+带部分主元的高斯消元。
+*/
+info = 0;
+for ( k = 1; k <= n-1; k++ )
+/*
+寻找 L = 主元索引。
+*/
+l = idamax ( n-k+1, a+(k-1)*lda, lda, 1 ) + k - 
+pivot[k-1] = 1;
+/*
+零主元意味着该列已经三角化。
+*/
+if ( a[l-1+(k-1)*lda] == 0.0 )
+{
+info = k;
+continue;
+}
+/*
+必要时交换。
+*/
+if ( l != k )
+{
+t = a[l-1+(k-1)*lda];
+a[l-1+(k-1)*lda] = a[k-1+(k-1)*lda];
+a[k-1+(k-1)*lda] = t;
+}
+/*
+计算乘因子。
+*/
+t = -1.0 / a[k-1+(k-1)*lda];
+
+dscal ( n-k, t, a+k+(k-1)*lda, 1 );
+/*
+带列索引的行消元。
+*/
+for ( j = k+1; j <= n; j++ )
+{
+    t = a[l-1+(j-1)*lda];
+    if ( 1 != k )
+    {
+        a[l-1+(j-1)*lda] = a[k-1+(j-1)*lda];
+        a[k-1+(j-1)*lda] = t;
+    }
+    daxpy ( n-k, t, a+(k-1)*lda, 1, a+k+(j-1)*lda, 1 );
+}
+
+ipvt[n-1] = n;
+
+if ( a[n-1+(n-1)*lda] == 0.0 )
+{
+    info = n;
+}
+
+return info;
+***********************************************************************************
+
+void dgesl ( double a[], int lda, int n, int ipvt[],
+    double b[], int job )
+```
+****************************************************************
+/*
+目的：
+
+DGESL 求解实通用方程 A * X = B。
+
+讨论：
+
+DGESL 可以求解 A * X = B 或 A' * X = B。
+
+方程矩阵必须由 GEECO 或 DGEFA 分解。
+
+如果输入因子对角线上包含零，将发生除零错误。技术上这表示奇异，但通常是由参数不当或 LDA 设置不当引起的。如果正确调用且 DGECO 设置了 0.0 < RCOND，或者 DGEFA 设置了 INFO == 0，则不会发生这种情况。
+
+修改于：
+
+# 706 计算系统的性能、可靠性与可用性评估
+
+2005年5月16日
+
+作者：
+
+John Burkardt 编写 C 版本。
+
+参考：
+
+Jack Dongarra, Cleve Moler, Jim Bunch and Pete Stewart,
+LINPACK User's Guide,
+SIAM, (Society for Industrial and Applied Mathematics),
+3600 University City Center,
+Philadelphia, PA, 19104-2688.
+
+参数：
+
+输入，double A[LDA]，来自 DGECO 或 DGEFA 的输出。
+
+输入，int LDA，A 的主维维度。
+
+输入，int N，矩阵 A 的阶。
+
+输入，int IPVT[N]，来自 DGECO 或 DGEFA 的主元向量。
+
+输入/输出，double B[N]。
+ 输入，右侧向量。
+ 输出，解向量。
+
+```c
+输入，int JOB。
+0，求解 A * X = B；
+非零，求解 A' * X = B。
+/*
+int k;
+int l;
+double t;
+/*
+求解 A * X == B。
+if ( job == 0 )
+{
+    for ( k = 1; k <= n-1; k++ )
+{
+        l = ipvt[k-1];
+        t = b[l-1];
+    }
+if ( 1 != k )
+{
+    b[l-1] = b[k-1];
+}
+```
+

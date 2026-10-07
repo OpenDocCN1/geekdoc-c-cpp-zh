@@ -1,0 +1,11 @@
+# 272 Performance, Reliability, and Availability Evaluation of Computational Systems
+
+**Exercise 8.** For a computer system composed of two servers (server-system: $S1$ and $S2$) operating in a hot-standby spanning configuration; a storage sub-system is composed of two disks ($D1$ and $D2$) configured in RAID 1 and controller (C). Consider that the system fails if the server-system or storage sub-system fails. The constant failure rates are $\lambda_{S1} = 1.14155 	imes 10^{-4}h^{-1}$, $\lambda_{S2} = 7.61035 	imes 10^{-3}h^{-1}$, $\lambda_C = 5.0776 	imes 10^{-5}h^{-1}$, $\lambda_{D1} = \lambda_{D2} = 8 	imes 10^{-5}h^{-1}$. The respect time to repair is exponentially distributed with $\mu_{S1} = \mu_{S2} = 20.833 	imes 10^{-3}h^{-1}$, $\mu_{D1} = \mu_{D2} = 41.667 	imes 10^{-3}h^{-1}$. Assume there is only one repair team. (a) Compute a CMC model of the server sub-system and compute its availability. (b) Conceive an availability model of the whole system. (c) Compute the state availability of the system. (d) Calculate the respect downtime in minutes per year. (e) Compute a reliability model of the whole system. (f) Calculate the system's MTTF. (g) Draw the reliability curve in the interval $[0, 1460]h.
+
+**Exercise 9.** Consider a system that has a time to failure obeying a 5-stagehyperexponential distributed variable with parameters $\lambda_1, \lambda_2, \lambda_3, \lambda_4, \lambda_5$ where $\lambda_1 = 5 	imes 10^{-4}h^{-1}$ and $\lambda_2 = \lambda_3 = \lambda_4 = \lambda_5 = 5.88 	imes 10^{-4}h^{-1}$. The system time to repair times is exponentially distributed with parameter $\mu = 2.0833 	imes 10^{-2}h^{-1}$, (a) Compute the steady-state availability. (b) Present the equivalent two-state availability model and respect availability. Explain.
+
+**Exercise 10.** Consider a tiny-private cloud system composed of a cloud manager sub-system (CMSS), three servers ($S_1, S_2, S_3$) and a network-attached storage (NAS), which is composed of a NAS controller (NC) and six disks configured in RAID 5. Each computer hardware is composed of a motherboard (MB), memory (M), the network controller (NC), video controller (VC), an internal disk (HD), its disk controller (HDC), and the power source (PS). The cloud subsystem
+
+![](bbox=[0.135, 0.59, 0.862, 0.85])
+
+**Figure 21.56** Tiny-Private Cloud System.
