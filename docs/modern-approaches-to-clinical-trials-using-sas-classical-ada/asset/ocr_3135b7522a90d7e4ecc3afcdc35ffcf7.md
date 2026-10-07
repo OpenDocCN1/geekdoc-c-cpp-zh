@@ -1,0 +1,1 @@
+follows $N(\eta_{t_j}, t_j)$ where $\eta = (	heta_1 - 	heta_0)\sqrt{t_{ij}}$ is the drift parameter.

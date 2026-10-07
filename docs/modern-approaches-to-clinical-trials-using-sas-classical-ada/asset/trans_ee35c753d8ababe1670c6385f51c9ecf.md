@@ -1,0 +1,55 @@
+
+
+# 参考文献
+
+- 1. Altman DG & Bland JM. (1999). 受控试验中的治疗分配：为什么要随机化？*British Medical Journal* 318: 1209. 
+- 2. Sverdlov O & Rosenberger WF. (2013). 临床试验中的随机化：我们可以消除偏倚吗？*Clinical Investigation* 3: 37-47.
+- 3. Friedman LM, Furberg CD & DeMets DL. (2010). *临床试验基础，第四版*。纽约：Springer出版社。
+- 4. Berger VW, Ivanova A & Knoll MD. (2003). 通过使用限制较少的随机化程序在保持平衡的同时减少预测性。*Statistics in Medicine* 22: 3017-3028.
+- 5. Efron B. (1971). 强制顺序试验达到平衡。*Biometrika* 58: 403-417.
+- 6. Pocock SJ. (1979). 临床试验中患者的治疗分配。*Biometrika* 35: 183-197.
+- 7. Sposto R & Krailo MD. (1987). 存生存试验中不相等分配的使用。*Statistics in Medicine* 6: 119-125.
+- 8. Dumville JC, Hahn S, Miles JNV & Torgerson DJ. (2006). 临床试验中不相等随机化比例的使用：回顾。*Contemporary Clinical Trials* 27: 1-12.
+- 9. Kuznetsova O & Timofeyeyev Y. (2011). 用于两个或多个治疗组之间不相等分配的砖隧道随机化。*Statistics in Medicine* 30: 812-824.
+- 10. Rosenberger WF, Stallard N, Ivanova A, Harper R & Ricks ML. (2001). 二元反应试验的最优自适应设计。*Biometrics* 57: 909-913.
+- 11. Zelen M. (1969). 胜者为王规则与受控临床试验。美国统计协会杂志 64: 131-146.
+- 12. Wei LJ & Durham S. (1978). 医学试验中的随机“胜者为王”规则。美国统计协会杂志 73: 840-843.
+- 13. Bartlett RH, Rolloff DW, Cornell RG, Andrews AF, Dillon PW & Zwischenberger JB. (1985). 新生儿呼吸衰竭的体外循环：一项前瞻性随机试验。*Pediatrics* 76: 479-487.
+- 14. Hu F & Rosenberger WF (2006). 临床试验中反应自适应随机化的理论。纽约：Wiley出版社。
+- 15. Thall PF & Wathen JK. (2007). 临床试验中实用贝叶斯自适应随机化。*欧洲癌症杂志* 43: 859-866.
+- 16. Palmer CR & Rosenberger WF. (1999). 伦理与实践：三期随机化临床试验的替代设计。*Controlled Clinical Trials* 20: 172-186.
+- 17. Tymofeyeyev Y, Rosenberger WF & Hu F. (2007). 在顺序二元反应试验中实施最优分配。美国统计协会杂志 102: 224-234.
+- 18. Sverdlov O, Tymofeyeyev Y & Wong WK. (2011). 多臂生存试验的最优反应-自适应随机化设计。*Statistics in Medicine* 30: 2890-2910.
+- 19. Sverdlov O, Tymofeyeyev Y & Wong WK. (2014). 具有 Weibull 事件结局的多臂临床试验高效反应-自适应随机化设计。*Biopharmaceutical Statistics* 24: 732-754.
+- 20. 美国食品药品管理局. (2010). 行业指南：药物和生物制品自适应设计临床试验（草案）。可用于：http://www.fda.gov/downloads/Guidance
+- 21. Krams M, Lees KR, Hacke W, Grieve AP, Orgogoso JM & Ford GA. (2003). 急性缺血性中风的剂量-反应研究。*Stroke* 34: 2543-2548.
+- 22. Rosenberger WF & Lachin J. (2002). 临床试验随机化：理论与实践。纽约：Wiley出版社。
+- 23. McEntegart D. (2008). Hu F & Rosenberger WF《临床试验中反应自适应随机化》书评。*Pharmaceutical Statistics* 7: 72-73.
+- 24. Rosenberger WF. (2002). 随机箱模型和顺序设计（讨论）。*Sequential Analysis* 21: 1-28 (讨论：29-41)。
+- 25. Ivanova A. (2003). 胜者为王类型的设计。*Metrika* 58: 1-13.
+- 26. Zhang LX, Hu F, Chan WS. (2011). 无限箱模型——理论属性与应用。*Annals of Statistics* 39: 643-671.
+- 27. Thompson WR. (1933). 关于两个样本中一个概率超过另一个的可能性。*Biometrika* 25: 275-294.
+- 28. Thall PF & Wathen JK. (2005). 多阶段试验中的协变量调整自适应随机化。*Statistics in Medicine* 24: 1947-1964.
+- 29. Giles FJ, Kantarian HM, Cortes JE, Garcia-Manero G, Verwe S, Thomas DA, Ferrajoli A, Wathen JK, Xiao LC, Berry DA & Estes. (2003). 50 岁及以上未治疗异常核型白血病患者中阿杉比啶对比胞细胞嘧啶的自适应随机研究。*Journal of Clinical Oncology* 21: 1722-1727.
+- 30. Cheung YK, Inoue LY, Wathen JK & Thall PF. (2006). 基于事件时间的连续贝叶斯自适应随机化。*Statistics in Medicine* 25: 55-70.
+- 31. Tripp L, Lee EQ, Wen Py, Batchelor TT, Cloughes T, Parmigiani G & Alexander BM. (2012). 复发性胶质母瘤的贝叶斯自适应试验设计。*Journal of Clinical Oncology* 30: 3258-3263.
+- 32. Korn E, Fremlin B. (2011). 结局自适应随机化：有用吗？*Journal of Clinical Oncology* 29: 771-776.
+- 33. Berry DA. (2011). 自适应临床试验：前景与警告。*Journal of Clinical Oncology* 29: 606-609.
+- 34. Hu F & Rosenberger WF. (2003). 治疗比较的反应自适应随机化的优性、变异性与效能。美国统计协会杂志 98: 671-678.
+- 35. Rosenberg WF, Sverdlov O & Hu F. (2012). 临床试验的自适应随机化。*Journal of Biopharmaceutical Statistics* 22: 719-736.
+- 36. Yi Y & Wang X. (2015). 反应自适应随机化的统计推断。见于 Sverdlov O 编辑，《现代自适应临床试验：统计学与实践方面》。佛罗里达州：CRC出版社。
+- 37. Atkinson A & Biswas A. (2014). *临床试验中的随机反应自适应设计*。佛罗里达州：CRC出版社。
+- 38. Whitehead J. (1997). *顺序临床试验的设计与分析，第二版*。纽约：Wiley出版社。
+- 39. Magirr D. (2011). 二元终点临床试验中的块反应-自适应随机化。*Pharmaceutical Statistics* 10: 341-346.
+- 40. Baldi Antognini A & Giovagnoli A. (2010). 临床试验中个人和集体伦理的复合最优分配。*Biometrika* 97: 935-946.
+- 41. Britain E & Schselman JJ. (1982). 比例比较的最优分配。*Biometrics* 38: 1003-1009.
+- 42. Zhang L & Biswas A. (2007). 二元反应的最优失败-成功-自适应设计。*Drug Information Journal* 41: 709-718.
+- 43. Azriel D, Mandel M & Rinott Y. (2012). 最大化二元反应双样本检验效能的最优分配。*Biometrika* 99: 101-113.
+- 44. Yi Y & Yuan Y. (2013). 反应自适应设计的优分配。*应用统计学杂志* 40: 1996-2008.
+- 45. Gallo P. (2006). 自适应设计实施中的操作挑战。*Pharmaceutical Statistics* 5: 119-124.
+- 46. Melfi, Page C & Geraldes M. (2001). 用于估计的自适应随机化设计。*加拿大统计杂志* 29: 107-116.
+- 47. Eiseley JR. (1971). 用于顺序临床试验的双重自适应偏倚币。*统计计划与推理杂志* 38: 249-261.
+- 48. Hu F & Zhang LX. (2004). 多治疗临床试验双重自适应偏倚币设计的渐近性质。*统计学年* 32: 268-301.
+- 49. Rosenberger WF & Hu F. (2004). 临床试验中最大化效能并最小化治疗失败。*Clinical Trials* 1: 141-147.
+- 50. Hu F, Zhang LX & He X. (2009). 高效随机-自适应设计。*统计学年* 37: 2543-2560.
+

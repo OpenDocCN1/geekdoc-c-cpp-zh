@@ -1,0 +1,1 @@
+choose the lowest dose for this dose-ranging trial. If there is an interest in identifying a dose that is below MinED, then the difficult question would be “how low would be low enough?” Once the low dose is selected for the design, a dose range can be calculated as the ratio of the highest dose divided by the lowest dose.

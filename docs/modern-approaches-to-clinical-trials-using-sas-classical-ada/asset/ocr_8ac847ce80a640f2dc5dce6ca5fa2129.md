@@ -1,0 +1,1 @@
+operating characteristics of this sequential testing by tracking the modified test statistics will be the same as those that would have been obtained by tracking the original statistics.

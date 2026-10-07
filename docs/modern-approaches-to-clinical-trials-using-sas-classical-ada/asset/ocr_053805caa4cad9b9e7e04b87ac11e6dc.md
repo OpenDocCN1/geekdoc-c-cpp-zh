@@ -1,0 +1,11 @@
+the most straightforward needs justification. By contrast, the fractional CRM applies the Kaplan-Meier estimator to redistribute the censored data to right [11]. As a result, the censored data can be fractionized to yield an outcome between 0 and 1, and thus, still make contributions to the likelihood. The victimeCRM macro is included in the supplemental material for the book from the companion website.
+
+We conduct simulation studies to compare the performance of fCRM and TITE-CRM. The times to toxicity are simulated by Weibull distributions. The toxicity probability of each dose is set equal to the cumulative distribution function that is evaluated at the end of the follow-up time $\tau$. Among all the DLTs that would occur in $(0, \tau)$, 70% of them are observed in $(\tau/2, \tau)$, the latter half of the assessment period. We take the sample size to be 36 patients and the skeleton as (0.1,0.2,0.3,0.4,0.5,0)$. Under each scenario, 1000 trials are replicated. As shown in Scenario 1 of Simulation Study Comparing the fCRM and TITE-CRM and Scenario 2 of Simulation Study Comparing the fCRM and TITE-CRM, the results from the fCRM and TITE-CRM are similar in terms of both the selection percentages of the MTDs and the number of patients treated at each dose. The fCRM pools all the data across different dose levels to estimate the Kaplan-Meier survival curve, because the data at each dose level are quite sparse. Similarly, the TITE-CRM uses the same weight function for different dose levels, which does not take into account the dose information. Due to the sparsity of the data, it would be difficult to accommodate dose levels in the Kaplan-Meier estimator or the weight function via stratification. Macros %fCRM and %TITECRM generate the results for Table 5.8 and Table 5.9 are also included in the supplemental material for the book from the companion website. The location of the kmin.sas file should be specified in the %include statement in the %fCRMsim macro.
+
+The simulation is performed with the %fCRMsim and %TITECRM macros. The input variables for the two macros are the:
+
++   1. skeleton is the data that includes the true toxicity rate and the skeleton.
+
++   2. target is the target toxicity rate.
+
++   3. ncohort is the total number of cohorts.

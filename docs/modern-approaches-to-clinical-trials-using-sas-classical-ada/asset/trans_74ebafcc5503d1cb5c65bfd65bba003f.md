@@ -1,0 +1,234 @@
+
+
+```
+legendlabel="95% confidence interval";
+series x=dosepred y=pred /legendlabels="Model Mean" lineattrs=(thickness=3)
+scatter x=dose-diff / markerattrs=(symbol=circlefilled)
+legendlabel="Observed difference";
+refine refine / lineattrs=(thickness=2 color=red pattern=shortdash)
+legendlabel="target difference";
+run;
+```
+
+# 附录 D
+
+完整数据可在补充材料中获得。
+
+生成示例 2 结果示例代码 7.7
+
+```sas
+data neurodeg;
+    input resp id dose time @@;
+    datalines;
+    191.70155 1 0 178.39954 1 0 3 167.33850 1 0
+    6 149.50935 1 0 9 91.134853 1 0 12
+    205.09590 250 30 175.24421 250 30 3 152.41340 250 30
+    6 113.48094 30 9 84.95754 250 30 12
+
+    /* 剂量数量 */
+    proc sqlprint;
+        select count(distinct(dose))format=1.0 into :n_dose from neurodeg;
+    quit;
+
+    /* 用于获取计算对比差的矩阵的初始模型 */
+    ods output CoVB=(keep=col2-col6)
+    ParameterEstimates=beta(where=(Effect ne "Intercept"));
+
+    proc glimmix data=neurodeg;
+        class dose id;
+        model resp=dose*time/solution CoVB;
+        random intercept time / type=UN subject=id;
+
+    data omega;
+        set omega;
+        where effect ne "Intercept"
+        drop effect;
+    run;
+
+    data models;
+        length modnam $25;
+        input modnam parl-3;
+        datalines;
+        emax 1.11
+        quadratic -0.022 .
+        exponential 8.867 . .
+        linear . . .
+    run;
+
+    data doses;
+        input dose @@;
+        datalines;
+        0 1 3 10 30
+    run;
+
+    /* 根据候选模型和协方差矩阵计算最优对比差 */
+%optcont(models=models, doses=doses, sigma=omega, direction=incr,
+dosevarname=dose*time);
+%put &modcontr;
+
+data _null_;
+  call execute(
+  proc glmix data=neurodeg;
+  class dose id;
+  model resp=dose*time /solution COVB ;
+  random intercept time / type=UN subject=id;
+  estimate
+  / adjust=simulate(&modcontr; (nsample=1000000 seed=1) upperialed)
+  run;);
+run;
+
+/* 自举模拟以获取剂量-响应估计的估计和置信区间 */
+proc iml;
+  /* 初始化步骤 */
+  call randseed(1);
+  nsime=1000;
+
+  /* 读取数据 */
+  use omega;
+  read all var (col2 col3 col4 col5 col6) into cv;
+  use beta;
+  read all var (Estimate) into mn;
+  read all var (dose) into dose;
+
+  /* 模型拟合 */
+  /* 后续需要的变量 */
+  invs=inv(cv);
+  nd=row(dose);
+  predmn=mn;
+  resp=mn;
+
+  /* 定义用于优化不同模型的函数 */
+  start fnglsemax(par) global (dose, resp, predmn, nd);
+
+  do i=1 to nd;
+    predmn[i]=par[1]+par[2]*dose[i]/(dose[i] + par[3]);
+  end;
+  dif=(predmn-resp);
+  return(dif*invs*dif);
+  finish fnglsemax;
+
+  start fnglsexpo(par) global (dose, resp, predmn, nd);
+
+  do i=1 to nd;
+    predmn[i]=par[1]+par[2]*(exp(dose[i]/par[3])-1);
+  end;
+  dif=(predmn-resp);
+  return(dif*invs*dif);
+  finish fnglsexpo;
+
+  start fngslin(par) global (dose, resp, predmn, nd);
+
+  do i=1 to nd;
+    predmn[i]=par[1]+par[2]*dose[i];
+  end;
+  dif=(predmn-resp);
+  return(dif*invs*dif);
+  finish fngslin;
+
+  start fngslquad(par) global (dose, resp, predmn, nd);
+
+  do i=1 to nd;
+    predmn[i]=par[1]+par[2]*dose[i]+par[3]*dose[i]^2;
+  end;
+  dif=(predmn-resp);
+  return(dif*invs*dif);
+  finish fngslquad;
+
+/* 拟合模型的宏模型 */
+%macro gfitmod(saveastart=)
+optn=(. . .);
+/* emax: 边界: [0.03, 0.5] 用于 ED50 */
+call nlplgnrc(rc, xr, "fnglsemax", stemax, optn, con);
+gaicemax=2*paremax(xr);
+paremax=xr;
+if saveastart=1 then stemax=xr;
+
+/* exponential: 边界: [0.1, 0.2] 用于 ED50 delta */
+call nlplgnrc(rc, xr, "fngsexpo", stexpo, optn, con);
+gaicexpo=2*pareexpo(xr);
+pareexpo=xr;
+if saveastart=1 then stexpo=xr;
+
+/* linear: start=(0); con=(. . .) */
+call nlplgnrc(rc, xr, "fngslin", start, optn, con);
+gaiclin=2*parlin(xr);
+parlin=xr;
+
+/* quadratic: start=(0, 0, 0); con=(. . . .) */
+call nlplgnrc(rc, xr, "fnglsquad", start, optn, con);
+gaicquad=2*parquad(xr);
+parquad=xr;
+%end;
+
+/* 从多变量分布中采样并拟合模型 */
+emaxdat=(nsim, 4, 0);
+expodatj=(nsim, 4, 0);
+quaddatj=(nsim, 4, 0);
+lindatj=(nsim, 3, 0);
+
+i=1 to nsim;
+  resp=t(randnormal(1, mn, cv));
+  %gfitmod(i,saveastart=0);
+  emaxdat[i]=gaicemax|paremax;
+  expodat[i]=gaicexpo|pareexpo;
+  quaddat[i]=gaicquad|parquad;
+  lindat[i]=gaiclin|parlin;
+end;
+
+create emaxdat from emaxdat[colname=('emax_gaic' 'emax_e0' 'emax_ed50')];
+append emmaxdat;
+close emmaxdat;
+
+create expodat from expodat[colname={'expo_gaic' 'expo_e0' 'expo_el', 'expo_delta'}];
+append expodat;
+close expodat;
+
+create quaddat from quaddat[colname={'quad_gaic' 'quad_e0' 'quad_bl', 'quad_b2'}];
+append quaddat;
+close quaddat;
+
+create lindat from lindat[colname={'lin_gaic' 'lin_e0' 'lin_delta'}];
+append lindat;
+close lindat;
+quit;
+
+/* 数据步中的后处理 */
+data simresults;
+    merge emaxdat expodat quaddat lindat;
+    min_gaic=min(emax_gaic, expo_gaic, quad_gaic, lin_gaic);
+    array doserp(101);
+
+    if(emax_gaic=min_gaic) then
+    do
+        i=1 to 101;
+        dose=(i-1)/100+30;
+        doserp(i)=emax-emax*dose/(emax_ed50+dose);
+    end
+    bestmod='emax';
+    end;
+
+    if(expo_gaic=min_gaic) then
+    do
+        i=1 to 101;
+        dose=(i-1)/100+30;
+        doserp(i)=expo_el*(exp(dose/expo_delta)-1);
+    end
+    bestmod='exponential';
+    end;
+
+    if(lin_gaic=min_gaic) then
+    do
+        i=1 to 101;
+        dose=(i-1)/100+30;
+        doserp(i)=lin_lin;
+    end;
+
+    if(quad_gaic=min_gaic) then
+    do
+        i=1 to 101;
+        dose=(i-1)/100+30;
+        doserp(i)=quad_quad;
+    end;
+run;
+```
+

@@ -1,0 +1,1 @@
+coefficients, which can be used for sample size calculations.

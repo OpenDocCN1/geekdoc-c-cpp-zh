@@ -1,0 +1,7 @@
+clinical trials with regard to the required number of randomized patients, while the assay sensitivity played a vital role with regards to the number of screened patients. The most relevant assay is the one that identifies patients who are more responsive to the new treatment than the control. It is especially important when the control is active.
+
+Maitournam and Simon [25] did extensive simulations assessing the relative efficiency of the enrichment design versus the all-comers design and conclude:
+
++   - When the treatment effect is limited to marker+ patients and the specificity of the assay is close to 1, the enrichment design is generally much more efficient than the all-comers design with regard to the number of randomized and number of screened patients. The efficiency decreases as the specificity of the assay degrades.
+
++   - If the treatment effect for the marker- patients is half as large as for the marker+ patients, the enrichment design requires more patients to be screened than the unselected design even if the assay is perfect. The increased number of screened patients for the enrichment design depends critically on the sensitivity of the assay. Under these conditions, there is no substantial advantage of the enrichment design in terms of the number of randomized patients unless the assay has specificity close to 1. – if that is the case, the selection of the preferred design will depend on other considerations such as relative costs of randomizing, safety and tolerability profile, and commercial value of a broader labeling indication.

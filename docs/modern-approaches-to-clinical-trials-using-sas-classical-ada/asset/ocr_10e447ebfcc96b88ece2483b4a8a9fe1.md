@@ -1,0 +1,5 @@
+where data from some geographic regions will contribute substantially to the registration trials, but no prior information is available on how patients in these regions respond to the product candidate.
+
+For the above reasons, it is often prudent to use interim data to check the validity of the assumptions made at the design stage. If the assumptions appear to be erroneous, one should consider making a midcourse sample size adjustment to improve the chance that the trial will reach a definitive conclusion.
+
+The main focus of this chapter will be unblind SSR methodology, though we will give a brief overview of blinded methods in 3.2 Blinded SSR Methods, in order to compare and contrast with unblinded SSR methods in 3.3 Unblinded SSR Methods. We conclude with summary and discussion in Section 3.4.

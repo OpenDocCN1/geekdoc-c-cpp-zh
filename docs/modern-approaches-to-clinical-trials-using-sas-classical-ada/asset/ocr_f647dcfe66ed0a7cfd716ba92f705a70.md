@@ -1,0 +1,11 @@
+# 3.3.4.2 Promising Zone Example
+
+Let us consider a hypothetical two-arm trial with equal allocation to be designed to test the efficacy of an experimental new treatment compared to the control which is also the standard of care. The primary endpoint is a continuous endpoint with high scores indicating improvement from baseline. We denote $\mu_t$ as the difference between the mean change from baseline for the treatment and $\mu_c$ as the difference between the mean change from baseline for the control arm. The treatment effect, i.e., the gain in efficacy between treatments is denoted by $\delta = \mu_t - \mu_c$.
+
+The null hypothesis $H_0: \delta = 0$ which is tested against the one-sided alternative hypothesis $H_1: \delta > 0$. Based on previous studies, the new treatment is expected to have a $\delta$ of at least 0.25 units with between-subject standard deviation to be around 1. Though the treatment difference is expected to be 0.25 units, a difference of 0.19 units and above is considered clinically and commercially meaningful. Hence, the sponsor would like to have a back plan to cover for uncertainty around the actual treatment difference to ensure that the trial can be appropriately powered in case the alternative hypothesis is less expected but still in the range of clinical and commercial relevance.
+
+While designing this study, we will consider few design options, including a classical design, i.e., fixed sample size GSD, and an adaptive design with SSR. However, there are pros and cons for each of the design options; however, we specifically explore scenarios under which adaptive design with SSR would be beneficial.
+
+# Classical Design
+
+It is expected that the treatment difference $\delta$ of at least 0.25 units with between-subject standard deviation ($\sigma$) around 1. For a classical design with only a single look, a total of 504 subjects (252 subjects per arm) are needed to achieve 80% power to detect a difference of 0.25 at a one-sided $\alpha = 0.025$. If the treatment difference is indeed as expected, then classical design with 252 subjects per arm will have at least 80% power to detect the true difference. If the treatment difference is lower than 0.25, then this trial would be underpowered with the power drop as low as 57% if the true treatment difference is 0.19. There are

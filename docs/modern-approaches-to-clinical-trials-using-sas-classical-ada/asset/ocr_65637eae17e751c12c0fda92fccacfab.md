@@ -1,0 +1,11 @@
+# 9.1 Introduction
+
+Randomized clinical trials are the gold standard to differentiate effects of different treatments. To ensure an objective comparison of different treatments, patients' allocation should be random or unpredictable so that both known and unknown prognostic factors and potential confounders can be balanced out. In practice, selection bias should be prevented as much as possible using randomization and blinding, including single- or double-blind schemes. A single-blind study only blocks the identity of the treatments to patients, while a double-blind study blocks both patients and clinicians. Most clinical trials attempt to balance the treatment assignment by restricting the allocation probability equally across arms, but it may not be effective and ethical. Adaptive randomization randomization schemes, which modify the probability of treatment assignment according to the accumulated information in the trial, have become increasingly common nowadays. Several factors affect the design of a randomized clinical trial. On one hand, the effects of different treatments should be differentiated quickly, so that more patients outside of the trial would benefit from the more efficacious treatment sooner. For this purpose, patients' allocation should be (nearly) balanced across the comparative arms. On the other hand, each trial participant should be treated the most effectively for his/her best health, and patients themselves also hope that they would be assigned to the arm that is most beneficial. This often leads to the allocation probabilities being skewed toward the potentially better treatment. Therefore, randomized clinical trials need to strike a balance between individual and collective ethics.
+
+Randomization can effectively reduce bias and confounding effects. Clinical trials with well-balanced prognostic variables can provide a more efficient and cleaner comparison. In general, randomization can be classified into five major types depending on the study objectives, as summarized below in Different Types of Randomization Schemes [1].
+
+Table 9.1 Different Types of Randomization Schemes
+
+| Type of Randomization | Description | Example |
+| --- | --- | --- |
+| Simple | Fixes randomization probabilities | Equal |

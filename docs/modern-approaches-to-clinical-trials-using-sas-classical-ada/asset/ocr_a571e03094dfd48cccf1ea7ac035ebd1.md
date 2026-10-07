@@ -1,0 +1,3 @@
+# 5.6 Summary
+
+The continual reassessment method and its variations have been studied extensively and their performances are in general better than algorithm-based methods, such as the 3+3 design. All the cumulative data can be integrated and modeled for better decision making. In the Bayesian paradigm, more direct comparisons and early stopping rules can be implemented, which can help pin down the right dose faster.

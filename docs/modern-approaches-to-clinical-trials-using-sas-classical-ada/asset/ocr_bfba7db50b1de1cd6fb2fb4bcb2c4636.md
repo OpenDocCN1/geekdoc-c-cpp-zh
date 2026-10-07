@@ -1,0 +1,11 @@
+# 8.4 Analysis Example for a Binary Endpoint
+
+Planning for a phase IIb study in the indication of systemic lupus erythematosus (SLE) has begun. This study will use the systemic lupus erythematosus responder index (SRI) as the primary endpoint. The SRI in order to be considered a responder, a subject must show a 4-reduction on the primary symptom score (SLEAI-2K), with no worsening symptoms based on a physician's assessment, and no new organ domain scores in the two highest categories of a secondary symptom score (BILAG). All three criteria must be met in order to be considered a responder. It has been decided that three active dose groups and one placebo group will be included in this study, with 60 subjects in each dosing group. Initial sample size estimates assumed placebo response of 0.4, a treatment response of 0.65 at $\alpha=0.05$ and 80% using a two-sample test of proportions. The dose response of the new compound will be evaluated after 24 weeks of dosing to estimate the optimal dose to carry into phase III testing, assuming the study is successful. A Bayesian model has been proposed for this analysis.
+
+The last drug approved in SLE was belimumab, which used the binary endpoint of SRI for registration. Across two phase III studies, 218 placebo subjects were responders out of 562 subjects tested or a response rate of 0.388. Assuming placebo subjects in the new trial will respond at the same rate as seen in these phase III trials, this estimate of 0.388 can be used for the prior distribution of $E$. Thus, logit(0.388) will be used as the estimate of central tendency for an informative normal prior on the $E$ parameter. The proposed study for a new compound is smaller than these studies and assumed to be more variable. Also, only two studies were used to inform the effect placebo response, so a weak informative prior will be used. In order to make the prior distribution diffuse, a variance of 4 is employed.
+
+```
+proc mcm, this could be parameterized as sd = 2, var = 4 of precision = 0.25 for the normal distribution.
+```
+
+The prior belief in the drug is that a change of 25% in SRI responders can be shown for subjects taking this drug. It would be possible to construct an informative prior on using this information, though this is not illustrated in the example code below. A non-informative prior (i.e.,
