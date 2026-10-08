@@ -1,0 +1,331 @@
+
+
+假依赖关系，281–283
+FFT (快速傅里变换), 346。另见 cuFFlibrary
+FTTW ((西部)最快傅里变换), 363–364
+文件，投影, 436–437
+有限差分, 多 GPU, 400–409
+标志,指令生成, 312–313
+浮点乘法累加 (FMAD), 311–312
+浮点单元 (FPU), 71–72
+浮点值
+- 原子的, 320–321
+- 双精度, 306–308
+- 指令, 301–303
+- 可表示的, 302
+- 单精度, 306–308
+浮点性能, 323
+FMAD (浮点乘法累加), 311–312
+fmul, 313–314
+FPU (浮点单元), 71–72
+函数
+```
+cudaGetDeviceProperties( ), 61, 94
+cudaErrorString( ), 27, 438
+cudaGetError( ), 437
+cudaGetSymbolAddress( ), 145
+cudaHostAlloc( ), 155, 216
+cudaHostDevicePointer( ), 156
+cudaMalloc, 26–27, 29
+cudaMallocHost( ), 149, 156
+cudaMallocManaged( ), 213
+cudaMemcpy( ), 27, 145
+cudaMemcpy( ), 146
+cudaMemcpyDeviceHost( ), 147
+cudaMemcpyToSymbol( ), 141, 250
+cudaMemset( ), 26
+cudaPeekLastError( ), 438
+cudaSetDevice( ), 390
+cudaStreamAddCallback( ), 296
+cudaStreamCreateWithFlags( ), 276
+cudaStreamCreateWithPriority( ), 273
+cudaStreamDestroy( ), 270
+cudaStreamAndWait( ), 278
+cuffXtMalloc( ), 360
+cuffXtMemcpy( ), 360
+curandCreateGenerator( ), 351
+curandPseudoRandomSeed( ), 352
+curandQuasiRandomGenerator 异步行为, 268
+axpy, 333
+checkGlobalVariable( ), 143
+checkInnerArray( ), 183
+checkStatusInternal( ), 179
+checkResult( ), 39
+cpuSecond, 44
+cudaDeviceAccess( ), 391
+cudaDeviceEnablePeer( ), 392
+cudaDeviceSharedMemConfig( ), 212
+cudaDeviceGetPriorityRange( ), 273
+cudaDeviceReset( ), 19
+cudaDeviceSetConfig( ), 212
+cudaDeviceSynchronize( ), 37, 44, 276
+cudaErrorInvalidPointer.
+cudaFree( ), 146
+cudaEventCreateWithFlags( ), 278
+cudaEventQuery( ), 274
+cudaEventRecord( ), 274
+cudaEventSynchronize( ), 274
+cudaFree( ), 26
+cudaFreeHost( ), 150, 155
+cudaFuncSetConfig( ), 140, 213
+cudaGetDeviceCount( ), 389
+Dimensions( ), 353
+dot, 333
+doti, 333
+_fdiv, 311
+gettimeofday( ), 44
+ghtr, 333
+hzrz, 333
+initialArray( ), 182
+initialInnerStruct( ), 179
+intrinsic, 303–304
+visualizing, 309–311
+kernel functions, 37–39
+type qualifiers, 38
+mm, 333
+mv, 333
+nextafter( ), 302
+printf, 34
+
+# 线程并行 (OpenACC) – 硬件加速器
+
+printThreadInfo, 51
+rand( ), 354–357
+roti, 345
+sctr, 345
+setCol( ), 219–220
+setRowCol( ), 222
+s, 333
+standard, 303–304
+visualizing, 309–311
+sumArraysOnGPU( ), 39
+sumMatrixOnHost( ), 53–54
+sv, 333
+synchronous behavior, 27, 268
+_synctreads( ), 140
+template, 120–121
+type qualifiers, 38
+device management, 60
+determining best, 63
+runtime API, 61–63
+setting at runtime, 64–65
+hardware accelerator, 10
+Hello World, 17–19
+Kepler, 11
+many-core architecture, 8
+parallelism level, 11–12
+concurrency-limiting resources, 226–287
+Fermi architecture, 71–73
+Kepler architecture, 73–78
+profiling, 78–80
+SM (Streaming Multiprocessors), 68
+GPU thread versus CPU, 12
+GPUDirect, 419–421
+GPU-to-GPU data transfer, 410
+CUDA-aware MPI, 416–417
+GPU affinity, 413–414
+GPUDirect RDMA, 419–421
+intra-node communication, 417–418
+stride with CUDA-aware MPI, 417–418
+traditional MPI, 413–415
+grid level concurrency, 267, 268
+streams and, 268
+grids, 53–57
+CWD (CUDA Distributor), 293
+dimensions, 32–36
+matrices, 53–60
+threads, 31
+matrix indexing, 49–53
+gthr function, 333
+gth function, 333
+gang parallelism (OpenACC), 365
+GeForce (NVIDIA), 10
+gettimeofday( ) system call, 44
+gflops, 7
+GigaThread engine, 72
+_global_declaration, 37–38
+global memory, 137, 141–142
+further reading, 490
+nvprof, 441
+parallel reduction, 238–239
+shared memory and, 232–236
+unrolling, 232–236
+read-only cache access, 225–255
+static global memory, 143–145
+global memory read, 160–169
+global memory write, 169–171
+_global_qualifier, 38
+globalVariable.cu, 144
+GPU (Grid Management Unit), 293
+GPU, 1
+versus CPU, 8
+data size, 11–12
+determining best, 63
+device code, 9, 25
+halo region, 389
+handling errors, 40
+437–438
+hardware accelerator, 10
+
+# 哈佛架构 - 内核函数
+
+Harvard architecture, 2
+Hello World, 17–19
+nested, 124–128
+heterogeneous computing, 8–9
+architecture
+built-in, 317–318
+performance, 318–321
+double-precision floating-point, 306–308
+floating-point values, 301–303
+generating, manipulating generation, 311–315
+optimization, 306–324
+parallelism and, 432
+single-precision floating-point, 306–308
+interleaved pairs, branched divergence, 112–114
+- device code, 9
+- host code, 9
+- data size, 11–12
+- further reading, 489
+- hardware accelerator, 10
+- parallelism, 11–12
+hierarchy
+memory hierarchy, 27
+Kepler GPUs, 204
+principle of locality, 136
+threads, 36
+host, 25
+data movement, 28
+memory functions, 26
+memory transfer to/from device, 150
+host code, 9
+array summation, 28–29
+_host_qualifier, 38
+host threads, multi-GPUs and, 394
+inter-stream dependencies, 288–289
+intrinsic functions, 303–304
+visualizing, 309–311
+I/O-bound applications, 306
+- Kepler architecture, 73–78
+Hyper-Q, 272
+memory hierarchy, 204
+kernel functions, 37–39
+type qualifiers, 38
+kernel level concurrency, 26
+kernels, 15
+bandwidth, memory, 179–180
+concurrent execution, non-NULL streams, 279–281
+HPC (high-performance computing), 1
+HYB (hybrid), 337
+Hyper-Q, 76
+stream scheduling, 272
+- debugging
+- assert, 455–456
+- cuda-gb, 452–554
+- cuda-gb, 448–449
+- environment information, 450–451
+- focus, 449
+- memory inspection, 450
+- printf, 454–455
+- tunable parameters, 451
+- device memory, 240
+- execution, 36
+- L1/L2 cache, 440
+- launching, 36–37
+- matrix addition, 151–152
+- breadth-first scheduling, 293–294
+- interleaved, 115
+ILP (instruction-level parallelism), 32
+development, APOD, 426–429
+further reading, 492
+implicit synchronization of streams, 276–277
+indexing, matrices, 49–53
+initialRuntimeArray(), function, 182
+initialRuntimeStruct(), function, 179
+in-place storage, 104
+instruction dispatch units, 72–73
+atomic, 304–306, 315–321
+
+# kernels directive – memory
+
+shared memory, 440
+system memory, 440
+texture cache, 440
+timing, 43
+spatial, 136
+temporal, 136
+loop directive, 372–374
+loop unrolling, 114–120
+branch divergence and, 115–117
+lower bound of transpose kernels, 181–185
+CPU timer, 44–49
+nvprof, 47–49
+writing, 37–39
+kernels directive, 367–370
+- MAD (multi-add), 300
+- FMAD (floating-point MAD), 311–312
+- managed memory, 157
+- performance comparisons, 196–197
+- many-core, 7
+indexing, matrices, 49–53
+summing
+- latency, 7
+- bandwidth and, 91
+- maximizing throughput, 90
+- minimizing, 90
+- throughput and, 91
+- latency hiding, 90–93
+- launching, kernels, 36–37
+- legacy applications, 311
+- libraries, 327
+advages, 329
+configuration, 331–332
+cuBLAS, 346–342
+CUFF, 346–342
+cuRAND, 349–358
+cuSPARSE, 332–341
+- allocating, 331
+- populating with, 331
+- results retrieval, 332
+- domains supported, 329–330
+Drop-In-Libraries, 358–359
+- further reading, 491
+- handles, 331
+- inputs, converted to supported format, 331
+- multi-GPU, 359–361
+- native format, 332
+OpenACC, 382–384
+performance survey, 361–364
+resources, releasing, 332
+workflow, 330–332
+LLVM infrastructure, 26
+local memory, 137, 139
+locality, 20
+- 1D grids and blocks, 57–58
+- 2D grids and blocks, 58–60
+- 2D grids and blocks, 53–57
+transpose, coalesced memory, 241–249
+matrix addition kernel, 151–152
+partial matrix addition, 152–155
+th blocks, 193–194
+unified memory and, 195–199
+matrix transpose, 180–194
+diagonal transpose, 185–192
+lower bound, 181–185
+naive transpose, 185–187
+unroll transpose, 187–189
+upper bound, 181–185
+- bank conflicts, 441–442
+checking, nvprof, 100–101
+constant memory, 137, 250
+cencils, 250–253
+data race, 304–305
+debugging
+```
+cuda-memcheck, 456–458
+racecheck, 458–462
+```
+- device memory, 143
+functions, 26
+kernels, 26
+
