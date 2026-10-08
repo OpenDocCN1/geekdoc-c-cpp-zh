@@ -1,0 +1,248 @@
+
+# INDEX
+
+## C
+
+- clock(), 1015–1016, 1193
+- clock_1, 1193
+- close() example, 504
+- Closed_polyline example, 456–458
+  - vs. Polygon, 458
+- close() file, 352
+- <cmath>, 918, 1135, 1182
+- ctrl, 878, 1179
+- COBOL language, 823–825
+- Code
+  - definition, 1218
+  - layout, cleaning up, 235–236
+  - libraries, uses for, 177
+  - storage, 591–592
+  - structure, ideals, 810–811
+  - test coverage, 1008
+- Coding standards, 974–975
+- C++, list of, 983
+- complexity, sources of, 975
+- ideals, 976–977
+- sample rules, 977–983
+- Color example, 425–426, 450–452
+- color chat example, 465–467
+- fill, 431–432, 462–464, 500
+- transparency, 451
+- Columns, matrices, 900–901, 906
+- Command-line, 47
+- Comments, 45–46
+  - block /*…*/, 238, 1076
+  - C++ and C, 1026
+  - cleaning up, 237–238
+  - vs. code, 238
+  - line //, 45–46, 1076
+  - role in debugging, 159–160
+- Common Lisp language, 825
+- Communication skills, programmers, 22
+- Compacting garbage collection, 938–939
+- Comparison, 67. See also <; ==
+- C-style strings, 1045–1047
+- characters, 740
+- containers, 1151
+- key_compare, 1147
+- lexicographical, C-style strings, 1046
+- lexicographical_compare(), 1162
+- min/max algorithms, 1161–1162
+- string, 851
+- three-way, 1046
+- Compatibility. See C++ and C
+- Compile-time errors. See Errors, compile-time
+- Compiled languages, 47–48
+- Compilers, 48, 1218
+  - compile-time errors, 51
+  - conditional compilation, 1058–1059
+  - syntax checking, 48–50
+- compl, synonym for ~, 1037, 1082
+- complex
+  - *, multiply, 919, 1183
+  - +, add (plus), 919, 1183
+  - <<, output, 1183
+  - !=, not equal (inequality), 919, 1183
+  - ==, equal, 919, 1183
+  - >>, input, 920, 1183
+  - /, divide, 919, 1183
+  - abs(), absolute value, 920, 1183
+  - conj(), conjugate, 920
+  - Fortran language, 920
+  - imag(), imaginary part, 920
+  - norm(), square of abs(), 919
+  - number types, 1182–1183
+  - polar(), polar coordinate, 920
+  - real(), real part, 920
+  - rho, 920
+  - square of abs(), 919
+  - theta, 920
+  - <complex>, 1134
+  - complex operators, 919–920, 1183
+  - standard math functions, 1181
+- Complex numbers, 919–920
+- Complexity, 1218
+  - sources of, 975
+- Composite assignment operators, 73–74
+- Compound statements, 111
+- Computation, 91. See also Programs; Software
+  - correctness, 92–94
+  - data structures, 90–91
+  - efficiency, 92–94
+  - input/output, 91
+  - objectives, 92–94
+  - organizing programs, 92–94
+  - programmer ideals, 92–94
+  - simplicity, 92–94
+  - state, definition, 90–91
+- Computation vs. data, 717–720
+- Computer-assisted surgery, 30
+- Computers
+  - CAT scans, 30
+  - computer-assisted surgery, 30
+  - in daily life, 19-21
+  - information processing, 32
+  - Mars Rover, 33
+  - medicine, 30
+  - perversiveness of, 19-21
+  - server farms, 31-32
+  - shipping, 26-28
+  - space exploration, 33
+  - telecommunications, 28-29
+  - timekeeping, 26
+  - world total, 19
+
+## D
+
+- Dahl, Ole-Johan, 833–835
+- Data. See also Containers; Sequences; list; map; associative array; vector
+  - abstraction, 816
+  - collections. See Containers
+  - vs. computation, 717–720
+  - generalizing code, 714–716
+  - in memory. See Free store (heap storage)
+  - processing, overview, 712–716
+  - separating from algorithms, 722
+  - storing. See Containers
+  - structure. See Containers; class; struct
+  - traversing. See Iteration; Iterators
+  - uniform access and manipulation, 714–716. See also STL (Standard Template Library)
+- Data member, 305, 492–493
+- Data structure. See Data; struct
+- Data type. See Type
+- Date and time, 1193–1194
+- Date example. See Chapters 6–7
+- Deallocating memory, 598–600, 1094–1095. See also delete(); delete
+- Debugging, 52, 158, 1219. See also Errors; Testing
+  - arrays and pointers, 656–659
+  - assertions, 163
+  - block termination, 161
+  - bugs, 158
+  - character literal termination, 161
+  - commenting code, 159–160
+  - compile-time errors, 161
+  - consistent code layout, 160
+  - constructors, 643–646
+  - declaring names, 161
+  - displaying the console window, 162
+  - expression termination, 161
+  - finding the last bug, 166–167
+  - function size, 160
+  - GUIs, 575–577
+  - input data, 166
+  - invariants, 162–163
+  - keeping it simple, 160
+  - logic errors, 154–156
+  - matching parentheses, 161
+  - naming conventions, 160
+  - post-conditions, 165–166
+  - pre-conditions, 163–165
+  - process description, 158–159
+  - reporting errors, 159
+  - stepping through code, 162
+  - string literal termination, 161
+  - systematic approach, 166–167
+  - test cases, 166, 227
+  - testing, 1012
+  - tracing code execution, 162–163
+  - transient bugs, 595
+  - using library facilities, 160
+  - widgets, 576–577
+
+## C (Continued)
+
+- dec manipulator, 382–383, 1174
+- Decimal digits, isdigit(), 397
+- Decimal integer literals, 1077
+- Decimal number system, 381–383, 1077–1078
+- Deciphering (decryption), example, 969–974
+- Declaration operators, 1099
+  - & reference to, 276–279, 1099
+  - * pointer to, 587, 1099
+  - [] array of, 649, 1099
+  - () function of, 113–115, 1099
+- Declarations, 51, 1098–1099
+  - C++ and C, 1026
+  - classes, 306
+  - collections of. See Header files
+  - constants, 262–263
+  - definition, 51, 77, 257, 1098–1099, 1219
+  - vs. definitions, 259–260
+  - entities used for, 261
+  - extern keyword, 259
+  - forward, 261
+  - function, 257–258, 1103
+  - function arguments, 272–273
+  - function return type, 272–273
+  - grouping. See Namespaces
+  - managing. See Header files
+  - need for, 261
+  - order of, 215
+  - parts of, 1098
+  - subdividing programs, 260–261
+  - uses for, 1098
+  - variables, 260, 262–263
+- Decrementing --, 97
+  - iterator, 1141–1142
+  - pointer, 652
+- Deep copy, 636
+- Default constructors, 328–329
+  - alternatives for, 329–330
+  - for built-in types, 328
+  - initializing objects, 327
+  - need for, identifying, 641
+  - uses for, 328–329
+- #define, 1129
+- Definitions, 77, 258–259, 1219. See also Declarations
+  - C++ and C, 1038–1040
+  - vs. declarations, 259–260
+  - function, 113–115, 272–273
+- delete
+  - C++ and C, 1026, 1037
+  - deallocating free store, 1094–1095
+  - destructors, 601–605
+  - embedded systems, 932, 936–940
+  - free-store deallocation, 598–600
+  - in unary expressions, 1087
+- delete[], 599, 1087, 1094–1095
+- Delphi language, 831
+- Dependencies, testing, 1002–1003
+- Depth-first approach to programming, 6
+- deque, double ended queue, 1144
+- dequeue, 1133
+- Dereference/indirection
+  - *, 594. See also Contents of
+  - [], 118. See also Subscripting
+- Derivation, classes, 505
+- Derived classes, 505, 1219
+  - access control, 511
+  - base classes, 1116–1117
+  - inheritance, 1116–1117
+  - multiple inheritance, 1117
+  - object layout, 506–507
+  - overview, 504–506, 1116–1117
+  - private bases and members, 511
+  - protected bases and members, 511
+  - public bases and members, 511
+  - specifying, 507–508
+  - virtual functions, 1117–1118

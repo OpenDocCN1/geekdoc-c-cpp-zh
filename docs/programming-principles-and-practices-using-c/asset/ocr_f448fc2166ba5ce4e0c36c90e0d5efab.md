@@ -1,0 +1,97 @@
++   - Debugging, *continued*
+	- function size, 160
+	- GUIs, 575–577
+	- input data, 166
+	- invariants, 162–163
+	- keeping it simple, 160
+	- logic errors, 154–156
+	- matching parentheses, 161
+	- naming conventions, 160
+	- post-conditions, 165–166
+	- pre-conditions, 163–165
+	- process description, 158–159
+	- reporting errors, 159
+	- stepping through code, 162
+	- string literal termination, 161
+	- systematic approach, 166–167
+	- test cases, 166, 227
+	- testing, 1012
+	- tracing code execution, 162–163
+	- transient bugs, 595
+	- using library facilities, 160
+	- widgets, 576–577
+- dec manipulator, 382–383, 1174
+- Decimal digits, **isdigit()**, 397
+- Decimal integer literals, 1077
+- Decimal number system, 381–383, 1077–1078
+- Deciphering (decryption), example, 969–974
+- Declaration operators, 1099
+	- & reference to, 276–279, 1099
+	- * pointer to, 587, 1099
+	- [] array of, 649, 1099
+	- () function of, 113–115, 1099
+- Declarations, 51, 1098–1099
+	- C++ and C, 1026
+	- classes, 306
+	- collections of. *See* Header files
+	- constants, 262–263
+	- definition, 51, 77, 257, 1098–1099, 1219
+	- *vs.* definitions, 259–260
+	- entities used for, 261
+	- **extern** keyword, 259
+	- forward, 261
+	- function, 257–258, 1103
+	- function arguments, 272–273
+	- function return type, 272–273
+	- grouping. *See* Namespaces
+	- managing. *See* Header files
+	- need for, 261
+	- order of, 215
+
++   - parts of, 1098
+- subdividing programs, 260–261
+- uses for, 1098
+- variables, 260, 262–263
+- Decrementing --, 97
+	- iterator, 1141–1142
+	- pointer, 652
+- Deep copy, 636
+- Default constructors, 328–329
+	- alternatives for, 329–330
+	- for built-in types, 328
+	- initializing objects, 327
+	- need for, identifying, 641
+	- uses for, 328–329
+- **#define**, 1129
+- Definitions, 77, 258–259, 1219. *See also* Declarations
+	- C++ and C, 1038–1040
+	- *vs.* declarations, 259–260
+	- function, 113–115, 272–273
+- **delete**
+	- C++ and C, 1026, 1037
+	- deallocating free store, 1094–1095
+	- destructors, 601–605
+	- embedded systems, 932, 936–940
+	- free-store deallocation, 598–600
+	- in unary expressions, 1087
+- **delete[]**, 599, 1087, 1094–1095
+- Delphi language, 831
+- Dependencies, testing, 1002–1003
+- Depth-first approach to programming, 6
+- **deque**, double ended queue, 1144
+- **dequeue**, 1133
+- Dereference/indirection
+	- *, 594. *See also* Contents of [] , 118. *See also* Subscripting
+- Derivation, classes, 505
+- Derived classes, 505, 1219
+	- access control, 511
+	- base classes, 1116–1117
+	- inheritance, 1116–1117
+	- multiple inheritance, 1117
+	- object layout, 506–507
+	- overview, 504–506, 1116–1117
+	- *private* bases and members, 511
+	- *protected* bases and members, 511
+	- *public* bases and members, 511
+	- specifying, 507–508
+	- virtual functions, 1117–1118

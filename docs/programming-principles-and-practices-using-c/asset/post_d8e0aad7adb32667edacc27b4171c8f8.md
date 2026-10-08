@@ -1,0 +1,400 @@
+
+# INDEX
+
+## G
+
+- GUIs (graphical user interfaces), continued
+    - wait loops, 559–560
+    - wait_for_button() example, 559–560
+    - waiting for user action, 559–560, 569–570
+- Widget example, 561–569, 1209–1210, 1213–1216
+- Window example, 565–569, 1210–1212
+- GUI system, giving control to, 423
+
+## H
+
+- .h file suffix, 46
+- Half open sequences, 119, 721
+- Hard real-time, 931, 981–982
+- Hardware replication, error handling, 934
+- Hardware violations, 141
+- Hashed container. See unordered_map
+- Hash function, 785–786
+- Hashing, 785
+- Hash tables, 785
+- Hash values, 785
+- Header files, 46, 1219
+    - C standard library, 1135–1136
+    - declarations, managing, 264
+    - definitions, managing, 264
+    - graphics example, 421–422
+    - including in source files, 264–266, 1129
+    - multiple inclusion, 1059
+    - standard library, 1133–1134
+- Headers. See Header files
+- Heap algorithm, 1160
+- Heap memory, 592, 935–936, 1084, 1160. See also
+    - Free store (heap storage)
+- Hejlsberg, Anders, 831
+- “Hello, World!” program, 45–47
+- Helper functions
+    - == equality, 333
+    - != inequality, 333
+    - class interfaces, 332–334
+    - Date example, 309–310, 332–333
+    - namespaces, 333
+    - validity checking date values, 310
+- hex manipulator, 382–383, 1174
+- Hexadecimal digits, 397
+- Hexadecimal number system, 381–383, 1077–1078
+- Hiding information, 1220
+- Hopper, Grace Murray, 824–825
+- Hyperbolic cosine, cosh(), 918
+- Hyperbolic sine, sinh(), 918, 1182
+- Hyperbolic tangent, tanh(), 917
+
+## I
+
+- I/O errors
+    - bad() stream state, 355
+    - clear(), 355–358
+    - end of file, 355
+    - eof() stream state, 355
+    - error handling, 1171
+    - fail() stream state, 355
+    - good() stream state, 355
+    - ios_base, 357
+    - recovering from, 355–358
+    - stream states, 355
+    - unexpected errors, 355
+    - unset(), 355–358
+- I/O streams, 1168–1169
+    - >> input operator, 855
+    - << output operator, 855
+    - cerr, standard error output stream, 151–152, 1169, 1189
+    - cin standard input, 347
+    - class hierarchy, 855, 1170–1171
+    - cout standard output, 347
+    - error handling, 1171
+    - formatting, 1172–1173
+    - fstream, 388–390, 393, 1170
+    - get(), 855
+    - getline(), 855
+    - header files, 1134
+    - ifstream, 388–390, 1170
+    - input operations, 1172
+    - input streams, 347–349
+    - iostream library, 347–349, 1168–1169
+    - istream, 347–349, 1169–1170
+    - istringstream, 1170
+    - ofstream, 388–390, 1170
+    - ostream, 347–349, 1168–1169
+    - ostringstream, 388–390, 1170
+    - output operations, 1173
+    - output streams, 347–349
+    - standard manipulators, 382, 1173–1174
+    - standard streams, 1169
+    - states, 1171
+    - stream behavior, changing, 382
+    - stream buffers, streambufs, 1169
+    - stream modes, 1170
+    - string, 855
+    - sstream, 395, 1170
+    - throwing exceptions, 1171
+    - unformatted input, 1172
+- IBM, 823
+- Ichbiah, Jean, 832
+- IDE (interactive development environment), 52
+- Ideals
+    - abstraction level, 812–813
+    - bottom-up approach, 811
+    - class interfaces, 323
+    - code structure, 810–811
+    - coding standards, 976–977
+    - consistency, 814–815
+    - correct approaches, 811
+    - correctness, 810
+    - definition, 1219
+    - direct expression of ideas, 811–812
+    - efficiency, 810
+    - embedded systems, 932–933
+    - importance of, 8
+    - KISS, 815
+    - maintainability, 810
+    - minimalism, 814–815
+    - modularity, 813–814
+    - overview, 808–809
+    - performance, 810
+    - software, 34–37
+    - on-time delivery, 810
+    - top-down approach, 811
+- Identifiers, 1081. See also Names
+    - reserved, 75–76. See also Keywords
+- if-statements, 102–104
+    - #if, 1058–1059
+    - #endif, 1058–1059
+- ifstream type, 350–352
+- imag(), imaginary part, 920, 1183
+- Image example, 443, 479–482
+- Images. See Graphics
+- Imaginary part, 920
+- Immutable values, class interfaces, 330–332
+- Implementation, 1219
+    - class, 306–308
+    - inheritance, 513–514
+    - programs, 36
+- Implementation-defined feature, 1075
+- Implicit conversions, 642–643
+- in mode, 389, 1170
+- in box example, 443, 563–564
+- In-class member definition, 1112
+- #include, 46, 264–266, 1128–1129
+- Include guard, 1059
+- includes(), 1159
+- Including headers, 1129. See also include
+- Incrementing ++, 66, 721
+    - iterators, 721, 750, 1140–1141
+    - pointers, 651–652
+    - variables, 73–74, 97–98
+- Indenting nested code, 271
+- Indirect != (not equal), 67, 1088, 1101
+    - complex, 919, 1183
+    - containers, 1151
+    - helper function, 333
+    - iterators, 721, 1141
+    - string, 67, 851, 1176
+- Infinite loop, 1219
+- Infinite recursion, 198, 1220
+- Information hiding, 1220
+- Information processing, 32
+- Inheritance
+    - class diagram, 505
+    - definition, 504
+    - derived classes, 1116–1117
+    - embedded systems, 951–954
+    - history of, 834
+    - implementation, 513–514
+    - interface, 513–514
+    - multiple, 1117
+    - pointers vs. references, 612–613
+    - templates, 686–687
+- Initialization, 69–73, 1220
+    - () initialization notation, 83
+    - arrays, 596–598, 654–656
+    - constants, 262, 329–330, 1099
+    - constructors, 310–312
+    - Date example, 309–312
+    - default, 263, 327, 1085
+    - invariants, 313–314, 701–702
+    - menus, 571
+    - pointers, 596–598, 657
+    - pointer targets, 596–598
+    - Token example, 184
+- initializer_list, 630
+- inline, 1037
+- Inline
+    - functions, 1026
+    - member functions, 316
+- inner_product(), 759. See also Dot product
+    - description, 774–775
+    - generalizing, 775–776
+    - matrices, 904
+    - multiplying sequences, 1184
+    - standard library, 759, 770
+- replace_merge(), 1158
+- Input, 60–62. See also Input >>; I/O streams
+    - binary I/O, 390–393
+    - C++ and C, 1052–1053
+    - calculator example, 179, 182, 185, 201–202, 206–208
+    - case sensitivity, 64
+    - cin, standard input stream, 61
+    - dividing functions logically, 359–362
+    - files. See File I/O
+    - format errors, 64–65
+    - individual characters, 396–398
+    - integers, 383–384
+    - istream, 394
+    - line-oriented input, 395–396
+    - newline character `\n`, 61–62, 64
+    - potential problems, 358–363
+    - prompting for, 61, 179
+    - separating dialog from function, 362–363
+    - a series of values, 356–358
+    - a single value, 358–363
+    - source of exceptions, 150–153
+    - stringstream, 395
+    - tab character `\t`, 64
+    - terminating, 61–62
+    - type sensitivity, 64–65
+    - whitespace, 64
+- Input >>, 61
+    - case sensitivity, 64
+    - complex, 920, 1183
+    - formatted input, 1172
+    - multiple values per statement, 65
+    - strings, 851, 1177
+    - text input, 851, 855
+    - user-defined, 365
+    - whitespace, ignoring, 64
+- Input devices, 346–347
+- Input iterators, 752, 1142
+- Input loops, 365–367
+- Input/output, 347–349. See also Input; Output
+    - buffering, 348, 406
+    - C++ and C. See stdio
+    - computation overview, 91
+    - device drivers, 346
+    - errors. See I/O errors
+    - files. See File I/O
+    - formatting. See Manipulators; printf()
+    - irregularity, 380
+    - iostream, 347–354
+        - natural language differences, 406
+        - ostream, 347–354
+    - regularity, 380
+    - streams. See I/O streams
+    - strings, 855
+    - text in GUIs, 563–564
+    - whitespace, 397, 398–405
+- Input prompt >, 223
+- Inputs, testing, 1001
+- Input streams, 347–349. See also I/O streams
+- insert()
+    - list, 615–617, 742–745
+    - map container, 782
+    - string, 851, 1150, 1177
+    - vector, 745–747
+- inserter(), 1162
+- Inserters, 1162–1163
+- Inserting
+    - list elements, 742–745
+    - into strings, 851, 1150, 1177
+    - vector elements, 745–747
+- Installing
+    - FLTK (Fast Light Toolkit), 1205
+    - Visual Studio, 1198
+- Instantiation, templates, 681, 1123–1124
+- int, integer type, 66–67, 78, 1099
+    - bits in memory, 78, 955
+- Integers, 77–78, 890–891, 1220
+    - assigning floating-point numbers to, 893
+    - assigning to floating-point numbers, 892–893
+    - decimal, 381–383
+    - input, formatting, 383–384
+    - largest, finding, 917
+    - literals, 1077
+    - number bases, 381–383
+    - octal, 381–383
+    - output, formatting, 381–383
+    - reading, 383–384
+    - smallest, finding, 917
+- Integral conversions, 1091–1092
+- Integral promotion, 1091
+- Interactive development environment (IDE), 52
+- Interface classes. See Graphics example, interfaces
+- Interfaces, 1220
+    - classes. See Class interfaces
+    - inheritance, 513–514
+    - user. See User interfaces
+- internal manipulator, 1174
+- Intrusive containers, example, 1059–1065
+- Invariants, 313–314, 1220. See also Post-conditions; Pre-conditions
+    - assertions, 163
+    - Date example, 313–314
+    - debugging, 162–163
+    - default constructors, 641
+    - documenting, 815
+    - invention of, 828
+    - Polygon example, 460
+- Invisible. See Transparency
+- <iomanip>, 1134, 1173
+- <ios>, 1134, 1173
+- <iosfwd>, 1134
+- iostream
+    - buffers, 406
+    - C++ and C, 1050
+    - exceptions, 1138
+    - library, 347–349
+- <iostream>, 1134, 1173
+- Irregularity, 380
+- is_open(), 1170
+- isalnum() classify character, 397, 1175
+- isalpha() classify character, 247, 397, 1175
+- isctrl() classify character, 397, 1175
+- isdigit() classify character, 397, 1175
+- isgraph() classify character, 397, 1175
+- islower() classify character, 397, 1175
+- isprint() classify character, 397, 1175
+- ispunct() classify character, 397, 1175
+- isspace() classify character, 397, 1175
+- istream, 347–349, 1169–1170
+    - >>, text input, 851, 1172
+    - >>, user-defined, 365
+    - binary I/O, 390–393
+    - connecting to input device, 1170
+    - file I/O, ifstream, 349–354, 1170
+    - get(), get a single character, 397
+    - getline(), 395–396, 1172
+    - stringstream, 395
+    - unformatted input, 395–396, 1172
+    - using together with stdio, 1050
+- <istream>, 1134, 1168–1169, 1173
+- istream_iterator type, 790–793
+- istringstream, 394
+- isupper() classify character, 397, 1175
+- isxdigit() classify character, 397, 1175
+- Iteration. See also Iterators
+    - control variables, 110
+    - definition, 1220
+    - example, 737–741
+    - linked lists, 727–729, 737–741
+    - loop variables, 110–111
+    - for-statements, 111–113
+    - strings, 851
+    - through values. See vector
+    - while-statements, 109–111
+- iterator, 1147
+- <iterator>, 1133, 1162
+- Iterators, 721–722, 1139–1140, 1220. See also STL iterators
+    - bidiirectional iterator, 752
+    - category, 752, 1142–1143
+    - containers, 1143–1145, 1148
+    - empty list, 729
+    - example, 737–741
+    - forward iterator, 752
+    - header files, 1133–1134
+    - input iterator, 752
+    - operations, 721, 1141–1142
+    - output iterator, 752
+    - vs. pointers, 1140
+    - random-access iterator, 752
+    - sequence of elements, 1140–1141
+- iter_swap(), 1157
+
+## J
+
+- Japanese age distribution example, 538–539
+- JPEG images, 480–482
+
+## K
+
+- Kernighan, Brian, 838–839, 1022–1023
+- key_comp(), 1152
+- key_compare, 1147
+- key_type, 1147
+- Key, value pairs, containers for, 776
+- Keywords, 1037–1038, 1081–1082
+- KISS, 815
+- Knuth, Don, 808
+- K&R, 838, 1022
+
+## L
+
+- []! suffix, 1077
+- [! , “lowercase character,” regex, 873, 1179
+- [[ , “not lowercase character,” regex, 874, 1179
+- Label
+    - access control, 306, 511
+    - case, 106–108
+    - graph example, 529–532
+    - of statement, 1096

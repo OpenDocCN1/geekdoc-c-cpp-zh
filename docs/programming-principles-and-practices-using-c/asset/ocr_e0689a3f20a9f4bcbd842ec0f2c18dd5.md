@@ -1,0 +1,97 @@
++   - `char` type, 63, 66–67, 78
+    - bits, 955
+    - built-in, 1099
+    - properties, 741–742
+- `signed` `vs.` `unsigned`, 894, 964
+- `cin`, 61
+    - `C` equivalent. See `stdin`
+    - standard character input, 61, 347, 1169
+- `Circle` example, 469–472, 497
+    - `vs.` `Ellipse`, 474
+- Circular reference. See `Reference` (circular)
+- `class`, 183, 1036–1037
+- `Class`
+    - abstract, 495, 512–513, 1118–1119. See also `Abstract` classes
+    - base, 504–506
+    - coding standards, 981
+    - concrete, 495–496, 1218
+    - `const` member functions, 1110
+    - constructors, 1112–1114, 1119–1120
+    - copying, 1115, 1119
+    - creating objects. See `Concrete` classes
+    - default constructors, 327–330
+    - defining, 212, 305, 1108, 1218
+    - derived, 504
+    - destructors, 1114–1115, 1119
+    - encapsulation, 505
+    - `friend` declaration, 1111
+    - generated operations, 1119–1120
+    - grouping related, 512
+    - hierarchies, 512
+    - history of, 834
+    - implementation, 306–308
+    - inheritance, 504–505, 513–514
+    - interface, 513–514
+    - member access. See `Access` control
+    - naming. See `Namespaces`
+    - nesting, 270
+    - object layout, 506–507
+    - organizing. See `Namespaces`
+    - parameterized, 682–683. See also `Template` `private`, 306–308, 505, 511, 1108–1109
+    - `protected`, 495, 505, 511
+    - `public`, 306–308, 505, 511, 1108–1109
+    - run-time polymorphism, 504–505
+    - subclasses, 504. See also `Derived` classes
+    - superclasses, 504. See also `Base` classes
+    - templates, 681–683
+- `this` pointer, 1110
+
++   - types as parameters. See `Template`
+- `union`, 1121
+- unqualified name, 1110
+- uses for, 305
+- `Class` interfaces, 323, 1108
+    - argument types, 324–326
+    - `const` member functions, 330–332
+    - constants, 330–332. See also `const`
+    - copying, 326–327
+    - helper functions, 332–334
+    - immutable values, 330–332
+    - initializing objects, 327–330
+    - members, 332–334
+    - mutable values, 332–334
+    - `public` `vs.` `private`, 306–308
+    - symbolic constants, defining, 326
+    - uninitialized variables, 327–330
+- `Class` members, 305, 1108
+    - `.dot.`, 306, 1109
+    - `::` (scope resolution), 1109
+    - accessing, 306. See also `Access` control
+    - allocated at same address, 1121
+    - bitfields, 1120–1121
+    - in-class definition, 1112
+    - in-class interfaces, 332–334
+    - data, 305
+    - definitions, 1112
+    - function, 314–316
+    - out-of-class definition, 1112
+- `Token_stream` example, 212
+- `Token` example, 183–184
+- `Class` scope, 267, 1083
+- `Class` template
+    - parameterized class, 682–683
+    - parameterized type, 682–683
+    - specialization, 681
+    - type generators, 681
+- `class_e_limination()` example, 910–911
+- Cleaning up code
+    - comments, 237–238
+    - functions, 234–235
+    - layout, 235–236
+    - logical separations, 234–235
+    - revision history, 237–238
+    - scaffolding, 234–235
+    - symbolic constants, 232–234
+- `clear()`, 355–358, 1150
+- `<<limits>`, 1135
+- `<<locale>`, 1135

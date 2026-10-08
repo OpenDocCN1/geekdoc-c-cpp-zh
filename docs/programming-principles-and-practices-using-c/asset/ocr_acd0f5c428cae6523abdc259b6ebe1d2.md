@@ -1,0 +1,9 @@
+# ### 22.2.5 C
+
+In 1970, it was “well known” that serious systems programming – in particular the implementation of an operating system – had to be done in assembly code and could not be done portably. That was much as the situation had been for scientific programming before Fortran. Several individuals and groups set out to challenge that orthodoxy. In the long run, the C programming language (Chapter 27) was by far the most successful of those efforts.
+
+Dennis Ritchie designed and implemented the C programming language in Bell Telephone Laboratories' Computer Science Research Center in Murray Hill, New Jersey. The beauty of C is that it is a deliberately simple programming language sticking very close to the fundamental aspects of hardware. Most of the current complexities (most of which reappear in C++ for compatibility reasons) were added after his original design and in several cases over Dennis Ritchie's objections. Part of C's success was its early wide availability, but its real strength was its direct mapping of language features to hardware facilities (see §25.4–5). Dennis Ritchie succinctly described C as “a strongly typed, but weakly checked language”; that is, C has a static (compile-time) type system, and a program that uses an object in a way that differs from its definition is not legal. However, a C compiler can't check that. That made sense when the C compiler had to run in 48K bytes of memory. Soon after C came into use, people devised a program, called lint, that separately from the compiler verified conformance to the type system.
+
+![](bbox=[0.07, 0.52, 0.83, 0.8])
+
+Together with Ken Thompson, Dennis Ritchie is the co-inventor of Unix, easily the most influential operating system of all times. C was – and is – associated with the Unix operating system and through that with Linux and the open-source movement.
