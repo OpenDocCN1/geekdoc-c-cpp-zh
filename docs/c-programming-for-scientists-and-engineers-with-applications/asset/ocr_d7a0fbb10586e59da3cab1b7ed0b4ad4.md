@@ -1,0 +1,5 @@
+# 1.3 Algorithms and Program Development 31
+
+![](bbox=[0.238, 0.088, 0.615, 0.556])
+
+Selection Structure The selection structure gives the computer a choice of executing one of a set of statements. Usually there are two alternative sequences, but in some cases only one sequence, and in some cases many. Exactly one alternative must be chosen, and executed only one time. C has special constructs for the selection structure. The diagrams for selection structure with one sequence and two alternative sequences are shown in Figure 1.12 and Figure 1.13 respectively. Notice that within the selection structure a sequence structure is embedded in one or more branches with the entries at the top and at the bottom. The following examples of these structures show the general forms in pseudocode and a C equivalent.

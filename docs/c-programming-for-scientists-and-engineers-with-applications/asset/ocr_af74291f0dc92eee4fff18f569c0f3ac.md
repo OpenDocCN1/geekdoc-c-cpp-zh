@@ -1,0 +1,1 @@
+7. Write a program to print all of the numbers from a file that should contain only positive measurements. Print appropriate error messages if the file header is not 070503 followed by an integer that tells how many measurements are in the file, or if the measurements are not all positive.

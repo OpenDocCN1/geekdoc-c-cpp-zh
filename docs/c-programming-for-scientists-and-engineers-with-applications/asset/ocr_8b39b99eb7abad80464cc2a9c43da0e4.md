@@ -1,0 +1,9 @@
+overall design, such a process can be made into a module and such a module can be used to replace the repeated process. It is called a spatial module. The C programming language provides the facility to represent these functional and spatial modules so that they are loosely coupled.
+
+During the design process the user requirements are spelt out. A prototype of the design is developed and tested to see whether it meets the requirements. During the design process the designer must document the design and provide the capability for future updates. The design steps may be repeated several times before writing the application program, to eliminate any design flaws. If there are any design flaws in the solution algorithm, it may be too late to correct them when the final product is found to be functionally incorrect. Therefore, we cannot overstress the importance of the solution algorithm design process. This is the most crucial phase in the development of any software.
+
+# 1.2.2 Structure Charts
+
+A structure chart is a design tool that represents the functional and spatial modules of the algorithm and their relationship to one another. In a structure chart, the statement of the problem is resolved in the form of a rectangular box at the top level. For example, in Figure 1.3 “Calculate the square root of a number” is the statement of the problem. The functions in the next level are represented in rectangular boxes horizontally from left to right in the order in which they are activated. If there is any function in the second level that needs to be divided into subfunctions, the functions at each level are represented from left to right and the further subdivision of the functions at each level is represented vertically.
+
+![](bbox=[0.145, 0.733, 0.725, 0.933])
