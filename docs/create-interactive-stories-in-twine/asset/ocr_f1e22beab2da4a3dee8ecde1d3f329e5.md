@@ -1,0 +1,9 @@
+# PARSELY–NOT JUST FOR EATING
+
+Parsely games were created by Jared A. Sorensen and draw from the old digital text adventure games from the 1980s. I'm sure that sounds like ancient history to you, but it wasn't long ago! In these digital games, players would be introduced to the start of a story and presented with a text prompt. They could write in anything they wanted. It was up to them to explore and figure out where they needed to go and what they needed to do to win the game.
+
+This is a different experience than the CYOP games we were designing in the last set of activities. In those, the players followed your stories and simply made choices when prompted. CYOP games lean more towards a story that you interact with, while Parsely game leans more towards a story you explore.
+
+There are other differences, as well. Parsely often require at least two people—but they can also be played by a large group of people, which is kind of cool! Parsely games have one person acting as the computer. They interpret and run the game for the rest of the group, who are the players. The players take turns giving commands to the “computer,” trying to move the game forward and win. The “computer” looks at the game layout and tells the players what happens. Any number of people can be players and make it through a Parsely game. They all have to work together, taking turns giving commands, playing as a single group, trying to help each other as they try to get to the end of the story and win!
+
+Much of the underlying structure and approach you used with building your CYOP game can be used to make Parsely games, too. You still need to think about characters, location, and events that happen in your game. But now, there’s much less writing for

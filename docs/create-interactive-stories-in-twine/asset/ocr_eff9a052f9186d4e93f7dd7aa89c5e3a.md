@@ -1,0 +1,11 @@
+down on a sheet of paper. As you use pages, you will cross off numbers.
+
+If you are writing out your story by hand, start at the beginning of your story and number your pages beginning with 1. Stop numbering when you get to the page when the players are given their first decision. As you number the pages, be sure to cross them off your list of numbers!
+
+Now, take a look at the part of your story that happens as a result of your first decision point. You need to pick a place further on in the book to place it—maybe in the 10s or 20s. Begin numbering those pages from the page number you pick. So if you picked page 23, and your section is three pages long, you would number them 23, 24, and 25, and cross those numbers off your page list. Now that you have a page that this part will start on, go back to the decision point and write in the page number the reader will need to turn to. Do the same for the other decision point, picking a different place to put that section, and writing the page number that the decision presented to the readers. It is all starting to come together!
+
+Continue this process moving forward through your story. Try to bounce back and forth in your book, but also try to fill in the list of available pages so there are no gaps when you're all done. Don't worry too much if, when you finish, there are a couple single-page gaps. You can always fill them in with some cool illustrations!
+
+If you've been working on a word processor so far, you should take advantage of the page numbering functionality of the program. Most programs also have a thumbnail view of the pages, so you can highlight the pages that are part of a section, then drag them to a new section, going back and adding the new page numbers to the decisions presented to the readers.
+
+Once you have made your way through your story, it will be time for you to go back and read your way through—to make sure everything works and all the pages match between the decision and where they are in your book. That's important!
