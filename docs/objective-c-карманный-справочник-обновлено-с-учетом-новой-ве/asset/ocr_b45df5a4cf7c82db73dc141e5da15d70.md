@@ -1,0 +1,7 @@
+The History of Objective-C 9
+
+OpenStep specification, as well as the core specification. This means that the Foundation framework is usable pretty much anywhere, although some of the newest classes and methods are missing with the GNUstep implementation. You can think of the Foundation framework as the Objective-C standard library. It provides a lot of features that are required for nontrivial programs. Several of the Objective-C 2 features are designed specifically to work with Foundation. You can use them without Foundation, but only if you implement something equivalent.
+
+# # The History of Objective-C
+
+The term "object oriented" was coined by Alan Kay in the 1960s, and Smalltalk the language that he and others created to demonstrate this style of programming. Smalltalk was developed during the 1970s, with the most widespread version being released in 1980. Smalltalk, however, was very slow. To run it properly, you needed a powerful computer such as the Xerox Alto, with 512KB of RAM and ideally at least a 2MHz processor. Brad Cox liked the idea of Smalltalk, but wanted a language he could use on computers that people could afford. His idea was to marry Smalltalk, a high-level language encouraging encapsulation, loose coupling, and code reuse, with C. C was right at the other end of the

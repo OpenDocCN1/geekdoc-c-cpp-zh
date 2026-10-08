@@ -1,0 +1,7 @@
+# Synthesizing Methods with Declared Properties 47
+
+The next option, **retain**, only makes sense in reference counting modes. When setting a **retain** property, the new value is retained and the old value released. In garbage collected mode, both **assign** and **retain** are equivalent.
+A copy property is similar to a retain property. When setting it, the new value is sent a -copy message instead of -retain. You should commonly use this for properties that have immutable types. For example, if you declare an NSString* property, then using copy ensures that you will have an immutable string, even if someone sets it with an NSMutableString* instance. Immutable objects return themselves from -copy, so this will only create a copy if one is actually required to ensure that the property is not accidentally mutated.
+If you use automatic reference counting or garbage collection, which we'll look at in detail in Chapter 3, Memory Management, then you can use weak. A weak property does not prevent its value from being deleted and will set it to nil when all other references have gone.
+Modern compilers also support unsafe_untained as a property type. This is equivalent to assign, but is more explicit about the lack of safety.
+The property types that only make sense for objects may also be used for C pointer types that are declared with __attribute__((Nonnull)). This attribute

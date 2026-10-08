@@ -1,0 +1,2 @@
++   [Objective-C Pocket手册：[针对 Mac OS X 10.7 和 iOS 5 的新版本并支持 ARC 机制已更新]](README.md)
++   [Objective-C Pocket手册：[针对 Mac OS X 10.7 和 iOS 5 的新版本并支持 ARC 机制已更新]](objective-c-карманный-справочник-обновлено-с-учетом-новой-ве.md)

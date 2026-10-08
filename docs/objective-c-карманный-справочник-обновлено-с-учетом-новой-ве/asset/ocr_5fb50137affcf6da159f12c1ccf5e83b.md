@@ -1,0 +1,5 @@
+Note: One of the major differences between the Apple and GNU implementations of Objective-C is that the GNU implementation uses typed selectors. Selectors are the names used to look up methods in a message send. In GNU Objective-C, they also include the encoding of the argument types of the message. This allows functions to check that they were called with the right argument types, which is very useful for distributed objects and a few other things.
+
+The GNUstep runtime now uses type-dependent dispatch by default, meaning that the method lookup depends on the type encoding of the selector. Sending a message with a type signature that does not match the receiver is undefined behavior, so both the GNUstep runtime's approach of logging a warning or throwing an exception, and the Apple runtime's approach of corrupting the stack, are equally valid.
+
+arguments. These are used in much the same way as C functions that take function pointers as arguments, for delayed execution, callbacks, sorting collections, and so on.

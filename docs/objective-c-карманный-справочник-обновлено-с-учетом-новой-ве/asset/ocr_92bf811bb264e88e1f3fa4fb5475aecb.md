@@ -1,0 +1,7 @@
+indicating whether assigning to them is supported. If you define a readwrite property and are not using garbage collection, you also need to define the setter’s semantics.
+
+**Note:** Sometimes, you will want to have a read-write property, but only make it readable in the public interface. Class extensions provide a mechanism for doing this. If you declare the property read-only in the main interface, but then redeclare read-write in the class extension, at @synthesize directive in the main @implementation will create the setter and getter. However, attempts to use the setter anywhere that the class extension is not visible will create a compiler error.
+
+There are several options for setter behavior. The simplest—and the only option for non-object types—is assign. This sets the value by trivial assignment. For non-object types, this just copies the value. For objects, things are a bit more complicated.
+
+The exact semantics of the various property accessors change depending on the memory management mode. With reference counting (manual or automatic), assign performs simple assignment when you set the value. When you access the value, it will return the pointer for nonatomic properties, or retain then autorelease it for atomic ones.

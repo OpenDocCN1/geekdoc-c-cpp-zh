@@ -1,0 +1,1 @@
+to the rest of the program. This means that you don’t need to put any lock around the counter variable, unless you plan on accessing it from outside of the queue.

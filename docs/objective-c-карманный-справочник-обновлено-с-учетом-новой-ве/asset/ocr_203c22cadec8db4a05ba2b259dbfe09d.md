@@ -1,0 +1,3 @@
+There are three possible options for this. The default is for all of the objects to be immutable. The option used in the example at the start of this chapter goes to the other extreme, making everything mutable. Appending a suffix to one of the strings in the array demonstrates this.
+The third option is somewhere in the middle. It makes container objects mutable, but other objects (strings, numbers, dates, and so on) immutable. This is useful when you want to modify the structure of the property list but not any of the leaf leaf elements.
+When you read a property list in this way, the property list serialization class will tell you what the format of the property list was.

@@ -1,0 +1,7 @@
+# Adding New Instance Variables 357
+
+with the object, after its creation.
+Adding new instance variables is not possible after an object has been created, because its memory layout is fixed by this point, but the best thing. The example at the start of this section shows a category on NSObject that demonstrates this capability. It allows you to associate a string value with any object, via a pair of methods.
+There are two things to note about the functions for setting and getting associative references. The first is the key. This has to be a unique pointer value, not used by any other code to identify a different associative reference. The simplest way of doing this is to define some static variable in the file and use its address.
+The other thing to note is the association policy. These policies mirror those available for declared properties. In this case, we're telling the runtime to retain the object now and to release it when the object is destroyed.
+There are some cases where associative references are very useful, especially when debugging. If you use the retain policy, the associated object will be released when the object that it is associated with is deallocated, so you can use a block to log a message about the deallocation, for example, without having to modify the object you are deallocating. You can also use it to easily differentiate two objects, for example, by adding a note indicating

@@ -1,0 +1,1 @@
+work because you need to handle the structure yourself. This structure stores the number of seconds and microseconds in separate fields, so the subtraction is more effort than just comparing two scalar values.

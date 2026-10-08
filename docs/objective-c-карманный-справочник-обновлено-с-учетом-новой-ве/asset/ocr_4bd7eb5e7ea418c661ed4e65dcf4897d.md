@@ -1,0 +1,4 @@
+millennium: the first day of 2001.
+Part of the point of NSDate is to free you from having to know which reference date you are using. You can compare two dates using -compare: or any of the related methods irrespective of what epoch they are using internally.
+If you create a new date with +alloc/-init or with +date, it will be set to the current time. Dates are mutable objects, but it's generally better to treat them as if they are not. There is only one method for modifying dates:
+-addTimeInterval::. This is deprecated in OS X 10.6 and can cause problems in older code, because a lot of people tend to forget that it's possible to modify dates and just retain them, rather than copying them.
