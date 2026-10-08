@@ -1,0 +1,50 @@
+
+# INDEX
+
+# 312
+
+with setjmp(), 241–242
+vprintf() function, 182
+vswprintf() function, 196
+vswcanf() function, 196
+vprintf() function, 196
+wscanaf() function, 196
+
+wchar_t type, 193–195
+wscat() function, 197
+wcschr() function, 197
+wcscmp() function, 197
+wcwscoll() function, 197
+wcsscpy() function, 197
+wcscsprt() function, 197
+wcsftime() function, 197
+wcslen() function, 195, 197
+wscscat() function, 197
+wscnmp() function, 197
+wscnpy() function, 197
+wcsbrk() function, 197
+wcschr() function, 197
+wcscspn() function, 197
+wcsstr() function, 197
+wctod() function, 196
+wcstof() function, 196
+wctok() function, 197
+wstol() function, 196
+wctoll() function, 196
+wcstombs() function, 194, 195
+wcstoul() function, 196
+wcstoll() function, 196
+wcsxfrm() function, 197
+wctom() function, 194
+while statement, 19
+
+Wide characters, 193–200
+
+wint_t type, 195
+wmemchr() function, 197
+wmemcmp() function, 197
+wmemcpy() function, 197
+wmemmove() function, 197
+wmemset() function, 197
+wprintf() function, 196
+wscanaf() function, 196

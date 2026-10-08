@@ -1,0 +1,5 @@
+The summary is to serialize the data, which is a general term that means to take all the data and write it out in a format that you control, that is well-known, and programmable to work the same way on all platforms.
+As you might imagine, this is a solved problem. There are a bunch of serialization libraries you can take advantage of, such as Google's protocol buffers’’, out there and ready to use. They will take care of all the gritty details for you, and even will allow data from your C programs to interoperate with other languages that support the same serialization methods.
+Do yourself and everyone a favor! Serialize your binary data when you write it to a stream! This will keep things nice and portable, even if you transfer data files from one architecture to another.
+
+·https://en.wikipedia.org/wiki/Protocol_buffers
