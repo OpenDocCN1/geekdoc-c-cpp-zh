@@ -1,0 +1,3 @@
+# In this part...
+
+To help make your experience more fulfilling, Part V gives you important tips that speed up your Cocoa development as well as Web locations for Cocoa code, demos, and assistance.
