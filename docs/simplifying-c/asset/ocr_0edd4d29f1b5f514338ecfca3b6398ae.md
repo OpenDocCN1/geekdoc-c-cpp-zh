@@ -1,0 +1,17 @@
+so designed that even nontechnical users can develop their own applications. The main focus when using fourth generation language is rapid development of applications. Report generators, query languages, and application generators are examples of the fourth-generation languages.
+
+# Fifth Generation
+
+A fifth-generation programming language is based on the concept of solving problems using constraints given to the program, rather than using an algorithm written by a programmer. It uses the domain of artificial intelligence (AI) to obtained constraint-based solutions. The fifth-generation language can be considered as an attempt to make a computer behave similar to human being behavior. Future development in the area of AI may result in programming system that accepts spoken statements from a user and then generates a computer program intended to produce the required output.
+
+Today, none of the five language generations mentioned earlier has become obsolete. We are using all the five generations of languages at some point of time. The user may feel that the first- and second-generation languages are not used by him/her directly, but it is extensively used indirectly by the user without his/her knowledge. The explanation for the same is given in the end of this chapter.
+
+# ### 2.2 | History of C Language
+
+The origin of C language dates back to 1972. Dennis M. Ritchie is the man who owns the credit of creating the C language. It was derived from the Basic Common Purpose Programming Language, commonly known as BCPL. The aim of developing C language was to build a robust system software. However, it became a pet of the programmers in the coming years, and has been used for developing all kind of software. Hence, it has come to be known as a general-purpose programming language.
+
+Although created in 1972, it was standardized in 1989 by the American National Standard Institute (ANSI). Since then, it came to be known as ANSI C. Vendors such as Apple, Borland, Microsoft, and IBM have built their own versions of C and C compilers based on the ANSI standards. Some of them have even provided an integrated development environment, more commonly known as IDE, for easy and fast development of C programs.
+
+C is a structured language for programming. It allows the program to be split into subprograms known as functions. Once generated, these functions are reusable. Set of such functions then constitutes a C program. The approach of splitting a program into subprogram is known as modular programming. The modular approach of programming helps us to solve problem arising in the design of the program easily, as we have to concentrate on only one function rather than an entire program. Usually, programs written in C language can be ported to different machines having different operating systems and compilers with almost negligible modification. Thus, it is considered to be a portable language.
+
+It is surprising to know that we are surrounded by C programs. Almost all operating systems, such as Windows, Unix, and Linux, have a large blocks of C program codes in them. If you remove the code from these operating systems, possibly the entire operating system may crash. Databases such as Oracle, MySQL, and networking protocols also use C

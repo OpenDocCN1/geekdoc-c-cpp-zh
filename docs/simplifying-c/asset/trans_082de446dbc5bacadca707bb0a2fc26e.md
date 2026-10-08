@@ -1,0 +1,155 @@
+
+存储区域。另一方面，局部变量则存储在栈中。图 2 说明了 C 程序的内存分配：
+
+![](img/5d422ba7108ffdf64376be51eaf0c459_322_0.png)
+
+如第 8 章所述，堆（heap）用于动态内存分配。当程序执行且内存被分配给变量时，堆的大小会不断变化。当内存分配给变量时，堆的大小会缩小；当程序员释放内存时，堆的大小会增加。有时整个堆区域可能被分配完毕，无法再进行内存分配。在这种情况下，内存分配函数将返回一个 NULL 指针。程序 1 说明了如何创建一个整数的动态列表，并从中找到最小值：
+
+### ▶ 程序 1
+
+```c
+/* Program to illustrate the use of malloc() function */
+#include<stdio.h>
+/* Function prototype*/
+int min(int *,int*);
+main()
+{
+    /* Declare variable */
+    int *ptr_list,*ptr_temp, i_num, i_ctr, i_min;
+    
+    /* Accept number of integers in list */
+    printf("How many numbers would you to store in a list: ");
+    scanf("%d", &i_num);
+    
+    /* Allocation of memory as per number of elements specified by user*/
+    ptr_list=(int *)malloc(i_num*sizeof(int));
+    
+    /* Check whether memory allocation is successful*/
+    if (ptr_list==NULL)
+    {
+        printf("Memory is insufficient for allocation\n");
+        exit(1);
+    }
+    /* Assignment of pointer to a list to a temporary variable*/
+    ptr_temp=ptr_list;
+    /* Accept values of integers in the list from user */
+    for (i_ctr=1; i_ctr <= i_num; i_ctr++)
+    {
+        printf("Enter the integer number %d: ",i_ctr);
+        scanf("%d",ptr_temp);
+        ptr_temp++;
+    }
+    /* Reassignment of pointer variable to beginning of list*/
+    ptr_temp=ptr_list;
+    /* Function called for finding minimum element from a list*/
+    i_min=min(ptr_temp,i_num);
+    printf("\n The minimum element of the list is \n", i_min);
+    /* Free allocated memory block*/
+    free(ptr_list);
+    return;
+}
+/* Function definition for finding minimum element from an array*/
+int min(int *ptr_temp, int i_num)
+{
+    int i_min,i_ctr;
+    /* Consideration of first element of a list as minimum*/
+    i_min=*ptr_temp;
+    /* Increment pointer variable by one location*/
+    ptr_temp++;
+    /* For-loop to scan all elements of list to find minimum element*/
+    for (i_ctr=2; i_ctr<=i_num; i_ctr++)
+    {
+        if (*ptr_temp<i_min)
+            i_min=*ptr_temp;
+        ptr_temp++;
+    }
+    /* Returning minimum of entire list*/
+    return(i_min);
+}
+```
+
+**输出：**
+
+How many numbers would you to store in a list: 5
+Enter the integer number 1: 23
+Enter the integer number 2: 5
+Enter the integer number 3: 12
+Enter the integer number 4: 2
+Enter the integer number 5: 78
+The minimum element of the list is 2
+
+在程序 1 中，声明了一个指针变量 `ptr_list`。然后询问用户希望在该列表中输入多少个元素。使用 `malloc` 函数为用户指定的列表元素数量保留内存块。`malloc` 函数返回的地址经过类型转换后存储在 `ptr_list` 指针变量中。指针变量 `ptr_temp` 用于存储列表的初始地址。需要存储在列表中的值由用户逐个输入并存储在列表中。每次在列表中添加一个值时，指针变量 `ptr_temp` 会向前移动一个位置以存储下一个值。扫描完所有值后，`ptr_temp` 再次指回列表的开头。调用函数 `min` 用于扫描整个列表并返回列表中的最小值。变量 `i_min` 用于存储最小值。下一个小节将讨论 `calloc` 函数。
+
+## 函数 calloc
+
+`calloc` 函数用于分配存储相同数据类型元素的内存空间。它分配连续的内存块。一旦内存分配完成，它会将所有字节设置为零。`malloc` 函数保留指定大小的单个内存块，而 `calloc` 函数保留 $n$ 个内存块，每个块的大小均指定为 `sizeof` 指定的大小。使用 `calloc` 函数的语法如下：
+
+```
+ptr=(cast-type*) calloc(n, element-size);
+```
+
+上述语句为 n 个内存块分配连续的内存空间，每个块的大小均指定。所有字节初始化为零，并返回指向分配区域第一个字节的指针。如果空间不足，则返回 NULL 指针。例如，要为 25 个初始为零的 float 元素分配内存空间，可以使用以下语句：
+
+```
+float *fptr;
+fptr = (float *) calloc(25, sizeof(float));
+```
+
+图 3 展示了编译器分配的字节在内存中的表示：
+
+25 个内存块，每个块能够存储一个 float 值
+
+![](img/5d422ba7108ffdf64376be51eaf0c459_324_0.png)
+
+▲ 图 3：为 25 个 Float 值分配内存空间
+
+与 `malloc` 和 `calloc` 函数类似，我们还有另一个用于内存分配的函数，称为 `realloc`。下一节将讨论 `realloc` 函数。
+
+## 函数 realloc
+
+使用 `calloc` 或 `malloc` 函数分配的内存可能不足或超出需求。在这两种情况下，建议更改已分配给变量的内存大小。这种更改已分配内存空间的过程称为内存重新分配。使用 `realloc` 函数时，会更改之前分配的内存块的大小。新的大小可以大于或小于之前块的大小。
+
+如果请求是使现有块的大小变大，则旧内容保持不变，并在块的末尾添加内存。如果变小，则从末尾截断块，剩余内容不变。如果无法调整原始块的大小，则 `realloc` 函数将尝试分配一个新的内存块。在此情况下，`realloc` 函数会将旧块的内容复制到新位置。随后将返回一个新的地址位置并分配给地址指针。如果 `realloc` 函数未能尝试分配新的内存块，则返回 NULL；在这种情况下，我们可能会丢失现有数据。使用 `realloc` 函数的语法如下：
+
+```
+ptr = realloc( ptr, newsize );
+```
+
+上述语句根据 *newsize* 中指定的值分配连续的内存空间。例如，如果最初使用以下语句通过 `malloc` 函数分配了 50 个字节：
+
+```
+ptr = (char * ) malloc(50 );
+```
+
+要额外增加 20 个字节的内存分配，可以使用以下语句：
+
+```
+ptr = realloc(ptr,70 );
+```
+
+执行上述语句后，原始内容将保留，内存块大小将从 50 字节增加到 70 字节。图 4 展示了使用 `realloc` 函数后编译器分配的字节在内存中的表示：
+
+![](img/5d422ba7108ffdf64376be51eaf0c459_325_0.png)
+
+▲ **图 4：内存重新分配的不同情况**
+
+下一节将讨论 `free` 函数。
+
+## 函数 free
+
+编译器使用一种称为垃圾收集的自动内存管理机制，以释放编译时分配的不再需要或未被使用的内存空间。程序中标识符的可用性由该标识符的存储类别决定，如第 8 章所述。在垃圾收集过程中，也使用此存储类别来确定是否释放某个内存块。当我们在运行时动态分配内存时，释放不再需要或已使用的内存空间的责任在于程序员。当存储空间有限时，管理内存空间的需求更大，在这种情况下，应尽快释放不再需要或未被使用的内存块。使用 `free` 函数的语法如下：
+
+```
+free(ptr);
+```
+
+使用上述语法时，将释放堆中与指针 *ptr* 关联的内存块。编译器释放内存块后，指针 ptr 被赋予 NULL 值。
+
+## 14.2 链表的概念
+
+我们已经知道，数组为所有元素作为一个块分配连续的内存字节。即使使用动态内存分配函数，整个块在内存中也必须是连续的。我们能编写一个程序，将数组的每个元素存储在内存的不同位置吗？答案是肯定的。那么随之而来的问题是如何跟踪每个内存单元的各个地址？利用我们已经讨论过的指针和结构的知识，可以在 C 程序中创建一个链表。链表为每个元素单独分配空间，这些空间位于称为*链表元素*或*节点*的独立内存块中。如第 11 章前面所述，也可以在 C 程序中创建结构体数组。因此，在这种情况下，每个节点将是一个结构体。指针将用于连接列表中的每个节点。链表中的所有节点彼此之间形成链接，类似于链条。每个节点将包含另一个节点的地址。图 5 说明了链表的视图：
+
+![](img/5d422ba7108ffdf64376be51eaf0c459_326_0.png)
+
+要创建一个链表，需要声明一个结构体。链表中的每个节点实际上都是一个结构体。该结构体将包含与第 11 章前面声明的结构体相似的数据项。然而，它将包含一个额外的项。这个额外项是一个类型为结构体节点的指针变量。因此，它将是一个嵌套结构体。当向列表添加新节点时，该指针变量将持有新添加的结构体的地址。这样的结构体可以表示如下：
+
