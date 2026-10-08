@@ -1,0 +1,265 @@
+
+
+# 业务场景：数据清理
+
+互联网销售组误用了错误的数据文件用于 Orion Star Catalog 网站。
+
+| Product_ID | Product |
+|---|---|
+| 21 02 002 00003 | Sunfit Trunks, Blue |
+| 21 02 002 00003 | Luci Knit Mittens, Red |
+| 21 02 002 00004 | Luci Knit Mittens, Blue |
+| 21 02 002 00004 | Sunfit Trunks, Aqua |
+| 21 02 002 00005 | Sunfit Trunks, Yellow |
+
+![](img/d3bde6e6ab06b1fc622215d982111742_203_0.png)
+
+# 数据清理：步骤 1
+
+创建正确数据集的第一步是执行以下操作：
+
+- 1. 找到 Product 值中包含 Mittens（手套）的观测值。
+- 2. 修改这些观测值 Product_ID 值的中间字符。
+
+| Product_ID | Product |
+|---|---|
+| 21 02 002 00003 | Luci Knit Mittens, Red |
+
+![](img/d3bde6e6ab06b1fc622215d982111742_203_1.png)
+
+| Product_ID | Product |
+|---|---|
+| 21 02 005 00003 | Luci Knit Mittens, Red |
+
+# 数据清理：步骤 1
+
+使用 SUBSTR 和 FIND 函数更改手套的错误的产品 ID。
+
+```
+Position=FIND(string,substring<modifiers,startpos);
+```
+
+```sas
+data correct;
+  set orion.clean_up;
+  if find(Product,'Mittens','I')>0 then do;
+    substr(Product_ID,9,1)='5';
+  end;
+run;
+
+proc print data=correct noobs;
+run;
+```
+
+# FIND 函数
+
+FIND 函数在目标字符串中搜索指定的子字符串。
+
+```
+Position=FIND(string,substring<modifiers,startpos);
+```
+
+- 如果在字符串中找到了子字符串，返回其在字符串中首次出现的起始位置。
+- 如果未找到子字符串，则返回 0。
+- I 表示不区分大小写的搜索。
+- 忽略尾部空格
+
+关于修饰符和 startpos 值的更多信息：
+
+- 修饰符可以是 I 或 T。这两个值可以以任何顺序和任何种大小写形式进行组合。如果省略此参数，则区分大小写且会考虑尾部空格。
+- startpos 值不仅指示搜索开始的位置，还指示了搜索的方向。正值表示正向（向右）搜索。负值表示反向（向左）搜索。如果省略此参数，搜索将从位置 1 开始并向前移动。
+- 这两个可选参数可以以任何顺序排列（即 startpos 可以位于修饰符之前）。
+
+# FIND 函数
+
+```sas
+data find;
+Text='AUSTRALIA, DENMARK, US';
+Pos1=find(Text, 'US');
+Pos2=find(Text, 'US');
+Pos3=find(Text, 'us');
+Pos4=find(Text, 'us', 'I');
+Pos5=find(Text, 'us', 'I',10);
+run;
+```
+
+| PDV |
+| Pos1 | SAS 给 Pos1 赋值了什么值？ |
+| N 8 | |
+
+# FIND 函数
+
+```sas
+data find;
+Text='AUSTRALIA, DENMARK, US';
+Pos1=find(Text, 'US');
+Pos2=find(Text, 'US');
+Pos3=find(Text, 'us');
+Pos4=find(Text, 'us', 'I');
+Pos5=find(Text, 'us', 'I',10);
+run;
+```
+
+| PDV |
+| Pos1 |
+| N 8 |
+| 2 |
+
+# FIND 函数
+
+```sas
+data find;
+Text='AUSTRALIA, DENMARK, US';
+Pos1=find(Text, 'US');
+Pos2=find(Text, 'US');
+Pos3=find(Text, 'us');
+Pos4=find(Text, 'us', 'I');
+Pos5=find(Text, 'us', 'I', 10);
+```
+
+| Pos1 | Pos2 |
+| N 8 | N 8 |
+| 2 | 20 |
+
+# 5.08 答答调查
+
+PDV 中 Pos3 和 Pos4 的值是什么？
+
+```sas
+data find;
+Text='AUSTRALIA, DENMARK, US';
+Pos1=find(Text, 'US');
+Pos2=find(Text, 'US');
+Pos3=find(Text, 'us');
+Pos4=find(Text, 'us', 'I');
+Pos5=find(Text, 'us', 'I', 10);
+```
+
+| Pos1 | Pos2 | Pos3 | Pos4 |
+| N 8 | N 8 | N 8 | N 8 |
+| 2 | 20 | | |
+
+# FIND 函数
+
+```sas
+data find;
+Text='AUSTRALIA, DENMARK, 'US';
+Pos1=find(Text,'US');
+Pos2=find(Text,'US');
+Pos3=find(Text,'us');
+Pos4=find(Text,'us','I');
+Pos5=find(Text,'us','I',10);
+run;
+
+| Pos1 | Pos2 | Pos3 | Pos4 | Pos5 |
+| N 8 | N 8 | N 8 | N 8 | N 8 |
+| 2 | 20 | 0 | 2 | 21 |
+
+# 数据清理：步骤 1
+
+使用 SUBSTR 和 FIND 函数更改手套的错误的产品 ID。
+
+```sas
+SUBSTR(string,start,<length>)=value;
+data correct;
+set orion.clean_up;
+if find(Product,'Mittens','I')>0 then do;
+substr(Product_ID,9,1)='5';
+end;
+proc print data=correct noobs;
+```
+
+# SUBSTR 函数（左侧）
+
+这种形式的 SUBSTR 函数（赋值语句的左侧）替换字符变量中的字符。
+示例：从位置 11 开始替换两个字符。
+
+```sas
+Location='Columbus, GA 43227';
+substr(Location,11,2)='OH';
+```
+
+PDV
+
+| Location |
+| $ 18 |
+| Columbus, OH 43227 |
+
+# 数据清理：步骤 1
+
+```sas
+data correct;
+set orion.clean_up;
+if find(Product,'Mittens','I')>0 then do;
+substr(Product_ID,9,1)='5';
+run;
+```
+
+| Product_ID | Product | Order_ID |
+|---|---|---|
+| 21 02 002 00003 | Sunfit Trunks, Blue | 1231986335 |
+| 21 02 005 00003 | Luci Knit Mittens, Red | 1232003830 |
+| 21 02 002 00004 | Luci Knit mittens, blue | 123200769 |
+| 21 02 002 00004 | Sunfit Trunks, Aqua | 1232007 |
+| 21 02 002 00005 | Sunfit Trunks, Yellow | 12320 |
+
+# 数据清理：步骤 2
+
+下一步是更改手套的产品 ID。
+
+| Product_ID | Product | Order_ID |
+|---|---|---|
+| 21 02 002 00003 | Sunfit Trunks, Blue | 1231986335 |
+| 21 02 005 00003 | Luci Knit Mittens, Red | 1232003830 |
+| 21 02 002 00004 | Luci Knit mittens, blue | 1232007 |
+
+# 数据清理：步骤 2
+
+使用 FIND 函数更改所有的手套。
+
+| Product_ID | Product | Order_ID |
+|---|---|---|
+| 21 02 002 00003 | Sunfit Trunks, Blue | 1231986335 |
+| 21 02 005 00003 | Luci Knit Mittens, Red | 1232003830 |
+| 21 02 002 00004 | Luci Knit mittens, blue | 1232007 |
+
+# 数据清理：步骤 2
+
+使用 FIND 函数更改所有的手套。
+
+```sas
+data correct;
+  set orion.clean_up;
+  if find(Product,'Mittens','I')>0 then do;
+    substr(Product_ID,9,1)='5';
+  end;
+run;
+```
+
+| Product_ID | Product | Order_ID |
+|---|---|---|
+| 21 02 002 00003 | Sunfit Trunks, Blue | 1231986335 |
+| 21 02 005 00003 | Luci Knit Mittens, Red | 1232003830 |
+| 21 02 002 00004 | Luci Knit mittens, blue | 1232007 |
+
+# TRAND 函数：详情
+
+TRAND 函数从源字符串移除 chars 参数中列出的字符。
+
+```sas
+ID='20 01-005 024';
+New ID1=compress(ID);
+New ID2=compress(ID, '-');
+New ID3=compress(ID, '- ');
+```
+
+| PDV | ID | New_ID1 |
+|---|---|---|
+| | $ 13 | $ 13 |
+| 20 01-005 024 | | 200100024 |
+
+| New_ID2 | New_ID3 |
+|---|---|
+| $ 13 | $ 13 |
+| 20 01-005 024 | 2001005024 |
+

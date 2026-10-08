@@ -1,0 +1,389 @@
+
+
+## 5.5 转换变量类型
+
+### 将变量转换为另一种数据类型
+
+**步骤 1** 使用 `RENAME=` 数据集选项进行重命名。
+
+```sas
+data hrdata;
+  set orion.convert(rename=(GrossPay=
+CharGross));
+run;
+SAS-data-set(RENAME=(old-name=new-name))
+```
+
+old-name 指定你想要重命名的变量。
+
+new-name 指定该变量的新名称。它必须是一个有效的 SAS 标识。
+
+你想要转换的变量的新名称是任意的。在这个示例中，现有的变量被重命名为 **CharGross**，以强调正在转换一个字符变量。
+
+要从同一个数据集中重命名多个变量，请用空格分隔你想要重命名的变量。例如，为了不仅重命名 **GrossPay**，还重命名 **ID**，请使用以下语句：
+
+```sas
+set orion.convert(rename=(GrossPay=CharGross) ID=IDNum);
+```
+
+### 将变量转换为另一种数据类型
+
+**步骤 2** 在赋值语句中使用 `INPUT` 函数创建一个新变量，其变量名与你重命名的变量原始名相同。
+
+```sas
+data hrdata;
+  set orion.convert(rename=(GrossPay=
+CharGross));
+GrossPay=input(CharGross,comma6.);
+run;
+```
+
+### 将变量转换为另一种数据类型
+
+**步骤 3** 在 `DATA` 语句中使用 `DROP=` 数据选项从输出的 SAS 数据集中排除原始变量。
+
+```sas
+data hrdata (drop=CharGross);
+  set orion.convert (rename=(GrossPay=
+  CharGross));
+GrossPay=input (CharGross,comma6.);
+run;
+```
+
+该程序的编译显示创建了带有数值型 `GrossPay` 变量的 PDV（程序视图）。
+
+![](img/d3bde6e6ab06b1fc622215d982111742_239_0.png)
+
+### 变量转换：编译
+
+```sas
+data hrdata (drop=CharGross);
+  set orion.convert (rename=(GrossPay=
+  CharGross));
+GrossPay=input (CharGross,comma6.);
+run;
+```
+
+部分 PDV
+
+| ID | CharGross | Hired |
+|---|---|---|
+| $5 | $6 | $7 |
+
+### 变量转换：编译
+
+```sas
+data hrdata (drop=CharGross);
+set orion.convert(rename=(GrossPay=
+  CharGross));
+GrossPay=input (CharGross,comma6.);
+run;
+```
+
+部分 PDV
+
+| ID | CharGross | Hired | GrossPay |
+|---|---|---|---|
+| $5 | $ 6 | $7 | N 8 |
+
+### 变量转换：编译
+
+```sas
+data hrdata (drop=CharGross);
+set orion.convert(rename=(GrossPay=
+  CharGross));
+GrossPay=input (CharGross,comma6.);
+run;
+```
+
+部分 PDV
+
+| ID | CharGross | Hired | GrossPay |
+|---|---|---|---|
+| $5 | $ 6 | $7 | N 8 |
+
+### 业务场景：继续
+
+`orion.convert` 数据集包含一个数值变量 `Code`（区号）和一个字符字符变量 `Mobile`（手机号码）。
+
+| ID | GrossPay | Mobile | Hired |
+|---|---|---|---|
+| $5 | $6 | $8 | $10 |
+| 36 | 52,000 | 303 393-0956 | 04/13/2008 |
+| 48 | 32,000 | 919 770-8292 | 08/25/2010 |
+| 52 | 49,000 | 301 449-5239 | 06/08/2009 |
+
+### 业务场景：继续
+
+创建一个字符变量 `Phone`，它包含括号内的区号，后是手机号码。
+
+| ID | GrossPay | Code | Mobile | Hired |
+|---|---|---|---|---|
+| $5 | $6 | $8 | $10 |
+| 36 | 52,000 | 303 393-0956 | 04/13/2008 |
+| 48 | 32,000 | 919 770-8292 | 08/25/2010 |
+| 52 | 49,000 | 301 449-5239 | 06/08/2009 |
+
+| Phone |
+| $14 |
+| (303) 393-0956 |
+| (919) 770-8292 |
+| (301) 449-5239 |
+
+## 5.5 转换变量类型
+
+### 自动数值转字符转换
+
+在第一次创建 `Phone` 变量时，让 SAS 自动处理转换。
+
+![](img/d3bde6e6ab06b1fc622215d982111742_242_0.png)
+
+### 自动数值转字符转换
+
+部分 orion.convert
+
+| Code | Mobile |
+|---|---|
+| N 8 | $ 8 |
+| 303 | 393-0956 |
+| 919 | 770-8292 |
+| 301 | 449-5239 |
+
+```sas
+data hrdata;
+  keep Phone Code Mobile;
+  set orion.convert;
+  Phone=(' Code !! ' Mobile;
+run;
+```
+
+SAS 自动将 `Code` 中的数值值转换为字符值。
+
+### 自动数值转字符转换
+
+部分日志
+
+```sas
+data hrdata;
+keep Phone Code Mobile;
+set orion.convert;
+Phone='(' Code '') Mobile;
+run;
+```
+
+注意：数值值已在由 (列) 指定的位置转换为字符值。
+注意：从 ORION.CONVERT 读取了 3 条观测值。
+注意：数据集 WORK.HRDATA 有 3 条观测值和 3 个变量。
+
+![](img/d3bde6e6ab06b1fc622215d982111742_243_0.png)
+
+### 自动数值转字符转换
+
+```sas
+proc print data=hrdata noobs;
+run;
+```
+
+PROC PRINT 输出
+
+| Code | Mobile | Phone |
+|---|---|---|
+| 303 | 393-0956 | (303) 393-0956 |
+| 919 | 770-8292 | (919) 770-8292 |
+| 301 | 449-5239 | (301) 449-5239 |
+
+为什么 SAS 在 `Phone` 中插入了空格？
+
+![](img/d3bde6e6ab06b1fc622215d982111742_243_0)
+
+### 自动数值转字符转换
+
+SAS 会将 `Code` 中的数值值自动转换为字符值。
+
+- 自动数值转字符转换在 `WHERE` 语句中使用时转换为字符值。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+- `WHERE` 语句在 WHERE 语句中执行此类操作。
+
+- 自动数值转字符转换在 `WHERE` 语句中执行此类操作。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+![](img/d3bde6e6ab06b1fc622215d982111742_242.png)
+
+### 自动数值转字符转换
+
+- 自动数值转字符转换在 `WHERE` 语句中执行此类操作。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+- `WHERE` 语句在 WHERE 语句中执行此类操作。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+### 自动数值转字符转换
+
+```sas
+data hrdata;
+  keep Phone Code Mobile;
+  set orion.convert;
+  Phone=(' Code !! ' Mobile;
+run;
+```
+
+### 自动数值转字符转换
+
+- - 自动数值转字符转换在 `WHERE` 语句中执行此类操作。
+
+- 自动数值转字符转换在 `WHERE` 语句中执行此类操作。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+- 自动数值转字符转换在 `WHERE` 语句中执行此类操作。
+
+-
+
+```sas
+data hrdata;
+  keep Phone Code Mobile;
+  set orion.convert;
+  Phone=(' Code !! ' Mobile;
+run;
+```
+
+
+
+SAS 自动将 `Code` 中的数值值转换为字符值。
+
+### 自动数值转字符转换
+
+```sas
+data hrdata;
+keep Phone Code Mobile;
+set orion.convert;
+Phone='(' Code '') Mobile;
+run;
+```
+
+注意：数值值已在由 (列) 指定的位置转换为字符值。
+注意：从 ORION.CONVERT 读取了 3 条观测值。
+注意：数据集 WORK.HRDATA 有 3 条观测值和 3 个变量。
+
+### 自动数值转字符转换
+
+```sas
+proc print data=hrdata noobs;
+run;
+```
+
+PROC PRINT 输出
+
+| Code | Mobile | Phone |
+|---|---|---|
+| 303 | 393-0956 | (303) 393-0956 |
+| 919 | 770-8292 | (919) 770-8292 |
+| 301 | 449-5239 | (301) 449-5239 |
+
+为什么 SAS 在 `Phone` 中插入了空格？
+
+![](img/d3bde6e6ab06b1fc622215d982111742_243_0)
+
+### 自动数值转字符转换
+
+SAS 会将 `Code` 中的数值值自动转换为字符值。
+
+- 自动数值转字符转换在 `WHERE` 语句中执行此类操作。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+- `WHERE` 语句在 WHERE 语句中执行此类操作。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+![](img/d3bde6e6ab06b1fc622215d982111742_242.png)
+
+### 自动数值转字符转换
+
+- 自动数值转字符转换在 `WHERE` 语句中执行此类操作。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+- `WHERE` 语句在 WHERE 语句中执行此类操作。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+### 自动数值转字符转换
+
+```sas
+data hrdata;
+  keep Phone Code Mobile;
+  set orion.convert;
+  Phone=(' Code !! ' Mobile;
+run;
+```
+
+### 自动数值转字符转换
+
+- 自动数值转字符转换在 `WHERE` 语句中执行此类操作。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+- `WHERE` 语句在 WHERE 语句中执行此类操作。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+### 自动数值 字符转换
+
+- 
+
+- 自动数值转字符转换在 `WHERE` 语句中执行此类操作。
+
+- 自动-- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+- 自动数值转字符转换在 `WHERE` 语句中执行此类操作。
+
+- 自动数值转字符转换在转换时将数值值转换为字符值。
+
+### 5.5 转换变量类型
+
+### CAT 函数和数值转换
+
+CAT 函数族通过使用 BEST12 格式并移除前导空格将任何数值参数转换为字符串。日志中不会写入注意。
+
+使用 CAT 的赋值语句：
+
+```sas
+Phone=cat(' ',Code, ' ',Mobile);
+```
+
+产生的结果等同于此语句：
+
+```sas
+Phone=(' '!Code(3.)' '!Mobile);
+```
+
+现在你可以编写完整的 SAS 程序来转换人员数据。
+
+# 转换 HR 数据：完整程序
+
+```sas
+data hrdata;
+  keep EmpID GrossPay Bonus Phone HireDate;
+  set orion.convert(rename=(GrossPay=
+CharGross));
+  EmpID=input(ID, 5.)+11000;
+  GrossPay=input(CharGross,comma.);
+  Bonus=GrossPay*.10;
+  HireDate=input(Hire,mmddyy10.);
+  Phone=cat(' ',Code, ' ',Mobile);
+run;
+```
+
+```sas
+proc print data hrdata-noobs;
+  var EmpID GrossPay Bonus Phone HireDate;
+  format HireDate mmddyy10;
+run;
+```
+
