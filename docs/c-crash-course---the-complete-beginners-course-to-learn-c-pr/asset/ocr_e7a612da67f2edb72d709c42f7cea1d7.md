@@ -1,0 +1,15 @@
+Microsoft offers Visual Studio Express, which is a free version that gives you everything you need to create C# applications. You can also create VB.NET applications using Visual Studio. Microsoft separates its desktop and web versions, so make sure that you download the right version for your project. For instance, if you want to make a web application and you have Visual Studio for desktop, then you won't be able to create the application. You'll need to download the Visual Studio application for web before you can create apps.
+
+To create applications with database storage, you need Microsoft SQL Server. You don't need the full version or the enterprise version. You just need the Express version to work with your growing applications. You can create a fully functional SQL Server database that will work with your applications, and then you can transfer the Express version of your database to the fully functional version of your site or application.
+
+When you install Visual Studio, you have the option to download third-party applications that integrate with your own application. Visual Studio uses NuGet, which lets you download the files and automatically add them to your project. Once you install and configure Visual Studio, you can download any library you need to get started.
+
+The final item you will need if you decide to create a web application is IIS. IIS (Internet Information Services) is the web hosting software that lets you host and run websites. If you have a Windows computer, you already have IIS. Some versions of Windows don't allow the full version of the site to run if you don't upgrade to the professional version. All server operating systems run the full version of IIS, desktops sometimes need the professional version to run your test websites. Check the settings in Control Panel to see if you have the ability to run IIS on your desktop if you are unsure.
+
+# Some Basic Best Practices
+
+Once you install Visual Studio and get your entire environment set up, there are a few best practices to follow before you start programming. They are small standards that most developers work with C# use. If you decide to work in the industry, you should know these standards to maintain consistency and to understand code when you're supposed to take over for another coder.
+
+Use StringBuilder instead of strings when building large strings. StringBuilder is a class that we'll learn about in future chapters. It has better performance than a primitive string variable. You'll be tempted to just use a primitive string instead of a StringBuilder, but always use a StringBuilder when working with dynamic strings.
+
+Use verbs to create methods. We'll discuss classes and methods in future chapters, but naming schemes are important when creating your classes and their methods. Methods

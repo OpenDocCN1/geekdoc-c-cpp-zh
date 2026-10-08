@@ -1,0 +1,4409 @@
+- pgno: 0
+  md: '# C# SERIES
+
+
+    # C# CRASH COURSE
+
+
+    The Complete Beginner''s Course to Learn C# Programming in 15 Clear-Cut Lessons
+
+
+    ALPHY BOOKS'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "# # C#\n CRASH COURSE\n\nThe Complete Beginner's Course to Learn C# Programming\
+    \ in 15 Clear-Cut Lessons - Including Dozens of Practical Examples & Exercises\n\
+    \nBy Alphy Books"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Copyright © 2017
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the publisher, except in the case of brief quotations embodied in reviews and
+    certain noncommercial uses permitted by copyright law.
+
+
+    Trademed names appear throughout throughout this book. Rather than use a trademark
+    symbol with every occurrence of a trademark name, names are used in an editorial
+    fashion, with no intention of infringement of the respective owner''s trademark.
+
+
+    The information in this book is distributed on an "as is" basis, exclusively for
+    educational purposes, without warranty. Neither the author nor the publisher shall
+    have any liability to any person or entity with respect to any loss or damage
+    caused or alleged to be caused directly or indirectly by the information contained
+    in this book.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Table of Contents
+
+
+    CHAPTER 1 : INTRODUCTION
+
+
+    CHAPTER 2 : C# PROGRAMMING LANGUAGE
+
+
+    WHY USE C#
+
+
+    WHAT IS C# USED FOR?
+
+
+    WHAT TOOLS DO YOU NEED?
+
+
+    SOME BASIC BEST PRACTICES
+
+
+    LAB QUESTIONS
+
+
+    CHAPTER 3 : DATA TYPES
+
+
+    BASIC DATA TYPE SYNTAX
+
+
+    THE STRING DATA TYPE
+
+
+    CUSTOM DATA TYPES
+
+
+    CONSTANTS
+
+
+    LAB QUESTIONS
+
+
+    CHAPTER 4 : OPERATORS
+
+
+    MATHEMATICAL OPERATORS
+
+
+    RELATIONAL OPERATORS
+
+
+    LOGICAL OPERATORS
+
+
+    THE ASSIGNMENT OPERATOR
+
+
+    LAB QUESTIONS
+
+
+    CHAPTER 5 : LOOPS AND IF STATEMENTS
+
+
+    THE FOR LOOP
+
+
+    THE WHILE LOOP
+
+
+    THE IF STATEMENT
+
+
+    THE SWITCH STATEMENT'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# LAB QUESTIONS
+
+
+    # CHAPTER 6: INTRODUCTION TO OOP
+
+
+    UNDERSTANDING OOP Basics
+
+
+    THE PUBLIC SPECIFIER
+
+
+    THE PRIVATE SPECIFIER
+
+
+    SETTING CLASSES AS PROTECTED
+
+
+    LAB QUESTIONS
+
+
+    # CHAPTER 7: CLASSES
+
+
+    INTRODUCTION TO Classes
+
+
+    CREATING CLASS CONSTRUCTORS
+
+
+    CREATING METHODS IN YOUR CODE
+
+
+    USING Properties
+
+
+    LAB QUESTIONS
+
+
+    # CHAPTER 8: STRUCTURES AND ENUMS
+
+
+    WHY USE A STRUCTURE OR Enum INSTEAD OF A Class?
+
+
+    USING Structures
+
+
+    CREATING Enums
+
+
+    LAB QUESTIONS
+
+
+    # CHAPTER 9: INHERITANCE
+
+
+    UNDERSTANDING BASIC Inheritance
+
+
+    INHERITING FROM A Parent Class
+
+
+    INHERITANCE AND INTERFACES
+
+
+    STATIC Classes
+
+
+    LAB QUESTIONS
+
+
+    # CHAPTER 10:ARRAYS'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Declaring an Array in C#
+
+
+    Filling AN ARRAY WITH VALUES
+
+
+    RETRIEVE VALUES FROM AN ARRAY
+
+
+    Using AN ARRAYList
+
+
+    LAB QUESTIONS
+
+
+    # CHAPTER 11: GENERICS
+
+
+    INTRODUCTION TO GENERICS
+
+
+    CREATING YOUR OWN GENERIC TYPES
+
+
+    USING THE LIST GENERIC CLASS
+
+
+    USING THE LIST CLASS FOR CUSTOM CLASS STRUCTURES
+
+
+    LAB QUESTIONS
+
+
+    # CHAPTER 12:FILE I/O
+
+
+    WRITING TO FILES
+
+
+    READING FROM FILES
+
+
+    APPENDING TO A FILE
+
+
+    DELETING A FILE
+
+
+    LAB QUESTIONS
+
+
+    # CHAPTER 13: MULTITHREADING
+
+
+    WHY TO USE MULTITHREADING
+
+
+    CREATING Threads In Your C# Program
+
+
+    DELETING A Thread
+
+
+    LAB QUESTIONS
+
+
+    # CHAPTER 14: POLYMORPHISM
+
+
+    WHY USE POLYMORPHISM?
+
+
+    OVERRIDING FUNCTIONS
+
+
+    OVERLOADING CLASSES'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'ABSTRACT CLASSES
+
+
+    LAB QUESTIONS
+
+
+    # CHAPTER 15: ERROR HANDLING
+
+
+    USING THE VISUAL STUDIO DEBUGGER
+
+
+    THE TRY CATCH STATEMENT IN C#
+
+
+    LAB QUESTIONS
+
+
+    # FINAL WORDS'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '> "I would love to change the world, but they won''t give me the source code”
+
+
+    Unknown Author'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # Chapter 1
+
+    Introduction
+
+
+    Hello and welcome to your new programming language. This book is an introduction
+    to programming using C#. We''ll focus on breadth rather than depth. The goal is
+    to be able to do something interesting as quickly as possible. We''ll start out
+    with fairly detailed explanations because it''s important to have a thorough understanding
+    of the basics, as we go on, we''ll have to leave a lot of stuff out. Some of the
+    topics could have an equally long guide guide themselves. You don''t need to understand
+    all aspects of everything you read; what you should retain is knowledge that a
+    particular capability exists and what it is called so that you can look it up
+    when you need it. This is what most programmers do.
+
+
+    The first few sections of the book are fairly self-contained with simple examples.
+    You should certainly not read them without typing them into the interpreter; you''ll
+    get even more out of the tutorial if you experiment with the examples yourself.
+
+
+    The remainder of the tutorial is structured around building a program that does
+    something interesting. This will allow us to touch on many aspects of programming
+    that are necessary to write real world programs: reading and writing to disk;
+    error handling; code organization into classes, modules, and packages; regular
+    expressions; and user input. We''ll also touch on some general principles in programming,
+    such as clarity and efficiency.
+
+
+    Let''s get started!'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Chapter 2
+
+    C# Programming Language
+
+
+    You might wonder why you should use C#. This chapter covers reasons why C# is
+    a great language to learn and what it can do for you.
+
+
+    C# is a backend programming language. It processes the input and output for web
+    and desktop applications. There are numerous languages to choose from, so you
+    might wonder why you would choose C# over other programming languages. This chapter
+    gives you some background on the C# language and what it''s used for in the programming
+    industry.
+
+
+    # Why Use C#
+
+
+    No developer is tied to any language. You can just use any language-based applications
+    to complete an application. When you want to develop pure Windows-based applications,
+    you''ll need to learn one of the .NET framework languages, which include C# and
+    VB.NET. When .NET was originally introduced, VB.NET was the most popular language.
+    This is because old Classic ASP used the VB style to create dynamic webpages.
+    C# has a C-style programming syntax, and it''s very close to the Java language
+    syntax. These two boosted C#''s popularity and now it''s the preferred language
+    among developers.
+
+
+    C#''s closeness to Java and C make it easier to learn than other languages. If
+    you know any C-style language, you''ll pick up on C# pretty easily. VB.NET is
+    considered closer to human language, so it''s a higher level language. The problem
+    is that VB.NET is then slower to run because it is closer to human language. This
+    is another reason why developers prefer C# over VB.NET—it processes code faster.
+    The further away from machine language that you get over, the slower it becomes.
+
+
+    Another reason C# is a good language to use is that it''s very easy to implement
+    with other Microsoft solutions. You can implement other C# solutions by just adding
+    them to your current solution. You can use Entity Framework with MSSQL with C#
+    with little implementation and configuration required. If you are tasked with
+    writing or adding to existing Visual Studio projects, C# is more easily integrated
+    into a Microsoft environment.
+
+
+    You don''t have to design much with C#, so if you prefer to work on strictly backend
+    systems, you''ll prefer C# over other languages. It''s also the solution that
+    backend coders use with automation within a Windows environment. If you decide
+    to work with any Windows system, it will be useful to know C#.
+
+
+    # What is C# Used For?'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'There are several reasons you would want to use C#. C# lets you work with both
+    desktop and web applications. Specifically, you use C# to work with Windows programs.
+    To run C#, the server needs to run the .NET framework. The .NET framework is only
+    compatible with Windows, so you need to run any C# application on a server or
+    desktop running Windows.
+
+
+    C# is commonly used in web applications. Specifically, the C# language is used
+    to process the dynamic, backend code. For instance, when a user sends information
+    through a web form, the C# language processes it, stores it, and then sends a
+    response. C# MVC still handles the front end that displays the information to
+    the user, by HTML and front-end languages are used to manipulate client-side code.
+    With web applications, you work with C# as the backend system, and you''ll implement
+    HTML, CSS, and JavaScript for the front end client-side browser changes.
+
+
+    C# is also used with desktop applications, but you won''t see many desktop applications
+    as a primary software anymore. The programming world is turning to cloud applications,
+    which is still beneficial for C# programmers. C# programmers can create APIs and
+    backend code that deals with cloud-based applications.
+
+
+    C# APIs are also called WCF applications. These APIs let developers integrate
+    external functions that work with internal applications. For instance, you can
+    use the Facebook API to integrate into your applications. The same can be done
+    with a C# API. The benefit of publishing an API is that it does not matter what
+    language the third-party developer uses. They can use PHP, Java, JavaScript, and
+    Python to work with your API. As long as the application works with either XML
+    or JSON input or output, the third-party developer can work with your C# API.
+
+
+    C# is also used to work database applications. It works with SQL Server to store
+    and request data from a database server. C# can use Entity Framework with MSSQL
+    so the developer can use LINQ queries and POCO classes to work with data. This
+    means that you don''t need to go back and forth with database-stored procedures.
+    Instead, the developer can work directly with the database structures and data.
+
+
+    Finally, C# is used for Windows services. These are programs that work in the
+    background of a computer, usually a server. They are used in automation to ensure
+    certain processes happen automatically at a specific time of day.
+
+
+    # What Tools Do You Need?
+
+
+    With C#, you can''t use any tool to create your programs. You need Visual Studio,
+    which is freely available as a download from the Microsoft official website. You
+    can buy the professional or enterprise version of the software, but it''s not
+    necessary as an individual. It’s especially necessary if you''re just starting
+    out as a student.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'Microsoft offers Visual Studio Express, which is a free version that gives
+    you everything you need to create C# applications. You can also create VB.NET
+    applications using Visual Studio. Microsoft separates its desktop and web versions,
+    so make sure that you download the right version for your project. For instance,
+    if you want to make a web application and you have Visual Studio for desktop,
+    then you won''t be able to create the application. You''ll need to download the
+    Visual Studio application for web before you can create apps.
+
+
+    To create applications with database storage, you need Microsoft SQL Server. You
+    don''t need the full version or the enterprise version. You just need the Express
+    version to work with your growing applications. You can create a fully functional
+    SQL Server database that will work with your applications, and then you can transfer
+    the Express version of your database to the fully functional version of your site
+    or application.
+
+
+    When you install Visual Studio, you have the option to download third-party applications
+    that integrate with your own application. Visual Studio uses NuGet, which lets
+    you download the files and automatically add them to your project. Once you install
+    and configure Visual Studio, you can download any library you need to get started.
+
+
+    The final item you will need if you decide to create a web application is IIS.
+    IIS (Internet Information Services) is the web hosting software that lets you
+    host and run websites. If you have a Windows computer, you already have IIS. Some
+    versions of Windows don''t allow the full version of the site to run if you don''t
+    upgrade to the professional version. All server operating systems run the full
+    version of IIS, desktops sometimes need the professional version to run your test
+    websites. Check the settings in Control Panel to see if you have the ability to
+    run IIS on your desktop if you are unsure.
+
+
+    # Some Basic Best Practices
+
+
+    Once you install Visual Studio and get your entire environment set up, there are
+    a few best practices to follow before you start programming. They are small standards
+    that most developers work with C# use. If you decide to work in the industry,
+    you should know these standards to maintain consistency and to understand code
+    when you''re supposed to take over for another coder.
+
+
+    Use StringBuilder instead of strings when building large strings. StringBuilder
+    is a class that we''ll learn about in future chapters. It has better performance
+    than a primitive string variable. You''ll be tempted to just use a primitive string
+    instead of a StringBuilder, but always use a StringBuilder when working with dynamic
+    strings.
+
+
+    Use verbs to create methods. We''ll discuss classes and methods in future chapters,
+    but naming schemes are important when creating your classes and their methods.
+    Methods'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'are given verb names because they perform the actions that either store data
+    or manipulate data. They also take input from users and provide output for your
+    users to
+
+
+    Class properties should always be nouns. Again, we’ll cover classes and properties
+    in future chapters, but remember that properties should be given noun names. For
+    instance, if a property holds a user’s name, it should be named something like
+    m_name, m_fullname, or _fullname. Notice that a class member property should have
+    some kind of prefix. It should be either m_ or _ as a prefix. This is standard
+    among naming schemes.
+
+
+    Comment on your code often. Remember that someone must come after you and edit
+    your code. This means that you need to comment on your code so that others are
+    able to pick up where you left off. Comments help other coders understand what
+    your code is supposed to do, what type of input it should expect, and if the coder
+    should pay attention to any quirks in the system.
+
+
+    C# is a great language to learn. If you want to work with a Windows environment
+    and want to make money in the industry, C# is the perfect language to learn. It’s
+    a popular language in the enterprise, it pays well. It’s also the language of
+    choice for coders who work with Microsoft SQL Server for storage. It’s also used
+    for automation when the server runs the Windows operating system. The fact is
+    that you can’t go wrong if you work with C# and Visual Studio. It’s a popular
+    language that any web or desktop developer should learn.
+
+
+    # Lab Questions
+
+
+    +   1. What is the tool you need to download if you want to program in C# or any
+    .NET language?
+
+
+    +   a. PHP
+
+    nb. Notepad++
+
+    c. Visual Studio
+
+    d. Eclipse
+
+
+    Explanation: Visual Studio is a Microsoft product for creating desktop or web
+    apps in any .Net language.
+
+
+    +   2. What is the common enterprise database server used in conjunction with
+    the .NET set languages?
+
+
+    +   a. Oracle
+
+    nb. SQL Server
+
+    c. MySQL'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'd. PostgreSQL
+
+
+    Explanation: The Microsoft SQL Server application is an enterprise solution for
+    database storage that works seamlessly with Visual Studio and C#.
+
+
+    3. What naming scheme is used when you want to give a class method a name in designing
+    your applications?
+
+
+    +   a. A noun
+
+    b. A verb
+
+    c. A preposition
+
+    d. A secret code
+
+
+    Explanation: A class method should have a verb naming scheme because it performs
+    an action in your code.
+
+
+    4. What is the naming scheme used for class properties?
+
+
+    +   a. A noun
+
+    b. A verb
+
+    c. A preposition
+
+    d. A secret code
+
+
+    Explanation: Because properties contain attributes, they take a noun naming scheme.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# # Chapter 3
+
+    Data Types
+
+
+    **Objective:** Data types determine the data you can store in your variables.
+    C# has several data types, and this chapter helps you understand them and what
+    you can do with these variables.
+
+
+    When you write a program, you need to tell the operating system what it can expect
+    for each variable set up in the system. The reason you need to define variable
+    data types is that the operating system allocates memory based on the data type.
+    The data type tells the operating system what you will store in a variable, and
+    is required for each variable you define.
+
+
+    # **Basic Data Type Syntax
+
+
+    Before we get into specific data types, we should take a look at basic syntax.
+    The following is a basic template for defining a variable.
+
+
+    ```
+
+    <data type><variable name>;
+
+    ```
+
+
+    We''ll cover several data types that you''ll use in your programs, but just for
+    the sake of this section, know that the data type specifier is always the first
+    item in your variable declaration statement.
+
+
+    The next item in your variable declaration statement is the variable name. You
+    can give your variables any name, but usually coding standards define the way
+    you name your variables. For instance, most developers require "camelCase" in
+    variable names. You start the name with a lowercase letter, and then any subsequent
+    words within the variable are capitalized. For you give your variable name "camelCase"
+    instead of "CamelCase" or "camelcase." However, you can name your variables anything
+    you want.
+
+
+    Note that different cases are different variables in C#. In the camelCase example,
+    each variable camelCase, camelcase, and CamelCase are different variables. This
+    follows the C convention of variable naming schemes. You''ll notice that C# follows
+    many of the standard C styles, if you''ve dabbled in the C language.
+
+
+    The final syntax requirement is the semicolon. The semicolon tells the compiler
+    that the end of a statement has been reached and any statements after should start
+    a new statement. If you forget the semicolon, the compiler gives you an error
+    and won''t let you compile the code.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'The final optional rule for variables is that you can define the variable and
+    give it a value at the same time you declare it. Let''s take a look at the syntax
+    template.
+
+
+    ```
+
+    <datatype><variable name> = value;
+
+    ```
+
+
+    Again, assigning a value is optional, but the above syntax is how you assign a
+    value at the same time you declare the variable. Remember that the value must
+    match the data type you use. For instance, if you attempt to assign a string character
+    to an integer data type variable, the compiler will give you an error.
+
+
+    # The String Data Type
+
+
+    In any program, you''ll work with strings. Strings are the variables that contain
+    words. These words can be any alphanumeric character or even special characters.
+    Most user input data is in the form of a string, but then you can convert that
+    to another data type. For instance, you might ask for a number for user input
+    but then convert the number to an integer to perform some type of calculation
+    using the input.
+
+
+    Let''s look at an example at a string variable.
+
+
+    ```
+
+    string myName = "John";
+
+    ```
+
+
+    Notice that the string data type is first used to define the string variable.
+    This is a primitive string data type. The data type "String" is a class definition
+    and is only used if you need to perform complex string functions on a variable.
+    For the most part, you will use the primitive string variable definition when
+    you set up your variables.
+
+
+    The next item in the statement is the variable name. We''ve used camel case, with
+    the first letter in the variable name set in lowercase. The next names use a capital
+    letter.
+
+
+    In this statement, we assign a value to the variable in the definition. We assign
+    the value "John" to the variableName. Notice that the end of the statement terminates
+    with a semicolon. This tells the compiler that the end of the statement has been
+    met. If we forget the semicolon in this statement, the next statement would cause
+    a syntax error.
+
+
+    You can also declare a string variable with no value. We can use the same statement
+    to illustrate how to define variables with no value.
+
+
+    ```
+
+    string myName;
+
+    ```
+
+
+    At this point, the string is null. You can also initialize a string to the null
+    value using a specialized string property called Empty. The following statement
+    illustrates how to use this statement.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '```
+
+    string symbolName = string.Empty;
+
+    ```
+
+
+    The above statement initializes the string with an empty value. This is commonly
+    used when the programmer doesn''t know the value of the string yet and doesn''t
+    want to set the string value to null.
+
+
+    # The Numeric Data Types in C#
+
+
+    C# offers several data types that you can use to store and calculate values. The
+    two main numeric values are decimals and integers. Integers are values that have
+    no decimal point value. They can be signed or unsigned. A signed integer is a
+    negative value, which means that the signed part is the negative notation and
+    the number is. An unsigned integer is a positive value that has no plus sign.
+    It''s automatically assumed to be a positive value.
+
+
+    Decimal values have several data types in C# depending on the number of precision
+    points you want to use. The smallest decimal value is a float data type. The largest
+    is the decimal data type. A decimal point allows you to store up to a 128-bit
+    number in your variable.
+
+
+    First, let''s take a look at an integer data declaration.
+
+
+    ```
+
+    int myNumber = 22;
+
+    ```
+
+
+    Notice the declaration to declare an integer is the same template and syntax that
+    we used with a string variable. All variable declarations follow the same template
+    syntax, so you can expect each declaration to follow this syntax when you write
+    your code.
+
+
+    We defined our variable named myNumber with the int data type. It''s the shortened
+    version of the integer specifier. An integer stores a 32 bit number, but you can
+    lengthen your integer storage to 64 bit using the long data type. Let''s take
+    a look at the long variable declaration.
+
+
+    ```
+
+    long myNumber = 222222;
+
+    ```
+
+
+    We used a longer integer value in the above statement to show that you can use
+    longer numbers when you use the long data type.
+
+
+    Let''s take a look at decimal variable declaration. First, let''s take a look
+    at a float decimal declaration.
+
+
+    ```
+
+    float myNumber = 22.333;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'Once again, the same syntax template is used to define a variable. This time
+    we used a decimal number. We could also use zero as a decimal place holder. For
+    instance, the following code would also be valid syntax.
+
+
+    ```
+
+    float myFunction = 22.0;
+
+    ```
+
+
+    If we needed a longer decimal point value, we could use the double data type or
+    the decimal data type. The double data type allows for a 64-bit decimal value.
+    The following code shows you how to declare a double variable.
+
+
+    ```
+
+    double myFunction = 22.2222222222;
+
+    ```
+
+
+    Again, we used a longer decimal point value to illustrate that the long data type
+    can hold up to 32-bit decimal values.
+
+
+    Next, we have the decimal data type. Decimal data types are rarely used unless
+    you need significant precision, as in scientific calculations. The following is
+    an example of the decimal value declaration statement.
+
+
+    ```
+
+    decimal myFunction = 33.444444444444444444444444444;
+
+    ```
+
+
+    You can have to twenty-eight decimal precision values with the decimal data type.
+    You won''t need to use this type unless you have a need for precise numeric calculations.
+
+
+    When you determine the data type for your variables, don''t just use the largest
+    data type. Use the data type that matches the value you need. Using too much memory
+    for your applications is considered poor coding, and it can harm your program’s
+    performance.
+
+
+    # Custom Data Types
+
+
+    When you use classes, you create a custom data type. You can also create custom
+    data types using structs and enums. We''ll cover these data types in future chapters,
+    but you still need to understand how to define these variables when you create
+    your programs.
+
+
+    Classes define your own properties and methods. Just like classes you integrate
+    from the .NET framework, you can create your own. We’ll discuss the way you create
+    a class with its own methods and properties, but let’s take a look at how you
+    would define a variable using your own classes. Let’s assume that you have a class
+    named MyClass. The following code defines a variable using the MyClass data type.
+
+
+    ```
+
+    MyClass myclass = new MyClass();
+
+    ```
+
+
+    You''ll notice that defining a value with a custom data type is much different
+    than a'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'primitive data type. You still use the data type designation, but you then
+    use the “new” specifier with the class constructor. We’ll cover constructors when
+    we discuss classes. Just know that when you use a custom data type with a class,
+    you need to instantiate the class and assign it to a variable. In this example,
+    we instantiate the MyClass class and assign it to myclass variable. Remember that
+    C# is case sensitive, so MyClass is a class and myclass is a variable, and the
+    compiler understands the difference.
+
+
+    # Constants
+
+
+    You don''t always need to dynamically assign a value to a variable. Sometimes
+    know that you know the value of pi is always 3.14. You don’t need to dynamically
+    assign this value, so you can create a constant. A constant holds a static value
+    that never changes. If you attempt to change this variable’s value, the compiler
+    gives you an error.
+
+
+    You define a constant same you define a dynamic variable, except you use the const
+    keyword as the first specifier. Let’s take a look at an example using a pi variable.
+
+
+    ```
+
+    const decimal pi = 3.14;
+
+    ```
+
+
+    We used the decimal data type because pi has several precision points that we
+    can use. We won’t be able to change the value in our code, so the pi variable
+    will remain with the value 3.14 throughout the lifetime of the program.
+
+
+    The const data type is used within a class to specify that the variable should
+    have the same value throughout the lifetime of the class. The variable is destroyed
+    when the class is destroyed in memory, but you should know that the variable’s
+    value doesn’t change, regardless of where the variable is used in the code. Because
+    a constant can’t have a dynamic value, you must give it a value when you define
+    it. If you recall, assigning a value to a dynamic variable is optional.
+
+
+    Using data types is something you’ll use in every C# program you create. You’ll
+    need to know how identify data types as you read other coders’ code. You might
+    need to reference the values that can be used with each data type, but you should
+    at least understand which ones store numbers versus strings and other data types.
+
+
+    # Lab Questions
+
+
+    +   1. When you want to use a small decimal variable, what data type should you
+    give it?
+
+
+    a. decimal
+
+    b. double
+
+    c. float
+
+    d. int'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'Explanation: The float data type is the smallest decimal data type in C#.
+
+
+    2. When you want to store a numeric value with no decimal precision, what data
+    type do you give the variable?
+
+
+    +   a. decimal
+
+    b. double
+
+    c. float
+
+    d. int
+
+
+    Explanation: The integer data type stores a numeric value that can be either positive
+    or negative (unsigned or signed).
+
+
+    3. When you need scientific-level storage that contains high-precision decimal
+    values, what data type do you use?
+
+
+    +   a. decimal
+
+    b. double
+
+    c. float
+
+    d. int
+
+
+    Explanation: The decimal data type stores up to 28 decimal place precision points
+    for precise calculations.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# # Chapter 4
+
+    Operators
+
+
+    **Objective:** Operators are a good follow-up to data types, because they perform
+    the operations on your values. This chapter discusses the main operators in C#
+    and how you use them to manipulate your code.
+
+
+    After you store values to your variables, you need to perform actions, whether
+    they are mathematical calculations or just string manipulation. Regardless of
+    what you need to do with the variables, you need an operator to perform each action.
+    In this chapter, we discuss operators and how you can use them for your C code.
+
+
+    # ## Mathematical Operators
+
+
+    Mathematical operators are probably the most common, because you''ll need to perform
+    some type of calculation on your numeric variables. Mathematical operators are
+    intuitive, because they follow the same rules that you learned in math class.
+    Mathematical operators include addition, subtraction, division, and multiplication.
+    C# also has a modulus operator for division remainders. With programming in C-style
+    languages, you can also choose to use incremental and decremental operators. We''ll
+    cover all of these in this section.
+
+
+    The first operator is the addition operator. As the name suggests, you use this
+    operator to add a value to an existing variable. The following code shows you
+    how to add in C#.
+
+
+    ```
+
+    int myNumber = 3;
+
+    int addedNumber = myNumber + 4;
+
+    ```
+
+
+    In the code above, we first created a variable and then we created a second variable
+    that contained the result of the addition of myNumber to 4. As you can probably
+    guess, the result is 7.
+
+
+    The next operator is subtraction. Just like the addition operator, the subtraction
+    operator is intuitive. It simply subtracts a number from a variable. The following
+    code is an example of the subtraction operator.
+
+
+    ```
+
+    int myNumber = 3;
+
+    int addedNumber = myNumber - 4;
+
+    ```
+
+
+    The code above is the same as that we used in the addition example, except this
+    time we subtracted the number 4 from the myNumber variable. The result is -1,
+    stored in the addedNumber variable.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'The multiplication variable works the same way. The multiplication operator
+    has the same syntax as the other operators we''ve looked at. The following code
+    is an example of the multiplication operator.
+
+
+    ```
+
+    int myNumber = 3;
+
+    addedNumber = myNumber * 4;
+
+    ```
+
+
+    The only change we''ve made to the code is the asterisk symbol, which is used
+    to specify that you want to multiply one variable by another. We''ve multiplied
+    myNumber by 4, so the result is 12, stored in the addedNumber variable.
+
+
+    The final simple operator we can use is the division operator. The division operator
+    works in the same way as the others. Let''s take a look at an example of the division
+    operator.
+
+
+    ```
+
+    int myNumber = 3;
+
+    float addedNumber = myNumber / 4;
+
+    ```
+
+
+    Again, the change we''ve made is the division operator. We''ve divided 3 by 4,
+    and the result is .75. Note that we needed to change the addedNumber to a float
+    data type because the result of the division calculation is a decimal value. When
+    you work with division calculations, you usually want to use a float data type
+    to avoid bugs in your code, even if you''re sure that every result will be an
+    integer.
+
+
+    Now that we''ve looked at the simple operators, we can move on to the lesser known
+    ones. The first one is the modulus operator. The modulus operator performs a division
+    calculation, but instead of returning the result minus the remainder, the modulus
+    operator returns the remainder. Let''s take a look at an example.
+
+
+    ```
+
+    int myNumber = 4;
+
+    float addedNumber = myNumber % 3;
+
+    ```
+
+
+    In the above example, the division calculation is 4 divided by 3. The result is
+    that 3 goes into 4 with a remainder of 1. Therefore, the addedNumber variable
+    contains the value of 1. Remember this when you use the modulus operator or you
+    could expect a different result.
+
+
+    The next operator is the increment operation. You''ll use this operator often,
+    especially with loops—which we''ll cover in future chapters. The increment operator
+    adds 1 to a variable. The operator is shorthand for adding 1 to a variable. Let''s
+    take a look at an example.
+
+
+    ```
+
+    int j = 0;
+
+    j++;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "The above code is the same as the following code.\n\n```\nint j = 0;\nj = j\
+    \ + 1;\n```\n\nNotice that the previous version of the code is much shorter and\
+    \ easier to read. The result is just adding 1 to the j variable. In this example,\
+    \ the result is that j is equal to 1.\n\nYou can also decrement a variable in\
+    \ the same way. Let's take a look at the decrement operator.\n\n```\nint j = 0;\n\
+    j--;\n```\n\nNotice that we just replaced the plus signs with minus signs. The\
+    \ result is that we decrement the j variable by 1. The above code is the same\
+    \ as the following code.\n\n```\nint j = 0;\nj = j - 1;\n```\n\nThe result is\
+    \ that the j variable contains the value -1.\n\nThe above operators are all of\
+    \ the ones that you'll use throughout your C# code. These calculations are common\
+    \ to any C# program.\n\n# Relational Operators\n\nRelational operators are used\
+    \ in loops and conditions that we'll discuss in later chapters. Relational operators\
+    \ make a comparison between two values, either static or dynamic variables. In\
+    \ this section, we'll cover the different operators.\n\nIn many cases, you'll\
+    \ need to ensure that two variables are equal to each other. Relational operators\
+    \ are used in if conditions, we'll use the if syntax—but know that full coverage\
+    \ of this operation is covered in later chapters.\n\nLet's first take a look at\
+    \ the equality operator.\n\n```\nint myNumber = 1;\n myNumber2 = 2;\nif ( myNumber1\
+    \ == myNumber2)\n{\n  //if condition equals yes, then do these operations\n}\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'In the above code, we created two variables named myNumber1 and my2 initialized
+    both of them with the values of 1 and 2. Obviously, these two values are not equal,
+    the relational operator in the if condition returns false. Since the result is
+    false, the statements within the if condition are not executed. Remember that
+    if the result of a relational operator is false, nothing within the if statement
+    brackets is executed and code execution will jump to whatever code is under the
+    condition.
+
+
+    Just like the equality operator, you can also identify if two variables are not
+    equal. Using the same syntax, let''s take a look at an example.
+
+
+    ```
+
+    int myNumber1 = 1;
+
+    int myNumber2 = 2;
+
+    if ( myNumber1 != myNumber2)
+
+    {
+
+    //if condition equals yes, then do we these operations
+
+    }
+
+    ```
+
+
+    We changed the relational operator to != or "not equal to.". In this condition,
+    the result of the calculation is false, so any statements within the if condition
+    are executed this time.
+
+
+    You''ll also need to determine if a value is greater than or less than another
+    variable. C# also has these relational operators to provide you with these two
+    conditions. Let''s take a look at the greater than relational operator.
+
+
+    ```
+
+    int myNumber1 = 1;
+
+    int myNumber2 = 2;
+
+    if ( myNumber1 > myNumber2)
+
+    {
+
+    //if condition equals yes, then do we these operations
+
+    }
+
+    ```
+
+
+    We used the same syntax and just switched the relational operator to the greater
+    than symbol. In this example, the result of the calculation is false, so none
+    of the if statements are executed.
+
+
+    Similar to the greater than operator, let''s take a look at the less than statement.
+
+
+    ```
+
+    int myNumber1 = 1;
+
+    int myNumber2 = 2;
+
+    if ( myNumber1 < myNumber2)
+
+    {
+
+    //if condition equals yes, then do we these operations
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'In the above statement, myNumber1 is indeed less than myNumber2, so the result
+    of the calculation is true. In this example, the statements within the if statement
+    brackets will execute.
+
+
+    In the previous operations, variables are either greater or less than, but what
+    happens if you want to know if the value is also equal? You can combine the greater
+    and less operators with the equality operator to check for both conditions. Let''s
+    take a look at the greater than or equal to operator.
+
+
+    ```
+
+    int myNumber1 = 1;
+
+    int myNumber2 >= myNumber1
+
+    //if condition equals yes, then do these operations
+
+    ```
+
+
+    In the above statement, neither of the conditions is true. The two variables are
+    not equal and myNumber1 is not greater than myNumber2. Therefore, none of the
+    if statements will execute. Now let''s take a look at the less than or equal to
+    statement.
+
+
+    ```
+
+    int myNumber1 = 1;
+
+    int myNumber2 = 2;
+
+    if ( myNumber1 <= myNumber2)
+
+    {
+
+    //if condition equals yes, then do these operations
+
+    ```
+
+
+    # Logical Operators
+
+
+    Logical operators let you combine conditions in your statements. You can control
+    the flow of execution using logical operators by evaluating two conditions. There
+    are three logical operators: && (and), || (or), and ! (not).
+
+
+    Let''s first look at the && operator using the same if conditions we used in the
+    previous section.
+
+
+    ```
+
+    int myNumber1 = 1;
+
+    int myNumber2 = 2;
+
+    if ( myNumber1 < myNumber2 && myNumber1 == 2)
+
+    {
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '```
+
+    // if condition equals yes, then do these operations
+
+    }
+
+    ```
+
+
+    In the above statement, we first evaluate if myNumber1 is less than myNumber 2.
+    In this example, the result is equal to true, but we''ve added the (&&) logical
+    operator, so if the statement must evaluate the second condition before it can
+    determine statement flow. The second condition evaluates if myNumber1 is equal
+    to 2. This condition has a result of false. Because we used the and, both conditions
+    must be true for the statement to execute. Since one of them equals false, the
+    if statement does not execute.
+
+
+    Let''s use the same values but change the logical operator to or (||).
+
+
+    ```
+
+    int myNumber1 = 1;
+
+    int myNumber2 = 2;
+
+    if (myNumber1 < myNumber2 || myNumber1 == 2)
+
+    {
+
+    // if condition equals yes, then do these operations
+
+    }
+
+    ```
+
+
+    Using the or completely changes the way the if statement executes. In the above
+    condition, the first condition calculates to true, but the next condition calculates
+    to false. The or statement says that either the first or the second statement
+    can evaluate to true for the if statement to execute. Since the first statement
+    executes to true, the if will execute.
+
+
+    The final logical operator is the not (!) ) operation. The not operator changes
+    the logic of the condition. Let''s take a look at some code.
+
+
+    ```
+
+    int myNumber1 = 1;
+
+    int myNumber2 = 2;
+
+    if (!myNumber1 == 2))
+
+    {
+
+    // if condition equals yes, then do these operations
+
+    }
+
+    ```
+
+
+    In the above code, instead of evaluating if the condition is true, we identify
+    if the condition is false. You know that we''re evaluating to false because of
+    the not operator. This operator is a bit more confusing, but since the expression
+    calculates to true, the not operator changes the condition to false. Since the
+    condition calculates to false, the if statement executes.
+
+
+    # The Assignment Operator
+
+
+    You''ve already seen assignment operators. The equal sign is a simple example
+    of the'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'assignment operator. It assigns a value to a variable. Let''s take a look one
+    more time at the assignment operator.
+
+
+    ```
+
+    int myNumber 1 = 1;
+
+    ```
+
+
+    The assignment operator is used to assign the value of 1 to myNumber.
+
+
+    You can also perform mathematical calculations on a variable and assign the result
+    to it with one line of code. It''s a form of shorthand code to use assignment
+    operators with mathematical calculations. You use the same mathematical operators
+    we used in the first section and combine them with the assignment operator.
+
+
+    Let''s take a look at example.
+
+
+    ```
+
+    int myNumber 1 = 1;
+
+    myNumber += 2;
+
+    ```
+
+
+    In this example, myNumber is first assigned the value of 1. The next statement
+    adds 2 to the variable and then assigns it the new value. The second statement
+    evaluates to 3 and assigns it to myNumber1.
+
+
+    You can do the same with any other mathematical operation. Let''s take a look
+    at one more example using the multiplication operator.
+
+
+    ```
+
+    int myNumber 1 = 1;
+
+    myNumber *= 2;
+
+    ```
+
+
+    Notice that the syntax is used, except we have used the multiplication character.
+    In this example, myNumber1 is multiplied by 2 and the value is assigned to myNumber1.
+    The result is that myNumber1 now contains the value of 2.
+
+
+    Operators are a major part of any programming language, including C#. These operators
+    are present in every major application, so you''ll need to know them well to work
+    in any programming language.
+
+
+    # Lab Questions
+
+
+    +   1. What operator tells the if statement to return true and execute its statements
+    if one of two conditions equals true?
+
+
+    +   a. ||
+
+    b. &&
+
+    c. !
+
+    d. >='
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'Explanation: The conditional or operator (||) requires only one condition to
+    equal true to execute the if statement.
+
+
+    2. What condition operator evaluates if two variables are greater than or equal
+    to each other?
+
+
+    +   a. ||
+
+    b. &&
+
+    c. !=
+
+    d. >=
+
+
+    Explanation: The greater than or equal operator returns true if variable 1 is
+    greater than variable 2 or if both variables are equal to each other.
+
+
+    3. What operator is shorthand for adding 1 to a variable?
+
+
+    +   a. ||
+
+    b. +
+
+    c. ++
+
+    d. +=
+
+
+    Explanation: The increment operator (++) adds 1 to the variable.
+
+
+    4. What operator adds a value to a variable and assigns it to the variable in
+    one line of code?
+
+
+    +   a. ||
+
+    b. +
+
+    c. ++
+
+    d. +=
+
+
+    Explanation: The += assignment operator first adds a given value to the variable
+    and assigns the new calculation result to the same variable.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Chapter 5
+
+    Loops and If Statements
+
+
+    Objective: Loops and If statements control the way your code executes. We saw
+    if statements in the last chapter, and we''ll dive deeper into them along with
+    a review of loops.
+
+
+    In every program, you need to evaluate statements and execute code depending on
+    the way statements calculate. Loops iterate through a statement until they reach
+    the stop condition, and if statements evaluate two conditions and execute statements
+    based on the results. In this chapter, we''ll show you how to use both structures
+    to control the way your code executes.
+
+
+    # The For Loop
+
+
+    The for loop is the most popular of all the loop structures. Loops iterate through
+    a series of conditions until a stop condition is met. If the stop condition is
+    never met, you create an infinite loop, so you always need to remember to include
+    the stop condition. The for loop is the most popular, because it''s very difficult
+    to reach the stop condition.
+
+
+    Let''s take a look at the general syntax template you use for the for loop.
+
+
+    ```
+
+    for ( init; condition; increment )
+
+    {
+
+    // statements execute here
+
+    }
+
+    ```
+
+
+    The for loop initializes a variable, sets a stop condition, and then increments
+    the initialized variable. These three statements are separated by semicolons.
+    With each iteration, the initialized variable is incremented until the condition
+    is met and the loop exits. Let''s take a look at an example.
+
+
+    ```
+
+    for ( int j = 0; j < 5; j++) )
+
+    {
+
+    // statements execute here
+
+    }
+
+    ```
+
+
+    In the above for loop, the j variable is initialized and set to 0. You can set
+    the variable to any value, but the standard is to set it to zero because loops
+    are usually used to iterate through arrays and these structures begin with index
+    0. The next statement is the condition. As long as j is less than 5, the loop
+    continues. Once j equals 5 or is more than 5, the loop executes. The increment
+    statement adds 1 to j after every loop. Let''s add some more detail to what happens
+    during a loop.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "```\nfor ( int j = 0; j < 5; j++)\n{\n    Console.WriteLine(j.ToString());\n\
+    }\n```\n\nThe output from the above loop looks like the following.\n\n+   0\n\
+    1\n2\n3\n4\n\nNotice that the value 5 doesn't print, because when j reaches the\
+    \ 5 value, the loop exits.\n\nYou'll see loops again when we work with arrays.\n\
+    \n# The While Loop\n\nThe while loop is similar to the for loop in that it has\
+    \ the same stop condition setup. However, the while loop does not initialize a\
+    \ variable and doesn't increment it after each iteration. You have a higher chance\
+    \ of causing an infinite loop when you use a while loop because there isn't any\
+    \ auto-incremented value, but you'll need a while loop when you have a condition\
+    \ to use that can't use a numerical condition.\n\nLet's take a look at the while\
+    \ loop template.\n\n```\nwhile (condition)\n{\n    //while loop statements execute\
+    \ here\n}\n```\n\nNotice the difference between this loop and the for loop is\
+    \ that this loop only has a condition to determine the next loop. Let's take a\
+    \ look at an example.\nbool loop = true;\nint j = 0;\n\n```\nwhile (loop)\n{\n\
+    \    Console.WriteLine(j)\n    if (j == 5)\n    {\n        loop = false;\n   \
+    \ }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "```\nj++;\n}\n```\n\nNotice using a while loop requires a lot more code. This\
+    \ is one reason they aren’t preferred over a for loop. We first define two variables\
+    \ that we’ll use to control the loop. The while loop is then initiated with its\
+    \ condition. The condition is set to always loop as long as the loop variable\
+    \ is equal to true. Since it's initialized to true, the while loop will iterate\
+    \ at least once.\n\nWithin the while loop, we have several statements. The first\
+    \ statement prints out the value of j. The next statement is an if statement that\
+    \ identifies the value of j. If j has reached the value of 5, the if statement\
+    \ flips the loop variable to false, so the evaluation of the stop condition will\
+    \ exit the loop. Finally, the last statement adds 1 to j. Because the while loop\
+    \ doesn’t have an auto-increment variable, you must remember to add your own to\
+    \ the while loop to avoid infinite loops. Infinite loops freeze and crash your\
+    \ program because they never end.\n\nYou’ll have to determine which loop is better\
+    \ for your program. You’ll probably use more than one throughout the code, but\
+    \ usually one is better for the execution of your code than the other.\n\n# The\
+    \ If Statement\n\nWe covered the if statement a little in the last chapter. The\
+    \ if statement is very common in programming, because it’s a way to change the\
+    \ workflow of the code. The if statement also has a condition, but instead of\
+    \ a loop, it only executes once. If you can embed statements within a loop as\
+    \ we saw in the previous section, and you can also embed a loop within an if statement.\
+    \ All of these methods are legitimate ways to control the execution of your code.\n\
+    \nFirst, let’s take a look at the basic template for an if statement.\n\n```\n\
+    if (expression)\n{\n  // statements that execute when the expression equals true\n\
+    }\n```\n\nWe already saw some examples, but let’s take a look at another one.\n\
+    \n```\nint myNumber1 = 1;\nint myNumber2 = 2;\nif ( myNumber1 == 2)\n{\n  Console.WriteLine(\"\
+    The variable equals the value of 2\");\n```"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '```
+
+    }
+
+    ```
+
+
+    We used the same code from the previous chapter to give you another example of
+    the if statement. In this example, we gave the if statement some code to execute.
+    The if statement prints “The variable equals the value of 2” if myNumber1 is equal
+    to 2. Since myNumber1 is initialized to the value of 1, the result is that the
+    if statement does not execute the code within the brackets.
+
+
+    Up until now, we''ve only looked at an if statement with one condition, but the
+    if statement also lets you combine the condition with an else and an if-else statement.
+    Both of these add even more control to your code. Let''s take a look at a template
+    for this statement.
+
+
+    ```
+
+    if(expression)
+
+    {
+
+    // statements that execute when the expression equals true
+
+    }
+
+    ```
+
+
+    ```
+
+    else
+
+    {
+
+    // statements that execute when the expression doesn''t equal true
+
+    }
+
+    ```
+
+
+    The above if-else statement gives you an option to execute alternative code should
+    the condition in the if statement evaluate to false.
+
+
+    Let''s take a look at some actual code that works with the if-else structure.
+
+
+    ```
+
+    int myNumber = 1;
+
+    int myNumber2 = 2;
+
+    if ( myNumber1 = 2)
+
+    {
+
+    Console.WriteLine("The variable equals the value of 2”);
+
+    }
+
+    else
+
+    {
+
+    Console.WriteLine("The variable does not equal 2”);
+
+    }
+
+    ```
+
+
+    We used the same code in the previous if statement, but we added the else statement.
+    Just like the previous if statement, this one evaluates to false as default. Instead
+    of just skipping the if statements altogether, the else statement executes by
+    default. This time, the result of the if statement execution is that “The variable
+    does not equal 2” is displayed in the console.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "You can also add an if statement to your else statement. This lets you create\
+    \ several conditions in one if statement block. Let's take a look at the template.\n\
+    \n```\nif (expression)\n{\n  // statements that execute when the expression equals\
+    \ true\n}\nelse if (expression)\n{\n  // statements that execute when the expression\
+    \ doesn’t equal true\n}\nelse\n{\n  // statements that execute when the expression\
+    \ doesn’t equal true\n}\n```\n\nNotice that we still kept the else statement with\
+    \ the two conditions. The else statement is optional for any statement. For instance,\
+    \ you could have just the two if statements from the template above and leave\
+    \ out the else statement.\n\nNow, let’s take a look at some actual code that uses\
+    \ the template. We’ll use the same variables from previous examples.\n\n```\n\
+    int myNumber1= 1;\nint myNumber2 = 2;\nif ( myNumber1 = 2)\n{\n  Console.WriteLine(\"\
+    The variable equals the value of 2\");\n}\nelse if ( myNumber1= 1)\n{\n  Console.WriteLine(\"\
+    The variable equals the value of 1\");\n}\nelse\n{\n  Console.WriteLine(\"The\
+    \ variable does not equal 2 or 1\");\n}\n```\n\nIn this statement, we use the\
+    \ same condition in the first block and the else block. If you notice, the first\
+    \ block evaluates to false. This time, we now have an else if statement. This\
+    \ statement has another condition for evaluation. This time, the condition is\
+    \ equal to true. Therefore, the second block is executed and the else statement\
+    \ is skipped. The"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "result of the above statement is that “The variable equals the value of 1”\
+    \ is displayed on the console.\n\n# The Switch Statement\n\nThe final conditional\
+    \ statement is the switch statement. The switch statement is similar to the if\
+    \ statement, but it evaluates one variable for multiple conditions. Let’s first\
+    \ a look at the template for this statement.\n\n```\nswitch(expression) {\n  case\
+    \ constant-expression :\n    // statement to execute\n    break;\n  case constant-expression\
+    \ :\n    // statement to execute\n    break;\n  default :\n    // statement to\
+    \ execute\n}\n```\n\nWith this statement, the variable is set in the switch expression,\
+    \ and then each case statement determines if the variable equals that value. Let’s\
+    \ take a look at the switch statement in action.\n\n```\nint myNumber = 1;\nswitch\
+    \ (myNumber) {\n  case: 1\n    Console.WriteLine(\"Value is 1”);\n    break;\n\
+    \  case: 2\n    Console.WriteLine(\"Value is 2”);\n    break;\n  default:\n  \
+    \  Console.WriteLine(\"Don’t know the value”);\n}\n```\n\nIn the above code, we\
+    \ evaluate the value of the variable myNumber. We initialize it to 1 and then\
+    \ use the case statements to go through each possible value. Because we know the\
+    \ value is 1, we can see that the first case statement evaluates to true, and\
+    \ then “Value is 1” is displayed in the console.\n\nThe default statement is similar\
+    \ to the else statement in an if block. If none of the case statements evaluate\
+    \ to true, then the default statement executes."
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'The break statements are used to exit out of the case statement. If you didn’t
+    add the break statements, the next case would execute until the code reached the
+    default statement. Just remember that each case statement requires a break to
+    exit out of the switch block.
+
+
+    We looked at several loop and if statements in this chapter. It''s important that
+    you understand code execution flow, because these statements are very common in
+    any programming language, including C#. These statements take some practice to
+    understand the way code executes, as each statement changes the workflow. Use
+    these statements to practice code flow in your own programs.
+
+
+    # Lab Questions
+
+
+    +   1. When you want to create a default statement for an if condition, what statement
+    do you use?
+
+
+    +   a. case
+
+    b. else
+
+    c. default
+
+    d. else if
+
+
+    Explanation: The else statement executes by default if none of the if conditions
+    evaluate to true.
+
+
+    +   2. What is the default statement for a switch condition when none of the case
+    statements evaluate to true?
+
+
+    +   a. case
+
+    b. else
+
+    c. default
+
+    d. else if
+
+
+    Explanation: The default statement is the last section in the switch condition
+    to execute statements when none of the case statements evaluate to true.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# # Chapter 6
+
+    Introduction to OOP
+
+
+    Objective: OOP is the main architecture coding design for a C# program. This chapter
+    covers the basics of C# programming using OOP concepts.
+
+
+    Object-Oriented Programming (OOP) is very different from linear development. OOP
+    uses the concept of components for software development. Instead of just writing
+    line-by-line and having each line execute until the end of the code is found,
+    the concept of classes uses components that execute in the order in which the
+    classes are defined and called. This chapter helps the coder understand how to
+    work with OOP and its concepts.
+
+
+    # Understanding OOP Basics
+
+
+    OOP uses the concept of creating parts that come together to build a whole program.
+    These parts are called classes. They are also referred to as class objects. Classes
+    represent each part of your program.
+
+
+    To understand the why classes represent parts of a program, think of a car. A
+    car has several parts that come together to form an entire car. Each part individually
+    is useless, but when they are put together, they create a machine that many people
+    can''t do.
+
+
+    Using the car example, you need (among other things) an engine, a steering wheel,
+    and tires to make up a car. Without these components, the car is useless. Classes
+    represent these parts of the car. The class contains all attributes for these
+    parts and any actions that they need to move or stop the car.
+
+
+    Before you begin your program, you need to design it prior to programming it.
+    When you design your classes using either a third-party diagramming program or
+    your own sketches and drawings. Whatever you use, it''s important to lay out the
+    program and determine the way your classes will represent the parts of your program.
+    When you design the program prior to coding it, you avoid any mistakes caused
+    by missing aspects of the program.
+
+
+    When you design your classes, you should also make sure that every property and
+    method work well with the class itself. For instance, if you have an ecommerce
+    application with a Customer and Product class, you wouldn''t put a method in the
+    Customer class that deals with product inventory. You would put product inventory
+    in the Product class or you would risk the possibility of accidentally creating
+    the same method twice when you realize it''s not available in the right class.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "# The Public Specifier\n\nOnce you design your classes, you have to decide\
+    \ if you want to make them available to other parts of your program. We’ll discuss\
+    \ how to create classes in the next chapter, but it’s important to understand\
+    \ the basics around them.\n\nThe public specifier tells the program that the class\
+    \ can be accessed in any area of the program. Let's take a look at an example\
+    \ of a Customer class with the public specifier.\n\n```\npublic class Customer\
+    \ {\n    public Customer() { }\n    public string first_name;\n    public string\
+    \ last_name;\n    public string phone;\n}\n```\n\nIn the above Customer class,\
+    \ notice that the first specifier for the class is the public keyword. If we eliminated\
+    \ the public keyword, this class would not be accessible to other parts of your\
+    \ program.\n\nYou’ll also notice the constructor is set to public. We’ll cover\
+    \ the purpose of the constructor in the next chapter, but just know that this\
+    \ is necessary for other parts of your program to instantiate the class and use\
+    \ its properties and methods. It is too set to public, but we could also set it\
+    \ to private. The public specifier lets other parts of the program instantiate\
+    \ the class.\n\nTo show you an example, the following code instantiates the class\
+    \ and sets it to a variable.\n\n```\nCustomer cust = new Customer();\ncust.firstLine\
+    \ = \"John\";\nConsole.WriteLine(cust.first_name);\n```\n\n# The Private Specifier\n\
+    \nJust like the public specifier, the private specifier is also an option for\
+    \ your classes. This hides the class from other parts of your program. With the\
+    \ private specifier, you’re unable to call the class from other parts of your\
+    \ program.\n\nLet’s take a look at the same code as the previous section, but\
+    \ we’ll use the private specifier.\n\n```\nprivate class Customer\n```"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\n{\n  private Customer() {\n    public string first_name;\n    public string\
+    \ last_name;\n    public string phone;\n  }\n}\n```\n\nWith this same class, we\
+    \ changed the public specifier to private. Now, the Customer class is completely\
+    \ hidden to other parts of the program.\n\nLet's try to call the class like we\
+    \ did in the previous section. Take a look at the following code.\n\n```\nCustomer\
+    \ cust = new Customer();\ncust.first_name = \"John\";\nConsole.WriteLine(cust.first_name);\n\
+    ```\n\nThe above code will give you an error that the class is set to private.\
+    \ When you use a private class, you can only use it within its own compartment.\
+    \ Most classes are not set to private, because they can't be used anywhere else\
+    \ in the program.\n\n# Setting Classes as Protected\n\nThe last specifier that's\
+    \ important is the protected specifier. This one isn't used much, but it's still\
+    \ used occasionally. Protected classes only allow the current class or any child\
+    \ classes to use properties and methods.\n\nWe'll get into deriving classes from\
+    \ parent classes and using child classes to expand a parent class. Just remember\
+    \ that with a protected class, only the child class can use its methods and properties\
+    \ when you design your program.\n\nIn later chapters, we'll cover more OOP concepts\
+    \ and classes to give you more practice with the code. It takes a lot of practice\
+    \ to get used to OOP, but it can be learned and used as a valuable tool for a\
+    \ new programmer.\n\n# Lab Questions\n\n+   1. What is the component that creates\
+    \ objects that correspond to parts of a program?\n\n+   a. class\nb. method\n\
+    c. property\nd. public"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'Explanation: A class object is a component of a program that defines a module.
+
+
+    2. What specifier allows any other part of your program to use the class and its
+    properties and methods?
+
+
+    +   a. public
+
+    b. private
+
+    c. protected
+
+    d. void
+
+
+    Explanation: The public specifier makes the class available from any other part
+    of your program.
+
+
+    3. What specifier only allows child classes to use its properties and methods?
+
+
+    +   a. public
+
+    b. private
+
+    c. protected
+
+    d. void
+
+
+    Explanation: The protected specifier blocks outside programs from using a class
+    method and properties, but child classes can use them.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "# # Chapter 7\nClasses\n\n**Objective:** In the last chapter we discussed OOP,\
+    \ and in this chapter we'll put those concepts to work in designing and building\
+    \ classes.\n\nClasses are the main components of OOP. Classes are the objects\
+    \ that come together to create a complete program. They are often called objects\
+    \ or class objects. You can use your class objects within any area of your code\
+    \ provided that the class is public. In this chapter, we'll discuss how to create\
+    \ a class and its methods, properties, and constructors.\n\n# ## Introduction\
+    \ to Classes\n\nAs we said earlier, classes define the components for your application.\
+    \ Before you set out to create your classes, you should draw out a design, either\
+    \ through diagramming or wireframes, that explains your program as a visual representation.\
+    \ If you forget a class and need to refactor your code, this is much more frustrating\
+    \ and time-consuming than just classes ahead of time through diagramming software.\n\
+    \nClasses are the building blocks of your code structure, so as you're designing\
+    \ your program, you should understand each part that you'll need to create your\
+    \ program. Every piece should be accounted for.\n\nA good way to design your program\
+    \ is to draw out your screens. For each screen, explain what it does. When you\
+    \ understand the way the screen works, then you can better understand the way\
+    \ your classes should be laid out.\n\nLet's first take a look at a basic class\
+    \ that describes a customer. Most applications need to include the concept of\
+    \ a customer as one component of the application. Let's take a look at a Customer\
+    \ class that contains the customer's address and last and first name properties.\n\
+    \npublic class Customer\n\n```\n{\n    public Customer () {}\n    public string\
+    \ first_name;\n    public string last_name;\n    public string phone;\n}\n```\n\
+    \nNotice that we set the public specifier to allow other programs to access the\
+    \ class object. Each of the class properties has the public specifier as well.\
+    \ This allows outside"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "programs to assign and retrieve their values throughout the program.\n\nThe\
+    \ constructor is the first function you see in the class object. Constructors\
+    \ are important parts of the class, because they allow outside methods to instantiate\
+    \ the class and use the properties and methods to manipulate the data. The constructor\
+    \ always has the same name as the class, and it never has a return type. We’ll\
+    \ discuss return types when we discuss how to create methods for your classes.\n\
+    \n# Creating Class Constructors\n\nClasses are the building blocks for your programs,\
+    \ and constructors are the scaffolding that hold the classes together. Constructors\
+    \ are what allow you to instantiate the classes you need to use throughout the\
+    \ lifetime of your program. You can set specifiers on your constructors, but they\
+    \ must always be the same name as the class, and they should never have a return\
+    \ type.\n\nLet’s take a look again at the same Customer class we created in the\
+    \ previous section.\n\n```\npublic class Customer\n{\n    public Customer () {\n\
+    \        public string first_name;\n        public string last_name;\n       \
+    \ public string phone;\n    }\n```\n\nThe constructor is the first line of code\
+    \ in the class definition. Notice that the method name is the same as the class\
+    \ name. This includes that because C# is case-sensitive, as you will recall from\
+    \ the first chapter. The constructor is built just like any other method in your\
+    \ classes. The constructor has the trailing parentheses that can take a parameter\
+    \ if you want it to. Then, it has the brackets that contain the executable code,\
+    \ if you want to execute any when when the class is instantiated. In this example,\
+    \ we don’t have any parameters for the constructor, and no code is executed when\
+    \ the code is instantiated.\n\nLet’s take a look at a class that has a constructor\
+    \ that takes parameters and then initializes some code.\n\n```\npublic class Customer\n\
+    {\n    public Customer (string first_name)\n    {\n        this.first_name = first_name;\n\
+    \    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "```\npublic string first_name;\npublic string last_name;\npublic string phone;\n\
+    }\n```\n\nIn the above snippet, we added some more code to the class constructor.\
+    \ First, we added a parameter to our constructor. The only way you can instantiate\
+    \ the class now is if you pass a first name to the constructor. You could pass\
+    \ an empty string to the parameter, but you must pass something to it.\n\nThe\
+    \ code within the constructor sets the local property to the variable value passed\
+    \ to the constructor. In this example, the first name is passed to the constructor\
+    \ and then the value is assigned to the local variable. You know that the local\
+    \ variable is used because of the \"this\" notation. The \"this\" specifier means\
+    \ that you want to use a local variable within the class.\n\nYou can have multiple\
+    \ constructors within a class. You could give your users the option to use a constructor\
+    \ that doesn't require a parameter along with the one that requires a first name.\
+    \ The following code illustrates how you can do this.\n\n```\npublic class Customer\n\
+    {\n    public Customer()\n    {\n        // do nothing\n    }\n    public Customer\
+    \ (string first_name)\n    {\n        this.first_name = first_name;\n    }\n \
+    \   public string first_name;\n    public string last_name;\n    public string\
+    \ phone;\n}\n```\n\nIn the above class code, you now have the option to instantiate\
+    \ with no parameters or with the constructor that automatically assigns the first\
+    \ name to the class property. If you already have the user's first name in your\
+    \ code, using this constructor would be a shortcut.\n\n# Creating Methods in Your\
+    \ Code\n\nMethods are the actions that your classes perform on the program's data.\
+    \ Methods are basically functions within your classes. They are also called the\
+    \ \"verbs\" of your"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "classes. Whenever action is taken against a class, you use a method. It could\
+    \ be a customer changing a phone number. You would then create a ChangePhoneNumber\
+    \ method. You might need to remove a product from inventory. This would be a method\
+    \ named “DecrementInventory” in your Product class.\n\nThe location of your methods\
+    \ is dependent on your class design that you set up when you create your program\
+    \ architecture design. Regardless of your method name, you notice, the important\
+    \ part of your design is where the method is located. You always place a method\
+    \ in the appropriate class. For instance, you wouldn't put the method DecrementInventory\
+    \ in the Customer class, because it's not related to anything that has to do with\
+    \ customers. Poorly designed code can have a negative effect on your application\
+    \ architecture.\n\nLet's take a look at a method within a class. We mentioned\
+    \ a class method that allows a user to change a phone number. Let's take a look\
+    \ at what an example method would look like in a customer class.\n\n```\npublic\
+    \ class Customer {\n  public Customer () { }\n  public void ChangePhone(string\
+    \ new_phone) {\n    this.phone = new_phone;\n  }\n    public string first_name;\n\
+    \  public string last_name;\n  public string phone;\n  }\n```\n\nWe added a ChangePhone\
+    \ method to the Customer class. If you notice, this method takes a new_phone variable.\
+    \ This variable takes the phone number for the customer and assigns it to the\
+    \ local class property. Notice again that we use this designation to specify that\
+    \ we want to assign the local class variable and not any other variable. This\
+    \ is especially important when you assign a local variable to a global class variable\
+    \ and both of them have the same name, just as we've illustrated in the above\
+    \ code.\n\nNotice that we added the void specifier as well. You specify what type\
+    \ of value is returned by a method. In this example, nothing is returned, so the\
+    \ specifier is set to void. If we returned, for instance, a string value, we would\
+    \ specify a string return type instead of the void keyword.\n\nAlso notice that\
+    \ we set the method to public. This means that any other parts of your code can\
+    \ use the method regardless of whether it's a child class. Some specifiers, such\
+    \ as protected only, allow derived classes to use the method. We want all other\
+    \ parts of your code to use the ChangePhone method, so we leave it as public.\
+    \ If we set it to"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "private, then no other classes could use the method except for the local Customer\
+    \ class.\n\n# Using Properties\n\nClass methods are the verbs and properties are\
+    \ the nouns. Any attributes that you want to place on your classes are done through\
+    \ properties. Class properties define the “look” of your classes. For instance,\
+    \ a first and last name is a property of the Customer class. It’s an attribute\
+    \ of your customers.\n\nLet’s take a look at our current Customer class properties.\n\
+    \n```\npublic class Customer\n{\n    public Customer () { {}\n    public void\
+    \ ChangePhone (string new_phone)\n    {\n        this.phone = new_phone;\n   \
+    \ }\n    public string first_name;\n    public string last_name;\n    public string\
+    \ phone;\n}\n```\n\nThe above Customer class has three properties. The first name,\
+    \ last name, and phone variables are all properties of the Customer class.\n\n\
+    You can add any number of properties to your class. You can add another string\
+    \ property named address to record your customer addresses. Let’s take a look\
+    \ at an example.\n\n```\npublic class Customer\n{\n    public Customer () { {}\n\
+    \    public void ChangePhone (string new_phone)\n    {\n        this.phone = new_phone;\n\
+    \    }\n    public string first_name;\n    public string last_name;\n    public\
+    \ string phone;\n    public string address;\n}\n```\n\nJust remember that all\
+    \ properties are the nouns, or attributes, that describe your class attributes,\
+    \ and methods are the verbs that perform actions on your classes and their data."
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'When you create classes, you''ll need at least one property, and you''ll probably
+    have at least one method in the class. Classes can be small, with only one line
+    of code, or you can have very large classes that define a large portion of your
+    program. Just remember that classes are scalable, so you should always create
+    a class for each section of your program to ensure that it is scalable when you
+    need more functionality in the future.
+
+
+    # Lab Questions
+
+
+    +   1. When you want to allow your class to be instantiated from any part of your
+    program, what specifier do you use?
+
+
+    +   a. public
+
+    b. global
+
+    c. private
+
+    d. void
+
+
+    > Explanation: The public specifier allows any class to instantiate your current
+    class, including derived classes or any external code.
+
+
+    +   2. What class components are considered the verbs?
+
+
+    +   a. properties
+
+    b. methods
+
+    c. constructors
+
+    d. data types
+
+
+    > Explanation: Methods are considered the verbs for your classes because they
+    take action on data and class properties.
+
+
+    +   3. What are considered the attributes or nouns for a class?
+
+
+    +   a. properties
+
+    b. methods
+
+    c. constructors
+
+    d. data types
+
+
+    > Explanation: Properties are the attributes that describe a class, so they are
+    considered the nouns.
+
+
+    +   4. What does a class need for other classes to instantiate it?
+
+
+    +   a. properties
+
+    b. methods'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'c. constructors
+
+
+    d. data types
+
+
+    **Explanation:** Constructors are methods that allow a class to be instantiated
+    from other parts of your code.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '#  Chapter 8
+
+    Structures and Enums
+
+
+    **Objective:** Structures and Enums are two other ways to create custom data types.
+    This chapter shows you how to use both data types to structure your code and make
+    it easier to read.
+
+
+    We covered classes in the previous chapter, which allowed you to create your own
+    data types. Structures and enums are the other two ways to create your own data
+    types, but these data types work differently than classes. You''re bound by stricter
+    rules with structures and enums, and they are used in different scenarios that
+    you saw with classes. In this chapter, we''ll look at both of these structures
+    and give you an idea of when you would use them in your C# programs.
+
+
+    # Why Use a Structure or Enum Instead of a Class?
+
+
+    When you start programming in C#, you might be tempted to create classes for everything.
+    Until up this chapter, we''ve pushed the idea that each component should be a
+    class, but you can use enums and structures for smaller components of your program.
+
+
+    For instance, suppose you have a list of customer types. Each type has a value
+    of 0 to 3 in your database. You could create a class for customer type, but you
+    can also create an enum for these values. The enum gives these values a friendly
+    name, and they store an integer to represent each friendly name coding value.
+
+
+    A structure is useful in the same way as an enum. A structure allows you to contain
+    more than just integer values. An enum is for integer values, and a structure
+    is useful when you need to store other data types. For instance, you could create
+    a structure for a customer data type when you need to store the customer ID and
+    a string value for the type. You might want to store a description in the structure
+    that matches the customer ID. You could use a class for this type of structure,
+    but sometimes a class is not necessary when you just need one or two properties
+    to represent a custom data type.
+
+
+    In this chapter, we''ll show you when you should use these data types instead
+    of building an entire class. For the most part, you will use classes to define
+    your application, but in a few examples, you won''t need a full blown class instead
+    of a small enum or structure.
+
+
+    # Using Structures
+
+
+    Structures are the closest thing to classes. They create your own data type, except
+    they are a bit different than the class object definition. Structures let you
+    create a custom data'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "type has a list of values with any data type that you need for the code.\n\n\
+    Structures look like classes with a long list of properties, but you use the “struct”\
+    \ keyword to define them instead of the class definition.\n\nLet’s take a look\
+    \ at the template used to define a structure.\n\n```\nstruct structure_name\n\
+    {\n    public data_type name\n    // any other structure properties that you need\n\
+    }\n```\n\nThe “struct” keyword indicates that you want to create a structure.\
+    \ After the struct keyword, you give your structure a name. This can be any name\
+    \ that properly describes what the structure should contain.\n\nWithin the structure’s\
+    \ brackets are the properties. Each property should be set to public or you won’t\
+    \ be able to access them. With classes, there are reasons not to allow access\
+    \ to properties, but with structures you should have them set to public. You can\
+    \ add as many structure properties as you need, but when you get too complicated\
+    \ it is sometimes better to choose a class instead of using a structure.\n\nLet’s\
+    \ take a look at a real-world example of a structure. We’ll use the same example\
+    \ we mentioned earlier. We’ll use a customer type structure.\n\n```\nstruct customer_type\n\
+    {\n    public int id\n    public string description;\n    public string type_name;\n\
+    }\n```\n\nIn the code above, we created a structure named customer_type. Within\
+    \ the structure definition, we created three properties. The first one will represent\
+    \ the ID for the customer type. The second property, named description, represents\
+    \ a brief description of the type, and then the type_name property is the name\
+    \ for the customer type.\n\nWith the structure defined, you can now use it in\
+    \ your code. Let’s see what the code looks like when you want to include the structure\
+    \ in your code.\n\n```\nstruct Customer_type\n{\n    public int id\n```"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "```\npublic string description;\npublic string type_name;\n}\npublic class\
+    \ testStructure\n{\n  public static void Main ()\n  {\n```\n\n```\nCustomer_type\
+    \ custType;\ncustType.id = 4;\ncustType.description = \"This customer has limited\
+    \ access to the application\";ncustType.type_name = \"Limited User\";\n  }\n```\n\
+    \nThe above code has the structure and a testStructure class for a console application.\
+    \ In the Main function, we define a new variable with the Customer_type data type.\
+    \ We then populate the structure’s properties with values. Notice that the structure\
+    \ code has the same syntax as when you retrieve or set values. This is one reason\
+    \ structures are easy to learn as long as you understand classes.\n\nOnce you\
+    \ have the data defined, you can use it anywhere in your code. When you create\
+    \ a variable within a method, the variable is local to the method. You can use\
+    \ it it only within the Main method unless you create the variable global to the\
+    \ class. In our example, we defined the variable within Main, so we can use it\
+    \ anywhere within the Main method.\n\nLet’s take a look at how you can retrieve\
+    \ the data from the structure.\n\n```\nstruct Customer_type\n{\n  public int id\n\
+    public string description;\npublic string type_name;\n}\n```\n\n```\npublic class\
+    \ testStructure\n{\n  public static void Main ()\n  {\n```\n\n```\nCustomer_type\
+    \ custType;\ncustType.id = 4;\ncustType.description = \"This customer has limited\
+    \ access to the\n```"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: 'application";
+
+    custType.type_name = "Limited User";
+
+    Console.WriteLine(custType.type_name);
+
+    }
+
+
+    We added a line of code to retrieve and display the data within the type_name
+    variable in our custType structure variable. That''s all it takes to retrieve
+    data from a structure.
+
+
+    # Creating Enums
+
+
+    Enums are a bit different than structures, but they are set up in a similar way.
+    Enums can only store integer values. They are useful when you have a list of integer
+    values that you don''t want to statically set in several variables. For instance,
+    suppose you want to use a list of days and represent them with integer values
+    from 0 to 6. If you did this without an enum variable, you''ve have to create
+    variables for each function you call. Instead of creating seven variables every
+    time you need to work with the days of the week, you can create an enum that can
+    be called at any time. The enum also lets you represent these values with friendly
+    names that are more easily recognizable.
+
+
+    Let''s take a look at the template syntax for creating an enum.
+
+
+    ```
+
+    enum enum_name
+
+    {
+
+    // list of enum variables
+
+    }
+
+    ```
+
+
+    With the enum, you use the enum keyword to indicate that you want to create an
+    enum data type. Then, after you specify that you want to create an enum data type,
+    you give your enum structure a name. You can give your enum any name that you
+    want. Enums have the same variable naming rules as regular variables.
+
+
+    Within the enum brackets are all of the properties that you need to define an
+    enum. let''s take a look at a real-world example using the days of the week enum
+    that we described previously.
+
+
+    ```
+
+    enum Days { Sun, Mon, Tue, Wed, Fri, Sat };
+
+    ```
+
+
+    Notice that with an enum, you don''t deine a public specifier and you don''t declare
+    any data types. Remember that enums only hold integer data types, so you don''t
+    need to define any of these specifiers. They are all public by default, so you
+    don''t need to use the public specifier.
+
+
+    When you define a list of enum variables, the compiler automatically assigns values
+    to'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "each variable. The first value is always zero unless you specify otherwise.\
+    \ Each additional variable is given the next number in the list. In this example,\
+    \ the first variable Sunday Monday has the value of 1, and so on.\n\nLet's take\
+    \ a look at how you would use this in code.\n\n```\nclass EnumProgram {\n    enum\
+    \ Days { Sun, Mon, tue, Wed, thu, Fri, Sat };\n    static void Main () {\n   \
+    \     int monday = (int)Days.Mon;\n        int friday = (int)Days.Fri;\n     \
+    \   Console.WriteLine(\"Monday: {0}\", monday);\n        Console.WriteLine(\"\
+    Friday: {0}\", friday);\n    }\n}\n```\n\nIn the above code, you can see how an\
+    \ enum variable returns a value. We assign the value to two integer variables.\
+    \ In the code above, the output first displays integer value of Monday, which\
+    \ is 1. The next output value is Friday, which is 5.\n\nYou can also reassign\
+    \ the integer values are set in an enum. For instance, suppose you want all of\
+    \ your enum values to start with the value of 1 and assign integer values from\
+    \ 1 to 7. Let's take a look at the code that would alter the enum values.\n\n\
+    enum Days { Sun = 1, Mon, Tue, Wed, Thu, Fri, Sat };\n\nIn the above code, we\
+    \ start the integer assignment with a value of 1. In this instance, instead of\
+    \ the last variable Sat having the value of 6, you will have the value of 7.\n\
+    \nYou won't need enums and structures as often as you need classes, but they are\
+    \ useful in many scenarios when you don't need the bulky overhead of a class definition.\
+    \ We showed you a couple of examples, and you'll figure out where they are useful\
+    \ when you create your program design.\n\n# Lab Questions\n\n+   1. What specifier\
+    \ do you use to allow structure variables to be accessible to any outside code\
+    \ that uses the data type?\n\n+   a. private\nbb. public"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'c. protected
+
+    d. void
+
+
+    **Explanation**: The public specifier allows any outside code to use the structure’s
+    variable
+
+    without hiding it from use.
+
+
+    2. What is the first value assigned to the first variable in an enum structure?
+
+
+    +   a. 1
+
+    b. 2
+
+    c. 0
+
+    d. -1
+
+
+    **Explanation**: In any enum, the first variable is always given the default value
+    of 0 and
+
+    each additional variable is given the next number in the list.
+
+
+    3. What is the keyword that defines that you want to create a structure in your
+    code?
+
+
+    +   a. enum
+
+    b. structure
+
+    c. struct
+
+    d. define
+
+
+    **Explanation**: The struct keyword indicates that you want to create a structure.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# # Chapter 9
+
+    Inheritance
+
+
+    **Objective:** Classes and OOP give you the ability to derive from parent classes.
+    This chapter explains inheritance within your class structure.
+
+
+    OOP is more than just creating classes and building a program that can call other
+    classes. You can derive your child classes from parent classes, so you don''t
+    need to repeat code for similar objects. Inheritance can be complex if you don''t
+    create a good class design, so this chapter attempts to explain inheritance and
+    how you should set up your class structure for the best scalable code.
+
+
+    # **Understanding Basic Inheritance
+
+
+    Inheritance lets you derive child classes from parent classes. Think about animals.
+    If you have a lion and a parrot, both of these animals have very different characteristics,
+    and they have similar ones as well. They are both animals, but one is a bird and
+    one is a mammal. If you didn''t use inheritance, you would need to create two
+    classes that describe both animals from top to bottom.
+
+
+    With inheritance, you can create one class that describes basic features of an
+    animal, and then derive child classes from the main parent class. For instance,
+    both birds and lions have eyes and feet. Their eyes and feet might look different,
+    but they still have them. Other characteristics are different, but all lions and
+    birds have feet. You can create a parent animal class that defines feet and eyes,
+    and then the child lion and bird classes can define characteristics specific to
+    their respective animals.
+
+
+    The purpose of inheritance is to make it unnecessary to repeat your code. Without
+    it, you''d have to create a bird and a lion class that defined the eyes and feet
+    of each animal, which would create redundant code. When you create redundant code,
+    you make it more difficult to manage your code. When you create ten classes that
+    define the eyes of an animal and you need to change that description, you need
+    to change all ten of those classes. This opens up more room for bugs and issues
+    when you try to scale your code, which you want to avoid.
+
+
+    Not every class must be a parent or child class. You can create code with standalone
+    classes that aren''t derived from any other code. The way you design your code
+    is up to you and the needs of the program you want to create.
+
+
+    # **Inheriting from a Parent Class
+
+
+    Before you create your child class, you need to create a parent class. Since we''re
+    using'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "an animal as an example parent class, we’ll first create an animal class that\
+    \ defines the very basic, shared characteristics between all animals.\n\nLet’s\
+    \ take a look at an example animal class.\n\n```\nabstract class Animal\n{\n \
+    \   public string eye_color;\n    public string number_of_feet;\n    public function\
+    \ breath()\n    {\n        return \"Animals breathe air.\";\n    }\n}\n```\n\n\
+    We created an Animal class in the above code. But it can be used as a parent class.\
+    \ Most abstract classes cannot be instantiated, as abstract are high-level main\
+    \ classes that can be used as parent classes for a number of child objects. The\
+    \ above code sets up some standard characteristics. Two properties take the eye\
+    \ color of the animal and the number of feet the animal has. All animals breathe,\
+    \ so we set up a method that indicates every animal breathes.\n\nNow it’s time\
+    \ to derive your child class. Let’s derive a lion class from the main animal class.\n\
+    \n```\nabstract class Animal\n{\n    public string eye_color;\n    public string\
+    \ number_of_feet;\n    public function breath()\n    {\n        return \"Animals\
+    \ breathe air.\";\n    }\n}\n```\n\n```\npublic class Lion : Animal\n{\n    public\
+    \ string mane_color;\n    public Lion () { {}\n    public void Roar()\n    {\n\
+    \        Console.WriteLine(\"A lion roars\");\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "We now have a derived child Lion class that inherits from the parent Animal\
+    \ class. We don't need to redefine the lion's eyes and feet, because we have these\
+    \ values in the parent Animal class.\n\nNotice that the class definition is first\
+    \ named Lion, and then a colon is added with the Animal class. This is how you\
+    \ indicate to the compiler that you want to inherit a parent class. You can derive\
+    \ from multiple classes by adding a comma and then adding more names of parent\
+    \ classes to indicate that you want to derive from multiple parents. Child classes\
+    \ can also derive from other child classes. The parent class definition doesn't\
+    \ matter as long as it's not set to private. Once you set a class to private,\
+    \ you can't derive from or instantiate it, so be careful with the specifiers that\
+    \ you choose for your.\n\nOur Lion class also has properties and methods that\
+    \ define characteristics that are specific to a lion. The lion roars, so we have\
+    \ a Roar method that defines the way a lion speaks. We also have a mane property\
+    \ to define a lion's mane. These two characteristics are specific to lions, so\
+    \ they belong in the Lion class. If they were global to all animals, we would\
+    \ place them in the Animal class so all other child classes could use these properties\
+    \ and methods.\n\n# Inheritance and Interfaces\n\nInterfaces are the foundation\
+    \ of inheritance. Interfaces allow you to define one class that can contain the\
+    \ declaration of each class that links to the interface, but any class can derive\
+    \ from it. It provides a way to create a “contract” between the child class and\
+    \ the parent classes that are linked to the interface.\n\nInterfaces are different\
+    \ than classes in that they only contain the declaration of the classes and not\
+    \ the class definitions. Let’s take a look at a sample interface.\n\n```\npublic\
+    \ interface IAnimal {\n    // interface members\n    void breathe();\n}\n```\n\
+    \nSince we only have one method in the Animal class, we only have one animal method\
+    \ defined in the interface. Notice that there are no class definitions in the\
+    \ interface. You just define the functions that are used in the interface. This\
+    \ also defines the ones that can be used in child classes. These interfaces make\
+    \ it easier to scale your classes, because you can create methods within your\
+    \ class that aren't ready to be released without any child classes to derive these\
+    \ methods until they are ready for use."
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "The standard naming scheme is also to use an I prefix when you name your interfaces.\
+    \ The prefix distinguishes the difference between the class and the interface\
+    \ when you work with both of them in your code.\n\nOnce you create your interface,\
+    \ you can inherit it in your classes. Let’s take a look at the Animal class when\
+    \ it derives from the IAnimal interface.\n\n```\npublic interface IAnimal {\n\
+    \    // interface members\n    void breathe();\n}\n\nabstract class Animal : IAnimal\
+    \ {\n    public string eye_color;\n    public string number_of_feet;\n    public\
+    \ function breathe() {\n        return \"Animals breathe air.\";\n    }\n}\n```\n\
+    \nThat’s all it takes to derive from the main Animal interface. Now, any of your\
+    \ other classes can inherit from the interface or the main Animal class. It’s\
+    \ standard for a program that includes interfaces to only allow programmers to\
+    \ derive from the interface, but it depends on the way you want to design your\
+    \ code and lay out your classes.\n\n# Static Classes\n\nStatic classes need a\
+    \ mention, because they are a bit different than regular public classes. Static\
+    \ classes don’t need to be instantiated, which makes them beneficial when you\
+    \ want to create a class that has functions you want to use randomly in your code.\
+    \ Static classes are defined using the static keyword.\n\nYou might need a static\
+    \ class when it contains a function that you could need on the fly as you work\
+    \ with your code. For instance, the ToString method in C# is a static method.\
+    \ You can use it at any time without instantiating a class. Just call the ToString\
+    \ method and it turns your variable into a string. You use this method when you\
+    \ want to change a number, for instance, into a string value. The ToString method\
+    \ will turn any variable into a string regardless of the type of data it contains.\n\
+    \nLet’s take a look at a static class."
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "```\nstatic class Animal : IAnimal\n{\n    public string eye_color;\n    public\
+    \ string number_of_feet;\n    public function breathe()\n    {\n        return\
+    \ \"Animals breathe air.\";\n    }\n}\n```\n\nNotice that we changed the abstract\
+    \ type in the above Animal class to static. Now, we don't need to instantiate\
+    \ this class. We can instantiate the class now that it's not an abstract defined\
+    \ class. With the static specifier, we can call the class with no instantiation.\
+    \ Let's take a look at what this looks like in a C# method.\n\n```\nstatic class\
+    \ Animal : IAnimal\n{\n    public string eye_color;\n    public string number_of_feet;\n\
+    \    public function breathe()\n    {\n        return \"Animals breathe air.\"\
+    ;\n    }\n}\n```\n\n```\nclass StaticTester\n{\n    static void Main(string[])\
+    \ args\n    {\n        Console.WriteLine(\"This is what happens when you call\
+    \ a static class: {0}\", Animal.breathe());\n    }\n}\n```\n\nIn the above code,\
+    \ we define our static Animal class and then we call the breathe method using\
+    \ the static method contained within the class. Notice that we didn't instantiate\
+    \ the class before we called the method. This is valid syntax when you use the\
+    \ static specifier in your code.\n\nInheritance is a complex topic that most developers\
+    \ need some time to understand when creating their programs. You don't always\
+    \ need to inherit classes when you design your program, but it will greatly reduce\
+    \ the time you need to scale your code as your program grows and has more users.\
+    \ It takes some practice before you can get the hang of inheritance, classes,\
+    \ and OOP. As you practice with OOP, use some inheritance with"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'parent and child classes to get used to the way they work within your designs.
+
+
+    # Lab Questions
+
+
+    1. What keyword can you use to avoid instantiating a class and using its methods?
+
+
+    +   a. public
+
+    b. private
+
+    c. void
+
+    d. static
+
+
+    Explanation: The static keyword lets you create classes that don’t need to be
+    instantiated before you use their methods.
+
+
+    2. What character is used to identify that you want to inherit a child class from
+    a parent class?
+
+
+    +   a. ;
+
+    b. :
+
+    c. –
+
+    d. ,
+
+
+    Explanation: The colon character is used to define an inherited class.
+
+
+    3. What is the standard prefix used to indicate that you’ve created an interface?
+
+
+    +   a. i
+
+    b. I
+
+    c. int
+
+    d. interface
+
+
+    Explanation: The I prefix is used to distinguish between a regular class and an
+    interface.
+
+
+    4. What is a derived class referred to as when it inherits from a parent class?
+
+
+    +   a. child
+
+    b. parent
+
+    c. subparent
+
+    d. derived
+
+
+    Explanation: A child class inherits from a parent class, so it’s always referred
+    to as a child class or an inherited class.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Chapter 10
+
+    Arrays
+
+
+    **Objective:** Arrays are variables that can contain multiple values. This chapter
+    helps you understand how to work with arrays, and how to assign and retrieve values
+    from them.
+
+
+    Arrays are a part of almost any program. They allow you to store a list of variables
+    with the same data type in one main variable. For instance, if you want to store
+    a list of integer values, you can store them in an array. Arrays are a bit more
+    limited than other data types. You need to know the number of values you want
+    to store in the array ahead of time. This is possible in some program logic, so
+    it makes sense to use an array.
+
+
+    # Declaring an Array in C#
+
+
+    Arrays are declared bit differently than regular variables. You still must declare
+    a data type. When you declare an array, you must define the type of variables
+    that will be stored in the array. For instance, if you define an array as an integer,
+    you can only store an array of integers within the variable. That''s the difference
+    between an array and other data types such as classes or structures. Once you
+    define the variable data type, you can use only the same variable data types throughout
+    all of your array.
+
+
+    Arrays store multiple variables, and each variable is given an index. The index
+    numbers start with 0. In other words, the first value stored in the array is the
+    index of 0. The next value has the index of 1, and the one after that has the
+    index of 2. As you can see, each value is given the next number in the index.
+    These index numbers are how you assign values to an array and how retrieve them
+    in your code.
+
+
+    Before you can use an array, you first need to declare it. Let''s first look at
+    the template datatype[] arrayName;
+
+
+    In the template above, the first term, data type, is used to determine the data
+    type for the array. Notice that the opening and closing brackets indicate an array
+    in your code definition. This is the one part of the array code that indicates
+    you want to create an array of the given data type. The second term is the name
+    of the array. You can give the array any name you want to define the array’s values.
+
+
+    Let''s take a look at a defined array in C# code.
+
+    int[] myNumbers;
+
+
+    In the above code, the first term is the data type you want to use in the array
+    values. In'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "this example, we define an integer array. The second term is the name of the\
+    \ array. You can give your array any name that makes sense to you and your programming\
+    \ design. In this example, we named the array myNumbers.\n\n# Filling an Array\
+    \ with Values\n\nWhen you work with arrays, you need to fill them with values.\
+    \ The for loop is what is most common when you want to fill an array with values.\
+    \ If you recall, we covered a for loop. A for loop lets you define a variable\
+    \ and a stop condition, and then automatically iterates through the array indices\
+    \ using the increment operator.\n\nBecause you usually know the length of an array\
+    \ and the amount of values you need to use fill the array, you can use the for\
+    \ loop. The for loop is the preferred way to fill an array with values. We want\
+    \ to fill myNumbers array with a list of numbers. Suppose you want to fill the\
+    \ array with values from one to ten. You could use the array indices to assign\
+    \ the values one by one.\n\nUsing array indexes one by one is more cumbersome\
+    \ than it's worth. The preferred way of filling an array is using a for loop.\
+    \ Let's take a look at what a for loop looks when you want to iterate through\
+    \ each number and assign it to the array indices.\n\n```\nfor ( int j = 0; j <\
+    \ 10; j++)\n{\n    myNumbers[ j ] = j;\n}\n```\n\nIn the above code, we use the\
+    \ same array that we used in the previous section. We defined an integer array\
+    \ named myNumbers. We know from the data type that we can only store integers\
+    \ in the myNumbers array.\n\nThe next section of code is the for loop. We know\
+    \ that we want to fill the array with ten numbers. Because all arrays start with\
+    \ the 0 index, we know that we first need to initialize the value of j to 0. The\
+    \ for loop loops through the array ten times, from 0 to 9. When the j variable\
+    \ reaches the value of 10, the loop exits and no more values are stored in the\
+    \ array.\n\nIn the above example, the values of 0 to 9 are stored in the array.\
+    \ You could also store array values by one using array indexes. The following\
+    \ code is an example of storing an array using the array's indices.\n\n```\nmyNumbers[0]\
+    \ = 0;\nmyNumbers[1] = 1;\nmyNumbers[2] = 2;\nmyNumbers[3] = 3;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "myNumbers [4] = 4 ;\nmyNumbers [5] = 5;\nmyNumbers [6] = 6;\nmyNumbers [7]\
+    \ = 7;\nmyNumbers [8] = 8;\nmyNumbers [9] = 9;\n\nThe above code, as you can see,\
+    \ is much more cumbersome than the for loop. And you can add index values to what\
+    \ you want to iterate through to add more numbers to your array. Obviously, using\
+    \ a for loop is much more efficient than using the static numbers and assigning\
+    \ them to an array without using the loop.\n\n# Retrieve Values from an Array\n\
+    \nOnce you assign values to an array, you need to know how to retrieve values\
+    \ from an array as well. In some cases, you fill an array with values that you\
+    \ later need to display to a user. You can use the cumbersome way of retrieving\
+    \ values that we showed in the previous section, or you can use a for loop again.\
+    \ A for loop makes it much easier to retrieve values than it would be by defining\
+    \ the variables you want to retrieve by one.\n\nLet's take a look at what the\
+    \ code looks like with a for loop.\n\n```\nint[] myNumbers;\nfor (int j = 0; j\
+    \ < 10; j++)\n{\n    myNumbers[ j ] = j;\n}\n```\n\n```\n// now you can display\
+    \ the values\nfor (int j = 0; j < 10; j++)\n{\n    Console.WriteLine(myNumbers\
+    \ [j]);\n}\n```\n\nIn the first section of the above code, we defined the array\
+    \ and assigned the array values. In the second for loop, we iterated through each\
+    \ array index and displayed the value of the index values. Notice that again we\
+    \ used the j variable to iterate through each index. Just one line of code is\
+    \ needed as opposed to using the static index variables force you to use several\
+    \ lines of code instead.\n\n# Using an ArrayList\n\nC# has a library called an\
+    \ ArrayList that makes working with arrays much easier. In"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'most cases, you don''t need any of the advanced options in the ArrayList, but
+    it does make it much easier to create arrays and retrieve values you add to the
+    array.
+
+
+    An ArrayList is a class in C# that contains several methods and properties that
+    make working with arrays much easier.
+
+
+    Let''s take a look at some example code that uses the ArrayList class library.
+
+
+    The above code does several different things that you''ll need to use at some
+    point in your own programs.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: 'The first part of the array program defines the array and some integer values
+    to it. Note that the initializing of the array only requires the custom data type
+    and doesn''t require the primitive data type we saw in previous sections.
+
+
+    The next section prints the total count for the array. The count is important
+    when you want to iterate through a number of indexes and you don''t know the number
+    of indexes that you need to iterate through.
+
+
+    The last section of the code iterates through the array and prints the values
+    to the screen. We again use the count of the array, so we know exactly the number
+    of times the loop should iterate. If you accidentally iterate through an array
+    too many times and you attempt to retrieve a value from an array index that doesn''t
+    exist, the program will throw an error. It''s important in any program to keep
+    track of where you are in the array to avoid creating bugs in your code. The syntax
+    is fine, so you won''t receive an error until you actually run the code.
+
+
+    Arrays are common in code, although they aren''t as popular as other types of
+    variables and data. They can be difficult to work with, and if you use them incorrectly,
+    you can create major bugs in your code. Always ensure that you practice a bit
+    with arrays before you actually iterate through them and add them to any part
+    of your program.
+
+
+    # Lab Questions
+
+
+    +   1. What is the first index number for an array?
+
+
+    +   a. 0
+
+    b. 1
+
+    c. -1
+
+    d. 3
+
+
+    Explanation: All arrays start with the index of 0 in any programming language,
+    C#.
+
+
+    +   2. What is the most popular type of loop that is used with an array, because
+    you can automatically iterate through the index of an array?
+
+
+    +   a. while
+
+    b. for
+
+    c. do while
+
+    d. switch
+
+
+    Explanation: The for loop lets you automatically create a stop condition with
+    a variable that auto increments to avoid accidentally creating an infinite loop.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '3. What is the C# library that makes it easier to work with arrays instead
+    of using primitive data types?
+
+
+    a. ArrayList
+
+
+    +   b. Array
+
+    c. List
+
+    d. Generic
+
+
+    Explanation: The ArrayList has several methods and properties that you can use
+    to work with arrays without using loops or raw code to fill the array with values
+    and retrieve values from the array.'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# Chapter 11
+
+    Generics
+
+
+    Objective: Generic lists are much easier to work with than arrays. This chapter
+    helps you understand how to work with generic lists and what you can use them
+    for.
+
+
+    We''ve discussed classes, structures, and enums. All of these create a custom
+    data type that you can use throughout your C# program. We''ve also discussed arrays.
+    Arrays require you to define a data type before you can use them, but you can
+    get around this restriction by using generics. Generics allow you to create arrays
+    that can hold generic types that you can''t use with a regular array. In this
+    chapter, we''re going to show you how to create your own generics and use the
+    pre-made List generic that comes with the .NET framework.
+
+
+    # Introduction to Generics
+
+
+    Generics are similar to arrays. As a matter of fact, when you create your own
+    custom generics you create arrays within the generic code. Generics are how you
+    can store custom data types as an array. You can create a generic class to store
+    any data type you want. The C# language provides you with a special syntax that
+    lets specify that you want to pass a generic data type. This data type can be
+    a simple primitive type such as a string or an integer, or you can even pass your
+    own classes to the generics class.
+
+
+    Generics use the special T syntax to indicate that you want to pass a generic
+    data type to the class methods. Think of a generic as a way to dynamically store
+    values in the same way as an array. Custom methods and properties perform similar
+    tasks on the generic data type, but behind all of the methods is code that works
+    with the stored array variable. The only difference is that the designation for
+    the array''s contained values is T instead of a hard-coded primitive type structure.
+
+
+    In almost every program, you will run into at least one section of your code that
+    uses a generic data type. This is especially true when you work with web applications.
+    Web applications use Lists and Collections, so you''ll need to work with these
+    generic lists in most of your web applications. For instance, when you send information
+    from a form to your C# controllers, the form is sent in a form collection generic
+    data type that you can use to retrieve your values.
+
+
+    # Creating Your Own Generic Types
+
+
+    The .NET languages have their own generic data types that you can use, but you
+    should'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "know how to create your own. Creating your own is important when you can't\
+    \ use the generic lists and want to create your own with custom methods that you\
+    \ can't find in the premade .NET libraries.\n\nWhen you create a generic type\
+    \ of your own, you create a custom class. Let's take a look at a simple class\
+    \ that takes a generic type.\n\n```\npublic class MyGeneric<T>\n    private T[]\
+    \ array;\n    public MyGeneric(int size)\n        array = new T[size + 1];\n```\n\
+    \nIn the above code, we created a generic custom class named MyGeneric. Notice\
+    \ the T data type between the greater than and less characters. This indicates\
+    \ to the compiler that you want to pass a generic type. You could pass a custom\
+    \ class or pass a primitive data type such as a string. This is the significance\
+    \ of the T notation in any class. It allows you to work with any data type without\
+    \ the limitations put on your classes by defined arrays.\n\nNotice that the other\
+    \ parts of the class are similar to what we've seen with other classes that we've\
+    \ created. The constructor takes the size of the array for the generic that we're\
+    \ creating so the code can allocate the right memory space. Because the data type\
+    \ is generic, we create an array that's private within the MyGeneric data type.\
+    \ With the T[] designation, we can store any data type within the array.\n\nWith\
+    \ the generic class created, we now need a way to get and set an item within the\
+    \ class. Because we're creating our own generic custom class, we need to create\
+    \ these methods. First, let's create the method that adds a value to the generic\
+    \ array.\n\n```\npublic class MyGeneric<T>\n    private T[] array;\n    public\
+    \ MyGeneric(int size)\n        array = new T[size + 1];\n\n    public void setItem(int\
+    \ index, T value)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "```\narray[index] = value;\n}\n```\n\nNotice that we added one method to the\
+    \ MyGeneric class. We kept the same property and constructor. We added the setItem\
+    \ method. Remember that methods are the verbs of a class, so this method adds\
+    \ a value to the array. It takes the index of the array to identify where you\
+    \ want to place the value, and uses the T designation to tell the compiler any\
+    \ generic data type can be used. The setItem method then assigns the generic data\
+    \ type to a location in the array.\n\nWith the setItem method set, you now need\
+    \ to retrieve a value from the array. Let's take a look at the new method in the\
+    \ MyGeneric class that lets you retrieve a value from the generic array.\n\n```\n\
+    public class MyGeneric<T>\n{\n    private T[] array;\n    public MyGeneric(int\
+    \ size)\n    {\n        array = new T[size + 1];\n    }\n```\n\n```\npublic T\
+    \ getItem(int index)\n{\n    return array[index];\n}\n```\n\n```\npublic void\
+    \ setItem(int index, T value)\n{\n    array[index] = value;\n}\n```\n\nThis is\
+    \ a full class that works with generics. We added the getItem method that retrieves\
+    \ information from the array. This is the completion of the generic class that\
+    \ you can create in your program.\n\n# Using the List Generic Class\n\nYou can\
+    \ create your own generic class, or use the premade generic class that is available\
+    \ from the .NET framework. It's much easier to use the premade classes than to\
+    \ create your own. You don't need to create your own unless you have specific\
+    \ needs for your classes that the premade generics don't offer."
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: 'There are a few generic classes available, but the most commonly used is the
+    List generic class. The List class contains just about anything you need to do
+    to a list. Let''s first a look at how you create a list variable.
+
+
+    ```
+
+    List<int> myInts = new List<int>();
+
+    ```
+
+
+    In the code, the primitive data type is set within the greater than and less than
+    signs. Remember that the generic type tells you that you can send any data type,
+    but in this example we use the integer primitive data type.
+
+
+    The int is passed to the generic List class to let it know that you want to store
+    a list of integers within the array.
+
+
+    Since the generic List data type is still a class, you need to use the new keyword
+    and call the base constructor. The list constructor doesn''t require a parameter,
+    so we can just use the parentheses with no data passed to the constructor.
+
+
+    With the variable defined and the List instantiated, we can now use its methods
+    and properties. Let''s look at the code that adds values to the variable.
+
+
+    ```
+
+    List<int> myInts = new List<int>();
+
+    ```
+
+
+    ```
+
+    myInts.Add(1);
+
+    myInts.Add(2);
+
+    myInts.Add(3);
+
+    ```
+
+
+    Notice that it''s much easier to add a value to the myInts variable. We have the
+    Add method that we can use to add a value to the generic list. We add the numbers
+    one, two, and three to the myInts generic list variable. That''s all it takes,
+    instead of using cumbersome code. You can also use a for loop as we used in the
+    array chapter, but this makes it much easier to add values to your code.
+
+
+    Finally, you need a way to retrieve values from the generic list. Let''s take
+    a look at the code we can use to loop through each value and print the results
+    to the screen.
+
+
+    ```
+
+    List<int> myInts = new List<int>();
+
+    ```
+
+
+    ```
+
+    myInts.Add(1);
+
+    myInts.Add(2);
+
+    myInts.Add(3);
+
+    ```
+
+
+    ```
+
+    for (int i = 0; i < myInts.Count; i++)
+
+    {}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '```
+
+    Console.WriteLine("MyInts: {0}", myInts[i]);
+
+    }
+
+    ```
+
+
+    In the code above, we used the same methods that we used previously, except this
+    time we added an additional for loop to go through each myInts value and display
+    it on the screen. Notice that you can use the for list structure to go through
+    each of the values in a generic list just as you can with an array. In most ways,
+    a generic list and an array work similarly.
+
+
+    # Using the List Class for Custom Class Structures
+
+
+    We used a primitive integer for the above code, but you can also store class structures
+    in a generic list. In other words, your custom classes can be stored in the same
+    way as you store primitive numbers in a list. For instance, if you have a Customer
+    class that contains customer information, you might want to store ten customers,
+    each within its own class. You then add the custom class to a generic list, so
+    you have ten customers stored in an array. You can then loop through each of these
+    Customer values and store them in a database. This makes it much easier to store
+    custom values and avoids having to write extra code.
+
+
+    Let''s take a look at the code. Let''s first initialize a variable for the Customer
+    class.
+
+
+    ```
+
+    List<Customer> myInts = new List<Customer>();
+
+    ```
+
+
+    In the code above, notice that the syntax is the same as we saw in the previous
+    section, but we used the Customer data type instead of the int data type. This
+    allows us to store a Customer data value in an array instead of primitive data
+    types.
+
+
+    Now let''s add a value to the generic variable.
+
+
+    ```
+
+    List<Customer> myInts = new List<Customer>();
+
+    Customer cust = new Customer();
+
+    cust.first_name = "John";
+
+    cust.last_name = "Smith";
+
+    myInts.Add(cust);
+
+    ```
+
+
+    In the code above, we instantiated the list variable and then created a customer
+    data type variable. We filled the customer class variable with some data and then
+    stored the entire class in the myInts generic list. This is very useful when you
+    want to store numerous customers in your database. Instead of iterating through
+    every variable value that''s needed in the database, you can just use one class
+    storage structure and store each one in the custom List generic class.
+
+
+    You can also use the same for loop to go through each value within the list. Let''s
+    take a'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "look at the complete code with the added loop to view the values we just stored.\n\
+    \n```\nList<Customer> myInts = new List<Customer>();\nCustomer cust = new Customer();\n\
+    cust.first_name = \"John\";\ncust.last_name = \"Smith\";\nmyInts.Add(cust);\n\
+    for (int i = 0; i < myInts.Count; i++) {\n Console.WriteLine(\"myInts: {0}\",\
+    \ myInts[i].first_name);\n}\n```\n\nNotice that we still had to initialize the\
+    \ customer and generic list. We added some values to the customer, and then for\
+    \ the loop goes through each value in the myInts generic list and displays the\
+    \ first name. Because we only have one value stored, we have one output value\
+    \ to the console.\n\nGeneric lists are a popular way to store large amounts of\
+    \ values regardless of their data type. You'll use generic lists often in your\
+    \ programming, especially if you work with C# MVC web applications.\n\n# Lab Questions\n\
+    \n+   1. What is the name of the generic list class available in the .NET framework?\n\
+    \na. T\nb. Generic\nc. List\nd. ArrayList\n\nExplanation: The List class is the\
+    \ premade generic list library you can use to create dynamic generic storage variables.\n\
+    \n+   2. What notation is used to describe that you want to pass a dynamic data\
+    \ type to the list or custom generic class?\n\na. T\nb. Generic\nc. List\nd. ArrayList\n\
+    \nExplanation: The T notation tells the compiler that any data type can be passed\
+    \ and that this is the data type you want to store in the custom generic class."
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "# # Chapter 12\nFile I/O\n\n**Objective:** At some point you will need to write\
+    \ data to files. This chapter focuses on reading and writing file data in C#.\n\
+    \nNot all of your programs will use files, but you will run across some sites\
+    \ or console applications that require you to read or write from files. Most Windows\
+    \ applications use some kind of file I/O processes to either read or write to\
+    \ files to store user data or preferences. In this chapter, we'll discuss how\
+    \ you can read and write data to files using C#.NET framework libraries that are\
+    \ included with the system.\n\n# Writing to Files\n\nOne of the easiest and most\
+    \ common methods you need to know with files is reading their data. You could\
+    \ read for a number of reasons, including importing data, importing user preferences,\
+    \ importing spreadsheet data to store in a database, and any other number of reasons.\
+    \ You can read predefined formatted data such as a comma delimited file, or a\
+    \ plain text file stored in it.\n\nThe C# language and the .NET library framework\
+    \ make storing data in a file much easier than it is with other languages. The\
+    \ .NET language includes the FileStream class that helps you write to a file.\
+    \ It takes a few parameters to get it to work, but you only need a few lines of\
+    \ code to write data to a file. Let's take a look at the code that can make this\
+    \ happen.\n\n```\nclass Program\n{\n    static void Main(string[] args)\n    {\n\
+    \        FileStream F = new FileStream(\"test.txt\", FileMode.OpenOrCreate, FileAccess.Write);\n\
+    \        for (int i = 1; i <= 20; i++)\n        {\n            F.WriteByte((byte)i);\n\
+    \        }\n        F.Close();\n    }\nn\n```\n\nThe above code is a class for\
+    \ a program named Program. The main method contains the code that writes data\
+    \ to a file. It's a simple loop that just loops from 1 to 20 and writes these\
+    \ numbers to the file."
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "The first line of code is the Filestream class, instantiated and assigned to\
+    \ a variable named F. The first parameter is the file where you want to store\
+    \ the data. We are simply storing data in a file name test.txt. Since we don't\
+    \ specify a location, the file is simply stored in the directory where the program\
+    \ runs.\n\nThe next parameter is the file mode. FileMode is an enum that we saw\
+    \ earlier in this book. This enum has several file modes that can be used when\
+    \ creating a file or just reading it. In this example, we use OpenOrCreate. This\
+    \ file mode tells the compiler to open the file, but if the file isn't already\
+    \ created or it's not found, then create the file before reading from it.\n\n\
+    The third enum is the FileAccess enum. You can either read from a file, write\
+    \ to a file, or read and write to a file. Because we just want to write to a file,\
+    \ we need to specify that we just want to write to the file. You could set the\
+    \ file access to read and write, but it's generally a standard to only set file\
+    \ access to with the access rights you need to perform a task.\n\nThe final part\
+    \ of the code writes the data to the file. We use a for loop to write the data\
+    \ from 1 to 20. Notice that we explicitly convert the numeric value to a byte\
+    \ before we write it to the file. This is done because data is written to files\
+    \ instead of raw data. You'll need to convert your data to a byte before you can\
+    \ write data to a file. Just remember this when you write your own data to files\
+    \ in your programs.\n\nWe use the WriteByte method to write data to the file.\
+    \ The final line of code used is the Close method. If you don't close the file,\
+    \ you won't be able to use it in future actions until you reboot the system. The\
+    \ operating system puts a lock on the file when you open it. You can only access\
+    \ the file in read only mode. To avoid this situation, you need to close the file\
+    \ in every part of your code where you open it. You won't be able to open it in\
+    \ any other program either, so make sure you always use the Close method at the\
+    \ end of your methods that open your files.\n\n# Reading from Files\n\nAnother\
+    \ common process you'll need to know is reading from files. In the last section,\
+    \ we showed how you to write to files. In this section, we'll show how to read\
+    \ from the file. We use the same class called FileStream, and we use the same\
+    \ functionality and processes. Let's take a look once again the main FileStream\
+    \ class call.\n\n```\nclass Program {\n    static void Main(string[] args) {\n\
+    \        FileStream F = new FileStream(\"test.txt\", FileMode.OpenOrCreate,\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "```\nFileAccess.ReadWrite);\n\n}\n```\n\nWe used the same Program class and\
+    \ created a Main method. We then used the FileStream class to open the file. In\
+    \ this example, we use the OpenOrCreate file mode again to indicate to the compiler\
+    \ that we want to open the file if it's available. If it's not available, then\
+    \ create the file on the fly. The file name we create is the same as the last\
+    \ file name we created in the previous section.\n\nNow let's add the code that\
+    \ writes data to the file, because at this point, the file is empty.\n\n```\n\
+    class Program\n{\n    static void Main(string[] args)\n    {\n        FileStream\
+    \ F = new FileStream(\"test.txt\", FileMode.OpenOrCreate, FileAccess.ReadWrite);\n\
+    \        for (int i = 1; i <= 20; i++)\n        {\n            F.WriteByte((byte)i);\n\
+    \        }\n    }\n}\n```\n\nAs you recall from the previous chapter, we had the\
+    \ same code to write data to a file. We had to explicitly convert the numeric\
+    \ value to a byte character before we wrote the data to the file.\n\nIn the previous\
+    \ section, we then closed the file to ensure that we could use it with other processes.\
+    \ But since we want to read the data from the file, we don't want to close the\
+    \ file yet. Let's take a look at the code that reads from the file.\n\n```\nclass\
+    \ Program\n{\n    static void Main(string[] args)\n    {\n        FileStream F\
+    \ = new FileStream(\"test.txt\", FileMode.OpenOrCreate, FileAccess.ReadWrite);\n\
+    \        for (int i = 1; i <= 20; i++)\n        {\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "```\nF.WriteByte((byte)i);\n}\nF.Position = 0;\nfor (int i = 0; i <= 20; i++)\n\
+    {\n    Console.Write(F.ReadByte() + \" \");\n}\nF.Close();\n}\n```\n\nBecause\
+    \ we first write to the file and then end it, the position of the file pointer\
+    \ is set to the end of the file. If we attempt to read from it at this point,\
+    \ we'll only get the end of the file and the program will crash. To avoid this,\
+    \ we can reposition the pointer to the beginning of the file. We do this by setting\
+    \ the Position to 0. The next for loop reads the data by byte by byte and displays\
+    \ it on the screen. We see that we use the ReadByte method because we read by\
+    \ byte from the file and display it using the Console static.\n\nFinally, at the\
+    \ end of the program we need to close the file pointer. Again, if we didn't close\
+    \ the file, the operating system would keep a lock on it and we wouldn't be able\
+    \ to use it for any other purpose.\n\n# Appending to a File\n\nIn the previous\
+    \ sections, we just created a file, added some content to it, and then read the\
+    \ file data. We just overwrite the data that could already be contained in the\
+    \ file. This is not the best behavior for most programs, because we need to append\
+    \ data to the file instead of overwriting all of it.\n\nYou can choose to append\
+    \ data to a file by using the same library that we used in previous sections.\
+    \ We just need to change the file access and modes that we used previously. Let's\
+    \ take a look at the code.\n\n```\nclass Program\n{\n    static void Main(string[]\
+    \ args)\n    {\n        FileStream F = new FileStream(\"test.txt\", FileMode.Append,\
+    \ FileAccess.ReadWrite);\n        for (int i = 1; i <= 20; i++)\n        {\n \
+    \           F.WriteByte((byte)i);\n        }\n        F.Position = 0;\n    }\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "```\nfor (int i = 0; i <= 20; i++)\n{\n    Console.Write(F.ReadByte() + \"\
+    \ \");\n}\nF.Close();\n```\n\nNotice when we used the same exact code as in the\
+    \ previous sections, but we changed the file mode when we opened the file. Instead\
+    \ of telling the compiler to open or create the file, we told it to open the file\
+    \ to append information to it. If the file doesn't exist, the following code will\
+    \ cause an error, you'll need to make sure that the F variable isn't null. We\
+    \ assume in this code that the test.txt file exists, so we don't need to check\
+    \ that the file variable is null.\n\nInstead of creating a file with the values\
+    \ of 1 to 20, we append the data to the file. So if the file already contains\
+    \ data, these values will be written after the current data. This includes cases\
+    \ where you already wrote the same data to the file.\n\n# Deleting a File\n\n\
+    You won't only need to create and read and write to a file. There are times you'll\
+    \ need to delete a file as well. Luckily, the .NET framework makes it just as\
+    \ easy to delete a file as it does to create and work with file data.\n\nIt's\
+    \ even easier to delete a file than perform the other processes. You use a different\
+    \ class library to delete a file. The FileStream library is strictly to read and\
+    \ write to files, but the class is a static class that does short, quick tasks\
+    \ to complete a process. In this case, we want to delete a file, which doesn't\
+    \ need any elaborate code.\n\nLet's take a look at what the code looks like to\
+    \ delete a file from the hard drive.\n\n```\nif(File.Exists(@\"C:\\test.txt\"\
+    )\n{\n    File.Delete(@\"C:\\test.txt\");\n}\n```\n\nIn the above code, we first\
+    \ test to see if the file exists before we actually attempt to delete it. We specify\
+    \ a location, which we didn't do in the previous sections. We use the static method\
+    \ \"Exists\" to first test if the file actually does exist. If it does, we move\
+    \ into the if statement block of code. We use another static method in the File\
+    \ class called Delete. Delete is the method that does the actual deletion of the\
+    \ file.\n\nReading, writing, and deleting files are the three main functions you'll\
+    \ need to know when you work with files. Of course, you still need permissions\
+    \ to work with files. The"
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'account that accesses the file needs the right permissions or you''ll receive
+    a permission denied error when you work with the local files. You can test for
+    these permissions when you do error trapping and correcting in your code. We will
+    show you how to do error check and error trapping in the next few chapters.
+
+
+    # Lab Questions
+
+
+    +   1. What is the .NET class library that helps you read and write to files in
+    your code?
+
+
+    +   a. FileMode
+
+    b. FileAccess
+
+    c. FileStream
+
+    d. File
+
+
+    Explanation: The FileStream class has methods that let you read and write to files
+    without writing your own code.
+
+
+    +   2. What is the enum you use when you open a file that specifies how you want
+    to open the file?
+
+
+    +   a. FileMode
+
+    b. FileAccess
+
+    c. FileStream
+
+    d. File
+
+
+    Explanation: The FileMode enum specifies if you want to open and create a file
+    if it does not exist.
+
+
+    +   3. What enum determines the type of access you want to give the program when
+    it opens the file?
+
+
+    +   a. FileMode
+
+    b. FileAccess
+
+    c. FileStream
+
+    d. File
+
+
+    Explanation: The FileAccess enum tells the compiler if you''re going to read,
+    write, or read and write to the file.
+
+
+    +   4. What class library is used to help you delete a file?
+
+
+    +   a. FileMode
+
+    b. FileAccess
+
+    c. FileStream'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: 'd. File
+
+
+    Explanation: The File class is a static class that lets you work with files, including
+    the deletion of files using the Delete method.
+
+
+    5. What method must you use before you exit the program after you''ve opened a
+    file?
+
+
+    a. Close
+
+
+    +   b. Finished
+
+
+    +   c. Done
+
+
+    +   d. Remove
+
+
+    Explanation: The Close method removes the file pointer on the file and the lock
+    placed by the operating system, so you can use the file for other processes.
+
+
+    6. What data type do you convert data to before you write it to a file?
+
+
+    +   a. int
+
+
+    +   b. byte
+
+
+    +   c. string
+
+
+    +   d. stream
+
+
+    Explanation: Data you write to a file is first converted to a byte character.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "# # Chapter 13\nMultithreading\n\n**Objective:** Multithreading lets you run\
+    \ multiple processes at the same time within a CPU. This chapter shows you how\
+    \ to set up multiple threads in a C# program.\n\nWhen you perform an action such\
+    \ as a loop in your program, the operating system waits until this action is completed\
+    \ before it moves to the next process. If you only have such as ten loops to move\
+    \ through, this doesn't take much time at all. However, if you have a thousand\
+    \ or even a million loops to iterate through, it could take several seconds or\
+    \ even minutes before the loop is finished. This means that your user must wait\
+    \ until the process is finished before anything else can be done in your program.\
+    \ This chapter teaches you how to use multithreading to allow processes to run\
+    \ instead of waiting.\n\n#  Why to Use Multithreading\n\nMultithreading allows\
+    \ you to run multiple processes at the same time. Think about your program and\
+    \ whether it was created for a large enterprise application. With large applications,\
+    \ you often process large amounts of data. When you need to process large amounts\
+    \ of data, you loop through each record and return the results to your user. When\
+    \ you have large amounts of data, your user could need to wait several minutes\
+    \ before they can do anything with your program. This is not a user-friendly way\
+    \ to create a program.\n\nWith multithreading, you can allow the user to perform\
+    \ any actions while still looping through the data. Multithreading creates multiple\
+    \ threads that contain your code. One thread would be for the main user actions\
+    \ and another thread for looping through the data. The user doesn't need to wait\
+    \ until the program is finished to complete the entire functionality of the program.\n\
+    \n# Creating Threads in Your C# Program\n\nOnce you know that you need multithreading\
+    \ in any of your program, you first need to create a function that contains the\
+    \ code that must be contained within the threading process. First, let's take\
+    \ a look at the code that you use to create a thread.\n\n```\nclass ThreadExample\n\
+    {\n    static void Main(string[] args)\n{\n    Thread th = Thread.CurrentThread;\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "```\nth.Name = \"My Thread\";\nConsole.WriteLine(\"This is {0}\", th.Name);\n\
+    }\n```\n\nIn the code above, we created a new thread named My thread. The Thread\
+    \ class is what you use to instantiate a new thread and assign it to a Variable.\
+    \ After we create the thread and assign it to the th variable, we then write the\
+    \ thread name to the console. This is just to test our code and ensure that the\
+    \ thread was actually created.\n\nThe above code creates the initial thread variable,\
+    \ but we haven't actually assigned any values to the thread, so we still haven't\
+    \ created a multithreaded application.\n\nLet's take a look at the code that you\
+    \ can use to actually create a multithreaded application instead of just creating\
+    \ a thread.\n\n```\nclass MultithreadedProgram\n{\n    public static void SecondThread()\n\
+    \    {\n        Console.WriteLine(\"Child thread starts\");\n    }\n\n    static\
+    \ void Main(string[] args)\n    {\n        ThreadStart childref = new ThreadStart(SecondThread);\n\
+    \        Console.WriteLine(\"In Main: Creating the Child thread\");\n        Thread\
+    \ childThread = new Thread(childref);\n        childThread.Start();\n    }\n}\n\
+    ```\n\nIn the code above, we create a new thread and assign it to a secondary\
+    \ thread. The secondary thread is given the name childref, so it's easily distinguishable\
+    \ from the main thread. Notice that we've created a method that contains the code\
+    \ needed to run in the second thread. We named the second thread function SecondThread.\n\
+    \nThe created thread is done through the library called ThreadStart. ThreadStart\
+    \ is assigned to the Thread class variable named childThread. This assigns the\
+    \ function to another thread. Finally, we start the thread with the Start method.\
+    \ This officially starts the second thread, so you can run it separately from\
+    \ the main thread.\n\nIf you run the code above, you can execute any other code\
+    \ in the Main method completely separately in a parallel thread named childThread.\
+    \ This means that any"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "processes you run in the Main thread will run at the same time the SecondThread\
+    \ runs its code.\n\nSometimes you want to make a thread sleep. The first thread\
+    \ should sleep for a few seconds before the second thread begins to run. You can\
+    \ use the Sleep method to make this happen. The Sleep method pauses one thread\
+    \ for the given amount of time without affecting any of the other threads. Let's\
+    \ take a look at the code.\n\n```\nclass MultithreadedProgram\n{\n    public static\
+    \ void SecondThread()\n    {\n        Console.WriteLine(\"Child thread starts\"\
+    );\n    }\n\n    static void Main(string[] args)\n    {\n        ThreadStart childref\
+    \ = new ThreadStart(SecondThread);\n        Console.WriteLine(\"In Main: Creating\
+    \ the Child thread\");\n        Thread childThread = new Thread(childref);\n \
+    \       childThread.Sleep(5000);\n        childThread.Start();\n    }\n}\n```\n\
+    \nNotice that we added another line of code in this program. We added a Sleep\
+    \ method to the code. We are pausing the thread for 5000 milliseconds. Notice\
+    \ that the time is set in millis. It's important to realize that the time is in\
+    \ milliseconds for most coding programs, so 5000 milliseconds are only 5 seconds.\
+    \ This means that the child thread will wait for 5 seconds while any other threads\
+    \ are running.\n\nYou can also pause your thread in the main function that's linked\
+    \ to your thread. Let's take a look at the code.\n\n```\nclass MultithreadedProgram\n\
+    {\n    public static void SecondaryThread()\n    {\n        Console.WriteLine(\"\
+    Child thread starts\");\n\n        // the thread is paused for 5000 milliseconds\n\
+    \        int sleepfor = 5000;\n\n        Console.WriteLine(\"Child Thread Paused\
+    \ for {0} seconds\", sleepfor / 1000);\n    }\\}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "```\nThread.Sleep(sleepfor);\nConsole.WriteLine(\"Child thread resumes\");\n\
+    }\nstatic void Main(string[] args)\n{\n    ThreadStart childref= new ThreadStart(SecondaryThread);\n\
+    \    Console.WriteLine(\"In Main: Creating the Child thread\");\n    Thread childThread\
+    \ = new Thread(childref);\n    childThread.Start();\n}\n```\n\nNotice that we\
+    \ used the same relative code that we had previously. This time, we decided to\
+    \ put the Sleep method call in the secondary thread method to call it from there.\
+    \ This code does the same thing that the previous section did. There are two threads,\
+    \ and one is set in the child thread which we instantiate and create. The 5000\
+    \ milliseconds pauses the secondary thread for 5 seconds (when you convert milliseconds\
+    \ to seconds).\n\nWe write the output to the console so you can identify what\
+    \ is going on as your program runs. The secondary thread pauses, but the main\
+    \ thread still keeps running regardless of what the secondary thread is doing.\
+    \ This is the advantage of using multithreaded processes.\n\n# Deleting a Thread\n\
+    \nAt some point, you'll need to delete or destroy threads after you're finished\
+    \ with them. This frees up the memory that was allocated for that thread.\n\n\
+    Take a look at the code you can use to destroy a thread.\n\n```\nclass MultithreadedProgram\n\
+    {\n    public static void SecondThread()\n    {\n        Console.WriteLine(\"\
+    Child thread starts\");\n    }\n\n    static void Main(string[] args)\n    {\n\
+    \        ThreadStart childref= new ThreadStart(SecondaryThread);\n        Console.WriteLine(\"\
+    In Main: Creating the Child thread\");\n        Thread childThread = new Thread(childref);\n\
+    \        childThread.Sleep(5000);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '```
+
+    childThread.Start();
+
+    childThread.Abort();
+
+    }
+
+    ```
+
+
+    Notice that we added a new line of code that calls the Abort method. This method
+    destroys the thread once you''re finished with it.
+
+
+    Multithreading isn''t needed with all programs, but it helps greatly when you
+    need to create better performance for your code. It''s especially useful when
+    you have a large amount of data you need to cycle through without forcing your
+    users to wait until the process is finished.
+
+
+    # Lab Questions
+
+
+    1. What is the class that you use to create a new thread?
+
+
+    +   a. ThreadStart
+
+    b. Thread
+
+    c. Start
+
+    d. ChildThread
+
+
+    Explanation: The Thread class contains the libraries, methods, and properties
+    used to create a new thread with a given name.
+
+
+    2. What is the class that you use to assign a method to a secondary thread to
+    allocate memory to the new thread?
+
+
+    +   a. ThreadStart
+
+    b. Thread
+
+    c. Start
+
+    d. ChildThread
+
+
+    Explanation: The Thread class lets you assign a secondary method to the thread
+    that you want to start within the program.
+
+
+    3. What is the method that you use to initialize and begin running the thread?
+
+
+    +   a. ThreadStart
+
+    b. Thread
+
+    c. Start
+
+    d. ChildThread
+
+
+    Explanation: The Start method starts the thread and begins execution of the secondary'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: 'thread and code.
+
+
+    4. What method do you use to pause the thread for a certain amount of time?
+
+
+    +   a. ThreadStart
+
+    b. Thread
+
+    c. Start
+
+    d. Sleep
+
+
+    **Explanation:** The Sleep method pauses the thread for a specified number of
+    milliseconds.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# # Chapter 14
+
+    Polymorphism
+
+
+    **Objective:** Polymorphism is a way to create different responses depending on
+    user input. This chapter covers polymorphism in C#.
+
+
+    Polymorphism is a powerful tool for a programmer creating dynamic applications.
+    Polymorphism takes your applications to the next level, whether it''s to create
+    an enterprise application or take your personal site to the next level. Polymorphism
+    is common in OOP as well, you''ll run into this type of programming when you work
+    with other people''s code. You should be able to recognize polymorphism when you
+    see it, so we will show you how to use it for your own programs and if you should
+    need to maintain other people''s code.
+
+
+    # ## Why Use Polymorphism?
+
+
+    When a programmer is new to OOP, it might be difficult to identify when you would
+    use polymorphism or even why you would want to use it. We discussed OOP and some
+    class methods and properties. We can use our same Animal, Lion, and Bird classes
+    that we discussed in those chapters.
+
+
+    Let''s use the same classes we had in other chapters. We discussed having a main,
+    base Animal class. The Animal class contained properties and methods that are
+    common among all animals. We had a property for legs and a method for an animal
+    speaking. We know that all animals can speak in some way, and all animals have
+    legs.
+
+
+    With our Animal class, we had a property that defined the legs for the animal.
+    All animals have legs, but these are not all the same. Different animals have
+    different numbers of legs, and the characteristics of these legs are different
+    between most species species. You need a way to describe different animal legs
+    without removing the property from the main Animal class.
+
+
+    You can create polymorphic classes using two methods: function overloading and
+    operator overloading. We''ll mostly cover function overloading, because it''s
+    the most common method that you''ll see when you create your C# coding projects.
+
+
+    You use polymorphism with class methods as well. Using our animal class example
+    again, each animal speaks in some way, but each of them speaks differently. A
+    bird chirps and a lion roars. You can use function overloading to specify about
+    what type of speech you hear from a different animal.
+
+
+    Anytime you have a base class that defines a very vague area of your program,
+    you''ll probably need polymorphism to override the parameters and functions to
+    better describe'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "the features in your child classes.\n\n# Overriding Functions\n\nWhen you inherit\
+    \ methods from main classes, you can overload those functions to create a better\
+    \ dynamic program. Overriding functions is done from the child class that derives\
+    \ its main functions from the parent class.\n\nLet's go back to our Animal class.\
+    \ We know that each animal must speak in some way, and we created a Speak method\
+    \ in the main abstract class. Because all animals don't speak the same, we need\
+    \ to override the main abstract class Speak method to customize it for our own\
+    \ child animal classes. Let's take a look at some code to view an example.\n\n\
+    ```\nabstract class Animal\n    public abstract void Speak(\n        Console.WriteLine(\"\
+    Animals say Hello\");\n    )\nclass Lion: Animal\n    public Lion ()\n    {\n\
+    \    public override void Speak ()\n        Console.WriteLine(\"A lion roars\"\
+    );\n    }\n```\n\nIn the above code, you can see that we created an Animal class.\
+    \ Remember that abstract classes cannot be instantiated, so you must derive a\
+    \ child class that actually be instantiated or the abstract class will not be\
+    \ useful to your program. We create an Animal abstract class with a method called\
+    \ Speak that can be used for all animals. We don't have a constructor for the\
+    \ main abstract Animal class, because the class can't be instantiated. Because\
+    \ constructors are for instantiation, there is no point in adding a constructor\
+    \ to the abstract Animal class.\n\nWe then create a Lion class. The Lion class\
+    \ derives from the main Animal class, because all Lions are animals. Because the\
+    \ Lion derives from the Animal class, we can use the methods defined within the\
+    \ Animal class. We have only one method Speak, but we can derive this from its\
+    \ parent class. However, Lions have a distinct way of talking to other animals,\
+    \ so we need to override the main Animal Speak"
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: "method with our own Lion Speak method. We do this using the override keyword\
+    \ in C#. Let’s take a look at the code that handles this type of method.\n\n```\n\
+    abstract class Animal\n{\n    public abstract void Speak\n(\n        Console.WriteLine(\"\
+    Animals say Hello\");\n    )\n}\nclass Lion: Animal\n{\n    public Lion ()\n \
+    \   {\n    public override void Speak ()\n{\n        Console.WriteLine(\"A lion\
+    \ roars\");\n    }\n}\n```\n\nNotice that our Lion class has a constructor, because\
+    \ we want to be able to instantiate this class to define a Lion in our program.\
+    \ We then create a Speak method that overrides the Speak method. When the Speak\
+    \ method is called in your program from the Lion class, the overridden method\
+    \ is called. Let’s look at how you call the Lion class and what is printed when\
+    \ you’ve finished.\n\n```\nstatic void Main(string[] args)\n{\n    Lion l = new\
+    \ Lion();\n    l.Speak();\n}\n```\n\nIn the above Main method, we instantiate\
+    \ the Lion class and call the Speak method. Since the Lion class overrides the\
+    \ parent Animal class Speak method, the code returns the phrase “A lion roars”\
+    \ to the user.\n\nWe can also use the Bird class as another example. We know that\
+    \ birds have a different way of speaking than lions, so we can create an override\
+    \ method that creates our own Bird class method that describes the way birds speak\
+    \ in the wild.\n\nLet’s take a look at what this class looks like.\n\nabstract\
+    \ class Animal"
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "```\n{ public abstract void Speak\n(\n    Console.WriteLine(\"Animals say Hello\"\
+    );\n)\n} class Lion: Animal\n{\n    public Lion ()\n    {\n    }\n    public override\
+    \ void Speak ()\n    {\n        Console.WriteLine(\"A lion roars\");\n    }\n\
+    }\nclass Bird : Animal\n{\n    public Bird ()\n    {\n    }\n    public override\
+    \ void Speak ()\n    {\n        Console.WriteLine(\"A bird chirps.\");\n    }\n\
+    }\n```\n\nWe added a Bird class that describes the way a bird speaks, which is\
+    \ ultimately an overridden class that we derive from the main Animal class. This\
+    \ class, again, is an abstract class, so it uses the main parent class as a template\
+    \ for the derived child class.\n\n# Overloading Classes\n\nOverloading is similar\
+    \ to overriding, but there is a distinct difference. Overriding is done from a\
+    \ child class, and the method has the overriding keyword in the code. With overloading\
+    \ methods, you create these methods within your own classes, so it doesn't work\
+    \ the same as overriding. Let’s take a look at an overloaded method using the\
+    \ Lion class we created in the previous section.\n\n```\nabstract class Animal\n\
+    {\n    public abstract void Speak\n(\n```"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "```\nConsole.WriteLine(\"Animals say Hello\");\n);\nclass Lion: Animal\n{\n\
+    \    public Lion ()\n    {\n    }\n    public override void Speak()\n    {\n \
+    \       Console.WriteLine(\"A lion roars\");\n    }\n    public override void\
+    \ Speak ( string gender)\n    {\n        if ( gender == \"male\")\n        {\n\
+    \            Console.WriteLine(\"The female lion purrs.\");\n        } else {\n\
+    \            Console.WriteLine(\"The male lion roars.\");\n        }\n    }\n\
+    }\n```\n\nNotice that we have now added a second method in our Lion class. Notice\
+    \ that this method has the same name as our other Speak method, but the new method\
+    \ takes a gender parameter. This parameter makes a distinction between the main\
+    \ Speak method that takes no parameters and this new method takes a gender parameter.\
+    \ It is called overloading your method, and it's a completely legitimate way to\
+    \ create dynamic classes for your programs.\n\nFor basic programming, you know\
+    \ that you can name two methods with the same name, but the only thing you need\
+    \ to change is the number of parameters or the data types that are taken by the\
+    \ parameters. This makes a distinguishable difference that the compiler understands.\
+    \ Therefore, your code won't return an error when it tries to compile your code.\n\
+    \nLet's take a look at the code that calls your new overloaded methods and the\
+    \ results that return after you call them.\n\n```\nstatic void Main(string[] args)\n\
+    {\n    Lion l1 = new Lion();\n```"
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '```
+
+    l.Speak();
+
+    l.Speak("male");
+
+    }
+
+    ```
+
+
+    The result from the above code results in the following output:
+
+
+    Animals say hello.
+
+    Male lions roar.
+
+
+    The compiler is able to understand and distinguish the difference because each
+    method has a different number of used parameters. The first one has no parameters,
+    and the second one has one string parameter.
+
+
+    # Abstract Classes
+
+
+    You''ve already seen abstract classes in many of our examples, but we haven''t
+    really discussed the differences between an abstract class and how it''s significant
+    in your programming projects. Abstract classes are usually the main, top classes
+    for your programs. They contain the similarities among all child classes.
+
+
+    Let''s use the Animal class as an example. We have an Animal class for our Lion
+    and Bird classes.
+
+
+    An abstract class is always at the top of the class design. If you take the Animal
+    class as an example, any animal that speaks can derive from the main abstract
+    class.
+
+
+    Polymorphism is an important part of C# coding and OOP programming in general.
+    You''ll need to work with this type of coding in almost any major enterprise application.
+    Once you get used to the way these programs work, you can design your own polymorphic
+    coding designs that make your C# code more dynamic and easier to work with.
+
+
+    # Lab Questions
+
+
+    +   1. What type of class is useful as a main top-level class but cannot be instantiated
+    by any other parts of your code?
+
+
+    +   a. private
+
+    b. abstract
+
+    c. private
+
+    d. sealed
+
+
+    Explanation: An abstract class is good for a top-level class that defines several
+    child class methods and properties, but it cannot be instantiated by any other
+    parts of your'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: 'code. Instead, it can only be derived through child classes.
+
+
+    2. What type of function uses the same method name as another within a class,
+    but passes different parameters to distinguish it from the main method?
+
+
+    +   a. overridden
+
+    **b. overloading**
+
+    c. private
+
+    d. void
+
+
+    **Explanation:** Function overloading is a way to use a method name that is the
+    same as others in its class without causing errors from the compiler. Methods
+    with the same name but different parameters won''t create a compiler error.
+
+
+    3. What type of function is used in a child class that derives a parent class
+    method but changes its functionality?
+
+
+    +   a. overridden
+
+    b. overloading
+
+    c. private
+
+    d. void
+
+
+    **Explanation:** Overridden classes change the way a parent class method'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# # Chapter 15
+
+    # Error Handling
+
+
+    **Objective:** Before you deploy your application, you need to fix any bugs. This
+    chapter focuses on debugging and how you can test your applications before you
+    deploy them to your users and production.
+
+
+    It''s always a priority to test an application before you promote it to a production
+    server or deploy it to your users. You can still use a beta testing application
+    before you actually deploy the full version, but even then you should debug your
+    application. One part of debugging is through error handling. Error handling is
+    a way to trap errors and “handle” them for the user. These error handling events
+    display a user-friendly message to the user, so your code doesn''t frustrate your
+    users. This chapter discusses how you can manage this type of process within your
+    code.
+
+
+    # ## Using the Visual Studio Debugger
+
+
+    As mentioned, you need the Visual Studio code editor to create and compile code
+    in C#. Visual Studio includes a debugger that you can use to walk through your
+    code. Is one advantage of working with C# over other languages that don''t have
+    a good IDE for programming. C# lets you walk through each of your lines of code,
+    and then you can watch the value of a variable as you walk through these lines
+    of code.
+
+
+    You can start the debugger menu using the F5 key or by using the debugger menu
+    item in your Visual Studio main. You can also set stop points called breakpoints
+    in your code. These breakpoints let pause the compiler and run processes to see
+    what is happening in your code. For instance, suppose you have an error or bug
+    in one of your modules. You''re not sure what variable is being set to a value,
+    and you think that this variable is causing the bug in your program. You can set
+    a breakpoint at a certain part of your code to view the value of the variable
+    at a certain point in the run process for your code.
+
+
+    The Visual Studio Watch List is important for this process because it gives you
+    the ability to view variable values in real time. If it weren''t for this tool,
+    you would only be able to guess the value of a variable as you worked through
+    your code. The Visual Studio Watch List lets you see the value of a variable as
+    you walk through your code. It''s an excellent way to identify if a variable has
+    been given the wrong value, and it lets you identify if you have a logic error
+    in your code. Because logic errors occur during run time, it''s useful for your
+    debugging process to consider if you have a logic error in an area such as a loop
+    or an if statement.
+
+
+    # ## The Try Catch Statement in C#'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "For error handling, the main component in any .NET language (including C# and\
+    \ VB.NET) is the try catch statement. This statement lets you trap errors and\
+    \ perform a user-friendly function that handles the errors for your users. You\
+    \ don't want to create unfriendly, messy errors for your users. In some cases,\
+    \ these errors can cause security issues for your application. Poorly handled\
+    \ error messages can display information, and in some cases, they can show passwords\
+    \ and user information that can be used for hacking your server—which you don't\
+    \ want displayed to the Internet public. The solution to this issue is to trap\
+    \ your errors and display a user-friendly message that tells your user how to\
+    \ handle the errors without causing them much frustration.\n\nLet's first look\
+    \ at the template used to create a try catch statement. We have created a basic\
+    \ template for you to follow.\n\n```\ntry\n{\n  // statements causing exception\n\
+    }\ncatch(ExceptionName e1)\n{\n  // error handling code\n}\ncatch(ExceptionName\
+    \ e2)\n{\n  // error handling code\n}\ncatch(ExceptionName eN)\n{\n  // error\
+    \ handling code\n}\nfinally\n{\n  // statements to be executed\n}\n```\n\nIn the\
+    \ code above, we first declare the try statement. This indicates that you're starting\
+    \ the try catch statement.\n\nEach catch statement in the try catch statement\
+    \ catches a different type of error. This part of the statement can be tricky\
+    \ if you don't know what type of errors you should expect, but you should create\
+    \ catch statements that trap any type of error. When the compiler catches these\
+    \ types of statements, then they move into the catch statement block, which is\
+    \ where you create your custom code that handles the errors that you weren't"
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "when you created your code. It's important to remember that users will find\
+    \ errors that you probably won't find when you navigate through your code. You\
+    \ want to account for any coding error possibilities including any logic errors,\
+    \ so make sure you trap any possible errors in your try catch.\n\nThe last statement\
+    \ we display is the finally statement. This statement tells the compiler what\
+    \ to do before it exists. It's your last chance to run any type of statement before\
+    \ the program ends. For instance, you might have a file open statement in your\
+    \ code. Before the statement or program ends, you need to close that file to avoid\
+    \ locking it from any other process through the operating system. You can use\
+    \ the finally statement to close the file before the program and the code ends\
+    \ to avoid any bugs in your code.\n\nTo take our code step further, let's take\
+    \ a close look at a real-world example in our code.\n\n```\npublic void division(int\
+    \ num1, int num2)\n{\n    try\n    {\n        result = num1 / num2;\n    }\n \
+    \   catch (DivideByZeroException e)\n    {\n        Console.WriteLine(\"Exception\
+    \ caught: {0}\", e);\n    }\n    finally\n    {\n        Console.WriteLine(\"\
+    Result: {0}\", result);\n    }\n}\n```\n\nTake a look at the above code to get\
+    \ an idea of how the try catch statement works within an actual application.\n\
+    \nWe created a division function that divides two numbers. The function takes\
+    \ two parameters that are used in the calculation to divide two numbers. As you\
+    \ recall from your math classes, you cannot divide by zero. If you don't have\
+    \ any type of try catch statement in your code, your users could accidentally\
+    \ send a zero value as the denominator and cause an error in your code. When you\
+    \ do this and don't account for the error, your program crashes and your users\
+    \ become frustrated with its functionality. You can overcome this issue by using\
+    \ the try catch statement that's included in the C# language.\n\nIf the user passes\
+    \ a zero value for the denominator, the catch block of code catches it and"
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: 'deals with it in a friendly way. This is important for your users when the
+    program has issues, even if it''s because of their own input. The catch phrase
+    stops the program from crashing in an unfriendly way, and it deals with the error
+    in a way that you want to use in your program.
+
+
+    In this example, we display an error to the user with the information returned
+    from the program’s operating system. The catch block displays to the user that
+    there was an error found in the code and displays information to it. This error
+    is also returned from the operating system. This code is good for debugging, but
+    it might not be very good for a real-world application. However, it''s up to you
+    how you deal with your coding errors.
+
+
+    The last statement for your catch block is the finally section. Remember that
+    this is the block of code you want to add in case you you need to finalize any
+    errors and change the code to something that doesn’t cause even more additional
+    bugs in your programs from shutting down properly.
+
+
+    In our finally block, we print out the result, whether it’s a valid result value
+    or an error in our code.
+
+
+    That''s all it takes to create error handling in your code. Just remember that
+    you should create user-friendly errors to avoid confusion for your users. This
+    chapter gave you an example, but you can use any style of error handling that
+    fits your program and what you need for your own users.
+
+
+    # Lab Questions
+
+
+    +   1. What is the first block or statement used in error handling for C#?
+
+
+    +   a. try
+
+    b. catch
+
+    c. finally
+
+    d. error
+
+
+    > Explanation: The try statement wraps your code for error handling to provide
+    friendly error messages to your users.
+
+
+    +   2. What is the statement that runs after all of your error handling is processed?
+
+
+    +   a. try
+
+    b. catch
+
+    c. finally
+
+    d. error
+
+
+    > Explanation: The finally block runs the final section of code until the program
+    exits or'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: continues.
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# Final Words
+
+
+    This is the start of your journey as a C# programmer. You have just barely scratched
+    the surface with this guide, as learning the syntax and conventions of a language
+    is just the beginning. The most important part of programming is the logical aspect
+    of it. Sure, you may know how to loop through an array of variables like a list
+    of shopping items, but if someone asks you to process an image using your knowledge
+    of programming, with the help of an API and some thing you can figure out how
+    to invert the colors of an image, flip it, rotate it, scale it, etc.
+
+
+    The real programming comes in the logical portion of the mind. It''s similar to
+    learning any other language, like English for example. You may understand the
+    grammar rules and the conventions, like adding periods to the end of sentences—but
+    the true skill lies in being able to write clean and logically thought-out structured
+    essays. The same concept applies to programming, where the person writing the
+    code must know how to apply or his knowledge of the rules of the language (like
+    C#) and use it to his or her advantage to come up with neat programs.
+
+
+    The knowledge and understanding of programming is truly great because it''s the
+    closest thing we have to have magical powers. You can literally create something
+    from scratch out of an empty notepad and have it to do things you want to do.
+    Whether that be a bot to analyse and predict the stock market or a video game,
+    that choice is yours.
+
+
+    In this guide you have learned the fundamentals of C#. You haven''t learned all
+    the possible methods that can be used in the language, but that isn''t the point.
+    This guide was designed to set you on a journey toward discovering objects and
+    methods that you need in order to help you to create programs that you desire.
+    You have been given the optimum knowledge to understand how to read an API and
+    to be able to understand what it adds to your code.
+
+
+    Good luck and we hope you enjoy this book!
+
+
+    Alphy Books Team.'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# Table of Contents
+
+
+    Chapter 1: Introduction 9
+
+
+    Chapter 1: Introduction 9
+
+
+    Chapter 2: C# Programming Language 10
+
+
+    Chapter 2: C# Programming Language 10
+
+
+    Why Use C# 10
+
+
+    What is C# Used For? 10
+
+
+    What Tools Do You Need? 11
+
+
+    Some Basic Best Practices 12
+
+
+    Lab Questions 13
+
+
+    Chapter 3: Data Types 15
+
+
+    Chapter 3: Data Types 15
+
+
+    Basic Data Type Syntax 15
+
+
+    The String Data Type 16
+
+
+    Custom Data Types 18
+
+
+    Constants 19
+
+
+    Lab Questions 19
+
+
+    Chapter 4: Operators 21
+
+
+    Chapter 4: Operators 21
+
+
+    Mathematical Operators 21
+
+
+    Relational Operators 23
+
+
+    Logical Operators 25
+
+
+    The Assignment Operator 26
+
+
+    Lab Questions 27
+
+
+    Chapter 5: Loops and If Statements 29
+
+
+    Chapter 5: Loops and If Statements 29
+
+
+    The For Loop 29
+
+
+    The While Loop 30
+
+
+    The If Statement 31
+
+
+    The Switch Statement 34
+
+
+    Lab Questions 35
+
+
+    Chapter 6: Introduction to OOP 36
+
+
+    Chapter 6: Introduction to OOP 36
+
+
+    Understanding OOP Basics 36'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: 'The Public Specifier 37
+
+
+    The Private Specifier 37
+
+
+    Setting Classes as Protected 38
+
+
+    Lab Questions 38
+
+
+    # Chapter 7: Classes 40
+
+
+    # Chapter 7: Classes 40
+
+
+    Introduction to Classes 40
+
+
+    Creating Class Constructors 41
+
+
+    Creating Methods in Your Code 42
+
+
+    Using Properties 44
+
+
+    Lab Questions 45
+
+
+    # Chapter 8: Structures and Enums 47
+
+
+    # Chapter 8: Structures and Enums 47
+
+
+    Why Use a Structure or Enum Instead of a Class? 47
+
+
+    Using Structures 47
+
+
+    Creating Enums 50
+
+
+    Lab Questions 51
+
+
+    # Chapter 9: Inheritance 53
+
+
+    # Chapter 9: Inheritance 53
+
+
+    Understanding Basic Inheritance 53
+
+
+    Inheriting from a Parent Class 53
+
+
+    Inheritance and Interfaces 55
+
+
+    Static Classes 56
+
+
+    Lab Questions 58
+
+
+    # Chapter 10:Arrays 59
+
+
+    # Chapter 10:Arrays 59
+
+
+    Declaring an Array in C# 59
+
+
+    Filling an Array with Values 60
+
+
+    Retrieve Values from an Array 61
+
+
+    Using an ArrayList 61
+
+
+    Lab Questions 63
+
+
+    # Chapter 11: Generics 65
+
+
+    # Chapter 11: Generics 65
+
+
+    Introduction to Generics 65
+
+
+    Creating Your Generic Types 65
+
+
+    Using the List Generic Class 67'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: 'Using the List Class for Custom Class Structures 69
+
+
+    Lab Questions 70
+
+
+    # Chapter 12:File I/O 71
+
+
+    # Chapter 12:File I/O 71
+
+
+    Writing to Files 71
+
+
+    Reading from Files 72
+
+
+    Appending to a File 74
+
+
+    Deleting a File 75
+
+
+    Lab Questions 76
+
+
+    # Chapter 13: Multithreading 78
+
+
+    # Chapter 13: Multithreading 78
+
+
+    Why to Use Multithreading 78
+
+
+    Creating Threads in Your C# Program 78
+
+
+    Deleting a Thread 81
+
+
+    Lab Questions 82
+
+
+    # Chapter 14: Polymorphism 84
+
+
+    # Chapter 14: Polymorphism 84
+
+
+    Why Use Polymorphism? 84
+
+
+    Overriding Functions 85
+
+
+    Overloading Classes 87
+
+
+    Abstract Classes 89
+
+
+    Lab Questions 89
+
+
+    # Chapter 15: Error Handling 91
+
+
+    # Chapter 15: Error Handling 91
+
+
+    Using the Visual Studio Debugger 91
+
+
+    The Try Catch Statement in C# 91
+
+
+    Lab Questions 94
+
+
+    # Final Words 96'
+  merge: -1
+  img_proc: true
