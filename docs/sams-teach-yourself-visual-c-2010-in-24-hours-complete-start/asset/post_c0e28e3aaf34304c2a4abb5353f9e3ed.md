@@ -1,0 +1,463 @@
+
+# Listings
+
+- flattening data, 277-278
+- group joins, 277
+- grouping data, 273-274
+- joining data, 275-276
+- ordering data, 273
+- standard query operator methods, 280
+- LINQ to DataSet query, 334
+- LINQ to SQL query, 336
+- lock statement, 464-465
+- methods
+  - declaring, 74-75
+  - overloading, 77
+- multiple interface inheritance, 108
+- multivalue converters
+  - adding to XAML, 393
+  - Converter parameter, 394
+  - size example, 392
+- named arguments, 80
+- null-coalescing operator, 54
+- object initializers, 88-89
+- optional parameters, 79
+- overloading constructors, 83
+- photo viewer application
+  - layout, 378-379
+  - PLINQ query, 473
+- printing array items with
+  - generic method, 257-258
+- read-only fields, 21
+- Remove method, 324
+- ReplaceWith method, 324
+- reshaped XML, returning, 322-323
+- resource dictionaries, 380
+- rethrowing exceptions, 240
+- scope and declaration space, 66
+- SetValue method, 323
+- source XML, transforming, 323
+- strings
+  - composite formatting, 187
+  - concatenation, 176
+  - custom format strings, 183-186
+  - joining and splitting, 176-177
+  - literals, 169
+  - standard format, 181
+  - StringBuilder class, 177
+  - ToString method, overriding, 182
+  - validation, 190
+- substrings, creating, 171-172
+- switches, 151-152
+- tasks
+  - creating, 470-471
+  - exception handling, 471-472
+  - waiting to complete, 471
+- text files, reading and writing, 304-305, 307
+- ToString method, overriding, 178-179
+- trust but verify philosophy, 98
+- UriBuilder class, 45
+- using statement, 454
+- validating data
+  - custom validation rules, 401
+  - validation checks, adding, 401
+  - visual feedback, 402
+- web-based photo viewer application, 416
+- while statements, 154
+- WPF
+  - application event handlers, 375-376
+  - data binding, 389
+  - wrapping exceptions, 241
+- XAML, 365
+- XML, creating
+  - DOM, 312
+  - LINQ to XML, 314
+  - namespace prefixes, 318
+  - namespaces, 317-318
+  - XML tree node navigation, 320
+- lists
+  - arrays, compared, 203
+  - capacity, 203
+  - LinkedList<T> class, 204
+  - List<> class
+    - application, 205-206
+    - methods/properties, 204
+- literals
+  - strings
+    - character escape sequences, 168-169
+    - listing, 169
+    - verbatim, 168-169
+  - values, 21-22
+- local variables, 20
+- LocalPath method, 44
+- Locals window, 352-353
+- lock statement, 464
+  - Enter/TryEnter methods, 465
+  - listing, 464-465
+  - lock expressions to avoid, 464
+  - Monitor class, 465
+- locks, 463-466
+  - exclusive, 464
+  - lock statement, 464
+  - Enter/TryEnter methods, 465
+  - expressions to avoid, 464
+  - listing, 464-465
+  - Monitor class, 465
+  - SpinLock class, 466
+  - Wait method, 465
+
+## M
+
+- logical operators, 50-51
+  - AND (&), 47
+  - listing of, 51
+  - OR (|), 47
+  - rules, 51
+  - sample application, 51
+  - XOR, 47
+- long type, 37
+- loops
+  - infinite, 156
+  - statements. See iteration statements
+- magic numbers, 21-22
+- Main function, 29
+- maintainable code, 64
+- MakeRelativeUri method, 44
+- managed applications, 8-9
+- managed code, 8, 17
+- managed threads, 462
+- managing memory. See memory management
+- manipulating strings, 171
+- manual reset events, 466
+- ManualResetEvent class, 466
+- ManualResetEventSlim class, 466
+- markup, 364-365
+- master pages (ASP.NET), 414-415
+- Match class, 189
+- MatchCollection class, 189
+- Max method
+  - BigInteger type, 46
+  - HashSet<T> class, 212
+  - SortedSet<T> class, 212
+- memory management
+  - automatic, 12-13
+  - dispose pattern, 455
+    - benefits, 456
+    - Contact class example, 455
+    - Dispose method, 456
+    - implementing, 455
+    - finalizers, 456
+      - implementing, 456-457
+      - rules, 457
+      - writing, 458
+  - garbage collection, 453
+  - heap, 452
+  - IDisposable interface, 453
+  - stack, 452
+  - using statement, 454
+    - compiler generated code, 454-455
+    - syntax, 454
+- Message property, 228
+- method group inference, 133
+- methods
+  - Add
+    - collection initializers, 218
+    - XML elements, 324-325
+  - AddAfterSelf, 324
+  - AddBeforeSelf, 324
+  - AddFirst, 324
+  - Anonymous, 136
+  - Append, 177
+  - AppendFormat, 177
+  - arithmetic, 42
+  - Array class, 200
+  - Attribute, 321
+  - Attributes, 321
+  - BigInteger type, 46
+  - calling, 76
+  - Collection<T> class, 206-207
+  - Compare, 173
+  - CompareOrdinal, 173
+  - CompareTo, 173
+  - Contains, 173
+  - Convert, 391, 393
+  - ConvertBack, 393
+  - declaring, 74-75
+  - defined, 74
+  - Dictionary<TKey, TValue> class, 209
+  - Directory class, 297
+  - DirectoryInfo class, 293
+  - Dispose
+    - disposable types, 454
+    - dispose pattern, 456
+  - EndsWith, 173
+  - Enter, 465
+  - EnterReaderLock, 467
+  - EnterWriterLock, 467
+  - event raiser, 140
+  - extension, 87-88
+  - File class, 298-299
+  - FileInfo class, 294
+  - finalizers, 456
+    - implementing, 456-457
+    - rules, 457
+    - writing, 458
+  - ForEach
+    - Array class, 200
+    - data parallelism, 468
+  - generic, 253
+    - calling, 253-254
+    - constraints, 253
+    - nongeneric classes, 253
+    - printing array items
+      - example, 257-258
+    - type inference, 254
+    - type parameters, 254
+    - type parameters, constraints, 252
+    - type parameters, hiding, 253
+  - GetCustomAttribute, 434-435
+  - GetEnumerator, 220
+
+*How can we make this index more useful? Email us at indexes@samspublishing.com*
+
+## Methods
+
+- GetFolderPath, 291-292
+- Guid type, 40-44
+- HashSet<> class, 213
+- IndexOf, 172
+  - as input, 76
+- InsertOnSubmit, 340
+- Invoke, 470
+- invoking
+  - C#, 448
+  - dynamically, 449
+  - reflectively, 448
+- IsNullOrEmpty, 170
+- IsNullOrWhiteSpace, 170-171
+- Join, 176-177
+- LastIndexOf, 172
+- List<> class, 204
+- onPropertyChanged, 388
+- overloading, 76-77
+  - example listing, 77
+  - return types, 77
+  - signatures, 77
+- PadLeft, 175
+- PadRight, 175
+- Page_Load, 418
+- parameters, 75-76
+  - output, 76
+  - reference, 76
+  - value, 75
+  - optional. See optional parameters
+- Path class, 290-291
+- Queue<> class, 216-217
+- ReadOnlyCollection<> class, 208-209
+- Remove
+  - string characters, 175
+  - XML elements/attributes, 324
+- RemoveAttributes, 324
+- RemoveNodes, 324
+- Replace, 175
+- ReplaceAll, 324
+- ReplaceAttributes, 324
+- ReplaceNodes, 324
+- ReplaceWith, 316-324
+- sample application, 78
+- Search, 78-79
+- SetAttributeValue, 315
+- SetElementValue, 315
+- SetValue, 323
+- ShowDialog, 375
+- signatures, 77
+- SortedDictionary<TKey, TValue> class, 210-211
+- SortedList<TKey, TValue> class, 210-211
+- SortedSet<> class, 213
+- Stack<> class, 215
+- standard query operator, 279-280
+- StartNew, 471
+- StartsWith, 173
+- static, 75
+- Stream class, 301
+- string comparisons, 173-174
+- structures, 120
+- TimeSpan type, 43
+- ToLowerInvariant, 174
+- ToString, 170
+  - overriding, 178-179, 182
+  - type formatting, 178-179
+- ToUpperInvariant, 174
+- Trim, 175
+- TrimEnd, 175
+- TrimStart, 175
+- TryEnter, 465
+- Uri class, 44
+- VerifyEmailAddress
+  - calling, 76
+  - declaring, 74-75
+- Wait, 465
+  - Task class, 471
+  - thread signals, 466
+- WaitAll, 471
+- WaitAny, 471
+- XPath namespace, 321. See also properties
+- Milliseconds method, 43
+- Min method
+  - BigInteger type, 46
+  - HashSet<> class, 212
+  - SortedSet<> class, 212
+- MinusOne method, 46
+- Minute property, 41
+- Minutes method, 43
+- mismatched else problem, 149
+- modifying
+  - indexers, 201
+  - strings, 174-175
+  - XML, 323
+    - adding elements, 324-325
+    - changing data, 323
+    - removing
+      - elements/attributes, 324
+      - replacing data, 324
+      - sample application, 325
+- modulus operator (%), 48
+- Monitor class, 465
+- Month property, 41
+- Move method
+  - Directory class, 297
+  - File class, 299
+- MoveTo method
+  - DirectoryInfo class, 293
+  - FileInfo class, 294
+- multidimensional arrays, 197
+- multiple exceptions, catching, 233-234
+- multiple inheritance, 94, 108
+- multiple threads, 462
+- multiplication operator (*), 48
+- multiplicative operators, 47
+- multithreading events, 140
+
+## Multivalve converters
+
+- 392-393
+- adding to XML, 393
+- Converter parameter, 394
+- size example, 392
+
+## Mutable strings
+
+- appending data, 177
+- characters, replacing, 178
+- data, adding/deleting, 178
+- StringBuilder class, 177
+- capacity, 178
+- listing, 177
+
+## Mutex (thread synchronization)
+
+- 467
+
+## N
+
+- \n escape sequence, 169
+- [n) regular expression
+  - metacharacter, 188
+- (n, ] regular expression
+  - metacharacter, 188
+
+- Name attribute, 376
+- Name method
+  - DirectoryInfo class, 293
+  - FileInfo class, 294
+
+- ?<name> regular expression
+  - metacharacter, 188
+- ?name' regular expression
+  - metacharacter, 188
+
+- named arguments, 80
+  - listing, 80
+  - sample application, 81
+- named parameters, 429
+
+- names
+  - attributes, 428
+  - expanded, 319
+  - identifiers, 23
+  - XML, 317
+
+- namespaces
+  - declaring, 29
+  - Framework class library, 14-16
+    - common, 15-16
+    - type names, 15
+    - System, 15
+    - System.Collections.Generic, 15
+    - System.Data, 15
+    - System.Diagnostics, 15
+    - System.Globalization, 15
+    - System.Linq, 16
+    - System.Net, 16
+    - System.ServiceModel, 16
+    - System.Text, 16
+    - System.Web, 16
+    - System.Windows, 16
+    - System.Windows.Controls, 16
+    - System.Windows.Forms, 16
+    - System.Xml, 16
+  - XML, 317
+    - atomization, 319
+    - creating XML, 317-318
+    - declaring, 317
+    - expanded names, 319
+    - prefixes, 318
+    - sample application, 319
+    - XPath, 321
+
+- navigating XML tree nodes
+  - LINQ queries against
+    - XElement class, 320-321
+  - properties
+    - XElement, 320
+    - XNode, 319-320
+
+- nesting
+  - classes, 85-86
+  - if statements, 148
+  - scopes, 66-67
+
+- .NET Framework
+  - class library, 8, 13
+    - available types, 13
+    - Base Class Libraries, 14
+      - functional areas, 14
+      - namespaces, 14-16
+  - CLR (common language runtime)
+    - common intermediate language, 9
+    - CTS (common type system), 9-10
+    - memory management, 12-13
+    - virtual execution system, 9-12
+  - CLS (common language specification), 11, 38-39
+  - components, 8
+  - CTS (common type system), 9-10
+  - CLS (common language specification), 11
+  - type safety, 10
+  - dynamic language runtime. See DLR
+  - evolution, 344
+  - functions, 484
+  - JIT (Just-in-Time) compiler, 12
+  - LINQ (Language Integrated Query), 268
+  - managed applications, 8-9
+  - managed code/unmanaged code, 8
+  - parallel computing platform, 8, 16-17
+  - Silverlight version, 203
+
+- New Project dialog box, 27-28
+- NewGuid method, 44
+- next statements, 359
+- NextAttribute property, 320
+- NextNode property, 319-320
+- nodes (XML tree, navigating)
+  - LINQ queries against
+    - XElement class, 320-321

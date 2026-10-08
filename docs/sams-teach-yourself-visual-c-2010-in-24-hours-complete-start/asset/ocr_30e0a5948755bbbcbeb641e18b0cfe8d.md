@@ -1,0 +1,103 @@
+# upcasting
+
++   - **upcasting**, 97
+  - **UpdateSourceTrigger** property
+    - ValidationRules collection, 402
+    - WPF data binding, 387
+  - **updating database records**, 340-341
+  - **Uri class**, 44-45
+    - methods, 44
+    - properties, 45
+  - **Uri property**, 45
+  - **UriBuilder class**
+    - listing, 45
+    - properties, 45
+  - **URIs (uniform resource identifiers)**, 44-45
+  - **UserName** property, 45
+  - **using statement**, 454
+    - compiler generated code, 454-455
+    - syntax, 454
+  - **UtcNow property**, 42
+  - **\\uxxxx escape sequence**, 169
+  - **\\uxxxxxxxx escape sequence**, 169
+
++   - **V**
+  - **\\v escape sequence**, 169
+  - **ValidatesOnDataErrors** property, 401
+  - **ValidatesOnExceptions** property, 401
+  - **validation**, 400-403
+    - AddressBook application, 403
+    - arguments, 230
+    - controls, 420-422
+    - ASPX page, 422
+    - combining, 421
+    - error messages, summarizing, 421
+    - listing of, 420-421
+    - properties, 421
+    - custom validation rules, 401
+    - strings, 189-190
+    - validation checks, adding, 401
+    - visual feedback, 402
+    - web applications, 420
+      - client-side, 420-421
+      - server-side, 420
+    - validation controls, 420-422
+      - Validator example, 422
+    - **ValidationRules** property, 401
+    - **ValidationSummary** control, 421
+    - **value parameters**, 75
+    - **value types**, 19, 36
+      - bool, 37-38
+      - byte, 37
+      - char, 37
+      - converting to reference types, 54
+        - boxing/unboxing operations, 56
+        - explicit conversions, 57
+        - implicit conversions, 56
+        - sample application, 58
+      - decimal, 37-38
+      - double, 37-38
+      - float, 37
+      - int, 37
+      - long, 37
+      - null, 53
+      - nullable
+        - defined, 54
+        - null-coalescing operator, 54
+        - sample application, 55
+        - syntax, 54
+        - values, 54
+      - reference types, compared, 19
+      - sbyte, 37
+      - short, 37
+      - switch expressions, 151
+      - uint, 37
+      - ulong, 38
+
++   - **values**
+  - constants, 70
+  - date and time values. See
+    - date and time values
+    - default, 53
+  - enumerations
+    - commas, 114
+    - multiple named values, 115
+    - numeric, 115-116
+  - flag enumerations, 118
+  - generic types, 252
+  - GUIDs, 40-44
+  - incrementing/decrementing, 48
+  - integer minimum, finding
+    - with generics code listing, 248-249
+    - objects, 246-247
+    - with generics application, 249-250
+    - without generics application, 247-248
+    - without generics code listing, 246
+  - integers, 45-46
+  - literal, 21-22
+  - nullable types, 54
+  - **nullable**
+    - **URLs**
+      - Uri class, 44-45
+      - UriBuilder class, 45
+      - XML elements/attributes, 323

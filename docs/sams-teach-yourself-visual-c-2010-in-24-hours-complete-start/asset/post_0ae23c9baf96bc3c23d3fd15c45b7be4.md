@@ -1,0 +1,397 @@
+
+# Task class
+
+- **Task class**, 471
+- **Task Parallel Library**. See [TPL](#tpl)
+- **tasks**
+    - creating
+        - explicitly, 470
+        - StartNew method, 471
+    - parallelism, 469-472
+    - exception handling, 471-472
+    - guidelines, 473-474
+    - Invoke method, 470
+    - task creation, 470-471
+    - waiting on tasks, 471
+    - waiting to complete, 471
+- **templates**, 399-400
+    - associating with controls, 400
+    - defining, 399-400
+- **ternary operators**. See [conditional operators](#conditional-operators)
+- **testing**
+    - empty strings, 170
+    - unit tests, 349-350
+    - value equality with generics, 251-252
+- **text**
+    - console window, displaying, 29
+    - WPF, 369
+- **text files, reading and writing**, 306-307
+    - ReadAllLines method, 306
+    - ReadAllText method, 306
+    - ReadLines method, 307
+    - ReadLine method, 304-305
+    - sample application, 305
+    - WriteAllLines method, 306-307
+    - WriteAllText method, 306-307
+    - WriteLine method, 304-305
+- **Text property**, 421
+- **this keyword**, 83
+- **threads**, 462
+    - concurrency problems, 463
+    - data parallelism, 468
+    - ForEach method example, 468
+    - loop execution, controlling, 468
+    - Parallel class, 468
+    - thread-safe collections, 469-470
+    - disadvantages, 463
+    - managed, 462
+    - multiple, 462
+    - preemptive multitasking, 462
+    - safety, 463
+    - synchronizing, 463
+    - interlocked operations, 466
+    - locks, 463-466
+    - mutex, 467
+    - reader-writer locks, 467
+    - semaphores, 467
+    - signals, 466
+    - task parallelism, 469-472
+        - exception handling, 471-472
+        - Invoke method, 470
+        - task creation, 470-471
+        - waiting on tasks, 471
+    - TPL. See [TPL](#tpl)
+- **throw keyword**, 231, 239
+- **throwing exceptions**, 231
+    - no handlers, 231
+    - rethrowing, 239-240
+    - breaking the stack, 240
+    - listing, 240
+    - timing, 231
+    - wrapped, 240-241
+- **TimeOfDay property**, 41
+- **TimeSpan type**, 42-43
+- **Today property**, 41
+- **ToLowerInvariant method**, 174
+- **tooltips, displaying**, 377
+- **ToString method**, 170
+    - overriding, 178-179, 182
+    - type formatting, 178-179
+- **TotalDays method**, 43
+- **TotalHours method**, 43
+- **TotalMilliseconds method**, 43
+- **TotalMinutes method**, 43
+- **TotalSeconds method**, 43
+- **ToUpperInvariant method**, 174
+- **TPL (Task Parallel Library)**, 467
+    - data parallelism, 468
+    - ForEach method example, 468
+    - loop execution, controlling, 468
+    - Parallel class, 468
+    - thread-safe collections, 469-470
+    - parallelization guidelines, 473-474
+- **PLinq**
+    - defined, 472
+    - operators, 473
+    - queries, creating, 473
+    - task parallelism, 469-472
+        - exception handling, 471-472
+        - Invoke method, 470
+        - task creation, 470-471
+        - waiting on tasks, 471
+- **tracepoints**, 356-357
+- **Trim method**, 175
+- **TrimEnd method**, 175
+- **TrimExcess method**
+    - Hashset<T> class, 213
+    - Queue<T> class, 217
+    - SortedDictionary<TKey, Tvalue> class, 211
+    - SortedList<TKey, TValue> class, 211
+    - SortedSet<T> class, 213
+    - Stack<T> class, 215
+- **TrimStart method**, 175
+- **trust but verify philosophy**, 98
+- **try keyword**, 232
+- **TryCreate method**, 44
+- **TryEnter method**, 465
+- **TryGetValue method**, 211
+- **TryParse method**, 44
+- **tuples**, 261
+    - classes, 261
+    - sample application, 262
+- **TwoWay data binding**, 387
+- **type parameters (generics)**, 250
+    - constraints, 250-252
+    - default values, 252
+    - multiple, 250
+- **types**
+    - anonymous, 270
+    - BigInteger, 45-46
+        - listing, 46
+        - methods, 46
+    - categories, 36-37
+    - comparison, 19
+    - DateTime, 39-42
+        - arithmetic methods, 42
+        - properties, 41-42
+    - default values, 53
+    - defined, 19
+    - disposable, 454
+    - dynamic, 39, 440
+        - COM interoperability, 448
+        - conversions, 442
+        - custom, creating, 445-447
+        - dynamic keyword, 439-440
+        - methods, invoking, 449
+        - overload resolution, 442-443
+        - runtime, 441-442
+        - sample application, 440-441
+        - variables, 440
+    - enumerations, 114
+        - Days, 116-117
+        - defining, 114
+        - flag enumerations, 117-119
+        - listing, 114-115
+        - multiple named values, 115
+        - numeric values, 115-116
+        - operations, 116
+        - sample application, 116-117
+        - underlying types, 116
+        - values, 114
+    - formatting, 178
+    - Guid, 43-44
+    - inference, 254
+    - null, 53
+    - nullable
+        - defined, 54
+        - null-coalescing operator, 54
+        - sample application, 55
+        - syntax, 54
+        - values, 54
+    - pointers, 36
+    - predefined, 36-38
+        - bool, 37-38
+        - byte, 37
+        - char, 37
+        - CLS-compliance, 38-39
+        - decimal, 37-38
+        - double, 37-38
+        - float, 37
+        - implicit conversions, 56
+        - int, 37
+        - long, 37
+        - object, 38-39
+        - sample applications, 40-41
+        - sbyte, 37
+        - short, 37
+        - string, 38
+        - uint, 37
+        - ulong, 38
+        - ushort, 38
+    - reference, 19, 36
+        - categories, 36
+        - value type conversions, 54
+        - safety, 247
+        - testing operators, 47
+    - TimeSpan, 42-43
+    - unified type system, 37
+- **URLs**
+    - Uri class, 44-45
+    - UriBuilder class, 45
+- **value**, 19, 36, 58
+- **var**, 39
+- **variant**, 39
+- **void**, 39
+
+# upcasting
+
+- **upcasting**, 97
+- **UpdateSourceTrigger** property
+    - ValidationRules collection, 402
+    - WPF data binding, 387
+- **updating database records**, 340-341
+- **Uri class**, 44-45
+    - methods, 44
+    - properties, 45
+- **Uri property**, 45
+- **UriBuilder class**
+    - listing, 45
+    - properties, 45
+- **URIs (uniform resource identifiers)**, 44-45
+- **UserName** property, 45
+- **using statement**, 454
+    - compiler generated code, 454-455
+    - syntax, 454
+- **UtcNow property**, 42
+- **\uxxxx escape sequence**, 169
+- **\xxxxxxxx escape sequence**, 169
+
+# V
+
+- **\v escape sequence**, 169
+- **ValidatesOnDataErrors** property, 401
+- **ValidatesOnExceptions** property, 401
+- **validation**, 400-403
+    - AddressBook application, 403
+    - arguments, 230
+    - controls, 420-422
+    - ASPX page, 422
+    - combining, 421
+    - error messages, summarizing, 421
+    - listing of, 420-421
+    - properties, 421
+    - custom validation rules, 401
+    - strings, 189-190
+    - validation checks, adding, 401
+    - visual feedback, 402
+    - web applications, 420
+        - client-side, 420-421
+        - server-side, 420
+    - validation controls, 420-422
+        - Validator example, 422
+    - **ValidationRules** property, 401
+    - **ValidationSummary** control, 421
+- **value parameters**, 75
+- **value types**, 19, 36
+    - bool, 37-38
+    - byte, 37
+    - char, 37
+    - converting to reference types, 54
+        - boxing/unboxing operations, 56
+        - explicit conversions, 57
+        - implicit conversions, 56
+        - sample application, 58
+    - decimal, 37-38
+    - double, 37-38
+    - float, 37
+    - int, 37
+    - long, 37
+    - null, 53
+    - nullable
+        - defined, 54
+        - null-coalescing operator, 54
+        - sample application, 55
+        - syntax, 54
+        - values, 54
+    - reference types, compared, 19
+    - sbyte, 37
+    - short, 37
+    - switch expressions, 151
+    - uint, 37
+    - ulong, 38
+- **values**
+    - constants, 70
+    - date and time values. See
+        - date and time values
+        - default, 53
+    - enumerations
+        - commas, 114
+        - multiple named values, 115
+        - numeric, 115-116
+    - flag enumerations, 118
+    - generic types, 252
+    - GUIDs, 40-44
+    - incrementing/decrementing, 48
+    - integer minimum, finding
+        - with generics code listing, 248-249
+        - objects, 246-247
+        - with generics application, 249-250
+        - without generics application, 247-248
+        - without generics code listing, 246
+    - integers, 45-46
+    - literal, 21-22
+    - nullable types, 54
+    - **nullable**
+    - **URLs**
+        - Uri class, 44-45
+        - UriBuilder class, 45
+        - XML elements/attributes, 323
+
+- **Values method**, 209
+- var type, 39
+- **variable windows (Visual Studio debugger)**, 352-354
+    - Locals window, 352-353
+    - Watch window, 352-353
+- **variables**
+    - capturing, 281
+    - catch handlers, 233
+    - constants, compared, 21
+    - declaring, 20, 22
+    - default values, 53
+    - defined, 20
+    - dynamic types, 440
+    - fields. See fields
+    - instance, 20
+    - iteration, 158
+    - lifetime, 20
+    - local, 20
+    - scope, 20
+    - space, 20
+    - static, 20
+- **variance (generic interfaces)**, 258-261
+    - class implementation, 258
+    - contravariance, 258
+    - covariance, 258
+    - extending, 260-261
+    - listing of, 258-259
+    - sample application, 259-260
+- **variant type**, 39
+- **verbatim string literals**, 168-169
+- **VerifyEmailAddress method**
+    - calling, 76
+    - declaring, 74-75
+- **VES (virtual execution system)**, 9-12
+- **virtual methods**, 207
+- **Visual Studio**
+    - benefits, 24
+    - debugger, 350
+        - breaking on exceptions, 351
+        - breakpoints, 355-357
+        - Call Stack window, 358-359
+        - compiler errors, 349
+        - DataTips, 354-355
+        - Exception Assistant, 351-352
+        - expression side effects, 353-354
+        - Immediate window, 355
+        - MSDN edition features, 352
+        - next statements, 359
+        - runtime errors, 349
+        - user-provided divisors, 350
+        - stepping through code, 357-358
+        - variable windows, 352-354
+        - visualizers, 350-360
+
+# W
+
+- **\W regular expression metacharacter**, 188
+- **Wait method**, 465
+    - Task class, 471
+    - thread signals, 466
+- **WaitAll method**, 471
+- **WaitAny method**, 471
+- **waiting on tasks**, 471
+- **Watch window**, 352-353
+- **web applications**
+    - accessing, 408
+    - architecture, 408
+    - ASP.NET, 408-411
+        - ASPX files, 409
+        - client-side validation, 420-421
+        - CSS, 416-418
+        - data binding, 418-420
+        - embedded code blocks, 419
+        - Global.asax event handlers, 411
+        - Hello world application, 409
+        - master pages, 414-415
+        - MVC Framework, 408
+        - Page event handlers, 410
+        - server-side validation, 420
+        - validation controls, 420-422
+        - web-based photo viewer application. See web-based photo viewer
+    - data validation, 420
+        - client-side, 420-421
+        - server-side, 420
+        - validation controls, 420-422
+    - Validator example, 422
+    - HTTP 408
+    - IIS, 410
