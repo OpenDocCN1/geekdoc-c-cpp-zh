@@ -1,0 +1,11 @@
+for how the other call-management applications support the IPT network. First, let's-follow the VoIP flow shown in Figure 2-1.
+
+![](bbox=[0.105, 0.142, 0.803, 0.452])
+
+Figure 2-1 CME Call Flow for On-Network Cisco IP Phones
+
+Essentially, the relationship between CME and the Cisco IP Phones is similar to the relation-ship between a mainframe and dumb terminals. CME controls virtually every action performed at the Cisco IP Phones. For example, if a user picks up the handset, an offhook state is sent from the Cisco IP Phone to the CME router using either the Skinny Client Control Protocol (SCCP) or the Session Initiation Protocol (SIP). We discuss the differences between these protocols in Chapter 3, but in a nutshell, SCCP and SIP are both signaling protocols that allow the call-management platform (CME, in this case) to communicate with an IP Phone. As the user dials di digits, each digit is sent to the CME router (again, via SCCP or SIP). After the user dials the phone number of the other Cisco IP Phone shown in Figure 2-1, CME sends some signaling messagescaging the phone to ring. After the user answers the ringing phone, CME connects the IP Phones directly and sends out of the communication stream. The phones now communicate directly using the Real-time Transport Protocol (RTP), which handles the audio stream between the devices.
+
+The fact that CME steps out of the middle of the RTP stream allows the IP Phones to communicate directly is fantastic because of two reasons. First, it eliminates the CME router as a point of failure. After CME establishes the RTP stream between the endpoints it can crash, reboot, or catch fire, and the connection between the two endpoints continues unhindered (provided the fire did not burn up the switch). The other benefit is that the CME router does not become a bottleneck for the RTP stream. If the links to the router became saturated or the router ran out of resources, RTP packets can drop, causing the call quality to degrade. Keep in mind that we are only talking about the RTP stream, which contains the audio of the call. All the phone features (as such as,
+
+> Key Topic

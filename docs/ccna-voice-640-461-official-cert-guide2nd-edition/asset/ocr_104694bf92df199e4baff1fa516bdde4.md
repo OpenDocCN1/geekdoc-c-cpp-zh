@@ -1,0 +1,9 @@
+On the other hand, CUCM database relationship has a little more substance to it. It is not any more difficult to manage than ICCS (it just works behind the scenes), but it does have some key concepts you'll want to know. First off, the CUCM IBM Informix database uses a one-way replication method where a server known as the Publisher holds the master copy of the database. All changes to the database (with some minor exceptions) occur on the Publisher server and replicate to the Subscribers. Figure 2-5 illustrates this relationship.
+
+![](bbox=[0.103, 0.235, 0.814, 0.613])
+
+Figure 2-5 CUCM Database Relationship
+
+Each CUCM cluster supports a single Publisher and up to eight Subscribers. Think of the Subscribers as the “workhorses” of the IPT network. These servers are providing dial tone, receiving digits, routing calls, and streaming music on hold. However, the Publisher typically performs only two functions: It maintains the database and serves TFTP requests. Because the Publisher serves such a critical role in maintaining the only writable copy of the CUCM database, it is usually kept from all the heavy work. The TFTP requests come from the Cisco Phones during their boot process (covered in Chapter 3).
+
+Tip: In smaller environments (500 IP phones or less), it's perfectly fine to use the Publisher for call processing and database management. However, once you exceed it's generally a best practice to pull the Publisher out of call processing and leave that work to the Subscribers. Likewise, once you exceed 1,250 subscribers, Cisco recommends moving the TFTP server role to a dedicated server.

@@ -1,0 +1,7 @@
+# Table 14-3 CUPC Troubleshooting Quick Reference
+
+| Symptom | Things to Check |
+| Users are not shown as the phone during an active call. | - Verify that the SIP trunk between CUCM and CUPS exists and is correctly configured. - Verify that the user is associated with the line (check the configuration of IP Phone, Device Profile, or CSF as appropriate) in CUCM. |
+| User cannot log on to CUPC. | - Verify that the user account is not locked. - Verify the correct server IP address in CUPC (the user may have changed it). - If using the host name instead of the IP address, verify that DNS is available and correctly configured. - Verify the license capabilities assignment in CUCM. |
+| User cannot add contacts; search returns no results. | - Verify that the user is associated with the correct LDAP profile in CUPS. - Verify LDAP Search Context in CUPS. |
+| User cannot control the IP Phone 9971. | - Verify that the IP Phone is associated with the user in CUCM. - Verify that the Allow Control of Device from CTI box is checked on the device configuration page in CUCM. - Verify that the user is a member of both the Standard CTI Enabled and Standard CTI Allow Control of Phones supporting Connected Xfer and Conf groups. |

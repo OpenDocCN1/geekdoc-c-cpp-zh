@@ -1,0 +1,15 @@
+# Strategies for Exam Preparation
+
+Strategies for exam preparation will vary depending on your existing skills, knowledge, and equipment available. Of course, the ideal exam preparation would consist of building a small voice lab with a Cisco Integrated Services Router, virtualized lab versions of CUCM, Unity Connection, and Presence servers, a switch, and a few IP Phones, which you could then use to work through the configurations as you read this book. However, not everyone has access to this, so the next best step you can take is to read the chapters and jot down notes with key concepts or configurations on a separate notepad. Each chapter begins with a “Do I Know This Already?” quiz, which is designed to give you a good idea of the chapter' content and your current understanding of it. In some cases, you might already know most of or all the information covered in a given chapter.
+
+After you read the book, look at the current exam objectives for the CCNA Voice exam listed on Cisco.com (www.cisco.com/certification). If there are any areas in the certification exam outline that you would still like to study, find those sections in the book and review them.
+
+When you feel confident in your skills, attempt the practice exam included on the CD with this book. As you work through the practice exam, note the areas where you lack confidence and review those concepts or configurations in the book. After you have reviewed the areas, work through the practice exam a second time and review your skills. Keep in mind that the more you work through the practice exam, the more familiar the questions will become, and so the practice exam will become a less accurate judge of your skills.
+
+After you work through the practice exam a second time and feel confident with your skills, schedule the real ICOMM 8.0 (640-46) exam through Vue (www.vue.com). You should typically take the exam within a week from when you consider yourself ready to take the exam, so that the information is fresh in your mind.
+
+Keep in mind that Cisco exams are very difficult. Even if you have a solid grasp of the information, many other factors play into the testing environment (stress, time constraints, and so on). If you pass the exam on the first attempt, fantastic! If not, know that this commonly happens. The next time you attempt the exam, you will have a major advantage: You already experienced the exam first-hand. Although future exams may have different questions, the topics and general “feel” of the exam remain the same. Take some time to study areas from the book where you feel weak on them. Retaking the exam the same or following day from your first attempt is a little aggressive; instead, schedule to retake it within a week, while you are still familiar with the content.
+
+# 640-461 ICOMM 8.0 Exam Topics
+
+Table I-1 lists the exam topics for the 640-461 ICOMM 8.0 exam. This table also lists the book parts in which each exam topic is covered.
