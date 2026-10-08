@@ -1,0 +1,226 @@
+
+code [0] 是值为 0x40 的元素 0，code [1] 是值为 0x79 的元素，以此类推。
+
+假设共阳极七段数码管连接到 PIC18F4321 微控制器的 PORTA。现在，为了输出特定数字的代码，例如数字 1，可以使用以下 C 代码：
+
+```c
+PORTA = code[1];
+```
+
+## C 语言中的延时例程
+
+使用 PIC18F C18 编译器获取时间延时的三种方式是：
+
+- 使用 PIC18F 片上定时器
+- 使用 C 语言循环
+- 使用 C18 延时函数，例如 `Delay_10KTCYx()` 函数
+
+以下我们将对这些方式进行描述。
+
+(a) 使用 PIC18F 片上定时器：关于使用 PIC18F 硬件定时器实现时间延时的内容将在第 10 章中讨论。
+
+(b) 使用 C 语言循环：可以使用“for”循环获得时间延时，方法如下：
+
+```c
+void delay(unsigned int itime) // 2 ms 延时
+{
+    unsigned int i,j;
+    for(i=0; i<itime; i++)
+        for(j=0; j<255;j++);
+}
+```
+
+上述 C 语言中的“delay”函数将利用 PIC18F4321 的 1-MHz 内部默认时钟提供 2 ms 的时间延时。为了确定“delay”函数确实提供 2 ms 的时间延时，下面给出了 C 程序的汇编代码：
+
+```assembly
+DELAY  MOVWF 0x20
+LOOP1  MOVVLW D'255' ; LOOP2 在计数为 255 时提供 2 ms 延时
+       MOVWF 0x21
+LOOP2  DECFSZ 0x21
+       GOTO LOOP2
+       DECFSZ 0x20
+       GOTO LOOP1
+       RETURN
+```
+
+结合 1-MHz 时钟以及附录 D 中 PIC18F 指令执行时间，可以证明上述 PIC18F 汇编程序将产生 2 ms 的时间延时。此外，第 7 章还描述了使用 PIC18F 汇编语言获取时间延时的相关概念。
+
+使用 C 语言中 2 ms 的“delay”函数，可以通过替换 `itime` 的值来获得更长的延时。例如，当 `itime = 10` 时，可以使用 C 语句获得 20 ms 的时间延时：
+
+```c
+delay(10);
+```
+
+(c) 使用 C18 延时函数，例如 `Delay_10KTCYx()` 函数：
+
+C18 编译器包含一个名为“Delay_10KTCYx()”的函数，它允许程序员指定以 10,000 指令周期为倍数的时间延时。这个“Delay”函数包含在 C18 编译器的头文件“delays.h”中。请注意，指令周期是指执行 PIC18F 指令机器码指令所需的时间。如前所述，PIC18F 每四个时钟周期执行一条机器码指令。函数名称“Delay_10KTCYx()”的细节可以分解如下：
+
+- 函数“Delay”用于提供固定的时间延时。
+- “10K”表示一万。
+- “TCY”表示指令周期（Tcy）。
+- “x”乘以括号中指定的参数（数字）。括号中的数字必须是一个 8 位无符号整数（0-255）。因此，产生的时间延时将是括号中的数字乘以 10,000 个指令周期。
+
+作为一个示例，假设编写一个 C 程序，使用 C18 函数“Delay_10KTCYx()”和 4-MHz 内部时钟来生成 10 秒的时间延时。
+
+当 $F_{OSC} = 4\text{MHz}$ 时，定时器频率为 $(4\text{MHz})/4 = 1\text{MHz}$。因此，周期为 $1\mu sec$。对于 10 秒延时，周期数 $= (10)/(10^{-6}) = 10^7 = 10,000,000$。C18 函数“Delay_10KTCYx(250)”将提供 2,500,000 个周期的延时。执行四次包含函数“Delay_10KTCYx(250)”的循环将产生 10 秒的延时。
+
+C 程序如下所示：
+
+```c
+#include <P18F4321.h>
+#include <delays.h>    // 延时函数库
+
+void main() {
+    unsigned char count;
+    OSCCON = 0x60; // 4MHz
+    for (count = 0; count < 4; count++) // 使用延时函数 4 次
+        Delay_10KTCYx(250); // 延时为 10,000 指令周期的倍数。
+}
+```
+
+## 示例 8.4
+
+假设使用 PIC18F4321。假设有三个开关连接到 PORTC 的位 0-2，一个 LED 连接到 PORTD 的位 6。如果 HIGH 开关的数量是偶数，则点亮 LED；否则，熄灭 LED。编写一个 C 语言程序来实现此功能。
+
+### 解决方案
+
+C 语言程序如下所示：
+
+```c
+#include <p18f4321.h>
+#define    portc0   PORTCbits.RC0
+#define    portc1   PORTCbits.RC1
+#define    portc2   PORTCbits.RC2
+
+void main (void)
+{
+    unsigned char mask = 0x07;              // 用于屏蔽 PORTC 高 5 位的数据
+    unsigned char masked_in;
+    unsigned char xor_bit;
+    TRISC = 0xFF; // 配置 PORTC 为输入端口
+    TRISD = 0; // 配置 PORTD 为输出端口
+    while(1)
+    {
+        masked_in = PORTC & mask; // 屏蔽输入位
+        if (masked_in == 0)
+            PORTD = 0x40; // 对于所有低电平开关（偶数），点亮 LED
+        else
+        {
+            xor_bit = portc0 ^ portc1 ^ portc2; // 输入位异或
+            if (xor_bit == 0) // 对于偶数个高电平开关
+                PORTD = 0x40; // 点亮 LED
+            else
+                PORTD = 0; // 对于奇数个高电平开关，熄灭 LED
+        }
+    }
+}
+```
+
+## 示例 8.5
+
+假设使用 PIC18F4321。假设需要输入连接到 PORTC 位 4 的开关，然后将其输出到连接到 PORTD 位 2 的 LED。编写一个 C 语言程序来实现此功能。
+
+### 解决方案
+
+以下 C 代码将实现此功能：
+
+```c
+#include <PIC18F4321.h>
+#define portc_bitin PORTCbits.RC4 // 声明 PORTC 的一个位（位 4）
+#define portd_bitout PORTDbits.RD2 // 声明 PORTD 的一个位（位 2）
+
+void main (void)
+{
+    TRISCbits.TRISC4 = 1; // 配置 PORTC 位 4 为输入位
+    TRISDbits.TRISD2 = 0; // 配置 PORTD 位 2 为输出位
+    while (1) // 停止
+    {
+        portd_bitout = portc_bitin; // 将开关输出到 LED
+    }
+}
+```
+
+## 示例 8.6
+
+如图 8.18 所示的 PIC18F4321 微控制器需要向连接到 PORTB 位 0 至 6 的共阳极七段数码管输出一个 BCD 数字（0 到 9）。PIC18F4321 通过连接到 PORTA 位 0 至 3 的四个开关输入 BCD 数字。编写一个 C 语言程序，根据开关输入在七段数码管上显示一个 BCD 数字（0 到 9）。使用查找表来表示七段代码。
+
+### 解决方案
+
+为了找到显示的正确值，可以从图 8.18 中获取包含每个 BCD 数字七段代码的表（也称为“查找表”），如下所示：
+
+| Hex | g | f | e | d | c | b | a |
+| :-- | :- | :- | :- | :- | :- | :- | :- |
+| 0   | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0x40
+| 1   | 1 | 1 | 1 | 1 | 0 | 0 | 1 | 0x79
+| 2   | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0x24
+| 3   | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0x30
+| 4   | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 0x19
+| 5   | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0x12
+| 6   | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0x03
+| 7   | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0x78
+| 8   | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0x00
+| 9   | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0x18
+
+请注意，对于共阳极七段数码管，‘0’ 将点亮段，‘1’ 将熄灭段。此外，假设 PORTB 的位 7 为 ‘0’。
+
+C 代码如下所示：
+
+```c
+#include <p18f4321.h>
+
+void main ()
+{
+   unsigned char input;
+   unsigned char code[10] = {0x40,0x79,0x24,0x30,0x19,0x12,0x03,0x78,0x00,0x18};
+   ADCON1 = 0x0F; // PORTA 为输入
+   TRISB = 0; // PORTB 为输出
+   while (1) {
+      input = PORTA & 0x0F; // 屏蔽开关输入
+      PORTB = code [input]; // 通过 PORTB 将代码输出到 7 段显示
+   }
+}
+```
+
+![](img/5e76fd429fabd2b62e16a7bfd8cf546f_235_0.png)
+
+图 8.18 示例 8.6 的插图
+
+在上述程序中，首先将 `PORTB` 设置为输出端口，`PORTA` 设置为输入端口。然后声明一个变量 `input`。程序进入一个无限 `while` 循环，首先通过 `PORTA` 接收来自四个开关的输入，并屏蔽前四位。设置一个 `unsigned char` 数组 `code` 以包含 0 到 9 每个十进制数字的七段代码。输入用作数组的索引，并将相应的 7 段代码发送到 `PORTB`。
+
+## 问题与习题
+
+8.1 识别 PIC18F4321 上的电源和地引脚。使用多个电源和地引脚的目的是什么？
+
+8.2 PIC18F4321 的默认时钟频率是多少？
+
+8.3 PIC18F 如何获取要执行的第一条指令的地址？这个地址是什么？
+
+8.4 上电复位和手动复位之间有什么区别？
+
+8.5 列出 PIC18F4321 的 I/O 端口及其大小。
+
+8.6 使用 PIC18F 汇编语言，配置：
+
+- (a) PORTC 的所有位为输入
+- (b) PORTD 的所有位为输出
+- (c) PORTB 的位 0 至 4 为输入
+- (d) PORTA 的所有位为输出
+
+8.7 使用 C 语言重复问题 8.6。
+
+8.8 使用以下方式将 PORTE 的三个位（位 0–2）配置为输出：
+
+- (a) PIC18F 汇编语言
+- (b) C 语言
+
+8.9 假设使用 PIC18F4321。假设有三个开关连接到 C 端口的位 0–2，一个 LED 连接到 D 端口的位 6。如果 HIGH 开关的数量是偶数，点亮 LED；否则，熄灭 LED。编写一个 PIC18F 汇编语言程序来实现此功能。另外，编写一个 C 程序，使用“if-else”结构来实现此功能。假设 ‘1’ 将点亮 LED，而 ‘0’ 将熄灭它。
+
+8.10 需要 PIC18F4321 微控制器根据连接到 C 和 D 端口位 1 的开关设定的输入条件，驱动连接到 C 和 D 端口位 0 的 LED。I/O 条件如下：
+
+- 如果 C 端口位 1 的输入为 HIGH，且 D 端口位 1 的输入为 LOW，则 C 端口的 LED 点亮，D 端口的 LED 熄灭。
+- 如果 C 端口位 1 的输入为 LOW，且 D 端口位 1 的输入为 HIGH，则 C 端口的 LED 熄灭，D 端口的 LED 点亮。
+
+![](img/5e76fd429fabd2b62e16a7bfd8cf546f_237_0.png)
+
+**图 P 8.11**（假设两个 LED 最初均熄灭。）
+

@@ -1,0 +1,15 @@
+# # PREFACE
+
+Microcontrollers play an important role in the design of digital systems. They are found in a wide range of applications including office automation systems (copiers and fax machines), consumer electronics (microwave ovens), digital instruments, and robotics.
+
+The second edition of this book is written in a very simplified manner to present the fundamental concepts of assembly and C language programming and interfacing techniques associated with typical microcontrollers. Microchip Technology’s PIC18F4321 is used for this purpose. The PIC18F family is inexpensive, and continues to be popular. Emphasis in this edition is given on chip-level design and implementation. This is very essential for the students to understand the hardware and software aspects of a specific microcontroller from chip level in a first course on microcontrollers. The PIC18F family is an excellent educational tool for this purpose.
+
+The PIC18F uses Harvard architecture with a RISC-based CPU. Conventional CPUs complete fetch, decode and execute cycles of an instruction in sequence. However, the PIC18F uses pipelining, in which instruction fetch and execution cycles are overlapped. This speeds up the instruction execution time of the PIC18F. A brief coverage of CPU architectures, RISC vs. CISC, pipelining, assembly / C Language programming and I/O techniques associated with typical microcontrollers are provided in the first part of the book. These topics are then related to a popular member of the PIC18F family such as the PIC18F4321.
+
+As far as the programming is concerned, assembly and C language programming are covered in this book using the PIC18F. Coverage of assembly language programming will provide an exposure to the internal architecture of microcontrollers. Note that although microcontrollers in typical industrial applications include mostly C and some assembly, an introduction to assembly language programming for students is essential.
+
+Several assembly and C language programs along with I/O examples are developed using Microchip’s MPLAB, and PICkit3. The MPLAB software package includes a text editor, PIC18F assembler, C compiler, and a simulator. The PICkit3 is a programmer interface provided by Microchip. One can build an inexpensive PIC18F-based system on a breadboard using one of the PIC18F devices such as the PIC18F4321.
+
+The programmer can download the compiled or assembled programs using the PICkit3 from the Personal Computer or laptop, and then perform meaningful experiments. This is the most inexpensive way of implementing laboratory experiments using a typical microcontroller such as the PIC18F4321. This will enable the students with a thorough and basic background in microcontroller-based applications from chip level.
+
+The book is self-contained and includes a number of basic topics. A background in basic digital logic and C language programming is assumed. Characteristics and principles
