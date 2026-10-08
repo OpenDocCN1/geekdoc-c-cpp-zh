@@ -1,0 +1,8 @@
+# Trademarks
+
+DEITEL® and the double-thumbs-up bug are registered trademarks of Deitel and Associates, Inc.
+Microsoft® Windows®, and Microsoft Visual C#® are registered trademarks of the Microsoft Corporation in the U.S.A. And Other other countries. This book is not sponsored or endorsed by or affiliated with the Microsoft Corporation.
+
+UNIX is a registered trademark of The Open Group.
+
+> Throughout this book, trademarks are used. Rather than put a trademark symbol in every occurrence of a trademarked name, we state that we are using the names in an editorial fashion only and to the benefit of the trademark owner, with no intention of infringement of the trademark.

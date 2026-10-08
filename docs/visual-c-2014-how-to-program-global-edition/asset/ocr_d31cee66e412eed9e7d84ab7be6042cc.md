@@ -1,0 +1,14 @@
+# 1.8 C# 59
+
+| Programming language | Description |
+|---|---|
+| JavaScript | JavaScript is the most widely used scripting language. It is primarily used to add programmability to web pages—for example, animations and interactivity with the user. All modern web browsers support it. |
+| Pascal | Research in the 1960s resulted in structured programming—writing programs that are clearer, easier to test and debug and easier to modify programs than previous techniques. The Pascal language, developed by Professor Niklaus Wirth in 1971, grew out of this research. It was popular for teaching structured programming for several decades. |
+| PHP | PHP is an object-oriented, open-source “scripting” language supported by a community of developers and by numerous websites. PHP is platform independent—exists for all UNIX, Linux, Mac and Windows operating systems. |
+| Pyton | Python, an object-oriented scripting language, was released in 1991. Developed by Guido Rossum of the National Research Institute for Mathematics and Computer Science (CWI), Python draws heavily from Mathematics—Python is “extensible”—it can be extended through classes and programming interfaces. |
+| Swift | Swift, introduced in 2014, is Apple’s programming language of the future for iOS and OS applications (apps). Swift is a contemporary language that includes popular programming-language features from languages as Objective-C, Java, C#, Ruby, and others. In 2015, Apple released Swift 2 with updated features. According to the TIO Index, Swift became one of the most popular programming languages. Swift is now open source, so it can be used on Non-Apple platforms. |
+| Ruby on Rails | Ruby—created in the mid-190s by Yukhiro Matsumoto—is an open-source, object-oriented programming language with a simple syntax that’s similar to Python. Ruby on Rails combines the scripting language Ruby with the Rails application framework developed by the company 37Signals. Their book, Getting Real (at http://gettingreal.37signals.com/toc.php), is a must-read for web developers. Many on Ruby Rails developers have reported productivity gains over other languages when developing database-intensive applications. |
+| Scala | Scala (http://scala-lang.org/what-is-scala.html)—was designed by Martin Orderson, at Ecole Polytechnique de Lausanne (EPFL) in Switzerland. Released in 2003, Scala uses the object-oriented programming and functional programming paradigms and is designed to integrate with Java. Programming in Scala can reduce the amount of code in your applications significantly. |
+| Visual Basic | Microsoft’s Visual Basic language was introduced in the early 1990s to simplify the development of Microsoft Windows applications. Its latest version supports object-oriented programming.
+
+**Fig. 1.6** | Some programming languages. (Part 2 of 2.)

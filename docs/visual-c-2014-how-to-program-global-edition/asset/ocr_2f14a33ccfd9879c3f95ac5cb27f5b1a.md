@@ -1,0 +1,34 @@
+# 916 Chapter 21 Generic Collections: Functional Programming with LINQ/PLINQ
+
+collection to perform a task. Another benefit is that you can easily ask the library to perform a task with parallel processing to take advantage of a processor's multiple cores. The purpose is of PLINQ (Parallel LINQ)—an implementation of the LINQ to Objects extension methods that parallelizes the operations for enhanced performance. PLINQ handles for you the error-prone aspects of breaking tasks into small pieces that execute in parallel and coordinating the results of those pieces, making it easier for you to write high-performance applications that take advantage of multicore processors.
+
+Demonstrating PLINQ
+Figure 21.9 demonstrates the LINQ to Objects and PLINQ extension methods Min, Max and Average operating on a 10,000,000-element array of int values (created in lines 13-15). As with LINQ to Objects, the PLINQ versions of these operations do not modify the original collection. We time the operations to show the substantial performance improvements of PLINQ (using multiple cores) over LINQ to Objects (using a single core). For the remainder of this discussion we refer to LINQ to Objects simply as LINQ.
+
+```
+// Fig. 21.9: ParallelizingWithPLINQ.cs
+// Comparing performance of LINQ and PLINQ Min, Max and Average methods.
+using System;
+using System.Linq;
+class ParallelizingWithPLINQ
+{
+    static void Main()
+{
+    var random = new Random();
+    // create array of random ints in the range 1-999
+    int[] values = Enumerable.Range(1, 1000000).Select(x => random.Next(1, 1000)).ToArray();
+    // time the Min, Max and Average LINQ extension methods
+    Console.WriteLine("Min, Max and Average with LINQ to Objects using a single core");
+    var linqStart = DateTime.Now; // get time before method calls
+    var linqMin = values.Min();
+    var linqMax = values.Max();
+    var linqAverage = values.Average();
+    var linqEnd = DateTime.Now; // get time after method calls
+    // display results and total time in milliseconds
+    var linqTime = linqEnd.Subtract(linqStart).TotalMilliseconds;
+    DisplayResults(linqMin, linqMax, linqAverage, linqTime);
+    // time the Min, Max and Average PLINQ extension methods
+    Console.WriteLine("\nMin, Max and Average with PLINQ using multiple cores");
+```
+
+**Fig. 21.9** | Comparing performance of LINQ and PLINQ Min, Max and Average methods. (Part 1 of 2).

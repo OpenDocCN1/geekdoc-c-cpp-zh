@@ -1,0 +1,3 @@
+Adding the Tuning Group, the radio station Label and the AM/FM RadioButton. Add a GroupBox to the Form. Set its Text to Tuning and its Size to 120, 70. Add a Label to the GroupBox. Set its AutoSize to False, its Size to 50, 44, its BackColor to Black, its ForeColor to Silver, its font to 12pt bold and its TextAlign to MiddleCenter. Set its Text to 92.9. Place the Label as shown in the figure. Add two RadioButtons to the GroupBox. Set the Text of one to AM and the other to FM.
+
+Adding the image. Add a PictureBox to the Form. Set its SizeMode to StretchImage and its Size to 55, 70. Set the Image property to MusicNote.gif (located in this chapter's examples folder).

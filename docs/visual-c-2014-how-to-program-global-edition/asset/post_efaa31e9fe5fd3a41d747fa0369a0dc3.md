@@ -1,0 +1,344 @@
+
+## 1044 Index
+
+Operators (cont.).
+
+- +, addition code assignment 213
+- -, less than 130
+- <=, less than or equal to 130
+- =, assignment 124
+- --, subtraction assignment 213
+- ==, is equal to 130
+- ->, greater than 130
+- >=, greater than or equal to 130
+- |, logical and
+- OR, 257
+- |, conditional OR 255, 256
+- arithmetic 126
+- as 530, 576
+- + await 985
+- binary 124, boolean logical AND, && 257
+- logical exclusive OR, ^ 255, 258
+- logical exclusive OR: | 257
+- + cast 207, compound assignment 213 215
+- conditional AND, && 255, 257, 240
+- conditional order, ?: 192 216
+- conditional OR, || 255, 257
+- decrement order, -- 213, 214
+- increment and decrement 214
+- increment order, ++ 213
+- s= 530
+- logical notation, =
+- logical operators 255, 258
+- logical XOR, ^ 258
+- memory address, (224, 454)
+- postfix decrement 213
+- postfix index 213
+- precedence chart 1016
+- refix decrement 213
+- prefix index 213
+- remainder order 229
+- remainder, & 126
+- optimizing compiler 242
+- optional parameter 31, 312
+- default value 311
+- Oracle Corporation 934
+- order by which actions should execute 184
+- order clause of a LINQ query 415
+- ascending modifier 415
+- descending modifier 415
+- Order extension method 914
+- Queryable 953, 959
+- orientation ranging 46
+- out keyword 319
+- out-of-range index 557
+- out property of class Console 741
+- out out of brackets 354
+- OutOfMemoryException class 557, 815
+- output 119
+- output device 46
+- output parameter 319
+- output unit 46
+- overflow error 408
+- loaded overclasses 452
+- descending generic methods 865
+- overloaded methods 310, 857
+- overloaded operators for complex numbers 463
+- overloading constructors 165
+- out a base class method 479, 483
+- override key method, 384, 492
+
+## Panel class (cont.).
+- properties 603
+- scrollbars 604
+- parallel 983
+- operations 983
+- Parallel LINQ 412
+- ParallelEnumerableAsParallelEnumerable method 918
+- ParallelEnumerable class 918
+- ParallelQuery-t class 918
+- ParallelQuery-t method Average 918
+- Max 918
+- Min 918
+- parameter, 153, output 319
+- parameter in the UML
+- Parameter Info window 115
+- parameter list 153
+- empty 154
+- parameter name 153
+- parameter type 153
+- parameterless constructor 444, 449, 864
+- struct 462
+- parans keyword 380
+- parent servant 599
+- parent menu 638
+- parent node 667, 836
+- parent property of class
+
+## P
+- package manager NiGet 948
+- Padding property of class Form 599
+- Padding method of class 791
+- page layout source 708
+- PaintEvents class 696
+- ClickEventArgs property 696
+- Graphics property 696
+- PaintEvents properties 697
+- parent of ( ) 133
+- palette 90
+- Panel class 64, 102, 586, 603
+- AutoScroll property 603
+- BorderStyle property 603
+- Controls property 603
+- Parent property of class DirectoryInfo 678
+- parent window 683
+- parentheses 111, 127
+- nested 127
+- redundant 129
+- unnecessary
+- Parse method of simple type decimal 171
+- Parse method of simple type double 285
+- Parse method of class Document 1003
+- Parse method of type decimal 172
+- Parse method of type int 123
+- partial class 588
+- partial keyword 592
+- partition string in quicksort 811
+- Pascal Case 109
+- contains 346
+- Pascal case 151
+
+## Index 1045
+- pass an array element to a method 361
+- pass array to a method 361
+- pass-by-reference 318
+- pass-by-value 318
+- Passing an array reference by value and by reference 385
+- Passing arrays and individual array elements to 362
+- passing options to a program
+- command-line arguments 382
+- password Text 600
+- Path 672, 775
+- Get-extension method 775
+- Payroll System Method exercise 545
+- perform a calculation 134
+- perform a task 153, 164
+- perform an eleven 112
+- performance 984
+- performing operations concurrently 983
+- permission setting 674
+- Permutations exercise 273
+- persistent data 940
+- phase 202
+- Phishing Scanner 781
+- PHP 50, 59
+- physical output operation 741
+- "pick off" each digit 144
+- PictureBox class 77, 88, 93, 64, 686
+- Click event 115
+- Image property 614
+- properties and event 614
+- SizeMode property 614
+- Pig Latin 736
+- pin code 822
+- platform 62, 70
+- platform independence 61, 68
+- PLINQ (Parallel LINQ) 883, 916, 916
+- PNG (Portable Network Graphics) 94
+- poker 403
+- Poll analysis application 353
+- Polymorphic programming language exercise using Account hierarchy 546
+- polymorphically process Invoices and Employees 539
+- polymorphism 250, 502, 509
+- polynomial 128, 129
+- pop off a stack 305
+- pop stack operation 828
+- portability 61
+- Portable Network Graphics porting 61
+- position number 341
+- position of class BindingSource 958
+- Positive, Negative or Zero exercise 334
+- PositiveInstance of structure delete 551
+- decrement 214
+- postfix decrement 213
+- postfix increment 213, 237
+- PostgresQL 934
+- postdecrement 214
+- postorder traversal of a binary tree 836
+- Power of Math 242, 281, 282, 530
+- power (exponent) 282
+- Power method 336
+- power of larger 100 196
+- precedence 133, arithmetic operators 127
+- precedence chart 128
+- precedence chart 207
+- precedence chart append 1016
+- precedence of values 1109
+- precision of a floating-point value 204
+- element 213
+- predicate 914
+- predicate method 821
+- prefix decrement 213
+- prefix increment 213
+- preorder of a binary tree 836
+- prepackaged data structures 882
+- Previous class of property Tree 666
+- primary key 935, 940
+- primary method 46
+- prime 335
+- prime number 401, 335
+- primitive data type 207
+- prime in interest calculation 240
+- prime of least privilege 457
+- print spool 832
+- access modifier 154, 440, 439
+- probability 293
+- procedural programming 883
+- procedure for solving a problem 184
+- Process class 655
+- processing phase 202
+- processing unit 45
+- Product Of Integers 273
+- program control 184
+- program in the general 509
+- program in the specific 509
+- ProgrammableWeb 555
+- programming languages 55
+- programming paradigms 883
+- programming oriented 883
+- structured 883
+- project 76
+- project menu 799
+- rules 288
+- properties 84, 86, 92, 158, 52, 161
+- property declaration 84
+- property of or control 84
+- property class 500
+- protected access modifier 154, 439, 479
+
+## Index 1046
+- pseudocode 184, 198, 208
+- first refinement 201
+- second refinement 202, 210
+- random 292, 396
+- Next method 293, 296
+- random generation 356, 336
+- random numbers 297
+- scaling factor 293, 296, 297
+- shifting value 296
+- recursive factorial 314
+- recursive linear search 810
+- recursive method 314
+- recursive step 811
+-
+- Recursive Sum Calculation 909
+- reduce (functional programming)
+- public access modifier 154, 436, interface
+- member of a derived class 479
+- method 437, service 436
+- static class 454
+- static method 454
+- push onto a 305, 828
+- Pythagorean Triples 275
+- Python 59
+- Range of class Enumerable 918
+- range variable of a LINQ query 414
+- reference type constraint 864
+- Reference, output and value 320
+- refinement process 201
+- Rational class 473
+- Rational Numbers (exercise) 473
+- ReadLine of Console 741
+- read-only property 193
+- Reading sequential-access files 750
+- Readline of Console File 931, 123, 248, 741
+- key 4936
+- Regex class 732
+- reinventing the wheel 108
+- relational database 935, 935
+- relation operations 130
+- lease resource 560
+- ReadOnly property of class 620
+- ReadOnly property of TextBox 601
+- release unnamed 542
+- remainder operator, %126, 229
+- remove of class Dictionary 775
+
+## Q
+- quad-processor 67,
+- quad runtime 787
+- query 411, 936
+- query expression (LINQ) 411
+- queryable 941
+- OrderBy extension method 953, 959
+- Then extension method 954
+- where extension method 959
+- Querying of Objects 432
+- queue 813, 832
+- queue class 885,
+- queue data structure 813
+- queue generic class 885
+- queue-> class 885
+- quicksort algorithm 811
+
+## R
+- radians 281
+- radio button 600, 609
+- group 609
+- using with TabBase 663
+- Radio GUI extension 103
+- radioButton control 64, 102, 606, 609
+- Checked property 609
+- Changed event 610
+- properties and events 609
+- Text property 609
+- radius of a circle 334
+- RAM (Random Access Memory) 46
+- remove method of class 422, 425
+- remove method of class StringBuilder 727
+- removeAt method of class List<T> 422, 425
+- remove method of class ObjectCollection 658
+- removeRange method of class List<T> 422
+- repeat method of class Enumerable 1007
+- repetition counter controls 205
+- sentinel control 202, 203, 205, 206
+- ReadEndOfFile method 600
+- StreamReader 771
+- real number 204
+- real of a complex class 535
+- "section" of the computer 46
+- reclaim memory 456
+- record 78, 945
+- record for sequence-file-prospect applications 743
+- record key 468
+- rectangle 472
+- rectangular array 369, 371
+- with three rows and four columns 369, 371
+- recursion 672
+- recursion exercises
+- binary search 810
+- recursion step 314
+- recursive binary search 810
+- recursive call 314
+- recursive evaluation 315
+- of it 315
