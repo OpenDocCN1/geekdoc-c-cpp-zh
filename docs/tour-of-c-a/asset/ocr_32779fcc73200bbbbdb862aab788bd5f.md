@@ -1,0 +1,10 @@
+# # A Tour of C++
+
+Third Edition
+
+Bjarne Stroustrup
+
+Addison-Wesley
+Boston • Columbus • New York • San Francisco • Amsterdam • Cape Town
+Dubai • London • Madrid • Milan • Munich • Paris • Montreal • Toronto • Delhi • Mexico City
+São Paulo • Sydney • Hong Kong • Seoul • Singapore • Taipei • Tokyo
