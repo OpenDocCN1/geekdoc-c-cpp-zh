@@ -1,0 +1,33 @@
+If you examine the error message carefully, you can see that the name of the function (**norminv**) can be found hidden in the text. You just have to be willing to ignore all the parts of the error message you don't understand. It is worth trying to remember what this error message looks like in your development environment so that when a similar linker error occurs you will be able to figure out what the problem is.
+
+The process of turning C++ source files into executables is called "building" the code. This is a three-stage process.
+
++   (1) The *pre-processor* performs simple text manipulation on the **cpp** files such as `#include` statements. The statement `#include` for example just means read in a copy of another file so we can use all the declarations from that file.
+
++   (2) The resulting **cpp** files are compiled.
+
++   (3) The compiled versions of all the files and all the libraries are *linked* together. Each use of a function is *linked* to the place where it is defined.
+
+Function declarations are used during the compile phase and all the function definitions are compiled. However, there is no check that everything glues together coherently until the linker stage. This is why mismatches between declarations and definitions are found at the linker stage.
+
+# 5.3.3 Write the definitions
+
+Create a file called **matlib.cpp** to contain the function definitions. Start the file with the line `#include matlib.h`.
+
+In general you should have a clear correspondence between your header files and your source files. The exceptions are: It is conventional on Windows to have a file called **stdafx.h** which just contains `#include` statements for the libraries you want to use; you should have a **main.cpp** for testing. We will follow these conventions on all operating systems, not just Windows.
+
+Whenever you write a `.h` file, make sure that the first line of the corresponding `.cpp` file includes the `.h` file. This is an important test that your `.h` file is correct and includes everything that it needs.
+
+In the rest of the file, you should write the necessary code for the function definitions. If you succeeded in writing these in the exercises, you can use your own code. If not, it might be quicker to use the code below.
+
+```
+```c
+double norminv( double x ) {
+    return 1234.0; // TODO fix this
+}
+
+double normcdf( double x ) {
+    return 1234.0; // TODO fix this
+}
+```
+```

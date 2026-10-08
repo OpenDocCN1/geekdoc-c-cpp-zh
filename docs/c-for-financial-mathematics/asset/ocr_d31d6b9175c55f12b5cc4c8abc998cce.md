@@ -1,0 +1,56 @@
+# ### 8.2.3 Passing objects between functions
+
+Let us write a new class called **PolarPoint** which represents a point in polar coordinates. It will therefore have member variables corresponding to polar coordinates ($r$, $\theta$).
+
+```
+```
+class PolarPoint {
+public:
+    double r;
+    double theta;
+};
+```
+```
+
+We can use this class to illustrate how one passes objects to and from functions. Let us write a new function **polarToCartesian** which takes a point in polar coordinates and returns the corresponding **CartesianPoint**.
+
+```
+```cpp
+CartesianPoint polarToCartesian( const PolarPoint& p) {
+    CartesianPoint c;
+    c.x = p.r*cos( p.theta );
+    c.y = p.r*sin( p.theta );
+    return c;
+}
+```
+```
+
+As we discussed in Section 7.2.1, you should use pass by reference when passing objects to functions. This explains the use of the **const** keyword and the **&** symbol. Normally any custom data type should be passed by reference. Pass by value is normally reserved just for **double**, **int**, and **bool**.
+
+# ### 8.2.4 How have classes helped?
+
+It is worth pausing to see how using classes has improved our code. Let us examine the code needed to test our new **polarToCartesian** function:
+
+```
+```cpp
+static void testPolarToCartesian() {
+    PolarPoint p;
+    p.r = 2.0;
+    p.theta = PI/2;
+    CartesianPoint c = polarToCartesian( p );
+    ASSERT_APPROX_EQUAL( c.x,0.0,0.001 );
+    ASSERT_APPROX_EQUAL( c.y,2.0,0.001 );
+}
+```
+```
+
+and compare it with our previous test code:
+
+```
+```cpp
+static void testPolarToCartesian() {
+    double r = 2.0;
+    double theta = PI/2;
+    double x=0.0,y=0.0;
+```
+```

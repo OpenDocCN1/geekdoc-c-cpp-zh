@@ -1,0 +1,81 @@
+static analysis, 261
+
+static members, 218
+
+statically typed, 17
+
+static_cast, 26
+
+stdafx.h, 72
+
+strike, 366
+
+string, 106
+
+stringstream, 107
+
+structurer, 367
+
+subclass, 209
+
+superclass, 209
+
+superclass methods, 216
+
+switch, 63
+
+templates, 295
+
+ternary operator, 66
+
+TEST, 89
+
+test infected, 91
+
+test-driven development, 91
+
+testing, 85
+
+this, 206
+
+threads, 337
+
+throw, 61
+
+true, 20
+
+try, 63
+
+typedef, 304
+
+UML, 167, 213, 230
+
+unit test, 85, 245
+
+unordered_map, 315
+
+unsigned, 19
+
+up-and-out option, 368
+
+user-defined types, 123
+
+using, 49
+
+vector, 97, 311
+
+vectorisation, 286
+
+version control, 258
+
+virtual, 162, 210
+
+virtual destructor, 162, 208, 271
+
+void, 45
+
+while, 55
+
+World Wide Web, 117
+
+You Aren't Going to Need It (YAGNI), 299

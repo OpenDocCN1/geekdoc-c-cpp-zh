@@ -1,0 +1,44 @@
+# ### 8.6 Encapsulation
+
+Let us now try to understand the public keyword in more detail. To do this let’s write an object-oriented version of our pie chart code. We begin with a class declaration called PieChart.
+
+```
+```
+class PieChart {
+public:
+    void setTitle( const std::string& title );
+    void addEntry( const std::string& label,
+                    double value );
+    void writeAsHTML( std::ostream& out ) const;
+    void writeAsHTML( const std::string& file ) const;
+private:
+    std::string title;
+    std::vector<std::string> labels;
+    std::vector<double> values;
+};
+```
+```
+
+Following our conventions, you can find this in PieChart.h.
+
+We have now marked the data variables as private. This means only member functions of PieChart can see those variables.
+
+The only member function that modifies the title is setTitle. The only function that modifies the list of labels and the list of data points is addEntry. Here are their definitions:
+
+```
+```
+void PieChart::setTitle( const std::string& t ) {
+    title = t;
+}
+
+void PieChart::addEntry( const string& label,
+                          double value ) {
+    labels.push_back( label );
+    values.push_back( value );
+}
+```
+```
+
+The interesting point is that it is now impossible for labels and values ever to contain a different number of elements. This is because the only code that ever modifies them is addEntry and that function maintains the guarantee that the two vectors always have the same length. We know that there can’t be any other code elsewhere in the project that breaks this guarantee because the variables are private. Because we have used the private keyword, we only have to check that member functions are well behaved to be certain that labels and values have the same number of elements.
+
+It is considered good programming style to make *all* member variables

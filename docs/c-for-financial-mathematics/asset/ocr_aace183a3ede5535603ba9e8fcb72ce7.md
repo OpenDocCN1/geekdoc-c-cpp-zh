@@ -1,0 +1,35 @@
+# # 3.8 Global and local variables
+
+The functions that we have written so far interact by passing parameters and returning values.
+
+Sometimes you may think it is a good idea to share a variable between functions.
+
+As an example, there is no standard definition for the number π in C++. So you might want to write the following code.
+
+```
+```cpp
+const double PI = 3.141592653589793;
+
+double computeArea(int r) {
+  double answer = 0.5 * PI * r * r;
+  return answer;
+}
+
+double computeCircumference(int r) {
+  double answer = 2.0 * PI * r;
+  return answer;
+}
+```
+```
+
+The first defines a **double** variable called PI with the given numeric value. It uses the **const** keyword to indicate that the value is not allowed to change.
+
+Because PI is declared outside of any function it is called a *global* variable. By contrast, the variable **r** in each function is called a *local* variable.
+
+The names you use for local variables within a function have no relationship with the names you use in another function. For example, we have reused the variable name “answer” in two different functions to refer to different quantities. Because these variables are local variables they don’t interfere with each other.
+
+The *scope* of a variable refers to the parts of code where that variable can be used. So we say that PI has global scope and **r** has local scope. In C++, the curly brackets determine the scope of a variable. If a variable is first mentioned within a set of curly brackets, it can only be referred to within those brackets. Once the execution of the code leaves those brackets, the variable is deleted. We will discuss scope further in Section 4.7.
+
+**Tip: Avoid global variables other than constants**
+
+Over time, computer programmers have learned that using global variables makes code hard to understand. When writing programs you should try to divide things into small independent pieces. Using global variables prevents

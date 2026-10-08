@@ -1,0 +1,23 @@
+The advantage of reformulating the model in this way is that we have a clear statement of how the constants $\tilde{\mu}$ and $\sigma$ can be interpreted in terms of the change of the log of stock price over a year. By contrast, the choices for $A$ and $B$ depend upon the choice of time interval $\delta t$ and so don’t have such a natural interpretation.
+
+The sum of independent normally distributed random variables is also a normally distributed random variable, so in our model, the distribution for the log of the stock price is normal at all times. We can compute the mean and variance at any subsequent time $T$ just as we computed the mean and variance at time 1 above. We conclude that at any time $t$, according to this model, the log stock price is normally distributed with mean $\log S_{0}+\tilde{\mu} t$ and standard deviation $\sigma \sqrt{t}$. We write:
+
+$\log S_{t} \sim N(\log S_{0}+\tilde{\mu} t, \sigma \sqrt{t}).$
+
+This means that we can also compute the distribution of $S_{t}$ at each time. Since $\log S_{t}$ is normally distributed, we say that the $S_{t}$ is log-normally distributed.
+
+Let us compute the probability density function of $S_{t}$ according to this model. We can write down the probability density of $z_{t} := \log S_{t}$. It is
+
+$p_{z_{t}}(x)=\frac{1}{\sigma \sqrt{2 \pi} t} \exp \left(-\frac{\left(x-\log \left(S_{0}\right)-\tilde{\mu} t\right)^{2}}{2 \sigma^{2} t}\right)$. (A.3)
+
+We can use this to compute the expected value of $S_{t}=\exp \left(z_{t}\right)$. The necessary integration is left as an exercise. The result is
+
+$\mathrm{E}\left(S_{t}\right)=S_{0} \exp \left(\left(\tilde{\mu}+\frac{1}{2} \sigma^{2}\right) t\right) .$
+
+Because the right-hand side is the same as the growth of a principal $S_{0}$ invested at a continuously compounded interest rate of $\tilde{\mu}+\frac{1}{2} \sigma^{2}$, it is natural to introduce a variable $\mu := \tilde{\mu}+\frac{1}{2} \sigma^{2}$ called the drift. Since investors already understand the notion of interest rates very well, the drift is a somewhat more intuitive notion to an experienced investor than $\tilde{\mu}$. So let us rewrite our model in terms of $\mu$.
+
+# **Definition. Discrete-time geometric Brownian motion**
+
+$\log \left(S_{t+\delta t}\right)=\log \left(S_{t}\right)+\left(\mu-\frac{1}{2} \sigma^{2}\right) \delta t+\sigma(\delta t)^{\frac{1}{2}} \epsilon_{t}$. (A.4)
+
+> *We will call this model the discrete-time geometric Brownian motion model. Since in this book we do not make much use of the mathematical theory of continuous-time stochastic processes, we will some times just call this model simply geometric Brownian motion. The parameter $\mu$ is the drift and can be interpreted as a form of interest rate as discussed above. The parameter $\sigma$ is called the volatility. It measures the size of random fluctuations in the stock market.*

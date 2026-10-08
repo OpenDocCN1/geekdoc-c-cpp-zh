@@ -1,0 +1,38 @@
+# ### 14.3 Testing the simulation
+
+According to the theory of [2], if a trader follows the delta hedging strategy in continuous time and if the stock price follows the Black–Scholes model, then the profit and loss of the trader will be exactly zero. In practice we choose a very large value for $N$ so that the trader is rehedging extremely frequently. We then check that the PnL of the trader is close to zero. Here is the code required to run this test.
+
+```
+```
+static void testDeltaHedgingMeanPayoff() {
+  rng("default");
+  HedgingSimulator simulator;
+  simulator.setNSteps(1000);
+  vector<double> result=simulator.runSimulations(1);
+  ASSERT_APPROX_EQUAL(result[0], 0.0, 0.01);
+}
+```
+```
+
+As usual we have seeded the random number generator by running to ensure that our test is reliable. This is the purpose of the `rng("default")`.
+
+One can see this either as a test of our code or as numerical evidence to back up the theory of delta hedging.
+
+# ### 14.4 Interpreting and extending our simulation
+
+We can use our code to see how delta hedging works in practice. In particular, if a trader re-hedges infrequently, we can draw a histogram of their profit and loss. Given the library we have developed, this is easy.
+
+```
+```
+static void testPlotDeltaHedgingHistogram() {
+  rng("default");
+  HedgingSimulator simulator;
+  simulator.setNSteps(100);
+  vector<double> result =
+      simulator.runSimulations(10000);
+  hist("deltaHedgingPNL.html", result, 20);
+}
+```
+```
+
+The resulting histogram is shown in Figure 14.1. This shows that although the expected profit and loss of the strategy is approximately 0, there is considerable variance. We conclude that in practice the delta hedging strategy is not risk free. This does not mean that delta hedging is not a useful strategy. It

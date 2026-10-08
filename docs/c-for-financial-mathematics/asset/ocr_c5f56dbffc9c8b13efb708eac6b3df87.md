@@ -1,0 +1,30 @@
+save a pointer to a Call0ption in a shared_ptr<Priceable>. For example, our Portfolio class does this. The shared_ptr class only knows that it has a Priceable reference, so when it calls delete, it calls the function defined on Priceable.
+
+Thus the calls to delete that happen due to the use of shared_ptr will cause problems if you create a subclass of a class that does not have a virtual destructor.
+
+It is unfortunate that virtual destructors are not the default in C++. You won’t get in much trouble if you give all classes a virtual destructor.
+
+Having any virtual functions makes an object a little more complex to write in assembly language. This is because you need to carry round both the data for the object and information about its type in memory. Therefore a class without any virtual functions will be marginally faster than one without. So if your class isn’t designed to be subclassed, it will be marginally quicker if you don’t have a virtual destructor. For most classes this won’t be that significant an optimisation.
+
+# Tip: Virtual destructors
+
+If in doubt, give your class a virtual destructor.
+
+# 16.6.2 When is a destructor needed?
+
+As we’ve already stated repeatedly, you need to write a virtual destructor whenever you write a class that is designed to be subclassed.
+
+But when do you need to write a more interesting destructor?
+
+One situation is whenever you call new or new[] in the constructor and don’t use a shared_ptr to store the result. More generally you should write a destructor when you obtain a resource in the constructor that you must release in the destructor.
+
+The word resource is rather vague, but here are some examples of resources:
+
++   - a chunk of memory;
+- a lock on a file that prevents others writing to the file;
+- a print job that you’ve started;
+- a connection to a database.
+
+A resource is something that you must explicitly return to the computer when you’ve finished with it.
+
+In mathematical code, using resources is quite unusual. So most of the time you won’t need to write a destructors at all (except for an empty virtual one). In particular:

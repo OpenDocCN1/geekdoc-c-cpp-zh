@@ -1,0 +1,40 @@
+```
+```cpp
+double y = sin(x) + cos(1.234);
+cout << "The answer is " << y << "\n";
+```
+```
+
+If a function requires two arguments, then, just as in mathematics, you separate the arguments with commas.
+
+```
+```cpp
+cout << "The 32nd power of 2 is ";
+cout << pow(2, 32);
+cout << "\n";
+```
+```
+
+The available functions in the cmath library are listed here: http://www.cplusplus.com/reference/cmath/.
+
+# ### 2.5.3 Comparison operators
+
+C++ also contains operators for performing comparisons. We have already met `>`, `<`, `>=`, and `<=`. Also available is `==` (two equal signs) which is used to test if two numbers are equal and `!=` which is used to test if two numbers are different.
+
+> **Danger!**
+
+Use two equal signs `==` to compare numbers not one equal sign. One equal sign is for *assignment*
+
+# ### 2.5.4 Logical operators
+
+The result of a comparison operation is a `bool` representing either `true` or `false`. You can then combine `bool` values using the operators `&&`, `||`, and `!`, which mean and, or, and not, respectively.
+
+So, for example, `true && false` evaluates to `false`.
+
+# ### 2.5.5 Bitwise operators
+
+The operators `&`, `|`, `~`, `<<` and `>>` treat integers as simply binary data and perform manipulations on these bits.
+
++   * `~` is the bit inversion operator. So `~x` contains binary representation of $x$ but with all the 1’s and 0’s switched.
+* `<<` shifts all the bits in a number to the left by a given amount. So `x<<3` shifts all the bits 3 steps to the left.
+* `>>` shifts all the bits in a number to the right by a given amount. So `x>>3` shifts all the bits 3 steps to the right.

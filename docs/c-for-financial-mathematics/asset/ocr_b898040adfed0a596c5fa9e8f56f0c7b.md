@@ -1,0 +1,44 @@
+This code violates the Once and Only Once principle because we have written essentially the same function twice, the only difference is that the types are different in the different function declarations.
+
+Templates provide a solution to this problem. The following single template function allows us to find the maximum of either doubles or floats.
+
+```
+```cpp
+template <typename T>
+inline T findMax(T x, T y) {
+    if (x < y) {
+        return y;
+    }
+    else {
+        return x;
+    }
+}
+```
+```
+
+When you write a templated function, you don’t specify all the types of the parameters to your function. Instead, you provide a list of dummy variables, called template parameters, which can be replaced as necessary with the required types. In this example, we have one template parameter and it is called T.
+
+In our example we specify that we are writing a template function and it has a template parameter called T, by writing:
+
+```
+`template <typename T>`
+```
+
+The remaining code in our template function is then a copy of the desired code to compute the maximum but using the dummy variable T to represent the type.
+
+We can then use our findMax function equally well with any type that provides an implementation of <. This includes float, double but also int and even string. This is tested using the following code:
+
+```
+```cpp
+void testMax() {
+    ASSERT(findMax(3, 1)==3); // ints
+    ASSERT(findMax(2.0, 3.0) == 3.0); // doubles
+    ASSERT(findMax(string("ant"),
+    string("zoo")) == string("zoo"));
+}
+```
+```
+
+One unusual feature of templated functions is that the definition is normally put in the header file and not in a .cpp file. The actual rule is that any declaration and definition should be in the same file. So if you are writing a library function, the definition must be in the header file because that is where the declaration has to be.
+
+The reason for this rule is that the code for a template function is not fully compiled until the template is actually used. It cannot be compiled until the

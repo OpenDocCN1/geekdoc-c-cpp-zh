@@ -1,0 +1,47 @@
+```
+```text
+    const {        
+        auto pos = stockPaths.find(stock);
+        ASSERT(pos != stockPaths.end());
+        return pos->second;
+    }
+```
+```
+
+One point that this code makes clear is that our `MarketSimulation` class stores matrices using `shared_ptr`. As discussed above, since containers copy the data that they store, it would be very inefficient to store a `Matrix` in a container directly. This code also demonstrates our convention of using a `typedef` to create a `shared_ptr` to a `const` with name beginning “SPC”. You can see this convention being used in the return type of the function `getStockPaths`.
+
+As a more complex example, here is the code required to create a submodel of a `MultiStockModel` given the names of the stocks you want included in the sub model. The code has to find the correct indices for these stocks and then extract the necessary submatrices from the member variables `drifts`, `stockPrices`, and `covarianceMatrix`.
+
+```
+```cpp
+MultiStockModel  MultiStockModel::getSubmodel(
+              set<string> stocks)  const {
+    
+    int n = stocks.size();
+    Matrix drifts(n, 1);
+    Matrix stockPrices(n, 1);
+    vector<string> newStocks(stocks.begin(),
+                    stocks.end());
+
+    Matrix cov(n, n);
+
+    int newIndex = 0;
+    for (auto& stock : stocks) {
+        int idx = getIndex(stock);
+        drifts(newIndex) = this->drifts(idx);
+        stockPrices(newIndex) =this->stockPrices(idx);
+        newIndex++;
+    }
+
+    int i = 0;
+    for (auto& stockI : stocks) {
+        int j = 0;
+        for (auto& stockJ : stocks) {
+            int oldI = getIndex(stockI);
+            int oldJ = getIndex(stockJ);
+            cov(i, j) = covarianceMatrix(oldI, oldJ);
+            j++;
+        }
+```
+
+```

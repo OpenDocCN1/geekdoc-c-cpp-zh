@@ -1,0 +1,22 @@
+```
+```cpp
+    /* Factory method */
+    static std::shared_ptr<Executor> newInstance(
+        int maxThreads );
+};
+```
+```
+
+You create a subclass of Task whenever you want some task to be performed. You pass that task to an Executor that decides when the task should be performed. You pass a task to an Executor by calling addTask. You can wait until all tasks are complete by calling join.
+
+The advantage of this pattern is that it separates the decision of what tasks need to be performed from the decision of how to actually run them. For example, you could write different Executors for different architectures or performance requirements. You might, for instance, decide to write a version of Executor that waits until midnight when the computer is not so busy before executing a task.
+
+In our example classes, the Executor returned by new instance manages a set of threads, each of which can then perform tasks. It may be a little more efficient to reuse threads in this way than to create a new thread for every single task. This is because setting up a thread, with its associated stack and security attributes, is a relatively expensive process. It is easy to see how you could write alternative Executors that perform more sophisticated scheduling.
+
+Notice that the programming task of implementing Task and Executor are really quite different. Writing a Task involves solving a business problem, whereas writing an Executor is more of a computer science problem. In a realistic project the tasks and the executor would be written by different people. In fact, this is going to be the case for our financial maths library too: I'll explain in detail how to implement your own Task classes, but I'll leave it to the interested reader to look at the code and work out how I've implemented Executor.
+
+# # 20.3 Monte Carlo pricing
+
+As an example of how to use our scheduler, let's see how we can write a multi-threaded Monte Carlo pricer.
+
+Monte Carlo pricing should be easy to speed up using multiple threads. Each thread can independently perform its pricing. We then just take the average result. The most tricky point is that we need to be careful about random number generation.
