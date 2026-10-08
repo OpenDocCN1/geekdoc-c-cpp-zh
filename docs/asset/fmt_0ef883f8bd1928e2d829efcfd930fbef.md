@@ -1,0 +1,184 @@
+
+```cs
+// Cast obj to your access to fields. This case
+// can't fail since we know objects are of the same type
+AccountsAttribute other = (AccountsAttribute) obj;
+```
+
+```cs
+// Compare the fields to see if they have the same value
+// This example checks if 'this' accounts is the same
+// as other's accounts
+if (other.m_accounts != m_accounts)
+return false;
+```
+
+```cs
+return true; // Objects are equal
+```
+
+```cs
+// Override GetHashCode since we override Equals
+public override override Int32 GetHashCode() {
+return (Int32) m_accounts;
+}
+```
+
+`[Accounts(Accounts.Savings)]`
+
+internal sealed class ChildAccount {
+
+`[Accounts(Accounts.Savings | Accounts.Checking | Accounts.Brokerage)`
+
+internal sealed class AdultAccount {
+
+```cs
+public sealed class Program {
+public static void Main() {
+CanWriteCheck(new ChildAccount()));
+```
+
+CanWriteCheck(new AdultAccount());
+
+// This just demonstrates that the method works correctly on a
+
+// type that doesn't have the AccountsAttribute applied to it.
+
+CanWriteCheck(new Program());
+
+}
+
+```
+
+```cs
+
+private static void CanWriteCheck(Object obj) {
+
+// Construct an instance of the attribute type and initialize it
+
+// to what we are explicitly looking for.
+
+Attribute checking = new AccountsAttribute(Accounts.Checking);
+
+// Construct the attribute instance that was applied to the type
+
+Attribute validAccounts = Attribute.GetCustomAttribute(
+
+obj.GetType(), typeof(AccountsAttribute), false);
+
+// If the attribute was applied to the type AND the
+
+// attribute specifies the "Checking" account, then the
+
+if ((validAccounts != null) && checking.Match(validAccounts)) {
+
+    Console.WriteLine("{0} types can write checks.", obj.GetType());
+
+} else {
+
+    Console.WriteLine("{0} types can NOT write checks.", obj.GetType());
+
+}
+
+}
+
+```
+
+Building and running this application yields the following output:
+
+ChildAccount types can NOT write checks.
+AdultAccount types can write checks.
+Program types can NOT write checks.
+
+# 在不创建属性派生对象的情况下检测自定义属性的使用
+
+In this section, I discuss an alternate technique for detecting custom attributes applied to a metadata entry. In some security-conscious scenarios, this alternate technique ensures that no code in an Attribute-derived class will execute. After all, when you call Attribute GetCustomAttribute(s) methods, internally, these methods call the class's constructor and also call property accessor methods. In addition, the first access to a type causes the CLR to invoke the type's constructor (if it exists). The constructor, accessor, and type constructor methods could contain code that will execute whenever just looking for an attribute. This allows unknown code to run in the AppDomain, and this is a potential security vulnerability.
+
+To discover attributes without allowing attribute class code, you use the System.Reflection.CustomAttributeData class. This class defines one static method for retrieving the attributes associated with a target: GetCustomAttributes. This method
+
+## 452 Part III Essential Types
+
+has overloads: one that takes an Assembly, one takes a Module, one takes a ParameterInfo, and one takes a MemberInfo. This class is defined in the System.Reflection namespace, which is discussed in Chapter 23. Typically, you'll use the CustomAttributeData class to analyze attributes in metadata for an assembly that is loaded via Assembly's reflectionOnLoad method (also ReflectionOnlyLoad loads an assembly in a way that prevents the CLR from executing any code in it; this includes type constructors).
+
+CustomAttributeData.GetCustomAttributes acts as a factory. That is, when you call it, it returns a collection of CustomAttributeData objects of type IList<CustomAttributeData>. The collection contains one element per custom attribute applied to the specified target. For each CustomAttributeData object, you can query read-only properties to determine which method would be constructed and initialized. Specifically, the Constructor property indicates which method would be passed to this constructor as an instance of IList<CustomAttributeTypedArgument>, and the NamedArguments property returns the fields/properties that would be set as an instance of IList<CustomAttributeNamedArgument>. Notice that I say "would be" in the previous sentences because the constructor and setter methods will not actually be called—we get the security by preventing any attribute class methods from executing.
+
+Here's a modified version of a previous code sample that uses the CustomAttributeData class to selectively obtain the attributes applied to various targets:
+
+```cs
+
+using System;
+
+using System.Diagnostics;
+
+using System.Reflection;
+
+using System.Collections.Generic;
+
+```
+
+```cs
+
+[assembly: CLSCompliant(true)]
+
+[Serializable]
+
+[DefaultMemberAttribute("Main")]
+
+[Accounts(Accounts.Savings)]
+
+internal sealed class ChildAccount {
+
+[Accounts(Accounts.Savings | Accounts.Checking | Accounts.Brokerage)
+
+internal sealed class AdultAccount {
+
+```cs
+public sealed class Program {
+public static void Main() {
+CanWriteCheck(new ChildAccount());
+CanWriteCheck(new AdultAccount());
+
+
+// This just demonstrates that the method works correctly on a
+// type that doesn't have the AccountsAttribute applied to it.
+CanWriteCheck(new Program());
+}
+```
+
+```cs
+private static void CanWriteCheck(Object obj) {
+// Construct an instance of the attribute type and initialize it
+// to what we are explicitly looking for.
+Attribute checking = new AccountsAttribute(Accounts.Checking);
+
+// Construct the attribute instance that was applied to the type
+Attribute validAccounts = Attribute.GetCustomAttribute(
+obj.GetType(), typeof(AccountsAttribute), false);
+
+// If the attribute was applied to the type AND the
+// attribute specifies the "Checking" account, then the
+if ((validAccounts != null) && checking.Match(validAccounts)) {
+    Console.WriteLine("{0} types can write checks.", obj.GetType());
+} else {
+    Console.WriteLine("{0} types can NOT write checks.", obj.GetType());
+}
+}
+```
+
+Building and running this application yields the following output:
+
+ChildAccount types can NOT write checks.
+
+AdultAccount types can write checks.
+
+Program types can NOT write checks.
+
+# Detecting the Use of a Custom Attribute Without Creating Attribute-Derived Objects
+
+In this section, I discuss an alternate technique for detecting custom attributes applied to a metadata entry. In some security-conscious scenarios, this alternate technique ensures that no code in an Attribute-derived class will execute. After all, when you call Attribute GetCustomAttribute(s) methods, internally, these methods call the class's constructor and also call property accessor methods. In addition, the first access to a type causes the CLR to invoke the type's constructor (if it exists). The constructor, accessor, and type constructor methods could contain code that will execute whenever just looking for an attribute. This allows unknown code to run in the AppDomain, and this is a potential security vulnerability.
+
+To discover attributes without allowing attribute class code, you use the System.Reflection.CustomAttributeData class. This class defines one static method for retrieving the attributes associated with a target: GetCustomAttributes. This method
+
+## 452 Part III Essential Types
+
+has overloads: one that takes an Assembly, one takes a Module, one takes a ParameterInfo, and one takes a MemberInfo. This class is defined in the System.Reflection namespace, which is discussed in Chapter 23. Typically, you'll use the CustomAttributeData class to analyze attributes in metadata for an assembly that is loaded via Assembly's reflectionOnLoad method (also ReflectionOnlyLoad loads an assembly in a way that prevents the CLR from executing any code in it; this includes type constructors).
