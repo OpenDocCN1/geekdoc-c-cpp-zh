@@ -1,0 +1,3588 @@
+- pgno: 0
+  md: '# # C++ Lambda Story
+
+
+    Everything you need to know about Lambda Expressions in Modern C++! From C++98
+    to C++20'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# C++ Lambda Story
+
+
+    Everything you need to know about Lambda Expression in Modern C++!
+
+
+    Bartłomiej Filipek
+
+
+    This book is for sale at http://leanpub.com/cppplamba
+
+
+    This version was published on 2020-07-31
+
+
+    ![](img/7cb35845bb98e3b897191af3bab607e2_1_0.png)
+
+
+    This is Leanpub book. Leanpub empowers authors and publishers with the Lean Publishing
+    process. Lean Publishing is the act of publishing an in-progress ebook using lightweight
+    tools and many iterations to get reader feedback, pivot until you have the right
+    book and build traction once you do.
+
+
+    © 2019 - 2020 Bartłomiej Filipek'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # Table of Contents
+
+
+    # ## About the Book
+
+
+    +   - Roots Of The Book
+
+    - Who This Book is For
+
+    - Reader Feedback
+
+    - Code License
+
+    - Formatting
+
+    - Syntax Highlighting Limitations
+
+    - Online Compilers
+
+
+    # ## About the Author
+
+
+    # ## Acknowledgement
+
+
+    # ## Revision History
+
+
+    # ### 1. Lambdas in C++98/03
+
+
+    +   - Callable Objects in C++98/03
+
+    - Issues with Functors
+
+    - Composing With Functional Helpers
+
+    - Motivation for a New Feature
+
+
+    # ### 2. Lambdas in C++11
+
+
+    +   - The Syntax of Lambda Expression
+
+    - A Few Examples of Lambda Expressions;
+
+    - Compiler Expansion
+
+
+    # ### The Type of a Lambda Expression
+
+
+    +   - Constructors and Copying
+
+
+    # ### The Call Operator
+
+
+    +   - Overloading
+
+    - Other Modifiers
+
+
+    # ### Captures
+
+
+    +   - The mutable Keyword
+
+    - Invocation Counter - An Example of Captured Globals
+
+    - Capturing Global Variables
+
+    - Capturing Statics
+
+    - Capturing a Class Member And this Pointer
+
+    - Moveable-only Objects
+
+    - Preserving Const'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Capturing a Parameter Pack
+
+
+    # Return Type
+
+
+    Trailing Return Type Syntax
+
+
+    # Conversion to a Function Pointer
+
+
+    A Tricky Case
+
+
+    # IIFE - Immediately Invoked Functional Expression
+
+
+    One Note About the Readablity
+
+
+    # Inheriting from a Lambda
+
+
+    # Storing Lambdas in a Container
+
+
+    # Summary
+
+
+    # 3. Lambdas in C++14
+
+
+    # Default Parameters for Lambdas
+
+
+    # Return Type
+
+
+    # Captures With an Initialiser
+
+
+    Limitations
+
+
+    Improvements for Existing Issues
+
+
+    # Generic Lambdas
+
+
+    Variadic Generic Arguments
+
+
+    Perfect Forwarding with Generic Lambdas
+
+
+    Deducing the Correct Type
+
+
+    ```
+
+    Replacing std::bind1 and std::bind2 with Lambdas
+
+    ```
+
+
+    Using Modern C++ Techniques
+
+
+    Function Composition
+
+
+    # LIFTing with lambdas
+
+
+    # Recursive Lambdas
+
+
+    With std::function
+
+
+    Internal Lambda and a Generic Parameter
+
+
+    More Tricks
+
+
+    Is recursive lambda the best alternative?
+
+
+    # Summary
+
+
+    # 4. Lambdas in C++17
+
+
+    # Lambda Syntax Update
+
+
+    # Exception Specification in Type System
+
+
+    constexpr Lambda Expressions
+
+
+    Examples
+
+
+    Capturing Variables
+
+
+    constexpr Summary:
+
+
+    # Capture of *this
+
+
+    Some Guides
+
+
+    # Updates To IIFE'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'Updates to Variadic Generic Lambdas
+
+    Deriving from Multiple Lambdas
+
+    Custom Template Argument Deduction Rules
+
+    Extension to Aggregate Initialisation
+
+    Example with std::variant and std::visit
+
+
+    Concurrent Execution Using Lambdas
+
+    Lambdas with std::thread
+
+    Lambdas with std::async
+
+    Lambdas and Parallel Algorithms in C++17
+
+    Lambdas And Async - Wrap Up
+
+
+    Summary
+
+
+    # 5. Lambdas in C++20
+
+
+    Lambda Syntax Update
+
+    A Quick Overview of the Changes
+
+    consteval Lambdas
+
+    Capturing a Parameter Pack
+
+    Template Lambdas
+
+    Concepts and Lambdas
+
+
+    Changes to Stateless Lambdas
+
+    Even with unevaluated contexts
+
+    Lambdas and constexpr Algorithms
+
+    C++20 Updates to the Overloaded Pattern
+
+    Summary
+
+
+    # Appendix A - List of Techniques
+
+
+    # Appendix B - Top Five Advantages of C++ Lambda Expressions
+
+
+    +   1. Lambdas Make Code More Readable
+
+    2. Lambdas Improve Locality of the Code
+
+    3. Lambdas Allow Storing State Easily
+
+    4. Lambdas Allow Several Overloads in the Same Place
+
+    5. Lambdas Get Better with Each Revision of C++!
+
+
+    # References
+
+
+    # Notes'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# About the Book
+
+
+    The book shows the story of lambda expressions. You''ll learn how to use this
+    powerful feature in a step-by-step manner, slowly digesting the new capabilities
+    and enhancements that come with each revision.
+
+
+    We''ll start with C++98/03, and then we''ll move on to the latest C++ Standards.
+
+
+    +   - C++98/03 - how to code without lambda support. What was the motivation for
+    the new modern C++ feature?
+
+    - C++11 - early days. You''ll learn about all the elements of a lambda expression
+    and even some tricks. This is the longest chapter as we need to cover a lot.
+
+    - C++14 - updates. Once lambdas were adopted, we saw some options to improve them.
+
+    - C++17 - more improvements, especially by handling this pointer and allowing
+    constexpr.
+
+    - C++20 - in this section we''ll have a glimpse of the future.
+
+
+    Additionally, you''ll find techniques and handy patterns throughout the chapters
+    for using lambda in your code.
+
+
+    Walking through the evolution of this powerful C++ feature allows us not only
+    to learn lambdas but also to see how C++ has changed over recent years. In one
+    section you''ll see a technique and then it will be “iterated” and updated in
+    further chapters when new C++ elements are available. When possible, the book
+    cross-links to other related sections of the book.
+
+
+    # Roots Of The Book
+
+
+    The idea for the content started after a coding presentation given by Tomasz Kamiński
+    at our local Cracow C++ User Group.
+
+
+    I took the ideas from the presentation (with Tomek''s permission, of course )'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'and then created two articles that appeared at bfilipek.com:
+
+
+    +   - Lambdas: From C++11 to C++20, Part 1
+
+    - Lambdas: From C++11 to C++20, Part 2
+
+
+    Later, I decided I wanted to offer my readers not only blog posts but a nice-looking
+    PDF. Leanpub provides an easy way to create such PDFs, so it was the right choice
+    to copy the articles’ content and create a Leanpub book.
+
+
+    Why not move further?
+
+
+    After some time, I decided to write more content, update the examples, better
+    use cases and patterns. And here you have the book! It''s now almost four times
+    the size of the initial material that is available on the blog!
+
+
+    # Who This Book is For
+
+
+    This book is intended for all C++ developers who like to learn all about a modern
+    C++ feature: lambda expressions.
+
+
+    # Reader Feedback
+
+
+    If you spot an error, a typo, a grammar mistake... or anything else (especially
+    logical issues!) that should be corrected, please send your feedback to bartlomiej.filipek
+    AT bfilipek.com.
+
+
+    You can also use this place:
+
+
+    +   - Leanpub Book’s Feedback Page
+
+
+    What’s more, the book has a dedicated page at GoodReads. Please share your review
+    here:
+
+
+    +   - C++ Lambda Story @GoodReads
+
+
+    # Code License
+
+
+    The code for the book is available under the Creative Commons License.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "# Formatting\n\nThe code is presented in a monospaced font, similar to the\
+    \ following\nexample:\n\nFor longer examples:\n\n```\n#include <iostream>\n\n\
+    int main() {\n    std::string text = \"Hello World\";\n    std::cout << text <<\
+    \ '\\\\n';\n}\n```\n\nOr shorter snippets:\n\n```\nint foo() {\n    return std::clamp(100,\
+    \ 1000, 1001);\n}\n```\n\nWhen available, you'll also see a link to the online\
+    \ compiler where you can\nplay with the code. For example:\n\nExample title. Live\
+    \ code @Wandbox\n\n```\n#include <iostream>\n\nint main() {\n    std::cout <<\
+    \ \"Hello World!\";\n}\n```\n\nYou can click on the link in the title and then\
+    \ it should open the website of\ngiven online compiler (in the above case it's\
+    \ Wandbox). You can compile the\nsample, see the output and experiment with the\
+    \ code.\n\nSnippets of longer programs were usually shortened to present only\
+    \ the core\nmechanics.\n\nUsually, source code uses full type names with namespaces,\
+    \ like\nstd::string, or std::vector. However, to make code compact and\nitely\
+    \ on a book page the namespaces sometimes might be removed,\nthey don't use space.\
+    \ Also, to avoid line wrapping, longer lines might be\nmanually split into two.\
+    \ In some cases, the code in the book might skip\ninclude statements."
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Syntax Highlighting Limitations
+
+
+    The current version of the book might show some limitations regarding syntax highlighting.
+
+
+    For example:
+
+
+    +   - if constexpr - Link to Pygments issue: #1432 - C++ if constexpr not recognized
+    (C++17).
+
+    - The first method of a class is not highlighted: #1084 - First method of class
+    not highlighted in C++.
+
+    - Template method is not highlighted #1434 - C++ lexer doesn''t recognize function
+    return type is templated.
+
+    - Modern C++ attributes are sometimes not recognised properly.
+
+
+    Other issues for C++ and Pygments: issues C++ .
+
+
+    # Online Compilers
+
+
+    Instead of creating local projects to play with the code samples, you can also
+    leverage online compilers. They offer a basic text editor and usually allow you
+    compile only one source file (the code you edit). They are convenient if you want
+    to play with code samples and check the results using various compilers vendors
+    and versions.
+
+
+    For example, many of the code samples for this book were created using Coliru
+    Online, Wandbox or Compiler Explorer and then adapted for the book.
+
+
+    Here''s a list of the useful services:
+
+
+    +   - Coliru - uses GCC 9.2.0 (as of July 2020), offers link sharing and a basic
+    text editor, it''s simple but very effective.
+
+    - Wandbox - offers a list of compilers, including most Clang and GCC versions,
+    can use libraries; offers link sharing and multiple file compilation.
+
+    - Compiler Explorer - offers many compilers, shows generated assembly code, can
+    execute the code, or make static code analysis.
+
+    - CppBench - runs simple C++ performance tests (using google benchmark library).'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '+   * C++ Insights - a Clang-based tool for source to source transformation.
+    It shows how the compiler sees the code, for example by expanding lambdas, auto,
+    structured bindings, template deduction, variadic packs or range-based for loops.
+
+
+    There’s also a helpful list of online compilers gathered on this website: List
+    of Online C++ Compilers.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# About the Author
+
+
+    Bartomiej (Bartek) Fipek is a C++ software developer with more than 12 years of
+    professional experience. In 2010 he graduated from Jagiellonian University in
+    Cracow, Poland, with a Masters Degree in Computer Science.
+
+
+    Bartek currently works at Xara, where he develops features for advanced document
+    editors. He also has experience with desktop graphics applications, game development,
+    large-scale systems for aviation, writing graphics drivers and even biofeedback.
+    In the past, Bartek has also taught programming (mostly game and graphics programming
+    courses) at local universities in Cracow.
+
+
+    Since 2011 Bartek has been regularly blogging at bfilipek.com . Initially, the
+    topics revolved around graphics programming, but now the blog focuses on core
+    C++. He''s also a co-organiser of the C++ User Group in Cracow . You can hear
+    Bartek in one @CppCast episode where he talks about C++17, blogging and text processing.
+
+
+    Since October 2018, Bartek has been a C++ Expert for the Polish National Body
+    which works directly with ISO/IEC JTC 1/SC 22 (C++ Standardisation Committee).
+    In the same month, Bartek was awarded his first MVP title for the years 2019/2020
+    by Microsoft.
+
+
+    In his spare time, he loves collecting and assembling Lego models with his little
+    son.
+
+
+    Bartek is the author of C++17 In Detail.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Acknowledgement
+
+
+    This book wouldn''t be possible without valuable input from C++ Expert Tomasz
+    Kamiński (see Tomek''s profile at Linkedin).
+
+
+    Tomek led a live coding presentation “history” of lambdas at our local C++ User
+    Group in Cracow:
+
+
+    Lambdas: From C++11 to C++20 - C++ User Group Krakow
+
+
+    A lot of examples used in this book comes from that session.
+
+
+    While the initial version of the book was relatively short, the extended version
+    (additional 100 pages!) was a result of the feedback and encouragement I got from
+    JFT (John Taylor). John spent a lot of time on finding every little things that
+    could be improved and extended.
+
+
+    Also, I''d like to thank Dawid Pilarski (panicsoftware.com/about-me ) for helpful
+    feedback on many details of lambdas.
+
+
+    Last but not least, I got a lot of feedback and comments from the blog readers,
+    Patreon forum, and discussions at C++ Polska . Thank you all!'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "# Revision History\n\n+   - 25th March 2019 - The First Edition is live!\n\
+    - 5th January 2020 - Grammar, better examples, wording, IIFE section , C++20 updates.\n\
+    - 17th April 2020 - The C++20 chapter is rewritten, grammar, wording, layout.\n\
+    - 30th April 2020 - Deriving from lambdas, in C++11, C++17 and C++20\n- 19th June\
+    \ 2020 - Major update:\n    - Improved C++03 chapter, added sections about better\
+    \ functional objects from the Standard Library,\n    - Added a new section on\
+    \ how to convert deprecated bindist into modern alternatives in the C++14 chapter,\n\
+    \    - Improved and extended IFFE section in C++11 and C++17 chapters,\n    -\
+    \ New Appendix with a list of lambda techniques,\n    - New Appendix with a list\
+    \ of top 5 lambda features, adapted from a blog article,\n    - New title image\
+    \ with updated subtitle,\n    - Lots of smaller improvements across the whole\
+    \ book,\n- 3rd August 2020 - Major Update, also the Kindle Version available:\n\
+    \    - New code samples now have a link to an online compiler version in the title,\n\
+    \    - Improved description of the syntax of lambdas, showed difference in C++17\
+    \ and C++20 chapters,\n    - New sections: how to store lambdas in a container,\
+    \ Lambdas and Asynchronous Execution, recursive lambdas, Exception Specification\
+    \ in Type System ,\n    - New section on variadic generic lambdas in C++14 and\
+    \ C++17 ,\n    - New section on variadic packs in C++11, C++20 ,\n    - Use const\
+    \ and noexcept in longer examples if possible,\n- Lots of smaller changes, improvements,\
+    \ layout across the whole book."
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# # 1. Lambdas in C++98/03
+
+
+    To start out, it''s good to create some background for our main topic. To do this,
+    we''ll move into the past and look at code that doesn''t use any modern C++ techniques.
+
+
+    In this chapter, you''ll learn:
+
+
+    +   * How to pass functors to algorithms from the Standard Library.
+
+    * The limitations of functors and function pointers.
+
+    * Why functional helpers weren''t good enough.
+
+    * The motivation for the new feature for C++0x/C++11.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "# Callable Objects in C++98/03\n\nOne of the fundamental ideas of the Standard\
+    \ Library is that algorithms like std::sort, std::for_each, std::transform and\
+    \ many others, can take any callable object and call it on elements of the input\
+    \ container. However, in C++98/03, this only included pointers to functions and\
+    \ functors.\n\nAs an example, let's have a look at an application that prints\
+    \ all elements of a vector.\n\nIn the first version we'll use a regular function:\n\
+    \n> A basic print function. Live code @Wandbox\n\n```\n#include <algorithm>\n\
+    #include <iostream>\n#include <vector>\n\nvoid PrintFunc (int x) {\n    std::cout\
+    \ << x << std::endl;\n}\n\nint main() {\n    std::vector<int> v;\n    v.push_back(1);\n\
+    \    v.push_back(2);\n    std::for_each(v.begin(), v.end(), PrintFunc);\n}\n```\n\
+    \nThe code above uses std::for_each to iterate over a vector (we use C++98/03\
+    \ so range-based for loop is not available!) and then passes PrintFunc as a callable\
+    \ object.\n\nWe can convert this simple function into a functor:\n\n> A basic\
+    \ print function. Live code @Wandbox\n\n```\n#include <algorithm>\n#include <iostream>\n\
+    #include <vector>\n\nstruct PrintFunctor {\n    void operator()(int x) const {\n\
+    \        std::cout << x << std::endl;\n    }\n}\n\nint main() {\n    std::vector<int>\
+    \ v;\n    v.push_back(1);\n    v.push_back(2);\n    std::for_each(v.begin(), v.end(),\
+    \ PrintFunctor);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "The example defines a simple functor with operator(). .\n\nWhile function pointers\
+    \ are usually stateless 1, functors can hold member variables which allow storing\
+    \ state. One example is to count the number of invocations of a callable object\
+    \ in an algorithm. This solution needs to store a counter that is updated with\
+    \ each lambda call:\n\nFunctor with a state. Live code @Wandbox\n\n```\n#include\
+    \ <algorithm>\n#include <iostream>\n#include <vector>\n\nstruct PrintFunctor {\n\
+    \    PrintFunctor() : numCalls(0) {}\n    void operator()(int x) const {\n   \
+    \     std::cout << x << '\\n';\n        ++numCalls;\n    }\n\n    mutable int\
+    \ numCalls;\n};\n\nint main() {\n    std::vector<int> v;\n    v.push_back(1);\n\
+    \    v.push_back(2);\n    const PrintFunctor visitor = std::for_each(v.begin(),\
+    \ v.end(), PrintFunctor());\n    std::cout << \"num calls: \" << visitor.numCalls\
+    \ << '\\n';\n}\n```\n\nIn the above example, we used a member variable numCalls\
+    \ to count the number of invocations of the call operator. Since the call operator\
+    \ is a const member function, I had to use a mutable variable.\n\nAs you can easily\
+    \ predict, we should get the following output:\n\n1\n2\nnum calls: 2\n\nWe can\
+    \ also \"capture\" variables from the calling scope. To do that we have to create\
+    \ a member variable in our functor and initialise it in the constructor.\n\nFunctor\
+    \ with a 'captured' variable. Live code @Wandbox\n\n```\n#include <algorithm>\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "```\n#include <iostream>\n#include <string>\n#include <vector>\n\nstruct PrintFunctor\
+    \ {\n    PrintFunctor(const std::string& str)\n        : strText(str), numCalls(0)\
+    \ {}\n\n    void operator()(int x) const {\n        std::cout << strText << x\
+    \ << '\\n';\n        ++numCalls;\n    }\n\n    std::string strText;\n    mutable\
+    \ int numCalls;\n};\n\nint main() {\n    std::vector<int> v;\n    v.push_back(1);\n\
+    \    v.push_back(2);\n    const std::string introText(\"Elem: \");\n    const\
+    \ PrintFunctor visitor = std::for_each(v.begin(), v.end(),\n                 \
+    \                   PrintFunctor(introText));\n    std::cout << \"num calls: \"\
+    \ << visitor.numCalls << '\\n';\n}\n```\n\nIn this version, PrintFunctor takes\
+    \ an extra parameter to initialise member variable. Then this variable is used\
+    \ in the call operator. So the expected output is as follows:\n\n+   - Elem: 1\n\
+    - Elem: 2\n- num calls: 2\n\n# Issues with Functors\n\nAs you can see, functors\
+    \ are powerful. They are represented by a separate class, and you can design them\
+    \ any way you like.\n\nHowever, in C++98/03, the problem was that you had to write\
+    \ a function or a functor in a different place than the invocation of the algorithm.\
+    \ This could mean that the code for a function could be dozens or hundreds of\
+    \ lines later or further in the source file.\n\nAs a potential solution, you might\
+    \ have tried writing a local functor class, since C++ always has support for that\
+    \ syntax. But that didn't work...\n\nSee this code:"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "```\nint main () {\n  struct PrintFunctor {\n    void operator () (int x) const\
+    \ {\n      std::cout << x << endl;\n    }\n  };\n  std::vector<int> v(10, 1);\n\
+    \  std::for_each(v.begin(), v.end(), PrintFunctor());\n}\n```\n\nTry to compile\
+    \ it with -std=c++98 and you'll see the following error on\nGCC:\n\nerror: template\
+    \ argument for\n'template-class__Iter, class__Funct> _Funct\nstd::for_each(__Iter,\
+    \ __Iter, __Funct)\nuses local type 'Main::PrintFunctor'\n\nBasically, in C++98/03,\
+    \ you couldn't instantiate a template with a local type.\n\nOnce the limitations\
+    \ are recognised and understood, C++ programmers found\nways to work around the\
+    \ issues with C++98/03. One solution is to prepare a\nset of helpers.\n\n# Composing\
+    \ With Functional Helpers\n\nHow about having some helpers and predefined functors?\n\
+    \nIf you check the <functional> header from the Standard Library, you'll findna\
+    \ lot of types and functions that can be immediately used with the standard\n\
+    alg.\n\nFor example:\n\n+   * std::plus<T>() - takes two arguments and returns\
+    \ their sum.\n* std::minus<T>() - takes two arguments and returns their difference.\n\
+    * std::less<T>() - takes two arguments and returns if the first one is\nsmaller\
+    \ than the second.\n* std::greater_equal<T>() - takes two arguments and returns\
+    \ if the first\nis greater or equal to the second.\n* std::bindist - creates a\
+    \ callable object with the first argument fixed to"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "the given value.\n- std::bind2nd - creates a callable object with the second\
+    \ argument fixed\nto the given value.\n- and many more.\n\nLet's write some code\
+    \ that benefits from the helpers:\n\nUsing old C++98/03 functional helpers. Live\
+    \ code @Wandbox\n\n```\n#include <algorithm>\n#include <functional>\n#include\
+    \ <vector>\n\nint main() {\n    std::vector<int> v;\n    v.push_back(1);\n   \
+    \ v.push_back(2);\n    // push_back until 9...\n    const size_t smaller5 = std::count_if(v.begin(),\
+    \ v.end(),\n        std::bind2nd(std::less<int>(),), 5));\n\n    return smaller5;\n\
+    }\n```\n\nThe example uses std::bind2nd and fixes its second argument by using\n\
+    std::bind2nd. This whole \"composition\" is passed into count_if. As you\ncan\
+    \ probably guess, the code expands into a function that performs a simple\ncomparison:\n\
+    \nreturn x < 5;\n\nIf you wanted ready-to-use helpers, then you can also look\
+    \ at the boost\nlibrary, for example boost::bind.\n\nUnfortunately, the main issue\
+    \ with this approach is the complexity and hard-\nto-learn syntax. for instance\
+    \ writing code that composes two or more\nfunctions is not natural. Have a look\
+    \ below:\n\nComposing functional helpers. Live Code @Wandbox\n\n```\nstd::vector<int>\
+    \ v;\nv.push_back(1);\nv.push_back(2);\n// push_back until 9...\nconst size_t\
+    \ val = std::count_if(v.begin(), v.end(),\n    std::bind(std::logical_and<bool>(),),\n\
+    \    std::bind(std::greater<int>(),_1, 2),\n    std::bind(std::less_equal<int>(),_1,\
+    \ 6)));\n```"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '```
+
+    // _1 comes from the std::placeholder namespace
+
+    ```
+
+
+    The composition uses std::bind (from C++11, so we cheated a bit, it''s not
+
+    ++98/03) with std::greater and std::less_equal connected with
+
+    std::logical_and . Additionally, the code uses _1 which is a placeholder for
+
+    the first input argument.
+
+
+    While the above code works, you can define it locally, you probably
+
+    agree that it''s complicated and not natural syntax. To mention that this
+
+    composition represents only a simple condition:
+
+
+    ```
+
+    return x > 2 && x <= 6 ;
+
+    ```
+
+
+    Is there anything better and more natural to use?
+
+
+    # Motivation for a New Feature
+
+
+    As you can see, in C++98/03, there were several ways to declare and pass a
+
+    callable object to algorithms and utilities from the Standard Library.
+
+    However, all of those options were a bit limited. For example, you couldn''t
+
+    declare a local functor object, or it was complicated to compose a function
+
+    with functional helper objects.
+
+
+    Fortunately with C++11 we finally saw a lot of improvements!
+
+
+    First of all, the C++ Committee lifted the template
+
+    instantiation with a local type. Now you can write functors locally, in the
+
+    place where you need them.
+
+
+    What''s more, C++11 also brought another idea to life: what if the compiler
+
+    could “write” such small functors for developers? That would mean that with
+
+    some new syntax, we could create functors “in place” and open the door to
+
+    cleaner and more compact syntax.
+
+
+    And that was the birth of “lambda expressions”!
+
+
+    If we look at N3337 - the final draft of C++11, we can see a separate section
+
+    for lambdas: [expr.prim.lambda].'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: Let’s have a look at this new feature in the next chapter.
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# 2. Lambdas in C++11
+
+
+    Hooray! The C++ Committee heard voices of developers, and since C++11 we got lambda
+    expression!
+
+
+    Lambdas quickly become one of the most recognisable features of modern C++.
+
+
+    You can read the spec located under N3337 - the final draft of C++11.
+
+
+    And the separate section for lambdas: [expr.prim.lambda].
+
+
+    I think the committee added lambdas in a smart way to the language. They incorporate
+    new syntax, but then the compiler “expands” it into an unnamed “hidden” functor
+    object. This way we have all the advantages (and disadvantages) of the real strongly
+    typed language, and it’s relatively easy to reason about the code.
+
+
+    In this chapter, you’ll learn:
+
+
+    +   - The basic syntax of lambdas.
+
+    - How to capture variables.
+
+    - How to capture member variables.
+
+    - The return type of a lambda.
+
+    - What a closure object is.
+
+    - How lambda can be converted to a function pointer and use it with C-style API.
+
+    - What’s IIFE.
+
+    - How to inherit from a lambda expression and why it can be useful.
+
+
+    Let’s go!'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# The Syntax of Lambda Expression
+
+
+    Below you can find a “diagram” that illustrates the syntax for lambdas:
+
+
+    ```
+
+    [] () qualifiers exception attr -> ret { /*code */ }
+
+    ^ ^ ^
+
+    | | | |
+
+    | | optional: trailing return type
+
+    | optional: mutable, exception specification or noexcept, attributes
+
+    | parameter list (optional when no specifiers added)
+
+    lambda introducer with an optional capture list
+
+    ```
+
+
+    Before we start it''s handy to bring some core definitions from the C++ Standard:
+
+
+    From [expr.prim.lambda#2] :
+
+
+    > The evaluation of a lambda-expression results in a prvalue temporary. This temporary
+    is called the closure object.
+
+
+    And from [expr.prim.lambda#3] :
+
+
+    > The type of the lambda-expression (which is also the type of the closure object)
+    is a unique, unnamed non-union class type — called the closure type.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# A Few Examples of Lambda Expressions:
+
+
+    ```
+
+    // 1. the simplest lambda expression:
+
+    [] {};
+
+    ```
+
+
+    In the first example, you can see a "minimal" lambda expression. It only needs
+    the [] and then the empty {} for the function body. The argument list - () - is
+    optional and not needed in this case.
+
+
+    ```
+
+    // 2. with two params:
+
+    [](float f, int a) { return a * f; }
+
+    [](int a, int b) { return a < b; };
+
+    ```
+
+
+    In the second example, probably one of the most common, you can see that the arguments
+    are passed into the () section, just like for a regular function. The return type
+    is not needed, as the compiler will automatically deduce it.
+
+
+    ```
+
+    // 3. trailing return type:
+
+    [](MyClass t) -> int { auto a = t.compute(a); print(a); return a; };
+
+    ```
+
+
+    In the above example, we explicitly set a return type. The trailing return type
+    is also available for function declaration since C++11.
+
+
+    ```
+
+    // 4. additional specifiers:
+
+    [x](int a, int b) mutable { return a < b; }
+
+    [](float param) noexcept { return param * param; }
+
+    [x](int a, int b) mutable noexcept { return a < b; };
+
+    ```
+
+
+    The last example shows that before the body of the lambda, you can use other specifiers.
+    In the code, we used mutable (so that we can change the captured variable) and
+    noexcept. The third lambda uses mutable and noexcept and they have to appear in
+    that order (so you cannot write mutable as the compiler rejects it).
+
+
+    While the () is optional, if you want to apply mutable or noexcept then () to
+    be in the expression:
+
+
+    ```
+
+    // 5. std::cout << x; // no () needed
+
+    [x] std { mutable { ++ x; }; // won''t compile!
+
+    []() mutable { ++ x; }; // fine - () required mutable
+
+    [] noexcept { }; // won''t compile!
+
+    () noexcept { }; // fine
+
+    ```
+
+
+    The same pattern for other specifiers that can be applied on lambdas'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "like constexpr or constval in C++17 and C++20.\n\n# Attributes\n\nThe syntax\
+    \ for lambdas also allows using attributes introduced in the form of [[attr_name]].\
+    \ However, if you apply an attribute to a lambda, then it applies to the type\
+    \ of the call operator and not to the operator itself. That's why currently (and\
+    \ even in C++20) there are no attributes that make sense to put on a lambda. Most\
+    \ compilers report an error. If we take a C++17 attribute and try to use it with\
+    \ the expression:\n\n```\nauto myLambda = [](int a) [[nodiscard]] { return a *\
+    \ a; };\n```\n\nGenerates the following errors on Clang (see code @Sandbox):\n\
+    \nerror: 'nodiscard' attribute cannot be applied to types\n\n# Compiler Expansion\n\
+    \nAs a summary, here's a basic example that shows how to write a lambda expression\
+    \ and pass it to std::for_each. For comparison, the code also illustrates the\
+    \ corresponding functor type:\n\nFirst Lambda and a Corresponding Functor. Live\
+    \ code @Wandbox\n\n```\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\
+    \nint main() {\n  struct {\n    void operator()(int x) const {\n      std::cout\
+    \ << x << '\\n';\n    } someInstance;\n\n  const vector<int> v = { 1, 2, 3 };\n\
+    \  std::for_each(v.begin(), v.end(), someInstance());\n  std::for_each(v.begin(),\
+    \ v.end(), [] (int x) {\n    std::cout << x << '\\n';\n  });\n\\}\n```\n\nIn the\
+    \ example, the compiler transforms...\n\n```\n[](int x) { std::cout << x << '\\\
+    n'; }\n```\n\n...into an anonymous functor that in a simplified form can look\
+    \ as follows:"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "```\nstruct {\n  void operator()(int x) const {\n    std::cout << x << '\\\\\
+    n';\n  }\n} someInstance;\n```\n\nThe process of translation or \"expansion\"\
+    \ can be easily viewed on C++ Insights an online tool that takes valid C++ code\
+    \ and produces a source code version that the compiler generates: like anonymous\
+    \ functors for lambdas, template instantiation and many other C++ features.\n\n\
+    In the next sections we'll dive more into the individual parts of the lambda expression.\n\
+    \n# The Type of a Lambda Expression\n\nSince the compiler generates a unique name\
+    \ for each lambda (the closure type), there's no way to \"spell\" it upfront.\n\
+    \nThat's why you have to use auto (or decltype )) to deduce the type.\n\n```\n\
+    auto myLambda = [](int a) -> double * a;\n```\n\nWhat's more, if you have two\
+    \ lambdas that look the same:\n\n```\nauto firstLam = [](int x) { return x * 2;\
+    \ }\nauto secondLam = [](int x) { return x * 2; };\n```\n\nTheir types are different\
+    \ even if the \"code-behind\" is the same! The compiler is required to declare\
+    \ two unnamed types for each lambda.\n\nWe can prove this property with the following\
+    \ code:\n\n```\n#include <type_traits>\nifferent Types, Same Code. Live code @Wandbox\n\
+    ```\n\n```\nint main() {\n  const auto oneLam = [](int x) noexcept { return x\
+    \ * 2; }\n  const auto twoLam = [](int x) noexcept { return x * 2; }\n  static_assert(std::is_same<decltype(oneLam),\
+    \ decltype(twoLam)>::value, \"must be different!\");\n}\n```\n\nThe example above\
+    \ verifies the closure types for oneLam and twoLam are not the same."
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "In C++17 we can use static_assert with no message and also helper variable\
+    \ templates\nfor type traits is_same_v:\nstatic_assert(std::is_same_v<double,\
+    \ decltype(baz(10)));\n\nHowever, while you don't know the name, you can spell\
+    \ out thensignature of the lambda and store it in std::function . In general,\
+    \ what\ncan't be done with a lambda defined as auto can be done if the lambda\
+    \ is\nusing std::function<> type. For example, the previous lambda has\nsignature\
+    \ of double(int) as it takes an input parameter and\nreturns double . We can then\
+    \ create a std:: function object in the following\nway:\n\n```\nstd::function\
+    \ double (int) MyFunc = [](int a) -> double { return 2.0 * a };\n```\n\nstd::function\
+    \ is a heavy object because it needs to handle all callable\nobjects. To do that,\
+    \ it requires advanced internal mechanics like type pushing\nor dynamic memory\
+    \ allocation. We can check its size in a simple\nexperiment:\n\n```\nstd::function\
+    \ and auto type Deduction. Live code @Wandbox\n#include <functional>\n#include\
+    \ <iostream>\n\nint main() {\n    const auto MyLambda = [](int a) noexcept ->\
+    \ double {\n        return 2.0 * a;\n    };\n\n    const std::function<double\
+    \ (int)> MyFunc =\n        [](int a) noexcept -> double {\n            return\
+    \ 2.0 * a;\n        };\n\n    std::cout << \"sizeof(MyLambda) is \" << sizeof(MyLambda)\
+    \ << '\\\\n';\n    std::cout << \"sizeof(MyFunc) is \" << sizeof(MyFunc) << '\\\
+    \\n';\n\n    return MyLambda(10) == MyFunc(10);\nn\n```\n\n# On GCC the code will\
+    \ print:\n\nsizeof(MyLambda) is 1\nsizeof(MyFunc) is 32"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "Because myLambda is just a stateless lambda, it’s also an empty class, without\
+    \ any data member fields, so its minimal size is only one byte. On the other hand,\
+    \ the std::function version is much larger - 32 bytes. That’s why you can, rely\
+    \ on the auto type deduction to get the smallest possible closure objects.\n\n\
+    When we talk about std::function , it’s also important to mention that this type\
+    \ doesn’t support movable-only closures. You can read more about this issue in\
+    \ the C++14 chapter on movable types.\n\n# Constructors and Copying\n\nIn the\
+    \ specification of the feature at [expr.prim.lambda] we can also read the following:\n\
+    \n| The closure type associated with a lambda-expression has a deleted (ldcl.fct.def.delete)\
+    \ default constructor and a deleted copy assignment operator. |\n\nThat’s why\
+    \ you cannot write:\n\n```\nauto foo = [&x, &y]() { ++x; ++y; };\ndecltype(foo)\
+    \ fooCopy;\n```\n\nThis gives the following error on GCC:\n\n```\nerror: use of\
+    \ deleted function 'main()::<lambda<>()()'\ndecltype(foo) fooCopy;\n~~~\n```\n\
+    \nnote: a lambda closure type has a deleted default constructor\n\nHowever, you\
+    \ can copy lambdas:\n\nCopying lambdas. Live code @Wbox\n\n```\n#include <type_traits>\n\
+    int main () {\n    const auto firstLam = [](int x) noexcept { return x * 2; };\n\
+    \    const auto secondLam = firstLam;\n    static_assert(std::is_same<firstLam,\
+    \ decltype(secondLam)>::\nvalue,\n    \"must be the same\";\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "If you copy a lambda, then you also copy its state. This is important when\
+    \ we talk about capture variables. In that context, a closure type stores captured\
+    \ variables as member fields. Performing a lambda copy will copy those data member\
+    \ fields.\n\n> > A peek into the future\nIn C++20 a stateless lambda will be default\
+    \ constructible and assignable.\n\n# The Call Operator\n\nThe code that you put\
+    \ into the lambda body is \"translated\" to the code in the operator() of the\
+    \ corresponding closure type.\n\nBy default, in C++11, it's a inline member function.\
+    \ For instance:\n\n```\nauto lam = [](double param) { /* do something*/ };\n```\n\
+    \nExpands into:\n\n```\nstruct _anonymousLambda {\n    inline void operator()(double\
+    \ param) const { /* do something*/ };\n}\n```\n\n# Overloading\n\nOne that is\
+    \ worth mentioning is that when you define a lambda there's no way to create \"\
+    overloaded\" lambdas taking different arguments. Like:\n\n```\n// doesn't compile!\n\
+    auto lam = [](double param) { /* do something*/ };\nauto lam = [](int param) {\
+    \ /* do something*/ };\n```\n\nAbove, the code won't compile as the compiler cannot\
+    \ translate two lambdas in a single functor, and you cannot redefine the same\
+    \ variable. On the other hand, it's possible to create a functor that has two\
+    \ call operators:\n\n```\nstruct MyFunctor {\n    inline void operator()(double\
+    \ param) const { /* do something*/ }\n    inline void operator()(int param) const\
+    \ { /* do something*/ };\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "MyFunctor can now work with double and int arguments. If you want a similar\
+    \ behaviour for lambdas, then you can see the section about inheriting from lambdas\
+    \ in this chapter and also about the overloaded pattern from the C++17 chapter.\n\
+    \n# Other Modifiers\n\nWe briefly touched on this topic in the syntax section,\
+    \ but you're not limited to a default declaration of the call operator for a closure\
+    \ type. In C++11 you can add mutable or exception specification.\n\n> If possible\
+    \ longer examples of this book try to mark the closure object with const and also\
+    \ make the lambda noexcept.\n\nYou can use those keywords by specifying mutable\
+    \ and noexcept after the parameter declaration clause:\n\n```\nauto myLambda =\
+    \ [](int a) mutable noexcept { /* do something */ }\n```\n\nThe compiler will\
+    \ expand this code into:\n\n```\nstruct _anonymousLambda {\n    inline void operator()(double\
+    \ param) noexcept { /* do something */ }\n};\n```\n\nPlease notice that the const\
+    \ keyword is gone now and the call operator can now change the member variables\
+    \ of a lambda.\n\nBut what members? How can we declare a member variable of lambdas?\
+    \ The next section about “capturing” variables:\n\n# Captures\n\nThe [] does not\
+    \ only introduce the lambda but also holds a list of captured variables. It's\
+    \ called “capture clause”.\n\nBy capturing a variable from outside of the lambda,\
+    \ you create a member variable (a non-static data member) in the closure type.\
+    \ Then, inside the lambda body, you can access it."
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'We did a similar thing for PrintFunctor in the C++98/03 Chapter. In that class,
+    we added a member variable std::string strText which was initialised in the constructor.
+    Having a member variable allows us to store state in the callable object.
+
+
+    The syntax for captures:
+
+
+    +   - [&] capture by reference all automatic storage duration variables declared
+    in the scope.
+
+    - [=] capture by value (create a copy) all automatic storage duration variables
+    declared in the scope.
+
+    - [x, &] capture by value and y by a reference explicitly.
+
+    - [args...] - capture a template argument pack, all by value.
+
+    - [&args...] - capture a template argument pack, all by reference.
+
+
+    And a summary with examples:
+
+
+    ```
+
+    int x = 2, y = 3;
+
+    const auto l1 = [&](){ return 1; }; // No capture
+
+    const auto l12 = [=](){ return x; }; // All by value (copy)
+
+    const auto l13 = [&](){ return y; }; // All by ref
+
+    const auto l14 = [x](){ return x; }; // Only x by value (copy)
+
+    // const auto l15 = [=](){ return x; }; // wrong syntax, no need for
+
+
+    const auto l15 = [&y](){ return y; }; // = to copy x explicitly
+
+    const auto l16 = [x, y](){ return x * y; }; // x by value and y by ref
+
+    const auto l17 = [, &x](){ return x + y; }; // All by value except x
+
+    const auto l18 = [&, y](){ return x - y; }; // which is ref
+
+    // // All by ref except which
+
+    // is by value
+
+    ```
+
+
+    To understand what happens with a captured let''s consider the following code
+    sample:
+
+
+    # Capturing a Variable
+
+
+    ```
+
+    std::string str("Hello World");
+
+    auto foo = [str]() { return std::cout << str << ''\n''; };
+
+    foo();
+
+    ```
+
+
+    For the lambda, str is captured by value (i.e. it is copied). The compiler will
+    generate the local functor:
+
+
+    # A Possible Compiler Generated Functor, Single Variable
+
+
+    ```
+
+    struct _unnamedLambda {
+
+    _unnamedLambda(std::string s) : str(s) {} // copy
+
+    ```
+
+
+    ![](img/7cb35845bb98e3b897191af3bab607e2_30_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "```\nvoid operator () const {\n    std::cout << str << '\\\\n';\n}\n\nstd::string\
+    \ str;\n};\n```\n\nA variable is passed into the constructor that is conceptually\
+    \ called \"in-place\" of lambda declaration.\n\nTo be precise the standard mentions\
+    \ in [expr.prim.lambda#21] :\n\n> When the lambda-expression is evaluated, the\
+    \ entities that are captured by copy are used to direct-initialise each corresponding\
+    \ non-static data member of the resulting closure object.\n\nA possible constructor\
+    \ that I showed above (_unnamedLambda) is only for demonstration purpose, the\
+    \ compiler might implement it differently and won't expose it.\n\n# Capturing\
+    \ Two Variables by Reference\n\n```\nint x = 1, y = 1;\nstd::cout << x << \" \"\
+    \ << y << std::endl;\nconst auto foo = [&x, &y](() noexcept { ++ x; ++ y; };\n\
+    foo();\nstd::cout << x << \" \" << y << std::endl;\n```\n\nFor the above lambda,\
+    \ the compiler might generate the following local functor:\n\n```\nA Possible\
+    \ Constructor Generated Functor, Two References. Live code @Wandbox\nstruct _unnamedLambda{\n\
+    \    _unnamedLambda(int &a, int &b) : x(a), y(b) {}\n\n    void operator () const\
+    \ noexcept {\n        ++ x; ++ y;\n    }\n\n    int &x;\n    int &y;\n};\n```\n\
+    \nSince we capture x and y by reference, the closure type will contain member"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "variables which are also references.\n\n> The value of the value-captured variable\
+    \ is at the time the lambda is defined - not when it is used! The value of a ref-captured\
+    \ variable is the value when the lambda is used - not when it is defined.\n\n\
+    While specifying [] and [& might be convenient, as it captures all automatic storage\
+    \ duration variables, it's clearer to capture a variable explicitly. That way\
+    \ the compiler can warn you about unintended effects (see notes global and static\
+    \ variable for example).\n\nYou can also read in item 31 in \"Effective Modern\
+    \ C++\" 3 by Scott Meyers: \"Avoid default capture modes.\"\n\n> The C++ closures\
+    \ do not extend the lifetimes of the captured references. Be sure that the capture\
+    \ variable still lives when lambda is invoked.\n\n# The mutable Keyword\n\nBy\
+    \ the default operator() of the closure type is marked as const , and you cannot\
+    \ modify captured variables inside the body of the lambda.\n\nIf you want to change\
+    \ this behaviour, you need to add the mutable keyword after the parameter list.\
+    \ This syntax effectively removes the const from the call operator declaration\
+    \ in the closure type. If you have a simple lambda expression with a mutable :\n\
+    \n```\nint x = 1;\nauto foo = [x]() mutable { ++ x; };\n```\n\nIt will be \"expanded\"\
+    \ into the following function:\n\n```\nstruct _lambda_x1 {\n    void operator()\
+    \ { ++ x; }\n    int x;\n};\n```\n\nAs you can see, the call operator can change\
+    \ the value of the member fields."
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# Capturing Two Variables by Copy and Mutable. Live code @Wandbox\n\n```\n\
+    #include <iostream>\n\nint main() {\n    const auto print = [](const char *str,\
+    \ int x, int y) {\n        std::cout << str << \" \" << x << \" \" << y << '\\\
+    n';\n    };\n    int x = 1, y = 1;\n    print(\"in main()\", x, y);\n    auto\
+    \ foo = [x, y, &]() mutable {\n        ++x;\n        ++y;\n        print(\"in\
+    \ foo()\", x, y);\n    };\n    foo();\n    print(\"in main()\", x, y);\n}\n```\n\
+    \nOutput:\n\nin main(): 1 1\nin foo(): 2 2\nin main(): 1 1\n\nIn the above example,\
+    \ we can change the values of x and y . Since those are only the copies of x and\
+    \ y from the enclosing scope, we don't see their new values after foo is invoked.\n\
+    \nOn the other hand, if you capture by reference, then you don't need to apply\
+    \ mutable to the lambda to modify the value. This is because the captured member\
+    \ variables are references and cannot be bound inside a const member function,\
+    \ but you can change the referenced values.\n\n> Capturing a Variable by Reference\n\
+    \n```\nint x = 1;\nstd::cout << x << '\\n';\nconst auto foo = [&x]()() noexcept\
+    \ { ++x; };\nfoo();\nstd::cout << x << '\\n';\n```\n\nIn the above example, the\
+    \ lambda is not mutable, but it can change the referenced value.\n\nOne important\
+    \ thing to notice is that when you apply mutable , then you cannot mark your resulting\
+    \ closure object with const as it prevents you from invoking the lambda!"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "```\nint x = 10;\nconst auto lam = [x]() mutable { ++ x; }\nlam(); // // doesn't\
+    \ compile!\n```\n\nThe last line won't compile as we cannot call a non-const member\
+    \ function on a const object.\n\n# Invocation Counter - An Example of Captured\
+    \ Variables\n\nBefore we move on to some more complicated topics with capturing,\
+    \ we can have a little break and focus on a more practical example.\n\nLambda\
+    \ expressions are handy when you want to use some existing algorithm from the\
+    \ Standard Library and alter the default behaviour. For example, for std::sort\
+    \ you can write your comparison function.\n\nBut we can go further and enhance\
+    \ the comparator with an invocation counter. Have a look:\n\n> Invocation Counter.\
+    \ Live code @Compiler Explorer\n\n```\n#include <algorithm>\n#include <iostream>\n\
+    #include <vector>\n\nint main() {\n    std::vector<int> vec { 0, 5, 2, 9, 7, 6,\
+    \ 1, 3, 4, 8 };\n    size_t compCounter = 0;\n    std::sort(vec.begin(), vec.end(),\n\
+    \        [&compCounter](int a, int b) noexcept {\n            ++compCounter;\n\
+    \            return a < b;\n        });\n\n    std::cout << \"number of comparisons:\
+    \ \" << compCounter << '\\\\n';\n    for (const auto & v : vec) {\n        std::cout\
+    \ << v << \", \";\n    }\n}\n0\n```\n\nThe comparator provided in the example\
+    \ works in the same way as the default one, it returns if a is smaller than b,\
+    \ so we use the natural order from lowest to the highest. However, the lambda\
+    \ to std::sort also captures a local variable compCounter . The variable is then\
+    \ used to count all the invocations of this comparator from the sorting algorithm."
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# Capturing Global Variables\n\nIf you have a global variable and you use [=]\
+    \ in your lambda, you might\nthnink that your global object is also captured by\
+    \ value... but it's not. See the\ncode:\n\n> Capturing Globals. Live code @Wandbox\n\
+    \n```\n#include <iostream>\n\nint global = 10;\n\nint main() {\n    std::cout\
+    \ << global << std::endl;\n    auto foo = [() mutable noexcept { ++ global; };\n\
+    \    foo();\n    std::cout << global << std::endl;\n    const auto increaseGlobal\
+    \ = [()] noexcept { ++ global; };\n    increaseGlobal();\n    std::cout << global\
+    \ << std::endl;\n    const auto moreIncreaseGlobal = [()] noexcept { ++ global;\
+    \ };\n    moreIncreaseGlobal();\n    std::cout << global << std::endl;\n}\n```\n\
+    \nThe above example defines global and uses it with several lambdas\nif you run\
+    \ the code, no matter the way\nyou capture, it will always point to the global\
+    \ object, and no local copies will\nbe created.\n\nIt's because only variables\
+    \ with automatic storage duration can be captured.\nGCC can even report the following\
+    \ warning:\n\n```\nwarning: capture of variable 'global' with non- automatic\n\
+    storage duration\n```\n\nThis warning will appear only if you explicitly capture\
+    \ a global variable, so if\nyou use [= it won't help.\n\nThe clang compiler is\
+    \ even more helpful, as it generates an error :\n\n```\nerror: 'global' cannot\
+    \ be captured because it does not have\namatic storage duration\n```\n\nSee clang\
+    \ live example @Wandbox.\n\n# Capturing Statics"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "Similarly to capturing global variables, you'll get the same issues with static\
+    \ objects:\n\nCapturing Static Variables. Live code @Wandbox\n\n```\n#include\
+    \ <iostream>\n\nvoid bar() {\n    static int static_int = 10;\n    std::cout <<\
+    \ static_int << std::endl;\n    auto foo = []() noexcept { return static_int;\
+    \ };\n    foo();\n    std::cout << static_int << std::endl;\n    const auto increase\
+    \ = []() noexcept { ++static_int; };\n    increase();\n    std::cout << static_int\
+    \ << std::endl;\n    const auto moreIncrease = [static_int]()() noexcept { return\
+    \ static_int; };\n    moreIncrease();\n    std::cout << static_int << std::endl;\n\
+    }\n\nint main() {\n    bar();\n}\n```\n\nThis time we try to capture a static\
+    \ variable and then change its value, but since it has no automatic storage duration,\
+    \ the compiler cannot do it.\n\nThe output:\n\n```\n10\n11\n12\n13\n```\n\nGCC\
+    \ reports a warning when you capture the variable by name [static_int] and Clang\
+    \ shows an error.\n\n# Capturing a Class Member and the Pointer\n\nThings get\
+    \ a bit more complicated when you're in a class member function, and you want\
+    \ to capture a member variable. Since all data members are related to the this\
+    \ pointer, it also has to be stored somewhere.\n\nHave a look:\n\nError when capturing\
+    \ a member variable. Live code @Wandbox\n\n```\n#include <iostream>\n\nstruct\
+    \ Baz {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\nvoid foo() {\n    const auto lam = [s]() { std::cout << s; };\n    lam();\n\
+    }\n\nstd::string s;\n\nint main () {\n    Baz b;\n    b.foo();\n}\n```\n\nThe\
+    \ code tries to capture s which is a member variable. But the compiler will emit\
+    \ an error message:\n\nIn member function 'void Baz::foo()'\nerror: capture of\
+    \ non-variable 'Baz::s'\nerror: 'this' was not captured for this lambda function\n\
+    \nTo solve this issue, you have to capture this pointer. Then you'll have access\
+    \ to member variables.\n\nWe can update the code to:\n\n```\nstruct Baz {\n  \
+    \  void foo() {\n        const auto lam = [this]() { std::cout << s; };\n    \
+    \    lam();\n    }\n    std::string s;\n}\n```\n\nThere are no compiler errors\
+    \ now.\n\nYou can use [=] or [&] to capture this (they both have the same effect\
+    \ in C++14).\n\nPlease note that we captured this by value... to a pointer. That's\
+    \ why you have access to the member variable, not its copy.\n\nIn C++11 (and even\
+    \ in C++14) you cannot write:\n\n```\nauto lam = ['* this]() { std::cout << s;\
+    \ };\n```\n\nThe code won't compile in C++11/14; it is, however, allowed in C++17."
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "If you use your lambdas in the context of a single method, then capturing this\
+    \ will be fine. But how about more complicated cases?\n\nDo you know what will\
+    \ happen with the following code?\n\n# Returning a Lambda From a Method\n\n```\n\
+    #include <functional>\n#include <iostream>\n\nstruct Baz {\n    std::function<void()>\
+    \ foo() {\n        return [&] { std::cout << s << endl; };\n    }\n    std::string\
+    \ s;\n};\n\n main() {\n    auto f1 = Baz(\"abc\").foo();\n    auto f2 = Baz(\"\
+    xyz\").foo();\n    f1();\n    f2();\n}\n```\n\nThe code declares a Baz object\
+    \ and invokes foo(). Please note that foo() returns a lambda (in std::function)\
+    \ that captures a member of the class. 4\n\nSince we use temporary objects, we\
+    \ cannot be sure what will happen when you call f1 and f2 . This is a dangling\
+    \ reference problem and generates Undefined Behaviour.\n\nSimilarly to:\n\n```\n\
+    struct Bar {\n    std::string const &() foo() const { return s; }\n    std::string\
+    \ s;\n};\nauto && f1 = Bar(\"abc\").foo(); // a dangling reference\n```\n\nPlay\
+    \ with code @Wordbox\n\nAgain, if you state the capture explicitly ([s]) :\n\n\
+    ```\nstd::function<void()> foo() {\n    return [s] { std::cout << s << endl; };\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "All in all, capturing this might get tricky when a lambda can outlive the object\
+    \ itself. This might happen when you use async calls or multithreading.\n\nWe'll\
+    \ return to that topic in the C++17 chapter. See this section\n\n# Moveable-only\
+    \ Objects\n\nIf you have an object that is movable only (for example unique_ptr\
+    \ ), then you cannot move it to lambda as a captured variable. Capturing by value\
+    \ does not work; you can only capture by reference.\n\n```\nunique_ptr<int> p\
+    \ = p(new int {10});\nauto foo = [p]() {}; // does not compile.\nauto foo_ref\
+    \ = [&p]() {}; // compiles, but the ownership\n// is not passed\n```\n\nIn the\
+    \ example, you can see the only way to capture unique_ptr by reference. This approach,\
+    \ however, might not be the best as it doesn't transfer the ownership of the pointer.\n\
+    \nIn the next chapter, about C++14], you'll see this issue is fixed to the capture\
+    \ with initialiser. of this section to follow up on this topic.\n\n# Preserving\
+    \ Const\n\nIf you capture a const variable, then the constness is preserved:\n\
+    \n> Preserving const . Live code @Wandbox\n\n```\n#include <iostream>\n#include\
+    \ <type_traits>\n\nint main() {\n    const int x = 10;\n    auto foo = [x]() mutable\
+    \ {\n        std::cout << std::is_const<decltype(x)>::value << std::endl;\n  \
+    \      x = 11;\n    }\n    foo();\n}\n```\n\nThe above code doesn't compile as\
+    \ the captured variable is constant. The example even tried to use mutable , but\
+    \ this doesn't help.\n\n# Capturing a Parameter Pack"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "To close off during the capture clause, we should mention that you can also\
+    \ leverage captures with variadic templates. The compiler expands the pack into\
+    \ a list of non-static data members which might be handy if you want to use lambda\
+    \ in a templated code. For example, here's a code sample that experiments with\
+    \ the captures:\n\n# Capturing a Variadic Pack. Live code [Wandbox](Wandbox)\n\
+    \n```\n#include <iostream>\n#include <tuple>\n\ntemplate <class... Args>\nvoid\
+    \ captureTest(Args... args) {\n    const auto lambda = [args...];\n    const auto\
+    \ tuple = std::make_tuple(args...);\n    std::cout << \"tuple size: \" << std::tuple_size<decltype(tuple)>()\
+    \ << '\\\\n';\n    std::cout << \"tuple ist: \" << std::get<0>(tuple) << '\\\\\
+    n';\n    lambda(); // call it\n}\n\nint main() {\n    captureTest(1, 2, 3, 4);\n\
+    \    captureTest(\"Hello world\", 10.0f);\n}\n```\n\nAfter running the code, we'll\
+    \ get the following output:\n\ntuple size: 4\ntuple ist: 1\ntuple size: 2\ntuple\
+    \ ist: Hello world\n\nThis somewhat experimental code shows that you can capture\
+    \ a variadic parameter pack (by reference is also possible) and then the pack\
+    \ is “stored” into a tuple object. We then call helper functions to access its\
+    \ data and properties.\n\nYou can also use CInsights to see how the compiler generates\
+    \ the code and extends templates, parameter packs and lambdas in code. See the\
+    \ example here [C++Insight](@C++Insight).\n\n> See the [C++14 chapter](C++14 chapter)\
+    \ where it's possible to capture movable only type and also in the [C++20 chapter](C++20\
+    \ chapter) for improvements on variadic parameter pack."
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# Return Type\n\nIn many cases, you can skip the return type of the lambda\
+    \ and then the compiler will deduce the typename for you.\n\nInitially, return\
+    \ type deduction was restricted to lambdas with bodies containing a single return\
+    \ statement. However, this restriction was quickly lifted as there were no issues\
+    \ with implementing a more convenient version.\n\nC++ Standard Core Language Defect\
+    \ Reports and Accepted Issues 5\n\nTo sum up, since C++11, the compiler will be\
+    \ able to deduce the return type as long as all of your return statements are\
+    \ of the same type.\n\n| If all rvalue return an expression and the types of the\
+    \ return expressions after lvalue-to-rvalue conversion (7.1 [conv.val]), array-to-pointer\
+    \ conversion (7.2 [conv.array]), and function-to-pointer conversion (7.3 [conv.func])\
+    \ are the same, common type |\n\nReturn Type Deduction. Live code @Wandbox\n\n\
+    ```\n#include <traits>\nint main () {\n    const auto baz = [[](int x) noexcept\
+    \ {\n        if (x < 20)\n            return x * 1.1;\n        else\n        \
+    \    return x * 2.1;\n    }];\n    static_assert(std::is_same<double, decltype(baz(10))::value,\n\
+    \        \"has to be the same!\");\n}\n```\n\nIn the above lambda, we have two\
+    \ return statements, but they all point to double so the compiler can deduce the\
+    \ type.\n\n> In C++14 return type of lambda will be updated to adapt to the rules\
+    \ of auto deduction for regular functions. See this section.\n\n# Trailing Return\
+    \ Type Syntax"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "If you want to be explicit about the return type, you can use trailing return\
+    \ type specification. For example, when you return a string literal:\nReturning\
+    \ a string literal from a lambda\n\n```\n#include <iostream>\n#include <string>\n\
+    \nint main() {\n    const auto testString = [][](int speed) noexcept {\n     \
+    \   if (speed > 100) {\n            return \"you're a super fast\";\n        }\n\
+    \        return \"you're a regular\";\n    };\n\n    auto str = testString(100);\n\
+    \    str += \"driver\"; // oops! no += on const char*\n\n    std::cout << str;\n\
+    \n    return 0;\n}\n```\n\nThe above code doesn't compile because the compiler\
+    \ dedces const char* as the return type for the lambda. Because there's no +=\
+    \ operator available on string literals, so the code breaks.\n\nWe can fix the\
+    \ problem by explicitly setting the return type to std::string:\n\n```\nauto testString\
+    \ = [][](int speed) -> std::string {\n    if (speed > 100) {\n        return \"\
+    you're a super fast\";\n}\n    return \"you're a regular\";\n}\n```\n\n```\nauto\
+    \ str = testString(100);\nstr += \"driver\"; // works fine\n```\n\nYou can play\
+    \ with the code @Coliru\n\nPlease notice that we had to remove noexcept now, as\
+    \ the std::string creation might throw.\n\nAs a side note, you can also use namespace\
+    \ std::string_literals; and then you return \"you're a regular\"s to indicate\
+    \ the std::string type.\n\n# Conversion to a Function Pointer"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "If your lambda doesn't capture any variables then the compiler can convert\
+    \ it to a regular function pointer. See the following description from the Standard\
+    \ expr.prim.lambda6 :\n\n> The closure type for a lambda-expression with no lambda-capture\
+    \ has a public-virtual non-explicit const conversion function to pointer having\
+    \ the same parameter and return types as the closure type's function call operator.\
+    \ The value returned by this conversion function shall be the address of a function\
+    \ that, when invoked, has the same effect as invoking the closure type's function\
+    \ call operator.\n\nTo illustrate how a lambda can support such conversion let’s\
+    \ consider the following example. It defines a functor baz that explicitly defines\
+    \ the conversion operator:\n\nConversion to a Function Pointer. Live code @Sandbox\
+    \ line-numbers-on\n#include <iostream>\n\n```\nvoid callWith10(void (* bar)(int))\
+    \ {\n  bar(10);\n}\n\nint main () {\n  struct {\n    using f_ptr = void (*)(int);\n\
+    \n    void operator()(int s) const { return call(s); }\n    operator f_ptr() const\
+    \ { return &call; }\n\n  private:\n    static void call(int s) { std::cout <<\
+    \ s << '\\n'; };n  } baz;\n\ncallWith10(baz);\ncallWith10([baz](int x) { std::cout\
+    \ << x << '\\n'; });\n}\n```\n\nIn the preceding program, there's a function callWith10\
+    \ that takes a function pointer. Then we call it with two arguments (lines 18\
+    \ and 19): the first one uses baz which is a functor that contains necessary conversion\
+    \ operators - it converts to f_ptr which is the same as the input parameter for\
+    \ callWith10 . Later, we have a call with a lambda. In this case, the compiler\
+    \ performs the required conversions underneath\n\nSuch conversion might be handy\
+    \ when you need to call a C-style function that requires some callback. For example,\
+    \ below you can find code that calls"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "qsort from the C Library and uses a lambda to sort elements in the reverse\n\
+    order:\n\nCalling a C-style function. Live code @Wandbox\n\n```\n#include <cstdlib>\n\
+    #include <iostream>\n\nint main() {\n    int values[] = { 8, 9, 2, 5, 1, 4, 7,\
+    \ 3, 6 };\n    constexpr size_t nElements = sizeof(values)/ sizeof(values[]);\n\
+    \n    std::qsort(values, nElements, sizeof(int),\n        [](const void * a, const\
+    \ void * b) noexcept {\n            return (*(int *)b - (*(int *)a);\n       \
+    \ });\n\n    for (const auto &val : values) {\n        std::cout << val << \"\
+    , \";\n    }\n}\n```\n\nAs you can see in the code sample uses qsort which takes\
+    \ only\nfunction pointers as the comparator. The compiler can do an implicit\n\
+    conversion of the stateless lambda that we pass.\n\n# A Tricky Case\n\nBefore\
+    \ we move on to another topic there's also one case that might be\ninteresting\
+    \ to analyse:\n\nPlus and a Lambda. Live code @Wandbox\n\n```\n#include <type_traits>\n\
+    int main() {\n    auto funcPtr = +[](){};\n    static_assert(std::is_same<decltype(funcPtr),\
+    \ void (*)()>::value);\nn}\n```\n\nPlease notice the strange syntax with + . If\
+    \ you remove the plus sign then the\nstatic_assert fails. Why is that?\n\nTo understand\
+    \ how it works we can look at the output generated by the C++\nInsights. See the\
+    \ working example:\n\n```\nusing FuncPtr_4 = void (());\nFuncPtr_4 funcPtr = \n\
+    \    + static_cast<void (*)()>(_{__la::operator la::__la::retType_4_18()});\n\
+    /* PASSED: static_assert(std::integral_constant<bool, 1>::value); */\n```"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "```\n// la is _lambda_4_18 in cppinnights\n```\n\nThe code uses + which is\
+    \ a unary operator. This operator can work on pointers, so the compiler converts\
+    \ our stateless lambda into a function pointer and assigns it to funcPtr. On the\
+    \ other hand, if you remove the plus, then funcPtr is a regular closure object,\
+    \ and that's why the static_assert fails.\n\nWhile it's probably not the best\
+    \ idea to write such a syntax with \"+\", it has the same effect if you write\
+    \ static_cast . You can apply this technique in a situation when you don't want\
+    \ the compiler to create too many function instantiations. For example:\n\nCasting\
+    \ to a Function Pointer. Live code @CppInsights\n\n```\ntemplate <typename F>\n\
+    void call_function(F f) {\n  f(10);\n}\n\nint main() {\n  call_function(static_cast<int\
+    \ *>(int int)> ([])(int x){\n    return x * 2;\n  });\n  call_function(static_cast<int\
+    \ *>(int int)> ([])(int x){\n    return x * 2;\n  });\n}\n```\n\nIn the above\
+    \ example the compiler has create only a single instantiation of call_function\
+    \ - as it only takes a function pointer int (*)int) . But if you remove static_cast\
+    \ s you'll get two versions of call_function as the compiler has to create two\
+    \ separate types for lambdas.\n\n# IIFE - Immediately Invoked Functional Expression\n\
+    \nIn most of the examples, you could notice that I defined a lambda and then call\
+    \ it later.\n\nHowever, you can also invoke lambda immediately:\n\nCalling Lambda\
+    \ Now. Live code @Wandbox\n\n```\n#include <iostream>\nint main() {\n  int x =\
+    \ 1, y = 1;\n  [&]() noexcept { ++ x; y; }(); // -- call ()\n  std::cout << x\
+    \ << \" \" << y;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "You can see above, the lambda is created and isn't assigned to any closure\
+    \ object. But then it's called with () . If you run the program, you can expect\
+    \ to see 2, as the output\n\nThis kind of expression might be useful when you\
+    \ have a complex initialisation of a const object.\n\n```\nconst auto val = []()\
+    \ {\n  /* several lines of code... */\n(); // call it!\n```\n\nAbove, val is a\
+    \ constant value of a type returned by lambda expression, i.e:\n\n```\n// val1\
+    \ = int\nconst auto val1 = []() { return 10; };\n\n// val2 = std::string\nconst\
+    \ auto val2 = []() -> std::string { return \"ABC\"; };\n```\n\nBelow you can find\
+    \ a longer example where you use IIFE as a helper lambda to create a constant\
+    \ function inside:\n\nIIFE and HTML Generation. Live code @Wandbox\n\n```\n#include\
+    \ <iostream>\n#include <string>\n\nvoid ValidateHTML(const std::string& link,\
+    \ const std::string& text) {\n  const std::string html = [&link, text];\n  const\
+    \ auto &inText = text.empty() ? link : text;\n  return \"<a href=\\\"\" + link\
+    \ + \"\\\">\" + inText + \"</a>\";\n} // call!\n\nValidateHTML(html);\n\nreturn\
+    \ html;\n\n}\n\nint main() {\n  try {\n    const auto ahref = BuildAHref(\"www.leanpub.com\"\
+    , \"Lean Store\");\n    std::cout << ahref;\n  } catch (...) {\n    std::cout\
+    \ << \"bad format...\";\n  }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "The above example contains a function BuildAHref which takes two parameters\
+    \ and then builds a <a></a> HTML tag. Based on the input parameters, we build\
+    \ the html variable. If the text is not empty, then we use it as the internal\
+    \ HTML value. Otherwise, we use the link . We want the html variable to be const\
+    \ , yet it's hard to write compact code with the required conditions on the input\
+    \ arguments. Thanks to IIFE we can write a separate lambda with const . Later\
+    \ the variable can be passed to validateHTML.\n\n# # One Note About the Readability\n\
+    \nSometimes having a lambda which is immediately invoked might cause some readability\
+    \ issues.\n\nFor example:\n\n```\nconst auto EnableErrorReporting = [&]() {\n\
+    \    if (HighLevelWarningEnabled())\n        return true;\n\n    if (HighLevelWarningEnabled())\n\
+    \        return UsersWantReporting();\n\n};\\nif (EnableErrorReporting) {\n  \
+    \  // ...\n}\n```\n\nIn the above example, the lambda code is quite complicated,\
+    \ and developers who read the code to decipher not only that the lambda is invoked\
+    \ immediately, but they also have to reason about the EnableErrorReporting type.\
+    \ They might assume that EnableErrorReporting is the closure object and not just\
+    \ a const variable. For such cases, you might consider not using auto so that\
+    \ we can easily see the type. And maybe even add a comment next to the () // call\
+    \ it now.\n\n> More on IIFE: You may want to read the chapter about C++17 changes\
+    \ and see an upgraded version of IIFE."
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "# Inheriting from a Lambda\n\nIt might be surprising to see, you can also derive\
+    \ from a lambda!\n\nSince the compiler expands a lambda expression into a functor\
+    \ object operator() , then we can inherit from this type.\n\nHave a look at the\
+    \ basic code:\n\n```\nInheriting from a single Lambda. Live code @Wandbox\n#include\
+    \ <iostream>\n\ntemplate < typename Callable>\nclass ComplexFunctor : public Callable\
+    \ {\npublic:\n    explicit ComplexFunctor(Callable f) : Callable(f) {}\n};\n\n\
+    template < typename Callable>\nComplexFunctor(Callable&& cal) {\n    return ComplexFunctor<Callable>(cal);\n\
+    }\n\nint main() {\n    const auto func = MakeComplexFunctor([]() {\n        std::cout\
+    \ << \"Hello Functor!\";\n    });\n    func();\n}\n```\n\nIn the example, there's\
+    \ the ComplexFunctor class which derives from Callable which is a template parameter.\
+    \ If we need to derive from a lambda, we need to do a little trick, unless we\
+    \ cannot spell out the exact type of the closure type (unless we wrap it in a\
+    \ std::function ). That's why we need the MakeComplexFunctor function to perform\
+    \ the template argument deduction and get the type of the lambda closure.\n\n\
+    The ComplexFunctor, apart from its name, is just a simple wrapper without much\
+    \ of a use. Are there any use cases for such code patterns?\n\nFor example, we\
+    \ can extend the code above and inherit it from two lambdas and create an overloaded\
+    \ set:\n\n```\nInheriting from two Lambdas. Live code @Wandbox\n#include <iostream>\n\
+    \ntemplate < typename TCall, typename UCall>\nclass SimpleOverloaded : public\
+    \ TCall, UCall {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "```\npublic :\n    SimpleOverloaded(TCall tf, UCall uf) : TCall(tf), UCall(uf)\
+    \ {\n        using TCall::operator();\n        using UCall::operator();\n    }\n\
+    \ntemplate <typename TCall, typename UCall> MadeOverloaded(TCall& tf, UCall& uf)\
+    \ {\n    return SimpleOverloaded<TCall, UCall>(tf, uf);\n}\n\nint main() {\n \
+    \   const auto func = std::cout << \"Int! \\n \", {\n        [](int) { },\n  \
+    \      [](float) { std::cout << \"Float! \\n \" }\n    };\n    func(10);\n   \
+    \ func(10.0f);\n}\n```\n\nThis time we have a bit more code: we derive from two\
+    \ template parameters, but we also need to expose their call operators explicitly.\n\
+    \nWhy is that? It's because when looking for the correct function overload the\
+    \ compiler requires the candidates to be in the same scope.\n\nTo understand that,\
+    \ let's write a simple type that derives from two base classes. The example also\
+    \ comments out two using statements:\n\n```\n#include <iostream>\n\nstruct BaseInt\
+    \ {\n    void Func(int) { std::cout << \"BaseInt... \\n \" ; }\n};\n\nstruct BaseDouble\
+    \ {\n    void Func(double) { std::cout << \"BaseDouble... \\n \" ; }\n};\n\nstruct\
+    \ Derived : public BaseInt, BaseDouble {\n    //using BaseInt::Func;\n    //using\
+    \ BaseDouble::Func;\n}\n```\n\n```\nint main() {\n    Derived d;\n    d.Func(10.0);\n\
+    }\n```\n\nWe have two base classes that implement Func . We want to call that\
+    \ method from the derived object."
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "# GCC reports the following error:\n\nerror: request for member 'Func' is ambiguous\n\
+    \nSee a demo @Wandbox\n\nBecause we commented the using statements ::Func() can\
+    \ be from a scope of BaseInt or BaseDouble. The compiler has two scopes to search\
+    \ the best candidate, and according to the Standard, it's not allowed.\n\nOk,\
+    \ let's go back to our primary use case:\n\nSimpleOver is an elementary class,\
+    \ and it's not production-ready. Have a look at the C++17 chapter where we'll\
+    \ discuss an advanced version of this pattern. Thanks to several C++17 features,\
+    \ we'll be able to inherit from multiple lambdas (thanks to variadic templates)\
+    \ and leverage more compact syntax!\n\n# Storing Lambdas in a Container\n\nAs\
+    \ the final technique in this chapter, let's have a look at the problem of storing\
+    \ closures in a container.\n\nBut didn't I wrote that lambdas could not be default\
+    \ created and assigned?\n\nYes... however we can do some tricks here.\n\nOne of\
+    \ the techniques is to leverage the property of stateless lambdas which convert\
+    \ to function pointers. While you cannot store closure objects directly, you can\
+    \ save function pointers converted from lambda expressions.\n\nFor example:\n\n\
+    ```\nStoring Lambdas As Function Pointers. Live code @Wandbox\n#include <iostream>\n\
+    #include <vector>\n\nint main () {\n  using TFunc = void (*)(int &);\n  std::vector<TFunc>\
+    \ ptrFuncVec;\n\n  ptrFuncVec.push_back([](int &x) { std::cout << x << '\\n';\
+    \ });\n  ptrFuncVec.push_back([](int &x) { x *= 2; });\n  ptrFuncVec.push_back(ptrFuncVec[0]);\
+    \ // print it again;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "```\nint x = 10;\nfor (const auto &entry : ptrFuncVec)\nentry(x);\n}\n```\n\
+    \nIn the above example, we create a vector of functions that will be applied to\
+    \ the variable. There are three entries in the container:\n\n+   - The first one\
+    \ prints the value of the input argument.\n- The second one modifies the value.\n\
+    - The third is a copy of the first, so it also prints the value.\n\nThe solution\
+    \ works, but it's limited to stateless lambdas only. What if we wanted to lift\
+    \ this restriction?\n\nTo solve this issue we can reach for the heavy helper:\
+    \ std::function To make the example interesting, it switched from simple integers\
+    \ to lambdas that use std::string objects:\n\nStoring Lambdas As std::function.\
+    \ Live code @Wandbox\n\n```\n#include <algorithm>\n#include <functional>\n#include\
+    \ <iostream>\n#include <vector>\n\nint main() {\n    std::vector<std::function<std::string(const\
+    \ std::string&)>> vecFilters;\n\n    size_t removedSpaceCounter = 0;\n    auto\
+    \ removeSpaces = [&removedSpaceCounter](const std::string& str) {\n        std::string\
+    \ tmp;\n        std::copy_if(str.begin(), str.end(), std::back_inserter(tmp),\
+    \ [](char c) { return std::isspace(c); });\n        removedSpaceCounter += str.length()\
+    \ - tmp.length();\n        return tmp;\n    };\n\n    auto makeUpperCase = [](const\
+    \ std::string& str) {\n        std::string tmp = str;\n        std::transform(tmp.begin(),\
+    \ tmp.end(), tmp.begin(), [](unsigned char c) { return std::toupper(c); });\n\
+    \        return tmp;\n    };\n\n    vecFilters.emplace_back(removeSpaces);\n \
+    \   vecFilters.emplace_back([](const std::string& str) {\n        return str +\
+    \ \" Amazing: \";\n    });\n    vecFilters.emplace_back([](const std::string&\
+    \ str) {\n        return str + \" Modern: \";\n    });\n    vecFilters.emplace_back([](const\
+    \ std::string& str) {\n        return str + \" C++: \";\n    });\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "```\nvecFilers.emplace_back([](const std::string& x) {\n    return x + \" World!\"\
+    ; \n});\nvecFilers.emplace_back(makeUpperCase);\n```\n\n```\nconst std::string\
+    \ str = \" H e l l o \";\nauto temp = str;\nfor (const & entryFunc : vecFilers)\
+    \ {\n    temp = entryFunc(temp);\n}\nstd:: cout << temp;\n```\n\n```\nstd::cout\
+    \ << \" \\n removed spaces: \" << removedSpaceCounter << '\\n';\n```\n\n# The\
+    \ output:\n\nHELLO AMAZING MODERN C++!\nremoved spaces: 12\n\nThis time we store\
+    \ std::function<std::string(const std::string&)> in the container. This allows\
+    \ us to use any kind of functional objects, including lambda expressions with\
+    \ captured variables. One of the lambdas removeSpacesCnt counts a variable which\
+    \ is used to store the information about the removed spaces from an input string.\n\
+    \n# Summary\n\nIn this chapter, you learned how to create and use lambda expressions.\
+    \ I described the syntax, capture clause, type of the lambda, and we covered lots\
+    \ of examples and use cases. We even went a bit further, and I showed you a pattern\
+    \ of deriving from a lambda or storing it in a container.\n\nBut that's not all!\n\
+    \nLambda Expressions become one significant part of Modern C++. With more use\
+    \ cases developers also saw possibilities to improve this feature. that's why\
+    \ you can now move to the next chapter and see essential updates that the ISO\
+    \ Committee added in C++14."
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# 3. Lambdas in C++14
+
+
+    C++14 added two significant enhancements to lambda expressions:
+
+
+    +   - Captures with an initialiser
+
+    - Generic lambdas
+
+
+    Plus, the Standard also updated some rules, for example:
+
+
+    +   - Default parameters for lambdas
+
+    - Return type as auto
+
+
+    These features can solve several issues that were visible in C++11.
+
+
+    You can see the specification in N4140 and lambdas: [expr.prim.lambda].
+
+
+    What’s more, in this chapter, you’ll learn about:
+
+
+    +   - Capturing member variables
+
+    - Replacing old functional stuff like std::bindist with modern techniques
+
+    - LIFTING
+
+    - Recursive Lambdas'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "# Default Parameters for Lambdas\n\nLet’s start with some smaller updates:\n\
+    \nIn C++14 you can use default parameters in a function call. This is a small\
+    \ feature that makes lambda more like a regular function.\n\nLambda with Default\
+    \ Parameter. Live code @Wandbox\n\n```\n#include <iostream>\nint main () {\n \
+    \   const auto lam = [](int x = 10 ) { std::cout << x << '\\n'; };\n    lam();\n\
+    \    lam(100);\n}\n```\n\nIn the above example, we call the lambda twice. The\
+    \ first time without any arguments, and then it uses a default x = 10. The second\
+    \ time we use 100.\n\nWhat’s interesting is that GCC and Clang have supported\
+    \ this feature since C++11.\n\n# Return Type\n\nIf you remember from the previous\
+    \ chapter, the return type for a simple lambda could be deduced by the compiler.\
+    \ This functionality was “extended” on regular functions and in C++14 you can\
+    \ use auto as a return type:\n\n```\nauto myFunction () {\n    int x = computeX(...);\n\
+    \    int y = computeY(...);\n    return x + y;\n}\n```\n\nAbove, the compiler\
+    \ will deduce int as a return type.\n\nThe concept of deducing return type was\
+    \ improved and extended in C++14. For lambda expressions, it means that they share\
+    \ the same rules as functions with auto return type:\n\n[expr.prim.lambda#4]:\
+    \ :"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "> The lambda return type is auto, which is replaced by the trailing-return-type\
+    \ if provided and/or deduced from return statements as described in [dcl.spec.auto]\n\
+    \nIf you have multiple return statements they all have to deduce the same type:\n\
+    \n```\nauto foo = [](int x) {\n    if (x < 0)\n        return x * 1.1f; // float!\n\
+    \    else\n        return x * 2.1;    // double!\n};\n```\n\nThe above code won't\
+    \ compile as the first return statement returns float while the second double\
+    \ decide . The compiler cannot decide, so you have to select the single type.\n\
+    \nWhile deciding integers or doubles might be helpful, there are far more reasons\
+    \ why return type deduction is valuable. This functionality plays a considerable\
+    \ aspect of template code and things that are “unknown”.\n\nFor example, lambda\
+    \ closure type is anonymous, and we cannot specify it explicitly in our code.\
+    \ If you want to return a lambda from a function, how do you specify the type?\n\
+    \nBefore C++14 you could use std::function :\n\nReturning std::function .Live\
+    \ code @Wandbox\n\n```\n#include <functional>\n#include <iostream>\n\nstd::function<int(int)>\
+    \ CreateMullLambda(int x) {\n    return [x](int param) noexcept { return x * param;\
+    \ }\n}\n\nint main() {\n    const auto lam = CreateMullLambda(10);\n\n    std::cout\
+    \ << lam(2);\n\n    return 0;\n}\n```\n\nHowever, the above solution is not straightforward.\
+    \ It requires you to specify"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "the function signature and c++ include some extra header file <functional>\n\
+    \ If you recall from the C++11 chapter, std::function is a heavy object (in\n\
+    GCC 9 the sizeof shows 32 bytes) and it needs some advanced internal mechanics\
+    \ so that it can handle any callable objects.\n\nThanks to the improvements in\
+    \ C++14, we can now heavily simplify the\ncode:\n\n```\nAuto return type deduction\
+    \ for lambdas. Live code @Wandbox\n#include <iostream>\nauto CreateMullLambda(int\
+    \ x) noexcept {\n    return [x](int param) noexcept { return x * param; };\n}\n\
+    int main() {\n    const auto lam = CreateMullLambda(10);\n    std::cout << sizeof(lam);\n\
+    \    return (2);\n}\n```\n\nThis time we can entirely rely on the compile-time\
+    \ type deduction, and no\nhelper types are required. On GCC the size of lambda\
+    \ sizeof(lam) is just 4\nbytes and it's far cheaper than the solution with std::function\
+    \ . Please\nnotice that we could also mark CreateMullLambda with noexcept as there\
+    \ are no\nway it can throw any exception. This was not the case when returning\n\
+    std::function.\n\n# Captures With an Initialiser\n\nNow some more significant\
+    \ updates!\n\nAs you recall, in a lambda expression you can capture variables\
+    \ from the\noutside scope. The compiler expands that capture syntax and creates\
+    \ member\nvariables (non-static members) in the closure type.\n\nNow, in C++14,\
+    \ you can create new member variables and initialise them in\nthe capture clause.\
+    \ Then you can access these variables inside the lambda.\nIt's called capture\
+    \ with an initialiser or another name for this feature is\ngeneralised lambda\
+    \ capture."
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# For example:\n\nCapture With An Initialiser. Live code @Wandbox\n\n```\n\
+    #include <iostream>\n\nint main () {\n    int x = 30;\n    int y = 12;\n    const\
+    \ auto foo = [z = x + y]() { std::cout << z << '\\n'; };\n    x = 0;\n    y =\
+    \ 0;\n    foo();\n}\n```\n\n# The output:\n\n42\n\nIn the example above, the compiler\
+    \ generates a new member variable and initialises it with x+y . The type of the\
+    \ new variable is deduced in the same way if you put auto in front of this variable.\
+    \ In our case:\n\n```\nauto z = x + y;\n```\n\nIn summary, the lambda from the\
+    \ preceding example resolves into a following (simplified) functor:\n\n```\nstruct\
+    \ __unnamedLambda {\n    void operator()() const {\n        std::cout << z <<\
+    \ '\\n';\n    }\n\n    int z;\n} someInstance;\n```\n\nz will be directly initialised\
+    \ (with x+y) when the lambda expression is defined.\n\nKeep in mind the previous\
+    \ sentence. The new variable is initialised at the place where you define a lambda\
+    \ and not where you invoke it.\n\nThat's why if you modify x or y variables after\
+    \ you created the lambda, the variable z won't change. In the example, you can\
+    \ see that immediately after the lambda was defined I changed the values of x\
+    \ and y . The output will be still 42 as z was initialised earlier."
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "Creating variables through initialiser is also flexible as you can, for example,\
+    \ create a reference to variables from the outside scope.\n\nReference as Capture\
+    \ With An Initialiser. Live code @Wandbox\n\n```\n#include <iostream>\nint main()\
+    \ {\n    int x = 30;\n    const auto foo = [&z = x]() { std::cout << z << '\\\\\
+    n'; };\n    foo();\n    x = 0;\n    foo();\n}\n```\n\nThis time the z variable\
+    \ is a reference to x . It's created in the same way as you'd write:\n\nauto &\
+    \ z = x;\n\nIf you run the example, you should see that the first line prints\
+    \ 30, but the second line shows 0 . This is because we captured a reference so\
+    \ when you modify the referenced variable, the z object will change.\n\n# Limitations\n\
+    \nPlease note that you can capture with initialiser as a reference, it's not possible\
+    \ to write r-value reference && That's why the code below is invalid:\n\n```\n\
+    [&& z = x] // invalid syntax!\n```\n\nAnother limitation for the feature is that\
+    \ it doesn't allow parameter packs. Let's have a look at the section 24 of [expr.prim.lambda]\
+    \ :\n\n> A simple-capture followed by an ellipsis is a pack expansion ([temp.variadic)).\
+    \ An init-capture followed by an ellipsis is ill-formed.\n\nIn other words, in\
+    \ C++14, you cannot write:\n\n```\ntemplate <class... Args>\nauto captureTest(Args...\
+    \ args) {\n    return lambda = [...capturedArgs] = std::move(args)(){};\n    //\
+    \ ...\n```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "This syntax, however, will be possible with C++20, see in this section .\n\n\
+    # Improvements for Existing Issues\n\nAll in all, new C++14 feature can solve\
+    \ a few problems, for example with movable only types or allow some extra optimisation.\n\
+    \nLet's review now.\n\n# Move\n\nPreviously, in C++11, you couldn't capture a\
+    \ unique pointer by value. Only capturing by reference was possible. Now, since\
+    \ C++14, we can move an object into a member of the closure type:\n\nCapturing\
+    \ a movable type code @Wandbox\n\n```\n#include <iostream>\n#include <memory>\n\
+    \nint main() {\n    std::unique_ptr<int> p(new int{10});\n    const auto bar =\
+    \ [ptr=move(p)] {\n        std::cout << \"pointer in lambda: \" << ptr.get() <<\
+    \ '\\n';\n    };\n    std::cout << \"pointer in main: \" << p.get() << '\\n';\n\
+    bar();\n}\n```\n\n# The output:\n\n```\npointer in main(): 0\npointer in lambda:\
+    \ 0x1413c20\n```\n\nThanks to the closure initialiser you can move the pointer\
+    \ ownership into lambda. As you can see in the example the unique pointer is set\
+    \ to nullptr just after the closure is created. When you call a lambda, then you'll\
+    \ see a valid memory address.\n\n# One Gotcha with std::function\n\nHaving a movable-only\
+    \ captured variable in a lambda makes the closure object not copyable. This might\
+    \ be an issue if you want to store such a lambda in std::function which accepts\
+    \ only copyable callable objects.\n\nWe can observe this in detail if we run C++Insights\
+    \ on the previous example"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "(see this link for a live code) you will see that std::unique_ptr is a member\
+    \ variable of the closure type. And having a moveable-only member prevents the\
+    \ compiler from creating a default copy constructor.\n\nIn short, this won't compile:\n\
+    \n```\nstd::function and std::move . Live code @Wandbox\nstd::unique_ptr<int>\
+    \ p=new int{10};\nstd::function<void()> fn = [ptr=std::move(p)]() {}; // won't\
+    \ compile\n```\n\n> If you want the until you can also have a look at the proposal\
+    \ of any_invokable (P0288) which is a possible future improvement for std::function\
+    \ and handles moveable only types.\n\n# Optimisation\n\nAnother idea is to capture\
+    \ initialisers as a potential optimisation technique. Rather than computing some\
+    \ value every time we invoke a lambda, we can compute it once in the initialise:\n\
+    \nCreating a string for lambda. Live code @Wandbox\n\n```\n#include <algorithm>\n\
+    #include <iostream>\n#include <string>\n#include <vector>\n\nint main() {\n  using\
+    \ namespace std::string_literals;\n  const std::vector<std::string> vs = {\"apple\"\
+    , \"orange\", \"foobar\", \"lemon\"};\n\n  const auto prefix = \"foo\" s;\n\n\
+    \  auto result = std::find_if(vs.begin(), vs.end(),\n      [&prefix](const std::string&\
+    \ s) {\n        return s == prefix + \"bar\" s;\n      });\n\n  if (result !=\
+    \ vs.end()) {\n    std::cout << prefix << \"-something found! \\n\";\n  }\n\n\
+    \  result = std::find_if(vs.begin(), vs.end(),\n    [savingString=prefix + \"\
+    bar\" s](const std::string& s) {\n      return s == savingString;\n    });\n\n\
+    \  if (result != vs.end()) {\n    std::cout << prefix << \"-something found! \\\
+    n\";\n  }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "The code above shows two calls to std::find_if . In the first scenario, we\
+    \ capture prefix and compare the input value against prefix + \"bar\"s . Every\
+    \ time the lambda is invoked a temporary value that stores the sum of those strings\
+    \ has to be created and computed.\n\nThe second call to find_if shows an optimisation:\
+    \ we created a captured variable savedString that computes the sum of strings.\
+    \ Then, we can safely refer to it in the lambda body. The sum of strings will\
+    \ run only once and not with every invocation of the lambda.\n\nThe example also\
+    \ uses std::string_literals , and that's why we can write \"foo\"s which represents\
+    \ a std::string object.\n\n# Capturing a Member Variable\n\nInitialiser is also\
+    \ used to capture a member variable. We can capture a copy of a member variable\
+    \ and don't bother with dangling references.\n\nFor example:\n\n> Capturing a\
+    \ member variable. Live code @Wandbox\n\n```\n#include <algorithm>\n#include <iostream>\n\
+    \nstruct Baz {\n  auto foo()const {\n    return [s = s](){ std::cout << s << std::endl;\
+    \ }\n  }\n}\n\nstd::string s;\n\nint main () {\n  const auto f1 = Baz{\"abc\"\
+    }.foo();\n  const auto f2 = Baz{\"xyz\"}.foo();\n  f1();\n  f2();\n}\n```\n\n\
+    In foo() we capture a member variable by copying it into the closure type. Additionally,\
+    \ we use auto for the return type of the member function() . As a remark, in C++11,\
+    \ we would have to use std::function, see in the C++11 chapter .\n\nIt might be\
+    \ surprising that we used a \"strange\" syntax like [s = s] when"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "declaring the lambda. This code works because a captured variable is in the\n\
+    scope of the closure type and not in the outside scope. That’s why there’s no\n\
+    conflict here.\n\n# Generic Lambdas\n\nThat's a big one!\n\nThe early specification\
+    \ of Lambdas allowed us to create anonymous\nfunctional objects and pass them\
+    \ to various generic algorithms from the\nStandard Library. However, closures\
+    \ were not “generic” on their own. For\nexample, you couldn’t specify a template\
+    \ parameter as a lambda parameter.\n\nFortunately, since C++14, the Standard introduced\
+    \ Generic Lambdas and\now we can write:\n\n```\nconst auto foo = [](auto x, int\
+    \ y) { std::cout << x << \" \" << y << '\\n'; };\nfoo(10, 1);\nfoo(10.1234, 2);\n\
+    foo(\"hello world\", 3);\n```\n\nPlease note auto foo as a parameter to the lambda.\
+    \ This is equivalent to using\ntemplate declaration in the call operator of the\
+    \ closure type:\n\n```\nstruct {\n    template < typename T>\n    void operator()(T\
+    \ x, int y) const {\n        std::cout << x << \" \" << y << '\\n';\n    }\nsomeInstance;\n\
+    ```\n\nIf there are more auto arguments, then the code expands to separate template\n\
+    parameters:\n\n```\nconst auto fooDouble = [](auto x, auto y) { /*...*/ };\n```\n\
+    \nExpands into:\n\n```\nstruct {\n    template < typename T, typename U>\n   \
+    \ void operator()(T x, u y) const { /*...*/ }\nsomeOtherInstance;\n```\n\n# Variadic\
+    \ Generic Arguments"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '```
+
+    #include <iostream>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "```\n#include <string>\n\nvoid foo (const std::string& ) { std::cout << \"\
+    foo(const string&) \\n\" ; }\nvoid foo (std::string&&) { std::cout << \"foo(string&&)\
+    \ \\n\" ; }\n\nint main () {\n    const auto callFoo = [](auto&& str) {\n    \
+    \    std::cout << \"Calling foo on: \" << str << '\\\n';\n        foo(std::forward<decltype(str)>(str));\n\
+    \    };\n\n    const std::string str = \"Hello World\";\n    callFoo(str);\n \
+    \   callFoo(\"Hello World Ref\");\n\n}\n```\n\n# The output:\n\nCalling foo on:\
+    \ Hello World\nfoo(const std::string&)\nCalling foo on: Hello World Ref\nfoo(std::string&&)\n\
+    \nThe sample code defines two function overloads for const and r-value references\
+    \ to std::string . The callFoo lambda uses a generic argument that is a universal\
+    \ reference 6 . If you wanted to rewrite this lambda into a regular function template\
+    \ it could look like:\n\n```\ntemplate < typename T>\nvoid callFooFunc(T&& str)\
+    \ {\n    std::cout << \"Calling foo on: \" << str << '\\n';\n    foo(std::forward<T>(str));\n\
+    }\n```\n\nAs you can see with generic lambdas, you have more options to write\
+    \ local anonymous functions.\n\nBut there's more.\n\n# Deducing the Correct Type\n\
+    \nAdditionally, generic lambdas might be very helpful when type deduction is tricky.\n\
+    \nFor example:\n\nCorrect type for map iteration. Live code @Wandbox\n\n```\n\
+    #include <algorithm>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "```\n#include <iostream>\n#include <map>\n#include <string>\n\nint main() {\n\
+    \    const std::map<std::string, int> numbers = {\n        \"one\", 1}, {\"two\"\
+    , 2}, {\"three\", 3\n    };\n\n    // each time entry is copied from pair-const\
+    \ string, int!\n    std::for_each(std::begin(numbers), std::end(numbers),\n  \
+    \      [](const std::pair<const std::string, int>& entry) {\n            std::cout\
+    \ << entry.first << \" = \" << entry.second << '\\n';\n        });\n\n}\n```\n\
+    \n# Did I make any mistake here? Does entry have the correct type?\n\nIt's a mistake,\
+    \ as the value type for map is std::pair<const Key, T> and not const std::pair<const\
+    \ std::string, int>. For our case, the code performed copies due to the conversion\
+    \ between std::pair<const std::string, int> and const std::pair<std::string, int>&\
+    \ (ie. const std::string to std::string):\n\n# This can be fixed by using auto\n\
+    \n```\nstd::for_each(std::begin(numbers), std::end(numbers),\n    [](const auto&\
+    \ entry) {\n        std::cout << entry.first << \" = \" << entry.second << '\\\
+    n';\n    });\n```\n\nNow the template deduction will adequately get the correct\
+    \ type of the entry, and will be no additional copy created. To not mention the\
+    \ code is much easier to read and shorter.\n\nSee the full example which also\
+    \ contains code that prints the addresses of the entries:\n\nCorrect type for\
+    \ map iteration, Live code @Wandbox\n\n```\n#include <algorithm>\n#include <iostream>\n\
+    #include <map>\n#include <string>\n\nint main() {\n    const std::map<std::string,\
+    \ int> numbers = {\n        \"one\", 1}, {\"two\", 2}, {\"three\", 3\n    };\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "```\n// print addresses:\nfor (auto mit = numbers.begin(); mit != numbers.cend();\
+    \ ++ mit)\nstd::cout << \" \" << mit << \" = \" << mit->second << \"\\n\";\n\n\
+    // each time entry is copied from pair<string, int>\nstd::for_each(std::begin(numbers),\
+    \ std::end(numbers),\n    [](const std::pair<string, int> &entry) {\n        std::cout\
+    \ << \" \" << entry.first << \" = \" << entry.second << \"\\n\";\n        entry.first\
+    \ << \" = = \" << entry.second << \"\\n\";\n    });\n\n// while this entries are\
+    \ not copied, they have the same addresses\nstd::for_each(std::begin(numbers),\
+    \ std::end(numbers),\n    [](const auto &entry) {\n        std::cout << \" \"\
+    \ << entry.first << \" = \" << entry.second << \"\\n\";\n        entry.first <<\
+    \ \" = = \" << entry.second << \"\\n\";\n    });\n```\n\nAnd here's a possible\
+    \ output:\n\n1 0x165dc40, 0x165dc60\n2 0x165dce0, 0x165dd00\n3 0x165dc90, 0x165dcb0\n\
+    4 0xff75ed29a20, 0xff75ed29a40: one = 1\n5 0xff75ed29a26, 0xff75ed29a40: three\
+    \ = 3\n6 0xff75ed29a28, 0xff75ed29a40: two = 2\n7 0x165dc40, 0x165dc60: one =\
+    \ 1\n8 0x165dce0, 0x165dd00: three = 3\n9 0x165dc90, 0x165dcb0: two = 2\n\nThe\
+    \ first lines show the addresses of keys and values from the map. Later in lines\
+    \ 4, 5 and 6, you can see three new addresses which are the same, but they are\
+    \ probably temporary copies for the loop iteration. The last three lines illustrate\
+    \ the version with const auto&, and as you can notice, the addresses are the same\
+    \ as in the first three lines.\n\nIn our example, we focused on extra copies of\
+    \ keys, but it's vital to understand that also the value is copied. This might\
+    \ not be an issue when you use a cheap-to-copy type like int , but it might cost\
+    \ much more if the objects are larger like strings."
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '> In C++20 you''ll get even more control over the template argument for lambdas
+    as this new revision of C++ introduces template lambdas, concepts and constrained
+    auto parameters.
+
+
+    # Replacing std::bind1st and std::bind2nd with Lambdas
+
+
+    In the chapter about C++98/03, I mentioned and showed a few code samples with
+    functional helpers like std::bind1st and std::bind2nd . However, since C++11 the
+    functionality becomes deprecated, and in C++17, the functions were removed.
+
+
+    Functions like bind1() /bind2nd() /mem_fun(), ... were introduced in the C++98-era
+    and are not needed now as you can apply a lambda or use modern alternatives. What''s
+    more, the routines we needed updated to handle perfect forwarding, variadic templates,
+    decltype and other techniques from C++11. Thus it''s not best way to use them
+    in modern code.
+
+
+    Here''s the list of deprecated functionality:
+
+
+    +   - unary_function() /pointer_to_unary_function()
+
+    - binary_function() /pointer_to_binary_function()
+
+    - bind1st() /binder1st
+
+    - bind2nd() /binder2nd
+
+    - ptr_fun()
+
+    - mem_fun()
+
+    - mem_fun_ref()
+
+
+    To replace bind1st /bind2nd you can use lambdas or std::bind (available since
+    C++11) or std::bind_front (since C++20).
+
+
+    Let''s consider the following code which uses the old functionality:
+
+
+    ```
+
+    const auto onePlus = std::bind1st(std::plus<int>(), 1 );
+
+    const auto minusOne = std::bind2nd(std::minus<int>(), 1 );
+
+    std::cout << onePlus(10) << " * "" << minusOne(10) << "\n";
+
+    ```
+
+
+    In the preceding example, object is a callable object composed of std::plus with
+    the first argument fixed. In other words when you write'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "onePlus(n) it’s then “expanded” into std::plus(1, n).\n\nSimilarly, minusone\
+    \ is composed of std::minus with the second argument fixed to one. Thus minusone(n)\
+    \ “expands” into std::minus(n, 1).\n\nThe above syntax is quite complicated, let's\
+    \ see how it can be improved with Modern C++ patterns.\n\n# Using Modern C++ Techniques\n\
+    \nLet's try with :bind - which offers more flexibility than bind1 and bind2.\n\
+    \nReplacing with std::bind. Live code @Compiler Explorer\n\n```\n#include <algorithm>\n\
+    #include <functional>\n#include <iostream>\n\nint main() {\n    using std::placeholders::_1;\n\
+    \    const auto onePlus = std::bind(std::plus<int>(), _1, _1);\n    const auto\
+    \ minusOne = std::bind(std::minus<int>(), _1, _1);\n    cout << onePlus(10) <<\
+    \ \" \" << minusOne(10) << '\\\\n';\n}\n```\n\nstd::bind is more flexible as it\
+    \ can capture multiple arguments or can reorder them. For argument management,\
+    \ you need to use “placeholders”. In our example, we used _1 to represent the\
+    \ first argument that will be passed to the final function object.\n\nWhile std::bind\
+    \ is much better than the C++98/03 legacy helpers, it’s not as natural as lambda\
+    \ expressions.\n\nWe can write at two versions with lambdas. The first one with\
+    \ the hardcoded values for the operations:\n\n```\nauto lambdaOnePlus = [1](int\
+    \ b) { return 1 + b; }\nauto lambdaMinusOne = [1](int b) { return b - 1; }\nstd::cout\
+    \ << lambdaOnePlus(10) << \" \" << lambdaMinusOne(10) << '\\\\n';\n```\n\nStill,\
+    \ since C++14 we can also take capture of initialiser and be more flexible:\n\n\
+    ```\nauto lambdaPlus = [a=1](int b) { return a + b; }\nauto lambdaMinusOne = [a=1](int\
+    \ b) { return b - a; };\n```"
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "```\nstd:: cout << lamOnePlus(10) << \" \" << lamMinusOne(10) << '\\\\n';\n\
+    ```\n\nThe lambda version is much cleaner and more readable. This will be more\
+    \ visible in a more complicated example below.\n\n# Function Composition\n\nAs\
+    \ a final example let's have a look at the following code with function composition:\n\
+    \n```\nFuncion composition with std::bind. Live code @Compiler Explorer\n#include\
+    \ <algorithm>\n#include <functional>\n#include <vector>\n\nint main() {\n    using\
+    \ std::placeholders::_1;\n    const std::vector<int> v { 1, 2, 3, 4, 5, 6, 7,\
+    \ 8, 9 };\n    const auto val = std::count_if(v.begin(), v.end(),\n        std::bind(std::logical_and<bool>(),\
+    \ (,),\n        std::bind(std::greater<int>)(_, _1, 2),\n        std::bind(std::less<int>)(_,\
+    \ _1, 6))));\n\n    return val;\n}\n```\n\nCan you immediately decipher what's\
+    \ going on there? 7\n\nAnd now let's rewrite this complicated composition with\
+    \ a simple lambda expression:\n\n```\nstd::vector<int> v { 1, 2, 3, 4, 5, 6, 7,\
+    \ 8, 9 };\nconst auto more2less6 = std::count_if(v.begin(), v.end(),\n    [(](int\
+    \ x) { return x > 2 && x < 6; });\n```\n\nIsn't that better?\n\n> You can read\
+    \ more about the guidelines for the use of std::bind and lambdas in the following\
+    \ resources: \"Effective Modern C++\", Item 34: Prefer lambdas to std::bind, and\
+    \ on the Google Abseil Blog: Tip of the Week #108: Avoid std::bind.\n\n# LIFTing\
+    \ with lambdas"
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "While the algorithms from the Standard Library are convenient, some issues\
+    \ are hard to solve. One of them is passing function overloads into function templates\
+    \ that takes a callable object.\n\nFor example:\n\n# Calling function overloads\n\
+    \n```\n#include <algorithm>\n#include <vector>\n\n// two overloads:\nvoid foo\
+    \ (int ) {}\nvoid foo (float) {}\n\nint main() {\n    const std::vector<int> vi\
+    \ = {1, 2, 3, 4, 5, 6, 7, 8, 9 };\n    std::for_each(vi.begin(), vi.end(), foo);\n\
+    }\n```\n\nIn the example above, we try to use two overloads for int and float\
+    \ and pass it to for_each. Unfortunately, we get the following error from GCC\
+    \ 9 (trunk):\n\n```\nerror: no matching function for call to\nfor_each(std::vector<int>::iterator,\
+    \ std::vector<int>::iterator,\n<unresolved overloaded function type>)\nstd::for_each(vi.begin(),\
+    \ vi.end(), foo);\n                       ^^^^\n```\n\nThe main issue is here\
+    \ that the compiler sees foo as a template parameter, it needs to resolve the\
+    \ type of it. But to do this it would have to check what types foo accepts, which\
+    \ is not possible.\n\nHowever, there's a trick where we can use lambda and then\
+    \ call the desired function overload.\n\nIn a basic form, for simple value types,\
+    \ for our two functions, we can write the following code:\n\n```\nstd::for_each(vi.begin(),\
+    \ vi.end(), [](auto x) { return foo(x); });\n```\n\nNow, we have a wrapper (a\
+    \ generic lambda) which handles the overload resolution and calls the proper overload\
+    \ for foo().\n\nWe can improve this by using perfect forwarding:"
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "```\nstd::for_each(vi.begin(), vi.end(), [](auto && x) {\n  return foo(std::forward<decltype(x)>(x));\n\
+    });\n```\n\nAnd here's the working example:\n\n```\n#include <algorithm>\n#include\
+    \ <iostream>\n#include <vector>\n```\n\n```\nvoid foo (int i) { std::cout << \"\
+    int: \" << i << \" \\n\"; };\nvoid foo (float f) { std::cout << \"float: \" <<\
+    \ f << \" \\n\"; };\n```\n\n```\nint main() {\n  const std::vector<int> vi = {1,\
+    \ 2, 3, 4, 5, 6, 7, 8, 9};\n  std:::for_each(vi.begin(), vi.end(), [](auto &&\
+    \ x) {\n    return foo(std::forward<decltype(x)>(x));\n  });\n}\n```\n\nHowever,\
+    \ for more advanced scenarios, this might not be a preferred solution. It's because\
+    \ we don't however variadic arguments and exception specification.\n\nIf you need\
+    \ a generic, and better solution, then you need to write a bit more code:\n\n\
+    ```\n#define LIFT(foo) \\\n[(auto&&...) -> \\\nnoexcept(noexcept(foo(std::forward<decltype(x)>(x)...)))\
+    \ \\\\\n-> decltype(std::forward<decltype(x)>(x)...)) \\\\\n{ return foo(std::forward<decltype(x)>(x)...);\
+    \ }\n```\n\nQuite complicated, right? )\n\nLet's try to decipher it. There are\
+    \ three duplicated parts:\n\n+   - return foo(std::forward<decltype(x)>(x)...);\
+    \ - this is perfect forwarding so that we can properly pass input arguments into\
+    \ the foo preserving their types.\n- noexcept(noexcept(foo(std::forward<decltype(x)>(x)...)))\
+    \ - uses the noexcept operator (the nested one) to check the exception specification\
+    \ of the foo callable object. Depending on the result it will yield noexcept(true)\
+    \ or noexcept(false).\n- decltype(foo(std::forward<decltype(x)>(x)...) - it's\
+    \ used to"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "deduce the return type for the wrapper lambda\n\nLIFT is defined as a macro\
+    \ as otherwise you’d have to write this code every time you’d like to create such\
+    \ lambda and pass it into an algorithm.. In this case, macros are the easiest\
+    \ syntax we can use [8](#8).\n\nPlay with the final code @Wandbox\n\n# Recursive\
+    \ Lambdas\n\nIf you have a regular function then it’s easy to call it recursively.\
+    \ A common example is the calculation of a factorial:\n\nRecursion with a Regular\
+    \ Function. Live code [@Wandbox](@Wandbox)\n\n```\nint factorial(int n) {\n  \
+    \  return n > 1 ? factorial(n - 1) : 1;\n}\n```\n\n```\nint main() {\n    return\
+    \ factorial(5);\n}\n```\n\nHowever it’s not directly possible with lambdas:\n\n\
+    Errors with Recursive Lambda. Live code [@Wandbox](@Wandbox)\n\n```\nint main()\
+    \ {\n    auto factorial = [](int n) {\n        return n > 1 ? factorial(n - 1)\
+    \ : 1;\n    };\n    return factorial(5);\n}\n```\n\nThis code doesn’t compile!\
+    \ Here’s an error from GCC:\n\nerror: use of 'factorial' before deduction of 'auto'\n\
+    \nThis happens because we cannot access factorial inside a body of the lambda,\
+    \ it’s still not fully evaluated. To illustrate this issue we can \"expand” the\
+    \ code into a simplified functor:\n\n```\nstruct fact {\n    int operator()(int\
+    \ n) const {\n        return n > 1 ? factorial(n - 1) : 1;\n    };\n};\nauto factorial\
+    \ = fact{};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "As you can see, inside operator () there’s no way we can access a variable\
+    \ of the functor type.\n\nIf you need to call lambda recursively, there are at\
+    \ least two tricks that you can leverage:\n\n+   - With std::function and capturing\
+    \ it.\n- With internal lambda and passing it as a generic parameter.\n\nLet’s\
+    \ see the first option:\n\n# With std::function\n\nThe main idea is that we assign\
+    \ a lambda to std::function 9 and then we can capture this into the lambda body.\n\
+    \n> Recursive Lambda with std::function . Live code @Wandbox\n\n```\n#include\
+    \ <functional>\nint main() {\n    const std::function<int(int)> factorial = [&factorial](int\
+    \ n) {\n        return n > 1 ? factorial(n - 1) : 1;\n    };\n    return factorial(5);\n\
+    }\n```\n\nIn the previous code sample, inside is a captured std::function object.\
+    \ This object is fully defined, and that’s why the compiler has no issues when\
+    \ accessing and calling it.\n\nIf you want to use only stateless lambdas, then\
+    \ you might even try with a function pointer rather than std::function as it should\
+    \ cost much less memory.\n\nBut there’s one more trick:\n\n# Internal Lambda and\
+    \ a Generic Parameter\n\nWith C++14 we can use the following alternative:\n\n\
+    > Recursive Lambda with internal implementation. Live code @Wandbox\n\n```\nint\
+    \ main() {\n    const auto factorial = [](int n) noexcept {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "```\nconst auto f_impl = [](int n, const auto& impl) noexcept -> int {\n  return\
+    \ n > 1 ? n * impl(n - 1, impl) : 1;\n};\nreturn factorial(n, f_impl);\n}\nreturn\
+    \ factorial(5);\n```\n\nThis time we create an internal lambda that performs the\
+    \ primary processing (f_impl). Later, we pass a generic argument to it (const\
+    \ auto& impl). This parameter is a callable object that we can call recursively.\
+    \ Thanks to generic lambdas in C++14 we can avoid the cost of std::function and\
+    \ rely on auto type deduction.\n\n# More Tricks\n\nIf you'd like to see more tricks,\
+    \ then you can also have a look at the following resources:\n\n+   - c++ - Recursive\
+    \ lambda functions in C++11 - Stack Overflow\n- Recursive lambdas in C++(14) -\
+    \ Pedro Melendez\n\n# Is recursive lambda the best alternative?\n\nIn this section,\
+    \ you could see some of the tricks with the lambda expression. Nevertheless, the\
+    \ complexity of those techniques is way ahead of a simple solution with just a\
+    \ recursive function call. That’s why there might be cases where recursive lambda\
+    \ is not the best and the most straightforward option. On the other hand, the\
+    \ strong points for complicated recursive lambdas are its locality and the ability\
+    \ to take auto arguments.\n\n# Summary\n\nAs you saw in this chapter, C++14 brought\
+    \ several key improvements to lambda expressions. You can now declare new variables\
+    \ to use inside a lambda scope. Since C++14 you and you can also use them efficiently\
+    \ in template code. In the next chapter, we'll dive into C++17, which brings more\
+    \ updates!"
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# 4. Lambdas in C++17
+
+
+    C++17 added two significant enhancements to lambda expressions:
+
+
+    +   - constexpr lambdas
+
+    - Capture of *this
+
+
+    The new C++ revision also updated the type system - it now contains exception
+    specification, which also relates to lambda expressions.
+
+
+    You can see the specification related to lambdas in N659 (C++17 draft just before
+    publication) and the lambda section: [expr.prim.lambda].
+
+
+    Additionally, you''ll learn about the following techniques:
+
+
+    +   - How to improve the IIFE pattern in C++17.
+
+    - How to improve variadic generic lambdas with fold expressions from C++17.
+
+    - How to derive from multiple lambdas.
+
+    - Lambdas and Asynchronous Execution.
+
+
+    Let’s start!'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "# Lambda Syntax Update\n\nWith C++17, we have a few changes to the syntax of\
+    \ lambda expressions:\n\n+   - You can now add constexpr after the parameter list.\n\
+    - The dynamic exception specification was deprecated in C++11 and removed in C++17,\
+    \ so in practice, you should only use noexcept.\n\n```\n() specifiersCall attrtr\
+    \ -> ret { /code; / }\n^ ^ ^\n| | |\n| | |\n| | optional: trailing return type\n\
+    | optional: mutable, constexpr, noexcept, attributes\n|\nparameter list (optional\
+    \ when no specifiers added)\nlambda introducer with an optional capture list\n\
+    ```\n\nYou can read about this new modification in the next section.\n\n# Exception\
+    \ Specification in Type System\n\nBefore we move to syntax improvements for lambdas,\
+    \ we need to cover one “general” language feature that was introduced in C++17.\n\
+    \nException Specification for a function didn't use to belong to the type of the\
+    \ function, but in C++17, it's part of it. You can have two function overloads:\
+    \ one with noexcept and the second without it. See below:\n\n> Exception Specification\
+    \ in Type System. Live code @Wandbox\n\n```\nusing TnoexceptVoidFunc = void (*)()\
+    \ noexcept;\nvoid SimplenoexceptCall(TnoexceptVoidFunc f) { f(); }\n\nusing TVoidFunc\
+    \ = void (*)();\nvoid SimpleCall(TVoidFunc f) { f(); }\n\nvoid fnoexcept() noexcept\
+    \ {}\nvoid fRegular() {}\n\nint main() {\n    SimplenoexceptCall(fnoexcept);\n\
+    \    SimplenoexceptCall([]{} noexcept { });\n    // SimplenoexceptCall([]{} fRegular);\
+    \ // cannot convert\n    SimplenoexceptCall([]{} {}); // cannot convert\n\n  \
+    \  SimpleCall(fnoexcept); // converts to regular function\n    SimpleCall(fRegular);\n\
+    \    SimpleCall([]{} noexcept { }); // converts\n    SimpleCall([]{} {});\n```"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "}\n\nA pointer to a noexcept function can be converted to a pointer to a regular\
+    \ function (this also works for a pointer to a member function and also for lambdas).\
+    \ But it's not possible the other way around (from a regular function pointer\
+    \ into a function pointer that is marked with noexcept ).\n\nOne of the reasons\
+    \ for adding the feature is a chance to optimise the code better. If the compiler\
+    \ guarantees that a function won't throw, then it can potentially generate faster\
+    \ code 10. Inside the Standard Library, there are many places where noexcept is\
+    \ checked and based on the code can be more efficient. This is how it works for\
+    \ std::vector which can differentiate between stored types that can move without\
+    \ throwing or not.\n\nHere's an example which uses type traits and constexpr to\
+    \ check if a given object is marked with noexcept\n\n```\n#include <iostream>\n\
+    #include <type_traits>\n\ntemplate <typename Callable>\nvoid CallWith10(Callable&&\
+    \ fn) {\n    if constexpr (std::is_nothrow_invocable_v<Callable, int> ) ) {\n\
+    \        std::cout << \"Calling fn(10) with optimisation \\n \";\n        fn(10);\n\
+    \    } else {\n        std::cout << \"Calling fn(10) normally \\n \";\n      \
+    \  fn(10);\n    }\n}\n\nint main() {\n    int x {10};\n    const auto lam = [&x](int\
+    \ y) noexcept { x += y; };\n    CallWith10(lam);\n\n    const auto lamEx = [&x](int\
+    \ y) {\n        std::cout << \"LamEx with x = \" << x << '\\n';\n        x +=\
+    \ y;\n    };\n    CallWith10(lamEx);\nn}\n```\n\n# The output:\n\nCalling fn(10)\
+    \ with optimisation\nCalling fn(10) normally\nlamEx with x = 20"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "The code uses std::is_nothrow_invocable_v to check if the given callable object\
+    \ is marked with noexcept.\n\n> In C++17, the Exception Specification is cleaned\
+    \ up. Effectively, you can only use noexcept for declaring a function that won't\
+    \ throw. The dynamic exception specification, i.e. throw(X, Y, Z) is now removed.\n\
+    \n> > **Quick Question:** What happens if you mark a function with noexcept and\
+    \ yet it throws an exception? In that case, the compiler will call std::terminate.\n\
+    \n# constexpr Lambda Expression\n\nSince C++11, constexpr allowed more and more\
+    \ code to be evaluated at compile time. This not only affects the performance\
+    \ but more importantly makes compile-time coding much more pleasant and potent.\
+    \ In C++17, this powerful keyword can also be applied on lambdas Let’s see specification\
+    \ expr.prim.lambda #4\n\n> The function call operator is a constexpr function\
+    \ if either the corresponding lambda-expression's parameter-declaration-clause\
+    \ is followed by constexpr , or it satisfies the requirements for a constexpr\
+    \ function.\n\nIn other words, if the lambda body follows the rules of a constexpr\
+    \ function then, operator() for the closure type is implicitly defined as constexpr\
+    \ . To recall, in C++17, a constexpr function has the following rules n4659/dcl.constexpr#3\n\
+    \n+   * it shall not be virtual;\n* its return type shall be a literal type;\n\
+    * each of its parameter types shall be a literal type;\n* its function-body shall\
+    \ be delete , default , or a compound-statement does not contain\n    * an asm-definition,\n\
+    \    * a goto statement,"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "+   - an identifier label,\n- a try-block, or\n- a definition of a variable\
+    \ of non-literal type or static or thread storage duration and for which no initialisation\
+    \ is performed.\n\n# For example:\n\n```\nconstexpr auto Square = [](int n) {\
+    \ return n * n; }; // implicit constexpr\nstatic_assert(Square(2) == 4 );\n```\n\
+    \nSince the body of Square is simple and it doesn't violate constexpr rules, then\
+    \ it's implicitly marked as constexpr and we can call it at compile-time with\
+    \ static_assert.\n\n# Examples\n\nHow about more practical code samples? At start,\
+    \ let's consider an implementation of a popular numerical algorithm:\n\n```\n\
+    constexpr lambda - Simple Accumulate. Live code @Wandbox\n\n#include <array>\n\
+    \ntemplate <typename Name, typename Func, typename T>\nconstexpr T SimpleAccumulate(Range&&\
+    \ range, Func func, T init) {\n    for (auto && elem : range) {\n        init\
+    \ += func(elem);\n    }\n    return init;\n}\n\nint main() {\n    constexpr std::array\
+    \ arr{ 1, 2, 3 };\n\n    constexpr auto sum = SimpleAccumulate(arr, [](auto i)\
+    \ {\n        return i * i;\n    }, 0);\n\n    static_assert (sum == 14 );\n}\n\
+    ```\n\nThe code uses a constexpr lambda which is passed to SimpleAccumulate .\
+    \ The lambda is not explicitly marked as constexpr , but the compiler will declare\
+    \ its call operator with constexpr as the body contains just a simple computation.\
+    \ The algorithm also uses a few C++17 elements: constexpr additions to std::array,\
+    \ std::begin and std::end (used in range-based for-loop) are also constexpr so\
+    \ it means the whole code might be"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "executed at compile time.\n\nAs another example we can use and enhance a recursive\
+    \ lambda from the C++14 chapter :\n\nRecursive constexpr Lambda. Live code @Compiler\
+    \ Explorer\n\n```\nint main() {\n    constexpr auto factorial = [](int n) {\n\
+    \        constexpr auto fact_impl = [](int n, const auto& impl) -> int {\n   \
+    \         return n > 1 ? impl(n - 1, impl) : 1;\n        };\n        return fact_impl(n,\
+    \ fact_impl);\n    };\n    static_assert(factorial(5) == 120);\n}\n```\n\nIn the\
+    \ example, we marked the factorial with constexpr_constpr , and this allows checking\
+    \ the computation through static_assert. Have a look at the live code at Compiler\
+    \ Explorer to see the generated assembler - it's almost “no-op” even with disabled\
+    \ optimisation level.\n\n# Capturing Variables\n\nYou can capture variables (assuming\
+    \ they are also constant expressions):\n\nCapturing constexpr variable. Live code\
+    \ @Wandbox\n\n```\nconstexpr int add(int const& t, int const& u) { return t +\
+    \ u; }\n\nint main() {\n    constexpr int x = 0;\n    constexpr auto lam = [&](int\
+    \ n) { return add(x, n); };\n    static_assert(lam(10) == 10);\n}\n```\n\nHowever,\
+    \ there’s an interesting case where you don’t “pass” a captured variable any further,\
+    \ like:\n\n```\nconstexpr int x = 0;\nconstexpr auto lam = [&](int n) { return\
+    \ n + x; };\n```\n\nIn that case, in Clang, we might get the following warning:\n\
+    \nwarning: lambda capture ‘x’ is not required to be captured for this use\n\n\
+    The same happens when we change the implementation of add() so it takes"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: 'arguments by value:
+
+
+    ```
+
+    constexpr int add (int t, int u) { return t + u };
+
+    ```
+
+
+    It’s because if we rely on constant expressions the compiler can optimise away
+    the variables, especially for built-in types for which we know the values at compile-time.
+
+
+    Here’s some extra description from cpppreference :
+
+
+    +   A lambda expression can read the value of a variable without capturing it
+    if the variable
+
+    - has const-volatile integral or enumeration type and has been initialised with
+    a constant expression, or
+
+    - is constexpr and has no mutable members.
+
+
+    For more information you can read this part of the Standard: C++ draft - basic.def.odr#4.
+
+
+    In the first add() example, that took a variable by reference, we enforce the
+    compiler to create a closure member that can be bound to the reference. Imagine
+    that the add( ) function returns the address of the argument and it will be compared
+    against x, so:
+
+
+    ```
+
+    int const * address (int const & x) {
+
+    return &x;
+
+    }
+
+
+    auto f = [x] {
+
+    auto * p = address(x);
+
+    return p == &&; // these need to be true
+
+    };
+
+    ```
+
+
+    Thus the compiler needs to store a copy of x inside the closure - i.e. capture
+    it. And it this the capture cannot be optimised away.
+
+
+    # constexpr Summary:
+
+
+    In a nutshell:
+
+
+    constexpr lambdas allow you to blend with template programming and'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "possibly have shorter code.\n\n> > Be prepared for the future:\n> In C++20\
+    \ we have lots of constexpr standard algorithms and containers like std::vector\
+    \ and std::string, so constexpr lambdas will be very handy in that context. Your\
+    \ code will look the same for the runtime version as well as for constexpr (compile-time)\
+    \ version!\n\nLet's now move to the second important feature available since C++17:\n\
+    \n# Capture of *this\n\nDo you remember the issue when we wanted to capture a\
+    \ class member? 11;\n\nBy default, we capture this (as a pointer!), and that's\
+    \ why we might get into trouble when temporary objects go out of scope.\n\nIn\
+    \ C++17 we have another way. We can capture a copy of *this 12:\n\nCapturing *this\
+    \ . Live code @Wandbox\n\n```\n#include <iostream>\n\nstruct Baz {\n    auto foo()\
+    \ {\n        return [*this] { std::cout << s << std::endl; }\n    }\n    std::string\
+    \ s;\n};\n\nint main() {\n    const auto f1 = Baz[\"xyz\"].foo();\n    const auto\
+    \ f2 = Baz[\"abc\"].foo();\n    f1();\n    f2();\n}\n```\n\nIn the example we\
+    \ can now write [*this] which means the lambda captures a copy of the temporary\
+    \ object, a copy of *this . The copy is then saved in the closure object and then\
+    \ there won't be any undefined behaviour when invoking the lambda later."
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "> Please note that in C++17 if you write [] in a member function, then this\
+    \ is implicitly captured! Have a look at the C++20 Chapter when this is enhanced\
+    \ and deprecated! P0806.\n\n# Some Guides\n\nOK, so should we capture [this] or\
+    \ [*this], and why is this important?\n\nIn most cases, when you work inside the\
+    \ scope of a class, then [this] (or [&]) is perfectly fine. There's no extra copy\
+    \ which is essential when your objects are large.\n\nYou might consider [*this]\
+    \ when you really want a copy, and when there's a chance a lambda will outlive\
+    \ the object.\n\nThis might be crucial for avoiding data races in async or parallel\
+    \ execution. Also, in the async/multithreading execution mode, the lambda might\
+    \ outlive the object, and then this pointer might no longer be alive.\n\n# Updates\
+    \ To IIFE\n\nIn the chapter about C++11 changes, you learned about IIFE - Immediately\
+    \ Invoked Functional Expression . In C++17 there's a little update to that technique.\n\
+    \nOne of the issues with IIFE is that it's sometimes hard to read, as the call\
+    \ operator might be easily skipped when reading the code:\n\n```\nconst auto var\
+    \ = [&] {\n    if (TheFirstCondition()) {\n        return one_value;\n    }\n\
+    \    if (TheSecondCindition()) {\n        return second_val;\n    }\n    return\
+    \ default_val;\n}(); // call it!\n```\n\nIn the C++11 chapter, we even discussed\
+    \ a situation where using const var might also be a bit misleading. It's because\
+    \ developers might be accustomeded to the fact that var might be a closure object\
+    \ and not the result of"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "the invocation.\n\nIn C++17 there's a handy template function std::invoke()\
+    \ that can make IIFE more visible:\n\n```\nconst auto var = std::invoke([&] {\n\
+    \  if (TheFirstCondition())\n    return one_value;\n  }\n  if (TheSecondCindition())\n\
+    \    return second_val;\n  }\n  return default_value;\n});\n```\n\nAs you can\
+    \ see, there's no need to write () at the end of the expression, and it's now\
+    \ clear that the code invokes something.\n\nstd::invoke() is located in the <functional>\
+    \ header file.\n\n# Updates to Variadic Generic Lambdas\n\nIn the C++14 chapter,\
+    \ we talked about the variadic argument list that we can use with generic lambdas.\
+    \ Thanks to fold expressions in C++17 we can write even more compact code. Here's\
+    \ the converted example for the sum calculation:\n\n> Sum with Fold Expressions.\
+    \ Live code @Wandbox\n\n```\n#include <iostream>\nint main() {\n  const auto sumLambda\
+    \ = [] (auto ... args) {\n    std::cout << \"sum of: \" << sizeof...(args) <<\
+    \ \" numbers \\n \";\n    return (args + ... + 0);\n  };\n\n  std::cout << sumLambda(1.1,\
+    \ 2.2, 2.3, 3.4, 4.5, 5.5, 6.6, 7.7, 8.8, 9.9);\nn}\n```\n\nIf you compare this\
+    \ to the previous example from C++14, you can quickly notice that there's no need\
+    \ for recursion! The fold expression gives us a simple and relatively intuitive\
+    \ syntax for writing expressions that combines variadic arguments.\n\nHere's another\
+    \ example for the variadic print utility:\n\n> Simple Printer with Fold Expression.\
+    \ Live code @Wandbox"
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: "```\n#include <iostream>\n\nint main() {\n    const auto printer = [] (auto\
+    \ ... args) {\n        (std::cout << << args) << '\\n';\n    };\n\n    printer(1,\
+    \ 2, 3, \"hello\", 10.5f);\n}\n```\n\nHowever, if you run the code it will print\
+    \ all arguments without any separator:\n\n123hello10.5\n\nAnd to solve this issue,\
+    \ we can introduce a little helper and also fold over comma operator rather than\
+    \ over <<\n\n> Printer With a Helper Internal Lambda. Live code @Wandbox\n\n```\n\
+    #include <iostream>\nint main() {\n    const auto printer = [] (auto ... args)\
+    \ {\n        const auto printElem = [](auto elem) {\n            std::cout <<\
+    \ elem << \", \\n        };\n        (printElem(args), ...);\n        std::cout\
+    \ << '\\n';\n    };\n\n    printer(1, 2, 3, \"hello\", 10.5f);\n}\n```\n\nAnd\
+    \ now we have the the following output:\n\n1, 2, 3, hello, 10.5,\n\nAnd this can\
+    \ be even shortened into:\n\n```\nconst auto printer = [] (auto ... args) {\n\
+    \    ((std::cout << args << \", \"), ...);\n    std::cout << '\\n';\n}\n```\n\n\
+    And if we do not want to show the last comma at the end of the print sequence\
+    \ we can do the following:\n\n> Printing Elements Without the Last Separator.\
+    \ Live code @Wandbox\n\n#include <iostream>"
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "```\nint main() {\n    const auto printer = [] (auto first, auto ... args)\
+    \ {\n        std::cout << first;\n        (std::cout << \", \" << args, ...);\n\
+    \        std::cout << '\\\\n';\n    };\n\n    printer(1, 2, 3, \"hello\", 10.5f);\n\
+    }\n```\n\nThis time we need to use a generic template argument for the first entry\
+    \ and then a variadic parameter list for the rest. We can then print the first\
+    \ element and add a comma before other entries. The code will now print:\n\n1,\
+    \ 2, 3, hello, 10.5\n\n# Deriving from Multiple Lambdas\n\nIn the C++11 chapter,\
+    \ you learned about deriving from a lambda expression. While it was interesting\
+    \ to see such a technique, the use cases were limited.\n\nThe main issue with\
+    \ that was that it supported only a specific number of lambdas. The examples used\
+    \ one or two base classes. But how using a variable number of base classes, which\
+    \ means a variable number of lambdas?\n\nIn C++17 we have a relatively easy pattern\
+    \ for that!\n\nHave a look:\n\n```\ntemplate < class... Ts> struct overloaded\
+    \ : Ts... { using Ts::operator (..); };\ntemplate < class... Ts> overloaded(Ts...)\
+    \ -> overloaded<Ts...>;\n```\n\nAs you can see, we now use variadic templates\
+    \ since they allow us to specify the variable number of base classes.\n\nHere's\
+    \ one simple example that we use the code:\n\nThe Overloaded Pattern. Live code\
+    \ @Compiler Explorer\n\n```\n#include <iostream>\n\ntemplate < class... Ts> struct\
+    \ overloaded : Ts... { using Ts::operator (..); };\ntemplate < class... Ts> overloaded(Ts...)\
+    \ -> overloaded<Ts...>;n\nint main() {}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '```
+
+    const auto test = overloaded{
+
+    [](const int & i) { std::cout << "int " << i << ''\\n''; };
+
+    [](const float & f) { std::cout << "float " << f << ''\\n''; };
+
+    [](const std::string& s) { std::cout << "string " << s << ''\\n''; }
+
+    };
+
+
+    test("10.0f");
+
+    ```
+
+
+    In the above example, we create a test object which is composed of three lambdas.
+    We can then call the object with a parameter, and the correct
+
+    lambda will be selected, depending on the type of the input parameter.
+
+
+    Let''s now have a closer look at the core parts of this pattern.
+
+
+    Those lines of code benefit from three features available since C++17:
+
+
+    +   * Pack expansions in using declarations - short and compact syntax for variadic
+    templates.
+
+    * Custom template argument deduction rules - that allows converting a list of
+    lambda objects into a list of base classes for the overloaded class. (note: not
+    needed in C++20).
+
+    * Extension to aggregate initialisation - before C++17 you couldn''t aggregate
+    initialise type that derives from other types.
+
+
+    In the C++11 chapter, we already covered the need for using declaration. This
+    is important for bringing the call operators into the same scope of the overloaded
+    structure. C++17 gives us a syntax that supports variadic templates, which was
+    not possible in the previous revisions of the language.
+
+
+    Let''s now try to understand the remaining two features:
+
+
+    # Custom Template Argument Deduction Rules
+
+
+    We derive from lambdas, and then we expose their operator() as we saw in the previous
+    section. But how can we create objects of this overload type?
+
+
+    As you know, there''s no way to know up-front the type of the lambda, as the compiler
+    has to generate some unique type name for each of them. For example, we cannot
+    just write:
+
+
+    ```
+
+    overload< LambdaType1, LambdaType2> myOverload { ... } // ???
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "```\n// what is LambdaType1 and LambdaType2 ??\n```\n\nThe only way that could\
+    \ work would be make function (as template argument deduction works for function\
+    \ templates, since, like, always):\n\n```\ntemplate <typename ... T>\nconstexpr\
+    \ auto make_overload(T& ... t) {\n    return overloaded<T...>(std::forward<T>(t)...);\n\
+    }\n```\n\nWith template argument deduction rules that were added in C++17, we\
+    \ can simplify the creation of common template types and the make_overloader function\
+    \ is not needed.\n\nFor example, for simple types, we can write:\n\n```\nstd::pair\
+    \ strDouble { std::string(\"Hello\"), 10.0 };\nn// strDouble is std::pair<std::string,\
+    \ double>\n```\n\nThere's also an option to define custom deduction guides. The\
+    \ Standard library uses a lot of them, for example, for std::array:\n\n```\ntemplate\
+    \ <class T, class... U>\narray(T, U...) -> array<T, 1 + sizeof...(U)>;\n```\n\n\
+    and the above rule allows us to write:\n\n```\narray test{1, 2, 3, 4, 5};\n//\
+    \ test is std::array<int, 5>\n```\n\nFor the overloaded pattern we can specify\
+    \ a custom deduction guide:\n\n```\ntemplate <class... Ts> overloaded(Ts...) ->\
+    \ overloaded<Ts...>;\n```\n\nNow, when we initialise an overload with two lambdas:\n\
+    \n```\noverloaded myOverload{ [](int) { }, [](double) { } };\n```\n\nThe template\
+    \ arguments for overload will be correctly deduced. In our case, the compiler\
+    \ knows the types of the two lambdas so it can resolve the types which the overload\
+    \ inherits from."
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: 'Check out the C++20 chapter as in the new Standard, the Class Template Argument
+    Deduction is improved! For the overloaded pattern, it means we don''t have to
+    have custom deduction guides!
+
+
+    Let''s go to the last missing part of the puzzle - aggregate initialisation.
+
+
+    # Extension to Aggregate Initialisation
+
+
+    This functionality is relatively straightforward: we can now aggregate initialise
+    a type that derives from other types. From the specification dcl.init.aggr :
+
+
+    > An aggregate is an array or a class with:
+
+    * no user-provided, explicit, or inherited non-static constructors
+
+    * no private or protected non-static data members
+
+    * no virtual functions, and
+
+    * no virtual, private, or protected base classes'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "For example (sample from the spec draft):\n\n# Aggregate Initialisation\n\n\
+    ```\nstruct base1 { int b1, b2 = 32 };\n\nstruct base2 {\n  base2() { b3 = 64\
+    \ }\n  int b3;\n};\n\nstruct derived : base1, base2 {\n  int d;\n};\n\nderived\
+    \ d1{{1, 2 }, {}, 4 };\nnderived d2{{{}, {}, 4 }};\n```\n\nThe code initializes\
+    \ d1.b1 with 1, d1.b2 with 2, d1.b3 with 64, d1.d with 4 . And for the second\
+    \ object we have: d2.b1 with 0, d2.b2 with 32, d2.b3 with 64, d2.d with 4\n\n\
+    In our case, it has a more significant impact. Because for the overload class,\
+    \ without the aggregate initialisation, we'd had to implement the following constructor:\n\
+    \n```\nstruct overloaded : Fs {\n  template < class ... Ts>\n  overloaded(Ts&&\
+    \ && ...ts) : Fs(std::forward<Ts>(ts)...)\n}\n\n// ...\n```\n\nIt's a lot of code\
+    \ to write, and probably it doesn't cover all of the cases noexcept.\n\nWith aggregate\
+    \ initialisation, we “directly” call the constructor of lambda from the base class\
+    \ list, so there's no need to write it and forward arguments to it explicitly.\n\
+    \nOK, we covered a lot, but is there any useful example of the overloaded pattern?\n\
+    \nIt appears might be convenient for std::variant visitation.\n\n# Example with\
+    \ std::variant and std::visit"
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "Equipped with the knowledge we can use inheritance and the overloaded pattern\
+    \ for something more practical. Have a look at an example with the visitation\
+    \ of std::variant:\n\n# The Overloaded Pattern with variant and visit. Live code\
+    \ @Compiler Explorer\n\n```\n#include <iostream>\n#include <variant>\n\ntemplate\
+    \ <class... Ts> struct overloaded : Ts... { using Ts::operator()...; };\ntemplate\
+    \ <class... Ts> overloaded(Ts...) -> overloaded<Ts...>;\n\nint main() {\n    const\
+    \ auto PrintVisitor = [](const auto& t) { std::cout << t << \" \\n\"; };\n\n \
+    \   std::variant<int, float, std::string> intFloatString(\"Hello\");\n\n    std::visit(PrintVisitor,\
+    \ intFloatString);\n\n    std::visit(overloaded(\n        [](int& i) { *i *= 2;\
+    \ },\n        [](float& f) { *f = 2.0f; },\n        [](std::string& s) { s = s\
+    \ + s; }\n    ), intFloatString);\n\n    std::visit(PrintVisitor, intFloatString);\n\
+    n}\n```\n\nIn the code above we create a variant class that can hold integers,\
+    \ floating-point or string values. There's a call to PrintVisitor which outputs\
+    \ the current value of the variant. Please notice that thanks to the generic lambda,\
+    \ the visitor can support all types (which have the << operator implemented).\n\
+    \nNow, we have another call to std::visit that creates a visitor in place, with\
+    \ three different lambda expressions - one for each type. In this artificial example,\
+    \ we want to multiply the value by two, and for strings, it means joining values\
+    \ together.\n\n# Concurrent Execution Using Lambdas\n\nIt's easy to show examples\
+    \ where the lambda runs on the same thread as the caller. But how about asynchronous\
+    \ cases? What if you want to call a lambda on a separate thread? What problems\
+    \ might you encounter? Let's review them in this section."
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "This section won't be a tutorial on how to write concurrent code in C++, but\
+    \ it aims to show problems that you can encounter with lambdas in asynchronous\
+    \ code. For more information about concurrency in C++, you can consult separate\
+    \ books like Concurrency with Modern C++ by Rainer Grimmer or C++ Concurrency\
+    \ in Action by Anthony Williams.\n\n# Lambdas with std::thread\n\nLet's start\
+    \ with std::thread which is available since C++11. As you might already know std::thread\
+    \ accepts a callable object in its constructor. It might be a regular function\
+    \ pointer, a functor or a lambda expression. A simple example:\n\nPassing lambda\
+    \ to a thread. Live code @Coliru\n\n```\n#include <iostream>\n#include <thread>\n\
+    #include <vector>\n#include <numeric> // for std::iota\n\nint main() {\n    const\
+    \ auto printThreadID = [=](const char * str) {\n        std::cout << str << \"\
+    : \" << std::this_thread::get_id() << \" thread id \\\\n\";\n    };\n\n    std::vector<int>\
+    \ numbers(100);\n\n    std::thread iotaThread([&numbers, &printThreadID](int startArg)\
+    \ {\n        std::iota(numbers.begin(), numbers.end(), startArg);\n        printThreadID(\"\
+    iota in \\\");\n    }, 10);\n\n    iotaThread.join();\n    printThreadID(\"printing\
+    \ numbers in \\\");\n\n    for (const auto &num : numbers) {\n        std::cout\
+    \ << num << \"\\\", \\\\\";\n    }\n\n}\n```\n\nIn the above example, we create\
+    \ a thread with a lambda expression. The std::thread class has a flexible constructor,\
+    \ so we can even pass a value for the argument. In our code 10 is passed into\
+    \ the lambda as startArg.\n\nThe code is simple because we can control the thread\
+    \ execution, and by joining it, we know that the results of the iota will be ready\
+    \ before we print them."
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "The critical thing to remember is while lambdas make it easy and convenient\
+    \ to create a thread, it’s still the asynchronous execution. Closures are not\
+    \ “special” and also vulnerable to all race conditions and blocking.\n\nThis is\
+    \ visible in the following example:\n\n```\n#include <iostream>\n#include <thread>\n\
+    #include <vector>\n\nint main() {\n    int counter = 0;\n\n    auto maxThreads\
+    \ = std::hardware_concurrency();\n    std::vector<std::thread> threads(maxThreads);\n\
+    \    for (int t = 0; t < maxThreads; ++t) {\n        threads.push_back([&counter]()\
+    \ noexcept {\n            for (int i = 0; i < 1000; ++i) {\n                counter++;\n\
+    \                counter--;\n                counter++;\n                counter--;\n\
+    \            }\n        });\n    }\n\n    for (auto &thread : threads) {\n   \
+    \     thread.join();\n    }\n\n    std::cout << counter << std::endl;\n}\n```\n\
+    \nIn the example, we’re creating several threads 13, and each thread performs\
+    \ some computations on the counter variable. The variable is shared among all\
+    \ the threads.\n\n> In C++20 you can use std::thread which is a thread that joins\
+    \ on destruction and also accepts stop tokens. This new kind of threading object\
+    \ allows more control for the thread execution.\n\nWhile you might expect to see\
+    \ 0 as the final value of counter , the result is undefined. One thread can read\
+    \ the value while others might simultaneously write to it, causing the final result\
+    \ to be non-deterministic."
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "To fix the issue, as regular threading scenarios, we should use some sort of\
+    \ a synchronisation mechanism. For this example, we can use atomics as they seem\
+    \ to be the easiest to use.\n\nChanging atomic value. Live code @Wandbox\n\n```\n\
+    #include <iostream>\n#include <thread>\n#include <vector>\n\nint main() {\n  \
+    \  std::atomic<int> counter = 0;\n\n    const auto maxThreads = std::thread::hardware_concurrency();\n\
+    \    std::vector<std::thread> threads(maxThreads);\n    threads.reserve(maxThreads);\n\
+    \    for (int tCounter=0; tCounter < maxThreads; ++ tCounter) {\n        threads.push_back([&counter]()\
+    \ noexcept {\n            for (int i = 0; i < 1000; ++ i) {\n                counter.fetch_add(1);\n\
+    \                counter.fetch_sub(1);\n                counter.fetch_add(1);\n\
+    \                counter.fetch_sub(1);\n            }\n        });\n    }\n\n\
+    \    for (auto &thread : threads) {\n        thread.join();\n    }\n\n    std::cout\
+    \ << counter.load() << std::endl;\n}\n```\n\nThe code above works as expected\
+    \ because increment and decrement operations are now atomic. It means that when\
+    \ value cannot interrupt this action. The synchronisation makes code safer but\
+    \ at a price of the performance. This is, however, a topic for a much longer discussion\
+    \ and a separate book.\n\n+   Another option to solve the synchronisation problem\
+    \ is to have a local variable in each thread that is computed. Then, before the\
+    \ thread ends, we could lock and update the global value. It is also worth adding\
+    \ that defining a variable volatile doesn't provide correct synchronisation. In\
+    \ C++20 volatile is deprecated in many places."
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "As we can see, it's quite handy to create a thread with a lambda expression.\
+    \ It's local to your executing thread, and you can do everything like with a regular\
+    \ function or functor object.\n\nLet's now try another technique that is available\
+    \ in C++.\n\n# Lambdas with std::async\n\nA second way that you can leverage multithreading\
+    \ is through std::async . We got that functionality together with threads in C++11.\
+    \ This is a high-level API that you set up and call computations lazily or fully\
+    \ asynchronously.\n\nLet's convert our example with iota into the async call:\n\
+    \n```\nInvoking code asynchronously with std::async . Live code @Coloru\n#include\
+    \ <iostream>\n#include <future> // for async and future\n#include <vector>\n#include\
+    \ <numeric> // for std::iota\n\nint main () {\n    const auto printThreadID =\
+    \ [](const char * str) {\n        std::cout << str << \" \" << std::this_thread::get_id()\
+    \ << \" thread id \\n \" << \";\n    };\n\n    std::vector<int> numbers(100);\n\
+    \n    std::future<void> iotaFuture = std::async(std::launch::async,\n        [&numbers,\
+    \ startArg=10, &printThreadID](){\n        std::iota(numbers.begin(), numbers.end(),\
+    \ startArg);\n        printThreadID(\"iota in\");\n    });\n\n    iotaFuture.get();\
+    \ // make sure we get the results...\n    printThreadID(\"printing numbers in\"\
+    );\n    for (const auto &num : numbers)\n        std::cout << num << \" \";\n\n\
+    }\n```\n\nThis time after threads, we rely on the mechanism of std::future. This\
+    \ is an object that handles the synchronisation and guarantees that the results\
+    \ of the invocation are available when we ask it through .get().\n\nIn our case\
+    \ we schedule the execution of the lambda through std::async, and then we need\
+    \ to call .get() to finish the computations. .get()"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: "member function blocking.\n\nHowever the code above is cheating a little, we're\
+    \ using future<void> and the vector is still passed as the reference captured\
+    \ by lambda. As an alternative you might want to create std::future<std::vector<int>>\
+    \ so that we pass through the future mechanism:\n\n```\nstd::future<std::vector<int>>\
+    \ iotaFuture = std::async(std::launch::async, \n[star]() {\n    std::vector<int>\
+    \ numbers(100);\n    std::iota(numbers.begin(), numbers.end(), start);\n    std::cout\
+    \ << \"calling from: \" << std::thread::get_id() << \" thread id \\n \";\n   \
+    \ return numbers;\n});\nauto vec = iotaFuture.get(); // make sure we get the results...\n\
+    // ...\n```\n\n // ...\n\nIt seems that over the years std::async/std::future\
+    \ has earned itself a mixed reputation. It looks like the functionality was a\
+    \ bit too rushed. It works for relatively simple cases but fails with advanced\
+    \ scenarios like:\n\n+   * continuation,\n* task merging,\n* no cancellation/joining,\n\
+    * it's not a regular type,\n* and few other issues.\n\nIf you want to know more,\
+    \ you read or watch the following resources:\n\n+   * There is a Better Future\
+    \ - Felix Petriconi - code::dive 2018 - YouTube\n* code::dive 2016 conference\
+    \ – Sean Parent – Better Code: Concurrency - YouTube\n* Core C++ 2019 :: Avi Kivity\
+    \ :: Building efficient I/O intensive applications with Seastar - YouTube\n\n\
+    # Lambdas and Parallel Algorithms from C++17\n\nAfter discussing the threading\
+    \ support in C++11, we can move to further standards: C++17. This time you have\
+    \ a super easy-to-use technique that"
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: 'allows you to parallelise most of the algorithms from the Standard Library.
+
+    All you have to do is to specify the first argument into the algorithm, for
+
+    example:
+
+
+    ```
+
+    auto myVec = GenerateVector();
+
+    std::sort(std::execution::par, myVec.begin(), myVec.end());
+
+    ```
+
+
+    Please notice the first argument: std::execution::par . It’s used to enable
+
+    parallel execution of the sort algorithm.
+
+
+    And we have other options:
+
+
+    | Policy Name | Description |
+
+    |---|---|
+
+    | sequenced_policy | It is an execution policy type used as a unique type to disambiguate
+    parallel algorithm overloading and require that a parallel algorithm’s execution
+    not be parallelised. |
+
+    | parallel_policy | It is is an execution policy type used as a unique type to
+    disambiguate parallel algorithm overloading and indicate that a parallel algorithm’s
+    execution may be parallelised. |
+
+    | parallel_unsequenced_policy | It is an execution policy type used as a unique
+    type to disambiguate parallel algorithm overloading and indicate that a parallel
+    algorithm’s execution may be parallelised and vectorised. |
+
+
+    For each policy we have a predefined global instance that you can pass to
+
+    algorithms:
+
+
+    +   * std::execution::par
+
+    * std::execution::seq
+
+    * std::execution::par_unseq
+
+
+    Execution policy declarations and global objects are located in the
+
+    <execution> header.'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "In C++20 there's also one more execution policy: unsequenced_policy along with\
+    \ the global instance std::execution::unseq. It's used to enable vectorisered\
+    \ execution on a single thread.\n\n# While we can easily enable parallel sorting,\
+    \ we can also quickly write some bad code:\n\nCopying into vector and dangerous\
+    \ behaviour.\n\n```\n#include <iostream>\n#include <vector>\n#include <numeric>\n\
+    #include <execution>\n\nint main () {\n    std::vector<int> vec(1000);\n    std::iota(vec.begin(),\
+    \ vec.end(), 0);\n    std::vector<int> output;\n    std::for_each(std::execution::par,\
+    \ vec.begin(), vec.end(),\n        [&](int &elem) {\n            if (elem % 2\
+    \ == 0) {\n                output.push_back(elem);\n            }\n        });\n\
+    \n    for (const auto & elem) cout << elem << \", \";\n}\n}\n```\n\n> The code\
+    \ above doesn't contain any \"Live Code\" link as it requires a compiler with\
+    \ the parallel algorithm support. This is possible in MSVC (starting with VS 2017)\
+    \ but doesn't work well with any online compiler. You can take the code and play\
+    \ inside Visual Studio.\n\nDo you see all the issues here?\n\nBy passing a lambda\
+    \ to std::for_each we need to remember that the execution doesn't happen on a\
+    \ single thread and locally. Several threads might be used here, for example,\
+    \ using a thread pool solution. That's why accessing a shared output vector is\
+    \ not the best idea. Not only can you insert elements in a wrong order, but it\
+    \ can crash if several threads attempt to change the vector at the same time."
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: 'We can fix the synchronisation problem by having a mutex and locking it before
+    each call of push_back . But is that code still efficient? If the filter condition
+    is straightforward and fast to execute, then you might even get slower performance
+    than the serial version (seq ).
+
+
+    Not to mention that by running it in parallel, you don’t know the order of the
+    copied elements in the output vector.
+
+
+    This section shows only a basic overview of the parallel algorithms, and if you
+    like to see more, please have a look at the following article: Bartek’s coding
+    blog: The Amazing Performance of C++17 Parallel Algorithms, is it Possible?
+
+
+    # Lambdas And Async - Wrap Upon
+
+
+    To wrap up: Lambda expressions are convenient when you want to start a thread,
+    invoke asynchronous code through std::async or use with parallel algorithms. However,
+    it’s essential to keep in mind that closure objects aren’t unique regarding the
+    concurrency and all challenges apply here as well.
+
+
+    # Summary
+
+
+    In this chapter, you’ve seen that C++17 joined two essential elements of C++:
+    constexpr with lambdas. This is a necessary step towards improved metaprogramming
+    support in the language. We’ll see that more in the next chapter about C++20.
+    What’s more, the C++17 Standard also addressed the capturing this problem. In
+    the new standard, you can capture this by value so that the code can be much safer.
+
+
+    We also had a look at some use cases for lambdas: IIFE technique, fold expressions
+    and variadic generic lambdas, deriving from lambda expressions and asynchronous
+    code execution. Thanks to the various features enabled in C++17, we now have much
+    nicer syntax and more straightforward ways to write efficient code.'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# 5. Lambdas in C++20
+
+
+    During the meeting in Prague, in February 2020, the ISO Committee finally approved
+    the C++20 Standard and pushed it to the official publication (probably at the
+    end of 2020). The new specification brings a lot of substantial improvements to
+    the language and the Standard Library! Lambda expressions also got a few upgrades.
+
+
+    In this chapter, you''ll see:
+
+
+    +   * What changes in C++20.
+
+    * New options to capture this pointer.
+
+    * Template lambdas.
+
+    * How to improve generic lambdas with concepts.
+
+    * How to use lambdas with constexpr algorithms.
+
+    * How to make the overloaded pattern even shorter.
+
+
+    You can see the specification related to lambdas in N4861 (the current C++20 draft,
+    post Prague version) and the lambda section: [expr.prim.lambda].'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "# Lambda Syntax Update\n\nWith C++20, we have more changes regarding the syntax\
+    \ of lambda expressions:\n\n+   - You can now add consteval after the parameter\
+    \ list.\n- There's an option to specify the template tail.\n- And after the trailing\
+    \ return you can put requires declaration.\n\n```\n<params> () specifiers exception\
+    \ attr - -> requires { /code; /* */\n  ^       ^       ^\n  |       | |\n  | \
+    \      optional: trailing return type\n  |  optional: mutable, constexpr, consteval,\
+    \ noexcept, attributes\n  | parameter list (optional when no specifiers added)\n\
+    \  |\noptional: template parameter list\n|\nlambda introducer with an optional\
+    \ capture list\n```\n\nYou can read about new modifications in the next sections.\n\
+    \n# A Quick Overview of the Changes\n\nWith C++20 we'll get the following features\
+    \ related to lambda expressions:\n\n+   - Allow [=, this] as a lambda capture\
+    \ - P049R2 and deprecate implicit capture of this via []] - P0806.\n- Pack expansion\
+    \ in lambda init-capture: ...args = std::move(args) {} - P0780.\n- static, thread_local,\
+    \ and lambda capture for structured bindings - P1091.\n- template lambdas (with\
+    \ concepts) - P0428R2.\n- Simplifying implicit lambda capture - P0588R1.\n- Default\
+    \ constructible and assignable static lambdas - P0624R2.\n- Lambdas in unevaluated\
+    \ contexts - P0315R4.\n- constexpr Algorithms - most importantly P2022,P0879 and\
+    \ P1645.\n\nIf you'd like to know more about C++20, you can have a look at the\
+    \ paper that summarises all the changes: Changes between C++17 and C++20 DIS -\
+    \ P2131."
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: "You can also see my Reference Card with all language and the library features:\
+    \ Bartek’s coding blog: C++20 Reference Card.\n\nLet's now have a quick look at\
+    \ some of the changes.\n\nIn most of the cases the newly added features \"clean-up\"\
+    \ lambda syntax. Plus, C++20 adds enhancements that allow us to use lambdas in\
+    \ advanced scenarios.\n\nFor example, with P1091 you can capture a structured\
+    \ binding:\n\n> Some compilers supported structured binding even in C++17 (for\
+    \ GCC), but it was not mandated by the Standard back.\n\nC++20 also brings clarifications\
+    \ related to *this capture. You'll get a warning if you capture [-=] in a method:\n\
+    \nAbout implicit *this capture. Live code @Wandbox\n\n```\nstruct Baz {\n    auto\
+    \ foo() {\n        return [=]() { cout << s << '\\\\n'; };\n    }\n    std::string\
+    \ s;\n};\n```\n\nCompiling with GCC 9 yields the following warning:\n\nwarning:\
+    \ implicit capture of 'this' ['=] is deprecated in C++20\n\nThe warning appears,\
+    \ because even with [=] you'll capture this as a pointer. It's better to write\
+    \ what you want explicitly: [=, this], or [=, *this]."
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "After a quick review, let's have a look at more prominent features in C++20\
+    \ related to lambdas.\n\n# constevalval Lambdas\n\nWhile constexpr from C++11\
+    \ allows function execution at the compilation phase, it's also possible to run\
+    \ those functions at runtime. It appears that in some cases, it might be best\
+    \ to limit the functionality only to compile-time. That's why in C++20, we have\
+    \ a new keyword that creates functions which conform to the rules of a constexpr\
+    \ function but can only be evaluated at compile-time. Such functions are also\
+    \ called \"immediate functions\".\n\nThis new keyword can also be applied to lambdas.\
+    \ Let's review a simple example:\n\nA Simple Immediate Lambda. Live code @Wandbox\n\
+    \n```\nint main() {\n    const int x = 10;\n    auto lam = [int x] consteval {\
+    \ return x + x; };\n    return lam(x);\n}\n```\n\nAbove, you can see that we applied\
+    \ consteval after the argument list of the lambda. This is very similar to the\
+    \ application of constexpr. The critical difference is that if you remove const\
+    \ from x_n, then the constexpr lambda can work (at runtime), while the immediate\
+    \ lambda won't compile.\n\nBy default, if a lambda follows the rules of a constexpr\
+    \ function, the compiler marks the call as const implicitly. This is not the case\
+    \ with consteval as it forms a stronger restriction on such code. And you cannot\
+    \ use both of these keywords at the same time. You can find the full specification\
+    \ for the new feature in this proposal: P1073R3.\n\n# Capturing a Parameter Pack\n\
+    \nOne improvement we got in C++20 is pack expansion in lambda capture-\n\n```\n\
+    template < typename...Args> void call(Args&& ... args) {\n    auto ret = [...capturedArgs]\
+    \ = std::move(args)]();\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "Previously before C++20, the code wouldn't compile (see the C++11 section on\
+    \ that ) and to work around this issue, you had to wrap arguments into a separate\
+    \ tuple. You can read about the history of this capture restriction in P0780.\n\
+    \nTo sum, capturing a variadic parameter pack, we can take the example that we\
+    \ got from the C++11 chapter and experiment with it, adding the latest feature.\
+    \ For instance, we can leverage fold expression to do a print of each captured\
+    \ object:\n\nCapturing a Variadic Pack. Live code @Wandbox\n\n```\n#include <iostream>\n\
+    #include <memory>\n\ntemplate < class First, class... Args>\nvoid captureTest(First&\
+    \ first, Args&... args) {\n    const auto printer = [first = std::move(first),\n\
+    \        std::cout << first << \",\n        ..capturedArgs = std::move(args)]()\
+    \ {\n        ((std::cout << \", \") << capturedArgs, ...));\n        std::cout\
+    \ << '\\\\n';\n    };\n    printer();\n}\n\nint main() {\n    auto ptr = std::make_unique<int>(10);\n\
+    \    captureTest(std::move(ptr), 2, 3, 4);\n    captureTest(std::move(ptr), 'a',\
+    \ 'b');\n}\n```\n\nThe output:\n\n0xf06cb20, 2, 3, 4\na, b\n\nIn the example,\
+    \ we used a printer object which is similar to the code that we wrote in the C++17\
+    \ chapter, but this time we capture variables rather than forward them as lambda\
+    \ arguments. The code shows that we can even pass a unique pointer. We pass it\
+    \ twice to the lambda and as you can see the second time we get @o on the second\
+    \ line since the pointer lost the ownership of the memory block.\n\n# Template\
+    \ Lambdas\n\nWith C++14, we got generic lambdas which means that parameters declared"
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "as auto template parameters.\n\nFor a lambda:\n\n```\n[(auto x) { x; }\n```\n\
+    \nThe compiler generates a call operator that corresponds to the following template\
+    \ method:\n\n```\ntemplate < typename T>\nvoid operator()(T x) { x; }\n```\n\n\
+    But there was no way to change this template parameter and use “real” template\
+    \ arguments. With C++20 it is possible now.\n\nFor example, how can we restrict\
+    \ our lambda to work only with vectors of some type?\n\nWe can write a generic\
+    \ lambda:\n\n```\nauto foo = [](auto & vec) {\n  std::cout << std::size(vec) <<\
+    \ '\\n';\n  std::cout << vec.capacity() << '\\n';\n};\n```\n\nBut if you call\
+    \ it with an int parameter (like foo(10) ) then you might get some hard-to-read\
+    \ error:\n\n```\nprog.cc: In instantiation of\n'main()::<lambda(const auto:1)>\
+    \ [with auto:1 = int]'\nprog.cc:16:11: required from here\nprog.cc:11:30: error:\
+    \ no matching function for call to 'size(const int&)'\n11 | std::cout<<std::size(vec)\
+    \ << '\\n';\n```\n\nIn C++20 we can write:\n\n```\nauto foo = []typename T>(std::vector<T>\
+    \ const & vec) {\n  std::cout << std::size(vec) << '\\n';\n  std::cout << vec.capacity()\
+    \ << '\\n';\n};\n```\n\nThe above lambda resolves to a templated call operator:\n\
+    \n```\n< typename T>\nvoid operator() (std::vector<T> const & s) { ... }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: "The template parameter comes after the capture clause [ ].\n\nIf you call it\
+    \ with int (foo(10); ) then you get a nicer message:\nnote: mismatched types 'const\
+    \ std::vector<T>' and 'int'\n\nPlay with code @Wandbox\n\nIn the above example,\
+    \ the compiler can warn you about the mismatch in the interface of the lambda.\n\
+    \nAnother important aspect is that in the generic lambda example, you only have\
+    \ a variable and not its template type. If you want to access the type, you have\
+    \ to use decltype(x) (for a lambda with (auto x) argument). This makes code more\
+    \ wordy and complicated.\n\nFor example (using code from P0428):\n\n```\nDeducing\
+    \ from generic argument\nauto f = []<auto const &x> {\n  using T = std::decay_t<decltype(x)>;\n\
+    \  T copy = x;\n  T::static_function();\n  using iterator = typename T::iterator;\n\
+    }\n```\n\nCan be now written as:\n\n```\nauto f = []<typename T>(T const & x)\
+    \ {\n  T copy = x;\n  T::static_function();\n  using iterator = typename T::iterator;\n\
+    }\n```\n\nAs you can see above, in the first example we need to write:\n\n```\n\
+    using T = std::decay_t<decltype(x)>\n```\n\nTo get the type of the input argument,\
+    \ in the C++20 version, there's no need for this as we can access the template\
+    \ parameter.\n\nAnd another important use case is perfect forwarding in a generic\
+    \ variadic"
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: "```\nlambda:\n\n// C++17\nauto ForwardToTestFunc = [](auto... ...args) {\n\
+    \    // what's the type of args ?\n    return TestFunc(std::forward<decltype(args)>(args...);\n\
+    };\n```\n\nEach time you want to access the type of the template argument, you\
+    \ need to use decltype() , but with template lambdas there's no need for that:\n\
+    \n```\n// C++20:\nauto ForwardToTestFunc = []<typename... T>(T&& ...args) {\n\
+    \    return TestFunc(std::forward<T>(args...)); // we have all the types!\n};\n\
+    ```\n\nAs you can see, template lambdas provide cleaner syntax and better access\
+    \ to types of arguments.\n\nBut there's more! You can also use concepts with lambdas!\
+    \ See in the next section.\n\n# Concepts and Lambdas\n\nConcepts are a revolutionary\
+    \ approach for writing templates! They allow you to put constraints on template\
+    \ parameters which improve the readability of code, might speed up compilation\
+    \ time and give better error messages.\n\nOne simple example:\n\n```\n// define\
+    \ a concept:\ntemplate < class T>\nconcept SignedIntegral = std::is_integral_v<T>\
+    \ && std::is_signed_v<T>;\n\n// use:\ntemplate < SignedIntegral T>\nvoid signedIntsOnly(T\
+    \ val) { }\n```\n\nIn the code above we create a concept that describes types\
+    \ that are signed and integral. Please notice that we can use existing traits.\
+    \ Later, we use it to define a template function that supports only types that\
+    \ match the concept. Here we don't use typename T but we can refer to the name\
+    \ of a concept.\n\nOk, but how is that related to lambda expressions?"
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "The key part here is the terse syntax and constrained auto parameter.\n\n#\
+    \ Simplifications and Terse Syntax\n\nThanks to the terse concept syntax you can\
+    \ also write templates without the template<typename>.. part.\n\nWith unsigned\
+    \ auto :\n\n```\nvoid myTemplateFunc (auto param) { }\n```\n\nOr with signed auto\
+    \ :\n\n```\nvoid signedIntOnly (SignedIntegral auto val) { }\nfloatsOnly (std::floating_point\
+    \ auto fp) { }\n```\n\nSuch syntax is similar to what you could use in generic\
+    \ lambdas from C++14, as right now you can also write:\n\n```\nvoid myTemplateFunction\
+    \ (auto val) { }\n```\n\nIn other words, lambdas, we can leverage this terse style\
+    \ and for example put extra restrictions on the generic lambda argument:\n\n```\n\
+    auto GenLambda = [](SignedIntegral auto param) { return param * param + 1; };\n\
+    ```\n\nAs you can see in the above example, I restricted the auto param with the\
+    \ SignedIntegral concept. The whole expression is even more readable than the\
+    \ template lambda that we discussed in the previous section.\n\nHere's a bit more\
+    \ complicated example, where we can even define a concept of some class interface:\n\
+    \n```\nIRenderable concept, with requires keyword\ntemplate < typename T>\nconcept\
+    \ IRenderable = requires(T v) {\n  (v.render()) -> std::same_as<void>;\n  (v.getVertCount())\
+    \ -> std::convertible_to<size_t>;\n};\n```\n\nIn the above example we define a\
+    \ concept that matches all types with render() and getVertCount() member functions.\
+    \ We can use it to"
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: "# write a generic lambda:\n\n```\nImplementations of IRenderable concept/interface.\
+    \ Live code @Wandbox\n#include <concepts>\n#include <iostream>\n\ntemplate < typename\
+    \ T>\nconcept IRenderable = requires(T v) {\n    (v.render()) -> std::same_as<void>;\n\
+    \    (v.getVertCount()) -> std::convertible_to<size_t>;\n};\n\nstruct Circle {\n\
+    \    void render() { std::cout << \"drawing circle \\n \" };\n    size_t getVertCount()\
+    \ const { return 10; };\n};\n\nstruct Square {\n    void render() { std::cout\
+    \ << \"drawing square \\n \" };\n    size_t getVertCount() const { return 4; };\n\
+    };\n\nint main () {\n    const auto RenderCaller = [](IRenderable auto& obj) {\n\
+    \        obj.render();\n    };\n\n    Circle c;\n    RenderCaller(c);\n    Square\
+    \ s;\n    RenderCaller(s);\n}\n```\n\nIn the above example RenderCaller is a generic\
+    \ lambda which can support types that satisfies the IRenderable concept.\n\n#\
+    \ Changes to Stateless Lambdas\n\nYou might recall from the chapter about C++11\
+    \ lambdas, even stateless, are not default constructible. However, this limitation\
+    \ is lifted in C++20.\n\nThat's why, if your lambda doesn't capture anything,\
+    \ then you can write the following code:\n\n```\nA stateless lambda. Live code\
+    \ @Wandbox\n#include <set>\n#include <string>\n#include <iostream>\n\nstruct Product\
+    \ {\n    std::string _name;\n    int _id { };\n    double _price { 0.0 };\n}\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: "```\nint main() {\n    const auto nameCmp = [](const auto & a, const auto &\
+    \ b) {\n        return a.__name < b.__name;\n    };\n    const std::set<Product,\
+    \ decltype(nameCmp)> prodSet {\n        {\"Cup\", 10, 100.0}, {\"Book\", 2, 200.5},\n\
+    \        {\"TV set\", 1, 2000}, {\"Pencil\", 4, 10.5}\n    };\n\n    for (const\
+    \ auto & elem : prodSet) {\n        std::cout << elem.__name << '\\n';\n    }\n\
+    }\n```\n\nIn the preceding example, I declared a class that stores a list of Products.\
+    \ I need a way to compare products, so I passed a stateless lambda that compares\
+    \ their string names.\n\nFor example, if you compiled that code with a C++17 flag,\
+    \ then you'd get an error about using a deleted constructor:\n\n```\nstl_set.h:In\
+    \ constructor\n'std::set<_Key, _Compare, _Alloc>...\n[with :Key = Product;\n \
+    \ _Compare = main()::lambda(const auto&1, const auto&2)>;\nstl_set.h:244:29: error:\
+    \ use of deleted function\n'main()::lambda(const auto&1, const auto&2)>:::<lambda()'\n\
+    ```\n\nBut in C++20 you can store stateless lambdas and even copy them:\n\n```\n\
+    template < typename F>\nstruct Product {\n    int _id {};\n    double _price {\
+    \ 0.0 };\n    F _predicate;\n};\n\nint main() {\n    const auto idCmp = [](const\
+    \ auto &a) noexcept {\n        return a._id != 0;\n    };\n    Product p { 10,\
+    \ 2000.0, idCmp };\n    [[maybe_unused]] p2 = p;\n}\n```\n\n# Even more with unvaluated\
+    \ contexts\n\nThere are also changes related to advanced use cases like unvaluated\
+    \ contexts. All together with default constructible lambdas you can now write:"
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: "```\nstd::map<int, int, decltype(([](int x, int y) { return x > y; })> map;\n\
+    ```\n\nAs you can see, it's now possible to specify the lambda inside of map container.\
+    \ It can be used as a comparator functor. For such \"unevaluated contexts\" are\
+    \ especially handy for advanced template metaprogramming. For example, in the\
+    \ proposal of the feature, authors mention sorting of tuple objects at compile\
+    \ time using a predicate which is a lambda.\n\nMore reasoning in P0315R2 .\n\n\
+    # Lambdas and constexpr Algorithms\n\nIf you recall the previous chapter, since\
+    \ C++17 we can use lambdas which are constexpr . With this functionality, you\
+    \ can pass a lambda to functions which are evaluated at compile time. In C++20\
+    \ most of the standard algorithms are now marked with the constexpr keyword which\
+    \ makes constexpr lambdas even more convenient!\n\nLet's consider a few examples.\n\
+    \nBelow you can find code that runs std::accumulate on an array, with a custom\
+    \ lambda:\n\n> Using std::accumulate with a custom constexpr lambda. Live code\
+    \ @Compiler Explorer\n#include <array>\n#include <numeric>\n\n```\nint main()\
+    \ {\n    constexpr std::array arr{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};\n    // with\
+    \ constexpr lambda\n    static_assert(std::accumulate(begin(arr), end(arr), 0,\n\
+    \        [](auto a, auto b) noexcept {\n            return a + b;\n        })\
+    \ == 55);\n    return arr[0];\n}\n```\n\nIn the example with std::accumulate we\
+    \ used lambda, which is, in fact, the std::plus operation.\n\nAnd in the next\
+    \ example there's a constexpr function that takes a comparator/predicate for the\
+    \ count_if algorithm:"
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "Passing a constexpr lambda to a custom function. Live code @Compiler Explorer\n\
+    \n```\n#include <array>\n#include <algorithm>\n\nconstexpr auto CountValues (auto\
+    \ container, auto cmp) {\n    return std::count_if(begin(container), end(container),\
+    \ cmp);\n}\n\nint main () {\n    constexpr auto minVal = CountValues(std::array{-10,\
+    \ 6, 8, 4, -5, 2, 4, 6},\n        [](auto a) { return a >= 0; }\n    );\n    return\
+    \ minVal;\n}\n```\n\n+   What standard algorithms are constexpr? All of the algorithms\
+    \ from the <algorithm>, <utility> and headers are now marked with constexpr except\
+    \ for shuffle, sample, stable_sort, stable_partition, inplace_merge and overloads\
+    \ that accept the Execution Policy argument. Read more in Papers P0202 and P1645.\n\
+    \n# C++20 Updates to the Overloaded Pattern\n\nIn the previous chapter, you learned\
+    \ about deriving from multiple lambda expressions and exposing them through the\
+    \ overloaded pattern. Such a technique is handy for std::variant visitation.\n\
+    \nThanks to the Class Template Argument Deduction (CTAD) updates in C++20 we can\
+    \ now have even shorter syntax!\n\nWhy?\n\nIt's because in C++20 there are extensions\
+    \ to CTAD and aggregates are automatically handled. That means there's no need\
+    \ to write a custom deduction guide.\n\nFor a simple type:\n\n```\ntemplate <\
+    \ typename T, typename U, typename V>\nstruct Triple { T t; U u; V v; };\n```\n\
+    \nIn C++20 you can write:"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '```
+
+    Triple ttt{ 10.0f , 90 , std::string{"hello"} };
+
+    ```
+
+
+    And τ will be deduced as float, u as int and v as std::string.
+
+
+    The overloaded pattern in C++20 is now just:
+
+
+    ```
+
+    template < class... > struct overload: Ts... { using Ts::operator (().); };
+
+    ```
+
+
+    The proposal for this feature is available in P1021 and also P1816 (wording).
+
+
+    > GCC10 fails to implement this proposal, but it doesn''t work for advanced cases
+    with inheritance, so we have to wait for the full conformance here.
+
+
+    # Summary
+
+
+    In this chapter, we reviewed the changes that C++20 has brought.
+
+
+    First of all, we have a few clarifications and improvements: for example the capture
+    of this , capturing structured bindings or the ability to default construct stateless
+    lambdas. What''s more, there are more significant additions! One of the prominent
+    capabilities now is template lambdas and concepts - so that you get more control
+    over generic lambdas.
+
+
+    To sum up, with C++20 and all of its features, lambdas are even more powerful
+    tools!'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# Appendix A - List of Techniques
+
+
+    Below you can find a list of techniques and patterns used throughout the book:
+
+
+    C++11 Chapter
+
+
+    +   - Calculating the number of invocations - An example of instrumenting a default
+    functor to extend it with additional functionality.
+
+    - Deriving from lambda - A basic technique that allows you to wrap a closure type
+    and extend it with additional functionality.
+
+    - IIFE - Immediately Invoked Function Expression - An efficient way to compute
+    the value of a const variable which requires a complex initialisation without
+    creating an extra function.
+
+    - Passing C++: a captureless lambda as a function pointer to C-style API functions.
+
+    - How to store lambdas in a container - we can do a little trick and store lambdas
+    wrapped in std::function.
+
+
+    C++14 Chapter
+
+
+    +   - Replacing std::bind1, std::bind2nd - how to use Modern C++ and replace deprecated
+    functionality.
+
+    - An optimisation thanks to capture with initialiser - An example of storing a
+    temporary value used for the body of the lambda.
+
+    - Perfect forwarding with generic lambdas - How to use std::forward on a generic
+    argument to pass it further down the stack.
+
+    - LIFING with lambdas - This allows a set of function overloads into a function
+    template that takes a callable object. For example, when you call algorithms from
+    the Standard Library.
+
+    - Recursive lambdas - Several tricks you can use to call the closure object inside
+    its body.
+
+    - Variadic generic lambdas - How to use variadic arguments in a lambda expression.'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# C++17 Chapter
+
+
+    +   - The overload pattern - The mechanism that allows to derive from multiple
+    lambda expressions and pass it to std::visit .
+
+
+    +   - IIFE improvements - How to improve readability with std::invoke .
+
+
+    +   - Updates to Variadic Generic Lambdas - Leveraging fold expressions for simpler
+    code.
+
+
+    +   - Lambdas and asynchronous execution - What are the pitfalls of using lambdas
+    with threads async and parallel algorithms.
+
+
+    # C++20 Chapter
+
+
+    +   - Updates to the overloaded pattern - Even more simplification with more deduction
+    guides.
+
+
+    +   - Updates to Capturing a Parameter Pack - Better support for r-value references.'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: "# # Appendix B - Top Five Advantages of C++ Lambda Expressions 14\n\nI hope\
+    \ you enjoyed the book and learned a lot about lambda expressions. It\\appears\
+    \ that this powerful feature has become one of the most visible\ntrademarks of\
+    \ Modern C++. The evolution of lambdas is also tightly coupled\nwith improvements\
+    \ in the language and thus by reading this book, you’ve\nseen a lot of cool C++\
+    \ techniques.\n\nAs a summary for the book, let’s wrap up our knowledge and list\
+    \ a few\nbenefits of lambdas.\n\n# ## Lambdas Make Code More Readable\n\nThe first\
+    \ point might sound quite obvious, but it’s always good to appreciate\nt fact\
+    \ that since C++11, we’ve been able to write more compact code.\n\nFor example,\
+    \ in the chapter about C++98/03 we tried to decipher the\nfollowing code that\
+    \ used bind expressions and predefined helper functions\nfrom the Standard Library:\n\
+    \n> Functional Composition and std::bind . Live code @Compiler Explorer\n\n```\n\
+    #include <algorithm>\n#include <functional>\n#include <vector>\n\nint main ()\
+    \ {\n using std::placeholders::;\n const std::vector<int> v{1, 2, 3, 4, 5, 6,\
+    \ 7, 8, 9};\n const auto val = std::count_if(v.begin(), v.end(),\n std::bind(std::logical_and<bool>(),\n\
+    \ std::bind(std::greater<int>)(, 1, 2),\n std::bind(std::less_equal<int>)(, 1,\
+    \ 6));\n\n return val;\n}\n```\n\nYou can immediately tell what the final value\
+    \ of val is?\n\nLet’s now rewrite this into a lambda expression:"
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: "# Cleaner Syntax with Lambdas. Live code @Compiler Explorer\n\n```\n#include\
+    \ <algorithm>\n#include <vector>\n\nint main () {\n    const std::vector<int>\
+    \ v { 1, 2, 3, 4, 5, 6, 7, 8, 9 };\n    const auto val = std::count_if(v.begin(),\
+    \ v.end(),\n        [](int v) noexcept { return v > 2 && v <= 6; });\n\n    return\
+    \ val;\n}\n```\n\n# Isn't that better?\n\nNot only have we got shorter syntax\
+    \ for the anonymous function object, but we could reduce one include statement\
+    \ (as there's no need for <functional> any more).\n\nIn C++98/03, it was convenient\
+    \ to use predefined helpers to build callable objects on the fly. They were handy\
+    \ and even allowed you to compose functionalities to get some complex conditions\
+    \ or operations. However, the main issue is the hard-learn syntax. You can of\
+    \ course still use them, even with C++17 or C++20 code (and for places where the\
+    \ use of lambdas is not possible), but I guess that their application for complex\
+    \ scenarios is a bit limited now. In most cases, it's far easier to use lambdas.\n\
+    \nI bet you can list a lot of examples from your projects where applying lambda\
+    \ expressions made code much cleaner and easier to read.\n\nRegarding the readability,\
+    \ we also have another part: locality."
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: "# 2. Lambdas Improve Locality of the Code\n\nIn C++98/03, you had to create\
+    \ functions or functors that could be far away from the place where you passed\
+    \ them as callable objects.\n\nThis is hard to show on simple artificial examples,\
+    \ but you can imagine a large source file, with more than a thousand lines of\
+    \ code. The code organisation might cause functors to be located in one place\
+    \ of a file (for example on top). Then the use of a functor could be hundreds\
+    \ of lines further or earlier in the code, so if you wanted to see the definition\
+    \ of a functor you had to navigate to a completely different place in the file.\
+    \ Such jumping might slow your productivity.\n\n![](img/7cb35845bb98e3b897191af3bab607e2_118_0.png)\n\
+    \nWe should also add more topic to the first and the second point. Lambdas improve\
+    \ locality, readability, but there's also **the naming part** . Since lambdas\
+    \ are anonymous, there's no need for you to select the meaningful name for all\
+    \ of small functions or functors.\n\n# 3. Lambdas Allow Storing State Easily\n\
+    \nIn the C++11, we covered a simple example of modifying the default comparator\
+    \ for std::sort that we could count the number of invocations.\n\n> Capturing\
+    \ state. Live code @Compiler Explorer\n\n```\n#include <algorithm>\n#include <iostream>\n\
+    #include <vector>\n\nint main () {\n    std::vector< int> vec {0, 5, 2, 9, 7,\
+    \ 6, 1, 3, 4, 8};\n    size_t compCounter = 0;\n    std::sort(vec.begin(), vec.end(),\
+    \ [&compCounter](int a, int b) noexcept {\n        ++compCounter;\n        return\
+    \ a < b;\n    });\n```"
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "```\n}};\nstd::cout << \"number of comparisons: \" << compCounter << '\\\\\
+    n';\nfor (const auto & v : vec) {\nstd::cout << v << \",\";\n}\n```\n\nAs you\
+    \ can see, we can capture a local variable and then use it across all invocations\
+    \ of the binary comparator. Such behaviour is not possible with regular functions\
+    \ 15, but it's not straightforward with custom functions types. Lambdas make it\
+    \ very natural and also very convenient to use.\n\n# 4. Lambdas Allow Several\
+    \ Overloads in the Same Place\n\nThis is one of the coolest examples not just\
+    \ related to lambdas, but also to several major Modern C++ features (primarily\
+    \ available in C++17). We learned about this technique in the C++17 chapter, where\
+    \ we discussed the ability to inherit from several lambdas.\n\nHave a look:\n\n\
+    ```\nThe overloaded pattern. Line @Compiler Explorer\n\n#include <iostream>\n\
+    #include <string>\n#include <variant>\n\ntemplate <class...> struct overload :\
+    \ Ts... { using Ts::operator ()...; };\ntemplate <class...> Ts:: overload(Ts...)\
+    \ -> overload<Ts...>;\n\nint main() {\nstd::variant<int, float, std::string> intFloatString(\"\
+    Hello\");\nstd::visit(overload(\n    [](const int & i) { std::cout << \"int: \"\
+    \ << i; },\n    [](const float & f) { std::cout << \"float: \" << f; },\n    [](const\
+    \ std::string & s) { std::cout << \"string: \" << s; }\n), intFloatString);\n\
+    }\n);\n```\n\nThe above example is a handy approach to building a callable object\
+    \ with all possible overloads for variant types on the fly. The overloaded pattern\
+    \ is conceptually equivalent to the following structure:\n\n# The Visitor Structure\n\
+    \n```\nstruct PrintVisitor {\n    void operator()(const int & i) const { std::cout\
+    \ << \"int: \" << i; }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "```\nvoid operator () (float & f) const { cout << \"float: \" << f; }\nvoid\
+    \ operator () (const string& s) const { cout << \"str: \" << s; }\n};\n```\n\n\
+    Additionally, it's also possible to write a compact generic lambda for all types\
+    \ from a variant object. This can support runtime polymorphism based on std::variant.\n\
+    \nRuntime Polymorphism Based on std::variant/std::visit. Live code @Compiler Explorer\n\
+    #include <variant>\n\n```\nstruct Circle { void Draw() const { };\nstruct Square\
+    \ { void Draw() const { };\nstruct Triangle { void Draw() const { };\n\nint main()\
+    \ {\n  std::variant<Circle, Square, Triangle> shape;\n  shape = Triangle();\n\
+    \  const auto callDraw = [](auto & sh) { sh.Draw(); };\n  std::visit(callDraw,\
+    \ shape);\n}\n```\n\nThis technique is an alternative to runtime polymorphism\
+    \ based on virtual functions. Here we can work with unrelated types. There's no\
+    \ need for a common base class. You can read about this approach in my blog article:\
+    \ Runtime Polymorphism with std::variant and std::visit.\n\n# 5. Lambdas Get Better\
+    \ with Each Revision of C++\n\nHere's the list of major features related to lambdas\
+    \ that we got with C++ Standards after the initial release with C++11:\n\nC++14"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# C++17
+
+
+    +   - constexpr lambdas - in C++17 your lambdas can work in a constexpr context.
+
+    - Capturing this improvements - Before C++17 this pointer was captured only as
+    a pointer which might lead to dangling issues. In C++17 you can capture a copy
+    of the object represented by this*.
+
+    - Fold Expressions that can improve generic variadic lambdas.
+
+
+    # C++20
+
+
+    +   - Template lambdas - improvements to generic lambdas which offer more control
+    over the input template argument.
+
+    - Lambdas and concepts - Lambdas can also work with constrained auto and Concepts,
+    they are as flexible as functors as template functions.
+
+    - Lambdas in unevaluated contexts - you can now create a map or a set and use
+    a lambda as a predicate.'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '# # References
+
+
+    +   - C++11 - [expr.prim.lambda]
+
+    - C++14 - [expr.prim.lambda]
+
+    - C++17 - [expr.prim.lambda]
+
+    - Lambda expressions - cppreference.com
+
+    - C++ compiler support - cppreference.com
+
+    - Effective Modern C++:42 Specific Ways to Improve Your Use of C++11 and C++14
+    1st Edition by Scott Meyers, see @Amazon.com
+
+    - Microsoft Docs - Lambda Expressions in C++
+
+    - Sticky Bits - Demystifying C++ lambdas
+
+    - The View from Aristia: Lambdas vs. Closures
+
+    - Simon Brand - Passing overload sets to functions
+
+    - Jason Turner - C++ Weekly - Ep 128 - C++20''s Template Syntax For Lambdas
+
+    - Jason Turner - C++ Weekly - Ep 41 - C++17''s constexpr Lambda Support
+
+    - Stack Overflow: c++ - Recursive lambda functions in C++11
+
+    - Pedro Melendez: Recursive lambdas in C++(14)
+
+    - Scott Meyers Standard C++ - Universal References in C++11
+
+    - Standard C++: Quick Q: Why can noexcept generate faster code than throw()?'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# Notes
+
+
+    **1** You can use globals or static variables in a regular function, but it''s
+    not the best solution. Such an approach makes it hard to control the state across
+    many groups of lambda inversions.
+
+
+    **2** bindist , bind2nd and other functional helpers were deprecated in C++11
+    and removed in C++17. The code in this chapter uses them to illustrate C++98/03
+    issues. Please use some modern alternatives in your projects. [C++14 chapter for
+    more information](#)
+
+
+    **3** “Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and
+    C++14” by Scott Myers, 2014
+
+
+    **4** std::function is required in C++11 as there''s no return type deduction
+    for regular functions. This limitation is lifted in C++14.
+
+
+    **5** Thanks to Tomek for finding the correct link!
+
+
+    **6** You can read more about universal references in this article by Scott Meyers:
+    [Universal References in C++11](#)
+
+
+    **7** I used val vague name on purpose, so its meaning is not clear.
+
+
+    **8** . For more information and proposals on how to improve the syntax, can read
+    this blog post [Passing overload sets to functions](#)
+
+
+    **9** We discussed assigning to std::function in the [“The Type of a Lambda Expression”](#)
+    in the C++11 chapter.
+
+
+    **10** See [Quick Q: Why can noexcept generate faster code than throw()](#)'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: 'Standard C++.
+
+
+    11 See in the C++11 Chapter - Capturing a Class
+
+
+    12 To capture *this , the class has to be copyable. You can''t use *this to capture
+    a move-only class.
+
+
+    13 std::thread::hardware_concurrency() is a static member function which returns
+    the number of concurrent threads supported by the implementation. Usually, it
+    might be several hardware threads on a given system. On Wandbox it''s 3, Coliru
+    reports 4.
+
+
+    14 this appendix is based on a blog article available at https://www.bfilipek.com/2020/05/lambdasadvantages.html
+
+
+    15 You can use globals or static variables in a regular function, but it''s not
+    the best solution.'
+  merge: -1
+  img_proc: true
