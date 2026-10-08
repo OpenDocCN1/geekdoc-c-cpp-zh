@@ -1,0 +1,7 @@
+to modulate one axis and the quad phase output to modulate the other axis. This produces a motion that varies from elliptical to perfectly circular, depending on the amplitude of the two modulation components, as shown in Figure 11.13. You might remember using a phasor (a rotating point in space) to generate sine and cosine functions in your math or physics classes. This is the opposite idea—here, the sine and cosine functions are used to generate the rotating point.
+
+This kind of modulation creates a rotor—term that Klaus Piehl coined in 1998 when he created the "Rotor Module" for the Scope DSP Library. According to John Bowen, Piehl got the idea for the term rotor from the Winkel rotary engine. It creates a modulated sound with a defined cyclical nature. Moog calls this modulation an orbit in the AniMoog vector app. We will use the two terms interchangeably; our projects will have a rotor that allows you to adjust the orbit-X and orbit-Y depths. If you modify your LFO to allow an adjustable phase relationship between the two outputs, you can create any kind of angled ellipse, such as Lissajous patterns. If you modulated the output amplitudes of the LFO with another LFO, you could create an orbit that varies from ellipse extreme to circular, as shown in Figure 11.14.
+
+![](bbox=[0.183, 0.301, 0.802, 0.775])
+
+Figure 11.12A LFO modulates the x coordinate of the joystick at (a) 50% depth and (b) 100% depth.

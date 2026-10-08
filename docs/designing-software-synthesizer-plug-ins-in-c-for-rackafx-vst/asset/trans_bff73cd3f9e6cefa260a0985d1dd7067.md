@@ -1,0 +1,239 @@
+
+
+```
+virtual OSStatus
+GetPropertyInfo()
+```
+
+```
+virtual OSStatus
+GetProperty()
+```
+
+```
+virtual OSStatus
+SetProperty()
+```
+
+首次调用将触发你的 `GetPropertyInfo()` 函数来查看你支持哪些额外的属性。我们将通过对以下属性返回 `noErr` 来响应：
+
+```
+kAudioUnitProperty_CocoaUI
+```
+
+由于我们支持 Cocoa GUI，因此我们需要对你的查询回答 `noErr`。
+
+在 `GetPropertyInfo()` 之后，宿主机将对我们回复 `noErr` 的项目调用 `GetProperty()`。在这个函数中，你必须回复宿主机可以检索并保存/维护你 GUI 的信息。完美实现此函数至关重要，否则即使你的代码编译正常，你的 GUI 也不会显示。
+
+## 处理 MIDI 事件的函数：
+
+类似于 RackAF 的插件基类，`AUInstrumentBase` 的设计是自动为最常见的消息调用一组 MIDI 消息。我们将实现其中的每一个函数，并且对所有它们都感兴趣。这些都是 `AUInstrumentBase` 或其一个基类 `AUMIDIBase` 的覆盖方法。
+
+```
+virtual OSStatus
+StartNote()
+```
+
+```
+virtual OSStatus
+StopNote()
+```
+
+```
+virtual OSStatus
+HandlePitchWheel()
+```
+
+```
+virtual OSStatus
+HandleControlChange()
+```
+
+```
+OSStatus
+HandleMidiEvent()
+```
+
+前四个函数相当自而易懂；它们处理 MIDI 音符开启、音符关闭、音高弯和连续控制器变化。第五个函数是你处理其他任何内容的地方。我们将使用它来处理程序更改（program change）和触后（aftertouch）消息。
+
+`AUSynth.h` 文件的最后一部分包含几个私有成员变量。我们将在 3-12 章详细讨论这些变量。对于 MiniSynth，这些是：
+
+合成器的多音通过维护一个音器对象指针数组来实现。所有合成器的该数组都命名为 `m_pVoiceArray`。区别在于它们持有的指针类型；在这种情况下，该数组持有 `CMiniSynth` 指针。下面定义的三个函数用于处理音器的时间顺序。`update()` 函数用于更新所有合成器变量。随着章节的推进行，我们将进入剩余变量的细节。
+
+```
+CMiniSynth* m_pVoiceArray[MAX_VOICES];
+void incrementVoiceTimestamps();
+CMiniSynth* getDestVoice();
+CMiniSynth* getDestVoiceWithNote(UINT uMIDNote);
+// --- 同时更新所有音器
+void update();
+
+// --- 用于滑音
+double m_dLastNoteFrequency;
+
+// --- 我们的接收通道
+UINT m_uMidiRxChannel;
+```
+
+## 2.40 实现 AUSynth 对象
+
+打开 `AUSynth.cpp` 文件并检查其内容。该文件对于每个合成器几乎相同。在文件的最顶部，你会看到预设名称的定义。我们将利用它在调用 `GetPresets()` 函数期间告诉宿主机关于我们的预设名称。
+
+接下来的代码对于插件的操作至关重要：
+
+```
+static const int numPresets = 1;
+static AUSPreset presetNames[numPresets] = {
+
+// --- (索引, 预设名称)
+// 使用逗号添加更多项
+
+// (0, CFSTR("Factory Preset")),
+// (1, CFSTR("Another Preset")) <-- 此处不再有逗号
+(0, CFSTR("Factory Preset"))
+};
+```
+
+AUDCOMPONENT_ENTRY (AUMusicDeviceFactory, AUSynth)
+
+这是进入动态链接库的入口。这行代码对于所有合成器都是相同的。语法为：
+
+AUDCOMPONENT_ENTRY (AUMusicDeviceFactory, ).
+
+构造函数：
+
+构造函数初始化插件和或多个预设：
+
+- 调用基类 `CreateElements()` 创建输入和输出端口
+- 初始化我们唯一的预设
+- 为 GUI 设置我们的全局参数（控件）
+- 创建音器对象并加载音器指针数组
+
+在构造函数的 `AUInstrumentBase` 部分，末尾的两个参数是输入和输出的数量；我们没有输入但有一个输出。输出可以是多通道的，我们将支持单声道立体声。使用我们的参数数量作为参数调用 `UseIndexedParameters()` 来设置我们的云存储。然后，调用 `SetParameter()` 创建参数骨架。
+
+```
+AUSynth::AUSynth(AudioUnitinComponentInstance)
+: AUInstrumentBase(inComponentInstance, 0, 1)
+```
+
+```
+  // --- 创建输入、输出端口、组和部分
+  CreateElements();
+```
+
+```
+// --- 定义参数（控件）的数量
+Globals()->->UseIndexedParameters(NUMBER_OF_SYNTH_PARAMETERS);
+```
+
+```
+// // 在这里初始化控件！
+// // 这些在 SynthParamList.h 中定义
+Globals()->->SetParameter(NOISE_OSC_AMP_DB
+```
+
+```
+// 在这里完成初始化
+m_dLastNoteFrequency = -1.0;
+```
+
+```
+// 在所有通道上接字
+m_uMidiRxChannel = MIDI_CH_ALL;
+```
+
+```
+// 加载音器
+// 细节见后续章节
+}
+```
+
+析构函数：
+
+在析构函数中，我们只需删除所有音器。如果有任何需要预处理的操作，会在破坏之前调用 `CleanUp()` 函数。该函数的基类版本也是空的。
+
+## Reset()
+
+在 `Reset()` 函数中，你调用基类函数，然后可选地杀死任何可能正在播放的笔记。基类会填充名称（你可以忽略第二个参数，它是用于释放名称字符串的）。然后我们设置单位。对于字符串列表控件，单位是：
+
+```
+ComponentResult AUSynth::Reset(AudioUnitScope, AudioInputElement)
+{
+    AUInstrumentBase::Reset(scope, Element);
+    // --- 所有音符
+    for(int i=0; i<MAX_VOICES; i++) {
+        CMiniSynth* pVoice = m_pVoiceArray[i];
+
+        if (pVoice) {
+            // --- 关闭
+            pVoice->noteOff();
+        }
+    }
+    return noErr;
+}
+```
+
+## Initialize()
+
+在 `Initialize()` 函数中，你调用基类函数，然后可选地杀死任何可能正在播放的笔记。基类函数识别参数是对对数的（我们将其用于滤波器截止频率）还是字符串列表。字符串列表使用逗号分隔的字符串来向用户显示一组选择。
+
+```
+ComponentResult AUSynth::Initialize()
+{
+    AUInstrumentBase::Initialize();
+
+    // 清空
+    m_dLastNoteFrequency = -1.0;
+
+    // --- 初始化
+    // 非常重要
+    for(int i=0; i<MAX_VOICES; i++)
+    {
+        m_VoiceArray[i]->preparePlay();
+    }
+
+    return noErr;
+}
+```
+
+## SetParameterInfo()
+
+为了减少代码，我们创建了一个名为 `SetParameterInfo()` 的辅助函数，用于设置参数名称、单位、最小值、最大值和默认值。`AudioParameter` 结构体包含给定参数的属性。我们的参数可能是读或可写的，因此我们设置了这些标志。
+
+```
+void setsetAUParameterInfo(AudioUnitParameterInfo& outParameterInfo,
+CFStringRef paramName,
+CFStringRef paramUnits,
+Float32 fMinValue,
+Float32 fMaxValue,
+Float32 fDefaultValue,
+bool bLogControl,
+bool bStringListControl)
+{
+ // --- 设置标志
+outParameterInfo.flags = kAudioUnitParameterFlag_IsWritable;
+outParameterInfo.flags += kAudioUnitParameterFlag_IsReadable;
+
+ // --- 设置名称
+AUBase::FillInParameterName(outParameterInfo, paramName, false);
+
+ // --- 设置单位
+if(bStringListControl)
+outParameterInfo.unit = kAudioUnitParameterUnit_Indexed;
+else
+{
+outParameterInfo.unit = kAudioUnitParameterUnit_CustomUnit;
+outParameterInfo.unitName = paramUnits;
+}
+
+ // 是否为对数控制？
+if(bLogControl)
+outParameterInfo.flags += kAudioUnitParameterFlag_DisplayLogarithmic;
+
+ // --- 设置最小、最大、默认值
+outParameterInfo.minValue = fMinValue;
+outParameterInfo.maxValue = fMaxValue;
+outParameterInfo.defaultValue = fDefaultValue;
+}
+```
+

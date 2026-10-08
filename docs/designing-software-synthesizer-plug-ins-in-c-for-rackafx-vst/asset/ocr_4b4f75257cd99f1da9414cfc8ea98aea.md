@@ -1,0 +1,11 @@
+follow this paradigm. The control block consists of the MIDI keyboard, GUI and other signals that are used for controlling the digital audio engine and articulation blocks. Figure 1.8 shows this block diagram for the synth in Figure 1.7 (b).
+
+# 1.7 Fundamental Goals of Synth Patch Design
+
+Musical taste is subjective. What constitutes a good or bad musical sound, note or event is likewise subjective. Notwithstanding the various musical tastes and preferences, from studying both musical instruments and the human ear/brain connection, we can learn to fashion a fundamental statement about musical expression objectives—keep the listener engaged to the note events that occur. This really means keeps the ears engaged. Our ears are transient-sensitive transducers. Transient sounds pique our ear/brain's curiosity, whereas steady sounds quickly fade away into the background. Perhaps this is evolutionary—a hunter walking through the freezes when he hears the crack of a nearby branch indicating the potential for food collection or the possibility of becoming something else's. But the hunter automatically ignores the steady stream of bird chirping or the sound of wind
+
+Figure 1.7: (a) A design with pitch, filter and amp EGs. (b) A single EG can modulate all three destinations.
+
+rustling the leaves, unless the chirping suddenly stops—a transient event that signals something out of the ordinary. So, our ear/brain connection is more sensitive to things that change, not things that stay the same. In this case, it's the time domain amplitude that is changing—the sound of the broken branch or the sudden stop in bird chirping. Our ears are interested in sounds with a changing time domain amplitude envelope. Think about other musical instruments like piano, guitar or cello—these produce sounds with specific amplitude envelopes. All three can be made to have a fast transient edge at the note onset (called the transient attack). The piano and guitar produces that fade away quickly whereas the cello can sustain a note for as long as the musician desires.
+
+![](bbox=[0.608, 0.333, 0.952, 0.928])

@@ -1,0 +1,1 @@
+The first thing you do in all of the MIDI functions is to test the MIDI channel to make sure you are capable of receiving messages on it. This code is essentially identical for all functions.

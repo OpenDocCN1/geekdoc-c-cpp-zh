@@ -1,0 +1,299 @@
+
+更容易测试诸如归零（Reset-To-Zero）模式等功能。在本节中，我们的目标是用尽可能少的代码添加多音功能。
+
+**代码列表 8.6：调制矩阵更新 I**
+
+```cpp
+if(m_uVelocityToAttackScaling -- 1)
+    m_GlobalModMatrix.enableMatrixRow(SOURCE_VELOCITY,
+    DEST_ALL_EG_ATTACK_SCALING,
+    true);
+else
+    m_GlobalModMatrix.enableMatrixRow(SOURCE_VELOCITY,
+    DEST_ALL_EG_ATTACK_SCALING,
+    false);
+if(m_uNoteNumberToDecayScaling -- 1)
+    m_GlobalModMatrix.enableMatrixRow(SOURCE_MIDI_NOTE_NUM,
+    DEST_ALL_EG_DECAY_SCALING,
+    true);
+else
+    m_GlobalModMatrix.enableMatrixRow(SOURCE_MIDI_NOTE_NUM,
+    DEST_ALL_EG_DECAY_SCALING,
+    false);
+```
+
+<< 结束 ** 代码列表 8.6：调制矩阵更新 I ** 结束 >>
+
+我们发现插件代码正变得越来越复杂，插件对象也在不断增长。插件对于底层合成器的了解过于深入，但目前没关系，因为这样写代码更简单。在下一章中，我们将退后一步，思考如何精简操作。
+
+NanoSynth 的核心包含一组构成单个合成器音色的对象：
+
+- QBLimitedOscillators 1 和 2
+- EnvelopeGenerator（包络生成器）
+- CMoogLadderFilter（梯形滤波器）
+- CLFO
+- CDCA
+- CModulationMatrix（每个矩阵都必须有自己的速度、音符等）
+
+```cpp
+class CNanoSynth : public CPlugin
+public:
+    <SNIP SNIP SNIP>
+    double m_dFilterRange; //
+    double m_doscFoPitchBendModRange;
+    double m_dAmpModRange;
+    void update();
+
+etc...
+```
+
+# CNanoSynth::CNanoSynth()
+
+```cpp
+<SNIP SNIP SNIP>
+```
+
+```cpp
+// --- 初始化调制范围
+m_d05cFoModRange = OSC_FO_MOD_RANGE;
+m_dFilterModRange = FILTER_FC_MOD_RANGE;
+m_d05cFPitchBendModRange = OSC_PITCHBEND_MOD_RANGE;
+m_dAmpModRange = AMP_MOD_RANGE;
+```
+
+```cpp
+<SNIP SNIP SNIP>
+```
+
+```cpp
+// 音符编号 -> 滤波器 Fc 控制
+pRow = createModMatrixRow(SOURCE_MIDI_NOTE_NUM,
+DEST_ALL_FILTER_KEYTRACK,
+&m_dFilterKeyTrackIntensity,
+&m_dDefaultModRange,
+TRANSFORM_NOTE_NUMBER_TO_FREQUENCY,
+true);
+```
+
+```cpp
+m_GlobalModMatrix.addModMatrixRow(pRow);
+```
+
+> << 在此处插入 ** 代码列表 8.4：矩阵路由 II ** >>
+
+```cpp
+m_LF01.m_uModDestOutput1 = SOURCE_LF01;
+m_LF01.m_uModDestOutput2 = SOURCE_LF01;
+```
+
+> << 插入 ** 代码列表 8.5：矩阵连接 II ** >>
+
+```cpp
+} // 构造函数结束
+```
+
+一组合成器组件的集合。它们精确的接线构成了一个补丁（patch）。一个音色可以将其组件连接起来形成许多不同的补丁。
+
+在某些合成器中，多音性是根据振荡器定义的；某些补丁可能会使用更多振荡器，而另减少多音性。对于我们的合成器，多音性定义为同时播放的最大音色数；某些合成器的音色使用的资源较少，可以实现更大的最大多音性。
+
+实现多音性有不同的方法，但由于我们处理的是 C/C++，一种方案是将合成器核心对象放入一个合成器音色结构体中：
+
+```cpp
+A bool __stdcall cNanoSynth::prepareForPlay()
+```
+
+```cpp
+<SNIP SNIP SNIP>
+```
+
+```cpp
+update();
+```
+
+```cpp
+// --- 默认开启音量并将全位于中间
+m_GlobalModMatrix.m_dSources[SOURCE_MIDI_VOLUME_CC07] = 127;
+m_GlobalModMatrix.m_dSources[SOURCE_MIDI_PAN_CC10] = 64;
+```
+
+```cpp
+return true;
+```
+
+```cpp
+bool __stdcall cNanoSynth::midiOn(UINT uChannel, UINT uMIDNote, UINT uVelocity)
+```
+
+```cpp
+// 测试通道/忽略
+if(m_uidiRxChannel != MIDI_CH_ALL && uChannel != m_uidiRxChannel)
+return false;
+```
+
+```cpp
+<SNIP SNIP SNIP>
+```
+
+```cpp
+// --- 在调制矩阵中为滤波器跟踪设置音符编号
+m_ModulationMatrix.m_dSources[SOURCE_MIDI_NOTE_NUM] = uMIDNote;
+```
+
+```cpp
+// --- 速度路由
+m_GlobalModMatrix.m_dSources[SOURCE_VELOCITY] = uVelocity;
+```
+
+```cpp
+return true;
+```
+
+```cpp
+bool __stdcall cNanoSynth::midiPitchBend(UINT uChannel, int ActualPitchValue, float fNormalizedPitchValue)
+```
+
+```cpp
+<SNIP SNIP SNIP>
+```
+
+```cpp
+// --- 发送到矩阵
+m_GlobalModMatrix.m_dSources[SOURCE_PITCHEND] = fNormalizedPitchValue;
+return true;
+```
+
+```cpp
+bool __stdcall cNanoSynth::midiMessage(unsigned char cChannel, unsigned char cStatus, unsigned char cData, unsigned char cData2)
+```
+
+```cpp
+<SNIP SNIP SNIP>
+```
+
+```cpp
+switch(cStatus)
+```
+
+```cpp
+<SNIP SNIP SNIP>
+```
+
+这使得更改音色限制变得容易，我们可以添加如下：
+
+```cpp
+#define MAX_VOICES 2
+```
+
+那么，在插件的 .h 文件，我们可以移除组件的固定静态声明，并用它们替换为 nanoSynth 结构体数组：
+
+```cpp
+nanoSynth m_Voices{MAX_VOICES};
+```
+
+现在我们有两个相同的音色结构体副本，每个副本都有自己的一组对象。你将看到多音版本几乎完全相同，区别在于我们更新和处理的是音色数组，而不是处理单组对象。
+
+# 共享全局矩阵
+
+你已经看到单声道 NanoSynth 如何在插件中共享它唯一的矩阵，以便插件在发生 MIDI 事件时可以进行更改。单声道 NanoSynth 共享其插件中独一无二的矩阵，以便插件在发生 MIDI 事件时进行更改。单声道 NanoSynth 共享其插件中独一无二的矩阵，以便插件在发生 MIDI 事件时可以进行更改。单声道 NanoSynth 共享其插件中独一无二的矩阵，以便插件在发生 MIDI 事件时可以进行更改。单声道 NanoSynth 共享其插件中独一无二的矩阵，以便插件在发生 MIDI 事件时可以进行更改。单声道 NanoSynth 共享其插件中独一无二的矩阵，以便插件在发生 MIDI 事件时可以进行更改。单声道 NanoSynth 共享其插件中独一无二的矩阵，以便插件在发生 MIDI 事件时可以进行更改。单声道 NanoSynth 共享其插件中独一无二的矩阵，以便插件在发生 MIDI 事件时可以进行更改。
+
+```。
+
+```cpp
+case CONTROL_CHANGE:
+    switch(cData)
+        case VOLUME_CC07:
+            // 逻辑在这里
+            // 发送到矩阵
+            m_GlobalModMatrix.m_dSources[SOURCE_MIDI_VOLUME_CC07] = (UINT)cData;
+            break;
+        case PAN_CC10:
+            // 逻辑在这里
+            // 发送到矩阵
+            m_GlobalModMatrix.m_dSources[SOURCE_MIDI_PAN_CC10] = (UINT)cData;
+            break;
+        case EXPRESSION_CC11:
+            // 尚未实现
+            break;
+        case SUSTAIN_PEDAL:
+            // 逻辑在这里
+            // 发送到矩阵
+            m_GlobalModMatrix.m_dSources[SOURCE_SUSTAIN_PEDAL] = (UINT)cData;
+            break;
+```
+
+这种方法在音色之间共享核心。由于对象拥有 `getMatrixCore()` 和 `setMatrixCore()` 方法，这种方法是简单的。
+
+另一个我们需要处理的是音色窃用（voice-stealing）。如果玩家连续三个三个符，但我们只能渲染两个，我们需要停止一个正在播放的音色并窃用它播放新的音符。这同时也让我们测试 EG 的关机模式。为了尽可能简单，我们需要数组来存储新被窃用的音符编号和速度，当 EG 遍历时。
+
+```cpp
+void CNanoSynth::update()
+```
+
+```cpp
+<SNIP SNIP SNIP>
+```
+
+```cpp
+// -- 调制矩阵设置
+```
+
+```cpp
+if(m_uFilterTrack == 1) 
+```
+
+```cpp
+m_GlobalModMatrix.enableMatrixRow(SOURCE_MIDI_NOTE_NUM, DEST_ALL_FILTER_KEYTRACK, true);
+```
+
+else
+
+```cpp
+m_GlobalModMatrix.enableMatrixRow(SOURCE_MIDI_NOTE_NUM, DEST_ALL_FILTER_KEYTRACK, false);
+```
+
+关闭操作。我们将稍后讨论细节，但现在你需要将此添加到插件中
+
+# << 插入 ** 代码列表 8.6：调制矩阵更新 I ** >>
+
+```cpp
+class Processor : public AudioEffect
+```
+
+```cpp
+(
+```
+
+```cpp
+public:
+```
+
+```cpp
+<SNIP SNIP SNIP>
+```
+
+我们与数组中的每个音色共享核心。循环中的最后一条将挂起的音符设置为 -1，这有效地清空了数组。此外，如果你将代码与上版本的 NanoSynth 进行比较，区别在于对象现在属于 `m_Voices` 数组而不是孤立存在。
+
+```cpp
+// NS MM2
+```
+
+```cpp
+UINT m_uVelocityToAttackScaling:
+```
+
+```cpp
+UINT m_uNumberToDecayScaling:
+```
+
+```cpp
+double m_dOscfPitchBendModRange:
+```
+
+```cpp
+double m_dAmpModRange:
+```
+
+图 8.11：插件与合成器矩阵共享全局调制矩阵；只有核心是共享的，而不是源和目标数组。
+
+等...
+

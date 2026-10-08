@@ -1,0 +1,10 @@
+| DCA.h | Oscillator.h |
+| DCA.cpp | Oscillator.cpp |
+| EnvelopeGenerator.h | WTOscillator.h |
+| EnvelopeGenerator.cpp | WTOscillator.cpp |
+| Filter.h | synthfunctions.h |
+| Filter.cpp | Voice.h |
+| LFO.h | Voice.cpp |
+| LFO.cpp | Optional: |
+| ModulationMatrix.h | QBLimOscillator.h |
+| ModulationMatrix.cpp | QBLimOscillator.cpp |
