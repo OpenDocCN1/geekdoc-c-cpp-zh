@@ -1,0 +1,36 @@
+# Getting back to the Main ( ) event
+
+If you've followed along with us so far, you're set up for the good part, back in Main(). The CreateList() method is used to return an unsorted list, which is stored in the array students.
+
+You might think it necessary to cast the array of students into an array of comparableObjects so that you can pass the students to Array's Sort() method:
+
+```
+IComparable<Student[]> comparables = (IComparable<Student>)students;
+```
+
+But not so, Sort() sees that the array passed consists of objects that implement Icomparable<something> and simply calls CompareTo() on each Student object to sort them. Great, he?
+
+The sorted array of Student objects is then passed to the locally defined DisplayArray() method. DisplayArray() uses foreach to iterate through an array of objects that implement a Display() method guaranteed by the objects' having implemented IDisable. In the loop, it calls Display() on each object and displays the result to the console using WriteLine().
+
+The program in Main() continues by sorting and displaying birds! I think we can agree that birds have nothing to do with students. The same Sort() and DisplayArray() methods work on Bird as Student.
+
+Sorting the list of students
+Lisa : 100
+Marge : 85
+Bart : 50
+Maggio : 30
+Homer : 0
+
+Sorting the list of birds
+Bluejay
+Cardinal
+Finch
+Hawk
+Oriole
+Robin
+Sparrow
+Press Enter to terminate...
+
+# Unifying Class Hierarchies
+
+8-1 shows the Robot and Animal hierarchies. Some, but not all, of the classes in each hierarchy not only inherit from the base classes, Robot or Animal, but also implement the IPet interface (not all animals are pets, you see), as shown in the following code — I skipped lots of details:

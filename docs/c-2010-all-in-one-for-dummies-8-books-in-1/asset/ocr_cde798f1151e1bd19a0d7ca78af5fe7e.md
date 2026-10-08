@@ -1,0 +1,32 @@
+# Inheritance and the Constructor 299
+
+```
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Creating a BaseClass object");
+        BaseClass bc = new BaseClass();
+        Console.WriteLine("\n creating a SubClass object");
+        SubClass sc = new SubClass();
+        // Wait for user to acknowledge.
+        Console.WriteLine("Press Enter to terminate...\
+```
+
+The constructors for BaseClass and SubClass do nothing more than output a message to the command line. Creating the BaseClass object invokes the default BaseClass constructor. Creating a SubClass object invokes the BaseClass constructor before invoking its own constructor.
+
+Here’s the output from this program:
+
+```
+Creating a BaseClass object
+Constructing BaseClass
+
+Now creating a SubClass object
+Constructing BaseClass
+Constructing SubClass
+Press Enter to terminate...
+```
+
+A hierarchy of inherited classes is much like the floor layout of a building. Each class is built on the classes it extends, as upper floors build on lower ones, and for a reason: Each class is responsible for itself. A subclass shouldn't be held responsible for initializing the members of the base class. The BaseClass must be given the opportunity to construct its members before the SubClass members are given a chance to access them. You want the horse out in front of the cart.
+
+![](bbox=[0.133, 0.733, 0.198, 0.813])

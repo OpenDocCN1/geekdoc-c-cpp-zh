@@ -1,0 +1,61 @@
+# 238 HavingArgumentsAndDisplay
+
+```
+// AverageAndDisplay -- Average two numbers with their
+// labels and display the results.
+public static void AverageAndDisplay(string s1, double d1,
+                               string s2, double d2)
+{
+    double average = (d1 + d2) / 2;
+    Console.WriteLine("The average of " + s1
+                                     "" whose value is " + d1
+                                     "" and " + s2
+                                     "" whose value is " + d2
+                                     "" is " + average + "");
+}
+```
+
+Executing this simple program generates output:
+
+The average of grade 1 whose value is 3.5 and grade 2 whose value is 4 is 3.75
+Press Enter to terminate...
+
+The method AverageAndDisplay() is declared with several parameters in
+t order in which arguments are to be passed to them.
+
+As usual, the sample program begins with the first statement
+at Main(). The first noncomment line in Main() invokes the method
+AverageAndDisplay(), passing the two strings "grade 1"
+and "grade 2" and the two double values 3.5 and 4.0.
+
+The method AverageAndDisplay() calculates the average of the two
+double values, d1 and d2, passed to along with their names contained in
+s1 and s2, and the calculated average is stored in average.
+
+> Changing the value of an argument inside the method can lead to confusion\and errors, so be wise and assign the value to a temporary variable and
+modify it instead.
+
+![](bbox=[0.143, 0.606, 0.228, 0.673])
+
+# Matching argument definitions with usage
+
+Each argument in a method call must match the method definition in both
+type and order if you call them without naming them. The following (illegal)
+example generates a build-time error:
+
+```
+// WithCompilerError -- This version does not compile!
+using System;
+namespace Example
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            // Access the member method.
+            AverageAndDisplay("grade 1", "grade 2", 3.5, 4.0);
+        }
+    }
+```
+
+![](bbox=[0.143, 0.773, 0.228, 0.839])

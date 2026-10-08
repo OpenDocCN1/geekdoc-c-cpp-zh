@@ -1,0 +1,333 @@
+
+# Index 829
+
+- purpose, 417
+- sample database schema, 419–420
+- visual tools, 425–428
+- writing data code
+  - basic, 429–431
+  - output of visual tools, 428–429
+- System.Data.Common namespace, 417
+- System.Data.ODb namespace, 417
+- System.Data.Oracle namespace, 417
+- System.Data.SqlClient namespace, 417
+- System.Data.SqlTypes namespace, 417
+- System.Drawing namespace
+  - brushes, 471
+  - drawing board, 476–478
+  - getting started, 473–475
+  - graphics, 470
+  - pens, 470–472
+  - setting up property, 475–476
+  - text, 471–472
+- System.Drawing.2D namespace, 469
+- System.Drawing.Imaging namespace, 469
+- System.Drawing.Text namespace, 469
+- System.IO namespace, 436, 453–454
+- System.Net. namespace
+  - checking network status, 459–460
+  - downloading from internet, 460–462
+  - e-mailing status report, 462–465
+  - functions, 458
+  - logging network activity, 465–468
+  - overview, 456
+- System.Security, 412–413
+- System.Web namespace, 416
+- System.Web.Forms.Control.CreateGraphics method, Windows Forms application, 470
+- System.Windows namespace, 416
+- System.Windows.Forms.Control.CreateGraphics method, 473
+
+# T
+
+- <T> notation, collections syntax, 123
+- T4. See Text Template Transformation Toolkit (T4)
+- Tab character (\t), 35
+- Table Options drop-down list, Visual Studio, 420–426
+- tables, displaying to user, 663–664
+- TabPanel layout control, 569
+- Tabs panel, Visual Studio, 520
+- tempering, 403
+- Tasks window, Visual Studio, 514
+- Team Foundation Server, 483
+- Team System version, Visual Studio, 483–484
+- Technical Stuff icon, 66
+- template directive, T4, 540
+- templates, hacking, 527–530
+- temporary variable, ordering events, 373
+- ternary (?:) operator, 90
+- Test Project, 494
+- testing
+  - Web applications, 711–712
+  - WPF command pattern, 610–611
+- text
+  - creating template, from, 537–539
+  - input controls, 666–666
+  - System.Drawing namespace, 471–472
+  - text box, New Project dialog box, 489
+- Text Template Transformation Toolkit (T4)
+  - building code based on outside data, 536
+  - directives
+    - assembly, 541
+    - import, 541
+    - include, 540
+    - output, 539–540
+    - template, 540
+  - DSL Tools, 534
+    - overview, 533–534
+    - replacing repetitive coding, 535
+  - templates. See Text Template Transformation Toolkit (T4)
+- TextBlock control, 571
+- TextBox, 589
+- TextBox input control, 572
+- TextReader class, 436
+- TextWriter class, 436
+- this keyword
+  - defined, 254–255
+  - overview, 253–254
+  - when explicit, 255–257
+  - working without, 257–259
+- throw keyword, 187–188
+- throwing exceptions, 192
+- tight coupling, 183–184
+- Tip Icon, 305
+- TKey class, 126
+- ToArray() method, 125
+- ToToString() method, SimpleSavingsAccount program, 290
+- Boolean() method, 56
+- ToDecimal() method, Calculate Interest program, 88
+- // TODO: comment, 450
+- To() method, 56
+- ToFloat() method, 56
+- ToLower() method, 53
+- ToString() method, 259
+- ToolbarOverflow layout panel, 570
+- Toolbar layout panel, 569
+- Toolbox. Visual Studio 
+  - overview, 22, 505–506
+  - reusing code, 23–24
+  - saving code, 23
+- Tools menu, Visual Studio, 514–515
+- Tools/Options box, 537
+- TopQueue() utility method, PriorityQueue class, 182
+- ToString() method, 43, 70, 194, 321–322
+- ToUpper() method
+  - converting string cases, 52–53
+  - overview, 47–48
+  - uppercasing first characters, 70–71
+- tracing stack, 195–196
+- TraceDownAMate.com, matching expression types at, 80–83
+- transforming templates
+  - setting up environment
+    - changing security settings, 536–537
+    - creating template from file, 537–539
+  - Text Template Transformation Toolkit (T4) 
+    - building code based on outside data, 536
+    - directives, 539–540
+    - DSL Tools, 534
+    - overview, 533–534
+    - replacing repetitive coding, 535
+  - Warnings As Errors section, build pane, 312–313
+- TreeView control, XAML, 576
+- tree-selector, New Project dialog box, 488
+- Trim() method
+  - AlignOut program, 62
+  - controlling string output manually, 61–62
+  - white space, 55
+- TrimEnd() method, 56
+- TrimFront() method, 56
+- trimming white space, 55–56
+- try block
+  - exceptions, 189
+  - file I/O activity, 441
+  - StreamReader class, 450
+- try keyword, 187–188
+- Value class, 126–127
+- TwoWay binding mode
+  - defined, 581
+  - editing data, 586
+  - with INotifyPropertyChanged interface, 588
+- type-safety, generics, 170–171
+- typing, dynamic, 770–772
+
+![](img/36596fb11aa4233d5cab0d6ddd1d82e8_855_0.png)
+
+# Index 831
+
+# u
+
+- UICommands, 605–606
+- UIElements, 556
+- uint integer, 28
+- ULong integer, 28
+- UML (Unified Modeling Language), 322–323
+- unary (--) operator, 74
+- unboxed value-type, 170
+- underscore _, 257
+- Unicode characters, 141
+- Unicode file format, 438
+- Unified Factoring Theory, 327
+- Unified Modeling Language, 322–323
+- Uniform Grid Panel, WPF, 561–562
+- union operation, 130
+- union(()) method, 131
+- unit testing, 610
+- UnmanagedMemoryStream class, 454
+- unreachable memory, 305
+- UpdateSource interface, 251
+- Union class, 457
+- usable interfaces concept, object-oriented programming, 211
+- user controls, 680–683
+- users, 241. See also client; input
+- UseDel() method, 306
+- ushort integer, 28
+- using statement, stringwriting, 445–448
+- Values property, dictionaries, 128
+- value-type variables, declaring
+- bool type, 34
+- calculating leap years, 38–40
+- cast, 41–42
+- character types, 34–36
+- comparing string and char, 37–38
+- decimal type, 32–33
+- declaring numeric constants, 40
+- floating-point variables, 29–32
+- int: 26–28
+- leaving compiler data types, 42–43
+- overview, 25–26
+- representing functions, 28–29
+- value type, 36–37
+- var keyword, 430–121, 128
+- viability, declaring value-type
+- variable-length array, 112–114
+- variableArray program, 112–114
+- declaring inside loop, 103
+- pointing to different objects, 222
+- variance, 2, 796
+- ValidatingData interface, 591
+- ValidatingOnChange interface, 591
+- validating data, WPF, 589–592
+- value variable types, 36–37
+- Variant data types, 43
+- VCR Bar, Visual Studio, 426–427
+
+# 832 C# 2010 All-in-One For Dummies
+
+- VehicleAndMotor sample, 223–224
+- VehicleOnly program, 218–220
+- vertical split, WPF designer, 397
+- Vertical Stack Panel, 557–558
+- VerticalContentAlignment property, 565
+- View controller, modeling, 655–657
+- ViewModel, WPF, Business Layer (BL), 615
+- Custom keyword, 621–623
+- model, 619–621
+- model unit tests, 617–638
+- Data Access Layer (DAL), 613
+- importance of, 612–613
+- Model, 614
+- virtual keyword, 330
+- methods, 321
+- Virtual PC, 487
+- VirtualizingStackPanel layout, 570
+- visibility, namespace, 395–396
+- Visio 2007 Add-in project, 493
+- Vissides, John, 601
+- Visual Basic Express, 383
+- Visual C# Expression, 482–483
+- Visual C# version, 14-2010, 374
+- custom handler, 375
+- customizing project types, 527–532
+- setting options, 518–521
+- using snippets, 521–526
+- implementing interface, 336
+- installing, 486–487
+- New Project dialog box, 395
+- categories, 491–494
+- New Project dialog box, 488–489
+- solutions and, 489
+- start-up project, 381
+- Task window, 450
+- Team System, 402
+- testing Web applications, 711–712
+- unit testing framework, 386
+- Express, 482–483
+- features, 485–486
+- Microsoft Developer Network (MSDN), 484–485
+- Professional, 483–484
+- additional file types, 652–651
+- coding in Code View, 647–651
+- working in designer, 642–647
+- visual tools, 428–429
+- System.Data namespace, 425–428
+- Visual Web Developer (VWD), 483
+- void keyword, 244
+- void methods, 133, 244–245
+- client file, 526
+- vsi file, 526
+- WWD (Visual Web Developer), 783
+- Wagner, Bill, 350
+- Warning icon, 6
+- WCF. See Windows Foundation (WCF)
+- WCF Service Application project, 492
+- WCF Service Configuration tool, Visual Studio, 515
+- WCF Service Library project, 493
+- Web application, breaking down 630–632
+- developing with style, building in n-tier, 655–656
+- coding behind, 652–653
+- modeling View Controller, 655–657
+- scripting, 653–655
+- testing with Visual Studio, 711–712
+- additional files, 651–652
+- coding in Code, 647–651
+- designer, 642–647
+- Web class, 457
+- Web construction, deployment
+- Copy Web design surface, 714–715
+- options, 713–714
+- Package/Publish, 715–716
+- managing files, 708
+- reviewing file types, 706–707
+- reviewing project types, 704–706
+- Master Pages
+  - adding content, 710–711
+  - making master page, 709–710
+  - testing Web applications with Visual Studio, 711–712
+- Web Development with ASP.NET, 6
+- Web forms applications
+  - best practices for securing, 411–412
+  - overview, 408–409
+  - script entity,
+    - overview, 410
+    - preventing, 410–411
+- SQL Injection attacks
+  - overview, 409
+  - preventing, 410
+- Web Forms designer, 499
+- Web projects, Visual Studio, 488, 492
+- Web servers
+  - PostBack, 636–639
+  - state, 639
+- Web services
+  - building service-oriented applications, 726–728
+  - building with ASMX
+    - coding code for SHARP, 739–740
+  - consuming services in applications, 743–744
+  - creating new service, 735–738
+  - deploying, 741–742
+  - overview, 731–732
+  - SOAP, 732–735
+  - building with REST, 759–763
+  - changing WCF service to use REST, 762–765
+  - getting to know REST, 759–760
+  - understanding guiding principles of REST, 760–761
+  - building with WCF
+    - breaking down, 748–750
+    - configuring, 752–556
+    - consuming, 757–758
+    - deploying, 756–757
+    - making registration service, 750–752
+    - overview, 745–747
+    - providing XML Web services, 728–729
+    - sample apps, 728–729
+
+![](img/36596fb11aa4233d5cab0d6ddd1d82e8_857_0.png)

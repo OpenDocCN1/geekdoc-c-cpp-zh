@@ -1,0 +1,9 @@
+# 398 Putting Classes into Namespaces
+
+![](bbox=[0.148, 0.107, 0.219, 0.178])
+
+Normally, Sort and Test would be in different C# source files that you build together into one program.
+
+The method Test_Main() can reference the Sort class without specifying the namespace because the two classes are in the same namespace. However, Main() must specify the Paint namespace when referring to PaintColor, as in the call to Paint.PaintColor.StaticPaint(). This process is known as fully qualifying the name.
+
+Notice that you don't need to take any special steps when referring to black.Paint(), because the class of the black object is specified, namespace and all, in the black declaration.

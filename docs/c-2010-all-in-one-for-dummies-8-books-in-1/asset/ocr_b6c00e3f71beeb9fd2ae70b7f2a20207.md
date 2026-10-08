@@ -1,0 +1,17 @@
+# 498 Designing in the Designer
+
+Some people like the code. Some people like the designer. Some people (like) prefer a strange mixture of the two. You determine how you want to use the tools.
+
+# Windows Forms
+
+The main difference between the Windows Forms designer and the WPF designer is the lack of a code panel in Windows Forms. Although there is code (of sorts) backing up Windows Forms, you don't get to edit it. So there.
+
+The topic of Windows Forms isn't covered in this book. Though it's still an active development platform, I had to make the tough call to cover WPF instead. It performs the same programming duties as Windows Forms but is the newer technology. The Windows Forms designer is shown in Figure 2-2.
+
+In truth, there is little to say about the Windows Forms designer itself. The individual controls have some nice designer features, but the designer itself doesn't much.
+
+It should be said, though, that I don't much with Windows Forms in this book. First, this isn't a Windows programming book; it is a C# book. Second, Windows Forms is on its way out. WPF is the future of Windows programming. Windows Forms is just for backward compatibility.
+
+![](bbox=[0.25, 0.552, 0.861, 0.933])
+
+Figure 2-2: The Windows Forms designer.

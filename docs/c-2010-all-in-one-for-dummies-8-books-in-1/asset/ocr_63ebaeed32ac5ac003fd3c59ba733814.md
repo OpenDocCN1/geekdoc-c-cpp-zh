@@ -1,0 +1,31 @@
+# Styling Your Controls
+
+When you have the data in your controls, you need to get the control looking a certain way. There are a lot of options here. All the controls with properties that can be set at design time and at runtime, or bound to cascading-style sheets (CSS).
+
+Being able to style is necessary; being able to manage the styles at runtime with C# is near magic. Using a combination of the three methods makes it possible to create dynamic applications that give the user the best experiences.
+
+# Styling control properties
+
+By far, the simplest way to style on a control is to use the built-in properties. It is straightforward, you know exactly what you are applying a look to, and IntelliSense helps you do so.
+
+Notice I didn't say it was the “best” way to styles. I said it with the simplest.
+
+Setting control properties has a host of problems. If you have more than one control to set up, you have the properties on each of them —even if they are the same. The runtime has a load of extra stuff. Also, it makes your code messy.
+
+Sometimes, you need to set a style this way. The best way to see all is to check the Properties panel. Set it to Categorized, and look the bottom, as shown in Figure 3-7. If you actually set properties here, you will be in the markup like the below example, not the code-behind, but you can find the names you need.
+
+```
+<asp:GridView ID="GridView1" runat="server"
+onselectedchanged="GridView1_SelectedIndexChanged"
+<RowStyle BackColor="#FF6666" />
+```
+
+After you get the name of something you want to set, you just set it like any other property:
+
+```
+GridView1.RowStyle.BackColor = System.Drawing.Color.Red;
+```
+
+The roughest part is discovering what framework element that the style will want as a value. The easiest way to determine this is to type the part to the left of the equal sign, and then mouse over the property to see how it is declared. BackColor, for instance, requires a System.Drawing.Color element. When I discovered that, I knew where to go to get the value.
+
+![](bbox=[0.865, 0.318, 0.965, 0.545])
