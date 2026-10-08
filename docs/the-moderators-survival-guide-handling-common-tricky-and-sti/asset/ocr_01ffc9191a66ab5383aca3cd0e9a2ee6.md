@@ -1,0 +1,5 @@
+# AUTHOR BIOS
+
+**Donna Tedesco** is a senior user experience researcher with over 10 years of user research experience. She has published and presented at local, national, and international conferences, and is coauthor with Bill Albert and Tom Tullis of the book *Beyond the Usability Lab: Conducting Large-Scale Online User Experience Studies*. Donna received a B.S. in engineering psychology/human factors from Tufts University School of Engineering, and an M.S. in human factors in information design from Bentley University.
+
+**Fiona Tranquada** is a senior usability consultant with over 10 years of user research experience. She has published and presented at local and national conferences and is an active board member for the Boston chapter of the User Experience Professionals Association (UXPA). Fiona received a B.A. in professional writing and creative writing from Carnegie Mellon, and an M.S. in human factors in information design from Bentley University.

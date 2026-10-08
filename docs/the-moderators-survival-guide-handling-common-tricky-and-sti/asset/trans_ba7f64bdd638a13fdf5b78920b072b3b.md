@@ -1,0 +1,277 @@
+
+
+## 参考文献
+
+Boren, M., & Ramey, J. (2000). Thinking Aloud: Reconciling theory and practice. IEEE Transactions on Professional Communication, 43(3), 261–278.
+
+Dumas, J. S., & Loring, B. A. (2008). Moderating Usability Tests: Principles and Practices for Interacting. Boston: Morgan Kaufmann.
+
+Loring, B., and Patel, M. (2001). Handling awkward usability testing sessions. Proceedings of the Human Factors Society, 45th Annual Meeting. The Human Factors Society, Santa Monica, CA.
+
+Macefield, R. (2007). Usability studies and the Hawthorne Effect. Journal of Usability Studies. Retrieved from http://www.upassoc.org/upa_publications/jus/2007may/hawthorne-effect.pdf.
+
+检索于 2013年4月17日
+
+Rubin, J. and Chisnell, D. (2008). Handbook of Usability Testing: In: How to Plan, Design, and Conduct Effective Tests (2nd ed.). Indianapolis, Wiley Pub.
+
+Schumacher, R. M. (2010). The Handbook of Global User Research. Boston: Elsevier.
+
+Sharon, T. (2012). It’s Our Research: Getting Stakeholder Buy-in for User Experience Research Projects. Boston: Morgan Kaufmann.
+
+Snyder, C. (2003). Paper Prototyping: The Fast and Easy Way to Design and Refine Interfaces. San Francisco: Morgan Kaufmann.
+
+Sun Tzu. (n.d.). The Art of War. Retrieved April 17, 2013, from http://suntzusaid.com/.
+
+## 索引
+
+注：页码后的“f”表示图表；“t”表示表格；“b”表示框。
+
+### A
+
+- 感谢标记 15–16
+- 熟人 240, 241
+- 调整研究方法 53, 54
+- 焦虑和烦躁的参与者
+- 在产品可用性方面 210b, 211
+- 在原型功能有限方面 201b, 202
+- 在你中立的角色方面 204
+- 协助 46b, 109, 118
+- 直接协助 110
+- 字典协助 47b, 110, 180, 293
+- 模糊协助 110
+- 权威，气场 14
+
+### D
+
+- 危险环境 271b, 272, 273
+- 数据完整性 13, 57
+- 防御性观察者 164
+- 歧视性评论 237, 238
+- 退出参与者 51–52, 51f
+- 分心的参与者 49, 195, 220, 221
+- 分心的远程观察者 168
+- 转为活泼风格 18t–19t, 20, 142
+- 挂断 131, 132
+- 醉酒/吸毒的参与者 267b, 268
+
+### B
+
+- 备用参与者 65, 155, 285, 286
+- 身体语言 30
+- 主持者的 30, 39, 49–52
+- 参与者的 34t
+- 任务中断 26, 26t, 33, 52–53
+- 建立参与感 49–50; 50f
+- 按教科书风格 17, 18–19t
+
+### E
+
+- 尴尬情况 22b, 227b
+- 鼓励参与者 64
+- 提前结束活动 54–55
+- 同理心 14
+- 设备，熟悉程度 70, 71
+- 伦理责任 16, 32b–33b, 55–57, 229
+- 外部情况，导致参与者分心。见 分心的参与者 (Distracted participants)
+
+### C
+
+- 儿童 96, 97
+- 澄清任务/问题 44–45
+- 舒适 13, 29, 32–35, 34t
+- 补偿 35, 284, 288
+- 会室 86, 87
+- 同意书 32b–33b, 82, 287
+- 控制，关于 38–39
+- 创意 14
+- 文化习俗与禁忌 292
+- 咒骂 237b
+
+### F
+
+- 设施 231b, 292
+- 火警 257b, 258
+- 首次点击 188
+- 首次参与者 203
+- 灵活性 14
+- 调情 244b, 245
+- 灵活参与者 65, 155, 285, 286
+- 焦点，转移。见 重新聚焦 (Refocus the research)
+- 焦点小组，参与者认为 79, 80
+- 友好风格 17, 18t–19t
+
+### G
+
+- 主持方法，告知观察者 293
+- 目标（研究目标）12, 57
+- 现场规则，观察者 294–295
+- 主持风格 17, 18t–19t
+- 适应 20, 20f
+- 主持模式 43
+- 选择模式
+
+### H
+
+- 听力困难 186b
+- 幽默 55–57
+- 运动控制困难 261
+
+### N – O
+
+- 感觉 247, 248
+- 使用 238
+- 自然灾害 259b, 260
+- 负面反馈
+- 没有 116
+- 不情愿提供 103
+- 新主持人 21b, 299
+- 紧张和不安的参与者 33b, 34b, 84, 207b, 208, 229
+- 无故缺席的参与者 161, 162
+- 笔记 81, 106
+- 记录行为 31, 51
+- 观察者 315–316
+- 防御性的 164
+- 远程分心的 168
+- 现场规则：294–295
+- 干扰
+- 大声且心躁的参与者 156, 157
+- 远程活动 163, 165
+- 预期 293–295
+- 承担责任 44
+- 攻击行为 237
+- 组织，保护 12
+- 掩盖 242b, 243
+
+### I
+
+- 健康/不适的参与者 262, 263b, 264
+- 非法活动 273b, 274
+- 即兴发挥 15b
+- 激励。见 补偿 (Compensation)
+- 好奇心 372, 18t–19t
+- 侮辱参与者 204
+- 中断
+- 面对 167, 168
+- 观察者 163–165
+- 远程 167, 170
+- 内部员工参与者 284, 285
+- 互联网连接 129, 130
+- 无关细节 127, 178b
+
+### J – L
+
+- 职位面试，参与者认为 95
+- 语言和语气 36, 38, 37t
+- 迟到的参与者 153, 154
+- 生命威胁情况，见 危险环境 (Dangerous environment)
+- 网站/应用程序 289
+- 大声且心躁的参与者 156, 157
+- 低识字率参与者 72, 73
+
+### P
+
+- 平，见 语言和语气 (Language and tone)
+- 参与者预期 284
+- 模式，见 主持 (Moderation)
+- 电话响声 292, 295
+- 物理属性 225, 226
+- 物理显示 231b, 232
+- 试点活动 189
+- 练习活动 301–302
+- 借口 27b, 55, 238
+- 保留 93, 201
+- 优先级 188–286
+- 产品准备 289
+- 原型更改 133
+- 原型/产品 134
+
+### M
+
+- 导师 301
+- 恶作剧 65
+- 主持技能提升 300
+- 问题行为 29, 19t, 55
+- 故事 303
+
+### Q
+
+- 问卷 286
+- 特质 13
+
+- 设置复杂度 290
+- 转移焦点。见 重新定向焦点 (Redirect focus)
+- 生病参与者。见 健康/不适的参与者 (Ill/unwell participant)
+- 实地考察 315
+- 技能提升，主持 306–307
+- 练习参与者 300
+
+### R
+
+- 读写困难。见 低识字率参与者 (Low-literacy participants)
+- 安抚参与者 47–49, 48b
+- 记录 81
+- 参与者的顾虑 82
+- 设置 91, 92
+- 招募备用/灵活参与者 65
+- 招募确认 80, 89, 97, 252, 284
+- 招募标准 64, 63
+- 招募要求 64, 65
+- 引导 45–47, 47u, 176
+- 重新聚焦焦点 53–54, 218
+- 远程参与者 187
+- 预演 128
+- 屏幕共享软件 27
+- 重定位 269
+- 参与者权利，保护 32b–33b
+- 活动主持人，活动 13–15
+- 耗尽 188b
+
+- 缓慢且小心的参与者 182b, 183
+- 挣扎 190b, 191
+- 风格。见 主持风格 (Moderating styles)
+
+### T
+
+- 离题 175
+- 任务
+- 识别和排序
+- 高优先级 286
+- 相互依赖 118
+- 无法完成 111
+
+- 技术障碍
+- 列表 126
+- 互联网连接 129, 130
+- 远程参与者
+- 挂断 131, 132
+- 屏幕共享软件 27
+- 排除指导 128
+- 屏幕录屏软件 125b
+- 处理 29b
+
+- 出声思考，鼓励 107, 108
+- 语气 238, 302。另见 语言和语气 (Language and tone)。
+- 触摸 270
+- 排除技能 133, 29b
+
+### S
+
+- 安全语句 292
+- 安全，物理 28
+- 屏幕录屏软件 125b
+- 筛选器。见 招募筛选器 (Recruiting screener)
+- 自愈参与者 144b, 145
+- 自反思 299b
+- 幽默感 14
+- 辅助动物 231b, 232
+
+### U – Z
+
+- 意外答案 180b, 181
+- 不舒服参与者 33, 34t
+- 不愉快的气味 265b, 266
+- 不情愿/不定的参与者 148b, 149, 200
+- 不安的参与者。见 紧张和不安的参与者 (Nervous and upset)
+- 参与者
+- 模糊回答 184b, 185
+
