@@ -1,0 +1,2 @@
++   [Visual Studio 2010 和 .NET 4 六合一：Visual Studio, .NET, ASP.NET, VB.NET, C# 和 F#](README.md)
++   [Visual Studio 2010 和 .NET 4 六合一：Visual Studio, .NET, ASP.NET, VB.NET, C# 和 F#](visual-studio-2010-and-net-4-six-in-one-visual-studio-net-as.md)

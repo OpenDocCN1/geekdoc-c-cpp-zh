@@ -1,0 +1,164 @@
+
+
+Global.asax 文件中 `Application_Start` 方法中的代码在 Dynamic Data Web 应用程序启动时会调用 `RegisterRoutes`，如下所示：
+
+```cs
+void Application_Start(object sender, EventArgs e) {
+    RegisterRoutes(RouteTable.Routes);
+}
+```
+
+`DynamicDataRoute` 实例（System.Web.DynamicDataRoute）代表由 ASP Dynamic Data 使用的路由。
+
+## 自定义 Dynamic Data 的 URL 路由
+
+你可以更改默认 URL 路由。你可以通过编辑之前显示的 `RegisterRoutes` 方法行，或者替换动态数据路由的模式来实现。如果你希望路由显示操作名称后跟跟表名，以下代码将产生如表 17-2 所示的结果。
+
+```
+routes.Add(new DynamicDataRoute("{action}/{table}.aspx*")) {
+    Constraints = new RouteDictionary(new action =
+        "List|Details|Edit|Insert" });
+    Model = DefaultModel
+});
+```
+
+**表 17-2：** Game 表操作的相对 URL
+
+| 操作 | 相对 URL |
+|---|---|
+| 创建 (插入新记录) | Insert/Games.aspx |
+| 更新 (编辑现有记录) | Edit/Games.aspx?GameId=GameIdToEdit |
+| 查看详情 | Details/Games.aspx?GameId=GameIdToView |
+| 列表 (显示表中的所有记录) | List/Games.aspx |
+
+Dynamic Data 模板提供的另一种替代方案是组合模式页面（combined-mode page），即单个页面执行列表、详情、插入和更新任务。要启用此功能，请注释掉之前添加动态路由的行，并取消独立页面模式部分路由定义的注释。列表 17-1 显示了 `RegisterRoutes` 方法中的结果代码，它定义了两个带有表的动态路由，随后是 `ListDetails.aspx` 页面以及每个新 `DynamicDataRoute` 实例的后续操作：
+
+- PageAction.List
+- PageAction.Details
+
+### 列表 17-1：Global.asax 文件中的组合页面模式代码
+
+![](img/b5597c749e848b27b0d305153ae16106_763_0.png)
+
+```cs
+public static void RegisterRoute(RouteCollection routes) {
+    DefaultModel.RegisterContext(typeof(RetroGamesDataContext),
+        new ContextConfiguration() { ScaffoldAllTables =
+            true; });
+    // 原有的 URL 路由
+    routes.Add(new DynamicDataRoute("{table}/{action.aspx",
+        // Constraints = new RouteValueDictionary(new action =
+            "ListDetails|Edit|Insert"),
+        // Model = DefaultModel
+    ));
+
+    // 自定义的 URL 路由
+    routes.Add(new DynamicDataRoute("{table}/table.aspx",
+{
+        Constraints = new RouteValueDictionary(new action =
+            "ListDetails|Edit|Insert"),
+        // Model = DefaultModel
+    }));
+}
+```
+
+```cs
+// 组合页面模式
+routes.Add(new DynamicDataRoute("{table}/ListDetails.aspx",
+{
+    Action = PageAction.List,
+    ViewName = "ListDetails",
+    Model = DefaultModel
+});
+```
+
+```cs
+routes.Add(new DynamicDataRoute("{table}/ListDetails.aspx",
+{
+    Action = PageAction.Details,
+    ViewName = "ListDetails",
+    Model = DefaultModel
+});
+```
+
+> 代码文件 |RetroGamesWeb1/Global.asax| 可在 Wrox.com 下载
+
+在进行上述更改后，所有操作均在同一个 URL http://localhost:2952/RetroGamesWeb1/Games/ListDetails.aspx 上运行。
+
+注意 `ListDetails` 是 `List`（列表）和 `Details`（详情）的组合。模板页面与之前用例中使用的 List 模板不同。
+
+## 在同一页面上执行 CRUD 操作
+
+Dynamic Data 网站的行为会有所不同，因为 CRUD 操作在同一页面上运行。因此，有一个新的选择可以选择活动记录，并且不同的按钮提供了不同的操作。
+
+按照以下步骤显示 Game 表的数据并测试 Dynamic Data 网站的新行为：
+
+1. 在浏览器中显示 `Default.aspx` 页面。
+2. 点击“My tables”下的 `Games` 超链接（Game 表）。现在，浏览器将显示页面，允许你执行来自 http://localhost:2952/RetroGamesWeb1/Games/ListDetails.aspx 的选表表的操作。第一行以黄色背景显示，选定记录的视图将出现在页面底部。左侧将提供每个记录的三个操作——编辑（Edit）、删除（Delete）和选择（Select）。因为选定记录的视图已经可见，所以不需要 Details（详情）按钮。如表 17-12 所示，选定记录的底部还会出现三个按钮——编辑、删除和新建（New）。
+
+| Name | ReleaseDate |
+|---|---|
+| Edit Delete DONKEY KONG | 11/21/1983 12:00:00 AM |
+| Edit Select GALAGA 84 | 1/1/1984 12:00:00 AM |
+| Edit Delete INVADERS | 1/1/1982 12:00:00 AM |
+| Edit Select WONDERBOY | 12/23/1982 12:00:00 AM |
+
+| Name | DONKEY KONG |
+|---|---|
+| ReleaseDate 11/21/1983 12:00:00 AM |
+
+3. 点击另一行的 Select 按钮。相应的记录以黄色背景出现，其详细视图将出现在页面底部。这是通过调用显示表数据的 GridView 控件的 JavaScript postback 实现的：
+
+```javascript
+javascript__doPostBack('ct100$Content1$GridView','Select$1')
+```
+
+4. 点击行之一左侧的 Edit 按钮。网格将启用记录原地编辑并提供更新（Update）和取消（Cancel）按钮，如表 17-13 所示。
+
+| Edit Delete Select | Name | ReleaseDate |
+|---|---|---|
+| | DONKEY KONG | 11/21/1983 12:00:00 AM |
+| Update Cancel | GALAGA 84 | 1/1/1984 12:00:00 AM |
+
+5. 点击页面底部的 Edit 按钮。这通过详细视图启用字段的地编辑，如表 17-14 所示。
+
+| Edit Delete Select | Name | ReleaseDate |
+|---|---|---|
+| | DONKEY KONG | 11/21/1983 12:00:00 AM |
+| Update Cancel | GALAGA 84 | 1/1/1984 12:00:00 AM |
+| Update Cancel | INVADERS | 1/1/1982 12:00:00 AM |
+| Update Cancel | WONDERBOY | 12/23/1982 12:00:00 AM |
+
+图 17-14：通过详细视图更新字段
+
+## 创建主从表关系的应用程序
+
+到此为止，你已经学习了单表的 Dynamic Data。在深入研究 Dynamic Data 模板之前，让我们转向具有许多关系的更复杂的数据模型。图 17-15 显示了新表的结构：
+
+- GameCategory
+- Player
+- PlayerScore
+
+此外，Game 有一个布尔字段 `Played` 和一个代表与 GameCategory 多对一关系的 `GameCategoryId`。
+
+![](img/b5597c749e848b27b0d305153ae16106_766_0.png)
+
+图 17-15：新表的结构
+
+每个游戏必须有一个类别。每当玩家玩一次游戏时，五个表都是 RetroGames SQL Server 2008 数据库的新版本。你可以创建一个类似结构的新数据库来运行此示例。目标是在 Dynamic Data 网站中使用具有许多关系的数据模型。
+
+按照之前描述的步骤创建一个新的 ASP.NET Dynamic Data LINQ to SQL 网站。使用 RetroGames2 作为解决方案的名称。记得添加数据模型并注册数据上下文。O/R 设计器的左面板将显示五个实体及其关系，如图 17-16 所示。
+
+![](img/b5597c749e848b27b0d305153ae16106_767_0.png)
+
+图 17-16：实体及其关系
+
+## 从多个相关表中过滤数据
+
+与之前的数据库一样，你只是对模板提供的代码进行了非常小的更改。然而，在这种情况下，Dynamic Data 必须许多许多关系以提供真正实用的 CRUD 操作和脚架行为。
+
+按照以下步骤显示来自不同相关表的数据并测试更复杂的 Dynamic Data 数据库提供的默认过滤器：
+
+1. 在浏览器中显示 `Default.aspx` 页面。它将显示数据模型中可用表的列表——在这种情况下，是五个表，如图 17-17 所示。
+2. 点击“My tables”下的 `Games` 超链接（Game 表）。现在，浏览器将显示 `Games/List.aspx` 页面，显示选表的数据。在这种情况下，它还显示了 GameCategory 的名称以及每行的“查看 PlayerScores”按钮。因为 `Played` 字段是布尔类型（SQL Server 中的 `bit`），它使用复选框来显示其值。此外，它显示了两个组合框 `Played` 和 `GameCategory`，如图 17-18 所示。
+

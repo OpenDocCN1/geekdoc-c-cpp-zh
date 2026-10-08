@@ -1,0 +1,15 @@
++   Visual C++ — With the ascension of .NET, there were still many development areas with native (Win32 API) Windows development rules (for example, device driver implementation). Visual C++ provided this capability. Besides, Visual C++ was able to interoperate with managed code, and additional grammatical and .NET extensions (Managed Extensions for C++) allowing compiling code targeting the .NET Common Language Runtime-time (CLR).
+
++   Visual J# — This language was considered as a replacement for Visual J+. This language had a Java syntax. It could build applications targeting the .NET Framework's CL. Now having a competing platform over Java, after replacing J+, Microsoft no longer created any running language on the JVM.
+
+.NET Framework's Class Library was introduced as a common infrastructure for developers, making it easy and natural to solve common tasks such as using data and Web services. Visual Studio .NET provided a rich set of built-in tools to leverage the infrastructure provided by the framework. The IDE was designed with extensibility in mind, and allowed developers to integrate their own tools into the IDE.
+
+A bit more than a year after Visual Studio.NET was released, a new version, Visual Studio .NET 2003, was shipped with .NET Framework 1.1. Microsoft had to work to stabilize the framework, and, of course, of critical bugs were fixed. A few things (such as the security model) were also changed, and new features were added to the framework (such as built-in support for building mobile applications, IPv6 support, and built-in data access from ODBC and Oracle databases). Also, the CLR became more stable from version 1.0 to 1.1.
+
+Visual Studio.NET (the one released with .NET 1.0) was not able to compile applications for the new CLR version, so the 2003 version was to to undertake this task. Thanks to the robustness and stability of Visual Studio .NET 2003, it became very popular, and is in use because of the large number of business applications developed for .NET 1.1.
+
+# VISUAL STUDIO 2005
+
+Released in November 2005, Visual Studio 2005, together with .NET Framework 2.0, brought fundamental changes to the tool, as well as to the languages. The Common Type System (CTS) of the framework introduced generic types. This concept affected all languages, because they must be prepared to handle the feature of generics, and development tools also needed to encapsulate support for this. The shift of CTS also enabled ASP.NET and AD.NET.
+
+Web application development had some pain in the former Visual Studio versions. Developers had to install and use Internet Information Server (IIS) locally on their machines, and it meant confrontation with system administrators who did not want have IIS on desktops for security reasons. Visual Studio 2005 installed a local Web server on desktops and resolved this situation.

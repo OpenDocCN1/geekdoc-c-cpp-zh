@@ -1,0 +1,11 @@
+# TABLE 18-5: ActionResult Derived Classes
+
+| TYPE | DESCRIPTION |
+| --- | --- |
+| EmptyResult | This class represents a result instructing the controller to take no action. Returning an EmptyResult.Instance from your action is like returning a null from a method. In this case, nothing will be written into the HTTP response. You may have several reasons to use this type. For example, it can be a result of a security-related action where you don't want to expose anything to the end user. |
+ UnauthorizedResult | This class represents the result of an unauthorized HTTP request. If you return a new instance of this class, it will end up in an HTTP status 401 message (which is the standard code for unauthorized access). Usually, the result is returned from a class implementing the IAuthorizationFilter interface. |
+| ContentResult | This class represents a user-defined content type that is the result of an action method. You can have arbitrary content and set it through the Content, ContentType, and Encoding properties. |
+| JavaScriptResult | The name of the class speaks itself, as it retrieves JavaScript content. You can use Script property to set the script to return. |
+| JsonResult | This class is suitable to serialize a .NET class for client-side consumption (for example, as a result of an Ajax call). With the properties this class provides, you can be in total control of how the data should be serialized to the client. This class has a property JsonRequestBehavior that, by default, denies the execution of an action for the HTTP GET verb. If you want to allow an action to return JavaScript Object Notation content for a GET request, you should set this property to JsonRequestBehavior.AllowGet. |
+| RedirectResult | This can be used to redirect the user to another URL at the end of the action. One of the examples is when you have finished editing a book selection and you're redirecting the user to the Book list view. |
+| RedirectToRouteResult | This result is similar to RedirectResult, but instead of a hard-coded URL, you can refer to one of the registered routes within the application. |
