@@ -1,0 +1,15 @@
+# CHAPTER 7 The Repetition Structure
+
+Figure 7-5 identifies the important components of the algorithm shown in Figure 7-4. With very rare exceptions, every loop has a condition and a loop body. In a pretest loop, the condition appears at the beginning of the loop. As mentioned earlier, the condition must be a Boolean value: true or false. The condition in Figure 7-5 evaluates to true when the sales amount is not equal to -1 and evaluates when it is equal to -1. Some loops, such as the one in Figure 7-5, require the user to enter a special value to end the loop. The values used to end loops are referred to as sentinel values. In the loop in Figure 7-5, the sentinel value is -1. The sentinel value should be one that is easily distinguishable from the valid data recognized by the program. The number 1000 would not be a good sentinel value for the loop in Figure 7-5, because is possible for a salesperson to sell $1,000 in product. -1, on the other hand, is a good sentinel value for the loop, the problem description states that the sales amount is always a positive number.
+
+Sentinel values are often referred to as trip values, because they release the loop from its task. They are called trailer values, because they are the last values entered before the loop ends.
+
+![](bbox=[0.312, 0.365, 0.866, 0.485])
+
+Figure 7-5 Components of the algorithm from Figure 7-4
+
+When a loop's condition evaluates to true, one or more instructions listed in the loop body are processed; otherwise, the loop body instructions are skipped. After each processing of the loop body instructions, the loop's condition is reevaluated to determine whether the instructions should be processed again. The loop body instructions are processed and the loop continues until the condition evaluates to false, at which time the loop ends and processing continues immediately. Keep in mind that, because the condition in a pretest loop is evaluated before the instructions within the loop body are processed, it is possible that the loop body instructions may not be processed at all. For example, if the payroll clerk at Miller Incorporated enters the number -1 as the first sales amount, the condition in Figure 7-5 will evaluate to false and the instructions in the loop will not be processed during that run of the program.
+
+Notice that the algorithm in Figure 7-5 contains two enter sales instructions. One of the instructions appears above the loop, and the other appears as the last instruction in the loop body. The enter sales instruction above is referred to as the priming read, because it is used to prime (prepare or set up) the loop. The priming read initializes the loop condition by providing its first value. In this case, the priming read gets only the first sales amount from the user. The first sales amount is compared to the sentinel value (-1) and determines whether the loop body instructions are processed at all. If the loop body instructions are processed, the enter sales instruction in the loop body gets the remaining sales amounts (if any)
+
+218

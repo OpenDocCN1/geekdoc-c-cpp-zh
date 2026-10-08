@@ -1,0 +1,15 @@
+# CHAPTER 1
+
+# An Introduction to Programming
+
+# Programming a Computer
+
+In essence, the word programming means giving a mechanism the directions to accomplish a task. If you are like most people, you've already programmed several mechanisms. For example, at one time or another, you probably programmed your digital video recorder (DVR) in order to schedule a timed-recording of a movie. You also may have programmed the speed dial feature on your cell phone. Or you may have programmed your coffee maker to begin the brewing process before you wake up in the morning. Like your DVR, phone and coffee maker, a computer is also a mechanism that can be programmed. The directions given to a computer are called programs or, more simply, programs. The people who write programs are called programmers. Programmers use a variety of special languages, called programming languages, communicate with the computer. Some popular programming languages are C++, Visual Basic, C#, and Java. In this book, you will use the C++ programming language.
+
+# The Programmer's Job
+
+When a company has a problem that requires a computer solution, typically it comes to rescue. The programmer might be an employee of the company; or he might be a freelance programmer, who is a who works on temporary contracts rather than long-term employ. First, the programmer meets with the user, who is the person (or persons) responsible for describing the problem. In many cases, this person or persons will also eventually use the solution. Depending on the complexity of the problem, multiple programmers may be involved, and they may need to meet with the user several times. The purpose of the initial meetings is to determine the exact problem and agree on the desired solution. After the programmer and user agree on the solution, the programmer begins converting the solution into a computer program. During the conversion phase, the programmer periodically meets with the user to determine whether the program fulfills the user's needs and to refine any details of the solution. When the user is satisfied that the program does what she wants, the programmer rigorously tests the program with sample data before releasing it to the user. In many cases, the programmer also provides the user with a manual that explains how to use the program. As this process indicates, the creation of a good computer solution to a problem—in other words, the creation of a good program—requires a great deal of interaction between the programmer and the user.
+
+# Do I Have What It To Be a Programmer?
+
+According to the 2008–09 Edition of the Occupational Outlook Handbook (OOH), published by the U.S. Department of Labor's Bureau of Statistics, "When hiring programmers, employers look for people with the necessary skills who can think logically and pay close attention to detail. Programming calls for patience, persistence, and the ability to work on exacting analytical work, especially under pressure. Ingenuity and creativity are also particularly important when programmers design solutions and test their work for potential failures. . . Because programmers are

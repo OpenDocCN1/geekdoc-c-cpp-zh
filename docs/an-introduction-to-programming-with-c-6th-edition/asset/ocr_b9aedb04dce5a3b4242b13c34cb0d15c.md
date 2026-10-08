@@ -1,0 +1,9 @@
+# One-Dimensional Arrays
+
+type. You年纪 one variable in a one-dimensional array from another variable in the same array using a unique number. The unique number, which is an integer, is called a subscript. The subscript indicates the variable's position in the array and is assigned by the computer when the array is created in memory. The first variable in a one-dimensional array is assigned a subscript of 0, the second a subscript of 1, and so on. You refer to each variable in an array by its name and the variable's subscript, which is specified in a set of square brackets in one-dimensional array named sales. To refer to the first variable in a one-dimensional array named sales, you use `sales[0]`—read `sales sub zero`. Similarly, to refer to the second variable in the array, you use `sales[1]`. If the sales array contains four variables, you refer to the fourth (and last) variable using `sales[3]`. Notice that the last subscript in an array is always one less than the total number of variables in the array; this is because array subscripts start at 0. Figure 11-1 illustrates the variables contained in the one-dimensional sales array using the storage analogy from Chapter 3. The age, rate, and charge variables included in the figure are scalar variables.
+
+![](bbox=[0.738, 0.318, 0.878, 0.353])
+
+![](bbox=[0.118, 0.403, 0.843, 0.818])
+
+Figure 11-2 shows the problem specification and IPO chart information for the XYZ Company's sales program, which uses an array to store the sales made in each of the company's four regions. (The flowchart for this program is contained in the Ch11Flowcharts.pdf file, which is located in the Cpp6\Chap11 folder.) The program allows the user to enter the sales amounts and

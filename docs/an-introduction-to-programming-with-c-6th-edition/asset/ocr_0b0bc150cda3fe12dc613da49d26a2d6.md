@@ -1,0 +1,9 @@
+# The Hypotenuse Program
+
+contained in the cmath library. Therefore, a program must contain the #include <cmath> directive in order to use the sqrt function. The directive tells the C++ compiler the location of the function. The sqrt function's syntax is shown in Figure 9-2. From Chapter 5 that an item within parentheses of a syntax—in this case—is called an argument; more specifically, it is called an actual argument. An actual argument represents information that the function needs to perform its task. The information is provided to the function when the function is invoked. Invoking a function is also referred to as calling a function. You call a function simply by including its name and actual arguments (if any) in a program. The sqrt function contains one actual argument (x), because it requires only one number: the square root that you want to find. The x argument must have either the double or float data type. Included in Figure 9-2 are examples of the sqrt function. (For clarity, the declaration statement included in Example 1 calls (invokes) the sqrt function, passing the double number 10.0. The function calculates the number square root and returns the answer to the assignment, which assigns the answer to the squareRoot variable. Similarly, the second statement in Example 2 calls the sqrt function, passing the double number stored in the num variable. The function calculates the number's square root and returns the answer to the cout statement which displays the answer on the computer screen.
+
+> Recall from Chapter 4 that #include directive provides a convenient way to use the source code from another file, without having to type the code.
+
+![](bbox=[0.118, 0.505, 0.656, 0.84])
+
+Figure 9-2 How to use the sqrt function

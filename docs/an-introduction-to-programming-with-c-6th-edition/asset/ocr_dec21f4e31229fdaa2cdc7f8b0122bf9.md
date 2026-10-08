@@ -1,0 +1,11 @@
+# Flowcharting a Pretest Loop
+
+from the user. This instruction is referred to as the update read, because it allows the user to update the value of the input item (in this case, the sales amount) that controls the looping condition. The update read is often an exact copy of the priming read. Keep in mind if you do not include the update read in the loop body, there will be no way to enter the sentinel value after the loop body instructions are processed the first time. This is because the priming read is processed once and gets only the first amount from the user. You will learn more about this in the section titled "The while Statement" later in the chapter.
+
+# Flowcharting a Pretest Loop
+
+Figure 7-6 shows the Miller Incorporated algorithm in flowchart form. Recall that all of a flowchart use the start/stop symbol, the rectangle is the process symbol, the parallelogram is the input/output symbol, and the diamond is the decision symbol. The diamond in Figure 7-6 indicates the beginning of a repetition structure. Like the diamond in a selection structure, the parallelogram structure contains a condition that evaluates to true or false. The condition determines whether the instructions within the loop body are processed. Like the diamond in a selection structure, the diamond has one flowline entering it and two flowlines leaving it. The two flowlines leading out of the diamond are marked with a "T" (for true) and an "F" (for false). The inline marked with a "T" leads to the loop body, which contains the instructions to be processed when the loop's condition evaluates to true. Notice that the flowline marked with an "F", on the other hand, leads to the instructions to be processed when the loop's condition evaluates to false. The flowline entering the diamond, along with the diamond and the symbols and flowlines within the true path, form a circle or loop. It is this loop (circle) that distinguishes the repetition structure from the selection structure in flowchart.
+
+![](bbox=[0.118, 0.638, 0.775, 0.883])
+
+Figure 7-6 Miller Incorporated algorithm shown in flowchart form

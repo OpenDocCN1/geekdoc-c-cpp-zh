@@ -1,0 +1,336 @@
+
+
+# 从顺序访问文件中读取信息
+
+与 `inEmploy` 对象相关。由于 `getline` 函数没有指定分隔符（`delimiterCharacter`），该函数在遇到换行符时停止读取。该函数将字符串存储在 `name` 变量中并消耗掉换行符。示例 4 中的 `getline(inEmploy, name = '#');` 从与 `inEmploy` 对象关联的文件读取一个字符串。然而，在这种情况下，`getline` 的分隔符 `delimiterCharacter` 表示字符串在 `#` 字符之前结束。在将字符串存储在 `name` 变量之后，`getline` 会消耗 `#` 字符。示例中的语句 `inEmploy >> salary;` 从文件中读取一个数字并将数字存储在 `salary` 变量中。
+
+593
+
+# 如何从顺序访问文件中读取数据
+
+读取数值和字符数据：`fileObject >> variableName;`
+读取字符串数据：`getline(fileObject, stringVariableName, delimiterCharacter);`
+
+# 示例 1
+
+```cpp
+int years = 0;
+double salary = 0.0;
+inFile >> years;
+inFile.ignore(1);
+inFile >> salary;
+```
+
+从与 `inFile` 对象关联的文件读取一个数字并将其存储在 `years` 变量中，忽略（消耗）一个字符，然后读取下一个数字并存储在 `salary` 变量中。
+
+# 示例 2
+
+```cpp
+char letter = ' ';
+inAlphabet >> letter;
+```
+
+从与 `inAlphabet` 对象关联的文件读取一个字符并将其存储在 `letter` 变量中。
+
+# 示例 3
+
+```cpp
+string name = "";
+getline(inEmploy, name);
+```
+
+从与 `inEmploy` 对象关联的文件读取一个字符串并存储在 `name` 变量中。
+
+# 示例 4
+
+```cpp
+string name = "";
+double salary = 0.0;
+getline(inEmploy, name, '#');
+inEmploy >> salary;
+```
+
+从与 `inEmploy` 对象关联的文件读取一个字符串并存储在 `name` 变量中，消耗 `#` 字符，然后从文件中读取一个数字并将其存储在 `salary` 变量中。
+
+图 14-8 如何从顺序访问文件中读取数据
+
+# 第 14 章 顺序访问文件
+
+小型测验（Mini-Quiz）题目的答案位于附录 A。
+
+# 小型测验 14-2
+
+1. 当 `open` 函数失败时，`is_open` 函数返回什么值？
+2. 下列哪个语句将 `quantity` 变量的内容写入 `inventory.txt` 文件，该文件与名为 `outInv` 的文件对象关联？
+   a. `inventory.txt << quantity << endl;`
+   b. `ofstream << quantity << endl;`
+   c. `outInv << quantity << endl;`
+   d. `outInv >> quantity >> endl;`
+3. 下列哪个语句将记录写入 `test.txt` 文件？该文件与名为 `outFile` 的文件对象关联。该记录包含两个分数，存储在 `score1` 和 `score2` 变量中。
+   a. `test.txt << score1 << score2 << endl;`
+   b. `ofstream << score1 << '#' << score2 << endl;`
+   c. `outFile << score1 << score2 << endl;`
+   d. `outFile << score1 << '#' << score2 << endl;`
+4. 下列哪个语句从问题 2 中读取记录并将记录存储在 `number` 变量中？`inventory.txt` 文件与名为 `inInv` 的文件对象关联。
+   a. `ifstream >> number;`
+   b. `inventory.txt >> number;`
+   c. `inInv << number;`
+   d. `inInv >> number;`
+
+594
+
+# 检测顺序访问文件的结束
+
+正如之前所学，计算机使用文件指针来跟踪下一个要从文件读取或写入的字符。当打开顺序访问文件进行输入时，计算机将文件指针置于文件中第一个字符之前。每当从文件中读取一个字符时，文件指针移动到下一个字符。当从文件中读取一整行时，计算机将文件指针移动到文件中下一行的开头。大多数情况下，程序需要逐行读取顺序访问文件中包含的每一行，从第一行开始到最后一行结束。你可以通过以下方式完成这项任务
+
+# 关闭顺序访问文件
+
+使用循环配合 **eof（文件结束）函数**。**eof 函数** 确定文件中的最后一个字符是否已被读取。换句话说，它确定文件指针是否位于文件最后一个字符之后。如果文件指针在文件末尾，**eof** 函数返回布尔值 false；否则，它返回使用该函数的布尔值。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+> **eof 函数** 是 **ifstream** 类中的类成员函数。
+
+595
+
+![](img/d64a28a68f49d61137bf2f3170ac40ad_615_0.png)
+
+图 14-9 如何检测顺序访问文件的结束
+
+# 关闭顺序访问文件
+
+> **close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1 中 `while` 子句中的条件显示了该函数的用法，且示例 1 告诉只要还没有到达文件末尾，就重复循环指令。你也可以使用逻辑非运算符 (!)` 来编写该条件，如示例 2 所示。
+
+**eof 函数** 是 **ifstream** 类中的类成员函数。
+
+**close 函数** 是 **ifstream** 和 **ofstream** 类中的类成员函数。
+
+为了防止1丢失
+
+
+
+ 顺序访问文件
+
+`
+
+。
+
+存在的 `ifstream` 或 `ofstream` 对象。
+
+615
+
+为了防止数据丢失，你应该尽快使用 **close 函数** 关闭顺序访问文件。在语法中，`fileObject` 是程序中已存在的 `ifstream` 对象的名称。示例 1
+`close()`
+关闭与 `inFile` 关联的文件
+
+示例 2
+`close()`
+关闭与 `outFile` 关联的文件
+
+图 14-10 如何关闭顺序访问文件
+
+# 第 14 章 顺序访问文件
+
+# 如何关闭顺序访问文件
+
+语法
+`fileObject.close()`
+
+存在的 `ifstream` 或 `ofstream` 对象。
+
+存在的 `ifstream` 或 `ofstream` 对象。
+
+ 616
+
+# 第 14 章 顺序访问文件
+
+# 编写集合程序
+
+图 14-11 显示了集合程序的 IPO 图信息和 C++ 指令。
+
+| main 函数 | C++ 指令 |
+|---|---|
+| IPO 图信息 | |
+| Input | int menuOption = 0; |
+| Processing | |
+| Output | |
+| Algorithm | do {
+| 显示菜单 | cout << endl;
+cout << "1 输入 CD 信息"
+cout << endl;
+cout << "2 显示 CD 信息"
+cout << endl;
+cout << "3 结束程序"
+cout << endl;
+} |
+| 获取菜单选项 | cout << "Enter menu option: ";
+cin >> menuOption;
+cin.ignore(10, '\n');
+cout << endl;
+}|
+
+617
+
+(继续)
+
+```cpp
+if (menuOption == 1)
+    saveCd();
+else
+    if (menuOption == 2)
+        displayCds();
+//end if
+//end if
+while (menuOption != 3);
+```
+
+# saveCd 函数
+
+# IPO 图信息
+
+# C++ 指令
+
+输入
+
+CD 名称
+
+```cpp
+string cdName = "";
+string artistName = "";
+```
+
+艺术家名称
+
+# 处理
+
+无
+
+# 输出
+
+cds.txt 文件（顺序访问）
+
+```cpp
+outfile outFile;
+```
+
+# 算法
+
++   1. 追加追加打开 cds.txt 文件
+2. 如果（cds.txt 文件成功打开）
+
+进入 CD 名称
+重复直到（CD 名称不是 "-1"）
+进入艺术家名称
+将 CD 名称和艺术家名称写入 cds.txt 文件
+获取另一个 CD 名称
+重复关闭 cds.txt 文件
+显示“无法打开文件。” 消息
+
+# displayCds 函数
+
+# IPO 图信息
+
+# C++ 指令
+
+输入
+
+cds.txt 文件（顺序访问）
+
+```cpp
+ifstream inFile;
+```
+
+# 处理
+
+无
+
