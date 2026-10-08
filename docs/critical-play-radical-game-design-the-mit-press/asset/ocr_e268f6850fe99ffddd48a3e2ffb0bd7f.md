@@ -1,0 +1,15 @@
++   *   *Design for many different play styles.* The designer could, for example, provide for a noncompetitive type of play alongside a competitive play scenario. The designer should design for subversion of the system and other means by which play can emerge.
+
++   *   *Develop a playable prototype.* The idea is mocked up on paper or by acting it out during the early stages of design.
+
++   *   *Play test with diverse audiences.* Designers need to get out of the studio or laboratory and play test with a wide-ranging audience, making sure to play with nontraditional gamers. Various players test the game for dead ends and dull sections, and types and levels of task difficulty.
+
++   *   *Verify values and revise goals.* Designers evaluate the game through the play tests and player comments. They verify that the values goals emerge through play, and revise goals and add or drop options based on feedback to ensure an engaging game and support the project values.
+
++   *   *Repeat.* This process is repeated to make sure the game supports the values it set out to frame and support, as well as provide an engrossing and playable experience. These two criteria for success must be measured in each iterative cycle.
+
+Within the critical play method, difference and value are fundamental concerns. Testing with paper, performance, or electronic prototypes should prove to be an especially important means of verifying that design decisions agreed upon during the process, such as equity in power relations or enhancing diversity; the system should adequately handle the complexities of critical play principles. In such testing, it is necessary to determine not only that a particular feature or idea was successfully implemented in a technical component but also that its implementation did not detract from prior decisions that were functional, interactive, or conceptual in nature.
+
+The iterative design process is well known; research has shown that iterative cycles can help designers facilitate feedback, including the discussion and evaluation of embedded social issues, while keeping the creation of a game more dynamic.13 For artists making games, this approach is useful too. The cyclical nature of the creative process can serve as a parallel studio practice and involve the community with which the artist wishes to engage. After all, games are dynamic systems.
+
+In making anything, however, there tends to be a gap between what was intended and what actually is created. Here, a critical play perspective engages a diverse audience of testers to ensure that the particular aspects of the project that are informed by conceptual, thematic, and technological factors continue to "say the same thing" once the project is finished. This agreement to examine the "doing" of "practice" can be of

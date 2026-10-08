@@ -1,0 +1,13 @@
+unconscious could be accessed through organized procedures—for example, in consciously performing or collaborating on “unconscious acts.” Through these methods, artists could connect with what they believed was the source of creativity. This structure of critical play, open experimentation, and rule-based systems emphasizes the social and intellectual role of the artistic community. The Surrealists' experiment and their use, at times, of violence and surprise were a vital part of understanding the larger questions of consciousness and culture. ${ }^{26}$ Therefore, in looking at critical play, Surrealist games—as documented in Brotchie and Gooding's small A Book of Surrealist Games (1995) as well as in Rosemont's 1998 text Surrealist Women—warrant careful examination. These include games based on existing parlor games, spiritual practice, automatic writing, and the growing genre of board games. The techniques that follow are culled from historic accounts of Surrealist practice.
+
+# ### *Automatism*
+
+Spontaneous writing or drawing without any conscious interference in the results. Most automatism was textual, but similar themes emerge in Surrealist's use of automated drawing, which was conceived as an accelerated or intensified sketch process where surprises and unpredictable images would appear. The technique was also used by early followers of Freud as a way to understand the unconscious through the writer's subconscious word choices.
+
+# ### *Cut-Up Technique*
+
+As previously discussed in relation to some of Tzara's Dada writings, including his various manifestos, “cut-ups” are texts derived from existing writing or printed sheets that are then dissembled or cut up at random and reassembled to create a new text. Cutting and pasting readymade material was a subversive and creative Surrealist strategy that had aesthetic, poetic, and political implications. ${ }^{27}$ This technique has been used by countless language players, including the American novelists Kathy Acker and William Burroughs.
+
+# ### *Reassembly*
+
+This technique is visual in nature and uses fragments of found images in collages that are then reassembled into a completed work. The technique of decollage was used to disassemble images from their original state. Because collage originated from a Dada-inspired critique, it has remained a strategy of alterity, or otherness, for other marginalized groups as well. Today, it is a staple of political and outsider art such as zine culture. Höch and Hausmann were the primary instigators of this form.

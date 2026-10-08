@@ -1,0 +1,61 @@
+
+## Bibliography
+
+- Chénieux-Gendron, Jacqueline. *Surrealism*. Trans. Vivian Folkenflik. New York: Columbia University Press, 1990.
+- Chesher, Chris. “Layers of Code, Layers of Subjectivity.” *Culture Machine* 5 (2003). http://culturemachine.tees.ac.uk/Cmach/ Backissues/j005/ Articles/CChesher.htm.
+- Christensen, Clayton M. *The Innovator's Dilemma: When New Technologies Cause Great Firms to Fail*. Boston: Harvard Business School Press, 1997.
+- Christensen, Clayton M., Erik A. Roth, and Scott D. Anthony. *Seeing What's Next: Using the Theories of Innovation to Predict Industry Change*. Cambridge, MA: Harvard Business School Press, 2004.
+- Churchill, Suzanne W. *The Little Magazine Others and the Renovation of American Poetry*. Aldershot, UK, and Burlington, VT: Ashgate, 2006.
+- Cole, Adra L., and Gary Knowles. *Researching Teaching: Exploring Teacher Development through Reflexive Enquiry*. Boston: Allyn and Bacon, 2000.
+- Come Out and Play (CO&P). Come Out and Play (event). 2006. http://www.comeoutandplay.org/.
+- Commission on the Advancement of Women and Minorities in Science, Engineering, and Technology Development (CAWMSET). *Land of Plenty: Diversity as America's Competitive Edge in Science, Engineering and Technology*. 2000. http://www.nsf.gov/od/cawmset/report.htm.
+- Conley, Katharine. *Automatic Woman: The Representation of Woman in Surrealism*. Omaha: University of Nebraska Press, 1996.
+- Conley, Katharine. “Claude Cahun's Iconic Heads: From ‘The Sadistic Judith’ to Human Frontier” *Papers of Surrealism*, no. 2 (Summer 2004). http://www.surrealismcentre.ac.uk/papersofsurrealism/ journal2/acrobat_files/conley_article.pdf.
+- Consalvo, Mia. *Cheating: Gaining Advantage in Videogames*. Cambridge, MA: MIT Press, 2007.
+- Cook, Greg. “What? Institutional? Us? Fluxus Gets the Harvard Treatment.” *The Phoenix* (March 20, 2007). http://thephoenix.com/article_ektid35744.aspx.
+- Cornelissen and Walker Rettberg, *Digital Culture, Play, and Identity*.
+- Costell, Matthew J. *The Greatest Games of All Time*. New York: Wiley Science Editions, 1991.
+- Costikyan, Greg. “I Have No Words & I Must Design.” *Interactive Fantasy* 2 (1994). http://www.costik.com/nowords.html.
+- Crawford, Chris. *The Art of Computer Game Design*, 1984. *The Art of Computer Game Design, Online Version*, maintained by Sue Peabody. City: Washington State University Press, 1997. http://www.vancover.wsu.edu/fac/peabody/game-book/Coverpage.html.
+- Critical Art Ensemble. *Digital Resistance: Explorations in Tactical Media*. New York: Automedia, 2003. http://www.critical-art.net/books/digital/.
+- Cross, Gary. *Kids' Stuff: Toys and the Changing World of American Childhood*. Cambridge, MA: Harvard University Press, 1997.
+- Crystal, David. *Language Play*. Chicago: University of Chicago Press, 2001.
+- Csíkszentmihályi, Mihaly. *Beyond Boredom and Anxiety: The Experience of Play in Work and Games*. San Francisco: Jossey-Bass, 1975.
+- Csíkszentmihályi, Mihaly. *Flow: The Psychology of Optimal Experience*. New York: Perennial Press, 1991.
+- Csíkszentmihályi, Mihaly. “Some Paradoxes in the Definition of Play.” In *Play as Context*, ed. Alyce Taylor Cheska, 14–25. West Point, NY: Leisure Press, 1979.
+- Csíkszentmihályi, Mihaly, and Stith Bennett. “An Exploratory Model of Play.” *American Anthropologist, New Series* 73, no. 1 (February 1971): 45–58.
+- Curtin, Mary Ellen. “Fanfiction.net Statistics.” January 2003. http://www.alternateuniverses.com/ffstats.html.
+- David, Jean-Marie. “Cadavre exquis.” *Dictionnaire des Littératures Policières* 1, no. A-1, ed. Claude Mesplède (November 2007): 337–338.
+- Dalí, Salvador. “The Conquest of the Irrational.” In *Salvador Dalí: A Panorama of His Art*, ed. A. Reynolds Morse. Cleveland: Salvador Dalí Museum, [1936] 1974.
+- Dean, Carolyn. “Claude Cahun’s Double.” *Yale French Studies* 90 (1996): 71–92.
+- Debord, Guy. “Introduction to a Critique of Urban Geography.” *Les Lèvres Nues* 6, trans. Ken Knabb (September 1955). http://library.nothingness.org/articles/SI/en/display/2.
+- Debord, Guy. “Perspectives for Conscious Alterations in Everyday Life.” In *Situationist International Anthology*, ed. and trans. Ken Knabb, 68–75. Berkeley, CA: Bureau of Public Secrets, [1961] 1981.
+- Debord, Guy. “Report on the Constructions and the International Situationist Tendency’s Conditions of Organization and Action.” 1957. http://www.eddc.vt.edu/sionline/si/report.html. Also in *Theories and Documents of Contemporary Art: A Sourcebook of Artists’ Writings*, ed. Peter Selz and Kristine Stiles, 704–706. Berkeley: University of California Press, 1996.
+- Debord, Guy. “Theory of the Dérive, Internationale Situationniste #2.” In *Situationist International Anthology*, ed. and trans. Ken Knabb. Berkeley, CA: Bureau of Public Secrets, [1958] 1981.
+- de Certeau, Michel. *The Practice of Everyday Life*. Trans. Steven Rendall. Berkeley: University of California Press, 1984.
+- Decordova, Richard. *Picture Personalities: The Emergence of the Star System in America*. Urbana: University of Illinois Press, 1990.
+- Deleuze, Gilles. *The Logic of Sense*. Trans. Mark Lester and Charles Stivale, ed. Constantin V. Boundas. New York: Columbia University Press, 1990.
+- Deleuze, Gilles. “What Is Becoming?” In *The Deleuze Reader*, trans. Constantin V. Boundas, 39–41. New York: Columbia University Press, 1993.
+- Dempsey, Amy. *Art in the Modern Era: A Guide to Styles, Schools & Movements*. New York: Harry N. Abrams, 2002.
+- Design Institute, University of Minnesota. *Big Urban Game*. 2003. http://design.umn.edu/bug/index.jsp.
+- Dickerman, Leah, ed. “Zurich.” In *Dada*. Washington, DC: National Gallery of Art, 2005.
+- Digg Online Aggregator “One Room, One Paintball Gun Controlled Via the Web, and One Iraqi-American.” Anonymous comments on Digg.com (May 19, 2007). http://digg.com/politics/One_room_one_paintball\_gun\_controlled\_via\_the\_Web\_and\_one\_Iraqi\_American.
+- Doherty, Claire. *From Studio to Situation: Contemporary Art and the Question of Context*. London: Black Dog, 2004.
+- Douglas, Ann. *The Feminization of American Culture*. New York: Noonday Press, 1998.
+- Duchamp, Marcel. *The Box in a Valise*. Trans. David Britt. New York: Rizzoli, 1989.
+- Duchamp, Marcel. *Marcel Duchamp, Notes*. Ed. Paul Matisse. Boston: G. K. Hall & Co., 1983.
+- Duchamp, Marcel. *Salt Seller: The Writings of Marcel Duchamp*. Ed. Michel Sanouillet and Elmer Peterson. New York: Oxford University Press, 1973.
+- Duchamp, Marcel. *The Writings of Marcel Duchamp*. Cambridge, MA: Da Capo Press, 1989.
+- Durai, H. G. “Pallangu: A South Indian Game.” *Man* 28 (November 1988): 185–186.
+- Durozoi, Gérard. *History of the Surrealist Movement*. Chicago: University of Chicago Press, 2002.
+- Ebony, David. “Improbable Games.” *Art in America* (November 1, 1996). http://www.high beam.com/doc/1G1-18823753.html.
+- Echols, Alice. *Daring to Be Bad: Radical Feminism in America, 1967–1975*. Minneapolis: University of Minnesota Press, 1989.
+- Elam, Harry Justin. *Taking It to the Streets: The Social Protest Theater of Luis Valdez and Amiri Baraka*. Ann Arbor: University of Michigan Press, 2001.
+- Elderfield, John. *The Modern Drawing: 100 Works on Paper from The Museum of Modern Art*. New York: The Museum of Modern Art, 1983.
+- Elliot, Anthony. “Interview (with Yoko Ono).” *Time Out Magazine* (London) (1968). http://pers-www.wlv.ac.uk/\~fa1871/yoko.html.
+- Erman, Adolf. *Life in Ancient Egypt*. Trans. H. M. Tirard. Mineola, NY: Dover, [1894] 1971.
+- Eskin, Blake. “Pass Go, Collect a Ticket to Paradise,” *New York Times* (late edition, November 14, 2004): section 2, page 38.
+- Fahlström, Öyvind. “On Monopoly Games.” New York: The Solomon R. Guggenheim Foundation, [1971] 1982.
+- Fairbairn, John T. “Go in Ancient China.” London. 1995. http://www.pandanet.co.jp/English/essay/goinancientchina.html.
+- Fairbairn, John T. *Invitation to Go*. Oxford, Glasgow, and New York: Oxford University Press, 1977.
+- Feminist Pedagogy Working Group (FPWG). “Decentering Authority!” In *Feminist Geography in Practice: Research & Methods*, ed. Pamela Moss. London: Blackwell, 2002.

@@ -1,0 +1,93 @@
+
+### Footnotes
+
+- 64. Sutton-Smith, *The Ambiguity of Play*, 133.
+- 65. Ibid., 134–135.
+- 66. Fluxus was influenced primarily by Dada in that it shunned authority and produced works of nonsense and incongruity. Surrealism and its investigation of the unconscious and playful processes are also invoked. Other art movements also came into play, but are less instrumental to this participatory, playful history, including Bauhaus, the twentieth-century design school that redefined everyday objects and means of production, and the Situationists, who were interested in massive social change through large-scale, primarily social actions. In the movements discussed here, play and subversion are threads feeding each successive movement.
+- 67. Deleuze, “What Is Becoming?”
+- 68. Dempsey, *Art in the Modern Era*.
+- 69. Ellipses mine. From the letter “George Maciunas to Tomas Schmit, January 1964,” in Hendricks, *FLUXUS CODEX*, 37.
+- 70. Jones, *Killing Monsters*.
+- 71. Spencer is known as the inventor of the terminology *social structure* and *social function* in the contemporary sense—that is, acknowledging the framework of institutions in the West. See Spencer, *First Principles*, 694.
+- 72. Munroe et al., *Y E S Yoko Ono*.
+- 73. Ono, *Instruction Paintings*.
+- 74. Ono, *Grauefruit*.
+- 75. Higgins, *Fluxus Experience*, 118.
+- 76. Ibid., 121.
+- 77. Ibid.
+- 78. Foster, *Compulsive Beauty*.
+- 79. Guerrilla Girls, “Get Naked.”
+- 80. Utterback, “Unusual Positions,” 226.
+- 81. Ibid., 221.
+- 82. See the feminist critiques of science and the theory of standpoint epistemology offered by Haraway, Harding, Harstcock, and Hill Collins: Haraway, “Situated Knowledges”; Harding, *Whose Science? Whose Knowledge?*; Harstcock, *The Feminist Standpoint Revisited*; and Hill Collins, *Black Feminist Thought*.
+- 83. Braidotti, “Cyberfeminism with a Difference,” par. 22.
+- 84. Guattari, *Chaosmosis*, 21.
+
+# 5 Performative Games and Objects
+
+- 1. Huizinga, *Homo Ludens*, 28.
+- 2. In fact, Roger Caillois critiqued Huizinga’s approach as being far too general, and argued instead for the strengths of further classification so that granularity and specificity could be achieved in studying types of games. See: Caillois, *Man, Play and Games*.
+- 3. Phalen, *The Unmarked*.
+- 4. In 1990s performances, Stone would go through a process of separating out her sexual organs from her experience of orgasm. See also Stone, *The War of Desire and Technology*.
+- 5. Csikszentmihalyi, *Flow*.
+- 6. Cole and Knowles, *Researching Teaching*, 66.
+- 7. Duchamp, *Salt Seller*.
+- 8. Glimcher, *Logical Conclusions*, 7.
+- 9. Marcel Duchamp, quoted in Judovitz, “Rendezvous with Marcel Duchamp,” 202.
+- 10. Decordova, *Picture Personalities*.
+- 11. Wayne, *Crawford’s Men*, 11.
+- 12. Curtin, “Fanfiction.net Statistics,” par. 1. In terms of contemporary digital fan culture, fan fiction on the web and its companion slash fiction are constantly growing phenomena, fostered by the ease of distribution on the Internet. In 2003, fan sites such as fanfiction.net have surpassed one million original entries.
+- 13. Matisse, “Notes d’un Peintre.”
+- 14. Kandinsky, *Concerning the Spiritual in Art*.
+- 15. Paul, *Digital Art*.
+- 16. Arp, *On My Way*. Artists including Arp, Hugo Ball and Emmy Hennings, Sophie Taeuber, and Hans Richter joined Tristan Tzara.
+- 17. Duchamp’s readymades, which appeared first in France, and in New York City after 1915 include: a bicycle wheel (1913); a bottle rack (1914); a shovel (1915); a chimney cowl (1915); a comb (1916); a typewriter cover (1916); a hat rack (1917, New York); a coat rack (1917); and a urinal (1917).
+- 18. Jean Arp, a classically trained German-French sculptor and painter, began exhibiting abstract paper and wood sculptures during World War I. *Collage Arranged According to the Laws of Chance* (1916-1917) explored chance operations in paintings, a precursor to other art movements involving gaming. Dada, noted Arp, was a movement to “discover an unreasoned order” (*ordre déraisonnable*) (1948). Arp, like other Dada artists, was working against presumptions about artistic styles and voice, and even questioned the possibility of expression. The fascination with chance is important to subversion and, as will be argued in later chapters, becomes important to the feminist version of playculture.
+- 19. Elderfield, *The Modern Drawing*, 108.
+- 20. Ollman, “The Lives of Hannah Höch”; Lavin, *Cut with the Kitchen Knife*; Kimmelman, “Dada Dearest.”
+- 21. Nochlin, *Women, Art and Power*, 29.
+- 22. Ollman, “The Lives of Hannah Höch”; Lavin, *Cut with the Kitchen Knife*; Kimmelman, “Dada Dearest.”
+- 23. Nochlin, *Women, Art and Power*, 28.
+- 24. Parlor games went out of fashion as radio, film, and other mass-media forms emerged to occupy leisure time.
+- 25. Ernst, from his journals (1925, 1991) and as featured in the video recording by Schamoni and Lamb, *Max Ernst*.
+- 26. Rosemont, *Surrealist Women*.
+- 27. Adamowicz, *Surrealist Collage*.
+- 28. The Surrealists’ deep engagement in Freudian thinking played a significant role in the development of their games, and war played no small part in their experience. Breton finally met Freud after the war in Vienna in 1921.
+- 29. Breton, “Second Manifesto of Surrealism,” 117.
+- 30. Breton, *Essays in Médium*, 137.
+- 31. Dalí, “The Conquest of the Irrational,” 49.
+- 32. Dalí’s thoughts on the Paranoïd-Critical method are collected in *Oui: The Paranoïd-Critical Revolution—Writings 1927–1933* (Boston: Exact Change, 1998). Dalí’s desire for a thorough confusion is alluded to in “The Moral Position of Surrealism,” 110. Originally published in 1971 in French.
+- 33. Kay Sage, married to Yves Tanguy, or Jacqueline Lamba, married to Breton. Their marriages assisted them in acquiring some public recognition of their work, but also kept them from eclipsing the success of their partners.
+- 34. Harris, *Surrealist Art and Thought*, 164–165.
+- 35. Krass, “The Photographic Conditions of Surrealism,” 35.
+- 36. Gamman and Marshment, *The Female Gaze*, 16.
+- 37. Conley, citing John Roberts, in “Claude Cahun’s Iconic Heads,” 13.
+- 38. Dean, “Claude Cahun’s Double.”
+- 39. Knafo, “Claude Cahun”; Rice, *Inverted Odysseys*.
+- 40. Tanaka and Kanayama, *Electrifying Art*.
+- 41. Munroe, *Japanese Art after 1945*.
+- 42. Munroe, *Japanese Art after 1945*.
+- 43. Stevens, “Everything Is Illuminated,” par. 3.
+- 44. Ibid., par. 6.
+- 45. Munroe, *Japanese Art after 1945*.
+- 46. Tanaka and Kanayama, *Electrifying Art*.
+- 47. Ibid.
+- 48. Hendrix, “U.S. Teenage Girls Prefer Japanese Heroes.”
+- 49. Murakami, *Welcome to Takashi Murakami.com*.
+- 50. Ibid.
+- 51. Kon, *Paprika*.
+- 52. Caillois, *Man, Play and Games*, 5.
+- 53. Lewitt, “Paragraphs on Conceptual Art,” 824.
+- 54. Ibid., 422.
+- 55. Guattari, *Chaosmosis*, 21.
+- 56. Documentation of this work shows that Grooms's performance manifested essential links to the shocking performance work of Alfred Jarry's *Ubu Roi* creations, discussed in the last chapter. Pasty Man should be read as a reference to the Ubu character, a “gross, vulgar, stinking character fills the stage with his filth and relentlessly thrusts himself and his shiteness at us till the better end. No celestial or metaphysical forces direct Ubu, nor does he have a spiritual nature. He is not in the least capable of introspection” (Schumacher, *Alfred Jarry and Guillaume Apollinaire*, 57). Grooms also incorporated pop culture icons—the comic strip characters Dick Tracy and Little Orphan Annie made their way into his work.
+- 57. Rosenthal, Rainbird, and Schmuckli. *Joseph Beuys*.
+- 58. Maciunas, *Manifiesto on Art*.
+- 59. George Maciunas had Nam June Paik play his *Piano Piece #13* (*Carpenter’s Piece*) in 1962, and then directed him to hammer nails into every key of the piano until the instrument was destroyed.
+- 60. Cook, “What? Institutional? Us?”, par. 1.
+- 61. Absolute Arts, “Fluxus Games Exhibition,” par. 5.
+- 62. MASS MoCA exhibition, “Fluxus Games,” June 16–Dec. 30, 2001.
+- 63. Alison Knowles noted this tendency of Duchamp at “I am 120: Marcel Duchamp’s Birthday Party,” Miguel Abreu Gallery, New York, July 27, 2007; it is this spirit, then, that makes gallery display of Fluxus work problematic. Take, for example, the more recent exhibition of Robert Filliou’s *7 Childlike Uses of Warlike Material* (1970) in the Centre Pompidou. These objects appear more like a jumble of detritus than art, except for the sanctifying glow of the white gallery wall.
+- 64. Cage, “An Autobiographical Statement,” par. 25.
+- 65. Knowles, cited in Robinson, *Sculpture of Interdeterminacy*, 3.
+- 66. See Jones, *Killing Monsters*.

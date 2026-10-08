@@ -1,0 +1,10 @@
+![](bbox=[0.17, 0.1, 0.82, 0.28])
+
+Figure 6.16
+Ricardo Miranda Zúniga, Vagamundo: A Migrant’s Tale, level two.
+
+the death rates of immigrants attempting to cross the border. The macabre, violent play of flying liquor bottles and disturbing insects exposes the dark side of custom and culture.
+
+The work of cultural theorist Homi Bhabha addresses the issues surrounding migration and the complex relationships among community and kinship, language, and the concept of nation, by arguing that the loss produced by migration translates into a metaphor of home that makes the meaning of belonging manifest. In this time of unprecedented human movement, is there something about the metaphor of home that works to unify a sense of place in the liminality of digital environments? Games may be apt vehicles to explore the complexities of migration if only because they emphasize the problemmatic boundaries of modernity and enact the “ambivalent temporarities of the nation-space.”⁷⁸ If, as Bhaha argues, “the ‘unhomely’ is a paradigmatic colonial and post-colonial condition,”⁷⁹ what does it mean in play spaces to “write home” in such contexts?⁷⁹ That domestic play here can be read within the larger manifestation of the idea of home, a theme that becomes a site of international political and social importance explored in critical play.
+
+Creating meaningful social change with artists’ games has larger implications for activists. Theorists of activism such as Michel de Certeau note that power must be changed in fundamental, internal ways. Tactics such as bartering, trading, la rerruque (meaning to work for oneself while “on the clock” for another), and the use of discarded materials undermine the rules of the larger social game one is bound within.⁸⁰ Judith Butler has also offered a critique of contemporary activist strategies. Along with other theorists, Butler argues that it is not enough to present a simple subversion of a stereotypical norm, such as the strategy I’ve identified as reskinning might
