@@ -1,0 +1,11 @@
+[15]. Since about 1980, fitting circles became an agenda in many areas of human practice. We just list some prominent cases below.
+
+In medicine, one estimates the diameter of a human iris on a photograph [141], or designs a dental arch from an X-ray [21], or measures the size of a fetus on a picture produced by ultrasound. Archaeologists examine the circular shape of ancient Greek stadia [157], or determine the size of ancient pottery by analyzing potsherds found in field expeditions [44, 80, 81, 190]. In industry, quality control requires estimation of the radius and the center of manufactured mechanical parts [119]. In mobile robotics, one detects round objects (pillars, tree trunks) by analyzing range readings from a 2D laser range finder used by a robot [197].
+
+![](bbox=[0.34, 0.3, 0.64, 0.48])
+
+But perhaps the single largest field of applications where circles are fitted to data is nuclear physics. There one deals with elementary particles born in accelerators and colliders. The newborn particles move along circular arcs in a constant magnetic field; physicists determine the energy of the particle by measuring the radius of its trajectory; to this end they fit an arc to a string of mechanical or electrical signals the particle leaves in the detector [45, 53, 82, 106, 107, 136, 173, 174, 175]. Particles with high energy move along arcs with large radii (low curvature), thus fitting arcs to nearly straight-looking trajectories is quite common; this task requires very elaborate techniques to ensure accurate results.
+
+We illustrate our discussion by a real–life example from archaeology. To estimate the diameter of a potsherd from a field expedition, the archaeologist traces the profile of a broken pot — such as the outer rim or base — with a pencil on a sheet of graph paper. Then he scans his drawing and transforms it into an array of pixels (data points). Lastly, he fits a circle to the digitized image by using a computer.
+
+A typical digitized arc tracing a circular wheelmade antefix is shown in

@@ -1,0 +1,84 @@
+
+
+首先，我们比较 Pratt 拟合法和 Taubin 拟合法。对于 Pratt 拟合法，约束矩阵为 **N** = **Ñ** = **P**，因此其本质偏差 (7.36) 变为
+
+$$\mathbb{E}(\Delta_{2}\mathbf{A}_{\text{Pratt}}) \stackrel{\mathrm{ess}}{=} -4\sigma^{2}\vec{A}\,[0,0,0,1]^{T} . \tag{7.42}$$
+
+换言之，Pratt 约束 **N** = **P** 消除了 (7.41) 中的第一项；它保留了第二项。
+
+对于 Taubin 拟合法，约束矩阵为 **N** = **T**，且其“真实”值为 **Ñ** = **T̃** = $\frac{1}{n}\sum \tilde{\mathbf{T}}_{i}$。因此，Taubin 的偏差为
+
+$$\mathbb{E}(\Delta_{2}\mathbf{A}_{\text{Taubin}}) \stackrel{\mathrm{ess}}{=} -2\sigma^{2}\vec{A}\,[0,0,0,1]^{T} . \tag{7.43}$$
+
+因此，Taubin 约束 **N** = **T** 消除了 (7.41) 中的第一项*以及*第二项的一半；它仅保留了第二项的一半。
+
+结果是，Taubin 拟合法的本质偏差是 Pratt 拟合法的一半。鉴于它们的主要项（方差）相等，我们可以看到 Taubin 拟合法在统计上比 Pratt 拟合法更精确；这种差异可能解释了在第 5 章的实验中观察到的 Taubin 拟合法相比 Pratt 拟合法表现略好的现象。
+
+在其 1991 年的原始论文 [176] 中，Taubin 表达了将其方法与 Pratt 方法进行对比的意图，但并未发表此类对比。我们认为我们的分析呈现了这样的对比。
+
+## **消除本质偏差。**
+
+有趣的是，可以设计一种完全没有本质偏差的代数拟合法。让我们将约束矩阵设置为
+
+$$\mathbf{N} = \mathbf{H} = 2\mathbf{T} - \mathbf{P} = \left[ \begin{array}{rrrr} 8\bar{z} & 4\bar{x} & 4\bar{y} & 2 \\ 4\bar{x} & 1 & 0 & 0 \\ 4\bar{y} & 0 & 1 & 0 \\ 2 & 0 & 0 & 0 \end{array} \right] . \tag{7.44}$$
+
+可以看出，(7.36) 中的所有项都相互抵消！结果得出的本质偏差消失：
+
+$$\mathbb{E}(\Delta_{2}\mathbf{A}_{\text{Hyper}}) \stackrel{\mathrm{ess}}{=} 0 . \tag{7.45}$$
+
+我们将这种拟合法称为*超精确*，或简称为“Hyper”。*超精确*这一术语由 Kanatani [102, 103, 104] 引入，他最早为了比较各种代数拟合法并设计更好的拟合法而将泰勒展开式应用到 $\sigma^{4}$ 阶项（他处理了比圆更一般的二次模型）。
+
+圆的 Hyper 拟合法在 [4] 中提出。
+
+我们注意到矩阵 **H** 是非奇异的，其三个特征值为正，一个为负（这些事实可以从以下简单观察中轻松推导：det **H** = −4，trace **H** = 8z̄ + 2 > 1，且 $\lambda = 1$ 是其一个特征值）。如果 **M** 是正定的，那么根据 Sylvester 惯性定律，矩阵 $\mathbf{H}^{-1}\mathbf{M}$ 具有与 **H** 相同的符号，即 $\mathbf{H}^{-1}\mathbf{M}$ 的特征值 $\eta$ 均为实数，其中恰好三个为正，一个为负。在这个意义上，Hyper 拟合法类似于 Pratt 拟合法，因为约束矩阵 **P** 也有三个正特征值和一个负特征值。
+
+**Hyper 拟合法的不变性。** 我们注意到 Hyper 拟合法在平移和旋转下是不变的。这是因为约束矩阵 **H** 是另外两个满足不变性要求的矩阵 **T** 和 **P** 的线性组合，如 5.7 节和 5.10 节所述。
+
+Hyper 拟合法在相似变换下也是不变的，这一点可以像 5.10 节中那样进行验证。实际上，每当 $(x,y) \mapsto (cx, cy)$ 时，我们有 $(A,B,C,D) \mapsto (A/c^2, B/c, C/c, D)$，因此 $\mathbf{A}^T \mathbf{H} \mathbf{A} \mapsto c^{-2} \mathbf{A}^T \mathbf{H} \mathbf{A}$。因此，约束 $\mathbf{A}^T \mathbf{H} \mathbf{A} = 1$ 将转化为 $\mathbf{A}^T \mathbf{H} \mathbf{A} = c^2$，这是无关紧要的，因为我们的参数向量 **A** 只需要确定到标量倍数。
+
+**Hyper 拟合法与 Pratt 拟合法。** 奇怪的是，Hyper 拟合法和 Pratt 拟合法返回相同的圆心^{1}。可以看出如下。回顾 Pratt 拟合法在数学上等价于 Chernov-Ososkov 拟合法，且两者都最小化目标函数 (5.16)，该函数为
+
+$$\mathcal{F}_{\text{Pratt}}(a, b, R) = \frac{\sum_{i=1}^{n} [(x_i - a)^2 + (y_i - b)^2 - R^2]^2}{4R^2}$$
+
+现在用几何参数 $(a,b,R)$ 表达 Hyper 拟合法，我们可以看到它最小化函数
+
+$$\mathcal{F}_{\text{Hyper}}(a, b, R) = \frac{\sum_{i=1}^{n} [(x_i - a)^2 + (y_i - b)^2 - R^2]^2}{4n^{-1} \sum_{i=1}^{n} [2(x_i - a)^2 + 2(y_i - b)^2 - R^2]}$$
+
+我们可以对这两个函数关于 $R^2$ 求导并求解方程
+
+$$\frac{\partial \mathcal{F}_{\text{Pratt}}}{\partial R^2} = 0 \qquad \text{and} \qquad \frac{\partial \mathcal{F}_{\text{Hyper}}}{\partial R^2} = 0,$$
+
+从而消除 $R^2$。然后我们得到一个关于 $a$ 和 $b$ 的目标函数，而对于 Pratt 拟合法和 Hyper 拟合法，这个函数恰好是相同的：
+
+$$\mathcal{F}(a, b) = \left( \frac{1}{n} \sum_{i=1}^{n} [(x_i - a)^2 + (y_i - b)^2] \right)^\frac{1}{2} - \frac{1}{n} \sum_{i=1}^{n} [(x_i - a)^2 + (y_i - b)^2],$$
+
+相差无关紧要的常数因子。然后其最小值给出 $a$ 和 $b$ 的估计，且对于这两种拟合法是相同的。（Taubin 拟合法给出不同的圆心估计。）
+
+由于 Hyper 拟合法返回与 Pratt 拟合法相同的圆心 $(\hat{a}, \hat{b})$，Hyper 拟合法的估计 $(\hat{a}, \hat{b}, \hat{R})$ 也具有无穷矩（第 6.4 章）。
+
+> 1 这个有趣的事实是由 A. Al-Sharadqah 发现的。
+
+**基于 SVD 的 Hyper 拟合法。** Hyper 拟合法的数值稳定实现与 5.5 节中开发的基于 SVD 的 Pratt 拟合法非常相似。首先，计算矩阵 $\mathbf{X}$ 的（短）SVD，$\mathbf{X} = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^{T}$。如果其最小奇异值 $\sigma_{4}$ 小于预定义的容差 $\epsilon$（例如，$\epsilon=10^{-12}$），则解 $\mathbf{A}$ 简单地是对应的右奇异向量（即 $\mathbf{V}$ 矩阵的第四列）。在常规情况下（$\sigma_{4} \geq \epsilon$），构造 $\mathbf{Y} = \mathbf{V}\Sigma\mathbf{V}^{T}$ 并求对称矩阵 $\mathbf{Y H}^{*-1}\mathbf{Y}$ 的特征对。选择具有最小正特征值的特征对 $\left(\eta,\mathbf{A}_{*}\right)$ 并计算 $\mathbf{A} = \mathbf{Y}^{-1}\mathbf{A}_{*}$ 即完成求解。相应的 MATLAB$^{\circled{R}}$ 代码可从 [84] 获得。
+
+**改进的 Hyper 拟合法。** Rangarajan 和 Kanatani [152] 指出，通过采用由 (7.40) 给出的约束矩阵 $\mathbf{N} = \mathbf{H}^{*}$，可以消除整个 $\widehat{O}\left(\sigma^{2}\right)$ 偏差；这一事实从 (7.39) 中可以看出。矩阵 $\mathbf{H}^{*}$ 在计算上比我们的 $\mathbf{H}$ 更复杂（它需要求 $\mathbf{M}$ 的伪逆），但数值实验 [152] 表明，对于较小的 $n$（如 $n = 10$ 或 $n = 20$），由此得到的拟合法精度高于我们的 Hyper 拟合法；对于较大的 $n$，精度显然没有差异。
+
+## 7.6 自然参数中的代数圆拟合法
+
+我们接下来的目标是使用更自然的几何参数 $(a,b, R)$ 来表达代数圆拟合法协方差和本质偏差。
+
+**参数方案之间的转换。** 代数圆参数 $(A,B,C,D)$ 与其几何特性 $(a,b, R)$ 之间的转换公式，参见 (3.11)，为
+
+$$a = -\frac{B}{2A}$, $b = -\frac{C}{2A}$, $R^2 = \frac{B^2 + C^2 - 4AD}{4A^2}. (7.46)$$
+
+求偏导得到一个 $3 \times 4$ 的“雅可比”矩阵
+
+$$\mathbf{J} = \left[\begin{array}{cccc} \frac{B}{2A^2} & -\frac{1}{2A} & 0 & 0 \\ \frac{C}{2A^2} & 0 & -\frac{1}{2A} & 0 \\ -\frac{R}{A} - \frac{D}{2A^2R} & \frac{B}{4A^2R} & \frac{C}{4A^2R} & -\frac{1}{2AR} \end{array}\right]$$
+
+因此我们有
+
+$$\Delta_{1}\Theta = \ddot{\mathbf{J}}\Delta\mathbf{A}$ 和 $\Delta_{2}\Theta = \ddot{\mathbf{J}}\Delta\mathbf{2A} + \widetilde{O}_{P}\left(\sigma^{2} / n\right)$, (7.47)$$
+
+其中 $\ddot{\mathbf{J}}$ 表示在真实参数 $\left(\bar{A}, \bar{B}, \bar{C}, \bar{D}\right)$ 处的矩阵 $\mathbf{J}$。余项 $\widetilde{O}_{P}\left(\sigma^{2} / n\right)$ 来自于 $(a, b, R)$ 关于 $(A, B, C, D)$ 的二阶偏导数。例如
+
+$$\Delta_{2} a = (\nabla a)^{T}(\Delta_{2}\mathbf{A}) + \frac{1}{2}\left(\Delta_{1}\mathbf{A}\right)^{T}\left(\nabla^{2} a\right)\left(\Delta_{1}\mathbf{A}\right)$, (7.48)$$
+

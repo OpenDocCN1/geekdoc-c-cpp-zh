@@ -1,0 +1,108 @@
+
+![](img/86db288e3c266985d1648282179ae4b5_226_0.png)
+
+图 7.1 半径估计值 $R^*$ 的极限值（当 $n \rightarrow \infty$ 时）随圆弧 $\theta$ 的变化（真实值为 $\tilde{R} = 1$）。几何拟合用点表示，Pratt 拟合用虚线表示，Taubin 拟合用实线表示，Kåsa 拟合用点划线表示（注意当 $\theta < \pi$ 时 Kåsa 曲线急剧下降）。
+
+## 7.8 通过 Huber 方法实现偏差降低与一致拟合
+
+在第 6.11 节中，我们介绍了一些可用于降低圆半径估计器偏差的技巧。我们还描述了一种通用程序（称为调整最小二乘法），该程序在大样本极限 $n \rightarrow \infty$ 下能产生渐近无偏且一致的估计器。该程序仅适用于多项式模型，即对一个多项式 $y = p(x) = \beta_0 + \beta_1x + \dots + \beta_k x^k$ 与数据点进行的拟合。
+
+在这里，我们将介绍适用于隐式非线性模型的类似程序，特别是针对圆和椭圆。这些方法基于 Huber [85, 86, 87] 的基本思想。
+
+**M-方程的无偏化。** 请注意，参数 $\Theta$ 的最大似然估计（MLE）是最大似然（ML）方程的解
+$$
+\nabla_{\Theta}(\ln L(\Theta)) = 0, \quad (7.59)
+$$
+其中 $L(\Theta)$ 表示似然函数，$\nabla_{\Theta}$ 表示梯度。对于 $n$ 个独立观测值 $\mathbf{x}_i = (x_i, y_i)$，我们有 $L(\Theta) = \prod_{i=1}^{n} f(\mathbf{x}_i; \Theta)$，即密度函数的乘积；因此方程 (7.59) 可写成形式
+$$
+\sum_{i=1}^{n} \Psi_{\mathrm{MLE}}(\mathbf{x}_i; \Theta) = 0 \quad (7.60)
+$$
+其中 $\Psi_{\mathrm{MLE}}(\mathbf{x}; \Theta) = \nabla_{\Theta} \ln f(\mathbf{x}; \Theta)$。
+
+Huber [85, 86, 87] 考虑了更一般的估计器，其定义为
+$$
+\sum_{i=1}^{n} \Psi(\mathbf{x}_i; \Theta) = \mathbf{0} \quad (7.61)
+$$
+此方程与 (7.60) 类似，但这里的 $\Psi$ 不一定与似然函数相关。他将 (7.61) 称为 *M-方程*，其解称为 *M-估计*；这里“M”代表“最大似然类型”。Huber 的主要目的是构建稳健估计器（即对异常值不敏感的估计器），但事实证明，Huber 的方法也可以用于构建渐近无偏（而非稳健）的估计器。下面我们对此进行描述。
+
+如果对于每个观测点 $\mathbf{x}$，
+$$
+\mathbb{E}[\Psi(\mathbf{x}; \widehat{\Theta})] = \mathbf{0} \quad (7.62)
+$$
+则称 M-方程 (7.61) 为*无偏*的，其中 $\widehat{\Theta}$ 再次表示真实参数。（注意我们定义的是*方程*的无偏性，而非*估计器*的无偏性。）
+
+> **定理 12 (Huber [86])** 如果 M-方程是无偏的，那么在一定的正则性条件下，相应的 M-估计器 $\widehat{\Theta}$ 具有渐近正态分布。此外，$n^{1/2}(\widehat{\Theta} - \tilde{\Theta})$ 收敛于均值零的正态分布。特别地，在极限 $n \rightarrow \infty$ 下，$\widehat{\Theta}$ 是渐近无偏且一致的。
+
+我们注意到，由无偏 M-方程得到的 M-估计器并不是真正无偏的，但其偏差随着 $n \rightarrow \infty$ 而消失。
+
+因此，为了获得渐近无偏且一致的估计器，需要修改定义给定估计器的 M-方程 (7.61) 以使其“无偏化”，即使其满足 (7.62)。这种方法已用于 IV 回归分析中。在多项式 $y = \sum_{i=0}^{k} \beta_i x^i$ 拟合数据的情况下，Chan 和 Mak [30] 做了这项工作。在拟合二次曲线（椭圆、双曲线）的情况下，Kukush、Markovsky 和 van Huffel [114, 115, 130, 167] 做了这项工作。在这里，我们将这种方法应用于圆，这将给出拟合圆的新方法。
+
+**代数圆拟合的无偏化。** 我们已经知道，代数圆拟合由矩阵方程定义
+$$
+\mathbf{MA} = \eta \mathbf{NA}, \tag{7.63}
+$$
+参见 (7.22)，其中矩阵 $\mathbf{M}$ 和 $\mathbf{N}$ 的分量是常数或数据 $\mathbf{x}_i$ 的函数，而 $\mathbf{A} = (A, B, C, D)^T$ 表示（代数）参数向量。该方程与 Huber 的 M-方程 (7.61) 略有不同，因此我们需要稍微扩展 Huber 的理论。如果我们说矩阵 $\mathbf{M}$ 是无偏的，意味着 $\mathbb{E}(\mathbf{M}) = \tilde{\mathbf{M}}$，其中 $\tilde{\mathbf{M}}$ 是 $\mathbf{M}$ 的“真实”值，即通过将真实点 $(\tilde{x}_i, \tilde{y}_i)$ 代替观测数据点 $(x_i, y_i)$ 得到的值；可以称之为 $\mathbf{M}$ 的无噪声（$\sigma=0$）版本。以同样的方式构建 $\tilde{\mathbf{N}}$，如果矩阵 $\mathbf{N}$ 也依赖于数据。然后我们得到 Huber 定理的类似形式：
+
+> **定理 13** 假设估计器 $\hat{\mathbf{A}}$ 是矩阵方程 (7.63) 的解，其中 $\mathbf{M}$ 和 $\mathbf{N}$ 是无偏的，即 $\mathbb{E}(\mathbf{M}) = \tilde{\mathbf{M}}$ 和 $\mathbb{E}(\mathbf{N}) = \tilde{\mathbf{N}}$。那么 $n^{1/2}(\hat{\mathbf{A}} - \tilde{\mathbf{A}})$ 收敛于均值零的正态分布；特别地，在极限 $n \to \infty$ 下，$\hat{\mathbf{A}}$ 是渐近无偏且一致的。
+
+因此，为了获得渐近无偏且一致的估计器，需要修改矩阵 $\mathbf{M}$ 和 $\mathbf{N}$ 以使它们变得无偏。
+
+有趣的是，进行这种修改还有另一个好处：它消除了估计器的固有偏差。确实，我们在 (7.33) 中看到固有偏差与 $\mathbb{E}(\Delta_2\mathbf{M})$ 成正比，因此如果矩阵 $\mathbf{M}$ 是无偏的，即 $\mathbb{E}(\Delta_2\mathbf{M}) = \mathbf{0}$，那么估计器 $\hat{\mathbf{A}}$ 就变为本质无偏的（其固有偏差为零）。$\mathbf{N}$ 的无偏性不影响 $\hat{\mathbf{A}}$ 的固有偏差。
+
+## 7.9 渐近无偏且一致的圆拟合
+
+我们为代数圆拟合构建 $\mathbf{M}$ 和 $\mathbf{N}$ 无偏版本的方法，类似于 Kanatani [93, 94, 95] 以及 Kukush、Markovsky 和 van Huffel [114, 115, 130, 167] 为更一般二次模型开发的方法。
+
+首先回顾矩阵 $\mathbf{M}$ 的结构：
+$$
+\mathbf{M} = \begin{bmatrix} \bar{zz} & \bar{xz} & \bar{yz} & \bar{z} \\ \bar{zx} & \bar{xx} & \bar{xy} & \bar{x} \\ \bar{zy} & \bar{xy} & \bar{yy} & \bar{y} \\ \bar{z} & \bar{x} & \bar{y} & 1 \end{bmatrix}.
+$$
+直接计算表明其分量的均值是
+$$
+\mathbb{E}(\bar{x}) = \tilde{x}, \quad \mathbb{E}(\bar{y}) = \tilde{y}, \quad \mathbb{E}(\bar{xy}) = \tilde{x}\tilde{y},
+$$
+$$
+\mathbb{E}(\bar{xx}) = \tilde{x}\tilde{x} + V, \quad \mathbb{E}(\bar{yy}) = \tilde{y}\tilde{y} + V, \quad \mathbb{E}(\bar{z}) = \tilde{z} + 2V,
+$$
+$$
+\mathbb{E}(\bar{xz}) = \tilde{x}\tilde{z} + 4\tilde{x}V, \quad \mathbb{E}(\bar{yz}) = \tilde{y}\tilde{z} + 4\tilde{y}V, \quad \mathbb{E}(\bar{zz}) = \tilde{z}\tilde{z} + 8\tilde{z}V + 8V^2,
+$$
+其中为了方便，我们记 $V = \sigma^2$，且我们的“样本均值”记号应用于真实点，即 $\bar{x} = \frac{1}{n} \sum \tilde{x}_i$ 等。
+
+由此立即得出
+$$
+\mathbb{E}(\bar{xx} - V) = \tilde{x}\tilde{x}, \quad \mathbb{E}(\bar{yy} - V) = \tilde{y}\tilde{y}, \quad \mathbb{E}(\bar{z} - 2V) = \tilde{z},
+$$
+$$
+\mathbb{E}(\bar{xz} - 4\tilde{x}V) = \tilde{x}\tilde{z}, \quad \mathbb{E}(\bar{yz} - 4\tilde{y}V) = \tilde{y}\tilde{z}, \quad \mathbb{E}(\bar{zz} - 8\tilde{z}V + 8V^2) = \tilde{z}\tilde{z}.
+$$
+
+因此，$\mathbf{M}$ 的无偏版本构建为
+$$
+\mathbf{M}_{\mathrm{unbiased}}=\mathbf{M}-\mathbf{V H}+8 V^{2} \mathbf{I}_{1},
+$$
+其中
+$$
+\mathbf{H}=\left[\begin{array}{cccc} 8 \bar{z} & 4 \bar{x} & 4 \bar{y} & 2 \\ 4 \bar{x} & 1 & 0 & 0 \\ 4 \bar{y} & 0 & 1 & 0 \\ 2 & 0 & 0 & 0 \end{array}\right] \quad \text { 且 } \quad \mathbf{I}_{1}=\left[\begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{array}\right].
+$$
+我们现在看到 $\mathbb{E}(\mathbf{M}_{\mathrm{unbiased}})=\tilde{\mathbf{M}}$。
+
+值得注意的是，矩阵 $\mathbf{H}$ 是我们的老朋友：它是超高精度圆拟合中的约束矩阵 (7.44)。实际上，我们在本节中再次看到它并不奇怪：确实，我们的基本目标与第 7.5 节相同，即消除固有偏差。但现在我们的目标扩展了（进一步）：我们希望估计器在极限 $n \rightarrow \infty$ 下是渐近无偏且一致的，而这一新功能由额外项 $8 V^{2} \mathbf{I}_{1}$ 保证。
+
+注。一些作者 [94, 198] 试图通过丢弃四阶项 $8 \sigma^{4} \mathbf{I}_{1}=8 V^{2} \mathbf{I}_{1}$ 来简化计算。这种简化仍然允许他们消除固有偏差，但由此产生的估计器不再是一致的。
+
+对于 Kåsa 和 Pratt 圆拟合，矩阵 $\mathbf{N}$ 是常数，不需要无偏化。对于 Taubin 拟合，$\mathbf{N}$ 依赖于数据，参见 (7.21)，但它的结构与 $\mathbf{M}$ 类似（事实上甚至更简单），可以类似地进行无偏化，我们将细节留给读者。
+
+实际上，此时我们的代数圆拟合之间的差异不再显著，因为无偏化程序保证了相同的统计特性——没有固有偏差和一致性——无论我们采用哪种拟合。因此，我们将把分析限制在最简单的代数拟合：Kåsa 拟合。
+
+因此，我们得出以下圆拟合算法：假设噪声水平 $V=\sigma^{2}$ 已知，找到满足
+$$
+(\mathbf{M}-\mathbf{V H}+8 V^{2} \mathbf{I}_{1}) \mathbf{A}=\eta \mathbf{N A}
+$$
+并对应于最小非负 $\eta$ 的 $\mathbf{A}$。所得估计具有零固有偏差，并且在极限 $n \rightarrow \infty$ 下是渐近无偏且一致的。
+
+**未知噪声水平。** 在上述过程中，参数 $V=\sigma^{2}$ 假设是已知的。然而，在更现实的情况下，它是未知的，因此必须对其进行估计。最简单的做法是使用某些（任意选择的）$\sigma^{2}>0$ 通过上述方法拟合一个圆，然后用标准公式估计 $\sigma^{2}$
+$$
+\widehat{\sigma}^{2}=\frac{1}{n-k} \sum_{i=1}^{n} d_{i}^{2},
+$$
+

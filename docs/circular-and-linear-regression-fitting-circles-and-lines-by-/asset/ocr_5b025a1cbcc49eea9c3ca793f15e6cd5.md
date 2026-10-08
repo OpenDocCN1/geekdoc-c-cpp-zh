@@ -1,0 +1,15 @@
+# PREFACE
+
+on fitting geometric shapes to data was published by Kanatani [95] in 1996. A good (but rather limited) tutorial on fitting parametric curves, due to Zhang, appeared on the Internet in about the same year (and in print in 1997, see [198]). These two publications covered ellipse fitting methods existing in 1996, but not specifically circle fitting methods. The progress made after 1996 remains unaccounted for.
+
+The goal of this book is to present the topic of fitting circles and circular arcs to observed points in full, especially accounting for all the recent achievements since the mid-1990s. I have tried to cover all aspects of this problem: geometrical, statistical, and computational. In particular, my purpose is to present numerical algorithms in relation to one another, with underlying ideas, to emphasize strong and weak points of each algorithm, and to indicate how to combine them to achieve the best performance. The book thoroughly addresses theoretical aspects of the fitting problem which are essential for understanding advantages and limitations of practical schemes. Lastly, an attempt was made to identify issues that remain obscure and may be subjects of future investigation.
+
+At the same time the book is geared toward the end user. It is written for practitioners who want to learn the topic or need to select the right tool for their particular task. I have tried to avoid purely abstract issues detached from practice, and presented topics that were deemed most important for image processing applications.
+
+I assume the reader has a good mathematical background (being at ease with calculus, geometry, linear algebra, probability and statistics) and some experience in numerical analysis and computer programming. I am not using any specific machine language in the book, though the MATLAB® code of all relevant algorithms may be found on our Web page [84].
+
+The author is deeply indebted to his former supervisor at the Joint Institute for Nuclear Research (Russia), G. Ososkov, for his constant guidance in the studies on the circle fitting problem. The author is grateful to K. Kanatani for his strong support in research and especially in the design of this book. The author thanks his graduate students C. Lesort and A. Al-Sharadqah for their devotion to the subject and their help in preparing the manuscript and posting the computer code on the Web. Lastly, the author is partially supported by National Science Foundation, grant DMS-0652896.
+
+The book is organized as follows, see diagram in Fig. 0.5. Chapter 1 is an introduction to the Errors-In-Variables regression analysis and gives its brief history (mostly in the context of the linear model). Chapter 2 summarizes the solution of the linear EIV problem and highlights its main properties (geometric and statistical). These two chapters do not deal with circles or arcs.
+
+Chapter 3 gives the theory of fitting circles by least squares. It addresses the existence and uniqueness of the solution, describes various parametrization
