@@ -1,0 +1,7 @@
+# Developing Scalable Servers with Non-blocking Sockets and I/O Multiplexing
+
+The scalability of networked applications, especially servers that handle multiple client connections simultaneously, often hinges on the effective use of non-blocking sockets and I/O multiplexing. These features are imperative for designing high-performance systems that can manage thousands of concurrent connections without succumbing to the limits of traditional blocking I/O operations. This section introduces non-blocking sockets, dives into the essentials of I/O multiplexing, and demonstrates how to leverage these concepts to build scalable servers in C.
+
+Non-blocking Socks: In traditional socket programming, sockets are in a blocking mode by default. This implies that the call to send or receive data over a socket is blocked until the operation completes. While this model is straightforward and works well for applications with low concurrency requirements, it significantly limits scalability. With blocking sockets, each connection generally requires a dedicated thread or process to handle I/O operations independently, leading to excessive resource utilization and scalability bottlenecks.
+
+Non-blocking sockets, as the name suggests, allow socket operations to return immediately, even if the operation does not complete instantaneously. This permits the application to carry on with other tasks or even handle I/O on multiple sockets concurrently within a single thread, paving the way for highly efficient and scalable server architectures.

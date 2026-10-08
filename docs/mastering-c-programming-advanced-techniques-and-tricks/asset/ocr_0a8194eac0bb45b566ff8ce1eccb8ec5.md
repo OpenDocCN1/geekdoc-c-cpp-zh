@@ -1,0 +1,3 @@
+# Proper Deallocation
+
+Memory allocated dynamically (using or must be explicitly freed using the free function. Failing to do so can lead to memory leaks, where allocated memory is no longer accessible but has not been returned to the system. Memory leaks can degrade system performance over time, especially in long-running programs. Additionally, it is crucial to ensure that memory is not accessed after it has been freed (use-after-free), which can lead to undefined behavior and security vulnerabilities.

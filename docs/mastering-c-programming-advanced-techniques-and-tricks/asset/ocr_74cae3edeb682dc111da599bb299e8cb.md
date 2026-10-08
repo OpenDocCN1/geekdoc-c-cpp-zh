@@ -1,0 +1,3 @@
+# Secure Coding Standards and Guidelines: CERT C, MISRA C
+
+Adhering to secure coding standards and guidelines is crucial for developing robust, secure, and reliable C applications. Among the myriad of standards available, CERT C and MISRA C stand out due to their comprehensive approach towards mitigating common programming errors that lead to security vulnerabilities. This section delves into the significance of these standards, their key principles, and how they guide programmers towards writing secure code.

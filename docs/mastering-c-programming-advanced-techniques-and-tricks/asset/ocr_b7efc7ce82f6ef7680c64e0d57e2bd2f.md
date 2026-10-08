@@ -1,0 +1,3 @@
+# Debugging Multithreaded Applications with Thread Sanitizer
+
+Multithreading in C programs can significantly improve performance by utilizing concurrent execution. However, it also introduces complexity that can make debugging more challenging. Issues such as race conditions, deadlocks, and memory corruption are more prevalent in multithreaded applications. Frankly, tools like Thread Sanitizer (TSan) provide powerful ways to detect threading issues early in the development cycle. This section explores how to use Thread Sanitizer to debug multithreaded C programs effectively.

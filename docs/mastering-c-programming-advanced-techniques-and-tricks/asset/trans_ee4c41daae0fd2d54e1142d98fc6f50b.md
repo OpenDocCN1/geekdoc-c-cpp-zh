@@ -1,0 +1,116 @@
+
+
+# 安全编码标准与指南：CERT C, MISRA C
+
+遵循安全编码标准和指南对于开发健壮、安全且可靠的 C 应用程序至关重要。在众多可用标准中，CERT C 和 MISRA C 因其在缓解导致安全漏洞的常见编程错误方面的全面方法脱颖而出。本节将深入探讨这些标准的重要性、其核心原则以及它们如何指导程序员编写安全代码。
+
+# CERT C
+
+CERT C 安全编码标准为 C 编程语言中的安全编程提供了指南。该标准由卡内基梅隆大学的软件工程学院（SEI）开发，旨在消除可能导致可利用漏洞的不安全编码实践和未定义行为。CERT C 关注广泛的安全管理领域，包括缓冲区溢出、整数安全和适当的内存管理，为解决这些问题提供了可操作的建议。
+
+CERT C 涵盖了 C 语言的各个方面，从数据处理、内存管理到并发和资源管理。其主要目标是促进安全编码实践的使用，防止在 C 应用程序中引入漏洞和未定义行为。
+
+# MISRA C
+
+MISRA C 最初为汽车行业开发，现已广泛应用于多个领域，用于开发高完整性和关键安全系统。它定义了 C 语言的一个子集，规定了编码规则以促进错误检测、可移植性和可维护性。尽管它更多地关注可靠性和安全性而非安全性，但其指南通过执行严格的编码纪律，本质上有助于创建更安全代码。
+
+MISRA C 提供了跨整个 C 语言的指南，强调可预测性，并避免可能导致歧义或未定义行为的结构。
+
+它旨在促进开发健壮、可维护且可移植的代码，特别是在可靠性至上的嵌入式系统背景下。
+
+示例：遵循 CERT C 和 MISRA C 指南编码
+
+以下示例演示了如何编写一个符合 CERT C 和 MISRA C 指南的简单函数，侧重于安全的字符串操作。
+
+```c
+#include <stdio.h>
+#include <string.h>
+#define BUFFER_SIZE 50
+
+void safeStringCopy(char *dest, const char *src, size_t size) {
+    if (size > BUFFER_SIZE || dest == NULL || src == NULL) {
+        // Handle error
+    }
+    /* MISRA C Rule 21.15 compliance - Avoid overlapping when using strcpy */
+    if ((src < dest && (src + size) > dest) || (src && (dest + size) > src)) {
+        // Handle potential overlap error
+    }
+    strncpy(dest, src, size);
+    dest[size] = '\0'; /* Ensure null termination (CERT STR31-C) */
+}
+
+int main() {
+    char dest[BUFFER_SIZE];
+    char *src = "hello";
+    safeStringCopy(dest, src, strlen(src) + 1);
+    return 0;
+}
+```
+
+输出：
+
+C 语言安全编码
+
+此示例强调了对 CERT C 和 MISRA C 指南的遵循。`safeStringCopy` 函数执行了参数校验，确保指针不为空且大小在范围内，符合 CERT C 对安全参数处理的建议。此外，它检查了缓冲区重叠，这是 MISRA C 为了防止在字符串拷贝操作期间出现未定义行为的要求。最后，它确保目标字符串以空字符结束，遵循了 CERT 的 STR31-C 指南。
+
+总之，CERT C 和 MISRA C 为安全可靠的 C 编程提供了坚实的基础。通过遵循这些标准，开发者可以避免导致漏洞和未定义行为的常见陷阱，增强应用程序的安全性和完整性。
+
+# 8.10
+
+# 代码分析与安全测试自动化工具
+
+在开发安全 C 应用程序过程中，仅依赖人工代码审查和测试可能不足以发现所有潜在的安全漏洞。自动化代码分析和安全测试工具提供了至关重要的审查层，能够检测出即使经验丰富的程序员也可能忽略的复杂安全问题。本节探索了代码分析和安全测试自动化工具的现状，强调了它们的功能、类型和实际应用。
+
+# 自动化工具的能力
+
+自动化代码分析工具利用多种技术（包括静态代码分析、动态分析和形式化验证）来识别缓冲区溢出、整数溢出、内存泄漏和 API 误用等漏洞。这些工具还可以强制执行标准（如 CERT C 和 MISRA C），确保遵循安全编程的最佳实践。
+
+- 静态分析：在不执行代码的情况下对其进行分析，根据代码结构和已知模式识别潜在漏洞。
+- 动态分析：在受控环境中运行程序以观察其行为，并检测内存损坏或未经的访问等问题。
+- 形式化验证：使用数学方法证明或反驳算法相对于特定形式化规范或属性的正确性。
+
+# 自动化工具的类型
+
+市场上存在大量的自动化工具，涵盖开源和商业产品。示例包括：
+
+- 静态分析：如 Clang Static Analyzer、Coverity 和 Cppcheck 等工具可以自动检测 C 源文件中大量的安全漏洞和编码错误。
+- 动态分析：AddressSanitizer 和 LeakSanitizer 为 C 程序的运行时行为提供深度见解，帮助识别内存泄漏、缓冲区溢出和其他运行时错误。
+- 模糊测试：American Fuzzy Lop (AFL) 和 LibFuzzer 是模糊测试工具的示例，它们自动为程序生成意外输入，以暴露可能的崩溃和漏洞。
+
+# 示例：使用 Cppcheck 进行静态分析
+
+Cppcheck 是一种流行的 C 和 C++ 代码静态分析工具。它可以检测许多常见的编码缺陷，包括可能导致安全漏洞的缺陷。
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+void example(char *str) {
+    char buffer[10];
+    // Potential buffer overflow
+    strcpy(buffer, str);
+}
+
+int main() {
+    char *longString = "this is a very long string";
+    example(longString);
+    return 0;
+}
+```
+
+在这些代码上运行 Cppcheck 将产生关于潜在缓冲区溢出的警告。
+
+
+
+Cppcheck 输出：
+
+```bash
+$ cppcheck example.c
+Checking example.c...
+[example.c:7]: (error) Buffer is accessed out of bounds: buffer
+```
+
+Cppcheck 的此输出强调了由于在使用 `strcpy` 时未确保源字符串放入目标缓冲区而导致的缓冲区溢出漏洞。这种来自自动化工具的反馈对于在开发早期识别和修复安全漏洞具有极价值。
+
+代码分析和安全测试自动化工具是开发安全 C 应用程序不可或缺的资产。通过将这些工具集成到工作流中，团队可以提高代码质量，减少安全风险并遵循行业最佳实践，从而提供健壮且安全的软件解决方案。
+

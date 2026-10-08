@@ -1,0 +1,5 @@
+# Memory Corruption and How to Detect It with Valgrind
+
+Memory corruption occurs when a program unintentionally modifies a part of memory, leading to unpredictable behavior, crashes, and vulnerabilities in the software. For C programmers, memory corruption is a common challenge due to the language’s direct memory manipulation capabilities. This section explores the causes and symptoms of memory corruption and demonstrates how to use Valgrind, a programming tool dedicated to memory debugging, memory leak detection, and profiling, to detect and solve these issues.
+
+Memory corruption can manifest in various ways, including but not limited to writing beyond the bounds of a memory buffer (buffer overflow), double free errors, and using uninitialized memory. These errors can be subtle, leading to hours of debugging without a clear understanding of the root cause.
