@@ -1,0 +1,25 @@
+protect women from female impostors, working under a system of belief that female athletes are, by nature, weaker and more prone to being taken advantage of than their male (read: more well equipped) counterparts (Cohen and Sermaning, 2008, p. 134).
+
+This fear of men and boys preying on women and girls is based on a reality of victimization that transgender and gender-variant individuals share. “Victimization is widely recognized in the literature, and the implication exists that virtually every transgender person is likely to experience some form of victimization as a direct result of his or her transgender identity or presentation” (Dean et al., 2000, p. 40). The dichotomous separation during the mundane experiences of sleeping and going to the bathroom to protect women and girls may have the secondary effect of excluding transgender and gender-variant participants.
+
+# Sleeping Arrangements
+
+Bedtime should be a restful time. However, the traditional separation of campers based on sex (girl cabins and boy cabins) excludes transgender and gender-variant individuals. Moreover, the potential lack of supervision during that period of time may create a void of leadership that creates opportunities for harassment, especially because bullying typically takes place during times of lower supervision (Carney and Notis, 2008).
+
+As do many other programs serving youths, Outward Bound, the largest adventure education organization in the United States, provides separate sleeping areas for boys and girls (Outward Bound, 2010). This classic sleeping arrangement that splits participants into a binary based on sex is troubling because it assumes a heterosexual norm. This binary also leaves transgender participants out in the cold. In contrast, Camp Aranu’iq places campers in cabins based on their gender expression and focuses on providing campers with personal privacy. Half of the cabins are dedicated to campers identifying in the “transmasculine spectrum” and half to campers identifying in the “transfeminine spectrum.” It may be more difficult for camps that don’t specialize in transgender and gender-variant populations to fully understand this issue and make appropriate arrangements.
+
+# Where Do I Go to the Bathroom?
+
+The first author was recently having lunch with a friend, J.P. (who self-identifies as “gender ambiguous”), and they got on the topic of bathrooms. J.P. recounted a familiar transgender tale of being very
+
+conscious about whether to use the bathroom (Cho et al., 2004; Lewis and Johnson, 2011). J.P. stated, “I usually try to not go to the bathroom until I get back home or I can go to a unisex bathroom.” This is partly personal comfort and security, but it is also about the comfort and security of the other bathroom users. “I’ve had women come into the bathroom, look at me, and then walk out and check the sign on the door.” Transgender and gender-variant individuals who don’t fall within the male–female binary may face the negative health ramifications of not having a place to use the bathroom or the possibility of harassment for using a bathroom.
+
+This issue is moot for outdoor education programs that are expedition based. Out in the wilderness, no signs state that a certain bush is for women. However, built camps often have sex-specific group restrooms. Camps can resolve this issue by providing more gender-neutral single-occupancy restrooms or providing many fully enclosed bathroom stalls in gender-neutral bathrooms (Transgender Law Center, 2005). Unfortunately, not all camps may offer convenient restroom facilities that Robin could use without being harassed. This would not be an issue at a transgender-specific camp because the camp’s restrooms are designed with this issue in mind.
+
+# Single-Gender Programming
+
+Even within traditional binary notions of gender, similar debates surround mixed- versus single-gender sex programming. In the world of outdoor education, single-gender programming normally refers to programs for women and girls. Programs such as Girlvutures in San Francisco or Northwest Passages in Seattle provide outdoor education programming for women and girls. The literature on this topic provides many good reasons that support single-gender programming.
+
+Authors have claimed that single-gender programming is essential because the outdoors has traditionally been a “male space” (McDermott, 2004) dominated by males (Allin and Humberstone, 2006). If it is true that women and girls have felt like an “other” who is not welcome in the dominant male culture of outdoor education, it is easy to extrapolate that research would likely find very similar results for transgender and gender-variant individuals.
+
+Research on outdoor programming for women and girls also shows that single-gender programming eliminates the potential for boys and men to disempower girls and women through chauvinistic

@@ -1,0 +1,25 @@
+ponents and objectively analyze the strengths and weaknesses of each piece in turn by a preset criteria, generate lists of cost-benefit relationships for a range of possible applications for the situation, and then determine which would be best suited to the context. CRDM requires these steps each time it is used, and this process would take an inordinate amount of time to complete, even when the best choice is obvious to all. The outcome is also significantly different. In using CRDM I would be able to see the student's analytical ability to determine the optimal anchor without time pressure or risk of loss, but I would not be able to observe their naturally existing cognitive process and interact with them in an educative fashion. There would be no place for discussion of how the situation feels to the student, what their gut is telling them, or even that they have an intuition to follow, which CRDM is meant to ignore. Teachable moments could stretch to hours, and attempting such a discussion midway up a multipitch route one-on-one would be untenable or dangerous, potentially more so with a larger group of beginning climbers at ground level.
+
+I concede the point that these techniques are used currently and with good effect; however, my assertion is that we are using them for the wrong reasons. Rational decision-making models are unrelated to these techniques--there is no place for a gut feeling within the CRDM framework. In this regard, we as a profession have built our house on a weak foundation. It is our professional responsibility to renovate our collective understanding when advances are made. We have no difficulty embracing the latest technology to ensure the safety of our students, so why should we hesitate to examine the theoretical underpinnings of how and why we train outdoor leaders to use that gear with their students?
+
+# Conclusion
+
+The development of more experienced professionals is far more rich and contextual than that of novices in the same profession. However, little evidence exists that novices use an entirely different process than experts--they simply have less to go on. Judgment is not an entity unto itself; it is contextual and an inherent cognitive function and it is linked to multiple facets of professional performance. Whereas CRDM attempts to de-contextualize and consider many options in order to provide optimum decisions, NDM and the other macrocognitive functions strive to adopt, adapt, and
+
+succeed in the midst of the actual context, which in the case of outdoor leadership usually involves time stress and high stakes. CRDM does offer an interesting method for dispassionate discussion of the events of a day, and this is well illustrated by its incorporation into the Wilderness Education Association curriculum (Drury et al., 2005, p. 156). However, this curriculum and others like it do not present a coherent and realistic model of decision making and, in my view, should not be taught to any outdoor instructors, regardless of their level of expertise, as a method of making decisions. Rather, it offers a powerful method of review of and reflection on decisions that have already been made with the purpose of considering the multifaceted and evolving nature of professional action in the field.
+
+The more I read on the topic of decision making, the more I come to believe that it is not a separate cognitive function, although we treat it as such. Perhaps it is nothing more or less than human thought and experience in action. If so, we should focus our efforts on developing that ability rather than attempting to study or teach artificial notions of choice or judgment. McCammon (2001) succinctly observes that "it's probably not possible to teach people how to make decisions, because they already do it pretty well... Learning to make better decisions, however, is a different matter, one that can be addressed by applying current knowledge of how people learn" (p. 29).
+
+# References
+
+Beare, M., & Lynch, P. (2005). Learning decision making for the outdoors: A naturalistic perspective. In T.J. Dick- son, T. Gray, & B. Hayllar (Eds.), Outdoor and experiential learning: Views from the top (pp. 210-220). Dunedin, New Zealand: Otago University Press.
+
+Boyes, M.A., & O'Hare, D. (2003). Between safety and risk: A model for outdoor adventure decision making. *Journal of Adventure Education and Outdoor Learning, 3(1)*, 63-76.
+
+Cacciabue, P.C., & Hollnagel, E. (1995). Simulation of cognition: Applications. In J.M. Hoc, P.C. Cacciabue, & E. Hollnagel (Eds.), *Expertise and technology: Issues in cognition and human-computer cooperation* (pp. 55-74). Hillsdale, NJ: LEA.
+
+Crandall, B., Klein, G., & Hoffman, R.R. (2006). *Working minds: A practitioner's guide to cognitive task analysis*. Cambridge, MA: MIT Press.
+
+de Groot, A.D. (1946/1978). *Thought and choice in chess*. 1st ed. New York: Mouton.
+
+de Groot, M. (1970). *Optimal statistical decisions*. New York: McGraw-Hill.

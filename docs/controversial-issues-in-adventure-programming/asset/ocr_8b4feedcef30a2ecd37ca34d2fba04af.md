@@ -1,0 +1,23 @@
+# # Transfer in Adventure Education: Why?
+
+By several accounts, the birth of the modern adventure education movement is traced to the founding of the first Outward Bound school in Aberdovey, Wales. Laurence Holt and Kurt Hahn established the school as a response to high death rates among young British mariners during World War II. Holt perceived that young sailors lacked the necessary resilience to survive the ordeals of the North Atlantic in a lifeboat and, partnering with Hahn, began the Outward Bound program to teach young men character and tenacity. This training was conducted primarily through the sea rather than for the sea. Thus the idea of leveraging the rich potential of environmental challenge and developing technical skill to afford transferable life lessons became a central element of adventure programming.
+
+Theoretical underpinnings for transfer in outdoor education were advanced by Walsh and Golins (1975), who suggested that transfer was a result of
+
++   a. a learner who is placed into a prescribed environment, then, given a
+
+b. set of problem-solving tasks leading to adaptive dissonance and subsequent mastery or competence, and, consequently, a reorganization of meaning and orientation toward change.
+
+This insightful framework has been used as an explanation for lasting outcomes (Ewert and McAvoy, 2000), validated (Sibthorp, 2003a), and adapted (McKenzie, 2003). It stands today as one of the most relevant explanations for how adventure programs foster change in participants.
+
+The contributions of Michael Gass and others cemented the primacy of learning transfer in the collective consciousness of the adventure programming field. Through inclusion in textbooks (Gass, 1985a, 1999) and scholarly publications (Gass, 1985b; Gass and Priest, 1993, 2006), Gass effectively communicated why transfer is critical to the adventure programming field and provided information on how instructors and programs can foster transference in participants. It should be noted that Gass is not the only author to write on the behalf of transfer and that publications by other scholars (e.g., Hammit et al., 1996; Holman and McAvoy, 2004; Leberman and Martin, 2004; Miller, 2001; Sibthorp, 2003b) have made strong contributions as well. The answer to why transfer is considered the primary goal of adventure programming, then, is a result of historical context, theoretical explanation, and popular academic contributions. Thus, we contend that transfer is largely considered the ultimate goal of adventure programming.
+
+# # Transfer in Adventure Education: Theoretically Sound But Empirically Elusive
+
+Support for transfer of learning exists in the adventure programming literature. For instance, Mitchell and Mitchell (1988, 1989) found that awareness of others and interpersonal skills were transferred outcomes of participation in Outward Bound courses at two years postcourse. Anderson and colleagues (1997) report that adventure education participants developed friendships and technical skills that transferred as a result of their adventure program. Mazze (2006) found evidence that participants in a NOLS course maintained an increased connection to the outdoors several months after their course. Hammit and colleagues (1996) report that a sample of NOLS alumni self-reported greater environmentally responsible behavior several months postprogram. Gass and Priest (2006) determined that factors such as trust, communication, collaboration, problem solving, decision making, and task completion could be increased among intact groups up to 12 months after a corporate adventure training program.
+
+Based on these studies, one might reasonably conclude that, indeed, adventure programs are effective at developing and transferring skills to life postprogram. However, the answers to our questions (How many? How frequently? How long? How effectively?) are barely understood. Further, studies need to more frequently offer a standard of comparison in order to communicate a sense of program efficacy. This argument cannot answer these questions, but it can shed light on what it would take to do so.
+
++   - **How many?** Studies need to address how many participants use their skills compared with how many do not. One could conclude that communication skills are transferred from an adventure program, but if only 10 percent of program participants report transfer and 90 percent do not, we cannot reliably conclude that the program fosters transfer.
+
+- **How frequently?** Studies need to examine how often transferable skills are applied by participants postcourse. For instance, if a

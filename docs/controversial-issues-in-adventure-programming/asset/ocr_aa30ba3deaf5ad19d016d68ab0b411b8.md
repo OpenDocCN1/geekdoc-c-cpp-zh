@@ -1,0 +1,25 @@
+rodents to rabbits to reptiles to birds (Havlick, 2002, pp. 96–100; Sheridan, 1979, pp. 12-22).
+
+ORV use increases the number of roads and motorized trails on public lands, which creates many negative ecological impacts. Roads increase erosion and air and chemical pollution. They fragment wildlife habitat, increase poaching, and help spread noxious weeds. (See Havlick, 2002, chapter 3, for a relatively recent summary of the ecological effects of roads on public lands.) ORV users are a powerful constituency for increased road-building and for keeping roads open that land managers would otherwise close for stewardship reasons.
+
+ORV users have also created tens of thousands of illegal roads and trails on public lands; one study estimated more than 60,000 miles of "unplanned or illegal roads" in national forests alone, many created by ORV users (U.S. Forest Service, 2000, pp. 1-5).
+
+In these ways, ORV have degraded millions of acres of our public lands. The damage has not been done by a few bad apples; rather, it is the cumulative effect of the normal use of ORV (Sheridan, 1979, p. 30). Some of the worst damage occurs when ORV are driven cross-country; unfortunately, such abuse is common. According to a recent survey performed for a coalition of ORV advocacy groups, more than two-thirds of Colorado's adult ORV users ride off-trail at least occasionally, and 15 to 20 percent frequently ride off-trail illegally (Frueh, 2001, p. 11).
+
+ORV use causes significant, permanent damage to nature. At a minimum, land managers should not allow ORV users to drive off-road on public lands, nor should users drive ORV off-road even where such use is currently allowed or encouraged. Ethical recreationists realize this, as shown in the excerpts already quoted from the codes of conduct of the American Birding Association and the Izaak Walton League. Given the scientific evidence, a person can drive ORV off-road only if he or she is willing to frankly reject the ethical standard that we should recreate only in ways that do not cause significant, permanent harm to nature.
+
+# Impacts on Other Recreationists
+
+Recreational activities can interfere with one another and with nonrecreational uses of forests and rangelands. Hikers scare horses on narrow mountain trails, or horses muddy the trails for hikers. Boaters scare fish and anger anglers, and campers leave gates open and cattle stray. When recreationists negotiate such conflicts, common sense and courtesy can go a long way. Because
+
+these are sometimes in short supply and because, once again, sheer numbers make a difference, land managers must manage recreational conflicts.
+
+Multiple use, sustained yield provides one plausible framework for resolving recreational conflicts. Users are encouraged to recreate in their favored ways, provided they do not significantly harm public lands or other recreationists. When negative impacts to other recreationists occur, attempts are made to eliminate or minimize them. When significant negative impacts to others are unavoidable, segregation of users may be attempted (seasonally, as with hunting, or by zoning, as when fishermen and kayakers are given different stretches of a river). However, because public lands are for public use and people strongly resist being locked out of their favorite places, segregation is at best a last resort.
+
+ORV bring a new dynamic to such conflicts and make management of multiple-use recreation impossible (Kockelman, 1983, pp. 409-410, 423-425; Sheridan, 1979, p. 17). The main reasons are that ORV cause excessive and asymmetrical harms to other outdoor recreationists and that they tend to assert exclusive possession where they are allowed.
+
+The most obvious harm ORV inflict on other recreationists is their noise, which can travel for miles and which interferes with a wide variety of recreational activities. ORV have taught us that quiet is an important recreational resource (as well as a resource for other animals, whose survival and reproduction may depend on it) (Kockelman, 1983, pp. 420-421; Sheridan, 1979, p. 30). A close second in terms of negative impact is safety, especially for parents recreating with children. ORV tearing along trails are dangerous to other users. Even when ORV are driven responsibly, encounters with them are unpleasant because they force other users off the trail and leave them gagging on exhaust fumes.
+
+ORV transform narrow hiking trails into wide, rutted roads, which are much less enjoyable to hike on. They scare away the wildlife that other users have come to see. The experience and reality of a natural landscape, important to many outdoor recreationists, recedes (Kockelman, 1983, p. 403). One study summarizes these impacts: "Most non-motorized forms of outdoor recreation are disrupted or hurt by the operation of ORV nearby, especially for those whose recreational goals include solitude, tranquility, relaxation, observation of wildlife, and the appreciation of wild environments" (Kockelman, 1983, p. 407).
+
+Research confirms an asymmetry in conflict between ORV users and users of nonmotorized

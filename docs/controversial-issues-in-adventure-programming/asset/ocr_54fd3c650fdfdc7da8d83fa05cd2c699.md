@@ -1,0 +1,13 @@
+previously, refers to how human alterations to *wilderness spaces undermine the potential for recreationists to derive wilderness aesthetic values from their experience*. **Crowding** and **degradation** are two related results of resource usage that can lead to both spoilage and reduction in users' capacity to participate in the recreation.
+
+Crowding occurs when concurrent use of a resource either prevents or diminishes the quality of usage by others. Wilderness campsites can become filled, climbing routes can develop queues, and waves can become crowded. *Crowding can diminish the recreation value of wilderness spaces, and it can have an even stronger effect on the potential for wilderness experience in the aesthetic sense*. How crowded can a resource become before it is no longer a wilderness? When does the experience become just another social experience that keeps us embedded in the normal life of civilization? For example, a busy weekend surf session at Mavericks (see figure 10.3) has become a strongly social experience that is unlikely to lead to the aesthetic dimensions of wilderness. Similarly, for surfers on
+
+the north shore of Oahu, the advent of tow surfing means that surfers are constantly drawn back to society by the sound and smell of motorized tow vehicles.
+
+In a direct sense, technological advances lead to greater crowding by making it easier to access wilderness recreation, democratizing the population of users, and expanding the scope of activity. Sea kayaking is a great avenue to wilderness experience, but not when one is surrounded by crowds. *Motorized vehicles* may be restricted from some areas, but a host of technical advances in equipment expand the reach of mountaineers, divers, cavers, skiers, and hikers and increase the chances that in any recreation users will conflict with other users for access, if not for solitude.
+
+**_Degradation_** of wilderness spaces occurs when *use of the resource alters the resource in a way that diminishes the future recreation value or the potential for wilderness experience*. Surfing leaves no lasting marks on the waves. However, many other uses of wilderness lead to visible physical degradation of the resource. Users of hiking.
+
+![](bbox=[0.08, 0.44, 0.89, 0.85])
+
+**Figure 10.3** Surfers crowd the break at Mavericks, an isolated, big-wave surfing resource off the coast of California. After years of being used by a single intrepid surfer, Mavericks has become an international surf destination where rampant crowding occurs during prime conditions (Warshaw, 2000).

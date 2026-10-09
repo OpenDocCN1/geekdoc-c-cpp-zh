@@ -1,0 +1,69 @@
+Creyer, E., Ross, W., & Evers, D. (2003). Risky recreation: An exploration of factors influencing the likelihood of participation and the effects of experience, Leisure Studies, 22(3), 239–253.
+
+Davidson, L. (2008). Tragedy in the adventure playground: Media representations of mountaineering accidents in New Zealand. Leisure Studies, 27(1), 3–19.
+
+Day, M. (2010). Jail threat to skiers who go too far offline. The Independent. www.independent.co.uk/news/ world/europe/jail-threat-to-skiers-who-go-too-far- offline-1893331.html [February 15, 2010].
+
+Delle Fave, A., Bassi, M., & Massimini, F. (2003). Quality of experience and risk perception in high-altitude climbing. Journal of Applied Sport Psychology, 15(1), 82–98.
+
+Elmes, M., & Barry, D. (1999). Deliverance, denial, and the Death Zone: A study of narcissism and regression in the May 1996 Everest climbing disaster. The Journal of Applied Behavioral Science, 35(2), 163–187.
+
+Ewert, A., Attarian, A., Hollenhorst, S., Russell, K., & Voight, A. (2006). Evolving adventure pursuits on public lands: Emerging challenges for management and public policy. Journal of Park and Recreation Administration, 24(2), 124–140.
+
+Farley, F. (1991). The Type-T personality. In L. Lipsett & L. Mitnick (Eds.), Self-regulatory behavior and risk taking: Causes and consequences (pp. 371–382). Norwood, NJ: Ablex Publishers.
+
+Fletcher, R. (2008). Living on the edge: The appeal of risk sports for the professional middle class. Sociology of Sport Journal, 25(3), 310–330.
+
+Goma, M. (1991). Personality profiles of subjects engaged in high physical risk sports. Personality and Individual Differences, 12(10), 1087–1093.
+
+Heidegger, M. (1996). Being and time: A translation of Sein und Zeit (J. Staumbach, trans.). Albany, NY: State University of New York.
+
+Horton, D. (2004). Extreme sports and assumption of risk: A blueprint. University of San Francisco Law Report, 38, 599–664.
+
+Hunt, J.C. (1995). The neutralisation of risk among deep scuba divers. Unpublished manuscript.
+
+Hunt, J.C. (1996). Diving the wreck: Risk and injury in sport scuba diving, Psychoanalytic Quarterly, LXV, 591–622.
+
+Lambton, D. (2000). Extreme sports flex their muscles. Allsport, September(5849), 19–22.
+
+Laurendace, J. (2008). “Gendered risk registers”: A theoretical consideration of egender and gender. Sociology of Sport Journal, 25(3), 293–309.
+
+Lyng, S. (2008). Risk-taking in sport: Edgeword and the reflexive community. In M. Atkinson & K. Young (Eds.), Tribal play: Subcultural journeys through sport (pp. 83–109). Bingley, U.K.: Emerald.
+
+Miller, J.R., & Demony, S.G. (2008). Parkour: A new extreme sport and a case study. The Journal of Foot and Ankle Surgery, 47(1), 63–65.
+
+Monasterio, E. (2007). The risks of adventure sports/ people. The Alpinist. www.alpinist.com/doc/wcb071/ rb-erik-monasterio-mountaineering-medicine [June 11, 2008].
+
+Nimmo, L., Stewart, J., McNamara, J., & Leaversuch, P. (2007). Research into staus of challenge/extreme sport and activities in Western Australia. Perth, Western Australia: Royal Life Saving Society (WA Branch).
+
+Ogily, B.C. (1974). The sweet psychic jolt of danger. Psychology Today, 8(5), 88–94.
+
+Oliver, S. (2006). Moral dilemmas of participation in dangerous leisure activities. Leisure Studies, 25(1), 95–109.
+
+Olsen, M. (2001). Women who risk: Profiles of women in extreme sports. New York: Hatherleigh Press.
+
+Pain, M.T.G., & Pain, M.A. (2005). Essay: Risk taking in sport. The Lancet, 366(1), 533–534.
+
+Palmer, C. (2004). Death, danger and the selling of risk in adventure sports. In B. Wheaton (Ed.), Understanding lifestyle sports: Consumption, identity and difference (pp. 55–69). New York: Routledge.
+
+Pizam, A., Reichel, A., & Uriely, N. (2002). Sensation seeking and tourist behavior. Journal of Hospitality and Leisure Marketing, 9(3–4), 17–33.
+
+Pollay, R.W. (2001). Export “A” ads are extremely expert, eh? Tobacco Control, 10, 71–74.
+
+Puchan, H. (2004). Living “extreme”: Adventure sports, media and commercialisation. Journal of Communication Management, 9(2), 171–178.
+
+Ramsey, C.B. (2003). Homicide on holiday: Prosecutorial discretion, popular culture, and the boundaries of the criminal law. Hastings Law Journal, 54, 1641–1703.
+
+Rinehart, R. (2000). Emerging arriving sports: Alternatives to formal sports. In J. Coakley & E. Dunning (Eds.), Handbook of sports studies (pp. 501–520). London: Sage.
+
+Rinehart, R. (2005). “BABES” or BOARDS: Opportunities in new millennium sport? Journal of Sport and Social Issues, 29(3), 232–255.
+
+Robinson, D.W. (1985). Stress seeking: Selected behavioural characteristics of elite rock climbers. Journal of Sport Psychology, 7(4), 400–404.
+
+Rossi, B., & Ceratiati, L. (1993). The sensation seeking in mountain athletes as assessed by Zuckerman’s sensation seeking scale. International Journal of Sport Psychology, 24(4), 417–431.
+
+Schrader, M.P., & Wann, D.L. (1999). High-risk recreation: The relationship between participant characteristics and degree of involvement. Journal of Sport Behaviour, 22(3), 426–431.
+
+Schrotth, M.I. (1995). A comparison of sensation seeking among different groups of athletes and nonathletes. Personality and Individual Differences, 18(2), 219–222.
+
+Self, D.R., Henry, E.D., Findley, C.S., & Reilly, E. (2007). Thrill seeking: The type T Personality and extreme sports. International Journal of Sport Management and Marketing, 2(1–2), 175–190.

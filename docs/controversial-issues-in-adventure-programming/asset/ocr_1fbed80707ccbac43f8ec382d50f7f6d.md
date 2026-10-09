@@ -1,0 +1,23 @@
+It seems as though educational systems in our various nations may be circling on a very-go-round of pedagogical approaches from whole-class instruction to child-centred and personalized learning with corresponding emphases on cognition and affect. As perceived academic standards rise and fall like the painted horses in the different countries, greater emphasis is placed on whole-class or whole-child approaches, often representing a move away from the prevailing system which is seen as failing to reach educational targets. (p. 259)
+
+Furthermore, measurement in itself is problematic because it assumes a finished measurable state rather than a potential, which may be situated, complex, and fluid. Watson and Emery (2010) suggest that if outcomes are social and emotional, it makes no sense to impose normalized standards to quantify them. These kinds of outcomes can be evaluated only through assessment that acknowledges the shifting and socially constructed nature of outcomes. Thus, intuitive formative assessment, widely practiced by outdoor learning professionals in adaptive and personalized pedagogy that is responsive to the contingencies of different people and situations, might better reflect accountability than a spurious objective measurement. Despite research that has sought to define attributes of meaningful learning experiences in outdoor education programs (e.g., Taniguchi, Freeman, and LeGrand Richards, 2005), one could argue that the variation in the offerings and outcomes of different programs and centers makes a universal accountability system an impossible and, moreover, undesirable dream.
+
+Even the voluntary sector has not escaped colonization. For example, the U.K. Scouts website states that taking part in a residential or day program will broadly meet the overall aims of the National Curriculum as well as some specific subject areas. This claim is followed by a list of 28 activities linked to key stages 2 and 3 (Scouts, 2010), and the scouts “teacher zone” includes links to the National Curriculum and Every Child Matters (Department for Education and Skills, 2003). Similarly, the website of the Duke of Edinburgh’s Award Scheme includes reference to impact research and meeting U.K. government education agenda (Duke of Edinburgh, 2010). We might anticipate that the power and influence of governmental accountability regimes would be attenuated when funding and training are
+
+separate and independent. However, colonization works not only directly through top-down guidance but also indirectly through expectations and values of the consumer within the system, expressing cultural values that permeate public life (Said, 1978).
+
+# ## Schooling Orthodoxy
+
+A recent study of an English residential outdoor education center (Rea, 2011b) revealed a disturbing phenomenon. This research was undertaken at a residential outdoor education center in Southwest England that is maintained by an English local authority. This center accommodates approximately 30 children ages 9 to 11. Center activities include those undertaken on site (e.g., climbing, orienteering, outdoor games, problem solving) and others based in the local surroundings (e.g., beach adventure, canoeing, coasteering, farm visits, gorge walking, local history trails, moorland walks, mountain biking, river walks, surfing). The work and life of the center are more fully described and discussed elsewhere (e.g., Rea, 2008, 2011a, 2011b; Waite and Rea, 2007).
+
+The center seemed to be adopting a number of schooling orthodoxies:
+
++   - Adopting the current schooling practice of overtly telling children what they are expected to learn.
+- Auditing children’s attainment against these intended outcomes.
+- Tailoring activities to the school curriculum.
+
+These moves tend to increase instrumental attitudes of staff and children toward demonstrating their achievement. This tension is implicit even in qualitative evaluative techniques. For example, Taniguchi, Freeman, and LeGrand Richards (2005) ask participants in a wilderness experience to write an essay about it. This free writing is then used to analyze key attributes or outcomes of the experience. Although the task is apparently open ended, by virtue of participation, the “correct” or expected responses to the event would be very clear to those taking part, thus perhaps leading the participants to conform to orthodoxy rather than give to authentic answers.
+
+# ### The Schooling Orthodoxy of Learning Goals
+
+Hayes (2007) expresses concern about current best practice in schools of teachers who share their intended learning outcomes with children. Note the pronoun Hayes uses to draw attention to the

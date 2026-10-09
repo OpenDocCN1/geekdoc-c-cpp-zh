@@ -1,0 +1,23 @@
+We are not involving people of color in decision making, as demonstrated by their stark absence at the administration and board levels within our field. Encouraging people of color to join currently constructed adventure programs without giving them actual power to determine their orientation and direction is discriminatory assimilation. We must all work together to ensure the true inclusivity of adventure programming by cocreating new programs with people of color. Moreover, to move the outdoor adventure field from an ethnocentric melting pot to a more multicultural practice, people of privilege need to work to prioritize the "include" and "involve" legs of Chavez's model.
+
+example of a construct of the sublime valued over the utilitarian. I am not questioning the value of Leave No Trace; rather, I am suggesting that we need to look critically at all theory and practice in outdoor adventure to see how it perpetuates paradigms that inhibit the participation of people of color.
+
+The location of outdoor adventure course areas is called into question by the fact that white people favor more remote outdoor experiences whereas African Americans seek out more developed recreation settings (Virden and Walker, 1999). However, the outdoor profession is drawn to using remote wilderness areas for programming. In addition, wilderness access historically has depended on resources to get there, money to buy specialized gear, and access to leisure time. The last time I checked, there was no subway to Yellowstone. As a mother in Erickson, Johnson, and Kivel's (2009) study points out,
+
+# # Paradigm of Wilderness Adventure
+
+The allure of high mountaintops, deep woods, and rushing rivers has been the holy grail of outdoor adventure programs. Outdoor adventure has evolved from a history of wealthy white people finding leisure in the sublime wilderness (Nash, 2001). This schism in values positions the sublime view of nature against the utilitarian view that advocates the usefulness of nature. A prevalent view of wilderness, rooted in the dominant group culture, favors a more sublime immersion into wilderness as opposed to a utilitarian approach that is often the orientation of ethnic and racial minorities. Many communities of color have traditionally used the wilderness for hunting, fishing, gathering, and surviving (Johnson et al., 2005).
+
+The idea of wilderness as a majestic, empty place is echoed in the definition from the Wilderness Act of 1964\u2014"a land untrampled by man, where man himself is a visitor who does not remain." Some scholars suggest that this view of wilderness is an artificial construct used to create a rationale for the genocide of indigenous people who populated the entire American continent upon the arrival of Europeans (Jaimes, 1992; Weatherford, 2010). If we create an idea that wilderness landscape, the frontier, is a lonely, empty place, it allows us to be excused for not seeing the people who did live there. "What better way to deny genocide than to ignore the existence of the human residents of the 'wilderness?'" (Fink, 1999, p. 167).
+
+Wilderness values that deny that people are an integral part of the landscape privileges the sublime view of wilderness over the utilitarian, which results in wilderness values that may not be shared by oppressed groups. The popular Leave No Trace philosophy used in many outdoor programs is an
+
+> "First of all, you have to have the type of car . . . you know . . . and then there's gas. . . . I don't have the right gear to go up to the mountains. I have to wear another jacket other than the one I am wearing to school every day. . . . Oh, then gloves. Earmuffs . . . you can afford it? I've got a decision here, you have choices. Do we eat, or do we go to the mountain? (p. 542)"
+
+Although the concept of urban adventures has been well established, the major outdoor adventure programs have been slow to embrace this arena. The insistent draw of the sublime looks outdoor adventure programming into "untamed" areas worthy of a Sierra Club calendar. The total-immersion attitude pervasive in long-term wilderness trips could be changed to short-term courses with progressive challenges.
+
+Encouraging people of color to participate in outdoor adventure programs with restrictive access based on logistical, philosophical, and cultural factors is quietly, yet profoundly, unwelcoming and not conducive to people of color enjoying future outdoor adventure experiences or feeling a sense of self-identity in the outdoors.
+
+# # Paradigm of Individualism
+
+Rugged individualism is a defining hallmark of North American culture and the pioneering spirit of westward expansion. Outdoor adventure programs have embraced the ethos of rugged individualism
