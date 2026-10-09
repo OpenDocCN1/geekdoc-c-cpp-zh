@@ -1,0 +1,40 @@
+To minimize the learning curve for developers, C# designers chose syntax that superficially resembles C++ templates. In C#, the syntax for generic classes and structures uses angle brackets to both declare the generic type parameters in the type declaration and specify the generic type arguments when the type is used.
+
+# Using a Generic Class
+
+Listing 12.6 shows how you can specify the actual type argument used by the generic class. You instruct the `path` variable to be the “Stack of Cell” type by specifying `Cell` within angle bracket notation in both the object creation expression and the declaration statement. In other words, when declaring a variable (`path` in this case) using a generic data type, C# requires the developer to identify the actual type arguments used by the generic type. Listing 12.6 illustrates this process with the new generic `Stack` class.
+
+**LISTING 12.6: Implementing Undo with a Generic Stack Class**
+
+```
+```
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+// ...
+
+public void Sketch()
+{
+Stack<Cell> path;     // Generic variable declaration
+path = new Stack<Cell>();  // Generic object instantiation
+Cell currentPosition;
+ConsoleKeyInfo key;
+
+do
+{
+// Etch in the direction indicated by the
+// arrow keys entered by the user
+key = Move();
+
+switch (key.Key)
+{
+case ConsoleKey.Z:
+// Undo the previous Move
+if (path.Count >= 1)
+{
+// No cast required
+currentPosition = path.Pop();
+```
+```

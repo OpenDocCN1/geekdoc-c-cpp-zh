@@ -1,0 +1,11 @@
+# # Rethrowing a Wrapped Exception
+
+On occasion, an exception thrown at a lower level in the stack will no longer make sense when caught at a higher level. For example, consider a `System.IO.IOException` that occurs because a system is out of disk space on the server. A client catching such an exception would not necessarily be able to understand the context of why there was even I/O activity. Similarly, consider a geographic coordinate request API that throws a `System.UnauthorizedAccessException` (an exception totally unrelated to the API called). In this second example, the caller has no context for understanding what the API call has to do with security. From the perspective of the code that invokes the API, these exceptions cause more confusion than they help diagnose. Instead of exposing such exceptions to the client, it might make sense to first catch the exception and then throw a different exception, such as `InvalidOperationException` (or even perhaps a custom exception), as a means of communicating that the system is in an invalid state. In such scenarios, be sure to set the InnerException property of the wrapping exception (generally via the constructor call such as `new InvalidOperationException(String, Exception)`) so that there is additional context that can be used for diagnostic purposes by someone closer to the framework that was invoked.
+
+An important detail to remember when considering whether to wrap and rethrow an exception is the fact that the original stack trace—which provides the context of where the exception was thrown—will be replaced with the new stack trace of where the wrapping exception is thrown (assuming ExceptionDispatchInfo is not used). Fortunately, when the original exception is embedded into the wrapping exception, the original stack trace is still available.
+
+# ## Guidelines
+
++   * **CONSIDER** wrapping specific exceptions thrown from the lower layer in a more appropriate exception if the lower-layer exception does not make sense in the context of the higher-layer operation.
+* **DO** specify the inner exception when wrapping exceptions.
+* **DO** target developers as the audience for exceptions, identifying both the problem and the mechanism to resolve it, where possible.

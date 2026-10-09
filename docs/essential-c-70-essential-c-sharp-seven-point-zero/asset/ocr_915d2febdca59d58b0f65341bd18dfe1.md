@@ -1,0 +1,19 @@
+# ## Multithreading Basics
+
+# BEGINNER TOPIC
+
+# Multithreading Jargon
+
+There is a lot of confusing jargon associated with multithreading, so let's define a few terms.
+
+A CPU (central processing unit) or **core** is the unit of hardware that actually executes a given program. Every machine has at least one CPU, though today multiple CPU machines are common. Many modern CPUs support **simultaneous multithreading** (which Intel trademarks as **Hyper-Threading**), a mode whereby a single CPU can appear as multiple “virtual” CPUs.
+
+A **process** is a currently executing instance of a given program; the fundamental purpose of the operating system is to manage processes. Each process contains one or more threads. A process may be accessed programmatically by an instance of the `Process` class in the `System.Diagnostics` namespace.
+
+C# programming at the level of statements and expressions is fundamentally about describing **flow of control**, and thus far in this book we’ve made the implicit assumption that a given program has only a single point of control. You can imagine the point of control as being a cursor that enters the text of your program at the `Main` method when you start it up, and then moves around the program as the various conditions, loops, method calls, and so on, are executed. A **thread** is this point of control. The `System.Threading` namespace contains the API for manipulating a thread, specifically, the `System.Threading.Thread` class.
+
+A **single-threaded** program is one in which there is only one thread in the process. A **multithreaded** program has two or more threads in the process.
+
+A piece of code is said to be **thread safe** if it behaves correctly when used in a multithreaded program. The **threading model** of a piece of code is the set of requirements that the code places upon its caller in exchange for guaranteeing thread safety. For example, the threading model of many
+
+2. Technically, we ought to say that *CPU* always refers to the physical chip, and *core* may refer to a physical or virtual CPU. This distinction is unimportant for the purposes of this book, so we use these terms interchangeably.

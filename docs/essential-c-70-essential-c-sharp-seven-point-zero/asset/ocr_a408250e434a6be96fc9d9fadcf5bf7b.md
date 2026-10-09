@@ -1,0 +1,35 @@
+```
+private static int CountLines(string file)
+{
+    string line;
+    int lineCount = 0;
+    FileStream stream =
+        new FileStream(file, FileMode.Open); 
+    StreamReader reader = new StreamReader(stream);
+    line = reader.ReadLine();
+
+    while(line != null)
+    {
+        if (line.Trim() != "")
+        {
+            lineCount++;
+        }
+        line = reader.ReadLine();
+    }
+
+    reader.Close();  // Automatically closes the stream
+    return lineCount;
+}
+```
+
+Output 5.9 shows the results of Listing 5.18.
+
+# Output 5.9
+
+104
+
+The program begins by passing the first command-line argument to DirectoryCountLines() or by using the current directory if no argument is provided. This method first iterates through all the files in the current directory and totals the source code lines for each file. After processing each file in the directory, the code processes each subdirectory by passing the subdirectory back into the DirectoryCountLines() method, rerunning the method using the subdirectory. The same process is repeated recursively through each subdirectory until no more directories remain to process.
+
+Readers unfamiliar with recursion may find it confusing at first. Regardless, it is often the simplest pattern to code, especially with hierarchical type data such as the filesystem. However, although it may be the most readable approach, it is generally not the fastest implementation. If
+
++   4. This code could be improved with a using statement, a construct that we have avoided because it has not yet been introduced.

@@ -1,0 +1,76 @@
+# **950  Index**
+
++   - Base classes, overriding. *See also* Derivation.
+    - accessing a base member, 336–337
+    - base keyword, 336
+    - brittle base class, 331–334
+    - constructors, 337
+    - fragile base class, 331–334
+    - introduction, 326
+    - new modifier, 330–334
+    - *override* keyword, 327, 336–337
+    - sealed modifier, 335
+    - sealing virtual members, 335
+    - virtual methods, 326–330
+    - *virtual* modifier, 326–330
+- base keyword, 336
+- Base members, accessing, 336–337
+- Base type, 244
+- BCL (Base Class Library), 33, 927, 929, 943
+- Binary digits, definition, 147
+- Binary display, string representation of, 151
+- Binary floating-point types, precision, 116
+- Binary literals, 51
+- Binary operators, 426–428
+- Binary search of arrays, 100–102
+- Binary*Expression, 568
+- Binary*Search()
+    - bitwise complement of, 688
+    - searching a list, 688–689
+    - searching arrays, 100–102
+- Binary*Tree<T>, 506–508, 704, 707–708
+- Bits, definition, 147
+- Bitwise complement of Binary*Search(), 688
+- Bitwise complement operator, tilde (~), 153
+- Bitwise operators
+    - & (ampersand) AND operator, 149–152, 151, 405–406
+    - &= (ampersand, equal sign) bitwise AND assignment operator, 152–153
+    - ^ (caret) XOR operator, 140–141, 149–152
+    - ^= (caret, equal sign) bitwise XOR assignment operator, 152–153
+    - << (less than signs), shift left operator, 148–149
+    - <<= (less than, equal signs), shift left assignment operator, 148–149
+    - ~ (tilde), bitwise complement operator, 153
+
++   - | (vertical bar) bitwise OR operator, 149–152, 151, 405–407
+- |= (vertical line, equal sign) bitwise OR assignment operator, 152–153
+- >> (greater than signs), shift right operator, 148–149
+- >>= (greater than, equal signs), shift right assignment operator, 148–149
+- binary digits, definition, 147
+- bits, definition, 147
+- bytes, definition, 147
+- introduction, 147–148
+- logical operators, 149–152
+- masks, 151
+- multiplication and division with bit shifting, 149
+- negative numbers vs. positive, 148
+- shift operators, 148–149
+- string representation of a binary display, 151
+- two’s complement notation, 148
+- Block statements, 133. *See also* Code blocks.
+- BlockingCollection<T>, 888
+- bool (Boolean) types
+    - description, 53–54
+    - returning from lambda expressions, 552, 558
+- Boolean expressions. *See also* Bitwise operators.
+- == (equal signs) equality operator, 138–139
+- != (exclamation point, equal sign) inequality operator, 138–139
+- < (less than sign), less than operator, 138
+- <= (less than, equal sign), less than or equal operator, 138
+- > (greater than sign), greater than operator, 138
+- >= (greater than, equal sign), greater than or equal operator, 138
+- definition, 137
+- equality operators, 138–139
+- evaluating. *See if* statements.
+- example, 137–138
+- in *if* statements, 130
+- relational operators, 138–139

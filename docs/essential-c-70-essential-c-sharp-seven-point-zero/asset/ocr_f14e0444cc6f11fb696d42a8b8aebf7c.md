@@ -1,0 +1,31 @@
+Further examination of the floating-point number reveals that it can contain a value very close to zero without actually containing zero. If the value exceeds the lower threshold for the *float* or *double* type, the value of the number can be represented as **negative zero** or **positive zero**, depending on whether the number is negative or positive, and is represented in output as -0 or 0.
+
+# **Compound Mathematical Assignment Operators (+=, -=, *=, /=, %=)**
+
+Chapter 1 discussed the simple assignment operator, which places the value of the right-hand side of the operator into the variable on the left-hand side. **Compound mathematical assignment operators** combine common binary operator calculations with the assignment operator. For example, consider Listing 4.10.
+
+```
+**LISTING 4.10:** Common Increment Calculation
+int x = 123;
+x = x + 2;
+```
+
+In this assignment, first you calculate the value of x + 2, and then you assign the calculated value back to x. Since this type of operation is performed relatively frequently, an assignment operator exists to handle both the calculation and the assignment with one operator. The += operator increments the variable on the left-hand side of the operator with the value on the right-hand side of the operator, as shown in Listing 4.11.
+
+```
+**LISTING 4.11:** Using the += Operator
+int x = 123;
+x += 2;
+```
+
+This code, therefore, is equivalent to Listing 4.10.
+
+Numerous other compound assignment operators exist to provide similar functionality. You can also use the assignment operator with subtraction, multiplication, division, and remainder operators (as demonstrated in Listing 4.12).
+
+```
+**LISTING 4.12:** Other Assignment Operator Examples
+x -= 2;
+x /= 2;
+x *= 2;
+x %= 2;
+```

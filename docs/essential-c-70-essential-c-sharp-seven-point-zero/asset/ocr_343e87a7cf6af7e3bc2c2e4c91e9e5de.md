@@ -1,0 +1,13 @@
+The manifest is essentially a header to the assembly, providing all the information about what an assembly is composed of, along with the information that uniquely identifies it.
+
+Assemblies can be class libraries or the executables themselves, and one assembly can reference other assemblies (which, in turn, can reference more assemblies), thereby establishing an application composed of many components rather than existing as one large, monolithic program. This is an important feature that modern programming frameworks take for granted, because it significantly improves maintainability and allows a single component to be shared across multiple programs.
+
+In addition to the manifest, an assembly contains the CIL code within one or more modules. Generally, the assembly and the manifest are combined into a single file, as was the case with `HelloWorld.exe` in Chapter 1. However, it is possible to place modules into their own separate files and then use an assembly linker (`al.exe`) to create an assembly file that includes a manifest that references each module.$^{4}$ This approach not only provides another means of breaking a program into components but also enables the development of one assembly using multiple source languages.
+
+Casually, the terms *module* and *assembly* are somewhat interchangeable. However, the term *assembly* is predominant for those talking about CLI-compatible programs or libraries. Figure 22.2 depicts the various component terms.
+
+Note that both assemblies and modules can also reference files such as resource files that have been localized to a particular language. Although it is rare, two different assemblies can reference the same module or file.
+
+Even though an assembly can include multiple modules and files, the entire group of files has only one version number, which is placed in the assembly manifest. Therefore, the smallest versionable component within an application is the assembly, even if that assembly is composed of multiple files. If you change any of the referenced files—even to release a patch—without updating the assembly manifest, you will violate the integrity of the manifest and the entire assembly itself. As a result, assemblies form the logical construct of a component or unit of deployment.
+
++   4. This is partly because one of the primary CLI IDEs, Visual Studio .NET, lacks functionality for working with assemblies composed of multiple modules. Current implementations of Visual Studio .NET do not have integrated tools for building multmodule assemblies, and when they use such assemblies, IntelliSense does not fully function.

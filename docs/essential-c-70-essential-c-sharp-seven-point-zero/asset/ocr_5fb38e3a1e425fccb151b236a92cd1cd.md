@@ -1,0 +1,11 @@
+# ## Runtime
+
+Even after the runtime converts the CIL code to machine code and starts to execute it, it continues to maintain control of the execution. The code that executes under the context of an agent such as the runtime is **managed code**, and the process of executing under control of the runtime is **managed execution**. The control over execution transfers to the data; this makes it **managed data** because memory for the data is automatically allocated and de-allocated by the runtime.
+
+Somewhat inconsistently, the term *Common Language Runtime* is not technically a generic term that is part of the CLI. Rather, CLR is the Microsoft-specific implementation of the runtime for the .NET framework. Regardless, CLR is casually used as a generic term for *runtime*, and the technically accurate term, *Virtual Execution System*, is seldom used outside the context of the CLI specification.
+
+Because an agent controls program execution, it is possible to inject additional services into a program, even though programmers did not explicitly code for them. Managed code, therefore, provides information to allow these services to be attached. Among other items, managed code enables the location of metadata about a *type* member, exception handling, access to security information, and the capability to walk the stack. The remainder of this section includes a description of some additional services made available via the runtime and managed execution. The CLI does not explicitly require all of them, but the established CLI frameworks have an implementation of each.
+
+# ## Garbage Collection
+
+**Garbage collection** is the process of automatically de-allocating memory according to the program’s needs. It represents a significant programming problem for languages that don’t have an automated system for performing this cleanup. Without the garbage collector, programmers must remember to always free any memory allocations they make. Forgetting to do so, or doing so repeatedly for the same memory allocation, introduces memory leaks or corruption into the program—something exacerbated by long-running programs such as web servers. Because of the runtime’s built-in support for garbage collection, programmers targeting runtime execution can focus on adding program features rather than on the “plumbing” related to memory management.

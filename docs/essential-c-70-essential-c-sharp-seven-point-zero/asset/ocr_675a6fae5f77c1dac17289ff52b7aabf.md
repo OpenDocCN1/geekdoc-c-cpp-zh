@@ -1,0 +1,21 @@
+The values assigned to **first** and **second** are successfully switched. To do this, the variables are **passed by reference**. The obvious difference between the call to Swap() and Listing 5.13's call to Combine() is the inclusion of the keyword ref in front of the parameter's data type. This keyword changes the call such that the variables used as arguments are passed by reference, so the called method can update the original caller's variables with new values.
+
+When the called method specifies a parameter as ref, the caller is required to supply a variable, not a value, as an argument and to place ref in front of the variables passed. In so doing, the caller explicitly recognizes that the target method could reassign the values of the variables associated with any ref parameters it receives. Furthermore, it is necessary to initialize any local variables passed as ref because target methods could read data from ref parameters without first assigning them. In Listing 5.14, for example, temp is assigned the value of first, assuming that the variable passed in first was initialized by the caller. Effectively, a ref parameter is an alias for the variable passed. In other words, it is essentially giving a parameter name to an existing variable, rather than creating a new variable and copying the value of the argument into it.
+
+# Output Parameters (out)
+
+As mentioned earlier, a variable used as a ref parameter must be assigned before it is passed to the called method, because the called method might read from the variable. The "swap" example given previously must read and write from both variables passed to it. However, it is often the case that a method that takes a reference to a variable intends to write to the variable but not to read from it. In such cases, clearly it could be safe to pass an uninitialized local variable by reference.
+
+To achieve this, code needs to decorate parameter types with the keyword out. This is demonstrated in the TryGetPhoneButton() method in Listing 5.15, which returns the phone button corresponding to a character.
+
+# LISTING 5.15: Passing Variables Out Only
+
+```
+```csharp
+class ConvertToPhoneNumber
+{
+    static int Main(string[] args)
+    {
+        if(args.Length == 0)
+```
+```

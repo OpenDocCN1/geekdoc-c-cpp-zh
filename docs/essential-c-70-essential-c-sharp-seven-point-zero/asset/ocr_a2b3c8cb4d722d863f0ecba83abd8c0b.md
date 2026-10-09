@@ -1,0 +1,7 @@
+# SUMMARY
+
+In this chapter, we started by examining the basic parts of multithreaded programs: the `Thread` class, which represents an independent point of control in a program, and the `ThreadPool`, which encourages efficient allocation and scheduling of threads to multiple CPUs. However, these APIs are low-level entities that are difficult to work with directly. Starting with Version 4.0, the Microsoft .NET Framework provides the Parallel Extensions library, which includes the Task Parallel Library (TPL) and Parallel LINQ (PLINQ). Both provide new APIs for creating and scheduling units of work represented by `Task` objects, executing loops in parallel using `Parallel.For( )` and `Parallel.ForEach( )`, and automatically parallelizing LINQ queries with `AsParallel( )`.
+
+We also discussed how C# 5.0 (and later) makes programming complex workflows with `Task` objects much easier by automatically rewriting your programs to manage the continuation “wiring” that composes larger tasks out of smaller tasks.
+
+At the beginning of this chapter, we briefly glossed over some of the difficult problems that developers often face when writing multithreaded programs: atomicity problems, deadlocks, and other race conditions that introduce uncertainty and bad behavior into multithreaded programs. The standard way to avoid these problems is to carefully write code that uses locks to synchronize access to shared resources; this is the topic of the next chapter.

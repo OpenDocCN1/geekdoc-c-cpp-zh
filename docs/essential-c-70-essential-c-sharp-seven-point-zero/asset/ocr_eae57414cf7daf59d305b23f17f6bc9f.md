@@ -1,0 +1,13 @@
+After **C# 1.0**, no new **reserved keywords** were introduced to C#. However, some constructs in later versions use **contextual keywords**, which are significant only in specific locations. Outside these designated locations, contextual keywords have no special significance.8 By this method, most C# 1.0 code is compatible with the later standards.9
+
+# Identifiers
+
+Like other languages, C# includes **identifiers** to identify constructs that the programmer codes. In Listing 1.1, `HelloWorld` and `Main` are examples of identifiers. The identifiers assigned to a construct are used to refer to the construct later, so it is important that the names the developer assigns are meaningful rather than arbitrary.
+
+A keen ability to select succinct and indicative names is an important characteristic of a strong programmer because it means the resultant code will be easier to understand and reuse. Clarity coupled with consistency is important enough that the Framework Design Guidelines (http://bit.ly/ dotnetguidelines) advise against the use of abbreviations or contractions in identifier names and even recommend avoiding acronyms that are not widely accepted. If an acronym is sufficiently well established (eg, HTML), you should use it consistently: Avoid spelling out the accepted acronym in some cases but not in others. Generally, adding the constraint that all acronyms be included in a glossary of terms places enough overhead on the use of acronyms that they are not used flippantly. Ultimately, select clear, possibly even verbose names—especially when working on a team or when developing a library against which others will program.
+
+8. For example, early in the design of C# 2.0, the language designers designated `yield` as a keyword, and Microsoft released alpha versions of the C# 2.0 compiler, with `yield` as a designated keyword, to thousands of developers. However, the language designers eventually determined that by using `yield` return rather than `yield`, they could ultimately avoid adding `yield` as a keyword because it would have no special significance outside its proximity to `return`.
+
+9. There are some rare and unfortunate incompatibilities, such as the following:
+* C# 2.0 requires implementation of `IDisposable` with the `using` statement rather than simply using a `Dispose()` method.
+* Some rare generic expressions are different between versions. For example, F(G<`A,B>`(7)) means F (G(<`A`, (B)>7) ) in C# 1.0, but in C# 2.0, it means to call generic method G<`A,B>` with argument 7 and pass the result to F.

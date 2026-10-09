@@ -1,0 +1,331 @@
+
+### U
+
+- Unexpected inequality, float type, 117–120
+- Unhandled exceptions
+    - error messages, 226–231
+    - handling with AggregateException, 803–807
+    - observing, 806–807
+    - registering for, 808–810
+    - on a thread, 807–810
+- UnhandledException event, 808
+- Unicode standard
+    - character representation, 54–56
+    - localizing applications, 54
+- Unified Modeling Language (UML), 373
+- Union(), 643
+- Unity, 37
+- Universal Windows Applications, 928, 930
+- Unmanaged code, definition, 32
+- Unmanaged types, 913
+- Unmodifiable. See Immutable.
+- UnobservedTaskException event, 807
+- Unsafe code. See also P/Invoke; Pointers and addresses.
+    - definition, 897
+    - description, 911–913
+    - executing by delegate, 920–922. See also P/Invoke.
+- unsafe
+    - code blocks, 911–912
+    - modifier, 911
+    - statement, 911
+- Unsynchronized local variables, 867–868
+- Unsynchronized state, 864–865
+- Unwrap(), 821
+- Uppercase, converting text strings to, 66
+- ushort type, 44
+- using directives
+    - dropping namespaces, 62–63
+    - example, 62–63, 195
+    - importing types from namespaces, 196
+    - nested namespaces, 196
+    - nesting, 197–198
+    - wildcards, Java vs. C#, 196
+- using statement
+    - deterministic finalization, 454–457
+    - resource cleanup, 455–457
+- using static directive
+    - abbreviating a type name, 198–199
+    - dropping namespaces, 62–63
+    - example, 62–63, 198
+- UWP (Windows 10 Universal Windows Platform) applications. See Universal Windows Applications.
+
+### V
+
+- Validating properties, 268–270
+- Value, passing parameters by, 203–204
+- value keyword, 264
+- Value parameters, 203–204
+- Value type conversion
+    - to an implemented interface. See Boxing.
+    - to its root base class. See Boxing.
+- Value types
+    - custom types. See Enums; Structs.
+    - default operator, 388–389
+    - guidelines, 381, 390
+    - immutability, 385
+    - inheritance, 389–390
+    - interfaces, 389–390
+    - introduction, 380–381
+    - new operator, 388
+    - vs. reference types, 204–206, 381–383
+    - stack, 381
+    - temporary storage pool. See Stack.
+- Values
+    - CIL (Common Intermediate Language), 940
+    - hardcoding, 48–50
+- Values property, 695
+- ValueTuple class, 503–505
+- var type, 647–649, 651
+- Variable names
+    - camelCase, 22
+    - underscore (_) in, 22
+- Variable parameter lists, passing, 212–213
+- Variables
+    - assigning values to, 22–23
+    - changing string values, 24
+    - declaring, 21–22
+    - definition, 20
+    - global, C++ vs. C#, 289
+    - local. See Local variables.
+    - naming conventions, 22
+    - setting to null, 67
+    - syntax, 20–21
+    - type, 21
+    - using, 23
+- Variadic generic types, 505
+
+### V (continued)
+
+- Verbatim string literals
+    - description, 58
+    - displaying a triangle, 58
+    - starting a new line, 57
+- Verbatim strings
+    - coding, 57, 58
+    - escape sequence, 58
+- VerifyCredentials(), 372
+- Versioning, 756–758
+- Versioning interfaces, 374–375
+- Versioning serialization, 756–758
+- Vertical bar, equal sign (|=) bitwise OR assignment operator, 152–153
+- Vertical bar (|) bitwise OR operator, 149–152, 151, 426–428
+- Vertical bars (||) OR operator, 139–140, 428
+- VES (Virtual Execution System). See also CIL (Common Intermediate Language); CLI (Common Language Infrastructure); Runtime.
+    - definition, 924
+    - description, 944
+    - managed execution, 32
+- Virtual abstract members, 341
+- Virtual Execution System (VES). See VES (Virtual Execution System).
+- Virtual fields, properties as, 273–274
+- Virtual functions, pure, 341
+- Virtual members, sealing, 335
+- Virtual memory, allocating with P/Invoke, 900
+- Virtual methods
+    - custom dynamic objects, 766–769
+    - Java vs. C#, 473
+    - overriding base classes, 326–330
+    - virtual modifier, 326–330
+- VirtualAllocEx(), 900
+- VirtualAllocEx() API, 900–901
+- VirtualMemoryManager, 899
+- VirtualMemoryPtr, 906
+- Visual Basic vs C#
+    - changing the number of items in an array, 102
+    - implicitly typed variables, 82
+    - importing namespaces, 196
+    - line-based, statements, 18
+    - Me keyword, 254
+    - Redim statement, 102
+    - redimensioning arrays, 102
+    - Variant, 82
+    - void type, 69
+- Visual code editors, 176–178
+- Visual Studio 2017, 435–436
+- Visual Studio Code, 3
+- void methods, 193
+- void type
+    - C++ vs. C#, 68
+    - dereferencing, 918
+    - description, 68
+    - no value vs. empty string, 68
+    - as a return, 193
+    - returning from an asynchronous method, 830–833
+    - strings, 68
+    - use for, 68
+- volatile keyword, 875–876
+
+### W
+
+- Wait(), 884–887
+- WaitAll(), 883–884
+- WaitAny(), 883–884
+- WaitAsync(), 887–888
+- WaitForExit(), 875
+- WaitHandle, 816
+- WaitOne(), 883–887
+- Warning messages, disabling/restoring, 175–176
+- #warning preprocessor directive, 172, 174–175
+- Weak references, garbage collection, 451–452
+- WebResponse.GetResponseAsync(), 821
+- Well-formed types
+    - determining whether two objects are equal, 420–423
+    - implementing Equals() equality operator, 420–423
+    - lazy initialization, 461–463
+    - object identity vs. equal object values, 416–419
+    - overriding Equals() equality operator, 420–423
+- Well-formed types, garbage collection. See also Resource cleanup.
+    - Collect(), 450
+    - introduction, 449–450
+    - in .NET, 450–451
+    - root references, 450
+    - strong references, 451
+    - weak references, 451–452
+- Well-formed types, namespaces
+    - in the CLR (Common Language Runtime), 442
+    - guidelines, 445
+    - introduction, 442–445
+    - naming conventions, 442
+    - nesting, 443–444
+- Well-formed types, overloading operators
+    - binary operators, 426–428
+    - binary operators combined with assignment operators, 428
+    - cast operator, 430–431
+    - conditional logical operators, 428
+    - conversion operators, 430–432
+    - unary operators, 428–430
+- Well-formed types, overriding object members
+    - Equals() equality operator, 415–423
+    - GetHashCode(), 413–415
+    - ToString(), 412–413
+- Well-formed types, referencing other assemblies
+    - changing the assembly target, 433
+    - class libraries, 433–438
+    - encapsulation of types, 439
+    - internal access modifiers on type declarations, 439–440
+    - protected internal type modifier, 440–441
+    - public access modifiers on type declarations, 439–440
+    - referencing assemblies, 434–436
+    - type member accessibility modifiers, 441. See also specific modifiers.
+- Well-formed types, resource cleanup
+    - exception propagation from constructors, 460
+    - finalization, 453–460
+    - finalization (f-reachable) queue, 458
+    - garbage collection, 458–460
+    - guidelines, 459–460
+    - with IDisposable, 455–460
+    - invoking the using statement, 455–457
+    - resurrecting objects, 461
+- Well-formed types, XML comments
+    - associating with programming constructs, 446–447
+    - generating an XML documentation file, 448–449
+    - guidelines, 449
+    - introduction, 445–446
+- when clauses, catching exceptions, 470
+- Where(), 616–617, 622–626
+- where clause, 659–660, 667
+- while(), iterating over collections, 609
+- while loops, 127, 153–156
+- while statement, 127, 153, 153–154, 154–155
+- Whitespace
+    - definition, 19
+    - formatting code, 19–20
+    - improving code readability, 19
+    - indenting code, 19
+- Win32, error handling in P/Invoke, 903–905
+- Windows 10 Universal Windows Platform (UWP) applications. See Universal Windows Applications.
+- word.Contains( "*" ), 664
+- Work stealing, 850–851
+- WPF (Windows Presentation Foundation), 927
+- Wrappers for API calls from P/Invoke, 909
+- Write() method
+    - starting a new line, 57, 64
+    - writing to the console, 26–28
+- Write-only properties, 271–272
+- WriteLine()
+    - round-trip formatting, 52–53
+    - starting a new line, 57, 64
+    - writing to the console, 26–28
+- WriteWebRequestSizeAsync(), 822, 825
+
+### X
+
+- Xamarin, 37, 926, 928
+- XML comments
+    - /// (forward slashes), XML comment delimiter, 447
+    - associating with programming constructs, 446–447
+    - delimited comments, 30
+    - generating an XML documentation file, 448–449
+    - guidelines, 449
+    - introduction, 445–446
+    - single-line, 30
+- XML documentation file, 448–449
+- XML (Extensible Markup Language), 31
+
+### Y
+
+- yield break statement, 715–716
+- yield return statement
+    - contextual keyword, 13
+    - early prototype implementations, 13
+    - implementing BinaryTree<T>, 708–709
+    - within a loop, 712–714
+    - requirements, 719–720
+    - returning iterator values, 708–709
+
+### Z
+
+- ZipCompression, 365
+
+## Index of 7.0 Topics
+
+### Symbols
+- _(underscore), 51
+    - as digit separator, 50
+    - discarding out parameter, 208
+    - discarding tuples, 87
+- ==, != (equals, exclamation point, equal sign) implementing on tuple (ValueTuple) in C# 7.3, 424
+
+### A
+- Anonymous types
+    - drawbacks, 652
+    - vs. tuples, 652
+- async keyword
+    - ValueTask<t> return, 829–830
+    - async Main method, 828
+    - in C# 7.1, 828, 872
+    - async methods, return of ValueTask<t>, 828–830
+    - await operators, with catch or finally statements, 846
+
+### B
+- Binary literals, 51
+
+### C
+- C# 7.1
+    - async Main methods, 828, 872
+    - default without type parameter, 389, 502
+    - inferring tuple element names, 85, 87
+- C# 7.2
+    - _(underscore), 51
+    - digit separator before and after numeric literal, 51
+    - pass read-only value type by reference, 209
+    - private protected, 441
+    - readonly struct, 385
+- C# 7.3
+    - ==, != (equals, exclamation point, equal sign) implementing on tuple (ValueTuple), 424
+    - camelCase, tuple names, 86–87
+    - catch statements, await operators, 846
+- CIL (Common Intermediate Language)
+    - disassembling, tools for, 34
+    - ILDASM, 34
+    - sample output, 35–37
+- Class libraries, referencing with Dotnet CLI, 436
+- Constructors
+    - expression-bodied member implementation, 283
+    - finalizers, 283
+- Create(), tuple instantiation, 504–505
+
+### D
+- Deconstruct(), 287–288
+- Destructors, 287–288
+- Default without type parameter in C# 7.1, 389, 502
+- Digit separator before and after numeric literal in C# 7.2, 51

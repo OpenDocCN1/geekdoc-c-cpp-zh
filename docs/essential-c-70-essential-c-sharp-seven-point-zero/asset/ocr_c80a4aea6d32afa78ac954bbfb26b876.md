@@ -1,0 +1,16 @@
+# **OUTPUT 19.6**
+
+```
+Push ENTER to exit.
+3.141592653589793238462643383279502884197169399375105820974944592307816
+40628620899862803482534211706798214808651328230664709384460955058223172
+5359408128481117450\n***********************************************
+2
+```
+
+After starting the task, a `Console.Read()` blocks the main thread. At the same time, the task continues to execute, calculating the next digit of pi and printing it out. Once the user presses Enter, the execution encounters a call to `CancellationTokenSource.Cancel()`. In Listing 19.10, we split the call to `task.Cancel()` from the call to `task.Wait()` and print out a line of asterisks in between. The purpose of this step is to show that quite possibly an additional iteration will occur before the cancellation token is observed—hence the additional 2 in Output 19.6 following the stars. The 2 appears because the `CancellationTokenSource.Cancel()` doesn't rudely stop the task from executing. The task keeps on running until it checks the token, and politely shuts down when it sees that the owner of the token is requesting cancellation of the task.
+
+The `Cancel()` call effectively sets the `IsCancellationRequested` property on all cancellation tokens copied from `CancellationTokenSource.Token`. There are a few things to note, however:
+
++       • A `CancellationToken`, not a `CancellationTokenSource`, is given to the asynchronous task. A `CancellationToken` enables polling for a cancellation request; the `CancellationTokenSource` provides the token and signals it when it is canceled (see Figure 19.3). By passing the `CancellationToken` rather than the `CancellationTokenSource`, we don't have to worry about thread synchronization issues on the `CancellationTokenSource` because the latter remains accessible to only the original thread.
+    • A `CancellationToken` is a struct, so it is copied by value. The value returned by `CancellationTokenSource.Token` produces a copy of the token. The fact that `CancellationToken` is a value type and a copy is created results in thread safe access to `CancellationTokenSource.Token`—it is available only from within the `WritePi()` method.

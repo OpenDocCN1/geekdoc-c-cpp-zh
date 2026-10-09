@@ -1,0 +1,26 @@
+```
+
+NextId = randomGenerator.Next(101, 999);
+}
+
+// ...
+**public static int** NextId = 42;
+// ...
+}
+```
+
+Listing 6.39 assigns the initial value of NextId to be a random integer between 100 and 1,000. Because the initial value involves a method call, the NextId initialization code appears within a static constructor and not as part of the declaration.
+
+If assignment of NextId occurs within both the static constructor and the declaration, it is not obvious what the value will be when initialization concludes. The C# compiler generates CIL in which the declaration assignment is moved to be the first statement within the static constructor. Therefore, NextId will contain the value returned by randomGenerator.Next(101, 999) instead of a value assigned during NextId's declaration. Assignments within the static constructor, therefore, will take precedence over assignments that occur as part of the field declaration, as was the case with instance fields. Note that there is no support for defining a static finalizer.
+
+Be careful not to throw an exception from a static constructor, as this will render the type unusable for the remainder of the application's lifetime.7
+
+# ADVANCED TOPIC
+
+# **Favor Static Initialization during Declaration**
+
+Static constructors execute before the first access to any member of a class, whether it is a static field, another static member, or an instance constructor. To support this practice, the compiler injects a check into all type static members and constructors to ensure that the static constructor runs first.
+
+Without the static constructor, the compiler initializes all static members to their default values and avoids adding the static constructor check. The result is that static assignment initialization is called before any static fields are accessed but not necessarily before all static methods or
+
+7. Technically the application domain's lifetime—the Common Language Runtime's virtual equivalent of an operating system process.

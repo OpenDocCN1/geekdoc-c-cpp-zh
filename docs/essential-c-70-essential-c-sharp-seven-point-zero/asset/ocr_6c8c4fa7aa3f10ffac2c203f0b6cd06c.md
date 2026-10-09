@@ -1,0 +1,13 @@
+resources such as database connections, handles (files, windows, etc.), network ports, and hardware devices such as serial ports. Also, the garbage collector determines what to clean up based on whether any references remain. Implicitly, this means that the garbage collector works with reference objects and restores memory on the heap only. Additionally, it means that maintaining a reference to an object will delay the garbage collector from reusing the memory consumed by the object.
+
+# ADVANCED TOPIC
+
+# Garbage Collection in .NET
+
+Many details about the garbage collector pertain to the specific CLI framework and therefore could vary. This section discusses the Microsoft .NET framework implementations, because they are the most prevalent.
+
+In .NET, the garbage collector uses a **mark-and-compact** algorithm. At the beginning of an iteration, it identifies all **root references** to objects. Root references are any references from static variables, CPU registers, and local variables or parameter instances (and f-reachable objects, as described later in this section). Given this list, the garbage collector is able to walk through the tree identified by each root reference and determine recursively all the objects to which the root references point. In this manner, the garbage collector creates a graph of all reachable objects.
+
+Instead of enumerating all the inaccessible objects, the garbage collector performs garbage collection by compacting all reachable objects next to one another, thereby overwriting any memory consumed by objects that are inaccessible (and therefore qualify as garbage).
+
+Locating and moving all reachable objects requires that the system maintain a consistent state while the garbage collector runs. To achieve this, all managed threads within the process halt during garbage collection. Obviously, this behavior can result in brief pauses in an application, which are generally insignificant unless a particularly large garbage collection cycle is necessary. To reduce the likelihood of a garbage collection cycle occurring at an inappropriate time, the System.GC object includes a `Collect()` method, which can be called immediately before the critical performing code. This method does not prevent the garbage collector from running, but it does reduce the probability that it will run, assuming no intense memory utilization occurs during the critical performance code.

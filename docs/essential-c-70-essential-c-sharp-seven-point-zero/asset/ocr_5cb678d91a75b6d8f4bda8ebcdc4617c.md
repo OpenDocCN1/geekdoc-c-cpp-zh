@@ -1,0 +1,5 @@
+control overriding, C# provides the virtual modifier, which identifies to the deriving class developer which members she intends for derivation. To prevent any derivation, the sealed modifier may be used on the class. Similarly, placing the sealed modifier on a member prevents further over-riding from subclasses.
+
+This chapter included a brief discussion of how all types derive from object. Chapter 10 discusses this derivation further, with a look at how object includes three virtual methods with specific rules and guidelines that govern overloading. Before you get there, however, you need to consider another programming paradigm that builds on object-oriented programming: interfaces. This is the subject of Chapter 8.
+
+The chapter ended with the details of type conversion using the is and as operators. It included a discussion of C# 7.0 pattern-matching capability and its use in both if and switch statements.

@@ -1,0 +1,13 @@
+generics; that is, just as we think of a generic “list of T” or a generic “pair of T,” so we can think of an “array of T” as being the same sort of pattern. Since arrays clearly support both reading and writing, given what you know about covariance and contravariance, you probably would suppose that arrays may be neither safely contravariant nor covariant. That is, you might imagine that an array can be safely covariant only if it is never written to and safely contravariant only if it is never read from—though neither seems like a realistic restriction.
+
+Unfortunately, C# does support array covariance, even though doing so is not type-safe. For example, Fruit[] fruits = new Apple[10]; is perfectly legal in C#. If you then include the expression fruits[0] = new Orange(), the runtime will issue a type safety violation in the form of an exception. It is deeply disturbing that it is not always legal to assign an Orange into an array of Fruit because it might really be an array of Apples, but that is the situation not just in C# but in all CLR languages that use the runtime’s implementation of arrays.
+
+Try to avoid using unsafe array covariance. Every array is convertible to the read-only (and therefore safely covariant) interface IEnumerable<>; that is, IEnumerable<Fruit> fruits = new Apple[10] is both safe and legal because there is no way to insert an Orange into the array if all you have is the read-only interface.
+
+# ### Guidelines
+
+AVOID unsafe array covariance. Instead, CONSIDER converting the array to the read-only interface IEnumerable<T>, which can be safely converted via covariant conversions.
+
+# # Generic Internals
+
+Given the discussions in earlier chapters about the prevalence of objects within the CLI type system, it should come as no surprise to learn that generics are also objects. In fact, the type parameter on a generic class becomes metadata that the runtime uses to build appropriate classes when needed. Generics, therefore, support inheritance, polymorphism, and encapsulation. With generics, you can define methods, properties, fields, classes, interfaces, and delegates.

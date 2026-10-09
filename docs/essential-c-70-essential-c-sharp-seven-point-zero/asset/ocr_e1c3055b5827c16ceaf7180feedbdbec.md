@@ -1,0 +1,3 @@
+Before closing the chapter, we considered the `Task.Delay()` method, a .NET 4.5 introduced API for implementing a timer based on TAP.
+
+The next chapter investigates another complex .NET technology: that of marshalling calls out of .NET and into unmanaged code using P/Invoke. In addition, it introduces a concept known as unsafe code, which C# uses to access memory pointers directly, as unmanaged code does (e.g., C++).

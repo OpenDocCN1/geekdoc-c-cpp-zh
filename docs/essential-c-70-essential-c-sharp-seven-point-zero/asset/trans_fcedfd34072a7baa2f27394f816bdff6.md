@@ -1,0 +1,144 @@
+
++   •   该接口或委托必须被声明为支持协变，并且编译器必须能够验证被注释的类型参数实际上仅用于“输出”位置。
+
+## 在 C# 4.0（及更高版本）中使用 in 类型参数修饰符启用逆变
+
+反过来的协变被称为 **逆变**。同样，假设两个类型 *X* 和 *Y* 之间存在一种关系，使得类型 *X* 的任何值都可以转换为类型 *Y*。如果类型 `I<X>` 和 `I<Y>` 始终具有相同的这种“反向”特殊关系——也就是说，类型 `I<Y>` 的任何值都可以转换为类型 `I<X>`——我们就说“`I<T>` 关于 *T* 是逆变的”。
+
+大多数人觉得逆变比协变更难理解。逆变的经典例子是比较器。假设你有一个派生类型 *Apple*（苹果）和一个基类型 *Fruit*（水果）。显然，它们之间具有特殊关系：每个 *Apple* 类型的值都可以转换为 *Fruit*。
+
+现在假设你有一个接口 `ICompareThings<T>`，其中有一个方法 `bool FirstIsBetter(T t1, T t2)`，该方法接受两个 *T* 并返回一个 *bool*，用于说明第一个是否优于第二个。
+
+当我们提供类型实参时会发生什么？`ICompareThings<Apple>` 有一个方法，接受两个苹果并进行比较。`ICompareThings<Fruit>` 有一个方法，接受两个水果并进行比较。但由于每个 *Apple* 都是 *Fruit*，显然一个类型为 `ICompareThings<Fruit>` 的值可以安全地用于任何需要 `ICompareThings<Apple>` 的地方。可转换性的方向被反转了；因此称为 *逆变*。
+
+也许毫不意外的是，要确保安全的逆变，需要协变接口限制条件的对立面。如果一个接口在其某个类型参数上是逆变的，则该类型参数必须仅用于输入位置，例如形参（或仅写入属性的类型，后者极其罕见）。你可以通过使用 *in* 修饰符声明类型参数来标记一个接口为逆变，如清单 12.44 所示。
+
+**清单 12.44：使用 in 类型参数修饰符实现逆变**
+
+```csharp
+class Fruit {}
+class Apple : Fruit {}
+class Orange : Fruit {}
+
+interface ICompareThings<in T>
+{
+    bool FirstIsBetter(T t1, T t2);
+}
+
+class Program
+{
+    class FruitComparer : ICompareThings<Fruit>
+    { ... }
+    static void Main()
+    {
+        // Allowed in C# 4.0 and later
+        ICompareThings<Fruit> fc = new FruitComparer();
+        Apple apple1 = new Apple();
+        Apple apple2 = new Apple();
+        Orange orange = new Orange();
+        // A Fruit comparer can compare apples and oranges:
+        bool b1 = fc.FirstIsBetter(apple1, orange);
+        // or apples and apples:
+        bool b2 = fc.FirstIsBetter(apple1, apple2);
+        // This is legal because the interface is
+        // contravariant
+        ICompareThings<Apple> ac = fc;
+        // This is really a Fruit comparer, so it can
+        // still compare two apples
+        bool b3 = ac.FirstIsBetter(apple1, apple2);
+    }
+}
+```
+
+就像对协变的支持一样，逆变使用了一种类型参数修饰符：`in`，它出现在接口的类型参数声明中。这指示编译器检查 `T` 从不作为属性 getter 或方法的返回类型出现，从而启用该接口的逆变转换。
+
+逆变转换具有与前文描述的协变转换类似的所有限制：它们仅对泛型接口和委托类型有效，变化的类型实参必须是引用类型，并且编译器必须能够验证接口对于逆变转换是安全的。
+
+一个接口可以在一个类型参数上是协变的，而在另一个类型参数上是逆变的，但这在实践中很少出现，除了委托。例如，`Func<A1, A2, . . . , R>` 委托系列在返回类型 `R` 上是协变的，而在所有参数类型上是逆变的。
+
+最后，请注意，编译器将在整个源代码中检查协变和逆变类型参数修饰符的有效性。考虑清单 12.45 中的 `IPairInitializer<in T>` 接口。
+
+**清单 12.45：编译器对变性的验证**
+
+```csharp
+// ERROR: Invalid variance; the type parameter 'T' is not
+//                 invariantly valid
+interface IPairInitializer<in T>
+{
+    void Initialize(IPair<T> pair);
+}
+
+// Suppose the code above were legal, and see what goes
+// wrong:
+class FruitPairInitializer : IPairInitializer<Fruit>
+{
+    // Let's initialize our pair of fruit with an
+    // apple and an orange:
+    public void Initialize(IPair<Fruit> pair)
+    {
+        pair.First = new Orange();
+        pair.Second = new Apple();
+    }
+}
+
+// ... later ...
+var f = new FruitPairInitializer();
+// This would be legal if contravariance were legal:
+IPairInitializer<Apple> a = f;
+// And now we write an orange into a pair of apples:
+a.Initialize(new Pair<Apple>());
+```
+
+一位随意的观察者可能会认为，由于 `IPair<T>` 仅作为输入形参使用，因此 `IPairInitializer` 上的逆变 `in` 修饰符是有效的。然而，`IPair<T>` 接口无法安全地变异，因此不能用可以变异的类型实参来构造它。如你所见，这不会保持类型安全，因此编译器首先不允许将 `IPairInitializer<T>` 接口声明为逆变。
+
+## 对数组中不安全协变的支持
+
+到目前为止，我们将协变和逆变描述为泛型类型的属性。在所有非泛型类型中，数组最像泛型；也就是说，正如我们将泛型“T 的列表”或泛型“T 的对”一样，我们也可以将“T 的数组”视为同一种模式。由于数组显然支持读和写，根据你对协变和逆变的了解，你可能会假设数组既不能安全地实现逆变，也不能安全地实现协变。也就是说，你可能会想象数组只有在从未被写入时才能安全地实现协变，在从未被读取时才能安全地实现逆变——尽管这两种情况似乎都不是现实的限制。
+
+不幸的是，尽管这样做在类型上是不安全的，但 C# 确实支持数组协变。例如，`Fruit[] fruits = new Apple[10];` 在 C# 中是完全合法的。如果你随后包含表达式 `fruits[0] = new Orange()`，运行时将发出类型安全违规，表现为异常。这是一种令人深感不安的情况，因为将 `Orange` 赋值给 `Fruit` 数组并不总是合法的，因为它可能实际上是一个 `Apple` 数组，但这不仅是 C# 中，而是在所有使用运行时数组实现的 CLR 语言中的状况。
+
+尽量避免使用不安全的数组协变。每个数组都可以转换为只读（因此是安全协变）的接口 `IEnumerable<>`；也就是说，`IEnumerable<Fruit> fruits = new Apple[10]` 既是安全的也是合法的，因为如果你只有只读接口，就没有办法向数组中插入 `Orange`。
+
+### 准则
+
+- 避免不安全数组协变。相反，考虑将数组转换为只读接口 `IEnumerable<T>`，该接口可以通过协变转换安全地转换。
+
+## 泛型内部机制
+
+鉴于前面章节中关于 CLI 类型系统中对象普遍性的讨论，得知泛型也是对象应该不会令人惊讶。实际上，泛型类上的类型参数变成了元数据，运行时使用这些元数据在需要时构建相应的类。因此，泛型支持继承、多态和封装。通过泛型，你可以定义方法、属性、字段、类、接口和委托。
+
+为了实现这一点，泛型需要底层运行时的支持。反过来，将泛型添加到 C# 语言中既是编译器也是框架的一个特性。例如，为了避免装箱，基于值类型参数和具有引用类型参数的泛型在实现上是不同的。
+
+**高级主题**
+
+### 泛型的 CIL 表示
+
+当泛型类被编译时，它与非泛型类没有显著不同。编译的结果只不过是元数据和 CIL。CIL 被参数化，以在代码的某处接受用户提供的类型。作为一个例子，假设你有一个简单的 `Stack` 类，其声明如清单 12.46 所示。
+
+**清单 12.46：Stack<T> 声明**
+
+```csharp
+public class Stack<T> where T : IComparable
+{
+    T[] items;
+    // rest of the class here
+}
+```
+
+当你编译该类时，生成的 CIL 被参数化，看起来像清单 12.47。
+
+**清单 12.47：Stack<T> 的 CIL 代码**
+
+```cil
+.class private auto ansi beforefieldinit
+    Stack`1<[[mscorlib]System.IComparable]>
+    extends [[mscorlib]System.Object
+{
+    ...
+}
+```
+
+第一个值得注意的项是出现在第二行 `Stack` 之后的 `` `1``。那个数字是元数（arity）。它声明了泛型类需要类型实参的类型参数数量。诸如 `EntityDictionary<TKey, TValue>` 这样的声明将具有元数 2。
+
+生成的 CIL 的第二行显示了强加在类上的约束。`T` 类型参数装饰有一个用于 `IComparable` 约束的接口声明。
+
