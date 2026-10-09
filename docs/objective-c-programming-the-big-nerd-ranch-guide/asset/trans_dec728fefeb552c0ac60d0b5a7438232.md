@@ -1,0 +1,185 @@
+
+# 第 32 章 块
+
+```
+2011-09-03 10:27:02.618 VowelMovement[787:707] new strings: (
+    Srkrt,
+    Rygn,
+    "Bg Nrd Rnch",
+    Msssspp
+)
+```
+
+需要注意的是，`enumerateObjectsUsingBlock:` 并不接受任意块作为其参数。此方法要求“一个接受对象、整数和 BOOL 指针作为参数且不返回任何内容的块”。这就是为什么我们如此构建分配给 `devowelizer` 的块。它的三个参数是专门为遍历数组而设计的。
+
+第一个参数是指向当前对象的指针。请注意，该指针的类型为 `id`，因此无论数组包含什么类型的对象，它都能正常工作。第二个参数是一个 `NSUInteger`，即当前对象的索引。第三个参数是指向 `BOOL` 的指针，默认为 `NO`。如果我们希望数组在当前迭代后停止，可以将其更改为 `YES`。
+
+在块赋值的开头添加一个检查：
+
+```objectivec
+devowelizer = ^(id string, NSUInteger i, BOOL *stop){
+    NSRange yRange = [string rangeOfString:@"y"
+                    options:NSCaseInsensitiveSearch];
+
+    // 是否找到了 y？
+    if (yRange.location != NSNotFound) {
+        *stop = YES; // 防止进一步迭代
+        return;     // 停止当前迭代
+    }
+
+    NSMutableString *newString = [NSMutableString stringWithString:string];
+
+    // 遍历元音数组，将每个出现的位置替换为空字符串。
+    for (NSString *s in vowels) {
+        NSRange fullRange = NSMakeRange(0, [newString length]);
+        [newString replaceOccurrencesOfString:s
+                                   withString:@""
+                                      options:NSCaseInsensitiveSearch
+                                        range:fullRange];
+    }
+
+    [newStrings addObject:newString];
+}; // 块赋值结束
+```
+
+这将检查当前迭代的字符串是否包含大写或小写的 'y' 字符。如果是，指针将被设置为 `YES`（这将阻止块执行更多迭代），然后当前迭代将被停止。
+
+构建并运行该程序。同样，两个数组会被记录到调试器输出中，但这一次，当块遇到包含字母 'y' 的单词时，在第二次迭代期间，数组枚举被取消了。你只能得到 `Srkrt`。
+
+现在，既然你已经对块进行了一些练习，让我们回到块如何帮助解决程序中代码片段分散的问题。当你使用回调时，例如在第 24 章中，你有这样一行代码：
+
+```objectivec
+[[NSNotificationCenter defaultCenter]
+ addObserver:logger
+ selector:@selector(zoneChange:)
+ name:NSSystemTimeZoneDidChangeNotification
+ object:nil];
+```
+
+你识别一个方法（通常使用 `@selector()`），然后在文件的其他地方实现该方法：
+
+```objectivec
+- (void)zoneChange:(NSNotification *)note
+{
+    NSLog(@"The system time zone has changed!");
+}
+```
+
+你可以使用 `NSNotificationCenter` 的 `addObserverForName:object:queue:usingBlock:` 方法，并传入一个块而不是选择器。使用此方法，你立即将指令交给 `NSNotificationCenter`，因此你不需要将回调的代码放在其他地方。阅读你代码的人将在同一块代码中看到指令和发送给 `NSNotificationCenter` 的消息。（你将在本章末尾的挑战中，对回调程序进行完全相同的更改。）
+
+## 类型定义
+
+块语法可能令人困惑，但你可以通过使用在第 10 章中学到的 `typedef` 关键字使其更友好。请记住，typedef 应位于文件的顶部或头文件中，在任何方法实现之外。在 `main.m` 中，添加以下代码行：
+
+```objectivec
+#import <Foundation/Foundation.h>
+```
+
+```objectivec
+typedef void (^ArrayEnumerationBlock)(id, NSUInteger, BOOL *);
+
+int main (int argc, const char * argv[])
+{
+```
+
+注意，这看起来与块变量声明完全相同。然而，在这里我们定义的是一个类型而不是变量，因此我们在尖头符号旁边放置一个适当的类型名称。这允许我们简化类似块的声明。而不是像这样声明 `devowelizer`：
+
+```objectivec
+void (^devowelizer)(id, NSUInteger, BOOL *);
+```
+
+你可以用以下声明替换该行：
+
+```objectivec
+ArrayEnumerationBlock devowelizer;
+```
+
+这使得你的块变量声明变得更加熟悉。请注意，块类型本身仅定义块的参数和返回类型；它不影响该类型块内的指令集。
+
+## 返回值
+
+最后，当块返回值时，你可以像调用函数一样调用其块变量。
+
+```objectivec
+double (^divBlock)(double,double) = ^(double k, double j) {
+    return k/j;
+};
+```
+
+在此代码中，你将 `divBlock` 声明为一个返回 `double` 并期望两个 `double` 作为参数的块变量。然后，你为其分配了一个值，该值包含将两个参数相除的结果作为返回值的指令。
+
+你可以像这样使用该块：
+
+```objectivec
+double quotient = divBlock(42.0, 12.5);
+```
+
+## 内存管理
+
+与原始变量一样，块是在栈上创建和存储的。也就是说，当创建块的函数或方法返回时，块将随着栈帧一起被销毁。然而，有时你的块需要存在更长时间。例如，它可能成为对象的实例变量。在这种情况下，你必须将你的块从栈复制到堆。
+
+要将块从栈复制到堆，请向其发送 `copy` 消息：
+
+```objectivec
+ArrayEnumerationBlock iVarDevowelizer = [devowelizer copy];
+```
+
+现在，你的块的副本存在于堆上。它现在是一个*基于堆的块*，而不是*基于栈的块*，并且新的块变量是指向该块的指针。
+
+接受块作为参数的方法，例如 `NSArray` 的 `enumerateObjectsUsingBlock:` 或 `NSNotificationCenter` 的 `addObserverForName:object:queue:usingBlock:`，预期会复制传递给它们的块以使其保持存在。在此过程中，它们创建了指向这些块的指针——以及强引用。
+
+因此，我们看到块被声明、赋值，并像变量一样传递。我们也看到它们看起来像函数。现在，我们像发送对象消息一样向块发送消息。
+
+表现为对象的基于堆的块带来了一些内存管理问题：
+
+- 与块一起使用的变量会怎样？
+
+块通常在其代码中使用在外部创建的其他变量（包括原始变量和指向对象的指针）。为了确保这些*外部变量*在块需要它们的时间内可用，这些变量在创建副本时会被块*捕获*。
+
+对于原始变量，这意味着值被复制并作为块内的局部变量存储。对于指针，块本身将保持其引用的任何对象的强引用。这意味着块引用的任何对象都保证至少与块本身一样长寿。（如果你一直在想知道块和函数指针之间的区别，就在这里。让我们看看函数指针是如何做到这一点的！）
+
+作为一个例子，看看我们的 VowelMovement 程序。`devowelizer` 块提到了在块外部创建的两个对象：`newStrings`（用于存储 `strings` 修改版本的数组）和 `string`（当前要复制以便修改的字符串）。`devowelizer` 将对这两个对象保持强引用，只要块本身存在，就会保持它们存活。*这些强引用会导致保留循环/循环引用吗？*
+
+肯定会。修复方法是相同的：其中一个引用需要变成弱引用。为此，在块外部声明一个 `__weak` 指针，然后在块内引用此指针。
+
+- 我可以更改块已复制的变量吗？
+
+默认情况下，块捕获的变量在块内是常数，你无法更改它们的值。例如，对象指针变量在块的作用域内是常数。（虽然你仍然可以发送能够更改其内容的对象消息，但你不能修改指针本身。）
+
+然而，有时你希望能够在块内修改外部变量。为此，你必须使用 `__block` 关键字声明外部变量。例如，在下面的代码中，你增加外部变量 `counter`。
+
+```objectivec
+__block int counter = 0;
+void (^counterBlock)() = ^{ counter++; };
+counterBlock(); // 将 counter 增加到 1
+counterBlock(); // 将 counter 增加到 2
+```
+
+如果没有 `__block` 关键字，你会在块定义中遇到编译错误，指出 `counter` 的值无法更改。
+
+## 基于块的未来
+
+块可能难以理解和使用。然而，在 Mac 和 iOS 编程中常见的重事件驱动应用程序中，它们极其有用且功能强大。Apple 的 API 越来越多地使用块。例如，`ALAssetLibrary` 和 `GameKit` 框架使用许多基于块的方法。只要有可能使用 Apple 的基于块的方法，就是一个好主意，以便更熟悉块。
+
+# 挑战
+
+## 匿名块
+
+本章中的示例为了可读性，将块声明、赋值和使用放在三个单独的代码行上。
+
+当你需要将整数传递给方法，例如 `NSNumber` 的 `numberWithInt:` 时，你可以匿名传递该 int：
+
+```objectivec
+// 选项 1：完全拆解
+int i;
+i = 5;
+NSNumber *num = [NSNumber numberWithInt:i];
+
+// 选项 2：跳过变量声明
+NSNumber *num = [NSNumber numberWithInt:5];
+```
+
+因为块是变量，你也可以对块这样做。实际上，这是使用块的最常见方式。你很少会声明块变量以便将块传入方法；你通常匿名使用它们。
+
+修改本章中的练习，将块作为 `enumerateObjectsUsingBlock:` 的参数匿名传递。也就是说，保留块，但去掉块变量。
+
