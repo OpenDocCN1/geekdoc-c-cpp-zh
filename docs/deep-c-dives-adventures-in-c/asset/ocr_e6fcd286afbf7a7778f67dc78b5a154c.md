@@ -1,0 +1,13 @@
+C also spread, though not as fast as Basic, on the early microcomputers of the 1980s. This was mostly due to the publication of “A Small C Compiler for the 8080s” in the then influential Dr. Dobb’s Journal. This provided a listing of an entire C compiler written in Small C – it was a self-compiler. As a result C became available on almost every machine and it was the language that was used to create systems programs that interfaced, or even modified, the operating system. All of the popular operating systems were, and still are, written in C – with the exception of Windows that mainly used C++.
+
+# ## Standards
+
+Even back at the start of the 1980s it became clear that C was an important language and needed standardizing. Until then the language as described in K&R served as the standard, but by 1982 it had grown apart from the language as actually used in the real world. Compilers had added features that weren’t in the original language – compiler “enhancements” are still a feature today and they tend to spoil the idea of a “standard” language.
+
+Both the American National Standards Institute, ANSI, and the International Organization for Standardization, ISO, were involved in defining the C programming language standard. In 1989 the ANSI C committee, formally called the ANSI X3J11 committee, produced the first standard and the same standard was ratified by the ISO in 1990. Thus we have ANSI C or C89 and ISO C or C90 which refer to the same language.
+
+The next important standard was C99, there is C95 in between, but this was mostly bug fixes to the previous one. Today we tend to think of C89/90 as “classic” C and C99 as modern C. Most programmers prefer C99 for two simple additions it introduced – the ability to use single line comments prefixed by // and the ability to declare variables in code especially in for loops. That is, before C99 you couldn’t write for(int i=0; as the int had to be defined outside of code.
+
+The next standard, C11, didn’t do much for the language. It introduced an inadequate attempt at Unicode support together with standard threading that so far hasn’t replaced pthreads and atomics. C17 was a bug fix that didn’t introduce anything new. At the time of writing, May 2024, C17 is the current standard, although it is soon to be replaced by C23.
+
+Currently most programmers prefer C99 as their standard as this is the best mix of classic features and modern extensions. The soon-to-be published C23 standard has some useful additions and looks to be the first refresh to have an impact on day-to-day C programming.

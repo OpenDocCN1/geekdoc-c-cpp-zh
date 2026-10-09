@@ -1,0 +1,6 @@
+The easiest and most logical way to implement the state change needed to implement an exception is to “unwind” the call stack back to the point where the code that is handling the error started the function calls.
+
+![](bbox=[0.22, 0.18, 0.8, 0.55])
+
+As all of the function's local variables are stored on the stack, this essentially obliterates all trace of the functions being called. Well not quite, because adjusting the call stack cannot do anything about any global side effects that the functions caused. For example, if the function printed something, opened a file or modified a global variable, then these things are not automatically undone by the exception. In the case of having printed something then it might not be possible to undo what has been done, but usually the catch portion of the exception handler can perform the final cleanup by adjusting global variables and closing files etc.
+Once everything is cleaned up as much as possible the code that is handling the error can have another go at the operation. Of course if this causes an exception then again we need to do something different and eventually we are going to have to give up and report an error. Ideally the code should ask for human assistance in working out what to do next but most code still just posts an error number and halts.
