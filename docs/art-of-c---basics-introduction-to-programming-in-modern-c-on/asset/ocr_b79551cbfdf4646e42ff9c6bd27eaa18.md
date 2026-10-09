@@ -1,0 +1,1 @@
+> Not all types need to be created thread-safe. The overall program may need to run thread-safe, depending on its use cases, but not all individual types, and their instances, need to be thread-safe.

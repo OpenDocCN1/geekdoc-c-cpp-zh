@@ -1,0 +1,185 @@
+
+```csharp
+34      sb.Append(ch);
+35      } catch (Exception ex) {
+36          Console.WriteLine(ex);
+37          sb.Append('?');
+38      }
+39      code.Clear();
+40  }
+
+42  private static char FindChar(String code) {
+43      if (Code.ReverseCode.ContainsKey(code)) {
+44          return Code.ReverseCode[code];
+45      } else {
+46          throw new ArgumentException($"Given code {code} not found.");
+47      }
+48  }
+```
+
+这种特定实现依赖于一个假设（具体到此示例）：字符之间使用一个空格，而单词之间使用多个空格。
+
+### 14.2.1. 解释
+
+如果你像之前一样运行该程序：
+
+```
+dotnet run
+```
+
+你会得到以下输出：
+
+```
+text: Hello, World! => code: . .... .--. - -.. .---- --- --..-- ..-- --- .-.. .- .. -.-- -.--
+code: . .... .--. - -.. .---- --- --..-- ..-- --- .-.. .- .. -.-- -.-- => text: hello, world!
+```
+
+### 14.2.2. 语法
+
+让我们从头开始。
+
+当面对一个问题时，作为一般规则，最好是从上到下解决该问题。也就是说，从高层的组织、描述、理解等到低层的细节。软件“设计”通常就是这样进行的。然后，你先开始实现低层组件，并向上构建。
+
+这是解决计算问题的一般准则。这种策略可能并不适用于所有问题领域。
+
+在这个特定示例中，我们可能需要以某种形式读取输入（假设是从莫尔斯电码信号转换而来，无论是电信号还是其他形式），并将其转换为英语。反过来，我们可以将英语文本转换为特定格式的符号序列（例如，可以通过某种方式读取并转换为莫尔斯电码信号）。
+
+因此，在不考虑特定（可执行）程序的情况下，我们可以想象我们需要以下“API”来支持广泛范围的程序。
+
+```csharp
+string Encode(string text);
+string Decode(string cipher);
+```
+
+在这个特定示例中，与本书中的大多数示例一样，我们没有明确定义且具体的需求。在实践中，我们很可能从一组特定需求开始，这些需求可能会限制我们的“API 设计”。在本课中，我们将使用 `Main()` 方法的用例作为需求。然后，该 API 设计很可能支持这些用例。
+
+现在，我们如何实现 `Encode()` 方法？
+
+如前所述，“编码”在这个示例中仅仅是“字典查找”。C# 编程语言和 .NET 提供了一个泛型数据类型 `Dictionary<K,V>`，我们可以将其用于此目的。
+
+字典存储键值对，并提供了一种获取与给定键对应的值的方法。如前所述，所有集合类型都是引用类型。
+
+`Dictionary` 字段 `Chars.code` 初始化为所有与英语相关的字符。请注意 `Dictionary` 对象的集合初始化语法，它使用了类似于赋值的语法。
+
+莫尔斯电码方案不区分大小写字母。为了方便，我们在 `Code` 类的静态构造函数中创建了一个新的 `Dictionary`，其中包含小写和大写字母表。
+
+在此示例中，在 `Code` 的静态构造函数中初始化的这个新 `Dictionary` 被命名为 `MorseCode`。
+
+`Encoder.Encode()` 方法使用了一个 `StringBuilder` 对象。它遍历给定 `text` 中的每个字符，如果它有对应的莫尔斯电码（`Code.MorseCode.ContainsKey(c) == true`），则将该电码添加到 `StringBuilder` 对象中。如果没有，则添加三个空格代表一个空格 (' ') 或一个无效值 "???"。
+
+然后通过 `ToString()` 方法返回累积的字符串。
+
+编写或理解 `Decoder.Decode()` 函数需要稍微多一点的思考。我们将把这个留作读者的练习。
+
+但是，它本质上遵循与 `Encode()` 相同的逻辑。它从 `Dictionary ReverseCode` 开始，并遍历输入 `cipher` 的字符数组。唯一的区别是，我们需要读取可能不止一个字符（直到下一个空格）才能将电码匹配到对应的字母。
+
+## 摘要
+
+我们在本课中复习了泛型 `Dictionary<K,V>` 集合类型。Dictionary 是一种引用类型。
+
+字典存储键值对。C# 在类似数据类型上使用的语法与其他编程语言中使用的语法大多相似。
+
+### 14.3. 练习
+
+- 1. 研究本课中 `Decoder.Decode()` 静态方法的实现，并凭记忆实现相同的功能（不直接复制该方法）。
+- 2. 编写一个程序，读取莫尔斯电码输入，并在每次看到输入中对应于 "SOS" 的电码时打印出警告。
+
+## 第 15 课. 超级百万彩票
+
+### 15.1. 议程 - 值元组、枚举、随机数生成器、break 和 continue 语句
+
+在许多国家，彩票是政府的垄断业务。彩票通常用于筹集资金以资助公共项目。
+
+在美国，有一些“超级”彩票，其门票在多个州销售，其奖金经常达到数亿美元。最大的是强力球（Powerball）和超级百万（Mega Millions）。
+
+让我们使用 C# 随机数生成器玩一场“虚假”的超级百万游戏。
+
+![](img/25af69ec45b3c0b589a8dccd0c2a88be_229_0.png)
+
+本课程的示例代码基于来自官方超级百万网站 www.megamillions.com 的信息，特别是来自该页面“如何玩” [https://www.megamillions.com/How-to-Play.aspx]。
+
+### 15.2. 代码阅读 - 彩票模拟
+
+主程序相当简单。所有的游戏逻辑都在命名空间 `Mega` 中的静态方法 `Millions.Play()` 中实现。
+
+`mega-millions/Program.cs`
+
+```csharp
+Console.WriteLine($"Let's play Fake Mega Millions (for fun)!");
+Mega.Millions.Play();
+```
+
+这是 Millions 静态类的实现：
+
+`mega-millions/Millions.cs`
+
+```csharp
+namespace Mega;
+
+public static class Millions {
+    public static void Play() {
+        var (numbers, mega) = Input.Read();
+        Console.WriteLine($"You selected: numbers = [{string.Join(', ', numbers)}]; Mega number = {mega}");
+        
+        var (whites, gold) = Game.DrawBalls();
+        Console.WriteLine($"White balls drawn = [{string.Join(', ', whites)}]; The golden ball = {gold}");
+        
+        var prize = Game.DeterminePrize(whites, gold, numbers, mega);
+        if (prize > Prize.None) {
+            Console.WriteLine($"Congratulations! You won!!! Your prize is {prize}!");
+        } else {
+            Console.WriteLine($"Thanks for playing Fake Mega Millions!");
+        }
+    }
+}
+```
+
+请注意，我们在本课时将 Millions 类声明为公共的。虽然我们这里构建的是可执行程序程序集，但如果我们希望将此游戏库提供给其他 C# 开发者，我们可以很容易地将其更改为库类型。
+
+此类包含一个静态方法 Play()，它也被声明为公共的。
+
+静态类 Input 处理用户输入：
+
+`mega-millions/Input.cs`
+
+```csharp
+namespace Mega;
+
+public static class Input { 
+	public static (ushort[], ushort) Read() => (
+		ReadFiveNumbers(),
+		ReadMegaNumber()
+	);
+
+	private static ushort[] ReadFiveNumbers() { 
+		Console.Write("Select 5 numbers between 1 and 70: ");
+
+		var numbers = new ushort[Game.NumWhiteBalls];
+		var i = 0;
+		while (i < Game.NumWhiteBalls) {
+			try { 
+				var parts = Console.ReadLine()!.Split();
+				foreach (var part in parts) {
+					if (ushort.TryParse(part, out ushort number) && 
+					IsValidNumber(number)) { 
+						numbers[i++] = number;
+					}
+					if (i >= Game.NumWhiteBalls) { 
+						break;
+					}
+				}
+			} catch (Exception) { 
+				continue;
+			}
+		}
+
+		Array.Sort(numbers);
+		return numbers;
+	}
+
+	private static ushort ReadMegaNumber() { 
+		Console.Write("Select 1 mega number between 1 and 25: ");
+
+		ushort mega;
+```
+

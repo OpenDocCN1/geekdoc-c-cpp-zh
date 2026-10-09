@@ -1,0 +1,232 @@
+
+
+请注意，如果同步实现不当，可能会导致一种称为“死锁”的情况。所有或部分线程无法继续执行，因为它们无法获取锁，这最终会导致程序执行没有任何实际进展的状态。
+
+如前所述，如果您对多线程编程不完全熟悉，最好坚持使用 C# 的 async/await 特性。
+
+Song 被定义为一种不可变的 record 类型。
+
+### shuffle-playlist/Song.cs (第 3-5 行)
+
+```csharp
+public record Song(string Title, string Singer) {
+    public override string ToString() => $"({Title}: {Singer})";
+}
+```
+
+虽然没有显式声明，但该 record 是使用位置式 record 语法实现的，并且它不保留其他内部数据。它没有其他的数据访问器或方法。（属性 Title 和 Singer 在构造上是只读的。）因此，Song 在所有实际目的上都是真正不可变的。
+
+显然，最简单的不可变 record 类型是那些没有声明主体的类型。例如，
+
+```csharp
+public record Song(string Title, string Singer);
+```
+
+在本课的具体示例中，我们只需要重写 object.ToString() 方法，该方法（从语义上讲）是只读的。
+
+在 C# 中，目前（截至 9.0 和 10.0 版本），没有方法可以显式声明或指示某个特定的 record 类型是真正不可变的（除了使用纯位置式 record 类型）。这需要程序员实践安全的编程。
+
+> 并非所有类型都需要被创建为线程安全的。整个程序可能需要运行得线程安全，这取决于其用例，但并非所有单个类型及其实例都需要是线程安全的。
+
+## 第 26 课：环形缓冲区
+
+### 26.1. 问题
+
+环形缓冲区是一种数据结构，其行为类似于具有圆形拓扑的数组：[循环缓冲区](https://en.wikipedia.org/wiki/Circular_buffer)。它有很多用途。它可以用作高效的固定大小 FIFO 队列（先进先出）。它也可以用作 MRU 列表（最近使用），以及其他用途。
+
+让我们实现一个循环数据结构，该结构同时支持 FIFO 队列和 MRU 列表的用例。
+
+在典型的 FIFO 队列用例中，如果有限大小的队列变“满”了，那么我们将需要抛出一个错误，否则我们应该能够以某种方式（例如，向客户端程序）指示这种情况，以便数据不会丢失。然而，当有限大小的缓冲区用于临时缓存数据时，例如在 MRU 列表的典型用例中（例如，许多面向文件的应用程序中的“最近打开的文件列表”菜单中），我们可以直接用新数据覆盖旧/最旧的数据。
+
+我们将实现一个环形缓冲区数据结构作为库，并创建两个测试应用程序来使用此数据结构，一个用于 FIFO 队列，另一个用于 MRU 列表。
+
+![](img/25af69ec45b3c0b589a8dccd0c2a88be_425_0.png)
+
+### 26.2. 讨论
+
+在这本书中，我们主要使用单个项目示例代码。这一课是个例外。我们创建四个项目：一个库及其测试项目，以及两个应用程序项目。
+
+这会产生一些开销。即使是简单的单元测试，我们也需要创建一个单独的项目。这确实令人遗憾，但这就是目前微软 .NET 生态系统的方式。
+
+我们可以使用 dotnet CLI 创建库程序集项目：
+
+```bash
+dotnet new classlib
+```
+
+如果您使用 Visual Studio 或其他 IDE，也可以达到相同的效果。
+
+就项目 XML 文件而言，真正的区别在于 OutputType 属性。对于库项目，我们使用 library 而不是 exe：
+
+```xml
+<OutputType>library</OutputType>
+```
+
+您可以按以下方式创建 "XUnit" 测试项目：
+
+```bash
+dotnet new xunit
+```
+
+通常的做法是将应用程序和库项目放在名为 src 的文件夹下，将测试项目放在名为 test 的文件夹下。但这并非强制要求。
+
+您也可以使用 dotnet 创建两个应用程序项目（在适当的文件夹中）：
+
+```bash
+dotnet new console
+```
+
+然而，如前所述，dotnet new 脚手架功能相当基础（就控制台应用程序而言），您只需复制现有的项目文件和任何 C# 文件，并进行必要的修改，即可作为您新项目的起点。
+
+您可以使用“解决方案”文件来管理多个项目（Visual Studio 默认使用此方式）。但是，再次强调，这并非强制要求。更重要的是添加对依赖项目的引用。例如，在本课示例项目中，库测试项目依赖于 "RingBuffer" 库项目，而两个应用程序项目也依赖于这个库项目。
+
+我们可以使用 dotnet add reference 来添加项目依赖项。如果您使用 dotnet CLI，--help 选项非常有用。例如，
+
+```bash
+$ dotnet add reference --help
+
+Usage: dotnet add <PROJECT> reference [Options] <PROJECT_PATH>
+
+Arguments:
+    <PROJECT>
+        The project file to operate on. If a file is not
+        specified, the command will search the current directory for one.
+    <PROJECT_PATH>    The paths to the projects to add as references.
+
+Options:
+    -h, --help    Show command line help.
+    -f, --framework <FRAMEWORK>  Add the reference only when targeting a
+        specific framework.
+    --interactive
+        Allows the command to stop and wait for user input or action (for example to complete authentication).
+```
+
+例如，我们可以执行以下操作来在测试项目中添加对库项目的引用。
+
+```bash
+dotnet add reference ../RingBuffer/ring-buffer.csproj
+```
+
+或者，我们可以手动更新项目文件。例如，以下代码取自测试项目。
+
+```xml
+<ItemGroup>
+    <ProjectReference Include="..\..\src\RingBuffer\ring-buffer.csproj" />
+</ItemGroup>
+```
+
+对于这个示例项目，整体目录结构看起来像这样：
+
+![](img/25af69ec45b3c0b589a8dccd0c2a88be_427_0.png)
+
+```bash
+book/03-having-fun/code/ring-buffer$ tree
+.
+├── src
+│   ├── MRU
+│   │   ├── bin
+│   │   ├── List.cs
+│   │   ├── obj
+│   │   ├── Program.cs
+│   │   └── ring-buffer-mru.csproj
+│   ├── Queue
+│   │   ├── bin
+│   │   ├── obj
+│   │   ├── Program.cs
+│   │   ├── Queue.cs
+│   │   └── ring-buffer-queue.csproj
+│   └── RingBuffer
+│       ├── bin
+│       ├── Buffer.cs
+│       ├── obj
+│       └── ring-buffer.csproj
+└── test
+    └── RingBufferTests
+        ├── bin
+        ├── BufferTest.cs
+        ├── obj
+        └── ring-buffer-tests.csproj
+
+60 directories, 231 files
+```
+
+### 26.3. 示例代码片段 - ring-buffer
+
+实现循环缓冲区可以有很多种不同的方法。这里提供一种实现方式：
+
+#### ring-buffer/src/RingBuffer/Buffer.cs (第 4-72 行)
+
+```csharp
+public sealed class Buffer<T> : IEnumerable<T> {
+    private readonly int size;
+    private readonly T[] ring;
+
+    // head >= tail ???
+    private int head = 0; // "Next" index
+    private int tail = 0;
+
+    public bool Overwrite { get; set; }
+
+    public Buffer(uint capacity, bool overwrite = false) {
+        ring = new T[capacity + 1];
+        size = ring.Length;
+        Overwrite = overwrite;
+    }
+
+    public bool Empty => head == tail;
+    public bool Full => head == (tail + size - 1) % size;
+    public int Capacity => size - 1;
+    public int Length => (head == tail) ? 0 : (head - tail + size) % size;
+
+    // Translate index into "ring index".
+    // The "ring index" runs from head to tail, backward.
+    public T this[int index] {
+        get {
+            index = (index % Capacity + Capacity) % Capacity;
+            return ring[(head - index - 1 + size) % size];
+        }
+        set {
+            index = (index % Capacity + Capacity) % Capacity;
+            ring[(head - index - 1 + size) % size] = value;
+        }
+    }
+
+    public void PushFront(T item) {
+        if (Overwrite) {
+            ring[head++] = item;
+            head %= size;
+            if (Full) {
+                tail = (tail + 1) % size;
+            }
+        } else {
+            if (Full) {
+                throw new OverflowException("Buffer is full");
+            }
+            ring[head++] = item;
+            head %= size;
+        }
+    }
+
+    public T PopBack() {
+        if (Empty) {
+            throw new InvalidOperationException("No items in Buffer");
+        }
+        var item = ring[tail++];
+        tail %= size;
+        return item;
+    }
+
+    public IEnumerator<T> GetEnumerator() {
+        for (var i = 0; i < Length; i++) {
+            yield return this[i];
+        }
+    }
+
+    IEnumerator IEnumerable.GetEnumerator() {
+        return GetEnumerator();
+    }
+}
+```
+
+我们将 RingBuffer 定义为泛型密封类 Buffer<T>，它实现了 IEnumerable<T> 接口。对类型 T 没有其他约束。它可以用于任何类型，从 object 到其任何派生类/record 或 struct 类型。
+

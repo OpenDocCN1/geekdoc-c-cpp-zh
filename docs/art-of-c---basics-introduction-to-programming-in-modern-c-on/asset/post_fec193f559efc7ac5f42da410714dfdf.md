@@ -1,0 +1,318 @@
+
+(Knowing inheritance/polymorphism and all the technical details of the OOP will mean very little unless you understand the fundamental concepts of object oriented programming.)
+
+## 28.3. Sample Code Snippets - rubiks-cube
+
+The main program tests a few operations on the Rubik's cube.
+
+**rubiks-cube/Program.cs** (lines 5-6)
+
+```csharp
+5  var c = new Cube();
+6  Console.WriteLine($"c =\n{c}");
+```
+
+**rubiks-cube/Program.cs** (lines 11-39)
+
+```csharp
+11 c.RotateWhite();
+12 Console.WriteLine($"c =\n{c}");
+13 c.RotateWhite(false);
+14 Console.WriteLine($"c =\n{c}");
+15
+16 c.RotateBlue();
+17 Console.WriteLine($"c =\n{c}");
+18 c.RotateBlue(false);
+19 Console.WriteLine($"c =\n{c}");
+20
+21 c.RotateRed();
+22 Console.WriteLine($"c =\n{c}");
+23 c.RotateRed(false);
+24 Console.WriteLine($"c =\n{c}");
+25
+26 c.RotateGreen();
+27 Console.WriteLine($"c =\n{c}");
+28 c.RotateGreen(false);
+29 Console.WriteLine($"c =\n{c}");
+30
+31 c.RotateOrange();
+32 Console.WriteLine($"c =\n{c}");
+33 c.RotateOrange(false);
+34 Console.WriteLine($"c =\n{c}");
+35
+36 c.RotateYellow();
+37 Console.WriteLine($"c =\n{c}");
+38 c.RotateYellow(false);
+39 Console.WriteLine($"c =\n{c}");
+```
+
+**rubiks-cube/Program.cs** (lines 44-45)
+
+```csharp
+44 c.Randomize();
+45 Console.WriteLine($"c =\n{c}");
+```
+
+A Cube is a large class, probably, the biggest among all the sample code in this book.
+
+**rubiks-cube/Cube.cs** (lines 5-42)
+
+```csharp
+5  public sealed class Cube {
+6      private readonly Face[] faces = new Face[] {
+7          new Face(Color.W),
+8          new Face(Color.B),
+9          new Face(Color.R),
+10         new Face(Color.G),
+11         new Face(Color.O),
+12         new Face(Color.Y),
+13     };
+14
+15     private Face W => faces[0];
+16     private Face B => faces[1];
+17     private Face R => faces[2];
+18     private Face G => faces[3];
+19     private Face O => faces[4];
+20     private Face Y => faces[5];
+21
+22     private Random rand;
+23
+24     public Cube() => rand = new Random();
+25
+26     public void Randomize() {
+27         const int rep = 20;
+28         foreach (var u in Range(0, rep)) {
+29             var r = rand.Next(0, 12);
+30
+31             var cw = r % 2 == 0;
+32             _ = (Color)(r / 2 + 1) switch {
+33                 Color.W => RotateWhite(cw),
+34                 Color.B => RotateBlue(cw),
+35                 Color.R => RotateRed(cw),
+36                 Color.G => RotateGreen(cw),
+37                 Color.O => RotateOrange(cw),
+38                 Color.Y => RotateYellow(cw),
+39                 _ => false
+40             };
+41         }
+42     }
+```
+
+**rubiks-cube/Cube.cs** (lines 47-62)
+
+```csharp
+47 private Triplet BsTopRowForW {
+48     get => B.TopRow;
+49     set => B.TopRow = value;
+50 }
+51 private Triplet RsTopRowForW {
+52     get => R.TopRow;
+53     set => R.TopRow = value;
+54 }
+55 private Triplet GsTopRowForW {
+56     get => G.TopRow;
+57     set => G.TopRow = value;
+58 }
+59 private Triplet OsTopRowForW {
+60     get => O.TopRow;
+61     set => O.TopRow = value;
+62 }
+```
+
+**rubiks-cube/Cube.cs** (lines 149-163)
+
+```csharp
+149 public bool RotateWhite(bool cw = true) {
+150     var row = BsTopRowForW;
+151     if (cw) {
+152         BsTopRowForW = OsTopRowForW;
+153         OsTopRowForW = GsTopRowForW;
+154         GsTopRowForW = RsTopRowForW;
+155         RsTopRowForW = row;
+156     } else {
+157         BsTopRowForW = RsTopRowForW;
+158         RsTopRowForW = GsTopRowForW;
+159         GsTopRowForW = OsTopRowForW;
+160         OsTopRowForW = row;
+161     }
+162     return true;
+163 }
+```
+
+**rubiks-cube/Cube.cs** (lines 245-257)
+
+```csharp
+245 public override string ToString() {
+246     var range = new List<int>() { 0, 1, 2 };
+247     var sb = new StringBuilder();
+248     sb.AppendLine(string.Concat(Repeat(new string('-', 7) + " ", 6)));
+249     foreach (var i in range) {
+250         for (var f = 0; f < 6; f++) {
+251             sb.Append($"[{string.Join(' ', range.Select(j => faces[f].GetRow(i)[j]).ToArray()}]");
+252         }
+253         sb.AppendLine();
+254     }
+255     sb.Append(string.Concat(Repeat(new string('-', 7) + " ", 6)));
+256     return sb.ToString();
+257 }
+```
+
+But, there are a fair amount of repetitions, in fact, 6 times across the 6 different faces.
+
+Here are some convenience types:
+
+**rubiks-cube/Face.cs** (lines 4–50)
+
+```csharp
+4  public sealed class Face {
+5      public Color Center { get; init; }
+7      private readonly Tile[,] tiles;
+9      private static readonly List<int> range = new() { 0, 1, 2 };
+11     public Triplet TopRow {
+12         get => range.Select(j => tiles[0, j]).ToArray();
+13         set => range.ForEach(j => tiles[0, j] = value[j]);
+14     }
+15     public Triplet RightCol {
+16         get => range.Select(i => tiles[i, 2]).ToArray();
+17         set => range.ForEach(i => tiles[i, 2] = value[i]);
+18     }
+19     public Triplet BottomRow {
+20         get => range.Select(j => tiles[2, 2 - j]).ToArray();
+21         set => range.ForEach(j => tiles[2, 2 - j] = value[j]);
+22     }
+23     public Triplet LeftCol {
+24         get => range.Select(i => tiles[2 - i, 0]).ToArray();
+25         set => range.ForEach(i => tiles[2 - i, 0] = value[i]);
+26     }
+28     internal Tile[] GetRow(int rowNum) => range.Select(j =>
+29         tiles[rowNum, j]).ToArray();
+30     internal Face(Color center) {
+31         Center = center;
+32         var t = new Tile(Center);
+33         tiles = new Tile[3, 3]{
+34             {t, t, t},
+35             {t, t, t},
+36             {t, t, t},
+37         };
+38     }
+40     public override string ToString() {
+41         var sb = new StringBuilder();
+42         sb.AppendLine(new string('-', 7));
+43         foreach (var i in range) {
+44             sb.AppendLine($"[{string.Join(' ', range.Select(j =>
+45                 tiles[i, j]).ToArray())}]");
+46         }
+47         sb.Append(new string('-', 7));
+48         return sb.ToString();
+49     }
+50 }
+```
+
+**rubiks-cube/Triplet.cs** (lines 3-24)
+
+```csharp
+public sealed class Triplet {
+    private Tile[] tiles;
+    public Tile[] Tiles {
+        get => tiles;
+    }
+    public Triplet(Tile[] tiles) {
+        this.tiles = new Tile[3];
+        Array.Copy(tiles, this.tiles, 3);
+    }
+    public static implicit operator Triplet(Tile[] tiles) {
+        return new Triplet(tiles);
+    }
+    public Tile this[int i] {
+        get => tiles[i];
+        set => tiles[i] = value;
+    }
+    public override string ToString() => $"[{string.Join( ', ', tiles)}]";
+}
+```
+
+**rubiks-cube/Tile.cs** (lines 3-11)
+
+```csharp
+public struct Tile {
+    public Color Color { get; set; }
+
+    public Tile(Color color) {
+        Color = color;
+    }
+
+    public override string ToString() => $"{Color}";
+}
+```
+
+**rubiks-cube/Color.cs** (lines 3-11)
+
+```csharp
+public enum Color : byte {
+    I = 0, // Invalid
+    W,
+    B,
+    R,
+    G,
+    O,
+    Y,
+}
+```
+
+We will leave it to the readers to go through this sample code and understand the overall APIs and the implementations.
+
+Clearly, this is not the only way, and the readers are encouraged to look for other possible ways to represent the Rubik's Cube as an "object" (in the sense of the OOP).
+
+# Lesson 29. Key-Value Store
+
+## 29.1. Problem
+
+There are many storage or database systems that store data in a dictionary format, that is, as a key-value mapping.
+
+Let's implement a simple key-value store.
+
+![](img/25af69ec45b3c0b589a8dccd0c2a88be_465_0.png)
+
+## 29.2. Discussion
+
+In the .NET world, libraries are shared through "NuGet packages".
+
+There is an interesting library for parsing command line arguments (flags and what not). <www.nuget.org/packages/System.CommandLine>. We will use this library for the project of this lesson.
+
+In order to be able to use a third-party library, you need to "install" it in your project.
+
+If you use the dotnet CLI, then you can use the dotnet add command. We used dotnet add before to add a reference to an internal library project in an earlier lesson.
+
+In this project we use dotnet add package command.
+
+```text
+dotnet add package --help
+Usage: dotnet add <PROJECT> package [options] <PACKAGE_NAME>
+
+Arguments:
+    <PROJECT>    The project file to operate on. If a file is not
+                 specified, the command will search the current directory for one.
+    <PACKAGE_NAME>  The package reference to add.
+
+Options:
+    -h, --help    Show command line help.
+    -v, --version <VERSION>  The version of the package to add.
+    -f, --framework <FRAMEWORK>  Add the reference only when
+                         targeting a specific framework.
+    -n, --no-restore    Add the reference without
+                       performing restore preview and compatibility check.
+    -S, --source <SOURCE>  The NuGet package source to use
+                     during the restore.
+    --package-directory <PACKAGE_DIR>  The directory to restore packages
+    to.
+    --interactive  Allows the command to stop and wait
+                for user input or action (for example to complete authentication).
+    --prerelease    Allows prerelease packages to be
+                installed.
+```
+
+For example,
+
+```text
+dotnet add package System.CommandLine --version 2.0.0-beta1.21216.1
+```

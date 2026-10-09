@@ -1,0 +1,152 @@
+
+# **rotate-numbers/Program.cs**
+
+```csharp
+using Example;
+
+var list = new List<int>() { 1, 2, 3, 4, 5 };
+Console.WriteLine($"Input list:\t{list.Str()}");
+
+var rotated2 = Rotor.Rotate(list, 7);
+Console.WriteLine($"Rotated by 7:\t{rotated2.Str()}");
+
+var rotated3 = Rotor.Rotate(list, -2);
+Console.WriteLine($"Rotated by -2:\t{rotated3.Str()}");
+
+var rotated4 = list.Shift(2);
+Console.WriteLine($"Shifted by 3:\t{rotated4.Str()}");
+```
+
+“Rotator.cs” 文件包含几种不同的实现，用于旋转数组中的元素，其中一种是静态方法，另一种是扩展方法。
+
+转子类（rotor class）还包含几个辅助方法。
+
+# **rotate-numbers/Rotor.cs**
+
+```csharp
+namespace Example;
+
+static class Rotor {
+    internal static IEnumerable<T> Rotate<T>(IList<T> list, int delta = 1) {
+        for (var i = 0; i < list.Count; i++) {
+            yield return list[Mod(i + delta, list.Count)];
+        }
+    }
+
+    internal static IEnumerable<T> Shift<T>(this IList<T> list, int delta = 1) {
+        for (var i = 0; i < list.Count; i++) {
+            yield return list[Mod(i + delta, list.Count)];
+        }
+    }
+
+    internal static string Str<T>(this IEnumerable<T> list) =>
+        $"{{string.Join(", ", list)}}";
+
+    private static int Mod(int n, int b) => ((n % b) + b) % b;
+}
+```
+
+### 12.2.1. 说明
+
+主程序使用一个简单的整数数组 {1, 2, 3, 4, 5} 来测试这些实现。
+
+```bash
+$ dotnet run
+
+Input list:     {1, 2, 3, 4, 5}
+Rotated by 7:    {3, 4, 5, 1, 2}
+Rotated by -2:   {4, 5, 1, 2, 3}
+Shifted by 3:    {3, 4, 5, 1, 2}
+```
+
+### 12.2.2. 语法
+
+这是一个小程序，但其中包含了许多内容。
+
+所有核心实现都包含在 `Rotor` 静态类中。特别是，`Rotor` 类定义了两个静态方法 `Rotate()` 和 `Shift()`。（方法名称是任意的。在这个例子中，“旋转”和“移位”之间没有区别。）
+
+注意主程序中调用这两个方法的方式差异。`Rotate()` 方法就像类中定义的任何其他静态方法一样被调用。`Rotor.Rotate<int>()` 接受类型为 `IList<int>` 的列表作为其第一个参数。
+
+另一方面，`Rotor.Shift<int>()` 方法好像是在类型 `IList<int>` 上定义的方法一样被调用，例如 `list.Shift(2)`。在这个语法中，没有提及 `Rotor`，即定义该方法的地方。
+
+这就是我们在前一课中介绍的“扩展方法”。调用者的源代码仍然需要导入定义扩展方法的类的命名空间（使用 `using`），在本例中为 `Example`。
+
+`Str()` 方法也是如此。`IList<int>` 类型没有定义名为 `Str()` 的方法，然而我们在语法上使用它，就好像它是该类型的方法一样。`Str()` 扩展方法在 `Rotor` 类中定义如下。
+
+```csharp
+internal static string Str<T>(this IEnumerable<T> list) =>
+    $"{{string.Join(", ", list)}}";
+```
+
+它是一个泛型方法，有一个类型参数 T。没有 where 类型约束。事实上，该方法适用于所有 `IEnumerable<T>` 类型，具有任何关联的元素类型 T。
+
+请注意，尽管该方法使用了第一个参数类型为 `IEnumerable<T>`（对于任意 T）这一事实，但其实现并不依赖于类型 T 的任何特定属性。
+
+扩展方法只能在静态类中定义（即，不能实例化的类）。
+
+内部静态方法 `Str<T>` 接受一个类型为 `IEnumerable<T>` 的参数，前面由关键字 `this` 修饰。这表明该方法是一个扩展方法。也就是说，我们可以使用该方法，就好像它是定义在 `IEnumerable<T>` 类型中的一个方法一样。主程序使用语法 `list.Str()` 来获取列表的内容作为字符串。
+
+> 请注意，`IList<T>` 是 `IEnumerable<T>`。也就是说，对于相同的元素类型 T，`IList<T>` 类型是 `IEnumerable<T>` 的子类型。（例如，`IList<string>` 是 `IEnumerable<string>` 的子类型。）
+
+我们在稍宽泛的类型 `IEnumerable<T>` 上实现 `Str()` 方法，而不是 `IList<T>`，因为实现只需要这些（例如 `string.Join()`）。换句话说，除了它是 `IEnumerable<T>` 的子类型这一事实外，`Str()` 的实现没有使用任何 `IList<T>` 特有的属性或方法。
+
+“扩展方法”纯粹是语法上的。一个人不能向别人的类型或静态类添加方法或属性。而且，如上所述，即使在扩展方法语法中未显式使用类型或类名称，也必须使用 `using` 声明导入其命名空间。
+
+包含许多扩展方法的最常见命名空间之一是来自 .NET 标准库的 `System.Linq`，我们将在本书稍后看到。
+
+> 在之前的课程中，我们说过使用 `using` 声明是可选的。然而，在使用扩展方法时，`using` 声明是必需的。这是因为没有其他方式来明确指定定义扩展方法的命名空间。
+
+在 C# 中，方法可以被“重载”。也就是说，只要这些方法具有不同的参数列表，就可以用相同的名称定义不同的方法。这对于静态方法和实例方法都适用。
+
+然而，参数列表中的 `this` 前缀并不会使方法签名不同。
+
+在这个例子中，我们有两个方法，它们执行完全相同的任务，`IEnumerable<T> Rotate<T>(IList<T> list, int delta)` 和 `IEnumerable<T> Shift<T>(this IList<T> list, int delta)`。我们不能为这两个方法使用相同的名称，因为它们本质上有相同的方法签名和相同的参数列表。
+
+现在，让我们看看 `Rotate<T>()` 方法的实现：
+
+```csharp
+IEnumerable<T> Rotate<T>(IList<T> list, int delta) { /* ... */ }
+```
+
+它是一个泛型方法，没有任何类型约束（即，没有 `where` 子句）。该方法可以用于任何元素类型的列表。
+
+如上所述，实现了 `System.Collections.Generic.IEnumerable<T>`（或 *System.Collections.IEnumerable*）类型的对象，除了其他用途外，可以作为集合用于 *foreach*（*in*）语句中。
+
+这个 *Rotate<T>* 方法返回一个类型为 *IEnumerable<T>* 的对象，因此其返回值可以用于 *foreach* 迭代以及任何需要 *IEnumerable<T>* 对象的地方。
+
+接口 *IEnumerable<T>* 声明了一个方法 *IEnumerator<T> GetEnumerator()*。*IEnumerator<T>* 接口反过来声明了几个属性/方法，包括 *Current* 属性和 *MoveNext()* 方法。
+
+在 C# 中，"*yield return*" 语法提供了一种实现 *IEnumerator<T>* 的捷径。
+
+不深入细节，使用 *yield return* 语句隐藏了创建 *IEnumerator<T>* 类型对象的复杂性。可以说，每个 *yield return* 语句返回 *IEnumerable<T>* 集合对象中的一个元素。
+
+> 其他语言中也有类似的构造。例如，在 Python 和 Javascript 中，它被称为“生成器”或“生成器函数”。
+
+在 *Rotate<T>()* 的实现中，我们有一个 for 循环，其中每次迭代都调用 *yield return*。由于循环迭代 *list.Count* 次，该方法返回的 *IEnumerator<T>* 对象具有 *list.Count* 个元素，其（隐式的）*IEnumerator<T>* 也可以迭代相同的 *list.Count* 次。
+
+```csharp
+for (var i = 0; i < list.Count; i++) {
+    yield return list[Mod(i + delta, list.Count)];
+}
+```
+
+这是 C# 中的一种特殊语法。*yield return*（以及 *yield break*）语句有更广泛的用途。使用这些 *yield* 语句的方法可以表现得像“协程”。然而，这个话题超出了本书的范围。
+
+`Rotate<T>()` 方法返回其第一个元素（i == 0）为 `list[delta]` 的值（暂时忽略模运算）。也就是说，旋转列表的第一个元素（的值）是原始列表中第 `delta` 个元素的值。其第二个元素，i == 1，的值是原始列表中 `list[1 + delta]` 的值。以此类推。这有效地将元素向左移位了 `delta`。
+
+`Mod(n, b)` 函数的结果落在从 0（包含）到 b（不包含）的范围内。（实现中的双重模运算是为了处理负的 n 值。）
+
+`IEnumerable<T> Shift<T>(this IList<T> list, int delta)` 方法与其他方法的实现方式完全相同，除了它被声明为扩展方法。
+
+这两个方法都使用第二个参数 `delta` 的默认值 1。也就是说，如果方法仅使用第一个参数，则第二个参数 `delta` 的值将使用默认值 1。例如，方法调用 `Rotate(list)` 等价于 `Rotate(list, 1)`。
+
+像 `delta` 这样具有默认值的参数通常被称为“可选参数”，因为它们不总是需要指定。只有参数列表中最后一组（连续的）参数可以被设为可选。
+
+# 总结
+
+我们介绍了方法重载的概念。在 C# 中，只要方法具有不同的参数列表，就可以使用相同的方法名称来定义不同的（但相关的）方法。
+
+在这节课中，我们看了 .NET 中两个重要的接口，即 `IEnumerable<T>` 和 `IEnumerator<T>`。我们还介绍了 C# 中的一种特殊语法，使用 `yield return` 语句来创建返回 `IEnumerable<T>` 的方法。
+
+此外，我们回顾了“扩展方法”，这是我们上一课首次介绍的内容。
+

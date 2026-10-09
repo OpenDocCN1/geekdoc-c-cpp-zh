@@ -1,0 +1,1 @@
+> There are many different types of resources that can help you learn programming in C#. ***The Art of C# - Basics: Introduction to Programming in Modern C#*** is designed/created to be *read*. This book is not meant to be used as a stand-alone be-all and end-all book.

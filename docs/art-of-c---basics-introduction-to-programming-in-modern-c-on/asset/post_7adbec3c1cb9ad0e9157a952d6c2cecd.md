@@ -1,0 +1,399 @@
+
+## L
+
+- Lambda expressions, 353
+- library assemblies, 120
+- library assembly, 213
+- LINQ method, 239
+- Linux or Mac, 30
+- list, 176
+- list initializer syntax, 178
+- List<T>, 178
+- local function, 541, 559
+- local variable, 50, 60, 78
+- local variables, 60
+- logical expression, 57
+- logical operations, 242
+- loop variables, 131
+- looping, 115, 137, 154
+
+## M
+
+- machine architecture, 61, 65
+- main class, 58
+- Main method, 241
+- main program, 111-112, 143, 254, 66, 90
+- main programs, 36
+- main() function, 58
+- Main() method, 316-317, 35, 51, 58, 65-66, 84
+- Main() methods, 306, 35
+- Main() static method, 305, 35
+- match expression, 155
+- match expressions, 235
+- Math.Abs(), 201, 208
+- MD5 hashing method, 162
+- member declaration modifier, 528
+- method, 559
+- method body block, 37
+- method call, 112, 25
+- method CompareTo(T), 180
+- method declaration, 254
+- method definition, 118
+- method overloading, 193, 244
+- method parameter, 532
+- method signature, 106, 131, 210
+- method signatures, 35
+- Methods, 519
+- methods, 244, 260, 270, 349
+- modern C#, 37, 84
+- modern programming styles, 82
+- modulo, 96
+- modulo operation, 193, 96
+- modulo operations, 193
+- move semantics, 286
+- multi-dimensional array, 129
+- multi-dimensional arrays, 137
+- multi-line comment, 101
+- multiline comments, 242
+- multiple constructors, 255
+- multiple inheritance, 272
+- multiplication, 92
+
+## N
+
+- named argument, 256
+- named parameters, 256, 297
+- nameof() operator, 166
+- namespace, 197, 213, 226, 25, 32, 36
+- namespace block, 32
+- namespace declaration, 33
+- namespace name, 33
+- namespace names, 33
+- Namespaces, 36
+- namespaces, 109, 121, 241
+- nested for loops, 131
+- nested if-else statements, 117
+- nested loops, 133, 135, 203
+- Nested types, 519
+- nested types, 121
+- net5.0, 30
+- net6.0, 30
+- net6.0-windows, 30
+- new, 499-500, 511-512, 544
+- new expression, 256
+- new operator, 113, 250, 255
+- new project, 36
+- new variable, 48
+- newline, 159
+- non-destructive mutation, 298
+- non-destructive mutations, 298
+- non-generic collection, 176
+- non-generic collections, 176
+- non-nullable string, 157
+- non-nullable string type, 92
+- non-virtual properties and methods, 270
+- not, 209
+- notnull constraint, 208
+- null, 184, 276, 499
+- null conditional operator, 366
+- null forgiving ` operator, 366
+- null reference, 184
+- null reference exception, 183
+- null suppression operator, 366
+- null-coalescing operator, 157
+- nullable, 184
+- nullable context, 106
+- Nullable flag, 31
+- nullable reference type, 276, 31
+- nullable reference types, 79, 83
+- nullable string, 157, 78, 83, 92
+- nullable value type, 543
+- nullable value types, 184
+- number literals, 142
+- numeric literals, 33, 99
+- numeric types, 143, 199-200, 207-208, 48
+
+## O
+
+- object, 144, 146, 176, 255, 273, 357
+- object initializer, 256-257, 298
+- object initializer syntax, 274, 296, 298, 317
+- object initializers, 257, 274
+- object or collection initializer, 528
+- object oriented programming, 179, 34, 360, 66, 79
+- object oriented programming styles, 240
+- object type, 315, 91
+- object-oriented programming, 36
+- Object.Clone(, 287
+- Object.Equals(expr, constant, 548
+- Object.MemberwiseClone(, 287
+- objects, 315
+- Octal numbers, 100
+- octal numbers, 142
+- opening bracket, 57
+- operating system, 35
+- operating systems, 58
+- operator !=0, 316
+- operator ==0, 316
+- operator overloading, 157, 208, 279, 287
+- operator precedence, 119
+- Operators, 519
+- optional argument syntax, 278
+- optional arguments, 193, 296
+- optional method parameter, 504
+- optional parameters, 255
+- or, 209
+- out, 143, 518, 535-536, 544
+- out keyword, 156
+- out modifier, 156
+- out parameter, 143, 156, 182
+- out parameter type, 184
+- out parameters, 238
+- overloaded constructor, 277
+- overloaded implementations, 60
+- override, 318, 329, 498, 540
+- override keyword, 358, 361
+- override modifier, 273
+- overrides a method, 520
+- overriding member, 559
+
+## P
+
+- pair of curly braces, 32, 34
+- pair of double quotes, 27
+- pair of parentheses, 34
+- parameter list, 34
+- parameter lists, 255
+- parameter name, 34
+- params, 337
+- parent type, 270, 272
+- parent-child hierarchy, 272
+- partial class, 109
+- partial method, 109
+- PascalCase, 33
+- PascalCase naming convention, 33
+- pattern match, 235
+- pattern matching, 208
+- patterns, 209
+- placeholder Program class, 66
+- pointer type, 282
+- pointers, 284-285
+- polymorphic behavior, 273, 321, 327, 332, 338
+- polymorphism, 254, 272-273, 282, 332, 349
+- positional arguments, 297
+- positional record, 296
+- positional record syntax, 296, 319
+- positional syntax, 357
+- precedence, 118-119
+- precision, 95
+- precisions, 95
+- predefined C# operators, 279
+- predefined delegate types, 111
+- predefined variable, 259
+- primary constructor, 296, 319
+- primary constructor parameters, 298
+- primitive types, 276, 91
+- private, 121, 129, 509
+- private auto-properties, 259
+- private constructors, 300
+- private members, 121
+- private property, 260
+- private protected, 509
+- private static methods, 145
+- programming concepts, 24
+- programming languages, 34
+- project file, 29
+- project XML file, 36
+- projects, 28
+- Properties, 519
+- properties, 158, 244, 259-260, 274, 349
+- property declarations, 325
+- protected, 270, 509
+- protected constructor, 360
+- protected constructors, 300
+- protected internal, 509
+- protected properties, 270
+- pseudo-random number generator, 237
+- public, 120, 227, 243, 255, 270, 275, 279, 500, 509, 519
+- public APIs, 260
+- public class, 255
+- public field, 259
+- public fields, 349
+- public methods, 271
+- public methods and properties, 270
+- public properties, 270, 276
+- public property, 257
+- public static class, 167
+- public static classes, 214
+- public static method, 167
+- public static methods, 214
+- Python, 192, 66
+
+## R
+
+- radix, 142
+- Random, 245
+- Random class, 237
+- random number generator, 225
+- rational number, 265
+- raw interpolated string literals, 159
+- raw string, 102, 92
+- raw string literal, 92
+- raw strings, 158
+- read-only property, 357
+- read-write properties, 328
+- readability, 78
+- ReadLine(), 78
+- readonly, 157, 275-276, 301, 503, 542, 544
+- readonly indexer, 300
+- readonly modifier, 542
+- readonly properties, 295-296
+- readonly property, 258, 295, 360, 59
+- readonly struct, 157, 266, 275, 280
+- readonly structs, 294
+- readonly-property, 297
+- real, 542
+- record, 253, 260, 270, 287-289, 294, 303, 305-306, 315-316, 321, 518, 527
+- record (class), 253
+- record class, 253, 270, 294, 304, 315, 320-321
+- record class objects, 303
+- record class types, 257
+- record keyword, 309
+- record struct, 253, 260, 270, 315-316, 320
+- record struct type, 272
+- record structs, 321
+- record type, 294, 317, 357
+- record types, 303
+- Records, 294
+- records, 249, 253, 318, 321
+- recursion, 146-147
+- recursive function, 146
+- ref, 143, 518, 529, 535, 544
+- ref assignment operator, 539
+- ref keyword, 156, 286
+- ref local, 538
+- ref parameter, 156
+- ref readonly, 538
+- ref readonly method return, 534
+- ref return, 286, 544
+- ref struct, 545
+- Ruby, 66
+- run time, 282, 333, 48
+- runtime, 129, 210
+- runtime behavior, 333
+- runtime exception, 210
+- runtimes, 58
+- Rust, 66
+- reference equality semantics, 315
+- reference object type, 315
+- reference return value, 513
+- reference semantic, 285
+- Reference semantics, 284
+- reference semantics, 284, 286-287, 294, 315
+- reference type, 133, 224, 253, 282-283, 294, 302, 317, 327, 333, 337, 526, 59, 93
+- scope, 51
+- scope of the variable, 168
+- scopes, 51
+- reference type fields, 275
+- reference type objects, 315
+- reference type variables, 349
+- sealed, 254, 331, 497, 501-502
+- sealed class, 299
+- reference types, 111, 184, 223, 245, 273, 294, 315, 349, 91
+- reference value, 255
+- semicolon, 27, 38
+- semicolons, 27
+- separator string, 64
+- setters, 244
+- reference variable, 253, 272, 282
+- reference variables, 283, 318
+- References, 285
+- shallow copy, 287
+- short circuiting, 183
+- references, 281
+- remainder, 96
+- reserved language keyword, 158
+- side effects, 61
+- simple arithmetic, 88
+- reserved words, 158
+- return, 209, 506, 510, 513, 546, 560
+- return keyword, 38
+- single inheritance, 271
+- single line comment, 101
+- single line comments, 242
+- return statement, 38, 504
+- return value, 38
+- singleton, 300
+- singleton object, 300
+- singleton type, 300
+- smiley character, 153
+- Sorting, 195
+- sorting algorithm, 204
+- sorting method, 333
+- source code, 189, 46
+- source code file, 25-26, 31, 47, 66
+
+## S
+
+- source file, 24, 46, 66
+- space character, 61
+- specialization, 181
+- stack memory, 281, 285, 333
+- standard .NET library, 25
+- startup class, 306
+- StartupObject property, 306
+- statement, 209, 24, 38
+- statements, 132-133, 24, 90, 98
+- static, 279, 498, 518, 543
+- static abstract methods, 279
+- static class, 119, 144, 151, 173, 189, 227, 243, 246, 26, 291, 301
+- static classes, 108, 170, 190
+- Static constructor, 519
+- static constructor, 216, 223, 238
+- static constructors, 239
+- static field variable, 302
+- static fields, 260
+- static helper method, 260
+- static initializer, 238
+- static Main() method, 66
+- static method, 166, 179, 187, 226, 24, 26-27, 291, 303, 333, 34, 49, 60, 78, 80, 83
+- static method implementations, 329
+- static method WriteLine(), 26
+- static methods, 108, 121, 126, 148, 189, 243-244, 246, 26, 260
+- static modifier, 179
+- static properties, 260
+- static property, 157, 218
+- static type checking, 210
+- static using, 27
+- static variables, 26
+- statically typed languages, 282, 91
+- stdin, 78
+- string, 149, 47, 548
+- string array type, 34
+- String class, 79
+- string concatenation, 102, 48-49
+- string concatenation expression, 92
+- string concatenations, 170, 49
+- string constant, 47, 49
+- string interpolation, 49, 61
+- string interpolation expression, 242, 48
+- string interpolation expressions, 49
+- string interpolation syntax, 81
+- string literal, 242, 259, 27, 48-49, 92
+- String literals, 102
+- String type, 91
+- string type, 27, 48, 93
+- string value, 59
+- string variable, 49, 59
+- string.Format(), 80
+- string.Format() method, 81
+- string.IsNullOrWhiteSpace(), 79
+- string.Join(), 190, 60, 64
+- StringBuilder, 170, 223
+- StringBuilder class, 49
+- strongly typed languages, 176
+- struct, 24, 253, 260, 265-266, 270, 274, 280, 288, 296, 305-306, 315-316, 320-321, 518, 527, 66
+- struct and record struct types, 257
+- struct type, 272, 274-276
+- struct types, 315
+- struct value type, 253

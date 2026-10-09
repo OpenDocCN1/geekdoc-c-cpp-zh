@@ -1,0 +1,399 @@
+
+
+## led-clock-digital/Ascii/Cell.cs
+
+```csharp
+namespace LED.Ascii;
+
+sealed class Cell {
+    private readonly char[,] leds;
+
+    internal int RowCount => leds.GetLength(0);
+    internal int ColCount => leds.GetLength(1);
+
+    internal Cell() : this(Number.None) { }
+
+    internal Cell(Number number) {
+        leds = new char[number.Rows, number.Cols];
+        Set(number);
+    }
+
+    internal char Get(int i, int j) {
+        return leds[i, j];
+    }
+
+    internal void Set(Number number) {
+        for (var i = 0; i < RowCount; i++) {
+            for (var j = 0; j < ColCount; j++) {
+                leds[i, j] = number.Get(i, j);
+            }
+        }
+    }
+
+    internal void Reset() {
+        for (var i = 0; i < RowCount; i++) {
+            for (var j = 0; j < ColCount; j++) {
+                leds[i, j] = ' ';
+            }
+        }
+    }
+}
+```
+
+## led-clock-digital/Ascii/Cells.cs
+
+```csharp
+namespace LED.Ascii;
+
+static class Cells {
+    internal static IEnumerable<IEnumerable<char>> ToEnumerators(this List<Cell> cells) {
+        var r = cells[0].RowCount;
+        for (var i = 0; i < r; i++) {
+            yield return cells.ToEnumerator(i);
+        }
+    }
+
+    private static IEnumerable<char> ToEnumerator(this List<Cell> cells, int i) {
+        var len = cells.Count;
+        var c = cells[0].ColCount;
+
+        for (var j = 0; j < len * c; j++) {
+            var (x, y) = (j / c, j % c);
+            yield return cells[x].Get(i, y);
+        }
+    }
+}
+```
+
+## led-clock-digital/Ascii/Display.cs
+
+```csharp
+namespace LED.Ascii;
+
+public abstract class Display : IDisplay {
+    public abstract void Clear();
+}
+
+public sealed class LEDDisplay : Display, ILEDDisplay {
+    private readonly List<Cell> cells;
+
+    public int Size => cells.Count;
+
+    public LEDDisplay(int size) =>
+        cells = Enumerable.Range(0, size).Select(i => new Cell(Number.None)).ToList() ?? new();
+
+    public override void Clear() {
+        cells.ForEach(c => c.Reset());
+        Show();
+    }
+
+    private void Show() {
+        foreach (var m in cells.ToEnumerators()) {
+            foreach (var n in m) {
+                Console.Write(n);
+            }
+            Console.WriteLine();
+        }
+    }
+
+    public void Show(Digit[] digits) {
+        var arr = digits.Select(d => Number.Convert(d)).ToList();
+        for (var i = 0; i < Size; i++) {
+            if (i < arr.Count) {
+                cells[i].Set(arr[i]);
+            } else {
+                cells[i].Reset();
+            }
+        }
+        Show();
+    }
+}
+```
+
+## led-clock-digital/Digita/Display.cs
+
+```csharp
+using System;
+namespace LED {
+    namespace Digita {
+        public abstract class Display : IDisplay {
+            public abstract void Clear();
+        }
+        public class LEDDisplay : Display, ILEDDisplay {
+            public override void Clear() {
+                throw new NotImplementedException();
+            }
+            public virtual void Show(Digit[] digits) {
+                throw new NotImplementedException();
+            }
+        }
+    }
+}
+```
+
+## 魔方
+
+### rubiks-cube/Program.cs
+
+```csharp
+using Rubiks;
+
+// 创建一个魔方。
+var c = new Cube();
+Console.WriteLine($"c = \n{c}");
+
+// 尝试六个面的旋转，包括顺时针和逆时针。
+c.RotateWhite();
+Console.WriteLine($"c = \n{c}");
+c.RotateWhite(false);
+Console.WriteLine($"c = \n{c}");
+
+c.RotateBlue();
+Console.WriteLine($"c = \n{c}");
+c.RotateBlue(false);
+Console.WriteLine($"c = \n{c}");
+
+c.RotateRed();
+Console.WriteLine($"c = \n{c}");
+c.RotateRed(false);
+Console.WriteLine($"c = \n{c}");
+
+c.RotateGreen();
+Console.WriteLine($"c = \n{c}");
+c.RotateGreen(false);
+Console.WriteLine($"c = \n{c}");
+
+c.RotateOrange();
+Console.WriteLine($"c = \n{c}");
+c.RotateOrange(false);
+Console.WriteLine($"c = \n{c}");
+
+c.RotateYellow();
+Console.WriteLine($"c = \n{c}");
+c.RotateYellow(false);
+Console.WriteLine($"c = \n{c}");
+
+// 打乱魔方。
+c.Randomize();
+Console.WriteLine($"c = \n{c}");
+```
+
+### rubiks-cube/Cube.cs
+
+```csharp
+namespace Rubiks;
+
+using System.Text;
+using static System.Linq.Enumerable;
+
+public sealed class Cube {
+    private readonly Face[] faces = new Face[] {
+        new(Color.W),
+        new(Color.B),
+        new(Color.R),
+        new(Color.G),
+        new(Color.O),
+        new(Color.Y),
+    };
+
+    private Face W => faces[0];
+    private Face B => faces[1];
+    private Face R => faces[2];
+    private Face G => faces[3];
+    private Face O => faces[4];
+    private Face Y => faces[5];
+
+    private Random rand;
+
+    public Cube() => rand = new Random();
+
+    public void Randomize() {
+        const int rep = 20;
+        foreach (var u in Range(0, rep)) {
+            var r = rand.Next(0, 12);
+            var cw = r % 2 == 0;
+            _ = (Color)(r / 2 + 1) switch {
+                Color.W => RotateWhite(cw),
+                Color.B => RotateBlue(cw),
+                Color.R => RotateRed(cw),
+                Color.G => RotateGreen(cw),
+                Color.O => RotateOrange(cw),
+                Color.Y => RotateYellow(cw),
+                _ => false,
+            };
+        }
+    }
+
+    // B, R, G, O 的顶部相对于 W
+    // W, Y 的顶部相对于 B
+
+    private Triplet BsTopRowForW {
+        get => B.TopRow;
+        set => B.TopRow = value;
+    }
+
+    private Triplet RsTopRowForW {
+        get => R.TopRow;
+        set => R.TopRow = value;
+    }
+
+    private Triplet GsTopRowForW {
+        get => G.TopRow;
+        set => G.TopRow = value;
+    }
+
+    private Triplet OsTopRowForW {
+        get => O.TopRow;
+        set => O.TopRow = value;
+    }
+
+    private Triplet RsTopRowForB {
+        get => R.RightCol;
+        set => R.RightCol = value;
+    }
+
+    private Triplet WsTopRowForB {
+        get => W.TopRow;
+        set => W.TopRow = value;
+    }
+
+    private Triplet OsTopRowForB {
+        get => O.LeftCol;
+        set => O.LeftCol = value;
+    }
+
+    private Triplet YsTopRowForB {
+        get => Y.TopRow;
+        set => Y.TopRow = value;
+    }
+
+    private Triplet GsTopRowForR {
+        get => G.RightCol;
+        set => G.RightCol = value;
+    }
+
+    private Triplet WsTopRowForR {
+        get => W.RightCol;
+        set => W.RightCol = value;
+    }
+
+    private Triplet BsTopRowForR {
+        get => B.LeftCol;
+        set => B.LeftCol = value;
+    }
+
+    private Triplet YsTopRowForR {
+        get => Y.LeftCol;
+        set => Y.LeftCol = value;
+    }
+
+    private Triplet OsTopRowForG {
+        get => O.RightCol;
+        set => O.RightCol = value;
+    }
+
+    private Triplet WsTopRowForG {
+        get => W.BottomRow;
+        set => W.BottomRow = value;
+    }
+
+    private Triplet RsTopRowForG {
+        get => R.LeftCol;
+        set => R.LeftCol = value;
+    }
+
+    private Triplet YsTopRowForG {
+        get => Y.BottomRow;
+        set => Y.BottomRow = value;
+    }
+
+    private Triplet BsTopRowForO {
+        get => B.RightCol;
+        set => B.RightCol = value;
+    }
+
+    private Triplet WsTopRowForO {
+        get => W.LeftCol;
+        set => W.LeftCol = value;
+    }
+
+    private Triplet GsTopRowForO {
+        get => G.LeftCol;
+        set => G.LeftCol = value;
+    }
+
+    private Triplet YsTopRowForO {
+        get => Y.RightCol;
+        set => Y.RightCol = value;
+    }
+
+    private Triplet BsTopRowForY {
+        get => B.BottomRow;
+        set => B.BottomRow = value;
+    }
+
+    private Triplet OsTopRowForY {
+        get => O.BottomRow;
+        set => O.BottomRow = value;
+    }
+
+    private Triplet GsTopRowForY {
+        get => G.BottomRow;
+        set => G.BottomRow = value;
+    }
+
+    private Triplet RsTopRowForY {
+        get => R.BottomRow;
+        set => R.BottomRow = value;
+    }
+
+    public bool RotateWhite(bool cw = true) {
+        var row = BsTopRowForW;
+        if (cw) {
+            BsTopRowForW = OsTopRowForW;
+            OsTopRowForW = GsTopRowForW;
+            GsTopRowForW = RsTopRowForW;
+            RsTopRowForW = row;
+        } else {
+            BsTopRowForW = RsTopRowForW;
+            RsTopRowForW = GsTopRowForW;
+            GsTopRowForW = OsTopRowForW;
+            OsTopRowForW = row;
+        }
+        return true;
+    }
+
+    public bool RotateBlue(bool cw = true) {
+        var row = RsTopRowForB;
+        if (cw) {
+            RsTopRowForB = YsTopRowForB;
+            YsTopRowForB = OsTopRowForB;
+            OsTopRowForB = WsTopRowForB;
+            WsTopRowForB = row;
+        } else {
+            RsTopRowForB = WsTopRowForB;
+            WsTopRowForB = OsTopRowForB;
+            OsTopRowForB = YsTopRowForB;
+            YsTopRowForB = row;
+        }
+        return true;
+    }
+
+    public bool RotateRed(bool cw = true) {
+        var row = GsTopRowForR;
+        if (cw) {
+            GsTopRowForR = YsTopRowForR;
+            YsTopRowForR = BsTopRowForR;
+            BsTopRowForR = WsTopRowForR;
+            WsTopRowForR = row;
+        } else {
+            GsTopRowForR = WsTopRowForR;
+            WsTopRowForR = BsTopRowForR;
+            BsTopRowForR = YsTopRowForR;
+            YsTopRowForR = row;
+        }
+        return true;
+    }
+}
+```
+

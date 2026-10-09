@@ -1,0 +1,3 @@
+convention, in the languages like Java and C#, is to override, and use, methods like "Object.Clone()" or "Object.MemberwiseClone()" to implement the "deep copy" logic, say, instead of using the assignment operator (=), which does shallow copy.
+
+In fact, C# allows "operator overloading", as we will discuss in the next few lessons. Hence, we can create a custom type using class (which by default follows reference semantics) and make it behave like a value type. As we will see shortly, that is what record (introduced in C# 9.0) does for us without us having to implement the value logic through operator overloading and what not.

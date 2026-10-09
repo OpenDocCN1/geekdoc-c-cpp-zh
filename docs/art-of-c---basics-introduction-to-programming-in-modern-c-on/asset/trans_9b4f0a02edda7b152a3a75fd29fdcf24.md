@@ -1,0 +1,211 @@
+
+
+## key-value-store/Server.cs（第 3-19 行）
+
+```csharp
+public sealed class Server : IServer<string> {
+    private Store<string> store;
+
+    public Server() => store = new();
+
+    public string? Ping() => "Pong";
+
+    public string? Get(string key) => store.Get(key);
+
+    public string? Set(string key, string value) => store.Set(key, value);
+
+    public string[] Keys() => store.Keys();
+
+    public bool Exists(string key) => store.Exists(key);
+
+    public string? Del(string key) => store.Del(key);
+}
+```
+
+在这个演示中，我们仅使用内存中的 **Dictionary<string,T>** 作为“数据库”：
+
+## key-value-store/Store.cs（第 3-31 行）
+
+```csharp
+public sealed class Store<T> {
+    private readonly Dictionary<string, T> map;
+
+    public Store() => map = new<>();
+
+    public T? Get(string key) => map.ContainsKey(key) ? map[key] : default;
+
+    public T? Set(string key, T value) {
+        T? oldValue = default;
+        if (map.ContainsKey(key)) {
+            oldValue = map[key];
+        }
+        map[key] = value;
+        return oldValue;
+    }
+
+    public string[] Keys() => map.Keys.ToArray();
+    public bool Exists(string key) => map.ContainsKey(key);
+
+    public T? Del(string key) {
+        T? oldValue = default;
+        if (map.ContainsKey(key)) {
+            oldValue = map[key];
+            map.Remove(key);
+        }
+        return oldValue;
+    }
+}
+```
+
+如所示，可以通过基于 IServer 接口的抽象使用不同的服务器实现。
+
+## key-value-store/Common/IServer.cs（第 3-10 行）
+
+```csharp
+public interface IServer<T> {
+    string? Ping();
+    T? Get(string key);
+    T? Set(string key, T value);
+    string[] Keys();
+    bool Exists(string key);
+    T? Del(string key);
+}
+```
+
+### 作者注
+
+### 寻求反馈
+
+作者始终致力于改进本书。
+
+如果您有任何建议，请告知我们。我们以及未来的读者都会非常感激。
+
+内容可以是简单的拼写错误、不清晰的句子和格式错误，也可以是示例代码中的任何 bug，甚至可能是完全错误的解释。以下是作者的电子邮件地址：
+
+- harry@codingbookspress.com
+
+作者将尽快根据需要修正错误。
+
+谢谢！
+
+# 第四部分：最终项目
+
+> 生活就像一部电影，写下你自己的结局。保持信念，保持伪装。 - Jim Henson
+
+# 第 30 课。逆波兰计算器
+
+### 30.1. 项目
+
+作为三个最终项目之一，我们将在本课中实现一个计算器，它可以处理任意算术表达式。例如，让我们考虑以下输入：
+
+```
+(1+3) * (6.0/2) - 3.5
+```
+
+它包括四种不同的算术运算：加法 $(+)$、乘法 $(*)$、除法 $(/)$ 和减法 $(-)$。在数学表达式中使用括号来改变优先级。该表达式计算结果为 8.5，您可以轻松验证。
+
+编写一个程序来评估像这样的通用算术表达式是一个相对复杂的问题。我们需要编写一个“解析器”来解析输入表达式。
+
+如果任何（有抱负的）读者对此感兴趣，可以通过编写一个简单的“递归下降解析器”来完成。我们将留给读者去完成。如果您是在没有计算机科学背景的情况下学习编程，那么这可以成为一个非常有趣且具有挑战性的问题。通过编写一个简单的计算器程序，您最终会学到很多知识。
+
+然而，对于本项目，我们将解决一个稍简单的问题。通过使用我们所谓的“后缀表示法”（也称为逆波兰表示法），计算可以简化。这里是维基百科文章的链接：[Reverse Polish notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation)。
+
+上述输入表达式在标准“中缀表示法”中可以写成如下的后缀表示法：
+
+```
+1 3 + 6.0 2 / * 3.5 -
+```
+
+注意，后缀表示法不需要使用任何括号。还要注意，这种简单的表示法只能支持二元运算（即具有两个操作数的运算）。请花时间看看您能否弄清楚如何阅读这个表达式。我们将在下一节中一起讨论。
+
+给定这样的输入，我们的程序需要生成这样的答案：
+
+```
+The result is 8.5
+```
+
+![](img/25af69ec45b3c0b589a8dccd0c2a88be_482_0.png)
+
+### 30.2. 设计建议
+
+实现逆波兰计算器最简单的方法是使用“栈”。栈是一种 LIFO（后进先出）数据结构，通常支持添加（到栈的末尾/顶部）和移除项（从栈的末尾/顶部）的接口：[Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))。
+
+让我们使用上面的例子来看看后缀表示法是如何工作的。我们将只使用栈来说明这个概念，而不是进行两次遍历，一次没有栈，第二次有栈。
+
+1.  当我们看到一个数字，在本例中是 1，我们将其推入栈中。此时，栈中有一个项目。
+2.  当我们看到另一个数字，3，我们再次将其推入栈中。现在，栈中从顶到底有 3 和 1。
+3.  当我们看到一个二元运算符，在本例中是 +，我们弹出栈顶的两个元素，即本例中的 3 和 1，并计算表达式，`3 + 1`。结果 `4`，一个数字，然后被推回栈中。此时，栈的内容是这个单一项目 `4`。
+4.  现在，输入中有一个 `6.0`，另一个数字。这被推入栈中。栈的内容：`{6.0, 4}`。
+5.  然后，数字 `2` 也被推入栈中。栈的内容：`{2, 6.0, 4}`。
+6.  当我们看到二元运算符 `/` 时，我们弹出顶部的两个元素，并计算表达式，`6.0 / 2`。注意顺序。该表达式的值是 `3.0`。这个数字被推回栈中。此时栈的内容：`{3.0, 4}`。
+7.  下一个标记是另一个运算符 `*`。因此，我们弹出顶部的两个元素并进行操作，`3.0 * 4`，其结果被放回栈中。现在，栈只包含一个项目，`12.0`。
+8.  输入中的下一个数字 `3.5` 被推入栈中。此时，栈的内容是 `{3.5, 12.0}`。
+9.  然后我们计算 `12.0 - 3.5`，因为下一个标记是二元运算符 `-`，并将结果 `8.5` 放回栈中。
+10. 此时，我们已处理完所有输入标记，栈顶的项目，8.5，是整个表达式的结果。
+
+实现逆波兰计算器很直接。
+
+-   首先，我们读取输入表达式。
+-   接下来，我们对这个表达式进行“分词”。也就是说，我们将其分割为数字和二元运算符的序列。为了简单起见，我们将假设所有标记至少由一个空白字符分隔，例如空格和/或制表符。
+-   然后，每当我们看到一个数字，就将其推入栈中。
+-   并且，每当我们看到一个运算符，我们就从栈中弹出顶部的两个项目并计算二元表达式。结果被推回栈中。
+-   当我们没有更多标记可处理时，栈中的顶部元素就是输入表达式的结果。
+
+您可以使用 .NET 库中的栈数据结构，或者使用我们在本书中学到的知识创建自己的栈类型。
+
+这是一个例子：
+
+```csharp
+public sealed class Stack<T> where T : notnull {
+    private readonly List<T> list;
+
+    public Stack() => list = new();
+
+    public int Size => list.Count;
+
+    public T Push(T tok) {
+        list.Add(tok);
+        return tok;
+    }
+
+    public T? Pop() {
+        if (list.Count > 0) { 
+            var tok = list[^1];
+            list.RemoveAt(list.Count - 1);
+            return tok;
+        }
+        return default;
+    }
+
+    public bool TryPop(out T? tok) {
+        if (list.Count > 0) {
+            tok = list[^1];
+            list.RemoveAt(list.Count - 1);
+            return true;
+        }
+        tok = default;
+        return false;
+    }
+
+    public T PopOrDie() {
+        if (list.Count > 0) {
+            var tok = list[^1];
+            list.RemoveAt(list.Count - 1);
+            return tok;
+        }
+        throw new IndexOutOfRangeException();
+    }
+
+    public (bool, T?) PopSoft() {
+        if (list.Count > 0) {
+            var tok = list[^1];
+            list.RemoveAt(list.Count - 1);
+            return (true, tok);
+        }
+        return (false, default);
+    }
+}
+```
+
+此栈实现使用 System.Collections.Generic.List<T> 来存储内部数据（通过“组合”），并暴露常规的 Push()
+

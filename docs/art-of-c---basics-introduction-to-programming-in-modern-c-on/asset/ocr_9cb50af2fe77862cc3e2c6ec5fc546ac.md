@@ -1,0 +1,5 @@
+# key-value-store/Store.cs
+
+```
+```C#\nnamespace KV;\n\npublic sealed class Store<T> {\n    private readonly Dictionary<string, T> map;\n\n    public Store() => map = new();\n\n    public T? Get(string key) => map.ContainsKey(key) ? map[key] :\n    default;\n\n    public T? Set(string key, T value) {\n        T? oldValue = default;\n        if (map.ContainsKey(key)) {\n            oldValue = map[key];\n        }\n        map[key] = value;\n        return oldValue;\n    }\n\n    public string[] Keys() => map.Keys.ToArray();\n\n    public bool Exists(string key) => map.ContainsKey(key);\n\n    public T? Del(string key) {\n        T? oldValue = default;\n        if (map.ContainsKey(key)) {\n            oldValue = map[key];\n            map.Remove(key);\n        }\n        return oldValue;\n    }\n}\n```
+```
