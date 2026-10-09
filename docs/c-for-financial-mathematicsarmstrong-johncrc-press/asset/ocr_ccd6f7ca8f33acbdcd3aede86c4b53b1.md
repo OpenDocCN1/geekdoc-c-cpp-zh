@@ -1,0 +1,35 @@
+```
+```cpp
+bool debitAccount(Account& account, double amount) {
+    if (account.balance >= amount) {
+        account.balance -= amount;
+        return true;
+    }
+    return false;
+}
+```
+```
+
+To see why this code is dangerous, suppose that initially the account contains $100. Suppose that two threads both attempt to debit $100 from the account.
+
+It is possible that, due to bad luck, it may happen that both threads will simultaneously check the balance and see there are sufficient funds. What may now happen is that one thread changes the balance to zero, and the second thread then changes it to -$100. The end result will be that the account will go overdrawn, even though it at first sight may look as though our if statement will prevent this occurring.
+
+This is an example of a *race condition*. A race condition is any situation where two threads attempt to access the same resource and the outcome depends upon the order of events. In our example, one imagines that the two threads are “racing” to debit from the account.
+
+Race conditions are inevitable unless we find some way of ensuring that two threads cannot read and write to the same data at the same time. *Mutual exclusion locks* provide a way of ensuring this.
+
+The class **mutex** represents a mutual exclusion lock. It has two key methods, **lock** and **unlock**. We say that when the function **lock** returns, the thread has *acquired* the lock. When **unlock** is called, the thread has *released* the lock.
+
+Only one thread can acquire the lock at a time. If thread A acquires the lock and then thread B tries to call **lock**, then call to **lock** won’t return until thread A has called **unlock**. This guarantees that only one thread ever holds the lock. It is called a *mutual exclusion lock* because each thread can exclude another thread from running by holding the lock. They mutually exclude each other from running.
+
+In the novel *Lord of the Flies*, a group of boys are stranded on a desert island. The boys find a conch shell on a beach and impose a “rule of the conch” on themselves. They agree that no one can speak unless he’s holding the conch. This means that the boys are using the conch as a mutual exclusion lock to prevent them from talking over each other.
+
+Here is an example of how we can use a mutual exclusion lock in a class called **Account** which represents a bank account. We give it a member variable which is a mutex and use this to ensure that no two threads can simultaneously debit from the same account:
+
+```
+```cpp
+bool debitAccount(Account& account,
+                  double amount) {
+    account.mtx.lock();
+```
+```

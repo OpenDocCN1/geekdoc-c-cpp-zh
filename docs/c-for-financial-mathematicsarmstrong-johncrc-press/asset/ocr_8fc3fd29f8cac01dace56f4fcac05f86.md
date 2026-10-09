@@ -1,0 +1,39 @@
+```
+```cpp
+		for (auto v : c) {
+			total += v;
+		}
+		return total;
+	}
+```
+```
+
+# 18.5   The container set
+
+One useful container class is set. To use it you must `#include <set>`.
+
+One key difference between a set and a vector is that a set does not contain duplicate elements (just like the mathematical concept of a set). Another difference is that the data stored in a set is always sorted.
+
+For this reason, you cannot store arbitrary data in a set, you must be able to compare two elements using the operator <. Two elements a and b are considered to be the same if neither a<b nor b<a.
+
+If you want to store a particular data type in a set you will need to overload the < operator. Actually, this isn’t quite true. You can choose to tell the set to use another function other than < to perform the comparisons if you like, but we will only discuss the standard case where you overload <.
+
+Fortunately the data types one most often wants to store in a set, namely numeric types and string, already have appropriate implementations of <.
+
+Here is an example of how you can insert elements into a set using insert, confirm that the set does not contain duplicates, and then print out the contents of the set using the for syntax.
+
+```
+```cpp
+set<int> ints;
+ints.insert(1);
+ints.insert(3);
+ints.insert(2);
+ints.insert(3);  // duplicate ignored
+ASSERT(ints.size() == 3);
+for (auto i : ints) {
+    std::cout << "Item " << i <<"\n";
+}
+```
+```
+
+Note that if you do not mind whether the elements in the set are sorted, you can use an unordered_set instead. It is usually faster to use an unordered_set. See Section 18.9.2 for more information on unordered_set.

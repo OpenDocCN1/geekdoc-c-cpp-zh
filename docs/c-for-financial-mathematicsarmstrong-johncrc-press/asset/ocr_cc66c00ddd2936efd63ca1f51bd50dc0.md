@@ -1,0 +1,21 @@
+# Chapter 15
+
+# Debugging and Development Tools
+
+Our software project has now become large and complex. It is still nothing like as complex as a bank's actual trading system, but it already spans thousands of lines of code and dozens of files. The need for some additional development tools to help us work productively is becoming obvious.
+
+Because development tools are not standardised, we cannot describe in detail how to use all the different development tools you may find useful. We will focus on one standard tool called a "debugger". A debugger is an essential part of any C++ developer's toolkit. Its primary purpose is that it allows you to quickly locate where in your code an error is occurring. We will indicate how you can use the standard Visual Studio debugger on Windows and the standard `gdb` tool on Unix to help find bugs in your code. Other debuggers work in a broadly similar fashion, but you will need to consult their documentation for fuller details.
+
+To show how a debugger can be used to find bugs, FMLib15 compiles but does not work correctly. We will show how to find the bugs that have been deliberately introduced.
+
+A debugger is by no means the only development tool you should be using. We finish the chapter with a description of some other development tools you might want to use to increase your productivity. We will also discuss some important software development best practices which are crucial to working with large software projects.
+
+# 15.1 Debugging strategies
+
+Before explaining how to use a debugger, let us describe a number of strategies and techniques you can use to debug your code.
+
+# 15.1.1 Unit tests
+
+Your code should contain a lot of unit tests. Unit tests are the most valuable debugging tool you have available.
+
+This means that whenever you introduce a bug, your tests should hopefully

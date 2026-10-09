@@ -1,0 +1,21 @@
+In my view, the C++-style syntax is bulky to type and hard to read. However, many authors recommend using C++-style casts. In this book we will use C-style casts, if only to save space in printouts.
+
+# 2.4 Memory addresses
+
+Another data type which is important in the C language is a memory address, more commonly known as a pointer. Manipulating memory directly is just the kind of thing that CPUs are good at. The aim of the C language was to make it possible to write code that is similar to machine code in terms of performance but is easier for humans to read and write. For this reason, pointers are one of the basic data types in C. Since C++ contains C, pointers are a basic data type in C++ too.
+
+However, our aim is to do mathematics and not to manipulate computer memory directly. For this reason we will try to avoid pointers wherever possible. We will only discuss them seriously in Chapter 11. Most C++ courses introduce pointers very early. As a result new programmers get the idea that they should use pointers a lot in their code too. However, an experienced C++ programmer knows that pointers are only an appropriate tool for solving problems involving direct memory access. We will rarely use them.
+
+Nevertheless, for the sake of completeness we will give a brief outline of the concept now.
+
+If you have a 32-bit computer, you can think of your memory as consisting of up to $2^{32}$ bytes of data. For 64-bit computers, simply replace the 32 with 64. We'll assume a 32-bit computer for the remainder of the discussion.
+
+Each of these $2^{32}$ bytes is stored in a memory location. Each possible location is itself labelled with a number. This number is called the memory address and it takes a value between 0 and $2^{32} - 1$. Usually human beings aren't very interested in the precise value of a memory address, so they aren't often written down. But when one does write one out, it's normal to write them in hexadecimal. In hexadecimal we can say that a memory location is a number between 00000000 and FFFFFFFF. This helps to clearly distinguish memory locations from “normal” numbers.
+
+A memory address is stored in C or C++ using a pointer data type. So you know what type of data is stored at that memory address, the pointer data type consists of two parts: the name of a data type that is pointed to and a * character. For example, if we write:
+
+```
+double* dPointer = 0x00000000;
+```
+
+then we have just declared a variable of type `double*` which means “a pointer to a double” or equivalently “a memory location containing a double”. We

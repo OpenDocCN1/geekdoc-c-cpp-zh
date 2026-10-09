@@ -1,0 +1,42 @@
+# 8.2.2 Using a class
+
+Let us see how someone will use the **CartesianPoint** class. Our example code contains a test that shows how the class can be used.
+
+```
+```
+1  CartesianPoint p;
+2  p.x = 100;
+3  p.y = 150;
+4  cout << "Coordinates (";
+5  cout << p.x ;
+6  cout << ", ";
+7  cout << p.y ;
+8  cout << ")\n";
+
+10 p.x *= 2;
+11 p.y *= 2;
+12 cout << "Rescaled coordinates (";
+13 cout << p.x ;
+14 cout << ", ";
+15 cout << p.y ;
+16 cout << ")\n";
+```
+```
+
+This creates a point and sets the coordinates to $ (100, 150) $. It then prints out the coordinates. Next it doubles all the coordinate values and prints them out a second time.
+
+To understand this in more detail, at line 1 we create an instance of the class **CartesianPoint**. We do this simply by declaring a variable whose type is **CartesianPoint**.
+
+```
+```CartesianPoint p;```
+```
+
+We have now created a variable called **p** that represents a point in space. We then set the member variables representing the $ x $ coordinate and the $ y $ coordinate. We choose the values so that **p** represents the point $ (100, 150) $.
+
+```
+```p.x = 100; p.y = 150;```
+```
+
+When you want to access the data inside the class you use a dot $ . $ followed by the name of the member variable.
+
+You can only access the variables because they have been marked as **public**. Try removing the word **public**; and see what compiler error you got. This will help you understand the compiler error in future should you ever happen to forget to mark your data as public.

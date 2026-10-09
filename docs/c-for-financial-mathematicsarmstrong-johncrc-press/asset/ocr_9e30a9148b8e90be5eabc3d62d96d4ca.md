@@ -1,0 +1,50 @@
+```
+```
+     std::vector<double> ret(nSimulations);
+     for(int i = 0; i < nSimulations; i++) {
+         ret[i] = runSimulation();
+     }
+     return ret;
+}
+```
+```
+
+There are no actual mathematical calculations in this code, so it doesn't seem likely that this is the problem. It seems a good guess that the runSimulation method is the problem. You can see the code for this method in Figure 15.4 on page 265.
+
+You may find it difficult to spot the bug in this code, even if you read through it line by line. The debugger can help you with this by allowing you to pause the execution at any point and print out the values of any variables you are interested in.
+
+To do this you should quit the debugger and restart. But this time type the command
+
+```
+```
+break HedgingSimulator::runSimulation
+```
+```
+
+before executing the run command. This will then pause execution at the beginning of the runSimulation function.
+
+When the program pauses you will see output similar to the following.
+
+```
+```
+Calling testDeltaHedgingMeanPayoff()
+
+Breakpoint 5, HedgingSimulator::runSimulation (this=0xffffc920)
+ at HedgingSimulator.cpp:41
+ 41     double T = toHedge->getMaturity();
+```
+```
+
+This shows you that execution has paused at line 41 of HedgingSimulator.cpp. The given line of code has not yet executed. To execute it, type next.
+
+This should have assigned a value to the local variable T. To see what value has been assigned type print T.
+
+You can now step through the function runSimulation line by line, checking the values of the variables as you go. You should be able to confirm that there is a problem with the computation of interest in the runSimulation function that you should then be able to fix.
+
+There is still one bug remaining in the code. Fixing it is left as an exercise.
+
+# ### 15.3.3 Other commands and features
+
+Let us briefly mention a few useful GDB features that we have not covered.
+
++   1. The command help can be used to find out the names of other useful commands.

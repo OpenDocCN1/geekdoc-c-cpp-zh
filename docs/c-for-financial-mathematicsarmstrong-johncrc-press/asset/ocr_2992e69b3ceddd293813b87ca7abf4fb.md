@@ -1,0 +1,20 @@
+a given file, so it doesn't make sense to allow people to create copies of an `ostream`.
+
+Although our example of `Matrix` shows that writing a copy constructor and implementing `operator=` can be useful, in general I recommend starting with the lazy approach and only providing **public** copy methods if you have a need for them.
+
+# 16.5.4 Move operators
+
+In C++11, C++ was improved so that you can reduce the amount of copying of memory that is performed when you return data by value. This is a performance enhancement technique called **RValue** references. As a result, to write as efficient a `Matrix` implementation as possible, one should use this technique. Doing this involves writing a *move constructor* and a *move assignment* operator.
+
+Whenever you write a class that manages its own memory, you might want to consider whether you should write a move constructor and move assignment operator for maximum efficiency. For this reason, in C++11 one can say that there is a rule of five.
+
+In practice, as a financial mathematician, your expertise is probably in writing mathematical algorithms and not in writing data structures. For this reason we will not discuss how to implement move constructors and move assignment operators in this book.
+
+# 16.6 Completing the Matrix class
+
+We haven't listed every member function of the `Matrix` class or every function in FMLib16 for manipulating them. Here are some additional features which are implemented in FMLib16.
+
++   - Member functions `exp`, `log`, `sqrt`, `pow`, `times` to exponentiate every cell of a matrix, etc. These change the matrix itself rather than return a modified copy. This is potentially more efficient than creating a copy as less memory may be needed.
+- Functions `setCol` and `setRow` to copy individual rows and columns from one matrix to another.
+- Functions `row` and `col` to extract a row or column.
+- Member function `positivePart` that returns $(x)^{+}$ for every cell $x$. This is handy for call options.

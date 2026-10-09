@@ -1,0 +1,37 @@
+Generally speaking, macros are a complete waste of time. You can write reusable code using functions and then use the inline keyword to ensure that it is just as fast as the macro code.
+
+However, just occasionally, macros have their uses, because they give you access to special variables like the name of the current file or the current line number. These special features are useful when writing developer tools (such as a testing framework). Unless you are writing such a framework, don’t learn how to write macros.
+
+# # 6.3  The macros in testing.h
+
+# ## 6.3.1  The ASSERT macro
+
+```
+ASSERT( test );
+```
+
+This checks whether a bool valued test is true and throws an error if it is not true.
+
+To speed up performance of a real system, all ASSERT checks are skipped when running the release build.
+
+This needs to be a macro because it prints out the line where the assertion failed. You can’t do this with functions.
+
+Here is an example of using ASSERT to verify that the input arguments to a function are valid. The function below will fail immediately if you attempt to take the square root of a negative number.
+
+```
+double safeSqrt(double x) {
+ASSERT(x >= 0);
+return sqrt(x);
+}
+```
+
+# ## 6.3.2  The ASSERT_APPROX_EQUAL macro
+
+When writing numerical methods, you don’t often want to check if two numbers are exactly equal. You normally want to check if they are approximately equal. This is because numerical methods are only approximate and calculations always involve rounding errors.
+
+ASSERT_APPROX_EQUAL(x, y, tol) throws an error if x and y are not within tol of each other. Here is an example of ASSERT_APPROX_EQUAL being used to test the output of norminv
+
+```
+static void testNormInv() {
+ASSERT_APPROX_EQUAL(norminv(0.975), 1.96, 0.01);
+```

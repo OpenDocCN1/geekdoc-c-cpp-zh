@@ -1,0 +1,1 @@
+We have seen how C++ allows you to write recursive functions. We have seen that every C++ function has a namespace, a name, and a signature. We have seen how C++ uses namespaces and types to resolve naming conflicts. We have learned the difference between local and global variables. We have learned how to define `const` variables.

@@ -1,0 +1,13 @@
+for a $\mathbb {Q}$-measure model and then fit the parameters to actual market data for put and call prices. This process is called *calibration*. The traders then simply assume that the difference between the $\mathbb {P}$-measure model and their pricing model is sufficiently small that their hedging strategy and pricing policy will still turn an acceptable profit with an acceptable risk.
+
+While the mathematical derivation of the Black–Scholes model and the delta hedging strategy depend heavily upon a number of implausible assumptions, the practical strategy of delta hedging works effectively in practice so long as one chooses good $\mathbb {Q}$-measure models. The most convincing proof of this is the financial success of the derivatives desk of banks.
+
+It is important to notice that the risk-neutral pricing approach together with delta hedging is just one possible investment strategy.
+
+An alternative mathematical approach is to price financial products using the notion of expected utility. A utility function assigns a number to the future wealth of an investor that measures how happy that investor is with the outcome. One can then model the behaviour of speculators by assuming that they are trying to maximize their expected utility in a $\mathbb {P}$ model that matches the beliefs of that investor. Using this model, speculators attempt to derive their profits by forming more accurate beliefs than other people and hence out-performing the market. This is an entirely different strategy to the approach of simply following the market and making a profit by charging a little more to buyers than one pays to sellers. In particular, speculators are willing to take large risks in the hope of making large profits. Delta hedges try to avoid risks entirely and instead aim to make a profit by offering a valuable service.
+
+# A.7 Summary
+
+We have described the delta hedging strategy used by banks. This strategy allows banks to make a profit by, in effect, selling a risk-management service to their customers. Risk-neutral pricing is a key component of the delta hedging strategy. Risk-neutral pricing tells you what you should charge your customers if you are following the delta hedging strategy. In addition, the partial derivatives of the risk neutral price tell you how to hedge your risk when you are following the delta hedging strategy.
+
+Other trading strategies, and hence other pricing methodologies, are used by other types of investors.

@@ -1,0 +1,39 @@
+hold the lock using a `unique_lock<mutex>` and you must pass the lock as a parameter when calling `wait`.
+
++   (e) The `condition_variable` will release your lock and start waiting as one atomic operation.
+
+The implementation of `Pipeline` follows this pattern exactly.
+
+```
+```cpp
+void Pipeline::write( double value ) {
+    unique_lock<mutex> lock(mtx);
+    while ( !empty) {
+        cv.wait(lock);
+    }
+    empty = false;
+    this->value = value;
+    cv.notify_all();
+}
+
+double Pipeline::read() {
+    unique_lock<mutex> lock(mtx);
+    while ( empty) {
+        cv.wait(lock);
+    }
+    empty = true;
+    cv.notify_all();
+    return value;
+}
+```
+```
+
+As can be seen, condition variables are much harder to understand than the `Pipeline` class itself.
+
+The classes such as `thread` and `condition_variable` supplied as part of C++ are really designed to allow you to build threading classes that are simpler to work with, such as `Pipeline`. We emphasise again that when writing multi-threaded code you should always use established design patterns and libraries.
+
+# Exercises
+
++   20.4.1. Modify `Executor` so that you can run function objects as well as `Task` implementations.
+
++   20.4.2. Write a multi-threaded function to compute the mean of a vector using a given number of threads.

@@ -1,0 +1,31 @@
+namely `ptr++`. The original code contains the addition `i++` and implicit addition when we write `toSum[i]`. To compute this value we need to add `i` to the pointer `toSum` and then read the memory address. You can see this more clearly if we rewrite the first version of the code using pointer arithmetic instead of `[]`.
+
+```
+int sumUsingPointerArithmetic( int* toSum, int length ) {
+    int sum = 0;
+    for (int i=0; i<length; i++) {
+        int* ithElement = toSum + i;
+        int valueOfIthElement = *ithElement;
+        sum+= valueOfIthElement;
+    }
+    return sum;
+}
+```
+
+# **Tip: Avoid writing brainteasers**
+
+Used in moderation, pointer arithmetic can be very helpful. For example, we will take advantage of pointer arithmetic when we write a class to represent a matrix in Chapter 16. However, you should try to avoid writing code that leaves people scratching their heads. Excessive use of pointers and pointer arithmetic is an excellent way to write incomprehensible code.
+
+As an example, notice that a memory location may itself contain a pointer. A pointer to a pointer to an `int` is of type `int**`. There is no reason to stop there if you like confusing yourself and your colleagues. There is nothing *technically* wrong with an `int***`. Here is a genuine job interview question that exploits this.
+
+**Question:** What would be the equivalent pointer expression for referring to the array element `a[i] [j] [k] [1]`?
+
++   A. `(((a+i)+j)+k)+1`
+
+B. `*(*(*(* (a+i)+j)+k)+1)`
+
+C. `((a+i)+j)+k+1)`
+
+D. `*((a+i)+j+k+1)`
+
+**Answer:** The correct answer, if you still want the job, is B. The correct answer in practice is to avoid this kind of silly code.

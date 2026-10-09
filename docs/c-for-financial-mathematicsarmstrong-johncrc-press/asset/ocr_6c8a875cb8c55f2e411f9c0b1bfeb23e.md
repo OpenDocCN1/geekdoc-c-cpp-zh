@@ -1,0 +1,31 @@
+```
+```
+          g(g), lowerLimit(lowerLimit) {
+              }
+          double evaluate(double x) {
+              return (1/(x*x))
+                     * g.evaluate(lowerLimit - 1 + (1/x));
+              }
+          };
+
+          DefiniteIntegrand integrand(f, lowerLimit);
+          return integral(integrand, 0, 1, nPoints);
+      }
+```
+```
+
+This code is perfectly good C++ because we know that our Definite-Integrand instance will only be kept in memory until the integralTo-Infinity method returns. We know that the function passed in to integralToInfinity will not be deleted until integralToInfinity returns. Therefore we can safely store a reference to it as a member variable.
+
+# Tip: Think carefully before using reference member variables or returning references
+
+You can return references and you can store data by reference but you will need to be certain when the reference will be deleted. You should never return a reference to a local variable as that will always be deleted. You will need to think carefully when returning references to member variables.
+
+Thinking carefully takes energy, so if you don't have any to spare use a shared_ptr.
+
+# 11.8 The C++ memory model
+
+One of the main features of C and C++ that make it appealing to computer programmers is that you can manipulate computer memory directly. For financial mathematicians this is often more of an irritation than a blessing, since computer memory isn't their particular area of expertise. However, if you wish to use pointers effectively and to debug code that uses pointers, it helps to understand computer memory.
+
+You can think of computer memory as divided into four sections:
+
++   (i) The memory used by other programs. You are not allowed to access this memory. If you try to then the operating system will make your program
