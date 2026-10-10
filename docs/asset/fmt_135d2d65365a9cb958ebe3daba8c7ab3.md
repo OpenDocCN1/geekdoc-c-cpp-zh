@@ -1,0 +1,252 @@
+
+记住，当编译器遇到 `await` 运算符时，它会生成代码来等待参数指定的项完成，并带随一个运行后续语句的延续（continuation）。你可以将 `async` 方法返回的值视为运行该延续的 `Task` 操作的引用。（这个描述并不完全准确，但对于本文的目的，这是一个足够好的模型。）因此，`doFirstLongRunningOperation` 方法首先创建并启动 `first` 和 `second` 任务，编译器将 `await` 语句重格式化为等待 `first` 完成的代码，紧接着是一个等待 `second` 完成的延续，而 `async` 修饰符导致编译器返回该延续的引用。注意，编译器现在决定了方法的返回值，你不再需要自己指定返回值。（事实上，如果你在这种情况下尝试返回一个值，你的代码将无法编译。）
+
+> 注意：如果你在 `async` 方法中没有包含 `await` 语句，该方法只是指向执行方法体代码的 `Task` 操作的引用。因此，当你调用该方法时，它实际上不会异步运行。在这种情况下，编译器会提示你：“此异步方法缺少 await 运算符并将同步运行。”
+
+> 提示：你可以使用 `async` 修饰符修缀委托，从而能够使用 `await` 运算符创建包含异步处理的委托。
+
+在下面的练习中，你将修改第 23 节中的 `GraphDemo` 应用，使用异步方法为图表生成数据。
+
+# 修改 GraphDemo 应用以使用异步方法
+
+- 1. 使用 Microsoft Visual Studio 2022 打开 `GraphDemo` 解决方案，它位于你文档文件夹中的 `\Microsoft Press\VCSBS\Chapter 24\GraphDemo` 文件夹。
+
+- 2. 在解决方案资源管理器中，展开 `MainPage.xaml` get代码和文本编辑器中打开 `MainPage.xaml.cs` 文件。
+
+- 3. 在 `MainPage` 类中，找到 `plotButton_Click` 方法。该方法中的代码如下：
+
+点击此处查看代码
+
+```csharp
+private void plotButton_Click(object sender, RoutedEventArgs args)
+{
+    try
+    {
+        Random rand = new Random();
+        redValue = (byte)rand.Next(0xFF);
+        greenValue = (byte)rand.Next(0xFF);
+        blueValue = (byte)rand.Next(0xFF);
+        tokenSource = new CancellationTokenSource();
+        CancellationToken token = tokenSource.Token;
+
+        int dataSize = bytesPerPixel * pixelWidth;
+        byte[] data = new byte[dataSize];
+
+        Stopwatch watch = Stopwatch.StartNew();
+        try
+        {
+            generateGraphData(data, 0, pixelWidth / 2, token);
+            duration.Text = $"Duration (ms): {watch.ElapsedMilliseconds}";
+        }
+        catch (OperationCanceledException oce)
+        {
+            duration.Text = oce.Message;
+        }
+        duration.Text = $"Duration (ms): {watch.ElapsedMilliseconds}";
+
+        WriteableBitmap graphBitmap = new WriteableBitmap(pixelWidth, pixelHeight);
+
+        using (Stream pixelStream = graphBitmap.PixelBuffer.AsStream())
+        {
+            pixelStream.Seek(0, SeekOrigin.Begin);
+            pixelStream.Write(data, 0, data.Length);
+            graphBitmap.Invalidate();
+            graphImage.Source = graphBitmap;
+        }
+        }
+        catch (Exception ex)
+        {
+            MessageDialog msg = new MessageDialog("Exception: " + ex.Message);
+            msg.ShowAsync();
+        }
+}
+```
+
+这是上一节应用程序的简化版本。它直接从用户界面线程调用 `generateGraphData` 方法，而没有使用 `Task` 对象并行为图表生成数据。
+
+> 注意：你在第 23 节的练习中减小了 `pixelWidth` 和 `pixelHeight` 字段的大小以节省内存，在继续下一步之前，在此版本中也再次这样做。
+
+- 4. 在 Visual Studio 工具栏中，确保平台设置为 x64。然后，在“调试”菜单上，选择“启动调试”。
+
+- 5. 在 `GraphDemo` 窗口中，选择“Plot Graph”（绘制图表）。在数据生成期间，选择“Cancel”（取消）。
+
+- 6. 关闭 `GraphDemo` 应用并返回 Visual Studio。
+
+- 7. 在显示 `MainPage` 类的代码和编辑器窗口中，在 `generateData` 方法上方添加名为 `generateDataAsync` 的新方法。该方法应该接收参数列表，但它应该返回 `Task` 而不是 `void`。该方法还应标记为 `async` 并看起来如下：
+
+点击此处查看代码
+
+```csharp
+private async Task generateDataAsync(byte[] data, int partitionStart, int partitionEnd, CancellationToken token)
+}
+```
+
+> 注意：建议使用 `Async` 后缀命名异步方法。
+
+- 8. 在 `generateDataAsync` 方法中，添加此处所示语句。
+
+点击此处查看代码
+
+```csharp
+private async Task generateDataAsync(byte[] data, int partitionStart, int partitionEnd, CancellationToken token)
+{
+    Task task = Task.Run(() =>
+        generateData(data, partitionStart, partitionEnd, token));
+
+    await task;
+}
+```
+
+此代码创建了一个运行 `generateData` 方法的 `Task` 对象，并使用 `await` 运算符等待 `Task` 完成。由 `await` 运算符生成的 `Task` 对象即是方法的返回值。
+
+- 9. 返回 `plotButtonClick` 方法并使用 `async` 修饰符修改方法定义，如下代码所示：
+
+点击此处查看代码
+
+```csharp
+private async void plotButtonClick(object sender, RoutedEventArgs args)
+{
+}
+```
+
+- 10. 在 `plotButtonClick` 方法的内部 try 块中，修改生成图数据的语句以异步调用 `generateDataAsync` 方法，如下所示：
+
+点击此处查看代码
+
+```csharp
+try {
+    await generateDataAsync(data, 0, pixelWidth / 2, token);
+    duration.Text = $"Duration (ms): {watch.ElapsedMilliseconds}";
+}
+```
+
+- 11. 在“调试”菜单上，选择“无调试启动”。
+
+- 12. 在 `GraphDemo` 窗口中，选择“Plot Graph”并验证应用程序是否正确生成图表。
+
+- 13. 再次选择“Plot Graph”。然后在数据生成期间选择“Cancel”。
+
+这一次用户界面应该是响应的。只会生成图表的一部分。
+
+# 定义返回值的异步方法
+
+到目前为止，你看到的所有示例都使用 `Task` 对象来执行不返回值的工作。然而，你也会使用任务来运行计算结果的方法。为了实现这一点，使用泛型类 `Task<TResult>`，其中类型参数 `TResult` 指定了结果的类型。
+
+创建和启动 `Task<TResult>` 对象的方法与普通 `Task` 对象相似。主要区别在于你执行的代码应该返回一个值。例如，后续代码示例所示的名为 `calculateValue` 方法生成一个整数结果。要调用此
+
+通过使用任务的方法，你创建并运行了一个 `Task<int>` 对象。你通过查询 `Task<int>` 对象的 `Result` 属性来获取方法返回的值。如果任务尚未完成方法的运行且结果尚不可用，`Result` 属性将阻塞调用者。这意味着你不需要自己执行任何同步操作，而且你知道当 `Result` 属性返回一个值时，任务已经完成了它的工作。
+
+点击此处查看代码图片
+
+```
+Task<int> calculateValueTask = Task.Run(() =>
+    calculateValue(...);
+
+int calculatedData = calculateValueTask.Result; // 阻塞直到
+    calculateValueTask completes
+
+private int calculateValue(...)
+{
+    int someValue;
+    // 执行计算并填充 someValue
+    ...
+    return someValue;
+}
+```
+
+泛型 `Task<TResult>` 类型也是定义返回返回值的异步方法机制的基础。在之前的示例中，你看到过通过返回 `Task` 来实现异步 `void`。如果一个异步方法实际上生成了结果，它应该返回一个 `Task<TResult>` 对象。下面的示例展示了这一点，它创建了 `calculateValue` 方法的异步版本：
+
+点击此处查看代码图片
+
+```
+private async Task<int> calculateValueAsync(...)
+{
+    // 使用 Task 调用 calculateValue
+    Task<int> generateResultTask = Task.Run(() =>
+        calculateValue(...);
+    await generateResultTask;
+    return generateResultTask.Result;
+}
+```
+
+这个方法看起来有点困惑，因为返回类型被指定为 `Task<int>`，但返回语句实际上返回的是一个 `int`。记住，当你定义一个异步方法时，编译器会对你的代码进行某些重构，它本质上返回一个指向 `Task` 的引用，运行语句 `return generateResultTask.Result;` 的延续。该延续返回的表达式类型是 `int`，因此方法的返回类型是 `Task<int>`。
+
+要调用返回值的异步方法，请使用 `await` 运算符，如下：
+
+点击此处查看代码图片
+
+```
+int result = await calculateValueAsync(...);
+```
+
+`await` 运算符从 `calculateValueAsync` 方法返回的 `Task` 对象中提取值，并在这种情况下将其分配给 `result` 变量。
+
+# 异步方法陷阱
+
+众所周知，`async` 和 `await` 运算符会给程序员带来困惑。理解以下几至关重要：
+
+- 将方法标记为 `async` 并不意味着它是异步运行的。这意味着该方法可以包含可能异步异步运行的语句。
+
+- `await` 运算符表示该方法应该由单独的任务运行，并且调用代码将挂起，直到该方法完成。调用代码使用的线程被释放并可以重复使用。如果该线程是用户界面线程，这非常重要，因为它可以让用户界面保持响应状态。
+
+- 使用 `await` 运算符与使用任务的 `Wait` 方法不同。`Wait` 方法始终阻塞当前线程，并在任务完成之前不允许其被重复使用。
+
+- 默认情况下，在 `await` 运算符之后，恢复执行的代码会尝试获取用于调用异步方法的原始线程。如果该线程正忙，代码将会被阻塞。你可以使用 `ConfigureAwait(false)` 方法来指定操作可以在任何可用线程上恢复，并减少阻塞的概率。这对于可能需要处理数千个并发请求的 Web 应用程序和服务特别有用。
+
+- 如果在 `await` 运算符之后运行的代码必须在原始线程上执行，则你不应该使用 `ConfigureAwait(false)`。在之前讨论的示例中，对每个等待的操作添加 `ConfigureAwait(false)` 将导致编译器生成的延续极有可能在单独线程上运行。这包括尝试为消息设置 `Text` 属性的延续，从而导致显示以下消息：*应用程序调用了一个为不同线程封送（marshaled）的接口。*
+
+点击此处查看代码图片
+
+```
+private async void slowMethod()
+    await doFirstLongRunningOperation().ConfigureAwait(false);
+    await doSecondLongRunningOperation().ConfigureAwait(false);
+    await doThirdLongRunningOperation().ConfigureAwait(false);
+    message.Text = "Processing Complete";
+```
+
+- 粗留使用返回结果并在用户界面线程上运行的异步方法可能会导致死锁，导致应用程序冻。考虑以下示例：
+
+点击此处查看代码图片
+
+```
+private async void myWeb()
+    var data = generateResult();
+    ...
+    message.Text = $"result: {data.Result}";
+```
+
+```
+private async Task<string> generateResult()
+    string result;
+    ...
+    result = ...;
+    return result;
+```
+
+在这段代码中，`generateResult` 方法返回一个字符串值。然而，`myMethod` 方法在尝试访问 `data.Result` 属性之前，并没有真正启动运行 `generateResult` 方法的任务。`data` 对象是任务的引用，由于任务尚未运行导致 `Result` 属性不可用，访问此属性将阻塞当前线程，直到 `generateResult` 方法完成。此外，用于运行 `generateResult` 方法的任务在方法完成后会尝试恢复其被调用的线程（即用户界面线程），但该线程被阻塞了。结果是，`myMethod` 方法在 `generateResult` 方法完成之前无法结束，而 `generateResult` 方法在 `myMethod` 方法完成之前无法结束。这个问题的解决方案是 `await` 运行 `generateResult` 方法的任务。你可以如下操作：
+
+点击此处查看代码图片
+
+```
+private async void myMethod()
+{
+    var data = generateResult();
+    message.Text = $"result: {await data}";
+}
+```
+
+# 异步方法与 Windows Runtime
+
+Windows 8 及其更高版本的设计者希望确保应用程序尽可能具有响应性，因此当他们实现 Windows Runtime (WinRT) 时，他们决定任何执行超过 50 毫秒的操作应仅通过异步 API 可用。你可能在这本书中注意到一两个处这种方法。例如，为了向用户显示消息，你可以使用 `MessageDialog` 对象。然而，当你显示此消息时，你使用的是 `ShowAsync` 方法，如下：
+
+点击此处查看代码图片
+
+```
+using Windows.UI.Popups;
+...
+MessageDialog dlg = new MessageDialog("Message to user");
+await dlg.ShowAsync();
+```
+
+`MessageDialog` 对象显示消息并等待用户选择作为此对话部分的“关闭”按钮。任何形式的用户交互都可能花费不确定的时间——用户可能会去选择“关闭”，而且通常不会阻塞应用程序或防止其在对话显示期间执行操作（如响应事件）。`MessageDialog` 类没有提供 `ShowAsync` 方法的同步版本，但如果你需要同步显示对话，只需不带 `await` 运算符的情况下调用 `dig.ShowAsync()`。另一个常见的异步处理示例是 `FileOpenPicker` 类，你在第 5 章“使用复合赋值和迭代语句”中见过它。`FileOpenPicker` 显示用户可以选择的文件列表。与 `MessageDialog` 类一样，用户在浏览和选择文件可能会花费大量时间，因此此操作不应阻塞应用程序。下面的示例显示了如何使用 `FileOpenPicker` 类显示用户文档文件夹中的文件，并在用户从列表中选择单个文件时等待：
