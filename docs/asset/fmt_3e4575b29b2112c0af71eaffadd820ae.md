@@ -1,0 +1,476 @@
+
+# J
+
+- `interface` (interface) 65
+- `multiple` 259
+- 继承构造函数 (inheriting constructor) 161
+- `initialization` 18
+- 类内成员 (in-class member) 264
+- `array` 202
+- `initializer` 7
+- 默认成员 (default member) 74
+- `lambda` 97
+- `initializer =` 8
+- `initializer-list` 58
+- `initializer_list` 55
+- `inline` 55
+- `lining` 55
+- `inner_product()` 229
+- `input` 139
+- 用户定义类型 (of user-defined type) 141
+- 运算符 `>>` 84
+- 输入迭代器 (input_iterator), 概念 192
+- 输入或输出迭代器 (input_or_output_iterator), 概念 192
+- 输入范围 (input_range), 概念 193
+- `insert()` 163, 169
+- `instantiation` 89
+- 实例化时间, 模板 185
+- 指令, 机器 16
+- `int` 6
+- `int32_t` 234
+- 整数字面量 6
+- 整数 (integral), 概念 190
+- 失效 (invalidation) 65
+- 59
+- 不变性 (invariant) 45
+- `invocable`, 概念 191
+- `invoke_result_t` 221
+- `I/O` 138
+- `iterator` 179
+- `state` 141
+- `<iosambuf>` 143
+- `<ios>` 123, 143
+- `clear()` 141
+- `setstate()` 141
+- `iota()` 229
+- 实例 (instance of), `dynamic_cast` 67
+- 类型 (kind of), `dynamic_cast` 67
+- `is_arithmetic_v` 218
+- `is_base_of` 218
+- `is_constructible_v` 218
+- `is_directory()` 151
+- `is_integral_v` 218
+- `is_same_of_v` 218
+- `==` 192
+- `+=` 192
+- `++` 179, 192
+- `[]` 192
+- `and I/O` 179
+- `iterator` 163, 179
+- `<iterator>`, 概念 190
+- `iter_t` 109
+- `iter_value_t` 109
+
+# J
+
+- `join()`, thread 228
+- `join_view` 187
+
+# K
+
+- Kernighan, Brian 259
+- `key and value` 164
+- `kinds of iostream` 146
+
+# L
+
+- `lambda`
+  - as adaptor 216
+  - as argument 96
+  - as initializer 97–98
+  - expression 95
+- `language`
+  - and library 119
+  - features, C with Classes 258
+  - features, C++11 263
+  - features, C++14 264
+  - features, C++20 265
+- `lazy`
+  - 132
+  - `{}` 132
+  - match 132, 135
+  - `atom()` 229
+- `leak`, resource 67, 78, 197
+- `less-than operator <` 7
+- `less-than-or-equal operator <=` 7
+- `letter`, `[[alpha]]` 133
+- `library`
+  - algorithm, standard 181
+  - C with Classes standard 259
+  - C++98 standard 259
+  - components, C++11 265
+  - C++14 266
+  - C++17 266
+  - C++20 266
+  - container, standard 168
+  - facilities, standard 120
+  - language 119
+  - non-standard 119
+  - lifetime, scope and 9
+  - lifting algorithm 113
+  - `likely]] attribute` 265
+  - `<limits>` 217, 234
+  - `line()`, source_location 222
+  - `linker` 2
+  - `list capture` 95
+  - `forward_list` 164
+  - `list` 162, 168
+  - `literal string` 3
+  - floating-point 6
+  - integer 6
+  - `operator *` 85
+  - raw string 130
+  - suffix, s 127
+  - suffix, sv 129
+  - type of string 127
+  - UDL, user-defined 84
+  - user-defined 264
+  - Literals string_literals 127
+  - string_view_literals 129
+  - In10 234
+  - In2 234
+  - local scope 9
+  - `lock`, reader-writer 242
+  - `locking`, double-checked 243
+  - `log()` 228
+  - `log10()` 228
+  - `log2()` 228
+  - `log2e` 234
+  - `long long` 263
+  - `lower`, regex 133
+
+# M
+
+- `machine instruction` 16
+- `macro`
+  - `EDOM` 228
+  - `ERANGE` 228
+  - `main()` 2
+  - exception and 161
+  - `make_pair()` 207
+  - `make_shared()` 199
+  - `make_unique()` 199
+  - management, resource 78, 197
+  - manipulation, bit 224
+  - manipulator 143
+  - `map` 164, 168
+  - and `unordered_map` 166
+  - `<map>` 123
+  - mapped type, value 164
+  - mapping to hardware 16
+  - `match`
+    - greedy 132, 135
+    - lazy 132, 135
+  - mathematical
+    - constant 234
+    - function 228
+    - functions, special 228
+    - `<math.h>` 228
+  - Max Munch rule 132
+  - `[[maybe_unused]] attribute` 264
+  - McIlroy, Doug 259
+  - meaning, C++ 257
+  - `member`
+    - access 23
+    - access `->` 23
+    - class 23
+    - data 23
+    - destructor for 65
+    - function 23
+    - function, const 56
+    - initialization, in-class 264
+    - initializer, default 74
+    - memberwise copy 72
+  - `mem_fn()` 217
+  - `memory` 79
+    - address 16
+    - dynamic 57
+    - resource, polymorphic 167
+    - safety 196
+    - `<memory>` 123, 197, 199
+  - `merge()` 182
+  - `mergeable`, concept 229
+  - `midpoint()` 229
+  - `minus operator -` 7
+  - `model`
+    - C++ 262
+    - template compilation 117
+  - modern C++ 262
+  - modularity 29
+  - `module`
+    - C++ 20 33
+    - export 33
+    - import 33
+    - standard library 123
+    - std 34, 277
+    - std::compat 277
+  - `modulus operator %` 7
+  - `month` 214
+  - Garbage collection 79
+  - Gavin 208
+  - `gcd()` 229
+  - `generator`
+    - coroutine 250
+    - type 221
+  - generic programming 103, 112, 258
+  - `get<>` 207
+  - by index 207
+  - `get()`, future member 245
+  - `getline()` 140
+  - graph, regex 133
+  - greater-than or operator > 7
+  - greater-than-or-equal operator >= 7
+  - greedy match 132, 135
+  - grouping, {}, 2
+  - guide, deduction 92
+  - Guidelines, C++ Core 262
+- `multimap` 168
+- 多个
+  - 字符集 128
+  - 继承 259
+  - 返回值 41
+  - 乘法运算符 * 7
+- `multiset` 168
+- `mutex` 241
+- `<mutex>` 241
+
+# N
+
+- n, 换行 3
+- naked
+  - delete 58
+  - new 58
+- name, 函数 5
+- namespace 作用域 9
+- `namespace` 35
+  - chrono 214
+  - inline 264
+  - pmr 167
+  - std 3, 36, 121
+  - views 188
+- 收窄转换
+  - = 初始化 8
+  - 类型转换 8
+- 导航, 层次结构 67
+- `new`
+  - 容器分配器 167
+  - naked 58
+  - operator in 57
+  - newline in 3
+- Nicholas 126
+- `[[nodiscard]] 属性` 98, 264
+- `noexcept` 50
+- `noexcept()` 263
+- 非齐次操作 108
+- 非内存资源 79
+- 非标准库 119
+- Norah 208
+- `[[noreturn]] 属性` 263
+- `normal_distribution` 231
+- 记法
+  - 正则表达式 131
+  - template 105
+- 不等于运算符 != 7
+- `notify_one()`, condition_variable 属性 245
+- `[[no_unique_address]] 属性` 265
+- `now()` 214
+- `NULL` 0, `nullptr` 14
+- `nullptr` 13
+  - function and 217
+- `NULL` 0 14
+- number
+  - C++ 用户数量 262
+  - 随机 231
+- Number 108
+- 示例 108
+- `<numbers>` 234
+- `<numeric>` 229
+- 数值算法 229
+- `numeric_limits` 234
+
+# O
+
+- `:,, format()` 145
+- 对象 6
+- 函数 94
+- 在容器中 160
+- 已移动的 78
+- 面向对象编程 63, 258
+- `ofstream` 147
+- 打开文件 151
+- 操作
+  - 容器 83
+  - 常规的 81
+  - 默认 72
+  - 本质的 72
+  - 文件系统 153
+  - 非齐次的 108
+  - 路径 152
+- `operator`
+  - `->` 220
+  - `+=` 7
+  - `%=` 7
+  - `*` 220
+  - `?:` 82
+  - `&`, 取址符 11
+  - `()`, 调用 94
+  - `*`, 取内容符 11
+  - `-`, 递减 7
+  - `/`, 除以 7
+  - `==`, 等于 7
+  - `>`, 大于 7
+  - `>=` 大于或等于 7
+  - `++`, 增 7
+  - `>>`, 输入 84
+  - `<`, 小于 7
+  - `<=` 小于或等于 7
+  - `*`, 字面量 85
+  - `-`, 减 7
+  - `%`, 取模 7
+  - `*`, 乘法 7
+  - `!=`, 不等于 7
+  - `<<`, 输出 3, 84
+  - `+`, 加 7
+  - `%`, 余数 7
+  - `*=` 缩放 7
+  - `/=` 缩放 7
+  - `<>` spaceship 81
+  - `[]`, 下标 25
+  - 算术 7
+  - 比较 7, 81
+  - 声明符 12
+  - `delete[]` 57
+  - `delete` 57
+  - `new` 57
+  - 已重载的 57
+  - 重载 80
+  - 关系 81
+  - 用户定义的 57
+- 优化, 短字符串 127
+- `optional` 210
+- 顺序
+  - + - format() 参数 145
+  - 构造的 67
+  - 析构的 67
+  - 求值的 8
+  - 的, 公有私有 23
+- `ostream` 138
+  - `<<`, 输出 138
+  - `<ostream>` 138
+- `ostream_iterator` 179
+- `ostringstream` 147
+- `out_of_range` 161
+- 输出 138
+- int 的位 204
+- cout 3
+- format 143
+- 用户定义类型 141
+- `operator <<` 3, 84
+- string 140
+- `output_iterator`, concept 192
+- `output_range`, concept 193
+- 已重载 operator 57
+- `overloaded()` 210
+- 基于 concept的 106
+- function 5
+- operator 80
+- `override` 61
+- 溢出, 缓冲区 200
+- 概述 容器 168
+- 所有权 197
+- 拥有的 196
+
+# P
+
+- `packaged_task` 线程 247
+- `par` 183
+- 并行算法 183
+- 参数类型 88
+- `partial_sum()` 229
+- `par_unseq` 183
+- 传递给 task 239
+- `path` 151
+  - operation 152
+- `pattern` 130
+  - `(?:` 134
+  - 多行 131
+- 完美转发 224
+- 可变的, concept 192
+- phone_book 示例 158
+- `pi` 234
+- `pipeline |` 188
+- `plus operator` 7
+- pmr, 命名空间 167
+- 指针 17
+  - `&` 11
+  - `*` 11
+  - dangling 196
+  - smart 84, 197,220
+- policy, 执行 183
+- 多态内存资源 167
+- type 60
+- `pow()` 228
+- `precision`, format() 145
+- `precision()` 143
+- 前提 45
+- `predicate` 94, 181
+- type 218
+- `predicate`, concept 191
+- print, regex 133
+- `printf()` 149
+- private order of public 239
+- problems, 头文件 32
+- procedural programming 2
+- producer() 示例 244
+- exit 225
+- programming
+  - generic 103, 112, 258
+  - procedural 2
+  - object-oriented 63, 258
+- `promise` 245
+  - member_exception() 245
+  - member_value() 245
+- `promise_type`, coroutine 253
+- pronunciation, C++ 257
+- diff_t 234
+- punct regex 133
+- pure virtual 60
+- purpose, template 103
+- `push_back()` 58, 163
+  - implementation 199
+- `push_front()` 163
+- `quick_exit()` termination 225
+
+# R
+
+- race, 数据 239
+- distribution 231
+- engine 231
+- number 231
+- `<random>` 123
+- `random_access_iterator`, concept 192
+- `random_access_range`, concept 193
+- `random_device` 233
+- `random_engine_seed()`
+- range checking, cost of 162
+- range adaptor 187
+- range-checking, span 200
+- range-for, span 200
+- ranges> 123, 185
+- `range_value_t` 109
+- `recursive_directory_iterator` 152
+- `reduce()` 229
+- reference 188, rvalue 77
+- recovery, error 47
+- regular expression 130
+- repetition, regex 132
+- `regex_iterator` 135
+- `regex_search` 130
+- register, removed 267
+- regular expression 131
+- expression regex 130
+- expression `<regex>` 130
+- regular, concept 191
+- regular_invocable, concept 191
+- `reinterpret_cast` 59
+- relation, concept 191
