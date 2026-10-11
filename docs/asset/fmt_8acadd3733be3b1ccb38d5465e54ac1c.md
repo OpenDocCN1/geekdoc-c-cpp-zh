@@ -1,0 +1,98 @@
+
+$$(2x_1 + x_2^2 + 2x_1x_4 - x_3)dx_1 + 2x_1x_2dx_2 - x_1dx_3 + x_1^2dx_4 = 0, \quad (3.319)$$
+
+whose vector of coefficients:
+
+```
+${X_1, X_2, X_3, X_4\} = \{2x_1 + x_2^2 + 2x_1x_4 - x_3, 2x_1x_2, -x_1, x_1^2\}; \quad (3.320)$
+```
+
+the curl bivector (3.278c) of the vector of coefficients (3.320) is zero, and thus (3.319) is an exact first-order differential in four variables. Taking $x_1, x_2$ as parameters (3.321a), the first-order differential (3.319) reduces (3.321c) to two variables $x_3, x_4$:
+
+```
+$x_1, x_2 = const; \quad 0 = -x_1dx_3 + x_1^2dx_4 = du, \quad u = -x_1x_3 + x_1^2x_4, \quad (3.321a-d)$
+```
+
+and has integral (3.321d). Next $x_1$ to be a variable, leaving $x_2$ constant (3.322a) and leading to (3.322b):
+
+```
+$x_2 = const; \quad du = -x_1dx_3 + x_1^2dx_4 + (2x_1x_4 - x_3)dx_3, \quad (3.322a, b)$
+```
+
+where the first two terms coincide with two of the first-order differential (3.319) in three variables $x_1, x_3, x_4$:
+
+```
+$x_2 = const; \quad 0 = (2x_1 + x_2^2 + 2x_1x_4 - x_3)dx_1 - x_1dx_3 + x_1^2dx_4; \quad (3.323a, b)$
+```
+
+substitution of (3.322b) in (3.323b) leads to (3.324a), whose primitive is (3.324b):
+
+```
+$0 = (2x_1 + x_2^2)dx_1 + du = dv, \quad v = u + x_1^2 + x_1^2x_2. \quad (3.324a, b)$
+```
+
+Taking all $x_1, x_2, x_3, x_4$ in (3.324b) leads to (3.325a):
+
+```
+$dv = d(u + x_1^2 + x_1^2x_2) = du + (2x_1 + x_2^2)dx_1 + 2x_1x_2dx_2 = 0, \quad (3.325a, b)$
+```
+
+that coincides with (3.319) by (3.319). From (3.324) and (3.321d) follows (3.326):
+
+```
+$C = v = u + x_1^2 + x_1^2x_2 = x_1^2 + x_1x_2^2 - x_1x_3 + x_1^2x_4, \quad (3.326)$
+```
+
+that is the solution (3.326) of the first-order differential (3.319). It can be checked that differentiation of (3.326) leads back to (3.319). The main results on first-order differentials are summarized next for two/three/more variables (notes 13/14/15).
+
+# Non-Linear Differential Equations and Dynamical Systems
+
+## NOTE 13: Exact Differentials and Integrating Factor
+
+A first-order differential in one variable (3.327a) is always exact for an integrable coefficient (3.327), and its solution reduces to an integration (3.27c);
+
+```
+$X \in E(\mathbb{R}); \quad X(x)dx = d\Phi \Leftrightarrow \Phi(x) = \int^x \Phi(\xi)d\xi; \quad (3.27a–c)$
+```
+
+in this there is no curl or helicity. A first-order differential in two variables (3.145) \equiv (3.328a) may have a vector of coefficients with non-zero curl (3.243b) \equiv (3.328b) and has zero helicity (3.243c) \equiv (3.328c):
+
+```
+$X_1 dx_1 + X_2 dx_2 = 0; \quad \Omega = \frac{\partial X_2}{\partial x_1}-\frac{\partial X_1}{\partial x_2} \neq 0, \quad H = 3.38a–c)$
+```
+
+Thus there are two cases: (i) an exact differential (3.329a) if the curl is zero; and (ii) an integrating factor for an inexact differential (3.329b) if the curl is not zero:
+
+```
+$X_1dx_1 + X_2dx_2 = \begin{cases} d\Phi & \text{if} \Omega = 0, \\ \lambda^{-1}d\Phi & \text{if} \Omega \neq 0. \end{cases} \quad (3.329a) \quad (3.329b)$
+```
+
+In both cases (Figure 3.6) the plane vector field has a family of orthogonal.
+
+## NOTE 14: Inexact Differentials without an Integrating Factor
+
+A differential in three variables (3.330a) can have a vector of coefficients with non-zero curl (3.330b) and non-zero helicity (3.330c):
+
+```
+$0 = X_1dx_1 + X_2dx_2 + X_3dx_3; \quad \Omega = \nabla \cdot \tilde{X} \neq 0, \quad H = \nabla \times \tilde{X} \neq 0. \quad (3.330a–c)$
+```
+
+Thus there are three cases: (i) an exact differential (3.331a) for zero curl; (ii) an inexact differential with an integrating factor (3.331b) for non-zero curl and zero helicity; and (iii) an inexact differential without an integrating factor (3.331c) for non-zero helicity:
+
+```
+$X_1dx_1 + X_2dx_2 + X_3dx_3 = \begin{cases} d\Phi & \text{if} \Omega = 0, \\ \lambda^{-1}d\Phi & \text{if} \Omega \neq 0, H = 0; \\ \lambda^{-1}d\Phi + d\Psi & \text{if} H \neq 0. \end{cases} \quad (3.331a) \quad (3.331b) \quad (3.331c)$
+```
+
+# Differentials and First-Order Equations
+
+In cases (i, ii) there is (3.331a) a family of surfaces orthogonal to the vector field (Figure 3.7), but not in case (iii). In the latter case (3.331c) there are on any surface (Figure 3.9) curves orthogonal to the vector field.
+
+## NOTE 15: First-Order Differentials in Any Dimension
+
+A differential of first-order in $N$ variables (3.332a) may have vector of coefficients (3.332a) with non-zero curl (3.332b) and non-zero helicity (3.332c):
+
+```
+$0 = \sum_{n=1}^N X_n dx_n; \quad \Omega_{mn} = \partial_m X_n - \partial_n X_m \neq 0, \quad H_{mn} = \sum_{n,s}^N X_s(\partial_m X_n - \partial_n X_m). \quad (3.332a-c)$
+```
+
+Thus there are three cases: (i) an exact differential if the curl is zero (3.333a) implying (3.305b) conditions; (ii) an inexact differential with an integrating factor (3.333b) if the curl is not zero but the helicity is zero, implying (3.305b); and (iii) an inexact differential without an integrating factor（此处原文中断）
