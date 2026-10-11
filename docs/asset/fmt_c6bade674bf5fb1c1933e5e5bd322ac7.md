@@ -1,0 +1,32 @@
+
+## 关于作者
+
+`<a href="index.html" title="Portfolio">作品集</a>`
+`<a href="index.html" title="Portfolio">作品集</a>`
+`<a href="index.html" title="Portfolio">作品集</a>`
+`<a href="index.html" title="Portfolio">作品集</a>`
+`<a href="index.html" title="Portfolio">作品集</a>`
+`<a href="index.html" title="Portfolio">作品集</a>`
+`<a href="index.html" title="Portfolio">作品集</a>`
+`<a href="index.html" title="Portfolio">作品集</a>`
+`<a href="index.html" title="Portfolio">作品集</a>`
+`<a href="index.html" title="Portfolio">作品集</a>`
+
+```
+a[title="home"] { color: rgb(51,0,0);
+  font-size: 1em;
+a[title="email"] { color: rgb(102,0,0);
+  font-size: 1.2em;
+a[title="resume"] { color: rgb(153,0,0);
+  font-size: 1.4em;
+a[href="#info"] { color: rgb(240,0,0);
+  font-size: 1.6em;
+a[href="#next"] { color: rgb(235,0,0);
+  font-size: 1.8em;
+a[href="#speakinginstyles"] {
+  font-size: 2em;}
+```
+
+`<navigation>`
+`</head>`
+`<body>`
