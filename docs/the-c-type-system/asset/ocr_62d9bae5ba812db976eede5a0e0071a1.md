@@ -1,0 +1,14 @@
+Using the null-forgiving operator with the argument to ToTitleCase convinces the compiler that it is safe to call the method having a non-null reference type parameter. If we were to inadvertently pass a null reference, we’d (justifiably) get the dreaded Object reference not set to an instance of an object exception. We must take care when using the null-forgiving operator that we really do know that the variable can’t be null.
+
+Nullable reference types, while having the same syntax as nullable value types, are just a device that indicates to the compiler that we’re making certain assumptions about the variable. Unlike nullable value types, which are underpinned by a distinct type with behavior injected by the compiler, nullable reference types are a purely compile-time mechanism, used for static analysis, and do not change the behavior of our code in any way. At run time, nullable and non-nullable references are just references. Nevertheless, distinguishing between them in code is useful for encoding our assumptions about nullability.
+
+Unexpected null reference exceptions are the curse of many programs and a class of error that programmers everywhere go to great lengths to try to avoid. The nullable reference type feature of modern C# is one that shifts some of that responsibility away from the programmer and onto the compiler.
+
+# Summary
+
+> My goal was to ensure that all use of references should be absolutely safe, with checking performed automatically by the compiler. But I couldn’t resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years.
+> —Tony (C.A.R.) Hoare
+
+The type system in C# is broadly similar to many other programming languages, including its support for user-defined types. C# differs in its distinction between reference types and value types. Although there are various recommendations on when to choose to define a value type instead of a reference type, including documentation from Microsoft, those guidelines often take only part of the story into consideration.
+
+The technical purpose of distinguishing value types from reference types is to allow the compiler and Common Language Runtime to make assumptions about values that may allow certain opportunities for optimization. Some of the differences we’ve discussed result from the way reference and value type instances are stored and managed in memory. That value type variables are not independently subject to garbage collection can itself be a big win. However, we can’t just turn our classes into structs or record structs and expect that our programs will suddenly use less memory or run more quickly. Value semantics involves much more than just declaring something as a value type.

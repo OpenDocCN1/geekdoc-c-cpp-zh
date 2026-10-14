@@ -1,0 +1,15 @@
+convenient and efficient use of memory. Struct and record struct variables are copied by value because they can’t be copied any other way. However, copying behavior is only one part of the difference between value and reference semantics.
+
+# Copying and Equality Comparison Behavior
+
+Equality comparison behavior is closely related to the way variables are copied. When we make a copy of a variable, the copy should compare equal to the original variable. That may seem obvious, but it’s the reason all structs inherit Equals from ValueType and why that default implementation of Equals for structs is so important. Without ValueType, a copy of a struct variable wouldn’t compare equal with the original value, because struct variables are copied by value. The copy is a distinct instance in its own right, and the default reference comparison offered by object.Equals would never compare the copy and original values as equal. The Equals method inherited from ValueType performs a value-based comparison to ensure that when we copy a value type instance, the copy and original variable will compare equal.
+
+When we compare references, we’re checking to see whether they represent the same specific instance, not whether those instances look alike. The behavior of the Equals method inherited by class types from object matches the copying behavior of references, because copying a reference variable doesn’t also copy the instance.
+
+Being copied by value isn’t, on its own, what endows a value type with value semantics; it’s simply the mechanism defined in the language for copying variables of struct type. In fact, copy-by-value behavior isn’t even a necessary ingredient of value semantics. Take, for example, the string class, which overrides the default behavior of Equals and operator== to perform a value-based comparison. As noted in Chapter 5, string is a class, and string variables are references, but when we compare two string variables, we’re most often interested in whether they both have the same content—that is, whether their character sequences are the same.
+
+For the purposes of equality comparisons, at least, a string’s value is the sequence of characters, not the actual value of the reference. Whether the two variables refer to the same string in memory is almost always irrelevant. Since string variables are references, string instances aren’t routinely copied by value, but they are compared by value.
+
+When we’re trying to define or understand value semantics, equality behavior is more significant than the way variables are copied. In the broader sense, a value type is any type that bases its equality comparisons on its state; that is, two value type objects are equal if they have the same value. By extension, there’s more to value semantics than a type being implemented as a struct or record struct; having value semantics is what makes a type a value type, if we accept a wider interpretation of the term value type than the definition in the C# Language Specification.
+
+We can override that behavior for any of our own class types too, but doing so is not always appropriate.

@@ -1,0 +1,302 @@
+
+- relational operators, 195
+- relational pattern, 195
+- RelativeLuminance method, user-defined conversions and, 246
+- Reminder class, by-reference fields and, 84
+- RemoveRed method, returning by-reference parameters by reference and, 100
+- Reset method, variables vs. values and, 126
+- return type instance modification, 123–128
+  - instance methods and mutability, 126–127
+  - properties as arguments for read-only parameters, 127–128
+  - reference type properties, 125–126
+- rich domain model, 184
+- rounding, mitigating limitations of, 142–144
+- run-time type, 166, 220–221
+- rvalue, 124
+
+### S
+- sealed, 34, 212–213, 224–225, 231
+- seam, 230–231
+- Select method, 241–242, 273, 280–281, 283–284
+- self-documenting code, 6
+- semantics
+  - copying, 46–47, 75, 177
+  - equality, 166–167, 177
+  - reference, 46–47, 176–177
+- separation of concerns, 9, 117
+- SequenceEqual method
+  - comparing array elements, 148
+  - effect of IEquatable interface, 262–267
+- services
+  - characteristics of, 187–188
+  - defined, 184
+- set accessor, 7, 32–34
+  - mutable value types, 78, 89, 107–110
+  - object initialization, 58–59, 91, 100–112
+  - value type properties, 123–124
+- side effects and direct effects, 88–92
+  - declarative code and performance, 91–92
+  - mutation vs. creation, 89–91
+  - reference semantics and, 178–180
+- simple assignment, 106–110
+  - value copy behavior, 107–109
+- single responsibility, 28–29
+- slices (ranges), 235
+- sorting collections of values, 203–204
+- SpeedExtensions type, internal vs. external interface and, 197
+- Speed type
+  - anemic type, 192
+  - automatic vs. nonautomatic properties, 133
+  - encapsulation, 192–199
+  - passing and returning by value, 119–120
+  - replacing built-in types, 5–10, 12–24, 27–28
+  - variable vs. value, 129–130
+- stack, value types and, 39
+- static abstract interface members, 162
+- static creation methods, 22–23
+- Stopwatch class, 251–252
+- StringBuilder type, 125, 246
+  - Capacity property, mutating property values and, 125
+- string class
+  - concatenation, 209, 241
+  - equality, 148–149, 177
+  - interpolation, 52, 148
+  - StringBuilder vs., 246
+  - value of, 177
+- string interning, 149
+- structs
+  - cyclic dependencies, 43
+  - defining, 32–33
+  - equality comparisons, 156–162
+  - immutability, 32–33
+  - inheritance, 34
+  - tightly packed, 256
+  - value semantics, 49
+- stubs (test doubles), 230
+- Subtract method, 223–224
+  - derived method behavior, 223–224
+
+### T
+- subtyping, 222–232
+  - avoiding implementation inheritance, 230–232
+  - defined, 222
+  - inheriting record types, 225–230
+  - input and output types of virtual methods, 223–224
+  - substitutability, 222–223
+  - upholding contract, 224–225
+- switch expressions, 21, 194–195, 284–285
+  - switch statement vs., 285
+- symbolic polymorphism, 240–241
+- symmetry
+  - class factory methods, 23–24, 196
+  - contract for equality, 217
+  - encapsulation and cohesion, 196
+- SynchronizationLockException error, 47
+- System.Diagnostics namespace, 251
+- System types, 45
+- target-typed default feature, 63
+- target-typed new feature, 14, 55
+- Temperature type
+  - pattern matching, 285
+  - positional records, 200–202
+- ternary condition (?:) operator, 81, 151
+- test doubles (stubs; fakes; mock objects), 230
+- testing, 9, 15, 22, 218–221, 229, 245, 262
+- theta, 3
+- this parameter, 87–88, 120
+- TimeSpan type
+  - arithmetic operations, 14–18
+  - replacing built-in types, 6, 10, 12
+  - unit conversions, 24, 27
+- Tolerance constant, setting for floating-point comparisons, 143
+- ToString method
+  - boxing, 118
+  - default reference field values, 56
+  - implicit conversion vs., 246
+- TotalSeconds property of TimeSpan type
+  - arithmetic operations, 14–15
+  - Seconds property vs., 10
+  - unit conversions, 27
+- ToTitleCase method, nullable reference types and, 65–66
+- TParser parameter, generic type constraints and, 234–237
+- tracing (instrumentation profiling), 258
+- transitivity
+  - equality comparisons, 155, 217
+  - ordering comparisons, 206
+- TranslucentColorParser class, overloading method groups with, 238
+- TranslucentColor type
+  - composition, 231–232
+  - generic type constraints, 236, 238
+  - implementation inheritance, 213–214, 216, 218–229
+  - user-defined conversions, 241–244
+- triangular number, 258–259
+- truth operators, 122
+- try…catch blocks, 80
+- TryXXX idiom, 79–82
+  - selecting operations, 81–82
+  - side effects and direct effects, 88–89
+- tuples
+  - equality comparisons, 170–172
+  - named, 102
+  - tuple assignment, 32
+  - tuple deconstruction, 29, 102–103
+- two-stage initialization, 110–113
+- typeof method
+  - EqualityContract property, 226–227
+  - GetType vs., 118
+- types, 1–30. See also reference types; value types
+  - abstracting, 29, 36
+  - adding clarity through, 4–9
+  - benefits of understanding, xix, xxiii
+  - clarity, adding through, 4–9
+  - class vs., 222–223
+  - deduction, of generic type parameters, 236–237
+  - deduction, of var declarations, 106
+  - determining need for new types, 15–18
+  - effect on performance, 270–279
+  - encoding units, 18–28
+  - generic constraint, 117, 162–163, 233–234
+  - implied by units, returning, 27–28
+  - inference, 106
+  - instances and storage, 39–45
+  - naming, 2–4
+  - new features in C#, xxiii
+  - null values and default values, 60–67
+  - object construction and initialization, 49–60
+  - purpose and focus of book, xx–xxi
+  - refactoring implementation, 9–18
+  - semantics, 45–49
+  - user defined, 32–37
+- type substitution, 220–221
+  - breach of contract, 221
+  - effects of, 220–221
+
+### U
+- ubiquitous language, 191–192, 288
+- unboxing, 44–45, 116, 163, 263
+- unconstrained generic type, 61–62, 162–163
+- uninitialized variables, 39
+- units, 18–28
+  - choosing most natural usage, 25–26
+  - itemizing with enumeration types, 19–22
+  - making explicit, 24–25
+  - returning types implied by, 27–28
+  - static creation methods, 22–23
+  - symmetry in design, 23–24
+- Units enumeration type, 19–21
+- unit testing, 251. See also testing
+- user-defined types. See classes; records; record structs; structs
+
+### V
+- validation, 8–9, 184, 193–194
+- value-based comparisons, 48, 177, 180–181, 215–216
+  - records, 166–168
+  - reference equality vs., 156, 158, 162–163
+  - strings, 148–149, 177
+- value-like behavior and characteristics
+  - classes and records, 35
+  - records, 48
+- value object role, 184, 186–187
+- value parameters, 71–73
+  - by-reference parameters vs., 76
+  - defined, 70, 118
+  - passing and returning by value, 119–120
+  - passing arguments, 70
+  - replacing with in parameters, 269
+- values, 175–210
+  - abstraction and vocabulary, 191–192
+  - boxed, 44–45, 47, 79, 115–118, 158–163
+  - by-reference vs., 79
+  - optimizing equality, 263–265
+  - characteristics of, 186–187
+  - comparison for ordering, 203–207
+  - default, 50, 56, 59, 62–64, 200–201
+  - defined, 184
+  - definite assignment, 39
+  - embedded, 40–43
+  - encapsulation and cohesion, 192–196
+  - encapsulation and public interface, 196–199
+  - equality, 47–48
+  - extensionality vs. intentionality, 204
+  - identity comparison, 47–48
+  - object relationships, 183–191
+  - passing and returning by, 119–120
+  - perils of uniformity and consistency, 207–209
+  - simplifying, 11–14
+  - unit conversions and value comparisons, 20–21
+  - validation of, 8–9
+  - variables vs., 38–39
+- value semantics
+  - benefits of understanding, xxiv
+  - reference semantics vs., 176–183, 199–203
+- value tuples
+  - equality comparisons, 170–172
+  - tuple deconstruction, 102–103
+- ValueTuple type, 170, 172
+- ValueType class
+  - Common Type System, 45–46, 211
+  - copying and identity, 48–49, 177–178
+  - default equality, 156–159, 163, 165, 253–260
+- value types
+  - advantages of, xxiii–xxiv
+  - arithmetic, 14–15
+  - avoiding defensive copies, 135–136
+  - construction, 52–53, 112–113
+  - copying, 110–115
+  - defensive copies, 129–130
+  - embedded fields, 43
+  - identity comparison, 47
+  - inheritance, 36
+  - initialization, 56–57
+  - instance fields of, 98
+  - instance lifetime, 36–37
+  - instance storage, 39
+  - nullable, 63–64
+  - parameters and, 71–73
+  - passing variables by reference, 78–79
+  - polymorphism, 211–247
+  - record structs, 34
+  - reference types vs., xx, 31, 70–71, 123–126, 176–181, 212–213, 273–277
+  - return type instance modification, 123–124
+  - sealed, 35, 212–221
+  - semantics, 45–48
+  - size of instances, 91–92, 136, 270–274
+  - structs, 33
+- variables, 37–39. See also array variables; by-reference variables; local variables; parameters; reference variables
+  - associated types, 38
+  - avoiding pitfalls of default variables, 200–201
+  - capturing, 84–85
+  - copy-by-value semantics, 73–74
+  - copying, 46–48
+  - defined, 37
+  - definite assignment, 39
+  - embedded, 40–43
+  - identifiers, 37
+  - kinds of, 37–38
+  - lifetime of, 36–37, 131–132
+  - read-only, 134–136
+  - values vs., 38–39, 82, 123–127
+- Velocity type
+  - abstraction, 17, 28–29, 199
+  - by-reference parameter limitations, 82
+  - non-destructive mutation, 90–91
+  - perils of mutable value types, 126–127
+  - property methods, 120–123
+- virtual dispatch, 212, 228
+- virtual methods, 34, 36, 118
+- vocabulary, 191–192, 199
+- Volume type, implementation inheritance and, 228–230
+
+### W
+- Where method, 85, 281
+- whole numbers, 140–141
+- widening conversions, 244
+- with keyword, 60, 90–91, 114–115
+- WithPercentAdded method, 197–198
+- WriteLine method, 118
+
+### Y
+- yield statement, 85–86
+
+### Z
+- ZeroKelvin constant, using for validation, 285

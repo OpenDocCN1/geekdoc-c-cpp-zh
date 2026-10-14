@@ -1,0 +1,3 @@
+a program, and more to programming than typing. Understanding value semantics can help you determine where you might employ value types in a design and how to implement them to best achieve your goal. Equally importantly, understanding value semantics will help you determine where a value type would *not* be appropriate.
+
+Over the course of this book, you’ll learn what value semantics means for C# programs, and how to use value types successfully and efficiently. Along the way, we’ll look in detail at both how and why value types behave as they do. First, though, we’ll explore using simple value types to make our code easier for humans to understand. Let’s get started.

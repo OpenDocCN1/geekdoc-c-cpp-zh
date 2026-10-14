@@ -1,0 +1,7 @@
+reference variable isn’t the same as the instance of the type it represents. For value type variables, however, the value and the instance are the same thing.
+
+Moreover, we can pass a variable by reference in several ways, each with different behavior and restrictions. We’ve looked at using by-reference method parameters to change variables in different ways, as well as at alternatives that can make our programs more direct and comprehensible by avoiding side effects and making values immutable. Immutability is an important aspect of avoiding problems associated with unwanted aliasing, even when by-reference variables are being used. If we use read-only properties and read-only structs judiciously, we can take advantage of some of the performance benefits of passing by reference, without suffering from the complications of managing access to shared mutable data.
+
+When an immutable value is shared by several references, aliasing can never present a problem. This is the basic principle behind in parameters and read-only local references, but it’s also a consideration when we want value semantics for a type but also want the benefits of reference semantics for performance.
+
+However, passing by reference isn’t without cost. Every access to a by-reference parameter involves an extra level of indirection. This cost is likely to be negligible but could adversely affect performance if the method is used in “hot paths” through the code. As with any performance optimization, we must measure the outcome to determine whether the optimization is worthwhile.
