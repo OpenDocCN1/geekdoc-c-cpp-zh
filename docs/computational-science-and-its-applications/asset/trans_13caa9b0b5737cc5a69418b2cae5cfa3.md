@@ -1,0 +1,91 @@
+
+
+![](img/81c56bc4b2fca1951aff5e0ab85b66be_240_0.png)
+
+图 13.7
+年龄组 4 额叶通道的累积熵。
+
+![](img/81c56bc4b2fca1951aff5e0ab85b66be_240_1.png)
+
+图 13.8
+年龄组 4 左颞叶通道的累积熵。
+
+![](img/81c56bc4b2fca1951aff5e0ab85b66be_241_0.png)
+
+**图 13.9**  
+年龄组 4 中央通道的累积熵。
+
+![](img/81c56bc4b2fca1951aff5e0ab85b66be_241_1.png)
+
+**图 13.10**  
+年龄组 4 右颞叶通道的累积熵。
+
+![](img/81c56bc4b2fca1951aff5e0ab85b66be_242_0.png)
+
+# 图 13.11
+
+年龄组 4 枕叶通道的累积熵。
+
+![](img/81c56bc4b2fca1951aff5e0ab85b66be_242_1.png)
+
+# 图 13.12
+
+年龄组 5 额叶通道的累积熵。
+
+![](img/81c56bc4b2fca1951aff5e0ab85b66be_243_0.png)
+
+**图 13.13**  
+年龄组 5 左颞叶通道的累积熵。
+
+![](img/81c56bc4b2fca1951aff5e0ab85b66be_243_1.png)
+
+**图 13.14**  
+年龄组 5 中央通道的累积熵。
+
+![](img/81c56bc4b2fca1951aff5e0ab85b66be_244_0.png)
+
+图 13.15
+
+年龄组 5 右颞叶通道的累积熵。
+
+![](img/81c56bc4b2fca1951aff5e0ab85b66be_244_1.png)
+
+图 13.16
+
+年龄组 5 枕叶通道的累积熵。
+
+小波用于不同频段之间的分类，并进一步扩展到小波熵方法，利用 10-20 国际系统通过 EEG 信号计算大脑不同区域的熵。得出结论，大脑区域的差异及其小波熵计算是区分患有 ASD 儿童的有效方法。例如，在四岁儿童中，中央区域存在显著差异，而在五岁儿童中，大脑的额叶和中央区域可以观察到显著差异。结果清楚地提供了证据，表明随着年龄的增长，大脑区域会发生变化。
+
+## 参考文献
+
++   1. Touchman Roberto. Autism and cognition within epilepsy: Social matters. *Epilepsy Currents* 2015 Jul–Aug;15(4):202–5.
++   2. O'Reilly C, JD Lewis, M Elsabbagh. Is functional brain connectivity atypical in autism? A systematic review of EEG and MEG studies. *PLOS ONE* 2017;12(5):e0175870.
++   3. Han YL, K Wang, J Jia, W Wu. Changes of EEG spectra and functional connectivity during an object-location memory task in Alzheimer’s disease; *Frontiers in Behavioral Neuroscience* 31 May 2017. doi: 10.3389/fnbeh.2017.00107
++   4. Katarzyna J Blinowska, Franciszek Rakowski, Maciej Kaminski, Fabrizio De Vico Fallani, Claudio Del Percio, Roberta Lizio, Claudio Babiloni et al. Functional and effective brain connectivity for discrimination between Alzheimer’s patients and healthy individuals: A study on resting state EEG rhythms. *Clinical Neurophysiology* 2017;128(4):667–680.
++   5. Lie OV, P van Mierlo. Seizure-onset mapping based on time-variant multivariate functional connectivity analysis of high-dimensional intracranial EEG: A Kalman filter approach. *Brain Topography* 2017;30(1):46–59.
++   6. Jun-Sang Sunwoo, Sanghun Lee, Jung-Hoon Kim, Jung-Ah Lim, Tae-Joon Kim, Jung-Ick Byun, Min Hee Jeong, Kwang Su Cha, Jeong Woo Choi, Kyung Hwan Kim, Soon-Tae Lee, Keun-Hwa Jung, Kyung-Il Park, Kon Chu, Manho Kim, Sang Kun Lee, Ki-Young Jung Altered functional connectivity in idiopathic rapid eye movement sleep behavior disorder: A resting-state EEG study. Sleep 2017 Jun 1;40(6).doi: 10.1093/sleep/zsx058.
++   7. Just MA, VL Cherkassky, TA Keller, NJ Minshew. Cortical activation and synchronization during sentence comprehension in high-functioning autism: Evidence of underconnectivity. *Brain* 2004;127(8):1811–21.
++   8. Wass S. Distortions and disconnections: Disrupted brain connectivity in autism. *Brain and Cognition* 2011;75(1):18–28.
++   9. McDonough IM, K Nashiro. Network complexity as a measure of information processing across resting-state networks: Evidence from the Human Connectome Project. *Frontiers in Human Neuroscience* 2014;8:409.
++   10. Yasser Ghanbari, Luke Bloy, J Christopher Edgar, Lisa Blaskey, Ragini Verma, Timothy PL Roberts. Joint analysis of band-specific functional connectivity and signal complexity in autism. *Journal of Autism and Developmental Disorders* 2015;45(2):444–460.
++   11. Misic B, VA Vaknorin, T Paus, AR McIntosh. Functional embedding predicts the variability of neural activity. *Frontiers in Systems Neuroscience* 2011;5:90.
++   12. Li X, S Cui, LJ Voss. Using permutation entropy to measure the electroencephalographic effects of sevoflurane. *Anesthesiology* 2008;109(3):448–56.
++   13. Tan O, S Aydin, G Sayar, D Gursoy. EEG complexity and frequency in chronic residual schizophrenia. *Anadolu Psikiyatri Dergisi* 2016;17(5):385–92.
++   14. Artan NS. EEG analysis via multiscale Lempel-Ziv complexity for seizure detection. *38th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (Embc)* 2016;2016:4535–538.
++   15. Mason RA, DL Williams, RK Kana, N Minshew, M Just. A theory of mind disruption and recruitment of the right hemisphere during narrative comprehension in autism. Neuropsychologia 2008;46(1):269–80.
++   16. Piryatinska A, B Darkhovsky, A Kaplan. Binary classification of multichannel EEG records based on the is an element of-complexity of continuous vector functions. Compute Methods Programs Biomed 2017;152:131–9.
++   17. Perkins TJ, MA Stokes, JA McGillivray, AJ Mussap, IA Cox, JJ Maller, et al. Increased left hemisphere impairment in high-functioning autism: A tract based spatial statistics study. Psychiatry Research – Neuroimaging 2014;224(2):119–23.
++   18. Zhenhu Liang, Yinghua Wang, Xue Sun, Duan Li, Logan J Voss, Jamie W Sleigh, Satoshi Hagihira, Xiaoli Li. EEG entropy measures in anesthesia. Frontiers in Computational Neuroscience 2015;9:16.
++   19. Vissers ME, MX Cohen, HM Geurts. Brain connectivity and high functioning autism: A promising path of research that needs refined models. Neuroscience and Biobehavioral Reviews 2012;36(1):604–25.
++   20. Filipek PA, PJ Accardo, S Ashwal, GT Baranek, EH Cook, G Dawson, et al. Practice parameter: Screening and diagnosis of autism report of the quality standards sub-committee of the American Academy of Neurology and the Child Neurology Society. Neurology 2000;55(4):468–79.
++   21. Kang J, H Chen, X Li, X Li. EEG entropy analysis in autistic children. Journal of Clinical Neuroscience 28 Nov 2018;62:199–206. doi: 10.1016/j.jocn.2018.11.027
++   22. Ibrahim S, R Djemal, A Alsuwailm. Electroencephalography (EEG) signal processing for epilepsy and autism spectrum disorder diagnosis. Biocybernetics and Biomedical Engineering 2018;38(1):16–26. doi: 10.1016/j.bbe.2017.08.006.
++   23. Askari E, SK. Setarehdanb, A Sheikhani, MR Mohammadi, M Teshnehlab, et al. Modeling the connections of brain regions in children with autism using cellular neural networks and electroencephalography analysis. Artificial Intelligence in Medicine 2018;89:40–50.
++   24. Grossi E, C Olivieri, M Buscema. Diagnosis of autism through EEG processed by advanced computational algorithms: A pilot study. Computer Methods and Programs in Biomedicine 2017;142:73–9. doi: 10.1016/j.cmpb.2017.02.002.
++   25. Sharma M, A Dhere, RB Pachori, UR Acharya. An automatic detection of focal EEG signals using new class of time–frequency localized orthogonal wavelet filter banks. Knowledge-Based Systems 2017;118:217–27.
++   26. Faust O, UR Acharya, H Adeli, A Adeli. Wavelet-based EEG processing for computer-aided seizure detection and epilepsy diagnosis. Seizure 2015;26:56–64. doi: 10.1016/j.seizure.2015.01.012.
++   27. Duffy FH, A Shankardass, GB McAnulty, H Als. The relationship of Asperger’s syndrome to autism: A preliminary EEG coherence study. BMC Medicine 2013;11:175. doi:10.1186/1741-7015-11-175.
++   28. Ahmadiou M, H Adeli, A Adeli. Fuzzy synchronization likelihood-wavelet methodology for diagnosis of autism spectrum disorder. Journal of Neuroscience Methods 2012;211(2):203–9.
++   29. Adeli H, S Ghosh-Dastidar, N Dadmehr. A wavelet-chaos methodology for analysis of EEGs and EEG subbands to detect seizure and epilepsy. IEEE Transactions on Bio-Medical Engineering 2007;54(2):205–11.
++   30. www.epilepsysociety.org.uk.
+

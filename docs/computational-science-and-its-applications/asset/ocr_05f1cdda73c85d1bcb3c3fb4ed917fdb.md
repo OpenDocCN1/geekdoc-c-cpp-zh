@@ -1,0 +1,10 @@
+not degrade for that particular reason. However, almost equivalent to that dream, but much more reachable, is to take away the free radicals. That is, without oxygen, the oxidation will be very much less likely to occur, but also without the free radicals the oxidation will be very much less likely to occur. But, just as exposure to oxygen is a part of life, so is the production of free radicals within polyethylene components of medical devices during its manufacturing process. Starting from its initial application in the 1960s, UHMWPE has gone through several stages of improvement, and this chapter highlights how free-radical research has played, and continues to play, a key role in each stage of its improvements for orthopedic applications. One primary aspect of this research has been a long-term (~20 years) targeted research study, conducted under the auspices of the Biosurface Center (NSF supported Industry-University Center for Biosurfaces (IUCBC)), under the guidance of Dr. M Shah Jahan of the Department of Physics and Materials Science at the University of Memphis, and in partnership with the State University of New York, Buffalo (SUNY Buffalo).
+
+# 4.2 Polymeric Free Radicals
+
+Figure 4.3 shows the steps of initiation, propagation, and termination of free radicals (denoted by a P• or H•, for example) of a hydrocarbon polymer (PH) as a result of irradiation with energy hν (h is Planck constant and ν is frequency of radiation). The free-radical species, denoted by (•), can be detected by the free-radical measurement technique known as Electron Spin Resonance (ESR), or Electron Paramagnetic Resonance (EPR). The non-radical or neutral species cannot be detected by ESR/EPR. One species that is particularly
+
+![](bbox=[0.17, 0.61, 0.83, 0.88])
+
+FIGURE 4.3
+Formation, propagation, and termination of polymeric radicals.

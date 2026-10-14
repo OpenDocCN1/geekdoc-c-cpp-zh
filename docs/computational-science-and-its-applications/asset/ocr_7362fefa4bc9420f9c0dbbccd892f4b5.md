@@ -1,0 +1,14 @@
+1971 to 1999 the relative humidity was found to increase and yields decrease. On the other hand, from 2000 to 2009, relative humidity (RHI) decreased while the rice yield increased in both the actual and predicted yield. Figure 16.7(e) represents the variation in actual and predicted yield with relative humidity during the evening; it is known that relative humidity in the evening is higher than in the morning; the graph represents the increasing trend in both the yields and RHII. It means that the yield was found to increase, with the increase in the evening relative to humidity.
+
+# 16.4 Conclusions
+
+The study shows that the observed weather variables, i.e. maximum and minimum temperature, morning and evening time relative humidity (RHI and RHII), 24-hourly rainfall, and past observed yields of rice of previous years over Gorakhpur district, through multiple linear regression could be used to develop a yield forecast model, five, and even ten, weeks in advance of harvest. The performance of the developed yield forecast model was tested and found to be satisfactory. The average error calculated for the validation years 2007 and 2008 was found to be 9.54%, which is within an acceptable limit of error. Yield forecast for the years 2009 and 2010 five weeks in advance of harvesting shows the percentage errors of 2.47% and 0.13%, while ten weeks in advance of harvesting it shows errors of 3.56% and 3.50% respectively. The observed errors were, therefore, found to be within an acceptable limit. The yield forecast model developed in this study include independent weather variables, which indicates the prime dependence of rice yield on these weather variables that play a major role in crop growth and production, directly or indirectly. Hence, from this chapter we can say that this type of yield forecast model can efficiently be used for future yield predictions at a district level for various crops like wheat, sugarcane, maize, cereals etc.
+
+# Acknowledgments
+
+The authors wish to express sincere thanks to India Meteorological Department and ICRISAT (International Crop Research Institute for the Semi-Arid Tropics)for providing the necessary data. One of the authors acknowledges with thanks the financial assistance in the form of a fellowship provided by the University Grants Commission for research.
+
+# References
+
++   1. Watson, R., Zinyowera, M., and Moss, R. 1996. Climate change impacts, adaptation and mitigation of climate change. *Contribution of WGII to the Second Assessment Report of the IPCC*, pp. 880. Cambridge: Cambridge University Press.
++   2. Kingra, P. K. 2016. Climate variability and impact on productivity of rice in central Punjab. *J Agromet* 18(1):146–148.

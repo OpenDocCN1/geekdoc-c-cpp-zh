@@ -1,0 +1,10 @@
+important with respect to oxidation or oxidative degradation of polymers is that of the carbonyl (−C=O_H). The Fourier-transform infrared (FTIR) absorption band of the carbonyl group (~1720 cm⁻¹) is used to measure the oxidation index (OI) for UHMWPE per ASTM F2102.
+
+# 4.3 Electron Spin Resonance
+
+Electron Spin Resonance (ESR), also known as Electron Paramagnetic Resonance (EPR), is the only technique that can directly detect free radicals and paramagnetic species in a given material. The theory behind ESR is based on the magnetic moment of unpaired electrons in an atomic or molecular structure. When exposed to an external magnetic field, these magnetic moments either align themselves parallel or antiparallel to the field, and the energy separation between the parallel and antiparallel states is known as the Zeeman Effect. The transition between these states can occur when an absorption of energy—an exactly equal amount of microwave energy (E = hν, where h is the Planck constant and ν, the microwave frequency)—occurs. This is known as the resonance condition, and it is governed by a simple, basic formula (classical) hν = gβH, where g is a spectral splitting factor, β is the Bohr magneton, and H is the external magnetic field. In ESR/EPR spectroscopy, the absorption signal (ESR spectrum) is detected and displayed as a first-derivative of the absorption, with its intensity (Y axis) typically plotted as a function of external magnetic field (X-axis). A typical absorption signal, known as an ESR spectrum, is shown in Figure 4.4. The peak-to-peak height (hpp) is proportional to the number of radicals present in the test specimen. For composite spectra, the double integration method is used to determine the radical concentration (see later). A brief outline of ESR in UHMWPE can be found in the UHMWPE handbook.²⁴
+
+![](bbox=[0.18, 0.64, 0.8, 0.89])
+
+FIGURE 4.4
+A first-derivative absorption signal.

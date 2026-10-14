@@ -1,0 +1,50 @@
+
+- 18. Sashikumaar Ganesan and Lutz Tobiska. Arbitrary Lagrangian–Eulerian finite-element method for computation of two-phase flows with soluble surfactants. *Journal of Computational Physics*, 231(9):3685–3702, 2012.
+- 19. Sashikumaar Ganesan and Shweta Srivastava. ALE-SUPG finite element method for convection–diffusion problems in time-dependent domains: Conservative form. *Applied Mathematics and Computation*, 303:128–145, 2017.
+- 20. Eberhard Bänsch. *Numerical Methods for the Instationary Navier-Stokes Equations with a Free Capillary Surface*. PhD thesis, Verlag nicht ermittelbar, 1998.
+- 21. S Ganesan and L.Tobiska. Finite element simulation of a droplet impinging on a horizontal surface. In *Proceedings of Algorithm*, vol. 2005, pp 1–11. Slovak Technical University, Bratislava, 2005.
+- 22. Gunar Matthies. *Finite Element Methods for Free Boundary Value Problems with Capillary Surfaces*. Shaker, Aachen, Germany 2002.
+- 23. F Nobile. *Numerical Approximation of Fluid Structure Interaction Problems with Application to Haemodynamics*. PhD thesis, École Polytechnique Fédérale de Lausanne, 2001.
+- 24. Christophe Geuzaine and Jean-François Remacle. Gmsh: A 3-d finite element mesh generator with built-in pre-and post-processing facilities. *International Journal for Numerical Methods in Engineering*, 79(11):1309–1331, 2009.
+- 25. Hang Si. Tetgen, a delaunay-based quality tetrahedral mesh generator. *ACM Transactions on Mathematical Software (TOMS)*, 41(2):11, 2015.
+- 26. Ulrich Wilbrandt, Clemens Bartsch, Naveed Ahmed, Najib Alia, Felix Anker, Laura Blank, Alfonso Ciaazzo, Sashikumaar Ganesan, Swetlana Giere, Gunar Matthies, et al. ParMooN—a modernized program package based on mapped finite elements. *Computers & Mathematics with Applications*, 74(1):74–88, 2017.
+- 27. Patrick Le Tallec and Jean Mauro. Fluid structure interaction with large structural displacements. *Computer Methods in Applied Mechanics and Engineering*, 190(24–25):3039–3067, 2001.
+- 28. Frederic J Blom. A monolithical fluid-structure interaction algorithm applied to the piston problem. *Computer Methods in Applied Mechanics and Engineering*, 167(3–4):369–391, 1998.
+- 29. EH Van Brummelen, SJ Hulshoff, and R De Borst. Energy conservation under incompatibility for fluid–structure interaction problems. *Computer Methods in Applied Mechanics and Engineering*, 192(25):2727–2748, 2003.
+- 30. Carlos A Felippa, KC Park, and Charbel Farhat. Partitioned analysis of coupled mechanical systems. *Computer Methods in Applied Mechanics and Engineering*, 190(24–25):3247–3270, 2001.
+- 31. Serge Piperno, Charbel Farhat, and Bernard Larrouturou. Partitioned procedures for the transient solution of coupled aeroelastic problems part i: Model problem, theory and two-dimensional application. *Computer Methods in Applied Mechanics and Engineering*, 124(1–2):79–112, 1995.
+- 32. S Ganesan, V John, G Matthies, R Meesala, S Abdus, and U Wilbrandt. An object oriented parallel finite element scheme for computations of pdes: Design and implementation. In *2016 IEEE 23rd International Conference on High Performance Computing Workshops (HiPCW)*, pages 2–11, 2016.
+- 33. Bing Jie Guo and Sverre Steen. Evaluation of added resistance of KVLCC2 in short waves. *Journal of Hydrodynamics, Series B*, 23(6):709–722, 2011.
+
+## 11
+## DNA—Drug Interaction: Insight from Computer Simulations
+Anurag Upadhyaya, Shesh Nath, and Sanjay Kumar
+
+## CONTENTS
+- 11.1 Introduction................................................................................................................171
+- 11.2 A Brief Review of DNA and Its Properties ......................................................................172
+- 11.3 Computer Simulations ...................................................................................................175
+- 11.4 Atomistic Simulations of DNA Rupture .........................................................................179
+- 11.5 Stability of a DNA Aptamer and Its Use as a Drug Delivery Agent ..............................182
+- 11.6 Stability of DNA-ICLs against Force and Its Use as an Anti-Tumor Drug ...................184
+    - 11.6.1 Rupture of DNA and DNA-ICLs .............................................................................186
+    - 11.6.2 Unzipping of DNA and DNA-ICLs.........................................................................188
+- 11.7 Conclusions and Future Perspective...............................................................................189
+- Acknowledgments................................................................................................................190
+- References...........................................................................................................................190
+
+### 11.1 Introduction
+Nucleic acids play crucial roles in biological processes including cell division (replication) and protein synthesis (transcription and translation). These processes happen in the normal healthy as well as in the cancerous cells. Cancerous cells are characterized by the uncontrolled cell division, which differs from the normal healthy cell division [1, 2]. The normal cells exhibit controlled cell division, where surface contact with like cells stops the cell division, a process referred to contact inhibition. Cancerous cells lose this ability and, as a result, they grow rapidly. Whether the cell division is mitosis or a meiosis, an exact copy of DNA replication is essential. The stability of DNA is largely affected by its length, base composition, sequence, and presence of nucleotide mismatches [3–8]. It is also strongly perturbed by changes in pH, temperature, and solvent as well as by the binding of proteins such as helicases, polymerases, or topoisomerases in living cells [7, 9, 10].
+
+Small molecules may interact or bind with DNA [11]. Classification of such molecules depends on their mechanism of action. Broadly speaking, DNA binding molecules can be categorized in: (i) groove binders that assemble in the minor groove; (ii) intercalators that pack in between base-pairs; (iii) alkylators, which react with DNA to form DNA alkylation; and (iv) cleavage agents, which have the capability to break DNA strands. Each of these classes of molecules has a different structure and interacts with DNA differently with the primary task of stopping cancerous cell division by inhibiting DNA replication. However, it halts the cell division without distinguishing between healthy or cancerous
+
+cells [12]. As a result, it causes several other side effects e.g. nausea, diarrhea, hair loss, low blood counts, mouth sores etc. Therefore, targeted delivery of drugs into the cancer cell is a prerequisite to increase effectiveness and reduce the toxic side effects by reducing uptake into normal cells.
+
+Recent studies have revealed that DNA aptamers can be used as agents for targeted drug delivery [13–15]. Aptamers are Guanine(G)-rich short oligonucleic acids (DNA, RNA) molecules, which can perform specific functions [16, 17]. These have been developed in vitro through a SELEX (Systematic Evolution of Ligands by Exponential Enrichment) process for the better understanding of the behavior of antibodies, which are produced in vivo or in living cells [16–18]. One of the most extensively characterized examples of the aptamer is found in telomerase at the ends of eukaryotic chromosomes, where it plays an important task in gene regulation [19, 20]. DNA loops or base-pockets consisting of Guanine can interact with small molecules and proteins and thus enhance their stability, affinity, and specificity [21]. For example, adenosine monophosphate (AMP) binds to the DNA loop (termed a binding-pocket) with eight hydrogen bonds, which enhances the stability [22–24] of the aptamer. It can be used as the target of drugs for cancer treatment [25]. Their high affinity and selectivity with target proteins make them ideal and powerful probes in biosensors and potent pharmaceuticals [26–36].
+
+Thus, there is a need to understand the role of inter- and intra-molecular interactions involved in the drug–DNA composite. Single molecule force spectroscopy (SMFS) experiments have offered the opportunity to study these molecular forces [2, 6, 37–48]. Initially, it was thought that the interactions detected in SMFS experiments would be mostly of a mechanical nature and can be calculated by knowing the value of the applied force. However, insights gathered from these experiments revealed that the measurement of molecular interactions depends not only on the magnitude of the applied force but also on how and where the force is applied [6, 38–48]. These experiments may be used to explore the local stability arising due to the interacting sites in the drug–DNA composites.
+
+The aim of the present chapter is to understand the conformational stability of DNA in the presence of these molecules and use them either as drugs or as a drug delivery agent. In Section 11.2, we briefly introduce DNA and its properties. Section 11.3 describes molecular dynamics (all atoms) simulations and the necessary force fields required for DNA. Section 11.4 deals with atomistic simulations of DNA rupture in the absence of drug molecules. In Section 11.5, we have extended our approach to study the stability of DNA aptamers and its use as a drug delivery agent. Section 11.6 focuses on the stability of DNA in the presence of alkylators. As discussed earlier, alkylators form covalent bonds with DNA strands, which are known as Inter Cross-Linkers (ICLs). We shall consider two drugs, namely Mitomycin C and Trabectedin, which form DNA-ICLs, and compare their stability with drug-free DNA. This chapter ends with a brief discussion and future perspectives in Section 11.7.
+
+### 11.2 A Brief Review of DNA and Its Properties
+Inside the cell there is a nucleus which contains the DNA (Figure 11.1). It is a molecule recognized as a “Molecule of life.” Genetic information is stored in the DNA and used in the development and functioning of living organisms including many viruses [49–51].

@@ -1,0 +1,7 @@
++   24. Tripathi, A., Singh, R. S., Bhatla, R., and Kumar, A. 2016. Maize yield estimation using agro-meteorological variables in Jaunpur district of Eastern Uttar Pradesh. *J Agromet* 18(1):153–154.
++   25. Mote, B. M., and Kumar, N. 2016. Calibration and validation of Ceres-rice model for different rice cultivars at Navsari. *J Agromet* 18(1):155–156.
++   26. Marviya, P. B., Rankja, N. J., and Chhoddavadiya, S. K. 2015. Development of statistical model for forecasting chickpea productivity of Rajkot district in Gujarat state. *J Agromet* 17(1):130–132.
++   27. Devi, M., Hussain, R., Sarma, A., Sarmah, K., and Deka, R. L. 2013. Yield prediction of winter rice employing meteorological variables in central and upper Brahmaputra valley zone of Assam. *J Agromet* 15 (Special Issue-I):162–166.
++   28. Ghosh, K., Balasubramanian, R., Bandopadhyay, S., Chattopadhyay, N., Singh, K. K., and Rathore, L. S. 2014. Development of crop yield forecast models under FASAL- a case study of kharif rice in West Bengal. *J Agromet* 16(1):1–8.
++   29. Willmott, Cort J. 1982. Some comments on the evaluation of model performance. *American Meteorological Society* 63(11):1309–1313.
++   30. WMO. 1966. WMO technical note no.79, WMO no.195-TP100, pp. 64–65. Geneva: WMO.
