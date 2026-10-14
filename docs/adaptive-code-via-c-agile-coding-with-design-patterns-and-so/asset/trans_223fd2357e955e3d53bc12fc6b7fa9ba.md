@@ -1,0 +1,275 @@
+
+
+```csharp
+[Test]
+public void PostCreateNewRoomDelegatesToRoomRepository()
+{
+    var controller = CreateController();
+
+    var viewModel = new CreateRoomViewModel { NewRoomName = "Test Room" };
+    controller.Create(viewModel);
+
+    mockRoomRepository.Verify(repository => repository.CreateRoom("Test Room"));
+}
+```
+
+```csharp
+public class AdoNetRoomRepository : IRoomRepository
+{
+    public AdoNetRoomRepository(IConnectionIsolationFactory factory)
+    {
+        this.factory = factory;
+    }
+
+    public void CreateRoom(string name)
+    {
+        factory.With(connection =>
+        {
+            using(var transaction = connection.BeginTransaction())
+            {
+                var command = connection.CreateCommand();
+                command.CommandText = "dbo.create_room";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Transaction = transaction;
+                var parameter = command.CreateParameter();
+                parameter.DbType = DbType.String;
+                parameter.ParameterName = "name";
+                parameter.Value = name;
+                command.Parameters.Add(parameter);
+
+                command.ExecuteNonQuery();
+            }
+        });
+    }
+
+    private readonly IConnectionIsolationFactory factory;
+}
+```
+
+```csharp
+public class AdoNetConnectionIsolationFactory : IConnectionIsolationFactory
+{
+    private readonly IApplicationSettings applicationSettings;
+    private readonly DbProviderFactory dbProviderFactory;
+    public AdoNetConnectionIsolationFactory(IApplicationSettings applicationSettings)
+    {
+        this.applicationSettings = applicationSettings;
+        this.dbProviderFactory = DbProviderFactories
+            .GetFactory(applicationSettings.GetValue("DatabaseProviderName"));
+    }
+
+    public void With(Action<IDbConnection> action)
+    {
+        using(var connection = dbProviderFactory.CreateConnection())
+        {
+            connection.ConnectionString = applicationSettings
+                .GetValue("ProsewareConnectionString");
+            connection.Open();
+
+            action(connection);
+        }
+    }
+}
+```
+
+```csharp
+public class AdoNetRoomRepository : IRoomRepository
+{
+    private readonly IApplicationSettings applicationSettings;
+    private readonly DbProviderFactory databaseFactory;
+    public AdoNetRoomRepository(IApplicationSettings applicationSettings,
+        DbProviderFactory databaseFactory)
+    {
+        Contract.Requires<ArgumentNullException>(applicationSettings != null);
+        Contract.Requires<ArgumentNullException>(databaseFactory != null);
+
+        this.applicationSettings = applicationSettings;
+        this.databaseFactory = databaseFactory;
+    }
+
+    public void CreateRoom(string name)
+    {
+        using(var connection = databaseFactory.CreateConnection())
+        {
+            connection.ConnectionString =
+                applicationSettings.GetValue("ProsewareConnectionString");
+            connection.Open();
+
+            using(var transaction = connection.BeginTransaction())
+            {
+                var command = connection.CreateCommand();
+                command.CommandText = "dbo.create_room";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Transaction = transaction;
+                var parameter = command.CreateParameter();
+                parameter.DbType = DbType.String;
+                parameter.ParameterName = "name";
+                parameter.Value = name;
+                command.Parameters.Add(parameter);
+
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+}
+```
+
+```csharp
+container.RegisterType<DbProviderFactory>(new InjectionFactory(c =>
+    DbProviderFactories.GetFactory(
+    c.Resolve<IApplicationSettings>().GetValue("DatabaseProviderName"))));
+```
+
+```csharp
+public class RoomController : Controller
+{
+    private readonly IRoomRepository roomRepository;
+    private readonly IRoomViewModelMapper viewModelMapper;
+    public RoomController(IRoomRepository roomRepository, IRoomViewModelMapper mapper)
+    {
+        Contract.Requires<ArgumentNullException>(roomRepository != null);
+        Contract.Requires<ArgumentNullException>(mapper != null);
+
+        this.roomRepository = roomRepository;
+        this.viewModelMapper = mapper;
+    }
+
+    [HttpGet]
+    public ActionResult List()
+    {
+        var roomListViewModel = new RoomListViewModel();
+
+        var allRoomRecords = roomRepository.GetAllRooms();
+
+        foreach(var roomRecord in allRoomRecords)
+        {
+            roomListViewModel.Rooms
+                .Add(viewModelMapper.MapRoomRecordToRoomViewModel(roomRecord));
+        }
+
+        return View(roomListViewModel);
+    }
+}
+```
+
+```csharp
+public class RoomController : Controller
+{
+    private readonly IRoomViewModelReader reader;
+    private readonly IRoomViewModelWriter writer;
+    public RoomController(IRoomViewModelReader reader, IRoomViewModelWriter writer)
+    {
+        Contract.Requires<ArgumentNullException>(reader != null);
+        Contract.Requires<ArgumentNullException>(writer != null);
+
+        this.reader = reader;
+        this.writer = writer;
+    }
+
+    [HttpGet]
+    public ActionResult List()
+    {
+        var roomListViewModel = new RoomListViewModel(reader.GetAllRooms());
+
+        return View(roomListViewModel);
+    }
+
+    [HttpGet]
+    public ActionResult Create()
+    {
+        return View(new RoomViewModel());
+    }
+
+    [HttpPost]
+    public ActionResult Create(RoomViewModel model)
+    {
+        ActionResult result;
+
+        if(ModelState.IsValid)
+        {
+            writer.CreateRoom(model.Name);
+
+            result = RedirectToAction("List");
+        }
+        else
+        {
+            result = View("Create", model);
+        }
+
+        return result;
+    }
+}
+```
+
+```csharp
+public class RepositoryRoomViewModelService : IRoomViewModelReader, IRoomViewModelWriter
+{
+    private readonly IRoomRepository repository;
+    private readonly IRoomViewModelMapper mapper;
+    public RepositoryRoomViewModelService(IRoomRepository repository, IRoomViewModelMapper mapper)
+    {
+        Contract.Requires<ArgumentNullException>(repository != null);
+        Contract.Requires<ArgumentNullException>(mapper != null);
+
+        this.repository = repository;
+        this.mapper = mapper;
+    }
+
+    public IEnumerable<RoomViewModel> GetAllRooms()
+    {
+        var allRooms = new List<RoomViewModel>();
+        var allRoomRecords = repository.GetAllRooms();
+        foreach(var roomRecord in allRoomRecords)
+        {
+            allRooms.Add(mapper.MapRoomRecordToRoomViewModel(roomRecord));
+        }
+        return allRooms;
+    }
+
+    public void CreateRoom(string roomName)
+    {
+        repository.CreateRoom(roomName);
+    }
+}
+```
+
+```csharp
+[HttpGet]
+public ActionResult Messages(int roomID)
+{
+    var messageListViewModel = new MessageListViewModel(reader.GetRoomMessages(roomID));
+
+    return View(messageListViewModel);
+}
+```
+
+```csharp
+public class RepositoryRoomViewModelService : IRoomViewModelReader, IRoomViewModelWriter
+{
+    private readonly IRoomRepository roomRepository;
+    private readonly IMessageRepository messageRepository;
+    private readonly IViewModelMapper mapper;
+    public RepositoryRoomViewModelService(IRoomRepository roomRepository,
+        IMessageRepository messageRepository, IViewModelMapper mapper)
+    {
+        Contract.Requires<ArgumentNullException>(roomRepository != null);
+        Contract.Requires<ArgumentNullException>(messageRepository != null);
+        Contract.Requires<ArgumentNullException>(mapper != null);
+
+        this.roomRepository = roomRepository;
+        this.messageRepository = messageRepository;
+        this.mapper = mapper;
+    }
+
+    public IEnumerable<MessageViewModel> GetRoomMessages(int roomID)
+    {
+        var roomMessages = new List<MessageViewModel>();
+        var roomMessageRecords = messageRepository.GetMessagesForRoomID(roomID);
+        foreach(var messageRecord in roomMessageRecords)
+        {
+            roomMessages.Add(mapper.MapMessageRecordToMessageViewModel(messageRecord));
+        }
+        return roomMessages;
+    }
+}
+```

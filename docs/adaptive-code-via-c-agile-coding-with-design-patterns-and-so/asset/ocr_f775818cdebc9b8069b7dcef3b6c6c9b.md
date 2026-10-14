@@ -1,0 +1,37 @@
+```
+```csharp
+public class TaskListController : INotifyPropertyChanged
+{
+    public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+    private readonly ITaskService taskService;
+    private readonly IObjectMapper mapper;
+    private ObservableCollection<TaskViewModel> allTasks;
+
+    public TaskListController(ITaskService taskService, IObjectMapper mapper)
+    {
+        this.taskService = taskService;
+        this.mapper = mapper;
+    }
+
+    public void OnLoad()
+    {
+        var taskDtos = taskService.GetAllTasks();
+        AllTasks = new ObservableCollection<TaskViewModel>(mapper.Map<IEnumerable<TaskViewModel>>(taskDtos));
+    }
+
+    public ObservableCollection<TaskViewModel> AllTasks
+    {
+        get
+        {
+            return allTasks;
+        }
+        set
+        {
+            allTasks = value;
+            PropertyChanged(this, new PropertyChangedEventArgs("AllTasks"));
+        }
+    }
+}
+```
+```

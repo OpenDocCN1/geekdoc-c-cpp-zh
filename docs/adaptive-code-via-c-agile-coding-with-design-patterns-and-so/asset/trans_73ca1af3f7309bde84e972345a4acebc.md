@@ -1,0 +1,185 @@
+
+
+获得的奖励积分数量取决于多个因素，这使得计算方法变得复杂：
+
+- 账户类型——等级越高获得的积分越多。
+- 交易金额——客户花费越多，获得的积分越多。
+- 账户当前余额——黄金和白金等级会让客户因保持高余额而获得更多积分。
+
+假设此代码是与其单元测试一起编写的，那么这些测试将极大地提供帮助，确保更改不会影响指定的行为。这是一个重要点——重构改变的是代码的排列，而不是结果。如果你尝试在没有单元测试的情况下进行重构，你如何知道自己是否无意中破坏了预期行为？你不会快速失败，而是在测试期间运行时的更晚阶段，或者更糟糕的是，在部署后才会失败。
+
+## 用常量替换“魔法数字”
+
+第一次重构是对代码可读性的一个简单但也很重要的改进。`CalculateRewardPoints` 方法中散布着大量的“魔法数字”。有六个不同的数字被使用，却没有任何上下文说明它们意味着什么或为什么需要它们。对编写代码的人来说，它们的意义可能很明显，因为那个人事先知道一切的含义。实际上，这可能只在几周内为真，也许两周，然后人的记忆开始模糊，他就记不清那个 5 或那个 2 的含义了。列表 4-29 显示了这次重构对类的更改。
+
+## LISTING 4-29 这段代码对不熟悉它的人来说更易读。
+
+Click here to view code image
+
+```
+public class Account
+{
+    public int CalculateRewardPoints(decimal amount)
+    {
+        int points;
+        switch(type)
+        {
+            case AccountType.Silver:
+                points = (int)decimal.Floor(amount / SilverTransactionCostPerPoint);
+                break;
+            case AccountType.Gold:
+                points = (int)decimal.Floor((Balance / GoldBalanceCostPerPoint) + (amount / GoldTransactionCostPerPoint));
+                break;
+            case AccountType.Platinum:
+                points = (int)decimal.Ceiling((Balance / PlatinumBalanceCostPerPoint) + (amount / PlatinumTransactionCostPerPoint));
+                break;
+            default:
+```
+
+```
+points = 0;
+    break;
+}
+    return Math.Max(points, 0);
+}
+
+private const int SilverTransactionCostPerPoint = 10;
+private const int GoldTransactionCostPerPoint = 5;
+private const int PlatinumTransactionCostPerPoint = 2;
+
+private const int GoldBalanceCostPerPoint = 2000;
+private const int PlatinumBalanceCostPerPoint = 1000;
+}
+```
+
+每个“魔法数字”都已被等价的变量所取代。交易金额的每点成本分母有一组三个变量，每个账户类型一个。然后还有两个变量用于余额金额的每点成本分母，适用于黄金和白金账户类型，这两个是唯一提供此激励的账户类型。
+
+这次重构的好处是，代码现在对不熟悉它的人来说是可理解的，因为你已通过变量名解释了这些值的含义。如果你只是将“魔法数字”替换为名为 A、B 或 X 的变量，那将不是改进。尽量选择能够简洁解释其用途的变量名。永远不要害怕冗长，并抓住每一个机会通过变量、类和方法名来为代码自我文档化。
+
+## 用多态替换条件表达式
+
+下一个重构更为复杂。`switch` 语句会根据账户类型改变 `CalculateRewards` 算法，它存在两个问题。首先，它会不利地影响可读性，但更紧迫的是，它引入了维护负担。想象一下，未来某个时候你被赋予了一个新需求：一种新的账户类型。已决定没有足够多的人满足白银账户的标准，因此你需要创建一个青铜账户。要添加青铜账户，你需要编辑 `Account` 类并为其添加测试。以这种方式编辑现有代码，在其经过验证并部署之后，应该避免。相反，你应该寻找其他方法来扩展代码，使其能够在无需编辑的情况下适应。
+
+你希望实现的目标是使添加新账户类型变得更容易，同时提高代码的可读性。为此，你将利用多态。你将把账户类型建模为 `Account` 类的不同子类。黄金账户类型将由 `GoldAccount` 类表示，白银账户和白金账户也是如此。
+
+第一步是定义这些类，如列表 4-30 所示。
+
+## LISTING 4-30 每种账户类型现在都是一个不同的类。
+
+Click here to view code image
+
+```
+public class SilverAccount
+```
+
+```
+{
+    public int CalculateRewardPoints(decimal amount)
+    {
+        return Math.Max((int)decimal.Floor(amount / SilverTransactionCostPerPoint), 0);
+    }
+
+    private const int SilverTransactionCostPerPoint = 10;
+}
+// ...
+public class GoldAccount
+{
+    public decimal Balance
+    {
+        get;
+        set;
+    }
+
+    public int CalculateRewardPoints(decimal amount)
+    {
+        return Math.Max((int)decimal.Floor((Balance / GoldBalanceCostPerPoint) + (amount / GoldTransactionCostPerPoint)), 0);
+    }
+
+    private const int GoldTransactionCostPerPoint = 5;
+    private const int GoldBalanceCostPerPoint = 2000;
+}
+// ...
+public class PlatinumAccount
+{
+    public decimal Balance
+    {
+        get;
+        set;
+    }
+
+    public int CalculateRewardPoints(decimal amount)
+    {
+        return Math.Max((int)decimal.Ceiling((Balance / PlatinumBalanceCostPerPoint) + (amount / PlatinumTransactionCostPerPoint)), 0);
+    }
+
+    private const int PlatinumTransactionCostPerPoint = 2;
+    private const int PlatinumBalanceCostPerPoint = 1000;
+}
+```
+
+请注意，在此阶段，原来的 `Account` 类尚未被更改。这些类是作为独立类创建的。这些类的单元测试将反映 `CalculateRewardPoints` 类的期望，但每个账户类型使用不同的 SUT。用于确定白金和黄金类应得奖励积分的算法依赖于当前余额；已包含该依赖项以使这些类能够独立编译。`Balance` 属性也是公开可设置的，这使得能够使用不同的值进行单元测试。图 4-8 中的 UML 类图解释了这些类的关系。
+
+![](img/65c1bad7a6b3cffae8cbb79664f0708b_179_0.png)
+
+FIGURE 4-8 `Account` 类将变为抽象类，并具有抽象的 `CalculateRewardPoints` 方法。
+
+这只是实现替换 `switch` 语句目标过程中的一个中间目标，当然。重要的是不要一次做太多，以便你可以通过一系列较小的更改验证自己是否走在正确的轨道上。列表 4-31 中的下一个更改是将所有四个类链接到一个继承层次结构中。
+
+## LISTING 4-31 复杂性已从 `Account` 类中移除。
+
+Click here to view code image
+
+```
+public abstract class AccountBase
+{
+    public decimal Balance
+    {
+        get;
+        private set;
+    }
+
+    public int RewardPoints
+```
+
+```
+{
+    get;
+    private set;
+}
+
+public void AddTransaction(decimal amount)
+{
+    RewardPoints += CalculateRewardPoints(amount);
+    Balance += amount;
+}
+
+public abstract int CalculateRewardPoints(decimal amount);
+}
+```
+
+没有了 `switch` 语句，这个类就没有理由再意识到自己的“类型”了，因此构造函数也被移除了。该类由于抽象的计算方法而变为抽象，这意味着你不能再实例化它，并且因此不能再对其进行测试。
+
+单元测试需要对象实例才能工作，因此下一步是将三个账户类型链接为该基类的子类。一个有用的命名约定——以及接口名以大写 I 为前缀——是为抽象类后缀 Base。这是一个快速提示，表明该类不能被实例化并且有相关的子类。
+
+当创建三个子类时，你可以从 `Gold-Account` 和 `PlatinumAccount` 中移除 `Balance` 属性，因为它们将从该基类继承 `Balance` 和 `AddTransaction` 成员。列表 4-32 显示了此步骤后三个类的全部内容。
+
+## LISTING 4-32 通过继承基类完成重构。
+
+Click here to view code image
+
+```
+public class SilverAccount : AccountBase
+{
+    public override int CalculateRewardPoints(decimal amount)
+    {
+        return Math.Max((int)decimal.Floor(amount / SilverTransactionCostPerPoint), 0);
+    }
+
+    private const int SilverTransactionCostPerPoint = 10;
+}
+// ...
+public class GoldAccount : AccountBase
+{
+    public override int CalculateRewardPoints(decimal amount)
+    {
+        return Math.Max((int)decimal.Floor((Balance / GoldBalanceCostPerPoint) + (amount /

@@ -1,0 +1,19 @@
+Clearly, it is very important that all interfaces chosen to represent an extension point should be stable. The likelihood and frequency of interface changes should be low, otherwise you will need to amend all clients to use the new version.
+
+# Just enough adaptability
+
+There is a “Goldilocks Zone” where code contains just the right amount of extension points—in the right places—to enable change in areas where it is needed without increasing complexity or over-engineering the solution. For any individual problem, there can be too little, too much, or just enough adaptability.
+
+Programmers who are beginning their careers tend to write code that is quite procedural, even in object-oriented languages such as C#. They tend to use classes as storage mechanisms for methods, regardless of whether those methods truly belong together. There is no discernible architecture to the code, and there are few extension points (and those that exist are misplaced). Any changes to requirements necessitate direct changes to the existing class or classes. This is how the original Trade-Processor was organized in Chapter 5, “The single responsibility principle.” It was a “god object” that had perfect knowledge of everything to do with the program.
+
+However, sometimes, this is the correct solution. If you assess the predicted variation for a small tool such as the TradeProcessor and conclude that it is very unlikely to change in any way, the original version of the code would suffice. Or perhaps the version that was refactored for clarity would be sufficient. The extra time spent refactoring for abstraction is wasted effort if you never make use of the extension points provided. Not only that, but the code is less readable, spread over different files and assemblies, with implementations hidden behind interfaces.
+
+At the opposite end of the spectrum is the programmer who has started abstracting code behind interfaces. This programmer has discovered a new hammer, and now everything looks like a nail. The code produced by this programmer is a mass of extension points, most of which will never be used. A significant effort is required to piece together the code, which constantly delegates responsibilities to interfaces, and a significant effort is required to write this code in the first place.
+
+If these two archetypal programmers—and their code—were combined, the result might be a harmonious middle ground where there are sufficient extension points, but where code can be adapted only in areas where requirements are unclear, changeable, or difficult to implement. This comes with experience, however, and it is difficult to arrive at this Zen-like state of protected variation without first being a naïve beginner and then transitioning to a know-it-all super-abstractor.
+
+# Conclusion
+
+The open/closed principle is a guideline for the overall design of classes and interfaces and how developers can build code that allows change over time. With each passing sprint, new requirements are inevitable and should be embraced. Acknowledging that change is a good thing is only part of the answer, however. If the code you have produced up until this point is not built to enable change, change will be difficult, time consuming, error prone, and costly.
+
+By ensuring that your code is open to extension but closed to modification, you effectively disallow future changes to existing classes and assemblies, which forces programmers to create new classes that can plug into the extension points. There are two main types of extension point available: implementation inheritance and interface inheritance. Virtual and abstract methods allow you to create

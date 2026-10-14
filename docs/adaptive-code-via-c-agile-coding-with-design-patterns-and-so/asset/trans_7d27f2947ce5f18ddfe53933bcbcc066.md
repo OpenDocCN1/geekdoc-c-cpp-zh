@@ -1,0 +1,137 @@
+
+
+## 已知端点
+
+当客户端在编译时已知服务的<|message|>位置时，可以在客户端创建服务代理。该代理至少可以通过两种方式创建：使用 Visual Studio 为项目添加服务引用，以及通过 .NET Framework 中的 ChannelFactory 类自行创建服务代理。
+
+在 Visual Studio 中添加服务引用非常容易：只需在项目的快捷菜单上选择“添加服务引用”。“添加服务引用”对话框只需要 Web Services Definition Language（WSDL）文件的位置，该文件提供了服务的元数据描述、其数据类型和可用行为。然后 Visual Studio 为此服务生成一组代理类，节省了大量时间。它甚至可以生成服务的异步版本以缓解阻塞问题。然而，使用此方法的代价是失去了对生成代码的控制。Visual Studio 生成的代码不太可能符合您内部的编码标准，这可能是一个问题，具体取决于这些标准的严格程度。另一个问题是，生成的服务代理不利于单元测试：它不会生成任何接口，只会生成实现类。
+
+添加服务引用的替代方案是在代码中自行创建服务代理。此方法最适合客户端可以访问服务接口并可以直接通过引用重用它时使用。清单 2-13 显示了使用 ChannelFactory 类创建服务代理的示例。
+
+### LISTING 2-13 The ChannelFactory class allows you to create a service proxy.
+
+Click here to view code image
+
+```
+var binding = new BasicHttpBinding();
+var address = new EndpointAddress("http://localhost/MyService");
+var channelFactory = new ChannelFactory<IService>(binding, address);
+var service = channelFactory.CreateChannel();
+service.MyOperation();
+service.Close();
+channelFactory.Close();
+```
+
+ChannelFactory 类是泛型的，其构造函数需要您希望其创建的服务代理的接口。因为此代码还需要 Binding 和 EndpointAddress，所以您必须为 ChannelFactory 提供完整的地址/绑定/契约（ABC）。在此示例中，IService 接口与服务实现的接口相同。您从 ChannelFactory.CreateChannel 获得的是一个代理，对于每次调用，它都会调用服务器端实现的等效方法。因为使用的是相同的接口，客户端类可以要求将此接口作为构造函数参数由依赖注入解析，并且客户端类立即变得可测试。此外，它们不必知道自己正在调用远程服务。
+
+## 服务发现
+
+有时您可能知道服务的绑定类型或其契约，但不知道其托管地址。在这种情况下，您可以使用服务发现，该功能在 .NET Framework 4 中引入到 Windows Communication Foundation（WCF）。
+
+服务发现有两种形式：托管和临时。在托管模式下，一个中心化的服务称为发现代理，对客户端而言是众所周知的，客户端直接向其发送查询以查找其他服务。这是较不有趣的模式，因为它引入了单点故障（SPOF）：如果发现代理不可用，客户端就无法访问任何其他服务，因为它们无法被发现。
+
+临时模式通过使用多播网络消息消除了对发现代理的需求。此默认实现使用用户数据报协议（UDP），每个可发现的服务都在指定的 IP 地址¹ 上监听查询。客户端有效地询问网络是否存在匹配其查询条件的服务，例如契约或绑定类型。在此场景中，如果其中一个服务不可用，只有该服务无法被发现，而其余服务仍会响应请求。清单 2-14 显示了如何以编程方式托管可发现的服务，而清单 2-15 显示了如何通过配置为服务添加可发现性。
+
+> ¹ 使用的 IP 地址是 239.255.255.250（IPv4）或 [FF02::C]（IPv6）。使用的端口是 3702。这是 WS-Discovery 标准设定的，因此不可配置。
+
+### LISTING 2-14 Programmatically hosting a discoverable service.
+
+Click here to view code image
+
+```
+class Program
+{
+    static void Main(string[] args)
+    {
+        using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService)))
+        {
+            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());
+
+            serviceHost.AddServiceEndpoint(typeof(ICalculator), new BasicHttpBinding(), new Uri("http://localhost:8090/CalculatorService"));
+            serviceHost.AddServiceEndpoint(new UdpDiscoveryEndpoint());
+
+            serviceHost.Open();
+            Console.WriteLine("Discoverable Calculator Service is running...");
+            Console.ReadKey();
+        }
+    }
+```
+
+### LISTING 2-15 Hosting a discoverable service via configuration.
+
+Click here to view code image
+
+```
+<system.serviceModel>
+    <behaviors>
+        <serviceBehaviors>
+            <behavior>
+                <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true"/>
+                <serviceDebug includeExceptionDetailInFaults="false"/>
+            </behavior>
+            <behavior name="calculatorServiceDiscovery">
+                <serviceDiscovery />
+            </behavior>
+        </serviceBehaviors>
+        <endpointBehaviors>
+            <behavior name="calculatorHttpEndpointDiscovery">
+                <endpointDiscovery enabled="true" />
+            </behavior>
+        </endpointBehaviors>
+    </behaviors>
+    <protocolMapping>
+        <add binding="basicHttpsBinding" scheme="https" />
+    </protocolMapping>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true" />
+    <services>
+        <service name="ConfigDiscoverableService.CalculatorService" behaviorConfiguration="calculatorServiceDiscovery">
+            <endpoint address="CalculatorService.svc" behaviorConfiguration="calculatorHttpEndpointDiscovery" contract="ServiceContract.ICalculator" binding="basicHttpBinding" />
+            <endpoint kind="udpDiscoveryEndpoint" />
+        </service>
+    </services>
+</system.serviceModel>
+```
+
+要变得可发现，服务所需要做的就是添加 ServiceDiscoveryBehavior 并托管一个 DiscoveryEndpoint。在此示例中，使用 UdpDiscoveryEndpoint 来接收来自客户端的多播网络消息。
+
+## Note
+
+WCF 中的服务发现符合 WS-Discovery 标准。这使其能够与不同的平台和语言互操作，而不仅仅是 .NET Framework。
+
+客户端使用 DiscoveryClient 类来查找可发现的服务，该类也需要一个 DiscoveryEndpoint。然后调用 Find 方法并传入一个已配置的 FindCriteria 实例，该实例描述要查找的服务的属性。Find 返回一个 FindResponse 实例，其中包含一个 Endpoints 属性——一个 EndpointDiscoveryMetadata 实例的集合，每个匹配的服务一个。清单 2-16 显示了查找可发现服务的这些步骤。
+
+### LISTING 2-16 Service Discovery is a good way to decouple code.
+
+Click here to view code image
+
+```
+class Program
+{
+    private const int a = 11894;
+    private const int b = 27834;
+
+    static void Main(string[] args)
+    {
+        var foundEndpoints = FindEndpointsByContract<ICalculator>();
+
+        if (!foundEndpoints.Any())
+        {
+            Console.WriteLine("No endpoints were found.");
+        }
+        else
+        {
+            var binding = new BasicHttpBinding();
+            var channelFactory = new ChannelFactory<ICalculator>(binding);
+            foreach (var endpointAddress in foundEndpoints)
+            {
+                var service = channelFactory.CreateChannel(endpointAddress);
+                var additionResult = service.Add(a, b);
+                Console.WriteLine("Service Found: {0}", endpointAddress.Uri);
+                Console.WriteLine("{0} + {1} = {2}", a, b, additionResult);
+            }
+        }
+
+        Console.ReadKey();
+    }
+}
+```

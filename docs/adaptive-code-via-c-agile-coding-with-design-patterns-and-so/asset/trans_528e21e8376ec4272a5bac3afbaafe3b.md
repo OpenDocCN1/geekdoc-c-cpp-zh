@@ -1,0 +1,447 @@
+
+
+```csharp
+public class MixinClient
+{
+    public MixinClient(ITargetInterface target)
+    {
+        this.target = target;
+    }
+
+    public void Run()
+    {
+        target.DoSomething();
+        target.FirstExtensionMethod();
+        target.SecondExtensionMethod();
+        target.FurtherExtensionMethodA(30);
+        target.FurtherExtensionMethodB("Hello!");
+    }
+
+    private readonly ITargetInterface target;
+}
+```
+
+```csharp
+public interface ITargetInterface
+{
+    void DoSomething();
+}
+// . . .
+public class TargetImplementation : ITargetInterface
+{
+    public void DoSomething()
+    {
+        Console.WriteLine("ITargetInterface.DoSomething()");
+    }
+}
+// . . .
+public interface IMixinInterfaceA
+{
+    void MethodA();
+}
+// . . .
+public class MixinImplementationA : IMixinInterfaceA
+{
+    public void MethodA()
+    {
+        Console.WriteLine("IMixinInterfaceA.MethodA()");
+    }
+}
+// . . .
+public interface IMixinInterfaceB
+{
+    void MethodB(int parameter);
+}
+// . . .
+public class MixinImplementationB : IMixinInterfaceB
+{
+    public void MethodB(int parameter)
+    {
+        Console.WriteLine("IMixinInterfaceB.MethodB({0})", parameter);
+    }
+}
+// . . .
+public interface IMixinInterfaceC
+{
+    void MethodC(string parameter);
+}
+// . . .
+public class MixinImplementationC : IMixinInterfaceC
+{
+    public void MethodC(string parameter)
+    {
+        Console.WriteLine("IMixinInterfaceC.MethodC(\"{0}\")", parameter);
+    }
+}
+```
+
+```csharp
+var config = MixinConfiguration.BuildFromActive()
+    .ForClass<TargetImplementation>()
+    .AddMixin<MixinImplementationA>()
+    .AddMixin<MixinImplementationB>()
+    .AddMixin<MixinImplementationC>()
+    .BuildConfiguration();
+
+MixinConfiguration.SetActiveConfiguration(config);
+
+ITargetInterface target = ObjectFactory.Create<TargetImplementation>(ParamList.Empty);
+```
+
+```csharp
+public class MixinClient
+{
+    public MixinClient(ITargetInterface target)
+    {
+        this.target = target;
+    }
+
+    public void Run()
+    {
+        target.DoSomething();
+
+        var targetAsMixinA = target as IMixinInterfaceA;
+        if(targetAsMixinA != null)
+        {
+            targetAsMixinA.MethodA();
+        }
+
+        var targetAsMixinB = target as IMixinInterfaceB;
+        if(targetAsMixinB != null)
+        {
+            targetAsMixinB.MethodB(30);
+        }
+
+        var targetAsMixinC = target as IMixinInterfaceC;
+        if(targetAsMixinC != null)
+        {
+            targetAsMixinC.MethodC("Hello!");
+        }
+    }
+
+    private readonly ITargetInterface target;
+}
+```
+
+```csharp
+public class FluentClient
+{
+    public FluentClient(IFluentInterface fluent)
+    {
+        this.fluent = fluent;
+    }
+
+    public void Run()
+    {
+        // without using fluency
+        fluent.DoSomething();
+        fluent.DoSomethingElse();
+        fluent.DoSomethingElse();
+        fluent.DoSomething();
+        fluent.ThisMethodIsNotFluent();
+
+        // using fluency
+        fluent.DoSomething()
+            .DoSomethingElse()
+            .DoSomethingElse()
+            .DoSomething()
+            .ThisMethodIsNotFluent();
+    }
+
+    private readonly IFluentInterface fluent;
+}
+```
+
+```csharp
+public interface IFluentInterface
+{
+    IFluentInterface DoSomething();
+
+    IFluentInterface DoSomethingElse();
+
+    void ThisMethodIsNotFluent();
+}
+// ...
+public class FluentImplementation : IFluentInterface
+{
+    public IFluentInterface DoSomething()
+    {
+        return this;
+    }
+
+    public IFluentInterface DoSomethingElse()
+    {
+        return this;
+    }
+
+    public void ThisMethodIsNotFluent()
+    {
+    }
+}
+```
+
+```csharp
+[TestClass]
+public class AccountTest
+{
+    [TestMethod]
+    public void AddingTransactionChangesBalance()
+    {
+        // Arrange
+        var account = new Account();
+    }
+}
+```
+
+```csharp
+[TestClass]
+public class AccountTest
+{
+    [TestMethod]
+    public void AddingTransactionChangesBalance()
+    {
+        // Arrange
+        var account = new Account();
+
+        // Act
+        account.AddTransaction(200m);
+    }
+}
+```
+
+```csharp
+[TestClass]
+public class AccountTest
+{
+    [TestMethod]
+    public void AddingTransactionChangesBalance()
+    {
+        // Arrange
+        var account = new Account();
+
+        // Act
+        account.AddTransaction(200m);
+
+        // Assert
+        Assert.AreEqual(200m, account.Balance);
+    }
+}
+```
+
+```csharp
+public class Account
+{
+    public void AddTransaction(decimal amount)
+    {
+    }
+
+    public decimal Balance
+    {
+        get;
+        private set;
+    }
+}
+```
+
+```csharp
+public class Account
+{
+    public Account()
+    {
+        Balance = 200m;
+    }
+
+    public void AddTransaction(decimal amount)
+    {
+
+    }
+
+    public decimal Balance
+    {
+        get;
+        private set;
+    }
+}
+```
+
+```csharp
+[TestMethod]
+public void AccountsHaveAnOpeningBalanceOfZero()
+{
+    // Arrange
+
+    // Act
+    var account = new Account();
+
+    // Assert
+    Assert.AreEqual(0m, account.Balance);
+}
+```
+
+```csharp
+public class Account
+{
+    public void AddTransaction(decimal amount)
+    {
+        Balance = 200m;
+    }
+
+    public decimal Balance
+    {
+        get;
+        private set;
+    }
+}
+```
+
+```csharp
+[TestMethod]
+public void Adding100TransactionChangesBalance()
+{
+    // Arrange
+    var account = new Account();
+
+    // Act
+    account.AddTransaction(100m);
+
+    // Assert
+    Assert.AreEqual(100m, account.Balance);
+}
+```
+
+```csharp
+[TestMethod]
+public void AddingTwoTransactionsCreatesSummationBalance()
+{
+    // Arrange
+    var account = new Account();
+    account.AddTransaction(50m);
+
+    // Act
+    account.AddTransaction(75m);
+
+    // Assert
+    Assert.AreEqual(125m, account.Balance);
+}
+```
+
+```csharp
+public class Account
+{
+    public void AddTransaction(decimal amount)
+    {
+        Balance += amount;
+    }
+
+    public decimal Balance
+    {
+        get;
+        private set;
+    }
+}
+```
+
+```csharp
+[TestClass]
+public class AccountServiceTests
+{
+    [TestMethod]
+    public void AddingTransactionToAccountDelegatesToAccountInstance()
+    {
+        // Arrange
+        var sut = new AccountService();
+
+        // Act
+        sut.AddTransactionToAccount("Trading Account", 200m);
+
+        // Assert
+        Assert.Fail();
+    }
+}
+```
+
+```csharp
+public class FakeAccountRepository : IAccountRepository
+{
+    public FakeAccountRepository(Account account)
+    {
+        this.account = account;
+    }
+
+    public Account GetByName(string accountName)
+    {
+        return account;
+    }
+
+    private Account account;
+}
+```
+
+```csharp
+public class AccountService : IAccountService
+{
+    public AccountService(IAccountRepository repository)
+    {
+        this.repository = repository;
+    }
+
+    public void AddTransactionToAccount(string uniqueAccountName, decimal transactionAmount)
+    {
+    }
+
+    private readonly IAccountRepository repository;
+}
+```
+
+```csharp
+[TestClass]
+public class AccountServiceTests
+{
+    [TestMethod]
+    public void AddingTransactionToAccountDelegatesToAccountInstance()
+    {
+        // Arrange
+        var account = new Account();
+        var fakeRepository = new FakeAccountRepository(account);
+        var sut = new AccountService(fakeRepository);
+
+        // Act
+        sut.AddTransactionToAccount("Trading Account", 200m);
+
+        // Assert
+        Assert.AreEqual(200m, account.Balance);
+    }
+}
+```
+
+```csharp
+public class AccountService : IAccountService
+{
+    public AccountService(IAccountRepository repository)
+    {
+        this.repository = repository;
+    }
+
+    public void AddTransactionToAccount(string uniqueAccountName, decimal transactionAmount)
+    {
+        var account = repository.GetByName(uniqueAccountName);
+        account.AddTransaction(transactionAmount);
+    }
+
+    private readonly IAccountRepository repository;
+}
+```
+
+```csharp
+[TestMethod]
+[ExpectedException(typeof(ArgumentNullException))]
+public void CannotCreateAccountServiceWithNullAccountRepository()
+{
+    // Arrange
+
+    // Act
+    new AccountService(null);
+
+    // Assert
+}
+```

@@ -1,0 +1,296 @@
+
+
+private void OnApplicationStartup(object sender, StartupEventArgs e)
+{
+    CreateMappings();
+
+    container = new UnityContainer();
+    container.RegisterType<ISettings, ApplicationSettings>();
+    container.RegisterType<IObjectMapper, MapperAutoMapper>();
+    container.RegisterType<ITaskService, TaskServiceAdo>();
+    container.RegisterType<TaskListController>();
+    container.RegisterType<TaskListView>();
+
+    ServiceLocator.SetLocatorProvider(() => new UnityServiceLocator(container));
+
+    MainWindow = container.Resolve<TaskListView>();
+    MainWindow.Show();
+
+    ((TaskListController)MainWindow.DataContext).OnLoad();
+}
+
+```csharp
+public class TaskListController : INotifyPropertyChanged
+{
+    public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+    private readonly ITaskService taskService;
+    private readonly IObjectMapper mapper;
+    private ObservableCollection<TaskViewModel> allTasks;
+
+    public TaskListController(ITaskService taskService, IObjectMapper mapper)
+    {
+        this.taskService = taskService;
+        this.mapper = mapper;
+    }
+
+    public TaskListController()
+    {
+        this.taskService = new TaskServiceAdo(new ApplicationSettings());
+        this.mapper = new MapperAutoMapper();
+    }
+
+    public void OnLoad()
+    {
+        var taskDtos = taskService.GetAllTasks();
+        AllTasks = new ObservableCollection<TaskViewModel>(mapper.Map<IEnumerable<TaskViewModel>>(taskDtos));
+    }
+
+    public ObservableCollection<TaskViewModel> AllTasks
+    {
+        get
+        {
+            return allTasks;
+        }
+        set
+        {
+            allTasks = value;
+            PropertyChanged(this, new PropertyChangedEventArgs("AllTasks"));
+        }
+    }
+}
+```
+
+public class MvcApplication : HttpApplication
+{
+    public static UnityContainer Container;
+
+    protected void Application_Start()
+    {
+        AreaRegistration.RegisterAllAreas();
+
+        FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+        RouteConfig.RegisterRoutes(RouteTable.Routes);
+        BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+        AutoMapper.Mapper.CreateMap<TaskDto, TaskViewModel>();
+
+        Container = new UnityContainer();
+        Container.RegisterType<ISettings, ApplicationSettings>();
+        Container.RegisterType<IObjectMapper, MapperAutoMapper>();
+        Container.RegisterType<ITaskService, TaskServiceAdo>();
+        Container.RegisterType<TaskViewModel>();
+        Container.RegisterType<TaskController>();
+
+        ControllerBuilder.Current.SetControllerFactory(new
+        UnityControllerFactory(Container));
+    }
+}
+
+public class TaskController : Controller
+{
+    private readonly ITaskService taskService;
+    private readonly IObjectMapper mapper;
+
+    public TaskController(ITaskService taskService, IObjectMapper mapper)
+    {
+        this.taskService = taskService;
+        this.mapper = mapper;
+    }
+
+    public ActionResult List()
+    {
+        var taskDtos = taskService.GetAllTasks();
+        var taskViewModels = mapper.Map<IEnumerable<TaskViewModel>>(taskDtos);
+        return View(taskViewModels);
+    }
+}
+
+public class UnityControllerFactory : DefaultControllerFactory
+{
+    private readonly IUnityContainer container;
+
+    public UnityControllerFactory(IUnityContainer container)
+    {
+        this.container = container;
+    }
+
+    protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
+    {
+        if (controllerType != null)
+        {
+            var controller = container.Resolve(controllerType) as IController;
+            if (controller == null)
+            {
+                controller = base.GetControllerInstance(requestContext, controllerType);
+            }
+            if (controller != null)
+                return controller;
+        }
+        requestContext.HttpContext.Response.StatusCode = 404;
+        return null;
+    }
+}
+
+static class Program
+{
+    public static UnityContainer Container;
+
+    [STAThread]
+    static void Main()
+    {
+        AutoMapper.Mapper.CreateMap<TaskDto, TaskViewModel>();
+
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+
+        Container = new UnityContainer();
+        Container.RegisterType<ISettings, ApplicationSettings>();
+        Container.RegisterType<IObjectMapper, MapperAutoMapper>();
+        Container.RegisterType<ITaskService, TaskServiceAdo>();
+        Container.RegisterType<TaskListController>();
+        Container.RegisterType<TaskListView>();
+
+        var mainForm = Container.Resolve<TaskListView>();
+        Application.Run(mainForm);
+    }
+}
+
+public partial class TaskListView : Form
+{
+    public TaskListView(TaskListController controller)
+    {
+        InitializeComponent();
+
+        controller.OnLoad();
+        this.taskListControllerBindingSource.DataSource = controller;
+    }
+}
+
+private void OnApplicationStartup(object sender, StartupEventArgs e)
+{
+    CreateMappings();
+
+    container = new UnityContainer();
+    container.RegisterTypes(
+        AllClasses.FromAssembliesInBasePath(),
+        WithMappings.FromMatchingInterface,
+        WithName.Default
+    );
+
+    MainWindow = container.Resolve<TaskListView>();
+    MainWindow.Show();
+
+    ((TaskListController)MainWindow.DataContext).OnLoad();
+}
+
+public partial class App : Application
+{
+    private void OnApplicationStartup(object sender, StartupEventArgs e)
+    {
+        CreateMappings();
+
+        container = new UnityContainer();
+        container.RegisterTypes(
+            AllClasses.FromAssembliesInBasePath().Where(type =>
+type.Assembly.FullName.StartsWith(MatchingAssemblyPrefix)),
+            UserDefinedInterfaces,
+            WithName.Default
+        );
+
+        MainWindow = container.Resolve<TaskListView>();
+        MainWindow.Show();
+
+        ((TaskListController)MainWindow.DataContext).OnLoad();
+    }
+
+    private IEnumerable<Type> UserDefinedInterfaces(Type implementingType)
+    {
+        return WithMappings.FromAllInterfaces(implementingType)
+            .Where(iface => iface.Assembly.FullName.StartsWith(MatchingAssemblyPrefix));
+    }
+}
+
+[Test]
+public void ConstructingWithoutRepositoryThrowsArgumentNullException()
+{
+    Assert.Throws<ArgumentNullException>(() => new RoomController(null));
+}
+
+[Test]
+public void ConstructingWithValidParametersDoesNotThrowException()
+{
+    Assert.DoesNotThrow(() => CreateController());
+}
+
+[Test]
+public void GetCreateRendersView()
+{
+    var controller = CreateController();
+
+    var result = controller.Create();
+
+    Assert.That(result, Is.InstanceOf<ViewResult>());
+}
+
+[Test]
+public void GetCreateSetsViewModel()
+{
+    var controller = CreateController();
+
+    var viewResult = controller.Create() as ViewResult;
+
+    Assert.That(viewResult.Model, Is.InstanceOf<CreateRoomViewModel>());
+}
+
+[Test]
+[TestCase(null)]
+[TestCase("")]
+[TestCase("  ")]
+public void PostCreateNewRoomWithInvalidRoomNameCausesValidationError(string roomName)
+{
+    var controller = CreateController();
+
+    var viewModel = new CreateRoomViewModel { NewRoomName = roomName };
+
+    var context = new ValidationContext(viewModel, serviceProvider: null, items: null);
+    var results = new List<ValidationResult>();
+
+    var isValid = Validator.TryValidateObject(viewModel, context, results);
+
+    Assert.That(isValid, Is.False);
+}
+
+[Test]
+[TestCase(null)]
+[TestCase("")]
+[TestCase("  ")]
+public void PostCreateNewRoomWithInvalidRoomNameShowsCreateView(string roomName)
+{
+    var controller = CreateController();
+
+    var viewModel = new CreateRoomViewModel { NewRoomName = roomName };
+    controller.ViewData.ModelState.AddModelError("Room Name", "Room name is required");
+    var result = controller.Create(viewModel);
+
+    Assert.That(result, Is.InstanceOf<ViewResult>());
+
+    var viewResult = result as ViewResult;
+    Assert.That(viewResult.View, Is.Null);
+    Assert.That(viewResult.Model, Is.EqualTo(viewModel));
+}
+
+[Test]
+public void PostCreateNewRoomRedirectsToViewResult()
+{
+    var controller = CreateController();
+
+    var viewModel = new CreateRoomViewModel { NewRoomName = "Test Room" };
+    var result = controller.Create(viewModel);
+
+    Assert.That(result, Is.InstanceOf<RedirectToRouteResult>());
+
+    var redirectResult = result as RedirectToRouteResult;
+    Assert.That(redirectResult.RouteValues["Action"], Is.EqualTo("List"));
+}
+

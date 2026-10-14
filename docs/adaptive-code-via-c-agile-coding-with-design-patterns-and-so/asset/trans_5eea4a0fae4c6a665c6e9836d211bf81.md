@@ -1,0 +1,315 @@
+
+
+```
+public class WorldWideShippingStrategy : ShippingStrategy
+{
+    public WorldWideShippingStrategy(decimal flatRate)
+        : base(flatRate)
+    {
+    }
+
+    public new decimal FlatRate
+    {
+        get
+        {
+            return base.FlatRate;
+        }
+        set
+        {
+            base.FlatRate = value;
+        }
+    }
+}
+// ...
+public class ShippingStrategy
+{
+    public ShippingStrategy(decimal flatRate)
+    {
+        if (flatRate <= decimal.Zero)
+            throw new ArgumentOutOfRangeException("flatRate", "Flat rate must be positive and non-zero");
+
+        this.flatRate = flatRate;
+    }
+
+    protected decimal FlatRate
+    {
+        get
+        {
+            return flatRate;
+        }
+        set
+        {
+            if (value <= decimal.Zero)
+                throw new ArgumentOutOfRangeException("value", "Flat rate must be positive and non-zero");
+
+            flatRate = value;
+        }
+    }
+}
+```
+```
+[Test]
+public void ShippingFlatRateCannotBeSetToNegativeNumber()
+{
+    strategy.Invoking(s => s.FlatRate = decimal.MinusOne)
+        .ShouldThrow<ArgumentOutOfRangeException>("Flat rate must be positive and non-zero")
+        .And.ParamName.Should().Be("value");
+}
+```
+```
+using System.Diagnostics.Contracts;
+
+public class ShippingStrategy
+{
+    public decimal CalculateShippingCost(float packageWeightInKilograms, Size<float> packageDimensionsInInches, RegionInfo destination)
+    {
+        Contract.Requires(packageWeightInKilograms > 0f);
+        Contract.Requires(packageDimensionsInInches.X > 0f && packageDimensionsInInches.Y > 0f);
+
+        return decimal.MinusOne;
+    }
+}
+```
+
+期望抛出 System.ArgumentOutOfRangeException，因为包裹尺寸必须为正且非零，但实际得到的是 System.Diagnostics.Contracts.__ContractsRuntime+ContractException，消息为 "Precondition failed: packageDimensionsInInches.X > 0f && packageDimensionsInInches.Y > 0f"
+```
+public class ShippingStrategy
+{
+    public decimal CalculateShippingCost(float packageWeightInKilograms, Size<float>
+    packageDimensionsInInches, RegionInfo destination)
+    {
+        Contract.Requires<ArgumentOutOfRangeException>(packageWeightInKilograms > 0f,
+        "Package weight must be positive and non-zero");
+        Contract.Requires<ArgumentOutOfRangeException>(packageDimensionsInInches.X > 0f &&
+        packageDimensionsInInches.Y > 0f, "Package dimensions must be positive and non-zero");
+
+        return decimal.MinusOne;
+    }
+}
+```
+```
+[Test]
+public void ShippingCostMustBePositive()
+{
+    strategy.CalculateShippingCost(1, ValidSize, null)
+        .Should().BeGreaterThan(decimal.MinusOne);
+}
+// ...
+public class ShippingStrategy
+{
+    public decimal CalculateShippingCost(float packageWeightInKilograms, Size<float>
+    packageDimensionsInInches, RegionInfo destination)
+    {
+        Contract.Requires<ArgumentOutOfRangeException>(packageWeightInKilograms > 0f,
+        "Package weight must be positive and non-zero");
+        Contract.Requires<ArgumentOutOfRangeException>(packageDimensionsInInches.X > 0f &&
+        packageDimensionsInInches.Y > 0f, "Package dimensions must be positive and non-zero");
+
+        Contract.Ensures(Contract.Result<decimal>() > 0m);
+
+        return decimal.MinusOne;
+    }
+}
+```
+```
+public class ShippingStrategy
+{
+    public ShippingStrategy(decimal flatRate)
+    {
+        this.flatRate = flatRate;
+    }
+
+    [ContractInvariantMethod]
+    private void ClassInvariant()
+    {
+        Contract.Invariant(this.flatRate > 0m, "Flat rate must be positive and non-zero");
+    }
+
+    protected decimal flatRate;
+}
+```
+```
+[ContractClass(typeof(ShippingStrategyContract))]
+interface IShippingStrategy
+{
+    decimal CalculateShippingCost(
+        float packageWeightInKilograms,
+        Size<float> packageDimensionsInInches,
+        RegionInfo destination);
+}
+// . .
+[ContractClassFor(typeof(IShippingStrategy))]
+public abstract class ShippingStrategyContract : IShippingStrategy
+{
+    public decimal CalculateShippingCost(float packageWeightInKilograms, Size<float> packageDimensionsInInches, RegionInfo destination)
+    {
+        Contract.Requires<ArgumentOutOfRangeException>(packageWeightInKilograms > 0f, "Package weight must be positive and non-zero");
+        Contract.Requires<ArgumentOutOfRangeException>(packageDimensionsInInches.X > 0f && packageDimensionsInInches.Y > 0f, "Package dimensions must be positive and non-zero");
+
+        Contract.Ensures(Contract.Result<decimal>() > 0m);
+
+        return decimal.One;
+    }
+
+    [ContractInvariantMethod]
+    private void ClassInvariant()
+    {
+        Contract.Invariant(flatRate > 0m, "Flat rate must be positive and non-zero");
+    }
+}
+```
+```
+public class Entity
+{
+    public Guid ID { get; private set; }
+
+    public string Name { get; private set; }
+}
+// ...
+public class User : Entity
+{
+    public string EmailAddress { get; private set; }
+
+    public DateTime DateOfBirth { get; private set; }
+}
+```
+```
+public class EntityRepository
+{
+    public virtual Entity GetByID(Guid id)
+    {
+        return new Entity();
+    }
+}
+// ...
+public class UserRepository : EntityRepository
+{
+    public override User GetByID(Guid id)
+    {
+        return new User();
+    }
+}
+```
+
+错误 CS0508: 'SubtypeCovariance.UserRepository.GetByID(System.Guid)': 返回类型必须为 'SubtypeCovariance.Entity' 才能匹配重写成员 'SubtypeCovariance.EntityRepository.GetByID(System.Guid)'
+```
+public interface IEntityRepository<TEntity>
+    where TEntity : Entity
+{
+    TEntity GetByID(Guid id);
+}
+// ...
+public class UserRepository : IEntityRepository<User>
+{
+    public User GetByID(Guid id)
+    {
+        return new User();
+    }
+}
+```
+```
+public interface IEqualityComparer<in TEntity>
+    where TEntity : Entity
+{
+    bool Equals(TEntity left, TEntity right);
+}
+// ...
+public class EntityEqualityComparer : IEqualityComparer<Entity>
+{
+    public bool Equals(Entity left, Entity right)
+    {
+        return left.ID == right.ID;
+    }
+}
+```
+```
+[Test]
+public void UserCanBeComparedWithEntityComparer()
+{
+    SubtypeCovariance.IEqualityComparer<User> entityComparer = new
+EntityEqualityComparer();
+    var user1 = new User();
+    var user2 = new User();
+    entityComparer.Equals(user1, user2)
+        .Should().BeFalse();
+}
+```
+
+错误 CS0266: 无法将类型 'SubtypeCovariance.EntityEqualityComparer' 隐式转换为 'SubtypeCovariance.IEqualityComparer<SubtypeCovariance.User>'。存在显式转换（是否缺少强制转换？）
+```
+[TestFixture]
+public class DictionaryTests
+{
+    [Test]
+    public void DictionaryIsInvariant()
+    {
+        // Attempt covariance...
+        IDictionary<Supertype, Supertype> supertypeDictionary = new Dictionary<Subtype, Subtype>();
+        
+        // Attempt contravariance...
+        IDictionary<Subtype, Subtype> subtypeDictionary = new Dictionary<Supertype, Supertype>();
+    }
+}
+```
+```
+public interface IDictionary<TKey, TValue> : ICollection<KeyValuePair<TKey, TValue>>, IEnumerable<KeyValuePair<TKey, TValue>>, IEnumerable
+```
+```
+public class EntityNotFoundException : Exception
+{
+    public EntityNotFoundException()
+        : base()
+    {
+    }
+
+    public EntityNotFoundException(string message)
+        : base(message)
+    {
+    }
+}
+//...
+public class UserNotFoundException : Exception
+{
+    public UserNotFoundException()
+        : base()
+    {
+    }
+
+    public UserNotFoundException(string message)
+        : base(message)
+    {
+    }
+}
+```
+```
+public Entity GetByID(Guid id)
+{
+    Contract.Requires<EntityNotFoundException>(id != Guid.Empty);
+
+    return new Entity();
+}
+//...
+public User GetByID(Guid id)
+{
+    Contract.Requires<UserNotFoundException>(id != Guid.Empty);
+
+    return new User();
+}
+```
+```
+[TestFixture(typeof(EntityRepository), typeof(Entity))]
+[TestFixture(typeof(UserRepository), typeof(User))]
+public class ExceptionRuleTests<TRepository, TEntity>
+    where TRepository : IEntityRepository<TEntity>, new()
+{
+    [Test]
+    public void GetByIDThrowsEntityNotFoundException()
+    {
+        var repo = new TRepository();
+        Action getByID = () => repo.GetByID(Guid.Empty);
+
+        getByID.ShouldThrow<EntityNotFoundException>();
+    }
+}
+```
+

@@ -1,0 +1,1323 @@
+- - '##'
+  - Who should read this book
+- - '###'
+  - 假设
+- - '###'
+  - 这本书可能不适合你，如果……
+- - '###'
+  - 本书的组织结构
+- - '###'
+  - 第一部分：敏捷基础
+- - '####'
+  - 第1章：Scrum 简介
+- - '####'
+  - 第2章：依赖与分层
+- - '####'
+  - 第3章：接口与设计模式
+- - '####'
+  - 第4章：单元测试与重构
+- - '###'
+  - 第二部分：编写 SOLID 代码
+- - '####'
+  - 第5章：单一职责原则
+- - '####'
+  - 第6章：开闭原则
+- - '####'
+  - 第7章：里氏替换原则
+- - '####'
+  - 第8章：接口隔离
+- - '####'
+  - 第9章：依赖注入
+- - '###'
+  - 第三部分：自适应示例
+- - '####'
+  - 第10章：自适应示例：简介
+- - '####'
+  - 第11章：自适应示例：冲刺1
+- - '####'
+  - 第12章：自适应示例：冲刺2
+- - '###'
+  - 附录
+- - '####'
+  - 附录A：自适应工具
+- - '####'
+  - 附录B（仅在线提供）：GitHub 代码示例
+- - '##'
+  - 本书中的约定和特色
+- - '##'
+  - 代码清单
+- - '##'
+  - 读者帮助和旁注
+- - '##'
+  - 图片
+- - '##'
+  - 系统要求
+- - '##'
+  - 下载：代码示例
+- - '##'
+  - 致谢
+- - '##'
+  - 勘误、更新与书籍支持
+- - '##'
+  - Microsoft Press 免费电子书
+- - '##'
+  - 我们期待您的反馈
+- - '##'
+  - 保持联系
+- - '###'
+  - 第一部分：敏捷基础
+- - '####'
+  - 第1章 Scrum 简介
+- - '#####'
+  - Scrum 是敏捷的
+- - '#####'
+  - Scrum 与瀑布
+- - '#####'
+  - Scrum 的不同形式
+- - '#####'
+  - Scrum 和...
+- - '#####'
+  - Scrum 但是...
+- - '#####'
+  - Scrum 不是...
+- - '#####'
+  - 角色与职责
+- - '#####'
+  - 产品负责人
+- - '#####'
+  - Scrum 主管
+- - '#####'
+  - 开发团队
+- - '#####'
+  - 猪和鸡
+- - '#####'
+  - 工件
+- - '#####'
+  - Scrum 看板
+- - '#####'
+  - 卡片
+- - '#####'
+  - 提示
+- - '#####'
+  - 构成的层级
+- - '#####'
+  - 产品
+- - '#####'
+  - 发布
+- - '#####'
+  - 最小可行发布
+- - '#####'
+  - 功能
+- - '#####'
+  - 史诗/功能 vs. MMF vs. 主题
+- - '#####'
+  - 用户故事
+- - '#####'
+  - Task
+- - '#####'
+  - The vertical slice
+- - '#####'
+  - Technical debt
+- - '#####'
+  - Defect
+- - '#####'
+  - Card sharp
+- - '#####'
+  - Color scheme
+- - '#####'
+  - Who creates cards?
+- - '#####'
+  - Avatars
+- - '#####'
+  - Swimlanes
+- - '#####'
+  - Horizontal swimlanes
+- - '#####'
+  - Technical debt
+- - '######'
+  - Good and bad technical debt
+- - '######'
+  - The technical debt quadrant
+- - '#####'
+  - 鲁莽的
+- - '#####'
+  - 谨慎的
+- - '#####'
+  - 深思熟虑的
+- - '#####'
+  - 无意的
+- - '#####'
+  - 偿还债务
+- - '#####'
+  - 数字化Scrum看板
+- - '#####'
+  - 完成的定义
+- - '#####'
+  - 图表与度量
+- - '#####'
+  - 注意事项
+- - '#####'
+  - 故事点
+- - '#####'
+  - 速率
+- - '#####'
+  - Sprint burndown
+- - '#####'
+  - Feature burnup chart
+- - '#####'
+  - Feature burnup
+- - '#####'
+  - Feature completed
+- - '######'
+  - Note
+- - '######'
+  - 注意
+- - '#####'
+  - Backlogs
+- - '#####'
+  - Product backlog
+- - '#####'
+  - Sprint backlog
+- - '#####'
+  - 冲刺
+- - '#####'
+  - 发布规划
+- - '#####'
+  - 功能估算
+- - '#####'
+  - 功能优先级
+- - '#####'
+  - 冲刺规划
+- - '######'
+  - 计划扑克
+- - '#####'
+  - 避免帕金森定律
+- - '#####'
+  - 亲和估算
+- - '#####'
+  - 每日站会
+- - '#####'
+  - Niko-niko 日历
+- - '######'
+  - 图 1-11 niko-niko 日历可以快速显示谁在冲刺中进展顺利，谁进展不顺。
+- - '#####'
+  - 冲刺演示
+- - '#####'
+  - 冲刺回顾
+- - '#####'
+  - 故事点三角验证
+- - '#####'
+  - Scrum 日历
+- - '#####'
+  - Scrum 和敏捷的问题
+- - '#####'
+  - 不适应性代码
+- - '#####'
+  - 僵化
+- - '######'
+  - 缺乏抽象
+- - '######'
+  - 混合职责
+- - '######'
+  - 不可测试性
+- - '######'
+  - 起重机与吊钩
+- - '#####'
+  - 度量指标
+- - '#####'
+  - '*有此，故因此*'
+- - '#####'
+  - 单元测试覆盖率
+- - '#####'
+  - 圈复杂度
+- - '#####'
+  - 结论
+- - '####'
+  - 第2章 依赖与分层
+- - '#####'
+  - 依赖的定义
+- - '#####'
+  - 一个简单的示例
+- - '#####'
+  - 新项目
+- - '######'
+  - 图2-3 任何项目的引用程序集都列在其“引用”节点下。
+- - '######'
+  - 清单2-1 对ReadKey的调用可防止控制台应用程序立即退出。
+- - '######'
+  - 清单2-2 通过调用实例方法来引入依赖关系。
+- - '#####'
+  - 框架依赖项
+- - '#####'
+  - 框架程序集始终会加载
+- - '#####'
+  - 默认引用列表
+- - '######'
+  - 清单2-3 部分Visual Studio项目模板，用于按条件引用不同的程序集。
+- - '#####'
+  - 第三方依赖
+- - '#####'
+  - 组织第三方依赖
+- - '#####'
+  - 在有向图中对依赖关系建模
+- - '######'
+  - 图 2-6 图由通过边连接的节点组成。
+- - '#####'
+  - 循环依赖
+- - '#####'
+  - 管理依赖关系
+- - '#####'
+  - 模式与反模式
+- - '#####'
+  - 实现与接口
+- - '#####'
+  - '*新的* 代码坏味道'
+- - '#####'
+  - 代码坏味道
+- - '#####'
+  - 使用依赖注入
+- - '######'
+  - LISTING 2-10 Using dependency injection allows you to remove the dependency on
+    the SecurityService class.
+- - '#####'
+  - The Entourage anti-pattern
+- - '######'
+  - FIGURE 2-13 The AccountController is still at the mercy of too many implementations.
+- - '#####'
+  - The Stairway pattern
+- - '######'
+  - FIGURE 2-14 The Stairway pattern is aptly named.
+- - '#####'
+  - 解决依赖项
+- - '#####'
+  - 程序集
+- - '#####'
+  - 解析过程
+- - '#####'
+  - Fusion 日志
+- - '######'
+  - 列表 2-12 Fusion 对绑定程序集失败尝试的示例输出。
+- - '#####'
+  - 服务
+- - '#####'
+  - 已知端点
+- - '######'
+  - LISTING 2-13 The ChannelFactory class allows you to create a service proxy.
+- - '#####'
+  - 服务发现
+- - '######'
+  - LISTING 2-14 Programmatically hosting a discoverable service.
+- - '######'
+  - LISTING 2-15 Hosting a discoverable service via configuration.
+- - '#####'
+  - Note
+- - '######'
+  - LISTING 2-16 Service Discovery is a good way to decouple code.
+- - '#####'
+  - Tip
+- - '#####'
+  - RESTful services
+- - '######'
+  - LISTING 2-17 Almost all of the HTTP verbs are supported by the ASP.NET Web API.
+- - '######'
+  - LISTING 2-18 Clients can use the HttpClient class to access RESTful services.
+- - '######'
+  - LISTING 2-19 Accessing the REST service from Windows PowerShell 3 is extremely
+    trivial.
+- - '#####'
+  - Dependency management with NuGet
+- - '#####'
+  - Consuming packages
+- - '######'
+  - FIGURE 2-17 NuGet packages have a lot of useful metadata associated with them.
+- - '######'
+  - FIGURE 2-18 The target package and all of its dependencies are referenced by the
+    project.
+- - '######'
+  - LISTING 2-20 NuGet has added a new configSection to the app.config specifically
+    for Riak.
+- - '#####'
+  - 生成包
+- - '######'
+  - 清单 2-21 包 XML 定义，包括元数据。
+- - '#####'
+  - Chocolatey
+- - '######'
+  - 清单 2-22 首先搜索包含所需应用程序的包，然后安装它。
+- - '#####'
+  - 分层
+- - '#####'
+  - 常见模式
+- - '#####'
+  - 层与层级
+- - '#####'
+  - 两层
+- - '#####'
+  - 用户界面
+- - '######'
+  - Note
+- - '#####'
+  - 数据访问
+- - '#####'
+  - 三层
+- - '#####'
+  - Business logic
+- - '#####'
+  - Cross-cutting concerns
+- - '######'
+  - LISTING 2-23 Manually applying cross-cutting concerns quickly swamps the real
+    intent of the code.
+- - '#####'
+  - Aspects
+- - '######'
+  - LISTING 2-24 Aspects are a great way to implement cross-cutting concerns.
+- - '#####'
+  - Asymmetric layering
+- - '#####'
+  - Command/query separation
+- - '######'
+  - LISTING 2-25 CQS-compliant and non-CQS-compliant command methods.
+- - '######'
+  - LISTING 2-26 CQS-compliant and non-CQS-compliant query methods.
+- - '#####'
+  - Command/Query Responsibility Segregation
+- - '#####'
+  - 结论
+- - '####'
+  - 第3章 接口与设计模式
+- - '#####'
+  - 完成本章后，你将能够
+- - '#####'
+  - 什么是接口？
+- - '#####'
+  - 语法
+- - '#####'
+  - 多继承
+- - '#####'
+  - 菱形继承问题
+- - '#####'
+  - 显式实现
+- - '######'
+  - LISTING 3-4 当显式实现时，接口方法在类实例上不可见。
+- - '######'
+  - LISTING 3-5 其中一些方法具有相同的签名。
+- - '######'
+  - LISTING 3-6 此类需要实现的接口将导致方法签名冲突。
+- - '######'
+  - LISTING 3-9 显式实现接口以避免冲突的方法签名。
+- - '######'
+  - LISTING 3-10 在实现具有通用方法签名的两个接口时，只有显式实现才足够。
+- - '#####'
+  - Polymorphism
+- - '#####'
+  - Adaptive design patterns
+- - '#####'
+  - The Null Object pattern
+- - '######'
+  - LISTING 3-12 Is checking against null really the responsibility of all clients?
+- - '######'
+  - LISTING 3-13 The service code should implement the Null Object pattern.
+- - '######'
+  - LISTING 3-14 The NullUser method implementations all do nothing.
+- - '#####'
+  - The IsNull property anti-pattern
+- - '######'
+  - LISTING 3-15 The IsNull property is only true for Null Object implementations.
+- - '######'
+  - LISTING 3-16 Logic based on the IsNull property makes this an anti-pattern.
+- - '######'
+  - LISTING 3-17 With proper encapsulation, the IsNull property is obsolete.
+- - '#####'
+  - Cascading Nulls
+- - '#####'
+  - The Adapter pattern
+- - '#####'
+  - 类适配器模式
+- - '#####'
+  - 对象适配器模式
+- - '#####'
+  - 策略模式
+- - '#####'
+  - 更进一步的灵活性
+- - '######'
+  - 鸭子类型
+- - '######'
+  - 使用动态语言运行时
+- - '#####'
+  - 使用 Impromptu Interface
+- - '######'
+  - LISTING 3-23 Impromptu Interface allows duck-typing in C#.
+- - '#####'
+  - CLR duck-typing support
+- - '######'
+  - LISTING 3-24 The CLR implicitly supports duck-typing for enumerable types.
+- - '######'
+  - FIGURE 3-8 Without requiring a specific interface, the compiler complains that
+    a public method is missing from the class.
+- - '######'
+  - FIGURE 3-9 The return type of the GetEnumerator method must also match an implicit
+    contract.
+- - '######'
+  - LISTING 3-25 Completing the implied interface of the DuckEnumerator class.
+- - '#####'
+  - Mixins
+- - '#####'
+  - 使用扩展方法
+- - '######'
+  - LISTING 3-26 Extension methods can enhance an existing interface.
+- - '######'
+  - LISTING 3-27 Extension methods can take parameters.
+- - '######'
+  - LISTING 3-28 Clients have access to extension methods as if they were declared
+    directly on the target interface.
+- - '#####'
+  - 使用 Re-motion Re-mix
+- - '######'
+  - LISTING 3-29 The disparate interfaces to be combined as a mixin.
+- - '######'
+  - LISTING 3-30 Instructing Re-mix how to construct TargetImplementation instances.
+- - '######'
+  - LISTING 3-31 Re-mix is in charge of creating mixins.
+- - '######'
+  - LISTING 3-32 Type-sniffing is bad practice but necessary for using mixins.
+- - '#####'
+  - Fluent interfaces
+- - '######'
+  - LISTING 3-33 Fluent interfaces allow method chaining.
+- - '######'
+  - LISTING 3-34 Implementing a simple fluent interface is easy.
+- - '#####'
+  - Conclusion
+- - '####'
+  - Chapter 4. Unit testing and refactoring
+- - '#####'
+  - After completing this chapter, you will be able to
+- - '#####'
+  - Unit testing
+- - '######'
+  - 安排、执行、断言
+- - '#####'
+  - 注意
+- - '#####'
+  - 安排前置条件
+- - '######'
+  - 清单 4-1 构造 SUT 是安排单元测试时常见的首要步骤。
+- - '#####'
+  - 执行可测试的操作
+- - '######'
+  - 清单 4-2 每个 Act 阶段都应只包含与 SUT 的一次交互。
+- - '#####'
+  - 断言预期结果
+- - '######'
+  - 清单 4-3 单元测试中已添加对预期行为的断言。
+- - '#####'
+  - 运行测试
+- - '######'
+  - 图 4-1 在 Visual Studio 集成的 MSTest 单元测试运行器中运行单元测试。
+- - '######'
+  - 清单 4-4 被测系统不需要在单元测试之前实现。
+- - '#####'
+  - 测试驱动开发
+- - '#####'
+  - 红、绿、重构！
+- - '######'
+  - 清单 4-5 当测试从红变绿时，永远只做最低限度的实现。
+- - '######'
+  - FIGURE 4-2 The test does, indeed, now pass—but is it correct?
+- - '######'
+  - LISTING 4-6 The Arrange part of this test is omitted.
+- - '######'
+  - FIGURE 4-3 The second unit test fails because of the implementation of the first
+    unit test’s expectations.
+- - '######'
+  - LISTING 4-7 Both tests now pass with this implementation, but is it correct?
+- - '######'
+  - LISTING 4-8 This test is identical to the prior version but has a different amount
+    value.
+- - '######'
+  - LISTING 4-9 All three tests pass with this implementation, but it is *still wrong!*
+- - '######'
+  - LISTING 4-10 This unit test should finally help crack the AddTransaction method.
+- - '######'
+  - LISTING 4-11 This implementation is so far the best for AddTransaction.
+- - '#####'
+  - More complex tests
+- - '######'
+  - 规范
+- - '######'
+  - 图 4-4 构成你现在将测试的子系统的依赖关系和实现。
+- - '######'
+  - 设计测试
+- - '######'
+  - LISTING 4-12 第一次尝试此新测试是不完整的。
+- - '######'
+  - 使用假对象进行测试
+- - '######'
+  - LISTING 4-13 一个非常简单的仅用于测试目的的存储库实现。
+- - '######'
+  - LISTING 4-14 账户服务类的当前状态。
+- - '######'
+  - LISTING 4-15 此测试因正确原因而失败：服务方法尚未实现。
+- - '######'
+  - 图 4-5 继续从红到绿的转换，你有你的失败测试。
+- - '######'
+  - LISTING 4-16 此 AccountService 的实现使测试通过。
+- - '#####'
+  - 使用 Mock 进行测试
+- - '######'
+  - 清单 4-17 像 Moq 这样的 mocking 框架可以让你非常轻松地创建 mock。
+- - '######'
+  - 图 4-6 使用桩（stub）进行模拟后，测试再次通过。
+- - '#####'
+  - Mock 与测试的过度指定
+- - '#####'
+  - 进一步测试
+- - '######'
+  - LISTING 4-18 No Arrange and no Assert, yet this is a valid test pattern for exceptions.
+- - '######'
+  - LISTING 4-19 Passing a null account repository into the constructor will cause
+    an exception.
+- - '######'
+  - LISTING 4-20 No expected exception attribute and no assertion!
+- - '######'
+  - LISTING 4-21 The if statement protects this method from a NullReferenceException.
+- - '######'
+  - FIGURE 4-7 Each layer defines an exception type for wrapping exceptions at lower
+    levels.
+- - '######'
+  - LISTING 4-22 The mock account is told to throw an exception when called.
+- - '######'
+  - LISTING 4-23 The try/catch block is introduced to map one exception with another.
+- - '#####'
+  - 为缺陷修复编写测试
+- - '######'
+  - LISTING 4-24 你现在正在手动断言抛出的异常。
+- - '######'
+  - LISTING 4-25 原始异常现在已被新异常正确包装。
+- - '#####'
+  - 测试设置
+- - '######'
+  - LISTING 4-26 mock 对象和 SUT 可以在设置方法中构造。
+- - '######'
+  - LISTING 4-27 此测试更短一些，也更易于阅读。
+- - '#####'
+  - 重构
+- - '#####'
+  - 更改现有代码
+- - '######'
+  - LISTING 4-28 新类除了账户余额外还跟踪奖励积分。
+- - '#####'
+  - 用常量替换“魔法数字”
+- - '######'
+  - LISTING 4-29 这段代码对不熟悉它的人来说更易读。
+- - '#####'
+  - 用多态替换条件表达式
+- - '######'
+  - LISTING 4-30 每种账户类型现在都是一个不同的类。
+- - '######'
+  - LISTING 4-31 复杂性已从 `Account` 类中移除。
+- - '######'
+  - LISTING 4-32 通过继承基类完成重构。
+- - '#####'
+  - 用工厂方法替换构造函数
+- - '#####'
+  - 用工厂类替换构造函数
+- - '######'
+  - 清单 4-35 账户工厂隐藏了创建账户实例的实现细节。
+- - '######'
+  - 清单 4-36 服务现在接收一个工厂作为构造函数参数，并使用它来创建账户。
+- - '#####'
+  - 新的账户类型
+- - '#####'
+  - 新的奖励账户
+- - '######'
+  - 清单 4-37 青铜账户作为新的账户类型被添加。
+- - '######'
+  - 清单 4-38 switch 语句添加了一个处理创建青铜账户的新 case。
+- - '######'
+  - 清单 4-39 如果账户遵循某种命名约定，这个工厂将适用于所有账户子类。
+- - '#####'
+  - 代码异味：拒绝遗赠
+- - '######'
+  - 清单 4-40 一个没有任何奖励积分计算的简单账户。
+- - '#####'
+  - 用委托替换继承
+- - '######'
+  - LISTING 4-41 奖励点数及其计算已从 Account 类中移出。
+- - '######'
+  - LISTING 4-42 奖励卡实现的示例。
+- - '######'
+  - LISTING 4-43 每个账户都包含一张奖励卡。
+- - '#####'
+  - Conclusion
+- - '#####'
+  - 用委托替换继承
+- - '######'
+  - LISTING 4-41 奖励点数及其计算已从 Account 类中移出。
+- - '######'
+  - LISTING 4-42 奖励卡实现的示例。
+- - '######'
+  - LISTING 4-43 每个账户都包含一张奖励卡。
+- - '#####'
+  - Conclusion
+- - '###'
+  - 'Part II: Writing SOLID code'
+- - '####'
+  - Chapter 5. The single responsibility principle
+- - '#####'
+  - After completing this chapter, you will be able to
+- - '#####'
+  - Problem statement
+- - '######'
+  - LISTING 5-1 An example of a class with too many responsibilities.
+- - '#####'
+  - 为了清晰而重构
+- - '######'
+  - LISTING 5-2
+- - '######'
+  - LISTING 5-3 ReadTradeData 封装了原始代码。
+- - '######'
+  - LISTING 5-4 ParseTrades 委托给其他方法以限制其复杂性。
+- - '######'
+  - '**LISTING 5-5** 所有验证代码都在一个方法中。'
+- - '######'
+  - 清单 5-6 LogMessage 方法目前只是 Console.WriteLine 的同义词。
+- - '######'
+  - 清单 5-7 从一种类型到另一种类型的映射是独立的职责。
+- - '######'
+  - 清单 5-8 有了 StoreTrades 方法，这个类中的职责就清晰了。
+- - '#####'
+  - 为抽象而重构
+- - '######'
+  - 图 5-1 TradeProcessor 现在将依赖三个新接口。
+- - '######'
+  - 清单 5-9 TradeProcessor 现在只是一个过程的封装，仅此而已。
+- - '######'
+  - '**LISTING 5-10** 上下文可以通过构造函数参数传递给类，保持接口整洁。'
+- - '######'
+  - LISTING 5-12 重构后的 SimpleTradeValidator 类。
+- - '#####'
+  - SRP 与装饰器模式
+- - '#####'
+  - 组合模式
+- - '#####'
+  - 组合应该放在哪里？
+- - '#####'
+  - 谓词装饰器
+- - '######'
+  - LISTING 5-18 断言装饰包含依赖项，客户端变得更简洁。
+- - '######'
+  - LISTING 5-19 定义专用的 IPredicate 接口使解决方案更通用。
+- - '#####'
+  - Branching decorators
+- - '######'
+  - LISTING 5-20 分支装饰器接受两个组件和一个谓词。
+- - '######'
+  - LISTING 5-22 LazyComponent 实现了一个惰性实例化的 IComponent，但 ComponentClient 不知情。
+- - '#####'
+  - Logging decorators
+- - '######'
+  - LISTING 5-23 日志代码模糊了方法意图。
+- - '######'
+  - LISTING 5-24 日志装饰器将日志代码提取出来，简化了主要实现。
+- - '#####'
+  - Profiling decorators
+- - '######'
+  - LISTING 5-25 此代码是有意且人为地缓慢的。
+- - '######'
+  - LISTING 5-26 System.Diagnostics.Stopwatch 类可以计时方法执行所需的时间。
+- - '######'
+  - LISTING 5-27 分析装饰器代码。
+- - '######'
+  - LISTING 5-28 在实现装饰器之前，必须用接口替换具体实现。
+- - '######'
+  - LISTING 5-29 LoggingStopwatch 装饰器是一个实现 IStopwatch 并进行日志记录和委托的实现。
+- - '######'
+  - LISTING 5-30 主要的 IStopwatch 实现使用 Stopwatch 类。
+- - '#####'
+  - 异步装饰器
+- - '######'
+  - LISTING 5-31 在 UI 线程上处理的命令会阻塞它，使 UI 无响应。
+- - '######'
+  - LISTING 5-32 用于 WPF 的异步装饰器，使用 Dispatcher 类。
+- - '#####'
+  - 异步装饰器的局限性
+- - '#####'
+  - 装饰属性和事件
+- - '######'
+  - LISTING 5-33 属性也可以使用装饰器模式，就像方法一样。
+- - '######'
+  - LISTING 5-34 事件也可以使用装饰器模式，就像方法一样。
+- - '#####'
+  - 使用策略模式代替 switch
+- - '######'
+  - LISTING 5-35 此方法使用 switch 语句，但策略模式会更具适应性。
+- - '######'
+  - LISTING 5-36 在 switch 语句被替换后，客户端看起来对变化更具适应性。
+- - '#####'
+  - 结论
+- - '####'
+  - 第6章 开闭原则
+- - '#####'
+  - 完成本章后，你将能够
+- - '#####'
+  - 开闭原则简介
+- - '######'
+  - Meyer 定义
+- - '######'
+  - Martin 定义
+- - '######'
+  - 错误修复
+- - '######'
+  - 客户端感知
+- - '#####'
+  - 扩展点
+- - '######'
+  - 没有扩展点的代码
+- - '######'
+  - 虚方法
+- - '######'
+  - 抽象方法
+- - '######'
+  - 接口继承
+- - '######'
+  - FIGURE 6-4 The client depends on an interface rather than a class.
+- - '#####'
+  - “Design for inheritance or prohibit it”
+- - '#####'
+  - Protected variation
+- - '######'
+  - Predicted variation
+- - '######'
+  - A stable interface
+- - '#####'
+  - Just enough adaptability
+- - '#####'
+  - Conclusion
+- - '####'
+  - 第 7 章 里氏替换原则
+- - '#####'
+  - 里氏替换原则简介
+- - '#####'
+  - 正式定义
+- - '#####'
+  - LSP 规则
+- - '#####'
+  - 契约规则
+- - '#####'
+  - 变体规则
+- - '#####'
+  - 契约
+- - '######'
+  - 图 7-1 方法签名几乎无法揭示实现的预期。
+- - '######'
+  - 注意
+- - '######'
+  - 提示
+- - '#####'
+  - 前置条件
+- - '######'
+  - LISTING 7-3 可以添加尽可能多的前置条件，以防止方法使用无效参数被调用。
+- - '#####'
+  - 后置条件
+- - '######'
+  - LISTING 7-4 方法末尾的守卫子句是后置条件，确保返回值在范围内。
+- - '#####'
+  - 数据不变量
+- - '######'
+  - LISTING 7-5 在构造函数中添加前置条件可以帮助保护数据不变量。
+- - '######'
+  - LISTING 7-6 当数据不变量是公共属性时，守卫子句移至 setter。
+- - '#####'
+  - 封装 vs. 契约
+- - '#####'
+  - Liskov 契约规则
+- - '#####'
+  - 前置条件不能被加强
+- - '######'
+  - LISTING 7-8 当前置条件被加强时，客户端无法可靠地在需要 ShippingStrategy 的地方使用 WorldWideShippingStrategy。
+- - '######'
+  - LISTING 7-9 这些重构后的单元测试分别针对两个运送策略类。
+- - '#####'
+  - 后置条件不能被削弱
+- - '######'
+  - LISTING 7-10 新实现需要削弱后置条件。
+- - '######'
+  - LISTING 7-11 此单元测试显示了原始单元测试，当策略为 WorldWideShippingStrategy 时会失败。
+- - '#####'
+  - 不变式必须得到维护
+- - '######'
+  - LISTING 7-12 子类破坏了超类的不变式，违反了 LSP。
+- - '######'
+  - LISTING 7-13 基类仅允许子类通过受保护的属性 setter 访问字段，从而正确维护不变式。
+- - '######'
+  - LISTING 7-14 With the invariant maintained, this unit test passes.
+- - '#####'
+  - Code contracts
+- - '#####'
+  - Preconditions
+- - '######'
+  - Note
+- - '######'
+  - LISTING 7-15 The System.Diagnostics.Contracts namespace can provide guard clauses
+    to methods.
+- - '######'
+  - FIGURE 7-2 Code contracts must be configured before use.
+- - '######'
+  - FIGURE 7-3 The property pages for code contracts contain a lot of settings.
+- - '######'
+  - LISTING 7-16 This version of the Requires method accepts the type of the exception
+    to be thrown.
+- - '#####'
+  - Postconditions
+- - '#####'
+  - 数据不变式
+- - '######'
+  - 清单7-18 数据不变式可以通过专门为此目的而设计的方法来保护。
+- - '#####'
+  - 接口契约
+- - '######'
+  - 清单7-19 一个专用的类可以为接口的每个实现定义前置条件、后置条件和不变式。
+- - '#####'
+  - Covariance and contravariance
+- - '#####'
+  - Definitions
+- - '#####'
+  - Covariance
+- - '######'
+  - LISTING 7-20 In this small domain, a User is a specialization of the Entity type.
+- - '######'
+  - LISTING 7-21 Without involving generics, all inheritance in C# is invariant.
+- - '######'
+  - LISTING 7-22 Make base classes generic to take advantage of covariance and allow
+    subclasses to override the return type.
+- - '#####'
+  - Contravariance
+- - '######'
+  - 图 7-6 由于泛型参数的逆变，基类/子类关系被反转。
+- - '######'
+  - 列表 7-23 IEqualityComparer 接口允许定义像 EntityEqualityComparer 这样的函数对象。
+- - '######'
+  - 列表 7-24 逆变反转类层次结构，允许在请求更具体的比较器时使用更通用的比较器。
+- - '#####'
+  - 不变性
+- - '######'
+  - 列表 7-25 某些泛型类型既不是协变的也不是逆变的。这使它们是不变的。
+- - '######'
+  - 列表 7-26 IDictionary 接口的任何泛型参数都没有标记为 in 或 out。
+- - '#####'
+  - 里斯科夫类型系统规则
+- - '#####'
+  - 不允许抛出新的异常
+- - '######'
+  - 列表 7-27 这两个异常都是 Exception 类型，但彼此之间没有继承关系。
+- - '######'
+  - 清单 7-28 接口的两种不同实现可能会抛出不同类型的异常。
+- - '######'
+  - 清单 7-29 此单元测试将会失败，因为 UserNotFoundException 不能赋给 EntityNotFoundException。
+- - '#####'
+  - 小结
+- - '####'
+  - 第 8 章 接口隔离
+- - '#####'
+  - 一个隔离示例
+- - '#####'
+  - 一个简单的 CRUD 接口
+- - '######'
+  - 图 8-1 隔离之前的初始接口。
+- - '######'
+  - 清单 8-1 用于对实体进行 CRUD 操作的简单接口。
+- - '######'
+  - 注意
+- - '######'
+  - LISTING 8-2 Some decorators apply to all methods.
+- - '######'
+  - LISTING 8-3 If a decorator targets part of an interface, segregation is an option.
+- - '######'
+  - LISTING 8-4 The ICreateReadUpdateDelete interface is split in two.
+- - '######'
+  - LISTING 8-5 The confirmation decorator is applied only to the interface to which
+    it pertains.
+- - '######'
+  - LISTING 8-6 A very simple interface for asking the user to confirm something.
+- - '#####'
+  - Caching
+- - '######'
+  - LISTING 8-7 The caching decorator includes redundant, pass-through methods.
+- - '######'
+  - LISTING 8-8 The IRead interface is targeted specifically by the ReadCaching decorator.
+- - '######'
+  - '**LISTING 8-10** ISave implementations will either create or update an entity,
+    as appropriate.'
+- - '######'
+  - '**LISTING 8-11** Two ISave interfaces are used by the audit decorator.'
+- - '#####'
+  - Multiple interface decoration
+- - '#####'
+  - Client construction
+- - '#####'
+  - Multiple implementations, multiple instances
+- - '######'
+  - LISTING 8-16 An entity-generic version of the controller class requires an entity-generic
+    version of each CRUD interface.
+- - '#####'
+  - Single implementation, single instance
+- - '#####'
+  - The Interface Soup anti-pattern
+- - '#####'
+  - Splitting interfaces
+- - '#####'
+  - Client need
+- - '######'
+  - LISTING 8-22 An implementation that loads settings from the configuration file.
+- - '######'
+  - LISTING 8-23 The clients of the interface use the property for different purposes.
+- - '######'
+  - 'LISTING 8-24 The interface is split into two parts: one for reading the theme,
+    and one for writing it.'
+- - '######'
+  - LISTING 8-25 Each of the two controllers now depends only on the interface that
+    it requires.
+- - '######'
+  - LISTING 8-26 The UsersSettingsConfig class now implements both interfaces, but
+    clients are unaware.
+- - '######'
+  - LISTING 8-27 Now using methods, the writer inherits from the reader.
+- - '######'
+  - LISTING 8-28 The writing controller has access to both the getter and setter through
+    one interface.
+- - '#####'
+  - Authorization
+- - '######'
+  - LISTING 8-29 This interface only contains operations that anonymous users can
+    perform.
+- - '######'
+  - LISTING 8-30 After logging in, the user will have access to privileged operations.
+- - '#####'
+  - 架构需求
+- - '######'
+  - LISTING 8-31 此持久层接口同时包含命令和查询。
+- - '######'
+  - LISTING 8-32 当命令和查询被不对称处理时，实现变得混乱。
+- - '######'
+  - LISTING 8-35 命令实现仅依赖于 NHibernate。
+- - '#####'
+  - 单方法接口
+- - '######'
+  - LISTING 8-36 ITask 是可能的最简单接口。
+- - '######'
+  - LISTING 8-37 IAction 接口添加了一个上下文参数。
+- - '######'
+  - LISTING 8-38 IFunction 接口具有返回值。
+- - '######'
+  - LISTING 8-39 IPredicate 是一个返回布尔值的函数。
+- - '#####'
+  - 结论
+- - '####'
+  - 第9章 依赖注入
+- - '#####'
+  - 谦逊的开始
+- - '######'
+  - 列表 9-1 此控制器不使用依赖注入。
+- - '######'
+  - 注意
+- - '#####'
+  - 任务列表应用程序
+- - '######'
+  - 图 9-2 三层任务列表应用程序的 UML 类图，带包。
+- - '######'
+  - 列表 9-3 TaskService 负责检索任务列表数据。
+- - '#####'
+  - 构建对象图
+- - '#####'
+  - 贫穷人的依赖注入
+- - '######'
+  - 清单 9-4 贫穷人的 DI 冗长但灵活。
+- - '######'
+  - 图 9-3 构成任务列表应用程序的接口、实现及其依赖项。
+- - '#####'
+  - 方法注入
+- - '######'
+  - 清单 9-5 现在，任务服务接受作为方法参数而非构造函数参数传入的设置。
+- - '#####'
+  - 控制反转
+- - '#####'
+  - The Register, Resolve, Release pattern
+- - '######'
+  - LISTING 9-9 The startup event handler delegates much of its work to a configuration
+    class.
+- - '######'
+  - LISTING 9-10 The configuration class has methods for all three phases of the Register,
+    Resolve, Release pattern.
+- - '#####'
+  - Imperative vs. declarative registration
+- - '######'
+  - LISTING 9-11 A section in the application configuration file can describe how
+    interfaces should map to implementations.
+- - '######'
+  - LISTING 9-12 现在注册阶段涉及将配置节传递给容器。
+- - '#####'
+  - Object lifetime
+- - '######'
+  - LISTING 9-13 一些资源的生命周期必须仔细管理。
+- - '######'
+  - LISTING 9-14 服务实现了 IDisposable 以便可以释放连接。
+- - '#####'
+  - 连接工厂
+- - '######'
+  - LISTING 9-15 连接工厂接口非常简单。
+- - '######'
+  - LISTING 9-16 依赖注入可以与工厂模式协同工作。
+- - '#####'
+  - 负责所有者模式
+- - '######'
+  - LISTING 9-17 负责所有者模式可确保资源得到适当释放。
+- - '#####'
+  - 工厂隔离模式
+- - '######'
+  - LISTING 9-18 使用工厂隔离模式的客户端示例。
+- - '#####'
+  - 超越简单的注入
+- - '#####'
+  - Service Locator 反模式
+- - '#####'
+  - 注入容器
+- - '#####'
+  - 非法注入
+- - '#####'
+  - 组合根
+- - '#####'
+  - 解析根
+- - '#####'
+  - ASP.NET MVC
+- - '######'
+  - LISTING 9-26 此 TaskController 是一个解析根，并且其构造函数需要依赖项。
+- - '######'
+  - LISTING 9-27 MVC 提供了许多扩展点。提供自定义控制器工厂可促进 DI。
+- - '#####'
+  - Windows Forms
+- - '######'
+  - LISTING 9-28 Program 类的 Main 方法是应用程序的入口点，并且是一个很好的组合根。
+- - '######'
+  - LISTING 9-29 此视图使用数据绑定将检索到的任务列表设置到数据网格控件。
+- - '#####'
+  - Convention over configuration
+- - '######'
+  - LISTING 9-30 通过使用约定，注册阶段可以大大简化。
+- - '######'
+  - 清单 9-31 约定可以根据你的规格进行定制。
+- - '#####'
+  - 优点与缺点
+- - '#####'
+  - 结论
+- - '###'
+  - 第三部分：自适应示例
+- - '####'
+  - 第 10 章 自适应示例：简介
+- - '#####'
+  - 在本章中，你将
+- - '#####'
+  - Trey Research
+- - '#####'
+  - 团队
+- - '#####'
+  - 产品负责人
+- - '#####'
+  - Scrum master
+- - '#####'
+  - Developers
+- - '#####'
+  - The Hype Cycle
+- - '#####'
+  - Test analyst
+- - '#####'
+  - The product
+- - '#####'
+  - Initial backlog
+- - '#####'
+  - Finding stories in prose
+- - '#####'
+  - 故事点估算
+- - '#####'
+  - 摘要
+- - '####'
+  - 第11章 自适应示例：冲刺1
+- - '#####'
+  - 本章你将
+- - '#####'
+  - 计划
+- - '#####'
+  - “我想要创建房间来对对话进行分类。”
+- - '#####'
+  - 控制器
+- - '#####'
+  - 控制器单元测试
+- - '######'
+  - LISTING 11-3 Unit tests for the GET request of the Create action.
+- - '######'
+  - LISTING 11-4 Unit tests for the POST request of the Create action.
+- - '#####'
+  - The room repository
+- - '######'
+  - LISTING 11-5 The AdoNetRoomRepository allows Room data to be stored in any ADO.NET-compatible
+    database.
+- - '#####'
+  - Factory Isolation pattern misapplied
+- - '######'
+  - LISTING 11-6 The isolation factory aims to manage the lifetime of a database connection.
+- - '#####'
+  - Refactoring
+- - '######'
+  - LISTING 11-7 The refactored room repository uses the DbProviderFactory directly.
+- - '######'
+  - LISTING 11-8 用于 DbProviderFactory 的 Unity Inversion of Control (IoC) 注册。
+- - '#####'
+  - “我想查看代表对话的房间列表。”
+- - '######'
+  - LISTING 11-9 RoomController 有一个用于列出房间的新操作。
+- - '#####'
+  - 重构
+- - '######'
+  - LISTING 11-10 控制器已重构为依赖于 reader 和 writer 接口。
+- - '######'
+  - LISTING 11-11 一个更接近原始控制器代码的服务。
+- - '#####'
+  - “我想查看发送到某个房间的消息。”
+- - '######'
+  - Note
+- - '######'
+  - LISTING 11-12 The Messages method retrieves all messages associated with a room,
+    by ID.
+- - '######'
+  - LISTING 11-13 The class that maps records to viewmodels now contains a method
+    for retrieving room messages.
+- - '#####'
+  - “我想向其他房间成员发送纯文本消息。”
+- - '######'
+  - LISTING 11-14 The AddMessage method on the RoomController class.
+- - '######'
+  - LISTING 11-15 The AddMessage method on the RoomViewModelWriter class.
+- - '#####'
+  - Sprint demo
+- - '#####'
+  - Proseware 的首次演示
+- - '#####'
+  - 冲刺回顾
+- - '######'
+  - 哪些方面进展顺利？
+- - '######'
+  - 哪些方面进展不佳？
+- - '######'
+  - 需要改变的事项？
+- - '######'
+  - 值得保留的事情？
+- - '######'
+  - 意外之事？
+- - '#####'
+  - 总结
+- - '####'
+  - 第12章 自适应示例：冲刺2
+- - '#####'
+  - 在本章中，你将
+- - '#####'
+  - 规划
+- - '#####'
+  - “我希望发送能够正确格式化的markdown。”
+- - '######'
+  - LISTING 12-1 The markdown decorator transforms user-entered markdown to HTML.
+- - '######'
+  - LISTING 12-2 The unit tests for the markdown transform decorator.
+- - '#####'
+  - “我想过滤消息内容使其合适。”
+- - '######'
+  - LISTING 12-3 A custom validation attribute is perfect for the content filter.
+- - '######'
+  - LISTING 12-4 为房间名称和消息文本上的验证规则添加单元测试。
+- - '#####'
+  - “我想同时为数百名用户提供服务。”
+- - '######'
+  - LISTING 12-5 MongoDB 数据持久层 的实现。
+- - '#####'
+  - Sprint demo
+- - '#####'
+  - 冲刺回顾
+- - '######'
+  - 哪些方面进展顺利？
+- - '######'
+  - 哪些方面进展不顺利？
+- - '######'
+  - 需要改变的事项？
+- - '######'
+  - 需要保留的事项？
+- - '######'
+  - 意外情况？
+- - '#####'
+  - 总结
+- - '###'
+  - 附录 A. 自适应工具
+- - '####'
+  - 使用 Git 进行源代码控制
+- - '#####'
+  - Git lessons
+- - '#####'
+  - Cloning a repository
+- - '#####'
+  - Switching to a different branch
+- - '#####'
+  - Updating local branches
+- - '#####'
+  - Continuous integration
+- - '####'
+  - 索引
+- - '#####'
+  - A
+- - '#####'
+  - B
+- - '#####'
+  - C
+- - '#####'
+  - D
+- - '#####'
+  - G
+- - '#####'
+  - H
+- - '#####'
+  - M
+- - '#####'
+  - N
+- - '#####'
+  - O
+- - '#####'
+  - S
+- - '#####'
+  - S
+- - '#####'
+  - T
+- - '#####'
+  - U
+- - '#####'
+  - V
+- - '#####'
+  - W
+- - '#####'
+  - X
+- - '####'
+  - 关于作者
+- - '####'
+  - 免费电子书
+- - '####'
+  - 既然你已经读完了这本书……
+- - '####'
+  - 请告诉我们你的想法！
+- - '####'
+  - 通过 C# 实现自适应代码
+- - '#####'
+  - 使用设计模式和 SOLID 原则进行敏捷编码
+- - '#####'
+  - 连接理论与实践的专家指导
+- - '#####'
+  - 关于本书
+- - '#####'
+  - 关于作者
+- - '####'
+  - 代码片段

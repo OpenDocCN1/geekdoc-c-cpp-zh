@@ -1,0 +1,39 @@
+# Windows Forms
+
+In a Windows Forms application, bootstrapping dependency injection is more like that of a WPF application than an ASP.NET MVC application. The resolution root of both is the view, with the presenter or controller being passed in as a constructor parameter and the object graph proceeding from there.
+
+Listing 9-28 shows the composition root of the Windows Forms front end for the Task List application. It is located in the Program class—in the Main method—which is the entry point of the application. As usual, it is important to try to keep the registration code as close to the entry point as possible.
+
+# LISTING 9-28 The Program class’s Main method is the entry point to the application and makes a good composition root.
+
+Click here to view code image
+
+```
+static class Program
+{
+    public static UnityContainer Container;
+
+    [STAThread]
+    static void Main()
+    {
+        AutoMapper.Mapper.CreateMap<TaskDto, TaskViewModel>();
+
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+
+        Container = new UnityContainer();
+        Container.RegisterType<ISettings, ApplicationSettings>();
+        Container.RegisterType<IObjectMapper, MapperAutoMapper>();
+        Container.RegisterType<ITaskService, TaskServiceAdo>();
+        Container.RegisterType<TaskListController>();
+        Container.RegisterType<TaskListView>();
+
+        var mainForm = Container.Resolve<TaskListView>();
+        Application.Run(mainForm);
+    }
+}
+```
+
+Note that, in this case, you are able to reuse not only the service implementations, but also the TaskListViewController because it doesn’t (yet) depend on anything wholly specific to WPF. Of course, in the future, it probably will, so it might be necessary to create a controller or presenter specifically to support the Windows Forms application.
+
+The view in this application is very simple, in that the code-behind merely accepts the controller
