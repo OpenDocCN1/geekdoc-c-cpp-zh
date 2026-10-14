@@ -1,0 +1,2428 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Analyzing Memory Ownership Patterns in C Libraries *
+
+
+    Tristan Ravitch
+
+    Department of Computer Sciences
+
+    University of Wisconsin–Madison
+
+    travitch@cs.wisc.edu
+
+
+    Ben Liblit
+
+    Department of Computer Sciences
+
+    University of Wisconsin–Madison
+
+    liblit@cs.wisc.edu
+
+
+    # Abstract
+
+
+    Programs written in multiple languages are known as polyglot programs. In part
+    due to the proliferation of new and productive high-level programming languages,
+    these programs are becoming more common in environments that must interoperate
+    with existing systems. Polyglot programs must manage resource lifetimes across
+    language boundaries. Resource lifetime management bugs can lead to leaks and crashes,
+    which are more difficult to debug in polyglot programs than monoglot programs.
+
+
+    We present analyses to automatically infer the ownership semantics of C libraries.
+    The results of these analyses can be used to generate bindings to C libraries
+    that intelligently manage resources, to check the correctness of polyglot programs,
+    and to document the interfaces of C libraries. While these analyses are unsound
+    and incomplete, we demonstrate that they significantly reduce the manual annotation
+    burden for a suite of fifteen open source libraries.
+
+
+    Categories and Subject Descriptors D.2.11 [Software Engineering]: Software Architectures—Languages;
+    D.2.12 [Software Engineering]: Interoperability; D.2.13 [Software Engineering]:
+    Reusable Software—Reusable libraries; D.3.2 [Programming Languages]: Language
+    Classifications—C, Python; D.3.3 [Programming Languages]: Language Constructs
+    and Features—Dynamic storage management, Procedures, functions, and subroutines;
+    D.3.4 [Programming Languages]: Processors—Code generation, Memory management;
+    E.1 [Data Structures]: Arrays, Records; F.3.2 [Logics and Meanings of Programs]:
+    Semantics of Programming Languages—Program analysis
+
+
+    Keywords resource lifetime management; memory allocation; allocators; finalizers;
+    ownership transfer; escape analysis; sharing; reference counting; foreign function
+    interfaces (FFIs); bindings; libraries; dataflow analysis; interprocedural static
+    program analysis; polyglot programming; interoperability
+
+
+    ```
+
+    char *strdup(const char *s);
+
+    char *asctime(const struct tm *tm);
+
+    ```
+
+
+    Figure 1. C function signatures
+
+
+    # 1. Introduction
+
+
+    High-level programming languages have been gaining acceptance in many application
+    domains where unsafe low-level languages like C and C++ were once the only option.
+    For example, Python and JavaScript have a significant presence in the desktop
+    application space. Additionally, Python has gained acceptance in the scientific
+    computing community [14]. Unfortunately, these high-level languages do not exist
+    in a vacuum. They depend on code written in unsafe lower-level languages for,
+    among other reasons, performance and interoperability. Some performance-sensitive
+    pieces of code simply cannot be rewritten in the desired high-level language.
+    In other cases, it is possible but not economically feasible to rewrite working
+    and tested code, so the original implementation must be used from the high-level
+    language.
+
+
+    Production-quality high-level languages support calling functions from libraries
+    written in other languages through foreign function interfaces (FFIs). High-level
+    language programs using FFIs execute code from more than one language, making
+    them polyglot programs. A critical challenge in writing correct polyglot programs
+    lies in managing the flow of resources across language boundaries. Programs lacking
+    a precise cross-language ownership semantics are vulnerable to resource leaks,
+    threatening reliability. Unclear ownership semantics can also lead to crashes
+    induced by use-after-free or double-free errors. Both of these types of errors
+    are more difficult to debug in polyglot programs, as common debugging tools target
+    programs written in a single language.
+
+
+    Most low-level languages like C do not provide any means for describing, much
+    less checking, object ownership semantics. Instead, this critical information
+    must be conveyed through documentation or recovered through static analysis. Library
+    interfaces defined in C typically refer to dynamically-allocated resources by
+    their address (a pointer). Unfortunately one cannot simply call free on all pointers
+    obtained from a low-level language to release the associated resources, or finalize
+    them. This approach fails because, while C functions expose most resources through
+    pointers, they use pointers for many other purposes as well.
+
+
+    Consider the two C function declarations in figure 1. Each returns a char*. The
+    value returned by strdup must be freed to prevent memory leaks, but freeing the
+    value returned by asctime will cause a crash. The caller owns the result of strdup
+    but not the result of asctime. Furthermore, some dynamically-allocated resources
+    may require specialized finalizer functions instead of generic free. Consider
+    fopen and fclose: calling free on the result of fopen is a partial resource leak.
+    Thus, functions returning managed resources must be identified along with their
+    associated resource finalizers.'
+  - "[PAGE 1]\n\n```\ntypedef struct pvl_elem_t{\n  void *data;\n  struct pvl_elem_t\
+    \ *next;\n} pvl_elem;\n\ntypedef struct pvl_list_t{\n  pvl_elem *head;\n} pvl_list;\n\
+    \ntypedef struct icalcomponent {\n  pvl_list *components;\n  struct icalcomponent*\
+    \ parent;\n} icalcomponent;\n\nvoid pvl_push(pvl_list *lst, void *d) {\n  pvl_elem\
+    \ *e = calloc(1, sizeof(pvl_elem));\n  e->next = lst->head;\n  lst->head = e;\n\
+    \  e->data = d;\n}\n\nvoid* pvl_pop(pvl_list *lst) {\n  if(lst->head == NULL)\
+    \ return NULL;\n  list_elem *e = lst->head;\n  void *ret = e->data;\n  lst->head\
+    \ = e->next;\n  free(e);\n  return ret;\n}\n```\n\n```\nstruct icalcomponent*\
+    \ icalcomponent_new() {\n  icalcomponent* comp = malloc(sizeof(icalcomponent));\n\
+    \  if (!comp) return NULL;\n  comp->components = newlist();\n  comp->parent =\
+    \ NULL;\n  return comp;\n}\n\nvoid icalcomponent_free(icalcomponent* c) {\n  icalcomponent*\
+    \ comp;\n  if (!c) return;\n  while ((comp=pvl_pop(c->components)) != NULL) {\n\
+    \    icalcomponent_remove_component(c,comp);\n    icalcomponent_free(comp);\n\
+    \  }\n  pvl_free(c->components);\n  free(c);\n}\n\nvoid icalcomponent_remove_component(\n\
+    \  icalcomponent *component, icalcomponent *child);\n\nvoid icalcomponent_add_component(icalcomponent\
+    \ *c,\n  icalcomponent *child) {\n  pvl_push(c->components, child);\n}\n\nvoid\
+    \ icalcomponent_set_parent(icalcomponent *c,\n  icalcomponent* parent) {\n  c->parent\
+    \ = parent;\n}\n```\n\n# Figure 2. Definitions for figure 3\n\n# Figure 3. Example\
+    \ from ical\n\nResource management semantics are unclear in C even without the\
+    \ additional complexities of polyglot programming.\nWe describe our ownership\
+    \ model for C resources and present algorithms to infer the ownership semantics\
+    \ of C libraries. These semantics are presented to users and tools through inferred\
+    \ annotations on library functions. While these analyses are unsound and incomplete,\
+    \ they are nonetheless useful. As discussed in section 8, our algorithms significantly\
+    \ reduce the manual annotation burden required to create library bindings. With\
+    \ review by a programmer familiar with the library being analyzed, these inferred\
+    \ annotations are sufficient to generate idiomatic FFI library bindings for high-level\
+    \ languages. The resulting bindings will be idiomatic in that they automatically\
+    \ manage the flow of resources between languages and clean them up when they become\
+    \ garbage. They also serve as an aid in program understanding and can augment\
+    \ documentation. Our primary contributions over prior work are: (1) two methods\
+    \ for identifying the ownership transfers of objects in C libraries (sections\
+    \ 4 and 5), (2) a method for inferring contracts that must be obeyed for function\
+    \ pointers (section 6), and (3) an algorithm for identifying reference-counted\
+    \ resources (section 7).\n\n# 2. Resource Ownership Model\n\nWe adopt the ownership\
+    \ model of Heine and Lam [6] whereby each object is pointed to by exactly one\
+    \ owning reference. The object must eventually either be finalized through the\
+    \ owning reference, or ownership must be transferred to another owning reference.\
+    \ When a pointer is finalized, the resources held by the object it points to are\
+    \ safely released. Non-owning references to any object can be created at any time\
+    \ and are valid until the object is finalized. In the Heine and Lam model, pointer-typed\
+    \ members of C++ objects are either always owning references or are never owning\
+    \ references (at public interface boundaries). We extend this model to pointer-typed\
+    \ fields of some C structures for all functions.\n\ninterface boundaries). We\
+    \ extend this model to pointer-typed fields of some C structures for all functions.\n\
+    \n# 2.1 Memory Ownership in C\n\nA memory allocator is an abstraction over the\
+    \ most prevalent resource in most programs: dynamically allocated memory. The\
+    \ standard C library’s allocator and finalizer functions are malloc and free,\
+    \ respectively. When the memory allocator owns a piece of memory (i.e., the memory\
+    \ is unallocated), it is an error for any other part of the program to use it.\
+    \ When the allocator function is called, it completely transfers ownership of\
+    \ the memory to the caller via the returned owning reference.\n\nComplex resources\
+    \ may own other resources through owned pointer fields. Finalizers for these complex\
+    \ resources must finalize their owned resources to obey the ownership model and\
+    \ to avoid leaks, as in figures 2 and 3. The icalcomponent type is a resource\
+    \ allocated with icalcomponent_new. It owns a component list, along with each\
+    \ of the components in the list of children. The finalizer for this type, icalcomponent_free,\
+    \ finalizes the list of children as well as the child components before finalizing\
+    \ the component itself with a call to free on line 23.\n\nOwnership extends beyond\
+    \ just allocators and finalizers. For example, the function icalcomponent_remove_component\
+    \ removes a child component from a component without finalizing it."
+  md: "\n## Analyzing Memory Ownership Patterns in C Libraries *\n\nTristan Ravitch\n\
+    Department of Computer Sciences\nUniversity of Wisconsin–Madison\ntravitch@cs.wisc.edu\n\
+    \nBen Liblit\nDepartment of Computer Sciences\nUniversity of Wisconsin–Madison\n\
+    liblit@cs.wisc.edu\n\n## Abstract\n\nPrograms written in multiple languages are\
+    \ known as polyglot programs. In part due to the proliferation of new and productive\
+    \ high-level programming languages, these programs are becoming more common in\
+    \ environments that must interoperate with existing systems. Polyglot programs\
+    \ must manage resource lifetimes across language boundaries. Resource lifetime\
+    \ management bugs can lead to leaks and crashes, which are more difficult to debug\
+    \ in polyglot programs than monoglot programs.\n\nWe present analyses to automatically\
+    \ infer the ownership semantics of C libraries. The results of these analyses\
+    \ can be used to generate bindings to C libraries that intelligently manage resources,\
+    \ to check the correctness of polyglot programs, and to document the interfaces\
+    \ of C libraries. While these analyses are unsound and incomplete, we demonstrate\
+    \ that they significantly reduce the manual annotation burden for a suite of fifteen\
+    \ open source libraries.\n\nCategories and Subject Descriptors D.2.11 [Software\
+    \ Engineering]: Software Architectures—Languages; D.2.12 [Software Engineering]:\
+    \ Interoperability; D.2.13 [Software Engineering]: Reusable Software—Reusable\
+    \ libraries; D.3.2 [Programming Languages]: Language Classifications—C, Python;\
+    \ D.3.3 [Programming Languages]: Language Constructs and Features—Dynamic storage\
+    \ management, Procedures, functions, and subroutines; D.3.4 [Programming Languages]:\
+    \ Processors—Code generation, Memory management; E.1 [Data Structures]: Arrays,\
+    \ Records; F.3.2 [Logics and Meanings of Programs]: Semantics of Programming Languages—Program\
+    \ analysis\n\nKeywords resource lifetime management; memory allocation; allocators;\
+    \ finalizers; ownership transfer; escape analysis; sharing; reference counting;\
+    \ foreign function interfaces (FFIs); bindings; libraries; dataflow analysis;\
+    \ interprocedural static program analysis; polyglot programming; interoperability\n\
+    \n```c\nchar *strdup(const char *s);\nchar *asctime(const struct tm *tm);\n```\n\
+    \nFigure 1. C function signatures\n\n## 1. Introduction\n\nHigh-level programming\
+    \ languages have been gaining acceptance in many application domains where unsafe\
+    \ low-level languages like C and C++ were once the only option. For example, Python\
+    \ and JavaScript have a significant presence in the desktop application space.\
+    \ Additionally, Python has gained acceptance in the scientific computing community\
+    \ [14]. Unfortunately, these high-level languages do not exist in a vacuum. They\
+    \ depend on code written in unsafe lower-level languages for, among other reasons,\
+    \ performance and interoperability. Some performance-sensitive pieces of code\
+    \ simply cannot be rewritten in the desired high-level language. In other cases,\
+    \ it is possible but not economically feasible to rewrite working and tested code,\
+    \ so the original implementation must be used from the high-level language.\n\n\
+    Production-quality high-level languages support calling functions from libraries\
+    \ written in other languages through foreign function interfaces (FFIs). High-level\
+    \ language programs using FFIs execute code from more than one language, making\
+    \ them polyglot programs. A critical challenge in writing correct polyglot programs\
+    \ lies in managing the flow of resources across language boundaries. Programs\
+    \ lacking a precise cross-language ownership semantics are vulnerable to resource\
+    \ leaks, threatening reliability. Unclear ownership semantics can also lead to\
+    \ crashes induced by use-after-free or double-free errors. Both of these types\
+    \ of errors are more difficult to debug in polyglot programs, as common debugging\
+    \ tools target programs written in a single language.\n\nMost low-level languages\
+    \ like C do not provide any means for describing, much less checking, object ownership\
+    \ semantics. Instead, this critical information must be conveyed through documentation\
+    \ or recovered through static analysis. Library interfaces defined in C typically\
+    \ refer to dynamically-allocated resources by their address (a pointer). Unfortunately\
+    \ one cannot simply call free on all pointers obtained from a low-level language\
+    \ to release the associated resources, or finalize them. This approach fails because,\
+    \ while C functions expose most resources through pointers, they use pointers\
+    \ for many other purposes as well.\n\nConsider the two C function declarations\
+    \ in figure 1. Each returns a char*. The value returned by strdup must be freed\
+    \ to prevent memory leaks, but freeing the value returned by asctime will cause\
+    \ a crash. The caller owns the result of strdup but not the result of asctime.\
+    \ Furthermore, some dynamically-allocated resources may require specialized finalizer\
+    \ functions instead of generic free. Consider fopen and fclose: calling free on\
+    \ the result of fopen is a partial resource leak. Thus, functions returning managed\
+    \ resources must be identified along with their associated resource finalizers.\n\
+    \n```c\ntypedef struct pvl_elem_t{\n  void *data;\n  struct pvl_elem_t *next;\n\
+    } pvl_elem;\n\ntypedef struct pvl_list_t{\n  pvl_elem *head;\n} pvl_list;\n\n\
+    typedef struct icalcomponent {\n  pvl_list *components;\n  struct icalcomponent*\
+    \ parent;\n} icalcomponent;\n\nvoid pvl_push(pvl_list *lst, void *d) {\n  pvl_elem\
+    \ *e = calloc(1, sizeof(pvl_elem));\n  e->next = lst->head;\n  lst->head = e;\n\
+    \  e->data = d;\n}\n\nvoid* pvl_pop(pvl_list *lst) {\n  if(lst->head == NULL)\
+    \ return NULL;\n  pvl_elem *e = lst->head;\n  void *ret = e->data;\n  lst->head\
+    \ = e->next;\n  free(e);\n  return ret;\n}\n```\n\nFigure 2. Definitions for figure\
+    \ 3\n\n```c\nstruct icalcomponent* icalcomponent_new() {\n  icalcomponent* comp\
+    \ = malloc(sizeof(icalcomponent));\n  if (!comp) return NULL;\n  comp->components\
+    \ = newlist();\n  comp->parent = NULL;\n  return comp;\n}\n\nvoid icalcomponent_free(icalcomponent*\
+    \ c) {\n  icalcomponent* comp;\n  if (!c) return;\n  while ((comp=pvl_pop(c->components))\
+    \ != NULL) {\n    icalcomponent_remove_component(c,comp);\n    icalcomponent_free(comp);\n\
+    \  }\n  pvl_free(c->components);\n  free(c);\n}\n\nvoid icalcomponent_remove_component(\n\
+    \  icalcomponent *component, icalcomponent *child);\n\nvoid icalcomponent_add_component(icalcomponent\
+    \ *c,\n  icalcomponent *child) {\n  pvl_push(c->components, child);\n}\n\nvoid\
+    \ icalcomponent_set_parent(icalcomponent *c,\n  icalcomponent* parent) {\n  c->parent\
+    \ = parent;\n}\n```\n\nFigure 3. Example from ical\n\nResource management semantics\
+    \ are unclear in C even without the additional complexities of polyglot programming.\
+    \ We describe our ownership model for C resources and present algorithms to infer\
+    \ the ownership semantics of C libraries. These semantics are presented to users\
+    \ and tools through inferred annotations on library functions. While these analyses\
+    \ are unsound and incomplete, they are nonetheless useful. As discussed in section\
+    \ 8, our algorithms significantly reduce the manual annotation burden required\
+    \ to create library bindings. With review by a programmer familiar with the library\
+    \ being analyzed, these inferred annotations are sufficient to generate idiomatic\
+    \ FFI library bindings for high-level languages. The resulting bindings will be\
+    \ idiomatic in that they automatically manage the flow of resources between languages\
+    \ and clean them up when they become garbage. They also serve as an aid in program\
+    \ understanding and can augment documentation. Our primary contributions over\
+    \ prior work are: (1) two methods for identifying the ownership transfers of objects\
+    \ in C libraries (sections 4 and 5), (2) a method for inferring contracts that\
+    \ must be obeyed for function pointers (section 6), and (3) an algorithm for identifying\
+    \ reference-counted resources (section 7).\n\n## 2. Resource Ownership Model\n\
+    \nWe adopt the ownership model of Heine and Lam [6] whereby each object is pointed\
+    \ to by exactly one owning reference. The object must eventually either be finalized\
+    \ through the owning reference, or ownership must be transferred to another owning\
+    \ reference. When a pointer is finalized, the resources held by the object it\
+    \ points to are safely released. Non-owning references to any object can be created\
+    \ at any time and are valid until the object is finalized. In the Heine and Lam\
+    \ model, pointer-typed members of C++ objects are either always owning references\
+    \ or are never owning references (at public interface boundaries). We extend this\
+    \ model to pointer-typed fields of some C structures for all functions.\n\n###\
+    \ 2.1 Memory Ownership in C\n\nA memory allocator is an abstraction over the most\
+    \ prevalent resource in most programs: dynamically allocated memory. The standard\
+    \ C library’s allocator and finalizer functions are malloc and free, respectively.\
+    \ When the memory allocator owns a piece of memory (i.e., the memory is unallocated),\
+    \ it is an error for any other part of the program to use it. When the allocator\
+    \ function is called, it completely transfers ownership of the memory to the caller\
+    \ via the returned owning reference.\n\nComplex resources may own other resources\
+    \ through owned pointer fields. Finalizers for these complex resources must finalize\
+    \ their owned resources to obey the ownership model and to avoid leaks, as in\
+    \ figures 2 and 3. The icalcomponent type is a resource allocated with icalcomponent_new.\
+    \ It owns a component list, along with each of the components in the list of children.\
+    \ The finalizer for this type, icalcomponent_free, finalizes the list of children\
+    \ as well as the child components before finalizing the component itself with\
+    \ a call to free on line 23.\n\nOwnership extends beyond just allocators and finalizers.\
+    \ For example, the function icalcomponent_remove_component removes a child component\
+    \ from a component without finalizing it.\n"
+  mdcn: "\n\n## Analyzing Memory Ownership Patterns in C Libraries *\n\nTristan Ravitch\n\
+    Department of Computer Sciences\nUniversity of Wisconsin–Madison\ntravitch@cs.wisc.edu\n\
+    \nBen Liblit\nDepartment of Computer Sciences\nUniversity of Wisconsin–Madison\n\
+    liblit@cs.wisc.edu\n\n## Abstract\n\nPrograms written in multiple languages are\
+    \ known as polyglot programs. In part due to the proliferation of new and productive\
+    \ high-level programming languages, these programs are becoming more common in\
+    \ environments that must interoperate with existing systems. Polyglot programs\
+    \ must manage resource lifetimes across language boundaries. Resource lifetime\
+    \ management bugs can lead to leaks and crashes, which are more difficult to debug\
+    \ in polyglot programs than monoglot programs.\n\nWe present analyses to automatically\
+    \ infer the ownership semantics of C libraries. The results of these analyses\
+    \ can be used to generate bindings to C libraries that intelligently manage resources,\
+    \ to check the correctness of polyglot programs, and to document the interfaces\
+    \ of C libraries. While these analyses are unsound and incomplete, we demonstrate\
+    \ that they significantly reduce the manual annotation burden for a suite of fifteen\
+    \ open source libraries.\n\nCategories and Subject Descriptors D.2.11 [Software\
+    \ Engineering]: Software Architectures—Languages; D.2.12 [Software Engineering]:\
+    \ Interoperability; D.2.13 [Software Engineering]: Reusable Software—Reusable\
+    \ libraries; D.3.2 [Programming Languages]: Language Classifications—C, Python;\
+    \ D.3.3 [Programming Languages]: Language Constructs and Features—Dynamic storage\
+    \ management, Procedures, functions, and subroutines; D.3.4 [Programming Languages]:\
+    \ Processors—Code generation, Memory management; E.1 [Data Structures]: Arrays,\
+    \ Records; F.3.2 [Logics and Meanings of Programs]: Semantics of Programming Languages—Program\
+    \ analysis\n\nKeywords resource lifetime management; memory allocation; allocators;\
+    \ finalizers; ownership transfer; escape analysis; sharing; reference counting;\
+    \ foreign function interfaces (FFIs); bindings; libraries; dataflow analysis;\
+    \ interprocedural static program analysis; polyglot programming; interoperability\n\
+    \n```c\nchar *strdup(const char *s);\nchar *asctime(const struct tm *tm);\n```\n\
+    \nFigure 1. C function signatures\n\n## 1. Introduction\n\nHigh-level programming\
+    \ languages have been gaining acceptance in many application domains where unsafe\
+    \ low-level languages like C and C++ were once the only option. For example, Python\
+    \ and JavaScript have a significant presence in the desktop application space.\
+    \ Additionally, Python has gained acceptance in the scientific computing community\
+    \ [14]. Unfortunately, these high-level languages do not exist in a vacuum. They\
+    \ depend on code written in unsafe lower-level languages for, among other reasons,\
+    \ performance and interoperability. Some performance-sensitive pieces of code\
+    \ simply cannot be rewritten in the desired high-level language. In other cases,\
+    \ it is possible but not economically feasible to rewrite working and tested code,\
+    \ so the original implementation must be used from the high-level language.\n\n\
+    Production-quality high-level languages support calling functions from libraries\
+    \ written in other languages through foreign function interfaces (FFIs). High-level\
+    \ language programs using FFIs execute code from more than one language, making\
+    \ them polyglot programs. A critical challenge in writing correct polyglot programs\
+    \ lies in managing the flow of resources across language boundaries. Programs\
+    \ lacking a precise cross-language ownership semantics are vulnerable to resource\
+    \ leaks, threatening reliability. Unclear ownership semantics can also lead to\
+    \ crashes induced by use-after-free or double-free errors. Both of these types\
+    \ of errors are more difficult to debug in polyglot programs, as common debugging\
+    \ tools target programs written in a single language.\n\nMost low-level languages\
+    \ like C do not provide any means for describing, much less checking, object ownership\
+    \ semantics. Instead, this critical information must be conveyed through documentation\
+    \ or recovered through static analysis. Library interfaces defined in C typically\
+    \ refer to dynamically-allocated resources by their address (a pointer). Unfortunately\
+    \ one cannot simply call free on all pointers obtained from a low-level language\
+    \ to release the associated resources, or finalize them. This approach fails because,\
+    \ while C functions expose most resources through pointers, they use pointers\
+    \ for many other purposes as well.\n\nConsider the two C function declarations\
+    \ in figure 1. Each returns a char*. The value returned by strdup must be freed\
+    \ to prevent memory leaks, but freeing the value returned by asctime will cause\
+    \ a crash. The caller owns the result of strdup but not the result of asctime.\
+    \ Furthermore, some dynamically-allocated resources may require specialized finalizer\
+    \ functions instead of generic free. Consider fopen and fclose: calling free on\
+    \ the result of fopen is a partial resource leak. Thus, functions returning managed\
+    \ resources must be identified along with their associated resource finalizers.\n\
+    \n```c\ntypedef struct pvl_elem_t{\n  void *data;\n  struct pvl_elem_t *next;\n\
+    } pvl_elem;\n\ntypedef struct pvl_list_t{\n  pvl_elem *head;\n} pvl_list;\n\n\
+    typedef struct icalcomponent {\n  pvl_list *components;\n  struct icalcomponent*\
+    \ parent;\n} icalcomponent;\n\nvoid pvl_push(pvl_list *lst, void *d) {\n  pvl_elem\
+    \ *e = calloc(1, sizeof(pvl_elem));\n  e->next = lst->head;\n  lst->head = e;\n\
+    \  e->data = d;\n}\n\nvoid* pvl_pop(pvl_list *lst) {\n  if(lst->head == NULL)\
+    \ return NULL;\n  pvl_elem *e = lst->head;\n  void *ret = e->data;\n  lst->head\
+    \ = e->next;\n  free(e);\n  return ret;\n}\n```\n\nFigure 2. Definitions for figure\
+    \ 3\n\n```c\nstruct icalcomponent* icalcomponent_new() {\n  icalcomponent* comp\
+    \ = malloc(sizeof(icalcomponent));\n  if (!comp) return NULL;\n  comp->components\
+    \ = newlist();\n  comp->parent = NULL;\n  return comp;\n}\n\nvoid icalcomponent_free(icalcomponent*\
+    \ c) {\n  icalcomponent* comp;\n  if (!c) return;\n  while ((comp=pvl_pop(c->components))\
+    \ != NULL) {\n    icalcomponent_remove_component(c,comp);\n    icalcomponent_free(comp);\n\
+    \  }\n  pvl_free(c->components);\n  free(c);\n}\n\nvoid icalcomponent_remove_component(\n\
+    \  icalcomponent *component, icalcomponent *child);\n\nvoid icalcomponent_add_component(icalcomponent\
+    \ *c,\n  icalcomponent *child) {\n  pvl_push(c->components, child);\n}\n\nvoid\
+    \ icalcomponent_set_parent(icalcomponent *c,\n  icalcomponent* parent) {\n  c->parent\
+    \ = parent;\n}\n```\n\nFigure 3. Example from ical\n\nResource management semantics\
+    \ are unclear in C even without the additional complexities of polyglot programming.\
+    \ We describe our ownership model for C resources and present algorithms to infer\
+    \ the ownership semantics of C libraries. These semantics are presented to users\
+    \ and tools through inferred annotations on library functions. While these analyses\
+    \ are unsound and incomplete, they are nonetheless useful. As discussed in section\
+    \ 8, our algorithms significantly reduce the manual annotation burden required\
+    \ to create library bindings. With review by a programmer familiar with the library\
+    \ being analyzed, these inferred annotations are sufficient to generate idiomatic\
+    \ FFI library bindings for high-level languages. The resulting bindings will be\
+    \ idiomatic in that they automatically manage the flow of resources between languages\
+    \ and clean them up when they become garbage. They also serve as an aid in program\
+    \ understanding and can augment documentation. Our primary contributions over\
+    \ prior work are: (1) two methods for identifying the ownership transfers of objects\
+    \ in C libraries (sections 4 and 5), (2) a method for inferring contracts that\
+    \ must be obeyed for function pointers (section 6), and (3) an algorithm for identifying\
+    \ reference-counted resources (section 7).\n\n## 2. Resource Ownership Model\n\
+    \nWe adopt the ownership model of Heine and Lam [6] whereby each object is pointed\
+    \ to by exactly one owning reference. The object must eventually either be finalized\
+    \ through the owning reference, or ownership must be transferred to another owning\
+    \ reference. When a pointer is finalized, the resources held by the object it\
+    \ points to are safely released. Non-owning references to any object can be created\
+    \ at any time and are valid until the object is finalized. In the Heine and Lam\
+    \ model, pointer-typed members of C++ objects are either always owning references\
+    \ or are never owning references (at public interface boundaries). We extend this\
+    \ model to pointer-typed fields of some C structures for all functions.\n\n###\
+    \ 2.1 Memory Ownership in C\n\nA memory allocator is an abstraction over the most\
+    \ prevalent resource in most programs: dynamically allocated memory. The standard\
+    \ C library’s allocator and finalizer functions are malloc and free, respectively.\
+    \ When the memory allocator owns a piece of memory (i.e., the memory is unallocated),\
+    \ it is an error for any other part of the program to use it. When the allocator\
+    \ function is called, it completely transfers ownership of the memory to the caller\
+    \ via the returned owning reference.\n\nComplex resources may own other resources\
+    \ through owned pointer fields. Finalizers for these complex resources must finalize\
+    \ their owned resources to obey the ownership model and to avoid leaks, as in\
+    \ figures 2 and 3. The icalcomponent type is a resource allocated with icalcomponent_new.\
+    \ It owns a component list, along with each of the components in the list of children.\
+    \ The finalizer for this type, icalcomponent_free, finalizes the list of children\
+    \ as well as the child components before finalizing the component itself with\
+    \ a call to free on line 23.\n\nOwnership extends beyond just allocators and finalizers.\
+    \ For example, the function icalcomponent_remove_component removes a child component\
+    \ from a component without finalizing it.\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    <!-- no content -->'
+  - '[PAGE 3]
+
+
+    lead to transfer in all cases. For example, common container-like data structures
+    in C (e.g., lists, trees, or hash tables) typically store pointers to data objects.
+    Clearly, storing an object in one of these containers allows it to escape. However,
+    most of these containers do not take ownership of their elements: the caller must
+    still manage their memory. Ma and Foster [10] note that ownership transfer in
+    library interfaces is relatively rare; we note that escaping parameters are anything
+    but rare. We therefore suggest that escape analysis is distinct from ownership
+    transfer analysis. In this section, we present a transfer analysis to more accurately
+    identify ownership transfers in C library functions. We revisit escape analysis
+    in section 5.
+
+
+    The essence of our ownership transfer analysis follows from our resource ownership
+    model in section 2. We consider a structure field to be owned if that field will
+    be finalized within the context of a finalizer function. Thus, ownership of an
+    object is transferred from a caller when another object assumes responsibility
+    for finalizing it (i.e., it is stored into a field that will be finalized). Fields
+    finalized in other contexts are sometimes used to store temporary allocations,
+    but these fields are not guaranteed to be finalized with the rest of the object
+    and are managed separately. The analysis proceeds in two phases. First it identifies
+    all of the owned fields in a library. Then it identifies all of the function parameters
+    that may be stored into an owned field. We describe fields in terms of symbolic
+    access paths. Note that we assume that any given field is either always owned
+    or never owned. We do not attempt to reason about fields that are only owned sometimes.
+    Furthermore, we assume that, if one element held in a container-like field (i.e.,
+    an array or linked data structure) is owned, all elements in that field are owned.
+
+
+    # 4.1 Symbolic Access Paths
+
+
+    This analysis is based on symbolic access paths [2, 7]; we follow the formulation
+    of Matosevic and Abdelrahman [11]. An access path describes a memory location
+    accessible from a base value by a (possibly empty) sequence of path components.
+    While we will only discuss field accesses in this paper, pointer dereferences,
+    array accesses, and union accesses are also valid path components. We treat all
+    array elements in a single array as identical; a more precise analysis could differentiate
+    between them. This treatment of field accesses is unsound when pointers to struct
+    types are cast to unrelated types [15], which could cause the analysis to identify
+    invalid ownership transfers.
+
+
+    Let ap(v) represent the access path for a source expression v. For example, the
+    assignment on line 18 of figure 3 assigns a value to lst→head. The corresponding
+    access path ap(lst→head) is the pair (lst, {head}). In this pair, lst is the base
+    value and {head} is a sequence of one field access to reach the affected memory
+    location. We sometimes refer to locations abstractly in terms of a base type rather
+    than a base value. Here, lst type pvl_list, so the abstract access path for this
+    field access is (pvl_list, {head}).
+
+
+    Following Matosevic and Abdelrahman we construct symbolic access paths by traversing
+    the call graph bottom-up, with strongly-connected components being iteratively
+    re-analyzed until a fixed-point is reached. We will assume that functions are
+    normalized such that the return value is the first parameter in the list of formal
+    parameters (always indexed as zero). Functions return values by writing to their
+    return parameter. Void functions have a placeholder in argument zero. For each
+    library analyzed, we construct two maps, each keyed by function and formal parameter
+    number:
+
+
+    +   - Let f be a function and i be the zero-based index of a parameter to that
+    function. Then finalizePaths[f, i] is a set of access paths that function f finalizes
+    in its iᵗʰ parameter.
+
+    +   - Let f be a function and i be the zero-based index of a parameter to that
+    function. Then writePaths[f, i] is a set of triples of the form (p, j, q) where
+    function f reads the value at access path q
+
+
+    of its jᵗʰ parameter and ultimately stores this value into access path p of its
+    iᵗʰ parameter.
+
+    Let argno(v) return the index of formal parameter v in the formal parameter list
+    of the enclosing function. Let base(p) return the base of access path p and components(p)
+    return the path components of p. The access path extend operation p₁ ⊕ p₂ extends
+    p₁ by p₂ in the natural way; the resulting path has the same base value as p₁
+    and the path components of p₂ appended to those of p₁. The set-valued operation
+    nr(p) returns the singleton set containing p if each path component in components(p)
+    is unique within p; otherwise, it returns the empty set. Likewise, nr((p, j, q))
+    returns a singleton set containing a triple if neither p nor q has repeated path
+    components. This condition excludes cyclic paths that could grow indefinitely;
+    such paths are common in the presence of inductive data structures.
+
+
+    Our handling and representation of cyclic access paths differs from Matosevic
+    and Abdelrahman [11]. They represent paths using a regular expression-like language
+    with repetition operators. Our analysis does not require information about cycles
+    in paths, so we use the simpler representation discussed above; this requires
+    the no-repetition condition (through the nr() operator) to prevent cyclic paths
+    from growing without bound. This less expressive treatment of paths is a potential
+    source of unsoundness, though it has not been a problem in practice.
+
+
+    We analyze code represented as LLVM bitcode: three-address code in static single
+    assignment (SSA) form [8]. Two types of statements add elements to finalizePaths
+    or writePaths: function calls and store instructions. This analysis is flow-insensitive
+    and paths are created or extended for any relevant store or function call that
+    may be executed. We consider function calls first. Suppose function f contains
+    a function call of the form g(value). Let p = ap(value) be the access path of
+    value. If g is a finalizer and base(p) is among the formal parameters of f, then:
+    finalizePaths[f, argno(base(p))] ⊇ nr(p)
+
+
+    Now consider a store of the form *location = value in function f. Let lp = ap(location)
+    and p = ap(value). If both base(lp) and base(p) are among the formal parameters
+    of f, then: writePaths[f, argno(base(lp))] ⊇ nr((lp, argno(base(p)), p))
+
+
+    Calls to non-finalizer functions generate new paths by extending access paths
+    in finalizePaths and writePaths. At a high level, paths are extended by mapping
+    access paths in callees to the arguments of their callers. For each call callee(...,
+    aᵢ, ...) in function f where a is the iᵗʰ argument to callee and p ∈ finalizePaths[callee,
+    i], let pext = ap(a) ⊕ p. If base(pext) is a formal parameter of f, then: finalizePaths[f,
+    argno(base(pext))] ⊇ nr(pext)
+
+
+    For each call callee(..., aᵢ, ..., bⱼ, ...) in function f where a and b are the
+    iᵗʰ and jᵗʰ arguments to callee, respectively, and (p, j, q) ∈ writePaths[callee,
+    i], let qext = ap(b) ⊕ q and pext = ap(a) ⊕ p. Let qextB = base(qext) and pextB
+    = base(pext). If both qextB and pextB are formal parameters of f, then: writePaths[f,
+    argno(pextB)] ⊇ nr((pext, argno(qextB), qext))'
+  - '[PAGE 4]
+
+
+    access paths. For the pvl_push function in figure 2, the analysis can only conclude
+    that d is written to the path (e, ⟨data⟩) without local points-to information.
+    Since e is not a formal parameter of pvl_push, this fact is not recorded in writePaths.
+    With local points-to information, the analysis can construct the maximal path
+    (lst, ⟨head,data⟩). The base of this maximal path is lst, which is a formal parameter
+    of pvl_push. Thus, writePaths can be updated to reflect the write of d to this
+    path.
+
+
+    # 4.2 Identifying Owned Fields
+
+
+    After all of the symbolic access paths in a library are constructed, we next identify
+    the owned fields in the library. According to our resource ownership model from
+    section 2, owned fields of a type are those fields that will be finalized when
+    an object of that type is finalized. Our analysis determines this by analyzing
+    the finalized access paths of each function: if a field of the argument of a finalizer
+    function is finalized, that field is owned. That is, if some function f is a finalizer
+    for its iᵗʰ formal parameter, all of the fields in finalizePaths[f, i] are owned
+    fields.
+
+
+    In figure 3, the function icalcomponent_free is a finalizer because the c parameter
+    (of type icalcomponent*) is finalized (or NULL) on every path. The pvl_free and
+    icalcomponent_free functions are finalizers as well (implementations not shown).
+    We see that icalcomponent_free passes the return value of pvl_pop to a finalizer.
+    pvl_pop returns the data from the head of its list argument through the access
+    path (lst, ⟨head,data⟩). Thus, the value passed to the finalizer is (icalcomponent,
+    ⟨components,head,data⟩); we conclude that this field of icalcomponent is owned.
+
+
+    # 4.3 Transferred Ownership
+
+
+    The key insight of the ownership transfer analysis is that ownership of any function
+    argument stored into an owned field is transferred from the caller. Assume a function
+    f has formal parameters a and b at positions i and j in the formal parameter list
+    respectively. If (p, j, q) ∈ writePaths[f, i] where ap(b) is q (q is the degenerate
+    access path of just the formal parameter b) and the last component of p is an
+    owned field, as per section 4.2, then f transfers ownership of b to a.
+
+
+    Returning to figure 3, the function pvl_push stores its d argument into a field
+    of lst, which is summarized by the access path (lst, ⟨head,data⟩). icalcomponent_add_component
+    calls pvl_push with a field of c, components, as an argument, extending the write
+    access path to (c, ⟨components,head,data⟩). The first phase of the analysis identified
+    the last component of this path as an owned field, and thus the c argument of
+    icalcomponent_add_component assumes ownership of child. Note that icalcomponent_set_parent
+    does not assume ownership of its parent parameter: the corresponding field is
+    never finalized, and is thus not owned.
+
+
+    Our access path construction proceeds backwards from an address across pointer
+    dereferences, field accesses, union accesses, and array accesses. We stop the
+    construction at SSA φ-nodes to avoid a potential exponential explosion of generated
+    access paths. While this is unsound, we have not observed any missed ownership
+    transfers in practice.
+
+
+    # 5. An Improved Escape Analysis
+
+
+    While the results of the transfer analysis are essential to minimize the effort
+    of generating language bindings that automate resource management, an escape analysis
+    still provides important information. If a pointer to an object escapes, but ownership
+    of that object is not transferred, we still learn information about the lifetime
+    of that object. While we cannot always automatically manage this lifetime, the
+    user can at least be informed that some scope management is required. Helper functions
+    could be used to pin objects with scoped lifetimes to keep them from being collected
+    while references exist in a C library that are not visible to the garbage collector.
+    While prior work has described an escape analysis for this purpose, we present
+    a more precise analysis that eliminates many of the false positives of prior work.
+
+
+    We describe a bottom-up summary-based flow-insensitive escape analysis with limited
+    field and context sensitivity for C. This analysis is a form of stack escape analysis
+    [3, 21], rather than a thread escape analysis [19]. Our analysis is based on a
+    value flow escape graph, which is a value flow graph [9] with extra annotations.
+    Our analysis is most similar to that of Whaley and Rinard [21], though ours is
+    flow-insensitive and requires only a single graph per function. Like Whaley and
+    Rinard [21], we analyze functions independently of their callers. We require this
+    because callers may be written in another language and unavailable at analysis
+    time. Furthermore, we trade precision for speed and simpler handling of callees.
+    Instead of unifying the points-to escape graph of each callee into the graph of
+    the caller at call sites, we use summary information to mark only the escaping
+    parameters as escaping. This allows for more compact representations of callees
+    at the cost of some of the precision of graph unification. We conservatively assume
+    that values passed to callees with no summaries do escape. The value flow graph
+    does not allow us to answer points-to queries, which we do not require, but it
+    can be constructed in a single pass, unlike the points-to escape graph.
+
+
+    Our value flow graph has two types of nodes: location nodes and sink nodes. An
+    edge a → b denotes that values flow from a to b. A value escapes if there is a
+    path from it to a sink. The analysis is conservative and identifies values that
+    may escape. This approximation is appropriate in that false positives (values
+    incorrectly identified as escaping) lead to leaks, not crashes.
+
+
+    Sink nodes are created for (1) return statements in functions that return aggregate
+    or pointer values and (2) stores to global variables, arguments, the return values
+    of callees, and access paths thereof. A sink is also created for each escaping
+    actual argument of a callee. The following statements induce edges in the value
+    flow graph:
+
+
+    +   - *a = b adds b → a or bₚ → a
+
+    +   Assignments cause the source operand to flow to the destination operand. The
+    edge bₚ → a is added if the right-hand side of the assignment is a field reference
+    with concrete access path (b, ⟨p⟩); if there is no field access, the simpler form
+    b → a is added.
+
+    +   - return a adds a → sink_ret
+
+    +   The returned value flows to the special return sink node.
+
+
+    For example, the function CaseWalkerInit in figure 5 has the value-flow escape
+    graph shown in figure 6. We represent location nodes as circles and sinks as rectangles.
+    The argument src is represented by its location node, which flows into a field
+    of the w argument. src escapes because there is a path from it to a sink.
+
+
+    Function calls of the form f(a1, a2, ..., aN) act as a sequence of assignments
+    *f₁ = a1, *f₂ = a2, ..., *f_N = aN where fᵢ is the node representing the iᵗʰ formal
+    argument of f. If fᵢ allows its argument to escape, then fᵢ is a sink node. Local
+    value v escapes from f if v →* s for some s ∈ sinkNodes; that is if any sink node
+    s is reachable from v. If v does not escape according to this query, then field
+    p of v escapes from f if vₚ →* s for some s ∈ sinkNodes.
+
+
+    To introduce a limited form of context sensitivity, we make special note of arguments
+    that escape into fields of other arguments. Assume there is a function call f(a,
+    b) where the first argument of f escapes into the second argument. We add an edge
+    a → b in all callers of f to model the effects of f on the value flow escape graph
+    of the caller. For example, the CmpIgnoreCase function in'
+  md: '
+
+    lead to transfer in all cases. For example, common container-like data structures
+    in C (e.g., lists, trees, or hash tables) typically store pointers to data objects.
+    Clearly, storing an object in one of these containers allows it to escape. However,
+    most of these containers do not take ownership of their elements: the caller must
+    still manage their memory. Ma and Foster [10] note that ownership transfer in
+    library interfaces is relatively rare; we note that escaping parameters are anything
+    but rare. We therefore suggest that escape analysis is distinct from ownership
+    transfer analysis. In this section, we present a transfer analysis to more accurately
+    identify ownership transfers in C library functions. We revisit escape analysis
+    in section 5.
+
+
+    The essence of our ownership transfer analysis follows from our resource ownership
+    model in section 2. We consider a structure field to be owned if that field will
+    be finalized within the context of a finalizer function. Thus, ownership of an
+    object is transferred from a caller when another object assumes responsibility
+    for finalizing it (i.e., it is stored into a field that will be finalized). Fields
+    finalized in other contexts are sometimes used to store temporary allocations,
+    but these fields are not guaranteed to be finalized with the rest of the object
+    and are managed separately. The analysis proceeds in two phases. First it identifies
+    all of the owned fields in a library. Then it identifies all of the function parameters
+    that may be stored into an owned field. We describe fields in terms of symbolic
+    access paths. Note that we assume that any given field is either always owned
+    or never owned. We do not attempt to reason about fields that are only owned sometimes.
+    Furthermore, we assume that, if one element held in a container-like field (i.e.,
+    an array or linked data structure) is owned, all elements in that field are owned.
+
+
+    ## 4.1 Symbolic Access Paths
+
+
+    This analysis is based on symbolic access paths [2, 7]; we follow the formulation
+    of Matosevic and Abdelrahman [11]. An access path describes a memory location
+    accessible from a base value by a (possibly empty) sequence of path components.
+    While we will only discuss field accesses in this paper, pointer dereferences,
+    array accesses, and union accesses are also valid path components. We treat all
+    array elements in a single array as identical; a more precise analysis could differentiate
+    between them. This treatment of field accesses is unsound when pointers to struct
+    types are cast to unrelated types [15], which could cause the analysis to identify
+    invalid ownership transfers.
+
+
+    Let ap(v) represent the access path for a source expression v. For example, the
+    assignment on line 18 of figure 3 assigns a value to lst→head. The corresponding
+    access path ap(lst→head) is the pair (lst, {head}). In this pair, lst is the base
+    value and {head} is a sequence of one field access to reach the affected memory
+    location. We sometimes refer to locations abstractly in terms of a base type rather
+    than a base value. Here, lst type pvl_list, so the abstract access path for this
+    field access is (pvl_list, {head}).
+
+
+    Following Matosevic and Abdelrahman we construct symbolic access paths by traversing
+    the call graph bottom-up, with strongly-connected components being iteratively
+    re-analyzed until a fixed-point is reached. We will assume that functions are
+    normalized such that the return value is the first parameter in the list of formal
+    parameters (always indexed as zero). Functions return values by writing to their
+    return parameter. Void functions have a placeholder in argument zero. For each
+    library analyzed, we construct two maps, each keyed by function and formal parameter
+    number:
+
+
+    - Let f be a function and i be the zero-based index of a parameter to that function.
+    Then finalizePaths[f, i] is a set of access paths that function f finalizes in
+    its iᵗʰ parameter.
+
+    - Let f be a function and i be the zero-based index of a parameter to that function.
+    Then writePaths[f, i] is a set of triples of the form (p, j, q) where function
+    f reads the value at access path q
+
+
+    of its jᵗʰ parameter and ultimately stores this value into access path p of its
+    iᵗʰ parameter.
+
+    Let argno(v) return the index of formal parameter v in the formal parameter list
+    of the enclosing function. Let base(p) return the base of access path p and components(p)
+    return the path components of p. The access path extend operation p₁ ⊕ p₂ extends
+    p₁ by p₂ in the natural way; the resulting path has the same base value as p₁
+    and the path components of p₂ appended to those of p₁. The set-valued operation
+    nr(p) returns the singleton set containing p if each path component in components(p)
+    is unique within p; otherwise, it returns the empty set. Likewise, nr((p, j, q))
+    returns a singleton set containing a triple if neither p nor q has repeated path
+    components. This condition excludes cyclic paths that could grow indefinitely;
+    such paths are common in the presence of inductive data structures.
+
+
+    Our handling and representation of cyclic access paths differs from Matosevic
+    and Abdelrahman [11]. They represent paths using a regular expression-like language
+    with repetition operators. Our analysis does not require information about cycles
+    in paths, so we use the simpler representation discussed above; this requires
+    the no-repetition condition (through the nr() operator) to prevent cyclic paths
+    from growing without bound. This less expressive treatment of paths is a potential
+    source of unsoundness, though it has not been a problem in practice.
+
+
+    We analyze code represented as LLVM bitcode: three-address code in static single
+    assignment (SSA) form [8]. Two types of statements add elements to finalizePaths
+    or writePaths: function calls and store instructions. This analysis is flow-insensitive
+    and paths are created or extended for any relevant store or function call that
+    may be executed. We consider function calls first. Suppose function f contains
+    a function call of the form g(value). Let p = ap(value) be the access path of
+    value. If g is a finalizer and base(p) is among the formal parameters of f, then:
+    finalizePaths[f, argno(base(p))] ⊇ nr(p)
+
+
+    Now consider a store of the form *location = value in function f. Let lp = ap(location)
+    and p = ap(value). If both base(lp) and base(p) are among the formal parameters
+    of f, then: writePaths[f, argno(base(lp))] ⊇ nr((lp, argno(base(p)), p))
+
+
+    Calls to non-finalizer functions generate new paths by extending access paths
+    in finalizePaths and writePaths. At a high level, paths are extended by mapping
+    access paths in callees to the arguments of their callers. For each call callee(...,
+    aᵢ, ...) in function f where a is the iᵗʰ argument to callee and p ∈ finalizePaths[callee,
+    i], let pext = ap(a) ⊕ p. If base(pext) is a formal parameter of f, then: finalizePaths[f,
+    argno(base(pext))] ⊇ nr(pext)
+
+
+    For each call callee(..., aᵢ, ..., bⱼ, ...) in function f where a and b are the
+    iᵗʰ and jᵗʰ arguments to callee, respectively, and (p, j, q) ∈ writePaths[callee,
+    i], let qext = ap(b) ⊕ q and pext = ap(a) ⊕ p. Let qextB = base(qext) and pextB
+    = base(pext). If both qextB and pextB are formal parameters of f, then: writePaths[f,
+    argno(pextB)] ⊇ nr((pext, argno(qextB), qext))
+
+
+    access paths. For the pvl_push function in figure 2, the analysis can only conclude
+    that d is written to the path (e, ⟨data⟩) without local points-to information.
+    Since e is not a formal parameter of pvl_push, this fact is not recorded in writePaths.
+    With local points-to information, the analysis can construct the maximal path
+    (lst, ⟨head,data⟩). The base of this maximal path is lst, which is a formal parameter
+    of pvl_push. Thus, writePaths can be updated to reflect the write of d to this
+    path.
+
+
+    ## 4.2 Identifying Owned Fields
+
+
+    After all of the symbolic access paths in a library are constructed, we next identify
+    the owned fields in the library. According to our resource ownership model from
+    section 2, owned fields of a type are those fields that will be finalized when
+    an object of that type is finalized. Our analysis determines this by analyzing
+    the finalized access paths of each function: if a field of the argument of a finalizer
+    function is finalized, that field is owned. That is, if some function f is a finalizer
+    for its iᵗʰ formal parameter, all of the fields in finalizePaths[f, i] are owned
+    fields.
+
+
+    In figure 3, the function icalcomponent_free is a finalizer because the c parameter
+    (of type icalcomponent*) is finalized (or NULL) on every path. The pvl_free and
+    icalcomponent_free functions are finalizers as well (implementations not shown).
+    We see that icalcomponent_free passes the return value of pvl_pop to a finalizer.
+    pvl_pop returns the data from the head of its list argument through the access
+    path (lst, ⟨head,data⟩). Thus, the value passed to the finalizer is (icalcomponent,
+    ⟨components,head,data⟩); we conclude that this field of icalcomponent is owned.
+
+
+    ## 4.3 Transferred Ownership
+
+
+    The key insight of the ownership transfer analysis is that ownership of any function
+    argument stored into an owned field is transferred from the caller. Assume a function
+    f has formal parameters a and b at positions i and j in the formal parameter list
+    respectively. If (p, j, q) ∈ writePaths[f, i] where ap(b) is q (q is the degenerate
+    access path of just the formal parameter b) and the last component of p is an
+    owned field, as per section 4.2, then f transfers ownership of b to a.
+
+
+    Returning to figure 3, the function pvl_push stores its d argument into a field
+    of lst, which is summarized by the access path (lst, ⟨head,data⟩). icalcomponent_add_component
+    calls pvl_push with a field of c, components, as an argument, extending the write
+    access path to (c, ⟨components,head,data⟩). The first phase of the analysis identified
+    the last component of this path as an owned field, and thus the c argument of
+    icalcomponent_add_component assumes ownership of child. Note that icalcomponent_set_parent
+    does not assume ownership of its parent parameter: the corresponding field is
+    never finalized, and is thus not owned.
+
+
+    Our access path construction proceeds backwards from an address across pointer
+    dereferences, field accesses, union accesses, and array accesses. We stop the
+    construction at SSA φ-nodes to avoid a potential exponential explosion of generated
+    access paths. While this is unsound, we have not observed any missed ownership
+    transfers in practice.
+
+
+    ## 5. An Improved Escape Analysis
+
+
+    While the results of the transfer analysis are essential to minimize the effort
+    of generating language bindings that automate resource management, an escape analysis
+    still provides important information. If a pointer to an object escapes, but ownership
+    of that object is not transferred, we still learn information about the lifetime
+    of that object. While we cannot always automatically manage this lifetime, the
+    user can at least be informed that some scope management is required. Helper functions
+    could be used to pin objects with scoped lifetimes to keep them from being collected
+    while references exist in a C library that are not visible to the garbage collector.
+    While prior work has described an escape analysis for this purpose, we present
+    a more precise analysis that eliminates many of the false positives of prior work.
+
+
+    We describe a bottom-up summary-based flow-insensitive escape analysis with limited
+    field and context sensitivity for C. This analysis is a form of stack escape analysis
+    [3, 21], rather than a thread escape analysis [19]. Our analysis is based on a
+    value flow escape graph, which is a value flow graph [9] with extra annotations.
+    Our analysis is most similar to that of Whaley and Rinard [21], though ours is
+    flow-insensitive and requires only a single graph per function. Like Whaley and
+    Rinard [21], we analyze functions independently of their callers. We require this
+    because callers may be written in another language and unavailable at analysis
+    time. Furthermore, we trade precision for speed and simpler handling of callees.
+    Instead of unifying the points-to escape graph of each callee into the graph of
+    the caller at call sites, we use summary information to mark only the escaping
+    parameters as escaping. This allows for more compact representations of callees
+    at the cost of some of the precision of graph unification. We conservatively assume
+    that values passed to callees with no summaries do escape. The value flow graph
+    does not allow us to answer points-to queries, which we do not require, but it
+    can be constructed in a single pass, unlike the points-to escape graph.
+
+
+    Our value flow graph has two types of nodes: location nodes and sink nodes. An
+    edge a → b denotes that values flow from a to b. A value escapes if there is a
+    path from it to a sink. The analysis is conservative and identifies values that
+    may escape. This approximation is appropriate in that false positives (values
+    incorrectly identified as escaping) lead to leaks, not crashes.
+
+
+    Sink nodes are created for (1) return statements in functions that return aggregate
+    or pointer values and (2) stores to global variables, arguments, the return values
+    of callees, and access paths thereof. A sink is also created for each escaping
+    actual argument of a callee. The following statements induce edges in the value
+    flow graph:
+
+
+    - *a = b adds b → a or bₚ → a
+
+    Assignments cause the source operand to flow to the destination operand. The edge
+    bₚ → a is added if the right-hand side of the assignment is a field reference
+    with concrete access path (b, ⟨p⟩); if there is no field access, the simpler form
+    b → a is added.
+
+    - return a adds a → sink_ret
+
+    The returned value flows to the special return sink node.
+
+
+    For example, the function CaseWalkerInit in figure 5 has the value-flow escape
+    graph shown in figure 6. We represent location nodes as circles and sinks as rectangles.
+    The argument src is represented by its location node, which flows into a field
+    of the w argument. src escapes because there is a path from it to a sink.
+
+
+    Function calls of the form f(a1, a2, ..., aN) act as a sequence of assignments
+    *f₁ = a1, *f₂ = a2, ..., *f_N = aN where fᵢ is the node representing the iᵗʰ formal
+    argument of f. If fᵢ allows its argument to escape, then fᵢ is a sink node. Local
+    value v escapes from f if v →* s for some s ∈ sinkNodes; that is if any sink node
+    s is reachable from v. If v does not escape according to this query, then field
+    p of v escapes from f if vₚ →* s for some s ∈ sinkNodes.
+
+
+    To introduce a limited form of context sensitivity, we make special note of arguments
+    that escape into fields of other arguments. Assume there is a function call f(a,
+    b) where the first argument of f escapes into the second argument. We add an edge
+    a → b in all callers of f to model the effects of f on the value flow escape graph
+    of the caller. For example, the CmpIgnoreCase function in
+
+    '
+  mdcn: '
+
+
+    导致所有情况下的转移。例如，C 中常见的容器类数据结构（例如列表、树或哈希表）通常存储指向数据对象的指针。显然，将对象存储在这些容器之一中会使其逃逸。然而，这些容器中的大多数并不拥有其元素：调用方仍需管理其内存。Ma
+    和 Foster [10] 指出，库接口中的所有权转移相对罕见；我们注意到逃逸参数却绝非罕见。因此我们建议逃逸分析与所有权转移分析是不同的。在本节中，我们提出一种转移分析，以更准确地识别
+    C 库函数中的所有权转移。我们在第 5 节重新审视逃逸分析。
+
+
+    我们所有权转移分析的核心源于第 2 节中的资源所有权模型。我们认为结构字段是被拥有的，如果该字段将在终结器函数上下文中被终结。因此，对象的所有权在调用方转移出去，当另一个对象承担对其进行终结的责任时（即它被存储到将被终结的字段中）。在其他上下文中终结的字段有时用于存储临时分配，但这些字段不能保证与对象其余部分一起被终结，并且单独管理。分析分为两个阶段。首先它识别库中所有被拥有的字段。然后它识别可能被存储到被拥有字段中的所有函数参数。我们用符号访问路径来描述字段。请注意，我们假设任何给定字段要么始终被拥有，要么从不被拥有。我们不尝试推理有时才被拥有的字段。此外，我们假设，如果容器类字段（即数组或链接数据结构）中保存的一个元素被拥有，则该字段中的所有元素都被拥有。
+
+
+    ## 4.1 符号访问路径
+
+
+    该分析基于符号访问路径 [2, 7]；我们遵循 Matosevic 和 Abdelrahman [11] 的表述。访问路径描述了可从基值通过（可能为空的）路径组件序列访问的内存位置。虽然本文仅讨论字段访问，但指针解引用、数组访问和联合访问也是有效的路径组件。我们将单个数组中的所有数组元素视为相同；更精确的分析可以区分它们。当结构体类型的指针被强制转换为不相关类型时
+    [15]，这种对字段访问的处理是不健全的，这可能导致分析识别出无效的所有权转移。
+
+
+    令 ap(v) 表示源表达式 v 的访问路径。例如，第 3 图第 18 行的赋值将值赋给 lst→head。对应的访问路径 ap(lst→head) 为对
+    (lst, {head})。在此对中，lst 是基值，{head} 是到达受影响内存位置的一个字段访问序列。我们有时在抽象上以基类型而不是基值来引用位置。这里，lst
+    类型为 pvl_list，因此该字段访问的抽象访问路径为 (pvl_list, {head})。
+
+
+    遵循 Matosevic 和 Abdelrahman，我们通过自底向上遍历调用图构造符号访问路径，其中强连通分量会迭代重新分析直到达到不动点。我们将假设函数已规范化，使得返回值是形式参数列表中的第一个参数（始终索引为零）。函数通过向其返回参数写入来返回值。void
+    函数在参数零处有一个占位符。对于每个被分析的库，我们构造两个映射，每个都以函数和形式参数编号为键：
+
+
+    - 设 f 为一个函数，i 为该函数形式参数的零基索引。则 finalizePaths[f, i] 是函数 f 在其第 i 个参数中终结的访问路径集合。
+
+    - 设 f 为一个函数，i 为该函数形式参数的零基索引。则 writePaths[f, i] 是形如 (p, j, q) 的三元组集合，其中函数 f 读取其第
+    j 个参数的访问路径 q 处的值，并最终将此值存储到其第 i 个参数的访问路径 p 中。
+
+    令 argno(v) 返回封闭函数形式参数列表中形式参数 v 的索引。令 base(p) 返回访问路径 p 的基，components(p) 返回 p 的路径组件。访问路径扩展操作
+    p₁ ⊕ p₂ 以自然方式扩展 p₁ 到 p₂； resulting 路径具有与 p₁ 相同的基值，并且 p₂ 的路径组件追加到 p₁ 的路径组件之后。集合值操作
+    nr(p) 如果 components(p) 中的每个路径组件在 p 中唯一，则返回包含 p 的单例集合；否则返回空集合。同样，nr((p, j, q))
+    如果 p 或 q 都没有重复路径组件，则返回包含三元组的单例集合。此条件排除了可能无限增长的循环路径；此类路径在存在归纳数据结构时很常见。
+
+
+    我们对循环访问路径的处理和表示与 Matosevic 和 Abdelrahman [11] 不同。他们使用带重复运算符的类似正则表达式的语言来表示路径。我们的分析不需要关于路径中循环的信息，因此我们使用上面讨论的更简单的表示；这需要无重复条件（通过
+    nr() 操作符）来防止循环路径无界增长。这种对路径的较少表达性处理是 unsound 的潜在来源，尽管在实践中尚未成为问题。
+
+
+    我们分析的代码表示为 LLVM bitcode：静态单赋值 (SSA) 形式 [8] 的三地址代码。两种类型的语句会向 finalizePaths 或 writePaths
+    添加元素：函数调用和存储指令。该分析是流不敏感的，并且为可能执行的任何相关存储或函数调用创建或扩展路径。我们首先考虑函数调用。假设函数 f 包含形如 g(value)
+    的函数调用。令 p = ap(value) 为 value 的访问路径。如果 g 是终结器并且 base(p) 在 f 的形式参数中，则：finalizePaths[f,
+    argno(base(p))] ⊇ nr(p)
+
+
+    现在考虑函数 f 中形如 *location = value 的存储。令 lp = ap(location) 且 p = ap(value)。如果 base(lp)
+    和 base(p) 都在 f 的形式参数中，则：writePaths[f, argno(base(lp))] ⊇ nr((lp, argno(base(p)),
+    p))
+
+
+    对非终结器函数的调用通过扩展 finalizePaths 和 writePaths 中的访问路径来生成新路径。在高层，路径通过将被调用者的访问路径映射到其调用者的参数来扩展。对于函数
+    f 中形如 callee(..., aᵢ, ...) 的每次调用，其中 a 是 callee 的第 i 个参数且 p ∈ finalizePaths[callee,
+    i]，令 pext = ap(a) ⊕ p。如果 base(pext) 是 f 的形式参数，则：finalizePaths[f, argno(base(pext))]
+    ⊇ nr(pext)
+
+
+    对于函数 f 中形如 callee(..., aᵢ, ..., bⱼ, ...) 的每次调用，其中 a 和 b 分别是 callee 的第 i 个和第 j
+    个参数，且 (p, j, q) ∈ writePaths[callee, i]，令 qext = ap(b) ⊕ q 且 pext = ap(a) ⊕ p。令
+    qextB = base(qext) 且 pextB = base(pext)。如果 qextB 和 pextB 都是 f 的形式参数，则：writePaths[f,
+    argno(pextB)] ⊇ nr((pext, argno(qextB), qext))
+
+
+    访问路径。对于第 2 图中的 pvl_push 函数，在没有局部 points-to 信息的情况下，分析只能得出 d 被写入路径 (e, ⟨data⟩) 的结论。由于
+    e 不是 pvl_push 的形式参数，此事实未记录在 writePaths 中。有了局部 points-to 信息，分析可以构造最大路径 (lst, ⟨head,data⟩)。该最大路径的基是
+    lst，它是 pvl_push 的形式参数。因此，writePaths 可以更新以反映 d 被写入此路径。
+
+
+    ## 4.2 识别被拥有的字段
+
+
+    在构造库中所有符号访问路径之后，我们接下来识别库中的被拥有字段。根据第 2 节的资源所有权模型，类型的被拥有字段是当该类型对象被终结时将被终结的字段。我们的分析通过分析每个函数的终结访问路径来确定这一点：如果终结器函数的参数的字段被终结，则该字段是被拥有的。也就是说，如果某个函数
+    f 是其第 i 个形式参数的终结器，则 finalizePaths[f, i] 中的所有字段都是被拥有字段。
+
+
+    在第 3 图中，函数 icalcomponent_free 是终结器，因为 c 参数（类型为 icalcomponent*）在所有路径上都被终结（或为 NULL）。pvl_free
+    和 icalcomponent_free 函数也是终结器（实现未显示）。我们看到 icalcomponent_free 将 pvl_pop 的返回值传递给终结器。pvl_pop
+    通过访问路径 (lst, ⟨head,data⟩) 返回其列表参数的头的数据。因此，传递给终结器的值是 (icalcomponent, ⟨components,head,data⟩)；我们得出结论，icalcomponent
+    的此字段是被拥有的。
+
+
+    ## 4.3 转移的所有权
+
+
+    所有权转移分析的关键洞见是，存储到被拥有字段中的任何函数参数的所有权都从调用方转移。假设函数 f 具有形式参数 a 和 b，分别位于形式参数列表中的位置 i
+    和 j。如果 (p, j, q) ∈ writePaths[f, i] 其中 ap(b) 是 q（q 只是形式参数 b 的退化访问路径）并且 p 的最后一个组件是根据第
+    4.2 节被拥有的字段，则 f 将 b 的所有权转移给 a。
+
+
+    回到第 3 图，函数 pvl_push 将其 d 参数存储到 lst 的一个字段中，由访问路径 (lst, ⟨head,data⟩) 概括。icalcomponent_add_component
+    使用 c 的一个字段 components 作为参数调用 pvl_push，将写入访问路径扩展为 (c, ⟨components,head,data⟩)。分析的第一阶段识别出此路径的最后一个组件为被拥有字段，因此
+    icalcomponent_add_component 的 c 参数承担了 child 的所有权。请注意，icalcomponent_set_parent
+    不承担其 parent 参数的所有权：对应的字段从未被终结，因此不是被拥有的。
+
+
+    我们的访问路径构造从地址向后进行，跨越指针解引用、字段访问、联合访问和数组访问。我们在 SSA φ-节点处停止构造，以避免生成访问路径的潜在指数爆炸。虽然这是不健全的，但我们在实践中没有观察到任何遗漏的所有权转移。
+
+
+    ## 5. 改进的逃逸分析
+
+
+    虽然转移分析的结果对于生成自动化资源管理的语言绑定至关重要，但逃逸分析仍提供重要信息。如果指向对象的指针逃逸，但该对象的所有权未被转移，我们仍然了解该对象的生命周期信息。虽然我们不总是能自动管理此生命周期，但用户至少可以被告知需要某种作用域管理。辅助函数可用于将具有作用域生命周期的对象钉住，以防止它们在对
+    C 库不可见的垃圾收集器中存在引用时被收集。虽然已有工作描述了用于此目的的逃逸分析，但我们提出了一种更精确的分析，消除了先前工作的大量误报。
+
+
+    我们描述了一种自底向上、基于摘要、流不敏感的 C 逃逸分析，具有有限的字段和上下文敏感性。该分析是一种栈逃逸分析 [3, 21] 的形式，而不是线程逃逸分析
+    [19]。我们的分析基于值流逃逸图，它是值流图 [9] 的带额外注释版本。我们的分析最类似于 Whaley 和 Rinard [21] 的分析，尽管我们的分析是流不敏感的并且每个函数只需要一个图。像
+    Whaley 和 Rinard [21] 一样，我们独立于其调用者分析函数。我们需要这样做，因为调用者可能用另一种语言编写且在分析时不可用。此外，我们以速度和更简单的被调用者处理为代价牺牲精度。不是在调用点将每个被调用者的
+    points-to 逃逸图合并到调用者的图中，我们使用摘要信息仅将逃逸参数标记为逃逸。这允许对被调用者进行更紧凑的表示，以牺牲图合并的一些精度为代价。我们保守地假设传递给没有摘要的被调用者值会逃逸。值流图不允许我们回答
+    points-to 查询，我们不需要，但它可以在一次遍历中构造，而 points-to 逃逸图则不行。
+
+
+    我们的值流图有两种类型的节点：位置节点和 sink 节点。边 a → b 表示值从 a 流向 b。如果存在从它到 sink 的路径，则值会逃逸。分析是保守的并识别可能逃逸的值。这种近似是合适的，因为误报（错误地识别为逃逸的值）会导致泄漏，而不是崩溃。
+
+
+    sink 节点为 (1) 返回聚合或指针值的函数的 return 语句和 (2) 对全局变量、参数、被调用者的返回值及其访问路径的存储而创建。还为每个逃逸的被调用者的实际参数创建
+    sink。以下语句在值流图中诱导边：
+
+
+    - *a = b 添加 b → a 或 bₚ → a
+
+    赋值导致源操作数流向目标操作数。如果赋值右手边是具有具体访问路径 (b, ⟨p⟩) 的字段引用，则添加边 bₚ → a；如果没有字段访问，则添加更简单的形式
+    b → a。
+
+    - return a 添加 a → sink_ret
+
+    返回的值流向特殊的返回 sink 节点。
+
+
+    例如，第 5 图中的函数 CaseWalkerInit 的值流逃逸图如第 6 图所示。我们将位置节点表示为圆圈，sink 表示为矩形。参数 src 由其位置节点表示，该节点流向
+    w 参数的一个字段。src 逃逸，因为存在从它到 sink 的路径。
+
+
+    形如 f(a1, a2, ..., aN) 的函数调用充当一系列赋值 *f₁ = a1, *f₂ = a2, ..., *f_N = aN 的序列，其中 fᵢ
+    是表示 f 的第 i 个形式参数的节点。如果 fᵢ 允许其参数逃逸，则 fᵢ 是 sink 节点。局部值 v 从 f 逃逸，如果 v →* s 对某个 s
+    ∈ sinkNodes；即如果有 sink 节点 s 可从 v 到达。如果 v 根据此查询不逃逸，则 v 的字段 p 从 f 逃逸，如果 vₚ →* s 对某个
+    s ∈ sinkNodes。
+
+
+    为了引入有限形式的上下文敏感性，我们特别注意逃逸到其他参数字段中的参数。假设有一个函数调用 f(a, b)，其中 f 的第一个参数逃逸到第二个参数。我们在
+    f 的所有调用者中添加边 a → b，以模拟 f 对调用者的值流逃逸图的影响。例如，CmpIgnoreCase 函数中
+
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 5]\n\n```\n```c\nvoid CaseWalkerInit(const char *src, CaseWalker *w) {\n\
+    \    w→src = src;\n    w→read = 0;\n}\n\nint CmpIgnoreCase(const char *s1, const\
+    \ char *s2) {\n    CaseWalker w1, w2;\n    Char8 c1, c2;\n\n    if (s1 == s2)\
+    \ return 0;\n\n    CaseWalkerInit(s1, &w1);\n    CaseWalkerInit(s2, &w2);\n\n\
+    \    for (;;) {\n        c1 = CaseWalkerNext(&w1);\n        c2 = CaseWalkerNext(&w2);\n\
+    \        if (!c1 || (c1 != c2)) break;\n    }\n    return (int)c1 − (int)c2;\n\
+    }\n```\n```\n\n# Figure 5. Examples of escaping pointers from fontconfig library\n\
+    \n![](img/9139029c964c589521a335b88c3d54c4_5_0.png)\n\n# Figure 6. Value flow\
+    \ escape graph for CaseWalkerInit in figure 5\n\n![](img/9139029c964c589521a335b88c3d54c4_5_1.png)\n\
+    \n# Figure 7. Value flow escape graph for CmpIgnoreCase in figure 5\n\nfigure\
+    \ 5 calls CaseWalkerInit, which we already established allows its src argument\
+    \ to escape into w. Thus, the value flow escape graph of CmpIgnoreCase, shown\
+    \ in figure 7, has edges from s1 to w1 and s2 to w2. Since w1 and w2 are local\
+    \ variables that do not otherwise escape, we are able to conclude that s1 and\
+    \ s2 do not escape, despite being passed as arguments that could escape if considered\
+    \ only in isolation.\n\nField sensitivity prevents a single escaping field from\
+    \ causing all other fields of the same object to also escape. We take a field-based\
+    \ approach to field sensitivity that is unsound when pointers to struct types\
+    \ are cast to structurally unrelated types [15] as in section 4.1. This unsoundness\
+    \ could make us label an escaping pointer as non-escaping. It could be made sound\
+    \ by having any casts to structurally unrelated types cause all affected fields\
+    \ to escape. We have not done this because such casts are rare in practice and\
+    \ have not yet caused problems.\n\n# 6. Indirect Calls as Contracts\n\nWhile analyzing\
+    \ library code, indirect calls (calls through function pointers) pose a problem.\
+    \ Libraries typically have many entry points and context of the call is unavailable.\
+    \ While some indirect call targets can be resolved, most cannot. Thus, whenever\
+    \ one of our analyses encounters an indirect call, it seems that we must conservatively\
+    \ assume that any function at all could be called. Instead of accepting this often\
+    \ overly-conservative conclusion, we note that:\n\n```\n```c\ntypedef struct XML_ParserStruct\
+    \ {\n    const char *m_encoding;\n    XML_MemSuite m_mem;\n} *XML_Parser;\n\n\
+    XML_Parser parserCreate(const char *encodingName)\n{\n    XML_Parser parser;\n\
+    \    parser = malloc(sizeof(struct XML_ParserStruct));\n    if (parser != NULL)\
+    \ {\n        parser→m_encoding = encodingName;\n        parser→m_mem.malloc_fcn\
+    \ = malloc;\n        parser→m_mem.realloc_fcn = realloc;\n        parser→m_mem.free_fcn\
+    \ = free;\n    }\n\n    return parser;\n}\n\nDTD* dtdCreate(const XML_MemSuite\
+    \ *ms) {\n    DTD *p = ms→malloc_fcn(sizeof(DTD));\n    if (p == NULL) return\
+    \ p;\n\n    p→scaffLevel = 0;\n    p→scaffSize = 0;\n    p→scaffCount = 0;\n \
+    \   p→contentStringLen = 0;\n    return p;\n}\n```\n```\n\n# Figure 8. Contracts\
+    \ in expat library\n\n+   - many indirect function calls are made through function\
+    \ pointers stored in object fields, particularly in the case where they are used\
+    \ to implement polymorphic behavior; and\n+   - libraries initialize many of these\
+    \ fields with default functions defined in the same library.\n\nWhile callers\
+    \ can technically store the address of any function in one of these function pointers,\
+    \ the library-provided initializers clearly indicate what semantics the library\
+    \ expects the call targets to obey. Violating those semantics is possible, but\
+    \ risks undefined behavior. Library-provided function pointer initializers effectively\
+    \ induce contracts on internally-initialized function pointers. The library obeys\
+    \ these contracts, and inferences based on them hold as long as client code obeys\
+    \ them as well. Recognizing these contracts and incorporating them into the analyses\
+    \ discussed in sections 3 to 7 improves precision.\n\nConsider the example in\
+    \ figure 8. When parser objects are created in parserCreate, the malloc_fcn field\
+    \ of their XML_MemSuite is initialized with a pointer to the standard malloc function\
+    \ on line 12. While this does not mean that every malloc_fcn field will refer\
+    \ to malloc, it strongly suggests that the library expects the target to be an\
+    \ allocator. Since we consider the assignment on line 12 to create a contract\
+    \ on the malloc_fcn field, we conclude that dtdCreate is an allocator because\
+    \ of the call-under-contract on line 21.\n\n# 7. Safely Sharing Ownership\n\n\
+    Most resources in our model must be exclusively owned in order for them to be\
+    \ automatically managed by a high-level language run-time system. However, we\
+    \ support shared ownership for reference-counted resources. Moreover, ownership\
+    \ can be safely shared between a low-level language and a high-level language\
+    \ run-time system, provided the high-level language run-time safely manipu-"
+  - "[PAGE 6]\n\n```\n```c\ntypedef struct {\n    int refcount;\n    Connection *connection;\n\
+    } PendingCall;\n\nPendingCall* pending_call_ref(PendingCall *pending) {\n    ++pending->refcount;\n\
+    \    return pending;\n}\n\nvoid pending_call_unref(PendingCall *pending) {\n \
+    \   --pending->refcount;\n    if (pending->refcount) return;\n\n    Connection\
+    \ *c = pending->connection;\n    free(pending);\n    connection_unref(c);\n}\n\
+    ```\n```\n\n![](img/9139029c964c589521a335b88c3d54c4_6_0.png)\n\nlates the reference\
+    \ count. When the high-level language acquires shared ownership of a resource,\
+    \ it must increment its reference count. When the high-level language is ready\
+    \ to relinquish ownership of the resource, it must decrement the reference count\
+    \ instead of calling a finalizer on it. If the high-level language finalizes the\
+    \ resource directly, later accesses through outstanding shared references in library\
+    \ code could lead to a crash. Note that shared resources may safely escape into\
+    \ library code (c.f. section 5) because the reference counts mediate their lifetimes.\n\
+    \n# 7.1 Identifying Reference Increment and Decrement Functions\n\nWe describe\
+    \ an analysis to identify, for a library with reference-counted resources:\n\n\
+    +   - the set of types that must be reference-counted (to know when references\
+    \ must be managed) and\n+   - the functions to increment and decrement references\
+    \ (*IncRef* and *DecRef*, respectively) for each type (to correctly manipulate\
+    \ the reference counts).\n\nWe begin by identifying the *DecRef* function of a\
+    \ resource. Fundamentally, *DecRef*:\n\n+   - takes a pointer to a resource as\
+    \ an argument,\n+   - decrements an integer field of the resource, and\n+   -\
+    \ if the reference count becomes zero, calls a finalizer on the argument.\n\n\
+    A common variant of *DecRef* calls the finalizer directly without decrementing\
+    \ the reference count if there is only a single reference to the resource. Another\
+    \ interesting variant, such as from gobject-2.0, has multiple reference count\
+    \ decrement attempts; these arise because gobject-2.0 supports finalizers that\
+    \ can add references to objects that are in the process of being finalized. Instead\
+    \ of precisely modeling every possible variant of reference counting, we employ\
+    \ an over-approximation that is unsound and incomplete, but nonetheless effective.\n\
+    \nWithout loss of generality, assume that *DecRef* functions take only single\
+    \ argument: a pointer to a resource. First, identify all *conditional finalizers*\
+    \ in the library. These are functions that finalize their argument on some, but\
+    \ not all, paths. Building on the results of the finalizer analysis described\
+    \ in section 3, this is a linear scan of the instructions in each function. A\
+    \ conditional finalizer is a function that calls at least one finalizer on its\
+    \ argument but is not itself a finalizer. (If it were a finalizer, it would call\
+    \ a finalizer on *all* paths.)\n\nConsider the example in figure 9, which is adapted\
+    \ from code in the dbus-1 library simplified for exposition. Following the algorithm,\
+    \ we note that pending_call_unref takes a single pointer-typed argument. It passes\
+    \ this argument to finalizer free on line 16. However, pending_call_unref may\
+    \ also return early on line 13. Therefore, pending_call_unref is not itself a\
+    \ finalizer, but it is a conditional finalizer.\n\nFor each conditional finalizer\
+    \ *cf* with argument *a*, *cf* is a *DecRef* function with access path ⟨*a*, ⟨*p*⟩⟩\
+    \ if it decrements an integer field of *a* via a sequence of field accesses *p*.\
+    \ We do not require that *cf* always decrement the reference count because some\
+    \ variants skip it under certain circumstances; this is a potential source of\
+    \ imprecision. For example, the conditional finalizer pending_call_unref in figure\
+    \ 9 always decrements the refcount field of its pending argument on line 12. Therefore,\
+    \ pending_call_unref is a *DecRef* function with access path ⟨pending, ⟨refcount⟩⟩.\n\
+    \nFor each *DecRef* function and its associated access path ⟨*a*, ⟨*p*⟩⟩, the\
+    \ corresponding *IncRef* function is the one that takes a single argument of the\
+    \ same type as *a*, the root of the access path, and always increments the location\
+    \ in the resource described by *p*. If there is more than one *IncRef* function\
+    \ for a given *DecRef* function, we do not associate them and an annotation would\
+    \ be required to match the desired pairs. If more than one *DecRef* function could\
+    \ manage a given type, a consumer of the analysis results would need an annotation\
+    \ to prefer one. Returning to figure 9, we find that pending_call_ref always increments\
+    \ the refcount field of its one argument. Therefore, pending_call_ref is the *IncRef*\
+    \ function corresponding to pending_call_unref.\n\nNote that we assume that libraries\
+    \ correctly manage reference counts internally. We make no attempt to verify this\
+    \ assumption, for which other analyses already exist [4].\n\n# 7.2 Identifying\
+    \ Reference-Counted Types\n\nSo far we have identified the *IncRef* and *DecRef*\
+    \ functions that manipulate reference counts. We must also determine the set of\
+    \ types whose reference counts are managed by these functions. Clearly, this set\
+    \ includes the common argument type between *IncRef* and *DecRef*. Polymorphic\
+    \ reference counting functions, however, manage multiple types. One way to identify\
+    \ the set of managed types is to note that any polymorphic *DecRef* function needs\
+    \ some way to perform type-specific finalization when the reference count reaches\
+    \ zero. The types handled by these type-specific finalization functions are the\
+    \ types managed by the *IncRef* and *DecRef* pair.\n\nMore formally, let *c* be\
+    \ a function that has already been identified as a *DecRef* function for some\
+    \ type. Identify all indirect function callees in *c* to which *c* passes its\
+    \ argument. For each such callee *f*, let *τf* be the set of types to which *f*\
+    \ casts its argument. The set of types managed by *c* is the type of the argument\
+    \ of *c* unioned with ⋃f τf.\n\nThe example in figure 10 is simplified from the\
+    \ open-source library glib-2.0. Our analysis recognizes g_object_unref as a *DecRef*\
+    \ function because of the decrements of the ref_count field on lines 6 and 9 and\
+    \ the call to finalizer g_type_free_instance on line 13. Next, we identify the\
+    \ targets of indirect calls in g_object_unref. The only indirect call appears\
+    \ on line 12. As initialized in g_emblem_class_init, the only known target is\
+    \ g_emblem_finalize. Thus, g_object_unref and g_object_ref are the *DecRef* and\
+    \ *IncRef* functions for GObject and GEmblem. As in this example, the indirect\
+    \ callees of *DecRef* often represent finalizers for resource-specific data members.\
+    \ This algorithm assumes that *DecRef* functions operate on structural subtypes\
+    \ of the input value. An alternative approach is to"
+  md: "\n```c\nvoid CaseWalkerInit(const char *src, CaseWalker *w) {\n    w->src =\
+    \ src;\n    w->read = 0;\n}\n\nint CmpIgnoreCase(const char *s1, const char *s2)\
+    \ {\n    CaseWalker w1, w2;\n    Char8 c1, c2;\n\n    if (s1 == s2) return 0;\n\
+    \n    CaseWalkerInit(s1, &w1);\n    CaseWalkerInit(s2, &w2);\n\n    for (;;) {\n\
+    \        c1 = CaseWalkerNext(&w1);\n        c2 = CaseWalkerNext(&w2);\n      \
+    \  if (!c1 || (c1 != c2)) break;\n    }\n    return (int)c1 - (int)c2;\n}\n```\n\
+    \n**Figure 5.** Examples of escaping pointers from fontconfig library\n\n![](img/9139029c964c589521a335b88c3d54c4_5_0.png)\n\
+    \n**Figure 6.** Value flow escape graph for CaseWalkerInit in figure 5\n\n![](img/9139029c964c589521a335b88c3d54c4_5_1.png)\n\
+    \n**Figure 7.** Value flow escape graph for CmpIgnoreCase in figure 5\n\n![](img/9139029c964c589521a335b88c3d54c4_5_2.png)\n\
+    \nFigure 5 calls CaseWalkerInit, which we already established allows its src argument\
+    \ to escape into w. Thus, the value flow escape graph of CmpIgnoreCase, shown\
+    \ in figure 7, has edges from s1 to w1 and s2 to w2. Since w1 and w2 are local\
+    \ variables that do not otherwise escape, we are able to conclude that s1 and\
+    \ s2 do not escape, despite being passed as arguments that could escape if considered\
+    \ only in isolation.\n\nField sensitivity prevents a single escaping field from\
+    \ causing all other fields of the same object to also escape. We take a field-based\
+    \ approach to field sensitivity that is unsound when pointers to struct types\
+    \ are cast to structurally unrelated types [15] as in section 4.1. This unsoundness\
+    \ could make us label an escaping pointer as non-escaping. It could be made sound\
+    \ by having any casts to structurally unrelated types cause all affected fields\
+    \ to escape. We have not done this because such casts are rare in practice and\
+    \ have not yet caused problems.\n\n## 6. Indirect Calls as Contracts\n\nWhile\
+    \ analyzing library code, indirect calls (calls through function pointers) pose\
+    \ a problem. Libraries typically have many entry points and context of the call\
+    \ is unavailable. While some indirect call targets can be resolved, most cannot.\
+    \ Thus, whenever one of our analyses encounters an indirect call, it seems that\
+    \ we must conservatively assume that any function at all could be called. Instead\
+    \ of accepting this often overly-conservative conclusion, we note that:\n\n- many\
+    \ indirect function calls are made through function pointers stored in object\
+    \ fields, particularly in the case where they are used to implement polymorphic\
+    \ behavior; and\n- libraries initialize many of these fields with default functions\
+    \ defined in the same library.\n\nWhile callers can technically store the address\
+    \ of any function in one of these function pointers, the library-provided initializers\
+    \ clearly indicate what semantics the library expects the call targets to obey.\
+    \ Violating those semantics is possible, but risks undefined behavior. Library-provided\
+    \ function pointer initializers effectively induce contracts on internally-initialized\
+    \ function pointers. The library obeys these contracts, and inferences based on\
+    \ them hold as long as client code obeys them as well. Recognizing these contracts\
+    \ and incorporating them into the analyses discussed in sections 3 to 7 improves\
+    \ precision.\n\nConsider the example in figure 8.\n\n```c\ntypedef struct XML_ParserStruct\
+    \ {\n    const char *m_encoding;\n    XML_MemSuite m_mem;\n} *XML_Parser;\n\n\
+    XML_Parser parserCreate(const char *encodingName)\n{\n    XML_Parser parser;\n\
+    \    parser = malloc(sizeof(struct XML_ParserStruct));\n    if (parser != NULL)\
+    \ {\n        parser->m_encoding = encodingName;\n        parser->m_mem.malloc_fcn\
+    \ = malloc;\n        parser->m_mem.realloc_fcn = realloc;\n        parser->m_mem.free_fcn\
+    \ = free;\n    }\n\n    return parser;\n}\n\nDTD* dtdCreate(const XML_MemSuite\
+    \ *ms) {\n    DTD *p = ms->malloc_fcn(sizeof(DTD));\n    if (p == NULL) return\
+    \ p;\n\n    p->scaffLevel = 0;\n    p->scaffSize = 0;\n    p->scaffCount = 0;\n\
+    \    p->contentStringLen = 0;\n    return p;\n}\n```\n\n**Figure 8.** Contracts\
+    \ in expat library\n\nWhen parser objects are created in parserCreate, the malloc_fcn\
+    \ field of their XML_MemSuite is initialized with a pointer to the standard malloc\
+    \ function on line 12. While this does not mean that every malloc_fcn field will\
+    \ refer to malloc, it strongly suggests that the library expects the target to\
+    \ be an allocator. Since we consider the assignment on line 12 to create a contract\
+    \ on the malloc_fcn field, we conclude that dtdCreate is an allocator because\
+    \ of the call-under-contract on line 21.\n\n## 7. Safely Sharing Ownership\n\n\
+    Most resources in our model must be exclusively owned in order for them to be\
+    \ automatically managed by a high-level language run-time system. However, we\
+    \ support shared ownership for reference-counted resources. Moreover, ownership\
+    \ can be safely shared between a low-level language and a high-level language\
+    \ run-time system, provided the high-level language run-time safely manipulates\
+    \ the reference count. When the high-level language acquires shared ownership\
+    \ of a resource, it must increment its reference count. When the high-level language\
+    \ is ready to relinquish ownership of the resource, it must decrement the reference\
+    \ count instead of calling a finalizer on it. If the high-level language finalizes\
+    \ the resource directly, later accesses through outstanding shared references\
+    \ in library code could lead to a crash. Note that shared resources may safely\
+    \ escape into library code (cf. section 5) because the reference counts mediate\
+    \ their lifetimes.\n\n### 7.1 Identifying Reference Increment and Decrement Functions\n\
+    \nWe describe an analysis to identify, for a library with reference-counted resources:\n\
+    \n- the set of types that must be reference-counted (to know when references must\
+    \ be managed) and\n- the functions to increment and decrement references (*IncRef*\
+    \ and *DecRef*, respectively) for each type (to correctly manipulate the reference\
+    \ counts).\n\nWe begin by identifying the *DecRef* function of a resource. Fundamentally,\
+    \ *DecRef*:\n\n- takes a pointer to a resource as an argument,\n- decrements an\
+    \ integer field of the resource, and\n- if the reference count becomes zero, calls\
+    \ a finalizer on the argument.\n\nA common variant of *DecRef* calls the finalizer\
+    \ directly without decrementing the reference count if there is only a single\
+    \ reference to the resource. Another interesting variant, such as from gobject-2.0,\
+    \ has multiple reference count decrement attempts; these arise because gobject-2.0\
+    \ supports finalizers that can add references to objects that are in the process\
+    \ of being finalized. Instead of precisely modeling every possible variant of\
+    \ reference counting, we employ an over-approximation that is unsound and incomplete,\
+    \ but nonetheless effective.\n\nWithout loss of generality, assume that *DecRef*\
+    \ functions take only single argument: a pointer to a resource. First, identify\
+    \ all *conditional finalizers* in the library. These are functions that finalize\
+    \ their argument on some, but not all, paths. Building on the results of the finalizer\
+    \ analysis described in section 3, this is a linear scan of the instructions in\
+    \ each function. A conditional finalizer is a function that calls at least one\
+    \ finalizer on its argument but is not itself a finalizer. (If it were a finalizer,\
+    \ it would call a finalizer on *all* paths.)\n\nConsider the example in figure\
+    \ 9, which is adapted from code in the dbus-1 library simplified for exposition.\n\
+    \n```c\ntypedef struct {\n    int refcount;\n    Connection *connection;\n} PendingCall;\n\
+    \nPendingCall* pending_call_ref(PendingCall *pending) {\n    ++pending->refcount;\n\
+    \    return pending;\n}\n\nvoid pending_call_unref(PendingCall *pending) {\n \
+    \   --pending->refcount;\n    if (pending->refcount) return;\n\n    Connection\
+    \ *c = pending->connection;\n    free(pending);\n    connection_unref(c);\n}\n\
+    ```\n\n![](img/9139029c964c589521a335b88c3d54c4_6_0.png)\n\nFollowing the algorithm,\
+    \ we note that pending_call_unref takes a single pointer-typed argument. It passes\
+    \ this argument to finalizer free on line 16. However, pending_call_unref may\
+    \ also return early on line 13. Therefore, pending_call_unref is not itself a\
+    \ finalizer, but it is a conditional finalizer.\n\nFor each conditional finalizer\
+    \ *cf* with argument *a*, *cf* is a *DecRef* function with access path ⟨*a*, ⟨*p*⟩⟩\
+    \ if it decrements an integer field of *a* via a sequence of field accesses *p*.\
+    \ We do not require that *cf* always decrement the reference count because some\
+    \ variants skip it under certain circumstances; this is a potential source of\
+    \ imprecision. For example, the conditional finalizer pending_call_unref in figure\
+    \ 9 always decrements the refcount field of its pending argument on line 12. Therefore,\
+    \ pending_call_unref is a *DecRef* function with access path ⟨pending, ⟨refcount⟩⟩.\n\
+    \nFor each *DecRef* function and its associated access path ⟨*a*, ⟨*p*⟩⟩, the\
+    \ corresponding *IncRef* function is the one that takes a single argument of the\
+    \ same type as *a*, the root of the access path, and always increments the location\
+    \ in the resource described by *p*. If there is more than one *IncRef* function\
+    \ for a given *DecRef* function, we do not associate them and an annotation would\
+    \ be required to match the desired pairs. If more than one *DecRef* function could\
+    \ manage a given type, a consumer of the analysis results would need an annotation\
+    \ to prefer one. Returning to figure 9, we find that pending_call_ref always increments\
+    \ the refcount field of its one argument. Therefore, pending_call_ref is the *IncRef*\
+    \ function corresponding to pending_call_unref.\n\nNote that we assume that libraries\
+    \ correctly manage reference counts internally. We make no attempt to verify this\
+    \ assumption, for which other analyses already exist [4].\n\n### 7.2 Identifying\
+    \ Reference-Counted Types\n\nSo far we have identified the *IncRef* and *DecRef*\
+    \ functions that manipulate reference counts. We must also determine the set of\
+    \ types whose reference counts are managed by these functions. Clearly, this set\
+    \ includes the common argument type between *IncRef* and *DecRef*. Polymorphic\
+    \ reference counting functions, however, manage multiple types. One way to identify\
+    \ the set of managed types is to note that any polymorphic *DecRef* function needs\
+    \ some way to perform type-specific finalization when the reference count reaches\
+    \ zero. The types handled by these type-specific finalization functions are the\
+    \ types managed by the *IncRef* and *DecRef* pair.\n\nMore formally, let *c* be\
+    \ a function that has already been identified as a *DecRef* function for some\
+    \ type. Identify all indirect function callees in *c* to which *c* passes its\
+    \ argument. For each such callee *f*, let *τf* be the set of types to which *f*\
+    \ casts its argument. The set of types managed by *c* is the type of the argument\
+    \ of *c* unioned with ⋃_f τ_f.\n\nThe example in figure 10 is simplified from\
+    \ the open-source library glib-2.0. Our analysis recognizes g_object_unref as\
+    \ a *DecRef* function because of the decrements of the ref_count field on lines\
+    \ 6 and 9 and the call to finalizer g_type_free_instance on line 13. Next, we\
+    \ identify the targets of indirect calls in g_object_unref. The only indirect\
+    \ call appears on line 12. As initialized in g_emblem_class_init, the only known\
+    \ target is g_emblem_finalize. Thus, g_object_unref and g_object_ref are the *DecRef*\
+    \ and *IncRef* functions for GObject and GEmblem. As in this example, the indirect\
+    \ callees of *DecRef* often represent finalizers for resource-specific data members.\
+    \ This algorithm assumes that *DecRef* functions operate on structural subtypes\
+    \ of the input value. An alternative approach is to\n"
+  mdcn: "\n\n```c\nvoid CaseWalkerInit(const char *src, CaseWalker *w) {\n    w->src\
+    \ = src;\n    w->read = 0;\n}\n\nint CmpIgnoreCase(const char *s1, const char\
+    \ *s2) {\n    CaseWalker w1, w2;\n    Char8 c1, c2;\n\n    if (s1 == s2) return\
+    \ 0;\n\n    CaseWalkerInit(s1, &w1);\n    CaseWalkerInit(s2, &w2);\n\n    for\
+    \ (;;) {\n        c1 = CaseWalkerNext(&w1);\n        c2 = CaseWalkerNext(&w2);\n\
+    \        if (!c1 || (c1 != c2)) break;\n    }\n    return (int)c1 - (int)c2;\n\
+    }\n```\n\n**Figure 5.** Examples of escaping pointers from fontconfig library\n\
+    \n![](img/9139029c964c589521a335b88c3d54c4_5_0.png)\n\n**Figure 6.** Value flow\
+    \ escape graph for CaseWalkerInit in figure 5\n\n![](img/9139029c964c589521a335b88c3d54c4_5_1.png)\n\
+    \n**Figure 7.** Value flow escape graph for CmpIgnoreCase in figure 5\n\n![](img/9139029c964c589521a335b88c3d54c4_5_2.png)\n\
+    \nFigure 5 calls CaseWalkerInit, which we already established allows its src argument\
+    \ to escape into w. Thus, the value flow escape graph of CmpIgnoreCase, shown\
+    \ in figure 7, has edges from s1 to w1 and s2 to w2. Since w1 and w2 are local\
+    \ variables that do not otherwise escape, we are able to conclude that s1 and\
+    \ s2 do not escape, despite being passed as arguments that could escape if considered\
+    \ only in isolation.\n\nField sensitivity prevents a single escaping field from\
+    \ causing all other fields of the same object to also escape. We take a field-based\
+    \ approach to field sensitivity that is unsound when pointers to struct types\
+    \ are cast to structurally unrelated types [15] as in section 4.1. This unsoundness\
+    \ could make us label an escaping pointer as non-escaping. It could be made sound\
+    \ by having any casts to structurally unrelated types cause all affected fields\
+    \ to escape. We have not done this because such casts are rare in practice and\
+    \ have not yet caused problems.\n\n## 6. Indirect Calls as Contracts\n\nWhile\
+    \ analyzing library code, indirect calls (calls through function pointers) pose\
+    \ a problem. Libraries typically have many entry points and context of the call\
+    \ is unavailable. While some indirect call targets can be resolved, most cannot.\
+    \ Thus, whenever one of our analyses encounters an indirect call, it seems that\
+    \ we must conservatively assume that any function at all could be called. Instead\
+    \ of accepting this often overly-conservative conclusion, we note that:\n\n- many\
+    \ indirect function calls are made through function pointers stored in object\
+    \ fields, particularly in the case where they are used to implement polymorphic\
+    \ behavior; and\n- libraries initialize many of these fields with default functions\
+    \ defined in the same library.\n\nWhile callers can technically store the address\
+    \ of any function in one of these function pointers, the library-provided initializers\
+    \ clearly indicate what semantics the library expects the call targets to obey.\
+    \ Violating those semantics is possible, but risks undefined behavior. Library-provided\
+    \ function pointer initializers effectively induce contracts on internally-initialized\
+    \ function pointers. The library obeys these contracts, and inferences based on\
+    \ them hold as long as client code obeys them as well. Recognizing these contracts\
+    \ and incorporating them into the analyses discussed in sections 3 to 7 improves\
+    \ precision.\n\nConsider the example in figure 8.\n\n```c\ntypedef struct XML_ParserStruct\
+    \ {\n    const char *m_encoding;\n    XML_MemSuite m_mem;\n} *XML_Parser;\n\n\
+    XML_Parser parserCreate(const char *encodingName)\n{\n    XML_Parser parser;\n\
+    \    parser = malloc(sizeof(struct XML_ParserStruct));\n    if (parser != NULL)\
+    \ {\n        parser->m_encoding = encodingName;\n        parser->m_mem.malloc_fcn\
+    \ = malloc;\n        parser->m_mem.realloc_fcn = realloc;\n        parser->m_mem.free_fcn\
+    \ = free;\n    }\n\n    return parser;\n}\n\nDTD* dtdCreate(const XML_MemSuite\
+    \ *ms) {\n    DTD *p = ms->malloc_fcn(sizeof(DTD));\n    if (p == NULL) return\
+    \ p;\n\n    p->scaffLevel = 0;\n    p->scaffSize = 0;\n    p->scaffCount = 0;\n\
+    \    p->contentStringLen = 0;\n    return p;\n}\n```\n\n**Figure 8.** Contracts\
+    \ in expat library\n\nWhen parser objects are created in parserCreate, the malloc_fcn\
+    \ field of their XML_MemSuite is initialized with a pointer to the standard malloc\
+    \ function on line 12. While this does not mean that every malloc_fcn field will\
+    \ refer to malloc, it strongly suggests that the library expects the target to\
+    \ be an allocator. Since we consider the assignment on line 12 to create a contract\
+    \ on the malloc_fcn field, we conclude that dtdCreate is an allocator because\
+    \ of the call-under-contract on line 21.\n\n## 7. Safely Sharing Ownership\n\n\
+    Most resources in our model must be exclusively owned in order for them to be\
+    \ automatically managed by a high-level language run-time system. However, we\
+    \ support shared ownership for reference-counted resources. Moreover, ownership\
+    \ can be safely shared between a low-level language and a high-level language\
+    \ run-time system, provided the high-level language run-time safely manipulates\
+    \ the reference count. When the high-level language acquires shared ownership\
+    \ of a resource, it must increment its reference count. When the high-level language\
+    \ is ready to relinquish ownership of the resource, it must decrement the reference\
+    \ count instead of calling a finalizer on it. If the high-level language finalizes\
+    \ the resource directly, later accesses through outstanding shared references\
+    \ in library code could lead to a crash. Note that shared resources may safely\
+    \ escape into library code (cf. section 5) because the reference counts mediate\
+    \ their lifetimes.\n\n### 7.1 Identifying Reference Increment and Decrement Functions\n\
+    \nWe describe an analysis to identify, for a library with reference-counted resources:\n\
+    \n- the set of types that must be reference-counted (to know when references must\
+    \ be managed) and\n- the functions to increment and decrement references (*IncRef*\
+    \ and *DecRef*, respectively) for each type (to correctly manipulate the reference\
+    \ counts).\n\nWe begin by identifying the *DecRef* function of a resource. Fundamentally,\
+    \ *DecRef*:\n\n- takes a pointer to a resource as an argument,\n- decrements an\
+    \ integer field of the resource, and\n- if the reference count becomes zero, calls\
+    \ a finalizer on the argument.\n\nA common variant of *DecRef* calls the finalizer\
+    \ directly without decrementing the reference count if there is only a single\
+    \ reference to the resource. Another interesting variant, such as from gobject-2.0,\
+    \ has multiple reference count decrement attempts; these arise because gobject-2.0\
+    \ supports finalizers that can add references to objects that are in the process\
+    \ of being finalized. Instead of precisely modeling every possible variant of\
+    \ reference counting, we employ an over-approximation that is unsound and incomplete,\
+    \ but nonetheless effective.\n\nWithout loss of generality, assume that *DecRef*\
+    \ functions take only single argument: a pointer to a resource. First, identify\
+    \ all *conditional finalizers* in the library. These are functions that finalize\
+    \ their argument on some, but not all, paths. Building on the results of the finalizer\
+    \ analysis described in section 3, this is a linear scan of the instructions in\
+    \ each function. A conditional finalizer is a function that calls at least one\
+    \ finalizer on its argument but is not itself a finalizer. (If it were a finalizer,\
+    \ it would call a finalizer on *all* paths.)\n\nConsider the example in figure\
+    \ 9, which is adapted from code in the dbus-1 library simplified for exposition.\n\
+    \n```c\ntypedef struct {\n    int refcount;\n    Connection *connection;\n} PendingCall;\n\
+    \nPendingCall* pending_call_ref(PendingCall *pending) {\n    ++pending->refcount;\n\
+    \    return pending;\n}\n\nvoid pending_call_unref(PendingCall *pending) {\n \
+    \   --pending->refcount;\n    if (pending->refcount) return;\n\n    Connection\
+    \ *c = pending->connection;\n    free(pending);\n    connection_unref(c);\n}\n\
+    ```\n\n![](img/9139029c964c589521a335b88c3d54c4_6_0.png)\n\nFollowing the algorithm,\
+    \ we note that pending_call_unref takes a single pointer-typed argument. It passes\
+    \ this argument to finalizer free on line 16. However, pending_call_unref may\
+    \ also return early on line 13. Therefore, pending_call_unref is not itself a\
+    \ finalizer, but it is a conditional finalizer.\n\nFor each conditional finalizer\
+    \ *cf* with argument *a*, *cf* is a *DecRef* function with access path ⟨*a*, ⟨*p*⟩⟩\
+    \ if it decrements an integer field of *a* via a sequence of field accesses *p*.\
+    \ We do not require that *cf* always decrement the reference count because some\
+    \ variants skip it under certain circumstances; this is a potential source of\
+    \ imprecision. For example, the conditional finalizer pending_call_unref in figure\
+    \ 9 always decrements the refcount field of its pending argument on line 12. Therefore,\
+    \ pending_call_unref is a *DecRef* function with access path ⟨pending, ⟨refcount⟩⟩.\n\
+    \nFor each *DecRef* function and its associated access path ⟨*a*, ⟨*p*⟩⟩, the\
+    \ corresponding *IncRef* function is the one that takes a single argument of the\
+    \ same type as *a*, the root of the access path, and always increments the location\
+    \ in the resource described by *p*. If there is more than one *IncRef* function\
+    \ for a given *DecRef* function, we do not associate them and an annotation would\
+    \ be required to match the desired pairs. If more than one *DecRef* function could\
+    \ manage a given type, a consumer of the analysis results would need an annotation\
+    \ to prefer one. Returning to figure 9, we find that pending_call_ref always increments\
+    \ the refcount field of its one argument. Therefore, pending_call_ref is the *IncRef*\
+    \ function corresponding to pending_call_unref.\n\nNote that we assume that libraries\
+    \ correctly manage reference counts internally. We make no attempt to verify this\
+    \ assumption, for which other analyses already exist [4].\n\n### 7.2 Identifying\
+    \ Reference-Counted Types\n\nSo far we have identified the *IncRef* and *DecRef*\
+    \ functions that manipulate reference counts. We must also determine the set of\
+    \ types whose reference counts are managed by these functions. Clearly, this set\
+    \ includes the common argument type between *IncRef* and *DecRef*. Polymorphic\
+    \ reference counting functions, however, manage multiple types. One way to identify\
+    \ the set of managed types is to note that any polymorphic *DecRef* function needs\
+    \ some way to perform type-specific finalization when the reference count reaches\
+    \ zero. The types handled by these type-specific finalization functions are the\
+    \ types managed by the *IncRef* and *DecRef* pair.\n\nMore formally, let *c* be\
+    \ a function that has already been identified as a *DecRef* function for some\
+    \ type. Identify all indirect function callees in *c* to which *c* passes its\
+    \ argument. For each such callee *f*, let *τf* be the set of types to which *f*\
+    \ casts its argument. The set of types managed by *c* is the type of the argument\
+    \ of *c* unioned with ⋃_f τ_f.\n\nThe example in figure 10 is simplified from\
+    \ the open-source library glib-2.0. Our analysis recognizes g_object_unref as\
+    \ a *DecRef* function because of the decrements of the ref_count field on lines\
+    \ 6 and 9 and the call to finalizer g_type_free_instance on line 13. Next, we\
+    \ identify the targets of indirect calls in g_object_unref. The only indirect\
+    \ call appears on line 12. As initialized in g_emblem_class_init, the only known\
+    \ target is g_emblem_finalize. Thus, g_object_unref and g_object_ref are the *DecRef*\
+    \ and *IncRef* functions for GObject and GEmblem. As in this example, the indirect\
+    \ callees of *DecRef* often represent finalizers for resource-specific data members.\
+    \ This algorithm assumes that *DecRef* functions operate on structural subtypes\
+    \ of the input value. An alternative approach is to\n"
+  merge: 1
+- raw:
+  - "[PAGE 7]\n\n```\nvoid g_object_unref(GObject *object) {\n    gint oref;\n   \
+    \ oref = g_atomic_int_get(&object->ref_count);\n    if (oref > 1) {\n        g_atomic_int_add(&object->ref_count,\
+    \ -1);\n    } else {\n        oref = g_atomic_int_add(&object->ref_count, -1);\n\
+    \        if (oref == 1) {\n            object->klass->finalize(object);\n    \
+    \        g_type_free_instance(object);\n        }\n    }\n}\n\nvoid g_emblem_class_init(GEmblemClass\
+    \ *klass) {\n    klass->finalize = g_emblem_finalize;\n}\n\nvoid g_emblem_finalize(GObject\
+    \ *object) {\n    GEmblem *emblem = (GEmblem*)object;\n    g_object_unref(emblem->icon);\n\
+    }\n```\n\n# Figure 10. Managed types example from glib-2.0 library\n\ndirectly\
+    \ exploit the structural subtyping relationship and consider all structural subtypes\
+    \ of the input to DecRef as being managed. We compare these two approaches in\
+    \ section 8.2.\n\n# 7.3 Interprocedural Reference Count Manipulation\n\nNot all\
+    \ functions directly increment and decrement references. Many use auxiliary functions,\
+    \ particularly those that rely on atomic increments and decrements. We employ\
+    \ a simple analysis to summarize the effects that functions have on the integer\
+    \ fields of their pointer-typed arguments. This analysis also tracks these effects\
+    \ for arguments of type int* to accommodate reference counting functions that\
+    \ pass the address of their reference count field instead of the object containing\
+    \ it.\n\n# 7.4 Benefits of Automation\n\nFor users unfamiliar with a library,\
+    \ the inferred annotations document that reference counts must be maintained.\
+    \ More importantly, automatically finding the vast majority of reference-counted\
+    \ types decreases a potentially large annotation burden.\n\n# 8. Evaluation\n\n\
+    We have applied the analyses described in sections 3 to 6 to a suite of fifteen\
+    \ open-source libraries. The libraries range in size from a few functions and\
+    \ a few hundred lines of code up to several thousand functions with hundreds of\
+    \ thousands of lines of code.\n\nWe evaluate the effectiveness of the ownership\
+    \ transfer analysis and the reference counting analysis separately. For the most\
+    \ part, libraries using a reference counting discipline do not require the results\
+    \ of the ownership transfer analysis because ownership is explicitly shared through\
+    \ the reference counts. Thus, the results of the ownership transfer analysis are\
+    \ typically not necessary to generate library bindings for reference-counted libraries.\n\
+    \n# 8.1 Transfer Analysis\n\nThis section evaluates the effectiveness of the ownership\
+    \ transfer analysis, with a particular focus on the reduction in manual annota-\n\
+    \n# Table 1. Number of inferred transfer and escape annotations\n\n| Library Analyzed\
+    \ | Transferred Parameters | | | | |\n|---|---|---|---|---|---|\n| Name | Functions\
+    \ | Transfer | Contract | Indirect | Direct |\n| archive | 267 | 9 | 33 | 18 |\
+    \ 47 |\n| freenect | 61 | 2 | 0 | 5 | 13 |\n| fuse | 188 | 4 | 5 | 106 | 28 |\n\
+    | glpk | 1072 | 0 | 67 | 54 | 149 |\n| gsl | 3910 | 39 | 68 | 21 | 88 |\n| ical\
+    \ | 1045 | 10 | 0 | 7 | 142 |\n\ntion burden compared to relying solely on the\
+    \ results of an escape analysis. Table 1 shows the number of inferred annotations\
+    \ for six libraries of various sizes. The transfer analysis was designed based\
+    \ on archive and ical. The remaining libraries can be considered as the test set.\
+    \ The second column in the table notes the number of functions in each library.\
+    \ The “Transfer” column reports the number of function parameters that our analysis\
+    \ has identified as transferring ownership from the caller. The rest of the columns\
+    \ break down the results of our escape analysis.\n\nWe partition escaping parameters\
+    \ into three categories: contract escapes, indirect escapes, and direct escapes.\
+    \ Contract escapes are parameters that escape through calls to function pointers\
+    \ where some targets are known, and all of those targets agree that the parameter\
+    \ does not escape. We refer to these parameters as contract escapes because they\
+    \ only escape if the contract on the function pointer they are passed to is violated,\
+    \ i.e., only if the assumptions of section 6 do not apply. Indirect escapes are\
+    \ parameters that are passed as arguments to calls through function pointers for\
+    \ which no targets can be identified. However, it is rare in practice for parameters\
+    \ to truly escape through function pointers because that would make the code difficult\
+    \ to reason about. If a consumer of these analysis results can make this assumption,\
+    \ the distinction can make a significant difference. For example, the fuse client\
+    \ library has many more indirect escapes than direct escapes. Direct escapes in\
+    \ table 1 are the remaining escaping parameters: simple escapes, such as to global\
+    \ variables, that are not due to calls through function pointers.\n\nWhile contract\
+    \ escapes are clearly not expected to escape by the library, by virtue of library-provided\
+    \ initializers, they offer more information still. Each indirect function call\
+    \ that induces contract escapes imposes a contract on the function pointer that\
+    \ is dereferenced for that call. We can say that any function that could be pointed\
+    \ to by that function pointer should obey the contract that its arguments not\
+    \ escape. Contract escapes are most prevalent in libraries with polymorphic behavior,\
+    \ as can be seen in archive. In this library, polymorphism is implemented through\
+    \ function pointers stored in each object. These function pointer fields are initialized\
+    \ with functions defined in the library when objects are created, allowing us\
+    \ to infer the corresponding contracts as suggested in section 6. It is important\
+    \ to note that we do not consider an argument to an indirect function call to\
+    \ be a contract escape if we merely know some of the targets of the call. We only\
+    \ label it as a contract escape if all known call targets agree that the parameter\
+    \ does not escape.\n\nEach transfer annotation has an accompanying direct escape\
+    \ annotation. If the results of the ownership transfer analysis, rather than the\
+    \ escape analysis, are used to automate resource management, then the difference\
+    \ between the “Direct” and “Transfer” columns in table 1 is the number of manual\
+    \ annotations saved by the ownership transfer analysis. Without the ownership\
+    \ transfer analysis, each extra escape annotation introduces a memory leak that\
+    \ must be plugged with a manual annotation. This difference is striking in glpk\
+    \ and ical: the ownership transfer analysis saves over 100 manual annotations\
+    \ in each. Further, glpk does not seem to ever transfer ownership. However, as\
+    \ discussed in section 5, the escape annotations are still useful as object lifetime\
+    \ documentation to the user."
+  - '[PAGE 8]
+
+
+    Note that the transfer analysis requires an accurate view of the finalizer functions
+    in a given library. The finalizer analysis is beyond the scope of this paper,
+    and the one used for this evaluation was not able to identify all of the finalizers
+    in the libraries used for this evaluation. To compensate, we manually annotated
+    four missed finalizers in ical and two in glpk. The finalizers in archive, freenect,
+    and fuse were automatically identified. We have exhaustively inspected the results
+    for glpk or gsl and some finalizers may have been missed in those libraries; if
+    so, our ownership transfer analysis would identify more transferred parameters
+    if the missed finalizers were manually annotated. We note that manually annotating
+    finalizers is significantly easier than manually examining possible ownership
+    transfers because finalizers tend to follow uniform naming conventions.
+
+
+    In the remainder of this subsection, we provide a more detailed analysis of the
+    results for three of the libraries in our evaluation. These three libraries were
+    chosen because they have interesting ownership transfer properties while being
+    small enough to thoroughly evaluate by hand.
+
+
+    # 8.1.1 ical
+
+
+    The ical library provides a representation of calendar data. It has many functions,
+    but only a few actually transfer ownership of objects. The primary data structures
+    in this library form a tree; when an item is added to a tree representing some
+    calendar event, that tree assumes ownership of the new item.
+
+
+    The two analyses agree that 10 parameters induce ownership transfers. The escape
+    analysis flags over 100 extra parameters, however. Some of these non-transferred
+    escapes can be explained by the presence of a container API that does not own
+    its elements: adding an item to the container causes an escape but the container
+    does not own anything except its own internal structures. Many of the remaining
+    discrepancies arise from parent pointers. When one item is inserted as the child
+    of another in a tree, the parent field of the newly inserted item is updated to
+    point to its new parent element. This causes the child to escape into the parent
+    and the parent to escape into the child. Similarly, many functions cause one or
+    more of their parameters to escape into themselves. These self-escapes could potentially
+    be special-cased when generating library bindings.
+
+
+    One function with an escape annotation but no transfer annotation was particularly
+    interesting. This function adds an attachment to another object; however, attachments
+    are the one resource in ical that are reference-counted. Since attachments are
+    reference-counted, they do not have a finalizer function that our analysis could
+    automatically identify. Adding a manual annotation to the unref function for attachments
+    causes the analysis to correctly identify the ownership transfer in question.
+    This suggests that it may be prudent to consider unref functions for reference-counted
+    resources as finalizers for the purposes of the ownership transfer analysis.
+
+
+    # 8.1.2 freenect
+
+
+    This library provides a driver and userspace control for Kinect hardware. Our
+    analysis infers ownership transfer of two parameters in two different functions,
+    freenect_init and fnusb_init. Both of these inferences are incorrect. The root
+    cause is fnusb_init, which freenect_init calls. The parameter in question is an
+    optional libusb_context. If the caller provides a context, the library keeps a
+    reference to it but does not assume ownership. However, if the caller does not
+    provide a context, fnusb_init allocates its own context over which it does assume
+    ownership. This ownership is recorded with a flag alongside the reference to the
+    libusb_context. This violates one of the assumptions of our ownership transfer
+    analysis: that fields are either always owned or never owned. This particular
+    field is sometimes owned. While these inferred transfer annotations are not correct,
+    the analysis still relieves the user of having to provide
+
+
+    eleven annotations to compensate for the overzealous escape analysis. The transfer
+    analysis also reduced the amount of code that must be inspected manually to two
+    functions.
+
+
+    We could adapt our analysis to make special note of fields that are only sometimes
+    finalized. Perhaps we could restrict it to fields that are finalized only based
+    on some flag. These conditionally-owned fields could be reported in diagnostics
+    and in generated documentation; with this extra information, users could decide
+    on the correct ownership semantics for their case. Although adding to the manual
+    inspection burden for users is undesirable, our analysis can show users exactly
+    where the ambiguity arises, limiting the scope of the inspection to just unusual
+    finalizers, rather than potentially every function in the library.
+
+
+    # 8.1.3 fuse
+
+
+    The fuse library is the userspace component of the Filesystem in Userspace project
+    for some *NIX systems. This library has only a handful of ownership transfers;
+    three of the four are transfers of a single type. In these cases, fuse_session
+    objects assume ownership of communication channels through constructors and an
+    explicit fuse_session_add_chan function.
+
+
+    The fourth ownership transferring function, fuse_session_new, is more interesting.
+    It creates a new fuse_session with two parameters: a void* for arbitrary user-provided
+    data and a struct with metadata. Among the metadata is an optional function to
+    finalize the user-provided data, which the finalizer for fuse_session objects
+    invokes if it is present.
+
+
+    This function exhibits an unforeseen interaction with our assumption that fields
+    will either always be owned or never owned: the user has control over the ownership
+    of a field, and our analysis finds evidence within the library being analyzed
+    that the field may be owned. This case suggests that our restriction, as well
+    as our notion of finalizers, could benefit from more nuance. In this case, we
+    see that a field is conditionally finalized based on a value provided by the user,
+    whereas the example in freenect made its decision to finalize or not based on
+    a field set by the library. While the correctness of the transfer annotation in
+    the case of this user data parameter to fuse_session_new may depend on the preferences
+    of the library user, the transfer analysis still saves a user from having to provide
+    at least 24 annotations to prevent leaks due to the escape analysis. Furthermore,
+    the user need only examine the four annotations inferred by the transfer analysis.
+    In reading the documentation on how to call fuse_session_new, the meaning of the
+    transfer annotation on the user data parameter would become clear.
+
+
+    One might be tempted to generate library bindings that never transfer ownership
+    of user data pointers to a C library. This example shows that such special treatment
+    for even this extremely common C idiom is not completely safe. In most cases user
+    data is not owned, but when it is the type system bears no indication one way
+    or another.
+
+
+    Most of the escaping parameters whose ownership is not transferred are other user
+    data pointers. There are also a few instances of self-escaping parameters as in
+    ical. A third class of escapes are due to an imprecision in the escape analysis
+    that could be fixed. The fuse library uses non-escaping heap allocations; parameters
+    stored into these heap allocations are reported as escaping because our escape
+    analysis does not take advantage of the fact that pointers returned by allocators
+    like malloc are not aliased by anything. This could be fixed by treating heap-allocated
+    locals in the same way that we treat non-escaping stack-allocated locals.
+
+
+    # 8.2 Reference Counting Analysis
+
+
+    Table 2 summarizes the results of our reference counting analysis. This analysis
+    was designed based on the dbus-1, exif, gobject-2.0, and gio-2.0 libraries. For
+    each library, we report (1) the number of functions in the library, (2) the number
+    of functions that are'
+  md: "\n```c\nvoid g_object_unref(GObject *object) {\n    gint oref;\n    oref =\
+    \ g_atomic_int_get(&object->ref_count);\n    if (oref > 1) {\n        g_atomic_int_add(&object->ref_count,\
+    \ -1);\n    } else {\n        oref = g_atomic_int_add(&object->ref_count, -1);\n\
+    \        if (oref == 1) {\n            object->klass->finalize(object);\n    \
+    \        g_type_free_instance(object);\n        }\n    }\n}\n\nvoid g_emblem_class_init(GEmblemClass\
+    \ *klass) {\n    klass->finalize = g_emblem_finalize;\n}\n\nvoid g_emblem_finalize(GObject\
+    \ *object) {\n    GEmblem *emblem = (GEmblem*)object;\n    g_object_unref(emblem->icon);\n\
+    }\n```\n\nFigure 10. Managed types example from glib-2.0 library\n\ndirectly exploit\
+    \ the structural subtyping relationship and consider all structural subtypes of\
+    \ the input to DecRef as being managed. We compare these two approaches in section\
+    \ 8.2.\n\n### 7.3 Interprocedural Reference Count Manipulation\n\nNot all functions\
+    \ directly increment and decrement references. Many use auxiliary functions, particularly\
+    \ those that rely on atomic increments and decrements. We employ a simple analysis\
+    \ to summarize the effects that functions have on the integer fields of their\
+    \ pointer-typed arguments. This analysis also tracks these effects for arguments\
+    \ of type int* to accommodate reference counting functions that pass the address\
+    \ of their reference count field instead of the object containing it.\n\n### 7.4\
+    \ Benefits of Automation\n\nFor users unfamiliar with a library, the inferred\
+    \ annotations document that reference counts must be maintained. More importantly,\
+    \ automatically finding the vast majority of reference-counted types decreases\
+    \ a potentially large annotation burden.\n\n## 8. Evaluation\n\nWe have applied\
+    \ the analyses described in sections 3 to 6 to a suite of fifteen open-source\
+    \ libraries. The libraries range in size from a few functions and a few hundred\
+    \ lines of code up to several thousand functions with hundreds of thousands of\
+    \ lines of code.\n\nWe evaluate the effectiveness of the ownership transfer analysis\
+    \ and the reference counting analysis separately. For the most part, libraries\
+    \ using a reference counting discipline do not require the results of the ownership\
+    \ transfer analysis because ownership is explicitly shared through the reference\
+    \ counts. Thus, the results of the ownership transfer analysis are typically not\
+    \ necessary to generate library bindings for reference-counted libraries.\n\n\
+    ### 8.1 Transfer Analysis\n\nThis section evaluates the effectiveness of the ownership\
+    \ transfer analysis, with a particular focus on the reduction in manual annotation\
+    \ burden compared to relying solely on the results of an escape analysis.\n\n\
+    Table 1. Number of inferred transfer and escape annotations\n\n| Library Analyzed\
+    \ | Functions | Transfer | Contract | Indirect | Direct |\n|---|---|---|---|---|---|\n\
+    | archive | 267 | 9 | 33 | 18 | 47 |\n| freenect | 61 | 2 | 0 | 5 | 13 |\n| fuse\
+    \ | 188 | 4 | 5 | 106 | 28 |\n| glpk | 1072 | 0 | 67 | 54 | 149 |\n| gsl | 3910\
+    \ | 39 | 68 | 21 | 88 |\n| ical | 1045 | 10 | 0 | 7 | 142 |\n\nTable 1 shows the\
+    \ number of inferred annotations for six libraries of various sizes. The transfer\
+    \ analysis was designed based on archive and ical. The remaining libraries can\
+    \ be considered as the test set. The second column in the table notes the number\
+    \ of functions in each library. The “Transfer” column reports the number of function\
+    \ parameters that our analysis has identified as transferring ownership from the\
+    \ caller. The rest of the columns break down the results of our escape analysis.\n\
+    \nWe partition escaping parameters into three categories: contract escapes, indirect\
+    \ escapes, and direct escapes. Contract escapes are parameters that escape through\
+    \ calls to function pointers where some targets are known, and all of those targets\
+    \ agree that the parameter does not escape. We refer to these parameters as contract\
+    \ escapes because they only escape if the contract on the function pointer they\
+    \ are passed to is violated, i.e., only if the assumptions of section 6 do not\
+    \ apply. Indirect escapes are parameters that are passed as arguments to calls\
+    \ through function pointers for which no targets can be identified. However, it\
+    \ is rare in practice for parameters to truly escape through function pointers\
+    \ because that would make the code difficult to reason about. If a consumer of\
+    \ these analysis results can make this assumption, the distinction can make a\
+    \ significant difference. For example, the fuse client library has many more indirect\
+    \ escapes than direct escapes. Direct escapes in table 1 are the remaining escaping\
+    \ parameters: simple escapes, such as to global variables, that are not due to\
+    \ calls through function pointers.\n\nWhile contract escapes are clearly not expected\
+    \ to escape by the library, by virtue of library-provided initializers, they offer\
+    \ more information still. Each indirect function call that induces contract escapes\
+    \ imposes a contract on the function pointer that is dereferenced for that call.\
+    \ We can say that any function that could be pointed to by that function pointer\
+    \ should obey the contract that its arguments not escape. Contract escapes are\
+    \ most prevalent in libraries with polymorphic behavior, as can be seen in archive.\
+    \ In this library, polymorphism is implemented through function pointers stored\
+    \ in each object. These function pointer fields are initialized with functions\
+    \ defined in the library when objects are created, allowing us to infer the corresponding\
+    \ contracts as suggested in section 6. It is important to note that we do not\
+    \ consider an argument to an indirect function call to be a contract escape if\
+    \ we merely know some of the targets of the call. We only label it as a contract\
+    \ escape if all known call targets agree that the parameter does not escape.\n\
+    \nEach transfer annotation has an accompanying direct escape annotation. If the\
+    \ results of the ownership transfer analysis, rather than the escape analysis,\
+    \ are used to automate resource management, then the difference between the “Direct”\
+    \ and “Transfer” columns in table 1 is the number of manual annotations saved\
+    \ by the ownership transfer analysis. Without the ownership transfer analysis,\
+    \ each extra escape annotation introduces a memory leak that must be plugged with\
+    \ a manual annotation. This difference is striking in glpk and ical: the ownership\
+    \ transfer analysis saves over 100 manual annotations in each. Further, glpk does\
+    \ not seem to ever transfer ownership. However, as discussed in section 5, the\
+    \ escape annotations are still useful as object lifetime documentation to the\
+    \ user.\n\nNote that the transfer analysis requires an accurate view of the finalizer\
+    \ functions in a given library. The finalizer analysis is beyond the scope of\
+    \ this paper, and the one used for this evaluation was not able to identify all\
+    \ of the finalizers in the libraries used for this evaluation. To compensate,\
+    \ we manually annotated four missed finalizers in ical and two in glpk. The finalizers\
+    \ in archive, freenect, and fuse were automatically identified. We have exhaustively\
+    \ inspected the results for glpk or gsl and some finalizers may have been missed\
+    \ in those libraries; if so, our ownership transfer analysis would identify more\
+    \ transferred parameters if the missed finalizers were manually annotated. We\
+    \ note that manually annotating finalizers is significantly easier than manually\
+    \ examining possible ownership transfers because finalizers tend to follow uniform\
+    \ naming conventions.\n\nIn the remainder of this subsection, we provide a more\
+    \ detailed analysis of the results for three of the libraries in our evaluation.\
+    \ These three libraries were chosen because they have interesting ownership transfer\
+    \ properties while being small enough to thoroughly evaluate by hand.\n\n####\
+    \ 8.1.1 ical\n\nThe ical library provides a representation of calendar data. It\
+    \ has many functions, but only a few actually transfer ownership of objects. The\
+    \ primary data structures in this library form a tree; when an item is added to\
+    \ a tree representing some calendar event, that tree assumes ownership of the\
+    \ new item.\n\nThe two analyses agree that 10 parameters induce ownership transfers.\
+    \ The escape analysis flags over 100 extra parameters, however. Some of these\
+    \ non-transferred escapes can be explained by the presence of a container API\
+    \ that does not own its elements: adding an item to the container causes an escape\
+    \ but the container does not own anything except its own internal structures.\
+    \ Many of the remaining discrepancies arise from parent pointers. When one item\
+    \ is inserted as the child of another in a tree, the parent field of the newly\
+    \ inserted item is updated to point to its new parent element. This causes the\
+    \ child to escape into the parent and the parent to escape into the child. Similarly,\
+    \ many functions cause one or more of their parameters to escape into themselves.\
+    \ These self-escapes could potentially be special-cased when generating library\
+    \ bindings.\n\nOne function with an escape annotation but no transfer annotation\
+    \ was particularly interesting. This function adds an attachment to another object;\
+    \ however, attachments are the one resource in ical that are reference-counted.\
+    \ Since attachments are reference-counted, they do not have a finalizer function\
+    \ that our analysis could automatically identify. Adding a manual annotation to\
+    \ the unref function for attachments causes the analysis to correctly identify\
+    \ the ownership transfer in question. This suggests that it may be prudent to\
+    \ consider unref functions for reference-counted resources as finalizers for the\
+    \ purposes of the ownership transfer analysis.\n\n#### 8.1.2 freenect\n\nThis\
+    \ library provides a driver and userspace control for Kinect hardware. Our analysis\
+    \ infers ownership transfer of two parameters in two different functions, freenect_init\
+    \ and fnusb_init. Both of these inferences are incorrect. The root cause is fnusb_init,\
+    \ which freenect_init calls. The parameter in question is an optional libusb_context.\
+    \ If the caller provides a context, the library keeps a reference to it but does\
+    \ not assume ownership. However, if the caller does not provide a context, fnusb_init\
+    \ allocates its own context over which it does assume ownership. This ownership\
+    \ is recorded with a flag alongside the reference to the libusb_context. This\
+    \ violates one of the assumptions of our ownership transfer analysis: that fields\
+    \ are either always owned or never owned. This particular field is sometimes owned.\
+    \ While these inferred transfer annotations are not correct, the analysis still\
+    \ relieves the user of having to provide eleven annotations to compensate for\
+    \ the overzealous escape analysis. The transfer analysis also reduced the amount\
+    \ of code that must be inspected manually to two functions.\n\nWe could adapt\
+    \ our analysis to make special note of fields that are only sometimes finalized.\
+    \ Perhaps we could restrict it to fields that are finalized only based on some\
+    \ flag. These conditionally-owned fields could be reported in diagnostics and\
+    \ in generated documentation; with this extra information, users could decide\
+    \ on the correct ownership semantics for their case. Although adding to the manual\
+    \ inspection burden for users is undesirable, our analysis can show users exactly\
+    \ where the ambiguity arises, limiting the scope of the inspection to just unusual\
+    \ finalizers, rather than potentially every function in the library.\n\n#### 8.1.3\
+    \ fuse\n\nThe fuse library is the userspace component of the Filesystem in Userspace\
+    \ project for some *NIX systems. This library has only a handful of ownership\
+    \ transfers; three of the four are transfers of a single type. In these cases,\
+    \ fuse_session objects assume ownership of communication channels through constructors\
+    \ and an explicit fuse_session_add_chan function.\n\nThe fourth ownership transferring\
+    \ function, fuse_session_new, is more interesting. It creates a new fuse_session\
+    \ with two parameters: a void* for arbitrary user-provided data and a struct with\
+    \ metadata. Among the metadata is an optional function to finalize the user-provided\
+    \ data, which the finalizer for fuse_session objects invokes if it is present.\n\
+    \nThis function exhibits an unforeseen interaction with our assumption that fields\
+    \ will either always be owned or never owned: the user has control over the ownership\
+    \ of a field, and our analysis finds evidence within the library being analyzed\
+    \ that the field may be owned. This case suggests that our restriction, as well\
+    \ as our notion of finalizers, could benefit from more nuance. In this case, we\
+    \ see that a field is conditionally finalized based on a value provided by the\
+    \ user, whereas the example in freenect made its decision to finalize or not based\
+    \ on a field set by the library. While the correctness of the transfer annotation\
+    \ in the case of this user data parameter to fuse_session_new may depend on the\
+    \ preferences of the library user, the transfer analysis still saves a user from\
+    \ having to provide at least 24 annotations to prevent leaks due to the escape\
+    \ analysis. Furthermore, the user need only examine the four annotations inferred\
+    \ by the transfer analysis. In reading the documentation on how to call fuse_session_new,\
+    \ the meaning of the transfer annotation on the user data parameter would become\
+    \ clear.\n\nOne might be tempted to generate library bindings that never transfer\
+    \ ownership of user data pointers to a C library. This example shows that such\
+    \ special treatment for even this extremely common C idiom is not completely safe.\
+    \ In most cases user data is not owned, but when it is the type system bears no\
+    \ indication one way or another.\n\nMost of the escaping parameters whose ownership\
+    \ is not transferred are other user data pointers. There are also a few instances\
+    \ of self-escaping parameters as in ical. A third class of escapes are due to\
+    \ an imprecision in the escape analysis that could be fixed. The fuse library\
+    \ uses non-escaping heap allocations; parameters stored into these heap allocations\
+    \ are reported as escaping because our escape analysis does not take advantage\
+    \ of the fact that pointers returned by allocators like malloc are not aliased\
+    \ by anything. This could be fixed by treating heap-allocated locals in the same\
+    \ way that we treat non-escaping stack-allocated locals.\n\n### 8.2 Reference\
+    \ Counting Analysis\n\nTable 2 summarizes the results of our reference counting\
+    \ analysis. This analysis was designed based on the dbus-1, exif, gobject-2.0,\
+    \ and gio-2.0 libraries. For each library, we report (1) the number of functions\
+    \ in the library, (2) the number of functions that are\n"
+  mdcn: "\n\n```c\nvoid g_object_unref(GObject *object) {\n    gint oref;\n    oref\
+    \ = g_atomic_int_get(&object->ref_count);\n    if (oref > 1) {\n        g_atomic_int_add(&object->ref_count,\
+    \ -1);\n    } else {\n        oref = g_atomic_int_add(&object->ref_count, -1);\n\
+    \        if (oref == 1) {\n            object->klass->finalize(object);\n    \
+    \        g_type_free_instance(object);\n        }\n    }\n}\n\nvoid g_emblem_class_init(GEmblemClass\
+    \ *klass) {\n    klass->finalize = g_emblem_finalize;\n}\n\nvoid g_emblem_finalize(GObject\
+    \ *object) {\n    GEmblem *emblem = (GEmblem*)object;\n    g_object_unref(emblem->icon);\n\
+    }\n```\n\n图10. 来自glib-2.0库的托管类型示例\n\n直接利用结构子类型关系，并考虑传递给DecRef的输入的所有结构子类型都是受管理的。我们将在8.2节中比较这两种方法。\n\
+    \n### 7.3 过程间引用计数操作\n\n并非所有函数都直接增加和减少引用。许多函数使用辅助函数，尤其是那些依赖原子增减操作的函数。我们采用一种简单的分析来总结函数对其指针类型参数的整数字段所产生的影响。该分析还跟踪对`int*`类型参数的影响，以适应那些传递引用计数字段地址而非包含该字段的对象的引用计数函数。\n\
+    \n### 7.4 自动化的好处\n\n对于不熟悉某个库的用户，推断出的注解记录了必须维护引用计数的事实。更重要的是，自动发现绝大多数引用计数类型可以减少可能很大的注解负担。\n\
+    \n## 8. 评估\n\n我们将第3节到第6节描述的分析应用于一套包含15个开源库的测试集。这些库的规模不等，小到只有几个函数和几百行代码，大到拥有数千个函数和数十万行代码。\n\
+    \n我们分别评估所有权转移分析和引用计数分析的有效性。在大多数情况下，使用引用计数规范的库不需要所有权转移分析的结果，因为所有权通过引用计数被显式地共享。因此，对于引用计数的库，生成库绑定通常不需要所有权转移分析的结果。\n\
+    \n### 8.1 所有权转移分析\n\n本节评估所有权转移分析的有效性，特别关注与仅依赖逃逸分析结果相比，在减少手动注解负担方面的作用。\n\n表1. 推断出的转移注解和逃逸注解的数量\n\
+    \n| 分析的库 | 函数数 | 转移 | 契约 | 间接 | 直接 |\n|---|---|---|---|---|---|\n| archive | 267\
+    \ | 9 | 33 | 18 | 47 |\n| freenect | 61 | 2 | 0 | 5 | 13 |\n| fuse | 188 | 4 |\
+    \ 5 | 106 | 28 |\n| glpk | 1072 | 0 | 67 | 54 | 149 |\n| gsl | 3910 | 39 | 68\
+    \ | 21 | 88 |\n| ical | 1045 | 10 | 0 | 7 | 142 |\n\n表1显示了六个不同规模库的推断注解数量。所有权转移分析是基于archive和ical库设计的。其余库可视为测试集。表中第二列记录每个库中的函数数量。“转移”列报告了我们的分析识别出的、从调用方转移所有权的函数参数数量。其余列对逃逸分析的结果进行了细分。\n\
+    \n我们将逃逸参数分为三类：契约逃逸、间接逃逸和直接逃逸。契约逃逸是指通过函数指针调用而逃逸的参数，这些调用的一些目标是已知的，并且所有这些目标都认为该参数不会逃逸。我们将这些参数称为契约逃逸，因为只有当传递给函数指针的契约被违反时，即第6节的假设不适用时，它们才会逃逸。间接逃逸是指作为参数传递给通过函数指针进行的调用，而这些函数指针无法识别出任何目标。然而，在实践中，参数真正通过函数指针逃逸的情况很少见，因为这会使代码难以推理。如果这些分析结果的使用者能够做出这一假设，那么这种区别可能会带来显著差异。例如，fuse客户端库的间接逃逸数量远多于直接逃逸。表1中的直接逃逸是其余逃逸参数：即简单逃逸，例如逃逸到全局变量，而不是由于通过函数指针的调用。\n\
+    \n虽然库显然不期望契约逃逸发生，但凭借库提供的初始化器，它们仍然提供了更多信息。每个导致契约逃逸的间接函数调用都会对为该调用解除引用的函数指针施加一个契约。我们可以说，任何可能被该函数指针指向的函数都应遵守其参数不逃逸的契约。契约逃逸在多态行为的库中最常见，正如archive库所示。在这个库中，多态通过存储在每个对象中的函数指针实现。这些函数指针字段在对象创建时使用库中定义的函数进行初始化，从而使我们能够如第6节所建议的那样推断相应的契约。需要注意的是，如果我们仅仅知道某个间接函数调用的一部分目标，我们不会将该调用的参数视为契约逃逸。只有当所有已知调用目标都认为该参数不会逃逸时，我们才将其标记为契约逃逸。\n\
+    \n每个转移注解都有一个对应的直接逃逸注解。如果使用所有权转移分析的结果而非逃逸分析的结果来自动化资源管理，那么表1中“直接”和“转移”列之间的差异就是所有权转移分析所节省的手动注解数量。如果没有所有权转移分析，每个额外的逃逸注解都会引入一个必须用手动注解来填补的内存泄漏。这一差异在glpk和ical中非常显著：所有权转移分析在每个库中节省了超过100个手动注解。此外，glpk似乎从不转移所有权。然而，如第5节所讨论的，逃逸注解作为对象生命周期文档对用户仍然有用。\n\
+    \n请注意，所有权转移分析需要准确了解给定库中的终结器函数。终结器分析超出了本文的范围，用于本次评估的分析无法识别本次评估所用库中的所有终结器。为了弥补这一点，我们手动注释了ical中四个遗漏的终结器和glpk中两个遗漏的终结器。archive、freenect和fuse中的终结器是自动识别的。我们已经详尽检查了glpk和gsl的结果，这些库中可能遗漏了一些终结器；如果确实如此，那么手动注释这些遗漏的终结器后，我们的所有权转移分析将识别出更多被转移的参数。我们注意到，手动注释终结器比手动检查可能的所有权转移要容易得多，因为终结器往往遵循统一的命名约定。\n\
+    \n在本小节的其余部分，我们将对评估中的三个库的结果进行更详细的分析。选择这三个库是因为它们具有有趣的所有权转移特性，同时规模足够小，可以手动全面评估。\n\
+    \n#### 8.1.1 ical\n\nical库提供了日历数据的表示。它有很多函数，但真正转移对象所有权的函数很少。该库中的主要数据结构形成一棵树；当一个条目被添加到表示某个日历事件的树中时，该树承担新条目的所有权。\n\
+    \n这两种分析一致认为有10个参数会导致所有权转移。然而，逃逸分析标记了超过100个额外的参数。其中一些非转移逃逸可以通过存在一个不拥有其元素的容器API来解释：向容器添加条目会导致逃逸，但容器除了自己的内部结构外不拥有任何东西。许多剩余的差异源于父指针。当一个条目作为另一个条目的子节点插入树中时，新插入条目的父字段会被更新为指向其新的父元素。这导致子条目逃逸到父条目中，同时父条目也逃逸到子条目中。类似地，许多函数会导致其一个或多个参数逃逸到它们自身中。这些自逃逸在生成库绑定时可以特殊处理。\n\
+    \n有一个函数带有逃逸注解但没有转移注解，特别有趣。该函数向另一个对象添加一个附件；然而，附件是ical中唯一进行引用计数的资源。由于附件是引用计数的，它们没有我们的分析可以自动识别的终结器函数。为附件的unref函数添加手动注解，使分析能够正确识别该所有权转移。这表明，出于所有权转移分析的目的，将引用计数资源的unref函数视为终结器可能是明智的。\n\
+    \n#### 8.1.2 freenect\n\n该库提供了Kinect硬件的驱动程序和用户空间控制。我们的分析推断出在两个不同函数freenect_init和fnusb_init中有两个参数发生所有权转移。这两个推断都是不正确的。根本原因在于freenect_init调用的fnusb_init函数。所讨论的参数是一个可选的libusb_context。如果调用方提供了上下文，库会保留对它的引用，但不会承担所有权。然而，如果调用方没有提供上下文，fnusb_init会分配自己的上下文，并对其承担所有权。该所有权与对libusb_context的引用一起通过一个标志记录。这违反了我们的所有权转移分析的一个假设：字段要么始终被拥有，要么从未被拥有。这个特定字段有时是被拥有的。虽然这些推断出的转移注解并不正确，但该分析仍然使用户无需提供十一个注解来弥补过于激进的逃逸分析。所有权转移分析还将必须手动检查的代码量减少到两个函数。\n\
+    \n我们可以调整分析，对仅有时被终结的字段做特别标记。也许我们可以将其限制为仅基于某个标志而终结的字段。这些有条件拥有的字段可以在诊断信息和生成的文档中报告；有了这些额外信息，用户就可以为自己的场景决定正确的所有权语义。虽然增加用户手动检查的负担是不可取的，但我们的分析可以向用户准确展示歧义产生的位置，将检查范围限制在异常终结器上，而不是可能存在于库中的每一个函数。\n\
+    \n#### 8.1.3 fuse\n\nfuse库是某些*NIX系统的Filesystem in Userspace项目的用户空间组件。该库只有少数几个所有权转移；四个中有三个是单一类型的转移。在这些情况下，fuse_session对象通过构造函数和显式的fuse_session_add_chan函数承担通信通道的所有权。\n\
+    \n第四个转移所有权的函数fuse_session_new更有趣。它使用两个参数创建一个新的fuse_session：一个用于任意用户提供数据的void*，以及一个包含元数据的struct。元数据中包含一个可选的用于终结用户提供数据的函数，如果存在，fuse_session对象的终结器会调用它。\n\
+    \n该函数与我们关于字段要么始终被拥有、要么从未被拥有的假设产生了意想不到的交互：用户控制着某个字段的所有权，而我们的分析在正在分析的库中找到了该字段可能被拥有的证据。这一案例表明，我们的限制以及我们对终结器的概念，可以从更细微的区分中受益。在这种情况下，我们看到字段是根据用户提供的值有条件地终结的，而freenect中的示例是根据库设置的字段来决定是否终结。虽然对于fuse_session_new的这个用户数据参数，转移注解的正确性可能取决于库用户的偏好，但所有权转移分析仍然使用户无需提供至少24个注解来防止因逃逸分析导致的泄漏。此外，用户只需检查所有权转移分析推断出的四个注解。在阅读如何调用fuse_session_new的文档时，用户数据参数上的转移注解的含义就会变得清晰。\n\
+    \n人们可能会倾向于生成从不向C库转移用户数据指针所有权的库绑定。这个例子表明，即使对这种极其常见的C语言惯用法进行特殊处理，也不是完全安全的。在大多数情况下，用户数据不被拥有，但当它被拥有时，类型系统也绝不会给出任何指示。\n\
+    \n大多数未转移所有权的逃逸参数是其他用户数据指针。还有一些与ical中类似的自逃逸参数实例。第三类逃逸是由于逃逸分析中的不精确性导致的，这种不精确性是可以修复的。fuse库使用非逃逸的堆分配；存储到这些堆分配中的参数被报告为逃逸，因为我们的逃逸分析没有利用这样一个事实：即像malloc这样的分配器返回的指针不会被任何东西别名化。这可以通过像对待非逃逸栈分配局部变量一样对待堆分配局部变量来修复。\n\
+    \n### 8.2 引用计数分析\n\n表2总结了我们的引用计数分析的结果。该分析是基于dbus-1、exif、gobject-2.0和gio-2.0库设计的。对于每个库，我们报告（1）库中函数的数量，（2）函数的数量，这些函数是\n\
+    \n"
+  merge: 1
+- raw:
+  - "[PAGE 9]\n\n# Table 2. Number of inferred reference counting annotations. “Ref/Unref”\
+    \ refers to the number of inferred IncRef and DecRef function pairs, rather than\
+    \ single functions.\n\n| Library Analyzed | Reference Counting | | | |\n|---|---|---|---|---|\n\
+    | Name | Functions | Allocators | Finalizers | Ref/Unref |\n| cairo | 379 | 2\
+    \ | 2 | 4 |\n| dbus-1 | 804 | 36 | 8 | 11 |\n| exif | 142 | 16 | 5 | 7 |\n| fontconfig\
+    \ | 196 | 51 | 8 | 3 |\n| freetype | 289 | 9 | 6 | 3 |\n| gio-2.0 | 1772 | 58\
+    \ | 11 | 9 |\n| glib-2.0 | 1529 | 228 | 39 | 16 |\n| gobject-2.0 | 394 | 15 |\
+    \ 3 | 1 |\n| soup-2.4 | 530 | 46 | 6 | 3 |\n\n```\nvoid exif_mem_free(ExifMem\
+    \ *mem, void *d)\n{\n    if (!mem) return;\n    if (mem->free_func) {\n      \
+    \  mem->free_func(d);\n        return;\n    }\n}\n```\n\n# Figure 11. Finalizer\
+    \ from exif library\n\nallocators, (3) the number of functions that are finalizers,\
+    \ and (4) the number of IncRef and DecRef function pairs. As with our ownership\
+    \ transfer analysis, the reference counting analysis requires an accurate view\
+    \ of the allocators and finalizers present in each library. The dbus-1 library\
+    \ required two manual annotations, exif required four, gobject required one, and\
+    \ glib required seven in order for all of the allocators and finalizers to be\
+    \ recognized. Some of these libraries use custom memory allocators, while others\
+    \ have finalizers that do not quite match the notion of a finalizer that our tools\
+    \ use because they include extra not-NULL checks. Figure 11 shows an example.\
+    \ On line 4, this finalizer checks that a function pointer that it calls is not-NULL.\
+    \ Extending the allocator and finalizer identification analyses is beyond the\
+    \ scope of this work.\n\nThis analysis is useful in several ways. First, it alerts\
+    \ users that their library uses reference counting. Our experiments revealed reference-counted\
+    \ types in libraries where we did not expect them, including ical and libusb.\
+    \ Reference counting is not the primary resource management discipline in either\
+    \ library, but is still important yet not apparent from a visual scan. More importantly,\
+    \ even in cases where reference counting is the primary resource management discipline,\
+    \ our reference counting analysis identifies both polymorphic IncRef/DecRef functions\
+    \ and the types they operate on. For example, in dbus-1 we recognize dbus_auth_unref\
+    \ and dbus_auth_ref as polymorphic managers of reference counts for three related\
+    \ types: DBusAuthClient, DBusAuthServer, and DBusAuth.\n\nThe gio-2.0 library\
+    \ highlights the importance of the reference counting analysis in the presence\
+    \ of polymorphic reference counters. While gio-2.0 has 9 IncRef/DecRef pairs that\
+    \ are identified by the analysis, it defines a further 138 types that are managed\
+    \ by the g_object_unref and g_object_ref functions defined in the gobject-2.0\
+    \ library. Note that the 9 types with their own reference counting functions cannot\
+    \ be managed with the generic gobject-2.0 reference counting functions, though\
+    \ nothing in the names of the types reveals this. Section 7.2 describes two algorithms\
+    \ for recognizing which types are managed by polymorphic reference counting functions.\
+    \ The first relies on the presence of type-specific finalizers and the second\
+    \ relies only on structural subtyping. The second algorithm\n\nhas been more reliable\
+    \ in practice, identifying 23 types as managed by the gobject-2.0 reference counting\
+    \ functions that were missed by the first algorithm. The first algorithm misses\
+    \ these types because they have no type-specific resources that need to be finalized,\
+    \ and so do not define a finalizer. However, they are still structural subtypes\
+    \ of GObject, so the second algorithm recognizes them.\n\n# 9. Related Work\n\n\
+    The C/C++ leak detector of Heine and Lam [6] is very similar in spirit to our\
+    \ work. They present an inference algorithm based on inequality constraints to\
+    \ assign an owner to each object in a program. Our algorithms work on partial\
+    \ programs (libraries) and are formulated in terms of symbolic access paths. Our\
+    \ major contributions beyond their work are to (1) recognize ownership semantics\
+    \ for C objects with a generalized notion of allocators and finalizers (instead\
+    \ of C++) and (2) incorporate shared ownership via reference counting and inferred\
+    \ contracts on function pointers used in library code. Rayside and Mendel [17]\
+    \ take a more dynamic approach with ownership profiling; they report detailed\
+    \ hierarchical ownership information that is more precise than what we can achieve\
+    \ statically. Negara et al. [13] describe an inference algorithm based on liveness\
+    \ analysis for identifying ownership transfer semantics in message passing applications.\
+    \ In cases where ownership can be proved to transfer to another process via message\
+    \ passing, the copy of the message can be skipped and the receiving process can\
+    \ assume ownership of the message directly. Boyapati et al. [1] address ownership\
+    \ at the type level with work on ownership types. Müller and Rudich [12] extend\
+    \ Universe Types to support ownership transfer. Their notion of temporary aliases\
+    \ correspond closely to our transient references. In effect, we infer ownership\
+    \ types for C. Focusing specifically on memory, Wegiel and Krintz [20] discuss\
+    \ methods for sharing heap-allocated objects between different managed run-time\
+    \ environments. They do not need to establish an owner for each heap object because\
+    \ the run-time environments are able to cooperate and safely share objects. Since\
+    \ one of our run-time systems is C, which has no facilities for such object sharing,\
+    \ we must infer ownership.\n\nAs discussed in section 7, we do not verify the\
+    \ correctness of reference count handling in the libraries we analyze. Emmi et\
+    \ al. [4] present an analysis to perform this complex verification building on\
+    \ the Blast model checker. Our work is complementary in that Emmi et al. require\
+    \ manual specification of the set of reference-counted types, which could be automated\
+    \ with our analysis.\n\n# 10. Conclusion\n\nWe have described an ownership model\
+    \ for C resources to make sharing resources between languages in polyglot programs\
+    \ safer. Documenting the ownership properties of even moderately large programs\
+    \ by hand is difficult and labor-intensive. We have described the allocator and\
+    \ finalizer analyses of Ravitch et al. in terms of our ownership model. We have\
+    \ discussed the difficulty in relying only on an escape analysis to model the\
+    \ ownership of objects in C libraries: many manual annotations are required to\
+    \ compensate for the prevalence of escaping function parameters when true ownership\
+    \ transfer is rare. We addressed this difficulty by describing a new ownership\
+    \ transfer analysis based on our ownership model. We also argue that the results\
+    \ of an escape analysis are still useful for understanding the semantics of libraries.\
+    \ We presented a scalable and composable escape analysis to further reduce the\
+    \ number of false positive escape annotations. We have described trade-offs for\
+    \ this escape analysis in context and field sensitivity that are suitable for\
+    \ analyzing an important class of incomplete program: library code. We have also\
+    \ presented an analysis to automatically"
+  - '[PAGE 10]
+
+
+    identify reference-counted types and their associated reference count management
+    functions.
+
+
+    Our algorithms automatically infer hundreds of annotations describing the resource
+    ownership semantics of fifteen significant open source libraries, significantly
+    reducing the manual annotation burden for those wishing to generate library bindings.
+    While these inferred annotations clearly have applications to polyglot programming,
+    they are also useful for understanding and documenting the behavior of complex
+    C libraries.
+
+
+    # References
+
+
+    [1] C. Boyapati, B. Liskov, and L. Shrira. Ownership types for object encapsulation.
+    In A. Aiken and G. Morrisett, editors, POPL, pages 213–223. ACM, 2003. ISBN 1-58113-628-5.
+
+
+    [2] B.-C. Cheng and W. W. Hwu. Modular interprocedural pointer analysis using
+    access paths: design, implementation, and evaluation. In M. S. Lam, editor, PLDI,
+    pages 57–69. ACM, 2000. ISBN 1-58113-199-2.
+
+
+    [3] J.-D. Choi, M. Gupta, M. J. Serrano, V. C. Sreedhar, and S. P. Midkiff. Stack
+    allocation and synchronization optimizations for Java using escape analysis. ACM
+    Trans. Program. Lang. Syst., 25(6):876–910, 2003.
+
+
+    [4] M. Emmi, R. Jhala, E. Kohler, and R. Majumdar. Verifying reference counting
+    implementations. In S. Kowalewski and A. Philippou, editors, TACAS, volume 5505
+    of Lecture Notes in Computer Science, pages 352–367. Springer, 2009. ISBN 978-3-642-00767-5.
+
+
+    [5] R. P. Gabriel, D. F. Bacon, C. V. Lopes, and G. L. S. Jr., editors. Proceedings
+    of the 22nd Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems,
+    Languages, and Applications, OOPSLA 2007, October 21-25, 2007, Montreal, Quebec,
+    Canada, 2007. ACM. ISBN 978-1-59593-786-5.
+
+
+    [6] D. L. Heine and M. S. Lam. A practical flow-sensitive and context-sensitive
+    C and C++ memory leak detector. In PLDI, pages 168–181. ACM, 2003. ISBN 1-58113-662-5.
+
+
+    [7] U. P. Khedker, A. Sanyal, and A. Karkare. Heap reference analysis using access
+    graphs. ACM Trans. Program. Lang. Syst., 30(1), 2007.
+
+
+    [8] C. Lattner and V. S. Adve. LLVM: A compilation framework for lifelong program
+    analysis & transformation. In CGO, pages 75–88. IEEE Computer Society, 2004. ISBN
+    0-7695-2102-9.
+
+
+    [9] L. Li, C. Cifuentes, and N. Keynes. Boosting the performance of flow-sensitive
+    points-to analysis using value flow. In T. Gyimóthy and A. Zeller, editors, SIGSOFT
+    FSE, pages 343–353. ACM, 2011. ISBN 978-1-4503-0443-6.
+
+
+    [10] K.-K. Ma and J. S. Foster. Inferring aliasing and encapsulation properties
+    for Java. In Gabriel et al. [5], pages 423–440. ISBN 978-1-59593-786-5.
+
+
+    [11] I. Matosevic and T. S. Abdelrahman. Efficient bottom-up heap analysis for
+    symbolic path-based data access summaries. In C. Eidt, A. M. Holler, U. Srinivasan,
+    and S. P. Amarasinghe, editors, CGO, pages 252–263. ACM, 2012. ISBN 978-1-4503-1206-6.
+
+
+    [12] P. Müller and A. Rudich. Ownership transfer in universe types. In Gabriel
+    et al. [5], pages 461–478. ISBN 978-1-59593-786-5.
+
+
+    [13] S. Negara, R. K. Karmani, and G. A. Agha. Inferring ownership transfer for
+    efficient message passing. In C. Cascaval and P.-C. Yew, editors, PPOPP, pages
+    81–90. ACM, 2011. ISBN 978-1-4503-0119-0.
+
+
+    [14] T. E. Oliphant. Python for scientific computing. Computing in Science and
+    Engineering, 9(3):10–20, 2007.
+
+
+    [15] D. J. Pearce, P. H. J. Kelly, and C. Hankin. Efficient field-sensitive pointer
+    analysis of c. ACM Trans. Program. Lang. Syst., 30(1), 2007.
+
+
+    [16] T. Ravitch, S. Jackson, E. Aderhold, and B. Liblit. Automatic Generation
+    of Library Bindings using Static Analysis. In M. Hind and A. Diwan, editors, PLDI,
+    pages 352–362. ACM, 2009. ISBN 978-1-60558-392-1.
+
+
+    [17] D. Rayside and L. Mendel. Object ownership profiling: a technique for finding
+    and fixing memory leaks. In R. E. K. Stirewalt, A. Egyed, and B. Fischer, editors,
+    ASE, pages 194–203. ACM, 2007. ISBN 978-1-59593-882-4.
+
+
+    [18] S. Sagiv, T. W. Reps, and R. Wilhelm. Parametric shape analysis via 3-valued
+    logic. ACM Trans. Program. Lang. Syst., 24(3):217–298, 2002.
+
+
+    [19] A. Salcianu and M. C. Rinard. Pointer and escape analysis for multithreaded
+    programs. In M. T. Heath and A. Lumsdaine, editors, PPOPP, pages 12–23. ACM, 2001.
+    ISBN 1-58113-346-4.
+
+
+    [20] M. Wegiel and C. Krintz. Cross-language, Type-safe, and Transparent Object
+    Sharing for co-Located Managed Runtimes. In W. R. Cook, S. Clarke, and M. C. Rinard,
+    editors, OOPSLA, pages 223–240. ACM, 2010. ISBN 978-1-4503-0203-6.
+
+
+    [21] J. Whaley and M. C. Rinard. Compositional pointer and escape analysis for
+    Java programs. In B. Hailpern, L. M. Northrop, and A. M. Berman, editors, OOPSLA,
+    pages 187–206. ACM, 1999. ISBN 1-58113-238-7.'
+  md: "\n### Table 2. Number of inferred reference counting annotations.\n\n“Ref/Unref”\
+    \ refers to the number of inferred IncRef and DecRef function pairs, rather than\
+    \ single functions.\n\n| Library Analyzed | Reference Counting | | | |\n|---|---|---|---|---|\n\
+    | Name | Functions | Allocators | Finalizers | Ref/Unref |\n| cairo | 379 | 2\
+    \ | 2 | 4 |\n| dbus-1 | 804 | 36 | 8 | 11 |\n| exif | 142 | 16 | 5 | 7 |\n| fontconfig\
+    \ | 196 | 51 | 8 | 3 |\n| freetype | 289 | 9 | 6 | 3 |\n| gio-2.0 | 1772 | 58\
+    \ | 11 | 9 |\n| glib-2.0 | 1529 | 228 | 39 | 16 |\n| gobject-2.0 | 394 | 15 |\
+    \ 3 | 1 |\n| soup-2.4 | 530 | 46 | 6 | 3 |\n\n```\nvoid exif_mem_free(ExifMem\
+    \ *mem, void *d)\n{\n    if (!mem) return;\n    if (mem->free_func) {\n      \
+    \  mem->free_func(d);\n        return;\n    }\n}\n```\n\n### Figure 11. Finalizer\
+    \ from exif library\n\nallocators, (3) the number of functions that are finalizers,\
+    \ and (4) the number of IncRef and DecRef function pairs. As with our ownership\
+    \ transfer analysis, the reference counting analysis requires an accurate view\
+    \ of the allocators and finalizers present in each library. The dbus-1 library\
+    \ required two manual annotations, exif required four, gobject required one, and\
+    \ glib required seven in order for all of the allocators and finalizers to be\
+    \ recognized. Some of these libraries use custom memory allocators, while others\
+    \ have finalizers that do not quite match the notion of a finalizer that our tools\
+    \ use because they include extra not-NULL checks. Figure 11 shows an example.\
+    \ On line 4, this finalizer checks that a function pointer that it calls is not-NULL.\
+    \ Extending the allocator and finalizer identification analyses is beyond the\
+    \ scope of this work.\n\nThis analysis is useful in several ways. First, it alerts\
+    \ users that their library uses reference counting. Our experiments revealed reference-counted\
+    \ types in libraries where we did not expect them, including ical and libusb.\
+    \ Reference counting is not the primary resource management discipline in either\
+    \ library, but is still important yet not apparent from a visual scan. More importantly,\
+    \ even in cases where reference counting is the primary resource management discipline,\
+    \ our reference counting analysis identifies both polymorphic IncRef/DecRef functions\
+    \ and the types they operate on. For example, in dbus-1 we recognize dbus_auth_unref\
+    \ and dbus_auth_ref as polymorphic managers of reference counts for three related\
+    \ types: DBusAuthClient, DBusAuthServer, and DBusAuth.\n\nThe gio-2.0 library\
+    \ highlights the importance of the reference counting analysis in the presence\
+    \ of polymorphic reference counters. While gio-2.0 has 9 IncRef/DecRef pairs that\
+    \ are identified by the analysis, it defines a further 138 types that are managed\
+    \ by the g_object_unref and g_object_ref functions defined in the gobject-2.0\
+    \ library. Note that the 9 types with their own reference counting functions cannot\
+    \ be managed with the generic gobject-2.0 reference counting functions, though\
+    \ nothing in the names of the types reveals this. Section 7.2 describes two algorithms\
+    \ for recognizing which types are managed by polymorphic reference counting functions.\
+    \ The first relies on the presence of type-specific finalizers and the second\
+    \ relies only on structural subtyping. The second algorithm has been more reliable\
+    \ in practice, identifying 23 types as managed by the gobject-2.0 reference counting\
+    \ functions that were missed by the first algorithm. The first algorithm misses\
+    \ these types because they have no type-specific resources that need to be finalized,\
+    \ and so do not define a finalizer. However, they are still structural subtypes\
+    \ of GObject, so the second algorithm recognizes them.\n\n## 9. Related Work\n\
+    \nThe C/C++ leak detector of Heine and Lam [6] is very similar in spirit to our\
+    \ work. They present an inference algorithm based on inequality constraints to\
+    \ assign an owner to each object in a program. Our algorithms work on partial\
+    \ programs (libraries) and are formulated in terms of symbolic access paths. Our\
+    \ major contributions beyond their work are to (1) recognize ownership semantics\
+    \ for C objects with a generalized notion of allocators and finalizers (instead\
+    \ of C++) and (2) incorporate shared ownership via reference counting and inferred\
+    \ contracts on function pointers used in library code. Rayside and Mendel [17]\
+    \ take a more dynamic approach with ownership profiling; they report detailed\
+    \ hierarchical ownership information that is more precise than what we can achieve\
+    \ statically. Negara et al. [13] describe an inference algorithm based on liveness\
+    \ analysis for identifying ownership transfer semantics in message passing applications.\
+    \ In cases where ownership can be proved to transfer to another process via message\
+    \ passing, the copy of the message can be skipped and the receiving process can\
+    \ assume ownership of the message directly. Boyapati et al. [1] address ownership\
+    \ at the type level with work on ownership types. Müller and Rudich [12] extend\
+    \ Universe Types to support ownership transfer. Their notion of temporary aliases\
+    \ correspond closely to our transient references. In effect, we infer ownership\
+    \ types for C. Focusing specifically on memory, Wegiel and Krintz [20] discuss\
+    \ methods for sharing heap-allocated objects between different managed run-time\
+    \ environments. They do not need to establish an owner for each heap object because\
+    \ the run-time environments are able to cooperate and safely share objects. Since\
+    \ one of our run-time systems is C, which has no facilities for such object sharing,\
+    \ we must infer ownership.\n\nAs discussed in section 7, we do not verify the\
+    \ correctness of reference count handling in the libraries we analyze. Emmi et\
+    \ al. [4] present an analysis to perform this complex verification building on\
+    \ the Blast model checker. Our work is complementary in that Emmi et al. require\
+    \ manual specification of the set of reference-counted types, which could be automated\
+    \ with our analysis.\n\n## 10. Conclusion\n\nWe have described an ownership model\
+    \ for C resources to make sharing resources between languages in polyglot programs\
+    \ safer. Documenting the ownership properties of even moderately large programs\
+    \ by hand is difficult and labor-intensive. We have described the allocator and\
+    \ finalizer analyses of Ravitch et al. in terms of our ownership model. We have\
+    \ discussed the difficulty in relying only on an escape analysis to model the\
+    \ ownership of objects in C libraries: many manual annotations are required to\
+    \ compensate for the prevalence of escaping function parameters when true ownership\
+    \ transfer is rare. We addressed this difficulty by describing a new ownership\
+    \ transfer analysis based on our ownership model. We also argue that the results\
+    \ of an escape analysis are still useful for understanding the semantics of libraries.\
+    \ We presented a scalable and composable escape analysis to further reduce the\
+    \ number of false positive escape annotations. We have described trade-offs for\
+    \ this escape analysis in context and field sensitivity that are suitable for\
+    \ analyzing an important class of incomplete program: library code. We have also\
+    \ presented an analysis to automatically identify reference-counted types and\
+    \ their associated reference count management functions.\n\nOur algorithms automatically\
+    \ infer hundreds of annotations describing the resource ownership semantics of\
+    \ fifteen significant open source libraries, significantly reducing the manual\
+    \ annotation burden for those wishing to generate library bindings. While these\
+    \ inferred annotations clearly have applications to polyglot programming, they\
+    \ are also useful for understanding and documenting the behavior of complex C\
+    \ libraries.\n\n## References\n\n- [1] C. Boyapati, B. Liskov, and L. Shrira.\
+    \ Ownership types for object encapsulation. In A. Aiken and G. Morrisett, editors,\
+    \ POPL, pages 213–223. ACM, 2003. ISBN 1-58113-628-5.\n- [2] B.-C. Cheng and W.\
+    \ W. Hwu. Modular interprocedural pointer analysis using access paths: design,\
+    \ implementation, and evaluation. In M. S. Lam, editor, PLDI, pages 57–69. ACM,\
+    \ 2000. ISBN 1-58113-199-2.\n- [3] J.-D. Choi, M. Gupta, M. J. Serrano, V. C.\
+    \ Sreedhar, and S. P. Midkiff. Stack allocation and synchronization optimizations\
+    \ for Java using escape analysis. ACM Trans. Program. Lang. Syst., 25(6):876–910,\
+    \ 2003.\n- [4] M. Emmi, R. Jhala, E. Kohler, and R. Majumdar. Verifying reference\
+    \ counting implementations. In S. Kowalewski and A. Philippou, editors, TACAS,\
+    \ volume 5505 of Lecture Notes in Computer Science, pages 352–367. Springer, 2009.\
+    \ ISBN 978-3-642-00767-5.\n- [5] R. P. Gabriel, D. F. Bacon, C. V. Lopes, and\
+    \ G. L. S. Jr., editors. Proceedings of the 22nd Annual ACM SIGPLAN Conference\
+    \ on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA\
+    \ 2007, October 21-25, 2007, Montreal, Quebec, Canada, 2007. ACM. ISBN 978-1-59593-786-5.\n\
+    - [6] D. L. Heine and M. S. Lam. A practical flow-sensitive and context-sensitive\
+    \ C and C++ memory leak detector. In PLDI, pages 168–181. ACM, 2003. ISBN 1-58113-662-5.\n\
+    - [7] U. P. Khedker, A. Sanyal, and A. Karkare. Heap reference analysis using\
+    \ access graphs. ACM Trans. Program. Lang. Syst., 30(1), 2007.\n- [8] C. Lattner\
+    \ and V. S. Adve. LLVM: A compilation framework for lifelong program analysis\
+    \ & transformation. In CGO, pages 75–88. IEEE Computer Society, 2004. ISBN 0-7695-2102-9.\n\
+    - [9] L. Li, C. Cifuentes, and N. Keynes. Boosting the performance of flow-sensitive\
+    \ points-to analysis using value flow. In T. Gyimóthy and A. Zeller, editors,\
+    \ SIGSOFT FSE, pages 343–353. ACM, 2011. ISBN 978-1-4503-0443-6.\n- [10] K.-K.\
+    \ Ma and J. S. Foster. Inferring aliasing and encapsulation properties for Java.\
+    \ In Gabriel et al. [5], pages 423–440. ISBN 978-1-59593-786-5.\n- [11] I. Matosevic\
+    \ and T. S. Abdelrahman. Efficient bottom-up heap analysis for symbolic path-based\
+    \ data access summaries. In C. Eidt, A. M. Holler, U. Srinivasan, and S. P. Amarasinghe,\
+    \ editors, CGO, pages 252–263. ACM, 2012. ISBN 978-1-4503-1206-6.\n- [12] P. Müller\
+    \ and A. Rudich. Ownership transfer in universe types. In Gabriel et al. [5],\
+    \ pages 461–478. ISBN 978-1-59593-786-5.\n- [13] S. Negara, R. K. Karmani, and\
+    \ G. A. Agha. Inferring ownership transfer for efficient message passing. In C.\
+    \ Cascaval and P.-C. Yew, editors, PPOPP, pages 81–90. ACM, 2011. ISBN 978-1-4503-0119-0.\n\
+    - [14] T. E. Oliphant. Python for scientific computing. Computing in Science and\
+    \ Engineering, 9(3):10–20, 2007.\n- [15] D. J. Pearce, P. H. J. Kelly, and C.\
+    \ Hankin. Efficient field-sensitive pointer analysis of C. ACM Trans. Program.\
+    \ Lang. Syst., 30(1), 2007.\n- [16] T. Ravitch, S. Jackson, E. Aderhold, and B.\
+    \ Liblit. Automatic Generation of Library Bindings using Static Analysis. In M.\
+    \ Hind and A. Diwan, editors, PLDI, pages 352–362. ACM, 2009. ISBN 978-1-60558-392-1.\n\
+    - [17] D. Rayside and L. Mendel. Object ownership profiling: a technique for finding\
+    \ and fixing memory leaks. In R. E. K. Stirewalt, A. Egyed, and B. Fischer, editors,\
+    \ ASE, pages 194–203. ACM, 2007. ISBN 978-1-59593-882-4.\n- [18] S. Sagiv, T.\
+    \ W. Reps, and R. Wilhelm. Parametric shape analysis via 3-valued logic. ACM Trans.\
+    \ Program. Lang. Syst., 24(3):217–298, 2002.\n- [19] A. Salcianu and M. C. Rinard.\
+    \ Pointer and escape analysis for multithreaded programs. In M. T. Heath and A.\
+    \ Lumsdaine, editors, PPOPP, pages 12–23. ACM, 2001. ISBN 1-58113-346-4.\n- [20]\
+    \ M. Wegiel and C. Krintz. Cross-language, Type-safe, and Transparent Object Sharing\
+    \ for co-Located Managed Runtimes. In W. R. Cook, S. Clarke, and M. C. Rinard,\
+    \ editors, OOPSLA, pages 223–240. ACM, 2010. ISBN 978-1-4503-0203-6.\n- [21] J.\
+    \ Whaley and M. C. Rinard. Compositional pointer and escape analysis for Java\
+    \ programs. In B. Hailpern, L. M. Northrop, and A. M. Berman, editors, OOPSLA,\
+    \ pages 187–206. ACM, 1999. ISBN 1-58113-238-7.\n"
+  mdcn: "\n\n### 表 2. 推断出的引用计数标注数量。\n\n“Ref/Unref”指推断出的 IncRef 和 DecRef 函数对的数量，而非单个函数。\n\
+    \n| 分析的库 | 引用计数 | | | |\n|---|---|---|---|---|\n| 名称 | 函数 | 分配器 | 终结器 | Ref/Unref\
+    \ |\n| cairo | 379 | 2 | 2 | 4 |\n| dbus-1 | 804 | 36 | 8 | 11 |\n| exif | 142\
+    \ | 16 | 5 | 7 |\n| fontconfig | 196 | 51 | 8 | 3 |\n| freetype | 289 | 9 | 6\
+    \ | 3 |\n| gio-2.0 | 1772 | 58 | 11 | 9 |\n| glib-2.0 | 1529 | 228 | 39 | 16 |\n\
+    | gobject-2.0 | 394 | 15 | 3 | 1 |\n| soup-2.4 | 530 | 46 | 6 | 3 |\n\n```\nvoid\
+    \ exif_mem_free(ExifMem *mem, void *d)\n{\n    if (!mem) return;\n    if (mem->free_func)\
+    \ {\n        mem->free_func(d);\n        return;\n    }\n}\n```\n\n### 图 11. exif\
+    \ 库中的终结器\n\n分配器，(3) 作为终结器的函数数量，以及 (4) IncRef 和 DecRef 函数对的数量。与我们之前的所有权转移分析一样，引用计数分析需要准确了解每个库中存在的分配器和终结器。为了识别全部\
+    \ allocators 和 finalizers，dbus-1 库需要两条手动标注，exif 需要四条，gobject 需要一条，glib 需要七条。其中一些库使用自定义内存分配器，而另一些库的终结器与我们的工具所使用的终结器概念不完全吻合，因为它们包含额外的非\
+    \ NULL 检查。图 11 展示了一个示例。在第 4 行，该终结器检查它调用的一个函数指针是否为非 NULL。扩展分配器和终结器识别分析超出了本工作的范围。\n\
+    \n该分析在多个方面很有用。首先，它提醒用户其库使用了引用计数。我们的实验在未预期的库中发现了引用计数类型，包括 ical 和 libusb。引用计数在这两个库中都不是主要的资源管理方式，但仍然很重要，而且仅靠视觉扫描并不明显。更重要的是，即使在引用计数是主要资源管理方式的情况下，我们的引用计数分析也能识别多态的\
+    \ IncRef/DecRef 函数及其操作的类型。例如，在 dbus-1 中，我们识别出 dbus_auth_unref 和 dbus_auth_ref\
+    \ 是三种相关类型（DBusAuthClient、DBusAuthServer 和 DBusAuth）引用计数的多态管理器。\n\ngio-2.0 库凸显了在多态引用计数器存在时引用计数分析的重要性。尽管\
+    \ gio-2.0 有 9 对由分析识别出的 IncRef/DecRef 函数对，但它还定义了另外 138 种由 gobject-2.0 库中定义的 g_object_unref\
+    \ 和 g_object_ref 函数管理的类型。请注意，这 9 种具有自己引用计数函数的类型不能使用通用的 gobject-2.0 引用计数函数来管理，尽管这些类型的名称中没有任何信息暗示这一点。第\
+    \ 7.2 节描述了两种算法，用于识别哪些类型由多态引用计数函数管理。第一种依赖于类型特定终结器的存在，第二种仅依赖于结构子类型。第二种算法在实践中更可靠，识别出\
+    \ 23 种由 gobject-2.0 引用计数函数管理的类型，而第一种算法遗漏了这些类型。第一种算法遗漏这些类型是因为它们没有需要终结的类型特定资源，因此没有定义终结器。但是，它们仍然是\
+    \ GObject 的结构子类型，因此第二种算法能够识别它们。\n\n## 9. 相关工作\n\nHeine 和 Lam [6] 的 C/C++ 泄漏检测器在本质上与我们的工作非常相似。他们提出了一种基于不等式约束的推断算法，为程序中的每个对象分配一个所有者。我们的算法则针对部分程序（库）工作，并使用符号化访问路径表示。我们相对于他们工作的主要贡献是：(1)\
+    \ 通过泛化的分配器和终结器概念（而非 C++）来识别 C 对象的所有权语义；(2) 通过引用计数和库代码中函数指针的推断契约来纳入共享所有权。Rayside\
+    \ 和 Mendel [17] 采取了一种更动态的方法进行所有权分析；他们报告了详细的分层所有权信息，比我们通过静态分析获得的结果更精确。Negara 等人\
+    \ [13] 描述了一种基于活跃性分析的推断算法，用于识别消息传递应用中的所有权转移语义。在可以通过消息传递证明所有权已转移给另一个进程的情况下，可以跳过消息的副本，接收进程可以直接承担消息的所有权。Boyapati\
+    \ 等人 [1] 从类型层面入手，研究了所有权类型。Müller 和 Rudich [12] 扩展了 Universe Types 以支持所有权转移。他们提出的临时别名概念与我们的瞬态引用非常对应。实际上，我们是在为\
+    \ C 语言推断所有权类型。Wegiel 和 Krintz [20] 专门关注内存方面，讨论了在不同托管运行时环境之间共享堆分配对象的方法。他们无需为每个堆对象建立所有者，因为这些运行时环境能够协同工作并安全地共享对象。由于我们的运行时环境之一是\
+    \ C，它没有这种对象共享机制，因此我们必须推断所有权。\n\n如第 7 节所述，我们并不验证所分析库中引用计数处理正确性。Emmi 等人 [4] 提出了一种分析，在\
+    \ Blast 模型检查器之上执行这一复杂验证。我们的工作是互补的，因为 Emmi 等人需要手动指定引用计数类型的集合，而这可以通过我们的分析自动化完成。\n\
+    \n## 10. 结论\n\n我们描述了一种针对 C 资源的所有权模型，以使多语言程序中语言之间的资源共享更加安全。即使对于中等规模的程序，手动记录所有权属性也是困难且劳动密集的。我们用我们的所有权模型描述了\
+    \ Ravitch 等人的分配器和终结器分析。我们讨论了仅依靠逃逸分析来建模 C 库中对象所有权的困难：由于真正的所有权转移很少发生，而逃逸函数参数却很普遍，因此需要大量手动标注来弥补。我们通过描述一种基于所有权模型的新的所有权转移分析解决了这一困难。我们还论证了逃逸分析的结果对于理解库的语义仍然有用。我们提出了一种可扩展、可组合的逃逸分析，以进一步减少误报逃逸标注的数量。我们描述了这种逃逸分析在情境敏感性和字段敏感性方面的权衡，这些权衡适用于分析一类重要的不完整程序：库代码。我们还提出了一种自动识别引用计数类型及其相关引用计数管理函数的分析。\n\
+    \n我们的算法自动推断出数百条标注，描述了十五个重要开源库的资源所有权语义，显著减少了那些希望生成库绑定的人所需的手动标注负担。虽然这些推断出的标注显然可用于多语言编程，但它们在理解和记录复杂\
+    \ C 库的行为方面也很有用。\n\n## 参考文献\n\n- [1] C. Boyapati, B. Liskov, and L. Shrira. Ownership\
+    \ types for object encapsulation. In A. Aiken and G. Morrisett, editors, POPL,\
+    \ pages 213–223. ACM, 2003. ISBN 1-58113-628-5.\n- [2] B.-C. Cheng and W. W. Hwu.\
+    \ Modular interprocedural pointer analysis using access paths: design, implementation,\
+    \ and evaluation. In M. S. Lam, editor, PLDI, pages 57–69. ACM, 2000. ISBN 1-58113-199-2.\n\
+    - [3] J.-D. Choi, M. Gupta, M. J. Serrano, V. C. Sreedhar, and S. P. Midkiff.\
+    \ Stack allocation and synchronization optimizations for Java using escape analysis.\
+    \ ACM Trans. Program. Lang. Syst., 25(6):876–910, 2003.\n- [4] M. Emmi, R. Jhala,\
+    \ E. Kohler, and R. Majumdar. Verifying reference counting implementations. In\
+    \ S. Kowalewski and A. Philippou, editors, TACAS, volume 5505 of Lecture Notes\
+    \ in Computer Science, pages 352–367. Springer, 2009. ISBN 978-3-642-00767-5.\n\
+    - [5] R. P. Gabriel, D. F. Bacon, C. V. Lopes, and G. L. S. Jr., editors. Proceedings\
+    \ of the 22nd Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems,\
+    \ Languages, and Applications, OOPSLA 2007, October 21-25, 2007, Montreal, Quebec,\
+    \ Canada, 2007. ACM. ISBN 978-1-59593-786-5.\n- [6] D. L. Heine and M. S. Lam.\
+    \ A practical flow-sensitive and context-sensitive C and C++ memory leak detector.\
+    \ In PLDI, pages 168–181. ACM, 2003. ISBN 1-58113-662-5.\n- [7] U. P. Khedker,\
+    \ A. Sanyal, and A. Karkare. Heap reference analysis using access graphs. ACM\
+    \ Trans. Program. Lang. Syst., 30(1), 2007.\n- [8] C. Lattner and V. S. Adve.\
+    \ LLVM: A compilation framework for lifelong program analysis & transformation.\
+    \ In CGO, pages 75–88. IEEE Computer Society, 2004. ISBN 0-7695-2102-9.\n- [9]\
+    \ L. Li, C. Cifuentes, and N. Keynes. Boosting the performance of flow-sensitive\
+    \ points-to analysis using value flow. In T. Gyimóthy and A. Zeller, editors,\
+    \ SIGSOFT FSE, pages 343–353. ACM, 2011. ISBN 978-1-4503-0443-6.\n- [10] K.-K.\
+    \ Ma and J. S. Foster. Inferring aliasing and encapsulation properties for Java.\
+    \ In Gabriel et al. [5], pages 423–440. ISBN 978-1-59593-786-5.\n- [11] I. Matosevic\
+    \ and T. S. Abdelrahman. Efficient bottom-up heap analysis for symbolic path-based\
+    \ data access summaries. In C. Eidt, A. M. Holler, U. Srinivasan, and S. P. Amarasinghe,\
+    \ editors, CGO, pages 252–263. ACM, 2012. ISBN 978-1-4503-1206-6.\n- [12] P. Müller\
+    \ and A. Rudich. Ownership transfer in universe types. In Gabriel et al. [5],\
+    \ pages 461–478. ISBN 978-1-59593-786-5.\n- [13] S. Negara, R. K. Karmani, and\
+    \ G. A. Agha. Inferring ownership transfer for efficient message passing. In C.\
+    \ Cascaval and P.-C. Yew, editors, PPOPP, pages 81–90. ACM, 2011. ISBN 978-1-4503-0119-0.\n\
+    - [14] T. E. Oliphant. Python for scientific computing. Computing in Science and\
+    \ Engineering, 9(3):10–20, 2007.\n- [15] D. J. Pearce, P. H. J. Kelly, and C.\
+    \ Hankin. Efficient field-sensitive pointer analysis of C. ACM Trans. Program.\
+    \ Lang. Syst., 30(1), 2007.\n- [16] T. Ravitch, S. Jackson, E. Aderhold, and B.\
+    \ Liblit. Automatic Generation of Library Bindings using Static Analysis. In M.\
+    \ Hind and A. Diwan, editors, PLDI, pages 352–362. ACM, 2009. ISBN 978-1-60558-392-1.\n\
+    - [17] D. Rayside and L. Mendel. Object ownership profiling: a technique for finding\
+    \ and fixing memory leaks. In R. E. K. Stirewalt, A. Egyed, and B. Fischer, editors,\
+    \ ASE, pages 194–203. ACM, 2007. ISBN 978-1-59593-882-4.\n- [18] S. Sagiv, T.\
+    \ W. Reps, and R. Wilhelm. Parametric shape analysis via 3-valued logic. ACM Trans.\
+    \ Program. Lang. Syst., 24(3):217–298, 2002.\n- [19] A. Salcianu and M. C. Rinard.\
+    \ Pointer and escape analysis for multithreaded programs. In M. T. Heath and A.\
+    \ Lumsdaine, editors, PPOPP, pages 12–23. ACM, 2001. ISBN 1-58113-346-4.\n- [20]\
+    \ M. Wegiel and C. Krintz. Cross-language, Type-safe, and Transparent Object Sharing\
+    \ for co-Located Managed Runtimes. In W. R. Cook, S. Clarke, and M. C. Rinard,\
+    \ editors, OOPSLA, pages 223–240. ACM, 2010. ISBN 978-1-4503-0203-6.\n- [21] J.\
+    \ Whaley and M. C. Rinard. Compositional pointer and escape analysis for Java\
+    \ programs. In B. Hailpern, L. M. Northrop, and A. M. Berman, editors, OOPSLA,\
+    \ pages 187–206. ACM, 1999. ISBN 1-58113-238-7.\n\n"
+  merge: 1
