@@ -1,0 +1,9 @@
+# Photometric Processing
+
+In the previous chapter, we learned about different ways to represent color. Though device dependent, RGB representation is still the most common representation of color images. In this chapter, we will learn about some fundamental image processing techniques that deal with processing the colors of the image. There are two ways to process color images. (a) In the first approach, the processing techniques are applied similarly to the red, green and blue color channels assuming each of them to be an independent 2D image. (b) In the second approach, RGB images are converted to 1D luminance (Y) and 2D chrominance (via some linear or non-linear color space transformation), which are processed separately and the processed image is subsequently transformed back to RGB.
+
+When applying tone mapping operators, the first approach is commonly used since this does not change the relative differences between the colors. But, a good example of the second approach is contrast enhancement where the contrast of the luminance but not of the chrominance is enhanced. As opposed to enhancing the contrast of each of the red, blue and green channel independently, enhancing only the luminance while keeping the chrominance unchanged helps to preserve the hue
+
+Figure 11.1. This figure shows different images (top row) and their corresponding histograms (bottom row). Since these are single channel gray scale images, the gray values i range from 0 to 255. The probability of their occurance, h(i) ranges from 0 to 1. Note that the left and middle image have same histogram though they are very different in appearance.
+
+which can be important in many applications. Similarly, in other applications like image compression, changing to a luminance and chrominance representation is justified since human perception gives more importance to luminance which can be leveraged by compressing the chrominance channels more aggressively than

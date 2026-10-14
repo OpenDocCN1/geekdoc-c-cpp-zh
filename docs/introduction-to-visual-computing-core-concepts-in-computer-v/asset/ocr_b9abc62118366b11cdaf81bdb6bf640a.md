@@ -1,0 +1,9 @@
+![](bbox=[0.15, 0.13, 0.81, 0.39])
+
+Figure 5.19. The figure shows the effect of local edge aggregation. Left: The original image; Right: The image with edgels detected by Canny edge detector which are then linked by local aggregation. Each linked edge is colored with a different color, not necessarily unique.
+
+shows that the multi-resolution operation of edge detection occurs in our brain with continuous levels rather than discrete levels. The characteristics of edges across these continuous levels follow some very predictable patterns. The most important of these patterns are: (a) The edge position may shift as the scale becomes coarser but the shift will not be drastic or discontinuous; (b) two edges can merge with coarser scales but can never split. These patterns are exploited to find the correspondences by humans. Since generating close to continuous scales of edges is almost impossible in computers, this automatic detecting of corresponding edges across different levels still remains as a challenge.
+
+# 5.1.3 Aggregating Edgels
+
+Edge detectors produce edgels which lie on a edge. The next step is to collect this edgels together to create a set of longer edges. This may seem to be trivially achieved by just tracing the edges starting from a pixel. But this is only true in an ideal case. As you see in the examples shown in the previous section, edgels are not perfectly detected. Some parts of an edge may be missing or some small edges may appear to be present in a place where there are no edges in reality. Therefore aggregating edgels turn out to be more complex than naive. There are two types of aggregation method. The first applies local edge linkers to trace out longer edges while the latter uses global edge linkers to classify multiple edgels to belong to a single edge.

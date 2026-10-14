@@ -1,0 +1,13 @@
+to compute the range of pixels in that row that are inside the polygon. The colors at these pixels are interpolated from the colors at either extreme of the range. This process of painting the triangles traversing the pixels in scanline order is called rasterization (shown by green pixels in Figure 13.1) and computing the attributes at the pixels is called pixel interpolation of the attributes.
+
+# 13.1 Geometric Transformation of Vertices
+
+The geometric pipeline consists of a sequence of transformations applied to every vertex of every triangle to find its corresponding 2D coordinate in the final image output. Chapter 6 discusses various geometric transformations that would be used in the current chapter.
+
+The first step is the model transformation. This is the transformation of the objects from the object specific 3D coordinates to the single reference world coordinates. Second, the view setup describes the position of the eye and the orientation of the head which are used to apply a view transformation that represents a scene in a canonical view coordinate system. Third, in the perspective projection step 2D projections of the 3D vertices are computed. This step also includes making preparations to resolve occlusions. The final step in this process is the window coordinate transformation which maps all the vertices on to the exact window on the display in which the 3D scene will be rendered.
+
+# 13.1.1 Model Transformation
+
+The model transformation aids significantly in scene building. Consider every object defined in its own object specific coordinate system. When geometric models of various objects are downloaded from different places to populate a scene, it is rather natural that each of these will be defined in a different coordinate system. The goal of model transformation is to place these objects in different places in the scene in different forms (maybe scaled differently or oriented differently). Therefore, model transformation is the transformation M from the object coordinate system to one global world coordinate system of the entire scene where all the objects are placed.
+
+The model transformation step also allows multiple instantiation of the same object in different position, orientation and scale. For example, if we are trying to create a 3D scene of a classroom, instead of storing the model of 100 chairs in the classroom, we can store one instance of the 3D chair in an object coordinate system and then instantiate 100 of them at different positions when building the scene. Figure 13.2 shows an example. Here there are three objects – a pyramid, a cylinder and a cube – defined in their own object coordinate system X_o Y_o Z_o. These are then converted to the global world coordinate system X_w Y_w Z_w to
