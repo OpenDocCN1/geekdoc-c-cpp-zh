@@ -1,0 +1,2765 @@
+
+# 索引
+
+## 符号
+
+- `&` (ampersand)
+  - `&` (AND) operator, 354
+  - `&&` (logical AND) operator, 89–90, 105
+- `<>` (angle brackets)
+  - `=>` operator, 62
+  - `=>` operator in lambda expressions, 413
+  - `>` (greater than) operator, 89
+  - `>=` (greater than or equal to) operator, 89
+  - `<` (less than) operator, 89
+  - `<=` (less than or equal to) operator, 89
+- `*` (asterisk), 11, 45, 198, 504
+- `@` (at symbol), 178
+- `\` (backslash), 104
+- `{ }` (braces or curly brackets), 53, 60
+- `:` (colon), 79
+- `$` (dollar sign), 46
+- `=` (equal sign), 37, 53–54, 91
+  - `==` (equal to) operator, 88–89, 505
+  - associativity and, 53–54
+- `!` (exclamation point)
+  - `!=` (inequality) operator, 505
+  - `!` (NOT operator), 88
+- `/` (forward slash), 11, 45, 504
+- `-` (minus sign), 45, 503–504
+  - `-=` (compound subtraction) operator, 108, 125
+  - `--` (decrement) operator, 55
+  - `-=` (subtraction and assignment) operator, 457
+- `()` (parentheses), 53, 60, 413
+  - in Boolean expressions, 92
+  - in expressions, 89
+  - in method calls, 64, 66
+  - precedence override, 90
+- `|` (pipe symbol)
+  - `|` (OR) operator, 354
+- `||` (逻辑或) 运算符，89–90
+- `+` (加号)，45, 54, 495, 503
+- `++` 运算符，55
+- `+=` (复合加法) 运算符，108, 125
+- `+=` (复合赋值) 运算符，108, 125, 444, 457
+- `++` (递增) 运算符，54–55, 499
+- 与委托一起使用，444
+- `?` (问号)
+  - `? :` 运算符，365–366
+  - 空条件运算符，184–186
+- `%` (取余运算符)，46
+- `;` (分号)，278
+  - 在 `for` 语句中，115
+  - 在 `return` 语句中，61
+  - 在语句中，33
+- `[ ]` (方括号表示法)，221, 357, 401, 407
+- `_` (下划线字符)，36
+
+## A
+
+- 抽象类，258, 277, 293–295, 303
+  - 实现，296–300
+- `abstract` 关键字，294
+- 抽象方法，295, 303
+- 访问修饰符
+  - 析构函数与，307
+  - 接口与，283
+- 访问数据，581–598
+- 可访问性
+  - 类，156–167
+  - 属性的，335–336
+- 访问器方法，330–331。另见 `get` 访问器；`set` 访问器
+  - 用于索引器，357–358
+- `Action` 委托，443, 521–522, 563, 670–671
+- 已激活事件，685
+- Adams, Douglas，214
+- 适配器，455
+- `Add` 方法，401, 409, 446
+  - 初始化集合，411
+- `Add Scaffold` 向导，712–713, 728, 747
+- `AddAfter` 方法，403
+- `AddBefore` 方法，403
+- `AddCount` 方法，586
+- `AddFirst` 方法，403
+- additive 运算符，91
+- `AddLast` 方法，403
+- `AddParticipant` 方法，586
+- 内存中的地址，177
+- `AddToAccumulator` 方法，542
+- `addValues` 方法，50–51, 62–64
+- `AggregateException` 类，554–556, 558
+- 聚合数据，475–477
+- `Allow Unsafe Code` 选项，198
+- AND (`&`) 运算符，354
+- 尖括号 (`<>`)
+  - `<` (小于) 运算符，89
+  - `<=` (小于或等于) 运算符，89
+    - 用于类型参数，373
+- 匿名数组，245
+- 匿名类，172–173
+- 匿名方法，415
+- 匿名类型，224–225
+- “App capability declarations” 页面，605
+- `App` 类，686
+- `App.config` (应用程序配置) 文件，8
+- 应用程序逻辑，69
+  - 与应用程序解耦，439–467
+- 应用程序窗口，687
+- 应用程序
+  - 使用异步方法，566–569
+  - 构建，12–13, 32
+  - CIL 指令，218
+  - 控制台，3–17
+  - 死锁，571–572
+  - 调试，13–14, 32
+  - 为多任务设计，519–520
+  - 字段与属性，343–344
+  - 图形化，17–32。另见 Universal Windows Platform (UWP) 应用
+  - 索引器，361–367
+  - LINQ，470–472
+  - 多任务，517–519, 533–543。另见 多任务
+  - 并行处理，517, 594–596。另见 并行化；`Task` 对象
+  - 划分为任务，521, 534–536。另见 任务
+  - 响应性，559。另见 响应性
+  - 无调试运行，32, 73
+  - 单线程，517, 590–594
+  - 解决方案文件，7
+  - 线程，310
+  - 线程安全，596–597
+- `App.xaml` 文件，27
+  - 更新，639–640
+- `App.xaml.cs` 文件，27–29
+  - `OnLaunched` 方法，29
+- `ArgumentException` 异常，229, 239, 245, 249–250
+- `argumentList`，64
+- 参数
+  - 在数组中，244–245
+  - 修改，187–190
+  - 省略，80
+  - 传递给方法，187
+  - 引用，188
+  - 顺序，79
+  - 可变数量，245–247。另见 参数数组
+- 算术运算，47–48
+  - 在复数上，502
+  - 结果类型，46
+- 算术运算符，45–54
+  - 优先级，53
+- 数组实例，228
+  - 复制，229
+  - 创建，222–223, 242
+- 数组表示法
+  - 用于集合类，401–403
+  - 用于集合查找，411
+- 数组属性，358–359
+- 数组变量，228
+  - 声明，221–222, 242
+  - 复数名称，222
+- 数组，227–228
+  - 访问元素，225, 242
+  - 匿名，245
+  - 参数，244–245
+  - 数组的数组，232
+  - 关联，407
+  - `bool` 变量的，356–357
+  - 与集合对比，415
+  - 复制，228–230, 359
+  - 创建，232–241
+  - 定义，221
+  - 隐式类型，224–225
+  - 索引器，353–368
+  - 索引，225, 235
+  - 初始化元素，222–224, 242
+  - 插入元素，401
+  - 迭代，225–227, 242
+  - 不规则，231–232, 242
+  - 限制，399, 401
+  - 内存分配，222–223
+  - 多维，230–242
+  - 空元素，237–238
+  - 元素数量，225–226, 242
+  - 参数，243–254
+  - 作为参数，227–228
+  - 作为返回值传递，227
+  - 填充，223–228, 239–240, 526, 533–534
+  - 矩形，231
+  - 删除元素，237–238, 401
+  - 调整大小，401
+  - 检索特定数据，472–474
+  - 大小，222–223
+  - 存储项目，239
+- 《计算机程序设计艺术，第 3 卷：排序与查找》，(Knuth)
+- `as` 运算符，197, 260–261
+- `AsParallel` 方法，575, 577, 580, 599
+- ASP.NET Web API 模板，705, 712–713, 747
+- ASP.NET Web 客户端库，748
+- 程序集，7–8, 16–17, 301
+  - 添加到项目引用，386
+  - 类库，379
+  - 命名空间与，17
+  - 引用，17
+- `AssemblyInfo.cs` 文件，7
+- 分配
+  - 确定性分配规则，38
+  - 对象到变量，259–261
+  - 结构变量到结构变量，215–216
+- 赋值运算符 (`=`)，37, 91
+  - 结合性与，53–54
+- 赋值运算符，复合，107–108
+- 关联数组，407
+- 结合性，53, 90–91, 493–494
+  - 赋值运算符与，53–54
+  - 复合赋值运算符的，108
+- 星号 (`*`)，11, 45, 198, 504
+- `async` 修饰符，560, 599, 685
+  - 注意事项，570–572
+- `AsyncCallback` 委托，574
+- 异步性，560
+- 异步方法，460, 560–575, 723
+  - `await` 运算符，547
+  - 定义，560–572
+  - 实现，566–569, 599
+  - 用于 I/O 操作，573–574
+  - 并行化，565–566
+  - 返回值，569–570
+  - Windows Runtime API 与，572–575
+  - 用于写入流，573–574
+- 异步操作，559–600
+  - 启用，685
+  - 状态，574
+- 附加属性，623–624
+- 自动属性，343–345, 351
+  - 对象初始值设定项，347–349
+- `Average` 方法，441–442
+- `await` 运算符，547, 552, 556, 560, 564–566, 599
+  - 用于具有返回值的异步方法，570
+  - 注意事项，570–572
+- 可等待对象，564
+- Azure，697, 705
+- “Azure Active Directory” 页面，705
+- Azure SQL 数据库，699
+  - 连接，706–707, 710
+  - 创建，699–701
+  - 删除列，702–703
+
+## B
+
+- 后台激活，680
+- 背景图像，640–641
+- 后台线程，561
+- 反斜杠 (`\`)，104
+- `Barrier` 类，586
+- 基类，256, 276。另见 继承
+  - 构造函数，258–259, 276
+  - 密封，295
+  - 虚方法，262–263
+- `base` 关键字，258–259, 263
+- `BasedOn` 属性，642
+- `BeginWrite` 方法，574
+- 双向数据绑定，659–663
+- `bin` 文件夹，14
+- 二进制运算符，494–497
+  - 中缀表示法，495
+  - 命名约定，495
+- 二叉树
+  - 构建，377–378
+  - 使用泛型方法构建，389–391
+  - 使用泛型构建，379–388
+  - 创建和填充，430–431
+  - 显示内容，378–379
+  - 插入项目，377, 380–381
+  - 理论，376–379
+  - 遍历，384–385
+  - 使用枚举器遍历，425–429
+  - 使用迭代器实现的枚举器遍历，434–436
+- 二进制值，356
+- `BinarySearch` 方法，396
+- 绑定表达式，654–655。另见 数据绑定
+- `BitArray` 类，400
+- 空白应用模板，18–19
+- Blend for Visual Studio 2015，648
+- 阻塞等待操作，600
+- 内存块，177–178
+- 语句块
+  - `for` 语句，114
+  - `while` 语句，109
+- `bool` 变量，88
+  - `bool` 数组，356–357
+- 布尔表达式。另见 `if` 语句
+  - 括号，92
+  - 在 `while` 语句中，109
+- 布尔运算符，88–91, 105
+- 布尔值
+  - 取反，186
+  - 返回，237
+  - `true` 和 `false`，356
+- 布尔变量，87–88
+- 瓶颈，CPU，530–533
+- 装箱，194, 200, 247
+  - 开销，372
+- 大括号或花括号 (`{ }`)，53, 60
+  - 用于数组元素初始化，223
+  - 用于类定义，154
+  - 分组语句，93
+  - 用于作用域定义，66–67
+- `break` 语句，100–102, 237
+  - 在迭代语句中，116
+- `Build Solution` 命令，12–13, 32
+- 业务逻辑，69
+  - 与应用程序解耦，439–467
+  - 暴露给视图，666。另见 `ViewModel`
+  - 与 UI 和数据分离，651–652, 696
+  - 在 `ViewModel` 中，652
+- 忙指示器，726–728
+- `Button` 类，458–459
+- `Button` 控件，24, 524
+  - 添加到 UWP 应用，677–680
+  - 编码，30–32
+  - `Command` 属性，678
+- 字节数组，525
+
+## C
+
+- `C#`
+  - 大小写敏感，8, 34
+  - 编译器。另见 编译器
+  - 在 Visual Studio 2015 中创建项目，3。另见 Visual Studio 2015
+  - 显示代码文件，26–27
+  - 关键字组合，302
+  - 布局样式，34
+  - 位置表示法，280
+  - 原始数据类型，37–44
+  - 源文件，8
+  - 语句，33–34。另见 语句
+  - 语法和语义，33–58
+  - 类型检查规则，259
+  - 变量，36–37, 54–57。另见 变量
+  - 空白字符，34
+- 缓存集合，487–490
+- `calculateClick` 方法，65, 137, 144–145
+- 回调方法，574
+- `camelCase` 表示法，36
+- `Cancel` 方法，543
+- 取消任务，543–554, 558
+- `cancellation`
+  - of blocking wait operations, 600
+  - of PLINQ queries, 580
+  - of synchronization, 587
+- cancellation tokens, 543–549, 558
+  - creating, 543–544
+  - registering callback methods, 544
+  - task status, 551–552
+- `CancellationToken` objects, 543–544, 551
+  - for PLINQ queries, 580
+- `CancellationTokenSource` objects, 544, 558, 580
+- `CanExecute` method, 669, 671–672, 679
+- `CanExecuteChanged` events, 670, 672–673, 679
+- `canExecuteChangedEventTimer_Tick` method, 672–673
+- `Canvas` class, 285
+- canvas controls, 284
+- Carroll, Lewis, 433
+- `case` keyword, 100
+- case labels, 100–101
+- casting, 195–198, 200
+  - explicit, 372
+- catch handlers, 128–129, 150. See also try/catch blocks
+  - matching exceptions to, 132–133
+  - missing, 129
+  - multiple, 130–131
+  - placement in try blocks, 132
+- catchall handlers, 147, 150
+- catching exceptions, 128–129, 146–148, 152
+- characters, unique codes, 119
+- checked expressions, 140–143
+- `checked` keyword, 139–143
+- checked statements, 139–140
+- CIL (Common Intermediate Language), 218
+- `Circle` class, 154–155
+- `Circle` objects, 168
+- `Circle` variables, 177
+- class hierarchies, 266–271
+- `class` keyword, 154
+- class libraries, 379, 382
+  - .NET Framework, 17, 399–400, 441–443, 587–588
+- class methods, 168
+- class scope, 66–67
+- class type variables, 155
+- class types, 177
+- classes, 8. See also objects
+  - abstract, 258, 277, 293–300
+  - accessibility, 156–167
+  - anonymous, 172–173
+  - bringing into scope, 170
+  - collection, 277–278, 399–410, 587–598. See also collections
+  - comparing operators, 500
+  - compatibility with WinRT, 218–219
+  - constructed types, 375
+  - constructors, 157–164, 258
+  - copying, 217–218
+  - creating, 286–290
+  - declaring, 160–161, 174
+  - defining, 154–155
+  - derived and base, 256
+  - event sources, 456
+  - field initialization, 209–210
+  - fields, 153, 155. See also fields
+  - generic, 373–388, 397
+  - inheritance, 255–276
+  - interfaces, 277–278. See also interfaces
+  - keyword combinations, 302
+  - methods, 153. See also methods
+  - namespaces, 14–15, 301. See also namespaces
+  - partial, 159–160, 711
+  - private data, 180
+  - referencing through interfaces, 280–281
+  - rules for, 301–302
+  - sealed, 256, 295–302
+  - static, 169
+  - static methods and data, 167–173
+  - vs. structures, 209–210
+  - synchronization primitives, 584–586
+  - testing, 290–293
+- classification, 153–154
+  - inheritance, 255–256
+- `Click` events, 458–459
+- `Clone` method, 179–180, 229–230
+  - copying arrays, 359
+- Close button, 26
+- `Close` method, 311
+- cloud, deploying web services to, 719–721
+- “Cloud Service Fundamentals Data Access Layer—Transient Fault Handling” page, 715–716
+- CLR. See common language runtime (CLR)
+- code
+  - accessing, 40–41
+  - blocking, 571
+  - commenting out, 488
+  - deadlocks, 571–572
+  - design and properties, 337
+  - displaying files, 26–27
+  - duplication, 293–294, 298–300. See also abstract classes
+  - ensuring it will run, 148–149
+  - execution, 129, 439–440, 460, 517
+  - failures, 127
+  - flow of control, 148
+  - managed, 218–219
+  - native, 218
+  - parallelizing, 537–540
+  - refactoring, 73
+- Code and Text Editor window. See also Visual Studio 2015
+  - generating and editing code shortcut menu, 69–70
+  - Quick Actions option, 70
+- “Code First to an Existing Database” page, 704
+- code-first entity modeling approach, 704
+- codes for characters, 119
+- `Collect` method, 309
+- collection classes, 277–278, 399–410
+  - thread-safe, 587–598
+- collections
+  - adding elements, 401, 421
+  - `AggregateException` exceptions, 555
+  - vs. arrays, 415
+  - `BitArray` class, 400
+  - collection classes, 399–410. See also collection classes
+  - counting elements, 403, 421
+  - creating, 420
+  - data integrity, 478
+  - defining type, 474
+  - `Dictionary<TKey, TValue>` class, 407–408
+  - enumerating elements, 423–431
+  - finding elements, 421
+  - `HashSet<T>` class, 409–410
+  - implementing, 416–420
+  - initializers, 411–413
+  - inserting elements into middle, 401
+  - inserting items, 403
+  - iterating, 401, 403, 421
+  - iterating in parallel, 576–578
+  - joining, 578–580
+  - lambda expressions, 413–415
+  - `LinkedList<T>` class, 403–404
+  - `List<T>` class, 401–403
+  - nongeneric, 400
+  - predicates, 411–413
+  - `Queue<T>` class, 404–405
+  - removing elements, 401, 403, 421
+  - sizing, 416
+  - `SortedList<TKey, TValue>` class, 408–409
+  - sorting elements, 401
+  - `Stack<T>` class, 405–406
+  - storing and retrieving data, 587–588
+  - thread-safe, 400
+- colon (`:`) in named parameters, 79
+- `Colors` class, 291
+- `ColumnarHeaderStyle` style, 643
+- COM (Component Object Model), 77
+- `ComboBox` controls
+  - adding to page, 613–614
+  - adding values, 614–615
+  - data binding with, 663–665
+- `ComboBoxItem` controls, 614–615
+- command buttons, 233
+- command Mode property, 692
+- `Command` pattern, 669–680
+- Command Prompt windows, 3
+- `Command` property, 678
+- command sets, Cortana, 682–683
+- `CommandBar` controls, 678
+- `CommandPrefix` element, 682
+- commands. See also names of individual commands
+  - activating with Cortana, 680–695
+  - adding to ViewModel, 669–680
+  - binding control action to, 669–670
+  - spoken or typed, 692
+- comments, 11
+  - commenting out code, 488
+  - TODO comments, 161
+- Common Intermediate Language (CIL), 218
+- common language runtime (CLR), 77, 218, 300–301
+  - catching all exceptions, 142–143, 146
+  - object destruction, 306. See also garbage collection
+- `Compare` method, 99, 395–396
+- `compareClick` method, 95–96
+- `CompareTo` method, 380–381, 384
+  - default implementation, 482
+- compiler
+  - destructor conversion, 308
+  - memory allocation for class types, 177
+  - memory allocation for value types, 177
+  - property generation, 344–345
+  - resolving method calls, 80–85
+  - type checking, 374
+- compile-time errors, 68
+- compiling code, 12
+- complex numbers, 501–502
+- `Complex` type, 502
+- Component Object Model (COM), 77
+- compound addition (`+=`) operator, 108
+- compound assignment evaluation, 498–499
+- compound assignment operators, 107–108, 119
+- compound subtraction (`-=`) operator, 108
+- computer memory, 184, 190–193, 198, 206, 305
+- concurrency, 519. See also multitasking
+  - synchronizing access to data, 581–598
+- concurrent operations. See also parallelization
+  - data corruption, 583
+  - parallelized, 594–596
+  - scheduling, 581
+  - tasks for, 517–558, 560–561
+- `ConcurrentBag<T>` class, 587, 596–597
+- `ConcurrentDictionary<TKey, TValue>` class, 587–588
+- `ConcurrentQueue<T>` class, 588
+- `ConcurrentStack<T>` class, 588
+- conditional logical operators, 89–91
+- `ConfigureAwait(false)` method, 571
+- connection strings, passwords in, 711
+- Console Application template, 5
+- console applications, 3–17
+  - creating in Visual Studio 2015, 3–8, 32
+  - defined, 3
+- `Console` class, 8–9
+- `Console.Write` method, 71
+- `Console.WriteLine` method, 166, 214
+  - overloading, 243–244, 248
+- `const` keyword, 169
+- `constantExpression` identifier, 100
+- constraints
+  - generics and, 375
+  - placement, 429
+- constructed types, 375
+- constructors, 26–27, 156–164
+  - base class, 258–259
+  - calling, 162, 174
+  - creating, 317
+  - declaring, 161–162, 174–175
+  - default, 158–159, 162, 183, 209, 235
+  - in derived classes, 258
+  - field initialization, 211–212, 258–259
+  - initializing objects, 345–346
+  - interfaces and, 283
+  - invoking, 162
+  - overloading, 158–159
+  - protected, 301
+  - public and private, 158
+  - public default, 259
+  - ViewModel, 687–688
+  - writing, 160–164
+- containers
+  - `Grid` controls, 608–609
+  - `StackPanel` controls, 609
+- `ContainsKey` method, 407
+- continuations, 522–523, 556, 561–564
+- `continue` statements, 116–117
+- `ContinueWith` method, 522–523, 556, 558
+- contravariance, 395–398
+- `controllingExpression` identifier, 100
+- controls
+  - adding to forms, 20–21
+  - aligning on form, 23
+  - anchoring to edges, 610–611
+  - binding action to commands, 669–670, 696
+  - binding expressions, 654–655. See also data binding
+  - connectors, 610
+  - default properties, 22–23
+  - Document Outline window, 49
+  - event handlers, 30
+  - font styles, 641–642
+  - header styles, 642–643
+  - label styles, 644–646
+  - `Name` property, 613
+  - naming, 23
+  - properties, 21–23
+  - repositioning, 21
+  - resizing, 23
+  - scaling, 623–630, 649
+  - text wrapping, 613
+  - width, 613
+  - XAML descriptions, 21
+- conversion operators, 508–514
+  - implicit and explicit, 509–510
+  - user-defined, 509–510
+  - writing, 511–513
+- `Convert.ToChar` method, 119
+- cooperative cancellation, 543–549
+- `Copy` method, 229–230
+- copying
+  - arrays, 228–230, 359
+  - classes, 217–218
+  - deep and shallow, 179
+  - reference types, 179–180
+  - structure variables, 215–218
+  - value type constant to nullable type, 186
+  - value type variable to nullable type, 186
+  - value types, 177–183
+- `CopyTo` method, 229–230
+- Cortana, 680–696
+  - enabling, 680–681
+  - registering voice commands, 681, 685–686
+- `Count` method, 442, 480
+- `Count` property, 403, 419, 676
+- `CountdownEvent` class, 585–586, 599
+- covariance, 394, 396, 398
+- CPU utilization
+  - identifying bottlenecks, 530–533
+  - multitasking applications, 535–536
+  - parallelized applications, 540
+  - single-threaded applications, 529–530
+- “Create a Windows app” page, 697
+- `.csproj` 后缀，39
+- `Current` 属性，424，426，428，667–669，674
+- `CurrentCount` 属性，586
+
+## D
+
+- dangling references，309
+- data
+  - corruption，583
+  - deleting，729
+  - displaying using data binding，652–659
+  - enumerating in specific order，491
+  - filtering，474–475，491
+  - inserting, updating, and deleting，728–746
+  - joining，477–478
+  - modeling. See classes; structures
+  - ordering, grouping, aggregating，475–477，491–492
+  - privacy，179–180
+  - querying. See query operators
+  - retrieving，712
+  - retrieving from cloud，720–726
+  - retrieving from databases，698–728
+  - searching with Cortana，680–695
+  - selecting，472–474
+  - shared，577
+  - storing. See arrays; collections
+  - validating，739–740
+  - views of，652
+- data access
+  - concurrent，581–598
+  - locking data，584
+  - to resource pools，585
+  - response time，575
+  - thread-safe，588–598
+- data binding，635，652–665，696
+  - bidirectional，652，659–663
+  - with `ComboBox` controls，663–665
+  - displaying data，652–659
+  - `Mode` parameter，659–663
+  - modifying data，659–663
+  - syntax，654
+- “Data Consistency Primer” page，729
+- data model
+  - connection to view，666. See also `ViewModel`
+  - controlled access，668
+- data sources
+  - for data binding，652–665
+  - relational databases，698
+- data types
+  - numeric，47
+  - operators and，45–47
+  - switch statements and，101
+  - `ToString` methods，43
+- database-first entity modeling approach，704
+- databases. See also Azure SQL Databases
+  - accessing，697
+  - data validation，739–740
+  - entity models，698. See also entity models
+  - error reporting，738–741
+  - GUIDs，737
+  - inserting, updating, and deleting data，728–746
+  - retrieving data from，698–728
+- `DataContext` 属性，656
+- `dateCompare` 方法，96–99
+- dates, comparing，94–99
+- `DateTime` 数据类型，96，99
+- `DbContext` 类，710
+- `DbSet` 泛型类型，710–711
+- deadlocks，571–572
+- `Debug` 文件夹，14
+- `Debug` 模式，13–14，32
+  - exceptions, viewing，134–135
+  - frame rate，25
+  - stepping through iteration statements，120–124
+  - for Universal Windows Platform apps，25
+- debug targets, Device and Local Machine options，24
+- `Debug` 工具栏，74–77，86，120–124
+- decimal numbers, converting to octal，117–119
+- decision statements，42，87–105
+  - Boolean operators，88–91
+  - Boolean variables，87–88
+  - if statements，91–99
+  - switch statements，99–104
+- declaring methods，60–61
+- decrement (`--`) operator，55，499
+- deep copying，179
+  - of arrays，230
+- default constructors，158–159
+  - initializing values，183
+  - invoking，162
+  - for structures，209
+  - writing，235
+- `default` 关键字，100，426，429
+- `delegate` 关键字，415
+- delegates，439–454
+  - accessing，445–446
+  - `async` modifier，566
+  - in `Barrier` constructor，586
+  - declaring，447–451，466
+  - events，456–465
+  - examples，441–443
+  - implementing，444–446，451–454
+  - initializing，444–445，466
+  - invoking，445，456
+  - lambda expressions and，455–456
+  - method adapters，455
+  - multiple methods，445
+  - public，445
+  - removing methods，445
+  - signatures，455
+- DELETE requests，728
+- delimiter characters，104
+- dependencies, eliminating，651–652，698
+- `Dequeue` 方法，370–372，399–400，404
+- derived classes，256，276. See also inheritance
+  - abstract method overrides，295，298
+  - override methods，263–264
+- `Deserialize Object` 方法，723
+- design
+  - application，337
+  - code，337
+  - for multitasking，519–520
+- design patterns
+  - `Command` pattern，669–680
+  - Model-View-ViewModel pattern，651–680
+- *Design Patterns: Elements of Reusable Object-Oriented Software* (Gamma et al.)，455
+- Design View 窗口，21，24. See also Visual Studio 2015
+- destroying objects，306
+- destructors，306
+  - calling `Dispose` method from，314–316
+  - creating，317–318
+  - finalization，310
+  - interfaces and，284
+  - overhead，310–311
+  - overlap，311
+  - restrictions on，307
+  - suppressing，321
+  - timing of running，309–310
+  - writing，306–308，325
+- developer mode for Windows 10，18–19
+- devices. See also Universal Windows Platform (UWP) apps
+  - families，602，631
+  - layout for narrow views，632–635
+- `Dictionary` 类，375
+- `Dictionary<TKey, TValue>` 类，400，407–408，416
+  - thread-safe version，587–588
+- `Dispatcher` 对象，563
+- `DispatcherTimer` 类，672
+- `DispatcherTimer` 对象，673
+- `displayData` 方法，111–112
+- disposal methods，311–324
+  - exception-safe，312，316–324
+  - in using statements，312–314
+- `Dispose` 方法，314，319，427–428
+  - calling from destructor，314–316
+  - calling once，320–323
+  - thread safety and，322–323
+- `disposed` 字段，320–323
+- `DistanceTo` 方法，165–166
+- `Distinct` 方法，477，480，484
+- `DivideByZeroException` 异常，147，555–556
+- `dlg.ShowAsync` 方法，572
+- `do` 语句，116–125
+  - stepping through，120–124
+  - writing，117–119
+- `doCancellationWork` 方法，556
+- documentation, comments，11
+- Documents 文件夹，5
+- `doIncrement` 方法，187–188
+- dollar sign (`$`)，46
+- dot notation，158，272
+- dot operator (`.`)，306
+- double quotation mark (“)，104
+- `double.Parse` 方法，71
+- doubly linked lists，403–404
+- `doWork` 方法，161，166，181
+- duplicate code，293–294. See also abstract classes
+  - removing，298–300
+- duplicate values, ignoring，477，480
+
+## E
+
+- `Ellipse` 类，289
+- `else` 关键字，91
+- encapsulation，154，439
+  - Add/Remove approach，446
+  - with methods，329–331
+- `EndWrite` 方法，574
+- `Enqueue` 方法，370–372，399，404
+- `EnterReadLock` 方法，586，600
+- `EnterWriteLock` 方法，586，600
+- Entity Data Model Wizard，706–709
+- Entity Framework，698
+  - creating entity models，703–711，747
+  - ignoring columns，701
+  - partial classes，711
+- “Entity Framework” page，699
+- entity models
+  - code-first approach，704
+  - creating，703–711，747
+  - data connections，706–707，710
+  - database-first approach，704
+  - editing，709
+  - passwords in connection strings，711
+  - remote database access，747
+  - web service access，705
+  - for web services，698
+- `enum` 关键字，202
+- enum types，201. See also enumerations
+- `Enumerable` 类，473
+  - extension methods，472–479
+- enumerable collections，423–431. See also collections
+  - cached version，487–490
+  - combining，480–481
+  - `Count` 方法，480
+  - defining type，474
+  - enumerating data in specific order，491
+  - enumeration of，487
+  - filtering data，474–475，479，485，491
+  - grouping data，476，479–480，485
+  - joining data，477–478
+  - ordering data，479
+  - projecting fields，474，491
+  - retrieving data，475–476，479
+  - selecting specific data，472–474
+  - sorting data，484
+  - summary functions，480
+- enumeration variables，202
+  - assigning values，202，220
+  - converting to strings，202–203
+  - declaring，219
+  - displaying，202
+  - nullable，202
+- enumerations，201–206
+  - creating，204–206
+  - declaring，202，219
+  - LINQ and，471
+  - literal names，202
+  - literal values，203，205
+  - underlying types，204
+- enumerator objects，424
+- enumerators
+  - for collections，423–431
+  - implementing with iterators，431–437
+  - manually implementing，425–429，437
+- equality operators，91
+  - `=` operator，37，53–54，91
+  - `==` operator，88–89，505
+  - implementing，505–508
+  - overriding，501
+- `Equals` 方法，505
+  - overriding，501，506
+  - for structures，208
+- equals operator，480
+- equi-joins，480
+- Error List 窗口，12–13
+- error reporting，738–741
+- errors. See also exception handling; exceptions
+  - managing，127–128
+- event handlers，290
+  - adding to controls，30
+  - single-threaded nature，547
+- `event` 关键字，456
+- event sources，456
+- events，440
+  - declaring，456–457，466
+  - defined，30
+  - enabling notifications，456–458
+  - raising，458，461–465，467
+  - security feature，458
+  - subscribers，456
+  - subscribing，457，465，467
+  - unsubscribing，457，467
+  - user interface，458–465
+  - waiting for，585
+- exception classes，143，302
+- `Exception` 异常族，131–132
+- exception filters，132–133
+- exception handling
+  - debugging，142–143
+  - task cancellation exceptions，552–554
+  - task exceptions，554–556，558
+- exception objects，144
+- exceptions
+  - `AggregateException`，554–556
+  - catching，128–129，146–148，150
+  - catching multiple，131–132
+  - finally blocks，148–149
+  - flow of control and，148
+  - inheritance hierarchies，131–132
+  - matching to catch handlers，132–133
+  - `Message` 属性，129
+  - multiple catch handlers，130–131
+  - propagating，129–130
+  - propagating to calling method，136–138
+  - task，554–556
+  - throwing，143–148，150
+  - tracing back to initial exception，135
+  - try/catch statement blocks，133–136
+  - unhandled，129–130，133
+- exception-safe disposal，312，316–324，326
+- `ExceptWith` 方法，409–410
+- `Execute` 方法，670–671
+
+## F
+
+- F10 键，75
+- F11 键，75
+- 快速查找项目，409–411
+- `Feedback` 元素，684
+- 字段，67, 153, 155
+  - 可访问性，156–167。另见 properties
+  - 隐藏，329–331, 343。另见 properties
+  - 初始化，156, 209–211, 258–259
+  - 接口与，283
+  - 命名，157, 333
+  - 私有，156, 265–266, 329
+  - 投影，474, 491
+  - 受保护，265–266
+  - 公共，156, 265–266, 343–344
+  - 静态，167–169
+  - 作为变量，164
+- 文件句柄，148
+- `FileOpenPicker` 类，111, 572–573
+- files
+  - 从文件中读取字符，111
+  - 资源，释放，112
+- `FillList` 方法，432
+- 过滤数据，474–475
+- 终结，310
+  - 抑制，321
+- `Finalize` 方法，308
+- `finally` 块，148–150
+  - 释放方法调用，312
+- `Find` 方法，411–412, 417, 441
+- `First` 属性，403
+- `float` 值，42–43
+- flow of control。另见 execution
+  - 异常后，148
+  - 中断以执行任务，439–440
+- `FontSize` 属性，22
+- `FontStyle` 样式，641–642
+- `for` 语句，114–116, 437
+  - 初始化，114–115
+  - 迭代数组，225–226
+  - 作用域，115–116
+- `foreach` 语句，250
+  - 迭代数组，226
+  - 迭代二叉树，430–431
+  - 迭代集合，401, 407
+  - 列出数组中的项目，423
+- 前台激活，680
+- `FormatException` 异常，128–129, 131, 135–136
+- forms
+  - 添加和编辑功能，732, 741–743
+  - 忙指示器，726–728
+  - 添加控件，20–21
+  - 定义，20
+  - 丢弃数据，733–734
+  - 显示数据，725–726
+  - `Grid` 元素，22
+  - 指定属性，21–23
+  - 保存数据，734
+  - 测试，743–746
+  - XAML 描述，21
+- 正斜杠 (`/`)，45, 504
+- 正斜杠 (`//`)，11
+- `Frame` 对象，29
+- Debug 模式下的帧率，25
+- 可达队列，310
+- `from` 查询运算符，479, 486
+- `FromAsync` 方法，575
+- `Func<T, TResult>` 委托，442
+- `Func` 委托，441–442, 473, 670–671
+
+## G
+
+- Gamma, Erich，455
+- 垃圾回收，184, 306, 308–311
+  - 执行，310
+  - 终结，310, 321
+  - 调用，309, 325
+  - 时机，309, 318
+- `GC` 类，321
+- `GC.Collect` 方法，309
+- `GC.SuppressFinalize` 方法，316
+- `Generate Method` 命令，71
+- Generate Method Stub Wizard，69–73, 86
+- 通用 `IComparable<T>` 接口，381
+- 通用 `Swap<T>` 方法，389
+- 泛型，373–375
+  - 类，创建，376–388, 397
+  - 集合类，399–400
+  - 约束，375, 397
+  - 反变，395–398
+  - 协变，394, 396, 398
+  - 与广义类对比，375
+  - `IEnumerable<T>` 接口，424
+  - `IEnumerator<T>` 接口，424
+  - 接口，391–397
+  - 方法，创建，389–391, 397
+  - 类型参数，373–375, 389, 397
+- 手势，602–603
+- `get` 访问器，332, 334, 336, 343
+  - 可访问性，335–336
+  - 实现属性，338
+  - 用于索引器，363–364
+  - 在索引器中，356–358
+- `get` 块，332
+- `get` 关键字，332, 360
+- GET 请求，736
+- `GetAsync` 方法，736, 748
+- `GetAwaiter` 方法，564
+- `GetData` 方法，392, 727
+- `GetDataAsync` 方法，723–725, 727, 730, 738–739
+- `GetEnumerator` 方法，424, 429–430
+  - 使用迭代器实现，432–433
+- `GetHashCode` 方法，395
+  - 重写，501, 506–507
+- `GetPosition` 方法，291
+- `GetType` 方法，132
+- `GetTypeName` 方法，265
+- 全局资源字典，639–640, 649
+- 全局唯一标识符 (GUIDs)，737
+- `goto` 语句，102
+- 图形应用程序，17–32。另见 Universal Windows Platform (UWP) apps
+  - 添加代码，29–32
+  - 在 Visual Studio 2015 中创建，18–26
+  - `MainPage.xaml` 文件，19–20
+  - Model-View-ViewModel 设计模式，651–680
+  - UI 设计与数据和业务逻辑分离，651–652
+  - 视图，18
+- 图形用户界面 (GUI)，602–603。另见 user interface (UI)
+- 大于表达式，377
+- `Grid` 控件，49, 524, 608–609
+  - 定义行和列，623–626
+  - 定位 `TextBlock` 控件，623–624
+  - 从 XAML 标记引用，632
+  - 用于可缩放 UI，649
+  - 表格布局，621–630
+- `Grid` 元素，22
+- `GridStyle` 样式，640
+- `GroupBy` 方法，476, 485, 492
+- `groupby` 查询运算符，479, 492
+- 分组数据，475–477
+- GUI (图形用户界面)，602–603。另见 user interface (UI)
+- “Guide to Universal Windows Platform (UWP) apps” 页面，602
+- “Guidelines for app suspend and resume” 页面，603
+- GUIDs (全局唯一标识符)，737
+
+## H
+
+- 手持设备。另见 Universal Windows Platform (UWP) apps
+- `Handle` 方法，555, 558
+- `handleException` 方法，555–556
+- `HashSet<T>` 类，400, 409–410
+- Haskell，412
+- `HasValue` 属性，186–187
+- `HeaderStyle` 样式，642–643
+- 堆，191–193
+  - 从堆分配内存，306
+  - 数组元素，222
+  - 装箱和拆箱要求，196
+  - 释放内存，306。另见 garbage collection
+  - 可达队列，310
+  - 对象引用，194
+- Helm, Richard，455
+- 隐藏代码，27
+- 爬山算法，521
+- `HorizontalAlignment` 属性，21
+- HTTP PUT、POST 和 DELETE 请求，728
+- `HttpClient` 类，720, 748
+- `HttpResponseMessage` 类，720
+- `HttpResponseMessage` 对象，736, 748
+- 匈牙利命名法，36
+
+## I
+
+- `IActivatedEventArgs` 类型，686
+- `IAsyncResult` 设计模式，574–575
+- `ICommand` 接口，669–670
+  - 实现，670–673
+- `ICommandBarElement` 接口，679
+- `IComparable` 接口，279, 380–381, 482
+- `IComparable<T>` 接口，381
+- `IComparer` 接口，395–396
+- `IComparer<T>` 对象，396
+- 图标
+  - `IntelliSense`，11
+  - 在 UWP 应用中，678, 689–690
+- 幂等性，728
+- 标识符，34–35
+  - 关键字，34–35
+  - 命名，157
+  - 重载，68
+  - 作用域，66
+  - 语法，34
+- `IDisposable` 接口，314, 326, 427
+  - 实现，314–316, 319–320
+- `IEnumerable` 接口，424–431
+  - 实现，429–431, 437
+  - 用于 LINQ，471
+- `IEnumerable<T>` 接口，424
+  - 协变，394
+  - 用于 LINQ，471
+- `IEnumerable<TItem>` 接口，434–436
+- `IEnumerable` 对象，582
+- `IEnumerable.GetEnumerator` 方法，429–430, 434–436
+- `IEnumerable<TItem>.GetEnumerator` 方法，429–430, 434–436
+- `IEnumerator` 接口，424
+- `IEnumerator<T>` 接口，424–429
+- `if` 语句，91–99, 105。另见 Boolean expressions
+  - 级联，94–99
+  - 分组语句，93
+  - 重写为 `switch` 语句，99
+  - 编写，94–99
+- `if-else` 语句，383–384
+- `Image` 控件，524, 526
+- `ImageBrush` 资源，639
+- 不可变属性，345
+- `Implement Interface Explicitly` 命令，287, 427, 429, 482
+- Implement Interface Wizard，280
+- `implicit` 关键字，509, 514
+- 隐式类型数组，224–225
+- 隐式类型变量，56–57
+- `in` 限定符，396
+- 递增 (`++`) 运算符，54–55, 499
+- 索引器，353–368
+  - 作为 `[ ]`，494
+  - 访问数组元素，359–360
+  - 访问器方法，357–358, 363–364, 368
+  - 与数组对比，358–360
+  - 调用，365–366
+  - 创建，368
+  - 定义，353
+  - 显式实现，361, 368
+  - 在接口中，360–361, 368
+  - 记法，411
+  - 重载，363–364
+  - 索引值范围检查，357
+  - 读写上下文，358
+  - 虚实现，360–361
+  - 在 Windows 应用程序中，361–367
+  - 编写，363–364
+- 数组的索引，225
+- `IndexOf` 方法，363
+- `IndexOutOfRangeException` 异常，555–556
+- 间接非托管资源，307
+- 不等于 (`!=`) 运算符，88–89
+- 无限值，47
+- 中缀记法，495
+- 信息隐藏，154
+- 继承，193, 255–276
+  - 从抽象类，277
+  - 抽象类与，293–295
+  - 分配类，259–261
+  - 基类构造函数，258–259
+  - 类层次结构，266–271
+  - 声明，256–257
+  - 声明新方法，261–262
+  - 声明重写方法，263–265
+  - 声明虚方法，262–263
+  - 扩展方法，271–275
+  - 异常层次结构，131–132
+  - 从接口，279
+  - 接口与，283
+  - 从托管类型，301
+  - 受保护访问，265–266
+  - 公共性质，257
+  - 从 `System.Object` 类，258
+- 初始化
+  - 集合类，411–413
+  - 在构造函数中，258–259
+  - 字段，156
+- `initializeComponent` 方法，26–27
+- `INotifyPropertyChanged` 接口，660–661, 673–674, 696
+- `Insert` 方法，383
+- `InsertIntoTree` 方法，389–391
+- `InstallCommandDefinitionsFromStorageFileAsync` 方法，685
+- 实例方法，164, 181
+  - 编写，165–167
+- 实例，165
+- `int` 关键字，387
+- `int` 参数，181–182
+- `int` 类型，204
+  - 作为数组索引，235
+  - 作为位数组，353–357
+  - 二进制表示，353–355
+  - 参数数组，244–247, 249–251
+- `int` 值
+  - 添加，63
+  - 算术运算，47–48
+  - 容器的，353。另见 `int` 类型
+  - 将字符串转换为，45，58
+  - 枚举文字的，203，205
+- `int` 变量
+  - 声明，165，178
+  - 值内存分配，177
+- `Int32.Parse` 方法，45
+- 整数算术，119
+  - 已检查和未检查，138–143
+  - 溢出检查，139，150
+- 整数除法，147
+- 整数索引，407
+- `IntelliSense`，9
+  - 图标，11
+- 接口扩展，280
+- `interface` 关键字，278
+- 接口属性，337–339，350
+- 接口，277–278，337–338
+  - 检查对象是否实现，281
+  - 用于可收集对象，277–278
+  - 反变，395–397
+  - 协变，393–394
+  - 定义，277
+  - 定义，278–279，284–286
+  - 显式实现，282–283，291
+  - 字段与属性，344
+  - 泛型，391–397
+  - I 前缀，279
+  - 实现，279–280，286–290，303，338–339
+  - 接口中的索引器，360–361，368
+  - 不变，393
+  - 关键字组合，302
+  - 方法，278
+  - 多个，281
+  - 引用，291
+  - 通过接口引用类，280–281
+  - 限制，283–284
+- `IntersectWith` 方法，409–410
+- `int.MinValue` 和 `int.MaxValue` 属性，138
+- `int.Parse` 方法，50，72，128，207
+- `Invalidate` 方法，526
+- `InvalidCastException` 异常，195–196，393
+- `InvalidOperationException` 异常，145–146，428
+  - `catch` 处理程序，146
+- 不变接口，393
+- I/O 操作
+  - 异步方法，573–574
+  - 响应性，517
+- `IRetrieveWrapper<T>` 接口，393–394
+- `is` 运算符，196–197，281
+  - 在类赋值中，260–261
+- `IsAtEnd` 属性，675
+- `IsAtStart` 属性，675，679
+- `IsBusy` 属性，727
+- `IsCancellationRequested` 属性，543–544
+- `IsChecked` 属性，145
+- `IsNullOrEmpty` 方法，365
+- `IsProperSubsetOf` 方法，409–410
+- `IsProperSupersetOf` 方法，409–410
+- `IsSubsetOf` 方法，409–410
+- `IsSupersetOf` 方法，409–410
+- `IStoreWrapper<T>` 接口，393–394
+- 迭代语句，107
+  - 迭代中的 `break` 语句，116
+  - 迭代中的 `continue` 语句，116–117
+  - 控制变量更新，109，114
+  - `do` 语句，116–124
+  - `for` 语句，114–116
+  - `while` 语句，108–114
+- 迭代器，431–436
+  - 实现，432–433
+  - 实现枚举器，434–436
+- `IWrapper` 接口，392–393
+
+## J
+
+- 锯齿数组，231–232，242
+- JavaScript Object Notation (JSON)，712，723
+- Johnson, Ralph，455
+- `Join` 方法，477–478，492
+- `join` 查询运算符，480，492
+- 连接数据，477–478
+- `JsonConvert` 类，723
+- Json.NET 包，721
+
+## K
+
+- `Key` 字段，476
+- `Key` 属性，408
+- 键/值对，407–409
+- 关键字组合，302
+- 关键字，34–35
+  - 列表，35
+- Knuth, Donald E.，376
+
+## L
+
+- `LabelStyle` 样式，644–646
+- lambda 演算，413–414
+- lambda 表达式
+  - 匿名方法和，415
+  - 委托和，455–456
+  - 元素，412
+  - 形式，413–415
+  - 语法，413
+- 语言互操作性，498
+- Language-Integrated Query (LINQ)，469–470
+  - 在应用程序中，470–472
+  - 转换为 PLINQ 查询，575
+  - 延迟求值，487–490
+  - 等值连接，480
+  - 过滤数据，474–475
+  - 强制求值，487–488，492
+  - 迭代集合，576–578
+  - 连接集合，578–580
+  - 连接数据，477–478
+  - 排序、分组、聚合数据，475–477
+  - 并行化查询，576–580
+  - 查询运算符，479–487
+  - 查询响应时间，559–560
+  - 选择数据，472–474
+- `Last` 属性，403
+- “Launch a background app with voice commands” 页面，684
+- 左移 (`<<`) 运算符，354
+- `Length` 属性，225–226，242，403
+- 编译代码库，7–8。另见程序集
+- `LinkedList<T>` 类，400，403–404
+- LINQ。另见 Language-Integrated Query (LINQ)
+- `List<T>` 类，396，400–403，441
+- `List<T>` 集合，418
+- `ListCustomer` 对象，667
+- `ListBox` 控件，40
+- `ListenFor` 元素，684
+- 枚举列表，424
+- 局部作用域，66–67
+- 局部变量，66
+  - 声明，165
+  - 显示值，121–123
+  - 生命周期，191
+- `lock` 语句，322–323，584，597–599
+- 锁定数据，584
+  - 序列化方法调用，597–598
+  - 同步原语，584–586
+- 逻辑，69。另见业务逻辑
+  - 与应用程序解耦，439–467
+- 逻辑 AND (`&&`) 运算符，89–90，105
+- 逻辑 OR (`||`) 运算符，89–90
+- 循环。另见 `for` 语句；`foreach` 语句；`while` 语句
+  - 取消，549
+  - 迭代的依赖，541–543
+  - 独立迭代，534
+  - 迭代数组，533–534
+  - 并行迭代，537，539–540
+
+## M
+
+- `Main` 方法，8–10，27
+  - 数组参数，228
+- `MainPage.xaml` 文件，19–20
+  - 用于设备系列，631
+  - 显示，687
+- `MainPage.xaml.cs` 文件，19，26，606–607
+- 托管应用程序，300
+- 托管代码，218–219
+- 托管执行环境，218
+- 托管资源，306
+- 托管类型，301
+- Manifest Designer，604
+- `ManualResetEventSlim` 类，585，599
+- 映射元素，407–408。另见索引器
+- `Margin` 属性，21
+- 匹配字符对，10
+- `Math` 类，154，167
+- `Max` 方法，442
+- 内存，计算机，190–193
+  - 垃圾回收，184
+  - 使用结构管理，206
+  - 方法调用，191
+  - 对象，191
+  - 值类型回收，305
+  - 不安全代码和，198
+- 内存分配
+  - 数组，222–223
+  - 类类型，177
+  - 值类型，177
+- 内存块引用，177–178
+- `MemoryStream` 类，574
+- `Message` 属性，129
+- `MessageDialog` 对象，31，572
+- 方法适配器，455
+- 方法调用，65–66
+  - 编译器解析，80–85
+  - 独立，543
+  - 内存获取，191–193
+  - 带可选参数的方法，79
+  - 并行运行，537–538
+  - `Peek Definition` 命令，82
+  - 序列化，597–598
+  - 语法，63–64
+  - 通过委托，440–441
+- 方法参数
+  - 生命周期，191
+  - 值与引用类型，179
+- 方法作用域，66–67
+- 方法签名
+  - 与方法实现分离，277。另见接口
+  - 虚方法和重写方法，264
+- `methodName`，60，64
+- 方法
+  - 抽象，295
+  - 接受任意类型的多个参数，247–248，254
+  - 接受给定类型的多个参数，244–247，254
+  - 访问器，330–331
+  - 添加到事件，457
+  - 匿名，415
+  - 参数，64，79，187–190
+  - 数组作为参数或返回值，227–228
+  - 异步，460，560–575
+  - 主体语句，60
+  - 调用，63–66
+  - 构造函数，157–164。另见构造函数
+  - 创建，59–66
+  - 声明，60–61，86
+  - 定义，62–63
+  - 释放，311–324
+  - 使用方法封装，329–331
+  - 表达式体，62，86，413
+  - 扩展，271–275
+  - `Extract Method` 命令，73
+  - Generate Method Stub Wizard，69–73，86
+  - 泛型，389–391，397
+  - 隐藏，260–263
+  - `if` 语句，91
+  - 初始化参数，188–189
+  - 实例，164–167
+  - 通过委托调用，440–441
+  - 关键字组合，302
+  - 长度，63
+  - `methodName`，60
+  - 修饰符，330–331
+  - 命名参数，77–85
+  - 命名参数，86
+  - 命名约定，157
+  - 可选参数，77–86，252–254
+  - 重载，10，68，243–244
+  - 重写，295–296
+  - 参数数组。另见参数数组
+  - `parameterList`，60，252
+  - 参数的括号，413
+  - 传递参数，187
+  - 将对象作为参数传递，183
+  - `Peek Definition` 命令，82
+  - 私有，265–266，675–676
+  - `private` 限定符，71
+  - 将异常传播回，137–138
+  - 受保护，265–266
+  - 公共，265–266
+  - `public` 和 `private` 关键字，156
+  - 引用，440。另见委托
+  - 用属性替换，339–343
+  - 返回类型，60，73
+  - 返回值，86，237
+  - 从中返回数据，61–62，86
+  - `returnType`，60
+  - 作用域，66–68
+  - 密封，295–296
+  - 方法间共享信息，67
+  - 语句，33
+  - 逐步执行，74–77，86
+  - 订阅者，456
+  - 摘要，476–477
+  - `System.Threading.CancellationToken` 参数，543
+  - `unsafe` 关键字，198
+  - 可变数量的对象参数，247–248
+  - 虚，295
+  - 编写，68–77
+- Microsoft Azure，697，705
+- Microsoft Azure SQL Database，699
+- Microsoft Blend for Visual Studio 2015，648
+- Microsoft .NET Framework。另见 .NET Framework
+- Microsoft Patterns & Practices Git 仓库，560
+- `Min` 方法，245–246
+- 减号 (`-`)，45，503–504
+  - `--` (递减) 运算符，55
+  - `-=` (复合减法) 运算符，108，125
+  - `-=` (减法和赋值) 运算符，457
+- Mobile Services，697
+- `Mode` 参数，659–663
+- 建模数据。另见类；结构
+- Model-View-ViewModel (MVVM) 设计模式，651–680
+  - 数据绑定，652–665
+  - 使用 `ComboBox` 控件的数据绑定，663–665
+  - 显示数据，652–659
+  - 修改数据，659–663
+  - `ViewModel`，665–680
+- 修饰符方法，330–331
+- Moore, Gordon E.，518
+- Moore 定律，518
+- 鼠标位置，291
+- `MoveNext` 方法，424，426–428
+- `mscorlib.dll`，17
+- 多核处理器，518–519
+- 多维数组，230–242。另见数组
+  - 访问元素，230
+  - 锯齿，231–232
+  - memory requirements, 230
+  - `params` keyword and, 246
+  - rectangular, 231
+- multiplicative operators, 91
+  - precedence, 53
+- multitasking, 517–519. See also tasks
+  - canceling, 543–554
+  - continuations, 556
+  - implementing, 519–543
+  - `Parallel` class, 536–543
+  - responsiveness and, 517
+  - scalability and, 518
+  - `Task` class, 524–536
+  - tasks, 520–524
+  - threads, 520–521
+- multithreading, 560. See also asynchronous methods; threads
+  - storing and retrieving data in collections, 587–588
+- `MyFileUtil` application, 228
+
+## N
+
+- `\n` (newline character), 238
+- `Name` property, 613
+- named arguments, 77–85
+  - ambiguities, resolving, 80–81
+  - passing, 79–80
+- named parameters, 79
+- `nameof` operator, 663
+- `namespace` keyword, 15
+- namespaces, 14–17
+  - assemblies and, 17
+  - bringing into scope, 15–16
+  - vs. longhand names, 16
+  - XAML namespace declarations, 606
+- naming identifiers, 157
+- NaN (not a number) value, 47
+- narrowing conversions, 509
+- native code, 218
+- `Navigate` method, 684, 689
+- .NET Framework
+  - exception classes, 143
+  - IAsyncResult design pattern, 574–575
+  - multitasking capabilities, 519–520
+  - primitive type equivalents, 207
+  - synchronization primitives, 584–586
+- .NET Framework class library, 17
+  - collection classes, 399–400
+  - delegates, 441–443
+  - thread-safe collection classes, 587–588
+- `new` keyword, 155, 191
+  - for anonymous classes, 172–173
+  - for array instances, 222–223
+  - creating objects, 305–306
+  - initializing delegates, 444–445
+  - memory allocation for objects and, 177
+  - in method signatures, 262
+- new methods, 261–262
+- New Project dialog box, 4
+- newline character (`\n`), 238
+- `Next` method, 223, 236, 675–676
+  - serializing calls to, 597–598
+- `Next` property, 403
+- `NodeData` property, 435
+- nongeneric collections, 400
+- not a number (NaN) value, 47
+- NOT (`!`) operator, 88, 186
+- NOT (`~`) operator, 354
+- notifications, 456–458
+- `NotImplementedException` exceptions, 71, 236, 287, 427
+- null elements in arrays, 237–238
+- null values, 183–185, 199
+- nullable types, 183–187
+  - heap memory, 191
+  - retrieving values of, 186
+- nullable values, 145
+- null-conditional operator, 184–185
+- `NullReferenceException` exceptions, 185, 445, 458
+- numbers, converting to string representation, 117–119
+- `NumCircles` field, 168
+- numeric types, 47
+
+## O
+
+- `obj` folder, 14
+- `Object` class, 193, 392
+- Object Collection Editor, 614–615
+- object initializers, 347–349
+- `object` keyword, 193
+- object references, 400
+- object types, 72, 194, 369–372, 375
+  - holding values and references, 391–392
+  - parameter arrays of, 247–248
+- object variables, 194, 260
+- `Object.Finalize` method, 308
+- objects, 155. See also classes
+  - accessing members, 306
+  - casting, 196–198
+  - comparing, 278
+  - constructors, 157–164. See also constructors
+  - creating, 160–164, 305–306
+  - dangling references, 309
+  - destroying, 306. See also garbage collection
+  - destructors, 306–308
+  - displaying on canvas, 288
+  - enumerator, 424
+  - finalization, 310
+  - initializing with properties, 345–349
+  - lifetime, 305–311
+  - locking, 584
+  - memory allocation for, 177
+  - memory requirements, 191
+  - passing as arguments to methods, 183
+  - private data, 165
+  - read and write locks, 586
+  - referencing through interfaces, 280–281
+  - storing references to, 183–184
+  - unmanaged, 198
+  - unreachable, 310
+  - verifying type, 196–197
+- `okClick` method, 30–31
+- `on` clause of equals operator, 480–481
+- `OnActivated` method, 685–687
+- `OnLaunched` method, 29, 684–685
+- `OnPropertyChanged` method, 661, 674
+- `openFileClick` method, 111
+- operands, 45
+- `OperationCanceledException` exceptions, 551, 556, 558, 580
+  - catching and handling, 552–554
+- `operator !=`, 500–501
+- `operator ==`, 500–501
+- `operator+`, 497
+- `operator` keyword, 494, 509, 514
+- operator overloading, 444, 493–514
+- operators, 493–494
+  - arguments, 495
+  - arithmetic, 45–54
+  - associativity, 53, 90–91, 493–494
+  - binary, 494
+  - Boolean, 88–91
+  - comparing, 500
+  - compound assignment, 107–108, 498–499
+  - conditional logical, 89–90
+  - constraints, 494
+  - conversion, 508–514
+  - data types and, 45–47
+  - equality, 501
+  - implementing, 501–508, 514
+  - increment and decrement, 499
+  - for `int` type bits, 354–355
+  - language interoperability and, 498
+  - null-conditional, 184–186
+  - overloaded, 494–496
+  - pairs, 500–501
+  - parameter types, 495–496
+  - precedence, 52–53, 58, 90–91, 493–494
+  - prefix and postfix forms, 55, 499
+  - public, 495
+  - static, 495
+  - structures and, 208
+  - symmetric, 496–497
+  - unary, 55, 493
+- optional parameters, 77–85
+  - ambiguities, resolving, 80–81
+  - defining, 79
+  - vs. parameter arrays, 252–254
+- OR (`|`) operator, 354
+- `OrderBy Descending` method, 476
+- `OrderBy` method, 475–476, 491
+- `orderby` query operator, 479, 491
+- ordering data, 475–477
+- `out` keyword, 189, 394
+- `out` parameters, 187–190, 199
+  - `params` keyword and, 247
+- `OutOfMemoryException` exceptions, 192
+- Output window, 12
+- overflow checking, 139
+  - checked expressions, 140–143
+- `OverflowException` exceptions, 129, 131
+  - catch handler for, 141–142
+  - in checked statements, 139–140
+- overloading, 10, 68
+  - constructors, 158–159
+  - operators, 444, 493–514
+  - vs. parameter arrays, 243–244
+  - `params` keyword and, 246–247
+- `override` keyword, 263–265
+- override methods, 295–296
+  - declaring, 263–265, 276
+  - rules for, 264
+  - writing, 269–270
+- overriding vs. hiding, 262–263
+
+## P
+
+- `Pack` class, 235
+- `Package.appxmanifest` file, 604
+- `Page` tag, 607
+- paging, 721
+- `Parallel` class, 536–543
+  - abstracting tasks, 536–540
+  - considerations for, 541–543
+  - degree of parallelization, 538
+  - `ParallelLoopState` objects, 549
+  - scheduling tasks, 542
+- Parallel LINQ (PLINQ), 560, 575–580, 599
+  - canceling queries, 580, 599
+  - iterating collections, 576–578
+- `Parallel.For` method, 537, 539–543, 558
+  - canceling, 549
+  - `lock` statements, 597
+  - unpredictable behavior, 582–583
+- `Parallel.ForEach` method, 542–543, 558
+  - canceling, 549
+- `Parallel.ForEach<T>` method, 537
+- `Parallel.Invoke` method, 537–538, 541, 543
+- parallelization, 536–540. See also concurrent operations; multitasking; tasks; threads
+  - in asynchronous methods, 565–566
+  - degree of, 520
+  - implementing, 538–540
+  - iterating collections, 576–578
+  - joining collections, 578–580
+  - of query operations, 575–580
+  - scheduling, 581
+  - units of, 520
+- `ParallelLoopState` objects, 537, 549
+- `ParallelQuery` objects, 575, 582
+- parameter arrays, 243–254. See also arrays
+  - declaring, 245–247
+  - elements of any type, 254
+  - elements of given type, 254
+  - `int` types, 244–247, 249–251
+  - number of, 247
+  - `object` types, 247–248
+  - vs. optional parameters, 252–254
+  - `params object[]`, 247–248
+  - priority of, 247
+  - writing, 249–251
+- `parameterList`, 60
+- parameters
+  - adding to class, 238–239
+  - arrays as, 227–228
+  - destructors and, 307
+  - determining minimum value, 244–246
+  - in lambda expressions, 414
+  - naming, 72, 86
+  - optional, 77–86, 252–254
+  - parentheses for, 413
+  - specifying, 79, 86
+  - type, 373–375
+  - types, 60
+  - variable numbers of, 243–244. See also parameter arrays
+  - variables as, 164
+- `params` keyword, 244–246. See also parameter arrays
+  - overloading and, 246–247
+- `params object[]`, 247–248
+- parentheses, 53, 60, 413
+  - in Boolean expressions, 92
+  - in expressions, 89
+  - in method calls, 64, 66
+  - precedence override, 90
+- `Parse` method, 65, 207
+- partial classes, 159–160, 711
+- `partial` keyword, 160
+- `ParticipantCount` property, 586
+- `ParticipantsRemaining` property, 586
+- `Pass.Reference` method, 182–183
+- `Pass.Value` method, 181
+- Patterns & Practices Git repository, 560
+- `Peek Definition` command, 82
+- performance, parallelization and, 540–541
+- Performance Explorer, 530–533
+- `PhraseTopic` element, 684
+- `PI` field, 169
+- `PickMultipleFilesAsync` method, 573
+- `PickSingleFileAsync` method, 573
+- PLINQ. See Parallel LINQ (PLINQ)
+- plus sign (`+`), 45, 54, 495, 503
+  - `++` (increment) operator, 54–55, 499
+  - with delegates, 444
+- pointers, 197–198
+- polymorphism
+  - testing, 270–271
+  - virtual methods and, 264–265
+- `Pop` method, 399
+- positional notation, 280
+- POST requests, 728, 735–736, 748
+- `PostAsync` method, 735, 748
+- precedence, 90–91, 493–494
+  - of compound assignment operators, 108
+  - overriding, 52–53, 58, 90
+- predicates, 411–413, 418
+- prefixing and postfixing operators, 55, 499
+- `Previous` method, 675–676
+- `Previous` property, 403
+- primitive types, 37–44. See also value types
+  - displaying values, 38–40
+  - fixed size, 138–139
+  - list of, 38
+  - .NET Framework type equivalents, 207
+- private data, 165
+- private fields, 163–164, 265–266, 301, 329
+  - privacy of, 180
+  - properties, accessing with, 179
+- `private` keyword, 71, 156, 180
+- private methods, 265–266, 675–676
+- private static fields, 170–172
+- processing power
+  - increasing, 518–519
+  - maximizing, 517. See also `Task` objects
+- processors
+  - displaying utilization, 529
+  - multicore, 518–519
+  - number of, 521
+- `Program` class, 8, 161, 576
+- `Program.cs` file, 8
+- programs. See also applications; code
+  - attributes, 7
+  - testing, 73–74
+- `ProgressRing` control, 726–728
+- project files, 7
+- project solution files, 7
+- projecting fields, 474
+- propagating exceptions, 136–138
+- properties, 331–333
+  - accessibility, 335–336
+  - accessing private fields, 179
+  - attached, 623–624
+  - automatic, 343–345, 351
+  - binding control properties to object properties, 652. See also data binding
+  - declaring, 331–332
+  - defined, 331
+  - immutable, 345
+  - initializing, 345
+  - initializing objects with, 345–349, 351
+  - interface, 337–339, 350
+  - naming, 333
+  - of nullable types, 186–187
+  - reading values, 333–334
+  - read-only, 334
+  - replacing methods with, 339–343
+  - restrictions on, 336–337
+  - simulating assignment, 494
+  - virtual, 338
+  - write-only, 334–335
+- Properties folder, 7
+- property getters and setters, 331
+- `PropertyChanged` events, 660–661, 674
+- protected access, 264–266
+- `protected` keyword, 266
+- pseudorandom number generator, 223
+- `public const int` fields, 235, 238
+- public constructors, 213. See also constructors
+  - default, 259
+- public events, 458
+- public fields, 265–266, 301, 343–344
+- `public` keyword, 156, 514
+- public methods, 180, 182, 265–266, 301
+  - writing, 171–172
+- Publish Web wizard, 718–721
+- `Push` method, 399
+- PUT requests, 728, 735
+- `PutAsync` method, 735, 748
+
+## Q
+
+- query operations, parallelizing, 575–580
+- query operators, 479–487
+  - retrieving data, 486–487
+- querying data, 469
+- `Queue` class, 374
+  - object-based version, 369–374
+- `Queue<T>` class, 399–400, 404–405
+  - thread-safe version, 588
+- queues, storing values in, 426–427
+- Quick Find functionality, 41
+- “Quickstart: Translating UI resources (XAML)” page, 678
+
+## R
+
+- `Random` class, 223, 235, 597
+- random number generator, 236
+- read locks, 586
+- read operations, 586, 600
+- `ReadAsStringAsync` method, 723–724, 736, 748
+- `reader.Dispose` method, 148–149
+- `reader.ReadLine` method, 71, 112, 311
+- `ReaderWriterLockSlim` class, 586, 600
+- `readInt` method, 71
+- `ReadLine` method, 71, 112, 311
+- read-only fields, 234
+- read-only indexers, 358
+- read-only properties, 334, 344–345, 350
+- `Rectangle` class, 286
+- `Rectangle` controls, 653
+- rectangular arrays, 231
+- `ref` parameters, 187–190, 199
+  - `params` keyword and, 247
+- refactoring code, 73
+- reference types
+  - arrays, 222. See also arrays
+  - `Clone` methods, 179
+  - copying, 179–180, 199, 208
+  - covariance, 394
+  - dangling references, 309
+  - declaring, 178
+  - defined, 177
+  - destructors, 307. See also destructors
+  - heap memory, 191
+  - initializing, 183
+  - null values, 184
+  - number, 308
+  - `ref` and `out` modifiers, 190
+  - `string` type, 178
+  - `System.Object` class, 193
+- references
+  - to arguments, 188
+  - to memory blocks, 177–178
+- References folder, 7–8
+  - optional assemblies, 17
+- `Regex` class, 731
+- `Register` method, 544
+- regular expression matching, 731
+- “The Regular Expression Object Model” page, 731
+- relational databases, 698. See also databases
+  - connecting to, 698. See also entity models
+- relational operators, 88–89, 91
+- remainder (modulus) operator (`%`), 46
+- `Remove` method, 401, 409, 446
+- `RemoveParticipant` method, 586
+- `RenderTransform` property, 644
+- Representational State Transfer (REST) model, 697, 712
+- `Reset` method, 585
+- resource dictionary, 639–640, 649
+- resource management, 311–316
+  - exception-safe disposal, 312–314, 316–324
+  - object lifetimes, 305–311
+- resource pools, 585, 599
+- resource release, 112, 312–314, 325. See also garbage collection
+  - preventing multiple releases, 320–323
+- resources, styles, 638
+- response time
+  - asynchronous operations and, 559–600
+  - data access operations, 575
+- responsiveness, 559
+  - asynchronous API and, 572–574
+  - improving, 517
+  - user interface, 561, 567–568
+- REST (Representational State Transfer) model, 697, 712
+- REST (Representational State Transfer) web services, 697
+  - adding data items, 748
+  - consuming in UWP apps, 748
+  - creating, 712–721
+  - idempotency, 728
+  - remote database access, 747
+  - retrieving data in UWP apps, 748
+  - updating data from UWP apps, 748
+- `result =` clauses, 64
+- `Result` property, 569
+- retrieving data. See arrays; collections; generics
+- `return` keyword, 61
+- return statements, 61–62, 101
+- return types, 60, 73
+- return values, 237, 414
+  - arrays as, 227
+  - of asynchronous methods, 569–570
+- `returnType`, 60
+- `Reverse` property, 433
+- right-shift operator (`>>`), 354
+- `RightTapped` events, 292
+- `RoutedEventHandler` delegate, 458–459
+- run method, 69
+- `Run` method, 522, 560
+- Run To Cursor command, 120
+- `RunAsync` method, 563
+- runtime
+  - casting checks, 196
+  - memory management, 191–192
+
+## S
+
+- `SaveAsync` method, 740–741
+- saving, 13
+- scalability
+  - asynchronicity and, 560
+  - improving, 518
+- scalable user interfaces, 621–630
+- scope
+  - blocks and, 93
+  - class, 66–67
+  - local, 66–67
+  - method, 66–67
+  - `for` statements, 115–116
+  - of variables, 66
+- sealed classes, 256, 295–303
+- `sealed` keyword, 295
+- sealed methods, 295–296
+- searching
+  - with Cortana, 680–695
+  - Quick Find, 41
+  - voice responses, 692–695
+- security, unsafe code, 198
+- `Segoe Print` font, 642, 646
+- `Select` method, 472–474, 491
+  - invoking, 484
+  - specifying fields, 475
+  - summary methods over results, 476–477
+- `select` operator, 479, 486, 490
+- selecting data, 472–474
+- `SelectionChanged` events, 40
+- selector parameter, 473–474
+- semaphores, 584
+- `SemaphoreSlim` class, 585, 599
+  - cancellation token, 587
+- semicolon (`;`)
+  - in interfaces, 278
+  - in return statements, 61
+  - in statements, 33
+  - in `for` statements, 115
+- serializing method calls, 597–598
+- `set` accessors, 332, 334–336
+  - accessibility, 335–336
+  - `OnPropertyChanged` method calls, 661–662
+- `set` accessors, 343
+  - implementing properties, 338
+  - in indexers, 356–358
+- `set` blocks, 332
+- `set` keyword, 332, 360
+- `Set` method, 585
+- `SetColor` method, 291–292
+- `SetData` method, 392
+- `Setter` elements, 637
+  - in styles, 639
+- shallow copying, 179
+  - of arrays, 230
+- shared data. See also synchronization
+  - synchronizing access, 577, 599
+- `Shift+F11`, 76
+- short circuiting, 90
+- short types, 204
+- Show All Files button, 13–14
+- `show` method, 96
+- `ShowAsync` method, 572
+- `showBoolValue` method, 44
+- `showDoubleValue` method, 44
+- `showFloatValue` method, 42–43
+- `showIntValue` method, 43
+- `showResult` method, 63
+- `showStepsClick` method, 118, 120
+- `SignalAndWait` method, 586
+- signatures, method, 261–262
+- Simulator, 618–621
+  - running, 627–630
+- single quotation mark (‘), 104
+- single-threaded applications, 517, 590–594
+  - creating, 524–530
+- `.sln` suffix, 39
+- solution files, 7–8
+- `Sort` method, 396, 401
+- `SortedList<TKey, TValue>` class, 400, 408–409
+- `SortedSet<T>` collection type, 410
+- sorting data, 377
+- source files, 6–7
+- source parameter, 473–474
+- `SpeechSynthesizer` class, 695
+- spinning, 577
+- `Split` method, 579, 688
+- SQL (Structured Query Language), 470
+- `Sqrt` method, 165–167
+- square bracket notation, 357
+  - for array elements, 401
+  - for arrays, 221
+  - for key/value pairs, 407
+- stack, 191–193
+  - structures, 206
+- `Stack<T>` class, 399–400, 405–406
+  - thread-safe version, 588
+- `StackOverflowException` exceptions, 333
+- `StackPanel` control, 609
+- `Start Debugging` command, 13–14, 32
+- `Start` method, 522, 560
+- `Start Without Debugging` command, 13–14, 32, 73
+- state information, 574. See also visual state transitions
+- statements, 33–34
+  - blocks, 93, 116
+  - making run, 148–149
+  - semantics, 33
+  - syntax, 33
+- static classes, 169
+- static fields, 167–168, 175, 180
+  - creating, 169
+- `static` keyword, 514
+- static methods, 8, 167–173
+  - bringing into scope, 170
+  - calling, 167–168, 174
+  - declaring, 167, 174
+  - implementing and testing, 249–251
+- static properties, 334
+- `static using` statements, 170
+- `static void` methods, 390
+- `Status` property, 548
+- stepping into and out of methods, 74–77, 86
+- `Stopwatch` objects, 526
+- `StorageFile` class, 573
+- storing data. See arrays; collections; generics
+- `StreamReader` class, 311
+- `String` class, 392, 579
+- string concatenation, 45–46
+- string interpolation, 46, 50, 248
+- `string` type, 178
+- string values
+  - converting to integers, 45, 58
+  - representing values in variables, 43–44, 50
+  - for variable names, 663
+- `StringReader` class, 311
+- strings
+  - appending to strings, 108
+  - converting enumeration variables, 202–203
+  - converting to integers, 128–129
+  - determining if empty, 365
+  - splitting, 579, 688
+  - wrapping, 392
+- `struct` keyword, 208
+- structs, 8
+- structure variables
+  - copying, 215–218
+  - declaring, 210–211, 220
+  - initializing, 211–212, 220
+  - nullable, 211
+- Structured Query Language (SQL), 470
+- structures, 8, 206–219
+  - vs. classes, 209–210
+  - comparing operators, 500
+  - compatibility with WinRT, 218–219
+  - creating, 212–215
+  - declaring, 208–209, 220
+  - default constructors, 209, 212–213
+  - field initialization, 209, 211–212
+  - fields, 208
+  - inheritance and, 257–258
+  - interface implementation, 279
+  - keyword combinations, 302
+  - operators for, 208
+  - public constructors, 213
+  - types, 206–207
+- `Style` elements, 639, 649
+- styles
+  - `BasedOn` property, 642
+  - defining, 639, 649
+  - Microsoft Blend, 648
+  - `Setter` elements in, 639
+  - for user interface, 638–648
+- 订阅者, 456
+- `subtractValues` 方法, 51
+- 汇总函数, 480
+- 汇总方法, 476–477
+- `SuppressFinalize` 方法, 321–322
+- `Swap<T>` 方法, 389
+- `switch` 关键字, 100
+- `switch` 语句, 99–105, 687
+  - 穿透, 101–102
+  - 规则, 101–102
+  - 语法, 100
+  - 编写, 102–104
+- 对称运算符, 496–497, 510–511
+- 同步
+  - 取消, 587
+  - 锁定数据, 584
+  - 用于共享数据访问, 577
+  - 任务, 581–598
+  - 任务, 581–599
+  - 线程, 585, 599
+- 同步原语, 584–586
+- 同步 I/O, 560
+- `System.Array` 类, 225, 228–229, 424
+- `System.Collections` 命名空间, 400
+- `System.Collections.Concurrent` 命名空间, 400, 587
+- `System.Collections.Generic` 命名空间, 374–376, 395, 399, 410, 424
+- `System.Collections.IEnumerable` 接口, 423–431
+- `System.Diagnostics.Stopwatch` 对象, 526
+- `System.Exception` 异常, 131, 563
+- `System.IComparable` 接口, 380–381
+- `System.IComparable<T>` 接口, 381
+- `System.Int32` 结构, 65, 206–207
+- `System.Int32` 类型, 387
+- `System.Int64` 结构, 206–207
+- `System.InvalidCastException` 异常, 372
+- `System.Linq` 命名空间, 473
+- `System.Object` 类, 193
+  - 继承自, 258
+  - 重写方法, 301
+- `System.Random` 类, 223
+- `System.Single` 结构, 206–207
+- `System.String` 类, 178
+- `System.Threading` 命名空间, 520, 584
+- `System.Threading.CancellationTokenSource` 对象, 543
+- `System.Threading.Tasks` 命名空间, 519, 537
+- `System.Threading.Tasks.TaskStatus` 枚举, 548
+- `System.ValueType` 类, 258
+
+## T
+
+- 平板电脑。参见 Universal Windows Platform (UWP) 应用
+- `TabularHeaderStyle` 样式, 643
+- `Tapped` 事件, 290
+- `TappedRoutedEventArgs` 参数, 291
+- `Task` 类, 519, 524–536
+  - 取消策略, 543–549
+  - 并行化, 524–543
+  - 线程, 520
+  - 等待方法, 554–556, 561–562
+- `Task<TResult>` 类, 569–570
+- `Task` 构造函数, 521
+- `Task` 对象, 520
+  - `Action` 委托, 521
+  - 创建, 521
+  - 实现, 533–543
+  - `Parallel` 类的, 536–540
+  - 响应性与, 561–562
+  - 运行, 522
+- `TaskCanceledException` 异常, 556
+- `TaskContinuationOptions` 值, 523
+- `TaskContinuationOptions.OnlyOnFaulted` 值, 556
+- `TaskCreationOptions` 对象, 522
+- `TaskFactory` 类, 575
+- 任务, 517–558。另见 多任务处理
+  - 抽象化, 536–540
+  - 异步, 559
+  - 可等待对象, 565
+  - 阻塞, 585
+  - 取消 vs. 允许运行至完成, 551
+  - 取消, 543–554, 558
+  - 检查取消, 552–554
+  - 计算绑定, 559
+  - 延续, 522–523, 558, 561–564
+  - 协作取消, 543–549
+  - 创建, 521–522, 557
+  - 异常处理, 554–556, 558
+  - 全局队列, 520
+  - 停止执行, 586
+  - 处理取消异常, 552–554
+  - 处理异常, 554–556
+  - 开销, 541
+  - 并行, 536–540, 558
+  - PLINQ 查询, 575–580
+  - 结果, 569–570
+  - 状态, 548–552, 554
+  - 同步原语, 584–586
+  - 同步, 523, 581–599
+  - 同步对数据的并发访问, 581–598
+  - 等待, 523, 547, 557, 561–562, 572
+  - 等待事件, 585
+- `Task.WaitAll` 方法, 547
+- 模板, 选择, 4。另见 Visual Studio 2015
+- 三元运算符, 365–366
+- 测试程序, 73–74
+- 文本框, 在其中显示值, 43
+- 文本文件, 迭代遍历, 110–113
+- `Text` 属性, 21–23
+- `TextBlock` 控件, 20–21, 524, 609–610
+  - 添加到页面, 464, 611–612, 615–616
+- `TextBox` 控件, 23
+  - 添加到页面, 612–613, 615–616
+- `TextReader` 类, 111, 311
+- `ThenBy` 方法, 476
+- `ThenByDescending` 方法, 476
+- `this` 关键字, 164, 272, 356–357
+- `Thread` 对象, 520
+- 线程池, 520
+- 线程安全, 596–597
+  - 集合类, 587–598
+  - 集合, 400
+  - `Dispose` 方法与, 322–323
+  - 开销, 588
+- `ThreadPool` 类, 520
+- 线程, 520–521
+  - 异步方法, 560。另见 异步方法
+  - 死锁, 571–572
+  - 定义, 310
+  - hill-climbing 算法, 521
+  - 数量, 521
+  - 调度, 520
+  - 休眠, 542
+  - 同步, 585, 599
+  - 等待, 585–586, 599
+- `Thread.Sleep` 方法, 542
+- 吞吐量, 提高, 517–558
+- `throw` 语句, 101, 143–144
+  - 用于, 的对象 144
+- `ThrowIfCancellationRequested` 方法, 551, 553
+- 抛出异常, 143–148
+- 波浪号 (`~`), 307
+- `ToArray` 方法, 415, 487–488, 490, 492
+- TODO 注释, 161, 180
+- `ToList` 方法, 487, 492
+- `ToString` 方法, 43, 203, 482
+  - 格式化输出, 238, 240
+  - 重写, 234, 503
+  - 重写默认行为, 213–214, 262
+  - 结构, 207
+- 触摸用户体验, 602
+- `TResult` 参数, 473–474
+- 视觉状态转换的触发器, 635–637
+- `try/catch` 块, 128
+  - `catch` 处理程序放置, 132
+  - 编写, 133–136
+- `try/finally` 块
+  - 用于资源释放, 312
+- `TSource` 参数, 473–474
+- 类型检查, 374
+- 类型不匹配, 195
+- 类型嵌套, 283
+- 类型参数, 373–375, 397, 425
+  - 用于集合类, 399–400
+  - 约束, 375
+  - 用于泛型方法, 389
+  - 初始化使用类型参数定义变量, 429
+  - `out` 关键字, 394
+  - `in` 限定符, 396
+- 类型安全
+  - 逆变与, 396
+  - 类型参数, 394
+- 类型检查规则, 259
+- 类型
+  - 匿名, 224–225
+  - 强制转换, 196–198
+  - 转换, 508–513
+  - 定义 vs. 实例, 155
+  - 枚举类型, 201。另见 枚举
+  - 扩展, 272–275
+  - 整数, 204
+  - 互操作性, 301
+  - 新, 定义, 271–272
+  - 结构, 206–207
+- `typeSelectionChanged` 方法, 40–42
+
+## U
+
+- 一元运算符, 55, 91, 493
+- 未分配的局部变量, 38
+- 拆箱, 194–196, 200
+  - 开销, 372
+- `unchecked` 关键字, 139–143
+- 下划线字符 (`_`), 36
+- 未处理的异常, 129–130, 133。另见 异常
+  - 捕获, 147–148
+- `UnionWith` 方法, 409–410
+- Universal Windows Platform (UWP) 应用, 18, 601–602。另见 图形应用
+  - 适配布局, 630–637
+  - 添加按钮, 677–680
+  - 添加语音激活图标, 689–690
+  - 应用布局和 UI 样式, 607
+  - 应用范围和本地资源, 638
+  - Blank App 模板, 605–607
+  - 忙指示器, 726–728
+  - 命令栏, 677–678
+  - 命令按钮, 233
+  - 在 Visual Studio 2015 中创建, 18–26, 32, 649
+  - 数据绑定, 635
+  - `Debug` 模式, 25
+  - 功能, 602–605
+  - 处理语音激活, 681, 686–689
+  - 图标, 678, 689–690
+  - 插入、更新和删除数据, 728–746
+  - 窄视图布局, 632–635, 649
+  - 生命周期, 603
+  - 设备族的 `MainPage.xaml` 文件, 631
+  - `MainPage.xaml.cs` 文件, 26
+  - 管理状态信息, 603
+  - 移动性, 603
+  - Model-View-ViewModel 设计模式, 651–680
+  - 打包, 603–604
+  - 页面, 20
+  - 从数据库检索, 698–728
+  - 可缩放用户界面, 607–637
+  - 缩放至设备形态, 603, 617–618, 649
+  - UI 样式, 638–649
+  - 在视图之间切换, 631, 635
+  - 表格布局, 621–630
+  - `Task` 类, 520
+  - 测试, 618–621, 690–691
+  - 触摸交互, 602
+  - Visual State Manager, 631–637
+  - 语音响应, 692–695
+  - 语音激活, 680–695
+  - WindowsRT 兼容性, 301
+- 非托管应用, 300
+- 非托管资源, 306
+- 不可达对象, 310
+- 不安全代码, 198
+- `unsafe` 关键字, 198
+- 用户界面 (UI)
+  - 创建, 20–26
+  - 数据绑定与, 635, 652–665
+  - 设计, 18
+  - `Dispatcher` 对象, 563
+  - 显示数据, 652–659
+  - 事件, 458–465
+  - `PropertyChanged` 事件, 660
+  - 响应手势, 602–603
+  - 响应性, 559, 561, 567–568, 570
+  - 可缩放至设备形态, 607–618
+  - 单线程特性, 547
+  - 样式, 638–648
+  - 表格布局, 621–630
+  - 用于 UWP 应用, 607–648
+- `using` 指令, 15–16
+- `using` 语句, 323–324
+- 资源生命周期控制, 312–314, 316–324
+- 静态, 170
+
+## V
+
+- `value` 关键字, 358
+- `Value` 属性, 186–187
+- 值类型。另见 原始类型
+  - 复制, 177–183, 199, 208
+  - 定义, 177
+  - 枚举, 201–206。另见 枚举
+  - 初始化, 183
+  - 内存回收, 305
+  - 可空, 185–187
+  - `ref` 和 `out` 修饰符, 190
+  - 栈内存, 191
+  - 结构, 206–219。另见 结构
+- 值
+  - 确定最小值, 244–246
+  - 返回, 414。另见 lambda 表达式
+- `ValueType` 类, 258
+- `var` 关键字, 56–57, 173, 474
+- 变量, 36–37
+  - 添加值, 108, 125
+  - 数组, 221–222。另见 数组
+  - 分配值, 53–54, 58
+  - 布尔, 87–88
+  - 类类型, 155
+  - 创建, 66
+  - 声明, 37, 58, 199
+  - 声明并在同一语句中初始化, 56, 58
+  - 使用类型参数定义, 初始化, 429
+  - 显示到屏幕, 71
+  - 显示值, 76
+  - 字段, 67
+  - 隐式类型, 56–57, 173
+  - 自增和自减, 54–55, 58
+  - 初始化, 50, 183, 429
+  - 初始化为相同值, 54
+  - 生命周期, 191
+  - 局部, 66
+  - 命名, 36, 333
+  - 指针, 197–198
+  - 限定为参数或字段, 164
+  - 引用类型, 177。另见 引用类型
+  - 返回变量名, 663
+  - 作用域, 66–67, 115–116
+  - 用于项目集, 221。另见 数组
+  - 存储对象引用, 183–184
+  - 字符串表示值, 43–44, 50, 58
+- `structure`, 210–211
+- testing for initialization, 184
+- `oftype` object, 194
+- type of, 56
+- unassigned, 38
+- value types. See value types
+- values, 43, 50, 58
+- values as arguments, 64
+- `VerticalAlignment` property, 21
+- `ViewModel`, 652. See also Model-View-ViewModel (MVVM) design pattern
+  - adding commands, 669–680
+  - `Adding` mode, 729–730, 733
+  - `Browsing` mode, 729–730, 733
+  - `Command` pattern, 669–680
+  - constructor, 687–688
+  - creating, 665–669
+  - discarding changes, 733–734
+  - `Editing` mode, 730, 733
+  - error-reporting capabilities, 738–741
+  - tracking state, 675
+  - validating and saving changes, 734
+- views
+  - `Command` pattern, 669–680
+  - connection to model, 666. See also `ViewModel`
+  - of data, 652
+  - referencing data, 674
+- virtual directories, 706
+- virtual indexer implementations, 360–361
+- `virtual` keyword, 263, 338
+- virtual machines, 218
+- virtual methods, 268, 295
+  - declaring, 262–263, 276
+  - polymorphism and, 264–265
+  - rules for, 264
+- virtual properties, 338
+- Visual C# syntax and semantics, 33–58. See also C#
+- Visual State Manager, 618, 630–637
+  - triggers, 635–637
+  - visual state transitions, 636
+- Visual Studio 2015, 3
+  - Allow Unsafe Code option, 198
+  - ASP.NET Web API template, 712–713
+  - Class Library template, 382
+  - Close button, 26
+  - Code and Text Editor window, 6
+  - Console Application template, 5
+  - console applications, 3–17
+  - Debug toolbar, 74–77
+  - default development environment settings, 4
+  - default method implementation, 70
+  - design surface form factor options, 607–608
+  - Design View window, 21, 24
+  - Document Outline window, 49
+  - Entity Data Model Wizard, 706–709
+  - environment, 3–8
+  - Error List window, 12–13
+  - Exceptions Settings, 553
+  - Generate Method Stub Wizard, 69–73
+  - generated code, 26–29
+  - graphical applications, 17–32
+  - Implement Interface Explicitly command, 287, 427, 429
+  - Implement Interface Wizard, 280
+  - Interface template, 285
+  - LINQ documentation, 481
+  - Manifest Designer, 604
+  - Microsoft Blend, 648
+  - namespaces, 14–17
+  - Object Collection Editor, 614–615
+  - Output window, 12
+  - project files, 7
+  - projects, 385–386
+  - Properties folder, 7
+  - Properties window, 21–23
+  - Publish Web wizard, 718
+  - Reference Manager dialog box, 386
+  - References folder, 7–8
+  - Simulator, 618–621, 627–630
+  - Solution Explorer, 6–7
+  - solution files, 7–8
+  - solutions, 385
+  - Start page, 3–4
+  - starter code, 6
+  - Task List window, 161
+  - Toolbox, 20–21
+  - Universal Windows Platform apps, 18–26, 32, 649
+  - Visual State Manager, 618, 630–637
+  - warnings, 31
+  - web service templates and tools, 698
+  - Windows Phone SDK 8.0, 601
+  - writing programs, 8–14
+  - XAML pane, 21
+- Visual Studio 2015 debugger
+  - Breakpoints Window button, 121
+  - exception handling, 142–143
+  - exceptions, 129–130
+  - Exceptions Settings pane, 142–143
+  - Locals window, 121–123
+- Visual Studio Performance Explorer and Profiler, 530–533
+- Vlissides, John, 455
+- voice activation, 680–696
+  - command sets, 682
+  - `Feedback` element, 684
+  - handling in apps, 681, 686–689
+  - language and locale settings, 683
+  - `ListenFor` element, 684
+  - `Navigate` element, 684
+  - `PhraseTopic` element, 684
+  - testing, 690–691
+- voice commands
+  - registering with Cortana, 681, 685–686
+- vocal responses, 692–695
+- voice-command definition (VCD) files, 681–684, 696
+- `VoiceCommandDefinitionManager` manager, 685
+
+## W
+
+- `Wait` method, 523, 555, 557, 561–562, 585
+  - blocking current thread, 571
+  - canceling, 600
+- `WaitAll` method, 523, 547, 555, 557
+- `WaitAny` method, 523, 555
+- `WalkTree` method, 384–385, 387
+- web apps
+  - creating, 705–706
+  - running, 706
+- web services, 698
+  - controller classes, 713–716
+  - creating, 712–721
+  - deploying to cloud, 719–721
+  - edit functionality, 730, 733, 737–738
+  - failed connection attempts, 715–716
+  - RESTful, 697
+  - retrieving data, 712
+  - retrieving data from cloud, 720–726
+- `when` keyword, 132
+- `Where` method, 474–475, 485, 491
+- `where` query operator, 479, 491
+- `while` statements, 108–114, 125, 236
+  - sentinel variable, 109
+  - terminating, 109
+  - writing, 110–113
+- white space characters, 34
+- widening conversions, 508
+- Win32 APIs, 218
+- windows, defined, 20
+- Windows 10, 300–301
+  - apps for. See Universal Windows Platform (UWP) apps
+  - Cortana, 680–695
+  - developer mode, 18–19
+  - devices, 602
+  - speech synthesis features, 692
+- Windows Phone Runtime, 601
+- Windows Phone SDK 8.0, 601
+- Windows Runtime (WinRT), 218–219, 300–301, 601
+  - app adaptation to device form factors, 601
+  - asynchronous methods and, 572–575
+  - hill-climbing algorithm, 521
+  - thread management, 520
+- Windows Store apps, 601, 603
+- Windows Universal template, 18
+- `Windows.Media.SpeechSynthesis` namespace, 695
+- `Windows.UI` namespace, 291
+- `Windows.UI.Popups` namespace, 31
+- `Windows.UI.Xaml` namespace, 672
+- `Windows.UI.Xaml.Media.Imaging` namespace, 525
+- `WithCancellation` method, 580, 599
+- `WrappedInt` class, 181–183
+- `WrappedInt` objects, 183
+- `Wrapper<T>` class, 392–393
+- write locks, 586
+- `Write` method, 573
+- write operations, 586, 600
+- `WriteableBitmap` objects, 525, 573
+  - populating, 526
+- `WriteAsync` method, 573–574
+- `WriteLine` method, 9–10, 68, 71, 167
+  - format string argument with numeric placeholders, 248
+  - overloading, 243–244, 248
+- write-only indexers, 358
+- write-only properties, 334–335, 341, 350
+- writing to streams, 573–574
+
+## X
+
+- XAML (Extensible Application Markup Language), 18
+  - namespace declarations, 606
+  - XAML files for device families, 631
+- XOR (`^`) operator, 354
+
+## Y
+
+- `yield` keyword, 432
+
+# About the author
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_948_0.png)
+
+**John Sharp** is a principal technologist for CM Group Ltd, a software development and consultancy company in the United Kingdom. He is well versed as a software consultant, developer, author, and trainer, with nearly 30 years of experience, ranging from Pascal programming on CP/M and C/Oracle application development on various flavors of UNIX to the design of C# and JavaScript distributed applications and development on Windows 10 and Microsoft Azure. He is an expert on building applications with the Microsoft .NET Framework and is also the author of *Windows Communication Foundation 4 Step By Step* (Microsoft Press).
+
+# Visit us today at
+
+## microsoftpressstore.com
+
+- Hundreds of titles available – Books, eBooks, and online resources from industry experts
+- Free U.S. shipping
+- eBooks in multiple formats – Read on your computer, tablet, mobile device, or e-reader
+- Print & eBook Best Value Packs
+- eBook Deal of the Week – Save up to 60% on featured titles
+- Newsletter and special offers – Be the first to hear about new releases, specials, and more
+- Register your book – Get additional benefits
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_949_0.png)
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_949_1.png)
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_949_2.png)
+
+# Wait, there’s more...
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_950_0.png)
+
+Find more great content and resources in the Microsoft Press Guided Tours app.
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_950_1.png)
+
+The Microsoft Press Guided Tours app provides insightful tours by Microsoft Press authors of new and evolving Microsoft technologies.
+
+- Share text, code, illustrations, videos, and links with peers and friends
+- Create and manage highlights and notes
+- View resources and download code samples
+- Tag resources as favorites or to read later
+- Watch explanatory videos
+- Copy complete code listings and scripts
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_950_2.png)
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_951_0.png)
+
+From technical overviews to drilldowns on special topics, get *free* ebooks from Microsoft Press at:
+
+www.microsoftvirtualacademy.com/ebooks
+
+Download your free ebooks in PDF, EPUB, and/or Mobi for Kindle formats.
+
+Look for other great resources at Microsoft Virtual Academy, where you can learn new skills and help advance your career with free Microsoft training delivered by experts.
+
+# Microsoft Press
+
+## 现在
+
+你已经读完这本书。
+
+## 告诉我们你的想法！
+
+它有用吗？它教会了你想要学习的内容吗？是否有改进的空间？
+
+请在 http://aka.ms/tellpress 告诉我们。
+
+你的反馈将直接发送给 Microsoft Press 的工作人员，我们会阅读每一份回复。提前感谢！
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_952_0.png)
+
+## 代码片段
+
+许多标题包含编程代码或配置示例。为了优化这些元素的呈现，请以单列、横向模式查看电子书并将字体大小调整为最小设置。除了以可重排文本格式呈现代码和配置外，我们还包含了模仿印刷书籍中呈现方式的代码图像；因此，在可重排格式可能影响代码列表呈现的情况下，你会看到“Click here to view code image”链接。点击该链接查看印刷级保真度的代码图像。要返回之前查看的页面，请点击设备或应用上的返回按钮。
