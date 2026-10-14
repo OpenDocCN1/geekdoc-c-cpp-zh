@@ -1,0 +1,151 @@
+
+the calling program. The first subscript position may be written as an empty pair of square brackets, as with a one-dimensional array. The corresponding function prototypes must be written in the same manner. But while calling the function the array name may be passed as the actual argument as in the case of one-dimensional arrays. E.g:
+
+```
+void process_array (int [][] [6]); /* function prototype */
+void process_array (int array[][6]) /*function definition */
+{
+...
+}
+```
+
+## Self Assessment Questions
+
+4. In a two-dimensional matrix, the first subscript in the declaration specifies number of ____________.
+5. A two-dimensional array is considered as an array of one-dimensional arrays. (True/False)
+
+## 7.4 Strings
+
+Strings in C are represented by arrays of characters. The end of the string is marked with a special character, the null character, which is simply the character with the value 0. (The null character has no relation except in name to the null pointer. In the ASCII character set, the null character is named NULL.) The null or string-terminating character is represented by another character escape sequence, \0.
+
+Because C has no built-in facilities for manipulating entire arrays (copying them, comparing them, etc.), it also has very few built-in facilities for manipulating strings.
+
+In fact, C's only truly built-in string-handling is that it allows us to use *string constants* (also called *string literals*) in our code. Whenever we write a string, enclosed in double quotes, C automatically creates an array of characters for us, containing that string, terminated by the \0 character. For example, we can declare and define an array of characters, and initialize it with a string constant:
+
+```
+char string[] = "Hello, world!";
+```
+
+In this case, we can leave out the dimension of the array, since the compiler can compute it for us based on the size of the initializer (14, including the terminating \0). This is the only case where the compiler sizes a string array for us, however; in other cases, it will be necessary that *we* decide how big the arrays and other data structures we use to hold strings are.
+
+To do anything else with strings, we must typically call functions. The C library contains a few basic string manipulation functions, and to learn more about strings, we'll be looking at how these functions might be implemented.
+
+Since C never lets us assign entire arrays, we use the **strcpy** function to copy one string to another:
+
+```
+#include <string.h>
+char string1[] = "Hello, world!";
+char string2[20];
+strcpy(string2, string1);
+```
+
+The destination string is **strcpy's** first argument, so that a call to **strcpy** mimics an assignment expression (with the destination on the left-hand side). Notice that we had to allocate string2 big enough to hold the string that would be copied to it. Also, at the top of any source file where we're using the standard library's string-handling functions (such as **strcpy**) we must include the line
+
+```
+#include <string.h>
+```
+
+```
+while(src[i] != '\0')
+{
+dest[i] = src[i];
+i++;
+}
+dest[i] = '\0';
+```
+
+We've called it mystrcpy instead of strcpy so that it won't clash with the version that's already in the standard library. Its operation is simple: it looks at characters in the src string one at a time, and as long as they're not \0, assigns them, one by one, to the corresponding positions in the dest string. When it's done, it terminates the dest string by appending a \0. (After exiting the while loop, i is guaranteed to have a value one greater than the subscript of the last character in src.) For comparison, here's a way of writing the same code, using a for loop:
+
+```
+for(i = 0; src[i] != '\0'; i++)
+dest[i] = src[i];
+dest[i] = '\0';
+```
+
+Yet a third possibility is to move the test for the terminating \0 character out of the for loop header and into the body of the loop, using an explicit if and break statement, so that we can perform the test after the assignment and therefore use the assignment inside the loop to copy the \0 to dest, too: for(i = 0; ; i++)
+
+```
+{
+dest[i] = src[i];
+if(src[i] == '\0')
+break;
+}
+```
+
+(There are in fact many, many ways to write strcpy. Many programmers like to combine the assignment and test, using an expression like (dest[i] = src[i]) != '\0')
+
+Here is a version of strcmp:
+
+```
+mystrcmp(char str1[], char str2[])
+{
+int i = 0;
+
+while(1)
+{
+if(str1[i] != str2[i])
+return str1[i] - str2[i];
+if(str1[i] == '\0' || str2[i] == '\0') return 0;
+i++;
+}
+}
+```
+
+Characters are compared one at a time. If two characters in one position differ, the strings are different, and we are supposed to return a value less than zero if the first string (str1) is alphabetically less than the second string. Since characters in C are represented by their numeric character set values, and since most reasonable character sets assign values to characters in alphabetical order, we can simply subtract the two differing characters from each other: the expression str1[i] - str2[i] will yield a negative result if the i'th character of str1 is less than the corresponding character in str2. (As it turns out, this will behave a bit strangely when comparing upper and lower-case letters, but it's the traditional approach, which the standard versions of strcmp tend to use.) If the characters are the same, we continue
+
+```
+char string8[] = "this is a test";
+char string9[10];
+substr(string9, string8, 5, 4);
+printf("%s\n", string9);
+```
+
+The idea is that we'll extract a substring of length 4, starting at character 5 (0-based) of string8, and copy the substring to string9. Just as with strcpy, it's our responsibility to declare the destination string (string9) big enough. Here is an implementation of substr. Not surprisingly, it's quite similar to strcpy:
+
+```
+substr(char dest[], char src[], int offset, int len)
+{
+int i;
+for(i = 0; i < len && src[offset + i] != '\0'; i++)
+dest[i] = src[i + offset];
+dest[i] = '\0';
+}
+```
+
+If you compare this code to the code for mystrcpy, you'll see that the only differences are that characters are fetched from src[offset + i] instead of src[i], and that the loop stops when len characters have been copied (or when the src string runs out of characters, whichever comes first). When working with strings, it's important to keep firmly in mind the differences between characters and strings. We must also occasionally remember the way characters are represented, and about the relation between character values and integers.
+
+As we have had several occasions to mention, a character is represented internally as a small integer, with a value depending on the character set in use. For example, we might find that 'A' had the value 65, that 'a' had the value 97 and that '+' had the value 43. (These are, in fact, the values in the ASCII character set, which most computers use. However, you don't need to learn these values, because the vast majority of the time, you use character constants to refer to
+
+characters, and the compiler worries about the values for you. Using character constants in preference to raw numeric values also makes your programs more portable.)
+
+As we may also have mentioned, there is a big difference between a character and a string, even a string which contains only one character (other than the \0). For example, 'A' is not the same as "A". To drive home this point, let's illustrate it with a few examples.
+
+If you have a string:
+
+```
+char string[] = "hello, world!";
+```
+
+you can modify its first character by saying
+
+```
+string[0] = 'H';
+```
+
+(Of course, there's nothing magic about the first character; you can modify any character in the string in this way. Be aware, though, that it is not always safe to modify strings in-place like this) Since you're replacing a character, you want a character constant, 'H'. It would not be right to write string[0] = "H"; /* WRONG */
+
+because "H" is a string (an array of characters), not a single character. (The destination of the assignment, string[0], is a char, but the right-hand side is a string; these types don't match.)
+
+On the other hand, when you need a string, you must use a string. To print a single newline, you could call
+
+```
+printf("\n");
+```
+
+It would not be correct to call
+
+```
+printf('\n'); /* WRONG */
+```
+
+printf always wants a string as its first argument. (As one final example, putchar wants a single character, so putchar('\n') would be correct, and putchar("\n") would be incorrect.)

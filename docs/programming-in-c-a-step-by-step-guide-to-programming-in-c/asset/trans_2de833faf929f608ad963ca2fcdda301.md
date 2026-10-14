@@ -1,0 +1,154 @@
+
+
+## 程序 14.8：一个完整的 C 程序实现优先队列如下所示
+
+```
+# include <stdio.h>
+# include <stdlib.h>
+struct node
+{
+int data;
+int priority;
+struct node *link;
+};
+void insert(struct node **front, struct node **rear, int value, int priority) {
+struct node *temp,*temp1;
+temp=(struct node *)malloc(sizeof(struct node));
+/* creates new node using data value passed as parameter */
+if(temp==NULL)
+{
+printf("No Memory available Error\n");
+exit(0);
+}
+temp->data = value;
+temp->priority = priority;
+temp->link=NULL;
+if(*rear == NULL) /* This is the first node */
+{
+*rear = temp;
+```
+
+```
+temp1=temp1->link;
+temp->link = temp1->link;
+temp1->link = temp;
+}
+}
+void delete(struct node **front, struct node **rear, int *value, int *priority) {
+struct node *temp;
+if((*front == *rear) && (*rear == NULL))
+{
+printf(" The queue is empty cannot delete Error\n");
+exit(0);
+}
+*value = (*front)->data;
+*priority = (*front)->priority; temp = *front;
+*front = (*front)->link;
+if(*rear == temp)
+*rear = (*rear)->link;
+free(temp);
+}
+
+void main()
+{
+struct node *front=NULL,*rear = NULL;
+int n,value, priority;
+```
+
+```c
+do
+{
+    do
+    {
+        printf("Enter the element to be inserted and its priority\n");
+        scanf("%d %d", &value, &priority);
+        insert(&front, &rear, value, priority);
+        printf("Enter 1 to continue\n");
+        scanf("%d", &n);
+    } while (n == 1);
+
+    printf("Enter 1 to delete an element\n");
+    scanf("%d", &n);
+    while (n == 1)
+    {
+        delete(&front, &rear, &value, &priority);
+        printf("The value deleted is %d and its priority is %d \n", value, priority);
+        printf("Enter 1 to delete an element\n");
+        scanf("%d", &n);
+    }
+    printf("Enter 1 to delete an element\n");
+    scanf("%d", &n);
+} while (n == 1)
+```
+```
+
+## 自测题
+
+6.队列也称为 ________ 数据结构。
+
+7.在队列的链表实现中，新添加的元素是队首元素。 （真/假）
+
+8. ________ 队列的一种应用是在操作系统的调度程序需要维护的优先队列的实现中。
+
+## 14.6 总结
+
+程序开发最重要的方面是为该程序操作的数据找到良好的表示。栈和队列是计算机编程中常用的 ADT 的例子。栈基本上是一个列表，只允许从一端插入和删除，该端称为栈顶，因此它是一种表现出后进先出 LIFO 特性的数据结构。栈的一个重要应用是在编程语言中实现递归。队列也是一个列表，只允许从一端插入，称为队尾，从另一端删除，称为队首。因此它是一种表现出先进先出 FIFO 特性的数据结构。当栈/队列的大小事先已知时，可以使用数组实现，并且更有效。
+
+当栈/队列的大小事先未知时，则使用链表表示。它提供了更大的灵活性。循环队列是一种队列，其中最后一个元素之后的下一个元素是第一个元素。
+
+## 14.7 终结性问题
+
+1.将以下中缀表达式转换为后缀：
+a/b-c+d*e-a*c
+
+2.将以下中缀表达式转换为前缀
+a*(b+c)/d-g
+
+3. 写一个表达式使循环队列中的队首指针指向下一个位置？
+
+4. 判断真假：
+栈用于递归程序。
+
+5. 运行时内存分配也称为 _____。
+
+## 14.8 自测题答案
+
++   1. 位图
++   2. 动态
++   3. LIFO
++   4. （a）栈不能增长 5.
++   真
++   6. FIFO
++   7. 假
++   8. 优先
+
+## 14.9 终结性问题答案
+
++   1. ab/c-de*+ac*
++   2. -/*a+bcdg
++   3. *front = (*front + 1) % MAX; 4.
+
+真
+
+5.动态内存分配。
+
+## 14.10 练习
+
++   1.编写一个 C 程序来实现字符栈。
++   2.编写一个 C 程序来实现双端队列，即可以在任一端进行插入和删除的队列。使用链表表示。
++   3.编写一个程序来反转链表。
++   4.编写一个程序从链表中删除一个节点。
++   5.编写一个程序在链表中给定节点之后插入一个节点。
++   6.什么是后缀表达式？编写一个程序将中缀表达式转换为后缀表达式。
++   7.编写一个程序来求值后缀表达式。
++   8.编写一个函数来检查栈是否已满。
++   9.编写一个函数来检查队列是否为空。
++   10.为什么栈和队列被称为抽象数据类型？解释。
+
+## 参考文献：
+
++   1.E. Balagurusamy, “Programming with ANSI C”, Tata McGraw-Hill Publishers, New Delhi.
++   2.Byron S. Gottfried, Schaum's Outline Series, “Theory and Problems of Programming with C”, Tata McGraw-Hill Publishers, New Delhi.
++   3.Stephen C. Kochan, “Programming in C”, CBS Publishers, Revised Edition, New Delhi.
++   4.Brian W. Kernighan and Dennis M. Ritchie, “The C Programming Language”, Second Edition, Prentice-Hall of India, New Delhi.
+
