@@ -1,0 +1,14 @@
+```
+static void doWork()
+{
+    // int i = 0;
+    // Console.WriteLine(i);
+    // Pass.Value(i);
+    // Console.WriteLine(i);
+
+    WrappedInt wi = new WrappedInt();
+    Console.WriteLine(wi.Number);
+    Pass.Reference(wi);
+    Console.WriteLine(wi.Number);
+}
+```

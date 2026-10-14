@@ -1,0 +1,16 @@
+```
+class Hour
+{
+    public Hour(int initialValue)
+    {
+        this.value = initialValue;
+    }
+    ...
+    public static Hour operator ++(Hour arg)
+    {
+        return new Hour(arg.value + 1);
+    }
+    ...
+    private int value;
+}
+```

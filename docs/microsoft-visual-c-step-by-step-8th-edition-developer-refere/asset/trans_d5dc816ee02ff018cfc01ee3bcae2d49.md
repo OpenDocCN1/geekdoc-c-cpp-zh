@@ -1,0 +1,148 @@
+
+
+items:
+
+- 用括号括起来的参数列表。与常规方法一样，如果你正在定义的方法（像前面的示例那样）不接受参数，你仍必须提供括号。在 *Find* 方法的情况下，谓词会依次与集合中的每个项一起提供，并且该项作为参数传递给 lambda 表达式。
+- => 运算符，它指示 C# 编译器这是一个 lambda 表达式。
+- 方法的主体。这里显示的示例非常简单，只包含一个语句，该语句返回一个布尔值，表示参数中指定的项是否与搜索条件匹配。然而，lambda 表达式可以包含多个语句，并且你可以以你认为最易读的方式对其进行格式化。只要记住在每个语句后加上分号，就像在普通方法中一样。
+
+## Important
+
+你也在第 3 章中看到过 => 运算符如何用于定义表达式体方法。有点令人困惑的是，这对 => 运算符是一种有点重载的使用。虽然在概念上存在一些相似之处，但表达式体方法和 lambda 表达式在语义上（和功能上）是非常不同的事物；你不应该将它们混淆。
+
+严格来说，lambda 表达式的主体可以是包含多个语句的方法体，也可以是单个表达式。如果 lambda 表达式的主体只包含单个表达式，你可以省略大括号和分号（但你仍需要在整个语句末尾加上分号以完成该语句）。此外，如果表达式只接受一个参数，你可以省略围绕该参数的括号。最后，在许多情况下，你实际上可以省略参数的类型，因为编译器可以从调用 lambda 表达式的上下文中推断出此信息。前面显示的 Find 语句的简化形式如下所示（这样读起来和理解起来容易得多）：
+
+Click here to view code image
+
+```
+Person match = personnel.Find(p => p.ID == 3);
+```
+
+## The forms of lambda expressions
+
+Lambda 表达式是非常强大的构造，随着你深入 C# 编程，你会以越来越高的频率遇到它们。表达式本身可以采用若干细微不同的形式。Lambda 表达式最初是 *lambda calculus* 数学记法的组成部分，该记法提供了一种描述函数的记法。（你可以将函数视为返回值的 方法。）尽管 C# 语言在其对 lambda 表达式的实现中扩展了 lambda calculus 的语法和语义，但许多原始原则仍然适用。以下是一些展示 C# 中可用的不同 lambda 表达式形式的示例：
+
+Click here to view code image
+
+```
+x => x * x // A simple expression that returns the square of its parameter
+    // The type of parameter x is inferred from the context.
+
+x => { return x * x ; } // Semantically the same as the preceding
+    // expression, but using a C# statement
+block as
+    // a body rather than a simple expression
+
+(int x) => x / 2 // A simple expression that returns the value of the
+    // parameter divided by 2
+    // The type of parameter x is stated explicitly.
+
+() => folder.StopFolding(0) // Calling a method
+    // The expression takes no parameters.
+    // The expression might or might not
+    // return a value.
+
+(x, y) => { x++; return x / y; } // Multiple parameters; the compiler
+    // infers the parameter types.
+    // The parameter x is passed by
+value, so
+    // the effect of the ++ operation
+is
+    // local to the expression.
+
+(ref int x, int y) => { x++; return x / y; } // Multiple parameters
+    // with explicit types
+    // Parameter x is
+passed by
+    // reference, so the
+effect of
+    // the ++ operation is
+permanent.
+```
+
+总之，这里有一些你应该注意的 lambda 表达式的特性：
+
+- 如果 lambda 表达式接受参数，你在 => 运算符左侧的括号中指定它们。你可以省略参数的类型，C# 编译器将从 lambda 表达式的上下文中推断出它们的类型。如果你希望 lambda 表达式能够在本地之外更改其值，可以通过引用传递参数（使用 *ref* 关键字），但不推荐这样做。
+- Lambda 表达式可以返回值，但返回类型必须与相应的委托匹配。
+- Lambda 表达式的主体可以是简单表达式，也可以是由多个语句、方法调用、变量定义和其他代码项组成的一段 C# 代码块。
+- 在 lambda 表达式方法完成时，在 lambda 表达式中定义的变量会超出作用域。
+- Lambda 表达式可以访问并修改在定义 lambda 表达式时处于作用域内的所有外部变量。务必非常小心使用此功能！
+
+## Lambda expressions and anonymous methods
+
+Lambda 表达式是在 C# 语言的 3.0 版本中添加的。C# 2.0 版本引入了匿名方法，它们可以执行类似的任务，但灵活性不如 lambda 表达式。匿名方法主要是为了让你可以在不必创建命名方法的情况下定义委托——你只需像这样在方法名称的位置提供方法体的定义：
+
+Click here to view code image
+
+```
+this.stopMachinery += delegate { folder.StopFolding(0); };
+```
+
+你也可以像这样将匿名方法作为参数传递以代替委托：
+
+Click here to view code image
+
+```
+control.Add(delegate { folder.StopFolding(0); });
+```
+
+请注意，每当你引入匿名方法时，你必须在前面加上 delegate 关键字。此外，所需的任何参数都指定在 delegate 关键字之后的括号中，如以下示例所示：
+
+Click here to view code image
+
+```
+control.Add(delegate(int param1, string param2)
+    { /* code that uses param1 and param2 */ ... });
+```
+
+Lambda 表达式比匿名方法提供了更简洁、更自然的语法，并且它们遍布 C# 的许多更高级的方面，正如你在本书后续章节中会看到的那样。一般来说，你应该在代码中使用 lambda 表达式而不是匿名方法。
+
+## Comparing arrays and collections
+
+以下是数组和集合之间重要区别的总结：
+
+- 数组实例具有固定大小，不能增长或缩小。集合可以根据需要动态调整自身大小。
+- 数组可以有多于一个维度。集合是线性的。然而，集合中的项本身可以是集合，因此你可以将集合的集合模拟为多维数组。
+- 你通过使用索引在数组中存储和检索项。并非所有集合都支持这一概念。例如，要在 List<T> 集合中存储一项，你使用 Add 或 Insert 方法，要检索一项，你使用 Find 方法。
+
+许多集合类提供 ToArray 方法，该方法创建并填充一个包含集合中项的数组。项被复制到数组中，并且不会从集合中移除。此外，这些集合提供构造函数，可以直接从数组填充集合。
+
+## Using collection classes to play cards
+
+在下一个练习中，你将把第 10 章中开发的纸牌游戏转换为使用集合而不是数组。
+
+## Use collections to implement a card game
+
+- 1. 如果尚未运行，请启动 Microsoft Visual Studio 2015。
+- 2. 打开 Cards 项目，该项目位于你的 Documents 文件夹中的 \Microsoft Press\VCSBS\Chapter 18\Cards 文件夹中。
+  该项目包含第 10 章项目的更新版本，该项目使用数组发牌。PlayingCard 类被修改为将卡片的值和花色公开为只读属性。
+- 3. 在代码和文本编辑器窗口中显示 Pack.cs 文件。在文件顶部添加以下 using 指令：
+
+Click here to view code image
+
+```
+using System.Collections.Generic;
+```
+
+- 4. 在 Pack 类中，将 cardPack 二维数组的定义更改为 Dictionary<Suit, List<PlayingCard>> 对象，如此处以粗体所示：
+
+Click here to view code image
+
+```
+class Pack
+{
+    ...
+    private Dictionary<Suit, List<PlayingCard>> cardPack;
+    ...
+}
+```
+
+原始应用程序使用二维数组来表示一副牌。此代码用 Dictionary 替换了数组，其中键指定花色，值是该花色中的卡片列表。
+- 5. 找到 Pack 构造函数。修改此构造函数中的第一个语句，将 cardPack 变量实例化为新的 Dictionary 集合而不是数组，如此处以粗体所示：
+
+Click here to view code image
+
+```
+public Pack()
+{
+```

@@ -1,0 +1,6 @@
+```
+class FileProcessor
+{
+    ~FileProcessor() { // your code goes here }
+}
+```

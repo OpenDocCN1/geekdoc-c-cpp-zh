@@ -1,0 +1,3 @@
+```
+int numberOfCompanies = addresses.Count();
+```

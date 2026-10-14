@@ -1,0 +1,206 @@
+
+
+constructor，构造函数提供的值会覆盖属性初始化器指定的值；使用其中一种方法，不要同时使用两者！
+
+## Note
+
+你不能创建只写自动属性。如果你尝试在没有 get 访问器的情况下创建自动属性，你会看到编译时错误。
+
+## Initializing objects by using properties
+
+在第 7 章中，你学习了如何定义构造函数来初始化对象。对象可以有多个构造函数，你可以定义具有不同参数的构造函数来初始化对象中的不同元素。例如，你可以定义一个模拟三角形的类，如下所示：
+
+Click here to view code image
+
+```
+public class Triangle
+{
+    private int side1Length;
+    private int side2Length;
+    private int side3Length;
+
+    // default constructor - default values for all sides
+    public Triangle()
+    {
+        this.side1Length = this.side2Length = this.side3Length = 10;
+    }
+
+    // specify length for side1Length, default values for the others
+    public Triangle(int length1)
+    {
+        this.side1Length = length1;
+        this.side2Length = this.side3Length = 10;
+    }
+
+    // specify length for side1Length and side2Length,
+    // default value for side3Length
+    public Triangle(int length1, int length2)
+    {
+        this.side1Length = length1;
+        this.side2Length = length2;
+        this.side3Length = 10;
+    }
+
+    // specify length for all sides
+    public Triangle(int length1, int length2, int length3)
+    {
+        this.side1Length = length1;
+        this.side2Length = length2;
+        this.side3Length = length3;
+    }
+}
+```
+
+根据类包含的字段数量以及你希望启用的初始化字段的各种组合，你可能会写出很多构造函数。如果许多字段具有相同的类型，也存在潜在问题：你可能无法为所有字段组合编写唯一的构造函数。例如，在前面的 *Triangle* 类中，你很难添加一个仅初始化 *side1Length* 和 *side3Length* 字段的构造函数，因为它没有唯一的签名；它将接受两个 *int* 参数，而初始化 *side1Length* 和 *side2Length* 的构造函数已经具有此签名。一个可能的解决方案是定义一个接受可选参数的构造函数，并在创建 *Triangle* 对象时以命名参数的形式指定参数值。然而，更好且更透明的解决方案是将私有字段初始化为一组默认值并将其作为属性公开，如下所示：
+
+Click here to view code image
+
+```
+public class Triangle
+{
+    private int side1Length = 10;
+    private int side2Length = 10;
+    private int side3Length = 10;
+
+    public int Side1Length
+    {
+        set { this.side1Length = value; }
+    }
+
+    public int Side2Length
+    {
+        set { this.side2Length = value; }
+    }
+
+    public int Side3Length
+    {
+        set { this.side3Length = value; }
+    }
+}
+```
+
+当你创建类的实例时，可以通过指定任何具有 *set* 访问器的公共属性的名称和值来初始化它。例如，你可以创建 *Triangle* 对象并初始化三个边的任意组合，如下所示：
+
+Click here to view code image
+
+```
+Triangle tri1 = new Triangle { Side3Length = 15 };
+Triangle tri2 = new Triangle { Side1Length = 15, Side3Length = 20 };
+Triangle tri3 = new Triangle { Side2Length = 12, Side3Length = 17 };
+Triangle tri4 = new Triangle { Side1Length = 9, Side2Length = 12, Side3Length = 15 };
+```
+
+这种语法称为对象初始化器。当你以这种方式调用对象初始化器时，C# 编译器会生成调用默认构造函数然后调用每个命名属性的 set 访问器以使用指定值初始化它的代码。你也可以将对象初始化器与非默认构造函数结合使用。例如，如果 Triangle 类还提供了接受单个字符串参数来描述三角形类型的构造函数，你可以调用此构造函数并初始化其他属性，如下所示：
+
+Click here to view code image
+
+```
+Triangle tri5 = new Triangle("Equilateral triangle") { Side1Length =
+3,
+Side2Length =
+3,
+Side3Length =
+3 };
+```
+
+需要记住的重要一点是，构造函数先运行，然后再设置属性。如果构造函数将对象中的字段设置为特定值，而你指定的属性会更改这些值，则理解这种顺序非常重要。
+
+你也可以使用对象初始化器与非只读的自动属性，如你在下一个练习中将看到的。在本练习中，你将定义一个用于建模正多边形的类，其中包含自动属性以提供有关多边形包含的边数及其边长的信息。
+
+## Note
+
+你不能以这种方式初始化自动只读属性；你必须使用上一节中描述的技术之一。
+
+## Define automatic properties and use object initializers
+
+- 1. 在 Visual Studio 2015 中，打开 AutomaticProperties 项目，该项目位于你的 Documents 文件夹中的 \Microsoft Press\VCSBS\Chapter 15\AutomaticProperties 文件夹中。
+
+AutomaticProperties 项目包含 Program.cs 文件，其中定义了 Program 类，其中包含 Main 和 doWork 方法，你在之前的练习中见过。
+
+- 2. 在 Solution Explorer 中，右键单击 AutomaticProperties 项目，指向 Add，然后单击 Class 以打开 Add New Item – AutomaticProperties 对话框。在 Name 框中，键入 Polygon.cs，然后单击 Add。
+
+Polygon.cs 文件，其中包含 Polygon 类，已创建并添加到
+
+项目中，并在 Code and Text Editor 窗口中出现。
+
+- 3. 将自动属性 NumSides 和 SideLength 添加到 Polygon 类中，如此处粗体所示：
+
+Click here to view code image
+
+```
+class Polygon
+{
+    public int NumSides { get; set; }
+    public double SideLength { get; set; }
+}
+```
+
+- 4. 将以下默认构造函数以粗体形式添加到 Polygon 类中：
+
+Click here to view code image
+
+```
+class Polygon
+{
+    ...
+    public Polygon()
+    {
+        this.NumSides = 4;
+        this.SideLength = 10.0;
+    }
+}
+```
+
+此构造函数使用默认值初始化 NumSides 和 SideLength 字段。在本练习中，默认多边形是边长为 10 个单位的正方形。
+
+- 5. 在 Code and Text Editor 窗口中显示 Program.cs 文件。
+
+- 6. 将以下语句以粗体形式添加到 doWork 方法中，替换 // TODO: 注释：
+
+Click here to view code image
+
+```
+static void doWork()
+{
+    Polygon square = new Polygon();
+    Polygon triangle = new Polygon { NumSides = 3 };
+    Polygon pentagon = new Polygon { SideLength = 15.5, NumSides = 5 };
+}
+```
+
+这些语句创建 Polygon 对象。square 变量使用默认构造函数进行初始化。triangle 和 pentagon 变量也使用默认构造函数进行初始化，然后此代码更改 Polygon 类公开的属性的值。对于 triangle 变量，NumSides 属性被设置为 3，但 SideLength 属性保持其默认值 10.0。对于 pentagon 变量，代码更改了 SideLength 和 NumSides 属性的值。
+
+- 7. 将以下代码以粗体形式添加到 doWork 方法的末尾：
+
+Click here to view code image
+
+```
+static void doWork()
+{
+    ...
+    Console.WriteLine($"Square: number of sides is {square.NumSides}, length of each side is {square.SideLength}");
+    Console.WriteLine($"Triangle: number of sides is {triangle.NumSides}, length of each side is {triangle.SideLength}");
+    Console.WriteLine($"Pentagon: number of sides is {pentagon.NumSides}, length of each side is {pentagon.SideLength}");
+}
+```
+
+这些语句显示每个 Polygon 对象的 NumSides 和 SideLength 属性的值。
+
+- 8. 在 Debug 菜单上，单击 Start Without Debugging。
+
+验证程序是否构建并运行，将此处所示的消息写入控制台窗口：
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_421_0.png)
+
+- 9. 按 Enter 键关闭应用程序并返回到 Visual Studio 2015。
+
+## Summary
+
+在本章中，你学习了如何创建和使用属性以提供对对象中数据的受控访问。你还学习了如何创建自动属性以及如何在初始化对象时使用属性。
+
+- 如果你想继续下一章，请保持 Visual Studio 2015 运行并转到第 16 章，“Using indexers。”
+
+- 如果你现在想退出 Visual Studio 2015，请在 File 菜单上单击 Exit。如果出现 Save 对话框，请单击 Yes 并保存项目。
+
+## Quick reference
+

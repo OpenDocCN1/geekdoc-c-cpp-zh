@@ -1,0 +1,49 @@
+
+```
+...
+<TextBox Grid.Row="1" Grid.Column="1" x:Name="id"
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+<TextBox Grid.Row="1" Grid.Column="5" x:Name="firstName"
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+<TextBox Grid.Row="1" Grid.Column="7" x:Name="lastName"
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+<ComboBox Grid.Row="1" Grid.Column="3" x:Name="title"
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+...
+<TextBox Grid.Row="3" Grid.Column="3" ... x:Name="email"
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+...
+<TextBox Grid.Row="5" Grid.Column="3" ... x:Name="phone"
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+...
+...
+<TextBox Grid.Row="0" Grid.Column="1" x:Name="cId" />
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+<TextBox Grid.Row="2" Grid.Column="1" x:Name="cFirstName"
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+<TextBox Grid.Row="3" Grid.Column="1" x:Name="cLastName"
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+<ComboBox Grid.Row="1" Grid.Column="1" x:Name="cTitle"
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+...
+<TextBox Grid.Row="4" Grid.Column="1" x:Name="cEmail"
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+...
+<TextBox Grid.Row="5" Grid.Column="1" x:Name="cPhone"
+IsEnabled="{Binding IsAddingOrEditing}" .../>
+
+<Page ...>
+    ...
+    <Page.TopAppBar >
+        ...
+    </Page.TopAppBar>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="addCustomer" Icon="Add" Label="New Customer" Command="{Binding Path=AddCustomer}"/>
+            <AppBarButton x:Name="editCustomer" Icon="Edit" Label="Edit Customer" Command="{Binding Path=EditCustomer}"/>
+            <AppBarButton x:Name="saveChanges" Icon="Save" Label="Save Changes" Command="{Binding Path=SaveChanges}"/>
+            <AppBarButton x:Name="discardChanges" Icon="Undo" Label="Undo Changes" Command="{Binding Path=DiscardChanges}"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
+```

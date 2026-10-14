@@ -1,0 +1,16 @@
+```
+class Point
+{
+    private int x, y;
+
+    public Point()
+    {
+        Console.WriteLine("default constructor called");
+    }
+
+    public Point(int x, int y)
+    {
+        Console.WriteLine($"x:{x}, y:{y}");
+    }
+}
+```

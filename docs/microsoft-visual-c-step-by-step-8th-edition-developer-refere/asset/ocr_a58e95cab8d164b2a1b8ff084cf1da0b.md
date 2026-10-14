@@ -1,0 +1,10 @@
+```
+class FileProcessor
+{
+    protected override void Finalize()
+    {
+        try { // your code goes here }
+        finally { base.Finalize(); }
+    }
+}
+```

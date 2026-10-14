@@ -1,0 +1,9 @@
+```
+struct Person
+{
+    ...
+}
+...
+Queue<int> intQueue = new Queue<int>();
+Queue<Person> personQueue = new Queue<Person>();
+```

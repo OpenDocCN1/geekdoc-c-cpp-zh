@@ -1,0 +1,12 @@
+```
+<Grid Margin="10,20,10,20">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="10*"/>
+        <RowDefinition Height="2*"/>
+    </Grid.RowDefinitions>
+    <TextBlock Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Adventure Works Customers" VerticalAlignment="Center" FontSize="50"/>
+    ...
+</Grid>
+```

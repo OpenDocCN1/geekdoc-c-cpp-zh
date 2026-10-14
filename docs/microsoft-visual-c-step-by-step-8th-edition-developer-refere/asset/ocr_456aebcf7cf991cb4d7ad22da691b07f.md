@@ -1,0 +1,4 @@
+```
+<TextBox Grid.Row="1" Grid.Column="1" x:Name="id" ...
+Text="{Binding CustomerID}" .../>
+```

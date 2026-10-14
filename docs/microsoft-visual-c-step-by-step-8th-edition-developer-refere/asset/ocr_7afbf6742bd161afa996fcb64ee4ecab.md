@@ -1,0 +1,6 @@
+```
+<ComboBox x:Name="title" HorizontalAlignment="Left" Margin="420,240,0,0"
+VerticalAlignment="Top" Width="100" FontSize="20"/>
+<ComboBoxItem Content="Mr"/>
+</ComboBox>
+```

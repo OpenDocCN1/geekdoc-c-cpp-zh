@@ -1,0 +1,7 @@
+```
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="customersTabularView" Margin="10,20,10,20" Visibility="Collapsed">
+        ...
+    </Grid>
+</Grid>
+```

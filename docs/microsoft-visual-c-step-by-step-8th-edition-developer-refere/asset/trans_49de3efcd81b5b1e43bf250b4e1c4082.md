@@ -1,0 +1,275 @@
+
+
+using System.Threading.Tasks;
+...
+
+static void ParallelTest()
+{
+    int[] data = new int[NUMELEMENTS];
+    int j = 0;
+
+    Parallel.For (0, NUMELEMENTS, (i) =>
+    {
+        j = i;
+        doAdditionalProcessing();
+        data[i] = j;
+        doMoreAdditionalProcessing();
+    });
+    for (int i = 0; i < NUMELEMENTS; i++)
+    {
+        Console.WriteLine($"Element {i} has value {data[i]}");
+    }
+}
+
+object myLockObject = new object();
+...
+lock (myLockObject)
+{
+    // 需要独占访问共享资源的代码
+    ...
+}
+
+CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+CancellationToken cancellationToken = cancellationTokenSource.Token;
+...
+// 保护包含 3 个资源的池的信号量
+SemaphoreSlim semaphoreSlim = new SemaphoreSlim(3);
+...
+// 等待信号量，如果另一个线程在 cancellationTokenSource 上调用 Cancel，则捕获 OperationCanceledException
+try
+{
+    semaphoreSlim.Wait(cancellationToken);
+}
+catch (OperationCanceledException e)
+{
+    ...
+}
+
+static void Main(string[] args)
+{
+    double pi = SerialPI();
+    Console.WriteLine($"Geometric approximation of PI calculated serially: {pi}");
+
+    Console.WriteLine();
+    // pi = ParallelPI();
+    // Console.WriteLine($"Geometric approximation of PI calculated in parallel: {pi}");
+}
+
+static double SerialPI()
+{
+    List<double> pointsList = new List<double>();
+    Random random = new Random(SEED);
+    int numPointsInCircle = 0;
+    Stopwatch timer = new Stopwatch();
+    timer.Start();
+
+    try
+    {
+        // 待办：实现 PI 的几何近似
+        return 0;
+    }
+    finally
+    {
+        long milliseconds = timer.ElapsedMilliseconds;
+        Console.WriteLine($"SerialPI complete: Duration: {milliseconds} ms");
+        Console.WriteLine(
+            $"Points in pointsList: {pointsList.Count}. Points within circle: {numPointsInCircle}");
+    }
+}
+
+try
+{
+    for (int points = 0; points < NUMPOINTS; points++)
+    {
+        int xCoord = random.Next(RADIUS);
+        int yCoord = random.Next(RADIUS);
+        double distanceFromOrigin = Math.Sqrt(xCoord * xCoord + yCoord * yCoord);
+        pointsList.Add(distanceFromOrigin);
+        doAdditionalProcessing();
+    }
+}
+
+private static void doAdditionalProcessing()
+{
+    Thread.SpinWait(SPINWAITS);
+}
+
+try
+{
+    for (int points = 0; points < NUMPOINTS; points++)
+    {
+        ...
+    }
+
+    foreach (double datum in pointsList)
+    {
+        if (datum <= RADIUS)
+        {
+            numPointsInCircle++;
+        }
+    }
+}
+
+try
+{
+    for (int points = 0; points < NUMPOINTS; points++)
+    {
+        ...
+    }
+
+    foreach (double datum in pointsList)
+    {
+        ...
+    }
+
+    double pi = 4.0 * numPointsInCircle / NUMPOINTS;
+    return pi;
+}
+
+try
+{
+    Parallel.For (0, NUMPOINTS, (x) =>
+    {
+        int xCoord = random.Next(RADIUS);
+        int yCoord = random.Next(RADIUS);
+        double distanceFromOrigin = Math.Sqrt(xCoord * xCoord + yCoord * yCoord);
+        pointsList.Add(distanceFromOrigin);
+        doAdditionalProcessing();
+    });
+}
+
+try
+{
+    Parallel.For (...)
+    {
+        ...
+    });
+
+    foreach (double datum in pointsList)
+    {
+        if (datum <= RADIUS)
+        {
+            numPointsInCircle++;
+        }
+    }
+
+    double pi = 4.0 * numPointsInCircle / NUMPOINTS;
+    return pi;
+}
+
+using System.Collections.Concurrent;
+
+static double ParallelPI()
+{
+    ConcurrentBag<double> pointsList = new ConcurrentBag<double>();
+    Random random = ...;
+    ...
+}
+
+static double ParallelPI()
+{
+    ...
+    Parallel.For(0, NUMPOINTS, (x) =>
+    {
+        int xCoord;
+        int yCoord;
+
+        lock(pointsList)
+        {
+            xCoord = random.Next(RADIUS);
+            yCoord = random.Next(RADIUS);
+        }
+
+        double distanceFromOrigin = Math.Sqrt(xCoord * xCoord + yCoord * yCoord);
+        pointsList.Add(distanceFromOrigin);
+        doAdditionalProcessing();
+    });
+    ...
+}
+
+<Page
+    x:Class="Customers.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Customers"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        </Grid>
+</Page>
+
+// Blank Page 项目模板记录在  http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+
+namespace Customers
+{
+    /// <summary>
+    /// 一个可独立使用或在 Frame 内导航的空页面。
+    /// </summary>
+    public sealed partial class MainPage : Page
+    {
+        public MainPage()
+        {
+            this.InitializeComponent();
+        }
+    }
+}
+
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+</Grid>
+
+<Page
+    ...
+    <Button Content="Click Me"/>
+</Page>
+
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <TextBlock />
+</Grid>
+
+<TextBlock HorizontalAlignment="Left" Margin="400,90,0,0" TextWrapping="Wrap" Text="Adventure Works Customers" VerticalAlignment="Top" FontSize="50"/>
+
+<TextBlock HorizontalAlignment="Left" Margin="330,190,0,0" TextWrapping="Wrap"
+Text="ID" VerticalAlignment="Top" FontSize="20"/>
+<TextBlock HorizontalAlignment="Left" Margin="460,190,0,0" TextWrapping="Wrap"
+Text="Title" VerticalAlignment="Top" FontSize="20"/>
+<TextBlock HorizontalAlignment="Left" Margin="620,190,0,0" TextWrapping="Wrap"
+Text="First Name" VerticalAlignment="Top" FontSize="20"/>
+<TextBlock HorizontalAlignment="Left" Margin="975,190,0,0" TextWrapping="Wrap"
+Text="Last Name" VerticalAlignment="Top" FontSize="20"/>
+
+<TextBox x:Name="id" HorizontalAlignment="Left" Margin="300,240,0,0" TextWrapping="Wrap"
+Text="" VerticalAlignment="Top" FontSize="20" IsReadOnly="True"/>
+<TextBox x:Name="firstName" HorizontalAlignment="Left" Margin="550,240,0,0"
+TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" FontSize="20"/>
+<TextBox x:Name="lastName" HorizontalAlignment="Left" Margin="875,240,0,0"
+TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" FontSize="20"/>
+
+<ComboBox x:Name="title" HorizontalAlignment="Left" Margin="420,240,0,0" VerticalAlignment="Top" Width="100" FontSize="20"/>
+
+<ComboBox x:Name="title" HorizontalAlignment="Left" Margin="420,240,0,0"
+VerticalAlignment="Top" Width="100" FontSize="20"/>
+<ComboBoxItem Content="Mr"/>
+</ComboBox>
+
+<ComboBox x:Name="title" HorizontalAlignment="Left" Margin="420,240,0,0" VerticalAlignment="Top" Width="75" FontSize="20">
+    <ComboBoxItem Content="Mr"/>
+    <ComboBoxItem Content="Mrs"/>
+    <ComboBoxItem Content="Ms"/>
+    <ComboBoxItem Content="Miss"/>
+</ComboBox>
+
+<TextBlock HorizontalAlignment="Left" Margin="300,390,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" FontSize="20"/>
+<TextBox x:Name="email" HorizontalAlignment="Left" Margin="450,390,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400" FontSize="20"/>
+<TextBlock HorizontalAlignment="Left" Margin="300,540,0,0" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" FontSize="20"/>
+<TextBox x:Name="phone" HorizontalAlignment="Left" Margin="450,540,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
+
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Margin="10,20,10,20">
+    </Grid>
+    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"
+Text="Adventure Works Customers" ... />
+    ...
+</Grid>
+

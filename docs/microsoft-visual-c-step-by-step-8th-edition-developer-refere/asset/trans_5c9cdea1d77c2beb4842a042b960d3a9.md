@@ -1,0 +1,339 @@
+
+
+static void Main(string[] args)
+{
+    Parallel.For (0, 100, AddToAccumulator);
+    Console.WriteLine($"Accumulator is {accumulator}");
+}
+
+private static void AddToAccumulator(int data)
+{
+    if ((accumulator % 2) == 0)
+    {
+        accumulator += data;
+        Thread.Sleep(10); // wait for 10 milliseconds
+    }
+    else
+    {
+        accumulator -= data;
+    }
+}
+
+public class MyApplication
+{
+    ...
+    // Method that creates and manages a task
+    private void initiateTasks()
+    {
+        // Create the cancellation token source and obtain a cancellation token
+        CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+        CancellationToken cancellationToken = cancellationTokenSource.Token;
+        // Create a task and start it running the doWork method
+        Task myTask = Task.Run(() => doWork(cancellationToken));
+        ...
+        if (...)
+        {
+            // Cancel the task
+            cancellationTokenSource.Cancel();
+        }
+        ...
+    }
+
+    // Method run by the task
+    private void doWork(CancellationToken token)
+    {
+        ...
+        // If the application has set the cancellation token, finish processing
+        if (token.IsCancellationRequested)
+        {
+            // Tidy up and finish
+            ...
+            return;
+        }
+        // If the task has not been canceled, continue running as normal
+        ...
+    }
+}
+
+...
+cancellationToken,Register(doAdditionalWork);
+...
+private void doAdditionalWork()
+{
+    // Perform additional cancellation processing
+}
+
+public sealed partial class MainPage : Page
+{
+    ...
+    private byte redValue, greenValue, blueValue;
+    private CancellationTokenSource tokenSource = null;
+    ...
+}
+
+private void generateGraphData(byte[] data, int partitionStart, int partitionEnd,
+CancellationToken token)
+{
+    ...
+}
+
+private void generateGraphData(byte[] data, int partitionStart, int partitionEnd, CancellationToken token)
+{
+    int a = pixelWidth / 2;
+    int b = a * a;
+    int c = pixelHeight / 2;
+
+    for (int x = partitionStart; x < partitionEnd; x++)
+    {
+        int s = x * x;
+        double p = Math.Sqrt(b - s);
+        for (double i = -p; i < p; i += 3)
+        {
+            if (token.IsCancellationRequested)
+            {
+                return;
+            }
+
+            double r = Math.Sqrt(s + i * i) / a;
+            double q = (r - 1) * Math.Sin(24 * r);
+            double y = i / 3 + (q * c);
+            plotXY(data, (int)(-x + (pixelWidth / 2)), (int)(y + (pixelHeight / 2)));
+            plotXY(data, (int)(x + (pixelWidth / 2)), (int)(y + (pixelHeight / 2)));
+        }
+    }
+}
+
+private void plotButton_Click(object sender, RoutedEventArgs e)
+{
+    Random rand = new Random();
+    redValue = (byte)rand.Next(0xFF);
+    greenValue = (byte)rand.Next(0xFF);
+    blueValue = (byte)rand.Next(0xFF);
+
+    tokenSource = new CancellationTokenSource();
+    CancellationToken token = tokenSource.Token;
+    ...
+}
+
+...
+Task first = Task.Run(() => generateGraphData(data, 0, pixelWidth / 4, token));
+Task second = Task.Run(() => generateGraphData(data, pixelWidth / 4, pixelWidth / 2, token));
+...
+
+private async void plotButton_Click(object sender, RoutedEventArgs e)
+{
+    ...
+}
+
+...
+// Task.WaitAll(first, second);
+await first;
+await second;
+
+duration.Text = string.Format(...);
+...
+
+private void cancelButton_Click(object sender, RoutedEventArgs e)
+{
+    if (tokenSource != null)
+    {
+        tokenSource.Cancel();
+    }
+}
+
+Parallel.For(0, 1000, doLoopWork);
+...
+private void doLoopWork(int i, ParallelLoopState p)
+{
+    ...
+    if (i > 600)
+    {
+        p.Stop();
+    }
+}
+
+<Image x:Name="graphImage" Grid.Column="1" Stretch="Fill" />
+</Grid>
+<TextBlock x:Name="messages" Grid.Row="4" FontSize="18" HorizontalAlignment="Left"/>
+</Grid>
+</Page>
+
+private async void plotButton_Click(object sender, RoutedEventArgs e)
+{
+    ...
+    await first;
+    await second;
+
+    duration.Text = $"Duration (ms): {watch.ElapsedMilliseconds}";
+
+    string message = $"Status of tasks is {first.Status}, {second.Status}";
+    messages.Text = message;
+    ...
+}
+
+tokenSource = new CancellationTokenSource();
+CancellationToken token = tokenSource.Token;
+...
+Task first = Task.Run(() => generateGraphData(data, 0, pixelWidth / 4, token),
+token);
+
+private async void plotButton_Click(object sender, RoutedEventArgs e)
+{
+    ...
+    tokenSource = new CancellationTokenSource();
+    CancellationToken token = tokenSource.Token;
+
+    ...
+    Task first = Task.Run(() => generateGraphData(data, 0, pixelWidth / 4, token), token);
+    Task second = Task.Run(() => generateGraphData(data, pixelWidth / 4, pixelWidth / 2, token), token);
+    ...
+}
+
+private async void plotButton_Click(object sender, RoutedEventArgs e)
+{
+    ...
+    try
+    {
+        await first;
+        await second;
+
+        duration.Text = $"Duration (ms): {watch.ElapsedMilliseconds}";
+    }
+    catch (OperationCanceledException oce)
+    {
+        duration.Text = oce.Message;
+    }
+
+    string message = $"Status of tasks is {first.Status, {second.Status}";
+    ...
+}
+
+private void generateGraphData(byte[] data, int partitionStart, int partitionEnd, CancellationToken token)
+{
+    ...
+    for (int x = partitionStart; x < partitionEnd; x++);
+    {
+        ...
+        for (double i = -p; i < p; i += 3)
+        {
+            //if (token.IsCancellationRequested)
+            //{
+            //    return;
+            //}
+            token.ThrowIfCancellationRequested();
+            ...
+        }
+    }
+    ...
+}
+
+private bool handleException(Exception e)
+{
+    if (e is DivideByZeroException)
+    {
+        displayErrorMessage("Division by zero occurred");
+        return true;
+    }
+
+    if (e is IndexOutOfRangeException)
+    {
+        displayErrorMessage("Array index out of bounds");
+        return true;
+    }
+    return false;
+}
+
+try
+{
+    Task first = Task.Run(...);
+    Task second = Task.Run(...);
+    Task.WaitAll(first, second);
+}
+
+catch (AggregateException ae)
+{
+    ae.Handle(handleException);
+}
+
+Task task = new Task(doWork);
+task.ContinueWith(doCancellationWork, TaskContinuationOptions.OnlyOnCanceled);
+task.Start();
+...
+private void doWork()
+{
+    // The task runs this code when it is started
+    ...
+}
+...
+private void doCancellationWork(Task task)
+{
+    // The task runs this code when doWork completes
+    ...
+}
+
+private void slowMethod()
+{
+    doFirstLongRunningOperation();
+    doSecondLongRunningOperation();
+    doThirdLongRunningOperation();
+    message.Text = "Processing Completed";
+}
+
+private void doFirstLongRunningOperation()
+{
+    ...
+}
+
+private void doSecondLongRunningOperation()
+{
+    ...
+}
+
+private void doThirdLongRunningOperation()
+{
+    ...
+}
+
+private void slowMethod()
+{
+    Task task = new Task(doFirstLongRunningOperation);
+    task.ContinueWith(doSecondLongRunningOperation);
+    task.ContinueWith(doThirdLongRunningOperation);
+    task.Start();
+    message.Text = "Processing Completed"; // When does this message appear?
+}
+
+private void doFirstLongRunningOperation()
+{
+    ...
+}
+
+private void doSecondLongRunningOperation(Task t)
+{
+    ...
+}
+
+private void doThirdLongRunningOperation(Task t)
+{
+    ...
+}
+
+private void slowMethod()
+{
+    Task task = new Task(doFirstLongRunningOperation);
+    task.ContinueWith(doSecondLongRunningOperation);
+    task.ContinueWith(doThirdLongRunningOperation);
+    task.Start();
+    task.Wait();
+    message.Text = "Processing Completed";
+}
+
+private void slowMethod()
+{
+    Task task = new Task(doFirstLongRunningOperation);
+    task.ContinueWith(doSecondLongRunningOperation);
+    task.ContinueWith(doThirdLongRunningOperation);
+    task.ContinueWith(t) => message.Text = "Processing Complete");
+    task.Start();
+}
+

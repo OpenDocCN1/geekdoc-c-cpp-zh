@@ -1,0 +1,9 @@
+```
+struct Time
+{
+    private int hours = 0; // compile-time error
+    private int minutes;
+    private int seconds;
+    ...
+}
+```

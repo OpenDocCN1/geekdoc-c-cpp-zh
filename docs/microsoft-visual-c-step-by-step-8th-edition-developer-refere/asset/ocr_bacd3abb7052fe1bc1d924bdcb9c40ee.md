@@ -1,0 +1,3 @@
+```
+IWrapper<object> storedObjectWrapper = stringWrapper;
+```

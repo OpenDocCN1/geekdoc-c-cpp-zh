@@ -1,0 +1,6 @@
+```
+int FindLandSpeed(ILandBound landBoundMammal)
+{
+    ...
+}
+```

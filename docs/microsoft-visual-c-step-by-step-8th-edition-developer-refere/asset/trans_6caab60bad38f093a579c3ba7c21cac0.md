@@ -1,0 +1,187 @@
+
+
+single item, and if you want, you can replace the Grid control with a Button, as shown in the example that follows:
+
+## Note
+
+Don’t type the following code. It is shown for illustrative purposes only.
+
+Click here to view code image
+
+```
+<Page
+    ...
+    <Button Content="Click Me"/>
+</Page>
+```
+
+However, the resulting app is probably not very useful—a form that contains a button and that displays nothing else is unlikely to win an award as the world’s greatest app. If you attempt to add a second control, such as a TextBox, to the page, your code will not compile and the errors shown in the following image will occur:
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_710_0.png)
+
+The purpose of the Grid control is to facilitate adding multiple items to a page. The Grid control is an example of a container control; it can contain a number of other controls, and you can specify the position of these other controls within the grid. Other container controls are also available. For example, the StackPanel control automatically places the controls it contains in a vertical arrangement, with each control positioned directly below its immediate predecessor.
+
+In this app, you will use a Grid to hold the controls necessary for a user to be able to enter and view data for a customer.
+
+3. Add a TextBlock control to the page, either by dragging it from the Toolbox or by typing the text <TextBlock /> directly into the XAML pane, on the blank line after the opening <Grid> tag, like this:
+
+Click here to view code image
+
+```
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <TextBlock />
+</Grid>
+```
+
+## Tip
+
+if the Toolbox does not appear, click Toolbox on the View menu, and it should be displayed in the toolbar to the left. Also, note that you can type the code for a control directly into the XAML window for a page; you do not have to drag controls from the Toolbox.
+
+4. This TextBlock provides the title for the page. Set the properties of the TextBlock control by using the values in the following table:
+
+| Property | Value |
+|---|---|
+| HorizontalAlignment | Left |
+| Margin | 400,90,0,0 |
+| TextWrapping | Wrap |
+| Text | Adventure Works Customers |
+| VerticalAlignment | Top |
+| FontSize | 50 |
+
+You can set these properties by using the Properties window or by typing the equivalent XAML markup into the XAML window, as shown here in bold:
+
+Click here to view code image
+
+```
+<TextBlock HorizontalAlignment="Left" Margin="400,90,0,0" TextWrapping="Wrap" Text="Adventure Works Customers" VerticalAlignment="Top"
+```
+
+```
+FontSize="50"/>
+```
+
+The resulting text should appear in the Design View window, like this:
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_712_0.png)
+
+Notice that when you drag a control from the Toolbox to a form, connectors appear that specify the distance of two of the sides of the control from the edge of the container control in which it is placed. In the preceding example, these connectors for the TextBlock control are labeled with the values 400 (from the left edge of the grid) and 90 (from the top edge of the grid). At run time, if the Grid control is resized, the TextBlock will move to retain these distances, which in this case might cause the distance of the TextBlock in pixels from the right and bottom edges of the Grid to change. You can specify the edge or edges to which a control is anchored by setting the HorizontalAlignment and VerticalAlignment properties. The Margin property specifies the distance from the anchored edges. Again, in this example, the HorizontalAlignment property of the TextBlock is set to Left and the VerticalAlignment property is set to Top, which is why the control is anchored to the left and top edges of the grid. The Margin property contains four values that specify the distance of the left, top, right, and bottom sides (in that order) of the control from the corresponding edge of the container. If one side of a control is not anchored to an edge of the container, you can set the corresponding value in the Margin property to 0.
+
+- 5. Add four more TextBlock controls to the page. These TextBlock controls are labels that help the user identify the data that is displayed on the page. Use the values in the following table to set the properties of these controls:
+
+| Control | Property | Value |
+|---|---|---|
+| First Label | HorizontalAlignment | Left |
+|  | Margin | 330,190,0,0 |
+|  | TextWrapping | Wrap |
+|  | Text | ID |
+|  | VerticalAlignment | Top |
+|  | FontSize | 20 |
+| Second Label | HorizontalAlignment | Left |
+|  | Margin | 460,190,0,0 |
+|  | TextWrapping | Wrap |
+|  | Text | Title |
+|  | VerticalAlignment | Top |
+|  | FontSize | 20 |
+| Third Label | HorizontalAlignment | Left |
+|  | Margin | 620,190,0,0 |
+|  | TextWrapping | Wrap |
+|  | Text | First Name |
+|  | VerticalAlignment | Top |
+|  | FontSize | 20 |
+| Fourth Label | HorizontalAlignment | Left |
+|  | Margin | 975,190,0,0 |
+|  | TextWrapping | Wrap |
+|  | Text | Last Name |
+|  | VerticalAlignment | Top |
+|  | FontSize | 20 |
+
+As before, you can either drag the controls from the Toolbox and use the Properties window to set their properties, or you can type the following XAML markup into the XAML pane, after the existing TextBlock control and before the closing </Grid> tag:
+
+Click here to view code image
+
+```
+<TextBlock HorizontalAlignment="Left" Margin="330,190,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" FontSize="20"/>
+```
+
+```
+<TextBlock HorizontalAlignment="Left" Margin="460,190,0,0" TextWrapping="Wrap" Text="Title" VerticalAlignment="Top" FontSize="20"/>
+<TextBlock HorizontalAlignment="Left" Margin="620,190,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" FontSize="20"/>
+<TextBlock HorizontalAlignment="Left" Margin="975,190,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" FontSize="20"/>
+```
+
+6. Below the *TextBlock* controls, add three *TextBox* controls that display the text ID, First Name, and Last Name. Use the following table to set the values of these controls. Notice that the *Text* property should be set to the empty string (“”). Also notice that the *id TextBox* control is marked as read-only. This is because customer IDs will be generated automatically in the code that you add later:
+
+| Control | Property | Value |
+|---|---|---|
+| First TextBox | x:Name | id |
+|  | HorizontalAlignment | Left |
+|  | Margin | 300,240,0,0 |
+|  | TextWrapping | Wrap |
+|  | Text |  |
+|  | VerticalAlignment | Top |
+|  | FontSize | 20 |
+|  | IsReadOnly | True |
+| Second TextBox | x:Name | firstName |
+|  | HorizontalAlignment | Left |
+|  | Margin | 550,240,0,0 |
+|  | TextWrapping | Wrap |
+|  | Text |  |
+|  | VerticalAlignment | Top |
+|  | FontSize | 20 |
+| Third TextBox | x:Name | lastName |
+|  | HorizontalAlignment | Left |
+|  | Margin | 875,240,0,0 |
+|  | TextWrapping | Wrap |
+|  | Text |  |
+|  | VerticalAlignment | Top |
+|  | FontSize | 20 |
+
+The following code shows the equivalent XAML markup for these controls:
+
+Click here to view code image
+
+```
+<TextBox x:Name="id" HorizontalAlignment="Left"
+Margin="300,240,0,0" TextWrapping="Wrap"
+Text="" VerticalAlignment="Top" FontSize="20" IsReadOnly="True"/>
+<TextBox x:Name="firstName" HorizontalAlignment="Left"
+Margin="550,240,0,0"
+TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300"
+FontSize="20"/>
+<TextBox x:Name="lastName" HorizontalAlignment="Left"
+Margin="875,240,0,0"
+TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300"
+FontSize="20"/>
+```
+
+The *Name* property is not required for a control, but it is useful if you want to refer to the control in the C# code for the app. Notice that the *Name* property is prefixed with *x*: . This is a reference to the XML namespace http://schemas.microsoft.com/winfx/2006/xaml specified in the *Page* attributes at the top of the XAML markup. This namespace defines the *Name* property for all controls.
+
+## Note
+
+It is not necessary to understand why the *Name* property is defined this way, but for more information, you can read the article “x:Name Directive” at http://msdn.microsoft.com/library/ms752290.aspx.
+
+The *Width* property specifies the width of the control, and the *TextWrapping* property indicates what happens if the user attempts to enter information into the control that exceeds its width. In this case, all the *TextBox* controls will wrap the text onto another line of the same width (the control will expand vertically). The alternative value, *NoWrap*, causes the text to scroll horizontally as the user enters it.
+
+7. Add a *ComboBox* control to the form, placing it below the *Title TextBlock* control, between the *id* and *firstName TextBox* controls. Set the properties of this control as follows:
+
+| Property | Value |
+|---|---|
+| x:Name | title |
+| HorizontalAlignment | Left |
+| Margin | 420,240,0,0 |
+| VerticalAlignment | Top |
+| Width | 100 |
+| FontSize | 20 |
+
+The equivalent XAML markup for this control is as follows:
+
+Click here to view code image
+
+```
+<ComboBox x:Name="title" HorizontalAlignment="Left" Margin="420,240,0,0" VerticalAlignment="Top" Width="100" FontSize="20"/>
+```
+
+You use a *ComboBox* control to display a list of values from which the user can select.
+
+8. In the Design View window, click the ComboBox control. In the Properties
+

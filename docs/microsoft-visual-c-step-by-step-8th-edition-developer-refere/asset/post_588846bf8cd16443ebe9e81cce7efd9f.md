@@ -1,0 +1,416 @@
+
+```
+class Circle
+{
+    public Circle(int initialRadius)
+    {
+        radius = initialRadius;
+    }
+
+    public double Area()
+    {
+        return Math.PI * radius * radius;
+    }
+
+    private double radius;
+}
+```
+```
+class Circle : System.IComparable
+{
+    ...
+    public int CompareTo(object obj)
+    {
+        Circle circObj = (Circle)obj; // cast the parameter to its real type
+        if (this.Area() == circObj.Area())
+            return 0;
+
+        if (this.Area() > circObj.Area())
+            return 1;
+
+        return -1;
+    }
+}
+```
+```
+class Circle : System.IComparable<Circle>
+{
+    ...
+    public int CompareTo(Circle other)
+    {
+        if (this.Area() == other.Area())
+            return 0;
+
+        if (this.Area() > other.Area())
+            return 1;
+
+        return -1;
+    }
+}
+```
+```
+public class Tree<TItem> where TItem : IComparable<TItem>
+{
+}
+```
+```
+public class Tree<TItem> where TItem : IComparable<TItem>
+{
+    public TItem NodeData { get; set; }
+    public Tree<TItem> LeftTree { get; set; }
+    public Tree<TItem> RightTree { get; set; }
+}
+```
+```
+public class Tree<TItem> where TItem : IComparable<TItem>
+{
+    ...
+    public Tree(TItem nodeValue)
+    {
+        this.NodeData = nodeValue;
+        this.LeftTree = null;
+        this.RightTree = null;
+    }
+}
+```
+```
+public class Tree<TItem> where TItem: IComparable<TItem>
+{
+    ...
+    public void Insert(TItem newItem)
+    {
+    }
+}
+```
+...
+Examine the value of the node, N, of the tree, B
+If the value of N is greater than that of the new item, I
+Then
+    If the left subtree of B is empty
+    Then
+        Construct a new left subtree of B with the item I as the node, and empty left and right subtrees
+    Else
+        Insert I into the left subtree of B
+End If
+...
+```
+public void Insert(TItem newItem)
+{
+    TItem currentNodeValue = this.NodeData;
+}
+```
+```
+public void Insert(TItem newItem)
+{
+    TItem currentNodeValue = this.NodeData;
+    if (currentNodeValue.CompareTo(newItem) > 0)
+    {
+        // Insert the new item into the left subtree
+    }
+    else
+    {
+        // Insert the new item into the right subtree
+    }
+}
+```
+```
+if (this.LeftTree == null)
+{
+    this.LeftTree = new Tree<TItem>(newItem);
+}
+else
+{
+    this.LeftTree.Insert(newItem);
+}
+```
+```
+if (this.RightTree == null)
+{
+    this.RightTree = new Tree<TItem>(newItem);
+}
+else
+{
+    this.RightTree.Insert(newItem);
+}
+```
+```
+public string WalkTree()
+{
+    string result = "";
+
+    if (this.LeftTree != null)
+    {
+        result = this.LeftTree.WalkTree();
+    }
+
+    result += $" {this.NodeData.ToString()} ";
+
+    if (this.RightTree != null)
+    {
+        result += this.RightTree.WalkTree();
+    }
+
+    return result;
+}
+```
+```
+static void Main(string[] args)
+{
+    Tree<int> tree1 = new Tree<int>(10);
+    tree1.Insert(5);
+    tree1.Insert(11);
+    tree1.Insert(5);
+    tree1.Insert(-12);
+    tree1.Insert(15);
+    tree1.Insert(0);
+    tree1.Insert(14);
+    tree1.Insert(-8);
+    tree1.Insert(10);
+    tree1.Insert(8);
+    tree1.Insert(8);
+
+    string sortedData = tree1.WalkTree();
+    Console.WriteLine($"Sorted data is: {sortedData}");
+}
+```
+```
+static void Main(string[] args)
+{
+    ...
+    Tree<string> tree2 = new Tree<string>("Hello");
+    tree2.Insert("World");
+    tree2.Insert("How");
+    tree2.Insert("Are");
+    tree2.Insert("You");
+    tree2.Insert("Today");
+    tree2.Insert("I");
+    tree2.Insert("Hope");
+    tree2.Insert("You");
+    tree2.Insert("Are");
+    tree2.Insert("Feeling");
+    tree2.Insert("Well");
+    tree2.Insert("!");
+
+    sortedData = tree2.WalkTree();
+    Console.WriteLine($"Sorted data is: {sortedData}");
+}
+```
+```
+static void Swap<T>(ref T first, ref T second)
+{
+    T temp = first;
+    first = second;
+    second = temp;
+}
+```
+```
+int a = 1, b = 2;
+Swap<int>(ref a, ref b);
+...
+string s1 = "Hello", s2 = "World";
+Swap<string>(ref s1, ref s2);
+```
+```
+static void InsertIntoTree<TItem>(ref Tree<TItem> tree,
+    params TItem[] data)
+{
+}
+```
+```
+static void InsertIntoTree<TItem>(ref Tree<TItem> tree,
+    params TItem[] data) where TItem :IComparable<TItem>
+{
+}
+```
+```
+static void InsertIntoTree<TItem>(ref Tree<TItem> tree, params TItem[] data) where TItem : IComparable<TItem>
+{
+    foreach (TItem datum in data)
+    {
+        if (tree == null)
+        {
+            tree = new Tree<TItem>(datum);
+        }
+        else
+        {
+            tree.Insert(datum);
+        }
+    }
+}
+```
+```
+static void Main(string[] args)
+{
+    Tree<char> charTree = null;
+    InsertIntoTree<char>(ref charTree, 'M', 'X', 'A', 'M', 'Z', 'Z', 'N');
+    string sortedData = charTree.WalkTree();
+    Console.WriteLine($"Sorted data is: {sortedData}");
+}
+```
+```
+interface IWrapper<T>
+{
+    void SetData(T data);
+    T GetData();
+}
+class Wrapper<T> : IWrapper<T>
+{
+    private T storedData;
+
+    void IWrapper<T>.SetData(T data)
+    {
+        this.storedData = data;
+    }
+
+    T IWrapper<T>.GetData()
+    {
+        return this.storedData;
+    }
+}
+```
+```
+Wrapper<string> stringWrapper = new Wrapper<string>();
+IWrapper<string> storedStringWrapper = stringWrapper;
+storedStringWrapper.SetData("Hello");
+Console.WriteLine($"Stored value is {storedStringWrapper.GetData()}");
+```
+```
+IWrapper<object> storedObjectWrapper = stringWrapper;
+```
+```
+IWrapper<object> storedObjectWrapper = (IWrapper<object>)stringWrapper;
+```
+```
+IWrapper<object> storedObjectWrapper = (IWrapper<object>)stringWrapper;
+Circle myCircle = new Circle();
+storedObjectWrapper.SetData(myCircle);
+```
+```
+interface IStoreWrapper<T>
+{
+    void SetData(T data);
+}
+
+interface IRetrieveWrapper<T>
+{
+    T GetData();
+}
+
+class Wrapper<T> : IStoreWrapper<T>, IRetrieveWrapper<T>
+{
+    private T storedData;
+
+    void IStoreWrapper<T>.SetData(T data)
+    {
+        this.storedData = data;
+    }
+
+    T IRetrieveWrapper<T>.GetData()
+    {
+        return this.storedData;
+    }
+}
+```
+```
+Wrapper<string> stringWrapper = new Wrapper<string>();
+IStoreWrapper<string> storedStringWrapper = stringWrapper;
+storedStringWrapper.SetData("Hello");
+IRetrieveWrapper<string> retrievedStringWrapper = stringWrapper;
+Console.WriteLine($"Stored value is {retrievedStringWrapper.GetData()}");
+```
+```
+IRetrieveWrapper<object> retrievedObjectWrapper = stringWrapper;
+```
+```
+interface IRetrieveWrapper<out T>
+{
+    T GetData();
+}
+```
+```
+// string derives from object, so this is now legal
+IRetrieveWrapper<object> retrievedObjectWrapper = stringWrapper;
+```
+```
+Wrapper<int> intWrapper = new Wrapper<int>();
+IStoreWrapper<int> storedIntWrapper = intWrapper; // this is legal
+...
+// the following statement is not legal - ints are not objects
+IRetrieveWrapper<object> retrievedObjectWrapper = intWrapper;
+```
+```
+public interface IComparer<in T>
+{
+    int Compare(T x, T y);
+}
+```
+```
+class ObjectComparer : IComparer<Object>
+{
+    int IComparer<Object>.Compare(Object x, Object y)
+    {
+        int xHash = x.GetHashCode();
+        int yHash = y.GetHashCode();
+
+        if (xHash == yHash)
+            return 0;
+
+        if (xHash < yHash)
+            return -1;
+
+        return 1;
+    }
+}
+```
+```
+Object x = ...;
+Object y = ...;
+ObjectComparer objectComparer = new ObjectComparer();
+IComparer<Object> objectComparator = objectComparer;
+int result = objectComparator.Compare(x, y);
+```
+```
+IComparer<String> stringComparator = objectComparer;
+```
+```
+public interface IComparer<in T>
+{
+    int Compare(T x, T y);
+}
+```
+```
+using System;
+using System.Collections.Generic;
+...
+List<int> numbers = new List<int>();
+
+// Fill the List<int> by using the Add method
+foreach (int number in new int[12]{10, 9, 8, 7, 7, 6, 5, 10, 4, 3, 2, 1})
+{
+    numbers.Add(number);
+}
+
+// Insert an element in the penultimate position in the list, and move the last item up
+// The first parameter is the position; the second parameter is the value being inserted
+numbers.Insert(numbers.Count-1, 99);
+
+// Remove the first element whose value is 7 (the 4th element, index 3)
+numbers.Remove(7);
+// Remove the element that’s now the 7th element, index 6 (10)
+numbers.RemoveAt(6);
+
+// Iterate the remaining 11 elements using a for statement
+Console.WriteLine("Iterating using a for statement:");
+for (int i = 0; i < numbers.Count; i++)
+{
+    int number = numbers[i]; // Note the use of array syntax
+    Console.WriteLine(number);
+}
+
+// Iterate the same 11 elements using a foreach statement
+Console.WriteLine("\nIterating using a foreach statement:");
+foreach (int number in numbers)
+{
+    Console.WriteLine(number);
+}
+```

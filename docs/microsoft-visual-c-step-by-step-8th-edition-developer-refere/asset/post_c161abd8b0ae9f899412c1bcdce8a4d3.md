@@ -1,0 +1,203 @@
+
+remain synchronized, even when you add and remove elements. This means that you can insert key/value pairs into a SortedList<TKey, TValue> in any sequence; they are always sorted based on the value of the keys.
+
+Like the Dictionary<TKey, TValue> class, a SortedList<TKey, TValue> collection cannot contain duplicate keys. When you use a foreach statement to iterate through a SortedList<TKey, TValue>, you receive back a KeyValuePair<TKey, TValue> item. However, the KeyValuePair<TKey, TValue> items will be returned sorted by the Key property.
+
+Here is the same example that associates the ages of members of my family with their names and then prints the information, but this version has been adjusted to use a SortedList<TKey, TValue> object rather than a Dictionary<TKey, TValue> collection:
+
+Click here to view code image
+
+```
+using System;
+using System.Collections.Generic;
+...
+SortedList<string, int> ages = new SortedList<string, int>();
+
+// fill the SortedList
+ages.Add("John", 51);    // using the Add method
+ages.Add("Diana", 50);
+ages["James"] = 23;    // using array notation
+ages["Francesca"] = 21;
+
+// iterate using a foreach statement
+// the iterator generates a KeyValuePair item
+Console.WriteLine("The SortedList contains:");
+foreach (KeyValuePair<string, int> element in ages)
+{
+    string name = element.Key;
+    int age = element.Value;
+    Console.WriteLine($"Name: {name}, Age: {age}");
+}
+```
+
+The output from this program is sorted alphabetically by the names of my family members:
+
+```
+The SortedList contains:
+Name: Diana, Age: 50
+Name: Francesca, Age: 21
+Name: James, Age: 23
+Name: John, Age: 51
+```
+
+## The HashSet<T> collection class
+
+The HashSet<T> class is optimized for performing set operations, such as determining set membership and generating the union and intersection of sets.
+
+You insert items into a HashSet<T> collection by using the Add method, and you delete items by using the Remove method. However, the real power of the
+
+HashSet<T> class is provided by the IntersectWith, UnionWith, and ExceptWith methods. These methods modify a HashSet<T> collection to generate a new set that either intersects with, has a union with, or does not contain the items in a specified HashSet<T> collection. These operations are destructive in as much as they overwrite the contents of the original HashSet<T> object with the new set of data. You can also determine whether the data in one HashSet<T> collection is a superset or subset of another by using the IsSubsetOf, IsSupersetOf, IsProperSubsetOf, and IsProperSupersetOf methods. These methods return a Boolean value and are nondestructive.
+
+Internally, a HashSet<T> collection is held as a hash table, enabling the fast lookup of items. However, a large HashSet<T> collection can require a significant amount of memory in order to operate quickly.
+
+The following example shows how to populate a HashSet<T> collection and illustrates the use of the IntersectWith method to find data that overlaps two sets:
+
+Click here to view code image
+
+```
+using System;
+using System.Collections.Generic;
+...
+HashSet<string> employees = new HashSet<string>(new string[] {"Fred","Bert","Harry","John"});
+HashSet<string> customers = new HashSet<string>(new string[] {"John","Sid","Harry","Diana"});
+
+employees.Add("James");
+customers.Add("Francesca");
+
+Console.WriteLine("Employees:");
+foreach (string name in employees)
+{
+    Console.WriteLine(name);
+}
+
+Console.WriteLine("\nCustomers:");
+foreach (string name in customers)
+{
+    Console.WriteLine(name);
+}
+
+Console.WriteLine("\nCustomers who are also employees:");
+customers.IntersectWith(employees);
+foreach (string name in customers)
+{
+    Console.WriteLine(name);
+}
+```
+
+This code generates the following output:
+
+Click here to view code image
+
+```
+Employees:
+Fred
+```
+
+Bert
+Harry
+John
+James
+
+Customers:
+John
+Sid
+Harry
+Diana
+Francesca
+
+Customers who are also employees:
+John
+Harry
+
+### Note
+
+The System.Collections.Generic namespace also provides the SortedSet<T> collection type, which operates in a similar manner to the HashSet<T> class. The primary difference, as the name implies, is that the data is maintained in a sorted order. The SortedSet<T> and HashSet<T> classes are interoperable; you can take the union of a SortedSet<T> collection with a HashSet<T> collection, for example.
+
+## Using collection initializers
+
+The examples in the preceding subsections have shown you how to add individual elements to a collection by using the method most appropriate to that collection (Add for a List<T> collection, Enqueue for a Queue<T> collection, Push for a Stack<T> collection, and so on). You can also initialize some collection types when you declare them by using a syntax similar to that supported by arrays. For example, the following statement creates and initializes the numbers List<int> object shown earlier, demonstrating an alternative to repeatedly calling the Add method:
+
+Click here to view code image
+
+```
+List<int> numbers = new List<int>(){10, 9, 8, 7, 7, 6, 5, 10, 4, 3, 2, 1};
+```
+
+Internally, the C# compiler converts this initialization to a series of calls to the Add method. Consequently, you can use this syntax only for collections that actually support the Add method. (The Stack<T> and Queue<T> classes do not.)
+
+For more complex collections that take key/value pairs, such as the Dictionary<TKey, TValue> class, you can use indexer notation to specify a value for each key, like this:
+
+Click here to view code image
+
+```
+Dictionary<string, int> ages = new Dictionary<string, int>()
+{
+    ["John"] = 51,
+    ["Diana"] = 50,
+    ["James"] = 23,
+    ["Francesca"] = 21
+};
+```
+
+If you prefer, you can also specify each key/value pair as an anonymous type in the initializer list, like this:
+
+Click here to view code image
+
+```
+Dictionary<string, int> ages = new Dictionary<string, int>()
+{
+    {"John", 51},
+    {"Diana", 50},
+    {"James", 23},
+    {"Francesca", 21}
+};
+```
+
+In this case, the first item in each pair is the key, and the second is the value. To make your code as readable as possible, I recommend that you use the indexer notation wherever possible when you initialize a dictionary type.
+
+## The Find methods, predicates, and lambda expressions
+
+Using the dictionary-oriented collections (Dictionary<TKey, TValue>, SortedDictionary<TKey, TValue>, and SortedList<TKey, TValue>), you can quickly find a value by specifying the key to search for, and you can use array notation to access the value, as you have seen in earlier examples. Other collections that support nonkeyed random access, such as the List<T> and LinkedList<T> classes, do not support array notation but instead provide the Find method to locate an item. For these classes, the argument to the Find method is a predicate that specifies the search criteria to use. The form of a predicate is a method that examines each item in the collection and returns a Boolean value indicating whether the item matches. In the case of the Find method, as soon as the first match is found, the corresponding item is returned. Note that the List<T> and LinkedList<T> classes also support other methods, such as FindLast, which returns the last matching object, and the List<T> class additionally provides the FindAll method, which returns a List<T> collection of all matching objects.
+
+The easiest way to specify the predicate is to use a lambda expression. A lambda expression is an expression that returns a method. This sounds rather odd because most expressions that you have encountered so far in C# actually return a value. If you are familiar with functional programming languages such as Haskell, you are probably comfortable with this concept. If you are not, fear not: lambda expressions are not particularly complicated, and after you have become accustomed to a new bit of syntax, you will see that they are very useful.
+
+### Note
+
+If you are interested in finding out more about functional programming with Haskell, visit the Haskell programming language website at http://www.haskell.org/haskellwiki/Haskell.
+
+Chapter 3, “Writing methods and applying scope,” explains that a typical method consists of four elements: a return type, a method name, a list of parameters, and a method body. A lambda expression contains two of these elements: a list of parameters and a method body. Lambda expressions do not define a method name, and the return type (if any) is inferred from the context in which the lambda expression is used. In the case of the Find method, the predicate processes each item in the collection in turn; the body of the predicate must examine the item and return true or false depending on whether it matches the search criteria. The example that follows shows the Find method (highlighted in bold) on a List<Person> collection, where Person is a struct. The Find method returns the first item in the list that has the ID property set to 3:
+
+Click here to view code image
+
+```
+struct Person
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+...
+// Create and populate the personnel list
+List<Person> personnel = new List<Person>()
+{
+    new Person() { ID = 1, Name = "John", Age = 51 },
+    new Person() { ID = 2, Name = "Sid", Age = 28 },
+    new Person() { ID = 3, Name = "Fred", Age = 34 },
+    new Person() { ID = 4, Name = "Paul", Age = 22 },
+};
+
+// Find the member of the list that has an ID of 3
+Person match = personnel.Find((Person p) => { return p.ID == 3; });
+
+Console.WriteLine($"ID: {match.ID}\nName: {match.Name}\nAge: {match.Age}");
+```
+
+Here is the output generated by this code:
+
+```
+ID: 3
+Name: Fred
+Age: 34
+```
+
+In the call to the Find method, the argument (Person p) => { return p.ID == 3; } is a lambda expression that actually does the work. It has the following syntactic

@@ -1,0 +1,402 @@
+
+
+static void doWork()
+{
+    int x = 591;
+    for (int i = 2; i <= 10; i++)
+    {
+        Console.WriteLine($"{x} in base {i} is {x.ConvertToBase(i)}");
+    }
+}
+
+int CompareTo(object obj)
+{
+    // 如果此实例等于 obj 则返回 0
+    // 如果此实例小于 obj 则返回 < 0
+    // 如果此实例大于 obj 则返回 > 0
+    ...
+}
+
+interface IComparable
+{
+    int CompareTo(object obj);
+}
+
+interface ILandBound
+{
+    ...
+}
+
+class Mammal
+{
+    ...
+}
+
+class Horse : Mammal , ILandBound
+{
+    ...
+}
+
+Horse myHorse = new Horse(...);
+ILandBound iMyHorse = myHorse; // 合法
+
+int FindLandSpeed(ILandBound landBoundMammal)
+{
+    ...
+}
+
+if (myHorse is ILandBound)
+{
+    ILandBound iLandBoundAnimal = myHorse;
+}
+
+class Horse : Mammal, ILandBound, IGrazable
+{
+    ...
+}
+
+class Horse : ILandBound, IJourney
+{
+    ...
+    public int NumberOfLegs()
+    {
+        return 4;
+    }
+}
+
+class Horse : ILandBound, IJourney
+{
+    ...
+    int ILandBound.NumberOfLegs()
+    {
+        return 4;
+    }
+
+    int IJourney.NumberOfLegs()
+    {
+        return 3;
+    }
+}
+
+Horse horse = new Horse();
+...
+// 以下语句将无法编译
+int legs = horse.NumberOfLegs();
+
+Horse horse = new Horse();
+...
+IJourney journeyHorse = horse;
+int legsInJourney = journeyHorse.NumberOfLegs();
+ILandBound landBoundHorse = horse;
+int legsOnHorse = landBoundHorse.NumberOfLegs();
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Drawing
+{
+    interface IDraw
+    {
+    }
+}
+
+using Windows.UI.Xaml.Controls;
+
+interface IDraw
+{
+    void SetLocation(int xCoord, int yCoord);
+    void Draw(Canvas canvas);
+}
+
+interface IColor
+{
+    void SetColor(Color color);
+}
+
+using Windows.UI;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Shapes;
+using Windows.UI.Xaml.Controls;
+
+class Square : IDraw, IColor
+{
+}
+
+class Square : IDraw, IColor
+{
+    private int sideLength;
+    private int locX = 0, locY = 0;
+    private Rectangle rect = null;
+}
+
+class Square : IDraw, IColor
+{
+    ...
+    public Square(int sideLength)
+    {
+        this.sideLength = sideLength;
+    }
+}
+
+void IDraw.SetLocation(int xCoord, int yCoord)
+{
+    throw new NotImplementedException();
+}
+
+void IDraw.Draw(Canvas canvas)
+{
+    throw new NotImplementedException();
+}
+
+void IDraw.SetLocation(int xCoord, int yCoord)
+{
+    this.locX = xCoord;
+    this.locY = yCoord;
+}
+
+void IDraw.Draw(Canvas canvas)
+{
+    if (this.rect != null)
+    {
+        canvas.Children.Remove(this.rect);
+    }
+    else
+    {
+        this.rect = new Rectangle();
+    }
+
+    this.rect.Height = this.sideLength;
+    this.rect.Width = this.sideLength;
+    Canvas.SetTop(this.rect, this.locY);
+    Canvas.SetLeft(this.rect, this.locX);
+    canvas.Children.Add(this.rect);
+}
+
+void IColor.SetColor(Color color)
+{
+    if (this.rect != null)
+    {
+        SolidColorBrush brush = new SolidColorBrush(color);
+        this.rect.Fill = brush;
+    }
+}
+
+using Windows.UI;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Shapes;
+using Windows.UI.Xaml.Controls;
+
+class Circle : IDraw, IColor
+{
+    private int diameter;
+    private int locX = 0, locY = 0;
+    private Ellipse circle = null;
+}
+
+class Circle : IDraw, IColor
+{
+    ...
+    public Circle(int diameter)
+    {
+        this.diameter = diameter;
+    }
+}
+
+void IDraw.SetLocation(int xCoord, int yCoord)
+{
+    this.locX = xCoord;
+    this.locY = yCoord;
+}
+
+void IDraw.Draw(Canvas canvas)
+{
+    if (this.circle != null)
+    {
+        canvas.Children.Remove(this.circle);
+    }
+    else
+    {
+        this.circle = new Ellipse();
+    }
+
+    this.circle.Height = this.diameter;
+    this.circle.Width = this.diameter;
+    Canvas.SetTop(this.circle, this.locY);
+    Canvas.SetLeft(this.circle, this.locX);
+    canvas.Children.Add(this.circle);
+}
+
+void IColor.SetColor(Color color)
+{
+    if (this.circle != null)
+    {
+        SolidColorBrush brush = new SolidColorBrush(color);
+        this.circle.Fill = brush;
+    }
+}
+
+private void drawingCanvas_Tapped(object sender, TappedRoutedEventArgs e)
+{
+    Point mouseLocation = e.GetPosition(this.drawingCanvas);
+    Square mySquare = new Square(100);
+
+    if (mySquare is IDraw)
+    {
+        IDraw drawSquare = mySquare;
+        drawSquare.SetLocation((int)mouseLocation.X, (int)mouseLocation.Y);
+        drawSquare.Draw(drawingCanvas);
+    }
+}
+
+private void drawingCanvas_Tapped(object sender, TappedRoutedEventArgs e)
+{
+    ...
+    if (mySquare is IColor)
+    {
+        IColor colorSquare = mySquare;
+        colorSquare.SetColor(Colors.BlueViolet);
+    }
+}
+
+private void drawingCanvas_RightTapped(object sender, RightTappedRoutedEventArgs e)
+{
+    Point mouseLocation = e.GetPosition(this.drawingCanvas);
+    Circle myCircle = new Circle(100);
+
+    if (myCircle is IDraw)
+    {
+        IDraw drawCircle = myCircle;
+        drawCircle.SetLocation((int)mouseLocation.X, (int)mouseLocation.Y);
+        drawCircle.Draw(drawingCanvas);
+    }
+
+    if (myCircle is IColor)
+    {
+        IColor colorCircle = myCircle;
+        colorCircle.SetColor(Colors.HotPink);
+    }
+}
+
+class Horse : Mammal, ILandBound, IGrazable
+{
+    ...
+    void IGrazable.ChewGrass()
+    {
+        Console.WriteLine("Chewing grass");
+        // 咀嚼草的代码
+    }
+}
+
+class Sheep : Mammal, ILandBound, IGrazable
+{
+    ...
+    void IGrazable.ChewGrass()
+    {
+        Console.WriteLine("Chewing grass");
+        // 与马相同的咀嚼草代码
+    }
+}
+
+class GrazingMammal : Mammal, IGrazable
+{
+    ...
+    void IGrazable.ChewGrass()
+    {
+        // 咀嚼草的通用代码
+        Console.WriteLine("Chewing grass");
+    }
+}
+
+class Horse : GrazingMammal, ILandBound
+{
+    ...
+}
+
+class Sheep : GrazingMammal, ILandBound
+{
+    ...
+}
+
+abstract class GrazingMammal : Mammal, IGrazable
+{
+    ...
+}
+
+GrazingMammal myGrazingMammal = new GrazingMammal(...); // 非法
+
+abstract class GrazingMammal : Mammal, IGrazable
+{
+    public abstract void DigestGrass();
+    ...
+}
+
+sealed class Horse : GrazingMammal, ILandBound
+{
+    ...
+}
+
+using Windows.UI;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Shapes;
+using Windows.UI.Xaml.Controls;
+
+abstract class DrawingShape
+{
+    protected int size;
+    protected int locX = 0, locY = 0;
+    protected Shape = null;
+}
+
+abstract class DrawingShape
+{
+    ...
+    public DrawingShape(int size)
+    {
+        this.size = size;
+    }
+}
+
+abstract class DrawingShape
+{
+    ...
+    public void SetLocation(int xCoord, int yCoord)
+    {
+        this.locX = xCoord;
+        this.locY = yCoord;
+    }
+
+    public void SetColor(Color color)
+    {
+        if (this.shape != null)
+        {
+            SolidColorBrush brush = new SolidColorBrush(color);
+            this.shape.Fill = brush;
+        }
+    }
+}
+
+abstract class DrawingShape
+{
+    ...
+    public virtual void Draw(Canvas canvas)
+    {
+        if (this.shape == null)
+        {
+            throw new InvalidOperationException("Shape is null");
+        }
+
+        this.shape.Height = this.size;
+        this.shape.Width = this.size;
+        Canvas.SetTop(this.shape, this.locY);
+        Canvas.SetLeft(this.shape, this.locX);
+        canvas.Children.Add(this.shape);
+    }
+}
+
+class Square : DrawingShape, IDraw, IColor
+{
+    ...
+}

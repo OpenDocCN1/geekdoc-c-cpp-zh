@@ -1,0 +1,228 @@
+
+
+and locate the *drawingCanvas_Tapped* method.
+This method runs when a user taps the screen or clicks the left mouse button. It draws a square on the screen at the point where the user taps or clicks.
+
+## 8. Locate the statement that calls the *SetLocation* method to set the position of the square on the screen. It is located in the *if* statement block as highlighted in the following:
+
+Click here to view code image
+
+```
+if (mySquare is IDraw)
+{
+    IDraw drawSquare = mySquare;
+    drawSquare.SetLocation((int)mouseLocation.X,
+(int)mouseLocation.Y);
+    drawSquare.Draw(drawingCanvas);
+}
+```
+
+## 9. Replace this statement with code that sets the *X* and *Y* properties of the *Square* object, as shown in bold in the following code:
+
+Click here to view code image
+
+```
+if (mySquare is IDraw)
+{
+    IDraw drawSquare = mySquare;
+    drawSquare.X = (int)mouseLocation.X;
+    drawSquare.Y = (int)mouseLocation.Y;
+    drawSquare.Draw(drawingCanvas);
+}
+```
+
+## 10. Locate the *drawingCanvas_RightTapped* method.
+
+This method runs when the user taps and holds a finger on the screen or clicks the right mouse button. It draws a circle at the location where the user taps and holds or right-clicks.
+
+## 11. In this method, replace the statement that calls the *SetLocation* method of the *Circle* object and set the *X* and *Y* properties instead, as shown in bold in the following example:
+
+Click here to view code image
+
+```
+if (myCircle is IDraw)
+{
+    IDraw drawCircle = myCircle;
+    drawCircle.X = (int)mouseLocation.X;
+    drawCircle.Y = (int)mouseLocation.Y;
+    drawCircle.Draw(drawingCanvas);
+}
+```
+
+## 12. Open the IColor.cs file for the Drawing project in the Code and Text Editor window. This interface specifies the *SetColor* method, like this:
+
+Click here to view code image
+
+```
+interface IColor
+{
+    void SetColor(Color color);
+}
+```
+
+13. Delete this method and replace it with the definition of a property named Color, as presented here:
+
+```
+interface IColor
+{
+    Color Color { set; }
+}
+```
+
+This is a write-only property, providing a set accessor but no get accessor. You define the property this way because the color is not actually stored in the DrawingShape class and is specified only as each shape is drawn; you cannot actually query a shape to find out which color it is.
+
+# Note
+
+It is common practice for a property to share the same name as a type (Color in this example).
+
+14. Return to the DrawingShape class in the Code and Text Editor window. Replace the SetColor method in this class with the Color property shown here:
+
+Click here to view code image
+
+```
+public Color Color
+{
+    set
+    {
+        if (this.shape != null)
+        {
+            SolidColorBrush brush = new SolidColorBrush(value);
+            this.shape.Fill = brush;
+        }
+    }
+}
+```
+
+# Note
+
+The code for the set accessor is almost the same as the original SetColor method except that the statement that creates the SolidColorBrush object is passed the value parameter.
+
+15. Return to the DrawingPad.xaml.cs file in the Code and Text Editor window. In the drawingCanvas_Tapped method, modify the statement that sets the color of the Square object to match the following code in bold:
+
+Click here to view code image
+
+```
+if (mySquare is IColor)
+{
+    IColor colorSquare = mySquare;
+    colorSquare.Color = Colors.BlueViolet;
+}
+```
+
+16. Similarly, in the drawingCanvas_RightTapped method, modify the statement that sets the color of the Circle object.
+
+Click here to view code image
+
+```
+if (myCircle is IColor)
+{
+    IColor colorCircle = myCircle;
+    colorCircle.Color = Colors.HotPink;
+}
+```
+
+17. On the Debug menu, click Start Debugging to build and run the project.
+
+18. Verify that the application operates in the same manner as before. If you tap the screen or click the left mouse button on the canvas, the application should draw a square, and if you tap and hold or click the right mouse button, the application should draw a circle. The following image shows the application running:
+
+# Drawing Pad
+
+![](img/16f6e3fe08f01ddadb2741a92c392b0e_414_0.png)
+
+19. Return to the Visual Studio 2015 programming environment and stop debugging.
+
+# Generating automatic properties
+
+As mentioned earlier in this chapter, the principal purpose of properties is to hide the implementation of fields from the outside world. This is fine if your properties actually perform some useful work, but if the get and set accessors simply wrap operations that just read or assign a value to a field, you might be questioning the value of this approach. However, there are at least two good reasons why you should define properties rather than expose data as public fields even in these situations:
+
+- **Compatibility with applications** Fields and properties expose themselves by using different metadata in assemblies. If you develop a class and decide to use public fields, any applications that use this class will reference these items as fields. Although you use the same C# syntax for reading and writing a field that you use when reading and writing a property, the compiled code is actually quite different—the C# compiler just hides the differences from you. If you later decide that you really do need to change these fields to properties (maybe the business requirements have changed
+
+and you need to perform additional logic when assigning values), existing applications will not be able to use the updated version of the class without being recompiled. This is awkward if you have deployed the application on a large number of devices throughout an organization. There are ways around this, but it is generally better to avoid getting into this situation in the first place.
+
+# Compatibility with interfaces
+
+If you are implementing an interface and the interface defines an item as a property, you must write a property that matches the specification in the interface, even if the property just reads and writes data in a private field. You cannot implement a property simply by exposing a public field with the same name.
+
+The designers of the C# language recognized that programmers are busy people who should not have to waste their time writing more code than they need to. To this end, the C# compiler can generate the code for properties automatically, like this:
+
+Click here to view code image
+
+```
+class Circle
+{
+    public int Radius{ get; set; }
+    ...
+}
+```
+
+In this example, the Circle class contains a property named Radius. Apart from the type of this property, you have not specified how this property works—the get and set accessors are empty. The C# compiler converts this definition to a private field and a default implementation that looks similar to this:
+
+Click here to view code image
+
+```
+class Circle
+{
+    private int _radius;
+    public int Radius{
+        get
+        {
+            return this._radius;
+        }
+        set
+        {
+            this._radius = value;
+        }
+    }
+    ...
+}
+```
+
+So for very little effort you can implement a simple property by using automatically generated code, and if you need to include additional logic later, you can do so without breaking any existing applications.
+
+# Note
+
+The syntax for defining an automatic property is almost identical to the syntax for defining a property in an interface. The exception is that an automatic property can specify an access modifier such as *private*, *public*, or *protected*.
+
+You can create a read-only automatic property by omitting the empty *set* accessor from your property declaration, like this:
+
+Click here to view code image
+
+```
+class Circle
+{
+    public DateTime CircleCreatedDate { get; }
+    ...
+}
+```
+
+This is useful in scenarios where you want to create an immutable property; a property that is set when the object is constructed and cannot subsequently be changed. For example, you might want to set the date on which an object was created or the name of the user who created it, or you might want to generate a unique identifier value for the object. These are values that you typically want to set once and then prevent them from being modified. With this in mind, C# allows you to initialize read-only automatic properties in one of two ways. You can initialize the property from a constructor, like this:
+
+Click here to view code image
+
+```
+class Circle
+{
+    public Circle()
+    {
+        CircleCreatedDate = DateTime.Now;
+    }
+
+    public DateTime CircleCreatedDate { get; }
+    ...
+}
+```
+
+Alternatively, you can initialize the property as part of the declaration, like this:
+
+Click here to view code image
+
+```
+class Circle
+{
+    public DateTime CircleCreatedDate { get; } = DateTime.Now;
+    ...
+}
+```
+
+Be aware that if you initialize a property in this way and also set its value in a
+

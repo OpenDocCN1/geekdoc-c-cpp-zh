@@ -1,0 +1,15 @@
+```
+class Example
+{
+    void firstMethod()
+    {
+        int myVar;
+        ...
+    }
+    void anotherMethod()
+    {
+        myVar = 42; // error - variable not in scope
+        ...
+    }
+}
+```

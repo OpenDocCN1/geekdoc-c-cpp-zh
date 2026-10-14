@@ -1,0 +1,9 @@
+```
+Dictionary<string, int> ages = new Dictionary<string, int>()
+{
+    {"John", 51},
+    {"Diana", 50},
+    {"James", 23},
+    {"Francesca", 21}
+};
+```

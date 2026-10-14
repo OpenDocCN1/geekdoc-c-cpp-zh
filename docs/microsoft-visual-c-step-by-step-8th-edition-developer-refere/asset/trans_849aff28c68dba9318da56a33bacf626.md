@@ -1,0 +1,416 @@
+
+
+```
+WrappedInt wi = new WrappedInt();
+...
+object o = wi;
+if (o is WrappedInt)
+{
+    WrappedInt temp = (WrappedInt)o; // This is safe; o is a WrappedInt
+    ...
+}
+```
+```
+WrappedInt wi = new WrappedInt();
+...
+object o = wi;
+WrappedInt temp = o as WrappedInt;
+if (temp != null)
+{
+    ... // Cast was successful
+}
+```
+```
+public static void Main(string [] args)
+{
+    int x = 99, y = 100;
+    unsafe
+    {
+        swap (&x, &y);
+    }
+    Console.WriteLine($"x is now {x}, y is now {y}");
+}
+
+public static unsafe void swap(int *a, int *b)
+{
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+```
+```
+enum Season { Spring, Summer, Fall, Winter }
+```
+```
+enum Season { Spring, Summer, Fall, Winter }
+
+class Example
+{
+    public void Method(Season parameter) // method parameter example
+    {
+        Season localVariable; // local variable example
+        ...
+    }
+
+    private Season currentSeason; // field example
+}
+```
+```
+Season colorful = Season.Fall;
+Console.WriteLine(colorful);  // writes out 'Fall'
+```
+```
+string name = colorful.ToString();
+Console.WriteLine(name);    // also writes out 'Fall'
+```
+```
+enum Season { Spring, Summer, Fall, Winter }
+...
+Season colorful = Season.Fall;
+Console.WriteLine((int)colorful); // writes out '2'
+```
+```
+enum Season { Spring = 1, Summer, Fall, Winter }
+```
+```
+enum Season { Spring, Summer, Fall, Autumn = Fall, Winter }
+```
+```
+enum Season : short { Spring, Summer, Fall, Winter }
+```
+```
+namespace StructsAndEnums
+{
+    enum Month
+    {
+        January, February, March, April,
+        May, June, July, August,
+        September, October, November, December
+    }
+}
+```
+```
+static void doWork()
+{
+    Month first = Month.January;
+    Console.WriteLine(first);
+}
+```
+```
+static void doWork()
+{
+    Month first = Month.January;
+    Console.WriteLine(first);
+    first++;
+    Console.WriteLine(first);
+}
+```
+```
+static void doWork()
+{
+    Month first = Month.December;
+    Console.WriteLine(first);
+    first++;
+    Console.WriteLine(first);
+}
+```
+```
+int i = 55;
+Console.WriteLine(i.ToString());
+Console.WriteLine(55.ToString());
+float f = 98.765F;
+Console.WriteLine(f.ToString());
+Console.WriteLine(98.765F.ToString());
+```
+```
+string s = "42";
+int i = int.Parse(s);  // exactly the same as Int32.Parse
+```
+```
+struct Time
+{
+    public int hours, minutes, seconds;
+}
+```
+```
+struct Time
+{
+    private int hours, minutes, seconds;
+    ...
+    public Time(int hh, int mm, int ss)
+    {
+        this.hours = hh % 24;
+        this.minutes = mm % 60;
+        this.seconds = ss % 60;
+    }
+
+    public int Hours()
+    {
+        return this.hours;
+    }
+}
+```
+```
+struct Time
+{
+    public Time() { ... } // compile-time error
+    ...
+}
+```
+```
+struct Time
+{
+    private int hours, minutes, seconds;
+    ...
+    public Time(int hh, int mm)
+    {
+        this.hours = hh;
+        this.minutes = mm;
+    }  // compile-time error: seconds not initialized
+}
+```
+```
+struct Time
+{
+    private int hours = 0; // compile-time error
+    private int minutes;
+    private int seconds;
+    ...
+}
+```
+```
+struct Time
+{
+    private int hours, minutes, seconds;
+    ...
+}
+
+class Example
+{
+    private Time currentTime;
+
+    public void Method(Time parameter)
+    {
+        Time localVariable;
+        ...
+    }
+}
+```
+```
+struct Time
+{
+    private int hours, minutes, seconds;
+    ...
+
+    public Time(int hh, int mm)
+    {
+        hours = hh;
+        minutes = mm;
+        seconds = 0;
+    }
+}
+```
+```
+struct Date
+{
+    private int year;
+    private Month month;
+    private int day;
+
+    public Date(int ccyy, Month mm, int dd)
+    {
+        this.year = ccyy - 1900;
+        this.month = mm;
+        this.day = dd - 1;
+    }
+}
+```
+```
+struct Date
+{
+    ...
+    public override string ToString()
+    {
+        string data = $"{this.month} {this.day + 1} {this.year + 1900}";
+        return data;
+    }
+}
+```
+```
+static void doWork()
+{
+    ...
+    Date defaultDate = new Date();
+    Console.WriteLine(defaultDate);
+}
+```
+```
+static void doWork()
+{
+    ...
+    Date weddingAnniversary = new Date(2015, Month.July, 4);
+    Console.WriteLine(weddingAnniversary);
+}
+```
+```
+Date now = new Date(2012, Month.March, 19);
+Date copy = now;
+```
+```
+Date now;
+Date copy = now; // compile-time error: now has not been assigned
+```
+```
+struct Date
+{
+    ...
+    public void AdvanceMonth()
+    {
+        this.month++;
+        if (this.month == Month.December + 1)
+        {
+            this.month = Month.January;
+            this.year++;
+        }
+    }
+}
+```
+```
+static void doWork()
+{
+    ...
+    Date weddingAnniversaryCopy = weddingAnniversary;
+
+    Console.WriteLine($"Value of copy is {weddingAnniversaryCopy}");
+}
+```
+```
+static void doWork()
+{
+    ...
+    weddingAnniversary.AdvanceMonth();
+    Console.WriteLine($"New value of weddingAnniversary is {weddingAnniversary}");
+    Console.WriteLine($"Value of copy is still {weddingAnniversaryCopy}");
+}
+```
+```
+July 4 2015
+Value of copy is July 4 2015
+New value of weddingAnniversary is August 4 2015
+Value of copy is still July 4 2015
+
+July 4 2015
+Value of copy is July 4 2015
+New value of weddingAnniversary is August 4 2015
+Value of copy is still August 4 2015
+```
+```
+int[] pins; // Personal Identification Numbers
+```
+```
+int size = int.Parse(Console.ReadLine());
+int[] pins = new int[size];
+```
+```
+int[] pins = new int[4]{ 9, 3, 7, 2 };
+```
+```
+Random r = new Random();
+int[] pins = new int[4]{ r.Next() % 10, r.Next() % 10,
+    r.Next() % 10, r.Next() % 10 };
+```
+```
+int[] pins = new int[3]{ 9, 3, 7, 2 }; // compile-time error
+int[] pins = new int[4]{ 9, 3, 7 };      // compile-time error
+int[] pins = new int[4]{ 9, 3, 7, 2 }; // OK
+```
+```
+Time[] schedule = { new Time(12,30), new Time(5,30) };
+```
+```
+var names = new[]{"John", "Diana", "James", "Francesca"};
+```
+```
+var bad = new[]{"John", "Diana", 99, 100};
+```
+```
+var numbers = new[]{1, 2, 3.5, 99.999};
+```
+```
+var names = new[] { new { Name = "John", Age = 50 },
+    new { Name = "Diana", Age = 50 },
+    new { Name = "James", Age = 23 },
+    new { Name = "Francesca", Age = 21 } };
+```
+```
+try
+{
+    int[] pins = { 9, 3, 7, 2 };
+    Console.WriteLine(pins[4]); // error, the 4th and last element is at index 3
+}
+catch (IndexOutOfRangeException ex)
+{
+    ...
+}
+```
+```
+int[] pins = { 9, 3, 7, 2 };
+for (int index = 0; index < pins.Length; index++)
+{
+    int pin = pins[index];
+    Console.WriteLine(pin);
+}
+```
+```
+var names = new[] { new { Name = "John", Age = 50 },
+                new { Name = "Diana", Age = 50 },
+                new { Name = "James", Age = 23 },
+                new { Name = "Francesca", Age = 21 } };
+foreach (var familyMember in names)
+{
+    Console.WriteLine($"Name: {familyMember.Name}, Age: {familyMember.Age}");
+}
+```
+```
+public void ProcessData(int[] data)
+{
+    foreach (int i in data)
+    {
+        ...
+    }
+}
+```
+```
+public int[] ReadData()
+{
+    Console.WriteLine("How many elements?");
+    string reply = Console.ReadLine();
+    int numElements = int.Parse(reply);
+
+    int[] data = new int[numElements];
+    for (int i = 0; i < numElements; i++)
+    {
+        Console.WriteLine($"Enter data for element {i}");
+        reply = Console.ReadLine();
+        int elementData = int.Parse(reply);
+        data[i] = elementData;
+    }
+    return data;
+}
+```
+```
+static void Main(string[] args)
+{
+    ...
+}
+```
+```
+static void Main(string[] args)
+{
+    foreach (string filename in args)
+    {
+        ProcessFile(filename);
+    }
+}
+```

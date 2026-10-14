@@ -1,0 +1,4 @@
+```
+Black.Hole();
+// converted to Black.Hole(new object[0]);
+```

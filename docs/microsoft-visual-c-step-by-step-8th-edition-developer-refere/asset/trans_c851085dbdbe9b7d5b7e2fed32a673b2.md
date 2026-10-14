@@ -1,0 +1,475 @@
+
+
+```
+struct Hour
+{
+    public Hour(int initialValue)
+    {
+        this.value = initialValue;
+    }
+    public static Hour operator +(Hour lhs, Hour rhs)
+    {
+        return new Hour(lhs.value + rhs.value);
+    }
+    ...
+    private int value;
+}
+```
+
+```
+Hour Example(Hour a, Hour b)
+{
+    return Hour.operator +(a,b); // pseudocode
+}
+```
+
+```
+struct Hour
+{
+    public Hour(int initialValue)
+    {
+        this.value = initialValue;
+    }
+    ...
+    public static Hour operator +(Hour lhs, Hour rhs)
+    {
+        return new Hour(lhs.value + rhs.value);
+    }
+
+    public static Hour operator +(Hour lhs, int rhs)
+    {
+        return lhs + new Hour(rhs);
+    }
+    ...
+    private int value;
+}
+```
+
+```
+int a = ...;
+Hour b = ...;
+Hour sum = a + b; // compile-time error
+```
+
+```
+struct Hour
+{
+    public Hour(int initialValue)
+    {
+        this.value = initialValue;
+    }
+    ...
+    public static Hour operator +(Hour lhs, int rhs)
+    {
+        return lhs + new Hour(rhs);
+    }
+
+    public static Hour operator +(int lhs, Hour rhs)
+    {
+        return new Hour(lhs) + rhs;
+    }
+    ...
+    private int value;
+}
+```
+
+```
+public static Hour operator +(Hour lhs, int rhs)
+{
+    ...
+}
+```
+
+```
+public static Hour Add(Hour lhs, int rhs)
+{
+    ...
+}
+```
+
+```
+struct Hour
+{
+    ...
+    public static Hour operator ++(Hour arg)
+    {
+        arg.value++;
+        return arg;
+    }
+    ...
+    private int value;
+}
+```
+
+```
+Hour now = new Hour(9);
+Hour postfix = now;
+now = Hour.operator ++(now); // pseudocode, not valid C#
+```
+
+```
+Hour now = new Hour(9);
+now = Hour.operator ++(now); // pseudocode, not valid C#
+Hour prefix = now;
+```
+
+```
+Hour now = new Hour(9);
+Hour postfix = now;
+now = Hour.operator ++(now); // pseudocode, not valid C#
+```
+
+```
+class Hour
+{
+    public Hour(int initialValue)
+    {
+        this.value = initialValue;
+    }
+    ...
+    public static Hour operator ++(Hour arg)
+    {
+        return new Hour(arg.value + 1);
+    }
+    ...
+    private int value;
+}
+```
+
+```
+struct Hour
+{
+    public Hour(int initialValue)
+    {
+        this.value = initialValue;
+    }
+    ...
+    public static bool operator ==(Hour lhs, Hour rhs)
+    {
+        return lhs.value == rhs.value;
+    }
+
+    public static bool operator !=(Hour lhs, Hour rhs)
+    {
+        return lhs.value != rhs.value;
+    }
+    ...
+    private int value;
+}
+```
+
+```
+class Complex
+{
+    public int Real { get; set; }
+    public int Imaginary { get; set; }
+}
+```
+
+```
+class Complex
+{
+    ...
+    public Complex (int real, int imaginary)
+    {
+        this.Real = real;
+        this.Imaginary = imaginary;
+    }
+}
+```
+
+```
+class Complex
+{
+    ...
+    public override string ToString()
+    {
+        return $"{this.Real} + {this.Imaginary}i";
+    }
+}
+```
+
+```
+class Complex
+{
+    ...
+    public static Complex operator +(Complex lhs, Complex rhs)
+    {
+        return new Complex(lhs.Real + rhs.Real, lhs.Imaginary + rhs.Imaginary);
+    }
+}
+```
+
+```
+class Complex
+{
+    ...
+    public static Complex operator -(Complex lhs, Complex rhs)
+    {
+        return new Complex(lhs.Real - rhs.Real, lhs.Imaginary - rhs.Imaginary);
+    }
+}
+```
+
+```
+class Complex
+{
+    ...
+    public static Complex operator *(Complex lhs, Complex rhs)
+    {
+        return new Complex(lhs.Real * rhs.Real - lhs.Imaginary * rhs.Imaginary,
+            lhs.Imaginary * rhs.Real + lhs.Real * rhs.Imaginary);
+    }
+
+    public static Complex operator /(Complex lhs, Complex rhs)
+    {
+        int realElement = (lhs.Real * rhs.Real + lhs.Imaginary * rhs.Imaginary) /
+            (rhs.Real * rhs.Real + rhs.Imaginary * rhs.Imaginary);
+
+        int imaginaryElement = (lhs.Imaginary * rhs.Real - lhs.Real * rhs.Imaginary) /
+            (rhs.Real * rhs.Real + rhs.Imaginary * rhs.Imaginary);
+
+        return new Complex(realElement, imaginaryElement);
+    }
+}
+```
+
+```
+static void doWork()
+{
+    Complex first = new Complex(10, 4);
+    Complex second = new Complex(5, 2);
+
+    Console.WriteLine($"first is {first}");
+    Console.WriteLine($"second is {second}");
+
+    Complex temp = first + second;
+    Console.WriteLine($"Add: result is {temp}");
+
+    temp = first - second;
+    Console.WriteLine($"Subtract: result is {temp}");
+
+    temp = first * second;
+    Console.WriteLine($"Multiply: result is {temp}");
+
+    temp = first / second;
+    Console.WriteLine($"Divide: result is {temp}");
+}
+```
+
+```
+class Complex
+{
+    ...
+    public static bool operator ==(Complex lhs, Complex rhs)
+    {
+        return lhs.Equals(rhs);
+    }
+
+    public static bool operator !=(Complex lhs, Complex rhs)
+    {
+        return !(lhs.Equals(rhs));
+    }
+}
+```
+
+'ComplexNumbers.Complex' defines operator == or operator != but does not override Object.Equals(object o)
+'ComplexNumbers.Complex' defines operator == or operator != but does not override Object.GetHashCode()
+
+```
+class Complex
+{
+    ...
+    public override bool Equals(Object obj)
+    {
+        if (obj is Complex)
+        {
+            Complex compare = (Complex)obj;
+            return (this.Real == compare.Real) &&
+                (this.Imaginary == compare.Imaginary);
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+```
+
+```
+public override bool Equals(Object obj)
+{
+    Complex compare = obj as Complex;
+    if (compare != null)
+    {
+        return (this.Real == compare.Real) &&
+               (this.Imaginary == compare.Imaginary);
+    }
+    else
+    {
+        return false;
+    }
+}
+```
+
+```
+Class Complex
+{
+    ...
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
+}
+```
+
+```
+static void doWork()
+{
+    ...
+    if (temp == first)
+    {
+        Console.WriteLine("Comparison: temp == first");
+    }
+    else
+    {
+        Console.WriteLine("Comparison: temp != first");
+    }
+
+    if (temp == temp)
+    {
+        Console.WriteLine("Comparison: temp == temp");
+    }
+    else
+    {
+        Console.WriteLine("Comparison: temp != temp");
+    }
+}
+```
+
+```
+class Example
+{
+    public static void MyDoubleMethod(double parameter)
+    {
+        ...
+    }
+}
+```
+
+```
+Example.MyDoubleMethod(42); // implicit int-to-double conversion
+```
+
+```
+class Example
+{
+    public static void MyIntMethod(int parameter)
+    {
+        ...
+    }
+}
+...
+Example.MyIntMethod(42.0); // compile-time error
+```
+
+```
+Example.MyIntMethod((int)42.0);
+```
+
+```
+struct Hour
+{
+    ...
+    public static implicit operator int (Hour from)
+    {
+        return from.value;
+    }
+
+    private int value;
+}
+```
+
+```
+class Example
+{
+    public static void MyOtherMethod(int parameter) { ... }
+    public static void Main()
+    {
+        Hour lunch = new Hour(12);
+        Example.MyOtherMethod(lunch); // implicit Hour to int conversion
+    }
+}
+```
+
+```
+Example.MyOtherMethod((int)lunch); // explicit Hour to int conversion
+```
+
+```
+struct Hour
+{
+    public Hour(int initialValue)
+    {
+        this.value = initialValue;
+    }
+
+    public static Hour operator +(Hour lhs, Hour rhs)
+    {
+        return new Hour(lhs.value + rhs.value);
+    }
+
+    public static implicit operator Hour (int from)
+    {
+        return new Hour (from);
+    }
+    ...
+    private int value;
+}
+```
+
+```
+void Example(Hour a, int b)
+{
+    Hour eg1 = a + b; // b converted to an Hour
+    Hour eg2 = b + a; // b converted to an Hour
+}
+```
+
+```
+class Complex
+{
+    ...
+    public Complex(int real)
+    {
+        this.Real = real;
+        this.Imaginary = 0;
+    }
+    ...
+}
+```
+
+```
+class Complex
+{
+    ...
+    public static implicit operator Complex(int from)
+    {
+        return new Complex(from);
+    }
+    ...
+}
+```
+
+```
+class Complex
+{
+    ...
+    public static explicit operator int(Complex from)
+    {
+        return from.Real;
+    }
+    ...
+}
+```
+

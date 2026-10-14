@@ -1,0 +1,8 @@
+```
+try
+{
+    await generateGraphDataAsync(data, 0, pixelWidth / 2, token);
+    duration.Text = $"Duration (ms): {watch.ElapsedMilliseconds}";
+}
+...
+```

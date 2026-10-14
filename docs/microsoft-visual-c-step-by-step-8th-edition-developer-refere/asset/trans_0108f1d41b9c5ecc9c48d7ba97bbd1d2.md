@@ -1,0 +1,138 @@
+
+
+object in the delegate, the application can subsequently invoke the method through the delegate, like this:
+
+```
+performCalculationDelegate();
+```
+
+这看起来像一个普通的函数调用；如果你不知道其他情况，它看起来像是你实际上正在运行一个名为 *performCalculationDelegate* 的方法。然而，通用语言运行时（CLR）知道这是一个委托，因此它会检索委托引用的方法并运行该方法。稍后，你可以更改委托引用的方法，因此调用委托的语句每次执行时可能实际上运行不同的 方法。此外，一个委托可以同时引用多个方法（可将其视为方法引用的集合），并且当你调用委托时，它引用的所有方法都将运行。
+
+## Note
+
+如果你熟悉 C++，委托类似于函数指针。然而，与函数指针不同，委托是完全类型安全的。你只能让委托引用与委托签名匹配的方法，并且不能调用不引用有效方法的委托。
+
+## Examples of delegates in the .NET Framework class library
+
+Microsoft .NET Framework 类库对其许多类型大量使用委托，其中两个例子在第 18 章“使用集合”中：*List<T>* 类的 *Find* 方法和 *Exists* 方法。如果你还记得，这些方法会遍历 *List<T>* 集合，要么返回匹配项，要么测试是否存在匹配项。当 *List<T>* 类的设计者在实现它时，他们对在你的应用程序代码中什么才构成匹配完全没有任何概念，因此他们让你通过提供自己的代码形式谓词来定义它。谓词实际上只是一个恰好返回布尔值的委托。
+
+以下代码应有助于提醒你如何使用 *Find* 方法：
+
+Click here to view code image
+
+```
+struct Person
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+...
+List<Person> personnel = new List<Person>()
+```
+
+```
+{
+    new Person() { ID = 1, Name = "John", Age = 47 },
+    new Person() { ID = 2, Name = "Sid", Age = 28 },
+    new Person() { ID = 3, Name = "Fred", Age = 34 },
+    new Person() { ID = 4, Name = "Paul", Age = 22 },
+};
+...
+// Find the member of the list that has an ID of 3
+Person match = personnel.Find(p => p.ID == 3);
+```
+
+*List<T>* 类公开的其他使用委托执行其操作的示例方法有 Average、Max、Min、Count 和 Sum。这些方法将 Func 委托作为参数。Func 委托引用返回一个值的方法（一个函数）。在以下示例中，Average 方法用于计算 personnel 集合中项目的平均年龄（Func<T> 委托仅返回集合中每个项目的 Age 字段的值），Max 方法用于确定具有最高 ID 的项目，而 Count 方法计算年龄在 30 到 39 之间（含）的项目数量。
+
+Click here to view code image
+
+```
+double averageAge = personnel.Average(p => p.Age);
+Console.WriteLine($"Average age is {averageAge}");
+...
+int id = personnel.Max(p => p.ID);
+Console.WriteLine($"Person with highest ID is {id}");
+...
+int thirties = personnel.Count(p => p.Age >= 30 && p.Age <= 39);
+Console.WriteLine($"Number of personnel in their thirties is {thirties}");
+```
+
+此代码生成以下输出：
+
+Click here to view code image
+
+```
+Average age is 32.75
+Person with highest ID is 4
+Number of personnel in their thirties is 1
+```
+
+你将在本书的其余部分遇到这些和其他委托类型被 .NET Framework 类库使用的许多示例。你也可以定义自己的委托。充分了解何时以及如何想要这样做的最好方法就是亲眼看到它们在实际运行中，因此接下来你将通过一个示例进行练习。
+
+## The Func<T, ...> and Action<T, ...> delegate types
+
+Average、Max、Count 以及 *List<T>* 类的其他方法所接受的参数实际上是一个泛型 Func<T, TResult> 委托；类型参数指的是传递给委托的参数类型和返回值的类型。对于文本中所示的 *List<Person>* 类的 Average、Max 和 Count 方法，第一个类型参数 T 是列表中的数据类型（Person 结构体），而 TResult 类型参数则由委托使用上下文决定。在以下示例中，TResult 的类型为 int，因为 Count 方法返回的值应为整数：
+
+Click here to view code image
+
+```
+int thirties = personnel.Count(p => p.Age >= 30 && p.Age <= 39);
+```
+
+因此，在此示例中，Count 方法期望的委托类型为 Func<Person, int>。
+
+这点可能看起来有些学术化，因为编译器会根据 *List<T>* 的类型自动生成委托，但值得熟悉这种惯用法，因为它在 .NET Framework 类库中反复出现。事实上，System 命名空间定义了一整个 Func 委托类型族，从不带参数且返回结果的 Func<TResult>，到接受 16 个参数的 Func<T1, T2, T3, T4, ..., T16, TResult>。如果你发现自己正在创建一种匹配此模式的自定义委托类型，应考虑改用合适的 Func 委托类型。你将在第 21 章“使用查询表达式查询内存数据”中再次遇到 Func 委托类型。
+
+除了 Func 之外，System 命名空间还定义了一系列 Action 委托类型。Action 委托用于引用执行操作而不是返回值的方法（一个 void 方法）。同样，提供了一系列 Action 委托类型，从指定接受单个参数的委托的 Action<T> 到 Action<T1, T2, T3, T4, ..., T16>。
+
+## The automated factory scenario
+
+假设你正在编写自动化工厂的控制系统。工厂包含大量不同的机器，每台机器在工厂制造的制品生产中执行不同的任务——成形和折叠金属板、焊接板材、喷漆板材等等。每台机器都由专业供应商建造和安装。机器都由计算机控制，每个供应商都提供了一组可用于控制其机器的函数。你的任务是将机器使用的不同系统集成到单一控制程序中。你决定集中关注的一个方面是提供一种快速关闭所有机器的手段，如果需要的话！
+
+每台机器都有其独特的计算机控制过程（和函数）用于安全关闭，如下所述：
+
+Click here to view code image
+
+```
+StopFolding();    // Folding and shaping machine
+FinishWelding();  // Welding machine
+PaintOff();       // Painting machine
+```
+
+## Implementing the factory control system without using delegates
+
+在控制程序中实现关闭功能的一种简单方法是如下所示：
+
+Click here to view code image
+
+```
+class Controller
+{
+    // Fields representing the different machines
+    private FoldingMachine folder;
+    private WeldingMachine welder;
+    private PaintingMachine painter;
+    ...
+    public void ShutDown()
+    {
+        folder.StopFolding();
+        welder.FinishWelding();
+        painter.PaintOff();
+    }
+    ...
+}
+```
+
+虽然这种方法可行，但它并不是非常可扩展或灵活。如果工厂购买了新机器，你必须修改此代码；Controller 类和用于管理机器的代码紧密耦合。
+
+## Implementing the factory by using a delegate
+
+尽管每个方法的名称不同，但它们都有相同的“形状”：它们不接受参数，也不返回值。（你稍后会考虑如果情况并非如此会发生什么，所以请耐心。）因此，每个方法的通用格式如下：
+
+```
+void methodName();
+```
+
+这就是委托可以派上用场的地方。你可以使用与此形状匹配的委托来引用任何机器关机方法。你声明一个委托
+

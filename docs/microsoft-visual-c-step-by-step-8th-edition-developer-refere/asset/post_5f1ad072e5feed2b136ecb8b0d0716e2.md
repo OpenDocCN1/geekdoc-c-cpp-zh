@@ -1,0 +1,346 @@
+
+```
+public ViewModel()
+{
+    ...
+    this.AddCustomer = new Command(this.Add, ...);
+    this.EditCustomer = new Command(this.Edit,
+        () => { return this.CanBrowse; });
+    ...
+}
+```
+
+```
+// Discard changes made while in Adding or Editing mode
+// and return the form to Browsing mode
+private void Discard()
+{
+    // If the user was adding a new customer, then remove it
+    if (this.IsAdding)
+    {
+        this.customers.Remove(this.Current);
+        this.OnPropertyChanged(nameof(Current));
+    }
+
+    // If the user was editing an existing customer,
+    // then restore the saved details
+    if (this.IsEditing)
+    {
+        this.CopyCustomer(this.oldCustomer, this.Current);
+    }
+
+    this.IsBrowsing = true;
+}
+```
+
+```
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+    public Command EditCustomer { get; private set; }
+    public Command DiscardChanges { get; private set; }
+    ...
+    public ViewModel()
+    {
+        ...
+        this.EditCustomer = new Command(this.Edit, ...);
+        this.DiscardChanges = new Command(this.Discard,
+            () => { return this.CanSaveOrDiscardChanges; });
+    }
+    ...
+}
+```
+
+```
+// Save the new or updated customer back to the web service
+// and return the form to Browsing mode
+private async void SaveAsync()
+{
+    // Validate the details of the Customer
+    if (this.ValidateCustomer(this.Current))
+    {
+        // Only continue if the customer details are valid
+        this.IsBusy = true;
+        try
+        {
+            // Convert the current customer into HTTP request format with a JSON payload
+            var serializedData = JsonConvert.SerializeObject(this.Current);
+            StringContent content =
+                new StringContent(serializedData, Encoding.UTF8, "text/json");
+
+            // If the user is adding a new customer,
+            // send an HTTP POST request to the web service with the details
+            if (this.IsAdding)
+            {
+                var response =
+                    await client.PostAsync("api/customers", content);
+                if (response.IsSuccessStatusCode)
+                {
+                    // TODO: Display the details of the new customer
+                }
+                // TODO: Handle POST failure
+            }
+            // The user must be editing an existing customer,
+            // so send the details by using a PUT request
+            else
+            {
+                string path = $"api/customers/{this.Current.CustomerID}";
+
+                var response = await client.PutAsync(path, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    this.IsEditing = false;
+                    this.IsBrowsing = true;
+                }
+                // TODO: Handle PUT failure
+            }
+        }
+        catch (Exception e)
+        {
+            // TODO: Handle exceptions
+        }
+        finally
+        {
+            this.IsBusy = false;
+        }
+    }
+}
+```
+
+```
+if (response.IsSuccessStatusCode)
+{
+    // Get the ID of the newly created customer and display it
+    Uri customerUri = response.Headers.Location;
+    var newCust = await this.client.GetAsync(customerUri);
+    if (newCust.IsSuccessStatusCode)
+    {
+        var customerData = await newCust.Content.ReadAsStringAsync();
+        this.CopyCustomer(
+            JsonConvert.DeserializeObject<Customer>(customerData), this.Current);
+        this.OnPropertyChanged(nameof(Current));
+        this.IsAdding = false;
+        this.IsBrowsing = true;
+    }
+    else
+    {
+        // TODO: Handle GET failure
+    }
+}
+```
+
+```
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+    public Command DiscardChanges { get; private set; }
+    public Command SaveChanges { get; private set; }
+    ...
+    public ViewModel()
+    {
+        ...
+        this.DiscardChanges = new Command(this.Discard, ...);
+        this.SaveChanges = new Command(this.SaveAsync,
+            () => { return this.CanSaveOrDiscardChanges; });
+        ...
+    }
+    ...
+}
+```
+
+```
+// POST api/Customers
+[ResponseType(typeof(Customer))]
+public async Task<IHttpActionResult> PostCustomer(Customer customer)
+{
+    if (!ModelState.IsValid)
+    {
+        ...
+    }
+
+    customer.ModifiedDate = DateTime.Now;
+    customer.rowguid = Guid.NewGuid();
+    db.Customers.Add(customer);
+    await db.SaveChangesAsync();
+    ...
+}
+```
+
+```
+// PUT api/Customers/5
+[ResponseType(typeof(void))]
+public async Task<IHttpActionResult> PutCustomer(int id, Customer customer)
+{
+    ...
+    customer.ModifiedDate = DateTime.Now;
+    db.Entry(customer).State = EntityState.Modified;
+    ...
+}
+```
+
+```
+private string _lastError = null;
+public string LastError
+{
+    get { return this._lastError; }
+    private set
+    {
+        this._lastError = value;
+        this.OnPropertyChanged(nameof(LastError));
+    }
+}
+```
+
+```
+catch (Exception e)
+{
+    // TODO: Handle exceptions
+}
+```
+
+```
+catch (Exception e)
+{
+    this.LastError = e.Message;
+}
+```
+
+```
+else
+{
+    this.LastError = response.ReasonPhrase;
+}
+```
+
+```
+if (response.IsSuccessStatusCode)
+{
+    ...
+    this.IsAtEnd = (this.customers.Count == 0);
+    this.LastError = String.Empty;
+}
+else
+{
+    this.LastError = response.ReasonPhrase;
+}
+```
+
+```
+private bool ValidateCustomer(Customer customer)
+{
+    ...
+    this.LastError = validationErrors;
+    return !hasErrors;
+}
+```
+
+```
+private async void SaveAsync()
+{
+    // Validate the details of the Customer
+    if (this.ValidateCustomer(this.Current))
+    {
+        ...
+        try
+        {
+            ...
+            // If the user is adding a new customer,
+            // send an HTTP POST request to the web service with the details
+            if (this.IsAdding)
+            {
+                ...
+                if (response.IsSuccessStatusCode)
+                {
+                    ...
+                    if (newCust.IsSuccessStatusCode)
+                    {
+                        ...
+                        this.IsBrowsing = true;
+                        this.LastError = String.Empty;
+                    }
+                    else
+                    {
+                        // TODO: Handle GET failure
+                        this.LastError = response.ReasonPhrase;
+                    }
+                }
+                // TODO: Handle POST failure
+                else
+                {
+                    this.LastError = response.ReasonPhrase;
+                }
+            }
+            // The user must be editing an existing customer,
+            // so send the details by using a PUT request
+            else
+            {
+                ...
+                if (response.IsSuccessStatusCode)
+                {
+                    this.IsEditing = false;
+                    this.IsBrowsing = true;
+                    this.LastError = String.Empty;
+                }
+                // TODO: Handle PUT failure
+                else
+                {
+                    this.LastError = response.ReasonPhrase;
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            // TODO: Handle exceptions
+            this.LastError = e.Message;
+        }
+        finally
+        {
+            this.IsBusy = false;
+        }
+    }
+}
+```
+
+```
+private void Discard()
+{
+    ...
+    this.LastError = String.Empty;
+}
+```
+
+```
+<Page
+    x:Class="Customers.MainPage"
+    ...>
+
+    <Grid Style="{StaticResource GridStyle}">
+        ...
+        <Grid x:Name="customersTabularView" ...>
+            ...
+            <Grid Grid.Row="2">
+                ...
+                <TextBlock Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="7" Style="{StaticResource ErrorMessageStyle}"/>
+                </Grid>
+            </Grid>
+            <Grid x:Name="customersColumnarView" Margin="20,10,20,110" ...>
+                ...
+                <Grid Grid.Row="1">
+                    ...
+                    <TextBlock Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ErrorMessageStyle}"/>
+                    </Grid>
+                </Grid>
+            ...
+        </Grid>
+    ...
+</Page>
+```
+
+```
+...
+<TextBlock Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="7"
+Style="{StaticResource ErrorMessageStyle}" Text="{Binding LastError}"/>
+...
+<TextBlock Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
+Style="{StaticResource ErrorMessageStyle}" Text="{Binding LastError}"/>
+```

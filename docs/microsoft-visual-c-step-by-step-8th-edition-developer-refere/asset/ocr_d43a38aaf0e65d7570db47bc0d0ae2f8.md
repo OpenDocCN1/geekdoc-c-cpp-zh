@@ -1,0 +1,13 @@
+scale very well; the program will use the number of threads you explicitly create, and the operating system will schedule only that number of threads. This can lead to overloading and poor response time if the number of threads greatly exceeds the number of available processors, or to inefficiency and poor throughput if the number of threads is less than the number of processors.
+
+WinRT optimizes the number of threads required to implement a set of concurrent tasks and schedules them efficiently according to the number of available processors. It implements a queuing mechanism to distribute the workload across a set of threads allocated to a thread pool (implemented by using a ThreadPool object). When a program creates a Task object, the task is added to a global queue. When a thread becomes available, the task is removed from the global queue and is executed by that thread. The ThreadPool class implements a number of optimizations and uses a work-stealing algorithm to ensure that threads are scheduled efficiently.
+
+![](bbox=[0.1, 0.38, 0.16, 0.42])
+
+# Note
+
+The ThreadPool class was available in previous editions of the .NET Framework, but it was enhanced significantly in .NET Framework 4.0 to support Tasks.
+
+You should note that the number of threads created to handle your tasks is not necessarily the same as the number of processors. Depending on the nature of the workload, one or more processors might be busy performing high-priority work for other applications and services. Consequently, the optimal number of threads for your application might be less than the number of processors in the machine. Alternatively, one or more threads in an application might be waiting for long-running memory access, I/O, or network operation to complete, leaving the corresponding processors free. In this case, the optimal number of threads might be more than the number of available processors. WinRT follows an iterative strategy, known as a hill-climbing algorithm, to dynamically determine the ideal number of threads for the current workload.
+
+The important point is that all you have to do in your code is divide, or partition, your application into tasks that can be run in parallel. WinRT takes responsibility for creating the appropriate number of threads based on the processor architecture and workload of your computer, associating your tasks with these threads and arranging for them to be run efficiently. It does not matter if you partition your work into too many tasks because WinRT will attempt to run only as many concurrent threads as is practical; in fact, you are encouraged to overpartition your work because this will help ensure that your application scales if you move it to a computer that has more processors available.

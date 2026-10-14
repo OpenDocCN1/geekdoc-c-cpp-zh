@@ -1,0 +1,7 @@
+```
+tokenSource = new CancellationTokenSource();
+CancellationToken token = tokenSource.Token;
+...
+Task first = Task.Run(() => generateGraphData(data, 0, pixelWidth / 4, token),
+token);
+```

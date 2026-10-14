@@ -1,0 +1,332 @@
+
+int[] pins = { 9, 3, 7, 2 };
+int[] alias = pins; // alias and pins refer to the same array instance
+
+int[] pins = { 9, 3, 7, 2 };
+int[] copy = new int[pins.Length];
+for (int i = 0; i < pins.Length; i++)
+{
+    copy[i] = pins[i];
+}
+
+int[] pins = { 9, 3, 7, 2 };
+int[] copy = new int[pins.Length];
+pins.CopyTo(copy, 0);
+
+int[] pins = { 9, 3, 7, 2 };
+int[] copy = new int[pins.Length];
+Array.Copy(pins, copy, copy.Length);
+
+int[] pins = { 9, 3, 7, 2 };
+int[] copy = (int[])pins.Clone();
+
+items[2, 3] = 99;      // set the element at cell(2,3) to 99
+items[2, 4] = items [2,3];  // copy the element in cell(2, 3) to cell(2, 4)
+items[2, 4]++;             // increment the integer value at cell(2, 4)
+
+int[, ,] cube = new int[5, 5, 5];
+cube[1, 2, 1] = 101;
+cube[1, 2, 2] = cube[1, 2, 1] * 3;
+
+int[,] items = new int[4, 40];
+
+int[][] items = new int[4][];
+int[] columnForRow0 = new int[3];
+int[] columnForRow1 = new int[10];
+int[] columnForRow2 = new int[40];
+int[] columnForRow3 = new int[25];
+items[0] = columnForRow0;
+items[1] = columnForRow1;
+items[2] = columnForRow2;
+items[3] = columnForRow3;
+...
+
+enum Value { Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace }
+
+enum Suit { Clubs, Diamonds, Hearts, Spades }
+
+class PlayingCard
+{
+    private readonly Suit suit;
+    private readonly Value value;
+
+    public PlayingCard(Suit s, Value v)
+    {
+        this.suit = s;
+        this.value = v;
+    }
+
+    public override string ToString()
+    {
+        string result = $"{this.value} of {this.suit}";
+        return result;
+    }
+
+    public Suit CardSuit()
+    {
+        return this.suit;
+    }
+
+    public Value CardValue()
+    {
+        return this.value;
+    }
+}
+
+class Pack
+{
+    public const int NumSuits = 4;
+    public const int CardsPerSuit = 13;
+    private PlayingCard[,] cardPack;
+    private Random randomCardSelector = new Random();
+    ...
+}
+
+public Pack()
+{
+    this.cardPack = new PlayingCard[NumSuits, CardsPerSuit];
+}
+
+public Pack()
+{
+    this.cardPack = new PlayingCard[NumSuits, CardsPerSuit];
+    for (Suit suit = Suit.Clubs; suit <= Suit.Spades; suit++)
+    {
+        for (Value value = Value.Two; value <= Value.Ace; value++)
+        {
+            this.cardPack[(int)suit, (int)value] = new PlayingCard(suit, value);
+        }
+    }
+}
+
+public PlayingCard DealCardFromPack()
+{
+    Suit suit = (Suit)randomCardSelector.Next(NumSuits);
+}
+
+public PlayingCard DealCardFromPack()
+{
+    Suit suit = (Suit)randomCardSelector.Next(NumSuits);
+    while (this.IsSuitEmpty(suit))
+    {
+        suit = (Suit)randomCardSelector.Next(NumSuits);
+    }
+}
+
+public PlayingCard DealCardFromPack()
+{
+    ...
+    Value value = (Value)randomCardSelector.Next(CardsPerSuit);
+    while (this.IsCardAlreadyDealt(suit, value))
+    {
+        value = (Value)randomCardSelector.Next(CardsPerSuit);
+    }
+}
+
+public PlayingCard DealCardFromPack()
+{
+    ...
+    PlayingCard card = this.cardPack[(int)suit, (int)value];
+    this.cardPack[(int)suit, (int)value] = null;
+    return card;
+}
+
+private bool IsSuitEmpty(Suit suit)
+{
+    bool result = true;
+    for (Value value = Value.Two; value <= Value.Ace; value++)
+    {
+        if (!IsCardAlreadyDealt(suit, value))
+        {
+            result = false;
+            break;
+        }
+    }
+
+    return result;
+}
+
+private bool IsCardAlreadyDealt(Suit suit, Value value)
+    => (this.cardPack[(int)suit, (int)value] == null);
+
+class Hand
+{
+    public const int HandSize = 13;
+    private PlayingCard[] cards = new PlayingCard[HandSize];
+    private int playingCardCount = 0;
+    ...
+}
+
+public override string ToString()
+{
+    string result = "";
+    foreach (PlayingCard card in this.cards)
+    {
+        result += $"{card.ToString()}\n";
+    }
+
+    return result;
+}
+
+public void AddCardToHand(PlayingCard cardDealt)
+{
+    if (this.playingCardCount >= HandSize)
+    {
+        throw new ArgumentException("Too many cards");
+    }
+    this.cards[this.playingCardCount] = cardDealt;
+    this.playingCardCount++;
+}
+
+private void dealClick(object sender, RoutedEventArgs e)
+{
+    try
+    {
+        pack = new Pack();
+    }
+    catch (Exception ex)
+    {
+        ...
+    }
+}
+
+try
+{
+    pack = new Pack();
+
+    for (int handNum = 0; handNum < NumHands; handNum++)
+    {
+        hands[handNum] = new Hand();
+    }
+}
+catch (Exception ex)
+{
+    ...
+}
+
+try
+{
+    ...
+    for (int handNum = 0; handNum < NumHands; handNum++)
+    {
+        hands[handNum] = new Hand();
+        for (int numCards = 0; numCards < Hand.HandSize; numCards++)
+        {
+            PlayingCard cardDealt = pack.DealCardFromPack();
+            hands[handNum].AddCardToHand(cardDealt);
+        }
+    }
+}
+catch (Exception ex)
+{
+    ...
+}
+
+try
+{
+    ...
+    for (int handNum = 0; handNum < NumHands; handNum++)
+    {
+        ...
+    }
+
+    north.Text = hands[0].ToString();
+    south.Text = hands[1].ToString();
+    east.Text = hands[2].ToString();
+    west.Text = hands[3].ToString();
+}
+catch (Exception ex)
+{
+    ...
+}
+
+class Console
+{
+    public static void WriteLine(Int32 value)
+    public static void WriteLine(Double value)
+    public static void WriteLine(Decimal value)
+    public static void WriteLine(Boolean value)
+    public static void WriteLine(String value)
+    ...
+}
+
+class Util
+{
+    public static int Min(int[] paramList)
+    {
+        // Verify that the caller has provided at least one parameter.
+        // If not, throw an ArgumentException exception - it is not possible
+        // to find the smallest value in an empty list.
+        if (paramList == null || paramList.Length == 0)
+        {
+            throw new ArgumentException("Util.Min: not enough arguments");
+        }
+
+        // Set the current minimum value found in the list of parameters to the first item
+        int currentMin = paramList[0];
+
+        // Iterate through the list of parameters, searching to see whether any of them
+        // are smaller than the value held in currentMin
+        foreach (int i in paramList)
+        {
+            // If the loop finds an item that is smaller than the value held in
+            // currentMin, then set currentMin to this value
+            if (i < currentMin)
+            {
+                currentMin = i;
+            }
+        }
+
+        // At the end of the loop, currentMin holds the value of the smallest
+        // item in the list of parameters, so return this value.
+        return currentMin;
+    }
+}
+
+int min = Util.Min(new int[] {first, second, third});
+
+class Util
+{
+    public static int Min(params int[] paramList)
+    {
+        // code exactly as before
+    }
+}
+
+int min = Util.Min(first, second);
+
+int min = Util.Min(first, second, third);
+
+// compile-time error
+public static int Min(params int[,] table)
+...
+
+// compile-time error: duplicate declaration
+public static int Min(int[] paramList)
+...
+public static int Min(params int[] paramList)
+...
+
+// compile-time errors
+public static int Min(ref params int[] paramList)
+...
+public static int Min(out params int[] paramList)
+...
+
+// compile-time error
+public static int Min(params int[] paramList, int i)
+...
+
+public static int Min(int leftHandSide, int rightHandSide)
+...
+public static int Min(params int[] paramList)
+...
+
+class Black
+{
+    public static void Hole(params object[] paramList)
+    ...
+}
+
+Black.Hole();
+// converted to Black.Hole(new object[0]);
