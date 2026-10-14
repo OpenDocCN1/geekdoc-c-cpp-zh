@@ -1,0 +1,15 @@
+computer is available? Instant messaging with a librarian? It’s important to consider that what librarians find important is not necessarily what patrons find important.
+
+# TRAINING STAFF
+
+The library might face resistance early on from staff. Many people don’t like change, so to avoid resistance, it’s useful to get everyone on staff involved as early as possible. Another good idea is that when you survey your patrons, you can also survey your staff to find out who already understands the technology and wants to jump on board and who will need a little bit more help. Also, it helps to show, not tell. Basically, that means that it’s better to show a scene than to simply talk about what is happening. So, if you simply tell staff what the library wants to do, many might not see the necessity of an app, but if you show them the app and what it can do for the library, they’re more likely to get excited.
+
+How do you show? The best way is to carry out a survey on an iPod Touch or Android tablet. SurveyMonkey and other popular online surveys are great tools for collecting data, but actually placing a device in the hand of a librarian unfamiliar with such devices will help him or her become more comfortable with using the interface. These devices also are small, so they’re easy to store. And for surveying patrons, you can buy an iPod lock (e.g., the Targus Defcon Notebook/iPod Lock Combo costs $39.99) or lock an iPod to an unattended desk for patrons to fill out the survey.
+
+The iPod and Android tablets also use the same kind of interface as the iPhone, and there are plenty of survey apps that you can purchase for them; best of all they are relatively cheap (less than $200). The Samsung Galaxy and Dell Streak tablet have received a lot of media attention, but there are many other tablets available—there are many Android tablets available on eBay for less than $150.
+
+You can use Survey on the Spot (free for iPhone) or Askdroid and ODK Collect (free for Android) to create a survey and then have librarians use the app to ask patrons a series of questions. Or use Tally Counter (free for iPhone) or CodeArk Tally Counter (free for Android) to count the number of people using smartphones. More powerful (and detailed) tally counts are also available for a cost: Tallymander ($3.99 for iPhone) and Advanced Tally Counter Pro ($0.99 for Android) let users count several different stats at once (e.g., types of questions patrons ask at the reference desk).
+
+The results of the surveys, in most cases, won’t be as powerful or specific as those you would get from sites like SurveyMonkey, but that doesn’t matter; what matters is your letting people who don’t regularly use the device know what it is. Even though people might resist change, almost everyone loves to play with gadgets!
+
+Many times libraries implement technological innovations that don’t take off because the library staff members don’t promote them to patrons. But in surveying staff and patrons on an iPhone or tablet, even though you might not convert anyone to a smartphone user, you will at least give people a better understanding of their importance.

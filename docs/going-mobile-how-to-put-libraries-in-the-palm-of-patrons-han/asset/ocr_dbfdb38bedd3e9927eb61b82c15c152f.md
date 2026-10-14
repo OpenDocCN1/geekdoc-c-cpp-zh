@@ -1,0 +1,3 @@
+ones that provide rollover effects and other visually interesting elements—this is yet another reason to employ the CSS tool whenever possible.
+
+If you want to add graphical menus and other functionality to your mobile site, you’ll need to learn a bit about JavaScript, which is an ubiquitous web language. However, it is also complex and takes a qualified programmer to write it. Understanding how JavaScript works and what it offers, however, is the last step in determining how to put together your page.
