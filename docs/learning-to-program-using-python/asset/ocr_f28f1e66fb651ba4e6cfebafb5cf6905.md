@@ -1,0 +1,1 @@
+created with wxPython. It also includes wxGlade, so you can make quick GUIs without having to install wxGlade separately.

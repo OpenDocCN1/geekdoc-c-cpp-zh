@@ -1,0 +1,191 @@
+
+
+### E.2 温度转换
+
+```python
+fahr = (9.0/5.0)*celsius + 32
+return fahr
+
+#---Create table
+print "Celsius | Fahrenheit\n"  #header
+
+for temp_c in range (0, 101):
+    temp_f = fahrenheit(temp_c)
+    print temp_c, " | %.1f\n" % temp_f
+```
+
+列表 E.2 是一个简短且简单的程序，用于将华氏度转换为摄氏度。同样，这也是我编写的最早的程序之一。这个程序不像列表 D.1 那么复杂，但你可以看到它确实完成了任务。由于列表 E.1 已经向您展示了 GPL 信息的样子，所以我在本例中不再包含 GPL 信息。
+
+这个特定的程序不接受任何用户输入；它只是创建一个表格，列出从 0 到 100 摄氏度的数值。作为练习，你可能希望将其修改为接受用户输入，并仅显示一个温度转换值。
+
+### E.3 游戏角色属性生成器
+
+列表 E.3 展示了我编写的一个简短程序，用于为角色扮演游戏生成角色属性。它很直观，但我在下面添加了注释。
+
+#### 列表 E.3：属性生成器
+
+```python
+###############################
+#Attribute_generator.py
+#
+#Purpose:  Create the attributes for a character.
+#Author:  Cody Jackson
+#Date:  4/17/06
+#
+#Version: 2
+#Changes - changed attribute variables to
+dictionaries
+###############################
+
+import dice_roller #multiDie
+
+def setAttribute():
+    """Generate value for an attribute."""
+    
+    attrib = dice_roller.multiDie(2, 2)
+    return attrib
+
+def hitPoints(build, body_part = 3):
+    """Generate hit points for each body part."""
+    
+    if body_part == 1:    #head
+        hp = build
+    elif body_part == 2:    #torso
+        hp = build * 4
+    elif body_part == 3:    #arms & legs
+        hp = build * 2
+    return hp
+
+def makeAttrib():
+    #----Make dictionary of attributes
+    attrib_dict = {}
+    
+    #----Get values for core attributes
+    attrib_dict["str"] = setAttribute() # strength
+    attrib_dict["intel"] = setAttribute() # intelligence
+    attrib_dict["will"] = setAttribute() # willpower
+    attrib_dict["charisma"] = setAttribute()
+    attrib_dict["build"] = setAttribute()
+    attrib_dict["dex"] = setAttribute()    # dexterity
+    
+    #----Get values for secondary attributes
+    attrib_dict["mass"] = (attrib_dict.get("build") * 5) + 15 #kilograms
+    attrib_dict["throw"] = attrib_dict.get("str") * 2    #meters
+    attrib_dict["load"] = (attrib_dict.get("str")
+            + attrib_dict.get("build")) * 2   # kilograms
+    
+    return attrib_dict
+
+##Get build value from attribute dictionary to calculate hp
+attrs = makeAttrib()
+build = attrs.get("build")
+
+def makeHP(build):
+    #——Make dictionary of hit points
+    hp_dict = {}
+    
+    #——Get hit points
+    hp_dict["head"] = hitPoints(build, 1)
+    hp_dict["torso"] = hitPoints(build, 2)
+    hp_dict["larm"] = hitPoints(build)
+    hp_dict["larm"] = hitPoints(build)
+    hp_dict["rleg"] = hitPoints(build)
+    hp_dict["lleg"] = hitPoints(build)
+    
+    return hp_dict
+
+def test():
+    """Show test values."""
+    
+    attrs = makeAttrib()
+    build = attrs.get("build")
+    hp = makeHP(build)
+    print attrs
+    print hp
+
+if __name__ == "__main__":
+    test()
+```
+
+第 12 行导入了来自列表 E.1 的掷骰子程序。这可能是本程序中最重要的一项；如果没有掷骰子器，就无法得出任何结果。
+
+第 14 行是一个调用掷骰子模块并返回值的函数。该值将用作角色的体力或智力属性。
+
+第 20 行开始了一个函数，用于根据各个身体部位（例如头部、手臂、躯干等）生成角色的生命值。该函数对 *body_part* 使用了一个默认值；这样我就不必单独处理每一个身体部位了。
+
+第 31 行是一个存储每个属性的函数。使用字典将属性名称与其对应的值关联起来。每个属性都调用 **setAttribute()** 函数（第 14 行）来计算其值。当该函数执行完毕时，返回完整的字典。
+
+第 51 行展示了一个“块注释”，这是我用来描述相关代码块功能的注释。它类似于文档字符串，但会被 Python 解释器忽略。它仅仅是为了帮助程序员理解后续代码将执行的操作。块注释后的代码通过空白行与任何不相关的代码分隔开。
+
+第 55 行是一个将生命值放入字典的函数，并遵循上述 **makeAttrib()**（第 31 行）函数的模式。
+
+第 69 行是一个测试函数。当该程序单独被调用时（不属于另一个程序的一部分），例如从命令行调用，它会创建一个示例角色并打印数值，以表明程序运行正确。第 78 行包含了决定 **test()** 函数是否运行的命令。
+
+### E.4 基于文本的角色创建
+
+接下来的几页（列表 E.4）是我在上面的属性生成器之后不久编写的基于控制台（非图形界面）的角色创建程序。这是我当时基于电影 *《异形》* 中的殖民海军建立的游戏的基础。它并不完美，仅勉强达到实际使用的完整度，但它有几个用途：
+
+1.  它是面向对象的，展示了继承、“self”以及面向对象的许多其他特性在实践中是如何工作的。
+2.  它接受用户输入并输出数据，因此你可以看到输入/输出函数是如何工作的。
+3.  几乎使用了 Python 的所有主要特性，特别是列表和字典。
+4.  它至少在我看来文档注释相当完善，因此跟踪逻辑流程应该相对容易。
+
+我读过的许多教程书都没有一个深入整合语言多种特性的程序；你通常只能得到一堆小的、“一次性”的代码片段，它们只解释某个概念。读者通常只能自己摸索如何将所有内容组合在一起。
+
+我包含这个程序是因为它展示了 Python 语言的许多概念。如果直接运行“原样”代码，内置的测试函数允许用户创建一个角色。它不包含文件操作，但我留给读者一个挑战，即修改它以保存完整角色。它也不是用 Python 3.x 编写的，所以我无法保证如果你安装了该版本，它能正确运行。
+
+你会注意到 **test()** 函数中被“注释掉的”打印语句。以这种方式使用打印语句是确保代码按预期运行的一种好方法，通过显示程序内部的各种值来实现。
+
+#### 列表 E.4：非图形角色创建
+
+```python
+######################
+#BasicCharacter.py
+#
+#Purpose:  A revised version of the Marine
+# character using classes.
+#Author: Cody Jackson
+#Date: 6/16/06
+#
+# Copyright 2006 Cody Jackson
+#
+#Version 0.3
+#    Removed MOS subset categories; added values to
+#    MOS dictionary
+#  Added default MOS skills
+#  Added Tank Commander and APC Commander MOS's
+#  Combined separate Character and Marine class tests into one test method
+#  Added character initiative methods
+#Version 0.2.1
+#  Corrected Marine rank methods
+#Version 0.2
+#  Added Marine subclass
+#Version 0.1
+#  Initial build
+######################################################
+
+#TODO: make I/O operations (save to file)
+from dice_roller import multiDie
+
+class Character:
+    """Creation of a basic character type."""
+
+    #---Class attributes
+    default_attribs = {}
+
+    def __init__(self):
+        """Constructor to initialize each data member to zero."""
+
+        #---General info
+        self.name = ""
+        self.gender = ""
+        self.age = 0
+
+        #---Attribute info
+        self.attrib = 0
+        self.attrib_dict = self.default_attribs.copy()  #instance version
+        self.setAttribute("str")
+        self.setAttribute("intel")
+        self.setAttribute("build")
+```
+
