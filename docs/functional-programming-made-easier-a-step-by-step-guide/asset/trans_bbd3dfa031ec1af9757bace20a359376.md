@@ -1,0 +1,226 @@
+
+
+## 17.4. Either 的 Applicative 实例代码
+
+和往常一样，Type 定义先来：
+
+```
+data Either a b = Left a | Right b
+```
+
+然后我们推导 Eq：
+
+```
+data Either a b = Left a | Right b
+derive instance eqEither :: (Eq a, Eq b) => Eq (Either a b)
+```
+
+注意我们将 a 和 b 都约束为有 Eq 实例。
+
+然后是 Ord：
+
+```
+data Either a b = Left a | Right b
+derive instance eqEither :: (Eq a, Eq b) => Eq (Either a b)
+derive instance ordEither :: (Ord a, Ord b) => Ord (Either a b)
+```
+
+再次注意这些约束。
+
+接下来，我们推导 Functor：
+
+```
+data Either a b = Left a | Right b
+derive instance eqEither :: (Eq a, Eq b) => Eq (Either a b)
+derive instance ordEither :: (Ord a, Ord b) => Ord (Either a b)
+derive instance functorEither :: Functor (Either a)
+```
+
+注意我们对类型构造子 Either 部分应用了类型 a。这是因为 Functor 的类型参数的 Kind 是 Type -> Type，而 Either 的 Kind 是 Type -> Type -> Type。这意味着我们只能对 b 类型参数进行映射，即 Either 的 Right。
+
+接下来，我们推导 Generic：
+
+```
+data Either a b = Left a | Right b
+derive instance eqEither :: (Eq a, Eq b) => Eq (Either a b)
+derive instance ordEither :: (Ord a, Ord b) => Ord (Either a b)
+derive instance functorEither :: Functor (Either a)
+derive instance genericEither :: Generic (Either a b) _
+```
+
+现在我们可以为 `show` 编写实例：
+
+```
+instance showEither :: (Show a, Show b) => Show (Either a b) where
+  show = genericShow
+```
+
+注意 `a` 和 `b` 都被约束为有 `Show` 实例。
+
+接下来，我们编写 `Bifunctor` 实例：
+
+```
+import Data.Bifunctor (class Bifunctor) ❶
+
+instance bifunctorEither :: Bifunctor Either where
+  bimap f _ (Left x)  = Left $ f x
+  bimap _ g (Right y) = Right $ g y
+```
+
+❶ 我们需要导入 `Bifunctor` 类。
+
+现在我们将一行一行地编写 `Apply` 实例。首先是实例定义：
+
+```
+instance applyEither :: Apply (Either a) where
+```
+
+注意我们这里指定的是 `Either a` 而不是 `Either`，原因与在 `Functor` 中相同。
+
+接下来我们编写 `Right` 情况：
+
+```
+instance applyEither :: Apply (Either a) where
+  apply (Right f) x = f <$> x
+```
+
+就像我们对 `Maybe` 所做的那样，我们只解包第一个参数，然后利用 `Functor` 实例中的 `map`。
+
+最后，我们编写 `Left` 情况：
+
+```
+instance applyEither :: Apply (Either a) where
+  apply (Right f) x = f <$> x
+  apply (Left y)  _ = Left y
+```
+
+这里应用了短路。我们在遇到 `Left` 时忽略第二个参数。这会产生一旦遇到第一个 `Left` 后就忽略所有后续 `Right` 和 `Left` 的效果。这与我们在遇到 `Nothing` 时对 `Maybe` 实现的短路行为相同。
+
+需要指出的一点区别是，对于 `Nothing` 来说，选择哪一个并不重要，因为它们都相同。但对于 `Either` 来说并非如此，因此我们优先选择第一个 `Left`。
+
+从技术上讲，我们也优先选择第一个 `Nothing`，只是我们在处理 `Maybe` 时没有考虑这一点，但在处理 `Either` 时我们需要考虑。
+
+最后，让我们一行一行地编写 Applicative：
+
+```
+instance applicativeEither :: Applicative (Either a) where
+```
+
+再次注意 `Either a`，原因与之前相同。
+
+我们将使用与在 `Maybe` 中使用 `Just` 作为 `pure` 的值相同的推理，使用 `Right`，因为 `Left` 会湮灭纯值：
+
+```
+instance applicativeEither :: Applicative (Either a) where
+  pure = Right
+```
+
+运行测试看看我们的新代码表现如何。
+
+它没有通过：
+
+```
+[error] Some of your project files import modules from packages that are not
+in the direct dependencies of your project.
+To fix this error add the following packages to the list of dependencies in
+your config:
+- bifunctors
+```
+
+将 `bifunctors` 添加到你的 `spago.dhall` 中，然后再试一次。
+
+## 17.5. Validation
+
+在上一章中，我们看到可以使用 `<$>` 来调用一个函数来在验证时构造全名：
+
+```
+fullNameEither :: Maybe String -> Maybe String -> Maybe String
+                 -> Either String String
+fullNameEither first middle last =
+  fullName <$> (first `errIfMissing` "First name must exist")
+           <*> (middle `errIfMissing` "Middle name must exist")
+           <*> (last `errIfMissing` "Last name must exist")
+```
+
+由于这返回的是一个 `Either`，它具有显式的短路行为（或 Effect），我们只会得到第一个错误。在上面的例子中，如果 `first` 和 `last` 都缺失，我们就永远不会知道。
+
+我们只会得到关于 `first` 为 `Nothing` 的错误。但有时，我们希望累积所有错误。
+
+为此，我们需要一个类似 `Either` 但没有短路行为的东西。
+
+我们将这个类型称为 `Validation`：
+
+```
+newtype Validation err result = Validation (Either err result)
+```
+
+注意我们只是将 `Either` 用 `newtype` 包裹起来。这将允许我们在合适时利用 `Either` 的实现，即当 `Validation` 的行为与 `Either` 相同 时，我们会告诉编译器使用 `newtype` 推导实例。
+
+有了新的类型，我们也有覆盖我们不喜欢的 `Either` 的某些特性的选项，例如它在 `apply` 中的短路方式。
+
+所以，继续将这个定义添加到你的代码中，并使用 `derive newtype instance` 推导 `Functor` 和 `Bifunctor` 实例。但不要忘记，要利用 `derive newtype instance`，你首先必须推导 `Newtype`。
+
+在继续阅读之前先试试。
+
+好吧，这要求有点高。让我们从 `Newtype` 的推导开始：
+
+```
+import Data.Newtype (class Newtype)
+
+newtype Validation err result = Validation (Either err result)
+derive instance newtypeValidation :: Newtype (Validation err result) _
+```
+
+> 导入 `Newtype` 类。
+
+现在我们可以通过使用 `derive newtype instance` 利用 `Either` 的底层实现来推导 `Functor` 和 `Bifunctor`：
+
+```
+newtype Validation err result = Validation (Either err result)
+derive instance newtypeValidation :: Newtype (Validation err result) _
+derive newtype instance functorValidation :: Functor (Validation err)
+derive newtype instance bifunctorValidation :: Bifunctor Validation
+```
+
+让我们通过推导 `Eq` 和 `Ord` 来完善我们的推导。在继续之前先试试。
+
+有 2 种推导方式。有或没有 newtype：
+
+```
+derive newtype instance eqValidation ::
+  (Eq err, Eq result) => Eq (Validation err result) ①
+derive instance eqValidation ::
+  (Eq err, Eq result) => Eq (Validation err result) ①
+```
+
+① 每一行代码都是有效的，只是不能同时使用。
+
+所以，既然它们是等价的，就没有必要多输入那个词：
+
+```
+derive instance eqValidation ::
+  (Eq err, Eq result) => Eq (Validation err result)
+derive instance ordValidation ::
+  (Ord err, Ord result) => Ord (Validation err result)
+```
+
+我们的新类型在此时对于大多数常见操作来说已经相当完备，并且与 Either 没有什么不同。
+
+下一步就是这个类型的全部原因。我们想要编写一个 Apply 实例，将所有错误收集到某种 Semigroup 或 Monoid 中。
+
+面对这个选择时，最好选择最简单的约束开始，即 Semigroup。编译器会告诉我们是否需要 Monoid，例如如果我们使用了 mempty 而没有意识到。
+
+但如果我们一开始就将类型约束为 Monoid，那么编译器就不会抱怨如果我们没有使用 mempty。需要我们自己记住问这个问题：“我们是否过度约束了类型”。
+
+在这里停止阅读并编写 Apply 实例以在 Semigroup 中收集错误，而不是像 Either 那样短路。尽量不要提前阅读答案。
+
+要编写 Apply 实例，让我们从实例定义开始：
+
+```
+instance applyValidation :: Semigroup err => Apply (Validation err) where
+```
+
+注意我们将错误类型约束为 Semigroup，这样我们就可以在其中收集错误。在实践中，Array a 是这种类型的最可能候选，其中 a 是某种错误类型。最简单的例子是 String。
+
+接下来，我们编写合并错误的错误情况：
+

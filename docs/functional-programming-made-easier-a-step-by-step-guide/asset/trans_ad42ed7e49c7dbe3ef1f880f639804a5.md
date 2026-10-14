@@ -1,0 +1,306 @@
+
+
+```
+```haskell
+fail :: ∀ e a. ParserError e => e -> Parser e a
+fail e = Parser \s -> ???
+```
+```
+
+我们之前见过这种模式。
+
+接下来，我们需要返回一个类型为 `Either` 的错误：
+
+```
+```haskell
+fail :: ∀ e a. ParserError e => e -> Parser e a
+fail e = Parser \s -> Left e
+```
+```
+
+仅仅因为它能编译并不意味着我们完成了。我们应该看看是否能让它更好。也就是减少它或将其泛化。你能看出我们可以改进什么吗？
+
+我首先注意到的是，我们并没有使用传给我们的 `String`，s。所以让我们把它消除掉：
+
+```
+```haskell
+fail :: ∀ e a. ParserError e => e -> Parser e a
+fail e = Parser \_ -> Left e
+```
+```
+
+但现在，应该很明显模式 `\_ ->` 告诉我们可以使用 `const`。让我们加上它：
+
+```
+```haskell
+fail :: ∀ e a. ParserError e => e -> Parser e a
+fail e = Parser $ const $ Left e
+```
+```
+
+现在，我们就得到了原始版本的简化版。
+
+在继续阅读之前，先回到 `satisfy` 并使用 `fail` 修改它。
+
+这里是修改后的代码：
+
+```
+```haskell
+satisfy
+  :: ∀ e
+  . ParserError e
+  => String
+  -> (Char -> Boolean)
+  -> Parser e Char
+satisfy expected pred =
+  char >>= \c -> if pred c then pure c else fail $ invalidChar expected
+```
+```
+
+现在我们把杂乱的部分提取出来后，这段代码读起来好多了。好很多。
+
+我们将使用一个新的库来帮助我们编写下一个 `Parser`，所以现在就把它添加进来吧。更新你的 `spago.dhall` 文件以添加 `unicode` 包：
+
+```
+```dhall
+{-
+Welcome to a Spago project!
+You can edit this file as you like.
+-}
+{ name = "my-project"
+, dependencies =
+    [ "bifunctors"
+    , "console"
+    , "contravariant"
+    , "effect"
+    , "either"
+    , "foldable-traversable"
+    , "integers"
+    , "lists"
+    , "maybe"
+    , "newtype"
+    , "nonempty"
+    , "prelude"
+    , "profunctor"
+    , "psci-support"
+    , "strings"
+    , "tuples"
+    , "unfoldable"
+    , "unicode"
+    ]
+, packages = ./packages.dhall
+, sources = [ "src/**/*.purs", "test/**/*.purs" ]
+}
+```
+```
+
+❶ 将这一行添加到你的文件中。
+
+然后运行以下命令来安装并构建这个新包：
+
+```
+```bash
+npx spago build
+```
+```
+
+接下来，编写一个 `Parser` 来解析单个数字并命名为 `digit`。使用 `satisfy` 和 `isDecDigit`。在编码时请查阅 Pursuit 了解 `isDecDigit` 的详情。
+
+请在完成编码前不要继续阅读。
+
+以下是 `digit` 的类型签名：
+
+```
+digit :: ∀ e. ParserError e => Parser e Char
+```
+
+我们需要这个约束，因为我们将调用 `satisfy`，而它具有这个约束因为它可能失败。
+
+接下来，我们使用来自 `purescript-unicode` 包的 `satisfy` 和 `isDecDigit`：
+
+```
+import Data.CodePoint.Unicode (isDecDigit)
+import Data.String.CodePoints (codePointFromChar)
+
+digit :: ∀ e. ParserError e => Parser e Char
+digit = satisfy "digit" (isDecDigit <<< codePointFromChar)
+```
+
++   1. 不要忘记导入 `isDecDigit`。
++   2. 我们还必须导入 `codePointFromChar` 来将 `Char` 转换为 `CodePoint`。
++   3. `"digit"` 是我们在未解析预期字符时在 `InvalidChar` 中会得到的 Value。
+
+这并不难。`satisfy` 为我们做了所有繁重的工作。
+
+所以接下来，编写 `letter` 来解析单个字母字符。使用 `isAlpha`。在继续阅读前先尝试一下。
+
+这与 `isDecDigit` 几乎完全相同：
+
+```
+import Data.CodePoint.Unicode (isDecDigit, isAlpha)
+
+letter :: ∀ e. ParserError e => Parser e Char
+letter = satisfy "letter" (isAlpha <<< codePointFromChar)
+```
+
++   1. 不要忘记将 `isAlpha` 添加到导入中。
++   2. `"letter"` 是告诉我们期望解析内容的错误 Value。
+
+现在，我们想要编写一个名为 `alphaNum` 的 `Parser`。虽然可以使用 `Data.CodePoint.Unicode` 中的 `isAlphaNum` 来编写它，但我们不需要做那么多额外的工作。相反，我们应该能够使用 `letter` 和 `digit` 来实现这一点。
+
+我们可以用暴力方式实现：
+
+```
+```haskell
+alphaNum :: ∀ e. ParserError e => Parser e Char
+alphaNum = Parser \\s -> case (parse letter s :: Either Perrror _) of ❶
+  Right x -> Right x
+  Left _ -> case parse digit s of ❷
+    Left err -> Left err
+    Right y -> Right y
+```
+```
+
+❶ 编译器无法确定 `e` 的类型以验证它具有 `ParserError` 实例。所以为了让它编译，我使用了我的应用程序的错误类型。这只是一个临时的 hack，因为我们不会保留这段代码，原因很快就会显现。
+
+❷ 这里就是它无法推断出错误类型的原因。我们忽略了 `Left` 值。即使我们给它一个名字，我们也必须在使用它之前让编译器尝试推断其类型。
+
+看着这段代码我的眼睛都疼了。我们想要尝试 `letter`，如果它失败就尝试 `digit`，但我们必须写这堆乱码。
+
+你可能会想为什么这段代码在我们的库中。通常，这种带有 `case` 表达式的代码会放在 `Parser` 的实例中。然而，这里它却在野外。这应该是一个很大的危险信号。
+
+你能想到一个类型类让我们尝试一个东西，如果它失败就尝试另一个吗？
+
+你还记得 `Alt` 吗？
+
+以下是它的定义以帮助你回忆：
+
+```
+```haskell
+class Functor f <= Alt f where
+  alt :: f a -> f a -> f a
+
+infixl 3 alt as <|> ❶
+```
+```
+
+❶ 请注意这是左结合的。这意味着我们会优先选择左边而不是右边。
+
+Alt 是我们在 2 个 Functor 之间做出的选择。在 `Parsers` 的情况下，我们希望选择成功解析的那个，优先选择 `Alt` 运算符 `<|>` 的左手边。
+
+现在，如果 `Parser` 支持 `Alt`，我们可以写出以下内容：
+
+```
+```haskell
+alphaNum :: ∀ e. ParserError e => Parser e Char
+alphaNum = letter <|> digit
+```
+```
+
+这比暴力方法好多了。所以，在继续阅读之前，先为 `Parser` 编写 `Alt` 实例吧。随意作弊并查看我们的暴力实现以获取线索（当然不要显式类型指定）。另外，不要忘记导入 `Control.Alt`。
+
+我们从通常的起点开始，类型签名：
+
+```
+import Control.Alt (class Alt, (<|>)) ①
+
+instance altParser :: Alt (Parser e) where
+```
+
+① 导入 Alt。请注意 class 关键字。
+
+不出所料，我们保持 e 不变。
+
+现在我们先编写左手边：
+
+```
+instance altParser :: Alt (Parser e) where
+  alt p1 p2 = ??? ①
+```
+
+① p1 和 p2 都是 Parsers。
+
+当然，我们返回一个 Parser，所以我们将使用我们的起始模式：
+
+```
+instance altParser :: Alt (Parser e) where
+  alt p1 p2 = Parser \s -> ???
+```
+
+现在我们必须做一些在暴力方法中做过的工作，但我们只需要做一次。所以让我们先尝试最左边的 Parser，因为 `<|>` 是左结合的：
+
+```
+instance altParser :: Alt (Parser e) where
+  alt p1 p2 = Parser \s -> case parse p1 s of
+    ???
+```
+
+现在我们将处理 p1 解析失败的错误情况：
+
+```
+instance altParser :: Alt (Parser e) where
+  alt p1 p2 = Parser \s -> case parse p1 s of
+    Left _ -> parse p2 s
+    ???
+```
+
+在错误情况下，我们只是简单地尝试第二个 Parser，p2，它会返回成功或错误。这将是 `<|>` 操作的最终结果。
+
+最后，我们必须处理 p1 的成功情况：
+
+```
+```haskell
+instance altParser :: Alt (Parser e) where
+  alt p1 p2 = Parser $\\s -> case parse p1 s of
+    Left _ -> parse p2 s
+    Right x -> Right x
+```
+```
+
+在成功情况下，我们只是返回成功值，其类型为 `Either`。
+
+现在，这段代码永远隐藏在这个实例代码中，我们可以通过使用 `<|>` 来利用它。
+
+现在，将 `alphaNum` 添加到你的代码中：
+
+```
+```haskell
+alphaNum :: ∀ e. ParserError e => Parser e Char
+alphaNum = letter <|> digit
+```
+```
+
+那么，如果 `alphaNum` 解析失败，错误会是什么？
+
+它会是 `invalidChar "digit"`。
+
+如果我们重新排列 `Parsers` 的顺序会怎样？
+
+```
+```haskell
+alphaNum :: ∀ e. ParserError e => Parser e Char
+alphaNum = digit <|> letter
+```
+```
+
+现在它会是 `invalidChar "letter"`。
+
+这两种都不是准确的。它们只是恰好是最后一个错误。我们希望错误是 `invalidChar "alphaNum"`。
+
+所以，在继续阅读之前，修改 `alphaNum` 使其返回 `invalidChar "alphaNum"` 作为其错误。
+
+我们是这样做的：
+
+```
+```haskell
+alphaNum :: ∀ e. ParserError e => Parser e Char
+alphaNum = letter <|> digit <|> fail (invalidChar "alphaNum")
+```
+```
+
+我们使用一个总是失败的 `Parser`，即 `fail`。通过把它放在最后，如果前两个失败，它将是这个 `Parser` 返回的错误。
+
+此时，我们应该测试我们的 `Parsers`，但在这样做之前，编写一个返回 `String` 的 `count` 版本，命名为 `count'`。它应该委托给我们在前一章中编写的 `count`。
+
+提示：查看你在现有测试代码中如何将 `Array Char` 转换为 `String`。
+

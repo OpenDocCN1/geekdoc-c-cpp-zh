@@ -1,0 +1,289 @@
+
+
+![](img/8c0e9b687c62642e828ccb5481e11313_891_0.png)
+
+当我们这样做时，我们得到：
+
+```
+m (Tuple a w)          -- runWriterT
+m (Tuple (Tuple a w) s)  -- runStateT
+m (Either e (Tuple (Tuple a w) s))  -- runExceptT
+```
+
+解包之后：
+
+```
+Either e (Tuple (Tuple a w) s)
+```
+
+对于这个栈，如果发生错误，我们也会丢失 State，即 s。实际上，当 ExceptT 位于我们的变换器栈的底部（不包括基础 Monad Identity）时，一旦发生错误，我们会丢失所有东西。
+
+## 20.5. 使用 Monad 变换器编写代码
+
+让我们编写一些在 Monad 栈中运行的代码。
+
+为此，我们要选择一个将 ExceptT 放在栈顶的栈，这样我们就不会丢失任何信息：
+
+|  |  |
+|---|---|
+| ExceptT | runExceptT |
+| WriterT | runWriterT |
+| StateT | runStateT |
+| Identity | unwrap |
+
+让我们为我们的应用创建一个 Monad 定义：
+
+```
+import Control.Monad.Except.Trans (ExceptT)
+import Control.Monad.State.Trans (StateT)
+import Control.Monad.Writer.Trans (WriterT)
+import Data.Identity (Identity)
+
+type AppM e w s a = ExceptT e (WriterT w (StateT s Identity)) a ①
+```
+
+① 类型名中的 M 提醒我们它是一个 Monad，而且是一个 Monad 栈。
+
+注意 AppM 可以进行 ETA 归约，也就是说，我们可以消去等号两边末尾的 a。
+
+之所以可以这样做，是因为 AppM 只是一个类型别名。你不能对类型定义这样做。虽然 ETA 归约后的版本是有效的，但为了清晰起见，我决定不进行归约。
+
+这里另一个重要的点是，WriterT、StateT 和 Identity 都还差 1 个类型参数：
+
+```
+type AppM e w s a = ExceptT e (WriterT w (StateT s Identity)) a
+```
+
+看一下 WriterT w (StateT s Identity)，我们可以看到它缺少最后一个类型参数 a：
+
+```
+newtype WriterT w m a = WriterT (m (Tuple a w)) ①
+```
+
+① WriterT 通常需要 3 个类型参数：w、m 和 a。
+
+那么，WriterT 的最后一个类型参数去哪儿了呢？
+
+它从 ExceptT 那里获得该参数：
+
+```
+newtype ExceptT e m a = ExceptT (m (Either e a)) ①
+```
+
+① 在我们由 AppM 定义的栈中，m 是 WriterT w (StateT s Identity)，它被传入了最后一个类型参数，即 Either e a。
+
+接着，WriterT 将自己的 a 交给 StateT：
+
+```
+newtype WriterT w m a = WriterT (m (Tuple a w)) ①
+```
+
+① 这里的 m 是 State s Identity，它被传入 Tuple a w 作为其最终类型参数。
+
+最后，WriterT 将它的 a 交给 Identity：
+
+```
+newtype StateT s m a = StateT (s -> m (Tuple a s)) ①
+```
+
+① 这里的 m 是 Identity，它被传入 Tuple a s 作为其最终类型参数。
+
+既然我们已经理解了 AppM 的定义，就可以开始编写我们的应用了：
+
+```
+type AppM e w s a = ExceptT e (WriterT w (StateT s Identity)) a
+
+app :: AppM String String Int Unit
+app = do
+    pure unit
+```
+
+这是一个很好的起点。现在让我们添加日志记录：
+
+```
+type AppM e w s a = ExceptT e (WriterT w (StateT s Identity)) a
+
+app :: AppM String String Int Unit
+app = do
+    tell "Starting App..." ①
+    pure unit
+```
+
+① 记住，这里无需调用 lift，因为我们在 ExceptT Monad 中运行，而它有一个 MonadTell 实例。
+
+如果我们能在日志末尾自动添加换行符，那就好了。让我们编写一个名为 log 的函数来实现这一点：
+
+```
+log :: ∀ m. MonadTell String m => String -> m Unit
+log s = tell $ s <> "\n"
+```
+
+① 我们约束 Monad m，使其具有 MonadTell 实例。
+
+② 这里的返回值与 tell 的返回值匹配，即 m Unit。
+
+让我们更新 app 以使用 log：
+
+```
+app :: AppM String String Int Unit
+app = do
+  log "Starting App..."
+  pure unit
+```
+
+现在让我们添加某种错误检查：
+
+```
+import Prelude ①
+
+app :: AppM String String Int Unit
+app = do
+  log "Starting App..."
+  n <- get ②
+  when (n == 0) $ void $ throwError "WE CANNOT HAVE A 0 STATE!" ③
+  pure unit
+```
+
+① 导入 Prelude 以获得 when。
+
+② 从 State 中获取 Int。
+
+③ 检查我们是否从 State 中得到了 0，如果是，那么就出现了一个错误。
+
+这段代码使用了 when，它是一个辅助函数，常用于 do 块中，当你只想在指定条件成立时才做某件事时。还有一个对应的辅助函数叫 unless，它在条件为假时做同样的事。
+
+你可以把它们看作没有 else 的 if。但这怎么可能呢？在 PureScript 和 Haskell 中，我们不能有没有 else 的 if。
+
+它的工作方式是让 when 的 else 部分返回一个默认值。
+
+为了理解它的实际运作方式，让我们仔细看看 when 函数：
+
+```
+when :: ∀ m. Applicative m => Boolean -> m Unit -> m Unit ①
+when true m = m ②
+when false _ = pure unit ③
+```
+
+① 注意它返回的是 m Unit，即某个 Applicative 或 Monad 中的 Unit，因为所有 Monad 都是 Applicative。这一点很重要，因为它允许我们拥有带默认 else 的 if。
+
+② 在 if 分支中，m 是一个 Monadic 值，但它不能包含纯计算值，否则我们就需要显式提供 else 分支。它必须是 Monadic 上下文中的 Unit。我们总是可以对 Monadic 值使用 void，将其值替换为 unit，以便与 when 一起使用。
+
+③ 在 else 分支中，它不做任何事，只返回 Monadic 上下文中 unit 的默认值。
+
+由于 throwError 的类型签名是 e -> m a，因此必须使用 void 来丢弃纯计算，即将 m a 改为 m Unit。不过，短路（Short-circuiting）的副作用仍然保留：
+
+```
+when (n == 0) $ void $ throwError "WE CANNOT HAVE A 0 STATE!"
+```
+
+让我们继续向应用代码中添加内容：在错误检查之后添加代码来修改 State，并再次写入日志：
+
+```
+app :: AppM String String Int Unit
+app = do
+  log "Starting App..."
+  n <- get
+  when (n == 0) $ void $ throwError "WE CANNOT HAVE A 0 STATE!"
+  put $ n + 1 ①
+  log "Incremented State" ②
+  pure unit
+```
+
+① 通过在旧 State 上加 1 来更新 State。
+
+② 记录我们已将 State 递增。
+
+现在，是时候编写一个函数，让我们能够运行 AppM Monad 栈了：
+
+```
+runApp :: Int -> AppM String String Int Unit -> ?x ① ②
+```
+
+① runApp 接受一个 State（即 Int）和一个 AppM（即我们的应用 Monad），并返回某个东西。
+
+② 返回类型暂时只是一个类型洞。
+
+如果你不确定返回值类型是什么，可以放一个所谓的类型洞，在这里就是 ?x。编译器会在这个位置为你生成一个错误，并告诉你它推断出的类型。在 PureScript 中使用类型洞的一个需要注意的地方是：不能有其他编译器错误存在。
+
+语法是 ? 后跟一个小写名称。我通常不在乎名称，因为我使用的是 IDE，即 VSCode。如果你在命令行编译，并且有多个类型洞需要区分，那么名称就更重要了。
+
+在 Haskell 中，类型洞是匿名的，即下划线字符 _，并且没有同样的限制——不需要一次干净的编译就能提供有用的类型推断信息。
+
+现在，我们只需添加与 Monad 栈顺序匹配的栈执行代码，即先 ExceptT，然后是 WriterT，依此类推：
+
+```
+runApp :: Int -> AppM String String Int Unit -> ?x
+runApp s = flip runStateT s <<< runWriterT <<< runExceptT
+```
+
+一旦编译通过，编译器会告诉我们以下信息：
+
+![](img/8c0e9b687c62642e828ccb5481e11313_896_0.png)
+
+这让我们不必自己去弄明白这个复杂的类型，现在我们可以用推断出的类型替换类型洞。我们再加一个 unwrap 来消掉 Identity Monad：
+
+```
+import Data.Newtype (unwrap) ①
+
+runApp
+  :: Int
+  -> AppM String String Int Unit
+  -> Tuple (Tuple (Either String Unit) String) Int ②
+runApp s = unwrap <<< flip runStateT s <<< runWriterT <<< runExceptT
+```
+
+① 导入 unwrap。
+
+② 这是从类型洞推断出的类型减去 Identity，因为我们现在正在进行 unwrap。
+
+而且，仅仅因为我们的代码能编译通过，并不意味着大功告成。让我们完整地看一遍，检查一下有哪些可以改进的地方：
+
+```
+```haskell
+import Prelude
+
+import Control.Monad.Except.Trans (ExceptT, runExceptT, throwError)
+import Control.Monad.State.Trans (StateT, get, put, runStateT)
+import Control.Monad.Writer.Trans (class MonadTell, WriterT
+                                  , runWriterT, tell)
+import Data.Either (Either)
+import Data.Identity (Identity)
+import Data.Newtype (unwrap)
+import Data.Tuple (Tuple)
+
+type AppM e w s a = ExceptT e (WriterT w (StateT s Identity)) a
+
+runApp
+  :: Int
+  -> AppM String String Int Unit
+  -> Tuple (Tuple (Either String Unit) String) Int
+runApp s = unwrap <<< flip runStateT s <<< runWriterT <<< runExceptT
+
+log :: ∀ m. MonadTell String m => String -> m Unit
+log s = tell $ s <> "\\n"
+
+app :: AppM String String Int Unit
+app = do
+  log "Starting App..."
+  n <- get
+  when (n == 0) $ void $ throwError "WE CANNOT HAVE A 0 STATE!"
+  put $ n + 1
+  log "Incremented State"
+  pure unit
+```
+```
+
+我注意到的第一件事是 **AppM** 太复杂了，即它有太多类型参数，而且在几个类型签名中都用到了它。
+
+我们打算通过引入另一个类型别名来简化它：
+
+```
+```haskell
+type AppStack e w s a = ExceptT e (WriterT w (StateT s Identity)) a
+
+type AppM = AppStack String String Int Unit
+```
+```
+
+现在我们可以简单地在函数类型签名中引用 **AppM**，这意味着如果我们将来更改 Monad 栈，就不必修改所有的类型签名。
+

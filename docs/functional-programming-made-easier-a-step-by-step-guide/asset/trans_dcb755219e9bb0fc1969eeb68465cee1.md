@@ -1,0 +1,280 @@
+
+
++   ① 添加了此导入。
++   ② 在请求上添加了 Encode 约束。
+
+现在我们需要对 Decode 的响应进行约束：
+
+```
+import Foreign.Generic.Class (class Encode, class Decode) ①
+
+apiCall :: ∀ request response m
+  . MonadAff m
+  => Encode request
+  => Decode response ②
+  => UUID
+  -> request
+  -> m (Either String response)
+-- COMPILER WARNING!!
+apiCall authToken request = do
+  ajaxResult <- H.liftAff $ Ajax.post ResponseFormat.string
+    "http://localhost:3000/"
+    $ Just $ RequestBody.String
+    $ encodeJSON request
+  pure do
+    { body } <- lmap Ajax.printError ajaxResult
+    lmap show $ runExcept $ decodeJSON body :: _ response
+```
+
++   ① 将类 Decode 添加到导入列表中。
++   ② 在 response 上添加了 Decode 约束。
+
+编译器告诉我们 authToken 未被使用。我们需要它来构造 QueryResultRequest，但现在我们只是传入完整的 request，所以我们可以删除这个参数：
+
+```
+apiCall :: ∀ request response m
+  . MonadAff m
+  => Encode request
+  => Decode response
+  => request ① ②
+  -> m (Either String response)
+apiCall request = do ③
+  ajaxResult <- H.liftAff $ Ajax.post ResponseFormat.string
+    "http://localhost:3000/"
+    $ Just $ RequestBody.String
+    $ encodeJSON request
+  pure do
+    { body } <- lmap Ajax.printError ajaxResult
+    lmap show $ runExcept $ decodeJSON body :: _ response
+```
+
++   ① 删除了 UUID 类型参数。
++   ② 将 -> 改为 =>。
++   ③ 删除了 authToken 参数。
+
+我们也可以删除导入：
+
+```
+import Data.UUID (UUID)
+```
+
+查看 apiCall，我在想以下行的显式类型签名是否真的不再必要了：
+
+```
+lmap show $ runExcept $ decodeJSON body :: _ response
+```
+
+让我们把它拿掉，看看编译器是否能在没有我们帮助的情况下推断出来。
+
+事实证明它可以：
+
+```
+```purescript
+apiCall :: ∀ request response m
+  . MonadAff m
+  => Encode request
+  => Decode response
+  => request
+  -> m (Either String response)
+apiCall request = do
+  ajaxResult <- liftAff $ Ajax.post ResponseFormat.string
+    "http://localhost:3000/"
+    $ Just $ RequestBody.String
+    $ encodeJSON request
+  pure do
+    { body } <- lmap Ajax.printError ajaxResult
+    lmap show $ runExcept $ decodeJSON body
+```
+```
+
+> ❶ 删除了显式类型签名。
+
+现在这可以编译了，在 `src` 目录下创建一个文件 `Utils.purs`。
+
+将 `apiCall` 移动到 `Utils` 并带上必要的导入。注意，一旦 `apiCall` 被移动，`H.liftAff` 可以改为普通的 `liftAff`。`Halogen` 模块只是为了方便而重新导出 `liftAff`。
+
+以下是 `Utils` 的更改：
+
+```
+```haskell
+module Utils where
+
+import Prelude
+
+import Affjax as Ajax
+import Affjax.ResponseFormat as ResponseFormat
+import Affjax.RequestBody as RequestBody
+import Control.Monad.Except (runExcept)
+import Data.Bifunctor (lmap)
+import Data.Either (Either)
+import Data.Maybe (Maybe(..))
+import Effect.Aff.Class (class MonadAff, liftAff)
+import Foreign.Generic (encodeJSON, decodeJSON)
+import Foreign.Generic.Class (class Encode, class Decode)
+
+apiCall :: ∀ request response m
+  . MonadAff m
+  => Encode request
+  => Decode response
+  => request
+  -> m (Either String response)
+apiCall request = do
+  ajaxResult <- liftAff $ Ajax.post ResponseFormat.string
+    "http://localhost:3000/"
+    $ Just $ RequestBody.String
+    $ encodeJSON request
+  pure do
+    { body } <- lmap Ajax.printError ajaxResult
+    lmap show $ runExcept $ decodeJSON body :: _ response
+```
+```
+
++   1. 添加了这些导入。
++   2. 使用来自 `Effect.Aff.Class` 的 `liftAff` 而不是从 Halogen 重新导出的那个。
++   3. 将 `H.liftAff` 改为 `liftAff`。
+
+现在，返回 Users 页面并导入 Utils 并在 handleAction 中使用 apiCall，然后继续阅读。
+
+以下是该更改：
+
+```
+import Utils (apiCall) ①
+
+handleAction :: Action -> H.HalogenM State Action Slots Output m Unit
+handleAction = case _ of
+  Initialize -> do
+    { userRef } <- ask
+    loggedOnUser' <- H.liftEffect $ Ref.read userRef
+    loggedOnUser' # maybe (pure unit) \{ authToken, admin } ->
+      when admin do
+        queryResponse <-
+          apiCall (QueryUsersRequest { authToken }) ②
+        case queryResponse of
+          Left err -> alertError err
+          Right (QueryUsersResponse
+            (QueryUsersResultsFailure { reason })) ->
+            alertError $ "Query Users: " <> case reason of
+              NotAuthorized -> "Not Authorized"
+              NotAuthenticated -> "Not Authenticated"
+          Right (QueryUsersResponse
+            (QueryUsersResultsSuccess { users })) ->
+            H.modify_ _ { authorized = true , users = users }
+```
+
+① 导入 apiCall。
+
+② 使用 apiCall 代替复制粘贴的代码。
+
+删除以下导入：
+
+```
+import Affjax as Ajax
+import Affjax.RequestBody as RequestBody
+import Affjax.ResponseFormat as ResponseFormat
+import Control.Monad.Except (runExcept)
+import Data.Bifunctor (lmap)
+import Foreign.Generic (encodeJSON, decodeJSON)
+import Foreign.Generic.Class (class Encode, class Decode)
+```
+
+现在在 Logon 页面上做同样的操作，即 Component.Logon，然后继续阅读。
+
+以下是该更改：
+
+```
+import Utils (apiCall) ①
+
+handleAction :: Action -> H.HalogenM State Action Slots Output m Unit
+handleAction = case _ of
+  Input f -> H.modify_ f
+  Logon -> do
+    { userName, password } <- H.get
+    logonResponse <-
+      apiCall (LogonRequest { userName, password }) ②
+    case logonResponse of
+      Left err -> alertError err
+      Right (LogonResponse LogonResultsFailure) ->
+        alertError "Invalid Logon Credentials"
+      Right (LogonResponse (LogonResultsSuccess
+        { authToken, admin, mustChangePassword })) -> do
+        log <<< logEntry Info "User logged on"
+        { userRef } <- ask
+        H.liftEffect $ Ref.write (Just { admin, authToken }) userRef
+        navigate <<< logonRoute
+          $ if mustChangePassword then PasswordTemporary
+            else PasswordPermanent
+```
+
+① 导入 apiCall。
+
+② 使用 apiCall。删除了 apiCall 中重复的代码。
+
+并且不要忘记删除以下导入：
+
+```
+import Affjax as Ajax
+import Affjax.ResponseFormat as ResponseFormat
+import Affjax.RequestBody as RequestBody
+import Data.Bifunctor (lmap)
+import Control.Monad.Except (runExcept)
+import Foreign.Generic (encodeJSON, decodeJSON)
+```
+
+退一步，看看 handleAction 在使用 apiCall 后变得多么整洁。重构在当时很痛苦，但它总是让我们的代码库看起来好得多。
+
+这也将使在其他页面上调用其他 API 变得容易得多。
+
+在我们开始为 Users 页面编写 render 函数之前，我想对我们的 Page 组件做一些更改，以便我们可以更好地控制样式。
+
+当我们最初创建 Page 组件时，我们居中了内容：
+
+```
+```haskell
+-- ABOVE CODE REDACTED
+, HH.div [
+    HC.style $ (do
+        display flex
+        alignItems center
+        justifyContent center
+        minHeight $ vh 90.0) *> style
+    ]
+    [ HH.slot _inner unit innerComponent iInput Output ]
+]
+```
+```
+
+❶ 你需要添加 `$` 和括号。
+
+❷ 我们最后 `applySecond` 我们的 `style` 覆盖，以便冲突时会选择我们的默认值，例如当我们指定 `justifyContent flexStart` 时，它与此处指定的内容冲突，我们的将是 Halogen 看到的最后一个 CSS `Rule`，因此使用它。
+
+确保你的代码与此保持一致。
+
+现在，我们将修改 `Router`，即 `Component.Router`，以将样式传递给 Page 组件，同时在这里，我们将调用 `Users.component` 尽管它的 `render` 函数尚未完成：
+
+```
+```haskell
+import Component.Users as Users
+import CSS.Flexbox (flexStart, alignItems, stretch, justifyContent)
+import CSS.Geometry (padding)
+import CSS.Size (rem)
+
+render :: State -> H.ComponentHTML Action Slots m
+render { route } = case route of
+  Logon -> HH.slot_ _logon unit (defaultPage Logon.component) unit
+  Logoff -> HH.span [ HC.style $ color white ] [ HH.text "Logoff" ]
+  Users -> HH.slot_ _users unit (wholePage Users.component) unit
+  ChangePassword -> HH.slot_ _changePassword unit
+    (defaultPage ChangePassword.component) unit
+where
+  defaultPage = Page.component $ pure unit
+  wholePage = Page.component do
+    alignItems stretch
+    justifyContent flexStart
+    padding (rem 2.0) (rem 2.0) (rem 2.0) (rem 2.0)
+```
+```
+
+❶ 添加了这些导入。
+
+❷ 使用默认的 Page 设置且无覆盖。
+

@@ -1,0 +1,308 @@
+
+
+错误的类型。
+
+我做了一个糟糕的决定使用了 `ResponseFormat.json`。所以让我们把它改成 `ResponseFormat.string`：
+
+```
+test :: Effect Unit
+test = launchAff_ do
+  result <- Ajax.get ResponseFormat.string 🔴
+    "https://jsonplaceholder.typicode.com/posts/1"
+  case result of
+    Left err -> log $ "ERROR: " <> Ajax.printError err
+    Right { body } ->
+      case runExcept (decodeJSON body :: F GetPostRes) of
+        Left err -> log $ "ERROR: " <> show err <> " (" <> body <> ")"
+        Right v -> log $ show v
+```
+
+❶ 将 `json` 改为 `string`。
+
+现在，它可以编译了。
+
+回想起来，我本应该记得 `Json` 是一个 Javascript 类型。如果我们要在 Javascript 中处理它，这就是我们想要的类型。但由于我们没有这样做，我们应该把它当作一个 `String` 来处理。
+
+运行我们的程序，我们得到：
+
+```
+{ body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+  id: 1,
+  title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  userId: 1
+}
+```
+
+你可以通过点击这个链接 https://jsonplaceholder.typicode.com/posts/1 并检查浏览器 `GET` 返回的内容来测试这一点。
+
+## 24.3.2. POST 请求
+
+接下来要添加到我们的代码中的是 `HTTP POST`。回顾 API 指南，我们发现可以 POST 到 https://jsonplaceholder.typicode.com/posts 来创建资源。顺便说一下，对同一个 URL 的 GET 请求会产生一篇博客文章列表。所以，如果你点击那个 URL，不要惊讶它表现得与我们对 POST 到该 URL 时的预期不同。
+
+从文档中，我们看到 POST 的主体应该是：
+
+```
+{
+  "title": "foo",
+  "body": "bar",
+  "userId": 1
+}
+```
+
+所以，让我们建模该请求：
+
+```
+type CreateBlogPostReq =
+  { title :: String
+  , body :: String
+  , userId :: Int
+  }
+```
+
+并且阅读文档进一步，它说我们将得到以下输出：
+
+```
+{
+  "id": 101,
+  "title": "foo",
+  "body": "bar",
+  "userId": 1
+}
+```
+
+所以，我们将建模它：
+
+```
+type CreateBlogPostRes =
+  { id :: Int
+  , title :: String
+  , body :: String
+  , userId :: Int
+  }
+```
+
+现在，我们应该查看 Ajax.post 函数的类型签名：
+
+```
+post
+  :: ∀ a. ResponseFormat a
+  -> URL
+  -> Maybe RequestBody
+  -> Aff (Either Error (Response a))
+```
+
+这看起来与 get 相同，只是多了一个可选的 RequestBody。我们应该在 Pursuit 中查看它：
+
+### RequestBody
+
+data RequestBody
+
+表示将包含在请求主体中的 HTTP 请求的数据。
+
+#### 构造子
+
+- ArrayView (forall r. (forall a. ArrayView a -> r) -> r)
+- Blob Blob
+- Document Document
+- String String
+- FormData FormData
+- FormURLEncoded FormURLEncoded
+- Json Json
+
+有许多方法可以编码我们的 RequestBody，但我们只会像上次一样使用 String。我不想再次犯同样的错误，选择 Json。
+
+顺便说一下，如果你使用 Argonaut 库，选择 Json 并不是一个坏决定。
+
+让我们将调用添加到代码中：
+
+```
+import Affjax.RequestBody as RequestBody ①
+import Data.Maybe (Maybe(..)) ②
+import Foreign.Generic (decodeJSON, encodeJSON) ③
+
+test :: Effect Unit
+test = launchAff_ do
+  result <- Ajax.get ResponseFormat.string
+    "https://jsonplaceholder.typicode.com/posts/1"
+  case result of
+    Left err -> log $ "ERROR: " <> Ajax.printError err
+    Right { body } ->
+      case runExcept (decodeJSON body :: F GetPostRes) of
+        Left err -> log $ "ERROR: " <> show err <> " (" <> body <> ")"
+        Right v -> log $ show v
+  postResult <- Ajax.post ResponseFormat.string ④
+    "https://jsonplaceholder.typicode.com/posts"
+    (Just $ RequestBody.String $
+      encodeJSON { userId:1, title:"title", completed:false })
+  ???
+```
+
+- ① 以限定方式导入 RequestBody。
+- ② 导入带有 Data 构造子的 Maybe。
+- ③ 将 encodeJSON 添加到导入列表中。
+- ④ 添加对 post 的调用。
+
+get 调用和 post 调用之间的唯一真正区别是最后一个参数。首先，我们从 CreateBlogPostReq 开始：
+
+```
+{ userId:1, title:"title", completed:false }
+```
+
+然后我们对其进行编码：
+
+```
+encodeJSON { userId:1, title:"title", completed:false }
+```
+
+然后我们使用 String 数据构造子从中制作一个 RequestBody：
+
+```
+RequestBody.String
+  $ encodeJSON { userId:1, title:"title", completed:false }
+```
+
+然后我们把它变成一个 Maybe：
+
+```
+```haskell
+Just $ RequestBody.String
+  $ encodeJSON { userId:1, title:"title", completed:false }
+```
+```
+
+现在，我们必须处理 `POST` 调用的结果，即 `postResult`。处理此结果将与我们为 `get` 编写的类似。
+
+所以，让我们先将该代码提取出来，因为那段代码很丑陋。
+
+我们将调用我们提取出来的函数，`processAjaxResult`：
+
+```
+```haskell
+import Effect.Class (class MonadEffect)
+
+processAjaxResult
+  :: ∀ m. MonadEffect m
+  => Either Ajax.Error (Ajax.Response String)
+  -> m Unit
+processAjaxResult = case _ of
+  Left err -> log $ "ERROR: " <> Ajax.printError err
+  Right { body } ->
+    case runExcept (decodeJSON body :: F GetPostRes) of
+      Left err -> log $ "ERROR: " <> show err <> " (" <> body <> ")"
+      Right v -> log $ show v
+```
+```
+
+❶ 导入 `MonadEffect` 类。
+
+这段代码的主体只是我们 `test` 代码中 `case` 表达式的复制粘贴。类型签名是这里唯一新的东西，所以让我们检查它：
+
+```
+```haskell
+processAjaxResult
+  :: ∀ m. MonadEffect m
+  => Either Ajax.Error (Ajax.Response String)
+  -> m Unit
+```
+```
+
+它被编写为在 `MonadEffect` 中工作。这允许此函数在任何可以记录到控制台的 Monad 中被调用，该 Monad 也有相同的需求：
+
+```
+```haskell
+log :: ∀ m. MonadEffect m => String -> m Unit
+```
+```
+
+注意，我们本可以把 `Monad` 硬编码为 `Aff`，但在不需要时最好不要硬编码 `Monads`。它使我们的代码保持灵活。
+
+`processAjaxResult` 的第一个参数是我们 Ajax 调用的结果，即类型为 `Either`
+
+Ajax.Error (Ajax.Response String) 的值。注意这假设我们始终使用 ResponseFormat.string。
+
+processAjaxResult 返回 m Unit。它的唯一操作是写入控制台的副作用。
+
+现在，我们准备修改我们的 test 代码以使用它：
+
+```
+test :: Effect Unit
+test = launchAff_ do
+  result <- Ajax.get ResponseFormat.string
+    "https://jsonplaceholder.typicode.com/posts/1"
+  processAjaxResult result ①
+  postResult <- Ajax.post ResponseFormat.string
+    "https://jsonplaceholder.typicode.com/posts"
+    (Just $ RequestBody.String $
+      encodeJSON { userId:1, title:"title", completed:false })
+  ??? ②
+```
+
+① 用我们提取出来的代码，即 case 表达式，来调用 processAjaxResult。
+
+② 我们还没有完成编码。
+
+现在，这里有一个情况，我们可以使用 bind 而不是有 2 行代码。以下是可以合并成一行代码的代码：
+
+```
+result <- Ajax.get ResponseFormat.string
+  "https://jsonplaceholder.typicode.com/posts/1"
+processAjaxResult result
+```
+
+我们提取 result 以将其传递给函数 processAjaxResult。这正是 bind 所做的，所以让我们使用它：
+
+```
+test :: Effect Unit
+test = launchAff_ do
+  processAjaxResult ==< Ajax.get ResponseFormat.string ①
+    "https://jsonplaceholder.typicode.com/posts/1" ②
+  postResult <- Ajax.post ResponseFormat.string
+    "https://jsonplaceholder.typicode.com/posts"
+    (Just $ RequestBody.String $
+      encodeJSON { userId:1, title:"title", completed:false })
+```
+
+① 注意我们消除了命名变量的需求，即 result 不见了。
+
+② 使用 >>= 的翻转版本，因为它读起来更好。注意翻转操作符不是 >>= 中的相同字符，而是该操作符的镜像，即 <=。
+
+好的，现在让我们对 postResult 做同样的操作：
+
+```
+test :: Effect Unit
+test = launchAff_ do
+    processAjaxResult <<< Ajax.get ResponseFormat.string
+        "https://jsonplaceholder.typicode.com/posts/1"
+    processAjaxResult <<< Ajax.post ResponseFormat.string
+        "https://jsonplaceholder.typicode.com/posts"
+        (Just $ RequestBody.String $
+            encodeJSON { userId:1, title:"title", completed:false })
+```
+
+并且它可以编译。当我们运行它时，我们得到：
+
+```
+{ body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto", id: 1, title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit", userId: 1 }
+ERROR: (NonEmptyList (NonEmpty (ErrorAtProperty "userId" (TypeMismatch "Int" "Undefined")) Nil)) ({
+  "id": 101
+})
+```
+
+我们可以看到 POST 失败了。注意实际响应，它在错误末尾：
+
+```
+({
+  "id": 101
+})
+```
+
+似乎 API 已经更改但文档没有。所以让我们更改我们的模型：
+
+```
+type CreateBlogPostRes =
+  { id :: Int
+  }
+```
+
+现在使用我们更新后的模型运行时我们得到：
+

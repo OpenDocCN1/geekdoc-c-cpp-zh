@@ -1,0 +1,246 @@
+
+
+- ② 添加了 MonadAsk 约束，以便我们可以调用 ask。
+- ③ 处理 initialize。
+- ④ 处理 Initialize 情况。
+- ⑤ 从 LoggedOnUser 获取 authToken 以进行 API 调用。
+- ⑥ 如果 API 调用失败则显示 Modal。
+- ⑦ 清除 userRef，因为用户已不再登录。
+- ⑧ 将 loggedOff 设置为 true，以便 render 会显示消息和按钮。
+
+在测试之前，最后一步是更改 Router 组件以显示 Logoff 组件：
+
+```purescript
+import Component.Logoff as Logoff ①
+
+    render :: State -> H.ComponentHTML Action Slots m
+    render { route } = case route of
+        Logon -> HH.slot_ _logon unit (defaultPage Logon.component) unit
+        Logoff ->
+            HH.slot_ _logoff unit (defaultPage Logoff.component) unit ②
+    -- BELOW CODE REDACTED
+```
+
+- ① 添加了导入。
+- ② 渲染 Logoff 子组件。
+
+我们现在可以删除这些导入：
+
+```purescript
+import CSS (color, white)
+import Halogen.HTML.CSS as HC
+```
+
+现在我们可以测试了。构建代码，刷新浏览器，登录，然后点击页面页眉右上角的 Logoff 链接。
+
+当我这样做时，我得到：
+
+![](img/8c0e9b687c62642e828ccb5481e11313_1915_0.png)
+
+布局有点乱。让我们修复它。
+
+首先要更改的是将 `flexDirection` 从 `row` 改为 `column`。我们还需要在这条消息和按钮之间添加一些内边距。而且消息文本应为 `white`：
+
+```purescript
+import CSS.Flexbox (flexDirection, column, justifyContent, alignItems) ①
+import CSS.Geometry (width, height, paddingTop, paddingBottom) ②
+
+    render :: State -> H.ComponentHTML Action Slots m
+    render { loggedOff, errorMessage } =
+        HH.div
+            [
+                HC.style do
+                    display flex
+                    flexDirection column ③
+                    alignItems center
+                    justifyContent center
+                    paddingTop $ vw 0.65
+            ]
+            if loggedOff then
+                [ HH.span ④
+                    [
+                        HC.style do
+                            color white ⑤
+                            paddingBottom (rem 1.0) ⑥
+                    ]
+                    [ HH.text "You have been successfully logged off" ] ⑦
+                , HH.button
+                    [
+                        HC.style do
+                            backgroundColor themeColor
+                            themeFont
+                            fontWeight $ FontWeight $ value "500"
+                            fontSize $ vw 1.0
+                            width (rem 20.0)
+                            height $ vw 3.0
+                            color white
+                            cursor pointer
+                        , HE.onClick $ const Click
+                    ]
+                    [ HH.text "Log Back On" ]
+                ]
+            else [] <>
+                [ (errorMessage # maybe (HH.text "") \message ->
+                    HH.slot _modal unit
+                        (Modal.component ModalCommon.errorConfig Message.component)
+                        message Modal)
+                ]
+```
+
+- 1. 将 `row` 改为 `column`。
+- 2. 在导入列表中添加了 `paddingBottom`。
+- 3. 在这里也将 `row` 改为 `column`。
+- 4. 将消息放在 `span` 中以便我们可以设置样式。
+- 5. 使文本在我们的深色背景上可读。
+- 6. 在它和按钮之间添加一些内边距。
+- 7. 不要漏掉这里添加的 `]`。
+
+现在，构建应用程序并再次尝试注销。
+
+当我这样做时，我得到：
+
+![](img/8c0e9b687c62642e828ccb5481e11313_1918_0.png)
+
+现在，点击 Log Back On 按钮。会发生什么？
+
+什么都没发生。为什么？
+
+我们的路由逻辑中有些东西不起作用。地址栏中的 URL 已更改为 http://localhost:3000/#/logon，但页面没有重新渲染。
+
+让我们查看 Component.Router 中的该逻辑：
+
+```purescript
+-- ABOVE CODE REDACTED
+handleQuery = case _ of
+  Navigate route a -> do
+    { userRef } <- ask
+    ref <- H.liftEffect $ Ref.read userRef
+    if isNothing ref then navigate Logon ①
+    else H.modify_ _ { route = route }
+    pure (Just a)
+```
+
+① 如果没有登录用户则我们导航到 Logon。
+
+## 你能看出哪里出了问题吗？
+
+我现在看不出有什么问题。所以，让我们思考一下这些问题。
+
+如果没有登录用户，我们将导航到 `Logon`。当我们点击 `Log Back On` 按钮时，应该执行这种情况。
+
+让我们向 `Component.Router` 添加一些调试代码，看看是否能弄清楚问题所在：
+
+```purescript
+import Data.Route as Route
+import Effect.Class.Console (log)
+import Routing.Duplex as RouteDuplex
+
+handleQuery = case _ of
+  Navigate route a -> do
+    { userRef } <- ask
+    ref <- H.liftEffect $ Ref.read userRef
+    log $ "ref: " <> show ref
+    log $ "route: " <> RouteDuplex.print Route.routeCodec route
+    if isNothing ref then navigate Logon
+    else H.modify_ _ { route = route }
+    pure (Just a)
+```
+
+- 1. 暂时添加了这些导入。
+- 2. 将 userRef 记录到控制台。
+- 3. 将 route 记录到控制台。
+
+添加调试代码并重建应用程序，刷新浏览器并登录然后注销。当你点击 `Log Back On` 按钮时，以下内容应该会记录到控制台：
+
+```text
+ref: Nothing
+route: /logon
+```
+
+这意味着地址栏中的 hash 是 `/logon`。由于 `ref` 是 `Nothing`，我们将调用 `navigate` 导航到 `Logon`，这会将 `/logon` 写入 hash。这将导致 `matchesWith` 被触发再次调用此 `Navigate` 处理程序。
+
+此时，`ref` 仍然是 `Nothing`，导致整个过程无限重复。这不好。但等等。我们没有看到调试消息一次又一次地无限打印。
+
+相反，它只打印一次。这必须意味着使用相同的 hash 值写入不会触发 `matchesWith`。让我们测试一下。
+
+假设你没有离开我们上次的位置，在浏览器的控制台中运行此命令，看看会发生什么：
+
+```text
+window.location.hash = "/test"
+```
+
+当我这样做时，我们的调试没有打印出来，这意味着 matchesWith 没有触发。但为什么呢？
+
+试试这个：
+
+```text
+window.location.hash = "/logoff"
+```
+
+当我这样做时，以下内容被打印：
+
+```text
+ref: Nothing
+route: /logoff
+ref: Nothing
+route: /logon
+```
+
+所以，这告诉我们，如果我们的自定义路由解析器失败，matchesWith 将不会调用我们。这是有道理的。/test 是此应用程序无效的 Route，而 logoff 是一个有效的 Route。
+
+此时，我们的 hash 应该是 /logon。所以，让我们通过写入相同的 hash 值来测试我们的理论，看看会发生什么：
+
+```text
+window.location.hash = "/logon"
+```
+
+当我这样做时，没有打印我们的调试日志。这就是为什么它没有无限循环。写入相同的 hash 将不会触发 matchesWith。
+
+好吧，现在我们了解了这些东西的真正工作原理，我们可以把注意力转回手头的代码：
+
+```purescript
+handleQuery = case _ of
+  Navigate route a -> do
+    { userRef } <- ask
+    ref <- H.liftEffect $ Ref.read userRef
+    log $ "ref: " <> show ref
+    log $ "route: " <> RouteDuplex.print Route.routeCodec route
+    if isNothing ref then navigate Logon ①
+    else H.modify_ _ { route = route }
+    pure (Just a)
+```
+
+① 有问题的逻辑。
+
+当我们没有登录用户并且尝试路由到 Logon 时，此逻辑将忽略该请求并再次尝试路由到 Logon。当我们已经在 Logon 时，此第二次路由将不会触发 matchesWith。
+
+这就是我们的问题。
+
+当没有人登录时，我们希望忽略我们刚刚导航到的位置并强制导航到 Logon，除了当我们刚刚导航到 Logon 时：
+
+```purescript
+handleQuery = case _ of
+  Navigate route a -> do
+    { userRef } <- ask
+    ref <- H.liftEffect $ Ref.read userRef
+    if isNothing ref && route /= Logon then navigate Logon ①
+    else H.modify_ _ { route = route }
+    pure (Just a)
+```
+
+① 我们只有在没有登录用户并且我们没有刚刚导航到 Logon 时才会导航到 Logon。
+
+我还移除了调试代码并删除了：
+
+```purescript
+import Data.Route as Route
+import Effect.Class.Console (log)
+import Routing.Duplex as RouteDuplex
+```
+
+现在，重建应用程序，刷新浏览器并重新测试登录然后注销然后再次使用 Log Back On 按钮登录。
+
+当我这样做时，Logon 页面正确显示。
+
+我们发现的关于 hash 更改的工作方式意味着我们不再需要执行以下测试：
+
