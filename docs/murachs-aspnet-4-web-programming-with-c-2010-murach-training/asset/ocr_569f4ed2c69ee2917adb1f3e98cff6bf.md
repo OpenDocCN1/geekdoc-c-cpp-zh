@@ -1,0 +1,11 @@
+# # How to create a master page
+
+As figure 9-2 explains, you create a master page by using the Master Page template in the Add New Item dialog box. This template includes two ContentPlaceHolder controls: one in the head element and one in the form element. The one in the form element marks the location on the rendered page where the content from the content page is displayed, and it’s the one shown in this figure. The one in the head element can contain any element that would normally be coded within the head element. You’ll learn more about how both of these ContentPlaceHolder controls work in the next figure.
+
+To develop the master page, you add elements outside of the ContentPlaceHolder controls. For example, to create the master page in figure 9-1, you add an image for a banner above the placeholder in the form element, navigation links to the left of this placeholder, and a label to display the days remaining until Halloween below this placeholder. Just as you can for any other form, you can use CSS to specify the layout of these elements.
+
+Although a master page has only two content placeholders by default, you should realize that you can create additional placeholders if you need to. You might want to do that, for example, to create a page layout that has custom content in several areas. To create an additional content placeholder, you simply drag the ContentPlaceHolder control from the Standard group of the Toolbox onto the master page and give it a unique ID.
+
+Note that an application can contain more than one master page. This allows you to create an application that has two or more sections with distinct page layouts. For example, you may want to use one master page for all of the content pages in the online shopping section of a web site, and another master page for the content pages in the customer service section.
+
+The master pages you create can also be nested. That lets you create one master page with the elements to be used by all of the pages in a web site and nested master pages with additional elements to be used by individual sections of the web site. You’ll learn more about nesting master pages later in this chapter.

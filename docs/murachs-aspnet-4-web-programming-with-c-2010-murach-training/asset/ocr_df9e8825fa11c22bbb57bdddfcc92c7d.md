@@ -1,0 +1,11 @@
+# How to insert a row in a GridView control
+
+You may have noticed that although the GridView control lets you update and delete rows, it has no provision for inserting new rows. When you use the GridView control in concert with a FormView or DetailsView control, though, you can provide for insert operations with a minimum of code. You’ll learn how to do that in chapter 15. Another alternative is to create a page that lets you insert data into a GridView control by using the techniques described in figure 14-11.
+
+To provide for insertions, you must first create a set of input controls such as text boxes into which the user can enter data for the row to be inserted. Next, you must provide a button that the user can click to start the insertion. Then, in the event handler for this button, you can set the insert parameter values to the values entered by the user and call the data source’s Insert method to add the new row.
+
+This is illustrated by the code in this figure. Here, if the insertion is successful, the contents of the text boxes are cleared. But if an exception is thrown, an error message is displayed. This message indicates that an exception has occurred and uses the Message property of the Exception object to display the message that’s stored in the Exception object.
+
+Notice in this example that a parameter is generated for each column in the Categories table. If a table contains an identity column, though, a parameter won’t be generated for that column. That makes sense because the value of this column is set by the database when the row is inserted.
+
+If you’re using an Access data source instead of a SQL data source, you should realize that this works differently. In this case, a parameter is generated for an identity column (called an auto-incremented column in Access), and you have to set the value of that parameter. To set this value correctly, you have to get the maximum value that’s stored in the column and then add one to that value. One way to do that is to use the ADO.NET classes you learned about in chapter 12 to retrieve the maximum value from the column. We won’t present the specific coding techniques for doing that in this book, though.

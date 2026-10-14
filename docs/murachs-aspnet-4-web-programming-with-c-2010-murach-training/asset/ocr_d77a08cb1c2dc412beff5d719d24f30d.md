@@ -1,0 +1,9 @@
+# How to force a page to use a secure connection
+
+When you build a complete web application, you usually include navigation features such as menus or hyperlinks that guide the user from page to page. Unfortunately, users sometimes bypass your navigation features and access pages in your application directly. For example, a user might bookmark a page in your application and return to it later. Other users might simply type the URL of individual pages in your application into their browser’s address bar. Some users do this innocently; others do it in an attempt to bypass your application’s security features.
+
+Because of that, a page that should use SSL to send or receive sensitive information shouldn’t assume that a secure connection has been established. Instead, it should check for a secure connection and establish one if necessary. To do that, you can use the properties of the HttpRequest class shown in figure 18-7.
+
+To check for a secure connection, you use the IsSecureConnection property. Then, if the connection isn’t secure, you can use the Url property to retrieve the URL for the page and modify that URL so it uses the HTTPS protocol. After you do that, you can use the Redirect method to redirect the browser using the new URL. Notice that you typically include this code at the beginning of the Load method for the page. That way, you can be sure that no other code is executed until a secure connection is established.
+
+Another way to force a page to use a secure connection is by setting a property of the page from IIS. When you use this technique, a user won’t be able to access the page without using a secure connection. In other words, he won’t be able to bypass the navigation features provided by your application. For more information on how to use this technique, please see appendix B (Windows 7 and Windows Vista) or appendix C (Windows XP).

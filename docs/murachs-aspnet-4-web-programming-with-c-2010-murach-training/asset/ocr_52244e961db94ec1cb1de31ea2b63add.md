@@ -1,0 +1,11 @@
+# An introduction to authentication
+
+If you want to limit access to all or part of your ASP.NET application to certain users, you can use *authentication* to verify each user’s identity. Then, once you have authenticated the user, you can use *authorization* to check if the user has the appropriate privileges for accessing a page. That way, you can prevent unauthorized users from accessing pages that they shouldn’t be able to access.
+
+# Three types of authentication
+
+Figure 19-1 describes the three types of authentication you can use in ASP.NET applications. The first, called *Windows-based authentication*, requires that you set up a Windows user account for each user. Then, you use standard Windows security features to restrict access to all or part of the application. When a user attempts to access the application, Windows displays a login dialog box that asks the user to supply the user name and password of the Windows account.
+
+To use *forms-based authentication*, you add a login page to your application that typically requires the user to enter a user name and password. Then, ASP.NET displays this page automatically when it needs to authenticate a user who’s trying to access the application. ASP.NET automatically creates a database to store user data such as user names and passwords, and it includes login controls that automatically generate code that reads data from and writes data to this database. As a result, you can implement forms-based authentication without having to write a single line of code. That makes this type of authentication easy to use, and you’ll see how this works as you progress through this chapter.
+
+*Windows Live ID authentication*, previously called *Passport authentication*, relies on the *Windows Live ID* service to authenticate users. Windows Live ID is a centralized account management service that lets users access multiple web applications with a single user account. Before you can use Windows Live ID with a web site, you must register the web site with Microsoft. Then, you can download the Windows Live ID Web Authentication software development kit (SDK) and use it in your web site to authenticate users of the site. For more information, go to www.msdn.microsoft.com and search for Windows Live ID.

@@ -1,0 +1,8 @@
+# How to use the Copy Web Site command
+for XCopy deployment
+
+To implement XCopy deployment from within Visual Studio, you use the Copy Web Site command shown in figure 22-5. This command lets you copy a web site to a file system, local IIS, FTP, or remote IIS web site. In addition, it lets you copy all of the files in the web site or just selected files, and you can use it to synchronize web sites so that both sites have the most recently updated versions of each file.
+
+To use this command, open the web site you want to copy and start the command to display the window shown in this figure. Here, the Source Web Site section lists the files in the current web site. Next, click the Connect button to display an Open Web Site dialog box that lets you pick the location you want to copy the web site to. If you’re copying to a local or remote IIS server, you can also use this dialog box to create a new IIS application or virtual directory on the server if the directory doesn’t already exist.
+
+Once you select the remote web site, its files will appear in the Remote Web Site section of the dialog box. You can then select the files you want to copy in the Source Web Site list and click the right-arrow button that appears between the lists to copy the files from the source web site to the remote web site. You can use the other buttons to copy files from the remote web site to the source web site, to synchronize files in the web sites, or to stop a lengthy copy operation.

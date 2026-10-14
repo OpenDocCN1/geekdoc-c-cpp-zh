@@ -1,0 +1,11 @@
+# How to work with cookies
+
+After you create a cookie, you work with it using the members of the HttpCookieCollection class shown in figure 8-11. This class defines a collection of HttpCookie objects. To refer to a cookie in a cookies collection, for example, you use the indexer of the collection. And to add a cookie to the collection, you use the Add method of the collection.
+
+The key to working with cookies is realizing that you must deal with two instances of the HttpCookieCollection class. The first one contains the collection of cookies that have been sent to the server from the client. You access this collection using the Cookies property of the HttpRequest object. The second one contains the collection of cookies that will be sent back to the browser. You access this collection using the Cookies property of the HttpResponse object.
+
+To send a new cookie to the client, you create the cookie and then add it to the collection of cookies in the HttpResponse object. This is illustrated in the first example in this figure. Here, a cookie named UserName is created and added to the HttpResponse object.
+
+The second example shows you how to retrieve the value of a cookie that’s sent from the browser. Here, the Request property of the page is used to refer to the HttpRequest object. Then, the indexer of the Cookies collection of the request object is used to get the cookie, and the Value property of the cookie is used to get the cookie’s value.
+
+The last example in this figure illustrates how you can delete a persistent cookie. To do that, you create a cookie with the same name as the cookie you want to delete, and you set its Expires property to a time in the past. In this example, I set the date to one second before the current time. Then, you add the cookie to the HttpResponse object so it’s sent back to the browser. When the browser receives the cookie, it replaces the existing cookie with the new cookie. When the client’s system detects that the cookie has expired, it deletes it.

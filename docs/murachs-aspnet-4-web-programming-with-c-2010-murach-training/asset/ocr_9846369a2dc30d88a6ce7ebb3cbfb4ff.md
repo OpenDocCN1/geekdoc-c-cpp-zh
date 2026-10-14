@@ -1,0 +1,9 @@
+# Elements used to create and format fields
+
+As figure 14-3 shows, the GridView control uses several different types of child elements to create and format its fields. The first element listed here is the Columns element, which defines the collection of columns that are displayed by the control. This element should be placed between the start and end tags for the GridView control.
+
+Between the start and end tags for the Columns element, you can place any combination of the remaining elements listed in the first table in this figure. For example, to create a column that’s bound to a column from the data source, you use the BoundField element.
+
+The second table in this figure lists the various types of style elements you can use with a GridView control to set the formatting used for different parts of the control. Some of these elements are used as child elements of the column elements. For example, the ItemStyle element is used in the code example in this figure to set the width for the Category ID column. The other style elements in this example are used to set the foreground and background colors for different types of rows displayed by the GridView control. Like a DataList control, a GridView control is rendered as an HTML table. Because of that, you typically use these style elements to format a GridView control rather than using CSS.
+
+Note that you don’t have to create these elements yourself. Instead, these elements are created automatically when you use the Fields dialog box as described in the previous figure, when you use the Properties window to specify the styles for an element, or when you apply a scheme to the GridView control using the Auto Format command.

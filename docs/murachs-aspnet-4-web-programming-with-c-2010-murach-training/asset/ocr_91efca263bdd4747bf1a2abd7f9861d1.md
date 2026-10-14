@@ -1,0 +1,9 @@
+# How jQuery AJAX works
+
+Figure 21-16 shows that jQuery AJAX works similarly to ASP.NET AJAX. As you would expect, however, jQuery AJAX uses the jQuery library instead of the ASP.NET AJAX client-side framework. Then, the JavaScript code uses jQuery AJAX to call a WCF service or web service that’s running on the server. When a response is received from the server, the JavaScript code in the response uses jQuery to process the data and update the DOM accordingly.
+
+Earlier in this chapter, you learned how to use ASP.NET AJAX to create a simple AJAX-enabled web application. The advantage of that approach is that the JavaScript code that works with the ASP.NET AJAX client-side framework is generated automatically when the page is rendered. This allows the developer to quickly develop web pages that use AJAX by dragging and dropping server controls onto the page, and it shields the developer from having to understand the details of what’s going on under the hood. The disadvantage of this approach is that the developer gives up control over how the JavaScript code works.
+
+The advantage of using jQuery AJAX is that the developer has more control over how the client-side controls and code work. The disadvantage of this approach is that it has a steeper learning curve. To start, the developer must have a solid understanding of HTML and CSS. Then, the developer must learn how to write JavaScript code that uses jQuery to work with the DOM and AJAX. Finally, the developer must manually write most of the client-side code.
+
+So which approach should you use? If the ASP.NET AJAX approach shown in this chapter is adequate for your web pages, there’s no reason to move to the jQuery AJAX approach. However, if your web pages require improved functionality or performance, the jQuery AJAX approach is probably what you want. In that case, you can get more information about jQuery AJAX in the ASP.NET environment by searching the Internet.

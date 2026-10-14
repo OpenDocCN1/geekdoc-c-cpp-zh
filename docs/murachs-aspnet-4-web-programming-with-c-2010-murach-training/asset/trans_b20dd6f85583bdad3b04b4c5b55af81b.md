@@ -1,0 +1,98 @@
+
+
+# 视角
+
+本章的目的是让你开始开发多页面 Web 应用程序的开发。现在，如果本章奏效，你应该能够自行开发简单的多页面应用程序。是的，还有很多东西需要学习，但你应该有一个良好的开端。
+
+坦率地说，Shopping Cart 应用程序中的大部分 C# 代码都很困难，即使在像这样简单的应用程序中也是如此。因此，如果你对 C# 的经验有限，你可能无法理解其中的一些代码。而且你可能无法为你的新应用程序编写相同类型的代码。
+
+如果是这种情况，我们建议你购买我们最新的 C# 书籍。它会迅速让你掌握 C# 语言。它会向你展示如何使用数十个 .NET 类，例如 List<T> 类。它会向你展示如何开发面向对象的 Windows 应用程序。它是一个极好的工作参考书。而且它是本书的完美伴侣，本书假设你已经了解 C#。
+
+## 术语
+
+- class library
+- master form
+- jQuery
+- HTTP redirect message
+- cross-page posting
+- absolute URL
+- relative URL
+- data source
+- session state
+- session state object
+- cookie
+
+## 练习 3-1 构建 Shopping Cart 应用程序
+
+本练习指导你构建一个与本章中介绍的类似的 Shopping Cart 应用程序。如果你相对较新于 Visual Studio 和 ASP.NET 4，这是一个很好的练习，通过实践你会学到很多。为了帮助你快速入门，应用程序所需的图像、数据库和类已为你提供。
+
+### 启动网站
+
+- 1. 在 C:\aspnet4_cs 目录中启动一个名为 Ch03Cart 的空文件系统网站。
+- 2. 向网站添加一个名为 App_Data 的文件夹，如图 2-4 所示。然后，将名为 Halloween.mdb 的现有 Access 数据库添加到此文件夹。你可以在 C:\aspnet4_cs\Ch01Cart\App_Data 目录中找到此文件。
+- 3. 向网站添加一个名为 App_Code 的文件夹。然后，如图 3-4 所示，将名为 Product 的现有类添加到此文件夹。你可以在 C:\aspnet4_cs\Ch01Cart 目录的 App_Code 文件夹中找到此类的文件。
+
+4. 在代码编辑器中打开 Product 类并查看其代码。此代码应与图 3-16 中显示的代码相似。
+
+### 构建简单的 Order 页面
+
+- 5. 向网站添加一个名为 Order 的表单并在设计视图中显示它。
+- 6. 添加 Products 下拉列表，让用户选择产品，以及标识它的文本。接下来，添加一个 Access 数据源并将其配置为从 Halloween 数据库获取产品数据，如图 3-10 和 3-11 所示。然后，如图 3-12 所示，将下拉列表绑定到数据源。
+- 7. 添加用于显示产品名称、简短描述、长描述和单价的标签。确保为这些标签适当设置 ID 属性。例如，为将显示产品名称的标签使用 lblName。当完成时，页面应看起来像这样：
+
+![](img/c024ccf88e28c30c07dd410d4342288f_142_0.png)
+
+- 8. 运行应用程序以查看下拉列表的工作方式。此时，你应该能够从列表中选择一个产品，但它不会更改标签显示的文本。
+- 9. 切换到代码编辑器并输入显示下拉列表中选择的产品的代码。为此，你可以为页面的 Load 事件编码事件处理程序，并可以使用名为 GetSelectedProduct 的方法，如图 3-19 的第 1 部分所示。当添加此代码时，不要忘记包含 System.Data 命名空间的 using 语句。
+- 10. 将 Products 下拉列表的 AutoPostBack 属性设置为 True。然后，运行应用程序并测试代码。此时，当你从列表中选择一个产品时，页面上应显示该产品的适当数据（但产品图像尚未显示）。
+
+### 构建简单的 Cart 页面
+
+- 11. 如图 3-4 所示，将名为 CartItem 和 CartItemList 的现有类添加到 App_Code 文件夹。你可以在 C:\aspnet4_cs\ Ch01Cart\App_Code 目录中找到这些类的文件。
+- 12. 在代码编辑器中打开 CartItem 和 CartItemList 类并查看其代码。CartItem 类的代码应与图 3-16 中显示的代码相似，CartItemList 类的代码应与图 3-17 中显示的代码相似。
+
+13. 向项目添加第二个名为 Cart 的 Web 表单。然后，如图 3-6 所示，将 Order 表单设置为起始页面。
+
+14. 向 Cart 页面添加文本和控件，使其看起来像图 3-2 中显示的页面，但不包括页面顶部的图像控件。为了帮助你对齐控件，你可以使用表格。确保适当设置控件的 ID 属性。
+
+15. 设置 Continue Shopping 按钮的 PostBackUrl 属性以显示 Order 页面。
+
+16. 切换到 Order 页面的设计视图并添加 Add to Cart 和 Go to Cart 按钮。然后，设置 Go to Cart 按钮的 PostBackUrl 属性以显示 Cart 页面。
+
+17. 运行应用程序并使用 Go to Cart 和 Continue Shopping 按钮在两个页面之间切换。
+
+### 修改 Cart 和 Order 页面以便购物车可以存储项目
+
+18. 在 Order 页面中，为 Add to Cart 按钮的 Click 事件添加代码以添加所选产品。为此，你可以使用 CartItemList 类的 GetCart 和 AddItem 方法、CartItemList 类的索引器以及 CartItem 类的 AddQuantity 方法，如图 3-19 所示。但是，由于没有数量文本框，你可以假设数量始终为 1。
+
+19. 在 Cart 页面中，添加显示购物车项目在列表框中的代码。为此，你可以为页面的 Load 事件编码事件处理程序，如图 3-21 所示。在此事件处理程序中，你可以使用 CartItemList 类的 GetCart 方法从会话状态获取购物车，并可以使用名为 DisplayCart 的方法在列表框中显示购物车项目。当添加此代码时，不要忘记在任何方法之外声明 cart 变量。
+
+20. 运行应用程序并测试此代码。此时，当你选择一个产品并单击 Add to Cart 按钮时，应用程序应将项目添加到购物车并在 Cart 页面中显示它。如果购物车已包含该项目，它应将该项目的数量增加 1。
+
+### 修改 Cart 页面以便可以从购物车中删除项目
+
+21. 在 Cart 页面中，添加删除所选项目从购物车的代码。为此，你可以为 Remove Item 按钮的 Click 事件编码事件处理程序，如图 3-21 所示。请注意，由于你未包含用于显示错误消息的标签，你可以省略设置此标签的代码。
+
+22. 在 Cart 页面中，添加清除购物车中所有项目的代码。为此，你可以为 Empty Cart 按钮的 Click 事件编码事件处理程序，如图 3-21 所示。
+
+23. 运行应用程序并测试此代码。此时，你应该能够使用 Remove Item 和 Empty Cart 按钮从购物车中删除项目。
+
+the validators on this page work properly. Then, enter customer information in the text boxes and click the Continue Shopping button again. Add another item to the cart and click the Check Out button again. This time, the customer information should be displayed on the CheckOut page. Now, click the Cancel Order button to return to the Order page. Then, click the Go to Cart button to see that there isn’t anything in the cart, and click the Check Out button to see that no customer information is displayed. If you encounter any problems, fix them.
+
+## 练习 3-3 向 Shopping Cart 应用程序添加图像和格式
+
+在本练习中，你将向练习 3-1 和 3-2 中开发的 Shopping Cart 应用程序添加图像。这将给你一个机会使用更复杂的表格并格式化该表格中的文本。
+
+### 向应用程序添加图像
+
+- 1. 向你的网站添加一个名为 Images 的文件夹。然后，将名为 banner.jpg 的文件添加到此文件夹。你可以在 C:\aspnet4_cs\Ch01Cart\Images 目录中找到此文件。
+- 2. 在 Images 文件夹内，添加一个名为 Products 的子文件夹。然后，将产品的 jpg 文件添加到此子文件夹。你可以在 C:\aspnet4_cs\Ch01Cart\Images\Products 目录中找到这些文件。
+- 3. 将 banner.jpg 文件添加到 Shopping Cart 应用程序中所有页面的顶部。
+
+### 修改 Order 页面以显示图像
+
+- 4. 向 Order 页面添加表格和格式，使其看起来与图 3-1 中显示的 Order 页面相似，但不带 Quantity 文本框。
+- 5. 向表格的右列添加一个 Image 控件，并将 ID 属性设置为 imgProduct。另请将包含图像的单元格的 valign 属性设置为“top”。
+- 6. 向 Order 页面添加代码以在 Image 控件中显示所选产品的图像。为此，你可以将 Image 控件的 ImageUrl 属性设置为相对于页面的图像文件位置加上所选产品的 Product 对象的 ImageFile 属性。请注意，这有效是因为 ImageFile 属性包含图像文件名的字符串。
+- 7. 运行应用程序并测试 Order 页面。加载时，它应显示下拉列表中选择的产品的图像。当你选择新产品时，它应在 Image 控件中显示该产品。
+

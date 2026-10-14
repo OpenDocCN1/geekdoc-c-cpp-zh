@@ -1,0 +1,198 @@
+
+
+![](img/c024ccf88e28c30c07dd410d4342288f_384_0.png)
+
+## 使用多个皮肤文件的主题
+
+### The Label.skin file
+
+```
+```aspx
+<asp:Label
+    runat="server"                  ForeColor="#000000" />
+
+<asp:Label
+    runat="server"                  ForeColor="#008000"
+    SkinID="Error" />
+```
+```
+
+### The DropDownList.skin file
+
+```
+```aspx
+<asp:DropDownList
+    runat="server"                  ForeColor="#FF8C00"
+    BorderColor="#000000"           BorderStyle="Solid"
+    BorderWidth="1px" />
+```
+```
+
+### The TextBox.skin file
+
+```
+```aspx
+<asp:TextBox
+    runat="server"                  ForeColor="#FF8C00"
+    BorderColor="#000000"           BorderStyle="Solid"
+    BorderWidth="1px" />
+```
+```
+
+### The Button.skin file
+
+```
+```aspx
+<asp:Button
+    runat="server"                  ForeColor="#000000"
+    Font-Bold="true"                BackColor="#FFA500"
+    BorderColor="#000000"           BorderWidth="1px" />
+```
+```
+
+### Description
+
+- Skins can be stored in a single file as shown in the previous figure or in separate files as shown in this figure.
+
+## How to use customization themes
+
+When you use a customization theme, you can apply the theme to an entire application or to selected pages. You can also apply a skin to individual controls. That’s what you’ll learn to do in the topics that follow. In addition, you’ll learn how to remove a customization theme from an application, page, or control.
+
+### How to apply a customization theme to an application
+
+In most cases, you’ll apply a customization theme to the entire application. To do that, you add a pages element within the system.web element of the web.config file as shown in figure 11-5. Then, you code a theme attribute within the pages element that specifies the name of the theme.
+
+Remember that when you apply a customization theme to an entire application, the formatting it specifies overrides any formatting that’s specified for individual elements and controls. If an attribute isn’t specified by the theme, though, you can use that attribute in an individual element or control to format that element or control. Because the Halloween theme specifies only the ForeColor attribute for the Label control, for example, you can apply any other formatting to individual labels.
+
+### How to apply a customization theme to a page
+
+Figure 11-5 also shows how to apply a customization theme to a page. To do that at design time, you can use the Theme attribute of the Page directive. To do that at runtime, you use the Theme property of the Page class.
+
+Note that the code that applies the theme at runtime must be executed before the HTML elements or ASP.NET controls are added to the page. Because the elements and controls are added during the Init event, the theme is typically applied during the PreInit event as shown in this figure. This event occurs just before the Init event.
+
+In this example, the code that applies the theme sets the Theme property for the Page equal to a string for a theme that has been stored in the Session object. That way, if the user has selected a theme earlier in the session, the theme for this page will be changed to the theme selected by the user. However, unless you store this theme in a persistent data store, it will be lost when the user ends the current session.
+
+### How to apply a skin to a control
+
+In figure 11-3, you saw how to use the SkinID attribute to apply a named skin to a server control at design time. Now, figure 11-5 reviews this skill, and it shows how to use the SkinID property of a server control to apply a named skin
+
+### How to apply a customization theme to all pages of an application
+
+```
+<configuration>
+    <system.web>
+        <pages theme="Halloween" />
+    </system.web>
+</configuration>
+```
+
+### How to apply a customization theme to a page
+
+#### At design time
+
+```
+<%@ Page Language="C#" Theme="Halloween" %>
+```
+
+#### At runtime
+
+```
+protected void Page_PreInit(object sender, EventArgs e)
+{
+    Page.Theme = Session["MyTheme"].ToString();
+}
+```
+
+### How to apply a skin to a control
+
+#### At design time
+
+```
+<asp:Label ID="lblMessage" runat="server" SkinID="Head1"></asp:Label>
+```
+
+#### At runtime
+
+```
+protected void Page_PreInit(object sender, EventArgs e)
+{
+    lblName.SkinID = Session["MySkinID"].ToString();
+}
+```
+
+### Description
+
+- To apply a customization theme to the current application, you can edit the web.config file for the application. Within the web.config file, you can use the theme attribute of the pages element to specify the name of the theme.
+- When you use the theme attribute of the pages element to apply a theme to a page, any formatting it specifies overrides the formatting specified by individual elements and controls.
+- To apply a customization theme to a single page, you can use the Theme attribute of the Page directive or the Theme property of the Page class.
+- To apply a skin to a control, you can use the SkinID attribute or property of the control.
+- The code that applies a theme or skin at runtime should be coded in the event handler for the PreInit event of the page so the code is executed before the HTML elements and ASP.NET controls are added to the page.
+
+## How to remove a customization theme from all pages of an application
+
+```
+<system.web>
+    <pages theme="" />
+</system.web>
+```
+
+### How to remove a customization theme from a page
+
+#### At design time
+
+```
+<%@ Page Language="C#" Theme="" %>
+```
+
+#### At runtime
+
+```
+protected void Page_PreInit(object sender, EventArgs e)
+{
+    Page.Theme = "";
+}
+```
+
+### How to remove a customization theme from a control
+
+#### At design time
+
+```
+<asp:Label ID="lblMessage" runat="server"
+    EnableTheming="False" ForeColor="red">
+</asp:Label>
+```
+
+#### At runtime
+
+```
+protected void Page_PreInit(object sender, EventArgs e)
+{
+    lblName.EnableTheming = false;
+    lblName.ForeColor = System.Drawing.Color.Red;
+}
+```
+
+### Description
+
+- To remove a customization theme from all of the pages in an application, you can set the theme attribute of the pages element in the web.config file to an empty string.
+- To remove a customization theme from a single page, you can set the Theme attribute of the Page directive or the Theme property of the Page class to an empty string.
+- To remove a customization theme from a control, you can set the EnableTheming attribute or property to False.
+- The code that removes a theme at runtime should be coded in the event handler for the PreInit event of the page so the code is executed before the HTML elements and ASP.NET controls are added to the page.
+
+## How to use style sheet themes
+
+If you want to be able to override the attributes specified by a theme, you can use style sheet themes instead of customization themes. Figure 11-7 shows how to use style sheet themes.
+
+### How to apply a style sheet theme
+
+To apply a style sheet theme to an entire application, you add a pages element to the web.config file just as you do for a customization theme. Instead of adding a theme attribute, though, you add a styleSheetTheme attribute. This is illustrated in the first example in this figure.
+
+To apply a style sheet theme to a page at design time, you set the StylesheetTheme attribute of the Page directive. To apply a style sheet theme at runtime, you don’t use the PreInit event of the page like you do for a customization theme. Instead, you override the StyleSheetTheme property of the page to get and set the name of the theme. Then, when a page loads, it automatically calls the StyleSheetTheme property to set the style sheet theme. In this figure, for example, the StyleSheetTheme property for the page works with a theme that’s stored in the Session object.
+
+### How to remove a style sheet theme
+
+This figure also shows how to remove a style sheet them from a page. To do that at design time, you set the StylesheetTheme attribute of the Page directive to an empty string. To do that at runtime, you override the StyleSheetTheme property of the page just as you do to apply a theme at runtime. In this case, though, the get accessor can simply return an empty string, and the set accessor doesn’t need to do anything. Note, though, that you can’t omit the set accessor. That’s because the StyleSheetTheme property of the page that this property overrides is defined with both get and set accessors.
+
+Although you can also remove a style sheet theme from a control at design time by setting the control’s EnableTheming property to False, you’re not likely to do that. That’s because any attributes you specify for individual controls are applied after the styles specified by the style sheet theme. So if you need to override an attribute that’s set by a theme, you can simply include that attribute on the control. That’s the main advantage of using style sheet themes.
+

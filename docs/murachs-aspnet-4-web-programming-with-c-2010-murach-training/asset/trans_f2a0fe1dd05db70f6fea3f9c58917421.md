@@ -1,0 +1,139 @@
+
+
+## 添加命令字段的“添加字段”对话框
+
+![](img/c024ccf88e28c30c07dd410d4342288f_514_0.png)
+
+### 上述对话框生成的代码
+
+```
+<asp:CommandField ButtonType="Button"
+    ShowDeleteButton="True"
+    ShowEditButton="True"
+    ShowInsertButton="True" />
+```
+
+### 说明
+
+- 你可以向 DetailsView 控件添加命令按钮，让用户更新、插入和删除数据。
+- DetailsView 控件的命令按钮与 GridView 控件的命令按钮类似。但是，DetailsView 控件不提供 Select 按钮，而提供了 New 和 Insert 按钮。有关命令按钮的更多信息，请参阅第 14 章中的图 14-9。
+- 要显示“添加字段”对话框，请从 DetailsView 控件的智能标记菜单中选择“添加新字段”。
+
+## 如何使用 DetailsView 控件引发的事件
+
+图 15-7 列出了 DetailsView 控件引发的事件。可以看出，这些事件与 GridView 控件引发的事件类似。其中大多数事件成对出现：一个在操作发生前引发，另一个在操作完成后引发。例如，ItemDeleting 事件在项目被删除前引发，而 ItemDeleted 事件在项目已被删除后引发。
+
+与 GridView 控件一样，处理 DetailsView 控件的“之前”事件最常见的原因是提供数据验证。例如，当用户单击 Update 按钮时，你可以处理 ItemUpdating 事件以确保用户输入了正确的数据。然后，如果用户未输入正确数据，可以将 e 参数的 Cancel 属性设置为 True。这将取消更新。
+
+“之后”操作事件让你检查数据库操作是否成功完成。为此，你需要检查两种类型的错误，如本图中的示例所示。首先，你应该通过测试 e 参数的 Exception 属性来检查数据库异常。如果它不为 null，则发生了数据库异常。然后，你应该显示适当的错误消息，让用户了解问题。
+
+如果数据源使用乐观并发，你还应检查是否未发生并发错误。你可以通过测试 e 参数的 AffectedRows 属性来做到这一点。如果发生了并发错误，此属性将被设置为零，表示没有行被更改。然后，你可以显示适当的错误消息。
+
+如果更新操作期间未发生错误，本图所示的 ItemUpdated 事件最后会调用下拉列表控件的 DataBind 方法。这是因为该控件启用了视图状态。因此，除非调用其 DataBind 方法刷新其数据，否则该控件将继续显示旧数据。如果该控件禁用了视图状态，则不需要 DataBind 调用。
+
+### DetailsView 控件引发的事件
+
+| 事件 | 说明 |
+|---|---|
+| ItemCommand | 在单击按钮时引发。 |
+| ItemCreated | 在创建项目时引发。 |
+| DataBound | 在项目的数据绑定完成后引发。 |
+| ItemDeleted | 在项目已被删除时引发。 |
+| ItemDeleting | 在项目即将被删除时引发。 |
+| ItemInserted | 在项目已被插入时引发。 |
+| ItemInserting | 在项目即将被插入时引发。 |
+| ItemUpdated | 在项目已被更新时引发。 |
+| ItemUpdating | 在项目即将被更新时引发。 |
+| PageIndexChanged | 在显示项目的索引已更改时引发。 |
+| PageIndexChanging | 在显示项目的索引即将更改时引发。 |
+
+### ItemUpdated 事件的事件处理程序
+
+```
+protected void DetailsView1_ItemUpdated(
+    object sender, DetailsViewUpdatedEventArgs e)
+{
+    if (e.Exception != null)
+    {
+        lblError.Text = "A database error has occurred. " +
+            "Message: " + e.Exception.Message;
+        e.ExceptionHandled = true;
+    }
+    else if (e.AffectedRows == 0)
+    {
+        lblError.Text = "Another user may have updated that product. "
+            + "Please try again.";
+    }
+    else
+    {
+        ddlProducts.DataBind();
+    }
+}
+```
+
+### 说明
+
+- 与 GridView 控件一样，DetailsView 控件会引发事件，你可以使用这些事件来测试数据库异常和并发错误。
+- 要确定是否发生了 SQL 异常，请测试 e 参数的 Exception 属性。如果发生了异常，可以将 ExceptionHandled 属性设置为 True 以抑制异常。你还可以将 KeepInEditMode 属性设置为 True 以使 DetailsView 控件保持在编辑模式。并且可以将 KeepInInsertMode 属性设置为 True 以使控件保持在插入模式。
+- 如果 e 参数的 AffectedRows 属性为零且未抛出异常，则可能发生了并发错误。
+- 如果 DetailsView 控件用于主/从页面，则在成功插入、更新或删除后，应调用主列表控件的 DataBind 方法。
+
+## 编辑模式下无模板和有模板的 DetailsView 控件
+
+![](img/c024ccf88e28c30c07dd410d4342288f_518_0.png)
+
+![](img/c024ccf88e28c30c07dd410d4342288f_518_1.png)
+
+### DetailsView 模板元素
+
+| 元素 | 说明 |
+|---|---|
+| ItemTemplate | 用于单个字段的模板。 |
+| AlternatingItemTemplate | 用于交替字段的模板。 |
+| EditItemTemplate | 用于编辑模式下字段的模板。 |
+| InsertItemTemplate | 用于插入模式下字段的模板。 |
+| HeaderTemplate | 用于字段的标题文本的模板。 |
+
+### 自定义模板字段的 aspx 代码
+
+```
+<asp:TemplateField HeaderText="Name:">
+    <ItemTemplate>
+        <asp:Label ID="Label8" runat="server" Text='<%# Bind("Name") %>'>
+        </asp:Label>
+    </ItemTemplate>
+    <EditItemTemplate>
+        <asp:TextBox ID="txtName" runat="server" Text='<%# Bind("Name") %>' Width="200px" MaxLength="50">
+        </asp:TextBox>
+    </EditItemTemplate>
+    <InsertItemTemplate>
+        <asp:TextBox ID="txtName" runat="server" Text='<%# Bind("Name") %>' Width="200px" MaxLength="50">
+        </asp:TextBox>
+    </InsertItemTemplate>
+    <HeaderStyle HorizontalAlign="Left" Width="150px" />
+    <ItemStyle Width="250px" />
+</asp:TemplateField>
+```
+
+### 说明
+
+- 你可以使用模板字段来控制 DetailsView 控件中字段的外观，使用与在 GridView 控件中处理模板字段相同的技术。有关更多信息，请参阅第 14 章中的图 14-15。
+
+## 产品维护应用程序
+
+以下主题介绍了一个应用程序，该应用程序在主/从页面中使用 GridView 和 DetailsView 控件来维护 Halloween 数据库中的 Products 表。
+
+### 应用程序的操作
+
+图 15-9 显示了产品维护应用程序的操作。该应用程序使用 GridView 控件在页面左侧列出产品记录。此控件使用分页，让用户滚动浏览整个 Products 表。
+
+当用户单击产品的 Select 按钮时，该产品的详细信息将显示在页面右侧的 DetailsView 控件中。然后，用户可以使用 Edit 或 Delete 按钮编辑或删除所选产品。用户还可以单击 New 按钮插入新产品。
+
+### aspx 文件
+
+图 15-10 显示了产品维护应用程序的 Default.aspx 文件。在第 1 部分中，你可以看到显示产品的 GridView 控件以及此控件的数据源。请注意，GridView 控件的 SelectedIndex 属性设置为 0。这样，当页面首次显示时，第一个产品的信息将显示在 DetailsView 控件中。
+
+DetailsView 控件显示在列表的第 2 部分和第 3 部分。这里，DetailsView 元素包含控制控件整体外观的属性。我通过对 DetailsView 控件应用方案，然后编辑属性以更改颜色来生成其中大部分属性。你还可以看到方案向控件添加了 RowStyle、EditRowStyle 和 FooterStyle 元素。由于未包含 InsertRowStyle 元素，因此此样式将默认为 EditRowStyle。
+
+为了让用户更轻松地使用 DetailsView 控件中的数据，所有绑定字段都已转换为模板字段。然后，修改了这些字段的 EditItem 和 InsertItem 模板，以便字段显示为图 15-8 中第二个 DetailsView 控件所示。此外，为除类别 ID 和图像文件字段外的每个字段添加了必填字段验证器，并为单价和库存字段添加了比较验证器。最后，添加了一个提供 Edit、Delete 和 New 按钮的命令字段。
+

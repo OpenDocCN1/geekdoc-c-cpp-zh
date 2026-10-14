@@ -1,0 +1,13 @@
+# How to work with data in session state
+
+Figure 3-15 shows how you can use the session state object to store application data. To do that, you use the members of this object, which is created from the HttpSessionState class. To access this object from a web form, you use the Session property of the page.
+
+The session state object contains a collection of items that consist of the item names and their values. One way to add an item to this collection is to use the indexer as shown in the first example. Here, an object named cart is assigned to a session state item named Cart. If the Cart item doesn’t exist when this statement is executed, it will be created. Otherwise, the value of the Cart item will be updated.
+
+Another way to add an item to the session state collection is to use the Add method, as illustrated in the second example. Just as when you use the indexer, if the item already exists, it’s updated when the Add method is executed. Otherwise, it’s added to the collection.
+
+You can also use the indexer to retrieve the value of an item from the session state collection as shown in the third example. Here, the value of the Cart item is retrieved and assigned to the cart variable. Since the value of a session state item is stored as an Object type, you typically cast it to the appropriate type. In this example, the value of the Cart item is cast to a sorted list because the cart variable it’s assigned to is defined as a sorted list.
+
+Because the session state object uses valuable server memory, you should avoid using it to store large items. Or, if you must store large items in session state, you should remove the items as soon as you’re done with them. To do that, you use the Remove method as illustrated in the fourth example in this figure.
+
+The first four examples in this figure use the Session property of the page to access the session state object. Because Session is a property of the System.Web.UI.Page class, however, you can only use this property from a class that inherits the System.Web.UI.Page class. In other words, you can only use it from a code-behind file for a page. To access session state from a class that doesn’t inherit the System.Web.UI.Page class, such as a database or business class, you use the Session property of the HttpContext object for the current request. To get this HttpContext object, you use the Current property of the HttpContext class as illustrated in the last example in this figure.

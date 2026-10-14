@@ -1,0 +1,5 @@
+# How to use the ScriptManagerProxy control
+
+The ScriptManagerProxy control is used to extend the capabilities of a ScriptManager control. The most common scenario for using a ScriptManagerProxy control is when you use a ScriptManager control on a Master page and you want to add either JavaScript code or a service proxy to a content page that uses that master page. This is illustrated in figure 21-7. Here, you can see a content page that uses a master page that contains an image and a ScriptManager control.
+
+Unlike the ScriptManager control, you can have more than one ScriptManagerProxy controls on a page. However, these controls can’t be used to modify the properties of the ScriptManager control. They can only add additional asp:ScriptReference and asp:ServiceReference elements to a page. As you can see in the second and third examples in this figure, you code these elements just like you do for a ScriptManager control.

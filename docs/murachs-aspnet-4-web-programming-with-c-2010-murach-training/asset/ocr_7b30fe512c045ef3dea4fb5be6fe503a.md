@@ -1,0 +1,13 @@
+# # How to use cross-page posting
+
+A fourth way to transfer to a different web page is to use *cross-page posting* as described in figure 3-8. To use cross-page posting, you specify the **URL** of another page in the **PostBackUrl** property of a button control. Then, when the user clicks the button, an HTTP Post message that contains the URL specified by the **PostBackUrl** property is sent back to the server. As a result, the page with that URL is loaded and executed instead of the page that was originally displayed.
+
+For example, the Go to Cart button on the Order page uses cross-page posting to go to the Cart page. As a result, the **PostBackUrl** property of this button is set to Cart.aspx as shown in this figure. Then, when the user clicks the Go to Cart button, ASP.NET loads and executes the Cart.aspx page instead of the Order.aspx page.
+
+Notice that the URL in the **PostBackUrl** property of this control starts with a tilde (~/) operator. This operator is added automatically when you set the **PostBackUrl** property from the Properties window, and you'll learn more about it in the next topic.
+
+If the user enters data into one or more controls on a page that uses cross-page posting, you can use the **PreviousPage** property to retrieve the data entered by the user. As the code example in this figure shows, you should first check to make sure that the **PreviousPage** property refers to a valid object. If this property doesn't refer to a valid object, it means that either the page isn't being loaded as the result of a cross-page posting, or the request came from another web site. In either case, no previous page is available.
+
+If the **PreviousPage** property refers to a valid object, you can use the **FindControl** method to find a control on the previous page. Then, you can cast it to a text box (if the control is a text box). Finally, you can use the **Text** property to retrieve the data that the text box contains.
+
+Because of the extra programming required to retrieve data entered by the user, cross-page posting is best used when no user input needs to be processed. For instance, since no data needs to be processed when the user clicks the Go to Cart button, I used cross-page posting instead of **Response.Redirect** or **Server.Transfer**. However, I used **Response.Redirect** for the Add to Cart button on the Order page so I could easily retrieve the selected product and the quantity entered by the user.

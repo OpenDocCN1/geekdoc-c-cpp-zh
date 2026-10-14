@@ -1,0 +1,13 @@
+# How to use the advanced features of a SQL data source
+
+The SqlDataSource control provides several advanced features that you may want to use in your applications. These features are explained in the topics that follow.
+
+# How to create a data source that can update the database
+
+Much like ADO.NET data adapters, a SQL data source can include Insert, Update, and Delete statements that let you automatically update the underlying database based on changes made by the user to bound data controls. To automatically generate these statements, you can check the first box in the dialog box shown in figure 13-17, which is displayed when you click on the Advanced button in the dialog box shown in figure 13-5. You can also check the box for optimistic concurrency, which enhances the generated statements so they check whether updated or deleted rows have changed since the data source retrieved the original data.
+
+Note that for this to work, the primary key column of the table you’re updating must be included in the Select statement. That’s because this column is used to identify a row that’s being updated or deleted. So if the Generate option in the Advanced SQL Generation Options dialog box isn’t enabled, it’s probably because you haven’t selected the primary key column.
+
+The code in this figure shows the aspx elements that are generated when you request Insert, Update, and Delete statements without using optimistic concurrency. Here, the InsertCommand, UpdateCommand, and DeleteCommand attributes provide the statements, and the InsertParameters, UpdateParameters, and DeleteParameters child elements define the parameters used by these statements. Because optimistic concurrency isn’t used, these statements will update the database whether or not the data has changed since it was originally retrieved, which could lead to corrupt data.
+
+If you check the Use Optimistic Concurrency check box, though, the update and delete commands will include Where clauses that compare the value of each column with the value originally retrieved. Because these values are passed as parameters, the generated aspx code will include additional elements that define these parameters. The SqlDataSource element will also include two additional attributes. The first one indicates that optimistic concurrency should be used, and the second one indicates the format that should be used for the names of the parameters that will hold the original column values. Then, if the value of any column has changed since it was originally retrieved, the update or delete operation will be refused, and your application needs to provide code that handles that situation. You’ll see how that works in chapter 14.

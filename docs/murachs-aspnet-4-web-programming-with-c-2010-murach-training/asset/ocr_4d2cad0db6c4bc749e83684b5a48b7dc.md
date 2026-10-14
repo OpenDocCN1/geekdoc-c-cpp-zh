@@ -1,0 +1,5 @@
+# How to use the ListItem Collection Editor
+
+In the last figure, you saw how to use the Add method of a list item collection to load items into a drop-down list or list box control. If the items are static, however, you might want to use the ListItem Collection Editor to load them instead. Figure 6-14 shows you how to use this editor.
+
+When you first display the ListItem Collection Editor, the list is empty. Then, you can use the Add button below the Members list to add items to the list. When you do, the item appears in the Members list and its properties appear in the Properties list. The first property lets you disable a list item so it doesn’t appear in the list. The other three properties are the same properties you learned about in figure 6-12. Note, however, that when you set the Text property, the Value property defaults to the same value. If that’s not what you want, you can change this value.

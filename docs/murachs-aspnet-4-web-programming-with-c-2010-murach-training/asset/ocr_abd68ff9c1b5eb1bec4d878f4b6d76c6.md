@@ -1,0 +1,9 @@
+# How to use the Command event
+
+Figure 6-7 shows how you can use the Command event to process a group of button controls using a single event handler. Like the Click event, this event receives both a sender argument and an e argument. In this case, the e argument represents a CommandEventArgs object.
+
+The two properties of the CommandEventArgs class are shown in this figure. You can use these properties to get the CommandName and CommandArgument properties of a control. When you create a button control, you can set the CommandName and CommandArgument properties to any string value. Then, you can examine them in the Command event handler to determine how the application should respond when the user clicks the button.
+
+The examples in this figure illustrate how this works. The first example shows the asp tags for four button controls. Notice that a different CommandName value is assigned to each one. However, the same event handler is named on the OnCommand attributes. That way, the same event handler will handle the Command event of all four controls. Although you can also assign CommandArgument values to each control, that’s not necessary here.
+
+The second example shows an event handler that processes the Command event of all four controls. To do that, it uses a switch statement to test the value of the CommandName property of the e argument. Since this value indicates the control that was clicked, it can be used to determine which method to call based on the button that was clicked. This is another way to do the processing you saw in figure 6-6 that used an image button control.

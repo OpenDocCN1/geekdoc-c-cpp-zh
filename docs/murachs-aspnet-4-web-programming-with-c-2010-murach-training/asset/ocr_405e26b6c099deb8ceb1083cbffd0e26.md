@@ -1,0 +1,11 @@
+# Common validator properties
+
+After you add a validator to a web form, you set its properties to determine which input control it validates and how errors are displayed. Figure 7-2 presents the properties that you use to do that. The most important property is the ControlToValidate property, which associates the validator with an input control on the page.
+
+The Display property determines how the error message for a validator is displayed. The option you choose depends on whether two or more validators are associated with the same input control and whether or not you use a validation summary control. Because the two validators for the form in figure 7-1 have the Display property set to Dynamic, the active error message will be displayed to the right of the text box.
+
+You use the ErrorMessage and Text properties to specify messages that are displayed when the validator detects an error. You can set one or both of these properties depending on whether you use a validation summary control. If you want the same message in both the validator and the validation summary control, just set the ErrorMessage property. But if you want different messages, set the ErrorMessage property to the message you want in the validation summary control and the Text property to the message you want in the validator.
+
+If the Enabled property of a validator is set to True, the validation test for the validator is performed. But if you want to skip the validation that’s done by a validator, you can set this property to False. In contrast, the EnableClientScript property determines whether the client-side script for the validation is generated. If this property is set to False, the validation is only done on the server.
+
+When ASP.NET performs the validation test specified by a validator, it sets the IsValid property of the validator to indicate whether or not the data is valid. Then, you can refer to this property in your C# code to test the result of the validation. In most cases, though, you won’t test the result of individual validators. Instead, you’ll test that all of the validators on the page passed their validation tests by checking the IsValid property of the page.
