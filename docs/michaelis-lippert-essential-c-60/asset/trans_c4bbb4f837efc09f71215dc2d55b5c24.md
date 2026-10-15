@@ -1,0 +1,182 @@
+
+
+## LISTING 13.7: Using the += and -= Delegate Operators
+
+```
+// ...
+Thermostat thermostat = new Thermostat();
+Heater heater = new Heater(60);
+Cooler cooler = new Cooler(80);
+
+Action<float> delegate1;
+Action<float> delegate2;
+Action<float> delegate3;
+
+delegate1 = heater.OnTemperatureChanged;
+delegate2 = cooler.OnTemperatureChanged;
+
+Console.WriteLine("Invoke both delegates:");
+delegate3 = delegate1;
+delegate3 += delegate2;
+delegate3(90);
+
+Console.WriteLine("Invoke only delegate2");
+delegate3 -= delegate1;
+delegate3(30);
+// ...
+```
+
+The results of Listing 13.7 appear in Output 13.1.
+
+## OUTPUT 13.1
+
+```
+Invoke both delegates:
+Heater: Off
+Cooler: On
+Invoke only delegate2
+Cooler: Off
+```
+
+Furthermore, you can also use the + and - operators to combine delegates, as Listing 13.8 shows.
+
+## LISTING 13.8: Using the + and - Delegate Operators
+
+```
+// ...
+Thermostat thermostat = new Thermostat();
+Heater heater = new Heater(60);
+Cooler cooler = new Cooler(80);
+
+Action<float> delegate1;
+Action<float> delegate2;
+Action<float> delegate3;
+
+// Note: Use new Action (cooler.OnTemperatureChanged)
+// for C# 1.0 syntax.
+```
+
+```
+delegate1 = heater.OnTemperatureChanged;
+delegate2 = cooler.OnTemperatureChanged;
+
+Console.WriteLine("Combine delegates using + operator:");
+delegate3 = delegate1 + delegate2;
+delegate3(60);
+
+Console.WriteLine("Uncombine delegates using - operator:");
+delegate3 = delegate3 - delegate2;
+delegate3(60);
+// ...
+```
+
+Use of the assignment operator clears out all previous subscribers and allows you to replace them with new subscribers. This is an unfortunate characteristic of a delegate. It is simply too easy to mistakenly code an assignment when, in fact, the += operator is intended. The solution, called events, appears in the “Events” section later in this chapter.
+
+Both the + and - operators and their assignment equivalents, += and -=, are implemented internally using the static methods System.Delegate.Combine() and System.Delegate.Remove(). These methods take two parameters of type delegate. The first method, Combine(), joins the two parameters so that the first parameter points to the second within the list of delegates. The second, Remove(), searches through the chain of delegates specified in the first parameter and then removes the delegate specified by the second parameter.
+
+One interesting thing to note about the Combine() method is that either or both of its parameters can be null. If one of them is null, Combine() returns the non-null parameter. If both are null, Combine() returns null. This explains why you can call thermostat.OnTemperatureChange += heater.OnTemperatureChanged; and not throw an exception, even if the value of thermostat.OnTemperatureChange is still null.
+
+## Sequential Invocation
+
+Figure 13.1 highlights the sequential notification of both heater and cooler.
+
+Although you coded only a single call to OnTemperatureChange(), the call is broadcast to both subscribers. Thus, with just one call, both cooler and heater are notified of the change in temperature. If you added more subscribers, they, too, would be notified by OnTemperatureChange().
+
+![](img/25683ccec0773ba5b8794b11f2b12877_591_0.png)
+
+## FIGURE 13.1: Delegate Invocation Sequence Diagram
+
+Although a single call, OnTemperatureChange(), caused the notification of each subscriber, the subscribers are still called sequentially, not simultaneously, because they are all called on the same thread of execution.
+
+## ADVANCED TOPIC
+
+## Multicast Delegate Internals
+
+To understand how events work, you need to revisit the first examination of the System.Delegate type internals. Recall that the delegate keyword is an alias for a type derived from System.MulticastDelegate. In turn, System.MulticastDelegate is derived from System.Delegate, which, for its part, is composed of an object reference (needed for nonstatic methods) and a method reference. When you create a delegate, the compiler automatically employs the System.MulticastDelegate type rather than the System.Delegate type. The MulticastDelegate class includes an object reference and a method reference, just like its Delegate base class, but it also contains a reference to another System.MulticastDelegate object.
+
+When you add a method to a multicast delegate, the MulticastDelegate class creates a new instance of the delegate type, stores the object reference and the method reference for the added method into the new instance, and adds the new delegate instance as the next item in a list of delegate instances. In effect, the MulticastDelegate class maintains a linked list of Delegate objects. Conceptually, you can represent the thermostat example as shown in Figure 13.2 on the facing page (denoted as a continuation of this advanced topic).
+
+When invoking a multicast delegate, each delegate instance in the linked list is called sequentially. Generally, delegates are called in the order they were added, but this behavior is not specified within the CLI specification. Furthermore, it can be overridden. Therefore, programmers should not depend on an invocation order.
+
+## Error Handling
+
+Error handling makes awareness of the sequential notification critical. If one subscriber throws an exception, later subscribers in the chain do not receive the notification. Consider, for example, what would happen if you changed the Heater’s OnTemperatureChanged() method so that it threw an exception, as shown in Listing 13.9.
+
+![](img/25683ccec0773ba5b8794b11f2b12877_593_0.png)
+
+## FIGURE 13.2: Multicast Delegates Chained Together
+
+## LISTING 13.9: OnTemperatureChanged() Throwing an Exception
+
+```
+class Program
+{
+    public static void Main()
+    {
+        Thermostat thermostat = new Thermostat();
+        Heater heater = new Heater(60);
+        Cooler cooler = new Cooler(80);
+        string temperature;
+
+        thermostat.OnTemperatureChange +=
+            heater.OnTemperatureChanged;
+        // Using C# 3.0. Change to anonymous method
+        // if using C# 2.0.
+        thermostat.OnTemperatureChange +=
+            (newTemperature) =>
+            {
+                throw new InvalidOperationException();
+            };
+        thermostat.OnTemperatureChange +=
+            cooler.OnTemperatureChanged;
+
+        Console.Write("Enter temperature: ");
+        temperature = Console.ReadLine();
+        thermostat.CurrentTemperature = int.Parse(temperature);
+    }
+}
+```
+
+![](img/25683ccec0773ba5b8794b11f2b12877_594_0.png)
+
+## FIGURE 13.3: Delegate Invocation with Exception Sequence Diagram
+
+Figure 13.3 shows an updated sequence diagram. Even though cooler and heater subscribed to receive messages, the lambda expression exception terminates the chain and prevents the cooler object from receiving notification.
+
+To avoid this problem so that all subscribers receive notification, regardless of the behavior of earlier subscribers, you must manually enumerate through the list of subscribers and call them individually. Listing 13.10 shows the updates required in the CurrentTemperature property. The results appear in Output 13.2.
+
+## LISTING 13.10: Handling Exceptions from Subscribers
+
+```
+public class Thermostat
+{
+    // Define the event publisher
+    public Action<float> OnTemperatureChange;
+
+    public float CurrentTemperature
+    {
+        get { return _CurrentTemperature; }
+        set
+        {
+            if (value != CurrentTemperature)
+            {
+                _CurrentTemperature = value;
+                Action<float> onTemperatureChange = OnTemperatureChange;
+                if(onTemperatureChange != null)
+                {
+```
+
+property. In this way, all exceptions are still reported and, at the same time, all subscribers are notified.
+
+Parenthetically, no null conditional was used in this example because of the if condition that verified onTemperatureChange was not null.
+
+## Method Returns and Pass-by-Reference
+
+There is another scenario in which it is useful to iterate over the delegate invocation list instead of simply activating a notification directly. This scenario relates to delegates that either do not return void or have ref or out parameters. In the thermostat example, the OnTemperatureChange delegate is of type Action<float>, which returns void and has no out or ref parameters. As a result, no data is returned to the publisher. This consideration is important, because an invocation of a delegate potentially triggers notification to multiple subscribers. If each of the subscribers returns a value, it is ambiguous as to which subscriber’s return value would be used.
+
+If you changed OnTemperatureChange to return an enumeration value, indicating whether the device was on because of the temperature change, the new delegate would be of type Func<float, Status>, where Status was an enum with elements On and Off. All subscriber methods would have to use the same method signature as the delegate and, therefore, each would be required to return a status value. Also, since OnTemperatureChange might potentially correspond to a chain of delegates, it is necessary to follow the same pattern that you used for error handling. In other words, you must iterate through each delegate invocation list, using the GetInvocationList() method, to retrieve each individual return value. Similarly, delegate types that use ref and out parameters need special consideration. However, although it is possible to use this approach in exceptional circumstances, the guideline is to avoid this scenario entirely by returning void.
+
+## Events
+
+There are two key problems with the delegates as you have used them so far in this chapter. To overcome these issues, C# uses the keyword event. In this section, you will see why you would use events, and how they work.
+

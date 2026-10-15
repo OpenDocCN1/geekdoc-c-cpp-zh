@@ -1,0 +1,11 @@
+an assembly are said to form the assembly’s API. Likewise, given a combination of assemblies, like those found in the .NET Framework, the collective group of assemblies form a larger API. Often, this larger group of APIs are referred to as the framework—hence the term .NET Framework in reference to the APIs exposed by all the assemblies included with .NET. Generically, the API comprises the set of interfaces and protocols (or instructions) for programming against a set of components. In fact, with .NET, the protocols themselves are the rules for how .NET assemblies execute.
+
+# Managed Execution and the Common Language Infrastructure
+
+The processor cannot directly interpret an assembly. Assemblies consist mainly of a second language known as Common Intermediate Language (CIL), or IL for short.⁷ The C# compiler transforms the C# source file into this intermediate language. An additional step, usually performed at execution time, is required to change the CIL code into machine code that the processor can understand. This involves an important element in the execution of a C# program: the Virtual Execution System (VES). The VES, also casually referred to as the runtime, compiles CIL code as needed (a process known as just-in-time compilation or jitting). The code that executes under the context of an agent such as the runtime is termed managed code, and the process of executing under control of the runtime is called managed execution. The code is “managed” because the runtime controls significant portions of the program’s behavior by managing aspects such as memory allocation, security, and just-in-time compilation. Code that does not require the runtime to execute is called native code (or unmanaged code).
+
+The specification for a VES is included in a broader specification known as the Common Language Infrastructure (CLI) specification.⁸ An international standard, the CLI includes specifications for the following:
+
+7. A third term for CIL is Microsoft IL (MSIL). This book uses the term CIL because it is the term adopted by the CLI standard. IL is prevalent in conversation among people writing C# code because they assume that IL refers to CIL rather than other types of intermediate languages.
+
+8. Miller, J., and S. Ragsdale. 2004. The Common Language Infrastructure Annotated Standard. Boston: Addison-Wesley.

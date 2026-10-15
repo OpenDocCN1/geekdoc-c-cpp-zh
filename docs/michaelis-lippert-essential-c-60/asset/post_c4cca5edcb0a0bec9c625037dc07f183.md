@@ -1,0 +1,127 @@
+
+object. Even literals include these methods, enabling somewhat peculiar-looking code such as this:
+
+```
+Console.WriteLine(42.ToString());
+```
+
+Even class definitions that don’t have any explicit derivation from object, derive from object anyway. The two declarations for PdaItem in Listing 6.21, therefore, result in identical CIL.
+
+## LISTING 6.21: System.Object Derivation Implied When No Derivation Is Specified Explicitly
+
+```
+public class PdaItem
+{
+    // ...
+}
+```
+
+```
+public class PdaItem : object
+{
+    // ...
+}
+```
+
+When the object’s default implementation isn’t sufficient, programmers can override one or more of the three virtual methods. Chapter 9 describes the details involved in doing so.
+
+## Verifying the Underlying Type with the is Operator
+
+Because C# allows casting down the inheritance chain, it is sometimes desirable to determine what the underlying type is before attempting a conversion. Also, checking the type may be necessary for type-specific actions where polymorphism was not implemented. To determine the underlying type, C# provides the is operator (see Listing 6.22).
+
+## LISTING 6.22: is Operator Determining the Underlying Type
+
+```
+public static void Save(object data)
+{
+    if (data is string)
+    {
+        data = Encrypt((string) data);
+    }
+
+    // ...
+}
+```
+
+Listing 6.22 encrypts the data if the underlying type is a string. This is significantly different from encrypting any data type that casts successfully to a string since many types support casting to a string, and yet their underlying type is not a string.
+
+Although this capability is important, you should consider issues related to polymorphism prior to using the is operator. Polymorphism supports the expansion of a behavior to other data types without requiring any modification of the implementation that defines the behavior. For example, deriving from a common base type and then using that type as the parameter to the Save() method avoids the need to check for string explicitly and enables other data types to support encryption during the save operation by deriving from the same base type.
+
+## Conversion Using the as Operator
+
+The advantage of the is operator is that it enables verification that a data item is of a particular type. The as operator goes one step further: It attempts a conversion to a particular data type and assigns null if the source type is not inherently (within the inheritance chain) of the target type. This strategy is significant because it avoids the exception that could result from casting. Listing 6.23 demonstrates use of the as operator.
+
+## LISTING 6.23: Data Conversion Using the as Operator
+
+```
+object Print(IDocument document)
+{
+    if(thing != null)
+    {
+        // Print document...
+    }
+    else
+    {
+    }
+}
+
+static void Main()
+{
+    object data;
+
+    // ...
+
+    Print(data as Document);
+}
+```
+
+By using the as operator, you are able to avoid additional try/catch handling code if the conversion is invalid, because the as operator provides a way to attempt a cast without throwing an exception if the cast fails.
+
+One advantage of the is operator over the as operator is that the latter cannot successfully determine the underlying type. The as operator may implicitly cast up or down an inheritance chain, as well as across to types supporting the cast operator. Unlike the as operator, the is operator can determine the underlying type.
+
+## SUMMARY
+
+This chapter discussed how to specialize a class by deriving from it and adding additional methods and properties. This coverage included a discussion of the private and protected access modifiers that control the level of encapsulation.
+
+The chapter also investigated the details of overriding the base class implementation and, alternatively, hiding it using the new modifier. To control overriding, C# provides the virtual modifier, which identifies to the deriving class developer which members she intends for derivation. To prevent any derivation, the sealed modifier may be used on the class. Similarly, placing the sealed modifier on a member prevents further overriding from subclasses.
+
+This chapter ended with a brief discussion of how all types derive from object. Chapter 9 discusses this derivation further, with a look at how object includes three virtual methods with specific rules and guidelines that govern overloading. Before you get there, however, you need to consider another programming paradigm that builds on object-oriented programming: interfaces. This is the subject of Chapter 7.
+
+This page intentionally left blank
+
+## Introducing Interfaces
+
+## BEGINNER TOPIC
+
+## Why Interfaces?
+
+Interfaces are useful because—unlike abstract classes—they enable the complete separation of implementation details from services provided. For a real-world example, consider the “interface” that is an electrical wall socket. How the electrical power gets to the socket is an implementation detail: It might be generated by chemical, nuclear, or solar energy; the generator might be in the next room or far away; and so on. The socket provides a “contract”: It agrees to supply a particular voltage at a specific frequency, and in return it requires that the appliance using that interface provide a compatible plug. The appliance need not care anything about the implementation details that get power to the socket; all it needs to worry about is that it provides a compatible plug.
+
+Consider the following example: A huge number of file compression formats are available (.zip, .7-zip, .cab, .lha, .tar, .tar.gz, .tar.bz2, .bh, .rar, .arj, .arc, .ace, .zoo, .gz, .bzip2, .xxe, .mime, .uue, and .yenc, just to name a few). If you created classes for each compression format, you could end up with different method signatures for each compression implementation and no ability to apply a standard calling convention across them. The desired method could be declared as abstract in the base class. However, deriving from a common base class uses up a class’s one and only opportunity for inheritance. It is unlikely that there is any code common to various compression implementations that can be put in the base class, thereby ruling out the potential benefits of having a base class implementation. The key point is that base classes let you share implementation along with the member signatures, whereas interfaces allow you to share the member signatures without the implementation.
+
+Instead of sharing a common base class, each compression class needs to implement a common interface. Interfaces define the contract that a class supports to interact with the other classes that expect the interface. If all the classes implemented the IFileCompression interface and its Compress() and Uncompress() methods, the code for calling the algorithm on any particular compression class would simply involve a conversion to the IFileCompression interface and a call to the members. The result is polymorphism because each compression class has the same method signature but individual implementations of that signature.
+
+The `IFileCompression` interface shown in Listing 7.1 is an example of an interface implementation. By convention—a convention so strong it is universal—the interface name is PascalCase with a capital “I” prefix.
+
+```
+interface IFileCompression
+{
+    void Compress(string targetFileName, string[] fileList);
+    void Uncompress(
+        string compressedFileName, string expandDirectoryName);
+}
+```
+
+`IFileCompression` defines the methods a type must implement to be used in the same manner as other compression-related classes. The power of interfaces is that they grant the ability to callers to switch among implementations without modifying the calling code.
+
+One key characteristic of an interface is that it has no implementation and no data. Method declarations in an interface have a single semicolon in place of curly braces after the header. Fields (data) cannot appear in an interface declaration. When an interface requires the derived class to have certain data, it declares a property rather than a field. Since the property does not contain any implementation as part of the interface declaration, it doesn’t reference a backing field.
+
+The declared members of an interface describe the members that must be accessible on an implementing type. The purpose of nonpublic members is to make those members inaccessible to other code. Therefore, C# does not allow access modifiers on interface members; instead, it automatically defines them as public.
+
+> ### Guidelines
+> 
+> **DO** use Pascal casing for interface names, with an “I” prefix.
+
+## Polymorphism through Interfaces
+
+Consider another example, as shown in Listing 7.2: `IListable` defines the members that a class needs to support for the `ConsoleListControl` class to display it. As such, any class that implements `IListable` can use the

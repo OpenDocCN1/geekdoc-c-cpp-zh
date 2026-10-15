@@ -1,0 +1,27 @@
+```
+private void InitializeComponent()
+{
+    _ProgressBar = new ProgressBar();
+    SuspendLayout();
+
+    _ProgressBar.Location = new Point(13, 17);
+    _ProgressBar.Size = new Size(267, 19);
+
+    ClientSize = new Size(292, 53);
+    Controls.Add(this._ProgressBar);
+    Text = "Multithreading in Windows Forms";
+    ResumeLayout(false);
+}
+```
+
+This program displays a window containing a progress bar that automatically starts incrementing. Once the progress bar reaches 100 percent, the dialog box closes.
+
+In Listing C.11, notice that you have to check InvokeRequired twice, and then the marshal calls across to the user interface thread if it returns true. In both cases, the marshalling involves instantiating a MethodInvoker delegate that is then passed to Invoke(). Since marshalling across to another thread could be relatively slow, an asynchronous invocation of the call is also available via BeginInvoke() and EndInvoke().
+
+Invoke(), BeginInvoke(), EndInvoke(), and InvokeRequired constitute the members of the System.ComponentModel.ISynchronizeInvoke interface that is implemented by System.Windows.Forms.Control, from which Windows Forms controls derive.
+
+# Windows Presentation Foundation
+
+Achieving the same marshalling check on the Windows Presentation Foundation (WPF) platform involves a slightly different approach. WPF includes a static member property called Current of type DispatcherObject on the System.Windows.Application class. Calling CheckAccess() on the dispatcher serves the same function as InvokeRequired on controls in Windows Forms.
+
+Listing C.12 demonstrates this approach with a static UIAction object. Whenever a developer wants to call a method that might interact with the user interface, she simply calls UIAction.Invoke() and passes a delegate for the UI code she wishes to call. This, in turn, checks the dispatcher to see if marshalling is necessary and responds accordingly.

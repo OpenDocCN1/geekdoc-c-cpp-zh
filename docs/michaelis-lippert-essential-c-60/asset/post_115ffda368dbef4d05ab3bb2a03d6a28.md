@@ -1,0 +1,331 @@
+
+## Index of 4.0 Topics
+
+### H
+- HideScheduler enum, 759
+- Hill climbing, 802-803
+- Hot tasks, 752
+
+### I
+- Id property, 755
+- IDisposable, 774
+- In type parameter, 526
+- InnerExceptions property, 764, 780, 804
+- IProducerConsumerCollection\<T>, 840
+- IsCancellationRequested property, monitoring, 770-771
+- IsCompleted property, 754
+
+### L
+- LazyCancellation enum, 759
+- LINQ queries, running in parallel, 594-595
+- LongRunning enum, 758
+- Long-running tasks, 773-774
+
+### M
+- MaxDegreeOfParallelism property, 807
+- Member names, retrieving, 729
+- Methods, calling
+  - applicable calls, 201
+  - compatible calls, 201
+- Multithreading, asynchronous tasks
+  - AggregateException.Handle() method, 764
+  - antecedent tasks, 757
+  - associating data with tasks, 755
+  - asynchronous continuations, 756-762
+  - AsyncState, 755
+  - chaining tasks, 757
+  - cold tasks, 752
+  - composing large tasks from smaller ones, 756-758
+  - continuation tasks, 757
+  - ContinueWith() method, 756-758, 760-761, 764-765
+  - control flow, 755
+  - creating threads and tasks, 750-751
+  - hot tasks, 752
+  - Id property, 755
+  - introduction, 751-755
+  - invoking, 751-753
+  - IsCompleted property, 754
+  - multithreaded programming complexities, 749-750
+  - observing unhandled exceptions, 764-765
+  - polling a Task\<T>, 753-754
+  - registering for notification of task behavior, 760-761
+  - registering for unhandled exceptions, 766-768
+  - Result property, 754
+  - Status property, 754
+  - synchronous delegates, 751
+  - task continuation, 755-762
+  - task identification, 755
+  - task scheduler, 750-751
+  - task status, getting, 754
+  - TaskContinuationOptions enums, 758-759
+  - tasks, definition, 750
+  - tasks vs. delegates, 751
+  - unhandled exception handling with AggregateException, 762-765
+  - unhandled exceptions on a thread, 765-768
+  - UnhandledException event, 766
+- Multithreading, canceling tasks
+  - CancellationToken object, 769-772
+  - CancellationTokenSource.Cancel() method, 770-771
+  - cooperative cancellation, definition, 769
+  - disposable tasks, 774
+  - IDisposable, 774
+  - IsCancellationRequested property, monitoring, 770-771
+  - long-running tasks, 773-774
+  - obtaining a task, 772-773
+  - TaskCreationOptions.LongRunning option, 773-774
+  - Task.Factory.StartNew() method, 772-773
+  - Task.Run() method, 772-773
+  - WaitHandle, 774
+- Multithreading, guidelines
+  - long-running tasks, 773-774
+  - parallel loops, 801
+  - unhandled exceptions, 768
+- Multithreading, parallel loop iterations
+  - Break() method, 808
+  - breaking, 808
+  - canceling, 805-806
+  - exception handling with AggregateException, 803-804
+  - hill climbing, 802-803
+  - introduction, 798–802
+  - MaxDegreeOfParallelism property, 807
+  - options, 806–807
+  - Parallel.For() loops, 807
+  - Parallel.For() method, 808
+  - Parallel.ForEach() loops, 807
+  - Parallel.ForEach() method, 808
+  - ParallelOptions parameter, 807
+  - Stop() method, 808
+  - TPL performance tuning, 802–803
+  - work stealing, 802–803
+- Multithreading, PLINQ queries
+  - canceling, 811–813
+  - introduction, 809–811
+- Multithreading, task-based asynchronous pattern
+  - AggregateException.Flatten() method, 780
+  - AggregateException.Handle() method, 780
+  - AspNetSynchronizationContext, 794
+  - with async and await, 781–786
+  - async and await with the Windows UI, 795–798
+  - async keyword, purpose of, 786
+  - asynchronous high-latency operations with the TPL, 777–781
+  - asynchronous lambdas, 786–787
+  - await keyword, 791–792
+  - await operators, 797–798
+  - awaiting non-Task\<T> values, 791–792
+  - ContinueWith() method, 779
+  - control flow misconceptions, 784
+  - control flow within tasks, 784–786
+  - custom asynchronous methods, 787–791
+  - DispatcherSynchronizationContext, 794
+  - GetResponseAsync() method, 779
+  - handling exceptions, 779–780
+  - Process.Kill() method, 789
+  - progress update, 789–791
+  - ReadToEndAsync() method, 779
+  - RunProcessAsync() method, 788–789
+  - synchronization context, 793–795
+  - synchronous high-latency operations, 775–777
+  - task drawbacks, overview, 775
+  - task schedulers, 793–795
+  - TaskCompletionSource.SetResult() method, 789
+  - TaskCompletionSource\<T> object, 788–789
+  - Unwrap() method, 779
+  - WriteWebRequestSizeAsync() method, 780, 783
+
+### N
+- Namespaces list of common, 165–166
+- .NET versions, 29
+- NotOnCanceled enum, 759
+- NotOnFaulted enum, 758
+- NotOnRanToCompletion enum, 758
+
+### O
+- OnlyOnCanceled enum, 758
+- OnlyOnFaulted enum, 759
+- OnlyOnRanToCompletion enum, 759
+- OperationCanceledException, 772, 806, 811–813
+- OutOfMemoryException, 444
+- Overloading a type definition, 471–472
+
+### P
+- Parallel loop iterations. See Multithreading, parallel loop iterations.
+- Parallel.For() loops, 807
+- Parallel.For() method, 808
+- Parallel.ForEach() loops, 807
+- Parallel.ForEach() method, 808
+- ParallelOptions parameter, 807
+- ParallelQuery\<T> class, 810, 813
+- PiCalculator.Calculate() method, 753
+- PLINQ queries, multithreading
+  - canceling, 811–813
+  - introduction, 809–811
+- Polling a Task\<T>, 753–754
+- PreferFairness enum, 758
+- Process.Kill() method, 789
+- Programming with dynamic objects
+  - Create() factory method, 723–724
+  - dynamic binding, 724–725
+  - dynamic driver, 721
+  - dynamic member invocation, 722
+  - dynamic principles and behaviors, 721–723
+  - dynamic System.Object, 723–724
+  - GetDynamicMemberNames() method, 729
+  - implementing a custom dynamic object, 726–728
+  - introduction, 719
+  - invoking reflection with dynamic, 719-720
+  - reflection, support for extension methods, 723
+  - retrieving member names, 729
+  - RuntimeBinderException, 722
+  - signature verification, 722
+  - vs. static compilation, 725-726
+  - System.Dynamic.DynamicObject, 728
+  - System.Dynamic.IDynamicMetaObjectProvider interface, 726-729
+  - System.Runtime.CompilerServices.CallSite\<T>, 723-724
+  - TryGetMember() method, 728
+  - TrySetMember() method, 728
+  - type conversion, 721-722
+  - type safety, 720-721, 726
+- Progress update, 789-791
+- Pulse() method, 823
+
+### R
+- Race conditions, 595
+- ReadToEndAsync() method, 779
+- Reflection
+  - invoking with dynamic, 719-720
+  - support for extension methods, 723
+- Registering for
+  - notification of task behavior, 760-761
+  - unhandled exceptions, 766-768
+- Result property, 754
+- RunContinuationAsynchronously enum, 759
+- RunProcessAsync() method, 788-789
+- RuntimeBinderException, 722
+
+### S
+- Semaphore, 839-840
+- SemaphoreSlim, 839-840
+- SemaphoreSlim.WaitAsync() method, 840
+- Set() method, 836-837
+- Signature verification, 722
+- Standard query operators
+  - AsParallel(), 595
+  - race conditions, 595
+  - running LINQ queries in parallel, 594-595
+- Start() method, 762-763
+- Static compilation vs. dynamic programming, 725-726
+- Status property, 754
+- Stop() method, 808
+- Structural equality, delegates, 526-527
+- Synchronization context, 793-795
+- Synchronizing threads. See Thread synchronization.
+- Synchronizing with Monitor class, 821-823
+- Synchronous delegates, 751
+- Synchronous high-latency operations, 775-777
+- System.Action, 524-525
+- System.Action delegates, 524-525
+- System.Dynamic.DynamicObject, 728
+- System.Dynamic.IDynamicMetaObjectProvider interface, 726-729
+- System.Func, 524-525
+- System.Func delegates, 524-525
+- System.Lazy\<T>, 430-431
+- System.Runtime.CompilerServices.CallSite\<T>, 723-724
+- System.Threading.AutoResetEventSlim, 836-839
+- System.Threading.ManualResetEvent, 836-839
+- System.Threading.ManualResetEventSlim, 836-839
+- System.Threading.Monitor.Enter() method, 823
+- System.Threading.Monitor.Exit() method, 823
+- System.Threading.Monitor.Pulse() method, 823
+
+### T
+- TAP (Task-based Asynchronous Pattern), problems addressed by, 799
+- Task schedulers, 750-751, 793-795
+- Task-based asynchronous pattern. See Multithreading, task-based asynchronous pattern.
+- TaskCanceledException, 772
+- TaskCompletionSource.SetResult() method, 789
+- TaskCompletionSource\<T> object, 788-789
+- TaskContinuationOptions enums, 758-759
+- Task.ContinueWith() method, 756, 793-794, 798
+- TaskCreationOptions.LongRunning option, 773-774
+- Task.Factory.StartNew() method, 772-773
+- Task.Run() method, 772-773
+- Tasks
+  - antecedent, 757
+  - asynchronous. See Multithreading, asynchronous tasks.
+  - canceling. See Multithreading, canceling tasks.
+  - chaining, 757
+  - cold, 752
+  - composing large from smaller, 756-758
+  - continuation, 755-762
+  - creating, 750-751
+  - definition, 750
+  - vs. delegates, 751
+  - disposable, 774
+  - drawbacks, 775
+  - hot, 752
+  - identification, 755
+  - long-running, 773-774
+  - obtaining, 772-773
+  - status, getting, 754
+- TaskScheduler class, 793
+- Task\<T>, polling a, 753-754
+- Thread synchronization
+  - Pulse() method, 823
+  - synchronizing with Monitor class, 821-823
+  - System.Threading.Monitor.Enter() method, 823
+  - System.Threading.Monitor.Exit() method, 823
+  - System.Threading.Monitor.Pulse() method, 823
+- Thread synchronization, synchronization types
+  - BlockingCollection\<T>, 840
+  - concurrent collection classes, 840-841
+  - ConcurrentBag\<T>, 840
+  - ConcurrentDictionary\<T>, 840
+  - ConcurrentQueue\<T>, 840
+  - ConcurrentStack\<T>, 840
+  - CountdownEvent, 839-840
+  - IProducerConsumerCollection\<T>, 840
+  - reset events, 836-839
+  - Semaphore, 839-840
+  - SemaphoreSlim, 839-840
+  - SemaphoreSlim.WaitAsync() method, 840
+  - Set() method, 836-837
+  - System.Threading.AutoResetEventSlim, 836-839
+  - System.Threading.ManualResetEvent, 836-839
+  - System.Threading.ManualResetEventSlim, 836-839
+  - Wait() method, 836-837
+  - WaitOne() method, 837
+- Thread synchronization, thread local storage
+  - definition, 841
+  - ThreadLocal\<T>, 841-842
+  - ThreadStaticAttribute, 843-845
+- ThreadLocal\<T>, 841-842
+- Threads, creating, 750-751
+- ThreadStaticAttribute, 843-845
+- ThrowIfCancellationRequested() method, 772
+- TPL performance tuning, 802-803
+- TryGetMember() method, 728
+- TrySetMember() method, 728
+- Tuple class, 471-472
+- Tuple.Create() method, 471-472
+- Type conversion, dynamic programming, 721-722
+- Type definition, overloading, 471-472
+- Type safety
+  - covariance, 498
+  - dynamic programming, 720-721, 726
+
+### U
+- UnauthorizedAccessException, 804
+- Unhandled exceptions
+  - handling with AggregateException, 762-765
+  - on a thread, 765-768
+- UnhandledException event, 766
+- Unsafe covariance in arrays, 497-498
+- Unwrap() method, 779
+
+### W
+- Wait() method, 836-837
+- WaitForExit() method, 788
+- WaitHandle, 774
+- WaitOne() method, 837
+- Work stealing, 802-803
+- WriteWebRequestSizeAsync() method, 780, 783

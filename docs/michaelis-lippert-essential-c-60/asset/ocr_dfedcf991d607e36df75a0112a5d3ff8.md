@@ -1,0 +1,3 @@
+# Appendix C: Interfacing with Multithreading Patterns
+
+One additional feature in the UIAction of Listing C.12 is the marshalling of any exceptions on the UI thread that may have occurred. SafeInvoke() wraps all requested delegate calls in a try/catch block; if an exception is thrown, it saves the exception and then rethrows it once the context returns to the calling thread. In this way, UIAction avoids throwing unhandled exceptions on the UI thread.

@@ -1,0 +1,3 @@
+expressions was already available via standard query operators, but query expressions frequently provide a simpler syntax for expressing such a query. Whether through standard query operators or query expression syntax, however, the end result is a significant improvement in the way developers can code against collection APIs—an improvement that ultimately provides a paradigm shift in the way object-oriented languages are able to interface with relational databases.
+
+In the next chapter, we continue our discussion of collections, by investigating some of the .NET Framework collection types and exploring how to define custom collections.

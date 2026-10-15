@@ -1,0 +1,26 @@
+data structure is corrupt. You therefore have no idea what the program could possibly be doing, so the safest thing to do is to shut down the whole thing immediately.
+
+Ideally, no programs would ever throw unhandled exceptions on any thread; programs that do so have bugs, and the best course of action is to find and fix the bug before the software is shipped to customers. However, rather than shutting down an application as soon as possible when an unhandled exception occurs, it is often desirable to save any working data and/or log the exception for error reporting and future debugging. This requires a mechanism to register notifications of unhandled exceptions.
+
+Every AppDomain provides such a mechanism, and to observe the unhandled exceptions that occur in an AppDomain, you must add a handler to the UnhandledException event. The UnhandledException event will fire for all unhandled exceptions on threads within the application domain, whether it is the main thread or a worker thread. Note that the purpose of this mechanism is notification; it does not permit the application to recover from the unhandled exception and continue executing. After the event handlers run, the application will display the Window Error Reporting dialog and then the application will exit. (For console applications, the exception details will also appear on the console.)
+
+In Listing 18.9, we show how to create a second thread that throws an exception, which is then handled by the application domain’s unhandled exception event handler. For demonstration purposes, to ensure that thread timing issues do not come into play, we insert some artificial delays using Thread.Sleep. Output 18.5 shows the results.
+
+# LISTING 18.9: Registering for Unhandled Exceptions
+
+```
+using System;
+using System.Diagnostics;
+using System.Threading;
+
+public class Program
+{
+    public static Stopwatch clock = new Stopwatch();
+    public static void Main()
+    {
+        try
+        {
+            clock.Start();
+            // Register a callback to receive notifications
+            // of any unhandled exception.
+```

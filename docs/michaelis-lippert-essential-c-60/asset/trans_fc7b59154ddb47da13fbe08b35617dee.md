@@ -1,0 +1,195 @@
+
+
+对于不熟悉 C 语言系语言中 == 语法 的读者来说，result == number 在 result 等于 number 时返回 true，而 result != number 则做相反的操作。赋值运算符和相等运算符将在下一章中讨论。
+
+## 更多基本类型
+
+迄今为止讨论的基本类型是数值类型。C# 还包括一些额外的类型：bool、char 和 string。
+
+## 布尔类型（bool）
+
+C# 的另一个原语是布尔或条件类型 bool，它在条件语句和表达式中表示 true 或 false。可接受的值是关键字 true 和 false。bool 的 BCL 名称是 System.Boolean。例如，为了以不区分大小写的方式比较两个字符串，你调用 string.Compare() 方法并传递 bool 字面量 true（参见清单 2.8）。
+
+## LISTING 2.8: A Case-Insensitive Comparison of Two Strings
+
+```
+string option;
+...
+int comparison = string.Compare(option, "/Help", true);
+```
+
+在这种情况下，你对变量 option 的内容与字面文本 /Help 进行不区分大小写的比较，并将结果赋给 comparison。
+
+虽然理论上单个位可以保存布尔值，但 bool 的大小为 1 字节。
+
+## 字符类型（char）
+
+char 类型表示 16 位字符，其可能值的集合取自 Unicode 字符集的 UTF-16 编码。char 与 16 位无符号整数（ushort）大小相同，后者表示 0 到 65,535 之间的值。然而，char 是 C# 中的一种独特类型，代码应将其视为此类。
+
+char 的 BCL 名称是 System.Char。
+
+## BEGINNER TOPIC
+
+## Unicode 标准
+
+Unicode 是表示大多数人类语言中字符的国际标准。它为计算机系统提供构建本地化应用程序的功能，应用程序可为不同文化显示适当的语言和文化特征。
+
+## ADVANCED TOPIC
+
+## 16 位对于所有 Unicode 字符来说太小了
+
+不幸的是，并非所有 Unicode 字符都可以用单个 16 位 char 表示。最初的 Unicode 设计者认为 16 位足够，但随着支持的语言越来越多，人们意识到这一假设是错误的。因此，一些（很少使用）Unicode 字符由两个 char 值的“代理对”组成。
+
+要构造一个字面量 char，请将字符放在单引号内，如 'A'。可接受的字符包括完整的键盘字符范围，包括字母、数字和特殊符号。
+
+有些字符不能直接放入源代码中，而需要特殊处理。这些字符以反斜杠（\ ）为前缀，后跟特殊字符代码。组合起来，反斜杠和特殊字符代码构成转义序列。例如，\n 表示换行符，\t 表示制表符。由于反斜杠表示转义序列的开始，它不再能标识简单的反斜杠；相反，你需要使用 \\ 来表示单个反斜杠字符。
+
+清单 2.9 写出一个单引号，因为字符 \' 对应于单引号。
+
+## LISTING 2.9: Displaying a Single Quote Using an Escape Sequence
+
+```
+class SingleQuote
+{
+    static void Main()
+    {
+        System.Console.WriteLine('\'');
+    }
+}
+```
+
+除了显示转义序列外，表 2.4 还包括字符的 Unicode 表示。
+
+## TABLE 2.4: Escape Characters
+
+| Escape Sequence | Character Name | Unicode Encoding |
+| --- | --- | --- |
+| \' | Single quote | \u0027 |
+| \" | Double quote | \u0022 |
+| \\ | Backslash | \u005C |
+| \0 | Null | \u0000 |
+| \a | Alert (system beep) | \u0007 |
+| \b | Backspace | \u0008 |
+| \f | Form feed | \u000C |
+| \n | Line feed (sometimes referred to as a newline) | \u000A |
+| \r | Carriage return | \u000D |
+| \t | Horizontal tab | \u0009 |
+| \v | Vertical tab | \u000B |
+| \uxxxx | Unicode character in hex | \u0029 |
+| \x[n][n][n]n | Unicode character in hex (first three placeholders are options); variable-length version of \uxxxx | \u3A |
+| \Uxxxxxxxx | Unicode escape sequence for creating surrogate pairs | \uD840DC01 (丿) |
+
+你可以使用 Unicode 编码表示任何字符。为此，将 Unicode 值以 \u 为前缀。你以十六进制表示法表示 Unicode 字符。例如，字母 A 是十六进制值 0x41。清单 2.10 使用 Unicode 字符显示一个笑脸（:))，输出 2.8 显示结果。
+
+## LISTING 2.10: Using Unicode Encoding to Display a Smiley Face
+
+```
+System.Console.Write('\u003A');
+System.Console.WriteLine(' \u0029');
+```
+
+## OUTPUT 2.8
+
+```
+: )
+```
+
+## 字符串
+
+零个或多个字符的有限序列称为字符串。C# 中的字符串类型是 string，其 BCL 名称是 System.String。字符串类型包括一些可能令熟悉其他编程语言的开发人员意外的特殊特性。除了第 1 章中讨论的字符串字面量格式外，字符串还包括“逐字字符串”前缀字符 @、使用 $ 前缀字符的字符串插值，以及字符串是不可变的这一事实。
+
+## 字面量
+
+你可以通过将文本放在双引号（"）中来在代码中输入字面量字符串，就像你在 HelloWorld 程序中所见的那样。字符串由字符组成，因此字符转义序列可以嵌入到字符串中。
+
+例如，在清单 2.11 中，显示了两行文本。然而，代码清单显示的是 System.Console.Write()，其中包含换行字符 \n，而不是 System.Console.WriteLine()。输出 2.9 显示结果。
+
+## LISTING 2.11: Using the \n Character to Insert a Newline
+
+```
+class DuelOfWits
+{
+    static void Main()
+    {
+        System.Console.Write(
+            "\"Truly, you have a dizzying intellect.\"" );
+        System.Console.Write("\"\n\"Wait 'til I get going!\"\n");
+    }
+}
+```
+
+## OUTPUT 2.9
+
+```
+"Truly, you have a dizzying intellect."
+"Wait 'til I get going!"
+```
+
+双引号的转义序列将打印的双引号与定义字符串开始和结束的双引号区分开来。
+
+在 C# 中，你可以在字符串前使用 @ 符号来表示反斜杠不应被解释为转义序列的开始。由此产生的 **逐字字符串字面量** 不会重新解释反斜杠字符。使用 @ 字符串语法时，空白也会原样保留。例如，清单 2.12 中的三角形在控制台上出现的完全如所键入的那样，包括反斜杠、换行符和缩进。输出 2.10 显示结果。
+
+```
+```csharp
+class Triangle
+{
+    static void Main()
+    {
+        System.Console.Write(@"begin
+             /\\
+            /  \\
+           /    \\
+          /______\\
+end");
+    }
+}
+```
+```
+
+```
+```text
+begin
+       /\\
+      /  \\
+     /    \\
+    /______\\
+end
+```
+```
+
+如果没有 @ 字符，此代码甚至无法编译。事实上，即使你将形状改为正方形，消除反斜杠，代码仍然无法编译，因为换行符不能直接放在未以 @ 符号为前缀的字符串中。
+
+逐字字符串唯一支持的转义序列是 `"`，它表示双引号并且不会终止字符串。
+
+## Language Contrast: C++—String Concatenation at Compile Time
+
+与 C++ 不同，C# 不会自动连接字面量字符串。你不能，例如，按如下方式指定字符串字面量：
+
+```
+"Major Strasser has been shot."
+"Round up the usual suspects."
+```
+
+相反，连接需要使用加法运算符。（如果编译器可以在编译时计算结果，则生成的 CIL 代码将是一个字符串。）
+
+如果同一个字面量字符串在程序集中多次出现，编译器将在程序集中只定义一次该字符串，并且所有变量都将引用同一个字符串。这样，如果包含数千个字符的相同字符串字面量被多次放入代码中，结果程序集将只反映其中一个的大小。
+
+## 字符串插值
+
+如第 1 章所述，使用字符串插值格式时，字符串可以支持嵌入表达式。字符串插值语法在字符串字面量前加上美元符号，然后将表达式嵌入大括号中。以下是一个示例：
+
+```
+System.Console.WriteLine($"Your full name is {firstName} {lastName}.");
+```
+
+其中 firstName 和 lastName 是引用变量的简单表达式。
+
+请注意，字符串字面量可以通过在 "@" 符号之前指定 "$" 来与字符串插值结合，如此示例所示：
+
+```
+System.Console.WriteLine($@"Your full name is:
+    { firstName } { lastName }");
+```
+
+由于这是一个字符串字面量，文本输出在两行上。你可以通过将换行符放在大括号内而不导致输出中换行，如下所示来实现代码中类似的换行：
+

@@ -1,0 +1,118 @@
+
+
+- 使用 OrderBy() 按升序排列，601-603
+- 使用 OrderByDescending() 按降序排列，602
+- 使用 ThenByDescending() 按降序排列，602
+- 语句 lambda，517-519
+- 结构相等，委托，526-527
+- Sum() 方法，618
+- System.Action 委托，524-525
+- System.Func 委托，524-525
+- System.Linq.Enumerable 类
+  - 聚合函数，618
+  - Average() 方法，618
+  - Count() 方法，618
+  - GroupBy() 方法，分组结果，610-611
+  - GroupJoin() 方法，611-613
+  - Join() 方法，607-610
+  - Max() 方法，618
+  - Min() 方法，618
+  - Select() 方法，592-594
+  - Sum() 方法，618
+- System.Linq.Enumerable 方法调用，616-617
+
+## T
+- ThenBy()，601-603
+- ThenByDescending()，602
+- ToArray() 方法，600
+- ToDictionary() 方法，600
+- ToList() 方法，600
+- ToLookup() 方法，600
+- 将查询表达式翻译为方法调用，640-641
+- Typeof() 运算符，lambda 表达式，520
+- 类型
+  - 匿名，61，263-265
+  - 隐式类型局部变量，60-61
+
+## U
+- UnaryExpression，535
+- Union() 运算符，618
+
+## V
+- var 关键字
+  - 匿名类型，572-576
+  - C++ 与 C#，575
+  - 声明隐式类型局部变量，60-61
+  - JavaScript 与 C#，575
+  - Visual Basic 与 C#，575
+- Variant
+  - C++ 与 C#，575
+  - JavaScript 与 C#，575
+  - Visual Basic 与 C#，575
+- Visual Basic 与 C#
+  - var 关键字，575
+  - Variant，575
+  - void*，575
+- void*
+  - C++ 与 C#，575
+  - JavaScript 与 C#，575
+  - Visual Basic 与 C#，575
+
+## W
+- where 子句
+  - 过滤集合，631-632
+  - 使用 LINQ 的查询表达式，623-624
+- Where() 方法，过滤类集合，597-598
+
+![](img/25683ccec0773ba5b8794b11f2b12877_1044_0.png)
+
+IntelliTect Corporation 是一家总部位于华盛顿州斯波坎的高端软件架构和开发咨询公司。我们的公司聘用最优秀的领导者和工程师，并专注于为客户需求提供最合适的解决方案。我们相信我们的专业知识和交付的质量将在项目生命周期内为客户带来更低的风险和更低的成本。
+
+IntelliTect 专注于以下服务：
+
+### Leadership
+IntelliTect 提供卓越的领导力，使我们与其他供应商区别开来。我们直击问题的根源并提供最合适的解决方案。我们以勇敢的诚实和完全的透明度为客户提供建议。
+
+### Software Architecture Consulting
+IntelliTect 进行架构参与，产生包括范围、布局、服务、安全和部署在内的软件架构。我们的服务包括交付应用程序的垂直切片实现——建模和验证架构、启动开发、并提高系统的可扩展性和可维护性。
+
+### Software Development
+IntelliTect 致力于使用最新的软件技术进行持续学习/开发，包括 Azure、Microsoft .NET、Visual Studio 和 BizTalk Server。此外，我们还是多支 Microsoft 软件设计评审团队的成员，包括 C#、Connected Systems Division 和 Visual Studio，从而帮助定义 Microsoft 技术。
+
+### Application Life Cycle Management
+IntelliTect 对敏捷应用生命周期管理（ALM）的经过验证的最佳实践方法提供了持续交付和改进。我们拥有 Scrum 认证的项目经理和培训师、Kanban 专业知识以及敏捷实践专业知识。我们认为没有“一刀切”的处方，最佳的敏捷方法是从分析客户需求中得出的混合方法。
+
+### SharePoint/Office365 Services
+IntelliTect 协助客户通过 SharePoint 企业内容管理（ECM）实现高效有效的协作和企业内容管理。我们的 SharePoint 服务包括咨询、培训、部署/升级、互联网/内联网门户和应用程序开发。微软于 2013 年底聘请 IntelliTect 在 4 个不同的大洲向微软的独立软件供应商和合作伙伴教授 SharePoint 2013。
+
+### Enterprise Integration Services
+IntelliTect 提供企业应用程序集成服务，利用 BizTalk 和 SQL Server Integration Services（SSIS）解决方案集成大型企业应用程序并实现企业间交易。我们的 BizTalk 集成包括业务线适配器的实施和企业服务总线（ESB）。
+
+### Analysis Services
+IntelliTect 在各个领域和行业提供广泛的分析服务，包括但不限于：商业战略、公用事业行业、医疗保健行业和制造业。
+
+### Training
+IntelliTect 在其服务中提供世界级培训。我们定期为客户提供参考解决方案架构，并协助其内部开发团队建立架构、ALM 和编码/测试标准方面的最佳实践。
+
+### Philanthropy
+IntelliTect 致力于将我们利润的很大一部分用于全球极端贫困的斗争。
+
+## JOIN THE INFORMIT AFFILIATE TEAM!
+你喜欢我们的书目，也喜欢与同事和朋友分享……为什么不通过这样做赚取一些 $$ 呢！
+
+如果你有一个网站、博客，甚至是 Facebook 页面，你可以通过在你的页面上放置 InformIT 链接来开始赚钱。
+
+每当访客点击这些链接并在 informit.com 上购买时，你就能在所有销售中赚取佣金*！
+
+你带到我们网站的每一次销售都会为你带来佣金。你所要做的就是发布你想要的书目的链接，任意数量，我们会处理剩下的事情。
+
+## APPLY AND GET STARTED!
+申请非常快速简单。
+
+了解更多信息请访问：
+http://www.informit.com/affiliates/
+
+*适用于 www.informit.com 的所有图书、电子书和视频销售
+
+![](img/25683ccec0773ba5b8794b11f2b12877_1045_0.png)
+

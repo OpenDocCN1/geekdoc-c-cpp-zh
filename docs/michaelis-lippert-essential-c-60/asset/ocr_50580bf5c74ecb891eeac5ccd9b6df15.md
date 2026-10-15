@@ -1,0 +1,35 @@
+The for loop is little more than a more convenient way to write a while loop; you can always rewrite a for loop like this:
+
+```
+{
+    initial;
+    while (condition)
+    {
+        statement;
+        loop;
+    }
+}
+```
+
+# Guidelines
+
+DO use the for loop when the number of loop iterations is known in advance and the “counter” that gives the number of iterations executed is needed in the loop.
+
+DO use the while loop when the number of loop iterations is not known in advance and a counter is not needed.
+
+# The foreach Loop
+
+The last loop statement in the C# language is foreach. The foreach loop iterates through a collection of items, setting a loop variable to represent each item in turn. In the body of the loop, operations may be performed on the item. A nice property of the foreach loop is that every item is iterated over exactly once; it is not possible to accidentally miscount and iterate past the end of the collection, as can happen with other loops.
+
+The general form of the foreach statement is as follows:
+
+```
+foreach(type variable in collection)
+    statement
+```
+
+Here is a breakdown of the foreach statement:
+
++   - type is used to declare the data type of the variable for each item within the collection. It may be var, in which case the compiler infers the type of the item from the type of the collection.
+
++   - variable is a read-only variable into which the foreach loop will automatically assign the next item within the collection. The scope of the variable is limited to the body of the loop.

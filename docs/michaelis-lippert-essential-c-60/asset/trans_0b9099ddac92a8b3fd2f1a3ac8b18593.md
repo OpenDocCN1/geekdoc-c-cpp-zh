@@ -1,0 +1,156 @@
+
+
+## 摘要
+
+泛型类型和泛型方法在 C# 2.0 中的引入，从根本上改变了 C# 开发者的编码风格。在 C# 1.0 代码中，程序员使用 object 的几乎所有情况下，泛型在 C# 2.0 中都成为更好的选择。在现代 C# 程序中，使用 object（尤其是在任何集合类型的上下文中）时，应当考虑泛型是否能更好地解决该问题。消除强制转换带来的类型安全性提升、消除装箱造成的性能损失，以及减少重复代码，这些都是重大的改进。
+
+第16章将介绍最常用的泛型命名空间之一：System.Collections.Generic。顾名思义，该命名空间几乎完全由泛型类型组成。它清晰地展示了某些最初使用 object 的类型后来如何改为使用泛型。不过，在讨论这些主题之前，我们先来研究表达式，这是 C# 3.0（及更高版本）中针对集合操作的一项重大改进。
+
+此页有意留白
+
+## 12
+
+## 委托与 Lambda 表达式
+
+前面的章节详细讨论了如何创建类来封装数据和对数据的操作。随着你创建的类越来越多，你会看到它们之间关系的常见模式。一种常见模式是，仅仅为了让方法反过来调用对象上的某个方法，而将对象传递给该方法。例如，如果向方法传递一个 IComparer<int> 引用，那么这个被调用的方法很有可能会调用你所提供的对象上的 Compare() 方法。在这种情况下，接口只不过是一种传递可调用方法引用的方式。每次想要传递方法时都要定义一个新接口，这似乎没有必要。在本章中，我们将介绍如何创建和使用一种称为委托的特殊类，它使你可以像处理任何其他数据一样处理方法引用。然后，我们将展示如何使用 Lambda 表达式快速、轻松地创建自定义委托。
+
+Lambda 表达式是在 C# 3.0 中加入这门语言的；之前的版本 C# 2.0 支持一种不太优雅的自定义委托创建语法，称为匿名方法。C# 2.0 之后的每个 C# 版本都支持匿名方法以保证向后兼容，但在新代码中应弃用匿名方法，改用 Lambda 表达式。本章包含一些“高级主题”块，介绍在需要处理遗留 C# 2.0 代码时如何使用匿名方法；如果你只使用较新的代码，基本上可以忽略这些部分。
+
+在本章的最后，我们将讨论表达式树，它使你能在执行时使用编译器对 Lambda 表达式的分析。
+
+![](img/25683ccec0773ba5b8794b11f2b12877_544_0.png)
+
+## 介绍委托
+
+经验丰富的 C 和 C++ 程序员长期以来一直使用“函数指针”作为将方法引用作为参数传递给另一个方法的机制。C# 通过使用委托实现了类似的功能。委托允许你捕获方法的引用，像处理其他任何对象一样传递它，并像调用任何其他方法一样调用被捕获的方法。让我们看一个示例，说明这种技术如何发挥作用。
+
+## 定义场景
+
+虽然冒泡排序的效率不高，但它是最简单的排序例程之一。清单 12.1 展示了 BubbleSort() 方法。
+
+## 清单 12.1：BubbleSort() 方法
+
+```
+static class SimpleSort1
+{
+    public static void BubbleSort(int[] items)
+    {
+        int i;
+        int j;
+        int temp;
+```
+
+```
+// ...
+public static void BubbleSort(
+    int[] items, ComparisonHandler comparisonMethod)
+{
+    int i;
+    int j;
+    int temp;
+
+    if(comparisonMethod == null)
+    {
+        throw new ArgumentNullException("comparisonMethod");
+    }
+
+    if(items==null)
+    {
+        return;
+    }
+
+    for (i = items.Length - 1; i >= 0; i--)
+    {
+        for (j = 1; j <= i; j++)
+        {
+            if (comparisonMethod(items[j - 1], items[j]))
+            {
+                temp = items[j - 1];
+                items[j - 1] = items[j];
+                items[j] = temp;
+            }
+        }
+    }
+    // ...
+}
+```
+
+委托类型 ComparisonHandler 表示一个比较两个整数的方法。在 BubbleSort() 方法中，你使用由 comparisonMethod 参数引用的 ComparisonHandler 实例来确定哪个整数更大。由于 comparisonMethod 表示一个方法，因此调用该方法的语法与调用任何其他方法完全相同。在本例中，ComparisonHandler 委托接受两个整数参数，并返回一个布尔值，指示第一个整数是否大于第二个整数。
+
+请注意，ComparisonHandler 委托是强类型的：它表示一个返回 bool 且恰好接受两个整数参数的方法。与任何其他方法调用一样，委托调用也是强类型的，如果参数的数据类型与委托参数不兼容，C# 编译器会报告错误。
+
+## 声明委托类型
+
+你刚刚看到了如何定义使用委托的方法，并学会了如何通过简单地将委托变量当作方法来调用委托。不过，你还需要学习如何声明委托类型。要声明委托类型，请使用 delegate 关键字，后跟一个看起来像方法声明的内容。该方法的签名就是委托能够引用的方法的签名，而委托类型的名称出现在方法声明中方法名称的位置。清单 12.4 展示了如何声明 ComparisonHandler 委托类型，使其要求两个整数参数并返回一个布尔值。
+
+## 清单 12.4：声明委托类型
+
+```
+public delegate bool ComparisonHandler (
+    int first, int second);
+```
+
+正如类可以嵌套在其他类中一样，委托也可以嵌套在类中。如果委托声明出现在另一个类中，则该委托类型将成为嵌套类型，如清单 12.5 所示。
+
+## 清单 12.5：声明嵌套的委托类型
+
+```
+class DelegateSample
+{
+    public delegate bool ComparisonHandler (
+        int first, int second);
+}
+```
+
+在这种情况下，数据类型将是 DelegateSample.ComparisonHandler，因为它被定义为 DelegateSample 中的嵌套类型。
+
+## 实例化委托
+
+在使用委托实现 BubbleSort() 方法的最后一步中，你将学习如何调用该方法并传递委托实例——具体来说，是 ComparisonHandler 类型的实例。要实例化委托，你需要一个方法，其参数和返回类型与委托类型本身的签名相匹配。对于 ComparisonHandler，该方法接受两个整数并返回 bool。方法名称不必与委托名称匹配，但方法签名的其余部分必须与委托签名兼容。清单 12.6 展示了与委托类型兼容的 GreaterThan 方法的代码。
+
+## 清单 12.6：声明与 ComparisonHandler 兼容的方法
+
+```
+public delegate bool ComparisonHandler (
+    int first, int second);
+
+class DelegateSample
+{
+    public static void BubbleSort(
+        int[] items, ComparisonHandler comparisonMethod)
+    {
+        // ...
+    }
+
+    public static bool GreaterThan(int first, int second)
+    {
+        return first > second;
+    }
+    // ...
+}
+```
+
+定义此方法后，你可以调用 BubbleSort() 并将委托要捕获的方法名称作为参数提供，如清单 12.7 所示。
+
+## 清单 12.7：将方法名称用作参数
+
+```
+public delegate bool ComparisonHandler (
+    int first, int second);
+
+class DelegateSample
+{
+    public static void BubbleSort(
+        int[] items, ComparisonHandler comparisonMethod)
+    {
+        // ...
+    }
+
+    public static bool GreaterThan(int first, int second)
+    {
+        return first > second;
+    }
+
+    static void Main()
+```
+

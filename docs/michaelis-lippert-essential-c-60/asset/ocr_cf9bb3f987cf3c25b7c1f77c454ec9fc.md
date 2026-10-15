@@ -1,0 +1,25 @@
+# OUTPUT 3.21
+
+```
+Enter an integer: -42
+1111111111111111111111111111111111111111111111111010110
+```
+
+Listing 3.45 performs a bit mask 64 times, once for each bit in the number. The three parts of the for loop header first declare and initialize the variable count, then describe the condition that must be met for the loop body to be executed, and finally describe the operation that updates the loop variable. The general form of the for loop is as follows:
+
+```
+for (initial ; condition ; loop)
+    statement
+```
+
+Here is a breakdown of the for loop.
+
++   - The initial section performs operations that precede the first iteration. In Listing 3.45, it declares and initializes the variable count. The initial expression does not have to be a declaration of a new variable (though it frequently is). It is possible, for example, to declare the variable beforehand and simply initialize it in the for loop, or to skip the initialization section entirely by leaving it blank. Variables declared here are in scope throughout the header and body of the for statement.
+
++   - The condition portion of the for loop specifies an end condition. The loop exits when this condition is false exactly like the while loop does. The for loop will execute the body only as long as the condition evaluates to true. In the preceding example, the loop exits when count is greater than or equal to 64.
+
++   - The loop expression executes after each iteration. In the preceding example, count++ executes after the right shift of the mask (mask >>= 1), but before the condition is evaluated. During the sixty-fourth iteration, count is incremented to 64, causing the condition to become false, and therefore terminating the loop.
+
++   - The statement portion of the for loop is the “loop body” code that executes while the conditional expression remains true.
+
+If you wrote out each for loop execution step in pseudocode without using a for loop expression, it would look like this:
