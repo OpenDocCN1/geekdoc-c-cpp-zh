@@ -1,0 +1,78 @@
+
+### Employees processed individually using static binding:
+
+salaried employee: John Smith
+social security number: 111-11-1111
+weekly salary: 800.00
+earned $800.00
+
+hourly employee: Karen Price
+social security number: 222-22-2222
+hourly wage: 16.75; hours worked: 40.00
+earned $670.00
+
+commission employee: Sue Jones
+social security number: 333-33-3333
+gross sales: 10000.00; commission rate: 0.06
+earned $600.00
+
+base-salaried commission employee: Bob Lewis
+social security number: 444-44-4444
+gross sales: 5000.00; commission rate: 0.04; base salary: 300.00
+earned $500.00
+
+### Employees processed polymorphically using dynamic binding:
+
+#### Virtual function calls made off base-class pointers:
+
+salaried employee: John Smith
+social security number: 111-11-1111
+weekly salary: 800.00
+earned $800.00
+
+hourly employee: Karen Price
+social security number: 222-22-2222
+hourly wage: 16.75; hours worked: 40.00
+earned $670.00
+
+commission employee: Sue Jones
+social security number: 333-33-3333
+gross sales: 10000.00; commission rate: 0.06
+earned $600.00
+
+base-salaried commission employee: Bob Lewis
+social security number: 444-44-4444
+gross sales: 5000.00; commission rate: 0.04; base salary: 300.00
+earned $500.00
+
+#### Virtual function calls made off base-class references:
+
+salaried employee: John Smith
+social security number: 111-11-1111
+weekly salary: 800.00
+earned $800.00
+
+hourly employee: Karen Price
+social security number: 222-22-2222
+hourly wage: 16.75; hours worked: 40.00
+earned $670.00
+
+(continued…)
+
+**Fig. 13.23** | Employee 类层次结构驱动程序。 (第 3 部分，共 4 部分。)
+
+commission employee: Sue Jones
+
+social security number: 333-33-3333
+
+gross sales: 10000.00; commission rate: 0.06
+
+earned $600.00
+
+base-salaried commission employee: Bob Lewis
+
+social security number: 444-44-4444
+
+gross sales: 500.00; commission rate: 0.04; base salary: 300.00
+
+earned $500.00
