@@ -1,0 +1,66 @@
+
+- [49] P.R. Cavalcanti、P.C.P. Carvalho 和 L.F. Martha。非流形建模：一种基于空间细分的方法。*《计算机辅助设计》*，29(3):299–320，1997年。
+- [50] D. Cazier 和 P. Kraemer。X-maps：一种用于非流形建模的高效模型。见*《国际形状建模会议录》*，第226–230页。IEEE会议出版服务，2010年6月。短文。
+- [51] C. Combier、G. Damiand 和 C. Solnon。测量广义映射的距离。见*《基于图的模式识别表示国际研讨会会议录》*，LNCS 第6658卷，第82–91页，德国明斯特，2011年5月。施普林格柏林/海德堡。
+- [52] C. Combier、G. Damiand 和 C. Solnon。从最大公共子映射到广义映射的编辑距离。*《模式识别快报》*，33(15):2020–2028，2012年11月。
+- [53] C. Combier、G. Damiand 和 C. Solnon。用于图像匹配的映射编辑距离与图编辑距离。见*《基于图的模式识别表示国际研讨会会议录》*，LNCS 第7877卷，第152–161页，奥地利维也纳，2013年5月。施普林格柏林/海德堡。
+- [54] R. Cori。*《平面图的一种编码及其应用》*。博士论文，巴黎第七大学，1973年。
+- [55] R. Cori。平面图的一种编码及其应用。见*《Astérisque》*，第27卷。法国数学学会，法国巴黎，1975年。
+- [56] T.H. Cormen、C.E. Leiserson、R.L. Rivest 和 C. Stein。*《算法导论》*。麻省理工出版社，剑桥、伦敦，第3版，2009年。
+- [57] G. Crocker 和 W. Reinke。可编辑的非流形边界表示。*《计算机图形学与应用》*，11(2)，1991年。
+- [58] G. Damiand。*《2D和3D图像表示的最小拓扑模型的定义与研究》*。博士论文，蒙彼利埃第二大学，2001年12月。
+- [59] G. Damiand。3D图像表示的拓扑模型：定义与增量提取算法。*《计算机视觉与图像理解》*，109(3):260–289，2008年3月。
+- [60] G. Damiand。*《对组合地图和广义地图的贡献：简化、模型、拓扑不变量与应用》*。研究指导资格论文，里昂第一大学，2010年9月。
+- [61] G. Damiand。组合地图。见*《CGAL用户与参考手册》*。CGAL编委会，3.9版，2011年。`http://www.cgal.org/Pkg/CombinatorialMaps`.
+- [62] G. Damiand。线性胞腔复形。见*《CGAL用户与参考手册》*。CGAL编委会，4.0版，2012年。`http://www.cgal.org/Pkg/LinearCellComplex`.
+- [63] G. Damiand、O. Alata 和 C. Bihoreau。在马尔可夫图像分割中使用2D拓扑地图信息。见*《国际离散几何与计算机图像会议录》*，*LNCS* 第2886卷，第288–297页，意大利那不勒斯，2003年11月。施普林格柏林/海德堡。
+- [64] G. Damiand 和 S. Alayrangues。使用广义地图计算规范多边形图式。见*《国际拓扑与几何图论会议录》*，*《离散数学电子笔记》* 第31卷，第287–292页，法国巴黎，2008年8月。爱思唯尔。
+- [65] G. Damiand 和 D. Arrivault。基于2D拓扑地图的新轮廓填充算法。见*《基于图的模式识别表示国际研讨会会议录》*，LNCS 第4538卷，第319–329页，西班牙阿利坎特，2007年6月。施普林格柏林/海德堡。
+- [66] G. Damiand、Y. Bertrand 和 C. Fiorio。二维图像表示的拓扑模型：定义与最优提取算法。*《计算机视觉与图像理解》*，93(2):111–154，2004年2月。
+- [67] G. Damiand 和 L. Brun。*《离散几何与数字图像，第4章：用于图像分析的组合地图》*，第4章，第103–120页。IC2论丛：信号与图像。法国巴黎 Hermès，2007年8月。
+- [68] G. Damiand 和 D. Coeurjolly。一种用于2D图像离散轮廓重建的通用并行算法。见*《国际视觉计算研讨会会议录》*，LNCS 第5359卷，第792–801页，美国内华达州拉斯维加斯，2008年12月。施普林格柏林/海德堡。
+- [69] G. Damiand 和 D. Coeurjolly。一种用于2D数字曲线多边形逼近的通用并行算法。*《实时图像处理杂志》*，6(3):145–157，2011年9月。
+- [70] G. Damiand、C. de la Higuera、J.-C. Janodet、E. Samuel 和 C. Solnon。一种用于带孔平面图子同构的多项式算法。见*《国际图挖掘与学习研讨会会议录》*，比利时鲁汶，2009年7月。
+- [71] G. Damiand、C. de la Higuera、J.-C. Janodet、E. Samuel 和 C. Solnon。子映射同构的多项式算法：在图像中搜索模式的应用。见*《基于图的模式识别表示国际研讨会会议录》*，LNCS 第5534卷，第102–112页，意大利威尼斯，2009年5月。施普林格柏林/海德堡。
+- [72] G. Damiand、M. Dexet-Guiard、P. Lienhardt 和 E. Andres。定义组合金字塔的移除与收缩操作：在空间建模器设计中的应用。*《图像与视觉计算》*，23(2):259–269，2005年2月。
+- [73] G. Damiand 和 A. Dupas。用于2D和3D图像分割的组合地图。见*《数字几何算法》*，*LNCVB* 第2卷，第359–393页。施普林格荷兰，2012年。
+- [74] G. Damiand、A. Dupas 和 J.-O. Lachaud。结合拓扑地图、多标签简单点和最小长度多边形以实现高效数字划分模型。见*《国际组合图像分析研讨会会议录》*，LNCS 第6636卷，第56–69页，西班牙马德里，2011年5月。施普林格柏林/海德堡。
+- [75] G. Damiand、A. Dupas 和 J.-O. Lachaud。具有拓扑控制的完全可变形3D数字划分模型。*《模式识别快报》*，32(9):1374–1383，2011年7月。
+- [86] M. de Berg、M. van Kreveld、M. Overmars 和 O. Schwarzkopf。*《计算几何：算法与应用》*。施普林格出版社，2000年1月。
+- [87] L. De Floriani 和 B. Falcidieno。用于实体对象表示的层次边界模型。*《ACM图形学汇刊》*，7(1):42–60，1988年。
+- [88] L. De Floriani、P. Magillo 和 E. Puppo。非流形网格的多分辨率拓扑表示。*《计算机辅助设计》*，36(2):141–159，2004年2月。
+- [89] L. De Floriani、M. Mesmoudi、F. Morando 和 E. Puppo。任意维度中非流形对象的分解。*《图形模型》*，65(1-3):2–22，2003年。
+- [90] L. De Floriani、F. Morando 和 E. Puppo。抽象单纯复形的一种表示：分析与比较。见*《国际离散几何与计算机图像会议录》*，LNCS 第2886卷，第454–464页，意大利那不勒斯，2003年11月。施普林格。
+- [91] L. De Floriani、F. Morando 和 E. Puppo。通过分解为近似流形部分来表示非流形对象。见*《ACM实体建模与应用研讨会会议录》*，第304–309页，美国华盛顿州西雅图，2003年6月。ACM出版社。
+- [92] M. Dexet。*《基于离散对象拓扑的几何建模器架构与二维和三维重建方法》*。博士论文，普瓦捷大学，2006年12月。
+- [93] D. Dobkin 和 M. Laszlo。三维细分操作的原语。见*《计算几何研讨会会议录》*，第86–99页，加拿大滑铁卢，1987年6月。
+- [98] A. Dupas and G. Damiand. 拓扑图中的局部与全局区域合并比较。载于 Proc. of International Workshop on Combinatorial Image Analysis, LNCS 第 4958 卷，第 420–431 页，美国纽约布法罗，2008 年 4 月。Springer Berlin/Heidelberg。
+- [99] A. Dupas and G. Damiand. 拓扑图用于 3D 图像分割的初步结果。载于 Proc. of International Conference on Discrete Geometry for Computer Imagery, LNCS 第 4992 卷，第 507–518 页，法国里昂，2008 年 4 月。Springer Berlin/Heidelberg。
+- [100] A. Dupas and G. Damiand. 具有拓扑控制的区域合并。Discrete Applied Mathematics, 157(16):3435–3446, 2009 年 8 月。
+- [101] A. Dupas, G. Damiand, and J.-O. Lachaud. 3D 图像数字可变形模型的多标签简单点定义。载于 Proc. of International Conference on Discrete Geometry for Computer Imagery, LNCS 第 5810 卷，第 156–167 页，加拿大蒙特利尔，2009 年 9 月。Springer Berlin/Heidelberg。
+- [102] H. Edelsbrunner. 计算几何中的算法。Springer, New-York, 1987。
+- [103] J. Edmonds. 多面体表面的组合表示。Notices American Mathematical Society, 7, 1960。
+- [104] H. Elter and P. Lienhardt. 细胞复形作为结构化半单纯集。International Journal of Shape Modeling, 1(2):191–217, 1994。
+- [105] P.F. Felzenszwalb and D.P. Huttenlocher. 基于图的图像分割的高效方法。International Journal of Computer Vision, 59(2):167–181, 2004。
+- [106] X. Feng, Y. Wang, Y. Weng, and Y. Tong. 3D 中的紧凑组合映射。载于 Proc. of the First International Conference on Computational Visual Media, CVM’12, 第 194–201 页，柏林，海德堡，2012。Springer-Verlag。
+- [107] M. Ferri, C. Gagliardi, and L. Grasselli. PL 流形的图论表示：结晶的综述。Aequationes Mathematicae, 31:121–141, 1986。
+- [108] V. Ferruci and A. Paoluzzi. 多维多面体的挤出与边界求值。Computer-Aided Design, 23(1):40–50, 1991。
+- [109] C. Fiorio. 图像分析中的像素间方法：一种拓扑和分割算法。Thèse de doctorat, Université Montpellier II, 1995 年 11 月。
+- [110] C. Fiorio. 用于图像分析的拓扑一致表示：边界拓扑图。载于 Proc. of International Conference Discrete Geometry for Computer Imagery, LNCS 第 1176 卷，第 151–162 页，法国里昂，1996 年 11 月。
+- [111] E. Fléchon, F. Zara, G. Damiand, and F. Jaillet. 物理模拟的通用拓扑框架。载于 Proc. of International Conference in Central Europe on Computer Graphics and Visualization, WSCG Full papers proceedings, 第 104–113 页，捷克共和国普热罗夫，2013 年 6 月。
+- [112] S. Fourey and L. Brun. 向 n-D 空间中的组合金字塔迈出的第一步。载于 Proc. of International Workshop on Graph-Based Representations in Pattern Recognition, LNCS 第 5534 卷，第 304–313 页，意大利威尼斯，2009 年 5 月。Springer。
+- [113] S. Fourey and L. Brun. n-d 组合金字塔的高效编码。载于 Proc. of International Conference on Pattern Recognition, 第 1036–1039 页。IEEE Computer Society, 2010。
+- [114] D. Fradin, D. Meneveaux, and P. Lienhardt. 处理复杂室内场景的基于层次拓扑模型。Computer Graphics Forum, 25(2):149–162, 2006 年 6 月。
+- [115] R. Fritsch and R.A. Piccinini. 拓扑中的细胞结构。Cambridge University Press, 1990。
+- [116] M. Gangnet, J.C. Herve, T. Puddet, and J.M. Van Thong. 平面图的增量计算。ACM Computer Graphics, 23(3):345–354, 1989。
+- [117] GIRL: General Image Representation Library. `http://girl.labri.fr`.
+- [118] R. Goffe, L. Brun, and G. Damiand. 不规则金字塔的自顶向下构造方案。载于 Proc. of International Conference On Computer Vision Theory and Applications, 第 163–170 页，葡萄牙里斯本，2009 年 2 月。
+- [119] R. Goffe, L. Brun, and G. Damiand. 用于大图像表示的切片自顶向下组合金字塔。International Journal of Imaging Systems and Technology, 21(1):28-36, 2011 年 3 月。
+- [120] R. Goffe, L. Brun, and G. Damiand. 切片自顶向下金字塔与大组织学图像分割。载于 Proc. of International Workshop on Graph-Based Representations in Pattern Recognition, LNCS 第 6658 卷，第 255–264 页，德国明斯特，2011 年 5 月。Springer Berlin/Heidelberg。
+- [121] R. Goffe, G. Damiand, and L. Brun. 从大图像中提取切片自顶向下不规则金字塔。载于 Proc. of International Workshop on Combinatorial Image Analysis, Research Publishing Services, 第 123–137 页，墨西哥坎昆，2009 年 11 月。RPS, Singapore。
+- [122] R. Goffe, G. Damiand, and L. Brun. 用于大图像分割的自顶向下金字塔中的因果提取方案。载于 Proc. of International Workshop on Structural and Syntactic Pattern Recognition, LNCS 第 6218 卷，第 264–274 页，土耳其伊兹密尔切什梅，2010 年 8 月。Springer Berlin/Heidelberg。
+- [123] S. Gosselin, G. Damiand, and C. Solnon. 组合映射的签名。载于 Proc. of International Workshop on Combinatorial Image Analysis, LNCS 第 5852 卷，第 370–382 页，墨西哥坎昆，2009 年 11 月。Springer Berlin/Heidelberg。
+- [124] S. Gosselin, G. Damiand, and C. Solnon. 频繁子图发现。载于 Proc. of Symposium on Combinatorial Pattern Matching, LNCS 第 6661 卷，第 429–440 页，意大利巴勒莫，2011 年 6 月。Springer Berlin/Heidelberg。
+- [125] H.-B. Griffiths. Surfaces. Cambridge University Press, Cambridge, 2nd edition, 1981。
+- [126] N. Guiard. 通过表面协同细化构建 3D 地质模型。Thèse de doctorat, École des Mines de Paris, 2006 年 5 月。
+- [127] L. Guibas and J. Stolfi. 一般细分操作和 Voronoi 图计算的原语。ACM Transaction on Graphics, 4(2):74–123, 1985。
