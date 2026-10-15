@@ -1,0 +1,1 @@
+2019 Community edition with the ASP.NET and web development workload installed. The sample projects use .NET 5.0 and C# 9. The code shown will also work with .NET Core 3.1, which is the current support version of .NET and also with the upcoming .NET 6. All of the projects will also work with Visual Studio Code if that's the editor of your choice.

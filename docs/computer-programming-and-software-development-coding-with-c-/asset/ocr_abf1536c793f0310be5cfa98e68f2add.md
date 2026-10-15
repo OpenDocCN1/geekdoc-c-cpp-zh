@@ -1,0 +1,7 @@
+operand is a noun and the operator is a verb acting upon that noun.
+
+| Arithmetic | + | / | - |
+| Comparison | > | < | >= |
+| Boolean Logic | ! | && | || |
+
+There are dozens of operators in C# that we can use to build statements, and a handful of them are listed right here. An operator can include anything from mathematical symbols for addition to greater than or less than comparisons or logical operators to determine if a condition is true or false. If we take a step back, it is important to understand that expressions are not statements by themselves. Statements utilize expressions, but expressions cannot stand on their own as complete instructions. This distinction is very important, so let's compare some expressions and statements. 2 + 2 is an expression, but we can't just write 2 + 2 all by itself in a C# program without any context. The app won't even compile this code. An expression statement would utilize this expression, but store the result in a variable and mark the end with our trusty semicolon to form a complete instruction. Evaluating true or false Boolean values is also a common use of expressions, but a complete statement again requires assignment in a semicolon. Some expressions can mostly stand on their own, such as creating a new object or executing a method, but they still require a semicolon at the end to form a complete statement. This book is certainly not a deep dive

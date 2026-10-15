@@ -1,0 +1,405 @@
+- - '##'
+  - PYTHON MACHINE LEARNING
+- - '##'
+  - ALGORITHM DESIGN & PRACTICAL CODE EXECUTION
+- - '##'
+  - Introduction
+- - '###'
+  - 第1章 平台与库
+- - '###'
+  - 第2章 回归与线性回归
+- - '###'
+  - 相关性
+- - '###'
+  - 模型质量
+- - '###'
+  - 第 3 章 多项式回归 & Lasso 回归
+- - '###'
+  - 模型质量
+- - '###'
+  - 第 4 章 岭回归与感知机回归
+- - '###'
+  - Train Predict and Plot
+- - '###'
+  - Chapter 5 Classification Algorithms & Logistic Regression
+- - '####'
+  - Normalization
+- - '####'
+  - 2. Feature Selection
+- - '####'
+  - 3. Algorithm
+- - '###'
+  - Chapter 6 Naive Bayes & Support Vector Machines
+- - '###'
+  - Naive Bayes
+- - '####'
+  - When and How to use Naive Bayes
+- - '####'
+  - 1. Data
+- - '####'
+  - Feature Engineering
+- - '###'
+  - enc.fit_transform
+- - '###'
+  - enc.categories_
+- - '####'
+  - Normalization
+- - '###'
+  - departure_scaler = StandardScaler()
+- - '###'
+  - airplane['Departure Delay in Minutes'] = departure_scaler.fit_transform(airplane[['Departure
+- - '###'
+  - arrival_scaler = StandardScaler()
+- - '###'
+  - airplane['Arrival Delay in Minutes'] = arrival_scaler.fit_transform(airplane[['Arrival
+    Delay
+- - '###'
+  - 相关性
+- - '###'
+  - 直方图
+- - '###'
+  - 4. 预测
+- - '###'
+  - 第 7 章 K 最近邻
+- - '####'
+  - K-最近邻
+- - '####'
+  - 何时以及如何使用 K 最近邻
+- - '####'
+  - 1. 数据
+- - '####'
+  - 归一化
+- - '####'
+  - 3. 算法
+- - '####'
+  - 4. 预测
+- - '###'
+  - 第 8 章 决策树和随机森林
+- - '####'
+  - 相关性
+- - '####'
+  - 3. 算法
+- - '####'
+  - 分类报告
+- - '###'
+  - 第 9 章 神经网络
+- - '###'
+  - Neural Network
+- - '####'
+  - 1. Data
+- - '####'
+  - Normalization
+- - '####'
+  - 3. Algorithm
+- - '###'
+  - f1 = f1_score(y_train, y_pred)
+- - '###'
+  - ll = log_loss(y_train, y_pred)
+- - '###'
+  - 'print(f"(train) f1_score: {f1}")'
+- - '###'
+  - 'print(f"(train) log_loss: {ll}")'
+- - '###'
+  - f1 = f1_score(y_test, y_pred)
+- - '###'
+  - ll = log_loss(y_test, y_pred)
+- - '###'
+  - 'print(f"(test) f1_score: {f1}")'
+- - '###'
+  - 'print(f"(test) log_loss: {ll}")'
+- - '###'
+  - Chapter 10 Convolutional Neural Networks
+- - '###'
+  - 第11章 降维与线性判别分析
+- - '####'
+  - 第二种用途：可视化
+- - '###'
+  - f1 = f1_score(y_train, y_pred)
+- - '###'
+  - LL = log_loss(y_train, y_pred)
+- - '###'
+  - 'print(f"(train) f1_score: {f1}")'
+- - '###'
+  - 'print(f"(train) log_loss: {LL}")'
+- - '###'
+  - f1 = f1_score(y_test, y_pred)
+- - '###'
+  - LL = log_loss(y_test, y_pred)
+- - '###'
+  - 'print(f"(test) f1_score: {f1}")'
+- - '###'
+  - 'print(f"(test) log_loss: {LL}")'
+- - '###'
+  - 第 12 章 t-分布随机邻域嵌入
+- - '###'
+  - tokenizer para eliminar elementos no deseados de los datos como símbolos y números
+- - '####'
+  - 第二种用途：可视化
+- - '###'
+  - 第13章 聚类算法与 K 均值
+- - '###'
+  - Chapter 14 Gaussian Mixtures & Hierarchical Clustering
+- - '###'
+  - Yes / No Encoding
+- - '###'
+  - 成绩
+- - '###'
+  - 第 15 章 亲和传播及其他机器学习算法
+- - '#'
+  - BOOK 3
+- - '##'
+  - REACT
+- - '##'
+  - JAVASCRIPT VULNERABILITIES
+- - '##'
+  - '*CONSTRUCTING SECURE ReactJS CODE*'
+- - '##'
+  - Introduction
+- - '##'
+  - Chapter 2 Cross-site Scripting Sinks
+- - '##'
+  - 第 4 章 安全地渲染 URL
+- - '##'
+  - 第 5 章 安全的动态内容渲染
+- - '##'
+  - 第 6 章 使用 DOMPurify 进行清理
+- - '##'
+  - Bug Details
+- - '##'
+  - Chapter 7 Risks of Direct DOM Manipulation Using Refs
+- - '##'
+  - Chapter 8 Dynamic Parsing of React Components
+- - '##'
+  - Chapter 9 Preventing Code Injection through JSON Data
+- - '##'
+  - Bug Details
+- - '##'
+  - Chapter 10 Stored and Reflected Cross-site Scripting
+- - '##'
+  - Chapter 11 Sanitization of JSON Data
+- - '##'
+  - 第 2 章 面向对象与函数式特性
+- - '###'
+  - 'int (C#) : System.Int32 (.NET)'
+- - '##'
+  - 第 5 章 .NET 基类库
+- - '##'
+  - 第 6 章 C# 的持续演进
+- - '##'
+  - 第 7 章 顶层程序
+- - '###'
+  - 第 8 章 表达式体成员与可释放类型
+- - '###'
+  - 第 9 章 关系模式
+- - '#'
+  - BOOK 5
+- - '##'
+  - C#
+- - '##'
+  - PROGRAMMING BASICS
+- - '##'
+  - WRITE, RUN, AND DEBUG CONSOLE APPLICATIONS
+- - '##'
+  - RICHIE MILLER
+- - '##'
+  - Introduction
+- - '##'
+  - Visual Studio
+- - '##'
+  - Sign in to Visual Studio
+- - '##'
+  - Chapter 2 Exploring C#'s Building Blocks
+- - '##'
+  - Chapter 3 Juggling Types
+- - '##'
+  - Chapter 4 Static Typing & Built-in Types
+- - '##'
+  - Chapter 6 Back to the Base Camp
+- - '##'
+  - 第7章 组装一个 C# 程序
+- - '##'
+  - 第 8 章 导入命名空间
+- - '##'
+  - 第10章 C#与智能IDE
+- - '##'
+  - c#
+- - '##'
+  - 编码基础
+- - '##'
+  - 控制流语句和表达式
+- - '##'
+  - 引言
+- - '##'
+  - 第 1 章 如何设置示例项目
+- - '##'
+  - 第3章 如何编写简单语句
+- - '##'
+  - 第4章 如何探索语句和表达式
+- - '###'
+  - Chapter 5 How to Make Logical Comparisons with Statements
+- - '##'
+  - 第6章 如何探索选择语句
+- - '##'
+  - Chapter 7 How to Create Branching Selection Statement
+- - '##'
+  - 第 8 章 如何探索 Switch 语句
+- - '##'
+  - Chapter 9 Understanding Iteration Statements
+- - '##'
+  - 第 10 章 如何探索不同类型的循环
+- - '##'
+  - Chapter 11 Working with While Statements
+- - '##'
+  - 第 12 章 如何探索额外的程序流程
+- - '###'
+  - 通过用户输入控制流程
+- - '###'
+  - Chapter 13 How to Enhance Program Flow Using Loops
+- - '###'
+  - 第 14 章 使用动态数据时的程序流程考量
+- - '##'
+  - 第15章 如何探索高级选择语句特性
+- - '##'
+  - AGENTS 101
+- - '###'
+  - 什么是代理？
+- - '###'
+  - 核心组件
+- - '###'
+  - 代理与工作流
+- - '#'
+  - BOOK 7
+- - '##'
+  - C# 类型类基础
+- - '##'
+  - 内置数据类型、类、接口和继承
+- - '##'
+  - 第 1 章 如何使用内置 C# 数据类型
+- - '##'
+  - 第 2 章 如何使用基元类型
+- - '###'
+  - 补充信息
+- - '##'
+  - 第 3 章 C# 表达式
+- - '###'
+  - 第 4 章 如何使用 DateTime
+- - '##'
+  - 第5章 隐式类型化基础
+- - '##'
+  - 第6章 如何创建和使用字符串
+- - '##'
+  - Chapter 7 Escaping Text Basics
+- - '##'
+  - 第8章 字符串是不可变的
+- - '##'
+  - Chapter 9 How to Work with Methods
+- - '###'
+  - 第10章 如何找到正确的方法
+- - '###'
+  - 第11章 如何按值和按引用传递参数
+- - '##'
+  - 第12章 如何使用out关键字
+- - '##'
+  - 第13章 命名实参与可选参数
+- - '##'
+  - System
+- - '##'
+  - Chapter 16 How to Create First Class & Objects
+- - '##'
+  - 附加信息
+- - '##'
+  - 第 17 章 如何使用类
+- - '##'
+  - 'Demonstration: Classes Are Reference Types'
+- - '##'
+  - Chapter 18 How to Add Properties
+- - '##'
+  - 第 19 章 如何在命名空间中对类进行分组
+- - '##'
+  - 第 20 章 如何处理 null
+- - '##'
+  - 第 22 章 Is-A 关系基础
+- - '##'
+  - 第 23 章 如何使用接口
+- - '##'
+  - 第 8 册
+- - '###'
+  - C# 编程
+- - '###'
+  - 显式接口实现
+- - '##'
+  - 引言
+- - '##'
+  - 第 2 章 面向抽象编程
+- - '##'
+  - 请选择
+- - '##'
+  - 第3章 如何创建接口以增加可扩展性
+- - '##'
+  - 第 4 章 如何使用 CSV 和 SQL 数据读取器
+- - '##'
+  - 第 5 章 动态加载和单元测试
+- - '##'
+  - 第6章 动态读取器工厂
+- - '##'
+  - 第7章 单元测试
+- - '##'
+  - 第 8 章 显式实现接口
+- - '###'
+  - 第9章 如何使用显式实现的成员
+- - '##'
+  - Chapter 10 How to Change Interfaces & Default Implementation
+- - '##'
+  - 第11章 如何添加默认实现
+- - '###'
+  - 错误
+- - '###'
+  - 开发模式
+- - '##'
+  - 第 12 章 如何调用默认实现的成员
+- - '##'
+  - 错误。
+- - '##'
+  - 开发模式
+- - '##'
+  - 第14章 附加功能与抽象类
+- - '#'
+  - BOOK 9
+- - '##'
+  - C#
+- - '##'
+  - GENERICS
+- - '##'
+  - PERFORMANCE AND TYPE SAFETY
+- - '##'
+  - Introduction
+- - '##'
+  - Chapter 1 How to Implement Stack Class for Doubles
+- - '###'
+  - Additional information
+- - '##'
+  - Chapter 3 How to Create Generic Stack Class
+- - '##'
+  - 第4章 泛型的优势
+- - '##'
+  - 第 5 章 如何创建 .NET 控制台应用程序
+- - '##'
+  - 第6章 如何实现泛型类
+- - '##'
+  - 第 7 章 如何使用类约束
+- - '##'
+  - 第 8 章 如何使用 new() 约束
+- - '###'
+  - 第 9 章 如何使用泛型接口
+- - '##'
+  - 第 10 章 如何创建泛型接口
+- - '##'
+  - 第 11 章 协变基础
+- - '##'
+  - 第 12 章 逆变基础
+- - '##'
+  - 第 13 章 如何使用接口继承
+- - '##'
+  - 第 14 章 如何创建泛型方法和泛型委托
+- - '##'
+  - 第 15 章 如何编写带返回值的泛型方法

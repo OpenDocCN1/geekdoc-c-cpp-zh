@@ -1,0 +1,5 @@
+set of parentheses. Our method does not accept any inputs or arguments, so the parentheses are empty. Let's place a breakpoint in our main method and then one inside of our GenerateTasksReport method and then see what happens when we run the app. Well, first, we land inside of the main method since that will continue to be the entry point of our application, that functionality is just built into .NET. However, as we step through our code, our new method will execute by name and we'll jump down into that block. Those statements will then execute like usual as they have throughout the book.
+
+![](bbox=[0.12, 0.37, 0.91, 0.65])
+
+If you are unsure of what these public static void keywords do, that's totally fine for the scope of this book. In simplified terms, public and static basically allow this method to be easily accessible by other components throughout our app. Void states that this app does not return or output any values to the code that called it. And of course, GenerateTaskReport is the name of the method and it's how we execute it from other places in our app like we are in the main method. Together, this line of code collectively forms the method's

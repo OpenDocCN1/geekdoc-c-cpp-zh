@@ -1,0 +1,5 @@
+the Object Browser, and then you can say View Namespaces. What I now see is a list of namespaces, and we can also drill down into the classes within those namespaces. And we click here on System, and we see the classes within the System namespace. And let's take a look at our Console class.
+
+![](bbox=[0.121, 0.234, 0.911, 0.574])
+
+And now we see here on the right the members that we have available on the Console class, for example, the Beep method, the Clear method, and, , also the different overloads for the WriteLine methods. We've used quite frequently already the WriteLine here. I on that, we see at the bottom, the description, the summary of the method, and the description of its perimeters. Optional exceptions that can be thrown by this method will also be listed here. But we also can use search in here. We can, for example, search for collection classes. When I search for collections, I will see here also the namespaces that have the word collections in their name. We'll

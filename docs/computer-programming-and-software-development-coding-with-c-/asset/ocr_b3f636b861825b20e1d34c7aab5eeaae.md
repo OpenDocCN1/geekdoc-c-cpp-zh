@@ -1,0 +1,3 @@
+![](bbox=[0.12, 0.096, 0.911, 0.481])
+
+You'll also see there's another option to implement all members explicitly, and we'll talk about explicit implementation a little later in the book. For now, we'll choose Implement interface, and Visual Studio creates our GetPeople method and our GetPerson method for us. And if I use F6 to build again, at this point our build succeeds. We are technically fulfilling the contract since we have these two methods.

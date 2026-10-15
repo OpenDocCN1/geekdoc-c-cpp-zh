@@ -1,0 +1,65 @@
+
+way to describe a model, a structure with data. Structs are typically used for lightweight structures, so with limited amount of data. Behind the scenes, a struct is still a value type. We can instantiate a struct using the new keyword. Basically it means that from the structure we can create a new instance. A struct can contain data but can also contain methods and even other members. If you're familiar with classes, you'll see that they are very similar to classes, but they have less options. While it's technically not correct, you could say that they are lightweight classes. As said, using a struct, we can wrap data to represent a structure.
+
+```
+struct Employee
+{
+    public string Name;
+    public string Department;
+}
+```
+
+If you want to represent in our code, say, an employee, what would we need? Well, an employee has a name and works in a given department. Those two pieces of data and probably quite a few more can be grouped together to represent that employee. And that we can do by using a struct, as you can see here. To create a struct, we'll first write the struct keyword, followed by the name we want to use. Here that would be Employee. The body of the struct is again between curly braces, and inside the struct I have defined two fields of type string, Name and Department. I use the term fields here, not variables. What's the difference, you may ask? The field is a variable defined on the struct root level, and the Name will also be used in working with classes, as we'll see in the next chapter. So now we have defined a struct. The struct is a template to represent employees. We can now create a variable of our new type called Employee. So Employee now becomes a custom type, and I can create a variable of that type. Then I give a value to the fields of my newly created Employee. The Name field and the Department field are both receiving a value here. At this point we have created a new employee and its fields have been initialized. Now a struct is more than just a wrapper to group together some fields of data. Indeed, to a struct I can also add a method. This method adds functionality to the struct and typically in the code inside the method we will work with the data of the struct.
+
+```
+struct Employee
+{
+    public string Name;
+    public string Department;
+    public void GetPaid()
+    {
+        //Code to pay out wage
+    }
+}
+```
+
+I won't go too far in this yet. We will see more on methods when we look at classes in the next chapter. I want to give a discussion on structs a bit shorter, though. While struct can be used, you'll more often use custom classes, which we'll learn about in the next chapter. In the final demonstration of this chapter we'll learn how we can create a struct and use it from our application. Up until now, we've always just used loose variables to work with our employees.
+
+```
+static void Main(string[] args)
+{
+    //UsingEnumerations();
+
+    UsingAStruct();
+
+    Console.ReadLine();
+}
+
+private static void UsingAStruct()
+{
+    throw new NotImplementedException();
+}
+
+private static void UsingEnumerations()...
+
+private static void CalculateWage(int baseWage, EmployeeType employeeType, StoreType storeType)...
+}
+```
+
+struct Employee
+{
+    public string Name;
+    public int Wage;
+}
+
+That has to change because I want to be able to represent in my C# code an employee as a set, as a type, really, and I can do that using a struct. Again, outside of the main class, let's create a struct. And we can create a struct, as a structure, that is, by using the keyword struct. What I'm going to do is I'm going to represent in code the concept of an employee. So I will call my struct here Employee. Just like before, the entire body goes between curly braces. Do know I can also put this, it a separate file, but just for the sake of simplicity, I'm going to put it here in our original file. We'll come to creating multiple files in the next chapters. Inside of this Employee struct, I want to, as said, represent the employee. What does an employee have? Well, an employee will typically have, I hope, a name, so I'm going to create a variable Name. It is actually
+
+```
+{ //UsingEnumerations(); UsingAstruct(); Console.ReadLine(); } 1 reference private static void UsingAstruct() { Employee employee; employee.Name = "Bethany"; employee.Wage = 1250; employee.Work(); } 0 references private static void UsingEnumerations(...) 1 reference private static void CalculateWage(int baseWage, EmployeeType employeeType, StoreType storeType)... } 1 reference struct Employee { public string Name; public int Wage; } 1 reference public void Work() { Console.WriteLine($"{Name} is now doing work!");
+```
+
+I've created an employee of type Employee, and then I have access to the variables that I've defined on the struct, and I've given them a value. And I can now also on that employee call the work method, and that will then ask the employee to perform work. So now I have, inside of this struct, captured functionality as well as data that represents an employee, and I've created one, I've given them values, and then also ask it to execute that functionality. That is the output of the Work method. So Bethany's probably baking a delicious pie for us because we've done a good job. A deep understanding of types is essential to understanding C#. As said, everything is a type. We've looked at the CTS, which is a standard to define which type categories can be defined. We've then already looked at two of these custom types, enumerations and structs. While this chapter was crucial to progressing with C#, I think the next one, too, is really important. We'll learn about creating classes and objects, the most commonly used custom type in C#.
+
+## Chapter 16 How to Create First Class & Objects
+
+C# is an language. That means that it's easy to represent structures in the language and let our code represent, well, models and their interactions. Within the previous chapter, we've see the struct, and while the struct can indeed be used to represent these models, they can't be used to do, well, everything that we'll need. That's why classes are used so much more often. Welcome to this chapter where I'll teach you how to create your first classes and objects. You'll be doing this all the time while writing your C# code. So first, I want to give you a bit of background on classes. Then, throughout the rest of the chapter, we'll be creating the Employee class. Creating it is one thing. We'll also need to use it, and that's what we'll do next. In the last part of this chapter, I'll explain to you about properties on our class. As said, before we start using classes, we need to understand them, so let's do that first. So what is a class? Just like a struct, a class can be used to represent a concept or model. Think of a car, an employee, or a dog. To represent these in code, you will almost always rely on classes. A class is really the blueprint of an object. Keep that sentence in mind when you're not familiar with the concept of programming. A class is a blueprint of an object. What does it mean? We will create classes that represent a concept, and we will instantiate an object from that class, which represents a single instance. Employee will be a class, but Bob and George, they're our objects, they are real employee instances. A class contains the data to represent the structure, and it also defines methods which expose the functionality of the class. Creating classes is done through the class keyword. As you may have guessed, we'll soon see how it's used. And yes, classes really are the building blocks of just about anything in C#. Classes are the foundation of programming, also known as OO. OO is about creating classes, and it's what we will typically do in C#. I will refer to this a few times later on. All code we will typically write, or maybe I should say nearly all code to be correct, will live inside of a class. Indeed, in C#, you can't put a method just anywhere in your code. It has to be inside of a class. The same goes for a variable. I can't just place it randomly where I want. It needs to be inside of a class. And you may be thinking, did I not write variables outside of a class up until now? And it may be so that you hadn't noticed that all the code we wrote was inside of the main method inside of the Program class. All of our code so far was in that one single class. Try putting a method outside of a class, you'll see Visual Studio complain pretty quickly. The compiler will notice you're doing something that's not allowed. Classes are reference types. When we create objects, very soon, you'll learn that these objects are created on the heap, so not on the stack. Classes are made for the heavier stuff compared to structs, and yes, most things I have just told you would also work if you use a struct. Structs do contain methods and variables. But remember, the structs are value types, and they are not that commonly used when building C# applications. Most of the time, when you're doing just anything, you'll be using a class. Okay, what does a class look like then? Let me show you its structure.

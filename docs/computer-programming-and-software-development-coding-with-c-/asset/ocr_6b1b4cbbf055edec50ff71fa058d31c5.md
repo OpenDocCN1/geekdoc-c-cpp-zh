@@ -1,0 +1,1 @@
+similarities between abstract classes and interfaces, but there are quite a few differences as well. We'll take a closer look at those differences later on in the book.

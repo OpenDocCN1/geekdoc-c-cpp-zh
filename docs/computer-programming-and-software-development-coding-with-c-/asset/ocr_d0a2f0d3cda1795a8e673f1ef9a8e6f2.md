@@ -1,0 +1,1 @@
+For example, the first component of PCA has 97% of the legs feature, 11% of the fins, but only has 1% of domestic and 0% of the others.

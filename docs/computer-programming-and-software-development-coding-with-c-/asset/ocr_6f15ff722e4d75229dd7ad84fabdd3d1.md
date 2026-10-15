@@ -1,0 +1,5 @@
+# Chapter 7 K Nearest Neighbors
+
+KNN is one of the most straightforward classification algorithms out there, but it has a drawback. It must use all data on every prediction, which can be a hassle if the dataset is too big. Let me explain why. KNN uses a distance algorithm such as Euclidean or Manhattan to measure the distance between one specific entry in the dataset against all other ones. As an example, if we choose a value for K = 3, we will say that the element being analyzed belongs to the most common class from the K closest neighbors, 3 in this case, given that each element needs to be analyzed against each K neighbors. As the number of elements in the dataset increases, the number of analysis that are required increases as well, exponentially. To measure the distance between elements, there are several different ways.
+
+![](bbox=[0.12, 0.55, 0.78, 0.88])

@@ -1,0 +1,8 @@
+```
+1: Register employee
+2: Register work hours for employee
+3: Pay employee
+9: Quit application
+```
+
+So now using the console, we can call different functions in the application. I can, for example, start by registering an employee. I need to enter the first name, the last name, and the hourly rate. The employee has been created, and we see, again, the Start menu. I'll do the same for a second employee. And the second employee was also created. I get the option to register work hours for an employee. The application now shows me the list of employees currently registered in the application, and I can select the first employee. I can say that this user has worked 20 hours. I can do the same for Bethany. So I again select option 2, I select employee 2, and I have specified that this employee has worked 15 hours. Finally, I can now on the employees also ask to receive their wage. I again select an employee, and I see that this user has worked now for 20 hours and receives a wage of 500. The hours are also reset. And I select the option 9, the application will quit. So how did I build this? , the application, again, uses the Employee class. And for the sake of simplicity, I've left out a few of the fields and properties that are not relevant in this case. So again, we have the Employee class. It has a couple of private fields, firstName, lastName, numberOfHoursWorked, wage, and hourlyRate.

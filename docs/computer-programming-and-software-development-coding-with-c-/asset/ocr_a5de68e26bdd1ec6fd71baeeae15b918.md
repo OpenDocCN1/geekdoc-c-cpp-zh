@@ -1,0 +1,5 @@
+When using a type that lives in a given namespace, we do need to point out to .NET where it should look for the type. We can do this by bringing in a using statement for the type's namespace at the top of the file. By adding a using statement for one of the namespaces we just saw in the previous screenshot, System.Data, all types inside of that namespace now become available for use within our code, such as you see here with the Data table that lives in the System.Data namespace. Visual Studio has a handy tool to look at existing types called the Object Browser. It's easy to see what types exist and what namespaces they live in. I'll show you how we can use the type that lives in the base class library, and I'll show you how we can bring in a library, again, containing custom types. The class library that we get with .NET Core is huge, and it's sometimes difficult to understand really what is in there.
+
+![](bbox=[0.12, 0.51, 0.62, 0.71])
+
+Also, when your application becomes large, it is also not easy to understand which types you have in there. To get an overview of that, we can use the Object Browser. Go to View and then select Object Browser.

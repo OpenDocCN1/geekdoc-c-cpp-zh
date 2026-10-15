@@ -1,0 +1,5 @@
+more neurons and layers are added. This takes us to the concept of deep learning.
+
+![](bbox=[0.22, 0.195, 0.88, 0.505])
+
+Deep learning is nothing more than a neural network that has more than one layer with multiple nodes. Look at the following diagram as an example. As you can observe, adding more nodes increases complexity, and the math behind this is not that complicated, but it is tricky if we compare this to a neural network. Here are some things that you need to know from deep learning architectures, such as the one in the diagram. Neural networks are parametric, so the W weights are equivalent to the theta parameters in logistic regression. This means that you need an optimization algorithm to help you obtain these parameters, such as stochastic gradient descent or Adam. There's no recipe on how many layers you can add. This is trial and error, or maybe we can call it experimentation. Deep

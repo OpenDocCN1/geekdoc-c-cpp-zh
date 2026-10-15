@@ -1,0 +1,193 @@
+
+
+![](img/0155736aec718cf18821e9f10a5d308d_244_0.png)
+
+A 将是红桃 A，B 为黑桃 A。让我们现在求解在我们已经抽到红桃 A 的前提下，抽到黑桃 A 的概率。这里是数学推导。如果有 52 张牌，那么抽 1 张牌后还剩 51 张牌。第一张牌的概率是 52 分之 1。第二张牌的概率则是 51 分之 1。所以，抽到红桃 A 和黑桃 A 的概率是 52 分之 1 乘以 51 分之 1。在这种情况下，就是 0.00037。仅抽到红桃 A 或黑桃 A 的概率是 52 分之 1，即 0.019。所以，如果我们把贝叶斯公式组合起来，这就是结果。在这种情况下，红桃 A 的概率和黑桃 A 的概率相互抵消。所以，在抽到红桃 A 之后抽到黑桃 A 的概率是 0.00037。不要押注这个条件概率。对你不利。这就是在非常高的层面上的贝叶斯定理。
+
+好吧，在机器学习中，我们重用相同的公式来估计一个数据样本属于某个类别的概率，例如鸟、狗或猫。所以，我们这样写公式。我们牌堆的例子和这个公式之间的唯一区别是 P 数据类的概率是从高斯概率分布、概率密度函数中估计出来的。其余的工作方式相同。
+
+朴素贝叶斯易于实现和理解，但它也是朴素的。为什么？因为它假设我们数据集中所有事件或项目都是独立的，而这可能并非如此。认为这一点是天真的，但不要低估黑暗面的力量。我是说朴素贝叶斯通常效果非常好，大多数时候都如此。以下是使用朴素贝叶斯进行分类的一些条件。
+
+- 输出数据，即预测结果，必须是分类的或标签，例如狗、猫、牛、正面、负面、中性。
+- 输入数据，即预测因子，必须是数值且连续，例如体重、年龄、薪水、距离。如果存在定性变量，如分类数据，它们必须使用编码器转换为数字，例如序数编码器或编码。
+- 关于分布，输入变量必须根据算法遵循某种分布，如高斯或伯努利。
+- 关于独立性，所有输入变量必须彼此独立非常重要。
+
+## Naive Bayes
+
+### When and How to use Naive Bayes
+
+### 1. Data
+
+```python
+In [1]: import pandas as pd
+import numpy as np
+
+airplane = pd.read_csv("Airline Passenger Satisfaction.csv", index_col=0)
+
+airplane.dropna()
+airplane.drop(['id'], axis=1, inplace=True)
+
+airplane.head()
+```
+
+Out[1]: 
+
+| Gender | Customer Type | Age | Type of Travel | Class | Flight Distance | Inflight wifi service | Departure/Arrival time convenient | Ease of Online booking | Gate location | ... | Inflight entertainment | On board service |
+|--------|---------------|-----|----------------|-------|-----------------|----------------------|-----------------------------------|------------------------|---------------|-----|------------------------|------------------|
+| Male | Loyal Customer | 13 | Personal Travel | Eco Plus | 460 | 3 | 4 | 3 | 1 | ... | 5 | |
+
+在这个分类示例中，我将确定朴素贝叶斯算法能否根据乘客对航班的一些问题预测乘客、客户满意度。
+
+### Feature Engineering
+
+```python
+In [3]: from sklearn.preprocessing import OrdinalEncoder, LabelEncoder
+
+Gender_encoder = OrdinalEncoder()
+airplane['Gender'] = Gender_encoder.fit_transform(airplane[['Gender']])
+
+customer_encoder = OrdinalEncoder()
+airplane['Customer Type'] = customer_encoder.fit_transform(airplane[['Customer Type']])
+
+travel_encoder = OrdinalEncoder()
+airplane['Type of Travel'] = travel_encoder.fit_transform(airplane[['Type of Travel']])
+
+class_encoder = OrdinalEncoder()
+airplane['Class'] = class_encoder.fit_transform(airplane[['Class']])
+
+label_encoder = OrdinalEncoder()
+airplane['satisfaction'] = label_encoder.fit_transform(airplane[['satisfaction']])
+# enc.fit_transform
+# enc.categories_
+```
+
+像往常一样，我先描述数据集，绘制相关性图，然后绘制直方图，因为贝叶斯假设所有变量都是独立的，并且输入数据必须遵循正态分布。
+
+![](img/0155736aec718cf18821e9f10a5d308d_247_0.png)
+
+我对一些特征进行归一化，因为它们的范围相比其他特征太高，并将 X 定义为除满意度以外的每个特征，因为满意度将是 Y。
+
+### Normalization
+
+```python
+In [6]: from sklearn.preprocessing import StandardScaler
+
+age_scaler = StandardScaler()
+airplane['Age'] = age_scaler.fit_transform(airplane[['Age']])
+
+flight_distance_scaler = StandardScaler()
+airplane['Flight Distance'] = flight_distance_scaler.fit_transform(airplane[['Flight Distance']])
+# departure_scaler = StandardScaler()
+# airplane['Departure Delay in Minutes'] = departure_scaler.fit_transform(airplane[['Departure
+# arrival_scaler = StandardScaler()
+# airplane['Arrival Delay in Minutes'] = arrival_scaler.fit_transform(airplane[['Arrival Delay
+
+airplane['Departure Delay in Minutes'] = airplane['Departure Delay in Minutes'].apply(lambda x
+
+airplane['Arrival Delay in Minutes'] = airplane['Arrival Delay in Minutes'].apply(lambda x : 1
+```
+
+这是标签。记住这是监督学习。我创建我的模型并拟合数据。
+
+![](img/0155736aec718cf18821e9f10a5d308d_248_0.png)
+
+始终重要的是不仅要关注准确率。还请记住使用混淆矩阵和分类报告。
+
+```python
+for i in X_val.index:
+    print(i)
+
+    for col in X_val.columns:
+        print(f"{col} = {X_val[col][i]}")
+
+    print(f"y_real = {y_val[i]}, y_pred = {y_pred[i]}, error = {y_val[i] - y_pred[i]}")
+
+    print()
+```
+
+```
+91691
+Gender = 0.0
+Customer Type = 0.0
+Age = 0.17335842271161097
+Type of Travel = 0.0
+Class = 0.0
+Flight Distance = 2.05114135755668508
+Inflight wifi service = 4
+Departure/Arrival time convenient = 4
+Ease of Online booking = 3
+Gate location = 4
+Food and drink = 5
+Online boarding = 5
+Seat comfort = 4
+Inflight entertainment = 5
+On-board service = 5
+Leg room service = 5
+Baggage handling = 5
+Checkin service = 3
+Inflight service = 5
+```
+
+我现在可以使用我最喜欢的散点轮廓图来可视化结果。
+
+![](img/0155736aec718cf18821e9f10a5d308d_249_0.png)
+
+散点代表真实目标，轮廓代表模型预测。因为贝叶斯使用高斯或正态分布，所以我还可以得到每个类别的平均乘客特征，中性/不满意和满意。
+
+```python
+print()
+
+neutral or dissatisfied
+    Gender: Female
+    Customer Type: Loyal Customer
+    Age: 37.53748462875793
+    Type of Travel: Business travel
+    Class: Business
+    Flight Distance: 928.3213967688619
+    Inflight wifi service: 2.4031293728533267
+    Departure/Arrival time convenient: 3.12506890556757
+    Ease of Online booking: 2.5505660857397277
+    Gate location: 2.9776957978204637
+    Food and drink: 2.958550650892592
+    Online boarding: 2.65377602521028284
+    Seat comfort: 3.034198362277487
+    Inflight entertainment: 2.893631005385235
+    On-board service: 3.021540940507993
+    Leg room service: 2.9956748505279225
+    Baggage handling: 3.375015901284824
+    Checkin service: 3.0452868591782214
+    Inflight service: 3.3890726370690754
+    Cleanliness: 2.9342958911080017
+    Departure Delay in Minutes: yes
+    Arrival Delay in Minutes: yes
+
+satisfied
+    Gender: Female
+    Customer Type: Loyal Customer
+    Age: 41.70753956114228
+    Type of Travel: Business travel
+    Class: Business
+    Flight Distance: 1530.1657535389454
+    Inflight wifi service: 3.1591623327863836
+    Departure/Arrival time convenient: 2.9696025808604722
+    Ease of Online booking: 3.0317323469699917
+    Gate location: 2.9783352337514253
+    Food and drink: 3.5201768779375366
+    Online boarding: 4.024584920877715
+    Seat comfort: 3.9636232166198515
+    Inflight entertainment: 3.959942756153183
+    On-board service: 3.8590538699001584
+    Leg room service: 3.823177684456434
+    Baggage handling: 3.9635119726339796
+    Checkin service: 3.6478571627221403
+    Inflight service: 3.967461134132436
+    Cleanliness: 3.7381872792502153
+    Departure Delay in Minutes: yes
+    Arrival Delay in Minutes: yes
+```
+
+这就是我如何使用朴素贝叶斯执行二元分类的方法。
+
+支持向量机是一种使用直线或多维超平面来分离数据的算法。想象一下用一张纸片将一堆弹珠分成两个类别。SVM 是一种分类器，如逻辑回归。因此，它非常适合二元分类。为什么它被称为支持向量机？好吧，让我们先关注支持向量部分。使用弹珠示例在 3D 空间中分割弹珠，即三个轴，一些弹珠应被用作焦点元素，以创建最佳间隙，即分离，以便可以插入一张纸片。那些被选中的弹珠被称为支持向量。SVM 是一个支持
+

@@ -1,0 +1,1 @@
+type you need to copy here this SimpleStack class. This means you cannot reuse your existing code. In the next chapter, you will learn how you can reuse your code by implementing a generic SimpleStack class.

@@ -1,0 +1,5 @@
+or respectively, a contravariant type. To create a contravariant type parameter, you write the in keyword before the type parameter. This works if the type parameter is not used as a return value in the generic interface. But now, as you can see, T is underlined in red. When you hover it, you see here the error Invalid variance: The type parameter 'T' must be covariantly valid on IReadRepository. T is defined here as contravariant.
+
+![](bbox=[0.12, 0.28, 0.91, 0.44])
+
+Here, IReadRepository needs a covariant type parameter, and here we have defined the type parameter as contravariant. This does not work. It means we have to split up these methods into a separate interface. So let's remove here from the generic type parameter of this IRepository interface the in keyword. Now let's create in this file a new public interface, and let's call it IWriteRepository. And now, I just grab all the methods of this IRepository interface, and I paste them into this new IWriteRepository interface. I have also included here the Save method, as this method belongs also to IWriteRepository.
