@@ -1,0 +1,11 @@
+# Social software, and the rest...
+
+What use is your super-powered gaming PC if you can't share it with anyone? Multiplayer gaming has risen to become a significant aspect of the industry, with even most single-player, story-focused games coming with a competitive or cooperative online option too. And sure, while the majority of these modes can be played solo, joining in with a random selection of players through various matchmaking services, there's no denying that the thrill of playing with people you actually know is all the more rewarding – win or lose. Even more besides, whether you want to play with your friends or not, having a means to talk and share your gaming experiences with other people will be imperative to making the most of your PC.
+
+Once upon a time this was achieved through specialised software like Raptr or XFire, but with the common practice of most friends circles connecting via WhatsApp or Messenger groups on their smartphones, these services ultimately died out. It's still possible to keep in touch via in-built instant messaging tools that can be found in many clients for gaming, but unless you also want to make the switch to a smartphone app you'll need to be both online and actively playing on the same platforms as your friends to get in touch with them. That's not to say that there aren't plenty of
+
+extra options on top of the in-built, closed nature of many other games and platforms, however. But there are numerous other tools, apps and services that could be very useful at some point. To help with that, we've created a final table to collate all of the important social and non-social software to help you get a better grasp of the things you should look for and download, or as a reference to return to should you find you suddenly have a need for such programs. Many of these you won't need right away, others you will, but in either case it's worth knowing about their existence should the need arise.
+
+Mixing football and acrobatic, rocket-powered remote control cars might not seem like an obvious combination, but Rocket League is easily one of the most exciting multiplayer games available at the moment. The small teams means it's easy for friends to get together, too.
+
+![](bbox=[0.28, 0.65, 0.97, 0.94])
