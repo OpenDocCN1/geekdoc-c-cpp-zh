@@ -1,0 +1,158 @@
+
+
+# 变异序列算法
+
+| fill_n | remove_if | stable_partition |
+| generate | replace | swap |
+| generate_n | replace_copy | swap_ranges |
+| iter_swap | replace_copy_if | transform |
+| partition | replace_if | unique |
+| random_shuffle | reverse | unique_copy |
+
+图 20.11 | 变异序列算法。（第 2 部分，共 2 部分。）
+
+图 20.12 显示了许多非修改序列算法——即不会导致其所应用的容器被修改的算法。图 20.13 显示了头文件 <numeric> 的数值算法。
+
+## 非修改序列算法
+
+| adjacent_find | find | find_if |
+| count | find_each | mismatch |
+| count_if | find_end | search |
+| equal | find_first_of | search_n |
+
+图 20.12 | 非修改序列算法。
+
+## 来自头文件 <numeric> 的数值算法
+
+| accumulate | partial_sum |
+| inner_product | adjacent_difference |
+
+图 20.13 | 来自头文件 <numeric> 的数值算法。
+
+# 20.2 序列容器
+
+C++ 标准模板库提供了三种序列容器——vector、list 和 deque。类模板 vector 和类模板 deque 均基于数组。类模板 list 实现了一个链表数据结构。
+
+STL 中最受欢迎的容器之一是 vector。回想一下，我们在第 7 章中将类模板 vector 引入为更稳健的数组类型。vector 的大小会动态变化。与 C 和 C++ 的“原始”数组不同（参见第 7 章），vector 可以相互赋值。这对于基于指针的 C 风格数组是不可能的，因为那些数组名是常量指针，不能成为赋值的目标。与 C 数组一样，vector 下标不会执行自动范围检查，但类模板 vector 通过成员函数 at（也在第 7 章中讨论）提供了这种能力。
+
+## 性能提示 20.4
+
+在 vector 的末尾插入是高效的。vector 只需在必要时增长以容纳新项目即可。在 vector 中间插入（或删除）元素代价昂贵——在插入（或删除）点之后 vector 的整个部分必须被移动，因为 vector 元素占据内存中连续的单元，就像 C 或 C++ 的“原始”数组一样。
+
+图 20.2 介绍了所有 STL 容器共有的操作。除这些操作外，每个容器通常还提供各种其他功能。其中许多功能对多个容器是常见的，但对每个容器的效率并不总是相等。您必须为应用程序选择最合适的容器。
+
+## 性能提示 20.5
+
+需要在容器两端频繁插入和删除的应用通常使用 deque 而不是 vector。尽管我们可以在 vector 和 deque 的前端和后端插入和删除元素，但类 deque 在前端进行插入和删除时比 vector 更高效。
+
+## 性能提示 20.6
+
+在容器中间和/或极端位置频繁插入和删除的应用通常使用 list，因为它对数据结构中任何位置的插入和删除实现了高效。
+
+除了图 20.2 中描述的通用操作外，序列容器还有几个其他通用操作——front 返回非空容器中第一个元素的引用，back 返回非空容器中最后一个元素的引用，push_back 在容器末尾插入新元素，pop_back 删除容器的最后一个元素。
+
+### 20.2.1 vector 序列容器
+
+类模板 vector 提供了一个具有连续内存位置的数据结构。这使得可以通过下标运算符 [] 高效、直接地访问 vector 的任何元素，就像 C 或 C++ 的“原始”数组一样。类模板 vector 最常用于容器中的数据必须通过下标轻松访问或将被排序的情况。当 vector 的内存耗尽时，vector 分配更大的连续内存区域，将原始元素复制到新内存中并释放旧内存。
+
+## 性能提示 20.7
+
+选择 vector 容器以获得最佳随机访问性能。
+
+## 性能提示 20.8
+
+类模板 vector 的对象提供快速的索引访问，使用重载的下标运算符 []，因为它们像 C 或 C++ 原始数组一样存储在连续内存中。
+
+## 性能提示 20.9
+
+一次插入多个元素比一次插入一个元素更快。
+
+每个容器的重要组成部分是它支持的迭代器类型。这决定了可以应用于容器的算法。vector 支持随机访问迭代器——即图 20.10 中显示的所有迭代器操作都可以应用于 vector 迭代器。所有 STL 算法都可以在 vector 上运行。vector 的迭代器有时被实现为指向 vector 元素的指针。每个接受迭代器参数的 STL 算法都要求这些迭代器提供最低限度的功能。例如，如果一个算法需要前向迭代器，那么该算法就可以操作任何提供前向迭代器、双向迭代器或随机访问迭代器的容器。只要容器支持算法的最低迭代器功能，算法就可以操作该容器。
+
+### 使用 Vector 和迭代器
+
+图 20.14 说明了 vector 类模板的几个函数。这些函数中的许多在每个一流容器中都可用。您必须包含头文件 <vector> 才能使用类模板 vector。
+
+```
+// Fig. 20.14: fig20_14.cpp
+// Demonstrating Standard Library vector class template.
+#include <iostream>
+using std::cout;
+using std::endl;
+
+#include <vector> // vector class-template definition
+using std::vector;
+
+// prototype for function template printVector
+template < typename T > void printVector( const vector< T > &integers2 );
+
+int main()
+{
+    const int SIZE = 6; // define array size
+    int array[ SIZE ] = { 1, 2, 3, 4, 5, 6 }; // initialize array
+    vector< int > integers; // create vector of ints
+
+    cout << "The initial size of integers is: " << integers.size()
+        << "\nThe initial capacity of integers is: " << integers.capacity();
+
+    // function push_back is in every sequence collection
+    integers.push_back( 2 );
+    integers.push_back( 3 );
+    integers.push_back( 4 );
+
+    cout << "\nThe size of integers is: " << integers.size()
+        << "\nThe capacity of integers is: " << integers.capacity();
+    cout << "\n\nOutput array using pointer notation: ";
+
+    // display array using pointer notation
+    for ( int *ptr = array; ptr != array + SIZE; ptr++ )
+        cout << *ptr << ' ';
+
+```
+```
+35  cout << "\nOutput vector using iterator notation: ";
+36  printVector( integers );
+37  cout << "\nReversed contents of vector integers: ";
+38
+39  // two const reverse iterators
+40  vector< int >::const_reverse_iterator reverseIterator;
+41  vector< int >::const_reverse_iterator tempIterator = integers.rend();
+42
+43  // display vector in reverse order using reverse_iterator
+44  for ( reverseIterator = integers.rbegin();
+45      reverseIterator!= tempIterator; ++reverseIterator )
+46      cout << *reverseIterator << ' ';
+47
+48  cout << endl;
+49  return 0;
+50 } // end main
+51
+52  // function template for outputting vector elements
+53  template < typename T > void printVector( const vector< T > &integers2 )
+54  {
+55      typename vector< T >::const_iterator constIterator; // const_iterator
+56
+57      // display vector elements using const_iterator
+58      for ( constIterator = integers2.begin();
+59          constIterator != integers2.end(); ++constIterator )
+60          cout << *constIterator << ' ';
+61  } // end function printVector
+```
+
+The initial size of integers is: 0
+The initial capacity of integers is: 0
+The size of integers is: 3
+The capacity of integers is: 4
+
+Output array using pointer notation: 1 2 3 4 5 6
+Output vector using iterator notation: 2 3 4
+Reversed contents of vector integers: 4 3 2
+
+图 20.14 | 标准库 vector 类模板。（第 2 部分，共 2 部分。）
+
+第 17 行定义了名为 integers 的类模板 vector 的实例，该实例存储 int 值。当此对象被实例化时，会创建一个空 vector，大小为 0（即 vector 中存储的元素数量）和容量为 0（即可以在不为 vector 分配更多内存的情况下存储的元素数量）。
+
+第 19 行和第 20 行演示了 size 和 capacity 函数；对于本示例中的 vector v，每个函数最初都返回 0。函数 size——在每个容器中都可用——返回容器当前存储的元素数量。函数 capacity 返回在 vector 需要动态调整大小以容纳更多元素之前可以存储在 vector 中的元素数量。
+
+第 23–25 行使用函数 push_back——在所有序列容器中都可用——将元素添加到 vector 的末尾。如果向已满的 vector 添加元素，vector 会增加其大小——某些 STL 实现会使 vector 的容量加倍。
+

@@ -1,0 +1,353 @@
+
+
+# 参考文献
+
+Rubin, K. S. and A. Goldberg. “Object Behavior Analysis.” *Communications of the ACM* Vol. 35, No. 9, September 1992, 48–62.
+
+Rumbaugh, J., M. Blaha, W. Premerlani, F. Eddy and W. Lorensen. *Object-Oriented Modeling and Design*. Englewood Cliffs, NJ: Prentice Hall, 1991.
+
+Rumbaugh, J., Jacobson, I. and G. Booch. *The Unified Modeling Language Reference Manual, Second Edition*. Reading, MA: Addison-Wesley, 2005.
+
+Saks, D. “Inheritance.” *The C Users Journal* May 1993, 81–89.
+
+Schildt, H. *STL Programming from the Ground Up*. Berkeley, CA: Osborne McGraw-Hill, 1999.
+
+Schildt, H. *The Art of C++*. Berkeley, CA: McGraw-Hill Osborne Media, 2004.
+
+Schlaer, S. and S. J. Mellor. *Object Lifecycles: Modeling the World in States*. Englewood Cliffs, NJ: Prentice Hall, 1992.
+
+Sedgwick, R. *Bundle of Algorithms in C++, Parts 1–5: Fundamentals, Data Structures, Sorting, Searching, and Graph Algorithms (Third Edition)*. Reading, MA: Addison-Wesley, 2002.
+
+Skelly, C. “Pointer Power in C and C++.” *The C Users Journal* Vol. 11, No. 2, February 1993, 93–98.
+
+Snyder, A. “The Essence of Objects: Concepts and Terms.” *IEEE Software Magazine* Vol. 10, No. 1, January 1993, 31–42.
+
+Stepanov, A. and M. Lee. “The Standard Template Library.” 31 October 1995 <www.cs.rpi.edu/~musser/doc.ps>.
+
+Stroustrup, B. “The UNIX System: Data Abstraction in C.” *AT&T Bell Laboratories Technical Journal* Vol. 63, No. 8, Part 2, October 1984, 1701–1732.
+
+Stroustrup, B. “What is Object-Oriented Programming?” *IEEE Software* Vol. 5, No. 3, May 1988, 10–20.
+
+Stroustrup, B. “Parameterized Types for C++.” *Proceedings of the USENIX C++ Conference* Denver, CO, October 1988.
+
+Stroustrup, B. “Why Consider Language Extensions?: Maintaining a Delicate Balance.” *The C++ Report* September 1993, 44–51.
+
+Stroustrup, B. “Making a vector Fit for a Standard.” *The C++ Report* October 1994.
+
+Stroustrup, B. *The Design and Evolution of C++*. Reading, MA: Addison-Wesley, 1994.
+
+Stroustrup, B. *The C++ Programming Language, Special Third Edition*. Reading, MA: Addison-Wesley, 2000.
+
+Taylor, D. *Object-Oriented Information Systems: Planning and Implementation*. New York, NY: John Wiley & Sons, 1992.
+
+Urlocker, Z. “Polymorphism Unbounded.” *Windows Tech Journal* Vol. 1, No. 1, January 1992, 11–16.
+
+Van Camp, K. E. “Dynamic Inheritance Using Filter Classes.” *The C/C++ Users Journal* Vol. 13, No. 6, June 1995, 69–78.
+
+Vilot, M. J. “An Introduction to the Standard Template Library.” *The C++ Report* Vol. 6, No. 8, October 1994.
+
+Voss, G. “Objects and Messages.” *Windows Tech Journal* February 1993, 15–16.
+
+Wang, B. L. and J. Wang. “Is a Deep Class Hierarchy Considered Harmful?” *Object Magazine* Vol. 4, No. 7, November/December 1994, 35–36.
+
+Weisfeld, M. “An Alternative to Large Switch Statements.” *The C Users Journal* Vol. 12, No. 4, April 1994, 67–76.
+
+Weiskamp, K. and B. Flamig. *The Complete C++ Primer, Second Edition.* Orlando, FL: Academic Press, 1993.
+
+Wiebel, M. and S. Halladay. “Using OOP Techniques Instead of switch in C++.” *The C Users Journal* Vol. 10, No. 10, October 1993, 105–112.
+
+Wilde, N. and R. Huitt. “Maintenance Support for Object-Oriented Programs.” *IEEE Transactions on Software Engineering* Vol. 18, No. 12, December 1992, 1038–1044.
+
+Wilde, N., P. Matthews and R. Huitt. “Maintaining Object-Oriented Software.” *IEEE Software Magazine* Vol. 10, No. 1, January 1993, 75–80.
+
+Wilson, G. V. and P. Lu. *Parallel Programming Using C++.* Cambridge, MA: MIT Press, 1996.
+
+Wilt, N. “Templates in C++.” *The C Users Journal* May 1993, 33–51.
+
+Wirfs-Brock, R., B. Wilkerson and L. Wiener. *Designing Object-Oriented Software.* Englewood Cliffs, NJ: Prentice Hall PTR, 1990.
+
+Wyatt, B. B., K. Kavi and S. Hufnagel. “Parallelism in Object-Oriented Languages: A Survey.” *IEEE Software* Vol. 9, No. 7, November 1992, 56–66.
+
+Yamazaki, S., K. Kajihara, M. Ito and R. Yasuhara. “Object-Oriented Design of Telecommunication Software.” *IEEE Software Magazine* Vol. 10, No. 1, January 1993, 81–87.
+
+Yuzwa, E. *Game Programming In C++: Start To Finish.* Boston, MA: Charles River Media, 2006.
+
+# 索引
+
+# 符号
+
+--, postfix decrement operator 119
+--, prefix decrement operator 119
+^, beginning of a string (regular expression) 847
+^, bitwise exclusive OR operator 719, 876
+^=, bitwise exclusive OR assignment operator 727, 828, 876
+,, comma operator 133
+::, binary scope resolution operator 76, 410
+::, unary scope resolution operator 207, 875, 882
+!, logical NOT 876
+!, logical NOT operator 153, 155
+!, logical NOT operator truth table 156
+!=, inequality operator 35, 427, 876
+?, quantifier (0 or 1) 845
+?:, ternary conditional operator 99, 219
+.*, pointer-to-member operator 880, 881
+'\0', null character 330
+'\n', newline character 330
+[] operator for map 789
+{ n, }, quantifier (at least n) 845
+{ n, m }, quantifier (between n and m) 845
+{ n }, quantifier (exactly n) 845
+*, multiplication operator 33
+*, pointer dereference or indirection operator 293, 294
+*, quantifier (0 or more) 845
+*=, multiplication assignment operator 118
+/, division operator 33
+/* */ , C-style multiline comment 25
+//, single-line comment 25
+/=, division assignment operator 118
+\', single-quote-character escape sequence 27
+\", double-quote-character escape sequence 27
+\\, backslash-character escape sequence 27
+\a, alert escape sequence 27
+\d, character class (any decimal digit) 842, 848
+\D, character class (any non-digit) 842
+\n, newline escape sequence 27
+\r, carriage-return escape sequence 27
+\S, character class (any non-whitespace character) 842
+\s, character class (any whitespace character) 842, 848
+\t, tab escape sequence 27
+\W, character class (any non-word character) 842
+\w, character class (any word character) 842
+& and * operators as inverses 293
+& in a parameter list 202
+& to declare reference 200
+&, address operator 292, 294, 876
+&, bitwise AND 719
+&&, logical AND operator 219
+&&, logical AND operator 153, 876
+truth table 154
+&=, bitwise AND assignment operator 727, 828, 876
+#, preprocessor operator 899, 904
+##, preprocessor operator 904
+%, modulus operator 33
+% =, modulus assignment operator 118
++, addition operator 32, 33
++, quantifier (1 or more) 845
+++ operator on an iterator 762
+++, postfix increment operator 119
+++, prefix increment operator 119
++=, addition assignment operator 118, 427, 692
+<, less-than operator 35
+<<, left-shift operator 719
+<<, stream insertion operator 26, 33
+<< =, left-shift assignment operator 727
+<=, less-than-or-equal-to operator 35
+=, assignment operator 32, 33, 156
+-=, subtraction assignment operator 118
+==, equality operator 35, 155, 427
+>, greater-than operator 35
+->, member selection via pointer 882
+->*, pointer-to-member operator 880
+>=, greater-than-or-equal-to operator 35
+>>, right shift operator 719
+>> =, right shift with sign extension assignment operator 727
+|, bitwise inclusive OR operator 719, 876
+|=, bitwise inclusive OR assignment operator 727, 828, 876
+||, logical OR operator 153, 154, 219, 876
+truth table 155
+~, bitwise complement operator 719, 876
+$, end of a string (regular expression) 847
+
+# 数字
+
+# A
+
+address (&) of a structure 714
+address of a bit field 731
+address operator (&) 292, 294, 295, 308, 425, 881
+addressable storage unit 732
+adjacent_difference STL algorithm 768
+adjacent_find STL algorithm 768, 827
+ADT (abstract data type) 416
+aggregate data type 303, 712
+aggregation 88, 350
+Agile Software Development 15
+aiming a derived-class pointer at a base-class object 534
+airline reservation system 669
+alert escape sequence ('\a') 27, 738
+algebraic expression 33
+<algorithm> 177
+algorithm xxxii, 756, 766, 796, 839
+<algorithm> header file 775
+algorithms
+accumulate 806, 808
+binary_search 809, 811
+copy_backward 813
+count 806, 808
+count_if 806, 808
+equal 798
+equal_range 820, 822
+fill 797
+fill_n 797
+find 809, 811
+find_if 809, 811
+for_each 806, 809
+generate 797
+generate_n 797
+inplace_merge 815
+includes 817
+inplace_merge 815
+insertion sort 263
+iter_swap 811, 813
+lexicographical_comp are 798, 800
+lower_bound 820
+make_heap 824
+max 825
+max_element 806, 808
+merge 813, 814
+min 825
+min_element 806, 808
+mismatch 798, 800
+pop_heap 825
+push_heap 824
+random_shuffle 806, 808
+remove 801
+remove_copy 801
+remove_copy_if 801, 803
+remove_if 801, 803
+replace 803
+replace_copy 803, 805
+replace_copy_if 803, 806
+replace_if 803, 805
+reverse 813, 815
+reverse_copy 815, 817
+selection sort 306
+set_difference 817, 819
+set_intersection 817, 819
+set_symmetric_difference 817, 819
+set_union 817, 820
+sort 809, 811
+sort_heap 824
+swap 811, 811
+swap_ranges 811, 813
+transform 806, 809
+unique 813, 815
+unique_copy 815, 816
+upper_bound 820
+algorithms copy_backward, merge, unique and reverse 813
+algorithms equal, mismatch and lexicographical_comp are 799
+algorithms fill, fill_n, generate and generate_n 797
+algorithms inplace_merge, unique_copy and reverse_copy 815
+algorithms lower_bound, upper_bound and equal_range 820
+algorithms min and max 825
+algorithms of the STL 582
+algorithms remove, remove_if, remove_copy and remove_copy_if 801
+algorithms replace, replace_if, replace_copy and replace_copy_if 804
+algorithms swap, iter_swap and swap_ranges 812
+alias 202, 203, 293, 707
+for a type 760
+for the name of an object 366
+alignment 714
+allocate 408
+allocate dynamic memory 648
+allocate memory 177, 407
+allocator 776
+allocator_type 760
+alphabetizing strings 337
+alter the flow of control 151
+ambiguity problem 882, 886
+American National Standards Institute (ANSI) 2, 3
+American Standard Code for Information Interchange (ASCII) 145, 337
+analysis stage of the software life cycle 43
+Analysis.cpp 116
+Analysis.h 115
+analyzing a project's requirements 19
+and operator keyword 876
+and_eq operator keyword 876
+"ANDed" 722
+angle brackets (< and >) 211, 899
+angle brackets (< and >) in templates 583
+ANSI (American National Standards Institute) 3
+ANSI C 8
+ANSI/ISO 9899: 1990 3
+any method of class bitset 828
+Apache Software Foundation 15
+append data to a file 660
+append method of class string 692
+arbitrary range of subscripts 417
+argument coercion 174
+argument for a macro 901
+argument to a function 55
+arguments in correct order 172
+arguments passed to member-object constructors 391
+arithmetic assignment operators 118, 119
+arithmetic operator 33
+arithmetic overflow 416, 637
+arithmetic overflow error 652
+arithmetic underflow error 652
+"arity" of an operator 427
+array 231, 233, 303, 416, 418
+name 315, 316
+name as a constant pointer to beginning of array 304, 315, 316
+notation for accessing elements 316
+of pointers to functions 328
+of strings 319
+subscripting 304, 316
+array assignment 417
+array bounds 245
+array bounds checking 245
+Array class 434
+Array class definition with overloaded operators 434, 471
+Array class member-function and friend function definitions 435
+Array class test program 438
+array comparison 417
+array initializer list 237
+array input/output 417
+array size 251
+array subscript operator ([]) 442
+arrays and functions 252
+arrays passed by reference 254
+arrays that know their size 417
+array-sort function 582
+arrow 95
+arrow member selection operator (->) 351, 403
+arrowhead in a UML sequence diagram 285
+ASCII (American Standard Code for Information Interchange) 145, 330, 337, 604
+assert 905
+<assert.h> header file 177
+assign member function of class string 690
+assign member function of list 780
+assign one iterator to another 766
+assigning a structure to a structure of the same type 714
+assigning addresses of base-class and derived-class objects to base-class and derived-class pointers 531
+assigning character strings to String objects 455
+assigning class objects 369
+assignment operator (=) 32, 38, 368, 424, 425, 761
+assignment operator functions 444
+assignment operators 118
+*= multiplication assignment operator 118
+/= division assignment operator 118
+%= modulus assignment operator 118
++= addition assignment operator 118
+-= subtraction assignment operator 118
+assignment statement 120
+associate from left to right 38, 122
+associate from right to left 38, 122, 146
+association (in the UML) 18, 86, 89, 373, 374
+name 87
+associative array 789
+associative container 757, 761, 765, 782, 785
+associative container functions count 783
+equal_range 785
+find 785
+insert 785, 789
+lower_bound 785
+upper_bound 785
+associativity 155, 157
+associativity not changed by overloading 426
+associativity of operators 34, 38
+asterisk (*) 33
+asynchronous call 284
+asynchronous event 638
+at member function of class bitset 828
+

@@ -1,0 +1,231 @@
+
+
+```cpp
+20    // empty body
+21 } // end constructor Test
+
+23 // print x using implicit and explicit this pointers;
+24 // the parentheses around *this are required
+25 void Test::print() const
+26 {
+27     // implicitly use the this pointer to access the member x
+28     cout << "       x = " << x;
+
+30     // explicitly use the this pointer and the arrow operator
+31     // to access the member x
+32     cout << "\n this->x = " << this->x;
+
+34     // explicitly use the dereferenced this pointer and
+35     // the dot operator to access the member x
+36     cout << "\n(*this).x = " << (*this).x << endl;
+37 } // end function print
+
+39 int main()
+40 {
+41     Test testObject( 12 ); // instantiate and initialize testObject
+
+43     testObject.print();
+44     return 0;
+45 } // end main
+```
+
+```
+       x = 12
+   this->x = 12
+  (*this).x = 12
+```
+
+**图 10.17** | *this 指针隐式和显式地访问对象的成员。（第 2 部分，共 2 部分。）
+
+为了便于说明，成员函数 `print`（第 25 至 37 行）首先使用 `this` 指针隐式地打印 x（第 28 行）——只指定了数据成员的名字。然后 `print` 使用两种不同的表示法通过 `this` 指针访问 x——`this` 指针上的箭头运算符（`->`）（第 32 行）和解除引用的 `this` 指针上的点运算符（`.`）（第 36 行）。
+
+注意当 `*this`（第 36 行）与点成员选择运算符（`.`）一起使用时，其周围的圆括号。这些圆括号是必需的，因为点运算符的优先级高于 `*` 运算符。如果没有圆括号，表达式 `*this.x` 将被求值，就如同加上了圆括号 `*(this.x)`，这是一个编译错误，因为点运算符不能用于指针。
+
+# 常见编程错误 10.7
+
+> 试图对指向对象的指针使用成员选择运算符（`.`）是一个编译错误——点成员选择运算符只能用于左值，例如对象名、对象的引用或指向对象的解引用指针。
+
+`this` 指针的一个有趣用法是防止对象自我赋值。正如我们将在第 11 章看到的，当对象包含指向动态分配存储的指针时，自我赋值会导致严重错误。
+
+```
+5
+6 #include <iomanip>
+7 using std::setfill;
+8 using std::setw;
+9
+10 #include "Time.h" // Time class definition
+11
+12 // constructor function to initialize private data;
+13 // calls member function setTime to set variables;
+14 // default values are 0 (see class definition)
+15 Time::Time( int hr, int min, int sec )
+16 {
+17     setTime( hr, min, sec );
+18 } // end Time constructor
+19
+20 // set values of hour, minute, and second
+21 Time &Time::setTime( int h, int m, int s ) // note Time & return
+22 {
+23     setHour( h );
+24     setMinute( m );
+25     setSecond( s );
+26     return *this; // enables cascading
+27 } // end function setTime
+28
+29 // set hour value
+30 Time &Time::setHour( int h ) // note Time & return
+31 {
+32     hour = ( h >= 0 && h < 24 ) ? h : 0; // validate hour
+33     return *this; // enables cascading
+34 } // end function setHour
+35
+36 // set minute value
+37 Time &Time::setMinute( int m ) // note Time & return
+38 {
+39     minute = ( m >= 0 && m < 60 ) ? m : 0; // validate minute
+40     return *this; // enables cascading
+41 } // end function setMinute
+42
+43 // set second value
+44 Time &Time::setSecond( int s ) // note Time & return
+45 {
+46     second = ( s >= 0 && s < 60 ) ? s : 0; // validate second
+47     return *this; // enables cascading
+48 } // end function setSecond
+49
+50 // get hour value
+51 int Time::getHour() const
+52 {
+53     return hour;
+54 } // end function getHour
+55
+```
+
+图 10.19 | 为支持级联成员函数调用而修改的 Time 类成员函数定义。（第 2 部分，共 3 部分。）
+
+```
+56 // get minute value
+57 int Time::getMinute() const
+58 {
+59     return minute;
+60 } // end function getMinute
+61
+62 // get second value
+63 int Time::getSecond() const
+64 {
+65     return second;
+66 } // end function getSecond
+67
+68 // print Time in universal-time format (HH:MM:SS)
+69 void Time::printUniversal() const
+70 {
+71     cout << setfill('0') << setw(2) << hour << ":"
+72         << setw(2) << minute << ":" << setw(2) << second;
+73 } // end function printUniversal
+74
+75 // print Time in standard-time format (HH:MM:SS AM or PM)
+76 void Time::printStandard() const
+77 {
+78     cout << ( ( hour == 0 || hour == 12 ) ? 12 : hour % 12 )
+79         << ":" << setfill('0') << setw(2) << minute
+80         << ":" << setw(2) << second << ( hour < 12 ? " AM" : " PM" );
+81 } // end function printStandard
+```
+
+图 10.19 | 为支持级联成员函数调用而修改的 Time 类成员函数定义。（第 3 部分，共 3 部分。）
+
+```
+1 // Fig. 10.20: fig10_20.cpp
+2 // Cascading member-function calls with the this pointer.
+3 #include <iostream>
+4 using std::cout;
+5 using std::endl;
+6
+7 #include "Time.h" // Time class definition
+8
+9 int main()
+10 {
+11     Time t; // create Time object
+12
+13     // cascaded function calls
+14     t.setHour( 18 ).setMinute( 30 ).setSecond( 22 );
+15
+16     // output time in universal and standard formats
+17     cout << "Universal time: ";
+18     t.printUniversal();
+19
+20     cout << "\nStandard time: ";
+21     t.printStandard();
+```
+
+图 10.20 | 使用 this 指针的级联成员函数调用。（第 1 部分，共 2 部分。）
+
+```
+22
+23     cout << "\n\nNew standard time: ";
+24
+25     // cascaded function calls
+26     t.setTime( 20, 20, 20 ).printStandard();
+27     cout << endl;
+28     return 0;
+29 } // end main
+```
+
+Universal time: 18:30:22
+Standard time: 6:30:22 PM
+
+New standard time: 8:20:20 PM
+
+图 10.20 | 使用 this 指针的级联成员函数调用。（第 2 部分，共 2 部分。）
+
+图 10.20 的程序创建了 Time 对象 t（第 11 行），然后在级联成员函数调用（第 14 和 26 行）中使用它。为什么返回 *this 作为引用的技术是可行的？点运算符（`.`）从左到右结合，所以第 14 行首先求值 t.setHour( 18 )，然后返回对对象 t 的引用作为这次函数调用的值。剩余表达式接着被解释为
+
+    t.setMinute( 30 ).setSecond( 22 );
+
+t.setMinute( 30 ) 调用执行并返回对对象 t 的引用。剩余表达式被解释为
+
+    t.setSecond( 22 );
+
+第 26 行也使用了级联。调用必须按照第 26 行中显示的顺序出现，因为类中定义的 printStandard 不返回对 t 的引用。在第 26 行中将对 printStandard 的调用放在对 setTime 的调用之前会导致编译错误。第 11 章将介绍若干使用级联函数调用的实际示例。其中一个示例在一条语句中使用多个 << 运算符与 cout 来输出多个值。
+
+## 10.6 使用 new 和 delete 运算符的动态内存管理
+
+C++ 使程序员能够控制程序中任何内置或用户定义类型的内存的分配和释放。这被称为动态内存管理，并通过 new 和 delete 运算符执行。回顾一下，Employee 类（图 10.12 至 10.13）使用两个 25 字符的数组来表示 Employee 的名和姓。Employee 类定义（图 10.12）在将这两个数组声明为数据成员时必须指定每个数组的元素个数，因为数据成员的大小决定了存储一个 Employee 对象所需的内存量。正如我们之前讨论的，对于少于 24 个字符的名字，这些数组可能会浪费空间。此外，超过 24 个字符的名字必须被截断以适合这些固定大小的数组。
+
+如果我们可以使用正好包含存储 Employee 的名和姓所需元素个数的数组，那岂不是很好？动态内存管理让我们能够做到这一点。正如你将在 10.7 节的示例中看到的，如果我们用指向 char 的指针替换数组数据成员 firstName 和 lastName，就可以使用 new 运算符在运行时动态分配（即保留）恰好容纳每个名字所需的内存量。以这种方式动态分配内存会使数组（或任何其他内置或用户定义类型）在自由存储区（有时称为堆）中创建——自由存储区是分配给每个程序用于存储动态分配对象的内存区域。一旦数组的内存被分配到自由存储区，我们可以通过将指针指向数组的第一个元素来访问它。当我们不再需要该数组时，可以使用 delete 运算符释放（即归还）内存，这些内存随后可被未来的 new 操作复用。
+
+同样，我们将在 10.7 节的示例中介绍如前所述的修改后的 Employee 类。首先，我们介绍使用 new 和 delete 运算符动态分配内存以存储对象、基本类型和数组的细节。
+
+考虑下面的声明和语句：
+
+```
+Time *timePtr;
+ timePtr = new Time;
+```
+
+new 运算符为 Time 类型的对象分配适当大小的存储空间，调用默认构造函数初始化该对象，并返回一个指向 new 运算符右侧指定类型的指针（即 Time *）。注意，new 可用于动态分配任何基本类型（如 int 或 double）或类类型。如果 new 无法在内存中找到足够的空间来容纳该对象，它会通过“抛出异常”来指示发生了错误。第 16 章“异常处理”将讨论在 ISO/IEC C++ 标准环境下如何处理 new 失败。特别是，我们将展示如何“捕获” new 抛出的异常并加以处理。当程序没有“捕获”异常时，程序会立即终止。
+
+# 可移植性提示 10.1
+
+> 在 ISO/IEC 标准之前的 C++ 版本中，new 运算符在失败时返回 0 指针。本书始终使用标准版本的运算符 new。
+
+要销毁动态分配的对象并释放该对象的空间，请使用 delete 运算符，如下所示：
+
+```
+delete timePtr;
+```
+
+这条语句首先调用 timePtr 所指向对象的析构函数，然后释放与该对象关联的内存。执行完上述语句后，系统可以重用该内存来分配其他对象。
+
+# 常见编程错误 10.8
+
+> 不再需要时未释放动态分配的内存可能导致系统过早耗尽内存。这有时被称为“内存泄漏”。
+
+你可以为新创建的基本类型变量提供初始值，例如
+
+```
+double *ptr = new double( 3.14159 );
+```
+
+这将新创建的 double 初始化为 3.14159，并将结果指针赋给 ptr。同样的语法可用于指定传递给对象构造函数的以逗号分隔的参数列表。例如，
+

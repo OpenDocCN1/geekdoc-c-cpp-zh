@@ -1,0 +1,365 @@
+
+- operator> overloaded function 758
+- operator>= overloaded function 458, 758
+- operator>> overloaded function 431, 442, 455
+- operators
+  - ! (logical NOT operator) 153, 155
+  - != (inequality operator) 35
+  - * (multiplication operator) 33
+  - *= multiplication assignment 118
+  - / (division operator) 33
+  - /= division assignment 118
+  - && (logical AND operator) 153
+  - % (modulus operator) 33
+  - %= modulus assignment 118
+  - + (addition operator) 32, 33
+  - += addition assignment 118
+  - < (less-than operator) 35
+  - << (stream insertion operator) 26, 33
+  - <= (less-than-or-equal-to operator) 35
+  - = (assignment operator) 32, 33, 156
+  - -= subtraction assignment 118
+  - == (equality operator) 35, 155
+  - > (greater-than operator) 35
+  - >= (greater-than-or-equal-to operator) 35
+  - || (logical OR operator) 153, 154
+  - addition assignment (+=) 118
+  - arithmetic 118
+  - assignment 118
+  - binary scope resolution (::) 76
+  - conditional (?:) 99
+  - const_cast 870
+  - decrement (--) 119, 119
+  - delete 407
+  - dot (.) 54
+  - increment (++) 119
+  - multiplicative (*, /, %) 114
+  - new 407
+  - postfix decrement 119
+  - postfix increment 119, 121
+  - prefix decrement 119
+  - prefix increment 119, 121
+  - ternary 99
+  - unary minus (-) 113
+  - unary plus (+) 113
+  - unary scope resolution (::) 207
+- operators .* and ->* 880
+- operators that can be overloaded 426
+- optimizations on constants 382
+- optimizing compiler 139, 189, 382
+- OR (|| : logical OR) 153
+- or operator keyword 876
+- or_eq operator keyword 876
+- order in which constructors and destructors are called 364
+- order in which destructors are called 362
+- order in which operators are applied to their operands 218
+- order of evaluation 219
+- original format settings 624
+- ostream class 600, 664, 670, 678, 687
+  - seekp function 664
+  - tellp function 665
+- ostream_iterator 762
+- ostringstream class 707, 708
+- other character sets 689
+- out-of-range array subscript 637
+- out-of-range element 442, 458
+- out of scope 193
+- out_of_bounds exception 776
+- out_of_range exception 652, 692, 776, 828
+- outCredit function 677
+- outer block 190
+- outer for structure 268
+- output a floating-point value 616
+- output buffering 628
+- output data 8
+- output data items of built-in type 602
+- output format of floating-point numbers 621
+- output iterator 764, 765, 766, 798, 806, 816, 819, 827
+- output of Char * variables 603
+- output of characters 603
+- output of floating-point values 603
+- output of integers 603
+- output of standard data types 603
+- output of uppercase letters 603
+- output sequence 762
+- output stream 775
+- output to string in memory 177
+- outputting to strings in memory 707
+- overflow 637
+- overflow error 416
+- overflow_error exception 652
+- overhead of a function call 901
+- overhead of an extra function call 445
+- overhead of virtual function 796
+- overload an operator as a nonmember, non-friend function 428
+- overload the addition operator (+) 425
+- overload unary operator ! 433
+- overloaded [] operator 442
+- overloaded += concatenation operator 457
+- overloaded << operator 428, 458
+- overloaded addition assignment operator (+=) 461
+- overloaded assignment (=) operator 441, 444, 455, 456
+- overloaded binary operators 427
+- overloaded cast operator function 446
+- overloaded concatenation operator 457
+- overloaded equality operator (==) 441, 445, 458
+- overloaded function 208, 209, 583, 585
+- overloaded function call operator () 459
+- overloaded function definitions 208
+- overloaded increment operator 461
+- overloaded inequality operator 441, 445
+- overloaded less than operator 458
+- overloaded negation operator 458
+- overloaded operator () 831
+- overloaded operator += 465
+- overloaded operator[] member function 445
+- overloaded postfix increment operator 461, 465
+- overloaded prefix increment operator 461, 465
+- overloaded stream insertion and stream extraction operators 430
+- overloaded stream insertion operator 884
+- overloaded string concatenation operator 457
+- overloaded subscript operator 442, 445, 459
+- overloaded unary operators 427
+- overloading 33, 208
+  - a member function 351
+- overloading + 427
+- overloading ++ 427
+- overloading << and >> 211
+- overloading an assignment operator 427
+- overloading binary operator < 433
+- overloading binary operators 433
+- overloading function call operator () 459
+- overloading operators 211
+- overloading postfix increment operator 460, 465
+- overloading prefix and postfix decrement operators 461
+- overloading prefix and postfix increment operators 461
+- overloading resolution 586
+- overloading stream insertion and stream extraction operators 429, 441, 442, 455, 461, 465
+- overloading template functions 586
+- overloading the stream insertion operator 687
+- override a function 537
+
+### P
+
+- pad with specified characters 603
+- padding 730
+- padding characters 612, 615, 617, 619
+- padding in a structure 730
+- page layout software 330
+- pair 785, 800, 841
+- pair of braces {} 37, 81
+- pair of iterators 767
+- parallelogram 476
+- parameter 55, 57, 188
+  - parameter in the UML 58, 224, 226, 227
+- parameter list 57, 67
+- parameterized stream manipulator 114, 139, 600, 610, 614, 664
+- parameterized type 587
+- parentheses operator () 34, 114
+- partial_sort algorithm 827
+- partial_sort_copy algorithm 827
+- partial_sum algorithm 768
+- partition algorithm 768
+- partitioning element 826
+- pass a structure 715
+- pass a structure call-by-reference 715
+- pass-by-reference 200, 251, 290, 296, 297, 299, 306
+  - with a pointer parameter used to cube a variable's value 297
+  - with pointer parameters 295
+  - with reference parameters 201, 295
+- pass-by-reference with pointers 202
+- pass-by-value 200, 201, 251, 295, 296, 297, 298, 308
+  - used to cube a variable's value 296
+- pass size of an array 309
+- pass size of an array as an argument 251
+- passing an array element 252
+- passing an entire array 252
+- passing an object by value 370
+- passing arguments by value and by reference 201
+- passing arrays and individual array elements to functions 252
+- passing arrays to functions 251
+- passing large objects 206
+- passing options to a program 320
+- “past the end” iterator 808
+- pattern of 1s and 0s 655
+- payroll file 657
+- payroll system 656
+- peek function of istream 608
+- percent sign (%) (modulus operator) 33
+- perform a task 53
+- Performance 4
+- Performance Tip 4
+- Performance Tips overview xxv
+- Permutation 826
+- PHP 15
+- PI 900, 901
+- platform 9
+- Plauger, P.J. 4
+- playing cards 320
+- plus function object 832
+- plus sign 618
+- plus sign (+) indicating public visibility in the UML 371
+- plus sign, + (UML) 54
+- Point class represents an x-y coordinate pair 528
+- pointer 290, 312
+- pointer 760
+- pointer arithmetic 301, 312, 314, 316, 772
+  - machine dependent 312
+  - on a character array 313
+- pointer assignment 314
+- pointer-based strings 330
+- pointer comparison 315
+- pointer dereference (*) operator 293, 294
+- pointer expression 312, 315
+- pointer handle 351
+- pointer manipulation 564
+- pointer notation 316
+- pointer operators & and * 294
+- pointer subtraction 312
+- pointer to a function 324, 327
+- pointer to an object 303, 348
+- pointer to void (void *) 314
+- pointer values as hexadecimal integers 293
+- pointer variable 649
+- pointer/offset notation 315
+- pointer/subscript notation 316
+- pointers and array subscripting 315, 316
+- pointers and arrays 315
+- Pointers declared const 304
+- Pointers to dynamically allocated storage 403, 445
+- pointer-to-member operators .* 880, 881 ->* 880
+- point-of-sale system 669
+- Poll analysis program 244
+- polymorphic exception processing 644
+- polymorphic programming 544, 546, 567
+- polymorphic screen manager 525
+- polymorphically invoking functions in a derived class 888
+- polymorphism 150, 522, 523, 524, 525, 796
+- polymorphism and references 564
+- pop function of container adapters 791
+- pop member function of priority_queue 795
+- pop member function of queue 793
+- pop member function of stack 589, 591, 791
+- pop member function of list 780
+- pop_front 777, 782, 793
+- pop_heap algorithm 825
+- portability 8
+- Portability Tip 4
+- Portability Tips 9
+- Portability Tips overview xxv
+- portable 3
+- portable code 4
+- portable language 8
+- position number 232
+- postdecrement 119, 121
+- postfix decrement operator 119
+- postfix increment operator 119, 121
+- postincrement 119, 465
+- preprocessor in an iterator 766
+- pow function 138, 139, 168
+- power 168
+- #pragma preprocessor directive 904
+- precedence 33, 34, 38, 121, 133, 155, 218
+- precedence not changed by overloading 426
+- precedence of the conditional operator 99
+- precision 114, 603, 609
+  - format of a floating-point number 114
+- precision function of ios_base 611
+- precision of a floating-point value 109
+- precision of floating-point numbers 611
+- precision setting 611
+- precompiled object file 420
+- predecrement 119, 121
+- predefined function objects 832
+- predefined namespace 874
+- predefined symbolic constants 904
+- predicate function 353, 780, 800, 803, 805, 808, 811, 814, 817, 819, 824
+- prefix decrement operator 119
+- prefix increment operator 119, 121
+- preincrement 119, 465
+- “prepackaged” functions 167
+- preprocess 6
+- preprocessor 6, 173, 899
+- preprocessor directives 6, 26, 29
+  - #ifdef 344
+  - #define 345
+  - #endif 344
+- preprocessor wrapper 344
+- prev_permutation 826
+- prevent class objects from being copied 445
+- prevent memory leak 650
+- prevent one class object from being assigned to another 445
+- preventing header files from being included more than once 345
+- primary memory 8
+- primitive data type promotion 113
+- principal 137
+- principle of least privilege 188, 243, 254, 297, 299, 309, 319, 353, 381, 382, 662, 765
+- print a line of text 25
+- print debugger command 959
+- printArray function template 583
+- printer 8, 599
+- printing a line of text with multiple statements 28
+- Printing a string one character at a time using a nonconstant pointer to constant data 302
+- printing an integer with internal spacing and plus sign 618
+- printing an unsigned integer in bits 720
+- printing character other than a space, digit or letter 738
+- printing character other than a space 733
+- printing character, including space 733
+- printing multiple lines of text with a single statement 29
+- printing string characteristics 697
+- printing the address stored in a char * variable 604
+- priority_queue adapter class 795
+  - empty function 795
+  - pop function 795
+  - push function 795
+  - size function 795
+  - top function 795
+- private
+  - access specifier 371
+- private access specifier 60
+- private base class 520
+- private base class data cannot be accessed from derived class 492
+- private inheritance 475, 478, 520
+- private libraries 6
+- private members of a base class 478
+- private static data member 410
+- probability 178
+- procedural programming language 18
+- program development environment 6
+- program execution stack 194
+- program in the general 523
+- program in the specific 523
+- program termination 365
+- programmer-defined function maximum 169
+- programmer-defined termination function 641
+- programming environment 167
+- promotion 113
+- promotion hierarchy for built-in data types 175
+- promotion rules 174
+- prompt 112
+- prompting message 628
+- proprietary classes 520
+- protected access specifier 344, 479
+- protected base class 520
+- protected base-class data can be accessed from derived class 501
+- protected inheritance 475, 478, 520
+- proxy class 353, 419, 421
+- pseudo-random number generator 840
+- pseudorandom numbers 181
+- public
+  - keyword 371, 376
+- public access specifier 53, 60
+- public base class 520
+- public inheritance 475, 478
+- public interface 61
+- public keyword 53, 60
+- public member of a derived class 479
+- public services of a class 73
+- public static class member 410
+- public static member function 410
+- punctuation mark 338
+- pure procedure 350
+- pure specifier 545
+- pure virtual function 545, 564
+- push function 589, 591
+- push function of container adapters 791

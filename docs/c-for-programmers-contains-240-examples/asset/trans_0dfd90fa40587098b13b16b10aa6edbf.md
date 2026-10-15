@@ -1,0 +1,86 @@
+
+第23行的 `displayMessage` 成员函数调用使第15行执行并显示欢迎消息。我们很快将详细解释第22～23行。
+
+类定义从第9行开始，首先是关键字 `class`，后跟类名 `GradeBook`。按照惯例，用户自定义类的名称以大写字母开头，并且为了可读性，类名中每个后续单词也以大写字母开头。这种大小写风格通常被称为驼峰式大小写（camel case），因为大写和小写字母的排列模式类似于骆驼的轮廓。
+
+每个类的类体都用一对左右花括号（{ 和 }）括起来，如第10行和第17行所示。类定义以分号结束（第17行）。
+
+## 常见编程错误 3.1
+
+> 忘记在类定义末尾加上分号是语法错误。
+
+回想一下，`main` 在执行程序时会被自动调用。你很快就会看到，必须显式调用成员函数 `displayMessage`，告诉它执行其任务。
+
+第11行包含访问说明符标签 `public:`。关键字 `public` 是一个访问说明符。第13～16行定义了成员函数 `displayMessage`。该成员函数出现在访问说明符 `public:` 之后，表示该函数“可公开使用”——它可以被程序中的其他函数（如 `main`）以及其他类的成员函数调用。访问说明符后面总是跟着冒号（:）。在本文后续部分，当提到访问说明符 `public` 时，我们会像本句一样省略冒号。第3.6节将介绍第二个访问说明符 `private`。
+
+程序中的每个函数都执行一项任务，并且可能在完成任务时返回一个值——例如，函数可能执行计算，然后返回计算的结果。定义函数时，必须指定返回类型，以指示函数完成任务时返回的值类型。在第13行中，函数名 `displayMessage` 左侧的关键字 `void` 就是该函数的返回类型。返回类型 `void` 表示 `displayMessage` 完成任务时不会向调用它的函数（在此例中为 `main`，我们稍后将看到）返回任何数据。在图3.5中，你将看到一个返回值的函数示例。
+
+成员函数名 `displayMessage` 位于返回类型之后。按照惯例，函数名以小写字母开头，名称中后续单词均以大写字母开头。成员函数名后面的圆括号表示这是一个函数。一组空圆括号（如第13行所示）表示该成员函数不需要额外数据即可执行其任务。你将在第3.5节中看到一个确实需要额外数据的成员函数示例。第13行通常称为函数头。每个函数体都用左右花括号（{ 和 }）界定，如第14行和第16行所示。
+
+函数体包含执行函数任务的语句。在本例中，成员函数 `displayMessage` 包含一条语句（第15行），用于显示消息"Welcome to the Grade Book!"。该语句执行完毕后，函数就完成了任务。
+
+## 常见编程错误 3.2
+
+> 从返回类型已声明为 `void` 的函数中返回值是编译错误。
+
+## 常见编程错误 3.3
+
+在另一个函数内部定义函数是语法错误。
+
+## 测试 GradeBook 类
+
+接下来，我们要在程序中使用 `GradeBook` 类。正如你在第2章中学到的，`main` 函数（第20～25行）开始每个程序的执行。
+
+在这个程序中，我们想调用 `GradeBook` 类的 `displayMessage` 成员函数来显示欢迎消息。通常，在创建类的对象之前，不能调用该类的成员函数。（正如你将在第10.7节中看到的，静态成员函数是个例外。）第22行创建一个名为 `myGradeBook` 的 `GradeBook` 类对象。注意，该变量的类型是 `GradeBook`——即我们在第9～17行定义的类。当我们声明 `int` 类型的变量时（如第2章所做的那样），编译器知道 `int` 是什么——它是一种基本类型。然而在第22行，编译器不会自动知道 `GradeBook` 是什么类型——它是一种用户自定义类型。我们通过包含类定义（第9～17行）来告诉编译器 `GradeBook` 是什么。如果省略这些行，编译器将发出错误消息（例如 Microsoft Visual C++ 中的“‘GradeBook’: undeclared identifier”或 GNU C++ 中的“‘GradeBook’: undeclared”）。你创建的每个类都成为一种可用于创建对象的新类型。你可以根据需要定义新的类类型；这也是 C++ 被称为可扩展语言的原因之一。
+
+第23行使用变量 `myGradeBook` 后跟点运算符（.）、函数名 `displayMessage` 和一组空圆括号来调用成员函数 `displayMessage`（在第13～16行定义）。该调用使 `displayMessage` 函数执行其任务。在第23行开头的“myGradeBook.”表示 `main` 应使用在第22行创建的 `GradeBook` 对象。第13行中的空圆括号表示成员函数 `displayMessage` 不需要额外数据即可执行其任务。（在第3.5节中，你将看到如何向函数传递数据。）当 `displayMessage` 完成任务后，`main` 函数继续执行第24行，这表明 `main` 成功完成了任务。这是 `main` 的结尾，因此程序终止。
+
+## GradeBook 类的 UML 类图
+
+在 UML 中，每个类都在 UML 类图中建模为一个带有三个分隔栏的矩形。图3.2给出了 `GradeBook` 类的类图（图3.1）。顶部栏包含类名，水平居中并以粗体显示。中间栏包含类的属性，这些属性对应于 C++ 中的数据成员。该栏当前为空，因为 `GradeBook` 类没有任何属性。（第3.6节将介绍带有一个属性的 `GradeBook` 类版本。）底部栏包含类的操作，这些操作对应于 C++ 中的成员函数。UML 通过列出操作名后跟一组圆括号来建模操作。`GradeBook` 类只有一个成员函数 `displayMessage`，因此图3.2的底部栏只列出该名称的一个操作。成员函数 `displayMessage` 不需要额外信息即可执行其任务，因此类图中 `displayMessage` 后面的圆括号为空，就像图3.1第13行中该成员函数头部的圆括号一样。操作名称前面的加号（+）表示 `displayMessage` 是 UML 中的公有操作（即 C++ 中的公有成员函数）。
+
+```
+public:
+    // function that displays a welcome message to the GradeBook user
+    void displayMessage( string courseName )
+    {
+        cout << "Welcome to the grade book for\n" << courseName << "!"
+            << endl;
+    } // end function displayMessage
+}; // end class GradeBook
+
+// function main begins program execution
+int main()
+{
+    string nameOfCourse; // string of characters to store the course name
+    GradeBook myGradeBook; // create a GradeBook object named myGradeBook
+
+    // prompt for and input course name
+    cout << "Please enter the course name:" << endl;
+    getline( cin, nameOfCourse ); // read a course name with blanks
+    cout << endl; // output a blank line
+
+    // call myGradeBook's displayMessage function
+    // and pass nameOfCourse as an argument
+    myGradeBook.displayMessage( nameOfCourse );
+    return 0; // indicate successful termination
+} // end main
+```
+
+```
+Please enter the course name:
+CS101 Introduction to C++ Programming
+
+Welcome to the grade book for
+CS101 Introduction to C++ Programming!
+```
+
+图3.3 | 定义一个包含带参数成员函数的 `GradeBook` 类，创建 `GradeBook` 对象并调用其 `displayMessage` 函数。（第2部分，共2部分。）
+
+在讨论 `GradeBook` 类的新特性之前，让我们看看这个新类是如何在 `main` 中使用（第26～40行）。第28行创建了一个名为 `nameOfCourse` 的 `string` 类型变量，用于存储用户输入的课程名称。`string` 类型的变量表示字符串，例如 "CS101 Introduction to C++ Programming"。`string` 实际上是 C++ 标准库中 `string` 类的对象。该类定义在头文件 `<string>` 中，名称 `string` 与 `cout` 一样属于命名空间 `std`。为了使第28行能够编译，第9行包含了 `<string>` 头文件。注意，第10行中的 `using` 声明允许我们在第28行直接写 `string` 而不是 `std::string`。目前，你可以把 `string` 变量看作像 `int` 等其他类型的变量。你将在第3.10节中看到更多 `string` 的功能。
+
+第29行创建一个名为 `myGradeBook` 的 `GradeBook` 类对象。第32行提示用户输入课程名称。第33行使用库函数 `getline` 执行输入，从用户处读取名称并将其赋给 `nameOfCourse` 变量。在解释这行代码之前，让我们先解释为什么不能简单地写成
+
+```
+cin >> nameOfCourse;
+```

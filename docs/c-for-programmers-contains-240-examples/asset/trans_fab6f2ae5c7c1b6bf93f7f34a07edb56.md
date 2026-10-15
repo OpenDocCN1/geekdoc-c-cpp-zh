@@ -1,0 +1,74 @@
+
+
+| 需求规格说明书中的名词和名词短语 |
+| bank | money / fund | account number |
+| ATM | screen | PIN |
+| user | keypad | bank database |
+| customer | cash dispenser | balance inquiry |
+| transaction | $20 bill / cash | withdrawal |
+| account | deposit slot | deposit |
+| balance | deposit envelope |  |
+
+Fig. 3.18 | 需求规格说明书中的名词和名词短语。
+
+maintains a count of the number of bills it contains. The requirements specification doesn’t say anything about what the system should do with deposit envelopes after it receives them. We can assume that acknowledging the receipt of an envelope—an operation performed by the class that models the deposit slot—is sufficient to represent the presence of an envelope in the system. (We assign operations to classes in Section 6.22.)
+
+在我们简化的 ATM 系统中，将各种“money”以及账户的“balance”等表示为其他类的属性似乎是最合适的。同样，名词“account number”和“PIN”在 ATM 系统中代表重要的信息。它们是银行账户的重要属性。它们并不表现出行为。因此，我们最合适的建模方式是将其作为 account 类的属性。
+
+尽管需求规格说明书经常以一般意义描述“transaction”，但我们目前不建模金融交易的宽泛概念。相反，我们将三种类型的交易（即“balance inquiry”、“withdrawal”和“deposit”）建模为独立的类。这些类拥有执行其所代表的交易所需的特定属性。例如，withdrawal 需要知道用户想要取款的金额。而 balance inquiry 则不需要任何额外数据。此外，这三个交易类表现出独特的行为。withdrawal 包括向用户 dispensing 现金，而 deposit 涉及从用户接收 deposit envelopes。 [Note: In Section 13.10, we “factor out” common features of all transactions into a general “transaction” class using the object-oriented concepts of abstract classes and inheritance.]
+
+我们根据图 3.18 中剩余的名词和名词短语确定系统的类。每个都指以下之一：
+
+- ATM
+- screen
+- keypad
+- cash dispenser
+- deposit slot
+- account
+- bank database
+- balance inquiry
+- withdrawal
+- deposit
+
+此列表中的元素很可能是我们实现系统时需要的类。
+
+我们现在可以根据所创建的列表对系统中的类进行建模。我们在设计过程中将类名大写——这是 UML 的约定——正如我们在编写实现设计的实际 C++ 代码时所做的那样。如果类名包含多个单词，我们将单词合并并将每个单词的首字母大写（例如 MultipleWordName）。使用此约定，我们创建类 ATM、Screen、Keypad、CashDispenser、DepositSlot、Account、BankDatabase、BalanceInquiry、Withdrawal 和 Deposit。我们使用所有这些类作为构建块来构建系统。然而，在开始构建系统之前，我们必须更好地了解类之间的关系。
+
+## Modeling Classes
+
+UML 使我们能够通过类图对 ATM 系统中的类及其相互关系进行建模。图 3.19 表示类 ATM。在 UML 中，每个类都被建模为具有三个隔间的矩形。顶部隔间包含类的名称，水平居中且以粗体显示。中间隔间包含类的属性。 （我们在第 4.11 节和第 5.10 节讨论属性。）底部隔间包含类的操作（在第 6.22 节讨论）。在图 3.19 中，中间和底部隔间为空，因为我们尚未确定该类的属性和操作。
+
+类图还显示了系统类之间的关系。图 3.20 显示了我们的类 ATM 和 Withdrawal 如何相互关联。暂时出于简单起见，我们只选择建模这一子集的类；我们将在本节后面呈现更完整的类图。请注意，此图中的类矩形未细分为隔间。UML 允许以这种方式抑制类属性和操作，当合适时，以创建更易读的图表。这样的图表被称为 elided diagram——其中某些信息，例如第二和第三隔间的内容，未被建模。我们将在第 4.11 节和第 6.22 节中将信息放在这些隔间中。
+
+在图 3.20 中，连接两个类的实线表示关联——类之间的关系。线两端附近的数字是 multiplicity 值，表示每个类中有多少对象参与关联。在这种情况下，沿着线从一端到另一端可以看出，在任何给定时刻，一个 ATM 对象参与与零个或一个 Withdrawal 对象的关联——零
+
+![](img/4fc2e1ee5600ca1ada5e16b9e1397269_128_0.png)
+
+Fig. 3.19 | 使用类图在 UML 中表示类。
+
+![](img/4fc2e1ee5600ca1ada5e16b9e1397269_128_1.png)
+
+Fig. 3.20 | 显示类之间关联的类图。
+
+![](img/4fc2e1ee5600ca1ada5e16b9e1397269_130_0.png)
+
+Fig. 3.22 | 显示组合关系的类图。
+
+composition symbol (the solid diamond) on its end of the association line is the whole (in this case, ATM), and the classes on the other end of the association lines are the parts—in this case, classes Screen, Keypad, CashDispenser and DepositSlot. The compositions in Fig. 3.22 indicate that an object of class ATM is formed from one object of class Screen, one object of class CashDispenser, one object of class Keypad and one object of class DepositSlot. The ATM “has a” screen, a keypad, a cash dispenser and a deposit slot. The has-a relationship defines composition. (We’ll see in the Software Engineering Case Study section in Chapter 13 that the is-a relationship defines inheritance.)
+
+根据 UML 规范，组合关系具有以下属性：
+
+- 1. 关系中只有一个类可以代表整体（即菱形只能放在关联线的某一端）。例如，要么屏幕是 ATM 的一部分，要么 ATM 是屏幕的一部分，但屏幕和 ATM 不能在关系中同时代表整体。
+- 2. 组合关系中的部件仅在整体存在时存在，并且整体负责其部件的创建和销毁。例如，构建 ATM 的行为包括制造其部件。此外，如果 ATM 被销毁，其屏幕、键盘、现金 dispenser 和 deposit slot 也将被销毁。
+- 3. 一个部件一次只能属于一个整体，尽管部件可以被移除并附加到另一个整体，后者然后承担对该部件的责任。
+
+我们类图中的实心菱形表示满足这三个属性的组合关系。如果 has-a 关系不满足其中一个或多个标准，UML 规定将空心菱形附加到关联线的末端以表示聚合——一种较弱的组合形式。例如，个人电脑和电脑显示器参与聚合关系——电脑有一个显示器，但这两个部件可以独立存在，并且同一个显示器可以同时连接到多台电脑，从而违反了组合的第二和第三属性。
+
+图 3.23 显示了 ATM 系统的类图。此图建模了我们在本节前面识别的大多数类，以及我们可以从需求规格说明书推断出的它们之间的关联。 [Note: Classes `BalanceInquiry` and `Deposit` participate in associations similar to those of class `Withdrawal`, so we have chosen to omit them from this diagram to keep it simple. In Chapter 13, we expand our class diagram to include all the classes in the ATM system.]
+
+图 3.23 呈现了 ATM 系统结构的图形模型。此类图包括类 `BankDatabase` 和 `Account` 以及图 3.20 或图 3.22 中均不存在的几个关联。类图显示类 ATM 与类 `BankDatabase` 具有 **一对一关系**——一个 ATM 对象针对一个 `BankDatabase` 对象对用户进行身份验证。在图 3.23 中，我们还建模了银行数据库包含有关许多账户的信息这一事实——一个 `BankDatabase` 类的对象参与与零个或多个 `Account` 类对象的组合关系。回想一下图 3.21，`BankDatabase` 类与 `Account` 类之间的关联在 Account 端的 multiplicity 值 `0..*` 表示零个或多个 Account 对象参与关联。类 `BankDatabase` 与类 `Account` 具有 **一对多关系**——`BankDatabase` 包含许多 Accounts。同样，类 `Account` 与类 `BankDatabase` 具有 **多对一关系**——可以有许多 Accounts 包含在 `BankDatabase` 中。 [Note: Recall from Fig. 3.21 that the multiplicity value `*` is identical to `0..*`. We include `0..*` in our class diagrams for clarity.]
+
+![](img/4fc2e1ee5600ca1ada5e16b9e1397269_131_0.png)
+
+**Fig. 3.23** | ATM 系统模型的类图。
+

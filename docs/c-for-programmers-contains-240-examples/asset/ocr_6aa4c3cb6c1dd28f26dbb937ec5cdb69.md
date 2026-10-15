@@ -1,0 +1,19 @@
+Boost.Regex library provides support for regular expressions. We demonstrate how to use the library to search a string for matches to a regular expression, validate data, replace parts of a string and split a string into tokens. The Boost.Smart_ptr library provides smart pointers to help manage dynamically allocated memory. We discuss the two types of smart pointers included in TR1—shared_ptr and weak_ptr. We provide examples to demonstrate how these can be used to avoid common memory management errors. This chapter also discusses the upcoming release of the new standard for C++.
+
+**Chapter 22, Other Topics**, is a collection of miscellaneous C++ topics. We discuss one more cast operator—const_cast. This operator, static_cast (Chapter 5), dynamic_cast (Chapter 13) and reinterpret_cast (Chapter 17), provide a more robust mechanism for converting between types than do the original cast operators C++ inherited from C (which are now deprecated). We discuss namespaces, a feature particularly crucial for software developers who build substantial systems. Namespaces prevent naming collisions, which can hinder such large software efforts. We discuss keyword mutable, which allows a member of a const object to be changed. Previously, this was accomplished by “casting away const-ness”, which is considered a dangerous practice. We also discuss pointer-to-member operators .* and ->*, multiple inheritance (including the problem of “diamond inheritance”) and virtual base classes.
+
+**Appendix A, Operator Precedence and Associativity Chart**, presents the complete set of C++ operator symbols, in which each operator appears on a line by itself with its operator symbol, its name and its associativity.
+
+**Appendix B, ASCII Character Set.** All the programs in this book use the ASCII character set, which is presented in this appendix.
+
+**Appendix C, Fundamental Types**, lists C++’s fundamental types.
+
+**Appendix D, Preprocessor**, discusses the preprocessor’s directives. The appendix includes more complete information on the #include directive, which causes a copy of a specified file to be included in place of the directive before the file is compiled and the #define directive that creates symbolic constants and macros. The appendix explains conditional compilation, which enables you to control the execution of preprocessor directives and the compilation of program code. The # operator that converts its operand to a string and the ## operator that concatenates two tokens are discussed. The various predefined preprocessor symbolic constants (__LINE__, __FILE__, __DATE__, __STDC__, __TIME__ and __TIMESTAMP__) are presented. Finally, macro operators of the header file <cassert> is discussed, which is valuable in program testing, debugging, verification and validation.
+
+**Appendix E, ATM Case Study Code**, contains the implementation of our case study on object-oriented design with the UML. This appendix is discussed in the tour of the case study (presented shortly).
+
+**Appendix F, UML 2: Additional Diagram Types**, overviews the UML 2 diagram types that are not found in the OOD/UML Case Study.
+
+**Appendix G, Using the Visual Studio Debugger**, demonstrates key features of the Visual Studio Debugger, which allows a programmer to monitor the execution of applications to locate and remove logic errors. The appendix presents step-by-step instructions, so you learn how to use the debugger in a hands-on manner.
+
+**Appendix H, Using the GNU C++ Debugger**, demonstrates key features of the GNU C++ Debugger. The appendix presents step-by-step instructions, so you learn how to use the debugger in a hands-on manner.

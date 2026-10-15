@@ -1,0 +1,174 @@
+
+Figure 8.15 implements selection sort using two functions—selectionSort and swap. Function selectionSort (lines 36–53) sorts the array. Line 38 declares the variable smallest, which will store the index of the smallest element in the remaining array. Lines 41–52 loop size - 1 times. Line 43 sets the index of the smallest element to the current index. Lines 46–49 loop over the remaining elements in the array. For each of these elements, line 48 compares its value to the value of the smallest element. If the current element is smaller than the smallest element, line 49 assigns the current element’s index to smallest. When this loop finishes, smallest will contain the index of the smallest element in the remaining array. Line 51 calls function swap (lines 57–62) to place the smallest remaining element in the next spot in the array (i.e., exchange the array elements array[i] and array[smallest]).
+
+Let us now look more closely at function swap. Remember that C++ enforces information hiding between functions, so swap does not have access to individual array elements in selectionSort. Because selectionSort wants swap to have access to the array elements to be swapped, selectionSort passes each of these elements to swap by reference.
+
+```
+// Fig. 8.15: fig08_15.cpp
+// Selection sort with pass-by-reference. This program puts values into an
+// array, sorts them into ascending order and prints the resulting array.
+#include <iostream>
+using std::cout;
+using std::endl;
+
+#include <iomanip>
+using std::setw;
+
+void selectionSort( int * const, const int ); // prototype
+void swap( int * const, int * const ); // prototype
+
+int main()
+{
+    const int arraySize = 10;
+    int a[ arraySize ] = { 2, 6, 4, 8, 10, 12, 89, 68, 45, 37 };
+
+    cout << "Data items in original order\n";
+
+    for ( int i = 0; i < arraySize; i++ )
+        cout << setw( 4 ) << a[ i ];
+
+    selectionSort( a, arraySize ); // sort the array
+
+    cout << "\nData items in ascending order\n";
+
+    for ( int j = 0; j < arraySize; j++ )
+        cout << setw( 4 ) << a[ j ];
+
+    cout << endl;
+    return 0; // indicates successful termination
+} // end main
+```
+
+Fig. 8.15 | Selection sort with pass-by-reference. (Part 1 of 2.)
+
+Precisely the same effect is achieved by
+
+```
+int hold = *element1Ptr;
+*element1Ptr = *element2Ptr;
+*element2Ptr = hold;
+```
+
+in the swap function of Fig. 8.15.
+
+Several features of function selectionSort should be noted. The function header (line 36) declares array as int * const array, rather than int array[], to indicate that the function receives a one-dimensional array as an argument. Both parameter array’s pointer and parameter size are declared const to enforce the principle of least privilege. Although parameter size receives a copy of a value in main and modifying the copy cannot change the value in main, selectionSort does not need to alter size to accomplish its task—the array size remains fixed during the execution of selectionSort. Therefore, size is declared const to ensure that it is not modified. If the size of the array were to be modified during the sorting process, the sorting algorithm would not run correctly.
+
+Note that function selectionSort receives the size of the array as a parameter, because the function must have that information to sort the array. When an array is passed to a function, only the memory address of the first element of the array is received by the function; the array size must be passed separately to the function.
+
+By defining function selectionSort to receive the array size as a parameter, we enable the function to be used by any program that sorts one-dimensional int arrays of arbitrary size. The size of the array could have been programmed directly into the function, but this would restrict the function to processing an array of a specific size and reduce the function’s reusability—only programs processing one-dimensional int arrays of the specific size “hard coded” into the function could use the function.
+
+### Software Engineering Observation 8.4
+
+> When passing an array to a function, also pass the size of the array (rather than building into the function knowledge of the array size)—this makes the function more reusable.
+
+## 8.7 sizeof Operator
+
+C++ provides the unary operator sizeof to determine the size of an array (or of any other data type, variable or constant) in bytes during program compilation. When applied to the name of an array, as in Fig. 8.16 (line 14), the sizeof operator returns the total number of bytes in the array as a value of type size_t (an unsigned integer type that is at least as big as unsigned int). Note that this is different from the size of a `vector<int>`, for example, which is the number of integer elements in the vector. The computer we used to compile this program stores variables of type double in 8 bytes of memory, and array is declared to have 20 elements (line 12), so array uses 160 bytes in memory. When applied to a pointer parameter (line 24) in a function that receives an array as an argument, the sizeof operator returns the size of the pointer in bytes (4 on the system we used)—not the size of the array.
+
+### Common Programming Error 8.7
+
+> Using the sizeof operator in a function to find the size in bytes of an array parameter results in the size in bytes of a pointer, not the size in bytes of the array.
+
+```
+// Fig. 8.16: fig08_16.cpp
+// Sizeof operator when used on an array name
+// returns the number of bytes in the array.
+#include <iostream>
+using std::cout;
+using std::endl;
+
+size_t getSize( double * ); // prototype
+
+int main()
+{
+    double array[ 20 ]; // 20 doubles; occupies 160 bytes on our system
+
+    cout << "The number of bytes in the array is " << sizeof( array );
+
+    cout << "\nThe number of bytes returned by getSize is "
+         << getSize( array ) << endl;
+    return 0; // indicates successful termination
+} // end main
+
+// return size of ptr
+size_t getSize( double *ptr )
+{
+    return sizeof( ptr );
+} // end function getSize
+```
+
+The number of bytes in the array is 160
+The number of bytes returned by getSize is 4
+
+Fig. 8.16 | sizeof operator when applied to an array name returns the number of bytes in the array.
+
+> [Note: When the Borland C++ compiler is used to compile Fig. 8.16, the compiler generates the warning message “Parameter 'ptr' is never used in function getSize(double *).” This warning occurs because sizeof is actually a compile-time operator; thus, variable ptr is not used in the function’s body at execution time. Many compilers issue warnings like this to let you know that a variable is not being used so that you can either remove it from your code or modify your code to use the variable properly. Similar messages occur in Fig. 8.17 with various compilers.]
+
+The number of elements in an array also can be determined using the results of two sizeof operations. For example, consider the following array declaration:
+
+```
+double realArray[ 22 ];
+```
+
+If variables of data type double are stored in eight bytes of memory, array realArray contains a total of 176 bytes. To determine the number of elements in the array, the following expression (which is evaluated at compile time) can be used:
+
+```
+sizeof realArray / sizeof( double ) // calculate number of elements
+```
+
+The expression determines the number of bytes in array realArray (176) and divides that value by the number of bytes used in memory to store a double value (8)—the result is the number of elements in realArray (22).
+
+### Determining the Sizes of the Fundamental Types, an Array and a Pointer
+
+Figure 8.17 uses sizeof to calculate the number of bytes used to store most of the standard data types. Notice that, in the output, the types double and long double have the same size. Types may have different sizes based on the platform running the program. On another system, for example, double and long double may be of different sizes.
+
+```
+// Fig. 8.17: fig08_17.cpp
+// Demonstrating the sizeof operator.
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main()
+{
+    char c; // variable of type char
+    short s; // variable of type short
+    int i; // variable of type int
+    long l; // variable of type long
+    float f; // variable of type float
+    double d; // variable of type double
+    long double ld; // variable of type long double
+    int array[ 20 ]; // array of int
+    int *ptr = array; // variable of type int *
+
+    cout << "sizeof c = " << sizeof c
+        << "\tsizeof(char) = " << sizeof( char )
+        << "\nsizeof s = " << sizeof s
+        << "\tsizeof(short) = " << sizeof( short )
+        << "\nsizeof i = " << sizeof i
+        << "\tsizeof(int) = " << sizeof( int )
+        << "\nsizeof l = " << sizeof l
+        << "\tsizeof(long) = " << sizeof( long )
+        << "\nsizeof f = " << sizeof f
+        << "\tsizeof(float) = " << sizeof( float )
+        << "\nsizeof d = " << sizeof d
+        << "\tsizeof(double) = " << sizeof( double )
+        << "\nsizeof ld = " << sizeof ld
+        << "\tsizeof(long double) = " << sizeof( long double )
+        << "\nsizeof array = " << sizeof array
+        << "\nsizeof ptr = " << sizeof ptr << endl;
+    return 0; // indicates successful termination
+} // end main
+```
+
+sizeof c = 1      sizeof(char) = 1
+sizeof s = 2      sizeof(short) = 2
+sizeof i = 4      sizeof(int) = 4
+sizeof l = 4      sizeof(long) = 4
+sizeof f = 4      sizeof(float) = 4
+sizeof d = 8      sizeof(double) = 8
+sizeof ld = 8     sizeof(long double) = 8
+sizeof array = 80
+sizeof ptr = 4
+
+Fig. 8.17 | sizeof operator used to determine standard data type sizes.

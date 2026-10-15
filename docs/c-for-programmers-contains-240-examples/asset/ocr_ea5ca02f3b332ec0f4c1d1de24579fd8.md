@@ -1,0 +1,18 @@
+Lines 18–19 instantiate two list objects capable of storing integers. Lines 22–23 use function push_front to insert integers at the beginning of values. Function push_front is specific to classes list and deque (not to vector). Lines 24–25 use function push_back to insert integers at the end of values. Remember that function push_back is common to all sequence containers.
+
+Line 30 uses list member function sort to arrange the elements in the list in ascending order. [Note: This is different from the sort in the STL algorithms.] A second version of function sort allows you to supply a binary predicate function that takes two arguments (values in the list), performs a comparison and returns a bool value indicating the result. This function determines the order in which the elements of the list are sorted. This version could be particularly useful for a list that stores pointers rather than values. [Note: We demonstrate a unary predicate function in Fig. 20.28. A unary predicate function takes a single argument, performs a comparison using that argument and returns a bool value indicating the result.]
+
+Line 40 uses list function splice to remove the elements in otherValues and insert them into values before the iterator position specified as the first argument. There are two other versions of this function. Function splice with three arguments allows one element to be removed from the container specified as the second argument from the location specified by the iterator in the third argument. Function splice with four arguments uses the last two arguments to specify a range of locations that should be removed from the container in the second argument and placed at the location specified in the first argument.
+
+After inserting more elements in otherValues and sorting both values and otherValues, line 55 uses list member function merge to remove all elements of otherValues and insert them in sorted order into values. Both lists must be sorted in the same order before this operation is performed. A second version of merge enables you to supply a predicate function that takes two arguments (values in the list) and returns a bool value. The predicate function specifies the sorting order used by merge.
+
+Line 61 uses list function pop_front to remove the first element in the list. Line 62 uses function pop_back (available for all sequence containers) to remove the last element in the list.
+
+Line 66 uses list function unique to remove duplicate elements in the list. The list should be in sorted order (so that all duplicates are side by side) before this operation is performed, to guarantee that all duplicates are eliminated. A second version of unique enables you to supply a predicate function that takes two arguments (values in the list) and returns a bool value specifying whether two elements are equal.
+
+Line 71 uses function swap (available to all containers) to exchange the contents of values with the contents of otherValues.
+Line 78 uses list function assign to replace the contents of values with the contents of otherValues in the range specified by the two iterator arguments. A second version of assign replaces the original contents with copies of the value specified in the second argument. The first argument of the function specifies the number of copies. Line 87 uses list function remove to delete all copies of the value 4 from the list.
+
+# 20.2.3 deque Sequence Container
+
+Class deque provides many of the benefits of a vector and a list in one container. The term deque is short for “double-ended queue.” Class deque is implemented to provide ef-

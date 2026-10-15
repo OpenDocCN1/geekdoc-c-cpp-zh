@@ -1,0 +1,52 @@
+
+Windows Vista. Each week we announce our latest Resource Centers in the newsletter. Errata and updates for this book are posted at www.deitel.com/books/cppfp/.
+
+You are embarking on a challenging and rewarding path. As you proceed, if you have any questions, please send e-mail to deitel@deitel.com. We’ll respond promptly. We hope that you’ll enjoy learning with C++ for Programmers.
+
+## 1.2 History of C and C++
+
+C++ evolved from C, which evolved from two previous programming languages, BCPL and B. BCPL was developed in 1967 by Martin Richards as a language for writing operating systems software and compilers for operating systems. Ken Thompson modeled many features in his language B after their counterparts in BCPL and he used B to create early versions of the UNIX operating system at Bell Laboratories in 1970.
+
+The C language was evolved from B by Dennis Ritchie at Bell Laboratories. C uses many important concepts of BCPL and B. C initially became widely known as the development language of the UNIX operating system. Today, most operating systems are written in C and/or C++. C is available for most computers and is hardware independent. With careful design, it is possible to write C programs that are portable to most computers.
+
+The widespread use of C with various hardware platforms unfortunately led to many variations. This was a serious problem for program developers, who needed to write portable programs that would run on several platforms. A standard version of C was needed. The American National Standards Institute (ANSI) cooperated with the International Organization for Standardization (ISO) to standardize C worldwide; the joint standard document was published in 1990 and is referred to as ANSI/ISO 9899: 1990.
+
+C99 is the latest C standard. It was developed to evolve the C language to keep pace with today’s powerful hardware and with increasingly demanding user requirements. The C99 Standard is more capable (than earlier C Standards) of competing with languages like Fortran for mathematical applications. C99 capabilities include the long long type for 64-bit machines, complex numbers for engineering applications and greater support of floating-point arithmetic. C99 also makes C more consistent with C++ by enabling polymorphism through type-generic mathematical functions and through the creation of a defined boolean type. For more information on C and C99, see our book C How to Program, Fifth Edition and our C Resource Center (located at www.deitel.com/C/).
+
+C++, an extension of C, was developed by Bjarne Stroustrup in the early 1980s at Bell Laboratories. C++ provides a number of features that “spruce up” the C language, but more importantly, it provides capabilities for object-oriented programming.
+
+You’ll be introduced to the basic concepts and terminology of object technology in Section 1.10. Objects are essentially reusable software components that model items in the real world. Software developers are discovering that a modular, object-oriented design and implementation approach can make them much more productive than can previous popular programming techniques. Object-oriented programs are easier to understand, correct and modify. You’ll begin developing customized, reusable classes and objects in Chapter 3, Introduction to Classes and Objects. This book is object oriented, where appropriate, from the start and throughout the text. This gets you “thinking about objects” immediately and mastering these concepts more completely.
+
+We also provide an optional automated teller machine (ATM) case study in the Software Engineering Case Study sections of Chapters 1–7, 9 and 13, and Appendix E, which contains a complete C++ implementation. The case study presents a carefully paced introduction to object-oriented design using the UML—an industry standard graphical modeling language for developing object-oriented systems. We guide you through a first design experience intended for the novice object-oriented designer/programmer. Our goal is to help you develop an object-oriented design to complement the object-oriented programming concepts you learn in this chapter and begin implementing in Chapter 3.
+
+## 1.3 C++ Standard Library
+
+C++ programs consist of pieces called *classes* and *functions*. You can program each piece that you may need to form a C++ program. However, most C++ programmers take advantage of the rich collections of existing classes and functions in the *C++ Standard Library*. Thus, there are really two parts to learning the C++ “world.” The first is learning the C++ language itself; the second is learning how to use the classes and functions in the C++ Standard Library. Throughout the book, we discuss many of these classes and functions. P. J. Plauger’s book, *The Standard C Library* (Upper Saddle River, NJ: Prentice Hall PTR, 1992), is a must read for programmers who need a deep understanding of the ANSI C library functions that are included in C++, how to implement them and how to use them to write portable code. The standard class libraries generally are provided by compiler vendors. Many special-purpose class libraries are supplied by independent software vendors.
+
+### Software Engineering Observation 1.1
+
+> When programming in C++, you typically will use the following building blocks: classes and functions from the C++ Standard Library, classes and functions you and your colleagues create and classes and functions from various popular third-party libraries.
+
+We include many *Software Engineering Observations* throughout the book to explain concepts that affect and improve the overall architecture and quality of software systems. We also highlight other kinds of tips, including *Good Programming Practices* (to help you write programs that are clearer, more understandable, more maintainable and easier to test and *debug*—or remove programming errors), *Common Programming Errors* (problems to watch out for and avoid), *Performance Tips* (techniques for writing programs that run faster and use less memory), *Portability Tips* (techniques to help you write programs that can run, with little or no modification, on a variety of computers—these tips also include general observations about how C++ achieves its high degree of portability) and *Error-Prevention Tips* (techniques for removing programming errors—also known as bugs—from your programs and, more important, techniques for writing bug-free programs in the first place).
+
+### Performance Tip 1.1
+
+> Using C++ Standard Library functions and classes instead of writing your own versions can improve program performance, because they are written carefully to perform efficiently. This technique also shortens program development time.
+
+### Portability Tip 1.1
+
+> Using C++ Standard Library functions and classes instead of writing your own improves program portability, because they are included in every C++ implementation.
+
+## 1.4 Key Software Trend: Object Technology
+
+One of the authors, Harvey Deitel, remembers the great frustration felt in the 1960s by software development organizations, especially those working on large-scale projects. During his undergraduate years, he had the privilege of working summers at a leading computer vendor on the teams developing timesharing, virtual memory operating systems. This was a great experience for a college student. But, in the summer of 1967, reality set in when the company “decommitted” from producing as a commercial product the particular system on which hundreds of people had been working for many years. It was difficult to get this software right—software is “complex stuff.”
+
+Improvements to software technology did emerge, with the benefits of structured programming (and the related disciplines of structured systems analysis and design) being realized in the 1970s. Not until object-oriented programming became widely used in the 1990s, though, did software developers feel they had the necessary tools for making major strides in the software development process.
+
+Actually, object technology dates back to the mid 1960s. The C++ programming language, developed at AT&T by Bjarne Stroustrup in the early 1980s, is based on two languages—C, which initially was developed at AT&T to implement the UNIX operating system in the early 1970s, and Simula 67, a simulation programming language developed in Europe and released in 1967. C++ absorbed the features of C and added Simula’s capabilities for creating and manipulating objects. Neither C nor C++ was originally intended for wide use beyond the AT&T research laboratories. But grass roots support rapidly developed for each.
+
+What are objects and why are they special? Actually, object technology is a packaging scheme that helps us create meaningful software units. These can be large and are highly focused on particular applications areas. There are date objects, time objects, paycheck objects, invoice objects, audio objects, video objects, file objects, record objects and so on. In fact, almost any noun can be reasonably represented as an object.
+
+We live in a world of objects. Just look around you. There are cars, planes, people, animals, buildings, traffic lights, elevators and the like. Before object-oriented languages appeared, procedural programming languages (such as Fortran, COBOL, Pascal, BASIC and C) were focused on actions (verbs) rather than on things or objects (nouns). Programmers living in a world of objects programmed primarily using verbs. This made it awkward to write programs. Now, with the availability of popular object-oriented languages such as C++ and Java, programmers continue to live in an object-oriented world and can program in an object-oriented manner. This is a more natural process than procedural programming and has resulted in significant productivity gains.
+
+A key problem with procedural programming is that the program units do not effectively mirror real-world entities, so these units are not particularly reusable. It’s not unusual for programmers to “start fresh” on each new project and have to write similar software “from scratch.” This wastes time and money, as people repeatedly “reinvent the wheel.” With object technology, the software entities created (called classes), if properly designed, tend to be reusable on future projects. Using libraries of reusable componentry can greatly reduce effort required to implement certain kinds of systems (compared to the effort that would be required to reinvent these capabilities on new projects).

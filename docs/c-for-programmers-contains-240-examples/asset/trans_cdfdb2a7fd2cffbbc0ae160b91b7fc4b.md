@@ -1,0 +1,265 @@
+
+```
+10  int main()
+11  {
+12    // use initializer list to initialize array n
+13    int n[ 10 ] = { 32, 27, 64, 18, 95, 14, 90, 70, 60, 37 };
+14
+15    cout << "Element" << setw( 13 ) << "Value" << endl;
+16
+17    // output each array element's value
+18    for ( int i = 0; i < 10; i++ )
+19        cout << setw( 7 ) << i << setw( 13 ) << n[ i ] << endl;
+20
+21    return 0; // indicates successful termination
+22  } // end main
+```
+
+| Element | Value |
+|---------|-------|
+| 0 | 32 |
+| 1 | 27 |
+| 2 | 64 |
+| 3 | 18 |
+| 4 | 95 |
+| 5 | 14 |
+| 6 | 90 |
+| 7 | 70 |
+| 8 | 60 |
+| 9 | 37 |
+
+Fig. 7.4 | 在其声明中初始化数组元素。 (第 2 部分，共 2 部分。)
+
+如果初始化器少于数组中的元素，则剩余的数组元素初始化为零。例如，图 7.3 中数组 n 的元素可以用声明初始化为零
+
+```
+int n[ 10 ] = {}; // initialize elements of array n to 0
+```
+
+该声明隐式将元素初始化为零，因为初始化器少于数组中的元素（本例中为无）。此技术只能在数组的声明中使用，而图 7.3 中显示的初始化技术可在程序执行期间重复使用，以“重新初始化”数组的元素。
+
+如果在带有初始化器列表的声明中省略数组大小，则编译器通过计算初始化器列表中的元素数量来确定数组中的元素数量。例如，
+
+```
+int n[] = { 1, 2, 3, 4, 5 };
+```
+
+创建一个包含五个元素的数组。
+
+如果在数组声明中同时指定了数组大小和初始化器列表，则初始化器的数量必须小于或等于数组大小。数组声明
+
+```
+int n[ 5 ] = { 32, 27, 64, 18, 95, 14 };
+```
+
+会导致编译错误，因为有六个初始化器而只有五个数组元素。
+
+## 常见编程错误 7.2
+
+在数组初始化器列表中提供比数组元素更多的初始化器是编译错误。
+
+## 常见编程错误 7.3
+
+忘记初始化应被初始化的数组元素是逻辑错误。
+
+## 7.4.3 使用常量变量指定数组大小并使用计算设置数组元素
+
+图 7.5 将 10 个元素的数组 s 设置为偶整数 2, 4, 6, ..., 20（第 17–18 行）并以表格格式打印数组（第 20–24 行）。这些数字是通过将循环计数器的每个连续值乘以 2 并加 2 生成的（第 18 行）。
+
+第 13 行使用 const 限定符声明所谓的常量变量 arraySize，其值为 10。常量变量必须在声明时用常量表达式初始化，此后不能修改（如下图 7.6 和图 7.7 所示）。常量变量也称为命名常量或只读变量。
+
+## 常见编程错误 7.4
+
+在声明时未为常量变量赋值是编译错误。
+
+```
+1  // Fig. 7.5: fig07_05.cpp
+2  // Set array s to the even integers from 2 to 20.
+3  #include <iostream>
+4  using std::cout;
+5  using std::endl;
+6
+7  #include <iomanip>
+8  using std::setw;
+9
+10 int main()
+11 {
+12     // constant variable can be used to specify array size
+13     const int arraySize = 10;
+14
+15     int s[ arraySize ]; // array s has 10 elements
+16
+17     for ( int i = 0; i < arraySize; i++ ) // set the values
+18         s[ i ] = 2 + 2 * i;
+19
+20     cout << "Element" << setw( 13 ) << "Value" << endl;
+21
+22     // output contents of array s in tabular format
+23     for ( int j = 0; j < arraySize; j++ )
+24         cout << setw( 7 ) << j << setw( 13 ) << s[ j ] << endl;
+25
+26     return 0; // indicates successful termination
+27 } // end main
+```
+
+Fig. 7.5 | 生成要放入数组元素的值。 (第 1 部分，共 2 部分。)
+
+| Element | Value |
+| --- | --- |
+| 0 | 2 |
+| 1 | 4 |
+| 2 | 6 |
+| 3 | 8 |
+| 4 | 10 |
+| 5 | 12 |
+| 6 | 14 |
+| 7 | 16 |
+| 8 | 18 |
+| 9 | 20 |
+
+Fig. 7.5 | 生成要放入数组元素的值。 (第 2 部分，共 2 部分。)
+
+```
+1  // Fig. 7.6: fig07_06.cpp
+2  // Using a properly initialized constant variable.
+3  #include <iostream>
+4  using std::cout;
+5  using std::endl;
+6
+7  int main()
+8  {
+9      const int x = 7; // initialized constant variable
+10
+11     cout << "The value of constant variable x is: " << x << endl;
+12
+13     return 0; // indicates successful termination
+14 } // end main
+```
+
+The value of constant variable x is: 7
+
+Fig. 7.6 | 初始化和使用常量变量。
+
+```
+1  // Fig. 7.7: fig07_07.cpp
+2  // A const variable must be initialized.
+3
+4  int main()
+5  {
+6      const int x; // Error: x must be initialized
+7
+8      x = 7; // Error: cannot modify a const variable
+9
+10     return 0; // indicates successful termination
+11 } // end main
+
+Borland C++ command-line compiler error message:
+```
+
+Error E2304 fig07_07.cpp 6: Constant variable 'x' must be initialized
+    in function main()
+Error E2024 fig07_07.cpp 8: Cannot modify a const object in function main()
+
+Fig. 7.7 | const 变量必须初始化。 (第 1 部分，共 2 部分。)
+
+数组元素并使用该总和计算考试的班级平均分。本章后面使用类 GradeBook 的示例，即图 7.16–7.17 和图 7.23–7.24，使用此技术。
+
+图 7.8 中的程序对 10 个元素的整数数组 a 中包含的值求和。程序在第 10 行声明、创建并初始化数组。for 语句（第 14–15 行）执行计算。作为数组 a 的初始化器的值也可以从键盘上的用户读取，或从磁盘上的文件读取（参见第 17 章，文件处理）。例如，for 语句
+
+```
+for ( int j = 0; j < arraySize; j++ )
+    cin >> a[ j ];
+```
+
+一次从键盘读取一个值并将该值存储在元素 a[ j ] 中。
+
+```
+// Fig. 7.8: fig07_08.cpp
+// Compute the sum of the elements of the array.
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main()
+{
+    const int arraySize = 10; // constant variable indicating size of array
+    int a[ arraySize ] = { 87, 68, 94, 100, 83, 78, 85, 91, 76, 87 };
+    int total = 0;
+
+    // sum contents of array a
+    for ( int i = 0; i < arraySize; i++ )
+        total += a[ i ];
+
+    cout << "Total of array elements: " << total << endl;
+
+    return 0; // indicates successful termination
+} // end main
+```
+
+Total of array elements: 849
+
+Fig. 7.8 | 计算数组元素的总和。
+
+## 7.4.5 使用条形图以图形方式显示数组数据
+
+许多程序以图形方式向用户呈现数据。例如，数值通常以条形图中的条形显示。在这样的图表中，更长的条形代表成比例更大的数值。显示数值数据的简单方法之一是使用条形图，其中每个数值显示为星号 (*) 的条形。
+
+教授们通常喜欢检查考试成绩的分布情况。教授可能会绘制每个类别中的成绩数量，以可视化成绩分布。假设成绩为 87、68、94、100、83、78、85、91、76 和 87。注意，有一个 100 分，90 分段有两个，80 分段有四个，70 分段有两个，60 分段有一个，60 分以下没有。我们下一个程序（图 7.9）将此成绩分布数据存储在包含 11 个元素的数组中，每个元素对应一个类别
+
+```
+// Fig. 7.9: fig07_09.cpp
+// Bar chart printing program.
+#include <iostream>
+using std::cout;
+using std::endl;
+
+#include <iomanip>
+using std::setw;
+
+int main()
+{
+    const int arraySize = 11;
+    int n[ arraySize ] = { 0, 0, 0, 0, 0, 0, 1, 2, 4, 2, 1 };
+
+    cout << "Grade distribution:" << endl;
+
+    // for each element of array n, output a bar of the chart
+    for ( int i = 0; i < arraySize; i++ )
+    {
+        // output bar labels ("0-9:", ..., "90-99:", "100: ")
+        if ( i == 0 )
+            cout << "    0-9: ";
+        else if ( i == 10 )
+            cout << "  100: ";
+        else
+            cout << i * 10 << "-" << ( i * 10 ) + 9 << ": ";
+
+        // print bar of asterisks
+        for ( int stars = 0; stars < n[ i ]; stars++ )
+            cout << '*';
+
+        cout << endl; // start a new line of output
+    } // end outer for
+
+    return 0; // indicates successful termination
+} // end main
+```
+
+```
+Grade distribution:
+    0-9:
+10-19:
+20-29:
+30-39:
+40-49:
+50-59:
+60-69: *
+70-79: **
+80-89: ****
+90-99: **
+  100: *
+```
+
+Fig. 7.9 | 条形图打印程序。
+
+成绩。例如，n[ 0 ] 表示 0–9 范围内的成绩数量，n[ 7 ] 表示 70–79 范围内的成绩数量，n[ 10 ] 表示成绩

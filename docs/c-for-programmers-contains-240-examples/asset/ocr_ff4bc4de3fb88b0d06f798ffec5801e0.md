@@ -1,0 +1,17 @@
+**Bibliography.** The Bibliography lists many books and articles for further reading on C++ and object-oriented programming.
+
+**Index.** The comprehensive index enables you to locate by keyword any term or concept throughout the text.
+
+# # Object-Oriented Design of an ATM with the UML: A Tour of the Optional Software Engineering Case Study
+
+In this section, we tour the book’s optional case study of object-oriented design with the UML. This tour previews the contents of the nine Software Engineering Case Study sections (in Chapters 1–7, 9 and 13). After completing this case study, you’ll be thoroughly familiar with a carefully developed and reviewed object-oriented design and implementation for a significant C++ application.
+
+The design presented in the ATM case study was developed at Deitel & Associates, Inc. and scrutinized by a distinguished development review team of industry professionals and academics. Real ATM systems used by banks and their customers worldwide are based on more sophisticated designs that take into consideration many more issues than we have addressed here. Our primary goal throughout the design process was to create a simple design that would be clear to OOD and UML novices, while still demonstrating key OOD concepts and the related UML modeling techniques.
+
+**Section 1.10, Software Engineering Case Study: Introduction to Object Technology and the UML**—introduces the object-oriented design case study with the UML. The section introduces the basic concepts and terminology of object technology, including classes, objects, encapsulation, inheritance and polymorphism. We discuss the history of the UML. This is the only required section of the case study.
+
+**Section 2.7, (Optional) Software Engineering Case Study: Examining the ATM Requirements Specification**—discusses a *requirements specification* that specifies the requirements for a system that we’ll design and implement—the software for a simple automated teller machine (ATM). We investigate the structure and behavior of object-oriented systems in general. We discuss how the UML will facilitate the design process in subsequent Software Engineering Case Study sections by providing several additional types of diagrams to model our system. We discuss the interaction between the ATM system specified by the requirements specification and its user. Specifically, we investigate the scenarios that may occur between the user and the system itself—these are called *use cases*. We model these interactions, using *use case diagrams* of the UML.
+
+**Section 3.11, (Optional) Software Engineering Case Study: Identifying the Classes in the ATM Requirements Specification**—begins to design the ATM system. We identify its classes, or “building blocks,” by extracting the nouns and noun phrases from the requirements specification. We arrange these classes into a UML class diagram that describes the class structure of our simulation. The class diagram also describes relationships, known as *associations*, among classes.
+
+**Section 4.11, (Optional) Software Engineering Case Study: Identifying Class Attributes in the ATM System**—focuses on the attributes of the classes discussed in Section 3.11. A class contains both *attributes* (data) and *operations* (behaviors). As we’ll see in later sections, changes in an object’s attributes often affect the object’s behavior. To determine the attributes for the classes in our case study, we extract the adjectives

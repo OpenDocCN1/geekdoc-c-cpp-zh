@@ -1,0 +1,17 @@
+Line 39 demonstrates class `string`’s overloaded `+=` operator for string concatenation. In this case, the contents of `s2` are appended to `s1`. Then line 40 outputs the resulting string that is stored in `s1`. Line 44 demonstrates that a C-style string literal can be appended to a `string` object by using operator `+=`. Line 45 displays the result.
+
+Our class String (Figs. 11.9–11.10) provided the overloaded operator `()` to obtain substrings. Standard class string does not provide this functionality as an overloaded operator; instead, it provides member function `substr` (lines 50 and 55). The call to `substr` in line 50 obtains a 14-character substring (specified by the second argument) of `s1` starting at position 0 (specified by the first argument). The call to `substr` in line 55 obtains a substring starting from position 15 of `s1`. When the second argument is not specified, `substr` returns the remainder of the string on which it is called.
+
+Line 58 dynamically allocates a `string` object and initializes it with a copy of `s1`. This results in a call to class `string`’s copy constructor. Line 63 uses class `string`’s overloaded `=` operator to demonstrate that it handles self-assignment properly.
+
+Lines 70–71 used class `string`’s overloaded `[]` operator to create lvalues that enable new characters to replace existing characters in `s1`. Line 73 outputs the new value of `s1`. In our class String (Figs. 11.9–11.10), the overloaded `[]` operator performed bounds checking to determine whether the subscript it received as an argument was a valid subscript in the string. If the subscript was invalid, the operator printed an error message and terminated the program. Standard class `string`’s overloaded `[]` operator does not perform any bounds checking. Therefore, you must ensure that operations using standard class `string`’s overloaded `[]` operator do not accidentally manipulate elements outside the bounds of the string. Standard class `string` does provide bounds checking in its member function `at`, which “throws an exception” if its argument is an invalid subscript. By default, this causes a C++ program to terminate.⁶ If the subscript is valid, function `at` returns the character at the specified location as a modifiable lvalue or an unmodifiable lvalue (i.e., a const reference), depending on the context in which the call appears. Line 77 demonstrates a call to function `at` with an invalid subscript.
+
+# 11.14 explicit Constructors
+
+In Section 11.8 and Section 11.9, we discussed that any single-argument constructor can be used by the compiler to perform an implicit conversion—the type received by the constructor is converted to an object of the class in which the constructor is defined. The conversion is automatic and you need not use a cast operator. In some situations, implicit conversions are undesirable or error-prone. For example, our Array class in Fig. 11.6 defines a constructor that takes a single int argument. The intent of this constructor is to create an Array object containing the number of elements specified by the int argument. However, this constructor can be misused by the compiler to perform an implicit conversion.
+
+![](bbox=[0.164, 0.837, 0.222, 0.882])
+
+> **Common Programming Error 11.9**
+> 
+> > Unfortunately, the compiler might use implicit conversions in cases that you do not expect, resulting in ambiguous expressions that generate compilation errors or resulting in execution-time logic errors.

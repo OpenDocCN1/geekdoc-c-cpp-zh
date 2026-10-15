@@ -1,0 +1,9 @@
+![](bbox=[0.15, 0.13, 0.83, 0.53])
+
+Fig. 13.28 | Class diagram of the ATM system (incorporating inheritance). Note that abstract class name Transaction appears in italics.
+
+class Transaction to show that the ATM, at any given moment, either is executing a transaction or is not (i.e., zero or one objects of type Transaction exist in the system at a time). Because a Withdrawal is a type of Transaction, we no longer draw an association line directly between class ATM and class Withdrawal—derived class Withdrawal inherits base class Transaction’s association with class ATM. Derived classes BalanceInquiry and Deposit also inherit this association, which replaces the previously omitted associations between classes BalanceInquiry and Deposit and class ATM. Note again the use of triangular hollow arrowheads to indicate the specializations of class Transaction, as indicated in Fig. 13.27.
+
+We also add an association between class Transaction and the BankDatabase (Fig. 13.28). All Transactions require a reference to the BankDatabase so they can access and modify account information. Each Transaction derived class inherits this reference, so we no longer model the association between class Withdrawal and the BankDatabase. Note that the association between class Transaction and the BankDatabase replaces the previously omitted associations between classes BalanceInquiry and Deposit and the BankDatabase.
+
+We include an association between class Transaction and the Screen because all Transactions display output to the user via the Screen. Each derived class inherits this association. Therefore, we no longer include the association previously modeled between Withdrawal and the Screen. Class Withdrawal still participates in associations with the CashDispenser and the Keypad. We do not move these associations to base class Trans-

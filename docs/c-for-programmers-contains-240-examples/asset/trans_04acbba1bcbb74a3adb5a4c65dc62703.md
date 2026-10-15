@@ -1,0 +1,214 @@
+
+
+Figure 19.13 shows the precedence and associativity of the operators introduced up to this point in the text. They are shown top to bottom in decreasing order of precedence.
+
+## 19.8 Bit Fields
+
+C++ provides the ability to specify the number of bits in which an integral type or enum type member of a class or a structure is stored. Such a member is referred to as a *bit field*. Bit fields enable better memory utilization by storing data in the minimum number of bits required. Bit field members *must* be declared as an integral or enum type.
+
+![](img/4fc2e1ee5600ca1ada5e16b9e1397269_770_0.png)
+
+### Performance Tip 19.2
+
+> Bit fields help conserve storage.
+
+Consider the following structure definition:
+
+```
+struct BitCard
+{
+    unsigned face : 4;
+    unsigned suit : 2;
+    unsigned color : 1;
+}; // end struct BitCard
+```
+
+| Operators | Associativity | Type |
+|---|---|---|
+| `::` (unary; right to left) · `::` (binary; left to right) | left to right | highest |
+| `()` `[]` `->` `++` `--` `static_cast<type>()` | left to right | unary |
+| `++` `--` `+` `-` `!` `delete` `sizeof` | right to left | unary |
+| `*` `~` `&` `new` |  |  |
+| `*` `/` `%` | left to right | multiplicative |
+| `+` `-` | left to right | additive |
+| `<<` `>>` | left to right | shifting |
+| `<` `<=` `>` `>=` | left to right | relational |
+| `==` `!=` | left to right | equality |
+| `&` | left to right | bitwise AND |
+| `^` | left to right | bitwise XOR |
+| `\|` | left to right | bitwise OR |
+| `&&` | left to right | logical AND |
+| `\|\|` | left to right | logical OR |
+| `?:` | right to left | conditional |
+| `=` `+=` `-=` `*=` `/=` `%=` `&=` `\|=` `^=` `<<=` `>>=` | right to left | assignment |
+| `,` | left to right | comma |
+
+**Fig. 19.13** | Operator precedence and associativity.
+
+The definition contains three unsigned bit fields—face, suit and color—used to represent a card from a deck of 52 cards. A bit field is declared by following an integral type or enum type member with a colon (:) and an integer constant representing the *width of the bit field* (i.e., the number of bits in which the member is stored). The width must be an integer constant.
+
+The preceding structure definition indicates that member face is stored in 4 bits, member suit in 2 bits and member color in 1 bit. The number of bits is based on the desired range of values for each structure member. Member face stores values between 0 (Ace) and 12 (King)—4 bits can store a value between 0 and 15. Member suit stores values between 0 and 3 (0 = Diamonds, 1 = Hearts, 2 = Clubs, 3 = Spades)—2 bits can store a value between 0 and 3. Finally, member color stores either 0 (Red) or 1 (Black)—1 bit can store either 0 or 1.
+
+The program in Figs. 19.14–19.16 creates array deck containing 52 BitCard structures (line 21 of Fig. 19.14). The constructor inserts the 52 cards in the deck array, and function deal prints the 52 cards. Notice that bit fields are accessed exactly as any other structure member is (lines 18–20 and 28–33 of Fig. 19.15). The member color is included as a means of indicating the card color on a system that allows color displays.
+
+```
+// Fig. 19.14: DeckOfCards.h
+// Definition of class DeckOfCards that
+// represents a deck of playing cards.
+
+// BitCard structure definition with bit fields
+struct BitCard
+{
+   unsigned face : 4; // 4 bits; 0-15
+   unsigned suit : 2; // 2 bits; 0-3
+   unsigned color : 1; // 1 bit; 0-1
+}; // end struct BitCard
+
+// DeckOfCards class definition
+class DeckOfCards
+{
+public:
+   DeckOfCards(); // constructor initializes deck
+   void deal(); // deals cards in deck
+
+private:
+   BitCard deck[ 52 ]; // represents deck of cards
+}; // end class DeckOfCards
+```
+
+**Fig. 19.14** | Header file for class DeckOfCards.
+
+// Fig. 19.15: DeckOfCards.cpp
+// Member-function definitions for class DeckOfCards that simulates
+// the shuffling and dealing of a deck of playing cards.
+#include <iostream>
+using std::cout;
+
+**Fig. 19.15** | Class file for DeckOfCards. (Part 1 of 2.)
+
+```
+6  using std::endl;
+7
+8  #include <iomanip>
+9  using std::setw;
+10
+11 #include "DeckOfCards.h" // DeckOfCards class definition
+12
+13 // no-argument DeckOfCards constructor intializes deck
+14 DeckOfCards::DeckOfCards()
+15 {
+16     for ( int i = 0; i <= 51; i++ )
+17     {
+18         deck[ i ].face = i % 13; // faces in order
+19         deck[ i ].suit = i / 13; // suits in order
+20         deck[ i ].color = i / 26; // colors in order
+21     } // end for
+22 } // end no-argument DeckOfCards constructor
+23
+24 // deal cards in deck
+25 void DeckOfCards::deal()
+26 {
+27     for ( int k1 = 0, k2 = k1 + 26; k1 <= 25; k1++, k2++ )
+28         cout << "Card:" << setw( 3 ) << deck[ k1 ].face
+29             << "  Suit:" << setw( 2 ) << deck[ k1 ].suit
+30             << "  Color:" << setw( 2 ) << deck[ k1 ].color
+31             << "   " << "Card:" << setw( 3 ) << deck[ k2 ].face
+32             << "  Suit:" << setw( 2 ) << deck[ k2 ].suit
+33             << "  Color:" << setw( 2 ) << deck[ k2 ].color << endl;
+34 } // end function deal
+```
+
+Fig. 19.15 | Class file for DeckOfCards. (Part 2 of 2.)
+
+It is possible to specify an unnamed bit field, in which case the field is used as padding in the structure. For example, the structure definition uses an unnamed 3-bit field as padding—nothing can be stored in those 3 bits. Member b is stored in another storage unit.
+
+```
+struct Example
+{
+    unsigned a : 13;
+    unsigned   : 3; // align to next storage-unit boundary
+    unsigned b : 4;
+}; // end struct Example
+```
+
+An unnamed bit field with a zero width is used to align the next bit field on a new storage-unit boundary. For example, the structure definition
+
+```
+struct Example
+{
+    unsigned a : 13;
+    unsigned   : 0; // align to next storage-unit boundary
+    unsigned b : 4;
+}; // end struct Example
+```
+
+uses an unnamed 0-bit field to skip the remaining bits (as many as there are) of the storage unit in which a is stored and align b on the next storage-unit boundary.
+
+```
+// Fig. 19.16: fig19_16.cpp
+// Card shuffling and dealing program.
+#include "DeckOfCards.h" // DeckOfCards class definition
+
+int main()
+{
+    DeckOfCards deckOfCards; // create DeckOfCards object
+    deckOfCards.deal(); // deal the cards in the deck
+    return 0; // indicates successful termination
+} // end main
+```
+
+![](img/4fc2e1ee5600ca1ada5e16b9e1397269_773_0.png)
+
+**Fig. 19.16** | Bit fields used to store a deck of cards.
+
+### Portability Tip 19.5
+
+*Bit-field manipulations are machine dependent. For example, some computers allow bit fields to cross word boundaries, whereas others do not.*
+
+### Common Programming Error 19.6
+
+*Attempting to access individual bits of a bit field with subscripting as if they were elements of an array is a compilation error. Bit fields are not “arrays of bits.”*
+
+### Common Programming Error 19.7
+
+*Attempting to take the address of a bit field (the & operator may not be used with bit fields because a pointer can designate only a particular byte in memory and bit fields can start in the middle of a byte) is a compilation error.*
+
+| Prototype | Description |
+|---|---|
+| `int iscntrl( int c )` | Returns **true** if c is a control character, such as newline ('\n'), form feed ('\f'), carriage return ('\r'), horizontal tab ('\t'), vertical tab ('\v'), alert ('\a'), or backspace ('\b')—and **false** otherwise. |
+| `int ispunct( int c )` | Returns **true** if c is a printing character other than a space, a digit, or a letter and **false** otherwise. |
+| `int isprint( int c )` | Returns **true** value if c is a printing character including space (' ') and **false** otherwise. |
+| `int isgraph( int c )` | Returns **true** if c is a printing character other than space (' ') and **false** otherwise. |
+
+Fig. 19.17 | Character-handling library functions. (Part 2 of 2.)
+
+Figure 19.18 demonstrates functions `isdigit`, `isalpha`, `isalnum` and `isxdigit`. Function `isdigit` determines whether its argument is a digit (0–9). Function `isalpha` determines whether its argument is an uppercase letter (A–Z) or a lowercase letter (a–z). Function `isalnum` determines whether its argument is an uppercase letter, a lowercase letter or a digit. Function `isxdigit` determines whether its argument is a hexadecimal digit (A–F, a–f, 0–9).
+
+```
+// Fig. 19.18: fig19_18.cpp
+// Using functions isdigit, isalpha, isalnum and isxdigit.
+#include <iostream>
+using std::cout;
+using std::endl;
+
+#include <cctype> // character-handling function prototypes
+using std::isalnum;
+using std::isalpha;
+using std::isdigit;
+using std::isxdigit;
+
+int main()
+{
+    cout << "According to isdigit:\n"
+        << ( isdigit( '8' ) ? "8 is a" : "8 is not a" ) << " digit\n"
+        << ( isdigit( '#' ) ? "# is a" : "# is not a" ) << " digit\n";
+
+    cout << "\nAccording to isalpha:\n"
+        << ( isalpha( 'A' ) ? "A is a" : "A is not a" ) << " letter\n"
+        << ( isalpha( 'b' ) ? "b is a" : "b is not a" ) << " letter\n"
+        << ( isalpha( '&' ) ? "& is a" : "& is not a" ) << " letter\n"
+        << ( isalpha( '4' ) ? "4 is a" : "4 is not a" ) << " letter\n";
+```
+
+Fig. 19.18 | Character-handling functions isdigit, isalpha, isalnum and isxdigit. (Part I of 2.)
+

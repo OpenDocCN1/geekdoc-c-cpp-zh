@@ -1,0 +1,85 @@
+
+- Booch, G., J. Rumbaugh, and I. Jacobson. *统一建模语言用户指南*. Reading, MA: Addison-Wesley, 1999.
+- Cargill, T. *C++ 编程风格*. Reading, MA: Addison-Wesley, 1993.
+- Carroll, M. D. and M. A. Ellis. *可重用 C++ 的设计与编码*. Reading, MA: Addison-Wesley, 1995.
+- Chonoles, M. J. and J. A. Schardt. *UML 2 入门*. New York, NY: Wiley Publishing, Inc., 2003.
+- Coplien, J. O. and D. C. Schmidt. *模式设计的模式语言*. Reading, MA: Addison-Wesley, 1995.
+- Dawson, M. *Beginning C++ 游戏编程*. Boston, MA: Course Technology PTR, 2004.
+- Deitel, H. M., P. J. Deitel and D. R. Choffnes. *操作系统，第三版*. Upper Saddle River, NJ: Prentice Hall, 2004.
+- Deitel, H. M. and P. J. Deitel. *Java 如何编程，第七版*. Upper Saddle River, NJ: Prentice Hall, 2007.
+- Deitel, H. M. and P. J. Deitel. *C 如何编程，第五版*. Upper Saddle River, NJ: Prentice Hall, 2007.
+- Dennis, A., B. H. Wixom and D. Tegarden. *使用 UML 2.0 进行系统分析和设计：面向对象的[content]
+- Booch, G., J. Rumbaugh, and I. Jacobson. *统一建模语言用户指南*. Reading, MA: Addison-Wesley, 1999.
+- Cargill, T. *C++ 编程风格*. Reading, MA: Addison-Wesley, 1993.
+- Carroll, M. D. and M. A. Ellis. *可重用 C++ 的设计与编码*. Reading, MA: Addison-Wesley, 1995.
+- Chonoles, M. J. and J. A. Schardt. *UML 2 入门*. New York, NY: Wiley Publishing, Inc., 2003.
+- Coplien, J. O. and D. C. Schmidt. *模式设计的模式语言*. Reading, MA: Addison-Wesley, 1995.
+- Dawson, M. *Beginning C++ 游戏编程*. Boston, MA: Course Technology PTR, 2004.
+- Deitel, H. M., P. J. Deitel and D. R. Choffnes. *操作系统，第三版*. Upper Saddle River, NJ: Prentice Hall, 2004.
+- Deitel, H. M. and P. J. Deitel. *Java 如何编程，第七版*. Upper Saddle River, NJ: Prentice Hall, 2007.
+- Deitel, H. M. and P. J. Deitel. *C 如何编程，第五版*. Upper Saddle River, NJ: Prentice Hall, 2007.
+- Dennis, A., B. H. Wixom and D. Tegarden. *使用 UML 2.0 进行系统分析和设计：面向对象的方法，第二版*. New York, NY: Wiley Publishing, Inc., 2004.
+- Dewhurst, S. C. *C++ 常用知识：必备的进阶编程*. Boston, MA: Addison-Wesley Professional, 2005.
+- Donovan, S. *C++ 示例*. Indianapolis, IN: Que, 2001.
+- Duncan, R. “Inside C++: Friend and Virtual Functions, and Multiple Inheritance.” *PC Magazine* 15 October 1991, 417–420.
+- Ellis, M. A. and B. Stroustrup. *注释版 C++ 参考手册*. Reading, MA: Addison-Wesley, 1990.
+- Embley, D. W., B. D. Kurtz and S. N. Woodfield. *面向对象的系统分析：模型驱动方法*. Englewood Cliffs, NJ: Yourdon Press, 1992.
+- Eriksson, H., D. Fado, B. Lyons and M. Penker. *UML 2 工具包*. New York, NY: Wiley Publishing, Inc., 2003.
+- Firesmith, D. G. and B. Henderson-Sellers. “Clarifying Specialized Forms of Association in UML and OML.” *面向对象编程期刊* May 1998: 47–50.
+- Flamig, B. *C++ 中的实用数据结构*. New York, NY: John Wiley & Sons, 1993.
+- Fowler, M. *UML 精粹：标准对象建模语言简明指南，第三版*. Reading, MA: Addison-Wesley, 2004.
+- Giancola, A. and L. Baker. “Bit Arrays with C++.” *C 用户期刊* Vol. 10, No. 7, July 1992, 21–26.
+- Glass, G. and B. Schuchert. *STL \<Primer\>*. Upper Saddle River, NJ: Prentice Hall PTR, 1995.
+- Gooch, T. “Obscure C++.” *Inside Microsoft Visual C++* Vol. 6, No. 11, November 1995, 13–15.
+- Henricson, M. and E. Nyquist. *工业级 C++：规则与建议*. Upper Saddle River, NJ: Prentice Hall, 1997.
+- *国际标准：编程语言—C++*. ISO/IEC 14882:1998. New York, NY: American National Standards Institute, 1998.
+- Jacobson, I. “Is Object Technology Software’s Industrial Platform?” *IEEE 软件杂志* Vol. 10, No. 1, January 1993, 24–30.
+- Jaeschke, R. *可移植性与 C 语言*. Indianapolis, IN: Sams Publishing, 1989.
+- Johnson, L. J. “Model Behavior.” *企业开发* May 2000: 20–28.
+- Josuttis, N. *C++ 标准库：教程与参考*. Boston, MA: Addison-Wesley, 1999.
+- Karlsson, B. *超越 C++ 标准库：Boost 入门*. Boston, MA: Addison-Wesley Professional, 2005.
+- Koenig, A. “What is C++ Anyway?” *面向对象编程期刊* April/May 1991, 48–52.
+- Koenig, A. “Implicit Base Class Conversions.” *The C++ Report* Vol. 6, No. 5, June 1994, 18–19.
+- Koenig, A. and B. Stroustrup. “Exception Handling for C++ (Revised),” *Proceedings of the USENIX C++ Conference*, San Francisco, CA, April 1990.
+- Koenig, A. and B. E. Moo. *Accelerated C++: Practical Programming by Example*. Boston, MA: Addison-Wesley Professional, 2000.
+- Koenig, A. and B. E. Moo. *C++ 沉思录：十年编程见解与经验*. Reading, MA: Addison-Wesley, 1997.
+- Kruse, R. L. and A. J. Ryba. *C++ 中的数据结构与程序设计*. Upper Saddle River, NJ: Prentice Hall, 1999.
+- Lajoie, J., S. B. Lippman, and B. E. Moo. *C++ Primer，第四版*. Boston, MA: Addison-Wesley Professional, 2005.
+- Langer, A. and K. Kreft. *标准 C++ IOStreams 与本地化：高级程序员指南与参考*. Reading, MA: Addison-Wesley, 2000.
+- Larman, C. *应用 UML 与模式：面向对象分析与设计和迭代开发导论，第三版*. Upper Saddle River, NJ: Prentice Hall PTR, 2004.
+- Lee, L., A. Lumsdaine and J. G. Siek. *Boost 图形库：用户指南与参考手册*. Boston, MA: Addison-Wesley Professional, 2001.
+- Lippman, S. B. and J. Lajoie. *C++ Primer，第三版*. Reading, MA: Addison-Wesley, 1998.
+- Lorenz, M. *面向对象软件开发：实用指南*. Englewood Cliffs, NJ: Prentice Hall, 1993.
+- Lorenz, M. “A Brief Look at Inheritance Metrics.” *The Smalltalk Report* Vol. 3, No. 8, June 1994, 1, 4–5.
+- Malik, D. S. *C++ 编程：从问题分析到程序设计，第三版*. Boston, MA: Course Technology, 2006.
+- Martin, J. *面向对象分析与设计原理*. Englewood Cliffs, NJ: Prentice Hall, 1993.
+- Martin, R. C. *使用 Booch 方法设计面向对象 C++ 应用*. Englewood Cliffs, NJ: Prentice Hall, 1995.
+- Matsche, J. J. “Object-Oriented Programming in Standard C.” *Object Magazine* Vol. 2, No. 5, January/February 1993, 71–74.
+- McCabe, T. J. and A. H. Watson. “Combining Comprehension and Testing in Object-Oriented Development.” *Object Magazine* Vol. 4, No. 1, March/April 1994, 63–66.
+- McGrath, M. *C++ 编程轻松步*. Southam, Warwickshire, United Kingdom: Computer Step, 2005.
+- McLaughlin, M. and A. Moore. “Real-Time Extensions to the UML.” *Dr. Dobb’s Journal* December 1998: 82–93.
+- Melewski, D. “UML Gains Ground.” *Application Development Trends* October 1998: 34–44.
+- Melewski, D. “UML: Ready for Prime Time?” *Application Development Trends* November 1997: 30–44.
+- Melewski, D. “Wherefore and What Now, UML?” *Application Development Trends* December 1999: 61–68.
+- Meyer, B. *面向对象软件构造，第二版*. Englewood Cliffs, NJ: Prentice Hall, 1997.
+- Meyer, B. and D. Mandrioli. *面向对象软件工程进展*. Englewood Cliffs, NJ: Prentice Hall, 1992.
+- Meyers, S. *Effective C++：改进程序与设计的 55 种具体方法，第三版*. Boston, MA: Addison-Wesley Professional, 2005.
+- Meyers, S. *Effective STL：改进标准模板库使用的 50 种具体方法*. Reading, MA: Addison-Wesley, 2001.
+- Muller, P. *Instant UML*. Birmingham, UK: Wrox Press Ltd, 1997.
+- Murray, R. *C++ 策略与战术*. Reading, MA: Addison-Wesley, 1993.
+- Musser, D. R. and A. A. Stepanov. “Algorithm-Oriented Generic Libraries.” *Software Practice and Experience* Vol. 24, No. 7, July 1994.
+- Musser, D. R., G. J. Derge and A. Saini. *STL 教程与参考指南：使用标准模板库进行 C++ 编程，第二版*. Reading, MA: Addison-Wesley, 2001.
+- Nierstrasz, O., S. Gibbs and D. Tsichritzis. “Component-Oriented Software Development.” *Communications of the ACM* Vol. 35, No. 9, September 1992, 160–165.
+- Pender, T. *UML Bible*. Wiley Publishing, Inc., 2003.
+- Perry, P. “UML Steps to the Plate.” *Application Development Trends* May 1999: 33–36.
+- Pilone, D. and N. Pitman. *UML 2.0 精要，第二版*. Sebastopol, CA: O’Reilly Media, Inc., 2005.
+- Pittman, M. “Lessons Learned in Managing Object-Oriented Development.” *IEEE Software Magazine* Vol. 10, No. 1, January 1993, 43–53.
+- Plauger, P. J. “Making C++ Safe for Threads.” *The C Users Journal* Vol. 11, No. 2, February 1993, 58–62.
+- Podeswa, H. *面向 IT 业务分析师的 UML：需求收集实用指南*. Boston, MA: Course Technology PTR, 2005.
+- Pohl, I. *C++ 精粹：简明 ANSI/ISO 参考与风格指南*. Reading, MA: Addison-Wesley, 1997.
+- Prata, S. *C++ Primer Plus，第五版*. Indianapolis, IN: Sams, 2004.
+- Prieto-Diaz, R. “Status Report: Software Reusability.” *IEEE Software* Vol. 10, No. 3, May 1993, 61–66.
+- Prosise, J. “Wake Up and Smell the MFC: Using the Visual C++ Classes and Applications Framework.” *Microsoft Systems Journal* Vol. 10, No. 6, June 1995, 17–34.
+- Ritchie, D. M. “The UNIX System: The Evolution of the UNIX Time-Sharing System.” *AT&T Bell Laboratories Technical Journal* Vol. 63, No. 8, Part 2, October 1984, 1577–1593.
+- Rosler, L. “The UNIX System: The Evolution of C—Past and Future.” *AT&T Bell Laboratories Technical Journal* Vol. 63, No. 8, Part 2, October 1984, 1685–1699.
+- Robson, R. *Using the STL: The C++ Standard Template Library*. New York, NY: Springer Verlag, 2000.

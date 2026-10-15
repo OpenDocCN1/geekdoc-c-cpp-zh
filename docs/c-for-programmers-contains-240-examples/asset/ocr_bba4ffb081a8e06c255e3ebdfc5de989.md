@@ -1,0 +1,15 @@
+expensive copy operations. A boost::function can hold any function whose arguments and return type can be converted to match the signature of the function wrapper. For example, if the function wrapper was created to hold a function that takes a string and returns a string, it can also hold a function that takes a char* and returns a char*, because a char* can be converted to a string, using a conversion constructor.
+
+# Mem_fn 5
+
+Boost.mem_fn enhances the std::mem_fun and std::mem_fun_ref functions. mem_fun and mem_fun_ref take a pointer to a member function or a reference to a member function, respectively, and create a function object that calls that member function. The member function can take no arguments or one argument. Function objects are often used with the Standard Library for_each function and other STL algorithms. We discussed function objects in Section 20.7. Boost.mem_fn enhances the standard functions by allowing you to create the function object with a pointer, reference or smart pointer (Section 21.8) to a member function. It also allows the member functions to take more than one argument. mem_fn is a more flexible version of mem_fun and mem_fun_ref.
+
+# Random 6
+
+Boost.Random allows you to create a variety of random number generators and random number distributions. The std::rand and std::srand functions in the C++ Standard Library generate pseudo-random numbers. A pseudo-random number generator uses an initial state to produce seemingly random numbers—using the same initial state produces the same sequence of numbers. The rand function always uses the same initial state, therefore it produces the same sequence of numbers every time. The function srand allows you to set the initial state to vary the sequence. Pseudo-random numbers are often used in testing—the predictability enables you to confirm the results. Boost.Random provides pseudo-random number generators as well as generators that can produce nondeterministic random numbers—a set of random numbers that can’t be predicted. Such random number generators are used in simulations and security scenarios where predictability is undesirable.
+
+Boost.Random also allows you to specify the distribution of the numbers generated. A common distribution is the uniform distribution, which assigns the same probability to each number within a given range. This is similar to rolling a die or flipping a coin—each possible outcome is equally as likely. You can set this range at compile time. Boost.Random allows you to use a distribution in combination with any random number generator and even create your own distributions.
+
+# Ref 7
+
+The Boost.Ref library provides reference wrappers that enable you to pass references to algorithms that normally receive their arguments by value. The reference_wrapper ob-

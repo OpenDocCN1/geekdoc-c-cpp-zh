@@ -1,0 +1,193 @@
+# Index 993
+
+passing arguments by value and by reference 201
+passing arrays and individual array elements to functions 252
+passing arrays to functions 251
+passing large objects 206
+passing options to a program 320
+“past the end” iterator 808
+pattern of 1s and 0s 655
+payroll file 657
+payroll system 656
+peek function of istream 608
+percent sign (%) (modulus operator) 33
+perform a task 53
+Performance 4
+Performance Tip 4
+Performance Tips overview xxv
+Permutation 826
+PHP 15
+PI 900, 901
+platform 9
+Plauger, P.J. 4
+playing cards 320
+plus function object 832
+plus sign 618
+plus sign (+) indicating public visibility in the UML 371
+plus sign, + (UML) 54
+Point class represents an x-y coordinate pair 528
+pointer 290, 312
+pointer 760
+pointer arithmetic 301, 312, 314, 316, 772
+machine dependent 312
+on a character array 313
+pointer assignment 314
+pointer-based strings 330
+pointer comparison 315
+pointer dereference (*) operator 293, 294
+pointer expression 312, 315
+pointer handle 351
+pointer manipulation 564
+pointer notation 316
+pointer operators & and * 294
+pointer subtraction 312
+pointer to a function 324, 327
+pointer to an object 303, 348
+pointer to void (void *) 314
+pointer values as hexadecimal integers 293
+pointer variable 649
+pointer/offset notation 315
+pointer/subscript notation 316
+pointers and array subscripting 315, 316
+pointers and arrays 315
+Pointers declared const 304
+Pointers to dynamically allocated storage 403, 445
+pointer-to-member operators .-* 880, 881 ->* 880
+point-of-sale system 669
+Poll analysis program 244
+
+polymorphic exception processing 644
+polymorphic programming 544, 546, 567
+polymorphic screen manager 525
+polymorphically invoking functions in a derived class 888
+polymorphism 150, 522, 523, 524, 525, 796
+polymorphism and references 564
+pop function of container adapters 791
+pop member function of priority_queue 795
+pop member function of queue 793
+pop member function of stack 589, 591, 791
+pop member function of list 780
+pop_front 777, 782, 793
+pop_heap algorithm 825
+portability 8
+Portability Tip 4
+Portability Tips 9
+Portability Tips overview xxv
+portable 3
+portable code 4
+portable language 8
+position number 232
+postdecrement 119, 121
+postfix decrement operator 119
+postfix increment operator 119, 121
+postincrement 119, 465
+preprocessor in a iterator 766
+pow function 138, 139, 168
+power 168
+#pragma preprocessor directive 904
+precedence 33, 34, 38, 121, 133, 155, 218
+precedence not changed by overloading 426
+precedence of the conditional operator 99
+precision 114, 603, 609
+format of a floating-point number 114
+precision function of ios_base 611
+precision of a floating-point value 109
+precision of floating-point numbers 611
+precision setting 611
+precompiled object file 420
+predecrement 119, 121
+predefined function objects 832
+predefined namespace 874
+predefined symbolic constants 904
+predicate function 353, 780, 800, 803, 805, 808, 811, 814, 817, 819, 824
+
+prefix decrement operator 119
+prefix increment operator 119, 121
+preincrement 119, 465
+“prepackaged” functions 167
+preprocess 6
+preprocessor 6, 173, 899
+preprocessor directives 6, 26, 29
+#ifdef 344
+#define 345
+#endif 344
+preprocessor wrapper 344
+prev_permutation 826
+prevent class objects from being copied 445
+prevent memory leak 650
+prevent one class object from being assigned to another 445
+preventing header files from being included more than once 345
+primary memory 8
+primitive data type promotion 113
+principal 137
+principle of least privilege 188, 243, 254, 297, 299, 309, 319, 353, 381, 382, 662, 765
+print a line of text 25
+print debugger command 959
+printArray function template 583
+printer 8, 599
+printing a line of text with multiple statements 28
+Printing a string one character at a time using a nonconstant pointer to constant data 302
+printing an integer with internal spacing and plus sign 618
+printing an unsigned integer in bits 720
+printing character other than a space, digit or letter 738
+printing character other than a space 733
+printing character, including space 733
+printing multiple lines of text with a single statement 29
+printing string characteristics 697
+printing the address stored in a char * variable 604
+priority_queue adapter class 795
+empty function 795
+pop function 795
+push function 795
+size function 795
+top function 795
+private
+access specifier 371
+
+private access specifier 60
+private base class 520
+private base class data cannot be accessed from derived class 492
+private inheritance 475, 478, 520
+private libraries 6
+private members of a base class 478
+private static data member 410
+probability 178
+procedural programming language 18
+program development environment 6
+program execution stack 194
+program in the general 523
+program in the specific 523
+program termination 365
+programmer-defined function maximum 169
+programmer-defined termination function 641
+programming environment 167
+promotion 113
+promotion hierarchy for built-in data types 175
+promotion rules 174
+prompt 112
+prompting message 628
+proprietary classes 520
+protected access specifier 344, 479
+protected base class 520
+protected base-class data can be accessed from derived class 501
+protected inheritance 475, 478, 520
+proxy class 353, 419, 421
+pseudo-random number generator 840
+pseudorandom numbers 181
+public
+keyword 371, 376
+public access specifier 53, 60
+public base class 520
+public inheritance 475, 478
+public interface 61
+public keyword 53, 60
+public member of a derived class 479
+public services of a class 73
+public static class member 410
+public static member function 410
+punctuation mark 338
+pure procedure 350
+pure specifier 545
+pure virtual function 545, 564
+push function 589, 591
+push function of container adapters 791
