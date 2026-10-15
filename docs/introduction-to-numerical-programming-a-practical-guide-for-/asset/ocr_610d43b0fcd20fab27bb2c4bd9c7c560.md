@@ -1,0 +1,13 @@
+![](bbox=[0.13, 0.1, 0.85, 0.45])
+
+FIGURE 3.9 Plots of function x³ e⁻ˣ created using routine Plot with different style parameters.
+
+The routine MultiPlot generalizes the functionalities of routine Plot, being designed to depict several functions of one variable on a single graph. The functions are specified by separate sets of (x,y) points, each defined on independent x-meshes. For an efficient use of the memory, it is not advisable to employ two-dimensional arrays to store the coordinates, with one dimension running over the individual plots and the other, running over the number of points in the largest set. Instead, the representative points of the nplot plots are contiguously packed in sequenced sets in the same vectors x[] and y[], with an additional array, n[], specifying the ending index for each set.
+
+The array sig[] is only used when error bars (sty[i]=4) are employed for at least one of the plots. The array col[] contains the colors of the individual plots and sty[] specifies the corresponding style parameters: 0—scatter plot, 1—line plot, −1—line plot with dashed line, 2—polar plot, −2—polar plot with dashed line, 3—drop lines, 4—error bars, and −4—error bars and continuous line. For ioptx set to 0, the x-axis is resized automatically, while for nonzero ioptx, the axis is resized based on the provided user interval [xminp,xmaxp]. The y-axis is resized analogously, in accordance with the option iopt y. The rest of the parameters have the same significance as for function Plot.
+
+The use of routine MultiPlot can be grasped from the program presented in Listing 3.10, which is aimed to plot two functions on the same graph (nplot=2). The arrays n[], col[], and sty[] are defined with nplot+1 (i.e., 3) components to compensate for the 0-offset and to make the components of indexes 1 and 2 usable.
+
+With the variables n1 and n2 specifying the number of representative points for each function, the arrays x[] and y[] are initialized with n1+n2 components, so as to be able to store the data for the concatenated sets. The indexes for the first set range between 1 and n1, and those for the second set range between n1+1 and n1+n2. Correspondingly, the ending indexes for the two plots are n[1]=n1 and n[2]=n1+n2. The x-mesh and the respective function values are generated separately for each set.
+
+The color and style parameters for the plots are set in the corresponding components of the arrays col[] and sty[] and the graph produced by the routine MultiPlot is shown in Figure 3.10.

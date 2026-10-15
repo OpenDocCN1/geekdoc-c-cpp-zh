@@ -1,0 +1,139 @@
+
+# 清单 7.12 三角矩阵求逆（Python 代码）
+
+```
+#================================================================================
+def MatTriInv(a, n):
+#--------------------------------------------------------------------------------
+# Calculates inverse of lower triangular matrix L of order n contained in
+# (n x n) array a and replaces on exit lower triangle of a by L^(-1).
+# Error flag = 0 - normal execution
+#             1 - singular matrix.
+#--------------------------------------------------------------------------------
+    for j in range(1,n+1):                     # loop over columns
+        if (a[j][j] <= 0e0): print("MatTriInv: singular matrix !"); return 1
+        a[j][j] = 1e0/a[j][j]                   # diagonal element
+
+        for i in range(j+1,n+1):               # non-diagonal elements
+            sum = 0e0
+            for k in range(j,i): sum -= a[i][k]*a[k][j]
+            a[i][j] = sum/a[i][i]
+
+    return 0
+```
+
+三角矩阵求逆的浮点运算次数随规模 $n$ 变化的函数为
+
+$$\underbrace{\sum_{j=1}^{n}\sum_{i=j+1}^{n}\sum_{k=j}^{i-2}1}_{\text{求和}}+\underbrace{\sum_{j=1}^{n}1+\sum_{j=1}^{n}\sum_{i=j+1}^{n}\left(1+\sum_{k=j}^{i-1}1\right)}_{\text{乘法与除法}}=\frac{1}{3}n^{3}+\frac{2}{3}n,\qquad(7.59)$$
+
+结果表明，它比标准高斯消元法或 LU 分解的计算量低约 8 倍，比高斯–若尔当消元法低约 6 倍。总之，除了存储的最优使用（实际上缩减为单个三角数组）以及无需选主元之外，所给出的三角矩阵求逆算法的效率几乎比其他一般方法高一个数量级。
+
+## 7.6 Cholesky 分解
+
+由于其特殊性质，*对称正定矩阵*出现在科学与工程的许多领域。例如，量子力学及基于其形式体系的理论就提供了大量此类矩阵的实例。如果对称矩阵 $\mathbf{A}$ 满足条件
+
+$$\mathbf{x}^{T}\cdot\mathbf{A}\cdot\mathbf{x}>0$$
+
+对于定义矩阵 $\mathbf{A}$ 的空间中任意非零列向量 $\mathbf{x}\neq0$ 均成立，则称其为*正定*矩阵，其中 $\mathbf{x}^{T}$ 为相应的转置行向量。等价地，正定矩阵的所有特征值均为正。
+
+可以证明，对称正定矩阵总可以分解为如下特殊形式
+
+$$\mathbf{A}=\mathbf{L}\cdot\mathbf{L}^{T},\qquad(7.60)$$
+
+其中 $\mathbf{L}$ 是*下三角*矩阵，$\mathbf{L}^{T}$ 是其转置（上三角）。这种分解被称为*Cholesky 分解*，是 LU 分解的一个重要特例，并能显著降低计算成本。事实上，在处理具有正定矩阵的线性方程组时，Cholesky 分解的速度约为基于高斯消元或 LU 分解的一般方法的 2 倍。
+
+从分解式 (7.60) 的显式形式
+
+A = [l11 ... ; : ... 0 ; li1 ... lii ; : ... ; ln1 ... lnn] · [l11 ... l1j ... l1n ; ... ; ljj ; ... ; 0 ... lnn]
+
+我们可以建立矩阵 A 与 L 的元素之间的如下关系：
+
+a_ij = a_ji = sum_{k=1}^{j} l_ik l_jk,  i ≥ j.  (7.62)
+
+从和的最后一项中求出矩阵 L 第 j 列的元素，并出于存储效率的考虑仅使用矩阵 A 的下三角部分，我们得到：
+
+l_jj = [a_jj - sum_{k=1}^{j-1} l_jk^2]^{1/2},  j = 1,2,...,n,
+ l_ij = (1/l_jj)[a_ij - sum_{k=1}^{j-1} l_ik l_jk],  i = j+1,...,n.  (7.63)
+
+分析这些关系在算法上的一致性，我们发现，如果按列填充矩阵 L，对每一列 j 先计算对角元素 l_jj，再计算其下方的元素 l_ij（i = j+1,...,n），则所有隐含的量在需要时都是现成的。还可以注意到，给定元素 a_ij 仅用于确定一个 l_ij，因此 Cholesky 分解的实现可以使用单个数组，其下三角部分最初包含矩阵 A 的定义元素，最终则包含矩阵 L 的相关元素。
+
+矩阵 A 的行列式由矩阵 L 和 L^T 的行列式之积给出，即考虑到它们的三角结构，由它们的对角元素之积给出：
+
+det A = ∏_{j=1}^{n} l_jj^2.  (7.64)
+
+基于式 7.63 的 Cholesky 分解实现在清单 7.13 中给出。数组 a 的下三角部分（包括对角线）在进入时须包含矩阵 A 的相关元素，退出时返回矩阵 L。上三角部分实际上未使用，因此保持不变。
+
+一个关键方面是，无需选主元，这大大简化了编码，并使 Cholesky 分解区别于任何其他基于消元或分解的方法；因为 Cholesky 分解所适用的矩阵的正定性保证了算法的无条件稳定性。考虑到分解失败的唯一情况是
+
+# 清单 7.13 对称正定矩阵的 Cholesky 分解（Python 代码）
+
+```
+```python
+#-------------------------------------------------------------------------------
+def Cholesky(a, n):
+#-------------------------------------------------------------------------------
+#  Performs Cholesky factorization L * Lᵀ of real symmetric positive-definite
+#  (n x n) matrix a. On exit, replaces lower triangle of a with L.
+#  a    - coefficient matrix (n x n); L in lower triangle and diagonal on exit
+#  det  - determinant of coefficient matrix (output).
+#  Error flag = 0 - normal execution
+#                1 - a is not positive-definite.
+#-------------------------------------------------------------------------------
+#
+    det = 1e0
+    for j in range(1,n+1):                         # loop over columns
+        sum = a[j][j]                              # diagonal element
+        for k in range(1,j): sum -= a[j][k]*a[j][k]
+        if (sum <= 0e0):
+            print("Cholesky: matrix b is not positive-definite !"); return (0,1)
+        a[j][j] = sqrt(sum)
+
+        for i in range(j+1,n+1):                    # non-diagonal elements
+            sum = a[i][j]
+            for k in range(1,j): sum -= a[i][k]*a[j][k]
+            a[i][j] = sum / a[j][j]
+
+        det *= a[j][j]*a[j][j]
+
+    return (det,0)
+```
+```
+
+就是矩阵不是正定的情况；例程 Cholesky 也提供了一种检查正定性的便捷方法，若分解失败则返回错误索引 1。
+
+一旦完成矩阵 A 的 Cholesky 分解，所得到的三角矩阵便可用来通过回代求解相关的线性方程组
+
+$$\mathbf{A}\cdot\mathbf{x}=\mathbf{b} \tag{7.65}$$
+
+通过该分解，该方程组等价于以下两个方程组：
+
+$$\mathbf{L}\cdot\mathbf{y}=\mathbf{b}, \tag{7.66}$$
+$$\mathbf{L}^{T}\cdot\mathbf{x}=\mathbf{y}. \tag{7.67}$$
+
+具体而言，第一个三角方程组 (7.66) 的结构为
+
+![](img/5c6c126e3d8cf2b3029f4242e9ad2887_219_0.png)
+
+其解可以从它的第一个分量开始递归确定，该分量实际上是显式的：
+
+\begin{cases} y_1 = \dfrac{b_1}{l_{11}}, \\ y_i = \dfrac{1}{l_{ii}}\left[ b_i - \sum_{j=1}^{i-1} l_{ij} y_j \right], \quad i = 2,3,\dots,n. \end{cases} \tag{7.69}
+
+中间解 y 为第二个三角方程组 (7.67) 提供常数项向量：
+
+\begin{bmatrix} l_{11} & \cdots & \cdots & \cdots & l_{n1} \\ & \ddots & & & \vdots \\ & & l_{ii} & \cdots & l_{ni} \\ & & & \ddots & \vdots \\ 0 & & & & l_{nn} \end{bmatrix} \begin{bmatrix} x_1 \\ \vdots \\ x_i \\ \vdots \\ x_n \end{bmatrix} = \begin{bmatrix} y_1 \\ \vdots \\ y_i \\ \vdots \\ y_n \end{bmatrix}. \tag{7.70}
+
+向量 x 是原方程组 A · x = b 所求的解，其分量可以通过按索引递减顺序的回代来递归表示，从最后一个分量开始，该分量是显式的：
+
+\begin{cases} x_n = \dfrac{y_n}{l_{nn}}, \\ x_i = \dfrac{1}{l_{ii}}\left[ y_i - \sum_{j=i+1}^{n} l_{ij} x_j \right], \quad i = n-1,n-2,\dots,1. \end{cases} \tag{7.71}
+
+出于算法效率的考虑，L^T 的元素用 L 的等价元素表示，以便始终只使用所有涉及的矩阵的下三角部分。
+
+根据递归关系 7.69 和 7.71，基于 Cholesky 分解求解对称正定矩阵线性方程组的例程在清单 7.14 中给出。数组 a 在进入例程 CholeskySys 时，应包含先前由函数 Cholesky 返回的系数矩阵 A 分解后得到的矩阵 L。常数项通过向量 b 传入例程，退出时返回相应的解。
+
+清单 7.15 给出了使用 Cholesky 分解求解线性方程组的一个典型程序序列。
+
+使用 Cholesky 分解求对称正定矩阵的逆是直接的，其依据是：可逆下三角矩阵的逆仍是下三角矩阵，且可逆矩阵的转置的逆等于原矩阵的逆的转置。事实上，矩阵 A 的逆可表示为
+
+\mathbf{A}^{-1} = \left(\mathbf{L} \cdot \mathbf{L}^T\right)^{-1} = \left(\mathbf{L}^T\right)^{-1} \cdot \mathbf{L}^{-1} = \left(\mathbf{L}^{-1}\right)^T \cdot \mathbf{L}^{-1}, \tag{7.72}
+
+显然它与原矩阵 A 本身一样是对称正定的，并且只需对因子矩阵 L 求一次逆即可非常高效地计算。若用带撇的符号表示逆矩阵的元素，

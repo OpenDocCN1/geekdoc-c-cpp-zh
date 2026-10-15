@@ -1,0 +1,16 @@
+# 11
+Monte Carlo Method
+
+# 11.1 Introduction
+
+The classical way to solve a problem of numerical analysis relies on a rigorous algorithm, which, for a given input, provides a well-defined solution in a predetermined number of steps. Such an approach is essentially deterministic, in the sense that its implementation is expected to lead on repeated runs, upon completion of the same number of operations, to the same result. Still, for numerous topical problems in applied sciences and engineering, the complexity of deterministic algorithms renders the computations intractable within reasonable amounts of time.
+
+Certain areas of modern sciences are concerned with systems composed of a huge number of coupled components, which are sometimes also prone to fluctuations. Such complex systems can be as different as collections of spins, biological populations, or galaxies. Their characterization is often accomplished by means of high-dimensional integrals. A typical example is the classical canonical partition function of a system of N interacting particles,
+
+Z = ∫ ⋯ ∫ d³r₁ ⋯ d³r_N exp[ − 1/(k_B T) E(r₁ ⋯ r_N) ] ,
+
+where E(r₁ ⋯ r_N) is the total energy of the system, with r_i, the position of particle i, T is the system temperature, and k_B, the Boltzmann constant. The evaluation of this 3N-dimensional integral by any of the classical quadrature methods can be completely ruled out even for the lowest particle numbers of practical interest. In fact, considering the modest value N = 20 and only 10 integration points for each dimension, the number of required elementary operations would be on the order of 10⁶⁰. Even using the latest petascale supercomputers, which are capable of more than 10¹⁶ floating point operations per second, the computation would require approximately 3 · 10³⁶ years!
+
+A rewarding alternative to the deterministic approaches for complex high-dimensional problems are the so-called stochastic methods, based on the law of large numbers from the probability theory. Here, the quantities of interest are defined as expectation values of random variables or, in other words, the average values of large sequences of random variables are considered under certain assumptions probabilistic estimates of the sought-for quantities. Such techniques, generically referred to as Monte Carlo methods, have an intrinsically nondeterministic character, since they use the outcome of stochastic experiments and, within statistical errors, they exhibit different behaviors on different runs. Essentially, instead of deterministically covering the domains of the involved functions, the Monte Carlo methods sample these randomly. In general, stochastic techniques do not require genuine random numbers, but rather pseudorandom sequences, nevertheless with a high degree of uniformity and low sequential correlations.
+
+The seminal Monte Carlo method was developed in the late 1940s at the Los Alamos National Laboratory by Stanislaw Ulam, Nicholas Metropolis, and John von Neumann, and it was named, due to the gambling-like underlying principles, after the famous Monte Carlo casino. The Monte Carlo method started unveiling its virtues with the advent of the high-performance computers, because the attainment
