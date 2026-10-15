@@ -1,0 +1,9 @@
+that determines whether or not a given String is present within a sorted array (or, if you choose, an ArrayList) by searching successively smaller segments of the list.
+
+Include a test driver that prompts the user for strings to be searched. The user should enter one string per line, with an empty line indicating the end of the series. After the sorted list of strings has been entered, the program should prompt the user for a search string. The program should then print a message stating whether or not the search string was found in the list, the total number of strings in the list, and the number of comparisons made while looking for the search string.
+
+PP 12.13 Write a program that prompts the user for a list of cities, where each city has a name and x and y coordinates. After all cities have been entered, the program should use a recursive algorithm to print the length of all possible routes that start at the first city entered, end at the last city entered, and visit every city in the list. For each route, the program should print the name of each city visited, followed by length of the route.
+
+PP 12.14 A Sierpinski Triangle is a fractal formed by drawing a triangle, and then using the midpoints of each side of triangle to form another triangle. This inner triangle is then removed. The result is three smaller triangles (one at the top and one in each corner) on which the process is repeated. After iteration N, the image will contain 3^N triangles, each of which is similar to the original triangle.
+
+Write a program that implements a recursive algorithm for drawing a Sierpinski Triangle. The user interface for the program should include a JSlider that allows the user to select a value for N. The slider should allow the user to pick a value for N between 0 and the maximum value of N possible based on the size of the program window. The maximum slider value should change as appropriate when the window is resized.

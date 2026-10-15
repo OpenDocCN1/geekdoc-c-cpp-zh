@@ -1,0 +1,206 @@
+
+
+## The finally Clause
+
+KEY CONCEPT
+The finally clause is executed whether the try block is exited normally or because of a thrown exception.
+
+A `try-catch` statement can have an optional *finally* clause. The `finally` clause defines a section of code that is executed no matter how the `try` block is exited. Most often, a `finally` clause is used to manage resources or to guarantee that particular parts of an algorithm are executed.
+
+If no exception is generated, the statements in the `finally` clause are executed after the `try` block is complete. If an exception is generated in the `try` block, control first transfers to the appropriate `catch` clause. After executing the exception-handling code, control transfers to the `finally` clause and its statements are executed. A `finally` clause, if present, must be listed following the `catch` clauses.
+
+Note that a `try` block does not need to have a `catch` clause at all. If there are no `catch` clauses, a `finally` clause may used by itself if that is appropriate for the situation.
+
+## SELF-REVIEW QUESTIONS (see answers in Appendix N)
+
+- SR 11.4 What is a `catch` clause?
+- SR 11.5 What is a `finally` clause?
+- SR 11.6 What output is produced by the following code fragment under each of the stated conditions?
+
+```
+try
+{
+    review.question();
+}
+catch (Exception1 exception)
+{
+    System.out.println ("one caught");
+}
+catch (Exception2 exception)
+{
+    System.out.println ("two caught");
+}
+finally
+{
+    System.out.println ("finally");
+}
+System.out.println ("the end");
+```
+
+a. No exception is thrown by the review.question() method.
+- b. An Exception1 exception is thrown by the review.question() method.
+- c. An Exception2 exception is thrown by the review.question() method.
+- d. An Exception3 exception is thrown by the review.question() method.
+
+## 11.4 Exception Propagation
+
+If an exception is not caught and handled where it occurs, control is immediately returned to the method that invoked the method that produced the exception. We can design our software so that the exception is caught and handled at this outer level. If it isn’t caught there, control returns to the method that called it. This process is called propagating the exception. This propagation continues until the exception is caught and handled or until it is passed out of the main method, which terminates the program and produces an exception message. To catch an exception at an outer level, the method that produces the exception must be invoked inside a try block that has catch clauses to handle it.
+
+> KEY CONCEPT
+> If an exception is not caught and handled where it occurs, it is propagated to the calling method.
+
+The Propagation program shown in Listing 11.3 succinctly demonstrates the process of exception propagation. The main method invokes method level1 in the ExceptionScope class (see Listing 11.4), which invokes level2, which invokes level3, which produces an exception. Method level3 does not catch and handle the exception, so control is transferred back to level2. The level2 method does not catch and handle the exception either, so control is transferred back to level1. Because the invocation of level2 is made inside a try block (in method level1), the exception is caught and handled at that point.
+
+Note that the output does not include the messages indicating that the methods level3 and level2 are ending. These println statements are never executed, because an exception occurred and had not yet been caught. However, after method level1 handles the exception, processing continues normally from that point, printing the messages indicating that method level1 and the program are ending.
+
+VideoNote
+Proper exception handling.
+
+Note also that the catch clause that handles the exception uses the getMessage and printStackTrace methods to output that information. The stack trace shows the methods that were called when the exception occurred.
+
+## LISTING 11.3
+
+```
+//************************************************************************
+//  Propagation.java      Author: Lewis/Loftus
+//
+//  Demonstrates exception propagation.
+//************************************************************************
+
+public class Propagation
+{
+    //-------------------------------------------------------------
+    // Invokes the level1 method to begin the exception demonstration.
+    //-------------------------------------------------------------
+    public static void main (String[] args)
+    {
+        ExceptionScope demo = new ExceptionScope();
+
+        System.out.println("Program beginning.");
+        demo.level1();
+        System.out.println("Program ending.");
+    }
+}
+```
+
+## OUTPUT
+
+Program beginning.
+Level 1 beginning.
+Level 2 beginning.
+Level 3 beginning.
+
+The exception message is: / by zero
+
+The call stack trace:
+java.lang.ArithmeticException: / by zero
+    at ExceptionScope.level3(ExceptionScope.java:54)
+    at ExceptionScope.level2(ExceptionScope.java:41)
+    at ExceptionScope.level1(ExceptionScope.java:18)
+    at Propagation.main(Propagation.java:17)
+
+Level 1 ending.
+Program ending.
+
+## LISTING 11.4
+
+```
+//***************************************************************************
+//  ExceptionScope.java      Author: Lewis/Loftus
+//
+//  Demonstrates exception propagation.
+//***************************************************************************
+
+public class ExceptionScope
+{
+    //------------------------------------------------------------
+    // Catches and handles the exception that is thrown in level3.
+    //------------------------------------------------------------
+    public void level1()
+    {
+        System.out.println("Level 1 beginning.");
+
+        try
+        {
+            level2();
+        }
+        catch (ArithmeticException problem)
+        {
+            System.out.println();
+            System.out.println ("The exception message is: " +
+                problem.getMessage());
+            System.out.println();
+            System.out.println ("The call stack trace:");
+            problem.printStackTrace();
+            System.out.println();
+        }
+
+        System.out.println("Level 1 ending.");
+    }
+
+    //------------------------------------------------------------
+    // Serves as an intermediate level. The exception propagates
+    // through this method back to level1.
+    //------------------------------------------------------------
+    public void level2()
+    {
+        System.out.println("Level 2 beginning.");
+        level3();
+        System.out.println("Level 2 ending.");
+    }
+```
+
+## 11.5 The Exception Class Hierarchy
+
+The classes that define various exceptions are related by inheritance, creating a class hierarchy that is shown in part in Figure 11.1
+
+The Throwable class is the parent of both the Error class and the Exception class. Many types of exceptions are derived from the Exception class, and these classes also have many children. Though these high-level classes are defined in the java.lang package, many child classes that define specific exceptions are part of several other packages. Inheritance relationships can span package boundaries.
+
+![](img/618a2d4ac82d0d6218f2b3b53b0b5d51_576_0.png)
+
+FIGURE 11.1 Part of the Error and Exception class hierarchy
+
+We can define our own exceptions by deriving a new class from Exception or one of its descendants. The class we choose as the parent depends on what situation or condition the new exception represents.
+
+The program in Listing 11.5 instantiates an exception object and throws it. The exception is created from the OutOfRangeException class, which is shown in Listing 11.6. Note that this exception is not part of the Java standard class library. It was created to represent the situation in which a value is outside a particular valid range.
+
+KEY CONCEPT
+A new exception is defined by deriving a new class from the Exception class or one of its descendants.
+
+## LISTING 11.5
+
+```
+//****************************************************************************
+//  CreatingExceptions.java      Author: Lewis/Loftus
+//
+//  Demonstrates the ability to define an exception via inheritance.
+//****************************************************************************
+
+import java.util.Scanner;
+
+public class CreatingExceptions
+{
+    //------------------------------------------------------------
+    // Creates an exception object and possibly throws it.
+    //------------------------------------------------------------
+    public static void main (String[] args) throws OutOfRangeException
+    {
+        final int MIN = 25, MAX = 40;
+
+        Scanner scan = new Scanner (System.in);
+
+        OutOfRangeException problem =
+            new OutOfRangeException ("Input value is out of range.");
+
+        System.out.print ("Enter an integer value between " + MIN +
+                          " and " + MAX + ", inclusive: ");
+        int value = scan.nextInt();
+
+        // Determine if the exception should be thrown
+        if (value < MIN || value > MAX)
+            throw problem;
+
+        System.out.println ("End of main method.");  // may never reach
+    }
+}
+```

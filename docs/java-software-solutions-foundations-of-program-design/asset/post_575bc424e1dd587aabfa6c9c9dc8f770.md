@@ -1,0 +1,71 @@
+
+- **implementation**—(1) The process of translating a design into source code. (2) The source code that defines a method, class, abstract data type, or other programming entity.
+- **implements**—A Java reserved word that is used in a class declaration to specify that the class implements the methods specified in a particular interface.
+- **import**—A Java reserved word that is used to specify the packages and classes that are used in a particular Java source code file.
+- **index**—The integer value used to specify a particular element in an array.
+- **index operator**—The brackets ([]) in which an array index is specified.
+- **indirect recursion**—The process of a method invoking another method, which eventually results in the original method being invoked again. See also direct recursion.
+- **infinite loop**—A loop that does not terminate because the condition controlling the loop never becomes false.
+- **infinite recursion**—A recursive series of invocations that does not terminate because the base case is never reached.
+- **infix expression**—An expression in which the operators are positioned between the operands on which they work. See also postfix expression.
+- **inheritance**—The ability to derive a new class from an existing one. Inherited variables and methods of the original (parent) class are available in the new (child) class as if they were declared locally.
+- **initialize**—To give an initial value to a variable.
+- **initializer list**—A comma-separated list of values, delimited by braces ({}), used to initialize and specify the size of an array.
+- **inline documentation**—Comments that are included in the source code of a program.
+- **inner class**—A nonstatic, nested class.
+- **input/output buffer**—A storage location for data on its way from the user to the computer (input buffer) or from the computer to the user (output buffer).
+- **input/output devices**—Hardware components that allow the human user to interact with the computer, such as a keyboard, mouse, and monitor.
+- **input/output stream**—A sequence of bytes that represents a source of data (input stream) or a destination for data (output stream).
+- **insertion sort**—A sorting algorithm in which each value, one at a time, is inserted into a sorted subset of the entire list. See also selection sort.
+- **inspection**—See walkthrough.
+- **instance**—An object created from a class. Multiple objects can be instantiated from a single class.
+- **instance method**—A method that must be invoked through a particular instance of a class, as opposed to a class method.
+- **instance variable**—A variable that must be referenced through a particular instance of a class, as opposed to a class variable.
+- **instanceof**—A Java reserved word that is also an operator, used to determine the class or type of a variable.
+- **instantiation**—The act of creating an object from a class.
+- **int**—A Java reserved word that represents a primitive integer type, stored using 32 bits in two’s complement format.
+- **integration test**—The process of testing software components that are made up of other interacting components. Stresses the communication between components rather than the functionality of individual components.
+- **interface**—(1) A Java reserved word that is used to define a set of abstract methods that will be implemented by particular classes. (2) The set of messages to which an object responds, defined by the methods that can be invoked from outside of the object. (3) The techniques through which a human user interacts with a program, often graphically. See also graphical user interface.
+- **interface hierarchy**—A tree-like structure created when interfaces are derived from other interfaces through inheritance. See also class hierarchy.
+- **interpreter**—A program that translates and executes code on a particular machine. The Java interpreter translates and executes Java bytecode. See also compiler.
+- **Internet**—The most pervasive wide-area network in the world; it has become the primary vehicle for computer-to-computer communication.
+- **Internet address**—A designation that uniquely identifies a particular computer or device on the Internet.
+- **invisible component**—A graphical user interface component that can be added to a container to provide buffering space between other components.
+- **invocation**—See method invocation.
+- **I/O devices**—See input/output devices.
+- **IP address**—A series of several integer values, separated by periods (.), that uniquely identifies a particular computer or device on the Internet. Each Internet address has a corresponding IP address.
+- **is-a relationship**—The relationship created through properly derived classes via inheritance. The subclass is-a more specific version of the superclass. See also has-a relationship.
+- **ISO-Latin-1**—A 128-character extension to the ASCII character set defined by the International Standards Organization (ISO). The characters correspond to the numeric values 128 through 255 in both ASCII and Unicode.
+- **iteration**—(1) One execution of the body of a repetition statement. (2) One pass through a cyclic process, such as an iterative development process.
+- **iteration statement**—See repetition statement.
+- **iterative development process**—A step-by-step approach for creating software, which contains a series of stages that are performed repetitively.
+- **Java Virtual Machine (JVM)**—The conceptual device, implemented in software, on which Java bytecode is executed. Bytecode, which is architecture neutral, does not run on a particular hardware platform; instead, it runs on the JVM.
+- **java**—The Java command-line interpreter, which translates and executes Java bytecode. Part of the Java Development Kit.
+- **Java**—The programming language used throughout this text to demonstrate software development concepts. Described by its developers as object oriented, robust, secure, architecture neutral, portable, high-performance, interpreted, threaded, and dynamic.
+- **Java API**—See Application Programming Interface.
+- **Java Development Kit (JDK)**—A collection of basic software tools, including a compiler and interpreter, for developing Java software. See also Software Development Kit.
+- **javac**—The Java command-line compiler, which translates Java source code into Java bytecode. Part of the Java Development Kit.
+- **javadoc**—A software tool that creates external documentation in HTML format about the contents and structure of a Java software system. Part of the Java Development Kit.
+- **javah**—A software tool that generates C header and source files, used for implementing native methods. Part of the Java Development Kit.
+- **javap**—A software tool that disassembles a Java class file, containing unreadable bytecode, into a human-readable version. Part of the Java Development Kit.
+- **jdb**—The Java command-line debugger. Part of the Java Development Kit.
+- **JDK**—See Java Development Kit.
+- **JVM**—See Java Virtual Machine.
+- **kilobit (Kb)**—A unit of binary storage, equal to 2¹⁰, or 1024 bits.
+- **kilobyte (K or KB)**—A unit of binary storage, equal to 2¹⁰, or 1024 bytes.
+- **label**—(1) A graphical user interface component that displays text, an image, or both. (2) An identifier in Java used to specify a particular line of code. The break and continue statements can jump to a specific, labeled line in the program.
+- **LAN**—See local-area network.
+- **last-in, first-out (LIFO)**—A data management technique in which the last value that is stored in a data structure is the first value that comes out. See also first-in, first-out; stack.
+- **layout manager**—An object that specifies the presentation of graphical user interface components. Each container is governed by a particular layout manager.
+- **lexicographic ordering**—The ordering of characters and strings based on a particular character set such as Unicode.
+- **life cycle**—The stages through which a software product is developed and used.
+- **LIFO**—See last-in, first-out.
+- **linear search**—A search algorithm in which each item in the list is compared to the target value until the target is found or the list is exhausted. See also binary search.
+- **link**—(1) A designation in a hypertext document that “jumps” to a new document (or to a new part of the same document) when followed. (2) A connection between two items in a dynamically linked structure, represented as an object reference.
+- **listener**—An object that is set up to respond to an event when it occurs.
+- **listener adaptor class**—A class defined with empty methods corresponding to the methods invoked when particular events occur. A listener object can be derived from an adaptor class. See also listener interface.
+- **listener interface**—A Java interface that defines the methods invoked when particular events are invoked. A listener object can be created by implementing a listener interface. See also listener adaptor class.
+- **literal**—A primitive value used explicitly in a program, such as the numeric literal 147 or the string literal “hello”.
+- **local-area network (LAN)**—A computer network designed to span short distances and connect a relatively small number of computers. See also wide-area network.
+- **local variable**—A variable defined within a method, which does not exist except during the execution of the method.
+- **logical error**—A problem stemming from inappropriate processing in the code. It does not cause an abnormal termination of the program.

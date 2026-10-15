@@ -1,0 +1,13 @@
+Inside the class definition are some more comments describing the purpose of the main method, which is defined directly below the comments. A method is a group of programming statements that is given a name. In this case, the name of the method is main and it contains only two programming statements. Like a class definition, a method is also delimited by braces.
+
+All Java applications have a main method, which is where processing begins. Each programming statement in the main method is executed, one at a time in order, until the end of the method is reached. Then the program ends, or terminates. The main method definition in a Java program is always preceded by the words public, static, and void, which we examine later in the text. The use of String and args does not come into play in this particular program. We describe these later also.
+
+The two lines of code in the main method invoke another method called println (pronounced print line). We invoke, or call, a method when we want it to execute. The println method prints the specified characters to the screen. The characters to be printed are represented as a character string, enclosed in double quote characters ("). When the program is executed, it calls the println method to print the first statement, calls it again to print the second statement, and then, because that is the last line in the main method, the program terminates.
+
+The code executed when the println method is invoked is not defined in this program. The println method is part of the System.out object, which is part of the Java standard class library. It’s not technically part of the Java language, but is always available for use in any Java program. We explore the println method in more detail in Chapter 2.
+
+# Comments
+
+Let’s examine comments in more detail. Comments are the only language feature that allows programmers to compose and communicate their thoughts independent of the code. Comments should provide insight into the programmer’s original intent. A program is often used for many years, and often many modifications are made to it over time. The original programmer often will not remember the details of a particular program when, at some point in the future, modifications are required. Furthermore, the original programmer is not always available to make the changes; thus, someone completely unfamiliar with the program will need to understand it. Good documentation is therefore essential.
+
+As far as the Java programming language is concerned, the content of comments can be any text whatsoever. Comments are ignored by the computer; they do not affect how the program executes.
