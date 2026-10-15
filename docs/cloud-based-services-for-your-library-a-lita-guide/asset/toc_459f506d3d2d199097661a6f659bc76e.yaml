@@ -1,0 +1,376 @@
+- - '#'
+  - 你的图书馆的云服务：LITA指南
+- - '##'
+  - 前言
+- - '###'
+  - 读者对象与范围
+- - '##'
+  - 材料组织
+- - '##'
+  - 致谢
+- - '##'
+  - 图书馆中的云计算和虚拟化
+- - '###'
+  - 云计算和虚拟化概述
+- - '###'
+  - 图书馆中的云计算与虚拟化
+- - '####'
+  - 云计算
+- - '#####'
+  - 基本特征
+- - '#####'
+  - 服务模型
+- - '#####'
+  - 部署模型
+- - '####'
+  - 虚拟化
+- - '###'
+  - 影响服务选择的因素
+- - '###'
+  - 基于云或虚拟化信息服务的类型
+- - '##'
+  - 参考文献
+- - '##'
+  - 云计算和虚拟化采用的格局
+- - '###'
+  - SURVEY FRAMEWORK
+- - '###'
+  - TABLE 2.1
+- - '###'
+  - Cloud Computing/Virtualization Adoption Platforms
+- - '###'
+  - The Landscape of Cloud Computing and Virtualization Adoption
+- - '###'
+  - METHODS
+- - '###'
+  - 结果
+- - '###'
+  - 人口统计
+- - '###'
+  - 图书馆 IT 服务云服务采用现状
+- - '###'
+  - 对云计算和虚拟化的认知
+- - '###'
+  - 云计算和虚拟化的促进与抑制因素
+- - '###'
+  - 图书馆虚拟化技术采纳评估模型
+- - '##'
+  - CONCLUSION
+- - '##'
+  - REFERENCES
+- - '#'
+  - The Landscape of Cloud Computing and Virtualization Adoption
+- - '##'
+  - Selecting and Implementing Solutions
+- - '#'
+  - Chapter Three
+- - '##'
+  - 技术因素
+- - '###'
+  - 基础设施管理
+- - '###'
+  - 平台管理
+- - '###'
+  - 安全
+- - '##'
+  - 图书馆特定IT支持
+- - '##'
+  - 组织因素
+- - '##'
+  - Budgeting and Service Subscription
+- - '##'
+  - Disaster and Recovery Planning
+- - '##'
+  - Issues to Consider for Service Durability
+- - '##'
+  - Service-Level Agreements and Terms of Service
+- - '##'
+  - 第三章
+- - '###'
+  - 解读合同
+- - '###'
+  - 服务能力
+- - '####'
+  - 环境因素
+- - '#####'
+  - 基础设施、平台和服务成本
+- - '#####'
+  - 计算成本的考虑因素
+- - '###'
+  - 确定实际成本与投资回报率
+- - '##'
+  - 选择与实施方案
+- - '###'
+  - 云爆发
+- - '##'
+  - 法律与政策问题
+- - '##'
+  - PLANNING FOR IMPLEMENTATION
+- - '##'
+  - 参考文献
+- - '##'
+  - 软件即服务与平台即服务
+- - '###'
+  - SaaS 图书馆解决方案
+- - '###'
+  - SaaS 供应商示例
+- - '###'
+  - 下一代基于云的 ILS
+- - '###'
+  - 数字档案管理系统
+- - '###'
+  - 面向公众的服务
+- - '###'
+  - 面向用户的服务
+- - '###'
+  - 社区虚拟化/云提供商
+- - '###'
+  - 问题
+- - '###'
+  - 所需专业知识
+- - '###'
+  - 服务复杂性、可持续性与持久性
+- - '###'
+  - 服务成本
+- - '###'
+  - 服务可移植性与互操作性
+- - '##'
+  - 使用传统服务器型托管的 PaaS
+- - '###'
+  - 服务类型与供应商
+- - '###'
+  - 共享虚拟服务器
+- - '###'
+  - 专用虚拟服务器
+- - '###'
+  - 专用物理服务器
+- - '###'
+  - 问题
+- - '####'
+  - 图 4.2
+- - '###'
+  - 所需专业技能
+- - '####'
+  - 使用基于 Web 的控制面板
+- - '####'
+  - 理解 DNS
+- - '####'
+  - 理解服务配置
+- - '####'
+  - 理解 SSH/SFTP
+- - '####'
+  - 理解数据库
+- - '####'
+  - 管理防火墙
+- - '###'
+  - 服务复杂性、可持续性和持久性
+- - '###'
+  - 在 PaaS 合同中应注意的内容
+- - '###'
+  - 服务成本
+- - '####'
+  - TABLE 4.1
+- - '###'
+  - 服务可移植性和互操作性
+- - '###'
+  - 创建前向失败计划
+- - '###'
+  - 将 PaaS 解决方案用作应用程序平台
+- - '###'
+  - PaaS 提供商示例
+- - '####'
+  - Amazon Elastic Beanstalk
+- - '####'
+  - FIGURE 4.3
+- - '####'
+  - CloudFoundry
+- - '####'
+  - Google Apps Engine
+- - '####'
+  - FIGURE 4.4
+- - '####'
+  - Heroku
+- - '####'
+  - FIGURE 4.5
+- - '####'
+  - RedHat OpenShift
+- - '####'
+  - Windows Azure
+- - '###'
+  - Issues
+- - '###'
+  - Expertise Required
+- - '###'
+  - Service Complexity, Sustainability, and Durability
+- - '###'
+  - Service Cost
+- - '###'
+  - Service Portability and Interoperability
+- - '##'
+  - CONCLUSION
+- - '##'
+  - 参考文献
+- - '#'
+  - 基础设施即服务
+- - '###'
+  - 32 位与 64 位操作系统
+- - '###'
+  - 应用程序编程接口 (API)
+- - '###'
+  - 备份/恢复
+- - '###'
+  - 带宽/进出传输
+- - '###'
+  - 云文件系统
+- - '###'
+  - 配置配置文件
+- - '###'
+  - 域名服务 (DNS)
+- - '###'
+  - 端点
+- - '###'
+  - 文件存储桶/容器
+- - '###'
+  - 负载均衡器
+- - '###'
+  - 机器映像
+- - '###'
+  - 消息或队列服务
+- - '###'
+  - 可挂载卷
+- - '###'
+  - 公钥/私钥
+- - '##'
+  - USING IAAS IN A TRADITIONAL IT APPROACH
+- - '##'
+  - IaaS Provider Examples
+- - '###'
+  - Amazon Web Services
+- - '###'
+  - Linode
+- - '####'
+  - FIGURE 5.2
+- - '###'
+  - Rackspace
+- - '####'
+  - FIGURE 5.3
+- - '##'
+  - Private Cloud IaaS Platforms
+- - '##'
+  - IaaS Examples in Libraries
+- - '#'
+  - Chapter Five
+- - '##'
+  - Expertise Required
+- - '###'
+  - Understanding backup and restoration.
+- - '###'
+  - 理解服务器管理、服务监控和复制
+- - '###'
+  - 能够谨慎预算
+- - '##'
+  - 服务复杂性、可持续性和耐久性
+- - '##'
+  - Service Cost
+- - '##'
+  - Service Portability and Interoperability
+- - '##'
+  - Comparing Costs across Providers
+- - '###'
+  - TABLE 5.1
+- - '##'
+  - PLATFORM-AGNOSTIC APPROACHES TO CLOUD SERVICES
+- - '##'
+  - Hybrid IaaS Provider Examples
+- - '##'
+  - Multiplatform IaaS Solutions
+- - '####'
+  - FIGURE 5.6
+- - '####'
+  - FIGURE 5.7
+- - '####'
+  - FIGURE 5.8
+- - '##'
+  - Using IaaS for Point-of-Need Service
+- - '####'
+  - FIGURE 5.9
+- - '##'
+  - Configuration
+- - '##'
+  - Issues
+- - '##'
+  - Expertise Required
+- - '##'
+  - Service Complexity, Sustainability, and Durability
+- - '##'
+  - Service Cost
+- - '###'
+  - TABLE 5.2
+- - '##'
+  - Service Portability and Interoperability
+- - '###'
+  - TABLE 5.3
+- - '###'
+  - TABLE 5.4
+- - '##'
+  - CONCLUSION
+- - '##'
+  - REFERENCES
+- - '#'
+  - Best Practice and Recommendations
+- - '##'
+  - 'APPROACH ONE:'
+- - '##'
+  - 方法二：基于SaaS的混合云管理
+- - '##'
+  - 'APPROACH THREE: REDUNDANT AND SCALABLE MULTICLOUD DEPLOYMENTS'
+- - '###'
+  - FIGURE 6.4
+- - '###'
+  - Multiple managed cloud services
+- - '##'
+  - 'APPROACH FOUR: DISTRIBUTED SAAS ENVIRONMENTS'
+- - '##'
+  - 准备采用云计算
+- - '###'
+  - 为新服务腾出空间
+- - '##'
+  - Build Support for the Migration
+- - '##'
+  - Leverage Vendor-Provided Tools
+- - '##'
+  - Stand on the Shoulders of Giants
+- - '##'
+  - Get Started
+- - '##'
+  - REFERENCES
+- - '##'
+  - 最佳实践与建议
+- - '##'
+  - F
+- - '##'
+  - G
+- - '##'
+  - H
+- - '##'
+  - I
+- - '##'
+  - J
+- - '##'
+  - K
+- - '##'
+  - L
+- - '##'
+  - M
+- - '##'
+  - N
+- - '##'
+  - O
+- - '##'
+  - P
+- - '##'
+  - Q
+- - '##'
+  - R
+- - '##'
+  - 您可能也会感兴趣

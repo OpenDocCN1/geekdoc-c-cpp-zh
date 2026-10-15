@@ -1,0 +1,60 @@
+
+
+both PaaS and IaaS platforms. This is not always possible for off-the-shelf library applications, particularly commercial solutions, but it may allow libraries to move common services such as database and file systems to platforms that are accessible from multiple service providers.
+
+## CONCLUSION
+
+Many libraries are already leveraging SaaS solutions for common data- and labor-intensive tasks. But because libraries often run specialized and relatively small services, it can be difficult for them to find SaaS or PaaS solutions that fit their needs economically. As chapters 4 and 5 demonstrate, libraries looking to develop their own applications or host relatively common applications such as content management or customer relations systems are likely to find PaaS solutions that fit their needs, and libraries seeking to implement customized library-focused systems such as DAMS or ILS are likely to need SaaS or IaaS solutions. In this chapter, we see that libraries seeking to use cloud computing as a simple disposable service have a variety of options, including application-specific PaaS and managed IaaS. These approaches are transformative in nature and can help IT departments create more durable, economical, and powerful service deployments.
+
+## REFERENCES
+
+Amazon. 2012. “Using Instances of Your Virtual Machine in Amazon EC2.” AWS Documentation. http://docs.amazonaws.com/AWSEC2/latest/UserGuide/UsingVirtualMachinesinAmazonEC2.html.
+
+Baun, Christian, and Marcel Kunze. 2011. “The KOALA Cloud Management Service: A Modern Approach for Cloud Infrastructure Management.” Proceedings of the 1st International Workshop on Cloud Computing Platforms CloudCP 2011. New York: ACM. doi:10.1145/1967422.1967423.
+
+Cockcroft, Adrian, Cory Hicks, and Greg Orzell. 2011. “Lessons Netflix Learned from the AWS Outage.” Netflix Tech Blog, April 2011. http://techblog.netflix.com/2011_04_01_archive.html.
+
+Han Yan. 2010. “On the Clouds: A New Way of Computing.” Information Technology and Libraries 29 (no. 2): 87–92. www.ala.org/lita/ital/29/2.
+
+Iglesias, Edward, and Wittawat Meesangnil. 2010. “Using Amazon S3 in Digital Preservation in a Mid-sized Academic Library: A Case Study of CCSU ERIS Digital Archive System.” Code4Lib Journal 12:1-7. http://journal.code4lib.org/articles/4468.
+
+Limoncelli, Thomas. A., Christina Hogan, and Strata R. Chalup. 2001. *The Practice of System And Network Administration*. Boston: Addison-Wesley.
+
+Mayank. 2011. “Puppet in the Cloud.” *SlideShare Engineering Blog*, March 2, 2011. http://engineering.slideshare.net/2011/03/cloud-control-puppetizing-cloud-servers-on-amazon-ec2/.
+
+Mitchell, Erik. 2010. “Using Cloud Services for Library IT Infrastructure.” *Code4Lib Journal* 9. http://journal.code4lib.org/articles/2510.
+
+Nemeth, Evi, Garth Snyder, and Trent R. Hein. 2006. *Linux Administration Handbook*. New York: Prentice Hall.
+
+Tonjes, Chris. 2011. “Amazon Fail: DC Public Library’s Lessons Learned from the Amazon Cloud Outage.” American Librarian Association Annual Conference, July 2011. http://connect.ala.org/files/dcpl%20cloud%20computing%20amazon%20fail.pdf.
+
+Uspal, David, David Lacy, and Demian Katz. 2011. “Deploying a Multifaceted Library Support System on the Cloud Using Open Source Components.” Montgomery County Community College Technology Conference, October 7, 2011. http://library.villanova.edu/files/4013/3001/4248/Deploying_a_Multifaceted_Library_Support_System_on_the_Cloud_using_Open_Source_Components.ppt.
+
+## Best Practice and Recommendations
+
+In this chapter we discuss ways to get started with cloud computing by exploring four basic methods of approaching larger-scale migrations to cloud computing that leverage a mix of the platforms and services reviewed in the previous chapters. The four approaches are based on a simple cloud architecture that features an application server, persistent storage space, and a separate database server or database service. The sizes of the server, database, and storage space are not specified; this architecture could scale for small, medium-sized, or large libraries and is capable of hosting multiple applications.
+
+Each approach features common functions, including automatic server configuration, automated backups, a separate database service, a single application server, service monitoring, and cost auditing. Though it is common to find these services in IaaS providers, there the services are not always automated or monitored to the extent needed. Likewise, these services are implemented in PaaS and SaaS environments as well, but there they often focus on distinct applications and cannot be configured to monitor multiple platforms or providers. To stay focused on high-level issues, I do not include in the comparison of approaches the specific functions of monitoring, auditing, firewall services, administrative user access, service growth planning, and budgeting. This certainly does not minimize the importance of designing a cloud infrastructure that includes these highly functional features, for they may be a compelling reason to adopt or reject a platform.
+
+## APPROACH ONE:
+SINGLE-VENDOR CLOUD DEPLOYMENT
+
+A common approach to cloud computing is to select a single vendor and implement a category of cloud services (e.g., all discovery services, all website services) within that vendor's environment. This applies to SaaS, PaaS, and IaaS environments and may be appropriate for specific categories of services. In this case, the single-vendor cloud is used to deploy our hypothetical application/database server environment. Single-vendor implementations can be easier to accomplish and have the benefit of enabling the library to work with a single suite of APIs and administrative interfaces. In the SaaS environment, a single-vendor cloud also likely includes tightly integrated services and efficient data management features. Single-vendor clouds do come with risks of vendor lock-in and service downtime if the cloud service fails, but many vendors have designed multiregion cloud platforms that operate independently, helping customers mitigate the risk of working with a single provider.
+
+As an example, figure 6.1 illustrates an example set of services implemented in the Amazon EC2 cloud environment. This approach uses configuration,
+
+![](img/f597dcda42d1ecd1c6edb1e8e00d8ca1_149_0.png)
+
+FIGURE 6.1
+Sample Amazon server configuration
+
+monitoring, machine imaging, and storage snapshot services built into the AWS platform to manage both the reserved storage space and application server. The Relational Database Service (RDS) is an independently managed service with its own backup and monitoring services. In this example, persistent data are stored as separate 100 GB EBS volumes (e.g., digital images, essential documents, website files) that can be detached from the application server and reattached to a new server if required. Storing important data on EBS volumes rather than on storage associated with the machine instance both makes it easier to migrate this data onto new servers and provides additional levels of redundancy that reduce the risk associated with hosting important files on cloud services.
+
+In this environment, CloudFormation configuration services would be used to document server configuration. The CloudFormation service supports both initialization and setup of Amazon resources (e.g., EC2 instances, EBS volumes, Security Group definitions) and installation and configuration of specific server applications. To accomplish this, the CloudFormation service uses a package management service called cloud-init that is designed to facilitate server configuration during initial start-up. A good “getting-started” guide for this service is in Amazon’s documentation on CloudFormation (Amazon 2012). Reid (2012) suggests using Chef (www.opscode.com/chef/) along with CloudFormation to create an automatic configuration tool that is independent of platform and operating system.
+
+Linode and Rackspace offer similar functionality for scripting resource creation and management. Figure 6.2 shows a similar cloud implementation using Linode as the sole cloud provider. Like Amazon, Linode supports multiple cloud regions and has its own customized scripting language, called Lish, to facilitate server management. Linode’s monitoring service, like Amazon’s, focuses on server health as opposed to application health. Linode uses StackScripts to support automatic configuration and deployment of servers and features version control for scripts to allow easy testing and restoration of services.
+
+Chapter 5 examines the costs associated with a single-vendor model. Tables 5.2 and 5.3 show budgets that generally fit the configurations outlined in figures 6.1 and 6.2. The budgets include a comparison of costs for on-demand and reserved instances but omit charges for services that libraries may want to include from outside vendors (e.g., managed backups, region replication, or application monitoring).
+
+Some benefits of this single-vendor cloud are tight integration between Amazon services; consistent monitoring, configuration, and backup services; built-in ability to scale or replace application server easily without impacting database or digital object storage; and ability to migrate one or more services into new availability
+
