@@ -1,0 +1,11 @@
+Note that you can specify a name for the document but it defaults to the project name you’ve chosen. That’s because as part of this process, Visual Studio is going to generate a new Office 2007/2010 document and place that .docx file in your solution directory. When you work on this project, you’ll be customizing that document. Thus, in many cases you may want to give the document that will host your customization an end-user-friendly name instead of your project name.
+
+Once this is complete you are returned to the main Visual Studio window with a new project. Unlike other project types, however, in this case the template creates a Word document and then opens that document within Visual Studio. As shown in Figure 25-11, within the Solution Explorer, on the upper-right side of the display, your project contains a .docx file. The full name of the ProVB_WordDocument.docx file is shown in the tab in the upper-left corner. Associated with this file is a second .vb file, which is where some of your custom code may be placed. As shown in the figure, the Visual Studio user interface actually encapsulates this document. The Properties window shows the properties for this document. Note that unlike when you created your VSTO project from an existing VBA document, there are no properties to support integration with VBA.
+
+![](bbox=[0.09, 0.32, 0.75, 0.7])
+
+Also noteworthy (although not shown) is that if you were to open your project’s properties and review the references, you’d find that all the Office Primary Interop assemblies you need in order to work with the Office object model have automatically been added to your project, and that the Embed Interop Types property has been set to True. You no longer need to try to figure out which COM interop assemblies are needed to access that interface from Word.
+
+# Adding Content to the Document
+
+Of course, the main visual feature in Figure 25-11 is that Visual Studio has fully encapsulated the Word user interface. Note how the Insert tab has been selected in the document. You have full access to all the features in Word in this mode; and to demonstrate this, let’s adjust the default contents of this document. Choose the

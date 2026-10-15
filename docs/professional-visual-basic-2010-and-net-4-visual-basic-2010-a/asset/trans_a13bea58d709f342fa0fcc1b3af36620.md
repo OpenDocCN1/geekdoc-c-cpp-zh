@@ -1,0 +1,221 @@
+
+上下文菜单或“测试视图”窗口）。这将编译你的解决方案并执行测试。如果运气不错，你应该会在“测试结果”窗口中看到每个测试旁边的图标从“待定”变为“进行中”，再变为“已通过”（见图 7-7）。
+
+![](img/d99870e80390742f93963da7be0b2e61_311_0.png)
+
+## 图 7-7
+
+若要查看测试失败，请对 Average 方法进行一处修改，该修改可能反映了一个简单但常见的逻辑错误：
+
+```
+Public Class Stats
+    Public Function Average(ByVal ParamArray values() As Double) As Double
+        Dim result As Double
+        Dim sum As Double
+        For i As Integer = 1 To values.Count - 1
+            sum += values(i)
+        Next
+        result = sum / values.Count
+        Return result
+    End Function
+End Class
+```
+
+代码片段来自 StatsTest
+
+这是一个常见错误：你可能会忘记集合是从零开始还是从一开始。如果你生成解决方案并运行所有测试，你将看到两个测试通过，而两个测试失败（见图 7-8）。
+
+![](img/d99870e80390742f93963da7be0b2e61_311_1.png)
+
+## 图 7-8
+
+AverageOfKnownRange 测试失败，因为你不再累加所有提供的数字。返回的错误消息也有助于识别该问题。请注意，它包含你添加到测试方法中的消息：
+
+```
+Assert.AreEqual failed. Expected:<5.4>. Actual:<5.5>. Average of 1-10 is not 5.5
+```
+
+创建一个名为 NorthwindData 的新类库项目。该项目将代表你用于管理 Northwind 数据库的代码子集。在本例中，它只访问 employees 表。删除添加到项目中的默认 Class1，并添加以下接口：
+
+```
+Public Interface INorthwindRepository
+    Function AllEmployees() As List(Of Employee)
+    Function GetEmployeeByID(ByVal id As Integer) As Employee
+    Function FindEmployeeByLastName(ByVal lastname As String) As Employee
+    Sub InsertEmployee(ByVal value As Employee)
+    Sub DeleteEmployee(ByVal id As Integer)
+End Interface
+```
+
+代码片段来自 NorthwindData
+
+该接口表示数据访问组件将能够执行的操作。虽然它不是一套完整的 CRUD（创建、检索、更新和删除）函数，但它应该足以提供给你进行测试。将其添加为接口，以便在下一节创建测试实现时更容易。添加一个新类 DbRepository，它实现上述接口：
+
+```
+Imports System.Collections.Generic
+
+Public Class DbRepository
+    Implements INorthwindRepository
+
+    Dim db As New NorthwindClassesDataContext
+
+    Public Function AllEmployees() As List(Of Employee) _
+        Implements INorthwindRepository.AllEmployees
+        Dim result As List(Of Employee)
+        result = (From e In db.Employees Select e).ToList
+        Return result
+    End Function
+
+    Public Sub DeleteEmployee(ByVal id As Integer) _
+        Implements INorthwindRepository.DeleteEmployee
+        Dim emp As Employee
+        emp = (From e In db.Employees
+            Where e.EmployeeID = id
+            Select e).FirstOrDefault
+        db.Employees.DeleteOnSubmit(emp)
+        db.SubmitChanges()
+    End Sub
+
+    Public Function FindEmployeeByLastName(ByVal lastname As String) As Employee _
+        Implements INorthwindRepository.FindEmployeeByLastName
+        Dim result As Employee
+        result = (From e In db.Employees
+            Where e.LastName.StartsWith(lastname)
+            Select e).FirstOrDefault
+        Return result
+    End Function
+
+    Public Function GetEmployeeByID(ByVal id As Integer) As Employee _
+        Implements INorthwindRepository.GetEmployeeByID
+        Dim result As Employee
+        result = (From e In db.Employees
+            Where e.EmployeeID = id
+            Select e).FirstOrDefault
+        Return result
+    End Function
+
+    Public Sub InsertEmployee(ByVal value As Employee) _
+        Implements INorthwindRepository.InsertEmployee
+        db.Employees.InsertOnSubmit(value)
+```
+
+```
+db.SubmitChanges()
+    End Sub
+End Class
+```
+
+代码片段来自 NorthwindData
+
+对于此实现，它实际上使用 LINQ to SQL 来查询数据库。有关 LINQ to SQL 的更多详细信息，请参阅第 10 章（如果你在跟着操作，可以等到读完第 10 章后再回来，或者直接从示例代码中复制 NorthwindClasses.dbml 和 app.config 文件）。
+
+现在该转向测试了（是的，我们应该先编写测试，但我们没有）。向解决方案中添加一个名为 NorthwindData.Tests 的新测试项目。将创建项目时生成的类重命名为 TestDbTests。由于你将使用 SQL Server 管理对象（SMO），请添加对 Microsoft.SqlServer.Smo.dll 和 Microsoft.SqlServer.ConnectionInfo.dll 的引用。你需要浏览并找到这两个 DLL；它们位于 c:\program files\microsoft sql server\100\sdk\assemblies。另外，在添加新引用时，从“.NET”选项卡上添加对 System.Configuration 命名空间的引用。将以下 Imports 语句添加到测试类中：
+
+```
+Imports System.Text
+Imports Microsoft.SqlServer.Management.Smo
+Imports Microsoft.SqlServer.Management.Common
+Imports System.Data.SqlClient
+Imports System.Configuration
+```
+
+```
+<TestClass()> Public Class TestDbTests
+```
+
+代码片段来自 NorthwindData
+
+向类中添加一个新方法，该方法将在测试类首次实例化时被调用。此方法应添加 ClassInitialize 特性：
+
+```
+<ClassInitialize()> Public Shared Sub Setup(ByVal testContext As TestContext)
+    'instantiate a new database
+    'using the saved scripts and the
+    'SQL Server Management Objects (SMO)
+    
+    'load create script
+    Dim script As String
+    Dim scriptPath As String =
+        My.Application.Info.DirectoryPath &
+        "\CreateTestDatabase.sql"
+    script = IO.File.ReadAllText(scriptPath)
+    
+    'execute it using SMO
+    ExecuteScript(script)
+End Sub
+```
+
+代码片段来自 NorthwindData
+
+示例项目包含 CreateTestDatabase.sql 脚本。如果你在跟着操作，请将此文件添加到项目中。此 SQL 脚本创建一个名为 Testwind 的新数据库，在该数据库中创建一个新的 Employees 表，并添加几条记录。设置该文件的属性，使 SQL 脚本被标记为“内容”，并将“复制到输出”属性设置为“如果较新则复制”。这可以确保脚本位于前面代码定义的正确位置。
+
+ExecuteScript 方法使用 SMO 来实际执行 SQL 脚本。将此方法添加到 TestDBTests 类中：
+
+```
+Private Shared Sub ExecuteScript(ByVal script As String)
+    Dim dsn As String
+    dsn = ConfigurationManager.ConnectionStrings("testdata").ConnectionString
+    
+    Using conn As New SqlConnection(dsn)
+```
+
+```
+Dim svr As New Server(New ServerConnection(conn))
+svr.ConnectionContext.ExecuteNonQuery(script)
+End Using
+End Sub
+```
+
+SMO 中的 Server 类与你访问 SQL Server 时可能用过的 SqlCommand 类类似（如果没有，你将在第 10 章用到）。它使你能够执行 SQL 脚本以创建数据库对象。与其他数据访问一样，它需要与数据库保持打开的连接：在本例中，testdata 连接字符串定义在 app.config 文件中，如下所示：
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <connectionStrings>
+        <!-- the connection string should be on one line -->
+        <add name="testdata"
+             connectionString="server=.\sqlexpress;
+                              database=master;
+                              integrated security=true;"/>
+    </connectionStrings>
+</configuration>
+```
+
+由于你在 Setup 方法中创建数据库，因此也应在测试完成时删除它：
+
+```vb
+<ClassCleanup()> Public Shared Sub Cleanup()
+    'drop the test database
+    'load drop script
+    Dim script As String
+    Dim scriptPath As String = _
+        My.Application.Info.DirectoryPath & _
+        "\DropTestDatabase.sql"
+    script = IO.File.ReadAllText(scriptPath)
+
+    'execute it using SMO
+    ExecuteScript(script)
+End Sub
+```
+
+ClassCleanup 特性定义一个在所有测试完成后被调用的方法。在本例中，它用于执行删除数据库的脚本。你可以在本节的示例代码中找到此脚本。
+
+现在数据库已存在，你可以为它创建测试了。为了本示例的目的，只需添加三个测试：
+
+```vb
+<TestMethod()> Public Sub AllEmployeesReturnsCount()
+    Dim employees As List(Of Employee)
+    employees = db.AllEmployees
+    Assert.AreEqual(employees.Count, 9)
+End Sub
+
+<TestMethod()> Public Sub FindEmployeeReturnsItem()
+    Dim emp As Employee = db.FindEmployeeByLastName("Dav")
+    Assert.IsNotNull(emp)
+    StringAssert.StartsWith(emp.LastName, "Dav")
+End Sub
+
+<TestMethod()> Public Sub InsertEmployeeIncreasesCount()
+    Dim emp As New Employee
+    With emp
+```

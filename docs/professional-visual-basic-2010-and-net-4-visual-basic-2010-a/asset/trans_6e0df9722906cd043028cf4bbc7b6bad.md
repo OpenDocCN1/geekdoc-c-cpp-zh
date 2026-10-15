@@ -1,0 +1,215 @@
+
+
+调用 ExecuteQuery 之后，遍历你刚刚检索到的列表并将列表名称写入控制台。应跳过隐藏的列表和文档库：
+
+```
+For Each list As List In lists
+    If Not list.Hidden AndAlso _
+        list.BaseType <> BaseType.DocumentLibrary Then
+
+        Console.WriteLine(list.Title)
+    End If
+Next
+```
+
+在将列表标题显示到控制台后，显示列表中每个项目的标题。这需要与上一个示例略有不同。与其让 List 类型具有 Items 属性，客户端对象模型鼓励你通过公开一个执行 CAML 查询的 GetItems 方法来限制跨网络传输的信息。你只需要每个项目的 Title 属性的值，因此你只会检索这些内容：
+
+```
+Dim xml = <View>
+    <ViewFields>
+        <FieldRef Name="Title"/>
+    </ViewFields>
+</View>
+
+Dim query As New CamlQuery()
+query.ViewXml = xml.ToString()
+Dim items = list.GetItems(query)
+context.Load(items)
+context.ExecuteQuery()
+
+For Each item In items
+    Console.WriteLine(vbTab + item("Title"))
+Next
+```
+
+完成的代码应如下所示：
+
+```
+Imports Microsoft.SharePoint.Client
+
+Module Module1
+    Sub Main()
+        Dim siteUrl = "http://localhost/sites/demo/"
+        Using context As New ClientContext(siteUrl)
+            Dim web = context.Web
+            Dim lists = web.Lists
+            context.Load(web)
+            context.Load(lists)
+            context.ExecuteQuery()
+
+            For Each list As List In lists
+                If Not list.Hidden AndAlso _
+                    list.BaseType <> BaseType.DocumentLibrary Then
+                    Console.WriteLine(list.Title)
+
+                    Dim xml = <View>
+                        <ViewFields>
+                            <FieldRef Name="Title"/>
+                        </ViewFields>
+                    </View>
+
+                    Dim query As New CamlQuery()
+                    query.ViewXml = xml.ToString()
+```
+
+```
+Dim items = list.GetItems(query)
+context.Load(items)
+context.ExecuteQuery()
+
+For Each item In items
+    Console.WriteLine(vbTab + item("Title"))
+Next
+End If
+Next
+End Using
+End Sub
+End Module
+```
+
+来自 Module1.vb 的代码片段
+
+按 Ctrl+F5 运行应用程序。除非你在运行上一个示例后添加、编辑或删除了项目，否则你应获得与图 24-24 相同的输出。
+
+## BUILDING WEB PARTS
+
+Web Parts 是用于在 SharePoint 中构建用户界面的核心元素之一。它们是一种特殊的服务器控件，支持可自定义的属性和个性化。
+
+从开发角度来看，有两种类型的 Web Parts：SharePoint 和 ASP.NET。也就是说，你可以使用 SharePoint 服务器对象模型中的类型专门为 SharePoint 构建 Web Parts，或者你可以使用 ASP.NET 3.5 中的类型构建可在 ASP.NET 和 SharePoint 中工作的 Web Parts。SharePoint 专用的 Web Part 框架实际上是为了向后兼容而存在的；任何新工作都应使用 ASP.NET Web Part 框架完成。
+
+像 ASP.NET 中的任何服务器控件一样，Web Parts 仅用代码构建。也就是说，在开发期间没有设计时体验。用户界面以 Visual Basic 代码表达，只有在托管控件的页面执行时你才能看到结果。
+
+为了解决这个问题，Web Part 开发人员开始使用用户控件为 Web Parts 构建用户界面（用户控件具有设计时体验），然后 Web Part 托管用户控件。这种类型的 Web Part 通常称为 Visual Web Part。
+
+要了解如何使用 Visual Studio 2010 构建 Visual Web Part，请打开 Visual Studio 2010，选择 File ⇨ New Project，选择 Visual Web Part 项目模板，将 Name 设置为 ContactsEditorWebPart，然后单击 Add 按钮。
+
+项目中将添加一个名为 VisualWebPart1 的文件夹。该文件夹将包含四个文件（见图 24-25）：
+
+- ► Elements.xml — 将 Web Part 定义部署到目标站点集的 Web Part 库的元素清单
+- ► VisualWebPart.vb — Web Part 的代码文件
+- ► VisualWebPart1.webpart — Web Part 定义文件
+- ► VisualWebPart1UserControl.ascx — 代表 Web Part 用户界面的用户控件
+
+![](img/d99870e80390742f93963da7be0b2e61_838_0.png)
+
+图 24-25
+
+将以下标记添加到 VisualWebPart1UserControl.ascx 以实现允许用户选择和编辑现有联系人的表单的用户界面。完成的表单的 Design 视图应类似于图 24-26 所示。
+
+```
+<asp:DropDownList ID="ContactsDropDownList" runat="server" AutoPostBack="True">
+</asp:DropDownList>
+<br /><br />
+
+<asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label>
+&nbsp;&nbsp;
+<asp:TextBox ID="FirstNameTextBox" runat="server"></asp:TextBox>
+<br />
+<asp:Label ID="Label2" runat="server" Text="Last Name"></asp:Label>
+&nbsp;&nbsp;
+<asp:TextBox ID="LastNameTextBox" runat="server"></asp:TextBox>
+<br />
+<asp:Label ID="Label3" runat="server" Text="Company"></asp:Label>
+&nbsp;&nbsp;
+<asp:TextBox ID="CompanyTextBox" runat="server"></asp:TextBox>
+<br />
+<asp:Label ID="Label4" runat="server" Text="Business Phone"></asp:Label>
+&nbsp;&nbsp;
+<asp:TextBox ID="BusinessPhoneTextBox" runat="server"></asp:TextBox>
+<br /><br />
+
+<asp:Button ID="SaveButton" runat="server" Text="Save" />
+```
+
+来自 VisualWebPart1UserControl.ascx 的代码片段
+
+![](img/d99870e80390742f93963da7be0b2e61_839_0.png)
+
+# 图 24-26
+
+在代码编辑器中右键单击（远离任何文本）并选择 View Code。添加以下代码以填充显示 Contacts 列表中现有项目的下拉列表：
+
+```
+Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
+    Handles Me.Load
+    If Not IsPostBack Then
+        LoadContactsDropDown()
+    End If
+End Sub
+
+Private Sub LoadContactsDropDown()
+    Dim web = SPContext.Current.Web
+    Dim list = web.Lists.TryGetList("Contacts")
+    If list IsNot Nothing Then
+        Dim data = list.Items.GetDataTable()
+        ContactsDropDownList.DataSource = data
+        ContactsDropDownList.DataTextField = "Title"
+```
+
+```
+```vb
+ContactsDropDownList.DataValueField = "ID"
+ContactsDropDownList.DataBind()
+End If
+End Sub
+```
+```
+
+要获取项目，你必须首先使用 SPContext 对象获取对当前站点的访问。然后你尝试获取对 Contacts 列表的引用。如果列表存在，则可以使用非常方便的辅助方法将列表的项目数据作为 DataTable 获取。一旦拥有 DataTable，你就可以使用标准的 ASP.NET 数据绑定技术来填充下拉列表。
+
+> > 尽管我们希望在下拉列表中显示联系人的姓氏，但我们绑定到 Title 列。在 SharePoint 中，任何列表中的第一列在内部都命名为 Title。关于为何如此的完整解释超出了本章的范围。
+
+现在你需要一些代码来填充表单中的文本框。这需要在页面首次加载时以及下拉列表中选定项目更改时完成。添加一个方法，从 Contacts 列表中获取适当的项目并用其属性的值填充文本框。更新页面的 Load 事件处理程序以调用此方法。另请为下拉列表的 SelectedIndexChanged 事件添加事件处理程序并在其中调用该方法：
+
+```
+```vb
+Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
+    Handles Me.Load
+    If Not IsPostBack Then
+        LoadContactsDropDown()
+        LoadTextBoxes()
+    End If
+End Sub
+
+Protected Sub ContactsDropDownList_SelectedIndexChanged(...)
+    Handles ContactsDropDownList.SelectedIndexChanged
+    LoadTextBoxes()
+End Sub
+
+Private Sub LoadTextBoxes()
+    Dim web = SPContext.Current.Web
+    Dim list = web.Lists.TryGetList("Contacts")
+    If list IsNot Nothing Then
+        Dim id = CInt(ContactsDropDownList.SelectedValue)
+        Dim item = list.Items.GetById(id)
+
+        LastNameTextBox.Text = item("Title").ToString()
+        FirstNameTextBox.Text = item("First Name").ToString()
+        CompanyTextBox.Text = item("Company").ToString()
+        BusinessPhoneTextBox.Text = item("Business Phone").ToString()
+    End If
+End Sub
+```
+```
+
+再次，你将转到 SPContext 以获取当前站点，然后尝试获取 Contacts 列表。你从下拉列表中获取所选项目的 ID，然后从列表中获取该项目。一旦拥有该项目，你就用项目的属性填充表单中的文本框。最后，你需要能够在单击 Save 按钮时保存属性的新值：
+
+```
+```vb
+Protected Sub SaveButton_Click() Handles SaveButton.Click
+    Dim web = SPContext.Current.Web
+    Dim list = web.Lists.TryGetList("Contacts")
+    If list IsNot Nothing Then
+        Dim id = CInt(ContactsDropDownList.SelectedValue)
+```
+

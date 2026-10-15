@@ -1,0 +1,3 @@
+# SUMMARY
+
+This chapter only scratches the surface of ASP.NET MVC, but it covered enough of the fundamentals to enable you to start building applications using the framework. Hopefully, this chapter also gives you enough of a sense of what ASP.NET MVC is about to know whether it is something that suits your style. For more on ASP.NET MVC, be sure to check out *Professional ASP.NET MVC 2* (Galloway et al., Wiley, 2010).

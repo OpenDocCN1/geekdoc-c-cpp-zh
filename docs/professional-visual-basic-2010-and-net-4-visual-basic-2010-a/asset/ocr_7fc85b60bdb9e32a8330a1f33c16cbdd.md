@@ -1,0 +1,5 @@
+In addition, you will bind the View’s data context to an instance of the ViewModel. This basically becomes the code-behind for your view except that it is loosely tied to the view so you can reuse it for multiple views. This also gives you great flexibility for testing and much more.
+
+# SUMMARY
+
+In this chapter you saw how to interact with various types of Web services, and used that knowledge to build a basic MVVM application. This will give you a foundation for building stronger Silverlight line-of-business applications. The lessons you have learned throughout this chapter, Chapter 18, and Chapter 19 should enable you to build very powerful Silverlight applications with rich interfaces. There are also many new technologies coming with Silverlight 4 that will continue to make it easier to build applications, and using less code.

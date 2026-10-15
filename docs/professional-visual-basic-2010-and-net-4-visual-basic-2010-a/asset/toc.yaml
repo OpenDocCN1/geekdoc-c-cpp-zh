@@ -1,0 +1,3158 @@
+- - '##'
+  - 小结 785
+- - '###'
+  - 第23章：ASP.NET MVC 787
+- - '####'
+  - Office业务应用程序架构 846
+- - '####'
+  - 同时使用VBA和VSTO 847
+- - '####'
+  - 创建Office加载项（Excel） 864
+- - '####'
+  - Outlook窗体区域 871
+- - '####'
+  - 小结 880
+- - '###'
+  - 第26章：Windows Workflow Foundation 881
+- - '####'
+  - 应用程序中的工作流 881
+- - '##'
+  - 'VISUAL STUDIO 2010: EXPRESS THROUGH ULTIMATE'
+- - '###'
+  - 表1-1：Visual Studio 版本
+- - '###'
+  - Visual Basic 关键字和语法
+- - '####'
+  - 表1-2：Visual Basic 中常用的关键字
+- - '###'
+  - 表 1-2（续）
+- - '###'
+  - 控制台应用程序
+- - '###'
+  - 从项目模板创建项目
+- - '###'
+  - 图 1-2
+- - '##'
+  - 图 1-3
+- - '###'
+  - 解决方案资源管理器
+- - '###'
+  - 项目属性
+- - '###'
+  - Compiler Settings
+- - '###'
+  - 调试属性
+- - '###'
+  - 引用
+- - '###'
+  - FIGURE 1-10
+- - '###'
+  - Resources
+- - '###'
+  - Settings
+- - '###'
+  - Other Project Property Tabs
+- - '####'
+  - Signing
+- - '####'
+  - My Extensions
+- - '####'
+  - Security
+- - '####'
+  - Publish
+- - '####'
+  - Code Analysis
+- - '###'
+  - PROJECT PROVB_VS2010
+- - '###'
+  - FIGURE 1-15
+- - '###'
+  - Form Properties Set in Code
+- - '###'
+  - 'TABLE 1-5: Properties Set by InitializeComponent'
+- - '###'
+  - Code Regions
+- - '###'
+  - Tear-Away Tabs
+- - '###'
+  - Running ProVB_VS2010
+- - '###'
+  - 自定义文本编辑器
+- - '###'
+  - IntelliSense、代码扩展和代码片段
+- - '####'
+  - IntelliSense
+- - '####'
+  - 代码扩展
+- - '###'
+  - FIGURE 1-19
+- - '###'
+  - Code Snippets
+- - '###'
+  - FIGURE 1-20
+- - '###'
+  - FIGURE 1-21
+- - '###'
+  - FIGURE 1-22
+- - '###'
+  - Additional Components for Visual Studio
+- - '###'
+  - 增强示例应用程序
+- - '###'
+  - 自定义代码
+- - '###'
+  - 添加 XML 注释
+- - '###'
+  - 自定义事件处理程序
+- - '###'
+  - 生成应用程序
+- - '###'
+  - 在调试器中运行应用程序
+- - '####'
+  - FIGURE 1-27
+- - '####'
+  - FIGURE 1-28
+- - '####'
+  - FIGURE 1-29
+- - '####'
+  - FIGURE 1-30
+- - '####'
+  - FIGURE 1-31
+- - '####'
+  - FIGURE 1-32
+- - '###'
+  - 其他与调试相关的窗口
+- - '###'
+  - 输出
+- - '###'
+  - 调用堆栈
+- - '###'
+  - 局部变量
+- - '###'
+  - 监视窗口
+- - '###'
+  - 即时窗口
+- - '###'
+  - 自动变量
+- - '###'
+  - 重用你的第一个 Windows 窗体
+- - '###'
+  - Visual Studio 2010 的有用功能
+- - '###'
+  - 生成配置
+- - '###'
+  - 任务列表
+- - '###'
+  - 命令窗口
+- - '###'
+  - 服务器资源管理器
+- - '###'
+  - 在 Visual Studio 2010 中录制和使用宏
+- - '###'
+  - 类图
+- - '###'
+  - Application Lifecycle Management
+- - '###'
+  - Team Foundation Server（TFS）
+- - '###'
+  - Code Analysis
+- - '####'
+  - 性能工具
+- - '####'
+  - 摘要
+- - '###'
+  - 2 对象和 Visual Basic
+- - '####'
+  - 本章你将学习的内容
+- - '####'
+  - 对象的组成
+- - '#####'
+  - 接口
+- - '####'
+  - 实现或行为
+- - '####'
+  - 字段或实例变量
+- - '####'
+  - System.Object
+- - '####'
+  - 使用 Visual Basic 类型
+- - '####'
+  - 值类型和引用类型
+- - '####'
+  - 原始类型
+- - '#####'
+  - 'TABLE 2-1: Primitive Types in .NET'
+- - '#####'
+  - 'COMMANDS: CONDITIONAL'
+- - '####'
+  - If Then
+- - '####'
+  - Comparison Operators
+- - '####'
+  - Select Case
+- - '####'
+  - VALUE TYPES (STRUCTURES)
+- - '#####'
+  - Boolean
+- - '#####'
+  - Integer Types
+- - '#####'
+  - Short
+- - '####'
+  - Integer
+- - '####'
+  - Long
+- - '####'
+  - 无符号类型
+- - '####'
+  - 小数类型
+- - '#####'
+  - Single
+- - '#####'
+  - Double
+- - '#####'
+  - Decimal
+- - '####'
+  - Char和Byte
+- - '####'
+  - DateTime
+- - '####'
+  - 引用类型（类）
+- - '####'
+  - Object类
+- - '####'
+  - String类
+- - '#####'
+  - String()
+- - '#####'
+  - 表2-4：String类上可用的方法
+- - '##'
+  - 表 2-4（续）
+- - '###'
+  - SubString 方法
+- - '###'
+  - 图 2-8
+- - '###'
+  - PadLeft 和 PadRight 方法
+- - '###'
+  - String.Split 方法
+- - '###'
+  - String 类是不可变的
+- - '###'
+  - 字符串常量
+- - '###'
+  - XML 字面量
+- - '###'
+  - DBNull 类和 IsDBNull 函数
+- - '###'
+  - 参数传递
+- - '###'
+  - ParamArray
+- - '###'
+  - VARIABLE SCOPE
+- - '###'
+  - WORKING WITH OBJECTS
+- - '####'
+  - Objects Declaration and Instantiation
+- - '####'
+  - Object References
+- - '###'
+  - Dereferencing Objects
+- - '###'
+  - Early Binding versus Late Binding
+- - '###'
+  - Implementing Late Binding
+- - '###'
+  - DATA TYPE CONVERSIONS
+- - '###'
+  - Performing Explicit Conversions
+- - '###'
+  - 表 2-5：Visual Basic 传统的专用转换方法
+- - '###'
+  - Parse 和 TryParse
+- - '###'
+  - 使用 CType 函数
+- - '###'
+  - 使用 DirectCast
+- - '##'
+  - 使用 TryCast
+- - '###'
+  - 创建类
+- - '####'
+  - 基本类
+- - '####'
+  - Class 关键字
+- - '###'
+  - 图 2-13
+- - '###'
+  - 图 2-14
+- - '###'
+  - 字段
+- - '###'
+  - 方法
+- - '####'
+  - 返回值的方法
+- - '####'
+  - 指示方法作用域
+- - '###'
+  - 方法参数
+- - '###'
+  - 属性
+- - '###'
+  - 参数化属性
+- - '###'
+  - 只读属性
+- - '###'
+  - 仅写属性
+- - '###'
+  - 默认属性
+- - '###'
+  - 事件
+- - '####'
+  - 处理事件
+- - '####'
+  - 处理多个事件
+- - '###'
+  - WithEvents 关键字
+- - '###'
+  - 引发事件
+- - '###'
+  - 声明和引发自定义事件
+- - '###'
+  - 使用 WithEvents 接收事件
+- - '###'
+  - 使用 AddHandler 接收事件
+- - '###'
+  - 构造函数方法
+- - '###'
+  - 参数化构造函数
+- - '###'
+  - 终止和清理
+- - '###'
+  - 方法重载
+- - '###'
+  - 方法签名
+- - '###'
+  - 结合重载与可选参数
+- - '###'
+  - 重载构造函数方法
+- - '###'
+  - 重载构造函数
+- - '###'
+  - Shared Methods, Variables, and Events
+- - '####'
+  - Shared Variables
+- - '####'
+  - Shared Methods
+- - '####'
+  - Shared Properties
+- - '###'
+  - 共享事件
+- - '###'
+  - 共享构造函数
+- - '###'
+  - 运算符重载
+- - '####'
+  - 定义 AndAlso 和 OrElse
+- - '###'
+  - 委托
+- - '###'
+  - 声明一个委托
+- - '###'
+  - 使用委托数据类型
+- - '###'
+  - 实现一个委托方法
+- - '###'
+  - 类与组件
+- - '###'
+  - Lambda 表达式
+- - '###'
+  - 本章小结
+- - '###'
+  - 3 自定义对象
+- - '####'
+  - 本章你将学习的内容
+- - '###'
+  - INHERITANCE
+- - '####'
+  - Implementing Inheritance
+- - '####'
+  - Creating a Base Class
+- - '###'
+  - 创建子类
+- - '###'
+  - Inherits 关键字
+- - '###'
+  - 方法重载
+- - '###'
+  - Overriding Methods
+- - '###'
+  - The Overridable Keyword
+- - '###'
+  - The Overrides Keyword
+- - '###'
+  - The MyBase Keyword
+- - '###'
+  - Virtual Methods
+- - '###'
+  - Overriding Overloaded Methods
+- - '###'
+  - Shadowing
+- - '###'
+  - Overriding Nonvirtual Methods
+- - '###'
+  - 隐藏任意元素
+- - '###'
+  - 继承的层次
+- - '###'
+  - 多重继承
+- - '###'
+  - 多级继承
+- - '###'
+  - 图 3-9
+- - '###'
+  - 与基类、你的类以及你的对象交互
+- - '###'
+  - Me 关键字
+- - '###'
+  - MyClass 关键字
+- - '###'
+  - 构造函数
+- - '####'
+  - 简单构造函数
+- - '###'
+  - 深入探讨构造函数
+- - '###'
+  - 带参数的构造函数
+- - '###'
+  - 构造函数、重载与变量初始化
+- - '###'
+  - 更多带参数的构造函数
+- - '###'
+  - Protected 作用域
+- - '###'
+  - Protected 变量
+- - '###'
+  - 事件与继承
+- - '####'
+  - 继承事件
+- - '###'
+  - 从子类引发事件
+- - '###'
+  - 共享方法
+- - '###'
+  - 重载共享方法
+- - '###'
+  - 隐藏共享方法
+- - '###'
+  - Shared Events
+- - '###'
+  - 创建抽象基类
+- - '###'
+  - MustInherit 关键字
+- - '###'
+  - MustOverride 关键字
+- - '###'
+  - Public MustInherit Class Person
+- - '###'
+  - 抽象基类
+- - '###'
+  - 使用原生接口
+- - '###'
+  - 次要接口
+- - '###'
+  - 定义接口
+- - '###'
+  - 使用接口
+- - '###'
+  - 实现接口
+- - '###'
+  - 重用通用实现
+- - '###'
+  - 组合接口和继承
+- - '###'
+  - 抽象
+- - '###'
+  - 图 3-12
+- - '###'
+  - 图 3-13
+- - '####'
+  - 来自 Form1 的代码片段
+- - '###'
+  - 图 3-14
+- - '###'
+  - 封装
+- - '###'
+  - 多态
+- - '####'
+  - 方法签名
+- - '####'
+  - 实现多态
+- - '###'
+  - Polymorphism through Late Binding
+- - '###'
+  - Polymorphism with Multiple Interfaces
+- - '###'
+  - Polymorphism through Reflection
+- - '###'
+  - 通过反射和多个接口实现多态
+- - '###'
+  - 通过继承实现多态
+- - '###'
+  - 多态性总结
+- - '###'
+  - 继承
+- - '####'
+  - 何时使用继承
+- - '####'
+  - 应用程序与框架继承
+- - '###'
+  - 继承与多接口
+- - '###'
+  - 应用继承与多接口
+- - '####'
+  - 创建 Contact 基础类
+- - '####'
+  - 派生 Contact
+- - '####'
+  - 实现 IPrintableObject
+- - '###'
+  - 要深入到什么程度？
+- - '###'
+  - 脆弱基类问题
+- - '####'
+  - 接口更改
+- - '####'
+  - 实现更改
+- - '###'
+  - SUMMARY
+- - '###'
+  - The Common Language Runtime
+- - '####'
+  - ELEMENTS OF A .NET APPLICATION
+- - '####'
+  - Modules
+- - '###'
+  - 程序集
+- - '###'
+  - 类型
+- - '###'
+  - 版本控制和部署
+- - '####'
+  - 更好的版本控制支持
+- - '###'
+  - Major.Minor.Build.Revision
+- - '###'
+  - Better Deployment
+- - '###'
+  - CROSS-LANGUAGE INTEGRATION
+- - '####'
+  - The Common Type System
+- - '####'
+  - 'TABLE 4-1: Common Type Methods'
+- - '####'
+  - Metadata
+- - '###'
+  - 对元数据的更好支持
+- - '###'
+  - 属性
+- - '##'
+  - FIGURE 4-1
+- - '##'
+  - FIGURE 4-2
+- - '###'
+  - 反射 API
+- - '###'
+  - IL 反汇编器
+- - '###'
+  - 内存管理
+- - '###'
+  - 传统垃圾回收
+- - '###'
+  - 循环引用
+- - '###'
+  - CLR 的垃圾回收器
+- - '###'
+  - The Finalize Method
+- - '###'
+  - IDisposable 接口
+- - '###'
+  - 使用 IDisposable
+- - '###'
+  - 更快的对象内存分配
+- - '###'
+  - FIGURE 4-4
+- - '###'
+  - Garbage Collector Optimizations
+- - '###'
+  - FIGURE 4-5
+- - '###'
+  - FIGURE 4-6
+- - '###'
+  - Namespaces and References
+- - '###'
+  - 常用命名空间
+- - '##'
+  - 图 4-12
+- - '###'
+  - 导入和别名命名空间
+- - '####'
+  - 导入命名空间
+- - '###'
+  - 别名命名空间
+- - '###'
+  - 在 ASP.NET 中引用命名空间
+- - '###'
+  - 创建您自己的命名空间
+- - '####'
+  - FIGURE 4-13
+- - '###'
+  - THE MY KEYWORD
+- - '###'
+  - My.Application
+- - '##'
+  - TABLE 4.2 (continued)
+- - '##'
+  - FIGURE 4-15
+- - '##'
+  - FIGURE 4-16
+- - '##'
+  - FIGURE 4-17
+- - '##'
+  - FIGURE 4-18
+- - '###'
+  - My.Forms Namespace
+- - '###'
+  - My.Resources
+- - '###'
+  - My.User
+- - '###'
+  - My.WebServices
+- - '###'
+  - EXTENDING THE MY NAMESPACE
+- - '##'
+  - FIGURE 4-19
+- - '##'
+  - FIGURE 4-20
+- - '###'
+  - SUMMARY
+- - '###'
+  - '5'
+- - '###'
+  - Declarative Programming
+- - '###'
+  - WHAT YOU WILL LEARN IN THIS CHAPTER
+- - '###'
+  - DECLARATIVE PROGRAMMING AND VISUAL BASIC
+- - '###'
+  - 使用 XAML 创建窗口
+- - '####'
+  - FIGURE 5-1
+- - '####'
+  - FIGURE 5-2
+- - '###'
+  - XAML 语法
+- - '###'
+  - XAML 语言基础
+- - '####'
+  - Attributes
+- - '####'
+  - Markup Extensions
+- - '###'
+  - 'TABLE 5-2: XAML 标记扩展'
+- - '###'
+  - XAML 指令
+- - '###'
+  - 'TABLE 5-3: XAML 指令'
+- - '###'
+  - 使用 XAML 声明工作流
+- - '####'
+  - FIGURE 5-3
+- - '####'
+  - FIGURE 5-4
+- - '###'
+  - SUMMARY
+- - '###'
+  - 异常处理和调试
+- - '####'
+  - 本章内容
+- - '####'
+  - VISUAL STUDIO 2010 TEAM SYSTEM 中的新功能：历史调试
+- - '####'
+  - 与 VB6 的兼容性说明
+- - '####'
+  - .NET 中的异常
+- - '#####'
+  - 异常的重要属性和方法
+- - '####'
+  - 表 6-2：有用的 Exception 类方法
+- - '####'
+  - 表 6-3：派生自 Exception 类的类示例
+- - '####'
+  - 结构化异常处理关键字
+- - '###'
+  - The Try, Catch, and Finally Keywords
+- - '###'
+  - The Throw Keyword
+- - '###'
+  - Throwing a New Exception
+- - '###'
+  - The Exit Try Statement
+- - '###'
+  - Nested Try Structures
+- - '###'
+  - Using Exception Properties
+- - '####'
+  - The Message Property
+- - '####'
+  - The InnerException and TargetSite Properties
+- - '###'
+  - Source and StackTrace
+- - '###'
+  - GetBaseException
+- - '###'
+  - HelpLink
+- - '###'
+  - INTEROPERABILITY WITH VB6-STYLE ERROR HANDLING
+- - '###'
+  - ERROR LOGGING
+- - '####'
+  - The Event Log
+- - '###'
+  - 表6-4：相关的EventLog事件
+- - '###'
+  - 表6-5：相关的EventLog方法
+- - '###'
+  - 表6-6：相关的EventLog属性
+- - '###'
+  - 写入跟踪文件
+- - '###'
+  - 表6-8：常见的Debug对象方法
+- - '###'
+  - 总结
+- - '###'
+  - 7 测试驱动开发
+- - '####'
+  - 本章学习内容
+- - '####'
+  - 何时以及如何测试
+- - '####'
+  - 使用断言
+- - '###'
+  - 表 7-3：Common CollectionAssert 类方法
+- - '###'
+  - VISUAL STUDIO 中的 TDD 工具
+- - '###'
+  - 单元测试演练
+- - '####'
+  - 创建测试
+- - '####'
+  - 运行测试
+- - '###'
+  - 图 7-7
+- - '###'
+  - 图 7-8
+- - '###'
+  - 测试实现
+- - '###'
+  - 使用“从用法生成”功能
+- - '###'
+  - 其他 Visual Studio 版本
+- - '###'
+  - 表 7-5（续）
+- - '###'
+  - 第三方测试框架
+- - '###'
+  - 本章小结
+- - '###'
+  - 第二部分：业务对象与数据访问
+- - '###'
+  - 数组、集合和泛型
+- - '####'
+  - 本章学习内容
+- - '####'
+  - 数组
+- - '###'
+  - 多维数组
+- - '###'
+  - UBound 函数
+- - '###'
+  - ReDim 语句
+- - '###'
+  - Preserve 关键字
+- - '###'
+  - 集合
+- - '###'
+  - 表 8-1：集合类
+- - '###'
+  - 迭代语句
+- - '###'
+  - For Each 和 For Next
+- - '###'
+  - While、Do While 和 Do Until
+- - '###'
+  - 泛型
+- - '####'
+  - 使用泛型
+- - '####'
+  - 可空类型
+- - '####'
+  - 泛型类型
+- - '###'
+  - 基本用法
+- - '###'
+  - 继承
+- - '###'
+  - 泛型方法
+- - '###'
+  - 创建泛型
+- - '###'
+  - 泛型类型
+- - '####'
+  - 类
+- - '###'
+  - Other Generic Class Features
+- - '###'
+  - Classes and Inheritance
+- - '###'
+  - Structures
+- - '###'
+  - Interfaces
+- - '###'
+  - Generic Methods
+- - '###'
+  - 约束
+- - '###'
+  - 类型约束
+- - '###'
+  - 类和结构约束
+- - '###'
+  - New 约束
+- - '###'
+  - 多重约束
+- - '###'
+  - 泛型与后期绑定
+- - '###'
+  - 协变和逆变
+- - '###'
+  - SUMMARY
+- - '###'
+  - AN INTRODUCTION TO XML
+- - '###'
+  - XML SERIALIZATION
+- - '###'
+  - 源代码风格特性
+- - '###'
+  - SYSTEM.XML DOCUMENT SUPPORT
+- - '###'
+  - XML STREAM-STYLE PARSERS
+- - '###'
+  - Writing an XML Stream
+- - '###'
+  - 读取 XML 流
+- - '###'
+  - XmlReaderSettings 类
+- - '###'
+  - 使用 XmlReader 遍历 XML
+- - '###'
+  - Handling Exceptions
+- - '###'
+  - Document Object Model (DOM)
+- - '###'
+  - DOM 遍历 XML
+- - '###'
+  - DOM Traversing XML
+- - '###'
+  - Writing XML with the DOM
+- - '###'
+  - XSL TRANSFORMATIONS
+- - '###'
+  - XSLT 在不同 XML 标准之间转换
+- - '###'
+  - System.Xml.Xsl 中的其他类和接口
+- - '###'
+  - ASP.NET 中的 XML
+- - '###'
+  - XmlDataSource 服务器控件
+- - '###'
+  - XmlDataSource 控件的命名空间问题
+- - '###'
+  - Xml 服务器控件
+- - '###'
+  - LINQ TO XML
+- - '###'
+  - LINQ 辅助 XML 对象
+- - '###'
+  - XDocument
+- - '###'
+  - XElement
+- - '###'
+  - 图 9-8
+- - '###'
+  - VISUAL BASIC AND XML LITERALS
+- - '###'
+  - 图 9-11
+- - '###'
+  - USING LINQ TO QUERY XML DOCUMENTS
+- - '####'
+  - Querying Static XML Documents
+- - '####'
+  - Querying Dynamic XML Documents
+- - '###'
+  - 图 9-12
+- - '###'
+  - WORKING WITH THE XML DOCUMENT
+- - '####'
+  - Reading from an XML Document
+- - '###'
+  - 写入 XML 文档
+- - '###'
+  - Visual Basic 中的 Lambda 表达式
+- - '###'
+  - FIGURE 9-13
+- - '###'
+  - SUMMARY
+- - '###'
+  - '10'
+- - '###'
+  - ADO.NET and LINQ
+- - '####'
+  - WHAT YOU WILL LEARN IN THIS CHAPTER
+- - '###'
+  - ADO.NET ARCHITECTURE
+- - '###'
+  - BASIC ADO.NET FEATURES
+- - '####'
+  - Common ADO.NET Tasks
+- - '####'
+  - Selecting Data
+- - '####'
+  - Inserting Data
+- - '####'
+  - Updating Data
+- - '###'
+  - 删除数据
+- - '###'
+  - 基本 ADO.NET 命名空间和类
+- - '####'
+  - 'TABLE 10-1: Core ADO.NET Namespaces'
+- - '####'
+  - TABLE 10-1 (continued)
+- - '###'
+  - ADO.NET 组件
+- - '###'
+  - .NET DATA PROVIDERS
+- - '###'
+  - Connection Object
+- - '####'
+  - Connection String Format — OleDbConnection
+- - '####'
+  - Connection-String Format — SqlConnection
+- - '###'
+  - Command Object
+- - '###'
+  - Using Stored Procedures with Command Objects
+- - '###'
+  - 创建存储过程
+- - '###'
+  - 异步执行命令
+- - '###'
+  - DataAdapter Objects
+- - '###'
+  - SQL Server .NET 数据提供程序
+- - '###'
+  - OLE DB .NET 数据提供程序
+- - '###'
+  - DATASET 组件
+- - '####'
+  - DataTableCollection
+- - '####'
+  - DataRelationCollection
+- - '###'
+  - ExtendedProperties
+- - '###'
+  - Creating and Using DataSet Objects
+- - '###'
+  - Programmatically Creating DataSet Objects
+- - '###'
+  - Advanced ADO.NET Features of the DataSet and DataTable Objects
+- - '####'
+  - Indexing
+- - '####'
+  - Serialization
+- - '###'
+  - DataReader Integration
+- - '###'
+  - DataTable Independence
+- - '###'
+  - WORKING WITH THE COMMON PROVIDER MODEL
+- - '###'
+  - ADO.NET 中的连接池
+- - '###'
+  - 事务和 SYSTEM.TRANSACTIONS
+- - '####'
+  - 创建事务
+- - '###'
+  - 创建资源管理器
+- - '###'
+  - LINQ TO SQL
+- - '###'
+  - LINQ TO SQL AND VISUAL BASIC
+- - '###'
+  - 使用 LINQ to SQL 检索数据：创建控制台应用程序
+- - '###'
+  - 介绍 O/R Designer
+- - '###'
+  - 创建 Product 对象
+- - '###'
+  - 对象如何映射到 LINQ 对象
+- - '###'
+  - DataContext 对象
+- - '####'
+  - 使用 Connection 属性
+- - '####'
+  - 使用 Transaction 属性
+- - '###'
+  - 表 10-5 *(续)*
+- - '###'
+  - Table(TEntity) 对象
+- - '###'
+  - 表 10-6：Table(TEntity) 对象方法的部分列表
+- - '###'
+  - 查询数据库
+- - '###'
+  - 使用查询表达式
+- - '###'
+  - 查询表达式详解
+- - '###'
+  - 使用表达式进行筛选
+- - '###'
+  - 执行连接
+- - '###'
+  - 分组项目
+- - '###'
+  - STORED PROCEDURES
+- - '###'
+  - FIGURE 10-10
+- - '###'
+  - UPDATING THE DATABASE
+- - '###'
+  - '11'
+- - '###'
+  - Data Access with the Entity Framework
+- - '###'
+  - 对象关系映射
+- - '###'
+  - 实体框架架构
+- - '###'
+  - 概念模型
+- - '###'
+  - Storage Model
+- - '###'
+  - Mapping Model
+- - '###'
+  - LINQ to Entities
+- - '###'
+  - The ObjectContext
+- - '###'
+  - MAPPING OBJECTS TO ENTITIES
+- - '####'
+  - Simple Mapping
+- - '##'
+  - FIGURE 11-10
+- - '##'
+  - FIGURE 11-11
+- - '##'
+  - FIGURE 11-12
+- - '###'
+  - Using a Single Table for Multiple Objects
+- - '##'
+  - FIGURE 11-13
+- - '###'
+  - 使用多个表表示一个对象
+- - '###'
+  - 从模型生成数据库
+- - '###'
+  - 更新模型
+- - '###'
+  - 小结
+- - '###'
+  - '12'
+- - '###'
+  - 使用 SQL Server
+- - '###'
+  - 本章学习内容
+- - '###'
+  - SQL SERVER COMPACT
+- - '###'
+  - 连接到 SQL Server Compact 数据库
+- - '####'
+  - 表 12-1：SQL Server Compact 连接选项
+- - '####'
+  - 图 12-1
+- - '####'
+  - 图 12-2
+- - '####'
+  - 图 12-3
+- - '###'
+  - 同步数据
+- - '##'
+  - FIGURE 12-10
+- - '##'
+  - FIGURE 12-11
+- - '##'
+  - FIGURE 12-12
+- - '##'
+  - SQL SERVER 的内置 XML 功能
+- - '###'
+  - SQL SERVER 中的 CLR 集成
+- - '###'
+  - 在 T-SQL 和 Visual Basic 之间做出选择
+- - '###'
+  - 表 12-2：使用 T-SQL 与 Visual Basic
+- - '###'
+  - 创建用户定义类型
+- - '####'
+  - 表 12-3：SqlUserDefinedType 特性参数
+- - '####'
+  - 图 12-19
+- - '###'
+  - 创建函数
+- - '####'
+  - 'TABLE 12-6: Parameters for Accessing the Geocode Service'
+- - '###'
+  - 使用用户定义函数
+- - '###'
+  - 创建存储过程
+- - '###'
+  - 从存储过程返回数据
+- - '####'
+  - 返回单个值
+- - '####'
+  - 返回多个值
+- - '###'
+  - 从 SQL Server 暴露 Web 服务
+- - '###'
+  - 访问 Web 服务
+- - '###'
+  - SQL Server 2008 功能
+- - '###'
+  - WCF 数据服务
+- - '####'
+  - REST
+- - '####'
+  - Atom 和 JSON
+- - '###'
+  - 使用 WCF Data Services 公开数据
+- - '####'
+  - 图 12-39
+- - '####'
+  - 表 12-9：查询示例与结果
+- - '###'
+  - WCF Data Services Client Library
+- - '##'
+  - FIGURE 12-41
+- - '##'
+  - FIGURE 12-42
+- - '###'
+  - SUMMARY
+- - '##'
+  - '13'
+- - '##'
+  - 服务（XML/WCF）
+- - '###'
+  - 本章你将学到什么
+- - '###'
+  - 服务简介
+- - '####'
+  - 网络视角
+- - '####'
+  - 应用程序开发
+- - '####'
+  - 网络与应用程序开发的融合
+- - '###'
+  - Web 服务的基础
+- - '####'
+  - DCOM
+- - '###'
+  - Remote Method Invocation in Java
+- - '###'
+  - CORBA
+- - '###'
+  - The Problems
+- - '###'
+  - Some Other Players
+- - '###'
+  - Web Services
+- - '###'
+  - How This All Fits Together
+- - '###'
+  - What Makes a WCF Service
+- - '###'
+  - THE LARGER MOVE TO SOA
+- - '###'
+  - Capabilities of WCF
+- - '###'
+  - Contracts and Metadata
+- - '###'
+  - 使用 WS-* 协议
+- - '###'
+  - 构建 WCF 服务
+- - '####'
+  - 创建接口
+- - '###'
+  - 使用接口
+- - '###'
+  - 在控制台应用程序中托管 WCF 服务
+- - '###'
+  - 图 13-5
+- - '###'
+  - 查看 WSDL 文档
+- - '###'
+  - 构建 WCF 客户端
+- - '####'
+  - 添加服务引用
+- - '###'
+  - 配置文件更改
+- - '###'
+  - 编写消费代码
+- - '###'
+  - 使用数据契约
+- - '###'
+  - Building a Service with a Data Contract
+- - '###'
+  - NAMESPACES
+- - '###'
+  - Building the Host
+- - '###'
+  - Building the Consumer
+- - '##'
+  - FIGURE 13-14
+- - '###'
+  - 查看 HelloCustomerService 的 WSDL 和 Schema
+- - '###'
+  - 摘要
+- - '###'
+  - 第三部分：智能客户端应用程序
+- - '###'
+  - 14 Windows Forms
+- - '####'
+  - 本章你将学到什么
+- - '####'
+  - SYSTEM.WINDOWS.FORMS 命名空间
+- - '####'
+  - 使用窗体
+- - '####'
+  - 设置启动窗体
+- - '###'
+  - 通过 Sub Main 显示窗体
+- - '###'
+  - 有关 Application 类的更多信息
+- - '###'
+  - 窗体的启动位置
+- - '###'
+  - 窗体边框
+- - '###'
+  - 始终置顶 — TopMost 属性
+- - '###'
+  - 所有者窗体
+- - '###'
+  - AddOwnedForm 方法
+- - '###'
+  - Owner 属性
+- - '###'
+  - OwnedForms 集合
+- - '###'
+  - 使窗体透明和半透明
+- - '###'
+  - Opacity 属性
+- - '###'
+  - The TransparencyKey Property
+- - '###'
+  - The Region Property
+- - '###'
+  - Visual Inheritance
+- - '###'
+  - Scrollable Forms
+- - '###'
+  - MDI Forms
+- - '###'
+  - Creating an MDI Parent Form
+- - '###'
+  - MDI Child Forms
+- - '###'
+  - An MDI Example in VB 2010
+- - '###'
+  - 排列子窗口
+- - '###'
+  - 对话框窗体
+- - '###'
+  - DialogResult
+- - '###'
+  - 运行时窗体
+- - '###'
+  - 窗体的默认实例
+- - '###'
+  - 控件
+- - '####'
+  - 控件 Tab 键顺序
+- - '####'
+  - 所有控件的属性
+- - '####'
+  - MaximumSize 和 MinimumSize 属性
+- - '###'
+  - UseWaitCursor 属性
+- - '###'
+  - 控件的动态大小调整和定位
+- - '###'
+  - 停靠
+- - '###'
+  - 锚定
+- - '###'
+  - 可调整大小的容器
+- - '###'
+  - FlowLayoutPanel 控件
+- - '###'
+  - Padding 和 Margin 属性
+- - '###'
+  - TableLayoutPanel 控件
+- - '###'
+  - Panel 和 GroupBox 容器控件
+- - '###'
+  - Extender Providers
+- - '####'
+  - ToolTip
+- - '####'
+  - HelpProvider
+- - '####'
+  - 表 14-3：HelpProvider 组件的属性
+- - '####'
+  - ErrorProvider
+- - '##'
+  - 图 14-20
+- - '####'
+  - Extender Providers 的属性
+- - '###'
+  - 在代码中使用扩展程序提供程序
+- - '###'
+  - 数据输入的高级功能
+- - '####'
+  - 自动完成
+- - '####'
+  - MaskedTextbox 控件
+- - '##'
+  - 表 14-4：MaskedTextBox 控件中可用的掩码字符
+- - '####'
+  - 验证数据输入
+- - '####'
+  - Validating 事件
+- - '###'
+  - The CausesValidation Property
+- - '###'
+  - Toolbars and the ToolStrip Control
+- - '###'
+  - 'TABLE 14-5: Controls Available for Inclusion in a ToolStrip Control'
+- - '###'
+  - Creating a ToolStrip and Adding Toolbar Elements
+- - '###'
+  - Allowing Users to Move Toolbar Elements
+- - '###'
+  - Creating a Standard Set of Toolbar Elements
+- - '###'
+  - Menus
+- - '###'
+  - 向菜单添加标准项目
+- - '###'
+  - 菜单项的图标和复选标记
+- - '###'
+  - 上下文菜单
+- - '###'
+  - 在运行时动态操作菜单
+- - '###'
+  - 通用对话框
+- - '###'
+  - OpenFileDialog 和 SaveFileDialog
+- - '###'
+  - 拖放
+- - '###'
+  - 标准 Windows.Forms 控件摘要
+- - '###'
+  - 处理相关控件组
+- - '###'
+  - 运行时添加控件
+- - '###'
+  - 其他实用编程技巧
+- - '###'
+  - 摘要
+- - '###'
+  - '15'
+- - '###'
+  - 高级 Windows Forms
+- - '####'
+  - 本章你将学到什么
+- - '###'
+  - 在视觉控件中封装逻辑
+- - '###'
+  - Windows Forms 中的自定义控件
+- - '####'
+  - 从现有控件继承
+- - '####'
+  - 构建复合控件
+- - '###'
+  - 从头编写控件
+- - '###'
+  - 从现有控件继承
+- - '####'
+  - 流程概述
+- - '####'
+  - 为继承的控件编写代码
+- - '####'
+  - 为自定义控件创建属性
+- - '####'
+  - 与 Visual Studio IDE 协调
+- - '####'
+  - 特性
+- - '####'
+  - 使用特性设置默认值
+- - '###'
+  - 使用 IDE 的替代技术
+- - '###'
+  - 为控件属性提供重置方法
+- - '###'
+  - 其他有用的属性
+- - '###'
+  - 为继承的控件定义自定义事件
+- - '###'
+  - 一个限制所选项目的 CheckedListBox
+- - '###'
+  - THE CONTROL AND USERCONTROL BASE CLASSES
+- - '###'
+  - The Control Class
+- - '###'
+  - The UserControl Class
+- - '###'
+  - A COMPOSITE USERCONTROL
+- - '###'
+  - Creating a Composite UserControl
+- - '###'
+  - 调整控件大小
+- - '###'
+  - 公开所包含控件的属性
+- - '###'
+  - 示例演练
+- - '####'
+  - '9.'
+- - '####'
+  - '10.'
+- - '####'
+  - '11.'
+- - '####'
+  - '12.'
+- - '###'
+  - 从头构建控件
+- - '###'
+  - 使用 GDI+ 绘制自定义控件
+- - '###'
+  - 什么是 GDI+？
+- - '###'
+  - System.Drawing 命名空间
+- - '###'
+  - System.Drawing.Graphics 类
+- - '###'
+  - 在 Windows 窗体中使用 GDI+ 功能
+- - '###'
+  - 为工具箱附加图标
+- - '###'
+  - 在其他控件中嵌入控件
+- - '###'
+  - SUMMARY
+- - '###'
+  - '16'
+- - '###'
+  - User Controls Combining WPF and Windows Forms
+- - '####'
+  - WHAT YOU WILL LEARN IN THIS CHAPTER
+- - '###'
+  - THE INTEGRATION LIBRARY
+- - '###'
+  - 'TABLE 16-1: Windows.Forms.Integration Classes and Delegate'
+- - '###'
+  - 在 Windows 窗体中托管 WPF 控件
+- - '###'
+  - 创建 WPF 控件库
+- - '###'
+  - Windows 窗体应用程序
+- - '####'
+  - 在窗体上布局控件
+- - '##'
+  - 图 16-2
+- - '####'
+  - 向窗体添加自定义代码
+- - '###'
+  - 自定义显示遮罩
+- - '###'
+  - 使用WPF控件的映射属性
+- - '###'
+  - HOSTING WINDOWS FORMS CONTROLS IN WPF
+- - '###'
+  - INTEGRATION LIMITATIONS
+- - '###'
+  - SUMMARY
+- - '###'
+  - 17 WPF 桌面应用程序
+- - '####'
+  - 本章你将学习的内容
+- - '####'
+  - 是什么、在哪里、为什么、如何——WPF 策略
+- - '###'
+  - 创建 WPF 应用程序
+- - '###'
+  - 图 17-1
+- - '###'
+  - 实现自定义 WPF 应用程序
+- - '###'
+  - 控件
+- - '###'
+  - 事件处理程序
+- - '###'
+  - FIGURE 17-3
+- - '###'
+  - Adding Behavior
+- - '###'
+  - Layout
+- - '###'
+  - Customizing the User Interface
+- - '###'
+  - 移除边框
+- - '###'
+  - Resources
+- - '###'
+  - WPF 用户控件
+- - '##'
+  - 图 17-12
+- - '###'
+  - WPF 中的数据绑定
+- - '####'
+  - WPF 控件之间的绑定
+- - '####'
+  - 依赖属性
+- - '###'
+  - FIGURE 17-13
+- - '###'
+  - FIGURE 17-14
+- - '###'
+  - Creating a Custom Dependency Property
+- - '###'
+  - 图 17-18
+- - '###'
+  - 样式
+- - '###'
+  - 数据绑定到数据源
+- - '###'
+  - SUMMARY
+- - '###'
+  - Expression Blend 3
+- - '####'
+  - WHAT YOU WILL LEARN IN THIS CHAPTER
+- - '####'
+  - GETTING TO KNOW BLEND
+- - '####'
+  - Creating a New Project
+- - '###'
+  - FIGURE 18-2
+- - '###'
+  - Projects and Solutions Tab
+- - '###'
+  - FIGURE 18-3
+- - '###'
+  - Blend’s Toolbox and the Assets Tab
+- - '###'
+  - Design Surface
+- - '###'
+  - Objects and Timeline
+- - '###'
+  - States
+- - '###'
+  - Properties
+- - '###'
+  - Resources
+- - '###'
+  - Data
+- - '###'
+  - SKETCHFLOW
+- - '###'
+  - Your First SketchFlow
+- - '###'
+  - SketchFlow Map
+- - '###'
+  - Adding Sketch Controls
+- - '###'
+  - Adding Simple Behaviors to Navigate
+- - '###'
+  - SketchFlow Player
+- - '###'
+  - 用户反馈
+- - '###'
+  - 记录你的 SketchFlow
+- - '###'
+  - 注释
+- - '###'
+  - 导出到 Word
+- - '###'
+  - 摘要
+- - '###'
+  - '19'
+- - '###'
+  - Silverlight
+- - '####'
+  - 本章你将学到什么
+- - '####'
+  - 什么是 SILVERLIGHT？
+- - '####'
+  - Smooth Streaming
+- - '####'
+  - Industry Standard Video
+- - '####'
+  - Digital Rights Management
+- - '###'
+  - STARTING A SILVERLIGHT PROJECT
+- - '###'
+  - Silverlight Application
+- - '###'
+  - Silverlight Navigation Application
+- - '###'
+  - Silverlight Class Library
+- - '###'
+  - SILVERLIGHT SOLUTION
+- - '###'
+  - Web Application
+- - '###'
+  - The ClientBin Folder and .xap File
+- - '###'
+  - Application Library Caching
+- - '###'
+  - Silverlight 应用程序
+- - '####'
+  - App.xaml
+- - '####'
+  - MainPage.xaml
+- - '###'
+  - 控件
+- - '####'
+  - 布局管理
+- - '####'
+  - Grid
+- - '###'
+  - FIGURE 19-7
+- - '###'
+  - StackPanel
+- - '###'
+  - Canvas
+- - '###'
+  - ScrollViewer
+- - '###'
+  - Border
+- - '###'
+  - ADDING ITEMS TO THE SILVERLIGHT PROJECT
+- - '###'
+  - FIGURE 19-8
+- - '###'
+  - Silverlight User Control
+- - '###'
+  - Silverlight Application Class
+- - '###'
+  - Silverlight Page
+- - '###'
+  - Silverlight Child Window
+- - '###'
+  - Silverlight Template Control
+- - '###'
+  - Silverlight Resource Dictionary
+- - '###'
+  - SILVERLIGHT OUT OF THE BROWSER
+- - '###'
+  - SUMMARY
+- - '###'
+  - 第四部分：Internet 应用程序
+- - '####'
+  - 第 20 章：Silverlight 与服务
+- - '####'
+  - 本章学习内容
+- - '####'
+  - 服务与 Silverlight
+- - '####'
+  - ASMX Web 服务
+- - '####'
+  - WCF 服务
+- - '###'
+  - ADO.NET Data Service
+- - '###'
+  - 图 20-4
+- - '###'
+  - 表 20-1：Customers
+- - '###'
+  - 表 20-2：Issues
+- - '###'
+  - MODEL-VIEW-VIEWMODEL
+- - '###'
+  - Separation of Concerns
+- - '###'
+  - The Model
+- - '###'
+  - 视图
+- - '###'
+  - ViewModel
+- - '###'
+  - 总结
+- - '##'
+  - '21'
+- - '##'
+  - 使用 ASP.NET
+- - '###'
+  - 本章学习内容
+- - '###'
+  - ASP.NET 的历史
+- - '###'
+  - ASP.NET 的主要功能
+- - '###'
+  - 开发者生产力
+- - '###'
+  - 性能和可扩展性
+- - '###'
+  - ASP.NET 的主要功能
+- - '###'
+  - 开发者生产力
+- - '###'
+  - 性能和可扩展性
+- - '###'
+  - 本地化
+- - '###'
+  - 健康监控
+- - '###'
+  - 数据的便捷访问
+- - '###'
+  - 管理和维护
+- - '###'
+  - Visual Studio 对 ASP.NET 的支持
+- - '###'
+  - 网站和 Web 应用程序项目
+- - '###'
+  - ASP.NET 应用程序文件夹
+- - '####'
+  - \App_Code 文件夹（仅限网站项目）
+- - '####'
+  - \App_Data 文件夹
+- - '####'
+  - \App_Themes 文件夹
+- - '####'
+  - \App_GlobalResources 文件夹
+- - '###'
+  - \App_LocalResources
+- - '###'
+  - \App_WebReferences
+- - '###'
+  - \App_Browsers
+- - '###'
+  - Web Server Options
+- - '###'
+  - BUILDING ASP.NET APPLICATIONS USING WEB FORMS
+- - '###'
+  - Pages, Forms, Controls, and Events
+- - '###'
+  - Server Controls
+- - '###'
+  - FIGURE 21-1
+- - '###'
+  - FIGURE 21-2
+- - '###'
+  - FIGURE 21-3
+- - '###'
+  - FIGURE 21-4
+- - '###'
+  - 事件
+- - '###'
+  - 页面生命周期
+- - '###'
+  - ViewState
+- - '###'
+  - Field Validation
+- - '##'
+  - FIGURE 21-11
+- - '##'
+  - FIGURE 21-12
+- - '###'
+  - Compilation
+- - '###'
+  - Deployment
+- - '###'
+  - 数据驱动应用程序
+- - '###'
+  - 使用 SqlDataSource 控件进行数据绑定
+- - '##'
+  - 图 21-15
+- - '##'
+  - 图 21-16
+- - '##'
+  - 图 21-17
+- - '###'
+  - 图 21-18
+- - '###'
+  - 图 21-19
+- - '###'
+  - 图 21-20
+- - '###'
+  - 使用 LinqDataSource 控件进行数据绑定
+- - '##'
+  - 图 21-21
+- - '##'
+  - 图 21-22
+- - '##'
+  - 图 21-23
+- - '##'
+  - 使用 ObjectDataSource 控件进行数据绑定
+- - '##'
+  - 图 21-27
+- - '##'
+  - 图 21-28
+- - '###'
+  - 小结
+- - '##'
+  - '22'
+- - '##'
+  - ASP.NET 高级功能
+- - '##'
+  - 本章你将学习的内容
+- - '##'
+  - 母版页
+- - '###'
+  - 创建母版页
+- - '##'
+  - 图 22-3
+- - '###'
+  - 创建内容页
+- - '##'
+  - 图 22-6
+- - '###'
+  - 在母版页中提供默认内容
+- - '###'
+  - 导航
+- - '###'
+  - 表 22-1：siteMapNode 元素属性
+- - '###'
+  - 使用 SiteMapPath 服务器控件
+- - '####'
+  - 图 22-8
+- - '###'
+  - Menu 服务器控件
+- - '####'
+  - 图 22-11
+- - '###'
+  - 使用 ASP.NET 提供程序模型
+- - '###'
+  - 创建应用程序服务数据库
+- - '####'
+  - ASP.NET SQL Server 安装向导命令行工具
+- - '####'
+  - ASP.NET SQL Server 安装向导 GUI 工具
+- - '###'
+  - 将内置提供程序连接到数据库
+- - '###'
+  - 成员资格和角色管理
+- - '###'
+  - FIGURE 22-17
+- - '###'
+  - FIGURE 22-18
+- - '###'
+  - FIGURE 22-19
+- - '###'
+  - PROFILE PROPERTIES
+- - '###'
+  - MICROSOFT AJAX (ASP.NET AJAX)
+- - '###'
+  - Understanding the Need for Ajax
+- - '###'
+  - Microsoft Ajax Implementation
+- - '###'
+  - FIGURE 22-26
+- - '###'
+  - FIGURE 22-27
+- - '###'
+  - FIGURE 22-28
+- - '###'
+  - UpdatePanel Control vs. Client-Side Service Calls
+- - '###'
+  - Introducing the Sample Project
+- - '###'
+  - 添加 UpdatePanel 控件
+- - '###'
+  - FIGURE 22-35
+- - '###'
+  - SUMMARY
+- - '##'
+  - '23'
+- - '##'
+  - ASP.NET MVC
+- - '##'
+  - WHAT YOU WILL LEARN IN THIS CHAPTER
+- - '##'
+  - MODEL-VIEW-CONTROLLER AND ASP.NET
+- - '##'
+  - BUILDING AN ASP.NET MVC APPLICATION
+- - '##'
+  - Creating the Project
+- - '##'
+  - Controllers and Actions
+- - '##'
+  - 添加模型
+- - '##'
+  - 路由
+- - '##'
+  - 脚手架和 CRUD 操作
+- - '##'
+  - 图 23-14
+- - '##'
+  - FIGURE 23-19
+- - '##'
+  - SUMMARY
+- - '##'
+  - '24'
+- - '##'
+  - SharePoint 2010 Development
+- - '###'
+  - WHAT YOU WILL LEARN IN THIS CHAPTER
+- - '###'
+  - INTRODUCTION
+- - '####'
+  - SharePoint Foundation 2010
+- - '####'
+  - SharePoint Server 2010
+- - '####'
+  - SharePoint Terminology
+- - '###'
+  - 站点集合、站点和网站
+- - '###'
+  - 创建元素清单
+- - '###'
+  - 手动部署和安装功能
+- - '###'
+  - 激活功能
+- - '###'
+  - FIGURE 24-4
+- - '###'
+  - FIGURE 24-5
+- - '###'
+  - Deactivating and Removing the Feature
+- - '###'
+  - Solution Framework
+- - '###'
+  - Creating a Solution Package
+- - '###'
+  - Deploying a Farm Solution
+- - '###'
+  - FIGURE 24-11
+- - '###'
+  - FIGURE 24-12
+- - '###'
+  - VISUAL STUDIO TOOLS FOR SHAREPOINT DEVELOPMENT
+- - '##'
+  - 图 24-21
+- - '##'
+  - SharePoint 2010 对象模型
+- - '##'
+  - 服务器对象模型
+- - '##'
+  - 图 24-23
+- - '##'
+  - 客户端对象模型
+- - '###'
+  - BUILDING WEB PARTS
+- - '##'
+  - 图 24-26
+- - '###'
+  - 总结
+- - '###'
+  - 第五部分
+- - '###'
+  - 库和专题
+- - '##'
+  - '25'
+- - '##'
+  - Visual Studio Tools for Office
+- - '##'
+  - 本章学习内容
+- - '##'
+  - 检查 VSTO 的发布版本
+- - '##'
+  - Office 自动化与 VSTO
+- - '##'
+  - 无 PIA 部署
+- - '##'
+  - VSTO 项目类型
+- - '##'
+  - Office 业务应用程序架构
+- - '##'
+  - 同时使用 VBA 和 VSTO
+- - '###'
+  - FIGURE 25-7
+- - '###'
+  - FIGURE 25-8
+- - '###'
+  - CREATING A DOCUMENT TEMPLATE (WORD)
+- - '###'
+  - Adding Content to the Document
+- - '##'
+  - FIGURE 25-12
+- - '###'
+  - 添加功能区（Ribbon）和操作窗格（Actions Pane）
+- - '##'
+  - 图 25-13
+- - '##'
+  - 图 25-14
+- - '###'
+  - 激活操作窗格
+- - '###'
+  - FIGURE 25-17
+- - '###'
+  - Updating a Content Control
+- - '###'
+  - CREATING AN OFFICE ADD-IN (EXCEL)
+- - '##'
+  - FIGURE 25-20
+- - '##'
+  - FIGURE 25-21
+- - '##'
+  - FIGURE 25-22
+- - '##'
+  - FIGURE 25-23
+- - '###'
+  - OUTLOOK FORM REGIONS
+- - '###'
+  - FIGURE 25-28
+- - '###'
+  - 新建 Outlook 表单区域
+- - '###'
+  - 你要创建哪种类型的表单区域？
+- - '###'
+  - FIGURE 25-29
+- - '###'
+  - 新建 Outlook 表单区域
+- - '###'
+  - 哪些标准邮件类别将显示此表单区域？
+- - '###'
+  - 哪些自定义邮件类别将显示此表单区域？
+- - '###'
+  - FIGURE 25-30
+- - '###'
+  - FIGURE 25-31
+- - '###'
+  - FIGURE 25-32
+- - '###'
+  - FIGURE 25-33
+- - '###'
+  - 图 25-34
+- - '###'
+  - 小结
+- - '##'
+  - '26'
+- - '##'
+  - Windows Workflow Foundation
+- - '##'
+  - 本章你将学习的内容
+- - '##'
+  - 应用程序中的工作流
+- - '##'
+  - BUILDING WORKFLOWS
+- - '##'
+  - Adding Workflow with Windows Workflow Foundation
+- - '##'
+  - A Simple Workflow
+- - '##'
+  - Standard Activities
+- - '###'
+  - Low-level activities — These activities perform some minor task, usually as part
+    of a larger process.
+- - '###'
+  - Control of flow activities — These activities are the equivalent of Visual Basic’s
+    If statement or While loop. They enable the workflow to branch or repeat as needed
+    to carry out a step.
+- - '###'
+  - Activities that communicate with external code — These activities are either called
+    by external code to initiate a workflow or used to call to external code as part
+    of a workflow. This category also includes activities that communicate with external
+    systems to persist the workflow state.
+- - '###'
+  - Transaction activities — These activities group a number of other activities together
+    into some logical element. This is usually done to mark a number of activities
+    that participate in a transaction.
+- - '###'
+  - 一个不太简单的工作流
+- - '###'
+  - FIGURE 26-15
+- - '###'
+  - FIGURE 26-16
+- - '###'
+  - Building Custom Activities
+- - '###'
+  - 动态加载工作流
+- - '###'
+  - 重新托管工作流设计器
+- - '###'
+  - 摘要
+- - '###'
+  - 理解文化类型
+- - '###'
+  - 查看您的线程
+- - '###'
+  - 在 ASP.NET 中全局声明文化
+- - '###'
+  - 在 ASP.NET 中采用文化设置
+- - '###'
+  - TRANSLATING VALUES AND BEHAVIORS
+- - '####'
+  - Understanding Differences in Dates
+- - '##'
+  - FIGURE 27-6
+- - '###'
+  - Understanding Differences in Sorting
+- - '##'
+  - FIGURE 27-9
+- - '##'
+  - FIGURE 27-10
+- - '###'
+  - ASP.NET RESOURCE FILES
+- - '###'
+  - Making Use of Local Resources
+- - '###'
+  - 添加另一种语言的资源文件
+- - '###'
+  - 完成Default.aspx页面的构建
+- - '###'
+  - 中性区域性通常更受青睐
+- - '###'
+  - 全局资源
+- - '####'
+  - FIGURE 27-15
+- - '####'
+  - FIGURE 27-16
+- - '###'
+  - RESOURCE FILES IN WINDOWS FORMS
+- - '####'
+  - FIGURE 27-17
+- - '####'
+  - FIGURE 27-18
+- - '####'
+  - FIGURE 27-19
+- - '####'
+  - FIGURE 27-20
+- - '####'
+  - FIGURE 27-21
+- - '####'
+  - FIGURE 27-22
+- - '####'
+  - FIGURE 27-23
+- - '###'
+  - 小结
+- - '###'
+  - 28 COM 互操作
+- - '####'
+  - 本章学习内容
+- - '####'
+  - 理解 COM
+- - '####'
+  - COM 与 .NET 实践
+- - '#####'
+  - 遗留组件
+- - '#####'
+  - 实现组件
+- - '###'
+  - 第 2 步：注册旧版组件
+- - '###'
+  - .NET 应用程序
+- - '##'
+  - 图 28-2
+- - '###'
+  - 从 .NET 引用旧版 COM 组件
+- - '##'
+  - 图 28-3
+- - '###'
+  - .NET 应用程序内部
+- - '###'
+  - 晚期绑定
+- - '###'
+  - 晚期绑定的示例
+- - '###'
+  - 示例 COM 对象
+- - '###'
+  - 计算框架
+- - '##'
+  - 图 28-7
+- - '###'
+  - 运行计算框架
+- - '###'
+  - ACTIVEX 控件
+- - '###'
+  - 旧版 ActiveX 控件
+- - '###'
+  - 步骤 1：创建控件
+- - '###'
+  - 步骤 2：注册你的旧版控件
+- - '###'
+  - 又一个 .NET 应用程序
+- - '##'
+  - 图 28-10
+- - '##'
+  - 图 28-11
+- - '##'
+  - 图 28-12
+- - '##'
+  - 图 28-13
+- - '##'
+  - 图 28-14
+- - '##'
+  - 再次尝试全部操作
+- - '##'
+  - 在 COM 世界中使用 .NET 组件
+- - '##'
+  - 一个 .NET 组件
+- - '##'
+  - RegAsm
+- - '##'
+  - 图 28-19
+- - '##'
+  - TlbExp
+- - '##'
+  - P/INVOKE
+- - '###'
+  - Windows API Code Pack
+- - '###'
+  - SUMMARY
+- - '##'
+  - '29'
+- - '##'
+  - Network Programming
+- - '###'
+  - WHAT YOU WILL LEARN IN THIS CHAPTER
+- - '###'
+  - PROTOCOLS, ADDRESSES, AND PORTS
+- - '####'
+  - 'TABLE 29-1: Standard Response Ranges'
+- - '###'
+  - Addresses and Names
+- - '###'
+  - 端口：它们不仅用于船舶
+- - '###'
+  - 防火墙：没有它们不行，有了它们也麻烦
+- - '###'
+  - System.Net 命名空间
+- - '###'
+  - Web 请求（和响应）
+- - '###'
+  - WebRequest 子类
+- - '###'
+  - 综合应用
+- - '###'
+  - 图 29-1
+- - '###'
+  - 图 29-2
+- - '###'
+  - 使用 WebClient 简化常见的 Web 请求
+- - '###'
+  - SOCKETS
+- - '####'
+  - Building the Application
+- - '###'
+  - 创建对话窗口
+- - '###'
+  - 创建 Conversation 窗体
+- - '###'
+  - 启动连接
+- - '###'
+  - 接收入站连接
+- - '##'
+  - Sending Messages
+- - '###'
+  - The Message Class
+- - '###'
+  - 在应用程序中使用 Internet Explorer
+- - '###'
+  - Windows 窗体与 HTML —— 没问题！
+- - '###'
+  - 允许在 Windows 应用程序中进行简单的 Web 浏览
+- - '###'
+  - 图 29-9
+- - '###'
+  - 图 29-10
+- - '###'
+  - 从 Windows 应用程序启动 Internet Explorer
+- - '###'
+  - 更新 URL 和页面标题
+- - '###'
+  - SUMMARY
+- - '##'
+  - 30 Application Services
+- - '###'
+  - WHAT YOU WILL LEARN IN THIS CHAPTER
+- - '###'
+  - USING IIS FOR APPLICATION SERVICES
+- - '###'
+  - INTERACTING WITH WINDOWS SERVICES
+- - '###'
+  - CREATING A WINDOWS SERVICE
+- - '###'
+  - The .NET Framework Classes for Windows Services
+- - '###'
+  - The ServiceBase Class
+- - '###'
+  - 安装导向类
+- - '###'
+  - 其他类型的 Windows 服务
+- - '###'
+  - 在 Visual Basic 中创建 Windows 服务
+- - '###'
+  - 创建文件监视服务
+- - '####'
+  - 为 Windows 服务创建解决方案
+- - '###'
+  - 向服务添加 .NET 组件
+- - '###'
+  - FileSystemWatcher 组件
+- - '###'
+  - EnableRaisingEvents 属性
+- - '###'
+  - Path 属性
+- - '###'
+  - NotifyFilter 属性
+- - '###'
+  - Filter 属性
+- - '###'
+  - IncludeSubdirectories 属性
+- - '###'
+  - 向 OnStart 和 OnStop 添加 FileSystemWatcher 代码
+- - '###'
+  - EventLog 组件
+- - '###'
+  - Created 事件
+- - '###'
+  - 安装服务
+- - '###'
+  - 启动服务
+- - '####'
+  - 图 30-3
+- - '###'
+  - 卸载服务
+- - '####'
+  - 图 30-4
+- - '###'
+  - 与服务通信
+- - '####'
+  - ServiceController 类
+- - '###'
+  - 表 30-2：重要的 ServiceController 方法
+- - '###'
+  - 表 30-3：重要的 ServiceController 属性
+- - '###'
+  - 将 ServiceController 集成到示例中
+- - '###'
+  - 关于 ServiceController 的更多信息
+- - '###'
+  - 自定义命令
+- - '###'
+  - PASSING STRINGS TO A SERVICE
+- - '###'
+  - DEBUGGING THE SERVICE
+- - '###'
+  - SUMMARY
+- - '##'
+  - 31 Assemblies and Reflection
+- - '###'
+  - WHAT YOU WILL LEARN IN THIS CHAPTER
+- - '###'
+  - 程序集
+- - '####'
+  - 清单
+- - '####'
+  - 程序集标识
+- - '####'
+  - 版本号
+- - '####'
+  - 强名称
+- - '####'
+  - 使用强名称签名程序集
+- - '####'
+  - 文化
+- - '###'
+  - Referenced Assemblies
+- - '###'
+  - The .publickeytoken Directive
+- - '###'
+  - The .ver Directive
+- - '###'
+  - The .locale Directive
+- - '###'
+  - ASSEMBLIES AND DEPLOYMENT
+- - '###'
+  - Application-Private Assemblies
+- - '###'
+  - Shared Assemblies
+- - '###'
+  - The Global Assembly Cache
+- - '###'
+  - VERSIONING ISSUES
+- - '####'
+  - Application Isolation
+- - '####'
+  - Side-By-Side Execution
+- - '####'
+  - Self-Describing Components
+- - '####'
+  - Version Policies
+- - '####'
+  - The Default Versioning Policy
+- - '####'
+  - Automatic Quick Fix Engineering Policy
+- - '####'
+  - Configuration Files
+- - '###'
+  - Startup Settings
+- - '###'
+  - Runtime Settings
+- - '####'
+  - Loading a Particular Version of an Assembly
+- - '####'
+  - Defining the Location of an Assembly
+- - '####'
+  - Providing the Search Path
+- - '###'
+  - BASICS OF REFLECTION
+- - '###'
+  - Assembly 类
+- - '###'
+  - 获取当前已加载的程序集
+- - '###'
+  - Type 类
+- - '###'
+  - 查找程序集中的类型
+- - '###'
+  - 查找类型的成员
+- - '###'
+  - 程序集的动态加载
+- - '####'
+  - Assembly 类的 LoadFrom 方法
+- - '###'
+  - 动态加载示例
+- - '###'
+  - 将程序集投入使用
+- - '###'
+  - 总结
+- - '##'
+  - '32'
+- - '##'
+  - .NET Framework 中的安全性
+- - '##'
+  - 本章你将学到什么
+- - '##'
+  - 安全概念和定义
+- - '##'
+  - SYSTEM.SECURITY.PERMISSIONS 命名空间中的权限
+- - '##'
+  - 表 32-2（续）
+- - '##'
+  - 代码访问权限
+- - '##'
+  - 表 32-3：CodeAccessPermission 的方法
+- - '##'
+  - 身份权限
+- - '##'
+  - 基于角色的权限
+- - '##'
+  - 图 32-2
+- - '##'
+  - 管理代码访问权限集
+- - '##'
+  - 图 32-3
+- - '##'
+  - 图 32-4
+- - '##'
+  - 用户访问控制
+- - '##'
+  - 定义应用程序 UAC 设置
+- - '##'
+  - 安全工具
+- - '###'
+  - 表 32-4：权限和程序集管理工具
+- - '###'
+  - 表 32-5：证书管理工具
+- - '##'
+  - 使用 SecurityException 类的异常
+- - '###'
+  - 表 32-6：常见的 SecurityException 属性
+- - '###'
+  - 表 32-6（续）
+- - '##'
+  - 加密基础
+- - '##'
+  - 哈希算法
+- - '##'
+  - 加密哈希算法
+- - '####'
+  - 图 32-8
+- - '##'
+  - SHA
+- - '##'
+  - MD5
+- - '##'
+  - RIPEMD-160
+- - '##'
+  - 对称密钥加密
+- - '##'
+  - PKCS
+- - '##'
+  - 数字签名示例
+- - '##'
+  - Secure Sockets Layer
+- - '##'
+  - SUMMARY
+- - '##'
+  - '33'
+- - '##'
+  - Parallel Programming Using Tasks and Threads
+- - '###'
+  - WHAT YOU WILL LEARN IN THIS CHAPTER
+- - '###'
+  - LAUNCHING PARALLEL TASKS
+- - '####'
+  - System.Threading.Tasks.Parallel Class
+- - '####'
+  - Parallel.Invoke
+- - '###'
+  - 缺乏执行顺序
+- - '###'
+  - 优点和缺点
+- - '###'
+  - 并行性和并发性
+- - '###'
+  - 将顺序代码转换为并行代码
+- - '####'
+  - 检测热点
+- - '####'
+  - 清单 33-1：简单的串行 AES 密钥和 MD5 哈希生成器
+- - '###'
+  - 衡量并行执行实现的加速比
+- - '###'
+  - 理解并行执行与并发执行
+- - '####'
+  - 清单33-2：AES 密钥和 MD5 哈希生成器并行运行时生成的示例输出
+- - '###'
+  - 并行化循环
+- - '####'
+  - Parallel.For
+- - '####'
+  - 清单33-4：原始的 GenerateMD5Hashes 子程序（使用顺序 For 循环）及其并行化版本
+- - '####'
+  - 原始顺序 For 版本
+- - '####'
+  - 使用 Parallel.For 的并行化版本
+- - '###'
+  - 重构现有顺序循环
+- - '###'
+  - Measuring Scalability
+- - '##'
+  - FIGURE 33-6
+- - '###'
+  - Parallel.ForEach
+- - '###'
+  - Working with Partitions in a Parallel Loop
+- - '##'
+  - 'LISTING 33-6: Debug output example generated running ParallelPartitionGenerateAESKeys
+    with a quad-core microprocessor'
+- - '###'
+  - 根据核心数优化分区
+- - '####'
+  - 清单 33-7：在四核微处理器上运行 ParallelPartitionGenerateAESKeys 优化分区版本所生成的调试输出示例
+- - '###'
+  - 图 33-7
+- - '###'
+  - 使用 IEnumerable 数据源
+- - '####'
+  - 清单 33-8：使用 Parallel.ForEach 和 IEnumerable 数据源并行化 GenerateMD5Hashes 子程序的版本
+- - '####'
+  - 清单 33-8（续）
+- - '###'
+  - 退出并行循环
+- - '####'
+  - 清单 33-9：可以对循环启用退出的 ParallelForEachGenerateMD5Hashes 子程序的新版本
+- - '###'
+  - 理解 ParallelLoopState
+- - '###'
+  - 分析并行循环执行的結果
+- - '###'
+  - 表 33-1：ParallelLoopResult 只读属性
+- - '###'
+  - 捕获并行循环异常
+- - '###'
+  - 列表 33-11：Debug 输出，其中在 InnerExceptions 集合中找到两个异常
+- - '###'
+  - 指定所需的并行度
+- - '###'
+  - ParallelOptions
+- - '####'
+  - 'LISTING 33-12: Specifying maximum desired degree of parallelism for Parallel.For
+    loops'
+- - '###'
+  - Understanding Hardware Threads and Logical Cores
+- - '###'
+  - CREATING AND MANAGING TASKS
+- - '###'
+  - System.Threading.Tasks.Task
+- - '###'
+  - 'TABLE 33-2: Task Read-only Properties'
+- - '###'
+  - 了解 Task 的生命周期
+- - '###'
+  - 表 33-3：Task 实例的初始状态
+- - '###'
+  - 表 33-4：Task 实例的最终状态
+- - '###'
+  - 使用 Task 并行化代码
+- - '###'
+  - 清单 33-13：使用任务
+- - '###'
+  - 启动任务
+- - '###'
+  - 使用并行任务和并行堆栈可视化任务
+- - '##'
+  - 图 33-11
+- - '##'
+  - 图 33-12
+- - '###'
+  - 等待任务完成
+- - '###'
+  - LISTING 33-14 (continued)
+- - '###'
+  - 处理任务抛出的异常
+- - '###'
+  - 'LISTING 33-16: Debug output with the exceptions found in the InnerExceptions
+    collection'
+- - '###'
+  - 从任务返回值
+- - '###'
+  - 'LISTING 33-17: Returning a list of String instances from a task'
+- - '###'
+  - TaskCreationOptions
+- - '###'
+  - Chaining Two Tasks Using Continuations
+- - '###'
+  - Preparing the Code for Concurrency and Parallelism
+- - '###'
+  - Synchronization Primitives
+- - '###'
+  - Synchronization Problems
+- - '###'
+  - Understanding Concurrent Collection Features
+- - '###'
+  - System.Collections.Concurrent
+- - '###'
+  - ConcurrentQueue
+- - '####'
+  - 'LISTING 33-18: Enqueueing the generated keys in a ConcurrentCollection'
+- - '####'
+  - 'LISTING 33-19: Reporting partial progress querying a ConcurrentQueue being updated
+    by an asynchronous task'
+- - '###'
+  - ConcurrentStack
+- - '###'
+  - 将 LINQ 转换为 PLINQ
+- - '###'
+  - ParallelEnumerable 及其 AsParallel 方法
+- - '####'
+  - 表 33-6：ParallelEnumerable 提供的 PLINQ 运算符
+- - '###'
+  - AsOrdered 和 Order By
+- - '###'
+  - 使用 ForAll 和 ConcurrentBag 工作
+- - '###'
+  - 摘要
+- - '##'
+  - '34'
+- - '##'
+  - 部署
+- - '##'
+  - 本章你将学习
+- - '##'
+  - 应用程序部署
+- - '##'
+  - 为什么在 .NET 中部署很简单
+- - '##'
+  - XCOPY 部署
+- - '##'
+  - 使用 Windows Installer
+- - '##'
+  - ClickOnce 部署
+- - '##'
+  - 选择框架版本
+- - '##'
+  - Visual Studio 部署项目
+- - '##'
+  - 项目模板
+- - '##'
+  - CAB 项目模板
+- - '##'
+  - 合并模块项目模板
+- - '##'
+  - 安装项目模板
+- - '##'
+  - Web 安装项目模板
+- - '##'
+  - 安装向导
+- - '##'
+  - 创建部署项目
+- - '##'
+  - 演练
+- - '##'
+  - 表格 34-1（续）
+- - '##'
+  - 检测到的依赖项属性
+- - '##'
+  - 为 ASP.NET Web 应用程序创建部署项目
+- - '##'
+  - 修改部署项目
+- - '##'
+  - 项目属性
+- - '##'
+  - 生成页
+- - '##'
+  - 打包文件
+- - '##'
+  - 先决条件
+- - '##'
+  - 压缩
+- - '##'
+  - 设置 Cabinet 文件大小
+- - '##'
+  - 文件系统编辑器
+- - '##'
+  - 向文件夹添加项目
+- - '##'
+  - 添加特殊文件夹
+- - '##'
+  - 表 34-2：添加特殊文件夹选项
+- - '##'
+  - 注册表编辑器
+- - '##'
+  - 向注册表项添加值
+- - '##'
+  - 导入注册表文件
+- - '##'
+  - 文件类型编辑器
+- - '##'
+  - 用户界面编辑器
+- - '###'
+  - 安装模式
+- - '##'
+  - 开始阶段
+- - '##'
+  - 进度阶段
+- - '##'
+  - 结束阶段
+- - '##'
+  - 自定义对话框顺序
+- - '##'
+  - 添加对话框
+- - '##'
+  - 对话框的属性
+- - '##'
+  - 自定义操作编辑器
+- - '##'
+  - 添加自定义操作
+- - '##'
+  - 启动条件编辑器
+- - '###'
+  - 添加文件搜索
+- - '###'
+  - 修改文件搜索属性
+- - '###'
+  - 创建启动条件
+- - '##'
+  - 生成
+- - '##'
+  - Windows 应用程序的 Internet 部署
+- - '##'
+  - 无触摸部署
+- - '##'
+  - 自动更新
+- - '##'
+  - 使用启动应用程序
+- - '##'
+  - 无触摸部署的局限性
+- - '##'
+  - ClickOnce 部署
+- - '##'
+  - 为 ClickOnce 配置应用程序
+- - '##'
+  - 在线与本地安装的应用程序
+- - '##'
+  - 部署在线应用程序
+- - '###'
+  - 图 34-16
+- - '###'
+  - 图 34-17
+- - '##'
+  - 部署可脱机使用的应用程序
+- - '##'
+  - ClickOnce 生成的文件和目录
+- - '##'
+  - 签署清单
+- - '##'
+  - 更新过程
+- - '##'
+  - ClickOnce 配置选项
+- - '##'
+  - 手动编辑 ClickOnce 清单
+- - '##'
+  - 回滚或卸载 ClickOnce 应用程序
+- - '##'
+  - ClickOnce 与其他部署技术的比较
+- - '##'
+  - IIS Web 部署工具
+- - '##'
+  - 图 34-21
+- - '##'
+  - 图 34-22
+- - '##'
+  - 总结
+- - '##'
+  - 编译的简单步骤
+- - '##'
+  - 编译器选项
+- - '##'
+  - 输出文件
+- - '###'
+  - '`/doc[+|-]`'
+- - '###'
+  - '`/out`'
+- - '###'
+  - '`/target`'
+- - '##'
+  - 输入文件
+- - '###'
+  - /addmodule
+- - '###'
+  - /link
+- - '###'
+  - /recurse
+- - '###'
+  - /reference
+- - '##'
+  - 资源
+- - '###'
+  - /linkresource
+- - '##'
+  - /resource
+- - '##'
+  - /win32icon
+- - '##'
+  - /win32resource
+- - '##'
+  - 代码生成
+- - '##'
+  - /debug[+/-]
+- - '##'
+  - /optimize[+/-]
+- - '##'
+  - /removeintchecks[+/-]
+- - '##'
+  - 错误和警告
+- - '##'
+  - /nowarn
+- - '##'
+  - /warnaserror[+-]
+- - '##'
+  - 语言
+- - '##'
+  - /define
+- - '##'
+  - /imports
+- - '##'
+  - /langversion
+- - '##'
+  - /optionexplicit[+:-]
+- - '##'
+  - /optionstrict[+:-]
+- - '##'
+  - /optioncompare
+- - '##'
+  - /optioninfer[+:-]
+- - '##'
+  - /rootnamespace
+- - '##'
+  - 其他功能
+- - '##'
+  - /?
+- - '##'
+  - /help
+- - '##'
+  - /noconfig
+- - '##'
+  - /nologo
+- - '##'
+  - /quiet
+- - '##'
+  - /verbose
+- - '##'
+  - 高级功能
+- - '##'
+  - /baseaddress
+- - '##'
+  - /bugreport
+- - '##'
+  - /codepage
+- - '##'
+  - /delaysign[+-:]
+- - '##'
+  - /errorreport
+- - '##'
+  - /filealign
+- - '##'
+  - /keycontainer
+- - '##'
+  - /keyfile
+- - '##'
+  - /libpath
+- - '##'
+  - /main
+- - '##'
+  - /moduleassemblyname
+- - '##'
+  - /netcf
+- - '##'
+  - /nostdlib
+- - '##'
+  - /platform
+- - '##'
+  - is specified.
+- - '##'
+  - Reference the common Framework libraries
+- - '##'
+  - Import System and Microsoft.VisualBasic
+- - '##'
+  - Visual Basic Power Packs 工具
+- - '##'
+  - VISUAL BASIC POWER PACKS
+- - '##'
+  - 获取 Visual Basic Power Packs
+- - '##'
+  - 使用 INTEROP FORMS TOOLKIT 2.1
+- - '###'
+  - 创建一个简单的 Interop Form
+- - '##'
+  - Deployment
+- - '##'
+  - Debugging
+- - '##'
+  - VB6 开发
+- - '##'
+  - 最终 Interop 提示
+- - '##'
+  - 使用 POWER PACKS 3.0 工具
+- - '##'
+  - FIGURE B-4
+- - '##'
+  - FIGURE B-5
+- - '##'
+  - 图 B-7
+- - '##'
+  - 小结
+- - '##'
+  - Workflow 2008 详解
+- - '##'
+  - 构建工作流
+- - '###'
+  - FIGURE C-2
+- - '###'
+  - A Simple Workflow
+- - '###'
+  - FIGURE C-3
+- - '###'
+  - FIGURE C-4
+- - '###'
+  - FIGURE C-5
+- - '###'
+  - FIGURE C-6
+- - '###'
+  - FIGURE C-7
+- - '###'
+  - FIGURE C-8
+- - '###'
+  - FIGURE C-9
+- - '###'
+  - Standard Activities
+- - '###'
+  - Building Custom Activities
+- - '##'
+  - FIGURE C-10
+- - '##'
+  - FIGURE C-11
+- - '###'
+  - USING WORKFLOWS WITH OTHER APPLICATIONS
+- - '###'
+  - Using Workflow Foundation with Windows Forms
+- - '###'
+  - 图 C-13
+- - '###'
+  - 图 C-14
+- - '###'
+  - 图 C-15
+- - '###'
+  - 图 C-16
+- - '##'
+  - 摘要
+- - '###'
+  - 企业服务
+- - '####'
+  - 事务
+- - '####'
+  - ACID 测试
+- - '####'
+  - 事务组件
+- - '###'
+  - 交易示例
+- - '###'
+  - 创建数据库
+- - '####'
+  - FIGURE D-4
+- - '###'
+  - 填充数据库
+- - '###'
+  - 业务逻辑
+- - '####'
+  - FIGURE D-5
+- - '####'
+  - FIGURE D-6
+- - '####'
+  - FIGURE D-7
+- - '###'
+  - 交易的第一半
+- - '###'
+  - 交易的后半部分
+- - '###'
+  - 注册你的组件
+- - '###'
+  - 为程序集提供强名称
+- - '###'
+  - 在组件服务中注册
+- - '###'
+  - 组件服务控制台
+- - '##'
+  - FIGURE D-12
+- - '###'
+  - 测试应用程序
+- - '##'
+  - FIGURE D-13
+- - '###'
+  - 事务属性
+- - '###'
+  - 无效数据
+- - '###'
+  - 当出错时
+- - '###'
+  - 事务的其他方面
+- - '####'
+  - 实时（JIT）
+- - '####'
+  - 对象池化
+- - '###'
+  - 排队组件
+- - '###'
+  - 队列组件示例
+- - '###'
+  - 再次使用控制台
+- - '###'
+  - 构建客户端
+- - '###'
+  - 队列调用
+- - '##'
+  - 图 D-17
+- - '##'
+  - 图 D-18
+- - '###'
+  - 具有队列组件的事务
+- - '###'
+  - 小结
+- - '###'
+  - 云端编程
+- - '####'
+  - 云计算的兴起
+- - '####'
+  - 云场景
+- - '####'
+  - 可扩展性
+- - '###'
+  - Cost Savings
+- - '###'
+  - Parallel Processing
+- - '###'
+  - The Case against Cloud Computing
+- - '###'
+  - AZURE
+- - '####'
+  - The Fabric
+- - '##'
+  - FIGURE E-4
+- - '##'
+  - FIGURE E-5
+- - '##'
+  - FIGURE E-6
+- - '##'
+  - FIGURE E-7
+- - '###'
+  - Storage Services
+- - '####'
+  - Blob Storage
+- - '####'
+  - Table Storage
+- - '###'
+  - Queues
+- - '###'
+  - SQL Azure
+- - '###'
+  - Compute Services
+- - '###'
+  - Windows Azure Tools for Visual Studio
+- - '###'
+  - Creating a Windows Azure Project
+- - '###'
+  - Using Table Storage
+- - '###'
+  - 使用 Blob 存储
+- - '###'
+  - 使用 Worker Role
+- - '###'
+  - 部署服务
+- - '###'
+  - FIGURE E-22
+- - '###'
+  - FIGURE E-23
+- - '###'
+  - SUMMARY
+- - '###'
+  - INDEX
+- - '##'
+  - (number sign), MaskedTextbox, 560
+- - '###'
+  - ActiveX – applications
+- - '###'
+  - ASP.NET – AutoCompleteMode
+- - '##'
+  - Common Language Runtime (CLR) — constraints
+- - '##'
+  - N
+- - '##'
+  - .NET – 对象
+- - '##'
+  - O
+- - '##'
+  - SharePoint – 套接字
+- - '##'
+  - StaticResources — 对称密钥加密
+- - '##'
+  - TextBoxRounding – TryCatch

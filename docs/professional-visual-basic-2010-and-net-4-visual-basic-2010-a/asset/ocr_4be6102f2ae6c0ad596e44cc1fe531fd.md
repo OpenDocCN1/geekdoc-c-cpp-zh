@@ -1,0 +1,15 @@
+# SUMMARY
+
+A good exercise moving forward with the demonstration code from this chapter is to combine this code with one of the examples provided in Expression Blend. For example, the original version of Blend included a Photo Book application which provided a XAML layer you could use in the `Image` control to provide a better UI feel to that control. The Photo Book sample application includes an excellent user control, `Photobook.xaml`, that encapsulates the page-turning effect. The challenge isn’t just to leverage a control but to enhance it, such as extending the full `Windows.Media.MediaPlayer` control so that you could display not only saved images, but also recordings.
+
+This chapter focused on familiarizing you with WPF. WPF implements a new application development paradigm for user interfaces. You can start designing and planning the next versions of your applications to use these new controls. Keep in mind that this single chapter hasn’t covered all the new features you can potentially leverage with WPF — that would require an entire book. Instead, you should now have an understanding of the base principals of the WPF programming model and how it integrates with Visual Basic.
+
+WPF is the user interface paradigm of the future for .NET developers. However, while the graphic support is more powerful, certain elements of this model require you to handle more of what traditionally was thought of as standard window behavior. It is hoped that this chapter has clarified several key concepts that you need to know when working with WPF:
+
++   - WPF-based applications leverage traditional programming languages such as Visual Basic.
++   - Creating the custom window behaviors, while sometimes required, is not especially difficult.
++   - Visual Basic is uniquely positioned with literal XML strings to dynamically generate and display XAML elements as part of your application.
++   - Data binding in WPF is an extremely powerful concept that is used at multiple layers of the application interface to create many of the dynamic elements of the user interface.
++   - The updates in Visual Studio 2010 make it possible for a developer to create visually compelling business applications with WPF.
+
+This chapter focused on the WPF libraries within the context of building new applications. At this point you are probably wondering about your existing applications. Unlike the early releases, unless you are tied to a production environment capped at .NET 2.0, you should be working with WPF and Silverlight. The next chapter is going to take you into Expression Blend and from there onto Silverlight. Expression Blend will still be the place to go to get beyond the current capabilities for UI design in Visual Studio. Then there is Silverlight, the new XAML based UI for cutting-edge Web hosted applications.

@@ -1,0 +1,21 @@
+# EXAMINING THE VSTO RELEASES
+
+With Visual Studio 2005, the VSTO package was available as an add-in to Visual Studio. VSTO has been around since early in the .NET tools life cycle. That original package targeted Office 2003, which was the most recent version of Office at the time Visual Studio 2007 was released. There were five templates, two each for Word and Excel document-level customizations and then a single template for creating Outlook add-ins.
+
+With the release of Office 2007, Microsoft provided an update to the Visual Studio 2005 environment called VSTO 2005 SE, where SE stood for Second Edition. This update essentially enabled VSTO to access some of the same templates for Office 2007; however, access to other features, such as the Office 2007 Ribbon, was limited in this set of tools. The requirement to manually create and edit an XML file to define a custom Ribbon bar made approaching this solution somewhat intimidating. However, VSTO 2005 SE was just an interim release until the VSTO team could put together a more complete package for Visual Studio 2008.
+
+With the release of Visual Studio 2008, the number of available options enabling you to extend the standard features of Office VSTO expanded. This continues with the release of Visual Studio 2010, although with Visual Studio 2010 the templates targeting SharePoint have been moved out of the Office category and into a new SharePoint category. Note that for Office 2003 support, you need to continue to leverage Visual Studio 2008.
+
+# Office Automation versus VSTO
+
+In any discussion of VSTO, it’s important to distinguish between Office automation and VSTO. Office automation is a term that actually refers to the capability to create a custom application that references Word or Excel or some other Office application. In this case, the user of your custom application can start and send data to your application. This type of automation does not necessarily involve VSTO or VBA.
+
+Office automation relies on the custom application having a reference to Office and then sending information into or retrieving information from that application without Office being customized. This type of automation leverages COM-based interop to the Office components and doesn’t fall into the same category of application as VSTO. A VSTO application is one in which the actual Office application is aware of and connected to the custom logic. Thus, when a user of an application that supports Office automation wants to retrieve data from an Excel spreadsheet, that user exits Excel, goes to that custom application, asks it to connect to the currently running instance of Excel, and attempts to retrieve the data. This type of automation tends to treat Office as more of a black box.
+
+VSTO applications are built into Office. They can and do display UI elements directly within applications such as Word, and they can and do leverage the same automation elements and interop assemblies that Office automation clients leverage. The key difference is that VSTO applications are directly integrated with the application process (threads) and have direct access to UI elements that are part of the application.
+
+# PIA-Free Deployment
+
+One of the key new features related to Visual Studio 2010 and .NET Framework 4 is support for assemblies that don’t require Primary Interop Assembly (PIA). A PIA encapsulates the metadata that defines the .NET types needed to take an external and often COM-based interface and expose that interface within .NET. Traditionally, to work with VSTO you were required to ensure that the client would have the appropriate PIA for the targeted version of Office.
+
+Visual Studio 2010 makes this unnecessary. Instead, when you reference an Office assembly such as those used in VSTO, you can choose to have Visual Studio generate those portions of the PIA that you actually reference as part of your assembly. Thus, instead of needing to ship and reference an external assembly to get the metadata that defines the Office interfaces, you can now have that metadata embedded into your executable. The result is a smaller package for deployment, as it is no longer necessary to ship the entire set of PIA assemblies with your application.

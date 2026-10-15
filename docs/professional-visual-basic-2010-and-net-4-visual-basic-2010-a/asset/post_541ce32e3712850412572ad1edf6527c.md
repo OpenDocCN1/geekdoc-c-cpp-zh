@@ -1,0 +1,143 @@
+
+Straight Talk About Computers - 15 copies
+Silicon Valley Gastronomic Treats - 10 copies
+You Can Combat Computer Stress! - 35 copies
+Sales for OR
+The Gourmet Microwave - 15 copies
+The Busy Executive's Database Guide - 10 copies
+Cooking with Computers: Surreptitious Balance Sheets - 25 copies
+But Is It User Friendly? - 30 copies
+Sales for WA
+The Busy Executive's Database Guide - 5 copies
+Is Anger the Enemy? - 3 copies
+Is Anger the Enemy? - 20 copies
+The Gourmet Microwave - 25 copies
+Computer Phobic AND Non-Phobic Individuals: Behavior Variations - 20 copies
+Life Without Fear - 25 copies
+Prolonged Data Deprivation: Four Case Studies - 15 copies
+Emotional Security: A New Algorithm - 25 copies
+
+Many more commands and expressions are available to you beyond what has been presented in this chapter.
+
+## STORED PROCEDURES
+
+So far, you have been querying the tables directly and leaving it up to LINQ to create the appropriate SQL statement for the operation. When working with pre-existing databases that make heavy use of stored procedures (and for those who want to follow the best practice of using stored procedures within a database), LINQ is still a viable option.
+
+LINQ to SQL treats working with stored procedures as a method call. As shown earlier in Figure 11-6, the design surface called the O/R Designer enables you to drag and drop tables onto it so that you can then programmatically work with the table. On the right side of the O/R Designer is a pane in which you can drag and drop stored procedures.
+
+Any stored procedures that you drag and drop onto this part of the O/R Designer become available methods to you off the DataContext object. For this example, drag and drop the usp_Get_Authors_By_States stored procedure onto this part of the O/R Designer (see Figure 10-10). You can rename it to GetAuthorsByStates using the property window. The following code shows how you would call this stored procedure within the pubs database:
+
+```
+Imports System.Data.Linq
+Module Main
+    Sub Main()
+        Dim dc As New PubsDataContext
+        'wraps the GetAuthorsByStates stored procedure
+        'first parameter is the delimited list of states
+        'second parameter is the delimiter
+        Dim query = dc.GetAuthorsByStates("OR|UT", "|")
+        For Each item In query
+            Console.WriteLine("{0} {1} from {2}, {3}",
+                item.au_fname,
+                item.au_lname,
+                item.city,
+                item.state)
+        Next
+    End Sub
+End Module
+```
+
+![](img/d99870e80390742f93963da7be0b2e61_446_0.png)
+
+## FIGURE 10-10
+
+The stored procedure takes two parameters. The first one is a delimited list of state abbreviations. Authors from those states will be returned. The second parameter is the delimiter used to separate the elements in the first parameter. This is a common way of querying for an unknown number of values.
+
+The return value for the query is a new type — named GetAuthorsByStatesResult — that wraps the fields returned. From here, iteration through this object is simple. As you can see from this example, calling your stored procedures is a straightforward process.
+
+## UPDATING THE DATABASE
+
+LINQ to SQL is not just for querying your database. You can also use it to insert, update, and delete records from the query. As you saw above in the LinqTransactions project, this is done using the DataContext object. The short version of updating the database is that you make one or more changes to the data returned from the database, then you submit those changes to save them.
+
+To insert a new record, you create a new instance of the class created by the LINQ to SQL designer, and insert it into the appropriate collection. This does not add it to the database, however. Only once you execute the SubmitChanges method of the DataContext does the record get sent to the database as the following code shows:
+
+```
+Private Sub InsertTitle()
+    Console.WriteLine("Titles before insert: {0}", dc.titles.Count)
+    Dim newTitle As New title
+    With newTitle
+        .title_id = "NU1234"
+        .title = "Some new title"
+        .type = "test"
+        .pubdate = New DateTime(2010, 1, 1)
+        .notes = "Added via LINQ"
+        .price = 50.0
+    End With
+    dc.titles.InsertOnSubmit(newTitle)
+
+    Console.WriteLine("Titles after insert, but before submit: {0}",
+        dc.titles.Count)
+    dc.SubmitChanges()
+    Console.WriteLine("Titles after submit: {0}", dc.titles.Count)
+End Sub
+```
+
+Code snippet from LinqUpdates project
+
+In the code, you create a new title. As the DataContext is connected to the database, you do not need to query first to return a collection to add the new record. Instead, you can add to the titles collection created by the designer. Once the new title is created, you then set the properties as desired. All required properties will need to be set, or an exception will occur when you attempt to submit the record(s) to the database. You then add the newly created record to the collection with the InsertOnSubmit method. At this point the record has not been added to either the database or the collection as the second Console.WriteLine demonstrates. Finally, once the SubmitChanges method is called, the newly added record exists in both the collection and the database.
+
+Updating a record is similar, with the main difference that you start with an existing record. This record could be in an existing collection you are working with, or retrieved specifically to be updated.
+
+```
+Private Sub UpdateTitle()
+    'retrieve record to update
+    Dim aTitle As title = (From t In dc.titles
+                            Where t.title_id = "NU1234"
+                            Select t).Single
+
+    Console.WriteLine("Record before update: {0}", aTitle.title)
+
+    'change values
+    aTitle.title = "Updated title"
+    aTitle.price = 45.95
+    'submit
+    dc.SubmitChanges()
+
+    Console.WriteLine("Record after update: {0}", aTitle.title)
+End Sub
+```
+
+Code snippet from LinqUpdates project
+
+In the code above, a single record is returned from the database by including the Single clause in the LINQ query. Alternately, you could already have a collection returned (as we will do with the delete) and update one or more records from it. As with the insert, you then can set the properties as desired. Changes are not sent to the database until the SubmitChanges method is called. While only a single record is changed here, there may be multiple records changed. All will be submitted when SubmitChanges is called.
+
+Finally, deleting records using LINQ to SQL mirrors the method used to insert. Rather than adding the new item into the collection with InsertOnSubmit, you mark it for deletion with DeleteOnSubmit.
+
+```
+Private Sub DeleteTitle()
+    Console.WriteLine("Titles before delete: {0}", dc.titles.Count)
+    'retrieve all records
+    Dim theTitles = From t In dc.titles
+                    Order By t.title_id Select t
+    'find and delete the desired record(s)
+```
+
+## 11
+
+## Data Access with the Entity Framework
+
++   **WHAT YOU WILL LEARN IN THIS CHAPTER**
++   
++   - What is Object-Relational Mapping?
++   - What is the Entity Framework
++   - How the Entity Framework works with databases
++   - Using the Entity Framework to edit data
++   - Using the Entity Framework to create new databases
+
+In the past, Microsoft has been known to change the recommended data access strategy relatively frequently. For example, Data Access Objects (DAO) was released in the Visual Basic 3.0 time frame, followed by RDO (Remote Data Objects) as an option in the Visual Basic 4 days, and ADO (Active Database Objects) with Visual Basic 6. Of course, all of these were COM libraries, so it was no surprise when they were superseded by ADO.NET when the .NET Framework shipped. There have been remarkably few changes to ADO.NET since then.
+
+Now, when I see Microsoft recommending a new data access strategy, I start to get nervous. However, in this case there is good news. The Entity Framework (EF) does not replace ADO.NET. You can continue to use ADO.NET without fear of it going away, even as a recommended data access tool. The Entity Framework simply provides a different — richer and more flexible — model for working with data sources.
+
+Beyond simply being a set of classes you use to access your data, Entity Framework enables you to work naturally with the data using the classes you have designed, while saving the data to the underlying database schema. The Entity Framework provides the mapping necessary to convert the data structures, variable types, and relationships between the Visual Basic data you work with in your applications to the SQL Server, Oracle, or other database. It offers a means of working with your database more easily and more naturally than with ADO.NET, without requiring you to manually build your own data access layer.
+
+Compared to LINQ to SQL, Entity Framework provides most of the same functionality for rapidly accessing your data. Where it differs is that Entity Framework provides a great deal of functionality not provided by LINQ to SQL, such as the ability to use databases other than SQL Server, and the ability to use client-side classes that don’t directly map to database tables.

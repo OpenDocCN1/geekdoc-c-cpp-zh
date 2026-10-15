@@ -1,0 +1,212 @@
+
+```vb
+Dim query = From people In Xdoc.Descendants("PERSONA") _
+            Select people.Value
+```
+
+此查询返回文档中找到的所有人物。使用 `XDocument` 对象的 `Element` 方法，你还可以获取所处理 XML 文档中的特定值。例如，继续使用 `hamlet.xml` 文档，下面的 XML 片段展示了标题的表示方式：
+
+```xml
+<?xml version="1.0"?>
+<PLAY>
+    <TITLE>The Tragedy of Hamlet, Prince of Denmark</TITLE>
+    <!-- XML removed for clarity -->
+</PLAY>
+```
+
+如你所见，`<TITLE>` 元素是 `<PLAY>` 元素的嵌套元素。使用下面的代码即可轻松获取标题：
+
+```vb
+Dim xdoc As XDocument = XDocument.Load("C:\hamlet.xml")
+Console.WriteLine(xdoc.Element("PLAY").Element("TITLE").Value)
+```
+
+这段代码将标题 "The Tragedy of Hamlet, Prince of Denmark" 输出到控制台屏幕。在代码中，你通过两次 `Element` 方法调用沿 XML 文档的层次结构向下操作——首先调用 `<PLAY>` 元素，然后调用嵌套在 `<PLAY>` 元素中的 `<TITLE>` 元素。
+
+继续使用 `hamlet.xml` 文档，你可以看到使用 `<PERSONA>` 元素定义的一长串人物列表：
+
+```xml
+<?xml version="1.0"?>
+<PLAY>
+    <TITLE>The Tragedy of Hamlet, Prince of Denmark</TITLE>
+    <!-- XML removed for clarity -->
+    <PERSONAE>
+        <TITLE>Dramatis Personae</TITLE>
+        <PERSONA>CLAUDIUS, king of Denmark. </PERSONA>
+        <PERSONA>HAMLET, son to the late,
+        and nephew to the present king.</PERSONA>
+        <PERSONA>POLONIUS, lord chamberlain. </PERSONA>
+        <PERSONA>HORATIO, friend to Hamlet.</PERSONA>
+        <PERSONA>LAERTES, son to Polonius.</PERSONA>
+        <PERSONA>LUCIANUS, nephew to the king.</PERSONA>
+        <!-- XML removed for clarity -->
+    </PERSONAE>
+</PLAY>
+```
+
+基于此，来看一下下面这段代码如何使用这个 XML：
+
+```vb
+Dim xdoc As XDocument = XDocument.Load("C:\hamlet.xml")
+Console.WriteLine(_
+        xdoc.Element("PLAY").Element("PERSONAE").Element("PERSONA").Value)
+```
+
+这段代码从 `<PLAY>` 开始，向下处理到 `<PERSONAE>` 元素，然后使用 `<PERSONA>` 元素。然而，这样操作后你将得到以下结果：
+
+```text
+CLAUDIUS, king of Denmark
+```
+
+虽然 `<PERSONA>` 元素是一个集合，但你只处理使用 `Element().Value` 调用时遇到的第一个元素。
+
+## 写入 XML 文档
+
+除了读取 XML 文档，你同样可以轻松地写入文档。例如，如果你想更改 hamlet 文件中第一个人物的名字，可以使用下面的代码来完成：
+
+```
+Module Module1
+    Sub Main()
+        Dim xdoc As XDocument = XDocument.Load("hamlet.xml")
+        xdoc.Element("PLAY").Element("PERSONAE")._
+            Element("PERSONA").SetValue("Foo deBar, King of Denmark")
+        Console.WriteLine(xdoc.Element("PLAY")._
+            Element("PERSONAE").Element("PERSONA").Value)
+        Console.ReadLine()
+    End Sub
+End Module
+```
+
+来自 LinqWrite 的代码片段
+
+在这种情况下，使用 Element 对象的 SetValue 方法，第一个 `<PERSONA>` 元素被覆盖为 "Foo deBar, King of Denmark" 这个值。调用 `SetValue` 并将值应用到 XML 文档后，再使用与之前相同的方法检索该值。运行这段代码，你确实可以看到第一个 `<PERSONA>` 元素的值已被更改。
+
+另一种修改文档的方式（在此示例中是通过向文档添加条目）是先将你想要的元素创建为 XElement 对象，然后将它们添加到文档中：
+
+```
+Module Module1
+    Sub Main()
+        Dim xdoc As XDocument = XDocument.Load("hamlet.xml")
+        Dim xe As XElement = New XElement("PERSONA", _
+            "Foo deBar, King of Denmark")
+        xdoc.Element("PLAY").Element("PERSONAE").Add(xe)
+        Dim query = From people In xdoc.Descendants("PERSONA") _
+            Select people.Value
+        Console.WriteLine("{0} Players Found", query.Count())
+        Console.WriteLine()
+        For Each item In query
+            Console.WriteLine(item)
+        Next
+        Console.ReadLine()
+    End Sub
+End Module
+```
+
+来自 LinqAdd 的代码片段
+
+在这个例子中，创建了一个名为 xe 的 XElement 文档。xe 的构造会生成以下 XML 输出：
+
+```
+<PERSONA>Foo deBar, King of Denmark</PERSONA>
+```
+
+然后，使用 `XDocument` 对象的 `Element().Add` 方法，你就可以添加已创建的元素：
+
+```
+xdoc.Element("PLAY").Element("PERSONAE").Add(xe)
+```
+
+接下来，查询所有人物时，你会发现现在不再是之前的 26 个，而是 27 个，新人物位于列表末尾。除了 Add 之外，你还可以使用 AddFirst，它的作用正是如此——将人物添加到列表开头，而不是默认的列表末尾。
+
+## Visual Basic 中的 Lambda 表达式
+
+虽然 lambda 表达式并不是 XML 特有的功能，但 Visual Basic 包含了对 lambda 表达式的支持。在处理 XML 或其他需要重复执行某个函数的代码时，lambda 表达式会非常方便。
+
+乍一看，lambda 表达式与函数类似。你可以使用 System.Func 泛型声明它们，然后按需执行：
+
+```
+Dim Square As Func(Of Integer, Integer) =
+    Function(x As Integer) x ^ 2
+Dim value As Integer = 42
+Console.WriteLine(Square(value))
+```
+
+这个示例创建了一个名为 Square 的新 lambda——它只是求一个整数的平方。这个表达式接收一个 Integer，并返回一个 Integer。还有其他 Func 泛型可用于各种不同的参数和返回值组合。Function 关键字用于定义表达式（稍后你将看到，还有一个 Sub 关键字）。
+
+在前面的示例中，实际函数写在 Function 关键字后面的一行上。许多开发人员一开始会觉得这种语法有点令人困惑。幸运的是，在 Visual Basic 2010 中，有一种更熟悉的形式：
+
+```
+Dim SquareIt As Func(Of Integer, Integer) = Function(x As Integer)
+    Return x ^ 2
+End Function
+
+Dim i As Integer = 42
+Console.WriteLine(SquareIt(i))
+```
+
+在这个示例中，lambda 的编写方式更像一个普通函数——跨越多行，并带有 return 语句。虽然这个函数只有一行，但你可以在 lambda 表达式中包含任何需要的处理逻辑，就像在普通函数中一样。
+
+这些表达式与常规函数的不同之处在于，它们实际上继承自 Delegate。这意味着它们实际上是代码对象。因此，你甚至可以从方法中返回它们。此外，由于它们继承自 Delegate，它们是可以互换的。例如，如果你有两个使用相同签名的 lambda，你可以声明一个方法来返回任何使用该签名的 lambda：
+
+```
+Dim Square As Func(Of Integer, Integer) = Function(x As Integer) x ^ 2
+Dim Cube As Func(Of Integer, Integer) = Function(x As Integer) x ^ 3
+
+Function GetMath(ByVal v As Integer) As Func(Of Integer, Integer)
+    'square even numbers, cube odd ones
+    If (v Mod 2) = 0 Then
+        Return Square
+    Else
+        Return Cube
+    End If
+End Function
+```
+
+然后，你的代码将根据参数运行相应的方法：
+
+```
+Dim nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+For Each x In nums
+    Dim f As Func(Of Integer, Integer)
+    f = GetMath(x)
+    Console.WriteLine("{0}: {1}", x, f(x))
+Next
+```
+
+lambda 表达式与 XML 有什么关系？你一直在使用的 LINQ 表达式在内部实际上是以 lambda 表达式的形式编写的（实际上，LINQ 正是 lambda 表达式被添加到 .NET 中的原因）。
+
+此外，你可以使用自己的 lambda 将复杂查询替换为 lambda 表达式，从而简化这些查询。例如，下面的代码从你一直在使用的 hamlet.xml 文件中打印出部分台词：
+
+```
+Dim doc As XElement = XElement.Load("..\..\hamlet.xml")
+Dim speakers = {"OPHELIA", "LORD POLONIUS" }
+
+Dim lines As List(Of String) =
+    (From line In doc.Descendants("SPEECH") _
+        .Where(Function(item As XElement)
+            Return speakers.Contains(item.Descendants("SPEAKER").Value)
+        End Function) _
+        .Select(Function(item As XElement)
+            Return String.Format("{0} said, {1}{2}{3}",
+                item.Descendants("SPEAKER").Value,
+                ControlChars.Quote,
+                item.Descendants("LINE").Value,
+                ControlChars.Quote)
+        End Function)).ToList()
+
+lines.ForEach(Sub(line)
+    Console.WriteLine(line)
+End Sub)
+```
+
+来自 Lambdas 的代码片段
+
+XML 文件被加载到 XElement 中进行处理，并初始化了一个发言者数组。这里使用了初始化数组的新语法。你想要返回数组中列出的任何人物所说的台词。你可以使用常规的 LINQ 语法来实现，但使用 lambda 可以将 where 子句缩减为几行。请注意，在这种情况下，你仍然需要使用语句续行符来拆分较长的查询。
+
+在之前的示例中，lambda 表达式都是先编写好再使用。然而，在这个示例中，表达式实际上是在它们要执行的位置编写的。你应使用哪种形式取决于你要完成的任务以及应用程序的需求，就像你在决定一个函数是应该写成独立函数还是内联形式一样。例如，如果只需要访问 lambda 一两次，先编写好可能是个好主意。在这个例子中，lambda 只使用一次，因此将其内联编写是更好的选择。此外，将 lambda 放在 LINQ 查询中，你可以更清楚地了解 lambda 正在做什么（例如，在 Where 子句中，lambda 返回所需的记录；而在 Select 子句中，它格式化输出）。
+
+在 select 子句中使用了第二个 lambda 表达式来连接 XML 中 `<SPEECH>` 元素的某些子节点。最后，整个结果集被转换为 List(Of String)。列表中的每个元素都是一个包含发言者和台词的字符串：
+
+LORD POLONIUS said, "By the mass, and 'tis like a camel, indeed."
+
+接下来，代码打印出选定的台词（参见图 9-13）。在这种情况下，它使用了 lambda 的新 Sub 版本。这与之前使用的 lambda 的工作方式完全相同，只是它不返回任何值。

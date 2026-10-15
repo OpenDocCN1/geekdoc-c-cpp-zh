@@ -1,0 +1,112 @@
+
+
+in each table. Relationships can be built with more than one column per table, with an array of DataColumn objects for the key columns. When a relationship is added to the DataRelationCollection, it may optionally add ForeignKeyConstraints that disallow any changes that would invalidate the relationship.
+
+## ExtendedProperties
+
+The DataSet (as well as the DataTable and DataColumn) has an ExtendedProperties property. ExtendedProperties is a PropertyCollection in which a user can place customized information, such as the SELECT statement that is used to generate the result set, or a date/time stamp indicating when the data was generated. Because the ExtendedProperties contains customized information, this is a good place to store extra user-defined data about the DataSet (or DataTable or DataColumn), such as a time when the data should be refreshed. The ExtendedProperties collection is persisted with the schema information for the DataSet (as well as DataTable and DataColumn). The following code example adds an expiration property to a DataSet:
+
+```
+Private Sub _extendedDataSetButton_Click(ByVal sender As System.Object,
+    ByVal e As System.EventArgs) Handles _extendedDataSetButton.Click
+' Build the SQL and connection strings.
+Dim cmdString As String = "SELECT * FROM authors"
+Dim connection As SqlConnection = GetPubsConnection()
+' Initialize the SqlDataAdapter with the SQL
+' and Connection strings, and then use the
+' SqlDataAdapter to fill the DataSet with data.
+Dim adapter As SqlDataAdapter =
+    New SqlDataAdapter(cmdString, connection)
+Dim authors As New DataSet
+adapter.Fill(authors)
+' Add an extended property called "expiration."
+' Set its value to the current date/time + 1 hour.
+authors.ExtendedProperties.Add("expiration",
+    DateAdd(DateInterval.Hour, 1, Now))
+MessageBox.Show(authors.ExtendedProperties("expiration").ToString,
+    "Authors Expiration")
+
+End Sub
+```
+
+Code snippet from AdoNetFeaturesTest project
+
+This code begins by filling a DataSet with the authors table from the pubs database. It then adds a new extended property, called expiration, and sets its value to the current date and time plus one hour. You then simply read it back. As you can see, it is very easy to add extended properties to DataSet objects. The same pattern also applies to DataTable and DataColumn objects.
+
+## Creating and Using DataSet Objects
+
+The ADO.NET DataSet is a memory-resident representation of the data that provides a consistent relational programming model, regardless of the source of the data it contains. A DataSet represents a complete set of data, including the tables that contain, order, and constrain the data, as well as the relationships between the tables. The advantage to using a DataSet is that the data it contains can come from multiple sources, and it is fairly easy to get the data from multiple sources into the DataSet. In addition, you can define your own constraints between the DataTables in a DataSet.
+
+There are several methods for working with a DataSet, which can be applied independently or in combination:
+
+- Programmatically create DataTables, DataRelations, and constraints within the DataSet and populate them with data.
+- Populate the DataSet or a DataTable from an existing RDBMS using a DataAdapter.
+- Load and persist a DataSet or DataTable using XML.
+- Load a DataSet from an XSD schema file.
+- Load a DataSet or a DataTable from a DataReader.
+
+Here is a typical usage scenario for a DataSet object:
+
+- 1. A client makes a request to a Web service.
+- 2. Based on this request, the Web service populates a DataSet from a database using a DataAdapter and returns the DataSet to the client.
+- 3. The client then views the data and makes modifications.
+- 4. When finished viewing and modifying the data, the client passes the modified DataSet back to the Web service, which again uses a DataAdapter to reconcile the changes in the returned DataSet with the original data in the database.
+- 5. The Web service may then return a DataSet that reflects the current values in the database.
+- 6. Optionally, the client can then use the DataSet class’s Merge method to merge the returned DataSet with the client’s existing copy of the DataSet; the Merge method will accept successful changes and mark with an error any changes that failed.
+
+The design of the ADO.NET DataSet makes this scenario fairly easy to implement. Because the DataSet is stateless, it can be safely passed between the server and the client without tying up server resources such as database connections. Although the DataSet is transmitted as XML, Web services and ADO.NET automatically transform the XML representation of the data to and from a DataSet, creating a rich, yet simplified, programming model.
+
+In addition, because the DataSet is transmitted as an XML stream, non-ADO.NET clients can consume the same Web service consumed by ADO.NET clients. Similarly, ADO.NET clients can interact easily with non-ADO.NET Web services by sending any client DataSet to a Web service as XML and by consuming any XML returned as a DataSet from the Web service. However, note the size of the data; if your DataSet contains a large number of rows, it will eat up a lot of bandwidth.
+
+## Programmatically Creating DataSet Objects
+
+You can programmatically create a DataSet object to use as a data structure in your programs. This could be quite useful if you have complex data that needs to be passed around to another object’s method. For example, when creating a new customer, instead of passing 20 arguments about the new customer to a method, you could just pass the programmatically created DataSet object with all of the customer information to the object’s method. In addition, this helps maintain your software as instead of having to maintain all those functions dealing with the multiple parameters, they simply need to receive a dataset. If the structure of the data changes, your functions do not need to change.
+
+Here is the code for building an ADO.NET DataSet object that is comprised of related tables:
+
+```
+Private Sub _buildDataSetButton_Click(ByVal sender As System.Object,
+    ByVal e As System.EventArgs) _
+    Handles _buildDataSetButton.Click
+
+Dim customerOrders As New Data.DataSet("CustomerOrders")
+Dim customers As Data.DataTable = customerOrders.Tables.Add("Customers")
+Dim orders As Data.DataTable = customerOrders.Tables.Add("Orders")
+Dim row As Data.DataRow
+With customers
+    .Columns.Add("CustomerID", Type.GetType("System.Int32"))
+    .Columns.Add("FirstName", Type.GetType("System.String"))
+    .Columns.Add("LastName", Type.GetType("System.String"))
+    .Columns.Add("Phone", Type.GetType("System.String"))
+    .Columns.Add("Email", Type.GetType("System.String"))
+End With
+With orders
+```
+
+The DataTable class is a member of the System.Data namespace within the .NET Framework Class Library. You can create and use a DataTable independently or as a member of a DataSet, and DataTable objects can be used by other .NET Framework objects, including the DataView. You access the collection of tables in a DataSet through the DataSet object’s Tables property.
+
+The schema, or structure, of a table is represented by columns and constraints. You define the schema of a DataTable using DataColumn objects as well as ForeignKeyConstraint and UniqueConstraint objects. The columns in a table can map to columns in a data source, contain calculated values from expressions, automatically increment their values, or contain primary key values.
+
+If you populate a DataTable from a database, it inherits the constraints from the database, so you don’t have to do all of that work manually. A DataTable must also have rows in which to contain and order the data. The DataRow class represents the actual data contained in the table. You use the DataRow and its properties and methods to retrieve, evaluate, and manipulate the data in a table. As you access and change the data within a row, the DataRow object maintains both its current and original state.
+
+You can create parent-child relationships between tables within a database, such as SQL Server, using one or more related columns in the tables. You create a relationship between DataTable objects using a DataRelation, which can then be used to return a row’s related child or parent rows.
+
+## Advanced ADO.NET Features of the DataSet and DataTable Objects
+
+One of the main complaints developers had about ADO.NET 1.x was related to the performance of the DataSet and its DataTable children — in particular, when they contained a large amount of data. The performance hit comes in two different ways. The first way is the time it takes to actually load a DataSet with a lot of data. As the number of rows in a DataTable increases, the time to load a new row increases almost proportionally to the number of rows. The second way is when the large DataSet is serialized and remoted. A key feature of the DataSet is the fact that it automatically knows how to serialize itself, especially when you want to pass it between application tiers. Unfortunately, the serialization is quite verbose and takes up a lot of memory and network bandwidth. Both of these performance problems have been addressed since ADO.NET 2.0.
+
+### Indexing
+
+The first improvement made since ADO.NET 2.0 to the DataSet family was a complete rewrite of the indexing engine for the DataTable, which now scales much better for large DataSets. The addition of the new indexing engine results in faster basic inserts, updates, and deletes, which also means faster Fill and Merge operations. Just as in relational database design, if you are dealing with large DataSets, then it pays big dividends if you first add unique keys and foreign keys to your DataTable. Even better, you don’t have to change any of your code at all to take advantage of this new feature.
+
+### Serialization
+
+The second improvement made to the DataSet family was adding new options to the way the DataSet and DataTable are serialized. The main complaint about retrieving DataSet objects from Web services and remoting calls was that they were way too verbose and took up too much network bandwidth. In ADO.NET 1.x, the DataSet serializes as XML, even when using the binary formatter. Using ADO.NET, you can also specify true binary serialization by setting the newly added RemotingFormat property to SerializationFormat.Binary, rather than (the default) SerializationFormat.XML. In the AdoNetFeaturesTest project of the Examples solution, I have added a Button (serializationButton) to the form and its associated Click event handler that demonstrates how to serialize a DataTable in binary format:
+
+```
+Private Sub _serializationButton_Click(ByVal sender As System.Object,
+    ByVal e As System.EventArgs) Handles _serializationButton.Click
+' Get the authors reader.
+Dim reader As SqlDataReader = GetAuthorsSqlReader()
+```
+

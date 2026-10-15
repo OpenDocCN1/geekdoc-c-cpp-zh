@@ -1,0 +1,173 @@
+
+
+```
+m_imageList = System.IO.Directory.GetFiles(m_curImagePath, "*.jpg")
+m_curIndex = 0
+If m_imageList.Count > 0 Then
+    Image1.Source = New System.Windows.Media.Imaging.BitmapImage(
+        New System.Uri(m_imageList(m_curIndex)))
+End If
+End Sub
+
+Private Sub ButtonPrev_Click(ByVal sender As System.Object,
+    ByVal e As System.Windows.RoutedEventArgs) Handles ButtonPrev.Click
+    If m_imageList.Count > 0 Then
+        m_curIndex -= 1
+        If m_curIndex < 0 Then
+            m_curIndex = m_imageList.Count - 1
+        End If
+        Image1.Source = New System.Windows.Media.Imaging.BitmapImage(
+            New System.Uri(m_imageList(m_curIndex)))
+    End If
+End Sub
+
+Private Sub ButtonNext_Click(ByVal sender As System.Object,
+    ByVal e As System.Windows.RoutedEventArgs) Handles ButtonNext.Click
+    If m_imageList.Count > 0 Then
+        m_curIndex += 1
+        If m_curIndex > m_imageList.Count - 1 Then
+            m_curIndex = 0
+        End If
+        Image1.Source = New System.Windows.Media.Imaging.BitmapImage(
+            New System.Uri(m_imageList(m_curIndex)))
+    End If
+End Sub
+
+Private Sub StackPanelPrev_MouseEnter(ByVal sender As System.Object,
+    ByVal e As System.Windows.Input.MouseEventArgs) Handles StackPanelPrev.MouseEnter
+    ButtonPrev.Visibility = Windows.Visibility.Visible
+End Sub
+
+Private Sub StackPanelPrev_MouseLeave(ByVal sender As System.Object,
+    ByVal e As System.Windows.Input.MouseEventArgs) Handles StackPanelPrev.MouseLeave
+    ButtonPrev.Visibility = Windows.Visibility.Hidden
+End Sub
+
+Private Sub StackPanelNext_MouseEnter(ByVal sender As System.Object,
+    ByVal e As System.Windows.Input.MouseEventArgs) Handles StackPanelNext.MouseEnter
+    ButtonNext.Visibility = Windows.Visibility.Visible
+End Sub
+
+Private Sub StackPanelNext_MouseLeave(ByVal sender As System.Object,
+    ByVal e As System.Windows.Input.MouseEventArgs) Handles StackPanelNext.MouseLeave
+    ButtonNext.Visibility = Windows.Visibility.Hidden
+End Sub
+End Class
+```
+
+前面的代码块大部分是之前存在于 MainWindow.vb 类中的相同代码。支持自定义事件的更改已以粗体突出显示。注意，除了自定义事件的声明和随事件传递的自定义属性之外，唯一的其他更改就是按需引发该事件。
+
+现在我们有了自定义事件，让我们采用更新后（并且更短）的主窗口代码并为此事件添加一个处理程序。您将在以下代码块底部找到新的事件处理程序：
+
+```
+Class MainWindow
+
+    'Move Window
+    Private Sub Rectangle_MouseLeftButtonDown(ByVal sender As Object,
+            ByVal e As System.Windows.Input.MouseButtonEventArgs) _
+            Handles TitleBar.MouseLeftButtonDown
+        Me.DragMove()
+    End Sub
+
+    'Minimize
+    Private Sub ButtonMin_Click(ByVal sender As Object,
+            ByVal e As RoutedEventArgs) Handles ButtonMin.Click
+        Me.WindowState = WindowState.Minimized
+    End Sub
+
+    Private Sub ButtonMax_Click(ByVal sender As Object,
+            ByVal e As RoutedEventArgs) Handles ButtonMax.Click
+        If (Me.WindowState = WindowState.Maximized) Then
+            Me.WindowState = WindowState.Normal
+        Else
+            Me.WindowState = WindowState.Maximized
+        End If
+    End Sub
+
+    Private Sub ButtonClose_Click(ByVal sender As Object,
+            ByVal e As RoutedEventArgs) Handles ButtonClose.Click
+        Me.Close()
+    End Sub
+
+    'Resize
+    Private Sub ThumbResize_DragDelta(ByVal sender As System.Object,
+            ByVal e As Primitives.DragDeltaEventArgs) Handles ThumbResize.DragDelta
+
+        If (Me.Height + e.VerticalChange < Me.MinHeight) Then
+            Me.Height = Me.MinHeight
+        Else
+            Me.Height += e.VerticalChange
+        End If
+
+        If (Me.Width + e.HorizontalChange < Me.MinWidth) Then
+            Me.Width = Me.MinWidth
+        Else
+            Me.Width += e.HorizontalChange
+        End If
+    End Sub
+
+    Private Sub ImageRotater_UpdatedPath(ByVal sender As Object,
+            ByVal e As String) Handles imageRotater1.ImagePathChanged
+        labelWindowTitle.Content = e
+    End Sub
+End Class
+```
+
+新的事件处理程序显示在代码底部，处理来自 ImageRotator 控件（窗口中显示的实例 imageRotator1）的新的 ImagePathChanged 事件。此时，更新后窗口在设计器中的视图如图 17-13 所示。与显示相关的有一些更改，包括添加了一个 Label 控件，如事件处理程序中所述。
+
+## FIGURE 17-13
+
+将之前的 Image 控件移入用户控件后，还进行了其他更改。首先，如前所述，标题矩形上的漂亮按钮已被移除并放置在控件中。取而代之的是，虽然不可见，但有 Label 控件 labelWindowTitle。该标签是新事件的目标，将显示图像文件夹。接下来请注意，标题矩形上的按钮已更新。这些更新的图形是从 Visual Studio 10 图像库导入的。您可以在 Visual Studio 10 安装文件夹中的 Common7 文件夹下找到该库。
+
+在显示的主要部分中，控件 imageRotator1 只是显示的一部分。添加了两个标签和两个按钮。目前这些都未使用，但在应用程序的此阶段完成之前将会使用。事实上，如果您只是下载并运行示例代码，您会发现当前图像与最终显示不匹配。但是，这里目标是运行应用程序，如果一切正常，您将看到与图 17-14 所示类似的内容。
+
+## FIGURE 17-14
+
+## Creating a Custom Dependency Property
+
+此时我们有一个支持单向通信的工具。在将其转换为依赖属性时，第一个示例将使用只读依赖属性。因此，在示例代码中，所有事件特定的代码现在都已注释掉。取而代之的是添加了一个新的只读区域。注意，在最终的示例代码中，该区域也已注释掉，并被新的读写依赖属性取代。
+
+开始的地方回到 ImageRotator 控件的代码中。一旦您注释掉定义自定义事件的单行，您将添加以下所有代码来定义一个只读依赖属性：
+
+```
+Public ReadOnly Property ImageURI As String
+    Get
+        Try
+            If Image1 IsNot Nothing AndAlso Image1.Source IsNot Nothing Then
+                Return Image1.Source.ToString()
+            Else
+                Return "No Selection"
+            End If
+        Catch ex As Exception
+            Return ""
+        End Try
+        Return ""
+    End Get
+End Property
+
+Private Shared ReadOnly ImageProp As DependencyPropertyKey =
+    DependencyProperty.RegisterAttachedReadOnly("ImageURI",
+        GetType(String),
+        Type.GetType("ProvB_WPF_Step3.ImageRotator"),
+        New FrameworkPropertyMetadata(
+            "Can you see me now?"))
+```
+
+来自 ImageRotator.vb 的代码片段
+
+此时，您可能会想知道为什么要用更多代码来替代。答案有两个要素。一是，您正在创建可在 XAML 中以声明方式直接引用的内容。二是，更重要的是，当您将其转换为读写属性时，您将能够用支持与自定义事件提供的相同解耦的双向通信模式来替换这种单向通信，即事件模式。
+
+现在您应该回顾这两个新的属性声明。从顶部开始，第一个应该看起来相当熟悉，因为它是一个标准的类属性定义。该属性目前映射到 Image 控件中的源属性，但从大局来看，这只是需要公开的属性。正如您很快会看到的，您可以将此映射到用户控件上的属性，而不是用户控件中的控件之一，这将更有价值。
+
+接下来是一行标记为 Private 的代码，它定义了一个名为 ImageProp 的 Shared ReadOnly 字段。ImageProp 将是只读属性的名称；由于它是只读的，所以不能作为真正的依赖属性创建，您需要创建一个 DependencyPropertyKey。这是一个只读版本的依赖属性，主要参数是要公开的属性名称和该属性的类型。在本例中，我们使用 GetType 方法获取该类型。接下来是提供此属性的对象的类型。请注意，这里我们切换到不太精确的 Type.GetType() 方法。请注意，此方法接受一个字符串，并且该字符串必须包含对象的完整命名空间。因此，GetType 方法是首选。
+
+RegisterAttachedReadOnly 方法的最后一个参数是一个 FrameworkPropertyMetadata 对象。此对象的第一个参数是属性的默认值。它还包括与 setter 应调用的位置相关的其他属性，并定义系统在属性值更改时可能存在的潜在依赖关系。这些对于本示例不是必需的。
+
+如果您对新属性没有做其他任何事情就跳到主窗口中的映射，那么您将能够进入 MainWindow 的设计器并在设计视图中看到它。这是一个提示，以防您自己操作时遇到任何问题；您可以退回到此点进行调试。
+
+我之所以这么说，是因为在离开此代码之前，下一步是替换之前调用 RaiseEvent 的位置，并改为设置新的依赖属性。您会看到在代码中每个现在已注释的 RaiseEvent 调用旁边都有一个新行，内容如下：
+
+```
+SetValue(ImageProp, m_curImagePath)
+```
+

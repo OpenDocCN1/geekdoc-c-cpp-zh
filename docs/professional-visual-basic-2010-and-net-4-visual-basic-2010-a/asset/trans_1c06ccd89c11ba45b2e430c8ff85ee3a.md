@@ -1,0 +1,131 @@
+
+
+## VISUAL STUDIO TOOLS FOR SHAREPOINT DEVELOPMENT
+
+One of the things that was clearly missing from previous versions of Visual Studio was tooling to assist in SharePoint development. Out-of-the-box, Visual Studio 2005 had none and Visual Studio 2008 only had templates for building SharePoint workflows. To attempt to address this issue, Microsoft and members of the community built extensions to Visual Studio. The three most popular of these were the Visual Studio Extensions for Windows SharePoint Services 3.0 (VSeWSS), WSPBuilder, and STSDev.
+
+As SharePoint rose in popularity, the need for more and better tooling for SharePoint development became glaringly obvious. It’s clear that this was understood by Microsoft because they’ve added extensive support for SharePoint development to Visual Studio 2010. Multiple project and item templates, solution and Feature explorers and designers, the capability to use visual designers when creating Web Parts, and the capability to deploy and debug using F5 are just some of the features that were added.
+
+This section takes a look at some of these tools by recreating the Feature used in the last example with Visual Studio 2010. You’ll start fresh by recreating your test site. Open the SharePoint 2010 Management Shell and execute the following two commands:
+
+```
+Remove-SPSite http://localhost/sites/demo -Confirm:$False
+New-SPSite http://localhost/sites/demo -Name "Demo" -OwnerAlias "<Machine Name>\<User Name>" -Template "STS#0"
+```
+
+Start Visual Studio 2010 as Administrator and select File ▸ New Project from the main menu. In the New Project dialog, pick the Visual Basic ▸ SharePoint ▸ 2010 node from the Installed Templates, select Empty SharePoint Project, set the target framework to .NET Framework 3.5, set the Name to SimpleFeatureVisualStudio, and click the OK button (see Figure 24-13). Recall that SharePoint 2010 runs on .NET 3.5, not .NET 4, so it’s important to set the target framework.
+
+![](img/d99870e80390742f93963da7be0b2e61_826_0.png)
+
+FIGURE 24-13
+
+A dialog will appear asking you which local site you wish to use for debugging and whether you want to deploy the solution as a farm or sandboxed solution when testing (see Figure 24-14). Set the site to http://localhost/sites/demo, choose to deploy as a farm solution, and click the Finish button. The Visual Studio project created for you represents the SharePoint solution; now you need to add your Feature and its elements.
+
+![](img/d99870e80390742f93963da7be0b2e61_827_0.png)
+
+FIGURE 24-14
+
+To create the Feature, right-click on the Features node in the Solution Explorer and select Add Feature. In the Feature designer, set the Title to Simple Feature 2, and the Description to something that indicates this Feature was built with Visual Studio (see Figure 24-15). Now you are ready to create the elements.
+
+![](img/d99870e80390742f93963da7be0b2e61_827_1.png)
+
+FIGURE 24-15
+
+We'll start with the Contacts list. Right-click on the project in the Solution Explorer, select Add New Item, select the List Instance item template, set the Name to Contacts, and click the Add button. Visual Studio will examine the test site you selected when you created the project to see what kinds of lists are available. It will then present a dialog allowing you to select the list type, and give your list a name and description. Complete the dialog as shown in Figure 24-16 and click the Finish button.
+
+![](img/d99870e80390742f93963da7be0b2e61_828_0.png)
+
+FIGURE 24-16
+
+Two things should happen: A new folder containing the elements.xml file for the list instance should be added to the project, and the new element should be added to the Feature created earlier (see Figure 24-17).
+
+![](img/d99870e80390742f93963da7be0b2e61_828_1.png)
+
+FIGURE 24-17
+
+The CAML generated for the list instance is sufficient to create the Contacts list but it will not populate the data. You'll need to add that by copying the Data element from the last example into the Elements.xml file.
+
+```
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Contacts"
+    OnQuickLaunch="TRUE"
+    TemplateType="105"
+    FeatureId="00bfea71-7e6d-4186-9ba8-c047ac750105"
+    Url="Lists/Contacts"
+    Description="">
+    <!-- Insert Data element here -->
+  </ListInstance>
+</Elements>
+```
+
+Next, you want to add the Contacts.aspx page. If you recall, this page was provisioned into the site using a Module. Right-click on the project in the Solution Explorer, select Add New Item, select the Module item template, and click the Add button. A new folder will be created in the project for the Module, a sample file will be created for the Module to provision, and the new element will be added to the Feature (see Figure 24-18).
+
+![](img/d99870e80390742f93963da7be0b2e61_829_0.png)
+
+FIGURE 24-18
+
+The Contacts.aspx page from the last example can be used as-is, so right-click on the Module1 folder in the Solution Explorer, select Add Existing Item, navigate to and select Contacts.aspx used previously, and click the Add button. A new File element should be added to the Module. We don't need the sample file, so right-click on it in the Solution Explorer and select Delete.
+
+The last step is to modify the generated CAML. Update the URL property of the File element so that the Contacts.aspx page is provisioned into a virtual folder named MySitePages (instead of Module1). The completed Elements.xml should look like the following:
+
+```
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="Module1">
+        <File Path="Module1\Contacts.aspx" Url="MySitePages/Contacts.aspx" />
+    </Module>
+</Elements>
+```
+
+Code snippet from Module1\Elements.xml
+
+The final element to add is the option in the Site Actions menu that enables you to navigate to the Contacts.aspx page. This is defined by a CustomAction element. Right-click on the project in the Solution Explorer, select Add New Item, and look through the list of item templates. You won’t find a template for a custom action, so select the Empty Element template instead. Copy and paste the CAML for the CustomAction used in the previous example into the newly created Elements.xml (see Figure 24-19).
+
+![](img/d99870e80390742f93963da7be0b2e61_830_0.png)
+
+FIGURE 24-19
+
+At this point you’ve replicated everything done in the previous example. To confirm that you’re ready to move forward, examine the generated Feature and solution manifests. Double-click Feature1.feature in the Solution Explorer and select the Manifest tab at the bottom of the designer to see the generated CAML. You should see something similar to the following (also shown in Figure 24-20):
+
+```
+<Feature
+    xmlns="http://schemas.microsoft.com/sharepoint/"
+    Title="Simple Feature 2"
+    Description="This one uses the tools in Visual Studio"
+    Id="fabe1b4b-5a99-4d06-80d0-30922bb53322"
+    Scope="Web">
+    <ElementManifests>
+        <ElementManifest Location="Contacts\Elements.xml" />
+        <ElementFile Location="Module1\Contacts.aspx" />
+        <ElementManifest Location="Module1\Elements.xml" />
+        <ElementManifest Location="EmptyElement1\Elements.xml" />
+    </ElementManifests>
+</Feature>
+```
+
+![](img/d99870e80390742f93963da7be0b2e61_831_0.png)
+
+FIGURE 24-20
+
+This is effectively the same as the Feature manifest from the previous example except that the elements are split into three manifests, rather than being included in one.
+
+To see the solution manifest, double-click `Package.package` in the Solution Explorer (you may need to expand the Package folder) and select the Manifest tab at the bottom of the designer. You should see something similar to the following (also shown in Figure 24-21):
+
+```xml
+<Solution
+    xmlns="http://schemas.microsoft.com/sharepoint/"
+    SolutionId="7aa00dc0-bd83-4bff-a99b-271dd6e713e">
+  <Assemblies>
+    <Assembly
+      Location="SimpleFeatureVisualStudio.dll"
+      DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="SimpleFeatureVisualStudio_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>
+```
+
+The big difference between this manifest and the one used in the previous example is the inclusion of the `Assembly` element. This directs SharePoint to deploy the assembly for this project into the global assembly cache (GAC). This project does not include any Visual Basic code so the presence of the element is inconsequential.
+
+You are now ready to test. Press F5 and several things will happen: Visual Studio will build the package and deploy it, it will activate the Feature in the site you indicated you want to use for testing, it will attach the debugger to the appropriate worker process, and it will launch the site in your browser. To confirm that everything worked as expected, ensure that the Contacts list was created and populated with data and that you can navigate to `Contacts.aspx` using the menu option that was added to the Site Actions menu. Close the browser to stop your debugging session.
+

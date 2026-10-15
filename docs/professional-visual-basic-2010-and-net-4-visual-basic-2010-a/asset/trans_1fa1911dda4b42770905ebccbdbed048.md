@@ -1,0 +1,144 @@
+
+
+```
+X509Certificate.CreateFromCertFile(certFilePath)
+textbox.Text = "Hash = " & cert.GetCertHashString() & Environment.NewLine
+textbox.Text &= "Effective Date = " & 
+cert.GetEffectiveDateString() & Environment.NewLine
+textbox.Text &= "Expire Date = " & 
+cert.GetExpirationDateString() & Environment.NewLine
+textbox.Text &= "Issued By = " & cert.Issuer & Environment.NewLine
+textbox.Text &= "Issued To = " & cert.Subject & Environment.NewLine
+textbox.Text &= "Algorithm = " & cert.GetKeyAlgorithm() & Environment.NewLine
+textbox.Text &= "Pub Key = " & cert.GetPublicKeyString() & Environment.NewLine
+End Sub
+End Class
+```
+
+Code snippet from CertLoad.vb
+
+The static method loads CreateFromCertFile (the certificate file) and creates a new instance of the class X509Certificate. When working correctly, the results are displayed in ProVB_Security as shown in Figure 32-11. The next section deals with Secure Sockets Layer (SSL), which uses X.509 certificates to establish the trust relationship.
+
+![](img/d99870e80390742f93963da7be0b2e61_1046_0.png)
+
+FIGURE 32-11
+
+## Secure Sockets Layer
+
+The Secure Sockets Layer (SSL) protocol provides privacy and reliability between two communicating applications over the Internet. SSL is built over the TCP layer. In January 1999, the Internet Engineering Task Force (IETF) adopted an enhanced version of SSL 3.0 called Transport Layer Security (TLS). TLS is backwardly compatible with SSL, and is defined in RFC 2246. However, the name SSL was retained due to wide acceptance of this Netscape protocol name. This section provides a simplified overview of the SSL algorithm sequence. SSL provides connection-oriented security via the following four properties:
+
+- Connection is private and encryption is valid for the current session only.
+- Symmetric key cryptography, like DES, is used for encryption. However, the session symmetric key is exchanged using public key encryption.
+- Digital certificates are used to verify the identities of the communicating entities.
+- Secure hash functions, such as SHA and MD5, are used for message authentication code (MAC).
+
+The SSL protocol provides the following features:
+
+- Cryptographic security — Using a symmetric key for session data-encryption, and a public key for authentication
+- Interoperability — Interpolates OS and programming languages
+- Extensibility — Adds new data-encryption protocols that are allowed within the SSL framework
+- Relative efficiency — Reduces computation and network activity by using caching techniques
+
+Two entities communicating using SSL protocols must have a public-private key pair, optionally with digital certificates validating their respective public keys.
+
+At the beginning of a session, the client and server exchange information to authenticate each other. This ritual of authentication is called the handshake protocol. During this handshake, a session ID, the compression method, and the cipher suite to be used are negotiated. If the certificates exist, then they are exchanged. Although certificates are optional, either the client or the server may refuse to continue with the connection and end the session in the absence of a certificate.
+
+After receiving each other’s public keys, a set of secret keys based on a randomly generated number is exchanged by encrypting them with each other’s public keys. After this, the application data exchange can commence. The application data is encrypted using a secret key, and a signed hash of the data is sent to verify data integrity.
+
+Microsoft implements the SSL client in the .NET Framework classes. However, the server-side SSL can be used by deploying your service through the IIS Web server.
+
+The following code demonstrates a method for accessing a secured URL. It takes care of minor details, such as encoding:
+
+```
+' Cryptography/GetWeb.vb
+Imports System
+Imports System.IO
+Imports System.Net
+Imports System.Text
+
+Public Class GetWeb
+    Dim MaxContentLength As Integer = 16384 ' 16k
+
+    Public Shared Function QueryURL(ByVal url As String) As String
+        Dim req As WebRequest = WebRequest.Create(url)
+        Dim result As WebResponse = req.GetResponse()
+        Dim ReceiveStream As Stream = result.GetResponseStream()
+        Dim enc As Encoding = System.Text.Encoding.GetEncoding("utf-8")
+        Dim sr As StreamReader = New StreamReader(ReceiveStream, enc)
+        Dim response As String = sr.ReadToEnd()
+        Return response
+    End Function
+
+End Class
+```
+
+Code snippet from Cryptography/GetWeb.vb
+
+Using this method from the ProVB_Security application allows you to retrieve the information associated with the selected Web page. In this case, you can pass the URL www.amazon.com to the method from the ButtonTest click event handler. The resulting display should be similar to what is shown in Figure 32-12.
+
+![](img/d99870e80390742f93963da7be0b2e61_1048_0.png)
+
+FIGURE 32-12
+
+## SUMMARY
+
+This chapter covered the basics of security and cryptography. It began with an overview of the security architecture of the .NET Framework. The chapter introduced the four types of security within Windows and .NET: NTFS, User Access Control (UAC), cryptographic, and programmatic.
+
+It then examined the security tools and functionality that the .NET Framework provides. You looked at the `System.Security.Permissions` namespace and learned how you can control code access permissions, role-based permissions, and identity permissions. You also learned how to manage code access permissions and UAC for your assembly.
+
+The second half of the chapter looked at cryptography, both the underlying theory and how it can be applied within your applications. You looked at the different types of cryptographic hash algorithms, including SHA, MD5, symmetric key encryption, and PKCS. You should also understand how you can use digital certificates, such as X.509 and Secure Socket Layer (SSL) certificates.
+
+## 33
+
+## Parallel Programming Using Tasks and Threads
+
+### WHAT YOU WILL LEARN IN THIS CHAPTER
+
+- Understanding the new task-based programming model and the Task Parallel Library
+- Launching, controlling, managing, and synchronizing parallel tasks
+- Refactoring loops to run them in parallel using Parallel.For and Parallel.ForEach
+- Transforming existing sequential code into parallelized code
+- Measuring the speed gain and the scalability offered by parallelized code
+- Working with different degrees of parallelism
+- Understanding the advantages of working with concurrent collections
+- Implementing a parallel producer-consumer pattern
+- Parallelizing LINQ queries using PLINQ
+
+In the last few years, multicore technology has become the mainstream in CPU designs, and microprocessor manufacturers continue to improve their processing power. However, the shift to multicore is an inflection point for software design philosophy.
+
+This chapter is about the new lightweight concurrency model offered by Visual Basic 2010 with .NET Framework 4 and its related hardware technologies. A comprehensive treatment of the challenges offered by the new multicore designs could easily fill 600 pages or more, so this chapter attempts to strike a reasonable balance between detail and succinctness.
+
+## LAUNCHING PARALLEL TASKS
+
+It was really difficult to develop applications capable of taking full advantage of multicore microprocessors working with previous .NET Framework versions. It was necessary to launch, control, manage, and synchronize multiple threads using complex structures prepared for some concurrency but not tuned for the modern multicore age.
+
+.NET Framework 4 introduces the new Task Parallel Library (TPL), born in the multicore age and prepared to work with a new lightweight concurrency model. The TPL provides a lightweight framework that enables developers to work with the following parallelism scenarios, implementing task-based designs instead of working with heavyweight and complex threads:
+
+- Data parallelism — There is a lot of data and it is necessary to perform the same operations for each piece — for example, encrypting 100 Unicode strings using the Advanced Encryption Standard (AES) algorithm with a 256-bits key.
+- Task parallelism — There are many different operations that can run concurrently, taking advantage of parallelism — for example, generating hash codes for files, encrypting Unicode strings, and creating thumbnail representations of images.
+- Pipelining — A mix of task and data parallelism. It is the most complex scenario because it always requires the coordination between multiple concurrent specialized tasks — for example, encrypting 100 Unicode strings using the AES algorithm with a 256-bits key and then generating a hash code for each encrypted string. This pipeline could be implemented running two concurrent tasks: the encryption and the hash code generation. Each encrypted Unicode string would enter into a queue in order to be processed by the hash code generation algorithm.
+
+The easiest way to understand how to work with parallel tasks is by using them. Thus, you can take your first step toward creating parallelized code with the methods offered by the System.Threading.Tasks.Parallel static class.
+
+### System.Threading.Tasks.Parallel Class
+
+The most important namespace for TPL is the new System.Threading.Tasks. It offers access to classes, structures, and enumerations introduced in .NET Framework 4, including the new System.Threading.Tasks.Parallel static class. Therefore, it is a good idea to import this namespace whenever you want to work with TPL:
+
+```
+Imports System.Threading.Tasks
+```
+
+This way, you will avoid large references. For example, instead of writing System.Threading.Tasks.Parallel.Invoke, you will be able to write Parallel.Invoke. In order to simplify the code, I will assume the aforementioned import is used in all the code snippets. However, remember that you can download the sample code for each code snippet and listing.
+
+The main class is Task, representing an asynchronous and potentially concurrent operation. However, it is not necessary to work directly with instances of Task in order to create parallel code. Sometimes, the best option is to create parallel loops or regions, especially when the code seems to be appropriate for a sequential loop. In these cases, instead of working with the lower-level Task instances, it is possible to work with the methods offered by the Parallel static class (System.Threading.Tasks.Parallel):
+
+- Parallel.For — Offers a load-balanced, potentially parallel execution of a fixed number of independent For loop iterations
+- Parallel.ForEach — Offers a load-balanced, potentially parallel execution of a fixed number of independent ForEach loop iterations
+- Parallel.Invoke — Offers the potentially parallel execution of the provided independent actions
+
+These methods are very useful when you are refactoring existing code to take advantage of potential parallelism. However, it is very important to understand that it is not as simple as replacing a For statement with Parallel.For. Many techniques for refactoring existing loops are covered in detail later in this chapter.
+
+### Parallel.Invoke
+
+The easiest way to try to run many methods in parallel is by using the new Invoke method provided by the Parallel class. For example, suppose that you have the following four independent subroutines that perform a format conversion, and you are sure it is safe to run them concurrently:
+

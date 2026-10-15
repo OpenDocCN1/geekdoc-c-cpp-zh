@@ -1,0 +1,13 @@
++   - **Remote data entry applications** — These include Sales or Field Force Automation (SFA and FFA) applications, such as the classic “traveling sales agent” applications. In this scenario, a given data row goes only in a single direction: reference data down to the client, inserts up to the server, as shown in Figure 12-8. As with the remote data mirror applications, a subset of data is typically installed on the client workstation, generally the catalog information and any reference data required, before the application goes off the network. The sales agent then goes out, making sales. Occasionally, the application is reconnected to the network, when new customer and sales data are uploaded to the main database, and updated catalog data is sent to the client.
+
++   - **Simple queuing applications** — These applications are a special case of the preceding scenario. The applications write exclusively to the local database and use synchronization to push the changed data to the server database. The difference here is partly intent; here the local database on the client is used as a temporary holding space. A periodic synchronization moves data between server and client when the two are connected. This scenario, shown in Figure 12-9, improves the overall performance of the application, particularly when you have a slow connection between server and client. It also provides access to the application even when the network is not available.
+
++   - **Remote database applications** — These applications treat the remote database as though it were a “master” copy of the data. In this scenario, shown in Figure 12-10, data may be changed either at the client or at the server, and the changes flow in both directions. This is the most dangerous scenario for synchronization clients because the data may have been changed differently in two (or more) locations. Therefore, some form of conflict resolution is required, as well as policies that specify which changes take precedence (e.g., last change overrides the data, someone must manually process all conflicts to select the valid data, or the data change made by the highest person in the organization chart wins). It is best to avoid or limit this scenario if possible when building a synchronization solution.
+
+![](bbox=[0.142, 0.491, 0.853, 0.846])
+
+图中标注：Clients inserts submitted on synchronization；Reference data from server；Application stores data locally while offline；Data from server；When network is available, data is pushed to server periodically；Application stores data locally。
+
+Disconnected　　Connected
+
+FIGURE 12-8　　　　　　　　　　　 FIGURE 12-9

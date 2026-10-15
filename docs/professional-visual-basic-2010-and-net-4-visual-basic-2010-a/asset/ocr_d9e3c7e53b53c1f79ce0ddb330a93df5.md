@@ -1,0 +1,13 @@
+This is different from adding a reference to a DLL that is located within a specified directory. When you create a reference via a path specification, Visual Studio can check that path for an updated copy of the reference, but your code is no longer as portable as it would be with a project reference. More important, unless there is a major revision, Visual Studio usually fails to detect the types of changes you are likely to make to that file during the development process. As a result, you’ll need to manually update the referenced file in the local directory of the assembly that’s referencing it. For your own code often it’s best to leverage project references, rather than path-based references. However, for third party controls where you’ll often only have an installed location, one which isn’t likely to change as you move between machines, a path based reference can work.
+
+On the other hand an alternative solution which is commonly used, is to ensure that instead of referencing third party controls based on their location, that instead ‘copy local’ references are used so that the version specific copy of the control deploys with the code that depends on it. This means that different versions of the controls can exist on the same server in different applications. Additionally because a local copy of the control is with the application, the application can be XCOPY deployed without needing to register the controls.
+
+# Resources
+
+In addition to referencing other assemblies, it is quite common for a .NET application to need to reference things such as images, icons, audio, and other files. These files aren’t used to provide application logic but are used at runtime to provide support for the look, feel, and even text used to communicate with the application’s user. In theory, you can reference a series of images associated with your application by looking for those images based on the installed file path of your application. Doing so, however, places your application’s runtime behavior at risk, because a user might choose to replace, copy for profit, or just delete your files.
+
+This is where project references become useful. Instead of placing the raw files onto the operating system alongside your executable, Visual Studio will package these files into your executable so that they are less likely to be lost or damaged. Figure 1-11 shows the Resources tab, which enables you to review and edit all the existing resources within a project, as well as import files for use as resources in your project. It even allows you to create new resources from scratch.
+
+![](bbox=[0.09, 0.49, 0.66, 0.86])
+
+FIGURE 1-11

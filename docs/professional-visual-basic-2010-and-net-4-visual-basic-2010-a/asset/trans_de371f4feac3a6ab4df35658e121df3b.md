@@ -1,0 +1,115 @@
+
+
+## 对象关系映射
+
+虽然 ADO.NET 允许在数据库之间实现一定程度的抽象，但其核心仍然反映了数据库的结构。你使用数据库 Connection 对象来访问命令，命令要么以 DataReader 形式返回数据，要么填充 DataSet。你通过存储过程或数据库表来维护数据库。然而，正如许多开发者发现的那样，不同数据库使用的数据类型并不相同，而且它们绝对无法与你在 Visual Basic 应用程序中使用的数据类型匹配。这可能导致应用程序中出现错误，例如当数据库的 NULL 被传递给 Visual Basic 类型时。此外，某些交互操作可能显得笨拙，例如将对象内容保存到数据库时，你可能需要将属性映射到一行或多行数据库行或表中的数据。
+
+为了解决这种对象与数据库不匹配的问题，人们开发了多种策略。许多开发者手动处理这一过程，手写数据访问层以在 .NET 和 SQL 之间进行转换。另一种常见策略 —— 且工作量较小 —— 是使用被称为对象关系映射（ORM）工具的工具。这些工具手动或自动地将数据库中使用的数据类型映射到客户端程序使用的数据类型，反之亦然。其中最优的工具能够将数据库的实际结构对客户端程序隐藏，从而在程序与数据库之间提供更自然的交互。在 .NET 世界中，最古老且使用最广泛的是 nHibernate，它本身是从最初为 Java 开发而设计的 Hibernate 库移植而来的。然而，还有很多其他 ORM，包括 SubSonic、LightSpeed、OpenAccess，以及现在的微软实体框架。甚至 LINQ to SQL 也可以被视为一种 ORM，因为它在 Visual Basic 类型和 SQL 类型之间进行转换。
+
+尽管实体框架仍然是一个相对年轻的框架，但它提供了许多较老、更成熟的框架中可用的功能。这包括将一个对象拆分到多个表中、将多个对象映射到同一张表、执行“延迟加载”（一种性能优化方式，对象只有在实际被访问时才加载到内存中）等等。此外，我们很可能会看到微软随着时间的推移继续改进它，因此它绝对是 ORM 领域的有力竞争者。
+
+## 实体框架架构
+
+图 11-1 展示了实体框架中使用的架构。
+
+![](img/d99870e80390742f93963da7be0b2e61_450_0.png)
+
+从图中可以看出，实体框架由多个逻辑层组成。最底层与实际数据访问相关，并涉及熟悉的 ADO.NET 数据提供程序。这应该可以从先前对实体框架的描述中预料到：它并非一种全新的数据检索方法，而是你现有 ADO.NET 知识的扩展。额外的层旨在让你的开发体验更轻松、更灵活。在这一层，实体框架与 ADO.NET 或 LINQ to SQL 并无差异，因为它直接处理表。
+
+在实际数据访问层之上是存储层。这基本上是数据库结构的表示，使用 XML 语法。它包含你已添加到模型中的所有表，以及它们之间的关系。
+
+存储层之上是映射层。它充当下方存储层与上方概念层之间的转换手段。你可以将其视为一个相对较薄的层，负责将数据库表的字段映射到应用程序所使用的类的相应属性。
+
+接下来是概念层。这一层提供模型的实体，为你提供在应用程序中使用的类 —— 无论是实体框架设计器生成的类，还是你自己的类，稍后你将看到。
+
+最后是对象服务层。它负责在你的概念模型之上提供 LINQ 和实体查询语言（Entity SQL）语法。
+
+当你看到像图 11-1 这样的图时，你的第一反应可能是担心这些额外层会给应用程序带来性能损失。当然，每一次映射、抽象或通信都会增加查询和/或更新的时间，这是意料之中的。然而，是否使用实体框架的决定不应完全取决于它比经典 ADO.NET 更快还是更慢。相反，它应取决于“它对我的需求来说足够快吗？”和“它能让我提高多少生产力？”的综合考量。由于实体框架使用核心 ADO.NET 对象，它不可能比直接使用这些类本身更快，甚至不可能一样快。然而，使用实体框架可以是一个更自然的开发过程，这意味着你可以更高效地创建 —— 更重要的是 —— 维护你的数据访问代码。
+
+## 概念模型
+
+你的实体框架应用程序直接处理你生成或创建的概念模型。为了了解这些模型的构建方式，创建一个简单的控制台应用程序（SimpleEF），并通过选择“项目 ➔ 添加新项”向该应用程序添加一个 ADO.NET 实体数据模型（见图 11-2）。
+
+![](img/d99870e80390742f93963da7be0b2e61_451_0.png)
+
+图 11-2
+
+当你向应用程序添加实体框架模型时，它会启动一个用于生成类的向导。第一步是决定你是从数据库生成类还是从空白模型开始。目前，选择从数据库生成类（见图 11-3）。选择 pubs 数据库。
+
+![](img/d99870e80390742f93963da7be0b2e61_452_0.png)
+
+在此阶段生成的连接字符串（见图 11-4）对于习惯更简单的 SQL Server 或 Access 连接字符串的人来说，可能看起来有点吓人。
+
+```
+metadata=res://*/PubModel.csdl|res://*/PubModel.ssdl|
+res://*/PubModel.msl;provider=System.Data.SqlClient;
+provider connection string="Data Source=.\sqlexpress;
+Initial Catalog=pubs;Integrated Security=True;MultipleActiveResultSets=True";
+```
+
+忽略开头几部分，你可以看到此连接字符串中包含的“正常”连接字符串。它之所以有额外的部分，是因为这个连接字符串将被所有三层（存储层、概念层和映射层）使用，而不仅仅是与数据库的连接。连接字符串的三个额外部分标识了将定义每层结构的文件。
+
+接下来，与 LINQ to SQL 一样，你可以选择要包含在模型中的数据库对象。现在，只需选择 authors、titleauthor 和 titles 表（见图 11-5），然后单击“完成”。
+
+![](img/d99870e80390742f93963da7be0b2e61_452_1.png)
+
+图 11-3
+
+![](img/d99870e80390742f93963da7be0b2e61_452_2.png)
+
+图 11-4
+
+![](img/d99870e80390742f93963da7be0b2e61_452_3.png)
+
+图 11-5
+
+图 11-6 显示了 Visual Studio 中生成的模型。请注意，除了创建表示数据库中列的属性外，它还包含模型中三张表之间的关系。
+
+![](img/d99870e80390742f93963da7be0b2e61_453_0.png)
+
+图 11-6
+
+最后，向导创建了许多表示外键关系的导航属性。你可以在此设计器窗口中浏览模型，或使用 Visual Studio 中打开的“模型浏览器”窗格（见图 11-7），可通过选择“视图 → 其他窗口 → 实体数据模型浏览器”查看。
+
+![](img/d99870e80390742f93963da7be0b2e61_453_1.png)
+
+图 11-7
+
+构建应用程序，但先不要运行它。构建完成后，在解决方案资源管理器中选择“显示所有文件”选项（见图 11-8）。如果你深入查看生成的 obj 文件夹，会找到三个生成的 XML 文件。以下代码展示了 CSDL 文件的一部分，即概念模型：
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PubsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+<EntityContainer Name="PubsEntities" annotation:LazyLoadingEnabled="true">
+<EntitySet Name="authors" EntityType="PubsModel.author" />
+<EntitySet Name="titleauthors" EntityType="PubsModel.titleauthor" />
+<EntitySet Name="titles" EntityType="PubsModel.title" />
+<AssociationSet Name="FK__titleauth__au_id__0CBAE877">
+<Association>PubsModel.FK__titleauth__au_id__0CBAE877</Association>
+<End Role="authors" EntitySet="authors" />
+<End Role="titleauthor" EntitySet="titleauthors" />
+</AssociationSet>
+<AssociationSet Name="FK__titleauth__title__0DAF0CB0">
+<Association>PubsModel.FK__titleauth__title__0DAF0CB0</Association>
+<End Role="titles" EntitySet="titles" />
+<End Role="titleauthor" EntitySet="titleauthors" />
+</AssociationSet>
+</EntityContainer>
+<EntityType Name="author">
+<Key>
+<PropertyRef Name="au_id" />
+</Key>
+<Property Name="au_id" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+<Property Name="au_lname" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+<Property Name="au_fname" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+<Property Name="phone" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="true" />
+<Property Name="address" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+<Property Name="city" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+<Property Name="state" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+<Property Name="zip" Type="String" MaxLength="5" Unicode="false" FixedLength="true" />
+<Property Name="contract" Type="Boolean" Nullable="false" />
+<NavigationProperty Name="titleauthors" Relationship="PubsModel.FK__titleauth__au_id__0CBAE877" FromRole="authors" ToRole="titleauthor" />
+</EntityType>
+...
+```
+

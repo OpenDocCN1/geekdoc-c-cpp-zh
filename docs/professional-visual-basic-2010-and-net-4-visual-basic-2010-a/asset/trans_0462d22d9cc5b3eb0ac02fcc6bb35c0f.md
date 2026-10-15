@@ -1,0 +1,233 @@
+
+
+## DOM 遍历 XML
+
+第一个 DOM 示例使用包含实际 XML 文档的字符串将 XML 文档加载到 XmlDocument 对象中。接下来的几页中的示例只是遍历文档（XmlDocument）中的每个 XML 元素（XmlNode）并将数据显示到控制台。与此示例相关的数据包含在一个变量 rawData 中，其初始化如下：
+
+```
+Dim rawData =
+    <multiFilmOrders>
+        <FilmOrder>
+            <name>Grease</name>
+            <filmId>101</filmId>
+            <quantity>10</quantity>
+        </FilmOrder>
+        <FilmOrder>
+            <name>Lawrence of Arabia</name>
+            <filmId>102</filmId>
+            <quantity>10</quantity>
+        </FilmOrder>
+    </multiFilmOrders>
+```
+
+来自 DomReading 的代码片段
+
+rawData 中的 XML 文档是与电影订单相关的 XML 层次结构的一部分。注意 XML 周围缺少引号：这是一个 XML 字面量。XML 字面量允许您将一段 XML 直接插入 VB 源代码中。它们可以写成多行，并且可以在您通常加载 XML 文件的任何地方使用。
+
+处理此数据的[content]
+
+## DOM Traversing XML
+
+The first DOM example loads an XML document into an XmlDocument object using a string that contains the actual XML document. The example over the next few pages simply traverses each XML element (XmlNode) in the document (XmlDocument) and displays the data to the console. The data associated with this example is contained in a variable, rawData, which is initialized as follows:
+
+```
+Dim rawData =
+    <multiFilmOrders>
+        <FilmOrder>
+            <name>Grease</name>
+            <filmId>101</filmId>
+            <quantity>10</quantity>
+        </FilmOrder>
+        <FilmOrder>
+            <name>Lawrence of Arabia</name>
+            <filmId>102</filmId>
+            <quantity>10</quantity>
+        </FilmOrder>
+    </multiFilmOrders>
+```
+
+Code snippet from DomReading
+
+The XML document in rawData is a portion of the XML hierarchy associated with a movie order. Notice the lack of quotation marks around the XML: This is an XML literal. XML literals allow you to insert a block of XML directly into your VB source code. They can be written over a number of lines, and can be used wherever you might normally load an XML file.
+
+The basic idea in processing this data is to traverse each <FilmOrder> element in order to display the data it contains. Each node corresponding to a <FilmOrder> element can be retrieved from your XmlDocument using the GetElementsByTagName method (specifying a tag name of FilmOrder). The GetElementsByTagName method returns a list of XmlNode objects in the form of a collection of type XmlNodeList. Using the For Each statement to construct this list, the XmlNodeList (movieOrderNodes) can be traversed as individual XmlNode elements (movieOrderNode). The code for handling this is as follows:
+
+```
+Dim xmlDoc As New XmlDocument
+Dim movieOrderNodes As XmlNodeList
+Dim movieOrderNode As XmlNode
+xmlDoc.LoadXml(rawData.ToString())
+' Traverse each <FilmOrder>
+movieOrderNodes = xmlDoc.GetElementsByTagName("FilmOrder")
+For Each movieOrderNode In movieOrderNodes
+    '**************************************************************
+    ' Process <name>, <filmId> and <quantity> here
+    '**************************************************************
+Next
+```
+
+Code snippet from DomReading
+
+Each XmlNode can then have its contents displayed by traversing the children of this node using the ChildNodes method. This method returns an XmlNodeList (baseDataNodes) that can be traversed one XmlNode list element at a time:
+
+```
+Dim baseDataNodes As XmlNodeList
+Dim bFirstInRow As Boolean
+baseDataNodes = movieOrderNode.ChildNodes
+bFirstInRow = True
+For Each baseDataNode As XmlNode In baseDataNodes
+    If (bFirstInRow) Then
+        bFirstInRow = False
+    Else
+        Console.Write(", ")
+End If
+Console.Write(baseDataNode.Name & ": " & baseDataNode.InnerText)
+Next
+Console.WriteLine()
+```
+
+Code snippet from DomReading
+
+The bulk of the preceding code retrieves the name of the node using the Name property and the InnerText property of the node. The InnerText property of each XmlNode retrieved contains the data associated with the XML elements (nodes) <name>, <filmId>, and <quantity>. The example displays the contents of the XML elements using Console.Write. The XML document is displayed to the console as follows:
+
+```
+name: Grease, quantity: 10
+name: Lawrence of Arabia, quantity: 10
+```
+
+Other, more practical, methods for using this data could have been implemented, including the following:
+
+- > The contents could have been directed to an ASP.NET Response object, and the data retrieved could have been used to create an HTML table (<table> table, <tr> row, and <td> data) that would be written to the Response object.
+- > The data traversed could have been directed to a ListBox or ComboBox Windows Forms control. This would enable the data returned to be selected as part of a GUI application.
+- > The data could have been edited as part of your application’s business rules. For example, you could have used the traversal to verify that the <filmId> matched the <name>. Something like this could be done if you wanted to validate the data entered into the XML document in any manner.
+
+## Writing XML with the DOM
+
+You can also use the DOM to create or edit XML documents. Creating new XML items is a two-step process, however. First, you use the containing document to create the new element, attribute, or comment (or other node type), and then you add that at the appropriate location in the document.
+
+Just as there are a number of methods in the DOM for reading the XML, there are also methods for creating new nodes. The XmlDocument class has the basic CreateNode method, as well as specific methods for creating the different node types, such as CreateElement, CreateAttribute, CreateComment, and others. Once the node is created, you add it in place using the AppendChild method of XmlNode (or one of the children of XmlNode).
+
+Create a new project that will be used to demonstrate writing XML with the DOM. Most of the work in this sample will be done in two functions, so the Main method can remain simple:
+
+```
+Sub Main()
+
+    Dim data As String
+    Dim fileName As String = "filmorama.xml"
+    data = GenerateXml(fileName)
+
+    Console.WriteLine(data)
+    Console.WriteLine("Press ENTER to continue")
+    Console.ReadLine()
+
+End Sub
+```
+
+Code snippet from DomWriting
+
+The GenerateXml function creates the initial XmlDocument, and calls the CreateFilmOrder function multiple times to add a number of items to the structure. This creates a hierarchical XML document that can then be used elsewhere in your application. Typically, you would use the Save method to write
+the XML to a stream or document, but in this case it just retrieves the OuterXml (that is, the full XML document) to display:
+
+```
+Private Function GenerateXml(ByVal fileName As String) As String
+Dim result As String
+Dim doc As New XmlDocument
+Dim elem As XmlElement
+
+'create root node
+Dim root As XmlElement = doc.CreateElement("FilmOrderList")
+doc.AppendChild(root)
+'this data would likely come from elsewhere
+For i As Integer = 1 To 5
+    elem = CreateFilmOrder(doc, i)
+    root.AppendChild(elem)
+Next
+result = doc.OuterXml
+Return result
+End Function
+```
+
+Code snippet from DomWriting
+
+The most common error made when writing an XML document using the DOM is to create the elements but forget to append them into the document. This step is done here with the AppendChild method, but other methods can be used, in particular InsertBefore, InsertAfter, PrependChild, and RemoveChild.
+
+Creating the individual FilmOrder nodes uses a similar CreateElement/AppendChild strategy. In addition, attributes are created using the Append method of the Attributes collection for each XmlElement:
+
+```
+Private Function CreateFilmOrder(ByVal parent As XmlDocument,
+    ByVal count As Integer) As XmlElement
+Dim result As XmlElement
+Dim id As XmlAttribute
+Dim title As XmlElement
+Dim quantity As XmlElement
+
+result = parent.CreateElement("FilmOrder")
+id = parent.CreateAttribute("id")
+id.Value = 100 + count
+
+title = parent.CreateElement("title")
+title.InnerText = "Some title here"
+
+quantity = parent.CreateElement("quantity")
+quantity.InnerText = "10"
+
+result.Attributes.Append(id)
+result.AppendChild(title)
+result.AppendChild(quantity)
+Return result
+End Function
+```
+
+Code snippet from DomWriting
+
+This generates the following XML (although it will all be on one line in the output):
+
+```
+<FilmOrderList>
+    <FilmOrder id="101">
+        <title>Some title here</title>
+        <quantity> 10 </quantity>
+    </FilmOrder>
+```
+
+```
+```xml
+<FilmOrder id="102">
+    <title>Some title here</title>
+    <quantity> 10 </quantity>
+</FilmOrder>
+<FilmOrder id="103">
+    <title>Some title here</title>
+    <quantity> 10 </quantity>
+</FilmOrder>
+<FilmOrder id="104">
+    <title>Some title here</title>
+    <quantity>10</quantity>
+</FilmOrder>
+<FilmOrder id="105">
+    <title>
+        Some title here
+    </title>
+    <quantity>10</quantity>
+</FilmOrder>
+</FilmOrderList>
+```
+```
+
+Once you get the hang of creating XML with the DOM (and forget to add the new nodes a few dozen times), it is quite a handy method for writing XML. If the XML you need to create can all be created at once, it is probably better to use the XmlWriter class instead. Writing XML with the DOM is best left for those situations when you need to either edit an existing XML document or move backwards through the document as you are writing. In addition, because the DOM is an international standard, it means that code using the DOM is portable to other languages that also provide a DOM.
+
+In addition to the XmlWriter, the XElement shown later in this chapter provides yet another method for reading and writing XML.
+
+## XSL TRANSFORMATIONS
+
+XSLT is used to transform XML documents into another format altogether. One popular use of XSLT is to transform XML into HTML so that XML documents can be presented visually. The idea is to use an alternate language (XSLT) to transform the XML, rather than rewrite the source code, SQL commands, or some other mechanism used to generate XML.
+
+Conceptually, XSLT is straightforward. A file (a .xsl file) describes the changes (transformations) that will be applied to a particular XML file. Once this is completed, an XSLT processor is provided with the source XML file and the XSLT file, and performs the transformation. The System.Xml.Xsl.XslTransform class is such an XSLT processor. Another processor you will find (introduced in the .NET Framework 2.0) is the XsltCommand object found at System.Xml.Query.XsltCommand. This section looks at using both of these processors.
+
+You can also find some features in Visual Studio that deal with XSLT. The IDE supports items such as XSLT data breakpoints and XSLT debugging. Additionally, XSLT stylesheets can be compiled into assemblies even more easily with the command-line stylesheet compiler, XSLTC.
+
+The XSLT file is itself an XML document. Dozens of XSLT commands can be used in writing an XSLT file. The first example explores the following XSLT elements (commands):
+
+- - `stylesheet` — This element indicates the start of the style sheet (XSL) in the XSLT file.
+- - `template` — This element denotes a reusable template for producing specific output. This output is generated using a specific node type within the source document under a specific context. For example, the text `<xsl:template match="/">` selects all root nodes (`/`) for the specific transform template. The template is applied whenever the match occurs in the source document.
+
