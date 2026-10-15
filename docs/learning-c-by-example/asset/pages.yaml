@@ -1,0 +1,2641 @@
+- pgno: 0
+  md: '# Learning C
+
+
+    by Example
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Copyright
+
+
+    Learning C by Example
+
+
+    Agus Kurniawan
+
+
+    1st Edition, 2015
+
+
+    Copyright © 2015 Agus Kurniawan'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Table of Contents
+
+
+    Copyright
+
+
+    Preface
+
+
+    1. Development Environment
+
+
+    1.1 Getting Started
+
+
+    1.2 Compilers
+
+
+    1.2.1 Linux
+
+
+    1.2.2 Windows
+
+
+    1.2.3 Mac
+
+
+    1.3 Development Tools
+
+
+    1.4 Hello World
+
+
+    2. Basic C Programming Language
+
+
+    2.1 Common Rule
+
+
+    2.2 Declaring Variable
+
+
+    2.3 Assigning Variables
+
+
+    2.4 Comment
+
+
+    2.5 Input & Output on Console
+
+
+    2.6 Arithmetic Operations
+
+
+    2.7 Mathematical Functions
+
+
+    2.8 Comparison Operators
+
+
+    2.9 Logical Operators
+
+
+    2.10 Increment and Decrement
+
+
+    2.11 Decision
+
+
+    2.11.1 if..then
+
+
+    2.11.2 switch..case
+
+
+    2.12 Iterations
+
+
+    2.12.1 For
+
+
+    2.12.2 While
+
+
+    2.13 Struct
+
+
+    3. Array and Pointer'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 3.1 Array
+
+
+    # 3.1.1 Defining An Array
+
+
+    # 3.1.2 Basic Array Operations
+
+
+    # 3.2 Multidimensional Array
+
+
+    # 3.3 Pointer
+
+
+    # 3.3.1 Basic Pointer
+
+
+    # 3.3.2 Dynamic Array
+
+
+    # 4. Functions
+
+
+    # 4.1 Creating Function
+
+
+    # 4.2 Function with Parameters and Returning Value
+
+
+    # 4.3 Function with Array Parameters
+
+
+    # 4.4 Function and Pointer
+
+
+    # 5. I/O Operations
+
+
+    # 5.1 Getting Started
+
+
+    # 5.2 Reading Input from Keyboard
+
+
+    # 5.2.1 getchar() and putchar() functions
+
+
+    # 5.2.2 gets() and puts() functions
+
+
+    # 5.2.3 scanf() function
+
+
+    # 5.3 Reading Program Arguments
+
+
+    # 5.4 Writing Data Into A File
+
+
+    # 5.5 Reading Data From A File
+
+
+    # 6. String Operations
+
+
+    # 6.1 Concatenating Strings
+
+
+    # 6.2 String To Numeric
+
+
+    # 6.3 Numeric to String
+
+
+    # 6.4 String Parser
+
+
+    # 6.5 Check String Data Length
+
+
+    # 6.6 Copy Data
+
+
+    # 6.7 Exploring Characters
+
+
+    # 7. Building C Library
+
+
+    # 7.1 Getting Started'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '7.2 Writing C Library
+
+
+    7.3 Compiling and Testing
+
+
+    7.3.1 Static Library
+
+
+    7.3.2 Shared Library
+
+
+    8. Threading
+
+
+    8.1 Creating Thread
+
+
+    8.2 Thread ID
+
+
+    8.3 Terminating Thread
+
+
+    8.3.1 Terminating Itself
+
+
+    8.3.2 Terminating Others
+
+
+    8.4 Joining Thread
+
+
+    8.5 Thread Mutex
+
+
+    8.6 Condition Variables
+
+
+    8.6.1 Signaling
+
+
+    8.6.2 Broadcasting
+
+
+    9. Database Programming
+
+
+    9.1 Database Library for C
+
+
+    9.2 MySQL
+
+
+    9.3 Connection Test
+
+
+    9.4 CRUD (Create, Read, Update and Delete) Operations
+
+
+    9.4.1 Creating Data
+
+
+    9.4.2 Reading Data
+
+
+    9.4.3 Updating Data
+
+
+    9.4.4 Deleting Data
+
+
+    10. Socket Programming
+
+
+    10.1 Getting Local Hostname
+
+
+    10.2 Creating and Connecting
+
+
+    10.2.1 Server
+
+
+    10.2.2 Client
+
+
+    10.2.3 Testing
+
+
+    10.3 Data Transfer'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "+   10.3.1 Server\n+   \n+   10.3.2 Client\n+   \n+   10.3.3 Testing\n+   \n\
+    +   Contact and Source Code\n+   \n+   Contact"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Preface
+
+
+    This book is a practical book to get started with C language. It describes all
+    the elements of the language and illustrates their use with code examples.
+
+
+    Agus Kurniawan
+
+    Depok, March 2015'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# 1. Development Environment
+
+
+    This chapter explains how to start with development environment using C.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 1.2 Compilers
+
+
+    There are many C compilers to develop C program. In this book, we use GCC as C
+    compiler for Linux, Mac and Windows. For Windows users, you also can use Visual
+    C++ compiler.
+
+
+    # 1.2.1 Linux
+
+
+    Installation of GCC C is easy. For Ubuntu Linux, you can do it using console and
+    write this script
+
+
+    ```
+
+    ```bash
+
+    $ sudo apt-get install build-essential
+
+    ```
+
+    ```
+
+
+    If installation already finished, you can check GCC version on console and write
+    script as below
+
+
+    ```
+
+    ```bash
+
+    gcc --version
+
+    ```
+
+    ```
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_9_0.png)
+
+
+    You will see gcc version, for instance shown in Figure above.
+
+
+    # 1.2.2 Windows
+
+
+    If your computer has Windows platform, you can use **Cygwin**. Download it on
+    http://cygwin.com/setup.exe and then run it.
+
+
+    On setup dialog, you choose **Devel** package as follows.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/4e69d9ab92a6fdfd6a6bac3671deb952_10_0.png)
+
+
+    After installed, you will get Cygwin terminal. Run it.
+
+
+    You can check GCC version. The following is a sample of output for GCC version
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_10_1.png)
+
+
+    # 1.2.3 Mac
+
+
+    To install GCC, you can install Xcode so you get GCC. After installed, you can
+    verify it by checking GCC version.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '```
+
+    agusks$ gcc --version
+
+    Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/c++/4.2.1
+
+    Apple LLVM version 6.0 (clang-600.0.57) (based on LLVM 3.5svn)
+
+    Target: x86_64-apple-darwin14.0.0
+
+    Thread model: posix
+
+    agusks$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# 1.3 Development Tools
+
+
+    Basically you can use any editor tool for instance, vi, vim, gedit, Eclipse. The
+    following is vi editor in Ubuntu.
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_12_0.png)
+
+
+    Here is gedit editor
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_12_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "# ## 1.4 Hello World\n\nNow we start to write the first program using C.\n\n\
+    Firstly, open your text editor and create new file, called **hello.c**\n\nLet’s\
+    \ write this code\n\n```\n```c\n#include <stdio.h>\n\nint main() {\n        printf(\"\
+    Hello C\\\\n\");\n        return 0;\n}\n```\n```\n\nSave this file.\n\nNow open\
+    \ your Terminal and compile this file.\n\n```\n```bash\nsudo gcc hello.c\n```\n\
+    ```\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_13_0.png)\n\nIf you check, you\
+    \ will get file **a.out**. GCC will generate a.out file if you don’t specify an\
+    \ output file name. You can define the output compiled file as follows\n\n```\n\
+    ```bash\nsudo gcc hello.c -o hello\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# HOW TO BREAK UP WITH YOUR MUSE
+
+
+    A FIELD GUIDE TO CREATIVE RECOVERY
+
+
+    Write faster with perfect concentration by breaking up with your muse. Artists
+    who depend on inspiration fail. Learn how to identify your muse, assess the attachment,
+    develop a ritual, and create new habits for sustainable creative work.
+
+
+    +   - Identify your muse
+
+    +   - Assess the attachment
+
+    +   - Develop a ritual
+
+    +   - Create new habits
+
+
+    The following field guide is a compilation of the artistic and creative recovery
+    techniques used by authors to sever ties with their muse forever.
+
+
+    > The artist is free, but the muse is a ball and chain. - J. T.
+
+
+    | Type | Characteristics | Prescription |
+
+    | --- | --- | --- |
+
+    | Type One: The Romantic Muse | Mood swings, requires inspiration, waxing and
+    waning energy | Use a schedule, not a feeling; work in consistent blocks |
+
+    | Type Two: The Monumental Muse | Overwhelming, full of grand ideas, none of which
+    are finished | Cut projects into smaller pieces; finish every day |
+
+    | Type Three: The Distracted Muse | Feeds on novelty, social media craving, disrupts
+    workflow | Build a single daily workspace and one list of tasks |
+
+    | Type Four: The Competitive Muse | Compares you to others, fuels jealousy and
+    procrastination | Work in isolation; compare only to yesterday''s output |
+
+    | Type Five: The Critic Muse | Judges your first draft, simplifies nothing, chases
+    perfection | Write ugly first drafts; edit only in separate sessions |
+
+
+    # MUSE TYPE ONE: THE ROMANTIC MUSE
+
+
+    This is the passionate lover of the art. It wants you to wait for the perfect
+    moment, the warm glow, the beautiful sunrise. It gives you sensations and takes
+    away your discipline. The cure: ignore the feeling. Set an alarm. Work begins
+    when the alarm rings, not when the inspiration sings.
+
+
+    In practical terms, schedule your writing for the same time each day. This allows
+    the subconscious to be ready. Lean into the boring ritual of showing up. Over
+    time, routine becomes charismatic and the muse loses its power.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# 2.1 Common Rule
+
+
+    In C language if you write a line of code we must write semicolon (;) at the end
+    of code.
+
+    Here is the syntax rule:
+
+
+    ```
+
+    syntax_code;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# 2.2 Declaring Variable
+
+
+    To declare a variable called *myvar1*, write the following:
+
+
+    ```
+
+    int myvar1;
+
+    ```
+
+
+    **int** is data type.
+
+
+    The following is the list of common data type you can use in C language.
+
+
+    +   - int
+
+    +   - long
+
+    +   - float
+
+    +   - char
+
+    +   - double
+
+
+    We can also write many variables as follows:
+
+
+    ```
+
+    int myvar1, myvar2;
+
+    ```
+
+
+    Once declared, these variables can be used to store data based on its data type.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# 2.3 Assigning Variables\n\nVariable that you already declare can be assigned\
+    \ by a value. It can done using the equals sign (=). For example, variable myvar1\
+    \ will assign the number 100, you would write this:\n\n```\nint myvar1 = 100;\n\
+    ```\n\nYou also declare as below\n\n```\nint myvar1;\nmyvar1 = 100;\n```\n\nYou\
+    \ must assign a value on a variable properly based on data type. If not, you will\
+    \ get error on compiling process, for instance, write this code\n\n```\n#include\
+    \ <stdio.h>\n\nint main() {\n    int n;\n    int i, j;\n\n    n=\"hello\";\n\n\
+    \    return 0;\n}\n```\n\nSave this code as file, called var1.c.\n\nTry to compile\
+    \ this file. You will get a warning message as shown Figure as below\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_19_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# 2.4 Comment
+
+
+    You may explain how to work on your code with writing C. To do it, you can use
+    // and /* */ syntax. Here is sample code:
+
+
+    ```
+
+    // bank account
+
+    char accountCode;
+
+
+    /* parameters*/
+
+    int p1, p2, p3, p4;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# 2.5 Input & Output on Console\n\nYou may want to show message on console\
+    \ using C. You can use printf() to write message on console. printf() also can\
+    \ be passed parameters inside using %d for integer numeric and %f for floating\
+    \ numeric. For char data type, we can use %c for passing parameter.\n\nHere is\
+    \ a sample code\n\n```\n#include <stdio.h>\n\nint main() {\n    int n = 10;\n\
+    \    float m = 1.245;\n    char c = 'A';\n\n    printf(\"%d \\n\",n);\n    printf(\"\
+    %f \\n\",m);\n    printf(\"%.2f \\n\",m);\n    printf(\"%.3f \\n\",m);\n    printf(\"\
+    %c \\n\",c);\n\n    return 0;\n}\n```\n\nSave this code into a file, called inout.c.\n\
+    \nCompile and run this code\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_21_0.png)\n\
+    \nYou can see on %f that wrote floating data with 6 decimal digits. You can specify\
+    \ the number of decimal digit by passing numeric after dot (.), for instance,\
+    \ %.2f and %.3f."
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# 2.6 Arithmetic Operations\n\nC supports the four basic arithmetic operations\
+    \ such as addition, subtraction, multiplication, and division. The following is\
+    \ the code illustration for basic arithmetic:\n\n```\n```c\n#include <stdio.h>\n\
+    \nint main() {\n        int a,b,c;\n        a = 10;\n        b = 6;\n\n      \
+    \  c = a + b;\n        printf(\"%d + %d = %d\\\\n\",a,b,c);\n\n        c = a -\
+    \ b;\n        printf(\"%d - %d = %d\\\\n\",a,b,c);\n\n        c = a * b;\n   \
+    \     printf(\"%d * %d = %d\\\\n\",a,b,c);\n\n        float d = a / b;\n     \
+    \   printf(\"%d / %d = %.2f\\\\n\",a,b,d);\n\n        float e =(float)a / b;\n\
+    \        printf(\"%d / %d = %.2f\\\\n\",a,b,e);\n\n        return 0;\n}\n```\n\
+    ```\n\nSave this program into a file, called **arith.c**. Compile and run it.\n\
+    \nProgram run:\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_22_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "# 2.7 Mathematical Functions\n\nC provides math library to manipulate mathematical\
+    \ operations. You must include **math.h** to implement mathematical operations.\n\
+    \nHere is an illustration code for mathematical functions usage:\n\n```\n```c\n\
+    #include <stdio.h>\n#include <stdlib.h>\n\n#include <math.h>\n\nint main() {\n\
+    \        float a;\n        float b;\n        float pi = 3.14;\n\n        a = 0.25;\n\
+    \        printf(\"value a = %.2f \\\\n\", a);\n\n        b = abs(-a);\n      \
+    \  printf(\"abs(a)=%.2f \\\\n\", b);\n\n        b = acos(a);\n        printf(\"\
+    acos(a)=%.2f \\\\n\", b);\n\n        b = asin(a);\n        printf(\"asin(a)=%.2f\
+    \ \\\\n\", b);\n\n        b = atan(a);\n        printf(\"abs(a)=%.2f \\\\n\",\
+    \ b);\n\n        b = atan2(a,5);\n        printf(\"atan(a,5)=%.2f \\\\n\", b);\n\
+    \n        b = cos(a);\n        printf(\"cos(a)=%.2f \\\\n\", b);\n\n        b\
+    \ = sin(a);\n        printf(\"sin(a)=%.2f \\\\n\", b);\n\n        b = tan(a);\n\
+    \        printf(\"tan(a)=%.2f \\\\n\", b);\n\n        b = sqrt(a);\n        printf(\"\
+    sqrt(a)=%.2f \\\\n\", b);\n\n        return 0;\n}\n```\n```\n\nSave this code\
+    \ into a file, called **mathdemo.c**. Then compile and run it. Because we use\
+    \ math.h, we add -lm parameter on compiling."
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '```
+
+    ```bash
+
+    $ gcc mathdemo.c -lm -o mathdemo
+
+    $ ./mathdemo
+
+    ```
+
+    ```
+
+
+    A program output can be seen in Figure below.
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_24_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "# 2.9 Logical Operators\n\nThese operators can be used to determine the logic\
+    \ between variables or values.\n\n| && | and |\n| || | or |\n| ! | not |\n\nTo\
+    \ illustrate how to use logical operators in C code, you can write this code.\n\
+    \n```\n#include <stdio.h>\n\nint main() {\n    int a,b;\n    a = 5;\n    b = 8;\n\
+    \n    printf(\"%d \\n\",a>b && a!=b);\n    printf(\"%d \\n\",!(a>=b));\n    printf(\"\
+    %d \\n\",a==b || a>b);\n\n    return 0;\n}\n```\n\nSave this code into a file,\
+    \ logical.c. Compile and run it.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_26_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# 2.10 Increment and Decrement\n\nImagine you have operation as below\n\n```\n\
+    num = num + 1;\n```\n\nyou can simply this syntax use ++.\n\n```\nnum++;\n```\n\
+    \nusing the same approach for this case\n\n```\nnum = num - 1;\n```\n\nyou can\
+    \ use — syntax.\n\n```\nnum--;\n```\n\nNow how to implement them in code. Let’s\
+    \ write this code.\n\n```\n#include <stdio.h>\n\nint main() {\n    int a = 10;\n\
+    \n    a++;\n    printf(\"%d \\n\",a);\n\n    a++;\n    printf(\"%d \\n\",a);\n\
+    \n    ++a;\n    printf(\"%d \\n\",a);\n\n    a--;\n    printf(\"%d \\n\",a);\n\
+    \n    a--;\n    printf(\"%d \\n\",a);\n\n    --a;\n    printf(\"%d \\n\",a);\n\
+    \n    return 0;\n}\n```\n\nSave this code into a file, called incdec.c.\n\nCompile\
+    \ and run it. Here is sample of program output."
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: 'agusk@ubuntu01:~/Documents/codes$ gcc incdec.c -o incdec
+
+    agusk@ubuntu01:~/Documents/codes$ ./incdec
+
+    11
+
+    12
+
+    13
+
+    12
+
+    11
+
+    10
+
+    agusk@ubuntu01:~/Documents/codes$'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "# 2.11 Decision\n\nThere are two approaches to build decision on C. We can\
+    \ use if..then and switch..case.\n\n# 2.11.1 if..then\n\nSyntax model for if..then\
+    \ can be formulated as below:\n\n```\nif (conditional) {\n    // do something\n\
+    }else{\n    // do another job\n}\n```\n\nconditional can be obtained by logical\
+    \ or/and comparison operations.\n\nHere is the sample code:\n\n```\n#include <stdio.h>\n\
+    \nint main() {\n    int a, b;\n    a = 5;\n    b = 8;\n\n    if(a>b || a-b<a){\n\
+    \        printf(\"conditional-->a>b || a-b<a \\n\");\n    }else{\n        printf(\"\
+    ..another \\n\");\n    }\n    return 0;\n}\n```\n\nSave this program into a file,\
+    \ called ifdemo.c. Then, run this file.\n\nProgram run:\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_29_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "# 2.11.2 switch..case\n\nswitch..case can be declared as below:\n\n```\nswitch(option){\n\
+    \    case option1:\n        // do option1 job\n        break;\n    case option2:\n\
+    \        // do option2 job\n        break;\n}\n```\n\nHere is the sample code\
+    \ of switch..case usage:\n\n```\n#include <stdio.h>\n\nint main() {\n    // you\
+    \ can obtain input value from keyboard\n    // or any input device\n    int input\
+    \ = 3;\n\n    switch(input){\n    case 1:\n        printf(\"choosen 1\\n\");\n\
+    \        break;\n    case 2:\n        printf(\"choosen 2\\n\");\n        break;\n\
+    \    case 3:\n    case 4:\n        printf(\"choosen 3\\n\");\n        break;\n\
+    \    }\n    return 0;\n}\n```\n\nSave this code into a file, called switch.c.\
+    \ Try to build and run it.\n\nProgram run:"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '```
+
+    ```bash
+
+    agusk@ubuntu01:~/Documents/codes$ ls
+
+    a.out      comp.c     ifdemo.c    linout.c    mathdemo.c    var1
+
+    arith      comp.c~    ifdemo.c~   logical     mathdemo.c~   var1.c
+
+    arith.c    hello      incdec      logical.c   switch.c      var1.c~
+
+    arith.c~   hello.c    incdec.c    logical.c~  switch.c~     var.c
+
+    comp       hello.c~   incdec.c~   mathdemo    var          var.c~
+
+    agusk@ubuntu01:~/Documents/codes$ gcc switch.c -o switch
+
+    agusk@ubuntu01:~/Documents/codes$ ./switch
+
+    choosen 3
+
+    agusk@ubuntu01:~/Documents/codes$
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# 2.12 Iterations\n\nIteration operation is useful when we do repetitive activities.\
+    \ We use for and *while* syntax\n\n# 2.12.1 For\n\nThe simple scenario that illustrates\
+    \ iteration scenario is to show list of number. We do iteration until the number\
+    \ value less than 10.\n\n```\n#include <stdio.h>\n\nint main() {\n    int i;\n\
+    \    for(i=0;i<10;i++){\n        printf(\"data %d\\n\",i);\n    }\n    return\
+    \ 0;\n}\n```\n\nSave this code into a file, called for.c. Compile and run it.\n\
+    \nHere is a program output:\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_32_0.png)\n\
+    \n# 2.12.2 While\n\nThe following is the same code like 2.12.1 scenario but it\
+    \ uses *while* syntax.\n\n```\n#include <stdio.h>\n\nint main() {\n    int num\
+    \ = 0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "```\nwhile(num<10){\n    printf(\"data %d\\n\",num);\n    num++;\n}\nreturn\
+    \ 0;\n}\n```\n\nSave this code into a file, called **while.c**. Try to compile\
+    \ and run it.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_33_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# 2.13 Struct\n\nWe can define a struct to declare a new data type. We use\
+    \ struct keyword. For illustration, we define new data type, called employee.\n\
+    \nCreate a file, called **structdemo.c**, and write this code.\n\n```\n#include\
+    \ <stdio.h>\n\n// define a struct\nstruct employee{\n    int id;\n    char name[10];\n\
+    \    char country[5];\n};\n\nint main() {\n    // declare struct variable\n  \
+    \  struct employee emp;\n    // set values\n    emp.id = 10;\n    sprintf(emp.name,\"\
+    jane\");\n    sprintf(emp.country,\"DE\");\n    // display\n    printf(\"id: %d,\
+    \ name: %s, country: %s\\n\",emp.id,emp.name,emp.country\n    return 0;\n}\n```\n\
+    \nSave this code.\n\nNow you compile and run this program.\n\n```\n$ gcc -o structdemo\
+    \ structdemo.c\n$ ./structdemo\n```\n\nA sample output of program can be seen\
+    \ in Figure below, Mac platform."
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '```
+
+    agusks$ ls
+
+    address.c      dtwopointer.c  ifdemo.c       multiarray.c   while.c
+
+    arith.c        for.c          incdec.c       pointer.c
+
+    arraydemo.c    funcdemo.c     inout.c        refpointer.c
+
+    comp.c         hello          logical.c      structdemo.c
+
+    dpointer.c     hello.c        mathdemo.c     switch.c
+
+    agusks$ gcc -o structdemo structdemo.c
+
+    agusks$ ./structdemo
+
+    id: 10, name: jane, country: DE
+
+    agusks$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# 3. Array and Pointer
+
+
+    This chapter explains how to work with array and Pointer.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "# 3.1 Array\n\nIn this section, we build an array using C. For illustration,\
+    \ we develop single and multi dimensional array.\n\n# 3.1.1 Defining An Array\n\
+    \nWe can define an array using [] syntax. For instance, we define array of int\
+    \ and char.\n\n```\nint numbers[5];\nchar chars[10];\n```\n\nWe also can construct\
+    \ array from struct.\n\n```\nstruct employee{\n    int id;\n    char name[10];\n\
+    \    char country[5];\n};\n\nstruct employee list[5];\n```\n\n# 3.1.2 Basic Array\
+    \ Operations\n\nAfter declared an array, we can set and get data on array. For\
+    \ illustration, create a file, called arraydemo.c, and write this code.\n\n```\n\
+    #include <stdio.h>\n\nstruct employee{\n    int id;\n    char name[10];\n    char\
+    \ country[5];\n};\n\nint main() {\n    // define array\n    int numbers[5];\n\
+    \    char chars[10];\n    struct employee list[5];\n\n    // insert data\n   \
+    \ int i;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "```\nfor(i=0;i<5;i++){\n    numbers[i] = i;\n    list[i].id = i;\n    sprintf(list[i].name,\"\
+    usr %d\",i);\n    sprintf(list[i].country,\"DE\");\n}\nsprintf(chars,\"hello c\"\
+    );\n\n// display data\nfor(i=0;i<5;i++){\n    printf(\"%d %c\\n\",numbers[i],chars[i]);\n\
+    \    printf(\"struct. id: %d, name: %s, country: %s \\n\", list[i].id,list[i].name,list[i].country);\n\
+    }\nprintf(\"%s\\n\",chars);\n\nreturn 0;\n}\n```\n\nSave this code and try to\
+    \ compile and run.\n\n```\n$ gcc -o arraydemo arraydemo.c\n$ ./arraydemo\n```\n\
+    \nA sample output can be seen in Figure below.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_38_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "# 3.2 Multidimensional Array\n\nWe can create multidimensional array, for instance\
+    \ two dimensional, we can use [] .\n\nFor testing, you can create a file, called\
+    \ **multiarray.c** and write this code.\n\n```\n```c\n#include <stdio.h>\n\nint\
+    \ main() {\n    // define Multidimensional demarrary\n    int matrix[3][5];\n\n\
+    \    // insert data\n    int i,j;\n    for(i=0;i<3;i++){\n        for(j=0;j<5;j++){\n\
+    \            matrix[i][j] = i+j;\n        }\n    }\n\n    // display data\n  \
+    \  for(i=0;i<3;i++){\n        for(j=0;j<5;j++){\n            printf(\"%d \",matrix[i][j]);\n\
+    \        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}\n```\n```\n\n\
+    Save this. Then, try to compile and run.\n\n```\n```bash\n$ gcc -o multiarray\
+    \ multiarray.c\n$ ./multiarray\n```\n```\n\nA sample output can be seen in Figure\
+    \ below."
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# 3.3 Pointer\n\nA pointer is a programming language object, whose value refers\
+    \ to (or “points to”) another value stored elsewhere in the computer memory using\
+    \ its address. A pointer references a location in memory, and obtaining the value\
+    \ stored at that location is known as dereferencing the pointer (source: http://en.wikipedia.org/wiki/Pointer_(computer_programming).\n\
+    \nTo obtain memory address of a variable, we can use & syntax. For instance, create\
+    \ a file, called **address.c**, and write this code.\n\n```\n```c\n#include <stdio.h>\n\
+    \nint main(int argc, const char* argv[]) {\n\n    int n;\n    n = 10;\n\n    printf(\"\
+    value n: %d \\n\", n);\n    printf(\"address n: %x \\n\", &n);\n\n    return 0;\n\
+    }\n```\n```\n\nSave this file. Then, try to compile and run.\n\n```\n```bash\n\
+    $ gcc -o address address.c\n$ ./address\n```\n```\n\nIf success, we obtain memory\
+    \ address of variable n. A sample output of program can be seen in Figure below."
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "![](img/4e69d9ab92a6fdfd6a6bac3671deb952_42_0.png)\n\n# 3.3.1 Basic Pointer\n\
+    \nTo declare a pointer of a specific data type, we can use * syntax. This variable\
+    \ consists of memory address of our pointer variable.\n\nFor illustration, create\
+    \ a file, called pointer.c, and write this code.\n\n```\n#include <stdio.h>\n\n\
+    int main(int argc, const char* argv[]) {\n\n    int n;\n    int* nPtr;\n\n   \
+    \ n = 10;\n    nPtr = &n;\n\n    printf(\"value n: %d \\n\",n);\n    printf(\"\
+    address n: %%x \\n\",(unsigned int)&n);\n\n    printf(\"value nPtr: %%x \\n\"\
+    ,(unsigned int)nPtr);\n    printf(\"address nPtr: %%x \\n\",(unsigned int)&nPtr);\n\
+    \    printf(\"value pointer nPtr: %d \\n\",*nPtr);\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "Save this file. Then, compile and run this file.\n\n```\n```bash\n$ gcc -o\
+    \ pointer pointer.c\n$ ./pointer\n```\n```\n\nYou can see a value of nPtr is memory\
+    \ address of variable n. If n is set value 10, then value of pointer nPtr which\
+    \ we declare as *nPtr is the same value with value of variable n.\n\nA sample\
+    \ of program output is shown in Figure below.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_43_0.png)\n\
+    \n# 3.3.2 Dynamic Array\n\nIn this section, we will create a dynamic array using\
+    \ pointer. In general, we can declare an array using [] with size. Now we can\
+    \ declare our array with dynamic size.\n\nBasically, when we add a new value,\
+    \ we allocate memory and then attach it to array. For illustration, we define\
+    \ array with size 10. Then, we add some values to this array.\n\nCreate a file,\
+    \ called **dpointer.c**, and write this code.\n\n```\n```c\n#include <stdio.h>\n\
+    #include <stdlib.h>\n\nint main(int argc, const char* argv[]) {\n\n    // define\
+    \ dynamic array of pointer\n    int *numbers; // single array pointer\n\n    //\
+    \ a number of array\n    int N = 10;\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "```\n// allocate memory\nnumbers = malloc( N * sizeof(int));\n\n// set values\n\
+    int i;\nfor(i=0;i<N;i++){\n    numbers[i] = i+3;\n}\n\n// display values\nfor(i=0;i<N;i++){\n\
+    \    printf(\"%d \",numbers[i]);\n}\nprintf(\"\\n\");\n\n// free memory\nfree(numbers);\n\
+    \nreturn 0;\n}\n```\n\nSave this code. Try to compile and run it.\n\n```\n$ gcc\
+    \ -o dpointer dpointer.c\n$ ./dpointer\n```\n\nA program output can be seen in\
+    \ Figure below.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_44_0.png)\n\nAnother\
+    \ sample, we also define dynamic array with multidimensional. For instance, we\
+    \ create two dimensional dynamic array. Create a file, called dtwopointer.c, and\
+    \ write this"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "code.\n\n```\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\nint main(int\
+    \ argc, const char* argv[]) {\n\n    // define dynamic array of pointer\n    int\
+    \ **matrix; // two dimensional array pointer\n\n    // a number of array\n   \
+    \ int M = 3;\n    int N = 5;\n\n    // allocate memory\n    matrix = malloc( M\
+    \ * sizeof(int*));\n\n    // set values\n    int i,j;\n    for(i=0;i<M;i++){\n\
+    \        matrix[i] = malloc( N * sizeof(int));\n        for(j=0;j<N;j++){\n  \
+    \          matrix[i][j] = i + j;\n        }\n    }\n\n    // display values\n\
+    \    for(i=0;i<M;i++){\n        for(j=0;j<N;j++){\n            printf(\"%d \"\
+    ,matrix[i][j]);\n        }\n        printf(\"\\n\");\n    }\n\n    // free memory\n\
+    \    free(matrix);\n\n    return 0;\n}\n```\n```\n\nSave this code. Compile and\
+    \ run this file.\n\n```\n```bash\n$ gcc -o dtwopointer dtwopointer.c\n$ ./dtwopointer\n\
+    ```\n```\n\nA sample output is shown in Figure below."
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '```
+
+    agusks$ ls
+
+    address      dpointer      hello.c       multiarray    switch.c
+
+    address.c    dpointer.c    ifdemo.c      multiarray.c  while.c
+
+    arith.c      dtwopointer.c incdec.c      pointer
+
+    arraydemo    for.c         inout.c       pointer.c
+
+    arraydemo.c  funcdemo.c    logical.c     structdemo
+
+    comp.c       hello         mathdemo.c    structdemo.c
+
+    agusks$ gcc -o dtwopointer dtwopointer.c
+
+    agusks$ ./dtwopointer
+
+    0 1 2 3 4
+
+    1 2 3 4 5
+
+    2 3 4 5 6
+
+    agusks$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# 4. Functions
+
+
+    This chapter explains how to create function using C.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "# 4.1 Creating Function\n\nDeclaring function in C can be written as follows\n\
+    \n```\n```c\nvoid foo(){\n    printf(\"foo() was called\\n\");\n}\n```\n```\n\n\
+    We put this function on above main() function. Then, we can call this function,\
+    \ for instance foo().\n\nFor illustration, we can create a file, called **funcdemo.c**,\
+    \ and write this code.\n\n```\n```c\n#include <stdio.h>\n\nvoid foo(){\n    printf(\"\
+    foo() was called\\n\");\n}\n\nint main(int argc, const char* argv[]) {\n\n   \
+    \ foo();\n    return 0;\n}\n```\n```\n\nSave this file. Compile and run this program.\n\
+    \n```\n```bash\n$ gcc -o funcdemo funcdemo.c\n$ ./funcdemo\n```\n```\n\nA sample\
+    \ of program output can be seen in Figure below.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_48_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "We also can declare a function on below of main() function but we must declare\
+    \ our function name.\n\nAdd this code on **funcdemo.c** file.\n\n```\n```c\n#include\
+    \ <stdio.h>\n\n// implicit declaration for functions\nvoid boo();\n\nint main(int\
+    \ argc, const char* argv[]) {\n\n    boo();\n    return 0;\n}\n\nvoid boo(){\n\
+    \    printf(\"boo() was called\\\\n\");\n}\n```\n```\n\nIf we compile and run\
+    \ this code, we will get a response, shown in Figure below.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_49_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "# 4.2 Function with Parameters and Returning Value\n\nYou may want to create\
+    \ a function that has parameters and a return value. It is easy because you just\
+    \ call *return* into your function.\n\nAdd this code in funcdemo.c file. Write\
+    \ this code.\n\n```\n```c\n#include <stdio.h>\n\n// implicit declaration for functions\n\
+    int add(int a, int b);\n\nint main(int argc, const char* argv[]) {\n\n    int\
+    \ result = add(10,5);\n    printf(\"result: %d\\n\",result);\n\n    return 0;\n\
+    }\n\nint add(int a, int b){\n    return a + b;\n}\n```\n```\n\nTry to compile\
+    \ and run this file.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_50_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# 4.3 Function with Array Parameters\n\nWe also can declare a function with\
+    \ array as parameters. To know how array size, our function should declare array\
+    \ size.\n\nWrite this code into your program for illustration.\n\n```\n```c\n\
+    #include <stdio.h>\n\n// implicit declaration for functions\ndouble mean(int numbers[],int\
+    \ size);\n\nint main(int argc, const char* argv[]) {\n\n    int numbers[8] = {8,4,5,1,4,6,9,6};\n\
+    \    double ret_mean = mean(numbers,8);\n    printf(\"mean: %.2f\\n\",ret_mean);\n\
+    \n    return 0;\n}\n\ndouble mean(int numbers[],int size){\n    int i, total;\n\
+    \    double temp;\n\n    for (i = 0; i < size; ++i){\n        total += numbers[i];\n\
+    \    }\n\n    temp = (double)total / (double)size;\n    return temp;\n}\n```\n\
+    ```\n\nNow you can compile and run this program.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_51_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "# 4.4 Function and Pointer\n\nWe can pass pointer as parameters in our function.\
+    \ For illustration, we can create swap() to swap our values.\n\nTry to run this\
+    \ program.\n\n```\n#include <stdio.h>\n\n// implicit declaration for functions\n\
+    void swap(int *px, int *py);\n\nint main(int argc, const char* argv[]) {\n   \
+    \ int *x, *y;\n    int a, b;\n\n    a = 10;\n    b = 5;\n\n    // set value\n\
+    \    x = &a;\n    y = &b;\n\n    printf(\"value pointer x: %d \\n\",*x);\n   \
+    \ printf(\"value pointer y: %d \\n\",*y);\n\n    swap(x,y);\n    printf(\"swap()\\\
+    n\");\n    printf(\"value pointer x: %d \\n\",*x);\n    printf(\"value pointer\
+    \ y: %d \\n\",*y);\n    return 0;\n}\n\nvoid swap(int *px, int *py){\n    int\
+    \ temp;\n\n    // store pointer px value to temp\n    temp = *px;\n    // set\
+    \ pointer px by py value\n    *px = *py;\n    // set pointer py by temp value\n\
+    \    *py = temp;\n}\n```\n\nA sample of program output can be seen in Figure below."
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '```
+
+    ```text
+
+    address.c        dpointer.c       funcdemo.c       inout.c          pointer.c
+
+    arith.c          dtwopointer.c    hello.c          logical.c        structdemo.c
+
+    arraydemo.c      for.c             ifdemo.c         mathdemo.c       switch.c
+
+    comp.c           funcdemo          inced.c          multiarray.c     while.c
+
+    agusk$ gcc -o funcdemo funcdemo.c
+
+    agusk$ ./funcdemo
+
+    value pointer x: 10
+
+    value pointer y: 5
+
+    swap()
+
+    value pointer x: 5
+
+    value pointer y: 10
+
+    agusk$
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# # 5. I/O Operations
+
+
+    This chapter explains how to work with I/O operations.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# 5.1 Getting Started
+
+
+    In this section, we learn how to work with I/O operation. The following is our
+    scenario to illustrate how deal with I/O using C:
+
+
+    +   - Reading input from keyboard
+
+    +   - Reading program arguments
+
+    +   - Writing data into a file
+
+    +   - Reading data from a file'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# 5.2 Reading Input from Keyboard\n\nWe can read input from keyboard in many\
+    \ ways. The following is a list of function for reading input from keyboard:\n\
+    \n+   - getchar()\n+   - gets()\n+   - scanf()\n+   - \n\nWe will implement theses\
+    \ functions on next section.\n\n# 5.2.1 getchar() and putchar() functions\n\n\
+    getchar() function is used to get a character from keyboard and putchar() function\
+    \ is used to print a character to Terminal.\n\nFor illustration, create a file,\
+    \ called keyboard.c, and write this code.\n\n```\n#include <stdio.h>\n\nvoid getchar_putchar();\n\
+    \nint main() {\n    getchar_putchar();\n    return 0;\n}\n\nvoid getchar_putchar(){\n\
+    \    int c;\n    printf (\"Type a character: \");\n    c = getchar();\n    printf\
+    \ (\"char: %c\\n\",c);\n    putchar(c);\n    printf(\"\\n\");\n}\n```\n\nCompile\
+    \ and run this program.\n\n```\n$ gcc -o keyboard keyboard.c\n$ ./keyboard\n```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "You can see the program output in the following Figure below.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_58_0.png)\n\
+    \n# 5.2.2 gets() and puts() functions\n\ngets() is used to read a text. It will\
+    \ stop to read if you type newline (ENTER key). Unfortunately, gets() is unsafe\
+    \ function(). We can use fgets() to read text with length limitation.\n\nFor testing,\
+    \ we add get_puts() function on **keyboard.c** file, and write this code.\n\n\
+    ```\n```c\n#include <stdio.h>\n\nvoid gets_puts();\n\nint main() {\n\n    gets_puts();\n\
+    \n    return 0;\n}\n\nvoid gets_puts(){\n    printf(\"-----unsafe input-----\\\
+    \\n\");\n    char name[256];\n\n    printf (\"Your name: \");\n    gets (name);\n\
+    \    printf (\"name: %s\\\\n\", name);\n    puts(name);\n\n    printf (\"-----fget()\
+    \ input-----\\\\n\");\n    name[0] = '\\\\0'; // clear\n    printf (\"Your name:\
+    \ \");\n    fgets(name,256,stdin);\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "```\nprintf (\"name: %s\\n\",name);\nputs(name);\n}\n```\n\nSave this code.\
+    \ Try to compile and run this program.\n\nA sample output can be seen in Figure\
+    \ below.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_59_0.png)\n\n# 5.2.3 scanf()\
+    \ function\n\nAnother approach, we can use scanf() function to read a text.\n\n\
+    For illustration, we add scanf() function on keyboard.c file, and write this code.\n\
+    \n```\n#include <stdio.h>\n\nvoid scanf_demo();\n\nint main() {\n\n    scanf_demo();\n\
+    \n    return 0;\n}\n\nvoid scanf_demo(){\n    int num;\n    char c;\n    char\
+    \ city[15];\n```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '```
+
+    float dec;
+
+
+    printf("Please enter an integer value: ");
+
+    scanf("%d", &num );
+
+
+    // %c ignores space characters
+
+    printf("Please enter a character: ");
+
+    scanf(" %c", &c );
+
+
+    printf("Please enter a city name (no space): ");
+
+    scanf("%s", city );
+
+
+    printf("Please enter a decimal value:  ");
+
+    scanf("%f", &dec );
+
+
+    printf("\n-----result------\n");
+
+    printf("number = %d\n", num );
+
+    printf("character = %c\n", c );
+
+    printf("city name = %s\n", city );
+
+    printf("decimal number = %f\n", dec );
+
+    }
+
+    ```
+
+
+    Save this code. Compile and run this program
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_60_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "# 5.3 Reading Program Arguments\n\nWe can read arguments and its length from\
+    \ our program. This information already pass to main() function.\n\nFor illustration,\
+    \ create a file, called **argument.c**, and write this code.\n\n```\n#include\
+    \ <stdio.h>\n\nint main(int argc, const char* argv[]) {\n    int i;\n\n    printf(\"\
+    total argument: %d\\n\",argc-1);\n    if(argc>1){\n        for(i=1;i<argc;i++){\n\
+    \            printf(\"%s\\n\",argv[i]);\n        }\n    }\n\n    return 0;\n}\n\
+    ```\n\nCompile and run this program.\n\n```\n$ gcc -o argument argument.c\n$ ./argument\n\
+    ```\n\nA sample output can be seen in Figure below.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_61_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "# 5.4 Writing Data Into A File\n\nWe can write data into a file. The following\
+    \ is the algorithm for writing data:\n\n+   - Create a file using fopen() function\n\
+    +   - Write data into a file using fprintf() and fputs() functions\n+   - Close\
+    \ a file using fclose() function\n\nFor testing, we create data into a file, **demo.txt**.\
+    \ For implementation, create a file, called **filewrite.c**, and write this code.\n\
+    \n```\n#include <stdio.h>\n\nint main(int argc, const char* argv[]) {\n    int\
+    \ i;\n    FILE *f;\n\n    f = fopen(\"demo.txt\", \"w+\");\n\n    for(i=0;i<5;i++){\n\
+    \        fprintf(f, \"fprintf message %d\\n\",i);\n        fputs(\"fputs message\\\
+    n\", f); // no format\n    }\n\n    fclose(f);\n    printf(\"Data was written\
+    \ into a file\\n\");\n\n    return 0;\n}\n```\n\nSave this code. Compile and run\
+    \ this program.\n\n```\n$ gcc -o filewrite filewrite.c\n$ ./filewrite\n```\n\n\
+    A sample output can be seen in Figure below."
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '![](img/4e69d9ab92a6fdfd6a6bac3671deb952_63_0.png)
+
+
+    If success, it will generate **demo.txt**. You can open this file using text editor.
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_63_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "# 5.5 Reading Data From A File\n\nWe also can read data from a file using fgetc()\
+    \ function. For testing, create file, called fileread.c, and write this code.\n\
+    \n```\n#include <stdio.h>\n\nint main(int argc, const char* argv[]) {\n\n    char\
+    \ ch;\n    FILE *f;\n\n    printf(\"Reading a file...\\n\");\n    f = fopen(\"\
+    demo.txt\", \"r\");\n    if(f==NULL){\n        printf(\"Failed to read file\\\
+    n\");\n        return 0;\n    }\n\n    while((ch = fgetc(f)) != EOF )\n      \
+    \  printf(\"%c\",ch);\n\n    fclose(f);\n\n    return 0;\n}\n```\n\nCompile and\
+    \ this program.\n\n```\n$ gcc -o fileread fileread.c\n$ ./fileread\n```\n\nA sample\
+    \ output can be seen in Figure below."
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '![](img/4e69d9ab92a6fdfd6a6bac3671deb952_65_0.png)
+
+
+    ```
+
+    arraydemo.c      filewrite       ifdemo.c       mathdemo.c
+
+    comp.c           filewrite.c     incdec.c       multiarray.c
+
+    agusk$ gcc -o fileread fileread.c
+
+    agusk$ ./fileread
+
+    Reading a file...
+
+    printf message 0
+
+    fputs message
+
+    printf message 1
+
+    fputs message
+
+    printf message 2
+
+    fputs message
+
+    printf message 3
+
+    fputs message
+
+    printf message 4
+
+    fputs message
+
+    agusk$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# 6. String Operations
+
+
+    This chapter explains how to work with String operations in C.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "# 6.1 Concatenating Strings\n\nIf you have a list of string, you can concatenate\
+    \ into one string. You can use strcat() function from string.h header. For illustration,\
+    \ create a file, called stringdemo.c, and write the following code.\n\n```\n#include\
+    \ <stdio.h>\n#include <string.h>\n\nvoid concatenating();\n\nint main(int argc,\
+    \ const char* argv[]) {\n    concatenating();\n    return 0;\n}\n\nvoid concatenating(){\n\
+    \    printf(\"====concatenating===\\n\");\n    char str1[30] = \"hello\";\n  \
+    \  char str2[10] = \"wolrd\";\n    strcat(str1,str2);\n    printf(\"result: %s\\\
+    n\",str1);\n}\n```\n\nCompile and run this program.\n\n```\n$ gcc -o stringdemo\
+    \ stringdemo.c\n$ ./stringdemo\n```\n\nA program output can be seen in Figure\
+    \ below."
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '![](img/4e69d9ab92a6fdfd6a6bac3671deb952_68_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "# 6.3 Numeric to String\n\nIt is easy to convert numeric to String type, you\
+    \ can use sprintf() function. You can get String type automatically. For illustration,\
+    \ add numeric_to_string() function and write this code.\n\n```\n#include <stdio.h>\n\
+    #include <string.h>\n\nvoid numeric_to_string();\n\nint main(int argc, const char*\
+    \ argv[]) {\n    numeric_to_string();\n    return 0;\n}\n\nvoid numeric_to_string(){\n\
+    \    printf(\"====numeric_to_string==\\n\");\n    int n = 10;\n    float m = 23.78;\n\
+    \n    char num1[10];\n    char num2[10];\n\n    sprintf(num1, \"%d\", n);\n  \
+    \  sprintf(num2, \"%.2f\", m);\n\n    printf(\"num1: %s\\n\", num1);\n    printf(\"\
+    num2: %s\\n\", num2);\n}\n```\n\nCompile and run this program."
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: 'agusk$ gcc -o stringdemo stringdemo.c
+
+    agusk$ ./stringdemo
+
+    ===numeric_to_string===
+
+    num1: 10
+
+    num2: 23.78
+
+    agusk$'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "# 6.4 String Parser\n\nThe simple solution to parsing String uses strtok()\
+    \ function with delimiter parameter. For example, you have String data with ;\
+    \ delimiter and want to parse it. Here is sample code by adding string_parser()\
+    \ function.\n\n```\n#include <stdio.h>\n#include <string.h>\n\nvoid string_parser();\n\
+    \nint main(int argc, const char* argv[]) {\n    string_parser();\n    return 0;\n\
+    }\n\nvoid string_parser(){\n    char cities[40] = \"Tokyo;Berlin;London;New York\"\
+    ;\n    char token[2]=\",\";\n    char* city;\n\n    printf(\"cities: %s\\n\",cities);\n\
+    \n    city = strtok(cities, token);\n    while(city != NULL){\n        printf(\"\
+    %s\\n\", city );\n        city = strtok(NULL, token);\n    }\n}\n```\n\nCompile\
+    \ and run this program.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_73_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "# 6.5 Check String Data Length\n\nYou can use strlen() function from string.h\
+    \ header to get the length of string data. For testing, add string_length() function\
+    \ and write this code.\n\n```\n#include <stdio.h>\n#include <string.h>\n\nvoid\
+    \ string_length();\n\nint main(int argc, const char* argv[]) {\n    string_length();\n\
+    \    return 0;\n}\n\nvoid string_length(){\n    char str[20] = \"Hello world\"\
+    ;\n    printf(\"str: %s\\n\",str);\n    printf(\"length: %d\\n\",(int)strlen(str));\n\
+    }\n```\n\nCompile and run this program.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_75_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "# 6.6 Copy Data\n\nYou may copy some characters from String data. To do it,\
+    \ you can use strcpy() and strncpy() functions. For illustration, add string_copy()\
+    \ function and write the following code.\n\n```\n#include <stdio.h>\n#include\
+    \ <string.h>\n\nvoid string_copy();\n\nint main(int argc, const char* argv[])\
+    \ {\n    string_copy();\n    return 0;\n}\n\nvoid string_copy(){\n    char str[15]\
+    \ = \"Hello world\";\n    char new_str[20];\n\n    strcpy(new_str,str);\n    printf(\"\
+    str: %s\\n\",str);\n    printf(\"new_str: %s\\n\",new_str);\n\n    memset(new_str,\
+    \ '\\0', sizeof(new_str));\n    strncpy(new_str,str,5);\n    printf(\"strncpy-new_str:\
+    \ %s\\n\",new_str);\n}\n```\n\nCompile and run this program.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_76_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "# 6.7 Exploring Characters\n\nYou may get a character by position index. *string_var[index]*\
+    \ syntax provides this feature. Note 0 is the first index.\n\nFor testing, add\
+    \ string_explore() function and write this code.\n\n```\n```c\n#include <stdio.h>\n\
+    #include <string.h>\n\nvoid string_explore();\n\nint main(int argc, const char*\
+    \ argv[]) {\n\n    string_explore();\n\n    return 0;\n}\n\nvoid string_explore(){\n\
+    \    char str[15] = \"Hello world\";\n    int index;\n\n    for(index=0;index<strlen(str);index++){\n\
+    \        printf(\"%c\\n\", str[index]);\n    }\n}\n```\n```\n\nCompile and run\
+    \ this program.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_78_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# 7. Building C Library
+
+
+    This chapter explains how to build a library in C.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "# 7.3 Compiling and Testing\n\nIn this section, we try to compile our library,\
+    \ **mysimplelib.c**, to be static library and shared library.\n\n# 7.3.1 Static\
+    \ Library\n\nFirstly, we compile our library, **mysimplelib.c**, to be a static\
+    \ library, called **libmysimple.a**.\n\n```\n$ gcc -c mysimplelib.c\n$ ar rs libmysimple.a\
+    \ mysimplelib.o\n```\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_83_0.png)\n\n\
+    To access our static library, we create a simple app. Create a file, called **mysimpletest.c**,\
+    \ and write this code.\n\n```\n#include <stdio.h>\n#include \"mysimple.h\"\n\n\
+    int main(int argc, const char* argv[]) {\n    int a,b,c;\n    a = 5;\n    b =\
+    \ 3;\n    c = add(a,b);\n    printf(\"%d + %d = %d\\n\",a,b,c);\n    c = subtract(a,b);\n\
+    \    printf(\"%d - %d = %d\\n\",a,b,c);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '```
+
+    c = multiply(a,b);
+
+    printf("%d * %d = %d\n", a, b, c);
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    Consider our static library, **libmysimple.a**, and header file for library, **mysimple.h**
+    are located into the same folder. Now you can compile and run this program.
+
+
+    ```
+
+    $ gcc -I./ -L./ -o mysimpletest mysimpletest.c ./libmysimple.a
+
+    $ ./mysimpletest
+
+    ```
+
+
+    A program output can be seen in Figure below.
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_84_0.png)
+
+
+    # 7.3.2 Shared Library
+
+
+    We compile our library, **mysimplelib.c**, to be a shared library, called **libmysimple.so**.
+    You can type the following commands.
+
+
+    ```
+
+    $ gcc -c -fpic mysimplelib.c
+
+    $ gcc -shared -o libmysimple.so mysimplelib.o
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '![](img/4e69d9ab92a6fdfd6a6bac3671deb952_85_0.png)
+
+
+    To test our shared library, we can use the same program from **mysimpletest.c**.
+
+
+    Consider share library, **libmysimple.so**, and header file for shared library,
+    **mysimple.h**, are located on the same folder.
+
+
+    You can compile and run our program.
+
+
+    ```
+
+    $ gcc -I./ -L./ -o mysimpletest mysimpletest.c -lmysimple
+
+    $ ./mysimpletest
+
+    ```
+
+
+    Program output:
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_85_1.png)
+
+
+    You can modify shared library file location. For instance, we put our shared library
+    file into /home/agusk/lib. We must add our library folder into LD_LIBRARY_PATH.
+    Type this command.
+
+
+    ```
+
+    export LD_LIBRARY_PATH=/home/agusk/lib:$LD_LIBRARY_PATH
+
+    ```
+
+
+    Then, you can compile and run our program, mysimpletest .'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# 8. Threading
+
+
+    This chapter explains how to work with threading using C.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "```\nret = pthread_create (&thread, NULL, perform, &n);\nif (ret)\n{\n    printf(\"\
+    \\n pthread_create() failed with error [%s]\\n\", strerror(err\n    return -1;\n\
+    }\nint c = getchar(); // hold app to exit\nreturn 0;\n}\n```\n\nYou can see we\
+    \ pass parameter n=10 to function perform(). On function perform(), we just do\
+    \ looping.\n\nNow save this code. To compile and link, you can type the following\
+    \ command.\n\n```\n$ gcc -pthread -o createthread createthread.c\n```\n\nIf success,\
+    \ you can run this app.\n\n```\n$ ./createthread\n```\n\nThe following is sample\
+    \ output.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_88_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: "# 8.2 Thread ID\n\nWe can obtain the running thread using pthread_self() and\
+    \ following is its syntax.\n\n```\n#include <pthread.h>\n\npthread_t pthread_self\
+    \ (void);\n```\n\nTo use this function, you can call pthread_self() inside thread\
+    \ function.\n\nFor illustration, create file, called threadid.c, and write this\
+    \ code.\n\n```\n#include <stdio.h>\n#include <pthread.h>\n#include <string.h>\n\
+    #include <errno.h>\n\nvoid* perform(void *arg)\n{\n    int i;\n    int *n = (int\
+    \ *)arg;\n    pthread_t tid;\n\n    printf(\"processing from thread\\r\\n\");\n\
+    \    /* get the calling thread's ID */\n    tid = pthread_self();\n    printf(\"\
+    Thread id: %d \\r\\n\",(int)tid);\n    for(i=0;i<(*n);i++)\n    {\n        printf(\"\
+    %d \",i);\n    }\n    printf(\"\\r\\n\");\n}\n\nint main(int argc, char* argv[])\n\
+    {\n    pthread_t thread;\n    int ret;\n    errno = 0;\n    int n = 10;\n\n  \
+    \  ret = pthread_create (&thread, NULL, perform, &n);\n    if (ret)\n    {\n \
+    \       printf(\"\\n pthread_create() failed with error [%s]\\n\",strerror(err\n\
+    \        return -1;\n    }\n    int c = getchar(); // hold app to exit\n    return\
+    \ 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "# 8.3 Terminating Thread\n\nWe can terminate a thread using two approaches,\
+    \ terminating itself and terminating others. We are going to explore these approaches\
+    \ on next section.\n\n# 8.3.1 Terminating Itself\n\nA thread can stop its processing\
+    \ using pthread_exit(). The following is a syntax of pthread_exit().\n\n```\n\
+    #include <pthread.h>\n\nvoid pthread_exit (void *retval);\n```\n\nFor illustration,\
+    \ we build app based threading and call function perform(). On function perform(),\
+    \ we do looping and will exit from internal thread after looped index 3 by calling\
+    \ pthread_exit().\n\nTo implement, we create a file, called selfexit.c, and write\
+    \ this code.\n\n```\n#include <stdio.h>\n#include <pthread.h>\n#include <string.h>\n\
+    #include <errno.h>\n\nvoid* perform(void *arg)\n{\n    int i;\n    int *n = (int\
+    \ *)arg;\n\n    printf(\"processing from thread\\r\\n\");\n    for(i=0;i<(*n);i++)\n\
+    \    {\n        if(i==3)\n        {\n            printf(\"Terminating thread\\\
+    r\\n\");\n            /* exit this thread */\n            pthread_exit((void *)0);\n\
+    \        }\n        printf(\"%d \",i);\n    }\n    printf(\"\\r\\n\");\n}\n\n\
+    int main(int argc, char* argv[])\n{\n```"
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "```\nint pthread_setcancelstate(int state, int *oldstate);\nvoid pthread_testcancel(void);\n\
+    ```\n\nFor illustration, we build app to create a thread and try to terminate\
+    \ it using pthread_cancel().\n\nCreate a file, called terminateother.c, and write\
+    \ this code.\n\n```\n#include <stdio.h>\n#include <pthread.h>\n#include <string.h>\n\
+    #include <errno.h>\n#include <unistd.h>\n\nvoid* perform(void *arg)\n{\n    int\
+    \ n = 0;\n\n    // I'm not ready to be canceled\n    pthread_setcancelstate(PTHREAD_CANCEL_DISABLE,\
+    \ NULL);\n    printf(\"processing from thread\\r\\n\");\n    while(1)\n    {\n\
+    \        printf(\"%d \",n);\n        n++;\n\n        pthread_testcancel();\n \
+    \       if(n>5)\n        {\n            // I'm ready to be canceled\n        \
+    \    pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);\n        }\n\n     \
+    \   sleep(1);\n    }\n    printf(\"\\r\\n\");\n}\n\nint main(int argc, char* argv[])\n\
+    {\n    pthread_t thread;\n    int ret, status;\n    errno = 0;\n\n    ret = pthread_create\
+    \ (&thread, NULL, perform, NULL);\n    if (ret)\n    {\n        printf(\"\\n pthread_create()\
+    \ failed with error [%s]\\n\",strerror(err\n        return -1;\n    }\n    sleep(10);\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "```\nerrno = 0;\nstatus = pthread_cancel(thread);\nif (status)\n{\n    printf(\"\
+    \\n pthread_cancel() failed with error [%s]\\n\",strerror(e\n    return -1;\n\
+    }\n\nint c = getchar(); // hold app to exit\nreturn 0;\n}\n```\n\nExplanation:\n\
+    \n+   - On main entry main(), we create a thread with passing perform() function\n\
+    +   - We hold current process using sleep() for 10 seconds\n+   - After that,\
+    \ we try to terminate a thread by calling pthread_cancel()\n+   - pthread_cancel()\
+    \ function returns status value. You can verify this return value\n+   - On perform()\
+    \ function, firstly we call pthread_setcancelstate() to disable the thread cancelling\n\
+    +   - After looping n>5, we enable the thread cancelling\n+   - pthread_testcancel()\
+    \ function is called to create a cancellation point\n\nSave this code. Compile\
+    \ and run it.\n\nThe following is a sample output.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_94_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: 'Save this code. Because we use math.h, we add library -lm on compiling and
+    linking. The following is a syntax to compile this code.
+
+
+    ```
+
+    ```bash
+
+    $ gcc -pthread -o jointhread jointhread.c -lm
+
+    $ ./jointhread
+
+    ```
+
+    ```
+
+
+    Now you can run it. The sample output is shown Figure below.
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_97_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "# 8.5 Thread Mutex\n\nYou have resources such as data variable, file, database\
+    \ which can be accessed only by a thread. It’s called mutex. For illustration,\
+    \ you have data which is stored on variable n. You also have 5 threads to access\
+    \ this data. The first rule is data variable can be accessed by one thread. It\
+    \ means data variable will be locked so another thread cannot access it.\n\nMutex\
+    \ is one of thread synchronization mechanism to control accessing resource.\n\n\
+    You can implement thread mutex using the following functions.\n\n```\n#include\
+    \ <pthread.h>\n\nint pthread_mutex_init(pthread_mutex_t *restrict mutex,\n   \
+    \ const pthread_mutexattr_t *restrict attr);\nint pthread_mutex_destroy(pthread_mutex_t\
+    \ *mutex);\nint pthread_mutex_lock(pthread_mutex_t *mutex);\nint pthread_mutex_unlock(pthread_mutex_t\
+    \ *mutex);\n```\n\nNote:\n\n+   - pthread_mutex_init() initialize mutex object\n\
+    +   - pthread_mutex_destroy() destroy mutex object\n+   - pthread_mutex_lock()\
+    \ locak mutex object\n+   - pthread_mutex_lock() unlock/release mutex object\n\
+    \nFor implementation, we create a file, called mutex.c. Firstly we define headers\
+    \ and global variables. Write this code.\n\n```\n#include <stdio.h>\n#include\
+    \ <pthread.h>\n#include <string.h>\n#include <errno.h>\n#include <unistd.h>\n\n\
+    pthread_t thread[5];\nint total_finished_jobs;\npthread_mutex_t lock;\n```\n\n\
+    Variable total_finished_jobs can be accessed by only one thread.\n\nOn main()\
+    \ point entry, we instantiate mutex object and create 5 threads.\n\n```\nint main(int\
+    \ argc, char* argv[])\n{\n    int i, ret;\n    errno = 0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: "```\n```c\ntotal_finished_jobs = 0;\n\nif (pthread_mutex_init(&lock, NULL)\
+    \ != 0)\n{\n    printf(\"\\n pthread_mutex_init() failed with error [%s]\\n\"\
+    , strerror\n    return 1;\n}\n\nfor (i=0;i<5;i++)\n{\n    ret = pthread_create\
+    \ (&thread[i], NULL, perform_job, NULL);\n    if (ret)\n    {\n        printf(\"\
+    \\n pthread_create() failed with error [%s]\\n\", strerror\n        return -1;\n\
+    \    }\n}\n\nint c = getchar(); // hold app to exit\npthread_mutex_destroy(&lock);\n\
+    \nreturn 0;\n}\n```\n```\n\nEach thread calls perform_job() function. When access\
+    \ variable total_finished_jobs, we try to lock object lock. After that, we update\
+    \ a value of total_finished_jobs.\n\nThe following is implementation of perform_job()\
+    \ function.\n\n```\n```c\nvoid* perform_job(void *arg)\n{\n    int i;\n    pthread_t\
+    \ tid;\n\n    tid = pthread_self();\n    printf(\"processing from thread %ld \\\
+    r\\n\", tid);\n    printf(\"Thread %ld. Started Job. \\r\\n\", tid);\n\n    //\
+    \ do something for doing job\n    for(i=0;i<20;i++)\n    {\n        sleep(1);\n\
+    \    }\n\n    // update job counter\n    pthread_mutex_lock(&lock);\n    total_finished_jobs++;\n\
+    \    printf(\"Thread %ld. Finished Job. \\r\\n\", tid);\n    printf(\"Total current\
+    \ finished job: %d \\r\\n\", total_finished_jobs);\n    pthread_mutex_unlock(&lock);\n\
+    }\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: 'Now save all code. You can compile and run it.
+
+
+    You can see a sample output on the following Figure.
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_100_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "# 8.6 Condition Variables\n\nWe have learned thread synchronization using thread\
+    \ mutex. Now we explore another thread synchronization using condition variables\
+    \ in controlling accessing resource.\n\nThere are two methods to implement condition\
+    \ variables on thread synchronization:\n\n+   - Signaling\n+   - Broadcasting\n\
+    \nEach method will be explained on next section.\n\n# 8.6.1 Signaling\n\nThe idea\
+    \ of signaling is after you access a resource you must notify to another thread\
+    \ to start accessing resource. To implement it, we can use the following functions.\n\
+    \n```\n#include <pthread.h>\n\nint pthread_cond_init(pthread_cond_t *restrict\
+    \ cond,\n    const pthread_condattr_t *restrict attr);\n\nint pthread_cond_wait(pthread_cond_t\
+    \ *restrict cond,\n    pthread_mutex_t *restrict mutex);\n\nint pthread_cond_destroy(pthread_cond_t\
+    \ *cond);\n```\n\nTo notify another thread, you can use pthread_cond_signal()\
+    \ which is defined as below.\n\n```\n#include <pthread.h>\n\nint pthread_cond_signal(pthread_cond_t\
+    \ *cond);\n```\n\nFor illustration, we create two threads that act as producer\
+    \ and consumer. Producer can write data and consumer can only read data. The data\
+    \ can be accessed by one thread, either producer or consumer.\n\nLet’s start to\
+    \ create a file, called condvariable.c. Firstly we define headers and global variables.\n\
+    \n```\n#include <stdio.h>\n#include <pthread.h>\n#include <string.h>\n#include\
+    \ <errno.h>\n#include <unistd.h>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: "```\n#define BUFF_LEN 30\n\nint buffer[BUFF_LEN];\nint index_put=0, index_get=0;\n\
+    int count = 0;\npthread_cond_t empty, get;\npthread_mutex_t lock;\n```\n\nOn main()\
+    \ entry point, we initialize object mutex and condition variables (empty and fill).\
+    \ We also create 2 thread, producer and consumer.\n\n```\nint main(int argc, char*\
+    \ argv[])\n{\n    pthread_t thread_consumer, thread_producer;\n    int ret;\n\
+    \    errno = 0;\n    int loops = 15;\n\n    // initialization\n    if (pthread_mutex_init(&lock,\
+    \ NULL) != 0)\n    {\n        printf(\"\\n pthread_mutex_init() failed with error\
+    \ [%s]\\n\",strerr\n        return 1;\n    }\n    if (pthread_cond_init(&empty,\
+    \ NULL) != 0)\n    {\n        printf(\"\\n pthread_cond_init() failed with error\
+    \ [%s]\\n\",strerro\n        return 1;\n    }\n    if (pthread_cond_init(&get,\
+    \ NULL) != 0)\n    {\n        printf(\"\\n pthread_cond_init() failed with error\
+    \ [%s]\\n\",strerro\n        return 1;\n    }\n\n    // create thread\n    ret\
+    \ = pthread_create (&thread_consumer, NULL, consumer, &loops);\n    if (ret)\n\
+    \    {\n        printf(\"\\n pthread_create() failed with error [%s]\\n\",strerror(err\n\
+    \        return -1;\n    }\n    ret = pthread_create (&thread_producer, NULL,\
+    \ producer, &loops);\n    if (ret)\n    {\n        printf(\"\\n pthread_create()\
+    \ failed with error [%s]\\n\",strerror(err\n        return -1;\n    }\n\n    int\
+    \ c = getchar(); // hold app to exit\n    pthread_mutex_destroy(&lock);\n    pthread_cond_destroy(&empty);\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "```\npthread_cond_destroy(&get);\nreturn 0;\n}\n```\n\nOn producer() function\
+    \ we do looping until obtain signal empty. After obtained a signal, we add a value\
+    \ on array buffer. If done, it will notify signal get.\n\n```\nvoid *producer(void\
+    \ *arg)\n{\n    int i;\n    int *loops = (int *)arg;\n\n    for (i = 0; i < (*loops);\
+    \ i++)\n    {\n        pthread_mutex_lock(&lock);\n        while (count == BUFF_LEN)\n\
+    \            pthread_cond_wait(&empty, &lock);\n\n        buffer[index_put] =\
+    \ i;\n        index_put = (index_put + 1) % BUFF_LEN;\n        count++;\n\n  \
+    \      pthread_cond_signal(&get);\n        pthread_mutex_unlock(&lock);\n    }\n\
+    \    printf(\"exit from producer\\r\\n\");\n}\n```\n\nOn consumer() function,\
+    \ firstly we wait signal fill. After obtained signal, we read data from array\
+    \ buffer. If done, we notify signal empty.\n\n```\nvoid *consumer(void *arg)\n\
+    {\n    int i;\n    int *loops = (int *)arg;\n\n    for (i = 0; i < (*loops); i++)\n\
+    \    {\n        pthread_mutex_lock(&lock);\n        while (count == BUFF_LEN)\n\
+    \            pthread_cond_wait(&get, &lock);\n\n        int tmp = buffer[index_get];\n\
+    \        index_get = (index_get + 1) % BUFF_LEN;\n        count--;\n        printf(\"\
+    Value: %d\\r\\n\", tmp);\n\n        pthread_cond_signal(&empty);\n        pthread_mutex_unlock(&lock);\n\
+    \    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '```
+
+    ```c
+
+    }
+
+    printf("exit from consumer\\r\\n");
+
+    }
+
+    ```
+
+    ```
+
+
+    Save this code. Compile and run it.
+
+
+    The following is a sample output.
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_104_0.png)
+
+
+    # 8.6.2 Broadcasting
+
+
+    We can notify some threads using broadcasting signal. It can use pthread_cond_broadcast()
+    and defined as follows.
+
+
+    ```
+
+    ```c
+
+    #include <pthread.h>
+
+
+    int pthread_cond_broadcast(pthread_cond_t *cond);
+
+    ```
+
+    ```
+
+
+    What’s difference between pthread_cond_broadcast() and pthread_cond_signal()?
+    pthread_cond_broadcast() notifies several threads but pthread_cond_signal() notifies
+    a thread.
+
+
+    For illustration, we use same code on previous section (section 8.6.1). In this
+    scenario, we have 2 consumer threads and 1 producer thread.'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: "```\n```c\nif (ret)\n{\n    printf(\"\\n pthread_create() failed with error\
+    \ [%s]\\n\", strerror(err));\n    return -1;\n}\nret = pthread_create (&thread_producer,\
+    \ NULL, producer, &loops);\nif (ret)\n{\n    printf(\"\\n pthread_create() failed\
+    \ with error [%s]\\n\", strerror(err));\n    return -1;\n}\n\nint c = getchar();\
+    \ // hold app to exit\npthread_mutex_destroy(&lock);\npthread_cond_destroy(&empty);\n\
+    pthread_cond_destroy(&get);\n\nreturn 0;\n}\n```\n```\n\nOn producer() function,\
+    \ we insert data after obtained signal empty. Then we call pthread_cond_broadcast()\
+    \ to notify all consumer threads.\n\n```\n```c\nvoid *producer(void *arg)\n{\n\
+    \    int i;\n    int *loops = (int *)arg;\n\n    for (i = 0; i < (*loops); i++)\n\
+    \    {\n        pthread_mutex_lock(&lock);\n        while (count == BUFF_LEN)\n\
+    \            pthread_cond_wait(&empty, &lock);\n\n        buffer[index_put] =\
+    \ i;\n        index_put = (index_put + 1) % BUFF_LEN;\n        count++;\n\n  \
+    \      pthread_cond_broadcast(&get); //broadcast to consumer\n        pthread_mutex_unlock(&lock);\n\
+    \    }\n    printf(\"exit from producer\\r\\n\");\n}\n```\n```\n\nOn consumer()\
+    \ function, we get data from array after obtained signal get. After that, we notify\
+    \ producer thread using pthread_cond_signal().\n\n```\n```c\nvoid *consumer(void\
+    \ *arg)\n{\n    int i;\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# 9. Database Programming
+
+
+    This chapter explains how to create database application using C.'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# 9.1 Database Library for C
+
+
+    C can communicate with database server through database driver. We must install
+    database driver for C before we start to develop database application.
+
+
+    In this chapter, I only focus on MySQL scenarios. Basically, I have already published
+    these codes to Github, https://github.com/agusk/crud-mysql-c , last year . You
+    can download and improve these codes.'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: "# 9.2 MySQL\n\nTo install MySQL server and client in Ubuntu and its database\
+    \ driver for C, you can try to writ this command in terminal\n\n```\n$ sudo apt-get\
+    \ install mysql-server mysql-client\n$ sudo apt-get install libmysqlclient-dev\n\
+    ```\n\nAfter finished, we can do testing.\n\nFirstly, we can start to create simple\
+    \ C application to check MySQL version. Write this code\n\n```\n#include <my_global.h>\n\
+    #include <mysql.h>\n\nint main(int argc, char **argv)\n{\n    printf(\"MySQL client\
+    \ version: %s\\n\", mysql_get_client_info());\n    exit(0);\n}\n```\n\nSave this\
+    \ program into a file, called **demo-mysql-version.c**.\n\nNow you can compile\
+    \ and run this file.\n\n```\n$ gcc -c -I/usr/include/mysql demo-mysql-version.c\n\
+    $ gcc -o demo-mysql-version demo-mysql-version.o -L/usr/lib/mysql -lmysql\n$ ./demo-mysql-version\n\
+    ```\n\nIf success, you will get MySQL client version.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_111_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "# 9.3 Connection Test\n\nIn this section, we try to test a connection to MySQL\
+    \ server. Create a file, called **demo-connection.c** and write this code.\n\n\
+    ```\n#include <my_global.h>\n#include <mysql.h>\n\nint main(int argc, char **argv)\n\
+    {\n    MYSQL *con = mysql_init(NULL);\n\n    if (con == NULL)\n    {\n       \
+    \ fprintf(stderr, \"%s\\n\", mysql_error(con));\n        exit(1);\n    }\n   \
+    \ printf(\"connecting to mysql server...\\r\\n\");\n    // change host, username,\
+    \ and password\n    if (mysql_real_connect(con, \"localhost\", \"root\", \"password\"\
+    , NULL, 0, NULL, 0) == NULL)\n    {\n        printf(\"error: %s\\r\\n\", mysql_error(con));\n\
+    \        mysql_close(con);\n        exit(1);\n    }\n    printf(\"connected.\\\
+    r\\n\");\n    printf(\"closing connection...\\r\\n\");\n\n    mysql_close(con);\n\
+    \    printf(\"closed.\\r\\n\");\n\n    exit(0);\n}\n```\n\nSave this program.\n\
+    \nNow you can compile and run this file.\n\n```\n$ gcc -c -I/usr/include/mysql\
+    \ demo-connection.c\n$ gcc -o demo-connection demo-connection.o -L/usr/lib/mysql\
+    \ -lmysqlclient\n$ ./demo-connection\n```\n\nProgram output:"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: "```\n```bash\nagusk@ubuntu15:~/books/cprog$ gcc -c -I/usr/include/mysql demo-connection.c\n\
+    agusk@ubuntu15:~/books/cprog$ gcc -o demo-connection demo-connection.o -L/usr/lib/mysql\
+    \ -lmysqlclient\nagusk@ubuntu15:~/books/cprog$ ./demo-connection\nconnecting to\
+    \ mysql server...\nconnected.\nclosing connection...\nclosed.\nagusk@ubuntu15:~/books/cprog$\
+    \ \n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: "```\nMYSQL_STMT  *stmt;\n\nstmt = mysql_stmt_init(con);\nif (!stmt)\n{\n  \
+    \  printf(\" mysql_stmt_init(), out of memory\\r\\n\");\n    exit(0);\n}\n\nif\
+    \ (mysql_stmt_prepare(stmt, CREATE_DATA, strlen(CREATE_DATA)))\n{\n    printf(\"\
+    mysql_stmt_prepare(), INSERT failed\\r\\n\");\n    printf(\"error: %s\\r\\n\"\
+    , mysql_stmt_error(stmt));\n    exit(0);\n}\n\nint i;\ntime_t now = time(NULL);\n\
+    char name[10];\nunsigned long str_length;\nfloat price;\nMYSQL_BIND  bind[3];\n\
+    MYSQL_TIME  ts;\n\nmemset(bind, 0, sizeof(bind));\n\nbind[0].buffer_type= MYSQL_TYPE_VAR_STRING;\n\
+    bind[0].buffer= (char *)&name;\nbind[0].is_null= 0;\nbind[0].length= &str_length;\n\
+    \nbind[1].buffer_type= MYSQL_TYPE_FLOAT;\nbind[1].buffer= (char *)&price;\nbind[1].is_null=\
+    \ 0;\nbind[1].length= 0;\n\nbind[2].buffer_type= MYSQL_TYPE_DATETIME;\nbind[2].buffer=\
+    \ (char *)&ts;\nbind[2].is_null= 0;\nbind[2].length= 0;\n\n// bind parameters\n\
+    if (mysql_stmt_bind_param(stmt, bind))\n{\n    printf(\"mysql_stmt_bind_param()\
+    \ failed\\r\\n\");\n    printf(\"%s\\r\\n\", mysql_stmt_error(stmt));\n    exit(0);\n\
+    }\n\nfor(i=1;i<=10;i++)\n{\n    // set values\n```"
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: "```\n```c\nsprintf(name,\"product-%d\",i);\nstr_length = strlen(name);\nprice\
+    \ = 0.23*i;\n\n// time_t to MYSQL_TIME\nstruct tm *now_struct = gmtime(&now);\n\
+    ts.year = now_struct->tm_year + 1900;\nts.month = now_struct->tm_mon + 1;\nts.day\
+    \ = now_struct->tm_mday;\nts.hour = now_struct->tm_hour;\nts.minute = now_struct->tm_min;\n\
+    ts.second = now_struct->tm_sec;\n\nprintf(\"executing data %d...\\\\r\\\\n\",i);\n\
+    if (mysql_stmt_execute(stmt))\n{\n        printf(\"mysql_stmt_execute(), 1 failed\\\
+    \\r\\\\n\");\n        printf(\"%s\\\\r\\\\n\", mysql_stmt_error(stmt));\n    \
+    \    exit(0);\n}\n\n}\nprintf(\"done.\\\\r\\\\n\");\nprintf(\"closing connection...\\\
+    \\r\\\\n\");\n\n/* Close the statement */\nif (mysql_stmt_close(stmt))\n{\n  \
+    \      printf(\"failed while closing the statement\\\\r\\\\n\");\n        printf(\"\
+    %s\\\\r\\\\n\", mysql_stmt_error(stmt));\n        exit(0);\n}\nmysql_close(con);\n\
+    printf(\"closed.\\\\r\\\\n\");\n\nexit(0);\n}\n```\n```\n\nSave this code.\n\n\
+    Now you can compile and run this file.\n\n```\n```bash\n$ gcc -c -I/usr/include/mysql\
+    \ demo-create-data.c\n$ gcc -o demo-create-data demo-create-data.o -L/usr/lib/mysql\
+    \ -lmysqlcli\n$ ./demo-create-data\n```\n```\n\nProgram output:"
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: "![](img/4e69d9ab92a6fdfd6a6bac3671deb952_117_0.png)\n\n# 9.4.2 Reading Data\n\
+    \nIn this section, we try to read data from MySQL. For illustration, create a\
+    \ file, called demo-read-data.c and write this code.\n\n```\n#include <my_global.h>\n\
+    #include <mysql.h>\n\nint main(int argc, char **argv)\n{\n    MYSQL *con = mysql_init(NULL);\n\
+    \n    if (con == NULL)\n    {\n        fprintf(stderr, \"%s\\n\", mysql_error(con));\n\
+    \        exit(1);\n    }\n    printf(\"connecting to mysql server...\\r\\n\");\n\
+    \    // change host, username, and password\n    if (mysql_real_connect(con, \"\
+    localhost\", \"root\", \"password\", \"mydatabase\", 0, NULL, 0) == NULL)\n  \
+    \  {\n        printf(\"error: %s\\r\\n\", mysql_error(con));\n        mysql_close(con);\n\
+    \        exit(1);\n    }\n    printf(\"connected.\\r\\n\");\n```"
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: "```\nprintf(\"show data product\\r\\n\");\nif (mysql_query(con, \"SELECT *\
+    \ FROM product\"))\n{\n    printf(\"error: %s\\r\\n\", mysql_error(con));\n  \
+    \  mysql_close(con);\n    exit(1);\n}\n\nMYSQL_RES *result = mysql_store_result(con);\n\
+    if (result == NULL)\n{\n    printf(\"error: %s\\r\\n\", mysql_error(con));\n \
+    \   mysql_close(con);\n    exit(1);\n}\n\nint num_fields = mysql_num_fields(result);\n\
+    MYSQL_ROW row;\nint i;\nwhile ((row = mysql_fetch_row(result)))\n{\n    for(i\
+    \ = 0; i < num_fields; i++)\n    {\n        printf(\"%s\\t\", row[i] ? row[i]\
+    \ : \"NULL\");\n    }\n    printf(\"\\r\\n\");\n}\n\nmysql_free_result(result);\n\
+    \nprintf(\"closing connection...\\r\\n\");\n\nmysql_close(con);\nprintf(\"closed.\\\
+    r\\n\");\n\nexit(0);\n}\n```\n\nSave this code.\n\nNow you can compile and run\
+    \ this file.\n\n```\n$ gcc -c -I/usr/include/mysql demo-read-data.c\n$ gcc -o\
+    \ demo-read-data demo-read-data.o -L/usr/lib/mysql -lmysqlclient\n$ ./demo-read-data\n\
+    ```\n\nProgram output:"
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "![](img/4e69d9ab92a6fdfd6a6bac3671deb952_119_0.png)\n\n# 9.4.3 Updating Data\n\
+    \nIn this section, we try to update data, for instance, we update data with id=5.\
+    \ Create a file, called demo-update-data.c and write this code.\n\n```\n#include\
+    \ <my_global.h>\n#include <mysql.h>\n#include <string.h>\n\n#define UPDATE_DATA\
+    \ \"update product set name = ?, price=? where idproduc\n\nint main(int argc,\
+    \ char **argv)\n{\n    MYSQL *con = mysql_init(NULL);\n\n    if (con == NULL)\n\
+    \    {\n        fprintf(stderr, \"%s\\n\", mysql_error(con));\n        exit(1);\n\
+    \    }\n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "```\n```c\nprintf(\"connecting to mysql server...\\\\r\\\\n\");\n// change\
+    \ host, username, and password\nif (mysql_real_connect(con, \"localhost\", \"\
+    root\", \"password\",\n                       \"mydatabase\", 0, NULL, 0) == NULL)\n\
+    {\n    printf(\"error: %s\\\\r\\\\n\", mysql_error(con));\n    mysql_close(con);\n\
+    \    exit(1);\n}\nprintf(\"connected.\\\\r\\\\n\");\n\nMYSQL_STMT *stmt;\n\nstmt\
+    \ = mysql_stmt_init(con);\nif (!stmt)\n{\n    printf(\" mysql_stmt_init(), out\
+    \ of memory\\\\r\\\\n\");\n    exit(0);\n}\n\nif (mysql_stmt_prepare(stmt, UPDATE_DATA,\
+    \ strlen(UPDATE_DATA)))\n{\n    printf(\"mysql_stmt_prepare(), UPDATE failed\\\
+    \\r\\\\n\");\n    printf(\"error: %s\\\\r\\\\n\", mysql_stmt_error(stmt));\n \
+    \   exit(0);\n}\n\nint i;\nchar name[10];\nunsigned long str_length;\nfloat price;\n\
+    MYSQL_BIND bind[3];\nint product_id;\n\nmemset(bind, 0, sizeof(bind));\n\nbind[0].buffer_type\
+    \ = MYSQL_TYPE_VAR_STRING;\nbind[0].buffer= (char *)&name;\nbind[0].is_null= 0;\n\
+    bind[0].length= &str_length;\n\nbind[1].buffer_type= MYSQL_TYPE_FLOAT;\nbind[1].buffer=\
+    \ (char *)&price;\nbind[1].is_null= 0;\nbind[1].length= 0;\n\nbind[2].buffer_type=\
+    \ MYSQL_TYPE_LONG;\nbind[2].buffer= (char *)&product_id;\nbind[2].is_null= 0;\n\
+    bind[2].length= 0;\n\n// bind parameters\nif (mysql_stmt_bind_param(stmt, bind))\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: "```\n```c\n{\n    printf(\"mysql_stmt_bind_param() failed\\\\r\\\\n\");\n \
+    \   printf(\"%s\\\\r\\\\n\", mysql_stmt_error(stmt));\n    exit(0);\n}\n\n// set\
+    \ updated values\n// change these values!!\nsprintf(name,\"product-updated\");\n\
+    str_length = strlen(name);\nprice = 10.33;\nproduct_id = 5;\n\nprintf(\"updating\
+    \ data...\\\\r\\\\n\");\nif (mysql_stmt_execute(stmt))\n{\n    printf(\"mysql_stmt_execute(),\
+    \ 1 failed\\\\r\\\\n\");\n    printf(\"%s\\\\r\\\\n\", mysql_stmt_error(stmt));\n\
+    \    exit(0);\n}\nprintf(\"done.\\\\r\\\\n\");\nprintf(\"closing connection...\\\
+    \\r\\\\n\");\n\n/* Close the statement */\nif (mysql_stmt_close(stmt))\n{\n  \
+    \  printf(\"Failed while closing the statement\\\\r\\\\n\");\n    printf(\"%s\\\
+    \\r\\\\n\", mysql_stmt_error(stmt));\n    exit(0);\n}\nmysql_close(con);\nprintf(\"\
+    closed.\\\\r\\\\n\");\n\nexit(0);\n}\n```\n```\n\nSave this code.\n\nNow you can\
+    \ compile and run this file.\n\n```\n```bash\n$ gcc -c -I/usr/include/mysql demo-update-data.c\n\
+    $ gcc -o demo-update-data demo-update-data.o -L/usr/lib/mysql -lmysqlclient\n\
+    $ ./demo-update-data\n```\n```\n\nProgram output:"
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: "![](img/4e69d9ab92a6fdfd6a6bac3671deb952_122_0.png)\n\n# 9.4.4 Deleting Data\n\
+    \nThe last operation is to delete data, for instance, delete data with id=3. Create\
+    \ a file, called **demo-delete-data.c** and write this code.\n\n```\n```c\n#include\
+    \ <my_global.h>\n#include <mysql.h>\n#include <string.h>\n\n#define DELETE_DATA\
+    \ \"delete from product where idproduct=?\"\n\nint main(int argc, char **argv)\n\
+    {\n\n        MYSQL *con = mysql_init(NULL);\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: "```\nif (con == NULL)\n{\n    fprintf(stderr, \"%s\\n\", mysql_error(con));\n\
+    \    exit(1);\n}\nprintf(\"connecting to mysql server...\\r\\n\");\n// change\
+    \ host, username, and password\nif (mysql_real_connect(con, \"localhost\", \"\
+    root\", \"password\", \"mydatabase\", 0, NULL, 0) == NULL)\n{\n    printf(\"error:\
+    \ %s\\r\\n\", mysql_error(con));\n    mysql_close(con);\n    exit(1);\n}\nprintf(\"\
+    connected.\\r\\n\");\n\nMYSQL_STMT *stmt;\n\nstmt = mysql_stmt_init(con);\nif\
+    \ (!stmt)\n{\n    printf(\" mysql_stmt_init(), out of memory\\r\\n\");\n    exit(0);\n\
+    }\n\nif (mysql_stmt_prepare(stmt, DELETE_DATA, strlen(DELETE_DATA)))\n{\n    printf(\"\
+    mysql_stmt_prepare(), UPDATE failed\\r\\n\");\n    printf(\"error: %s\\r\\n\"\
+    , mysql_stmt_error(stmt));\n    exit(0);\n}\n\nint i;\nMYSQL_BIND bind[1];\nint\
+    \ product_id;\n\nmemset(bind, 0, sizeof(bind));\n\nbind[0].buffer_type= MYSQL_TYPE_LONG;\n\
+    bind[0].buffer= (char *)&product_id;\nbind[0].is_null= 0;\nbind[0].length= 0;\n\
+    \n// bind parameters\nif (mysql_stmt_bind_param(stmt, bind))\n{\n    printf(\"\
+    mysql_stmt_bind_param() failed\\r\\n\");\n    printf(\"%s\\r\\n\", mysql_stmt_error(stmt));\n\
+    \    exit(0);\n}\n\n// select product id to be deleted\n```"
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: "```\n// change these values!!\nproduct_id = 3;\n\nprintf(\"deleting data...\\\
+    r\\n\");\nif (mysql_stmt_execute(stmt))\n{\n    printf(\"mysql_stmt_execute(),\
+    \ 1 failed\\r\\n\");\n    printf(\"%s\\r\\n\", mysql_stmt_error(stmt));\n    exit(0);\n\
+    }\nprintf(\"done.\\r\\n\");\nprintf(\"closing connection...\\r\\n\");\n\n/* Close\
+    \ the statement */\nif (mysql_stmt_close(stmt))\n{\n    printf(\"failed while\
+    \ closing the statement\\r\\n\");\n    printf(\"%s\\r\\n\", mysql_stmt_error(stmt));\n\
+    \    exit(0);\n}\nmysql_close(con);\nprintf(\"closed.\\r\\n\");\n\nexit(0);\n\
+    }\n```\n\nSave this code.\n\nNow you can compile and run this file.\n\n```\n$\
+    \ gcc -c -I/usr/include/mysql demo-delete-data.c\n$ gcc -o demo-delete-data demo-delete-data.o\
+    \ -L/usr/lib/mysql -lmysqlcli\n$ ./demo-delete-data\n```\n\nProgram output:"
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# 10. Socket Programming
+
+
+    This chapter explains how to get started with Socket programming using C.'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: "# 10.1 Getting Local Hostname\n\nWe usually know our hostname using command\
+    \ hostname. For instance, you can type the following command.\n\n```\n$ hostname\n\
+    ```\n\nWe also can get our hostname by program. We can use gethostname() function.\
+    \ It is defined as below.\n\n```\n#include <unistd.h>\n\nint gethostname(char\
+    \ *name, size_t len);\n```\n\nFor illustration, we create a simple app to read\
+    \ local hostname. Create a file, called gethostname.c, and write this code.\n\n\
+    ```\n#include <stdio.h>\n#include <sys/unistd.h>\n\nint main(void)\n{\n    char\
+    \ hostname[128];\n\n    gethostname(hostname, sizeof(hostname));\n    printf(\"\
+    My local hostname: %s\\n\", hostname);\n\n    return 0;\n}\n```\n\nSave this code\
+    \ and try to compile and run.\n\nThe following is a sample output.\n\n![](img/4e69d9ab92a6fdfd6a6bac3671deb952_127_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '# 10.2 Creating and Connecting
+
+
+    In this section we explore socket programming. For illustration we build client-server
+    app. In this scenario, we just connect and then close.
+
+
+    To create communication, we can use socket() function. It can be defined as below.
+
+
+    ```
+
+    #include <sys/types.h>
+
+    #include <sys/socket.h>
+
+
+    int socket(int domain, int type, int protocol);
+
+    ```
+
+
+    domain is defined as below.
+
+
+    | Name | Purpose |
+
+    |---|---|
+
+    | AF_UNIX, AF_LOCAL | Local communication |
+
+    | AF_INET | IPv4 Internet protocols |
+
+    | AF_INET6 | IPv6 Internet protocols |
+
+    | AF_IPX | IPX - Novell protocols |
+
+    | AF_NETLINK | Kernel user interface device |
+
+    | AF_X25 | ITU-T X.25 / ISO-8208 protocol |
+
+    | AF_AX25 | Amateur radio AX.25 protocol |
+
+    | AF_ATM PVC | Access to raw ATM PVCs |
+
+    | AF_APPLETALK | Appletalk |
+
+    | AF_PACKET | Low level packet interface |
+
+
+    type is defined as below.
+
+
+    |  |  |
+
+    | SOCK_STREAM | Provides sequenced, reliable, two-way, connection-based byte streams.
+    An out-of-band data transmission mechanism may be supported. |
+
+    | SOCK_DGRAM | Supports datagrams (connectionless, unreliable messages of a fixed
+    maximum length). |
+
+    | SOCK_SEQPACKET | Provides a sequenced, reliable, two-way connection-based data
+    transmission path for datagrams of fixed maximum length; a consumer is required
+    to read an entire packet with each input system call. |
+
+    | SOCK_RAW | Provides raw network protocol access. |
+
+    | SOCK_RDM | Provides a reliable datagram layer that does not guarantee ordering.
+    |
+
+    | SOCK_PACKET | Obsolete and should not be used in new programs; |
+
+
+    We will focus on socket type: SOCK_STREAM and SOCK_DGRAM.'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '# 10.2.1 Server
+
+
+    To build server, you can follow steps, shown in Figure below.
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_130_0.png)
+
+
+    bind(), listen(), accept() and close() function can be defines as follows.
+
+
+    ```
+
+    ```c
+
+    #include <sys/types.h>
+
+    #include <sys/socket.h>
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: "```\n#include <unistd.h>\n\nint bind(int sockfd, const struct sockaddr *addr,\
+    \ socklen_t addrlen);\nint listen(int sockfd, int backlog);\nint accept(int sockfd,\
+    \ struct sockaddr *addr, socklen_t *addrlen);\nint close(int fd);\n```\n\nWe usually\
+    \ struct sockaddr_in to pass parameter addr. It is defined as follows.\n\n```\n\
+    struct sockaddr_in {\n    sa_family_t    sin_family;  /* address family: AF_INET\
+    \ */\n    in_port_t      sin_port;    /* port in network byte order */\n    struct\
+    \ in_addr sin_addr;    /* internet address */\n};\n\nstruct in_addr {\n    uint32_t\
+    \       s_addr;      /* address in network byte order */\n};\n```\n\nFor implementation,\
+    \ we build server app by creating a file, called simple_server.c, and write this\
+    \ code.\n\n```\n1 #include <stdio.h>\n2 #include <sys/types.h>\n3 #include <sys/socket.h>\n\
+    4 #include <netinet/in.h>\n5 #include <string.h>\n6 #include <errno.h>\n7\n8 int\
+    \ main(void)\n9 {\n10\n11\n12     int sockfd, newsockfd, portno, clilen;\n13 \
+    \    struct sockaddr_in serv_addr, cli_addr;\n14\n15     portno = 8056; // server\
+    \ port\n16     errno = 0;\n17\n18     sockfd = socket(AF_INET, SOCK_STREAM, 0);\n\
+    19     if (sockfd < 0)\n20     {\n21         printf(\"\\n socket() failed with\
+    \ error [%s]\\n\",strerror(errno)\n22         return -1;\n23     }\n24\n25   \
+    \  bzero((char *) &serv_addr, sizeof(serv_addr));\n26\n27     serv_addr.sin_family\
+    \ = AF_INET;\n28     serv_addr.sin_addr.s_addr = INADDR_ANY;\n29     serv_addr.sin_port\
+    \ = htons(portno);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: "```\n30\n31 if (bind(sockfd, (struct sockaddr *) &serv_addr,\n32     sizeof(serv_addr))\
+    \ < 0)\n33 {\n34     printf(\"\\n bind() failed with error [%s]\\n\",strerror(errno));\n\
+    35     return -1;\n36 }\n37\n38 printf(\"socket has created and binded\\n\");\n\
+    39 printf(\"listening incoming socket client...\\n\");\n40\n41 listen(sockfd,5);\n\
+    42 clilen = sizeof(cli_addr);\n43 newsockfd = accept(sockfd, (struct sockaddr\
+    \ *) &cli_addr, &clilen\n44 if (newsockfd < 0)\n45 {\n46     printf(\"\\n accept()\
+    \ failed with error [%s]\\n\",strerror(errno)\n47     return -1;\n48 }\n49\n50\
+    \ printf(\"a client was connected\\n\");\n51\n52 // close socket\n53 close(newsockfd);\n\
+    54 close(sockfd);\n55\n56 return 0;\n57 }\n```\n\nYou can compile this program.\n\
+    \n```\n$ gcc -o simple_server simple_server.c\n```\n\n# 10.2.2 Client\n\nTo connect\
+    \ the server, we can use connect() function. This function can be defined as below.\n\
+    \n```\n#include <sys/types.h>\n#include <sys/socket.h>\n\nint connect(int sockfd,\
+    \ const struct sockaddr *addr,\n    socklen_t addrlen);\n```\n\nServer information\
+    \ is passed to addr parameter.\n\nFor client implementation, we create a file,\
+    \ called simple_client.c, and write this code."
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: "```\n```c\n#include <stdio.h>\n#include <sys/types.h>\n#include <sys/socket.h>\n\
+    #include <netinet/in.h>\n#include <netdb.h>\n#include <string.h>\n#include <errno.h>\n\
+    \nint main(void)\n{\n    int sockfd, portno;\n\n    struct sockaddr_in serv_addr;\n\
+    \    struct hostent *server;\n\n    // server hostname. You can change it\n  \
+    \  char server_hostname[] = \"ubuntu15\";\n    portno = 8056; // server port\n\
+    \    errno = 0;\n\n    sockfd = socket(AF_INET, SOCK_STREAM, 0);\n    if (sockfd\
+    \ < 0)\n    {\n        printf(\"\\n socket() failed with error [%s]\\n\", strerror(errno));\n\
+    \        return -1;\n    }\n\n    printf(\"socket has created\\n\");\n\n    server\
+    \ = gethostbyname(server_hostname);\n    if (server == NULL)\n    {\n        printf(\"\
+    \\n gethostbyname() failed with error [%s]\\n\", strerror(errno));\n        return\
+    \ -1;\n    }\n\n    bzero((char *) &serv_addr, sizeof(serv_addr));\n    serv_addr.sin_family\
+    \ = AF_INET;\n    bcopy((char *)server->h_addr,\n          (char *)&serv_addr.sin_addr.s_addr,\n\
+    \          server->h_length);\n    serv_addr.sin_port = htons(portno);\n\n   \
+    \ printf(\"connecting to server...\\n\");\n    if (connect(sockfd,(struct sockaddr\
+    \ *)&serv_addr,sizeof(serv_addr)) < 0)\n    {\n        printf(\"\\n connect()\
+    \ failed with error [%s]\\n\", strerror(errno));\n        return -1;\n    }\n\n\
+    \    printf(\"connected to server\\n\");\n```\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '```
+
+    54      // close socket
+
+    55      close(sockfd);
+
+    56
+
+    57      return 0;
+
+    58 }
+
+    ```
+
+
+    Save all code. Try to compile.
+
+
+    ```
+
+    $ gcc -o simple_client simple_client.c
+
+    ```
+
+
+    # 10.2.3 Testing
+
+
+    Now we can test our server and client app. Firstly we run server app. The following
+    is a sample output.
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_134_0.png)
+
+
+    Then you run client app.
+
+
+    ![](img/4e69d9ab92a6fdfd6a6bac3671deb952_134_1.png)
+
+
+    After client connected to server, server and client close connection.'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: "# 10.3 Data Transfer\n\nWe can send and receive data via socket using read()\
+    \ and write functions. These functions are defined as below.\n\n```\n#include\
+    \ <unistd.h>\n\n ssize_t read(int fd, void *buf, size_t count);\n ssize_t write(int\
+    \ fd, const void *buf, size_t count);\n```\n\nThese functions are general I/O\
+    \ functions. We can use specific I/O for socket operations using send() and recv()\
+    \ functions. They can implemented as follows.\n\n```\n#include <sys/types.h>\n\
+    #include <sys/socket.h>\n\n ssize_t send(int sockfd, const void *buf, size_t len,\
+    \ int flags);\n ssize_t recv(int sockfd, void *buf, size_t len, int flags);\n\
+    ```\n\nIn this section we build client-server like section 10.2 but we try to\
+    \ transfer data using write() and read() functions.\n\n# 10.3.1 Server\n\nAfter\
+    \ client connected, we read data from client using read() function. Then we send\
+    \ message to client using write() function. After that, we close connection.\n\
+    \nFor implementation, we create a file, called data_server.c, and write this code.\n\
+    \n```\n1 #include <stdio.h>\n2 #include <sys/types.h>\n3 #include <sys/socket.h>\n\
+    4 #include <netinet/in.h>\n5 #include <string.h>\n6 #include <errno.h>\n7\n8\n\
+    9 int main(void)\n10 {\n11\n12     int sockfd, newsockfd, portno, clilen, sz;\n\
+    13     char buffer[256];\n14     struct sockaddr_in serv_addr, cli_addr;\n15\n\
+    16     portno = 8059; // server port\n17     errno = 0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: "```\n```c\nsockfd = socket(AF_INET, SOCK_STREAM, 0);\nif (sockfd < 0)\n{\n\
+    \    printf(\"\\n socket() failed with error [%s]\\n\",strerror(errno));\n   \
+    \ return -1;\n}\n\nbzero((char *) &serv_addr, sizeof(serv_addr));\n\nserv_addr.sin_family\
+    \ = AF_INET;\nserv_addr.sin_addr.s_addr = INADDR_ANY;\nserv_addr.sin_port = htons(portno);\n\
+    \nif (bind(sockfd, (struct sockaddr *) &serv_addr,\n         sizeof(serv_addr))\
+    \ < 0)\n{\n    printf(\"\\n bind() failed with error [%s]\\n\",strerror(errno));\n\
+    \    return -1;\n}\n\nprintf(\"socket has created and binded\\n\");\nprintf(\"\
+    listening incoming socket client...\\n\");\n\nlisten(sockfd,5);\nclilen = sizeof(cli_addr);\n\
+    newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, &clilen);\nif (newsockfd\
+    \ < 0)\n{\n    printf(\"\\n accept() failed with error [%s]\\n\",strerror(errno));\n\
+    \    return -1;\n}\n\nprintf(\"a client was connected\\n\");\n\n// read data\n\
+    sz = read(newsockfd,buffer,255);\nif (sz < 0)\n{\n    printf(\"\\n read() failed\
+    \ with error [%s]\\n\",strerror(errno));\n    return -1;\n}\nprintf(\"Received\
+    \ message: %s\\n\",buffer);\n\n// write data\nsz = write(newsockfd,\"this is message\
+    \ from server\",30);\nif (sz < 0)\n{\n    printf(\"\\n write() failed with error\
+    \ [%s]\\n\",strerror(errno));\n    return -1;\n}\n\n// close socket\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '```
+
+    ```c
+
+    71    close(newsockfd);
+
+    72    close(sockfd);
+
+    73
+
+    74    return 0;
+
+    75 }
+
+    ```
+
+    ```
+
+
+    This code is similar to code on section 10.2.1 but we continue to read and send
+    data.
+
+
+    Save this code and compile it.
+
+
+    ```
+
+    ```bash
+
+    $ gcc -o data_server data_server.c
+
+    ```
+
+    ```
+
+
+    # 10.3.2 Client
+
+
+    On client side, we send message after connected. Then we read message from server.
+
+
+    Let’s start to create a file, called **data_client.c**, and write this code.
+
+
+    ```
+
+    ```c
+
+    1  #include <stdio.h>
+
+    2  #include <sys/types.h>
+
+    3  #include <sys/socket.h>
+
+    4  #include <netinet/in.h>
+
+    5  #include <netdb.h>
+
+    6  #include <string.h>
+
+    7  #include <errno.h>
+
+    8
+
+    9
+
+    10 int main(void)
+
+    11 {
+
+    12     int sockfd, portno, sz;
+
+    13
+
+    14     struct sockaddr_in serv_addr;
+
+    15     struct hostent *server;
+
+    16     char buffer[256];
+
+    17
+
+    18     // server hostname. You can change it
+
+    19     char server_hostname[] = "ubuntu15";
+
+    20     portno = 8059; // server port
+
+    21     errno = 0;
+
+    22
+
+    23     sockfd = socket(AF_INET, SOCK_STREAM, 0);
+
+    24     if (sockfd < 0)
+
+    25     {
+
+    26         printf("\n socket() failed with error [%s]\n", strerror(errno));
+
+    27         return -1;
+
+    28     }
+
+    29
+
+    30     printf("socket has created\n");
+
+    31
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: '```
+
+    ```c
+
+    32    server = gethostbyname(server_hostname);
+
+    33    if (server == NULL)
+
+    34    {
+
+    35        printf("\n gethostbyname() failed with error [%s]\n",strerror(errno));
+
+    36        return -1;
+
+    37    }
+
+    38
+
+    39    bzero((char *) &serv_addr, sizeof(serv_addr));
+
+    40    serv_addr.sin_family = AF_INET;
+
+    41    bcopy((char *)server->h_addr,
+
+    42          (char *)&serv_addr.sin_addr.s_addr,
+
+    43          server->h_length);
+
+    44    serv_addr.sin_port = htons(portno);
+
+    45
+
+    46    printf("connecting to server...\n");
+
+    47    if (connect(sockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr)) < 0)
+
+    48    {
+
+    49        printf("\n connect() failed with error [%s]\n",strerror(errno));
+
+    50        return -1;
+
+    51    }
+
+    52
+
+    53    printf("connected to server\n");
+
+    54
+
+    55    // write data
+
+    56    strcpy(buffer,"this is message from client");
+
+    57    sz = write(sockfd,buffer,strlen(buffer));
+
+    58    if (sz < 0)
+
+    59    {
+
+    60        printf("\n write() failed with error [%s]\n",strerror(errno));
+
+    61        return -1;
+
+    62    }
+
+    63
+
+    64    // read data
+
+    65    bzero(buffer,256);
+
+    66    sz = read(sockfd,buffer,255);
+
+    67    if (sz < 0)
+
+    68    {
+
+    69        printf("\n read() failed with error [%s]\n",strerror(errno));
+
+    70        return -1;
+
+    71    }
+
+    72    printf("Received message: %s\n",buffer);
+
+    73
+
+    74    // close socket
+
+    75    close(sockfd);
+
+    76
+
+    77    return 0;
+
+    78 }
+
+    ```
+
+    ```
+
+
+    Save this code and compile it.
+
+
+    ```
+
+    ```bash
+
+    $ gcc -o data_client data_client.c
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: "# 10.3.3 Testing\n\nWe are ready to test our client-server app. Firstly we\
+    \ run server app.\n\nThe following is a sample output for server app.\n\n```\n\
+    ```text\nagusk@ubuntu15:~/books/cprog$ gcc -o data_server data_server.c\nagusk@ubuntu15:~/books/cprog$\
+    \ ./data_server\nsocket has created and binded\nlistening incoming socket client....\n\
+    a client was connected\nReceived message: this is message from client\nagusk@ubuntu15:~/books/cprog$\
+    \ \n```\n```\n\nThen we run client app. You can see the output, shown in Figure\
+    \ below.\n\n```\n```text\nagusk@ubuntu15:~/books/cprog$ gcc -o data_client data_client.c\n\
+    agusk@ubuntu15:~/books/cprog$ ./data_client\nsocket was created\nconnecting to\
+    \ server....\nconnected to server\nReceived message: this is message from server\n\
+    agusk@ubuntu15:~/books/cprog$ \n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: '# # Contact and Source Code
+
+
+    If you have question related to this book, please contact me at aguskur@hotmail.com
+    . My blog: [http://blog.aguskuriawan.net](http://blog.aguskuriawan.net)
+
+
+    You can download source code for this book on [http://www.aguskuriawan.net/book/cprog03282015.zip](http://www.aguskuriawan.net/book/cprog03282015.zip)'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
