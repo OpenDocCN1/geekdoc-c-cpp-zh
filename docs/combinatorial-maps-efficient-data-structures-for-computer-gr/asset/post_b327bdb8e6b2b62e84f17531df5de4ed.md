@@ -1,0 +1,53 @@
+
+- [145] V.A. Kovalevsky. Discrete topology and contour definition. *Pattern Recognition Letters*, 2(5):281–288, 1984.
+- [146] V.A. Kovalevsky. Finite topology as applied to image analysis. *Computer Vision, Graphics, and Image Processing*, 46:141–161, 1989.
+- [147] P. Kraemer, D. Cazier, and D. Bechmann. Multiresolution half-edges. In *Proc. of Spring Conference on Computer Graphics*, pages 242–249. ACM Press, April 2007.
+- [148] P. Kraemer, D. Cazier, and D. Bechmann. Extension of half-edges for the representation of multiresolution subdivision surfaces. *The Visual Computer*, 25(2):149–163, 2009.
+- [149] P. Kraemer, L. Untereiner, T. Jund, S. Thery, and D. Cazier. CGoGN: N-dimensional meshes with combinatorial maps. In *Proc. of International Meshing Roundtable*, pages 485–503. Springer International Publishing, October 2013. http://cgogn.unistra.fr/.
+- [150] M. Kremer, D. Bommes, and L. Kobbelt. OpenVolumeMesh - A versatile index-based data structure for 3D polytopal complexes. In *Proc. of International Meshing Roundtable*, pages 531–548, 2012.
+- [151] W.G. Kropatsch. Building irregular pyramids by dual-graph contraction. *Vision, Image and Signal Processing*, 142(6):366–374, 1995.
+- [152] W.G. Kropatsch and H. Macho. Finding the structure of connected components using dual irregular pyramids. In *Proc. of International Conference on Discrete Geometry for Computer Imagery*, pages 147–158, September 1995.
+- [153] T.L. Kunii and S. Takahashi. Area guide map modeling by manifolds and CW-complexes. In *Proc. of IFIP TC 5/WG 2 Working Conf. on Geometric Modeling in Computer Graphics*, pages 5–20, Genoa, Italy, 1993.
+- [154] V. Lang and P. Lienhardt. Geometric modeling with simplicial sets. In *Proc. of Pacific Graphics*, Seoul, Korea, 1995.
+- [155] V. Lang and P. Lienhardt. Simplicial sets and triangular patches. In *Proc. of Computer Graphics International*, Pohang, Korea, 1996.
+- [156] F. Ledoux, J.-M. Mota, A. Arnould, C. Dubois, P. Le Gall, and Y. Bertrand. Spécifications formelles du chanfreinage. *Techniques et Sciences Informatiques*, 21(8):1–26, 2002.
+- [157] F. Ledoux, J.-C. Weill, and Y. Bertrand. GMDS: A generic mesh data structure. In *Proc. of International Meshing Roundtable*, USA, 2008.
+- [158] F. Ledoux, J.-C. Weill, and Y. Bertrand. Definition of a generic mesh data structure in the high performance computing context. *Developments and Applications in Engineering Computational Technology*, 26:49–80, 2010.
+- [159] S.H. Lee and K. Lee. Partial entity structure: a fast and compact non-manifold boundary representation based on partial topological entities. In *Proc. of ACM Symposium on Solid Modeling and Applications*, Ann Arbor, USA, 2001.
+- [160] P.-F. Léon, X. Skapin, and P. Meseure. Topologically-based animation for describing geological evolution. *Machine Graphics & Vision*, 15(3):481–491, January 2006.
+- [161] P.-F. Léon, X. Skapin, and P. Meseure. A topology-based animation model for the description of 2D models with a dynamic structure. In *Proc. of Workshop on Virtual Reality Interaction and Physical Simulation*, pages 67–76, Grenoble, France, 2008. Eurographics Association.
+- [162] P. Lienhardt. Subdivisions of n-dimensional spaces and n-dimensional generalized maps. In *Proc. of ACM Symposium on Computational Geometry*, pages 228–236, Saarbrücken, Germany, June 1989.
+- [163] P. Lienhardt. Subdivisions of surfaces and generalized maps. In *Proc. of Eurographics*, pages 439–452, Hamburg, Germany, 1989.
+- [164] P. Lienhardt. Subdivisions de surfaces et cartes généralisées de dimension 2. *RAIRO: Theoretical Informatics and Applications*, 25(2):171–202, 1991.
+- [165] P. Lienhardt. N-dimensional generalized combinatorial maps and cellular quasi-manifolds. *International Journal of Computational Geometry and Applications*, 4(3):275–324, 1994.
+- [166] P. Lienhardt, X. Skapin, and A. Bergey. Cartesian product of simplicial and cellular structures. *International Journal on Computational Geometry and Applications*, 14(3):115–159, June 2004.
+- [167] S. Lins and A. Mandel. Graph-encoded 3-manifolds. *Discrete Mathematics*, 57:261–284, 1985.
+- [168] H. Lopes, S. Pesco, G. Tavares, M. Maia, and A. Xavier. Handlebody representation for surfaces and its applications to terrain modeling. *International Journal of Shape Modeling*, 09(01):61–77, 2003.
+- [169] H. Lopes and G. Tavares. Structural operators for modeling 3-manifolds. In *Proc. of ACM Symposium on Solid Modeling and Applications*, SMA '97, pages 10–18, New York, NY, USA, 1997. ACM.
+- [170] Y. Luo and G.A. Lukacs. A boundary representation for form-features and non-manifold solid objects. In *Proc. of ACM/Siggraph Symposium on Solid Modeling Foundations and CAD/CAM Applications*, Austin, Texas, USA, 1990.
+- [171] M. Mäntylä. Computational topology: a study of topological manipulations and interrogations in computer graphics and geometric modeling. *Acta Polytechnica Scandinavica*, 37, 1983.
+- [172] M. Mäntylä. *An Introduction to Solid Modeling.* Computer Science Press, 1988.
+- [173] M. Mäntylä and R. Sulonen. GWB: A solid modeler with Euler operators. *Computer Graphics and Applications*, 2(7):17–31, 1982.
+- [174] J. P. May. *Simplicial objects in algebraic topology.* Van Nostrand, Princeton, 1967.
+- [175] H. Meine and U. Köthe. The GeoMap: a unified representation for topology and geometry. In *Proc. of International Workshop on Graph-Based Representations in Pattern Recognition*, volume 3434 of *LNCS*, pages 132–141, Poitiers, France, April 2005. Springer Berlin Heidelberg.
+- [176] P. Meseure, E. Darles, and X. Skapin. A topology-based mass/spring system. In *Proc. of Computer Animation and Social Agents (short papers)*, St Malo, France, June 2010.
+- [177] P. Meseure, E. Darles, and X. Skapin. Topology-based physical simulation. In *Proc. of Workshop on Virtual Reality Interaction and Physical Simulation*, pages 1–10, Copenhagen, Denmark, November 2010.
+- [178] M. E. Mortenson. *Geometric Modeling.* John Wiley & Sons, Inc., New York, NY, USA, 1985.
+- [179] D.E. Muller and F.P. Preparata. Finding the intersection of two convex polyhedra. *Theoretical Computer Science*, 7(2):217–236, 1978.
+- [180] J. R. Munkres. *Elements of Algebraic Topology.* Perseus Books, 1984.
+- [181] S. Murabata and M. Higashi. Non-manifold geometric modeling for set operations and surface operations. In *Proc. of IFIP/RPI Geometric Modeling Conference*, Rensselaerville, NY, USA, 1990.
+- [182] W. Nef. *Beiträge zur Theorie der Polyeder, mit Anwendungen in der Computergraphik.* Herbert Lang, Bern, 1978.
+- [183] A. Paoluzzi, F. Bernardini, C. Cattani, and V. Ferrucci. Dimension-independent modeling with simplicial complexes. *ACM Transactions on Graphics*, 12(1):56–102, 1993.
+- [184] V. Pascucci, V. Ferrucci, and A. Paoluzzi. Dimension-independent convex-cell based hierarchical polyhedral complex: representation scheme and implementation issues. In *Proc. of Symposium on Solid Modeling and Applications*, pages 163–174, 1995.
+- [185] S. Peltier, L. Fuchs, and P. Lienhardt. Homology of simploidal sets. In *Proc. of International Conference on Discrete Geometry for Computer Imagery*, volume 4245 of *LNCS*, pages 235–246, Szeged, Hungary, 2006. Springer Berlin Heidelberg.
+- [186] S. Peltier, L. Fuchs, and P. Lienhardt. Simploidal sets: definitions, operations and comparison with simplicial sets. *Discrete Applied Mathematics*, 157:542–557, 2009.
+- [187] S. Peltier, A. Ion, Y. Haxhimusa, W.G. Kropatsch, and G. Damiand. Computing homology group generators of images using irregular graph pyramids. In *Proc. of International Workshop on Graph-Based Representations in Pattern Recognition*, volume 4538 of *LNCS*, pages 283–294, Alicante, Spain, June 2007. Springer Berlin/Heidelberg.
+- [188] S. Peltier, A. Ion, W.G. Kropatsch, G. Damiand, and Y. Haxhimusa. Directly computing the generators of image homology using graph pyramids. *Image and Vision Computing*, 27(7):846–853, June 2009.
+- [189] M. Poudret, A. Arnould, Y. Bertrand, and P. Lienhardt. Cartes combinatoires ouvertes. Research Notes 2007-1, Laboratoire SIC E.A. 4103, F-86962 Futuroscope Cedex, France, October 2007.
+- [190] S. Prat, P. Gioia, Y. Bertrand, and D. Meneveaux. Connectivity compression in arbitrary dimension. *The Visual Computer*, 21(8):876–885, 2005.
+- [191] G. Ringel. *Map Color Theorem*. Springer-Verlag, 1974.
+- [192] G. Ringel. The combinatorial map color theorem. *Journal of Graph Theory*, 1(2):141–155, 1977.
+- [193] A. Rosenfeld. Adjacency in digital pictures. *Information and Control*, 26(1):24–33, 1974.
+- [194] J. Rossignac. 3D compression made simple: Edgebreaker with zip-and-wrap on a corner-table. In *Proc. of International Conference on Shape Modeling and Applications*, pages 278–283, 2001.
+- [195] J. Rossignac and M. O'Connor. SGC: A dimension-independent model for pointsets with internal structures and incomplete boundaries. *Geometric Modeling for Product Engineering*, pages 145–180, 1989.
+- [196] H. Seifert and W. Threlfall. *A textbook of topology*. Academic Press, New York, 1980.

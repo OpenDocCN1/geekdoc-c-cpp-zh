@@ -1,0 +1,103 @@
+
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_217_0.png)
+
+## FIGURE 6.9
+
+1-closure for 3-map.
+
+(a) A 3-map $M$ with 1-boundary, 2-boundary and 3-boundary. Darts 3 and 4 are 1-free.
+
+(b) The 3-map $M_{1\text{-close}}$. Dart 7 and 8 are new darts associated with darts 3 and 4.
+
+As for $n$-GMaps, a *closure operation* can be defined for removing all boundaries for all dimensions. For that, all the possible $i$-closure operations are applied, from $i = 1$ to $i = n$. For example, starting from the 3-map given in Fig. 6.9(a), the 1-closure operation produces the 3-map shown in Fig. 6.9(b), which has no 1-boundary. Then, the 2-closure operation produces the 3-map given in Fig. 6.10(a), which has no 2-boundary. Finally, the 3-closure operation produces the 3-map given in Fig. 6.10(b), which has no 3-boundary, and thus no boundary at all.
+
+Algorithm 48 implements the $i$-closure operation for $n$-maps and for $i \in \{2, \ldots, n\}$. This algorithm follows directly the $i$-closure definition (see Def. 56). As for Algorithm 47, the $i$-boundary map is not explicitly computed.
+
+In this algorithm, the new darts are created and linked by $\beta_i$ with the corresponding $i$-free darts (cf. item 4 of the $i$-closure definition). Then, the other $\beta$ links are defined, according to the definition of the boundary map. $\beta_{i+1}$ is initialized to $\varnothing$ for all the new darts (second item of the $i$-boundary map definition), by definition of the *createDartNMap* function.
+
+All $j$, such that $|i-j| \geq 2$, have to be considered, thus two cases occur: if $i = 2$, this is the set $\{4, \ldots, n\}$; otherwise, this is the set $\{0, 1, \ldots, i-2, i+2, \ldots, n\}$. For all $j$ in this set, $\beta_j$ is deduced from the definition of $\beta_i$ for the $i$-free dart $d$. Indeed, $\beta_i \circ \beta_j$ is a partial involution. As $\beta_i(d) = d'$ and $\beta_j(d) = d''$, it is necessary to have $\beta_j(d') = \beta_i(d'')$. Since $d' = f(d)$, defining $\beta_j^{-1}(d') = \beta_i(d'')$ is equivalent to define $\beta_j''^{-1}(f(d)) = f(\beta_j'(d))$: this corresponds to item 2 of the $i$-closure definition (remember that in the algorithm, $\beta_i$ denotes also $\beta_i'$ and $\beta_i''$).
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_218_0.png)
+
+## FIGURE 6.10
+
+Closure for 3-map.
+
+(a) The 3-map $M'$ obtained from Fig. 6.9(b) by applying the 2-closure operation. Darts 9 to 16 are new darts.
+
+(b) The 3-map $M'_{3\text{-close}}$. The forty black darts are new darts, describing the external volume enclosing the two initial cubes.
+
+```
+Algorithm 48: closeNMap(cm,i): i-close an n-map
+
+Input: cm: an n-map;
+       i ∈ {2, …, n}.
+Result: cm is i-closed.
+
+1  if i = 2 then S ← {4, …, n};
+2  else S ← {0, 1, …, i − 2, i + 2, …, n};
+3  foreach i-free dart d ∈ cm.Darts do
+4      d′ ← createDartNMap(cm);
+5      d.Betas[i] ← d′; d′.Betas[i] ← d;
+6      foreach j ∈ S do
+7          d″ ← d.Betas[j];
+8          if not isFreeNMap(cm,d,j) and not isFreeNMap(cm,d″,i)
+9          then
+10             d′.Betas[inv(j)] ← d″.Betas[i];
+11             d″.Betas[i].Betas[j] ← d′;
+12         d″ ← d.Betas[inv(i − 1)];
+13         while not isFreeNMap(cm,d″,i) and not isFreeNMap(cm,d″.Betas[i],inv(i − 1)) do
+14             d″ ← d″.Betas[i].Betas[inv(i − 1)];
+15         if not isFreeNMap(cm,d″,i) then
+16             d′.Betas[i − 1] ← d″.Betas[i];
+17             d″.Betas[i].Betas[inv(i − 1)] ← d′;
+```
+
+Note that β_j is defined for d only if d is not j-free and d'' is not i-free. Indeed, if d is j-free, then d' must be also j-free, and thus there is nothing to do as darts are created free in all dimensions. If d'' is i-free, it is not possible yet to define the β_j links between d' and β_i(d''), as the new dart associated with β_j(d) is not yet created. This will be done in a future step of the algorithm, when dart β_j(d) will be processed. This is why this definition is done in both directions.
+
+β_{i-1} is initialized by following the path of darts β_{i-1}^{-1}∘(β_i∘β_{i-1}^{-1})^k(d) until obtaining either an i-free dart or a dart such that its associated dart by β_i is (inv(i-1))-free. The first case corresponds to the definition of β'_{i-1} in the i-boundary map. However, it is not possible to define β_{i-1} as the second dart concerned by this definition is not yet created. The definition will be done when the second extremity of this path will be processed. For this second dart, the first dart is no longer i-free, because its corresponding dart has already been created, and linked with it by β_i. However, the new dart is (inv(i-1))-free as it is not yet (inv(i-1))-linked. In this second case, β_{i-1}(d') is defined as β_i(d''), and reciprocally. As d' = f(d) and β_i(d'') = f(β_{i-1}^{-1}∘(β_i∘β_{i-1}^{-1})^k(d)), this is equivalent to β''_{i-1}(f(d)) = f(β_{i-1}^{-1}∘(β_i∘β_{i-1}^{-1})^k(d)), which corresponds to item 2 of the i-closure definition.
+
+Note that β_{i-1}^{-1} is used, because the i-closure definition uses the inverse of the i-boundary map (this is only necessary for i = 2).
+
+The complexity of Algorithm 48 is linear in number of darts of cm. Indeed, each dart is considered exactly once in the main foreach loop. In this loop, each operation is atomic except the while loop (line 12) which is linear in number of darts in the path β_{i-1}^{-1}∘(β_i∘β_{i-1}^{-1})^k(d). However these darts are considered exactly twice, the first time when d is processed, and the second time when the second i-free dart is processed. In other words, these paths are disjoint for each different pair of i-free darts. So, the overall complexity of the algorithm which is linear in number of darts of the n-map.
+
+The behaviour of this algorithm can be illustrated on the examples provided in Fig. 6.7(a) and Fig. 6.10(a). Since it is close to the behavior of Algorithm 47, this is left to the reader.
+
+The 1-closure operation for n-maps is implemented by Algorithm 49. It is similar to Algorithm 48, the two main differences are that both β_0 and β_1 links have to be defined, and second that β_{i-1} does not exist.
+
+As for Algorithm 48, a new dart d' is created and linked by β_1 with an existing 1-free dart. Then, e = β_0^k(d) is computed, such that k is the smallest integer such that e is 0-free. e and d' are 1-sewn. Then, during the foreach loop (line 7), the technique of the general algorithm is followed in order to link new dart d' with its neighbors, for each j ∈ {3, …, n}.
+
+The complexity of Algorithm 49 is also linear in number of darts of cm, for the same reasons than for the general i-closure algorithm.
+
+The behaviour of this algorithm can be illustrated by considering the 3-map depicted in Fig. 6.9(a). In this 3-map, there are only two 1-free darts. Let us start with d = 3; a new dart d' = 7 is created, and darts 3 and 7 are
+
+1-sewn. Then, after the while loop (line 5), dart e = 1 is reached, and darts 7 and 1 are 1-sewn. During the foreach loop (line 7), only j = 3 is considered, and thus d″ = 6. However, as dart 6 is 0-free, β3 is not updated for dart 7. Then dart d = 4 is considered: a new dart d′ = 8 is created, and darts 4 and 8 are 1-sewn. Dart e = 2, and darts 8 and 2 are 1-sewn. At last, since dart d = 4 is not 3-free and dart d″ = β3(4) = 1 is not 0-free, darts 8 and 7 are 3-sewn.
+
+## Algorithm 49: 1closeNMap(cm): 1-close an n-map
+
+Input: cm: an n-map.
+
+Result: cm is 1-closed.
+
+```
+1 foreach 1-free dart d ∈ cm.Darts do
+2   d′ ← createDartNMap(cm);
+3   d.Betas[1] ← d′; d′.Betas[0] ← d;
+4   e ← d;
+5   while not isFreeNMap(cm,e,0) do e ← e.Betas[0];
+6   d′.Betas[1] ← e; e.Betas[0] ← d′;
+7   foreach j ∈ {3,…,n} do
+8     d″ ← d.Betas[j];
+9     if not isFreeNMap(cm,d,j) and not isFreeNMap(cm,d″,0)
+10      then
+11       d′.Betas[j] ← d″.Betas[0];
+12       d″.Betas[0].Betas[j] ← d′;
+```
+
+## 6.2 Removal
+
+The removal operation consists in removing a given i-cell c while merging the two (i + 1)-cells incident to c when they exist; when there is only one (i + 1)-cell incident to c, no cells are merged. The basic operation is the i-removal, which consists in removing an i-cell. Two examples are depicted in Fig. 6.11. Starting from the 2D object in Fig. 6.11(a), first, the two edges e1 and e2 are removed, producing the object given in Fig. 6.11(b). The two faces incident to edge e1 in the initial object are merged into one face (this is similar for the two faces incident to edge e2). Then, the two vertices v1 and v2 are removed, producing the object in Fig. 6.11(c). The two edges incident to vertex v1 are merged into one edge (as the two edges incident to vertex v2).
+
+Given an nD object, the i-removal operation is defined for i ∈ {0,…,n − 1}. Indeed, for i = n, there is no (i + 1)-cell incident to c. Moreover, it is not possible to remove any i-cell: at most two (i + 1)-cells are incident to c,
+

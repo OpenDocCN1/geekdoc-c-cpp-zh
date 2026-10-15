@@ -1,0 +1,11 @@
+# FIGURE 7.16
+
+(a) 2-map describing the 2D labeled image of Fig. 7.15(a).
+
+(b) Enclosure tree of regions associated with this 2-map. Son relations are drawn by black segments, and samecc relation by grey arrows.
+
+regions (see Fig. 7.16(a)). Two adjacent regions share a part of their boundary: this part is described in the 2-map by an edge, which contains two darts. Indeed, thanks to the infinite region R0, the 2-map is without boundary for all dimensions. In the example (cf. Fig. 7.16(a)), regions R1 and R2 are adjacent, and in the 2-map, edge {3,5} describes this adjacency relation. Moreover, when two regions are multi-adjacent (such as regions R1 and R3, which are adjacent twice), there are two corresponding edges in the 2-map (edges {2,7} and {4,9}).
+
+As 2-maps are ordered models, the order on the boundaries around regions is naturally taken into account. For example, starting from dart 1 which belongs to region R1, applying β1 relations produces the sequence of darts (1, 2, 3, 4), which allows to iterate through the external boundary of R1 in a clockwise direction. When a region has k holes (e.g. region R3 has 1 hole), it has k internal boundaries, one for each hole. Starting from one dart belonging to an internal boundary, and applying β1 relations, we iterate through the internal boundary in a counterclockwise direction. The sequence of darts (11, 12, 13) is obtained for the internal boundary of region R3. These two different directions are coherent (clockwise for external boundaries, counterclockwise for internal boundaries): when iterating through a boundary, the region is always to the right of the oriented boundary.
+
+The 2-map describes the subdivision of the image in regions. Faces correspond to regions. Edges correspond to adjacency relations between regions, i.e. to parts of their common boundaries. Vertices correspond to adjacency relations between boundaries. Thanks to 2-map properties, all the incidence and adjacency relations between the cells are described in an ordered way. However there is a problem for regions with holes. In this case (as region R3 in the example), the region has several boundaries (one external and k inter-

@@ -1,0 +1,122 @@
+
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_349_0.png)
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_349_1.png)
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_349_2.png)
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_349_3.png)
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_349_4.png)
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_349_5.png)
+
+# FIGURE 8.17
+
+(a) The chain of maps corresponding to the incidence graph of Fig. 8.13.
+
+(b) A chain of maps with multi-incidence.
+
+(c) The 2-Gmap corresponding to the cellular quasi-manifold depicted in Fig. 8.15(b).
+
+(d) The chain of maps corresponding to the 2-Gmap of (c).
+
+(e) Isolated cells.
+
+(f) Identifying 0-cells. The identification of two 1-cells will produce the chain of maps depicted in (a).
+
++   2. for any $i, 0 \leq i \leq n$, for any $j, 0 \leq j \leq i-1$, for any dart $d \in D^i$, $\alpha_j^i(d) = \varphi^i(\langle \alpha_{i+1},\ldots,\alpha_n\rangle(\alpha_j(d')))$, where $d' \in D$ and $\varphi^i(\langle \alpha_{i+1},\ldots,\alpha_n\rangle(d')) = d$. For instance in Figs. 8.17(c) and (d):
++   
++      - involutions $\alpha_0^2$ and $\alpha_1^2$ in (d) correspond to $\alpha_0$ and $\alpha_1$ in (c), since $\langle\rangle(d)$ is equivalent to $d$;
++      - $\alpha_0^1(a)=b$ since $a$ corresponds to $\langle\alpha_2\rangle(1)$ and $b$ corresponds to $\langle\alpha_2\rangle(\alpha_0(1))$; similarly, $\alpha_0^1(k)=l$ since $k$ corresponds to $\langle\alpha_2\rangle(11)$ and $l$ corresponds to $\langle\alpha_2\rangle(12)$, where $12=\alpha_0(11)$;
+
++   3. for any $i$, $1 \leq i \leq n$, for any dart $d \in D^i$, $\sigma^i(d)=\varphi^i(\langle\alpha_i,\ldots,\alpha_n\rangle(d'))$, where $d' \in D$ and $\varphi^i(\langle\alpha_{i+1},\ldots,\alpha_n\rangle(d'))=d$. For instance in Figs. 8.17(c) and (d):
++   
++      - $\sigma^2(1)=a$ in (d), since $a$ corresponds to $\langle\alpha_2\rangle(1)$ in (c);
++      - $\sigma^1(a)=A$ (resp. $\sigma^1(l)=F$) in (d) since $a$ corresponds to $\langle\alpha_2\rangle(1)$ and $A$ corresponds to $\langle\alpha_1,\alpha_2\rangle(1)$ (resp. $l$ corresponds to $\langle\alpha_2\rangle(12)$ and $F$ corresponds to $\langle\alpha_1,\alpha_2\rangle(12)$) in (c).
+
+# Simplicial interpretation of chains of maps
+
+A simplicial analog can be associated with any chain of maps $\mathcal{C}=((G^i=(D^i,\alpha_0^i,\ldots,\alpha_{i-1}^i))_{i=0,\ldots,n},(\sigma^i)_{i=1,\ldots,n})$. The conversion is easily deduced from that of $n$-G-maps. For any $i$, $0\leq i\leq n$, the simplicial interpretation of $G^i$ is that of any $i$-Gmap, but it describes the interior of $i$-cells, since $\alpha_i^i=\omega$ is undefined; so, all orbits involving $\alpha_i^i$ do not exist, meaning that all simplices in the simplicial interpretation of $G^i$ are incident to a vertex numbered $i$. All face operators linking simplices which are internal to an $i$-cell are defined as for the simplicial interpretation of any $i$-Gmap. Face operators linking simplices issued from different cells correspond to face operators $\sigma^i$. More precisely, let $i$ be such that $0\leq i\leq n$:
+
++   1. let $J$ be any nonempty sequence $\{j_0,\ldots,j_k\}\subset [0,i]$, such that $j_k=i$; associate a set of simplices numbered $(j_0,\ldots,j_k=i)$ with the set of orbits $\langle[0,i]\setminus J\rangle$ of $G^i$;
++   
++   2. assume $k>0$. Let $l$ be such that $0\leq l\leq k-1$, $d$ be a dart of $D^i$ and $\sigma$ be the simplex associated with $\langle[0,i]\setminus\{j_0,\ldots,j_l,\ldots,j_k=i\}\rangle(d)$. Then $d\iota(\sigma)$ is the simplex associated with $\langle[0,i]\setminus\{j_0,\ldots,j_{l-1},j_{l+1},\ldots,j_k=i\}\rangle(\sigma^{j_{k-1}+1}(\ldots(\sigma^i(d)))$;
++   
++   3. each vertex corresponding to an orbit $\langle[0,i]\setminus\{i\}\rangle$ of $G^i$ is numbered $i$.
+
+It is also possible to define conversion processes between equivalent subclasses of chains of maps and incidence graphs, as for connected $n$-Gmaps without boundary and without multi-incidence and $n$-surfaces.
+
+Note also that other subclasses of combinatorial maps can be defined, according to the topological properties which have to be satisfied (cf. [104] for instance).
+
+# 8.3.2 Euler-Poincaré Characteristic for Combinatorial Maps
+
+The Euler-Poincaré characteristic is a well-known topological invariant¹¹: if two subdivisions are homeomorphic, then their Euler-Poincaré characteristics are equal. The converse assertion is used in practice, i.e. if the Euler-Poincaré characteristics of two subdivisions are different, it is sure that the subdivisions are not homeomorphic.
+
+The Euler-Poincaré characteristic of an n-dimensional simplicial “object” is the alternate sum of the number of i-simplices, for 0 ≤ i ≤ n, i.e.:
+
+```
+χ = Σ_{i=0}^{n} (-1)^i |K_i|
+```
+
+where K_i is the set of i-simplices.
+
+# 8.3.2.1 For n-Gmaps
+
+The definition of the Euler-Poincaré characteristic of an n-Gmap can be easily deduced from the simplicial interpretation of n-Gmaps, since an orbit for i involutions corresponds to an (n − i)-simplex.
+
+# Definition 91 (Euler-Poincaré characteristic of an n-Gmap) Let G = (D, α₀, …, αₙ) be an n-Gmap, with n ≥ 0. Its Euler-Poincaré characteristic χ(G) is:
+
+```
+χ(G) = Σ_{i=0}^{n} (-1)^{(n−i)} Σ_{0 ≤ k₀ < … < k_{i−1} ≤ n} #⟨α_{k₀}, …, α_{k_{i−1}}⟩
+```
+
+where #⟨α_{k₀}, …, α_{k_{i−1}}⟩ is the number of orbits ⟨α_{k₀}, …, α_{k_{i−1}}⟩.
+
+For instance:
+
++   when n = 0, χ(G) = #⟨⟩ = |D|, i.e. it is equal to the number of vertices in the associated cellular quasi-manifold;
+
++   when n = 1, χ(G) = −#⟨⟩ + #⟨α₁⟩ + #⟨α₀⟩, i.e. it is equal to the numbers of vertices numbered (0) and (1) minus the number of edges of the associated cellular quasi-manifold. When G is connected and without 0 and 1-boundary, i.e. it corresponds to a closed polygonal curve, #⟨α₀⟩ = #⟨α₁⟩ = #⟨⟩/2; thus χ(G) = 0, it is the Euler-Poincaré characteristic of a circle. When G is connected, without 0-boundary but with 1-boundaries, i.e. it corresponds to an open polygonal curve, #⟨α₀⟩ = #⟨⟩/2 and #⟨α₁⟩ = 1 + #⟨⟩/2; thus χ(G) = 1, it is the Euler-Poincaré characteristic of a segment;
+
+# FIGURE 8.18
+
+Examples of 2-Gmaps and their Euler-Poincaré characteristics.
+
+(a) G₁ describes a disk: χ(G₁) = 1.
+
+(b) G₂ describes an annulus: χ(G₂) = 0.
+
+(c) G₃ describes a Möbius strip: χ(G₃) = 0.
+
+(d) G₄ describes a torus: χ(G₄) = 0.
+
++   when n = 2, χ(G) = #⟨⟩ − #⟨α₀⟩ − #⟨α₁⟩ − #⟨α₂⟩ + #⟨α₀, α₁⟩ + #⟨α₀, α₂⟩ + #⟨α₁, α₂⟩, i.e. it is equal to the number of triangles minus the number of edges (numbered (1,2), (0,2), (0,1)) plus the number of vertices (numbered (2), (1), (0)). Four examples of 2-Gmaps are depicted in Fig. 8.18, together their Euler-Poincaré characteristics. For instance, for G₁ depicted in Fig. 8.18(a): #⟨⟩ = 12, #⟨α₀⟩ = #⟨α₁⟩ = 6, #⟨α₂⟩ = 10, #⟨α₀, α₁⟩ = 2, #⟨α₀, α₂⟩ = 5 and #⟨α₁, α₂⟩ = 4. Thus χ(G₁) = 12 − 6 − 6 − 10 + 2 + 5 + 4 = 1: this is the Euler-Poincaré characteristic of a disk. Note that the Euler-Poincaré characteristics of an annulus, of a Möbius strip and of a torus are equal;
+
++   when n = 3, χ(G) = −#⟨⟩ + #⟨α₀⟩ + #⟨α₁⟩ + #⟨α₂⟩ + #⟨α₃⟩ − #⟨α₀, α₁⟩ − #⟨α₀, α₂⟩ − #⟨α₀, α₃⟩ − #⟨α₁, α₂⟩ − #⟨α₁, α₃⟩ − #⟨α₂, α₃⟩ + #⟨α₀, α₁, α₂⟩ + #⟨α₀, α₁, α₃⟩ + #⟨α₁, α₂, α₃⟩.
+
+For a 2-Gmap having no 0 nor 1-boundary, #⟨α₀⟩ = #⟨α₁⟩ = #⟨⟩/2. Thus the previous formula χ(G) = #⟨⟩ − #⟨α₀⟩ − #⟨α₁⟩ − #⟨α₂⟩ + #⟨α₀, α₁⟩ + #⟨α₀, α₂⟩ + #⟨α₁, α₂⟩ can be simplified: χ(G) = −#⟨α₂⟩ + #⟨α₀, α₁⟩ + #⟨α₀, α₂⟩ + #⟨α₁, α₂⟩. This formula can be rewritten into χ(G) = (#⟨α₁ ∘ α₀⟩ + #⟨α₂ ∘ α₀⟩ + #⟨α₂ ∘ α₁⟩ − |D|)/2 by using properties on orbits and the fact that G has no 0 nor 1-boundary (see [165] for details).
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_352_0.png)
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_352_1.png)
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_352_2.png)
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_352_3.png)
+
+![](img/6ba3cf72cbe3568e76a174448323bb33_353_0.png)
+
+If the 2-Gmap has no 0 nor 1-boundary and no folded cell, $\#\langle\alpha_2\rangle=2\#\langle\alpha_0,\alpha_2\rangle$ and the previous formula becomes $\chi(G)=\#\langle\alpha_0\rangle-\#\langle\alpha_0,\alpha_2\rangle+\#\langle\alpha_1,\alpha_2\rangle$. This gives the classical definition of the Euler-Poincaré characteristics equals to the number of vertices minus the number of edges plus the number of faces.
+
+2-Gmap $G_5$ depicted in Fig. 8.19(a) contains 1-boundary and 2-boundary. $\#\langle\rangle=36$, $\#\langle\alpha_0\rangle=\#\langle\alpha_1\rangle=19$, $\#\langle\alpha_2\rangle=21$, $\#\langle\alpha_0,\alpha_1\rangle=5$, $\#\langle\alpha_0,\alpha_2\rangle=11$ and $\#\langle\alpha_1,\alpha_2\rangle=8$: thus $\chi(G_2)=36-19-19-21+5+11+8=1$: this is the Euler-Poincaré characteristic of a disk.
+
+3-Gmap $G_6$ depicted in Fig. 8.19(b) is such that $\#\langle\rangle=80$, $\#\langle\alpha_0\rangle=\#\langle\alpha_1\rangle=40$, $\#\langle\alpha_2\rangle=72$, $\#\langle\alpha_3\rangle=72$, $\#\langle\alpha_0,\alpha_1\rangle=11$, $\#\langle\alpha_0,\alpha_2\rangle=20$, $\#\langle\alpha_0,\alpha_3\rangle=36$, $\#\langle\alpha_1,\alpha_2\rangle=13$, $\#\langle\alpha_1,\alpha_3\rangle=36$, $\#\langle\alpha_2,\alpha_3\rangle=32$, $\#\langle\alpha_0,\alpha_1,\alpha_2\rangle=2$, $\#\langle\alpha_0,\alpha_1,\alpha_3\rangle=10$, $\#\langle\alpha_0,\alpha_2,\alpha_3\rangle=16$, $\#\langle\alpha_1,\alpha_2,\alpha_3\rangle=9$: thus $\chi(G_2)=-80+40+40+40+72-11-20-36-13-36-32+2+10+16+9=1$, it is the Euler-Poincaré characteristic of a 3D ball.
+
+At last, the definition of the Euler-Poincaré characteristic, and thus its computation, can be simplified for $n$-Gmaps satisfying some properties, for instance when there is no folded cell.
+
+# 8.3.2.2  For $n$-maps
+
+The definition of the Euler-Poincaré characteristic of an $n$-map is based upon the correspondence between an $n$-map $M$ and an equivalent $n$-Gmap $G$ (see Section 5.5.2); each dart of the $n$-map is described by two darts joined by
+

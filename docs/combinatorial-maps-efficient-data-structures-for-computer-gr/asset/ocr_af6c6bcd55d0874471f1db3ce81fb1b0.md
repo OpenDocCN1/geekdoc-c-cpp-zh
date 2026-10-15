@@ -1,0 +1,11 @@
+handling these structures. Two fields are mainly addressed: geometric modeling, and image processing. Indeed, different needs emerge from these fields, and it is interesting to illustrate some consequences for the design of data structures and operations. Note that all notions and operations, data structures and algorithms studied in this book are also useful for other fields in which subdivided geometric objects are handled, as computational geometry, discrete geometry, image analysis, etc.
+
+# 1.1.2 Different Subdivisions
+
+Sometimes, subdivisions satisfy some geometric properties, among which can be distinguished *shape* properties or *structural* properties, which can themselves be more or less *local* or *global*.
+For instance:
+
++   - local shape properties: the faces of (the representation of) the soccer ball are convex on the sphere, as the faces of any Voronoï diagram in the Euclidean plane. This is not the case for the house, in which concave faces exist, as for the letter of the cube;
++   - global shape properties: the soccer ball is a sphere, i.e. all points of the surface have the same curvature. This is not the case for the cube, in which sharp edges exist;
++   - local structural properties: the faces of the soccer ball are pentagons and hexagons, i.e. any face is incident to five or six edges and vertices. There is no such regularity for the faces of the house, nor for the faces of a Voronoï diagram in the Euclidean plane.
++   - global structural properties: any edge of the soccer ball or of a Voronoï diagram in the Euclidean plane is incident to exactly two faces. More precisely, any *surface* can be constructed by gluing faces along edges, in such a way that at most two faces share an edge. This is not the general case. For instance (cf. Fig. 1.3(b)), when simulating the growing of plants, the structure of the plant is often represented by a tree (in the meaning of graph theory), and the leaves are represented by parts of surfaces: so, the representation of the plant is a 2-*dimensional complex*, i.e. a geometric object which does not satisfy all structural properties of a surface.

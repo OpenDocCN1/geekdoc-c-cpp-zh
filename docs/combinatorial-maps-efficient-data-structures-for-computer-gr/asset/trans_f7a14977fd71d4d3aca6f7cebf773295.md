@@ -1,0 +1,53 @@
+
+- [145] V.A. Kovalevsky. 离散拓扑与轮廓定义. *Pattern Recognition Letters*, 2(5):281–288, 1984.
+- [146] V.A. Kovalevsky. 图像分析中有限拓扑的应用. *Computer Vision, Graphics, and Image Processing*, 46:141–161, 1989.
+- [147] P. Kraemer, D. Cazier, and D. Bechmann. 多分辨率半边. In *Proc. of Spring Conference on Computer Graphics*, pages 242–249. ACM Press, April 2007.
+- [148] P. Kraemer, D. Cazier, and D. Bechmann. 多分辨率细分曲面表示的半边扩展. *The Visual Computer*, 25(2):149–163, 2009.
+- [149] P. Kraemer, L. Untereiner, T. Jund, S. Thery, and D. Cazier. CGoGN：基于组合映射的 N 维网格. In *Proc. of International Meshing Roundtable*, pages 485–503. Springer International Publishing, October 2013. http://cgogn.unistra.fr/.
+- [150] M. Kremer, D. Bommes, and L. Kobbelt. OpenVolumeMesh - 用于三维多面体复形的通用基于索引的数据结构. In *Proc. of International Meshing Roundtable*, pages 531–548, 2012.
+- [151] W.G. Kropatsch. 通过对偶图收缩构建不规则金字塔. *Vision, Image and Signal Processing*, 142(6):366–374, 1995.
+- [152] W.G. Kropatsch and H. Macho. 使用对偶不规则金字塔寻找连通分量的结构. In *Proc. of International Conference on Discrete Geometry for Computer Imagery*, pages 147–158, September 1995.
+- [153] T.L. Kunii and S. Takahashi. 通过流形和 CW 复形进行区域导向地图建模. In *Proc. of IFIP TC 5/WG 2 Working Conf. on Geometric Modeling in Computer Graphics*, pages 5–20, Genoa, Italy, 1993.
+- [154] V. Lang and P. Lienhardt. 使用单纯集进行几何建模. In *Proc. of Pacific Graphics*, Seoul, Korea, 1995.
+- [155] V. Lang and P. Lienhardt. 单纯集与三角面片. In *Proc. of Computer Graphics International*, Pohang, Korea, 1996.
+- [156] F. Ledoux, J.-M. Mota, A. Arnould, C. Dubois, P. Le Gall, and Y. Bertrand. 倒角的形式化规范. *Techniques et Sciences Informatiques*, 21(8):1–26, 2002.
+- [157] F. Ledoux, J.-C. Weill, and Y. Bertrand. GMDS：一种通用网格数据结构. In *Proc. of International Meshing Roundtable*, USA, 2008.
+- [158] F. Ledoux, J.-C. Weill, and Y. Bertrand. 高性能计算环境中通用网格数据结构的定义. *Developments and Applications in Engineering Computational Technology*, 26:49–80, 2010.
+- [159] S.H. Lee and K. Lee. 部分实体结构：基于部分拓扑实体的快速紧凑非流形边界表示. In *Proc. of ACM Symposium on Solid Modeling and Applications*, Ann Arbor, USA, 2001.
+- [160] P.-F. Léon, X. Skapin, and P. Meseure. 基于拓扑的动画用于描述地质演化. *Machine Graphics & Vision*, 15(3):481–491, January 2006.
+- [161] P.-F. Léon, X. Skapin, and P. Meseure. 用于描述具有动态结构的二维模型的基于拓扑的动画模型. In *Proc. of Workshop on Virtual Reality Interaction and Physical Simulation*, pages 67–76, Grenoble, France, 2008. Eurographics Association.
+- [162] P. Lienhardt. n 维空间的细分与 n 维广义映射. In *Proc. of ACM Symposium on Computational Geometry*, pages 228–236, Saarbrücken, Germany, June 1989.
+- [163] P. Lienhardt. 曲面的细分与广义映射. In *Proc. of Eurographics*, pages 439–452, Hamburg, Germany, 1989.
+- [164] P. Lienhardt. 曲面的细分与二维广义映射. *RAIRO: Theoretical Informatics and Applications*, 25(2):171–202, 1991.
+- [165] P. Lienhardt. n 维广义组合映射与细胞拟流形. *International Journal of Computational Geometry and Applications*, 4(3):275–324, 1994.
+- [166] P. Lienhardt, X. Skapin, and A. Bergey. 单纯结构与细胞结构的笛卡尔积. *International Journal on Computational Geometry and Applications*, 14(3):115–159, June 2004.
+- [167] S. Lins and A. Mandel. 图编码的三流形. *Discrete Mathematics*, 57:261–284, 1985.
+- [168] H. Lopes, S. Pesco, G. Tavares, M. Maia, and A. Xavier. 用于曲面及其地形建模应用的柄体表示. *International Journal of Shape Modeling*, 09(01):61–77, 2003.
+- [169] H. Lopes and G. Tavares. 用于建模三流形的结构算子. In *Proc. of ACM Symposium on Solid Modeling and Applications*, SMA '97, pages 10–18, New York, NY, USA, 1997. ACM.
+- [170] Y. Luo and G.A. Lukacs. 用于形体特征和非流形实体对象的边界表示. In *Proc. of ACM/Siggraph Symposium on Solid Modeling Foundations and CAD/CAM Applications*, Austin, Texas, USA, 1990.
+- [171] M. Mäntylä. 计算拓扑：计算机图形学和几何建模中拓扑操作与查询的研究. *Acta Polytechnica Scandinavica*, 37, 1983.
+- [172] M. Mäntylä. *An Introduction to Solid Modeling.* Computer Science Press, 1988.
+- [173] M. Mäntylä and R. Sulonen. GWB：具有欧拉算子的实体建模器. *Computer Graphics and Applications*, 2(7):17–31, 1982.
+- [174] J. P. May. *Simplicial objects in algebraic topology.* Van Nostrand, Princeton, 1967.
+- [175] H. Meine and U. Köthe. GeoMap：拓扑与几何的统一表示. In *Proc. of International Workshop on Graph-Based Representations in Pattern Recognition*, volume 3434 of *LNCS*, pages 132–141, Poitiers, France, April 2005. Springer Berlin Heidelberg.
+- [176] P. Meseure, E. Darles, and X. Skapin. 基于拓扑的质量/弹簧系统. In *Proc. of Computer Animation and Social Agents (short papers)*, St Malo, France, June 2010.
+- [177] P. Meseure, E. Darles, and X. Skapin. 基于拓扑的物理仿真. In *Proc. of Workshop on Virtual Reality Interaction and Physical Simulation*, pages 1–10, Copenhagen, Denmark, November 2010.
+- [178] M. E. Mortenson. *Geometric Modeling.* John Wiley & Sons, Inc., New York, NY, USA, 1985.
+- [179] D.E. Muller and F.P. Preparata. 寻找两个凸多面体的交集. *Theoretical Computer Science*, 7(2):217–236, 1978.
+- [180] J. R. Munkres. *Elements of Algebraic Topology.* Perseus Books, 1984.
+- [181] S. Murabata and M. Higashi. 用于集合运算和曲面运算的非流形几何建模. In *Proc. of IFIP/RPI Geometric Modeling Conference*, Rensselaerville, NY, USA, 1990.
+- [182] W. Nef. *Beiträge zur Theorie der Polyeder, mit Anwendungen in der Computergraphik.* Herbert Lang, Bern, 1978.
+- [183] A. Paoluzzi, F. Bernardini, C. Cattani, and V. Ferrucci. 使用单纯复形进行与维数无关的建模. *ACM Transactions on Graphics*, 12(1):56–102, 1993.
+- [184] V. Pascucci, V. Ferrucci, and A. Paoluzzi. 基于维数无关的凸胞分层多面体复形：表示方案与实现问题. In *Proc. of Symposium on Solid Modeling and Applications*, pages 163–174, 1995.
+- [185] S. Peltier, L. Fuchs, and P. Lienhardt. 简单纯集的同调. In *Proc. of International Conference on Discrete Geometry for Computer Imagery*, volume 4245 of *LNCS*, pages 235–246, Szeged, Hungary, 2006. Springer Berlin Heidelberg.
+- [186] S. Peltier, L. Fuchs, and P. Lienhardt. 简单纯集：定义、运算与单纯集比较. *Discrete Applied Mathematics*, 157:542–557, 2009.
+- [187] S. Peltier, A. Ion, Y. Haxhimusa, W.G. Kropatsch, and G. Damiand. 使用不规则图金字塔计算图像的同调群生成元. In *Proc. of International Workshop on Graph-Based Representations in Pattern Recognition*, volume 4538 of *LNCS*, pages 283–294, Alicante, Spain, June 2007. Springer Berlin/Heidelberg.
+- [188] S. Peltier, A. Ion, W.G. Kropatsch, G. Damiand, and Y. Haxhimusa. 直接使用图金字塔计算图像同调的生成元. *Image and Vision Computing*, 27(7):846–853, June 2009.
+- [189] M. Poudret, A. Arnould, Y. Bertrand, and P. Lienhardt. 开放组合映射. Research Notes 2007-1, Laboratoire SIC E.A. 4103, F-86962 Futuroscope Cedex, France, October 2007.
+- [190] S. Prat, P. Gioia, Y. Bertrand, and D. Meneveaux. 任意维度的连通性压缩. *The Visual Computer*, 21(8):876–885, 2005.
+- [191] G. Ringel. *Map Color Theorem*. Springer-Verlag, 1974.
+- [192] G. Ringel. 组合映射着色定理. *Journal of Graph Theory*, 1(2):141–155, 1977.
+- [193] A. Rosenfeld. 数字图像中的邻接性. *Information and Control*, 26(1):24–33, 1974.
+- [194] J. Rossignac. 三维压缩变得简单：基于角表面的 Edgebreaker 配合 zip-and-wrap. In *Proc. of International Conference on Shape Modeling and Applications*, pages 278–283, 2001.
+- [195] J. Rossignac and M. O'Connor. SGC：具有内部结构和不完整边界的点集的与维数无关的模型. *Geometric Modeling for Product Engineering*, pages 145–180, 1989.
+- [196] H. Seifert and W. Threlfall. *A textbook of topology*. Academic Press, New York, 1980.
