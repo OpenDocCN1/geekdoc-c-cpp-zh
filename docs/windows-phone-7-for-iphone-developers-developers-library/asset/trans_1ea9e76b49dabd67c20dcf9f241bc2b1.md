@@ -1,0 +1,141 @@
+
+
+> 有关依赖属性及其工作原理的更多信息，您可以查阅《WPF Unleashed》或《Silverlight Unleashed》。了解这些是如何工作的以及如何发挥其强大功能，将使您成为针对移动设备和桌面均极其高效的 Silverlight 开发者。
+
+现在运行应用程序并导航到列表框页面。点击按钮时它会开始移动。持续点击按钮，随着它缓慢向下移动。每当按钮在移动时您点击它，它都会在您点击的精确时刻报告其在父画布内的当前位置，即使有一个完全独立的后台线程正在执行动画。
+
+## Silverlight 中的布局简介
+
+在本章中迄今为止，您已经看到了几种类型的布局控件。本章的这一部分将提供有关每种类型布局控件的用途、它们的工作方式以及您如何在应用程序中使用它们的更多细节。
+
+布局是 Silverlight 相对于 iOS 具有明显优势的一个领域。iOS 不提供像 StackPanel 或 Grid 那样的低级、灵活的布局面板控件。UIView 本身就像 WP7 Canvas 一样——子视图基于其坐标以固定位置放置在父视图内。iOS 中也没有 Grid 控件；最接近的做法是创建表格视图控制器（我们将在后面的章节中讨论各种 WP7 对 Table View Controller 的替代方案，以及自定义单元格的细分）。作为 iOS 开发者，在您开始使用 Silverlight 的高级布局功能后，您很可能会很快上瘾于拥有如此强大的功能。
+
+## 在 Canvas 上绘图
+
+从之前的代码示例中您可能已经猜到了，Canvas 控件提供了一个固定位置的布局面板。面板内的任何子控件在其 Canvas 中都有一个固定位置，由 Canvas.Top 和 Canvas.Left 依赖属性指示。
+
+您按如下方式在 XAML 中定义 Canvas：
+
+```
+<Canvas x:Name="myCanvas" Width="300" Height="400">
+    <TextBlock Text="This is inside a Canvas"
+        Canvas.Top="40" Canvas.Left="100" />
+</Canvas>
+```
+
+正如本章前面提到的，您并不局限于使用普通的 Canvas。您可以在其他布局面板内嵌套 Canvas，也可以在画布内托管其他布局面板。您还可以做一些创新性的事情，例如将列表框的布局面板从默认更改为 Canvas，以便列表项以固定、绝对位置呈现。
+
+## 使用 StackPanel
+
+顾名思义，StackPanel 是一个将子元素按堆栈排列的布局面板，可以是水平或垂直排列。您无需指定哪些控件以何种顺序出现，也无需指定任何坐标。
+
+唯一需要注意的是子控件在 StackPanel 内的出现顺序。堆栈面板的第一个子元素将是面板中首先出现的一个。请看以下堆栈面板定义：
+
+```
+<StackPanel Orientation="Vertical">
+    <Button>
+        <TextBlock Text="Button 1"/>
+    </Button>
+    <Button>
+        <TextBlock Text="Button 2"/>
+    </Button>
+    <Button>
+        <TextBlock Text="Button 3"/>
+    </Button>
+    <Button>
+        <TextBlock Text="Button 4"/>
+    </Button>
+</StackPanel>
+```
+
+默认情况下，StackPanel 会垂直渲染其子元素，每个新的子元素都放置在其前一个同级元素下方。要使 StackPanel 内的元素水平渲染，请将堆栈面板的 Orientation 属性更改为 Horizontal。
+
+与 Canvas 一样，通过在彼此之间、在 Canvas 内或在 Grids 内嵌套多个 StackPanels，您可以获得非常不错且非常强大的结果。
+
+## 使用 Grid 控件
+
+Grid 控件是一个极其强大的布局面板。我不会在这里详细介绍 Grid 的各种细节和细微差别，因为您可以在 Microsoft 的 MSDN 文档或您喜爱的 Silverlight 书籍中在线获得详尽的细节。以下是简单的 Grid 定义：
+
+```
+<!--ContentPanel - place additional content here-->
+<Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Background="AliceBlue">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="200"/>
+        <ColumnDefinition Width="200"/>
+        <ColumnDefinition Width="55"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+```
+
+```
+<RowDefinition Height="60"/>
+<RowDefinition Height="75"/>
+<RowDefinition Height="75"/>
+</Grid.RowDefinitions>
+<Border Grid.Row="0" Grid.Column="0" BorderBrush="DarkGreen" BorderThickness="0,0,0,4" Background="BlanchedAlmond">
+    <TextBlock TextAlignment="Center" VerticalAlignment="Center" Foreground="DarkGreen" FontWeight="Bold" Text="Account Number"/>
+</Border>
+<Border Grid.Row="0" Grid.Column="1" BorderBrush="DarkGreen" BorderThickness="0,0,0,4" Background="BlanchedAlmond">
+    <TextBlock TextAlignment="Center" VerticalAlignment="Center" Foreground="DarkGreen" FontWeight="Bold" Text="Account Name"/>
+</Border>
+<Border Grid.Row="0" Grid.Column="2" BorderBrush="DarkGreen" BorderThickness="0,0,0,4" Background="BlanchedAlmond">
+    <TextBlock TextAlignment="Center" VerticalAlignment="Center" Foreground="DarkGreen" FontWeight="Bold" Text="?"/>
+</Border>
+<!-- actual rows -->
+<Border Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,1">
+    <TextBlock TextAlignment="Center" VerticalAlignment="Center" Foreground="Black" Text="ACT00001"/>
+</Border>
+<Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+    <TextBlock TextAlignment="Center" VerticalAlignment="Center" Foreground="Black" Text="Account 1"/>
+</Border>
+<Border Grid.Row="1" Grid.Column="3" BorderBrush="Black" BorderThickness="0,0,1,1">
+    <CheckBox IsChecked="True" Background="Transparent" />
+</Border>
+<Border Grid.Row="2" Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,1">
+    <TextBlock TextAlignment="Center" VerticalAlignment="Center" Foreground="Black" Text="ACT00002"/>
+</Border>
+```
+
+```
+<Border Grid.Row="2" Grid.Column="1" BorderBrush="Black"
+    BorderThickness="0,0,1,1">
+    <TextBlock TextAlignment="Center" VerticalAlignment="Center"
+        Foreground="Black"
+        Text="Account 2"/>
+</Border>
+<Border Grid.Row="2" Grid.Column="3" BorderBrush="Black"
+    BorderThickness="0,0,1,1">
+    <CheckBox IsChecked="False" Background="Transparent"/>
+</Border>
+</Grid>
+```
+
+前面的代码生成了一个看起来像图 8.6 所示的显示。
+
+![](img/04a00d46bb1059867d95707babd62ee7_115_0.png)
+
+图 8.6 在网格中显示控件。
+
+## 导航到测试和草稿页面
+
+正如本章中多次看到的那样，Silverlight 开发者在进行快速原型设计时常见的做法是创建一个新的空白页面来尝试某件事。他们可能会使用这个新的空白页面来查看他们想要编写的控件的想法、想要使用的样式、数据绑定模板或任何其他内容。
+
+本章前面您看到我们修改了一个超链接，以便我们可以导航到我们的实验页面。虽然这对于一本书来说可行，但在实际场景中通常很丑陋且繁琐。我喜欢这样做：
+
+- 首先，在您的项目中创建一个新文件夹并将其命名为 Playground。在此文件夹中创建新的 WP7 测试页面。现在，而不是通过在真实 UI 中散布指向所有测试页面的链接来破坏您的真实 UI，您可以修改您的应用程序，使其在启动时直接进入您的测试页面。
+- 在解决方案资源管理器中展开项目下方的 Properties 节点。双击文件 WMAppManifest.xml。查找名为 DefaultTask 的 XML 元素。在这里您会看到一个名为 `NavigationPage` 的属性。将其从 `MainPage.xaml` 更改为 `/Playground/Whatever.xaml`。下次启动应用程序时，它将直接加载到您的测试页面，而不会破坏您的真实 UI。
+- 当您对在 Playground 文件夹中处理的页面的 XAML 标记感到满意时，您可以将其复制并粘贴到您的真实 UI 中。
+
+如果您以前使用过 HTML 表格，那么您已经对 Grid 控件的工作原理有了相当好的起点。它基于简单的列和行原则运行。您可以添加属于单个列的子元素、跨越多个列、跨越单个列内的多行，等等。
+
+棘手的部分是 Grid 没有动态的行数。换句话说，如果您有三个行定义并尝试添加一个行值为 3 的控件（请记住，行和列都从索引 0 开始），该控件将不会出现。您不能在没有适当行定义的情况下添加元素。
+
+这是重要区别，因为熟悉 Silverlight 的开发者，尤其是熟悉 iOS UITableViewController（及其控制的表格视图）的开发者，往往期望网格能够动态生成行。虽然您可以以编程方式操作网格以向其添加行，但这与列表框不同，列表框期望在运行时显示未知数量的行。奇怪的是，对于寻找电子表格风格的数据显示的人来说，常采用的技巧是使用列表框，其中每一行都生成一个固定大小的网格。
+
+## 总结
+
+本章为您提供了 Windows Phone 7 开发者可用的各种原始控件的快速概览，并将其与 iOS 开发者可用的一些类似产品进行了比较。在某些情况下，例如动态布局面板，我们涵盖了 iOS 中不可用的控件。
+
+我故意避免对任何一个控件进行过多的细节介绍，因为本章的重点是为您提供 Windows Phone 7 SDK 通过 Silverlight 访问的基本功能的全景视图。
+
+使用文本框、文本块、按钮、布局面板、图像，甚至基本的动画，您已经在通往编写强大的 WP7 应用程序的道路上迈出了良好的开端，而我们才刚刚触及这个令人难以置信的 SDK 的表面。

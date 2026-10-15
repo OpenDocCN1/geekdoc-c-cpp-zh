@@ -1,0 +1,9 @@
+can’t put the algorithms in code delivered to a device, you can invoke web services on your servers that will execute the sensitive code. In this fashion you are completely in control of the sensitive code that you cannot let fall into the wrong hands. Again, as with all security decisions, you need to weigh the benefits you get from this architecture with the drawbacks of requiring a device to have connectivity to perform certain functions and the cost of maintaining the server in the cloud, and so on.
+
+# Summary
+
+Security is important to everyone, but in varying degrees. What one user wants in terms of security is rarely the same as what another wants. Security can be enforced by regulatory bodies, compliance regulations and committees, or enforced by business people within your organization, or it can come from your own opinion of how secure your small, independent application should be.
+
+When building security into your application, the most important thing to do is weigh the cost of implementation versus the degree of intrusion prevention you get. After you’ve done that, weigh the negative impact to user experience created by the security feature versus the relative degree of security added to your application. You need to weigh all these factors when building security features because if you don’t, you could end up annoying your users with excessive security or losing them through ineffective or nonexistent security.
+
+This chapter showed you how to encrypt and decrypt sensitive information, how you can transmit sensitive information over the wire (the mechanics of which were discussed in previous chapters), and some possibilities for protecting intellectual property from the eyes of unwanted intruders. Hopefully, after having read this chapter, you have a good idea of the degree and manner of security you want to implement in your application and know how you plan to go about it.

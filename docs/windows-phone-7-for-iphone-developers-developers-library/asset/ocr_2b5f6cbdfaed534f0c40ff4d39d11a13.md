@@ -1,0 +1,11 @@
+![](bbox=[0.15, 0.1, 0.77, 0.37])
+
+Figure 7.2 Working with a TableViewController in Xcode/Interface Builder.
+
+At its core, Interface Builder is taking a configuration of an object hierarchy (such as a view hierarchy including view controllers and subviews) and storing that information in a special file called a “nib” (although the more modern equivalent of this file is an XML file with the XIB extension, still called “nib” because it’s much easier to pronounce).
+
+By setting your main window’s configuration through Interface Builder, you are indicating the state you would like that window to be in after the application has started up. When a reference for your main window is asked for by the application, it will take all the information contained in the XIB file and use it to create a fresh instance of a window object. This pattern continues throughout your application as UI objects are needed, including custom table view cells like the one shown in Figure 7.2.
+
+This differs from the way designers work with Silverlight applications in that Interface Builder really just creates data files. These data files are written by Interface Builder and read by the application at runtime to generate instances of objects. Silverlight applications use XAML as a markup language to describe the instantiations that should occur. This is a subtle but important difference. XAML is an instantiation language. It uses XML to describe the objects that should be instantiated and the properties within those objects that should be set.
+
+This is a subtle but important difference because there are some things that require a live, running application to render in iOS, which is why Interface Builder often supplies only “simulation” UI-like fake navigation bars, tab bars, and the like. The point at which iOS developers need to write pure Objective-C and where they need to build their UI in Interface Builder is often confusing, and the consequences for getting this split wrong can be immense. Some seasoned iPhone developers rarely use IB, and often use it only when there is no other alternative. Other iPhone developers have an IB-first approach in which
