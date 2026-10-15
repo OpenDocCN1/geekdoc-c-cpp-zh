@@ -1,0 +1,202 @@
+
+
+3. 接下来，打开 Default.aspx 文件，并用清单 16.18 中显示的代码替换现有代码：
+
+# 清单 16.18：Default.aspx 文件的代码
+
+```
+<asp:TextBox ID="TextBox1" Runat="server" />
+<br />
+<asp:Button ID="Button1" Text="Button" Runat="server" />
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_Default" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register TagPrefix="cc" TagName="customcontrol" Src="customcontrol.ascx" %>
+<script runat="server">
+protected void Page_Load(object sender, EventArgs e)
+{
+    if (WebPartManager1.Personalization.CanEnterSharedScope && WebPartManager1.Personalization.Scope == PersonalizationScope.User)
+    {
+        WebPartManager1.Personalization.ToggleScope();
+    }
+}
+protected void LinkButton1_Click(object sender, EventArgs e)
+{
+    WebPartManager1.DisplayMode = WebPartManager.EditDisplayMode;
+}
+protected void LinkButton2_Click(object sender, EventArgs e)
+{
+    WebPartManager1.DisplayMode = WebPartManager.BrowseDisplayMode;
+}
+</script>
+<html>
+<head id="Head1" runat="server">
+<title>custom control</title>
+</head>
+<body>
+<form id="form1" runat="server">
+    <div id="header"><h1>C# 2010 Black Book</h1></div>
+    <div id="content">
+        <asp:WebPartManager ID="WebPartManager1" runat="server" />
+        Custom WebPart &nbsp;<br />
+        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Edit Mode</asp:LinkButton>
+        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Browse Mode</asp:LinkButton><br /><br />
+        <asp:WebPartZone ID="WebPartZone2" runat="server">
+        <ZoneTemplate>
+        <cc:customcontrol runat="server" id="customcontrol1" />
+        </ZoneTemplate></asp:WebPartZone>
+        <asp:EditorZone ID="EditorZone1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderWidth="1px" Font-Names="verdana" Padding="6">
+        <LabelStyle Font-Size="0.8em" ForeColor="#333333" />
+        <HeaderStyle BackColor="#E2DED6"
+```
+
+```
+Font-Bold="True" Font-Size="0.8em"
+ForeColor="#333333" /> <ZoneTemplate>
+<asp:BehaviorEditorPart
+ID="BehaviorEditorPart1" runat="server" />
+<asp:LayoutEditorPart
+ID="LayoutEditorPart1" runat="server"  />
+</ZoneTemplate>
+<HeaderVerbStyle Font-Bold="False"
+Font-Size="0.8em" Font-Underline="False"
+ForeColor="#333333" />
+<PartChromeStyle
+BorderColor="#E2DED6" BorderStyle="Solid" BorderWidth="1px" />
+<PartStyle
+BorderColor="#F7F6F3" BorderWidth="5px" />
+<FooterStyle BackColor="#E2DED6"
+HorizontalAlign="Right" />
+<EditUIStyle Font-Names="Verdana"
+Font-Size="0.8em" ForeColor="#333333" />
+<InstructionTextStyle
+Font-Size="0.8em" ForeColor="#333333" />
+<ErrorStyle Font-Size="0.8em" />
+<VerbStyle Font-Names="verdana"
+Font-Size="0.8em" ForeColor="#333333" />
+<EmptyZoneTextStyle
+Font-Size="0.8em" ForeColor="#333333" />
+<PartTitleStyle Font-Bold="True"
+Font-Size="0.8em" ForeColor="#333333" />
+</asp:EditorZone>
+<br /><br /><br />
+</div>
+</form>
+</body>
+</html>
+```
+
+4. 现在，在 Web.config 文件的 <system.web> 节中添加以下代码：
+
+```
+<webParts>
+<personalization>
+<authorization>
+<allow users="*" verbs="entersharedscope"/>
+</authorization>
+</personalization>
+</webParts>
+```
+
+5. 若要运行 CustomWebPart Web 应用程序，请按 F5 键。图 16.52 显示了输出：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_860_0.png)
+
+图 16.52：CustomWebPart Web 应用程序的输出
+
+6. 单击“Edit Mode”链接（图 16.52）以切换到 Edit 模式。现在，单击“Custom Control”上的向下箭头，并选择“Edit”选项，如图 16.53 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_861_0.png)
+
+当你选择“Edit”选项时，编辑器区域（Editor Zone）将出现在网页上，如图 16.54 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_861_1.png)
+
+如图 16.54 所示，编辑器区域包含各种编辑器部件，你可以使用这些编辑器部件修改自定义 Web 部件控件的外观和布局。你可以根据自己的需求，从编辑器区域控件中选择相应的选项来修改自定义 Web 部件控件的属性，然后单机“Apply”按钮。最后，单击“OK”按钮以将更改应用到自定义 Web 部件控件。
+
+## 在代码中创建 ConnectionsZone 控件
+
+在本章的“In Depth”部分中，我们讨论了 ConnectionsZone 控件的工作原理，还讨论了如何使用 ConnectionsZone 类来创建 ConnectionsZone 控件。现在，让我们借助 ConnectionsZone 类来创建 ConnectionsZone 控件，并指定该控件的各种属性。为此，我们创建一个名为 ConnectionsZoneApp 的应用程序（同样可在 CD 中找到）。清单 16.19 显示了 ConnectionsZoneApp 网站的 Default.aspx 页面的完整代码：
+
+### 清单 16.19：Default.aspx 页面的代码
+
+```
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>ConnectionsZone control Example</title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Underline="True" ForeColor="Navy" Text="ConnectionZone Webpart:"></asp:Label>
+<br />
+<br />
+<asp:Panel ID="Panel1" runat="server" BackColor="#FFE0C0" BorderStyle="Ridge" Height="161px" Width="437px">
+<asp:Label ID="Label1" runat="server" Text="Connection Status:" Width="622px" Font-Bold="True" Font-Underline="True" ForeColor="Navy"></asp:Label><br />
+&nbsp;<asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Underline="True" ForeColor="Navy" Text="Connection Configuration:"></asp:Label>
+<br />
+<br />
+<asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>&nbsp;
+<br />
+<asp:Label ID="Label6" runat="server" Text="Label"></asp:Label></asp:Panel>
+</div>
+</form>
+</body>
+</html>
+```
+
+### 清单 16.20：Default.aspx 页面的代码隐藏文件（Code-Behind）的代码
+
+```
+using System;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+public partial class _Default : System.Web.UI.Page
+{
+    WebPartManager wpm = new WebPartManager();
+    ConnectionsZone conn = new ConnectionsZone();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        string value;
+        value = conn.NoExistingConnectionInstructionText;
+        conn.NoExistingConnectionInstructionText = value;
+        Label13.Text = conn.NoExistingConnectionInstructionText;
+        Label14.Text = "DEFAULT:" + conn.ConfigureConnectionTitle;
+        conn.ConfigureConnectionTitle = "Configure a new connection";
+        Label16.Text = "CUSTOM:" + conn.ConfigureConnectionTitle;
+    }
+}
+```
+
+图 16.55 显示了 ConnectionsZoneApp 网站的输出：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_863_0.png)
+
+图 16.55：ConnectionsZone 控件的运行效果演示
+
+## 小结
+
+在本章中，我们讨论了 Login 控件及其在创建和使用用户帐户方面的用途。这些控件包括 Login、LoginView、LoginStatus、LoginName、CreateUserWizard、Password 和 ChangePassword。我们还讨论了 Web 部件控件，这些控件展示了用户如何在运行时动态地个性化其网站。这些控件包括 WebPartManager、ProxyWebPartManager、WebPartZone、CatalogZone 和 EditorZone 控件。
+
+在下一章中，你将学习如何借助 Silverlight 来增强 Web 应用程序。
+

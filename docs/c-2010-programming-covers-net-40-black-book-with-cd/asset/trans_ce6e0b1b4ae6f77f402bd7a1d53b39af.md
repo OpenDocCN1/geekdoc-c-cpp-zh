@@ -1,0 +1,256 @@
+
+
+## Listing 4.4: 显示声明部分类的代码
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Account
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Method body
+        }
+    }
+    partial class Account
+    {
+        double PrincipalAmount, InterestRate, Time, SimpleInterest;//Data members
+        public void calculateInterest()
+        {
+            //Method body
+        }
+        partial void ShowAmount();
+    }
+    partial class Account
+    {
+        partial void ShowAmount()
+        {
+            //Method body
+        }
+        public void ShowInterest()
+        {
+            //Method body
+        }
+    }
+}
+```
+
+在 Listing 4.4 中，我们创建了一个名为 Account 的部分类。Account 部分类的第一部分包含变量 PrincipalAmount、InterestRate、Time 和 SimpleInterest 以及一个方法 CalculateInterest()，以及一个名为 ShowAmount() 的部分方法的声明。Account 部分类的第二部分包含 ShowInterest() 方法，以及 ShowAmount() 部分方法的定义。
+
+## Creating an Object
+
+要访问类的成员变量和成员函数，必须创建该类的对象。要了解如何创建类的对象，首先创建一个名为 MyObject 的新控制台应用程序（也在 CD 上提供）。用 Listing 4.5 所示的代码替换应用程序的 Program.cs 文件的默认代码：
+
+## Listing 4.5: 显示 MyObject 应用程序的代码
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Myobject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Amount Amt = new Amount();
+```
+```
+Amt.Balance();
+Amt.GetData();
+Console.Write("\nPress ENTER to Quit..");
+Console.ReadLine();
+}
+public class Amount
+{
+    double TotalAmount = 12000, Deductions = 2000, BalanceAmount;
+    public void Balance()
+    {
+        BalanceAmount = TotalAmount - Deductions;
+        Console.WriteLine("Your Current Amount is Rs: " + BalanceAmount);
+    }
+    public void Debit()
+    {
+        int DebitAmount = 0;
+        Console.Write("Enter Amount:");
+        DebitAmount = int.Parse(Console.ReadLine());
+        BalanceAmount = BalanceAmount - DebitAmount;
+        Console.WriteLine("Your Balance Amount is Rs.:" + BalanceAmount);
+    }
+    public void Credit()
+    {
+        int CreditAmount = 0;
+        Console.Write("Enter Amount:");
+        CreditAmount = int.Parse(Console.ReadLine());
+        BalanceAmount = BalanceAmount + CreditAmount;
+        Console.WriteLine("Your Balance Amount is Rs.:" + BalanceAmount);
+    }
+    public void GetData()
+    {
+        char Data;
+        Console.WriteLine("--------------------------------");
+        Console.Write("Press (d) for Debit and (c) for Credit:");
+        Data = char.Parse(Console.ReadLine());
+        if (Data == 'd')
+        {
+            Debit();
+        }
+        if (Data == 'c')
+        {
+            Credit();
+        }
+    }
+}
+```
+
+在 Listing 4.5 中，我们借助 new 关键字创建了 Amount 类的一个对象 Amt。Figure 4.7 显示了 MyObject 应用程序的输出：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_199_0.png)
+
+Figure 4.7: 显示 MyObject 应用程序的输出
+
+## Using this Keyword
+
+this 关键字指的是类的当前实例。借助 this 关键字，你可以访问类的一个实例并将其与实例方法、实例构造函数和实例属性一起使用。请注意，this 关键字不能与静态成员一起使用，因为静态成员是由类访问而不是由类的实例访问。要访问类的实例成员，请使用 this 关键字后跟点号（.）运算符。要了解如何使用 this 关键字访问类的实例成员，首先创建一个名为 MythisKeyword 的新控制台应用程序（也在 CD 上提供）。用 Listing 4.6 所示的代码替换应用程序的 Program.cs 文件的默认代码：
+
+## Listing 4.6: 显示 MythisKeyword 应用程序的代码
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace MythisKeyword
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Amount Amt = new Amount();
+            Amt.Balance();
+            Amt.GetData();
+            Console.Write("\nPress ENTER to Quit..");
+            Console.ReadLine();
+        }
+    }
+    public class Amount
+    {
+        double TotalAmount, Deductions, BalanceAmount;
+        public void Balance()
+        {
+            this.TotalAmount = 12000;
+            this.Deductions = 2000;
+            BalanceAmount = TotalAmount - Deductions;
+            Console.WriteLine("Your Current Amount is Rs: " + BalanceAmount);
+        }
+        public void Debit()
+        {
+            int DebitAmount = 0;
+            Console.Write("Enter Amount:");
+            DebitAmount = int.Parse(Console.ReadLine());
+            BalanceAmount = BalanceAmount - DebitAmount;
+            Console.WriteLine("Your Balance Amount is Rs.:" + BalanceAmount);
+        }
+        public void Credit()
+        {
+            int CreditAmount = 0;
+            Console.Write("Enter Amount:");
+            CreditAmount = int.Parse(Console.ReadLine());
+            BalanceAmount = BalanceAmount + CreditAmount;
+            Console.WriteLine("Your Balance Amount is Rs.:" + BalanceAmount);
+        }
+        public void GetData()
+        {
+            char Data;
+```
+```
+Console.WriteLine("----------------------------------------");
+Console.Write("Press (d) for Debit and (c) for Credit:");
+Data = char.Parse(Console.ReadLine());
+if (Data == 'd')
+{
+    Debit();
+}
+if (Data == 'c')
+{
+    Credit();
+}
+}
+```
+
+在 Listing 4.6 中，Amount 类的数据成员 TotalAmount 和 Deductions 由 this 关键字访问。Figure 4.8 显示了 MythisKeyword 应用程序的输出：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_201_0.png)
+
+## Creating an Array of Objects
+
+C# 中的对象数组与 C++ 或 Java 中的对象数组有点不同。你必须先创建数组，然后再创建数组的各个元素。这与 C++ 不同，在 C++ 中创建对象数组会自动调用构造函数并创建数组的各个元素。在 C# 中，你不能同时创建数组及其各个元素。要更好地理解它，首先创建一个名为 MyArrayOfObjects 的新控制台应用程序（也在 CD 上提供）。用 Listing 4.7 所示的代码替换应用程序的 Program.cs 文件的默认代码：
+
+## Listing 4.7: 显示 MyArrayOfObjects 应用程序的代码
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace MyArrayOfObjects
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const int Size = 3;
+            Employee[] Manager = new Employee[Size];
+            for (int i = 0; i < Size; i++)
+            {
+                Manager[i] = new Employee();
+            }
+            for (int i = 0; i < Size; i++)
+            {
+                Console.WriteLine("Details of Manager:" + (i + 1));
+                Manager[i].GetData();
+```
+```
+Console.WriteLine("-----------------");
+}
+for (int i = 0; i < Size; i++)
+{
+    Console.WriteLine("Manager:" + (i + 1));
+    Manager[i].PutData();
+    Console.WriteLine("------------");
+}
+Console.Write("\nPress ENTER to quit...");
+Console.ReadLine();
+}
+class Employee
+{
+    string Name;
+    float Age;
+    public void GetData()
+    {
+        Console.Write("Enter Name :");
+        Name = (Console.ReadLine());
+        Console.Write("Enter Age:");
+        Age = float.Parse(Console.ReadLine());
+    }
+    public void PutData()
+    {
+        Console.WriteLine("The Name is:" + Name);
+        Console.WriteLine("The Age is:" + Age);
+    }
+}
+```
+
+在 Listing 4.7 中，高亮的行显示了如何创建对象数组。Figure 4.9 显示了 MyArrayOfObjects 应用程序的输出：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_202_0.png)
+
+Figure 4.9: 显示 MyArrayOfObjects 应用程序的输出
+

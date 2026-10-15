@@ -1,0 +1,195 @@
+
+
+接下来，打开 PasswordRecoveryandChangePasswordControls Web 应用程序并按 F5 键运行它。图 16.41 显示了 PasswordRecoveryandChangePasswordControls Web 应用程序的输出：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_847_0.png)
+
+### 图 16.41：登录页面
+
+在图 16.41 中，你可以看到 Forgot Password? 旁边出现了 Click here 链接。当用户无法记住各自的密码时，可以点击此链接。当用户点击 Click here 链接时，他们会被重定向到 Forgot Password 页面，如图 16.42 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_847_1.png)
+
+### 图 16.42：忘记密码页面
+
+在此 Web 页面中，用户首先会被提示输入用户名。在指定用户名后，点击 Submit 按钮（图 16.42）。Forgot Password 页面现在显示安全问题，如图 16.43 所示：
+
+### 图 16.43：回答安全问题
+
+现在，在 Answer 文本框中提供安全问题的答案并点击 Submit 按钮。你提供的答案将被验证与安全问题。一旦验证通过，密码将被发送到用户的电子邮件地址，如图 16.44 所示：
+
+### 图 16.44：显示密码检索成功的消息
+
+电子邮件包含用户名和用于访问 Web 应用程序的临时密码。现在，返回到登录页面（点击 Click here to go back 链接）并输入用户名和临时密码登录到 Web 应用程序。成功登录后，你可以更改临时密码。为此，点击 Change Password 链接并输入临时密码进行验证，然后输入新密码，如图 16.45 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_849_0.png)
+
+### 图 16.45：更改密码
+
+点击 Change Password 按钮，它会显示一条消息，告知密码已成功更改，如图 16.46 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_849_1.png)
+
+### 图 16.46：显示密码更改成功的消息
+
+## 在代码中创建 WebPartManager 控件
+
+WebPartManager 控件是你需要添加到 Web 页面以管理所有其他 Web Parts 控件的主要 Web Parts 控件。你可以通过使用 WebPartManager 类通过从工具箱拖放控件来使用 WebPartManager 控件。为了演示 WebPartManager 控件的工作方式，让我们执行以下步骤：
+
+- 创建一个名为 WebPartManagerControl 的新 Web 应用程序（也在 CD 上提供）。请注意，WebPartManager 控件不提供 UI 并且仅用于管理 Web Parts 控件。
+- 打开 Default.aspx 文件并用清单 16.9 所示的代码替换现有代码：
+
+### 清单 16.9：Default.aspx 文件的代码
+
+```
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>WebPartManager Control</title>
+</head>
+<body>
+<form id="form1" runat="server">
+<h1> C# 2010 Black Book</h1>
+<br />
+<asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Underline="True" ForeColor="#0000C0" Text="WebPart Manager:" style="z-index: 100; left: 12px; position: absolute; top: 90px"></asp:Label>
+<br />
+&nbsp;
+<br />
+<br />
+<asp:Panel ID="Panel1" runat="server" BackColor="silver" BorderColor="#804040" BorderStyle="Double" Height="137px" Width="320px">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#0000C0" Text="WEBPARTMANAGER CREATED!!!!" Visible="False"></asp:Label><br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<asp:Button ID="Button2" runat="server" BackColor="Maroon" Font-Bold="True" ForeColor="White" OnClick="Button2_Click" Text="Display Mode" Width="213px" style="z-index: 102; left: 50px; position: absolute; top: 205px" />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<asp:Label ID="Label2" runat="server" Font-Bold="True" ForeColor="#0000C0" Visible="False" style="z-index: 101; left: 124px; position: absolute; top: 256px"></asp:Label></asp:Panel>
+</form>
+</body>
+</html>
+```
+
+- 打开 Default.aspx.cs 文件并添加清单 16.10 所示的代码：
+
+### 清单 16.10：Default.aspx.cs 文件的代码
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+    }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Label2.Visible = true;
+        Button2.Visible = false;
+        WebPartManager wpm = new WebPartManager();
+        string str;
+        str = wpm.DisplayMode.Name;
+        Label2.Text = str;
+        Label1.Visible = true;
+    }
+}
+```
+
+display mode 属性被设置为查看当前默认显示模式。
+现在，按 F5 键运行 WebPartManagerControl 应用程序。输出如下所示，如图 16.47 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_851_0.png)
+
+点击 Display Mode 按钮以创建 WebPartManager 控件，如图 16.48 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_851_1.png)
+
+正如你在图 16.48 中看到的，当你点击 Display Mode 按钮时，会显示 WEBPARTMANAGER CREATED 消息，表明已创建了一个 WebPartManager 控件。此外，WebPartManager 控件的默认显示模式 Browse 的名称也会出现。
+
+## 在代码中创建 WebPartZone 控件
+
+在这里，你学习如何直接在代码中处理 WebPartZone 控件。通过使用类创建此控件后，你可以访问和更改控件的各种属性。为此，让我们执行以下步骤：
+
+- 创建一个名为 WebPartZoneControl 的 Web 应用程序（也在 CD 上提供）以创建 WebPartZone 控件。
+- 打开 Default.aspx 文件并用清单 16.11 所示的代码替换现有代码：
+
+### 清单 16.11：Default.aspx 文件的代码
+
+```
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>WebPartZone Control Example</title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div id="header">
+<h1>C# 2010 Black Book</h1>
+</div>
+<asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Underline="True" ForeColor="Navy" Text="WebPart Zone:"></asp:Label>
+<br />
+<asp:Panel ID="Panel1" runat="server" BackColor="#FFE0C0" BorderColor="#FF8000" BorderStyle="Double" Height="226px" Width="293px">
+<br />
+<asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Underline="True" ForeColor="Navy" Text="Enter Header Text:"></asp:Label>
+<br />
+<br />
+<br />
+<asp:TextBox ID="TextBox1" runat="server" Width="230px"></asp:TextBox>
+<br />
+<br />
+<asp:Button ID="Button1" runat="server" BackColor="#FFFFC0" OnClick="Button1_Click" Text="Create WebPartZone" />
+<br />
+<br />
+<asp:Label ID="Label3" runat="server" Font-Bold="True"></asp:Label>
+</asp:Panel>
+</form>
+</body>
+</html>
+```
+
+- 打开 Default.aspx.cs 文件并添加清单 16.12 所示的代码：
+
+### 清单 16.12：Default.aspx.cs 文件的代码
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        WebPartManager wpm = new WebPartManager();
+        WebPartZone wpz = new WebPartZone();
+        String str;
+        wpz.MenuLabelText = TextBox1.Text;
+        str = wpz.MenuLabelText;
+        Label3.Text = "Header text:" + str;
+    }
+}
+```
+
+- 通过按 F5 键运行 WebPartZoneControl Web 应用程序。在 Enter Header Text 下方的文本框中输入标题文本，在本例中为 WebPart Header，然后点击 Create WebPartZone 按钮。这会显示输出，如图 16.49 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_853_0.png)
+
+### 图 16.49：WebPartZoneControl Web 应用程序的输出
+
+当你在指定的文本框中输入标题文本并点击 Create WebPartZone 按钮时，会创建一个包含标题文本为 WebPart Header 的 WebPartZone。
+

@@ -1,0 +1,132 @@
+
+
+- The Dictionary<TKey, TValue> class
+- The SortedDictionary<TKey, TValue> class
+- The Stack<T> class
+- The Queue<T> class
+- The HashSet<T> class
+
+Let's explore these classes in detail.
+
+## The List<T> Class
+
+The List<T> class is similar to a generic equivalent of the ArrayList class. The List<T> class provides an easy-to-use substitute for arrays. It provides various methods, such as Sort, Reverse, and Find to sort the list members, arrange the list members in reverse order, and search a member in the list. The class hierarchy of the List<T> class is given as follows:
+System.Object
+System.Collections.Generic.List<T>
+
+Table 32.13 lists the important properties of the List<T> class:
+
+### Table 32.13: Noteworthy Properties of the List<T> Class
+| Property | Description |
+|---|---|
+| Capacity | Retrieves or sets the number of elements that the List<T> object can hold without resizing |
+| Count | Retrieves the number of items present in the List<T> object |
+| Item | Retrieves or sets an element at the specified index. |
+
+Table 32.14 lists the important methods of the List<T> class:
+
+### Table 32.14: Noteworthy Methods of the List<T> Class
+| Method | Description |
+|---|---|
+| Add() | Adds an object at the end of the List<T> object |
+| AddRange() | Adds the items of a specified collection at the end of the List<T> object |
+| AsReadOnly() | Allows you to read the values of the objects stored in the List<T> object |
+| BinarySearch() | Uses a binary search algorithm to locate a specific element in the sorted List<T> object |
+| Clear() | Removes all items from the List<T> object |
+| Contains() | Ascertains whether or not an element is in the List<T> object |
+| ConvertAll<TOutput> | Converts the items in the current List<T> object into another type and returns a list containing the converted items |
+| CopyTo() | Copies the List<T> object or a portion of it to a one-dimensional array |
+| Exists() | Ascertains whether or not the List<T> object contains items that match the conditions defined by a specified criteria |
+| Find() | Searches an item that matches the conditions defined by a specified criteria |
+| FindAll() | Gets all the items that match the conditions defined by a specified predicate |
+| FindIndex() | Searches an item that matches the conditions defined by a specified predicate, and returns the zero-based index of the first occurrence within the List<T> object or a portion of it |
+| FindLast() | Searches for an item that matches the conditions defined by a specified predicate, and returns the last occurrence within the entire List<T> object |
+| FindLastIndex() | Searches an item that matches the conditions defined by a specified predicate, and returns the zero-based index of the last occurrence within the List<T> object or a portion of it |
+
+| Method | Description |
+|---|---|
+| ForEach() | Performs the specified action on each item of the List<T> object |
+| GetEnumerator() | Returns an enumerator that iterates through the List<T> object |
+| GetRange() | Creates a copy of a range of items in the source List<T> object |
+| IndexOf() | Returns the zero-based index of the first occurrence of a value in the List<T> object or a portion of it |
+| Insert() | Inserts an item into the List<T> object at the specified index |
+| InsertRange() | Inserts the items of a collection at a specified index into the List<T> object |
+| LastIndexOf() | Returns the index of the last occurrence of an item in the List<T> object or a portion of it |
+| Remove() | Removes the first occurrence of a specific object from the List<T> object |
+| RemoveAll() | Removes all the items that match the conditions defined by a specified predicate |
+| RemoveAt() | Removes an item at the specified index of the List<T> object |
+| RemoveRange() | Removes a range of items from the List<T> object |
+| Reverse() | Reverses the order of the items in the List<T> object or a portion of it |
+| Sort() | Sorts the items in the List<T> object or a portion of it |
+| ToArray() | Copies the items of the List<T> object to a new array |
+| TrueForAll() | Determines whether every element in the List<T> object matches the conditions defined by a specified predicate |
+
+## The LinkedList<T> Class
+
+The LinkedList<T> class is a generic collection class, which allows you to create collections that act as double linked lists. You can populate them as linked lists and later on retrieve values from them in the same way as you retrieve values from linked lists. The class hierarchy for this class is given as follows:
+
+```
+System.Object
+System.Collections.Generic.LinkedList<T>
+```
+
+Table 32.15 lists the important properties of the LinkedList<T> class:
+
+### Table 32.15: Noteworthy Properties of the LinkedList<T> Class
+| Property | Description |
+|---|---|
+| Count | Retrieves the number of items present in the LinkedList<T> object |
+| First | Retrieves the first node of the LinkedList<T> object |
+| Last | Retrieves the last node of the LinkedList<T> object |
+
+Table 32.16 lists the important methods of the LinkedList<T> class:
+
+### Table 32.16: Noteworthy Methods of the LinkedList<T> Class
+| Method | Description |
+|---|---|
+| AddAfter() | Adds a new node or value after an existing node in the LinkedList<T> object |
+| AddBefore() | Adds a new node or value before an existing node in the LinkedList<T> object |
+| AddFirst() | Adds a new node or value at the beginning of the LinkedList<T> object |
+| AddLast() | Adds a new node or value at the end of the LinkedList<T> object |
+
+| Method | Description |
+|---|---|
+| Clear() | Removes all nodes from the LinkedList<T> object |
+| Contains() | Ascertains whether or not a value is in the LinkedList<T> object |
+| CopyTo() | Copies the LinkedList<T> object or a portion of it to a one-dimensional array at a specified index of the target array |
+| Find() | Finds the first node that contains the specified value |
+| FindLast() | Finds the last node that contains the specified value |
+| Remove() | Removes the first occurrence of a node or value from the LinkedList<T> object |
+| RemoveFirst() | Removes the node at the beginning of the LinkedList<T> object |
+| RemoveLast() | Removes the node from the end of the LinkedList<T> object |
+
+## The SortedList<TKey, TValue> Class
+
+The SortedList<TKey, TValue> class allows you to make generic collections of key/value pairs. They work similar to arrays of key/value pairs so that the values can be retrieved either with the key or with the indexes. The class hierarchy for this class is given as follows:
+
+System.Object
+System.Collections.Generic.SortedList<TKey, TValue>
+
+Table 32.17 lists the important properties of the SortedList<TKey, TValue> class:
+
+### Table 32.17: Noteworthy Properties of the SortedList<TKey, TValue> Class
+| Property | Description |
+|---|---|
+| Capacity | Retrieves or sets the number of elements that the SortedList<TKey, TValue> object can contain |
+| Count | Retrieves the number of key/value pairs from the SortedList<TKey, TValue> object |
+| Item | Retrieves or sets the value associated with the specified key |
+| Keys | Retrieves a collection containing the keys from the SortedList<TKey, TValue> object |
+| Values | Retrieves a collection containing the values from the SortedList<TKey, TValue> object |
+
+Table 32.18 lists the important methods of the SortedList<TKey, TValue> class:
+
+### Table 32.18: Noteworthy Methods of the SortedList<TKey, TValue> Class
+| Method | Description |
+|---|---|
+| Add() | Adds an item with the specified key and value into the SortedList<TKey, TValue> object |
+| Clear() | Removes all the items from the SortedList<TKey, TValue> object |
+| ContainsKey() | Ascertains whether or not the SortedList<TKey, TValue> object contains a specific key |
+| ContainsValue() | Ascertains whether or not the SortedList<TKey, TValue> object contains a specific value |
+| GetEnumerator() | Returns an enumerator that iterates through the SortedList<TKey, TValue> object |
+| IndexOfKey() | Searches the specified key and returns the zero-based index within the entire SortedList<TKey, TValue> object |
+

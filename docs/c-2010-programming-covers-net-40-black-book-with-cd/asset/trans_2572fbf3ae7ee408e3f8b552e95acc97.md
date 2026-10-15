@@ -1,0 +1,182 @@
+
+
+12. 点击 Confirm Booking 按钮。
+
+显示一个页面，文字为 Thank You，如图 17.28 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_911_0.png)
+
+图 17.28：BookTicketCalendarAppCS 应用程序中确认预订
+
+接下来，让我们学习 DatePicker 控件。
+
+## 使用 DatePicker 控件
+
+DatePicker 控件具有一个文本框和一个下拉日历，分别允许您输入或选择日期。执行以下步骤以了解如何在 Silverlight 3.0 中使用 DatePicker 控件处理日期：
+
+- 1. 创建一个名为 SubjectScheduleAppCS 的 Silverlight 应用程序（可在光盘上获得）。该应用程序托管在单个 HTML 网页中。
+- 2. 将 Listing 17.5 中给出的代码添加到 SubjectScheduleAppCS 应用程序的 MainPage.xaml 文件中：
+
+### Listing 17.5: Showing the Code for the MainPage.xaml File
+
+```
+<UserControl xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" x:Class="SubjectScheduleAppCS.MainPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="600">
+<UserControl.Resources>
+    <Style TargetType="TextBlock" x:Name="textStyle">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Foreground" Value="Maroon"/>
+    </Style>
+</UserControl.Resources>
+<Grid x:Name="LayoutRoot" Background="white">
+    <Rectangle x:Name="back" Height="450" Width="600">
+        <Rectangle.Fill>
+<LinearGradientBrush SpreadMethod="Reflect">
+    <LinearGradientBrush.GradientStops>
+        <GradientStop Offset="0.25" Color="Beige"/>
+        <GradientStop Offset="0.75" Color="Burlywood"/>
+    </LinearGradientBrush.GradientStops>
+</LinearGradientBrush>
+</Rectangle.Fill>
+</Rectangle>
+<TextBlock x:Name="text1" FontSize="30" Text="Make Your Own Schedule" Margin="125,10,0,0" Foreground="Maroon" />
+<ListBox x:Name="list1" Margin="20,101,20,74">
+    <ListBoxItem Background="HotPink">
+        <Grid>
+            <TextBlock Text="Subjects" FontSize="24" Foreground="LightYellow" Margin="10,0,0,0"></TextBlock>
+            <TextBlock Text="Select Date" FontSize="24" Foreground="LightYellow" Margin="250,0,0,0"></TextBlock>
+        </Grid>
+    </ListBoxItem>
+    <ListBoxItem x:Name="bioItem" Background="LightBlue">
+        <StackPanel>
+            <TextBlock x:Name="bioText" Text="Biology" Style="{StaticResource textStyle}" Margin="10,0,0,0"/>
+            <my:DatePicker x:Name="bioDate" Height="30" Width="200" Margin="200,-20,0,0" IsDropDownOpen="False" SelectedDateFormat="Long"/>
+        </StackPanel>
+    </ListBoxItem>
+    <ListBoxItem x:Name="chemItem" Background="LightBlue">
+        <StackPanel>
+            <TextBlock x:Name="chemText" Text="Chemistry" Style="{StaticResource textStyle}" Margin="10,0,0,0"/>
+            <my:DatePicker x:Name="chemDate" Height="30" Width="200" Margin="200,-20,0,0" IsDropDownOpen="False" SelectedDateFormat="Long"/>
+        </StackPanel>
+    </ListBoxItem>
+    <ListBoxItem x:Name="engItem" Background="LightBlue">
+        <StackPanel>
+            <TextBlock x:Name="engText" Text="English" Style="{StaticResource textStyle}" Margin="10,0,0,0"/>
+            <my:DatePicker x:Name="engDate" Height="30" Width="200" Margin="200,-20,0,0" IsDropDownOpen="False" SelectedDateFormat="Long"/>
+        </StackPanel>
+    </ListBoxItem>
+    <ListBoxItem x:Name="finItem" Background="LightBlue">
+        <StackPanel>
+            <TextBlock x:Name="finText" Text="Finance" Style="{StaticResource textStyle}" Margin="10,0,0,0"/>
+            <my:DatePicker x:Name="finDate" Height="30" Width="200" Margin="200,-20,0,0" IsDropDownOpen="False" SelectedDateFormat="Long"/>
+        </StackPanel>
+    </ListBoxItem>
+    <ListBoxItem x:Name="mathItem" Background="LightBlue">
+        <StackPanel>
+            <TextBlock x:Name="mathText" Text="Mathematics" Style="{StaticResource textStyle}" Margin="10,0,0,0"/>
+<my:DatePicker x:Name="mathDate" Height="30" Width="200" Margin="200,-20,0,0" IsDropDownOpen="False" SelectedDateFormat="Long"/>
+</StackPanel>
+</ListBoxItem>
+<ListBoxItem x:Name="phyItem" Background="LightBlue">
+<StackPanel>
+<TextBlock x:Name="phyText" Text="Physics" Style="{StaticResource textStyle}" Margin="10,0,0,0"/>
+<my:DatePicker x:Name="phyDate" Height="30" Width="200" Margin="200,-20,0,0" IsDropDownOpen="False" SelectedDateFormat="Long"/>
+</StackPanel>
+</ListBoxItem>
+</ListBox>
+</Grid>
+</UserControl>
+```
+
+请注意，在前面的列表中，SubjectScheduleAppCS 应用程序中有六个 DatePicker 控件。
+
+- 3. 打开 SubjectScheduleAppCS 应用程序的 MainPage.xaml 文件的代码隐藏文件并编写代码，如 Listing 17.6 所示：
+
+### Listing 17.6: Showing the Code for the Code-Behind File of the MainPage.xaml File of the SubjectScheduleAppCS Application
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Shapes;
+namespace SubjectScheduleAppCS
+{
+    public partial class MainPage : UserControl
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            DateTime firstDay = new DateTime(2010, 8, 1);
+            DateTime endDay = firstDay.AddDays(15);
+            //specifying the first visible and selectable date
+            bioDate.DisplayDateStart = firstDay;
+            chemDate.DisplayDateStart = firstDay;
+            engDate.DisplayDateStart = firstDay;
+            finDate.DisplayDateStart = firstDay;
+            mathDate.DisplayDateStart = firstDay;
+            phyDate.DisplayDateStart = firstDay;
+            //specifying the last visible and selectable date
+            bioDate.DisplayDateEnd = endDay;
+            chemDate.DisplayDateEnd = endDay;
+            engDate.DisplayDateEnd = endDay;
+            finDate.DisplayDateEnd = endDay;
+            mathDate.DisplayDateEnd = endDay;
+            phyDate.DisplayDateEnd = endDay;
+```
+
+在 Listing 17.6 中，firstDay 变量表示日期 2010 年 8 月 1 日，endDay 变量表示日期 2010 年 8 月 16 日。firstDay 变量被分配给 bioDate、chemDate、engDate、finDate、mathDate 和 phyDate DatePicker 控件的第一个可见且可选择的日期。同样，endDay 变量使用其 DisplayDateEnd 属性被分配给 DatePicker 控件的最后一个可见且可选择的日期。
+
+- 4. 运行 SubjectScheduleAppCS 应用程序以查看输出，如图 17.29 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_914_0.png)
+
+如图 17.29 所示，有六个 DatePicker 控件可为每个科目选择日期。
+
+- 5. 点击 DatePicker 控件最右侧的图标以查看下拉日历并选择日期，如图 17.30 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_914_1.png)
+
+6. 重复步骤 4 为每个科目选择日期。图 17.31 显示了当从 SubjectScheduleAppCS 应用程序中的所有 DatePicker 控件中选择日期时的应用程序输出：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_915_0.png)
+
+图 17.31：SubjectScheduleAppCS 应用程序中所有 DatePicker 控件中选定的日期
+
+至此，您已学习如何使用 DatePicker 控件。接下来，让我们学习如何在 Silverlight 应用程序中使用 GridSplitter 控件。
+
+## 使用 GridSplitter 控件
+
+GridSplitter 控件允许您的 Silverlight 应用程序的用户调整 Grid 控件的行和列的大小。执行以下步骤以了解如何使用 Silverlight GridSplitter 控件调整 Grid 控件的行和列的大小：
+
+- 1. 创建一个 Silverlight 应用程序并将其命名为 TextImageAppCS（可在光盘上获得）。Listing 17.7 显示了 TextImageAppCS 应用程序的 MainPage.xaml 文件的代码：
+
+### Listing 17.7: Showing the Code for the MainPage.xaml File
+
+```
+<UserControl xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+x:Class="TextImageAppCS.MainPage"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+mc:Ignorable="d"
+d:DesignHeight="300" d:DesignWidth="400">
+
+<Grid x:Name="LayoutRoot" Background="Beige">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="50"/>
+        <RowDefinition Height="125"/>
+        <RowDefinition Height="125"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="150"/>
+        <ColumnDefinition Width="250"/>
+    </Grid.ColumnDefinitions>
+    <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="TextImage Application" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red"/>
+```
+

@@ -1,0 +1,201 @@
+
+
+Calendar 类的显著公共属性在表 14.24 中列出：
+
+| 属性 | 描述 |
+|---|---|
+| Caption | 获取或设置作为 Calendar 控件标题呈现的文本值 |
+| CaptionAlign | 获取或设置作为 Calendar 控件标题呈现的文本的对齐方式 |
+| CellPadding | 获取或设置单元格数据与其边框之间的空格数 |
+| CellSpacing | 获取或设置单元格之间的间距 |
+| DayHeaderStyle | 获取显示星期几的区域的样式属性 |
+| DayNameFormat | 获取或设置一周中各天的名称格式 |
+| DayStyle | 获取显示月份中各天的样式属性 |
+| FirstDayOfWeek | 获取或设置在 Calendar 控件的第一天列中显示的星期几 |
+| NextMonthText | 获取或设置用于下个月导航控件的显示文本 |
+| NextPrevFormat | 获取或设置 Calendar 控件标题部分中上个月和下个月导航元素的格式 |
+| NextPrevStyle | 获取上个月和下个月导航元素的样式属性 |
+| OtherMonthDayStyle | 获取 Calendar 控件上不属于显示月份的天数的样式属性 |
+| PrevMonthText | 获取或设置用于上个月导航控件的显示文本 |
+| SelectedDate | 获取或设置所选日期 |
+| SelectedDates | 获取表示 Calendar 控件上所选日期的 System.DateTime 对象集合 |
+| SelectedDayStyle | 获取所选日期的样式属性 |
+| SelectionMode | 获取或设置 Calendar 控件上的日期选择模式，指定用户可以选择单个日期、一周或整个月份 |
+| SelectMonthText | 获取或设置选择器列中月份选择元素的显示文本 |
+| SelectorStyle | 获取星期和月份选择器列的样式属性 |
+| SelectWeekText | 获取或设置选择器列中星期选择元素的显示文本 |
+| ShowDayHeader | 获取或设置一个值，指示是否显示星期几的标题 |
+| ShowGridLines | 获取或设置一个值，指示 Calendar 控件上的天数是否用网格线分隔 |
+| ShowNextPrevMonth | 获取或设置一个值，指示 Calendar 控件是否在标题部分显示上个月和下个月的导航元素 |
+| ShowTitle | 获取或设置一个值，指示是否显示标题部分 |
+| TitleFormat | 获取或设置标题部分的格式 |
+| TitleStyle | 获取 Calendar 控件标题的样式属性 |
+| TodayDayStyle | 获取 Calendar 控件上今天日期的样式属性 |
+| TodaysDate | 获取或设置今天日期的值 |
+| UseAccessibleHeader | 获取或设置一个值，指示是否对日标题渲染表格标题 <th> HTML 元素而不是表格数据 <td> HTML 元素 |
+| VisibleDate | 获取或设置指定要显示在 Calendar 控件上的月份的日期 |
+| WeekendDayStyle | 获取 Calendar 控件上周末日期的样式属性 |
+
+下一节是即时解决方案部分，其中您可以看到所有这些标准控件的实际应用。
+
+## 即时解决方案
+
+### 使用 Button 控件
+
+当您在 Web 页面上添加 Button 控件时，以下代码会添加到 Web 页面的源代码中：
+<asp:Button ID="Button1" runat="server" Text="Button" />
+
+现在，让我们创建一个名为 ButtonControl 的 Web 应用程序（也可在 CD-ROM 上获得）以显示 Button 控件的工作方式。您可以从工具箱的标准选项卡中通过拖放添加 Button 控件到 Web 页面，或在工具箱中双击它。在这些应用程序中，我们在 Button 控件的 Click 事件中设置 Label 控件的 Text 和 ForeColor 属性。
+
+> NOTE
+> 本章中的应用程序使用“新建网站”对话框中的 ASP.NET 空 Web 站点模板创建。创建应用程序后，您需要向应用程序添加 Default.aspx 页面。
+
+### Listing 14.1: 显示 Default.aspx 页面的代码
+
+```
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title> Button Control Example</title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Underline="True" Text="Button control example showing text on button click event"></asp:Label>
+<br />
+<br />
+<br />
+<asp:Button ID="Button1" runat="server" Font-Bold="True" onclick="Button1_Click" Text="Click Me, I will Welcome You !!" />
+&nbsp;<br />
+<br />
+<asp:Label ID="Label2" runat="server"></asp:Label>
+</div>
+</form>
+</body>
+</html>
+```
+
+现在，在 Default.aspx 页面的代码隐藏文件中添加 Listing 14.2 所示的代码
+
+### Listing 14.2: 显示 Default.aspx 页面的代码隐藏文件的代码
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+public partial class _Default : System.Web.UI.Page {
+protected void Page_Load(object sender, EventArgs e)
+{
+}
+protected void Button1_Click(object sender, EventArgs e)
+```
+
+```
+<asp:Label ID="Label1" runat="server" Text="Enter Password"></asp:Label>
+<br />
+<asp:TextBox ID="TextBox2" runat="server" TextMode="Password" Width="172px"></asp:TextBox>&nbsp; &nbsp;<br />
+<asp:TextBox ID="TextBox3" runat="server" Width="173px"></asp:TextBox><br />
+</div>
+</form>
+</body>
+</html>
+```
+
+# NOTE
+
+SingleLine TextMode 属性是 TextBox 控件的默认属性，不会出现在 Default.aspx 页面中。
+
+现在，在 Default.aspx 页面的代码隐藏文件中为 TextBox 控件添加 Listing 14.4 所示的代码：
+
+### Listing 14.4: 显示 Default.aspx 页面的代码隐藏文件的代码
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+public partial class _Default : System.Web.UI.Page {
+    protected void Page_Load(object sender, EventArgs e)
+    {
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        TextBox1.Text = "You have clicked the button";
+        TextBox4.Text = "This is a multi line textbox. This is a multi line textbox. This is a multi line textbox. This is a multi line textbox.";
+        TextBox3.Text = TextBox2.Text;
+    }
+}
+```
+
+现在，通过按 F5 键运行应用程序。单击 Click me 按钮后的输出如 Figure 14.2 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_719_0.png)
+
+### Figure 14.2: 显示 TextBox 控件的类型
+
+### 使用 Label 控件
+
+当您在 Web 页面上添加 Label 控件时，以下代码会添加到 Web 页面的源代码中：
+
+```
+<asp:Label ID="Label1" runat="server" Text="Label1"></asp:Label>
+```
+
+现在，让我们创建一个名为 LabelControl 的 Web 应用程序（也可在 CD-ROM 上获得）以显示 Label 控件的工作方式。您可以从工具箱的标准选项卡中通过拖放添加 Label 控件到 Web 页面，或在工具箱中双击它。在这些应用程序中，我们在 Page_Load 事件中设置 Label 控件的 Text 和 BackColor 属性。Listing 14.5 显示了 Label 控件的 Default.aspx 页面的代码：
+
+### Listing 14.5: 显示 Default.aspx 页面的代码
+
+```
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>Label Control Example</title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<asp:Label ID="Label1" runat="server" Text="Example showing some of the properties of the Label Control" Font-Bold="True" Font-Underline="True"></asp:Label>
+<br />
+<br />
+<asp:Label ID="Label3" runat="server"></asp:Label>
+<br />
+<br />
+<asp:Label ID="Label4" runat="server"></asp:Label>
+<br />
+</div>
+</form>
+</body>
+</html>
+```
+
+现在，在 Default.aspx 页面的代码隐藏文件中添加 Listing 14.6 所示的代码：
+
+### Listing 14.6: 显示 Default.aspx 页面的代码隐藏文件的代码
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        Label3.Text = "Welcome to the world of ASP.NET 4.0";
+        Label4.Text = "I have Olive Color";
+        Label4.BackColor = System.Drawing.Color.Olive;
+    }
+}
+```

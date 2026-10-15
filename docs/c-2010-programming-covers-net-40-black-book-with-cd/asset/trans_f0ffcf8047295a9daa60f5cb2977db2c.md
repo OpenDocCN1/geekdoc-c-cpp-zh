@@ -1,0 +1,110 @@
+
+
+System.Object
+    System.Web.UI.Control
+        System.Web.UI.WebControls.WebControl
+            System.Web.UI.WebControls.Panel
+                System.Web.UI.WebControls.WebParts.Part
+                    System.Web.UI.WebControls.WebParts.EditorPart
+                        System.Web.UI.WebControls.WebParts.PropertyGridEditorPart
+
+PropertyGridEditorPart 控件的语法如下：
+
+PropertyGridEditorPart propgrid;
+
+PropertyGridEditorPart 类位于 System.Web.UI.WebControls.WebParts 命名空间中，且不能继承。该类包含 Title 和 Display 两个属性。Title 属性用于获取或设置 Web Parts 控件的标题文本，Display 属性用于确定当网页处于编辑模式时是否显示该控件。
+
+PropertyGridEditorPart 类中两个重要的方法是 ApplyChanges 和 SyncChanges。ApplyChanges 方法会将用户在 PropertyGridEditorPart 控件上设置的值保存到 Web Parts 控件的相应属性中。当用户单击编辑界面上的“确定”或“应用”按钮时，会调用此方法。如果 PropertyGridEditorPart 控件中的值成功保存到 WebPart 控件，则返回 true；如果值未保存到 WebPart 控件，则返回 false。SyncChanges 方法会更新 PropertyGridEditorPart 控件中的值，以便用户能够编辑这些属性的值。
+
+## BehaviorEditorPart 控件
+
+顾名思义，BehaviorEditorPart 控件提供了一些选项，使用户能够修改 Web Parts 控件的行为。该控件通常处于隐藏状态，仅当包含 Web Parts 控件的网页处于编辑模式时才可见。与其他 EditorPart 控件类似，BehaviorEditorPart 控件也包含在 EditorZone 控件中。
+
+BehaviorEditorPart 控件提供的各种选项如下：
+
+-   Description – 简要描述 Web Parts 控件的功能
+-   TitleUrl – 指定有关 Web Part 控件的附加信息的链接
+-   TitleIconImageUrl – 指定显示在 Web Part 控件标题栏中的图像
+-   CatalogIconImageUrl – 指定在控件目录中作为 Web Parts 控件代表的图像
+-   HelpUrl – 指定 Web Parts 控件帮助文件的链接
+-   HelpMode – 指定用于显示 Web Part 控件帮助内容的 UI 类型
+-   Hidden – 隐藏或显示 Web Parts 控件
+-   ImportErrorMessage – 获取或指定导入 Web Parts 控件时出现的错误消息
+-   ExportMode – 导出 Web Parts 控件的属性
+-   AuthorizationFilter – 指定一个字符串值，指示是否可以将 Web Parts 控件添加到网页
+-   AllowClose – 指定一个值，允许用户关闭网页上的 Web Parts 控件
+-   AllowEdit – 指定一个值，允许用户修改网页上的 Web Parts 控件
+-   AllowHide – 指定一个值，允许用户隐藏 Web Parts 控件
+-   AllowMinimize – 指定一个值，用于最小化 Web Parts 控件
+-   AllowZoneChange – 指定一个值，指示 Web Parts 控件是否可以在区域之间移动
+
+要将 BehaviorEditorPart 控件添加到网页，请将控件从工具箱拖放到 Default.aspx 页面的“设计”视图中的 EditorZone 控件上。图 16.20 显示了“设计”视图中 EditorZone 控件内部的 BehaviorEditorPart 控件：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_828_0.png)
+
+还可以通过在 Default.aspx 页面的 EditorZone 控件的 `<zonetemplate>` 元素中使用以下代码来添加 BehaviorEditorPart 控件：
+
+```
+```aspx
+<ZoneTemplate>
+    <asp:BehaviorEditorPart ID="BehaviorEditorPart1" runat="server" />
+</ZoneTemplate>
+```
+```
+
+BehaviorEditorPart 控件是 BehaviorEditorPart 类的对象。BehaviorEditorPart 控件用于修改网页中的 UI 属性，例如 Title、Link、Description 和 Help 链接。可以使用属于 System.Web.dll 程序集的 BehaviorEditorPart 类来添加 BehaviorEditorPart 控件。BehaviorEditorPart 类的命名空间层次结构如下所示：
+
+```
+```text
+System.Object
+    System.Web.UI.Control
+        System.Web.UI.WebControls.WebControl
+            System.Web.UI.WebControls.Panel
+                System.Web.UI.WebControls.WebParts.Part
+                    System.Web.UI.WebControls.WebParts.EditorPart
+                        System.Web.UI.WebControls.WebParts.BehaviorEditorPart
+```
+```
+
+BehaviorEditorPart 控件的语法如下：
+
+```
+```text
+BehaviorEditorPart behaviorA;
+```
+```
+
+BehaviorEditorPart 类派生自 EditorPart 类，后者用于修改关联的 Web Parts 控件的属性。BehaviorEditorPart 类从 Control 类继承各种方法、属性和事件，例如 ApplyStyle、Title 和 DataBinding。BehaviorEditorPart 类的重要属性列于表 16.35 中：
+
+| 属性 | 描述 |
+|---|---|
+| DefaultButton | 获取或设置 Panel 控件中包含的默认按钮的 ID |
+| Display | 获取一个值，该值指定当与 BehaviorEditorPart 控件关联的 Web Parts 控件处于编辑模式时，是否应显示该 BehaviorEditorPart 控件 |
+
+## 注意
+
+要在 Web Parts 控件之间创建连接，用户需要切换到 ConnectionDisplayMode，并从 Web Part 谓词菜单中选择连接谓词。
+
+ConnectionsZone 类的重要属性列于表 16.36 中：
+
+| 属性 | 描述 |
+|---|---|
+| `ConfigureConnectionTitle` | 获取或设置由 ConnectionsZone 控件创建的连接 UI 的标题文本。 |
+| `ConfigureVerb` | 获取对 WebPartVerb 对象的引用。可以使用此引用来打开连接 UI 中的配置视图。 |
+| `ConnectToConsumerInstructionText` | 获取或设置连接 UI 中供用户选择要连接到提供程序控件的使用者控件的部分所显示的文本。 |
+| `ConnectToConsumerText` | 获取或设置用户单击以选择连接的使用者控件的超链接文本。 |
+| `ConnectToConsumerTitle` | 获取或设置连接 UI 中供用户选择要连接的使用者控件的部分的标题文本。 |
+| `ConnectToProviderInstructionText` | 获取或设置连接 UI 中供用户选择要连接到使用者控件的提供程序控件的部分所显示的文本。 |
+| `ConnectToProviderText` | 获取或设置一个超链接文本，用户单击该文本可打开并选择连接的提供程序控件。 |
+| `CancelVerb` | 获取对 WebPartVerb 对象的引用，该对象使用户能够取消建立连接的过程。 |
+| `CloseVerb` | 获取对 WebPartVerb 对象的引用，该对象使用户能够关闭连接 UI。 |
+| `ConnectToProviderTitle` | 获取或设置连接 UI 中供用户选择要连接的特定提供程序控件的部分的标题文本。 |
+| `ConnectVerb` | 获取对 WebPartVerb 对象的引用，以允许两个 Web Parts 控件相互连接。 |
+| `ConsumersInstructionText` | 获取或设置当连接已存在时连接 UI 的使用者部分中包含的说明文本。 |
+| `ConsumersTitle` | 获取或设置当连接已存在时连接 UI 中使用者部分的标题文本。 |
+| `DisconnectVerb` | 获取对 WebPartVerb 对象的引用，以使用户能够断开两个已连接的 WebPart 控件。 |
+| `ExistingConnectionErrorMessage` | 获取或设置当现有连接中出现错误时在连接 UI 中显示的消息字符串。 |
+| `GetFromText` | 获取或设置连接 UI 中提供程序名称之前显示的文本。使用者使用此提供程序来检索数据。 |
+| `GetText` | 获取或设置连接 UI 中使用者名称之前显示的文本。此使用者从提供程序检索数据。 |
+| `InstructionTitle` | 获取或设置在连接 UI 中对使用者或提供程序控件执行的操作的说明文本，用于管理现有连接。 |
+

@@ -1,0 +1,209 @@
+
+```
+{
+    ListBox1.Items.Add(ex.Message);
+}
+}
+```
+
+在前面的代码中，请注意应用程序中包含的 XML 数据。随后，系统会根据员工的职位对数据进行排序。
+
+现在，按键盘上的 F5 键运行应用程序。单击“显示”按钮后，应用程序的输出如图 27.7 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_1373_0.png)
+
+## 创建示例扩展方法
+
+正如本章“深入探讨”部分所介绍的那样，扩展方法是一种特殊的静态方法。在 LINQ 中使用时，该方法会向现有方法添加查询功能。它以静态方法的形式定义，但使用实例方法语法进行调用。让我们使用扩展方法创建一个应用程序。创建一个网站并将其保存为 ExtensionMethod（可在光盘上获取）。现在，修改 Default.aspx 页面中的代码，如清单 27.8 所示：
+
+### 清单 27.8：显示 Default.aspx 页面的代码
+
+```
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<title>Using Extension Method</title>
+</head>
+<body>
+<form id="Form" runat="server">
+    <div id="header">
+        <h1>
+            C# 2010 Black Book
+        </h1>
+    </div>
+    <div id="content">
+        <div class ="itemContent">
+            Retrieves data using Extensions Method
+            <br />
+            <asp:ListBox ID="ListBox1" runat="server" Height="156px" style="margin-left: 1px; margin-top: 65px;" Width="191px"></asp:ListBox>
+            <br />
+            <br />
+            <asp:Button ID="Button1" runat="server" Text="Use Extension Methods" style="margin-left: 209px" Width="176px" onclick="Button1_Click" />
+        </div>
+    </div>
+</form>
+</body>
+</html>
+```
+
+修改源文件中的代码后，更改 Default.aspx 页面的代码隐藏文件中的代码，如清单 27.9 所示：
+
+### 清单 27.9：显示 Default.aspx 页面代码隐藏文件的代码
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            string[] words = {"lame", "name", "tame", "apple", "mango", "nice", "example", "parrot", "apricot", "banana"};
+            var result = Words.OrderBy(s => s);
+            ListBox1.Items.Clear();
+            foreach (var r in result)
+            {
+                ListBox1.Items.Add(r);
+            }
+        }
+        catch (Exception ex)
+        {
+            ListBox1.Items.Add(ex.Message);
+        }
+    }
+}
+```
+
+现在，按键盘上的 F5 键运行应用程序。当您单击“使用扩展方法”按钮时，应用程序的输出如图 27.8 所示：
+
+```
+</form>
+</body>
+</html>
+```
+
+修改源文件中的代码后，更改 Default.aspx 页面的代码隐藏文件中的代码，如清单 27.11 所示：
+
+### 清单 27.11：显示 Default.aspx 页面代码隐藏文件的代码
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        int[] numbers = { 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95 };
+
+        var myNums =
+            from n in numbers
+            where n > 25
+            select n;
+        foreach (var x in myNums)
+        {
+            ListBox1.Items.Add(x.ToString());
+        }
+    }
+}
+```
+
+清单 27.11 生成大于 25 的数字，这是在 where 子句中指定的条件。
+
+现在，按键盘上的 F5 键运行应用程序。单击“使用 where 子句”按钮后，应用程序的输出如图 27.9 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_1376_0.png)
+
+## 图 27.9：使用 where 子句显示输出
+
+## 类型筛选
+
+您可以使用 where 子句，通过 OfType() 扩展方法按特定类型筛选数据。现在，让我们创建一个应用程序，在其中使用 OfType() 扩展方法与 where 子句来筛选数据。创建一个网站并将其保存为 TypeFiltering（可在光盘上获取）。要添加所需控件，可以在清单 27.12 中找到 Default.aspx 页面的代码。
+
+### 清单 27.12：显示 Default.aspx 页面的代码
+
+```aspx
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="head1" runat="server">
+    <title>TypeFiltering Example</title>
+</head>
+<body>
+    <form id="form" runat="server">
+        <div id="header">
+            <h1>
+                C# 2010 Black Book
+            </h1>
+        </div>
+        <div id="content">
+            <div class="itemContent">
+                &nbsp;Retrieves data after filtering type of data<asp:ListBox ID="ListBox1" runat="server" Height="125px" style="margin-left: 98px; margin-top: 73px" Width="145px"></asp:ListBox>
+                <br />
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button1" runat="server" style="margin-left: 102px" Text="Type Filtering" Width="143px" onclick="Button1_Click1" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+```
+
+修改源文件中的代码后，更改 Default.aspx 页面的代码隐藏文件中的代码，如清单 27.13 所示：
+
+### 清单 27.13：显示 Default.aspx 页面代码隐藏文件的代码
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+    }
+    protected void Button1_Click1(object sender, EventArgs e)
+    {
+        object[] data = { 1, "one", 2, "two", 3, "three", 4, "four", 5, "five", 6, "six", 7, "seven", 8, "eight", 9, "nine", 10, "ten" };
+        var query = data.OfType<string>();
+        foreach (var s in query)
+        {
+            ListBox1.Items.Add(s);
+        }
+    }
+}
+```
+
+在前面的代码中，向输入中添加了字符串和整数类型的值。在 OfType() 方法中，指定了应将字符串类型的数据显示在网页上。
+
+现在，按键盘上的 F5 键运行应用程序。当您单击“类型筛选”按钮时，应用程序的输出如图 27.10 所示：
+
+![](img/e073a4882197be4ab61103cbe0bcb394_1378_0.png)
+
+图 27.10：显示 TypeFiltering 应用程序的输出
+
+## 使用 SelectMany() 子句
+
+SelectMany() 子句是 LINQ 中使用的一种投影运算符类型，用于定义投影，以根据选择器函数选择结果值。让我们创建一个应用程序，在其中使用 SelectMany() 子句显示数据。创建一个网站并将其保存为 ProjectionOperator（可在光盘上获取）。要添加所需控件，可以在清单 27.14 中找到 Default.aspx 页面的代码：

@@ -1,0 +1,23 @@
+# Digest Authentication
+
+It is same as Basic authentication, only with a better defense than Basic authentication. Unlike Basic authentication, in Digest authentication, the user name and password are not sent as plain text, rather they are sent as an MD5 message digest, which is a Message Digest 5 (MD5) hash. This MD5 hash makes it difficult for unauthenticated or unauthorized users to intercept. MD5 hash is an encrypted message that is sent in the HTTP header to the Web server. You will learn more about MD5 later in this chapter. The Web browser sends the MD5 hash to the Web server so that IIS can authenticate the user. The IIS furthers the MD5 hash to the Windows domain controller that then determines the authenticity of the user.
+
+To implement the Digest authentication in IIS, you need to ensure that both the Web server and client are part of the same domain. In addition, the Windows domain controller needs to have the reversible encryption enabled to authenticate users through Digest authentication.
+
+> NOTE
+> Digest authentication works only for those Web browsers that support the HTTP 1.1 protocol. Some examples of HTTP 1.1-compliant Web browsers include Internet Explorer 6, 7, and 8.
+
+Both the Basic and Digest authentication modes can provide security across proxy servers and firewalls. Moreover, to effectively implement Basic and Digest authentications, you need to first ensure that Anonymous authentication is disabled in IIS; otherwise, Anonymous authentication is used. Now, let's move on to learn about Forms authentication in IIS and ASP.NET.
+
+# Forms Authentication
+
+Consider an ASP.NET application that provides functionality to buy and sell online (that is, through the Internet). To have a secure and reliable transaction, the application needs to uniquely identify the numerous users who want to buy or sell. In such a situation, creating Windows user accounts for each and every user may not be feasible. Moreover, the users may not be aware of which Windows credentials to use for accessing the application. In such cases, you may want to allow the users to subscribe or register with custom credentials. You can store the valid credentials in a database at the back-end or in the application itself. To authenticate such users (who have non-Windows credentials), you need to allow them to provide their credentials for authentication process, which is not possible with Anonymous and Windows authentication modes. ASP.NET provides an authentication mode known as Forms authentication that is suitable for such situations.
+
+You can use Forms authentication to authenticate users who are independent of the Windows operating system. You can write your own code in the ASP.NET application to authenticate users. In Forms authentication, if a user attempts to access a Web page or resource, you can direct that user to another Web page (popularly known as the login page). The login page contains an HTML form on which the user needs to provide the credentials (user name and password) needed for authentication. When the login page is submitted to the Web server, the credentials are verified. If the user is authenticated, access to the requested Web page is granted to the user. In case the user is not authenticated, then the user is again directed to the login page to provide the correct credentials.
+
+> NOTE
+> When you use Forms authentication, the user name and password of the user are passed on to the Web server as plain text. Therefore, it is advisable to use SSL connections between the Web server and client while using Forms authentication.
+
+If the user is authenticated, an authentication cookie containing a ticket that holds the credentials of the authenticated user is sent to the user. When the user makes any subsequent requests, then this authentication ticket is sent to the Web server for re-identifying the user. The authentication cookies are generated depending on the Web browser, as there are some Web browsers that do not support cookies. In such cases, you can employ a cookieless Forms authentication. In case of cookieless authentication, the authentication ticket is encrypted and then sent to the user in the URL itself.
+
+When you are using Forms authentication in the ASP.NET application, you can enable Forms authentication in IIS. The Forms authentication in IIS facilitates authentication for both Windows and non-Windows users. Forms authentication in IIS allows security for even the non-ASP.NET content. Note that enabling Forms authentication alone in IIS results in an error as the user first needs to be authenticated by IIS, which is only possible through

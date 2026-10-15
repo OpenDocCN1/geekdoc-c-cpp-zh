@@ -1,0 +1,129 @@
+
+
+# 11
+
+# 使用 WPF 中的排版
+和文档
+
+![](img/e073a4882197be4ab61103cbe0bcb394_494_0.png)
+
+| 如果您需要立即解决以下问题： | 请参阅页码： |
+|---|---|
+| 使用排版 | 473 |
+| 使用文档 | 481 |
+
+## 深入探讨
+
+排版和文档是 Windows Presentation Foundation (WPF) 的两个基本组件。使用排版，您可以对文本应用不同的样式，例如显示特殊字符、为文本添加装饰、操作、换行、修剪和转换文本，以及对文本应用模糊效果。WPF 还提供了各种排版类，例如 TextDecoration、Typography、RotateTransform 和 TextEffect，以将不同的排版功能应用于文本。这些功能包括渲染文本并支持 OpenType 字体。文档组件允许您创建灵活且格式良好的文本。该组件位于 System.Windows.Documents 命名空间中。在 WPF 4.0 中，有两种类型的文档，固定文档和流文档。固定文档是排版完成且可直接打印的文档，其中所有内容的位置都是固定的。它们由 FixedDocument 类表示，其内容使用 DocumentViewer 控件显示。流文档旨在为用户提供更好的内容显示和可读性。流文档的内容在显示它的窗口被调整大小时会自动调整。在 WPF 4.0 中，主要的富文档功能包括创建、查看、管理和打印文档。
+
+在本章中，您将学习排版及其功能。您还将学习用于将排版功能应用于文本的一些重要类。接下来，您将学习 WPF 4.0 中可用的文档，包括固定文档和流文档。深入探讨部分中讨论的所有概念的实现在即时解决方案部分中展示。
+
+让我们开始学习排版。
+
+## 排版及其功能
+
+WPF 支持丰富的文本呈现，称为排版，用于在屏幕上显示文本。排版是使用各种类（如 RotateTransform、ScaleTransform、SkewTransform、TextEffect 和 BitmapEffect）设计和装饰文本的艺术。在 WPF 中，排版使用 Microsoft ClearType，这是一项由 Microsoft 开发的软件技术，用于提高液晶显示器 (LCD) 上文本的可读性，例如平板显示器、笔记本电脑屏幕和 Pocket PC 屏幕。WPF 中主要的排版功能包括文本渲染的质量和性能改进、OpenType 排版支持、增强的字体支持以及新的文本应用程序编程接口 (API)。在 WPF 4.0 中，排版提供以下功能：
+
+- 使用 Microsoft ClearType 渲染文本
+- 支持 OpenType 字体格式和国际字体
+- 增强的文本应用程序编程接口 (API)
+
+现在，让我们详细讨论排版的这些功能。
+
+### 使用 Microsoft ClearType 渲染文本
+
+在 WPF 中，文本使用 Microsoft ClearType 技术渲染，该技术包括各种增强功能，例如子像素定位、y 方向抗锯齿和硬件加速。ClearType 使用子像素渲染来增强文本的清晰度和可读性。它增加了文本显示中微小细节的清晰度；从而使您在长时间使用计算机工作时更容易，而不会真正使眼睛疲劳。ClearType 的 y 方向抗锯齿功能在文本的 x 轴和 y 轴上提供更好的分辨率。此功能平滑了文本的尖锐边缘，这些边缘会降低文本的可读性。ClearType 还提供硬件加速功能，通过减少中央处理单元 (CPU) 负载和系统内存需求来提高系统性能。
+
+### 支持 OpenType 字体格式和国际字体
+
+OpenType 字体格式由 Microsoft 和 Adobe 共同开发，是 TrueType 字体格式的扩展。它提供丰富的先进排版功能集合，例如风格化替代和花饰。花饰是与书法相关的装饰元素。它们用于短语，例如活动公告。在 WPF 中，排版通过提供以下功能来支持增强的国际文本字体：
+
+- 所有书写系统中的自动行距
+- 语言引导的行断开和连字符
+- 支持国际文本
+
+> 注意
+> TrueType 字体在计算机屏幕和打印机上提供最高质量的文本。
+
+### 增强的文本应用程序编程接口
+
+在 WPF 4.0 中，您可以在应用程序中包含文本时使用文本 API。这些 API 提供常见的用户界面 (UI) 控件，例如 Label、TextBlock 和 TextBox，以便您可以轻松地与文本交互。您还可以在应用程序中使用 RichTextBox 和 PasswordBox 控件进行更高级和专门的文本处理。您还可以使用文本 API 提供的各种类（如 TextRange、TextSelection 和 TextPointer）来执行文本操作。
+
+文本 API 还允许您使用 DrawingContext 对象的 DrawText 方法直接在应用程序中绘制文本。您需要创建一个 FormattedText 对象来使用 DrawText 方法。FormattedText 对象允许您绘制多行文本，以便您可以单独格式化文本的每个字符。此外，您可以使用 TextFormatter 对象和 System.Windows.Media.TextFormatting 命名空间中的其他类型来创建自定义文本布局。
+
+## 排版的重要类
+
+在 WPF 中，有一些重要的类支持排版及其功能。这些类是用于将排版功能应用于文本的重要元素。这使您可以提高文本质量并增强字体样式。排版的重要类如下：
+
+- TextDecoration 类
+- Typography 类
+- Transform 类
+- TranslateTransform 类
+- RotateTransform 类
+- ScaleTransform 类
+- SkewTransform 类
+- TextEffect 类
+- BitmapEffect 类
+
+让我们详细讨论这些类中的每一个，并查看它们的功能和属性。
+
+### TextDecoration 类
+
+TextDecoration 类用于装饰文本。WPF 中有四种文本装饰类型：下划线、基线、删除线和上划线。TextDecoration 类派生自 Animatable 类，有助于对文本应用动画效果。
+
+TextDecoration 类的继承层次结构如下：
+
+```
+System.Object
+  System.Windows.Threading.DispatcherObject
+    System.Windows.DependencyObject
+      System.Windows.Freezable
+        System.Windows.Media.Animation.Animatable
+          System.Windows.TextDecoration
+```
+
+以下代码片段显示了如何在 WPF 应用程序中添加 TextDecoration 类：
+
+```
+<TextDecoration .../>
+```
+
+TextDecoration 类提供各种属性，列于表 11.1：
+
+| 表 11.1：显示 TextDecoration 类的属性 |  |
+|---|---|
+| 属性 | 描述 |
+| CanFreeze | 检索一个值，该值指示对象是否可以更改。 |
+| DependencyObjectType | 检索包装当前实例的通用语言运行时 (CLR) 类型的 DependencyObjectType 对象。 |
+| Dispatcher | 检索与所引用 DispatcherObject 关联的 Dispatcher 对象。Dispatcher 按优先级为线程排队工作项。 |
+| HasAnimatedProperties | 检索一个值，该值指示是否有一个以上的 AnimationClock 对象与任何对象依赖属性相关联。AnimationClock 类维护输出值产生的时段的运行时状态。 |
+| IsFrozen | 检索一个值，该值指示对象是否可修改。 |
+| IsSealed | 检索一个值，该值指示 TextDecoration 类的实例当前是否处于只读模式。 |
+| Location | 检索或设置绘制文本装饰的垂直位置。 |
+| Pen | 获取或设置用于绘制文本装饰的 Pen 属性。 |
+| PenOffset | 获取或设置文本装饰的起始点。 |
+| PenOffsetUnit | 检索 PenOffset 值所表示的单位。 |
+| PenThicknessUnit | 检索 Pen 厚度所表示的单位。 |
+
+### Typography 类
+
+Typography 类提供对丰富的 OpenType 排版属性的访问。它有助于为所有文本应用一致的样式。您可以通过在标记或代码中设置排版属性，使用 OpenType 字体轻松在 WPF 中创建文档。Typography 对象公开 OpenType 字体支持的功能集。
+
+Typography 类的继承层次结构如下：
+
+```
+System.Object
+System.Windows.Documents.Typography
+```
+
+Typography 类提供一些更重要的属性，列于表 11.2：
+
+| 表 11.2：显示 Typography 类的属性 |  |
+|---|---|
+| 属性 | 描述 |
+| AnnotationAlternates | 获取或设置指定替代文本索引的值。 |
+| Capitals | 获取或设置 FontCapitals 枚举值，该值指示所选文本的大写形式。 |
+| CapitalSpacing | 获取或设置一个值，该值确定大写文本之间的间距是否全局调整以提高可读性。 |
+| CaseSensitiveForms | 获取或设置一个值，该值确定字形是否调整其垂直位置以与大写文本对齐。字形是以艺术方式表示文本的一种方式。 |
+| ContextualAlternates | 获取或设置一个值，该值确定是否可以根据所创建文本的上下文使用自定义字形形式来显示在文本上。 |
+
