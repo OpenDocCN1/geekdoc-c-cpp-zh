@@ -1,0 +1,2406 @@
+- pgno: 0
+  md: '# Design Patterns In C#
+
+
+    JEAN PAUL V.A
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Dedications
+
+
+    This book is the compilation of my last 1 year learning effort in Design Patterns.
+    It was a very interesting journey and I gained valuable assets towards my skill
+    sets.
+
+
+    I would like to thank for all the encouragements I received from my friends as
+    well as friends over c-sharpcorner.com.
+
+
+    Copyright © 2012 by Jean Paul V.A (www.jeanpaulva.com)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Contents
+
+
+    +   1. SINGLETON PATTERN .........................................................
+    6
+
+    +   2. COMMAND PATTERN ...........................................................
+    9
+
+    +   3. ADAPTER PATTERN ...........................................................
+    15
+
+    +   4. DECORATOR PATTERN .........................................................
+    18
+
+    +   5. STRATEGY PATTERN ...........................................................
+    22
+
+    +   6. TEMPLATE METHOD PATTERN ...................................................
+    25
+
+    +   7. VISITOR PATTERN ............................................................
+    30
+
+    +   8. OBSERVER PATTERN ...........................................................
+    34
+
+    +   9. BUILDER PATTERN ............................................................
+    38
+
+    +   10. CHAIN OF RESPONSIBILITY PATTERN ............................................
+    41
+
+    +   11. ABSTRACT FACTORY PATTERN ...................................................
+    46
+
+    +   12. FACTORY METHOD PATTERN ....................................................
+    49
+
+    +   13. FLYWEIGHT PATTERN ..........................................................
+    53
+
+    +   14. PROXY PATTERN ..............................................................
+    57
+
+    +   15. FACADE PATTERN .............................................................
+    61
+
+    +   16. STATE PATTERN ..............................................................
+    63
+
+    +   17. ITERATOR PATTERN ...........................................................
+    66
+
+    +   18. MEDIATOR PATTERN ...........................................................
+    70
+
+    +   19. MEMENTO PATTERN ............................................................
+    74
+
+    +   20. PROTOTYPE PATTERN ..........................................................
+    78
+
+    +   21. BRIDGE PATTERN .............................................................
+    82'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '22. INTERPRETER PATTERN .........................................................85
+
+
+    23. COMPOSITE PATTERN ...........................................................90
+
+
+    REFERENCES........................................................................93
+
+
+    SOURCE CODE .......................................................................93
+
+
+    CONCLUSION .......................................................................94'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 1. Singleton Pattern
+
+
+    This is most popular pattern among the 23 Design Patterns. This pattern talks
+    about efficient instance management.
+
+
+    # Challenge
+
+
+    You are working on an application which requires Logging information into a file
+    named **Application.Log**. The logging is managed by a class named **LogManager**.
+    The LogManager through its constructor keeps a lock on the File.
+
+
+    The LogManager instance an be created throughout the application and it will result
+    in Exceptions. Above that there is only instance requirement for the LogManager
+    class.
+
+
+    The above problem can be solved using Singleton Pattern.
+
+
+    # Definition
+
+
+    > GoF Definition: "Ensure a class only has one instance, and provide a global
+    point of access to it"
+
+
+    # Implementation
+
+
+    To implement the specification above we have to perform the following:
+
+
+    +   - Make the Constructor Private and Create only 1 Instance
+
+    +   - Create a Static Property to Access the Instance
+
+
+    Following is the modified class definition according to Singleton Pattern.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_5_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "Following is the code contained in LogManager class.\n\n```\n```csharp\npublic\
+    \ class LogManager\n{\n    private static LogManager _instance;\n\n    public\
+    \ static LogManager Instance\n    {\n        get\n        {\n            if (_instance\
+    \ == null)\n                _instance = new LogManager();\n\n            return\
+    \ _instance;\n        }\n    }\n\n    private LogManager()  // Constructor as\
+    \ Private\n    {\n        _fileStream = File.OpenWrite(GetExecutionFolder() +\
+    \ \"\\\\Application.log\");\n        _streamWriter = new StreamWriter(_fileStream);\n\
+    \    }\n\n    private FileStream _fileStream;\n    private StreamWriter _streamWriter;\n\
+    \n    public void WriteLog(string message)\n    {\n        StringBuilder formattedMessage\
+    \ = new StringBuilder();\n        formattedMessage.AppendLine(\"Date: \" + DateTime.Now.ToString());\n\
+    \        formattedMessage.AppendLine(\"Message: \" + message);\n\n        _streamWriter.WriteLine(formattedMessage.ToString());\n\
+    \        _streamWriter.Flush();\n    }\n\n    public string GetExecutionFolder()\n\
+    \    {\n        return Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);\n\
+    \    }\n}\n```\n```\n\nYou can see that the constructor is private here. As it\
+    \ is private outside classes cannot create instance of LogManager.\n\n```\n```csharp\n\
+    private LogManager()  // Constructor as Private\n{\n    --\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "You can see the new Instance property which is static. It also ensures only\
+    \ one instance is created.\n\n```\npublic static LogManager Instance\n{\n    get\n\
+    \    {\n        if (_instance == null)\n            _instance = new LogManager();\n\
+    \n        return _instance;\n    }\n}\n```\n\nFor invoking the write method we\
+    \ can use the following code:\n\n```\nLogManager.Instance.WriteLog(\"Test Writing\"\
+    );\n```\n\nFollowing image depicts the Number of Instances in Singleton and Normal\
+    \ Scenario.\n\n![](img/10a39e9a5b1ae55cb003d638eba7aaa0_7_0.png)\n\nThe advantage\
+    \ of using Singleton is listed below:\n\n+   - Instance Reuse makes Effective\
+    \ Memory Management\n+   - File Locking Overheads are Avoided\n\nThe limitations\
+    \ of Singleton are listed below:\n\n+   - Making Constructor as Private impose\
+    \ Restrictions\n+   - More Overheads in Multi-threaded usage (But Thread Safe\
+    \ in .Net)\n\n# Summary\n\nIn this chapter we have seen what is Singleton pattern\
+    \ and a possible implementation of it using C#.NET. Multiton is another pattern\
+    \ which is often compared with Singleton."
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# 2. Command Pattern
+
+
+    In this chapter I am trying to show the usage of Command Design Pattern. This
+    is a popular pattern and it is making use of good object oriented constructs and
+    simplifies the logic of enabling Undo functionality in our applications.
+
+
+    # Challenge
+
+
+    You are working on a painting application. For each brush stroke you need to provide
+    the Undo feature.
+
+
+    The brushes presently available are square and rectangle. In future more and more
+    brushes will be available. Our challenge is to provide the user with Undo feature.
+    Clearly, on clicking the undo button, the last stroke should be cleared from the
+    canvas.
+
+
+    What would be your approach?
+
+
+    # Screen Shot of Application
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_8_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "# Class Diagram\n\n![](img/10a39e9a5b1ae55cb003d638eba7aaa0_10_0.png)\n\nWhen\
+    \ the application is executed, the user will be having a blank white screen, with\
+    \ a set of colors to choose from. The default brush selected will be Square and\
+    \ on clicking the canvas a new square will be drawn on the canvas. The default\
+    \ color selected is Blue and is stored in the variable _activeColor.\n\nThe form\
+    \ level variables declared are:\n\n```\nprivate ShapeEnum _activeShape = ShapeEnum.Square;\n\
+    private Color _activeColor = Color.Blue;\nprivate Bitmap _bitmap;\nprivate Graphics\
+    \ _graphics;\n```\n\nFor each mouse down operation a new square class will be\
+    \ created. That means if 10 clicks are made 10 square classes will be created\
+    \ and the Do() operation is called. An enumeration variable called _activeShape\
+    \ is used to keep track of the current shape selected by the user. The mouse down\
+    \ event would look like the following.\n\n```\nprivate void Canvas_MouseDown(object\
+    \ sender, MouseEventArgs e)\n{\n    // Each mouse down creates a new command class\
+    \ instance\n    ICommand command = null;\n    if (_activeShape == ShapeEnum.Square)\n\
+    \        command = new SquareCommand(_bitmap, _activeColor, e.X, e.Y);\n    else\
+    \ if (_activeShape == ShapeEnum.Rectangle)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "```\ncommand = new RectangleCommand(_bitmap, _activeColor, e.X, e.Y);\ncommand.Do();\n\
+    _commandStack.Push(command);\nRefreshUI();\n}\n```\n\nLet us take an example:\
+    \ assume the user clicked the mouse at Point X=100 and Y=200. As the _activeShape\
+    \ is Square, a new SquareCommand class instance is created with arguments e.X\
+    \ and e.Y. The remaining arguments are bitmap and the active color. Then the command\
+    \ instance would be pushed to a stack and the Do() operation is called.\n\nThe\
+    \ stack provides a storage for usage of the command instance later. The declaration\
+    \ of stack is:\n\n```\nprivate Stack<ICommand> _commandStack = new Stack<ICommand>();\n\
+    ```\n\n# Inside the SquareCommand Class\n\nWe can have a look on the Square class.\
+    \ Both the SquareCommand and RectangleCommand class will be having same implementations\
+    \ except in the Do() operation of drawing the respective shape.\n\n```\npublic\
+    \ class SquareCommand : ICommand\n{\n    private Point _point;\n    private Bitmap\
+    \ _bitmap;\n    private Graphics _graphics;\n    private Color _color;\n    public\
+    \ SquareCommand(Bitmap bitmap, Color color, int x, int y)\n    {\n        _bitmap\
+    \ = bitmap;\n        _graphics = Graphics.FromImage(_bitmap);\n        _color\
+    \ = color;\n        _point = new Point(x, y);\n    }\n\n    public void Do()\n\
+    \    {\n        // Save the current pixel colors for a future UNDO perform\n \
+    \       SaveCurrentPixels();\n        // Do the drawing\n        _graphics.FillRectangle(new\
+    \ SolidBrush(_color),\n            new Rectangle(_point.X, _point.Y, Width, Height));\n\
+    \    }\n    private const int Width = 50;\n    private const int Height = 50;\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "```\n```csharp\nprivate List<Color> _colors = new List<Color>();\nprivate void\
+    \ SaveCurrentPixels()\n{\n    for (int i = _point.X; i < _point.X + Width; i++)\n\
+    \        for (int j = _point.Y; j < _point.Y + Height; j++)\n            _colors.Add(_bitmap.GetPixel(i,\
+    \ j));\n}\n/// <summary>\n/// Perform Undo by restoring back the pixels to previous\
+    \ colors\n/// </summary>\npublic void Undo()\n{\n    int ix = 0;\n    for (int\
+    \ i = _point.X; i < _point.X + Width; i++)\n        for (int j = _point.Y; j <\
+    \ _point.Y + Height; j++)\n            _bitmap.SetPixel(i, j, _colors[ix++]);\n\
+    }\n```\n```\n\nThe constructor is called with the bitmap and the x, y positions\
+    \ which are then stored into class fields. When the Do() method is called the\
+    \ current pixel colors are saved into the _colors list. This would enable us to\
+    \ perform the Undo() method later. After that the graphics.FillRectangle() method\
+    \ is called to draw the square. The width and height of the square would be set\
+    \ to 50 pixels using the constants Width and Height respectively.\n\nThe Undo()\
+    \ method just restores the previous pixel values using the bitmap.SetPixel method()\
+    \ by iterating through each pixel starting from x, y position.\n\n# Performing\
+    \ the Undo() on clicking Undo button\n\nAs we encapsulated each operation to a\
+    \ class with parameters and logged them into the command stack, it is now easier\
+    \ to call the Undo() method. Please remind that on clicking the Undo button we\
+    \ have to get the last operation instance and call the Undo() method of it, and\
+    \ removing it from the stack.\n\nThe code for it is:\n\n```\n```csharp\nprivate\
+    \ void UndoButton_Click(object sender, EventArgs e)\n{\n    // Check command stack\
+    \ contains items\n    if (_commandStack.Count > 0)\n    {\n        // Remove the\
+    \ last command\n        ICommand lastCommand = _commandStack.Pop();\n        //\
+    \ Call the Undo method\n        lastCommand.Undo();\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "# 3. Adapter Pattern\n\nMost of you might have heard about Adapter Pattern.\
+    \ It is a pattern commonly used in our applications but without knowing it. Adapter\
+    \ Pattern is one among the 23 Design Patterns. In this chapter I would like to\
+    \ examine this pattern using a simple example.\n\n# Challenge\n\nYou are working\
+    \ on a Square class. You need to find the Area of it using Calculator class. But\
+    \ the Calculator class only takes Rectangle class as input. How to solve this\
+    \ scenario?\n\nHave\n\nRequired\n\n![](img/10a39e9a5b1ae55cb003d638eba7aaa0_14_0.png)\n\
+    \n![](img/10a39e9a5b1ae55cb003d638eba7aaa0_14_1.png)\n\n# Definition\n\nGoF Definition:\
+    \ \"Convert the interface of a class into another interface clients expect. Adapter\
+    \ lets classes work together that couldn't otherwise because of incompatible interfaces.\"\
+    \n\n# Implementation\n\nFollowing are the class definitions for Rectangle and\
+    \ Calculator.\n\n```\npublic class Rectangle\n{\n    public int Width;\n    public\
+    \ int Height;\n}\n\npublic class Calculator\n{\n    public int GetArea(Rectangle\
+    \ rectangle)\n    {\n        int area = rectangle.Width * rectangle.Height;\n\
+    \        return area;\n    }\n}\n```\n\nAs we can see from the above example an\
+    \ instance of Rectangle is needed to calculate the area. If we have a square class\
+    \ of definition below, the calculation cannot be done."
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "```\npublic class Square\n{\n    public int Size;\n}\n```\n\nHere we have to\
+    \ create a new CalculatorAdapter to get the work done.\n\n```\npublic class CalculatorAdapter\n\
+    {\n    public int GetArea(Square square)\n    {\n        Calculator calculator\
+    \ = new Calculator();\n\n        Rectangle rectangle = new Rectangle();\n    \
+    \    rectangle.Width = rectangle.Height = square.Size;\n\n        int area = calculator.GetArea(rectangle);\n\
+    \n        return area;\n    }\n}\n```\n\nThe CalculatorAdapter performs the following\
+    \ functions:\n\n+   - Takes the Square parameter\n+   - Convert Square to Rectangle\n\
+    +   - Call the original Calculator.GetArea() method\n+   - Return the value received\n\
+    \nThe invoking code is shown below:\n\n```\n// Create Square class and assign\
+    \ Size from UI\nSquare square = new Square();\nsquare.Size = SquarePanel.Width;\n\
+    \n// Use Adapter to calculate the area\nCalculatorAdapter adapter = new CalculatorAdapter();\n\
+    int area = adapter.GetArea(square);\n\n// Display the result back to UI\nResultLabel.Text\
+    \ = \"Area: \" + area.ToString();\n```\n\nOn running the sample application we\
+    \ can see the following results."
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '![](img/10a39e9a5b1ae55cb003d638eba7aaa0_16_0.png)
+
+
+    # Note
+
+
+    We can have other examples including Interfaces to show the above pattern. For
+    simplicity I have avoided the interfaces. In real life the AC to DC adapter is
+    an example of the Adapter pattern as it makes the incompatible device and power
+    supply work together.
+
+
+    # Summary
+
+
+    In this chapter we have explored Adapter pattern. This pattern is useful in scenarios
+    where incompatible types are dealt with. The associated source code contains the
+    example application we have discussed.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# 4. Decorator Pattern
+
+
+    In this chapter I would like to demonstrate the Decorator Pattern. It provides
+    a new way of adding responsibilities in the runtime and thus a good alternative
+    to sub classing.
+
+
+    # Challenge
+
+
+    You have an Album class today which is just blank now. Tomorrow the customer wants
+    a Christmas tree on that. You need to achieve this without modifying the Album
+    class.
+
+
+    How to achieve this during runtime?
+
+
+    # Definition
+
+
+    GoF Definition: "Attach additional responsibilities to an object dynamically.
+    Decorators provide a flexible alternative to sub classing for extending functionality"
+
+
+    # Closed for Modification and Open for Extension
+
+
+    One of the main challenges we face in development is Change. The Closed for Modification
+    and Open for Extension principle says a new functionality can be added by keeping
+    the original code unchanged.
+
+
+    # Example:
+
+
+    We will modify the original Album class to incorporate the Christmas tree on it.
+    This should not be the best approach. There is a better approach to this. We can
+    still keep the Album class unchanged and add the Christmas tree to it. Everything
+    happens in the runtime – that is the cool part of it.
+
+
+    # Some more examples
+
+
+    We can see real life controls like Form, Button etc. There would be a Form class
+    with built-in functionality. Still the user can use it and add new controls to
+    it / extend the functionality. Here we will be basically deriving from the existing
+    Form/Button class and add new methods or properties to it.
+
+
+    The difference between the above approach and Decorator pattern is that, in the
+    Decorator pattern, it is done during runtime.
+
+
+    # Conclusion on Change
+
+
+    So basically we can conclude that whenever changes are required, the possible
+    solutions could be:'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "+   - Change the original class\n+   - Subclass it and create instance of subclass\n\
+    +   - Use Decorator Pattern and still using the original class instance\n\nHere\
+    \ we are going to see how we can use Decorator Pattern to help with the following\
+    \ scenario.\n\n# Requirement\n\nThe requirement here would be to provide a default\
+    \ Album object and based on dynamic requirement from the user in runtime, we have\
+    \ to draw other pictures to the album.\n\n![](img/10a39e9a5b1ae55cb003d638eba7aaa0_18_0.png)\n\
+    \n# Design\n\nOur first class would be the Album class which has a Graphics object\
+    \ as parameter.\n\nIt contains a Draw() method which is virtual and just clears\
+    \ the graphics object.\n\n```\npublic class Album\n{\n    public Graphics Graphics\n\
+    \    {\n        get;\n        set;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "```\npublic Album()\n{\n}\n\npublic Album(Graphics graphics)\n{\n    Graphics\
+    \ = graphics;\n}\n\npublic virtual void Draw()\n{\n    Graphics.Clear(Color.White);\n\
+    }\n}\n```\n\n# Decorator\n\nWe are adding the class named AlbumDecorator which\
+    \ will serve as the base class for all decorators.\n\n```\npublic abstract class\
+    \ AlbumDecorator : Album\n{\n    protected Album _album;\n\n    public AlbumDecorator(Album\
+    \ album)\n    {\n        _album = album;\n    }\n\n    public override void Draw()\n\
+    \    {\n        _album.Draw();\n    }\n}\n```\n\nIt takes an Album class as parameter\
+    \ in the constructor.\n\nThere are ChristmasTreeDecorator, SantaClausDecorator,\
+    \ StarDecorator deriving from AlbumDecorator:\n\n```\npublic class ChristmasTreeDecorator\
+    \ : AlbumDecorator\npublic class SantaClausDecorator : AlbumDecorator\npublic\
+    \ class StarDecorator : AlbumDecorator\n```\n\nEach class deriving from AlbumDecorator\
+    \ has it's own picture to draw."
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# Invoking
+
+
+    In the main form we create an instance of Album class and assign it to form field
+    _album.
+
+
+    ```
+
+    private Album _album;
+
+    _album = new Album(_graphics);
+
+    _album.Draw();
+
+    ```
+
+
+    In the runtime, when user wants a Christmas Tree, an instance of ChristmasTreeDecorator
+    is created.
+
+
+    ```
+
+    _album = new ChristmasTreeDecorator(_album);
+
+    _album.Draw();
+
+    ```
+
+
+    In the above code we can see the same _album.Draw() method is called.
+
+
+    # How it works
+
+
+    Whenever we call the Draw() method of a decorator class, it in turns calls the
+    original Album.Draw(). After that it will call it''s own Draw() method. In this
+    way we can pass the same album instance to multiple decorators. If there are 10
+    decorators, all the decorator Draw() methods will be invoked.
+
+
+    You can test this by placing a breakpoint inside the StarDecorator Draw() method.
+
+
+    # Note
+
+
+    In the real world scenario we can use Decorator Pattern to calculate Taxes as
+    decorators for the Item Price. The Tax, Extra Tax etc. can be wrapped as decorators
+    around the original item price.
+
+
+    # Summary
+
+
+    Using decorator we can add dynamic responsibilities to an object in runtime. This
+    provides us the flexibility of creating an instance of decorators on an as-needed
+    basis. This would provide a real advantage in scenarios where the additional responsibility
+    increases the use of memory. The attachment contains the example we have discussed.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# 5. Strategy Pattern
+
+
+    In this chapter I would like to explore the flexibility of Strategy design pattern.
+
+
+    # Challenge
+
+
+    You are working on a Gaming application. The player can select between two different
+    guns:
+
+
+    +   1. Pistol having 5 bullets
+
+    +   2. Grenade Launcher having 20 bullets
+
+
+    In the normal coding scenario, if the gamer changes the gun we have to do lot
+    of if conditions
+
+    in the fire method, in the draw gun method, in the bullet animation methods.
+
+
+    How to do a better approach?
+
+
+    # Definition
+
+
+    GoF Definition: "Define a family of algorithms, encapsulate each one, and make
+    them interchangeable. Strategy lets the algorithm vary independently from clients
+    that use it"
+
+
+    # Implementation
+
+
+    We can avoid the above complications by switching to the Strategy pattern. Our
+    solution would be: Extract the difference implementations into appropriate classes
+    and switch between the classes.
+
+
+    # Code Explained
+
+
+    The core classes involved are:
+
+
+    +   - Gamer
+
+    +   - PistolGun implementing IGun
+
+    +   - GrenadeLauncher implementing IGun
+
+
+    Whenever the user changes the gun the Gamer.Gun property is switched between PistolGun
+    and GrenadeLauncher instances.
+
+
+    Here the IGun interface extracts the part which differs for different guns.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "```\npublic interface IGun\n{\n    void Fire();\n\n    void Draw();\n\n   \
+    \ int Bullets { get; set; }\n\n    PictureBox GunBox { get; set; }\n\n    PictureBox\
+    \ BulletBox { get; set; }\n}\n```\n\nThe Gamer class which maintains the Gun and\
+    \ refreshes the Picture Box would be looking like:\n\n```\npublic class Gamer\n\
+    {\n    private Label _bulletsLabel;\n\n    public Gamer(Label bulletsLabel)\n\
+    \    {\n        _bulletsLabel = bulletsLabel;\n    }\n\n    private IGun _gun;\n\
+    \n    public IGun Gun\n    {\n        get { return _gun; }\n        set { _gun\
+    \ = value; RefreshGunInfo(); }\n    }\n\n    private void RefreshGunInfo()\n \
+    \   {\n        _gun.Draw();\n        ShowBulletsInfo();\n    }\n\n    private\
+    \ void ShowBulletsInfo()\n    {\n        _bulletsLabel.Text = \"Bullets: \" +\
+    \ _gun.Bullets.ToString();\n    }\n\n    public void Fire()\n    {\n        _gun.Fire();\n\
+    \n        ShowBulletsInfo();\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# 6. Template Method Pattern
+
+
+    Template Method is a widely used design pattern and it provides great flexibility
+    in our designs. This is one of my favourite patterns.
+
+
+    # Challenge
+
+
+    You are creating machines for creating Pizza and Burger. When we look closely
+    we can see all the machines have some operations in common and in the same order.
+
+
+    +   - Start
+
+    +   - Produce
+
+    +   - Stop
+
+
+    The Start operation consists of turning on the machines, do the system check for
+    any troubles and turning on the indicators.
+
+
+    The Produce operation does the respective production of item.
+
+
+    The Stop operation shutdowns the internal workings of the machine, turns off the
+    indicators and power offs the machine.
+
+
+    The challenge is to create more machines like Cheese Burger, Pan Pizza with less
+    custom implementations. We need to take care that the duplicate codes are avoided
+    in our design.
+
+
+    # Definition
+
+
+    GoF Definition: "Define the skeleton of an algorithm in an operation, deferring
+    some steps to subclasses. Template Method lets subclasses redefine certain steps
+    of an algorithm without changing the algorithm’s structure"
+
+
+    # Implementation
+
+
+    We can see that all the operation appears in the same sequence. Often the Start
+    and Stop operation are common to both Pizza and Burger machines.
+
+
+    So we can define a skeleton of algorithm (or the order of invocation) like below:
+
+
+    +   1. Start
+
+    +   2. Produce
+
+    +   3. Stop'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "We can see all the machines have this order of execution. Only the Produce\
+    \ operation will be different.\n\nSo creating an Execute() method to incorporate\
+    \ this would look like:\n\n```\npublic class Machine\n{\n    public void Execute()\n\
+    \    {\n        Start();\n        Produce();\n        Stop();\n    }\n}\n```\n\
+    \nBy calling the Execute() method we can invoke all the 3 methods in the right\
+    \ order. Keeping the Execute() method in the base class as public, we can create\
+    \ Produce() method as virtual so that it can be overridden. For more customization\
+    \ we are making all the 3 methods as virtual.\n\n# Note\n\nFor virtual methods,\
+    \ a default implementation will be provided in the base class. The derived class\
+    \ may/may not override it.\n\nFor abstract methods, we need to override them in\
+    \ the derived class. There won’t be any default implementation in the base class.\n\
+    \nThe modified Machine class will look like below:\n\n```\npublic class Machine\n\
+    {\n    public void Execute()\n    {\n        Start();\n        Produce();\n  \
+    \      Stop();\n    }\n\n    protected virtual void Start()\n    {\n        Trace.WriteLine(\"\
+    Machine.Starting..\");\n    }\n\n    protected virtual void Produce()\n    {\n\
+    \        Trace.WriteLine(\"Machine.Producing..\");\n    }\n\n    protected virtual\
+    \ void Stop()\n    {\n        Trace.WriteLine(\"Machine.Stopping..\");\n    }\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "Please note the class uses **virtual** keyword so that the derived classes\
+    \ can override.\n\nThe derived class PizzaMachine will look like:\n\n```\npublic\
+    \ class PizzaMachine : Machine\n{\n    protected override void Produce()\n   \
+    \ {\n        Trace.WriteLine(\"PizzaMachine.Producing..\");\n    }\n}\n```\n\n\
+    The derived class BurgerMachine will look like:\n\n```\npublic class BurgerMachine\
+    \ : Machine\n{\n    protected override void Produce()\n    {\n        Trace.WriteLine(\"\
+    BurgerMachine.Producing..\");\n    }\n}\n```\n\nPlease note that both of them\
+    \ derives from **Machine** class and use the keyword **override** to custom implement\
+    \ the Produce() method.\n\n# Execution\n\nNow we can execute the PizzaMachine\
+    \ using the Execute() method of base class.\n\n```\nnew PizzaMachine().Execute();\n\
+    ```\n\nLet us examine how the order of execution works.\n\n+   1. Machine.Execute()\
+    \ is invoked\n+   2. Machine.Start() is invoked\n+   3. PizzaMachine.Produce()\
+    \ is invoked\n+   4. Machine.Stop() is invoked\n\nPlease note the step 3 above,\
+    \ in which the execution shifts from Machine class to PizzaMachine class. This\
+    \ is the power of Template Method pattern. Here the order of execution is maintained\
+    \ and a custom production is done.\n\n# Note\n\nThe underlying detail of how the\
+    \ above code works goes to Virtual Method Table (VMT) where the base class method\
+    \ address is kept in a table. The derived classes will be having a new address\
+    \ for the derived method. This will be replacing the original base class method\
+    \ address.\n\nThe control flow is depicted in the image below."
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '![](img/10a39e9a5b1ae55cb003d638eba7aaa0_27_0.png)
+
+
+    # Test Application
+
+
+    A test application is created with a GUI using WinForms.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_27_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Summary
+
+
+    In this chapter we have seen the advantage of Template Method design pattern and
+    the problem it tries to address. The source code contains the classes and application
+    explained.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "# 7. Visitor Pattern\n\nVisitor Pattern is one among the 23 design patterns.\
+    \ It is less known but holds a good idea for OOPs enthusiasts.\n\n# Challenge\n\
+    \nYou are having a list of objects with the following class structure:\n\n```\n\
+    public class Member\n{\n    public string Name;\n    public DateTime DateOfBirth;\n\
+    }\n```\n\nYou need to do an operation of selecting all Member having age greater\
+    \ than 18.\n\nOne way of the solution is add a new property called IsAboveEighteen\
+    \ and set the value by iterating over the items and comparing with current date.\
+    \ But this requires more processing.\n\nWe can achieve the same using Visitor\
+    \ pattern by adding a property which operations on the existing properties and\
+    \ returns the value.\n\n# Definition\n\nGoF Definition: \"Represent an operation\
+    \ to be performed on the elements of an object structure. Visitor lets you define\
+    \ a new operation without changing the classes of the elements on which it operates\"\
+    \n\n# Implementation\n\nIntroducing a new property named IsAboveEighteen and in\
+    \ the getter implement the code to read DateOfBirth property to calculate the\
+    \ value.\n\n```\npublic class Member\n{\n    public string Name;\n    public DateTime\
+    \ DateOfBirth;\n\n    public bool IsAboveEighteen\n    {\n        get\n      \
+    \  {\n            bool result = (DateTime.Now - this.DateOfBirth).TotalDays >\
+    \ 365 * 18;\n\n            return result;\n        }\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "In the above example, the new property explores the existing property values\
+    \ to calculate its own value. The advantage is that there is no change of structure\
+    \ and no extra operations to achieve the desired result.\n\n![](img/10a39e9a5b1ae55cb003d638eba7aaa0_30_0.png)\n\
+    \nThe following unit tests operate on the new property and display the result\
+    \ having IsAboveEighteen as true.\n\n```\n[TestMethod()]\npublic void IsAboveEighteenTest()\n\
+    {\n    IList<Member> list = new List<Member>()\n    {\n        new Member() {\
+    \ Name = \"N1\", DateOfBirth= new DateTime(2000, 1, 1) },\n        new Member()\
+    \ { Name = \"N2\", DateOfBirth= new DateTime(2000, 1, 1) },\n        new Member()\
+    \ { Name = \"N3\", DateOfBirth= new DateTime(1990, 1, 1) },\n        new Member()\
+    \ { Name = \"N4\", DateOfBirth= new DateTime(1980, 1, 1) }\n    };\n\n    var\
+    \ selectedList = list.Where(m => m.IsAboveEighteen);\n    foreach (Member member\
+    \ in selectedList)\n        Console.WriteLine(member.Name);\n\n    Assert.AreEqual(2,\
+    \ selectedList.Count());\n}\n```\n\nOn running the test we can see the following\
+    \ output."
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '![](img/10a39e9a5b1ae55cb003d638eba7aaa0_31_0.png)
+
+
+    # Extending Visitor in Sql Server
+
+
+    In Sql Server the same functionality can be achieve using Computed Columns. Even
+    though Vistor Pattern is an Object Oriented Extension we can use the concept in
+    database too.
+
+
+    Let us explore this with a simple example. We are having a table to store Transaction
+    having Quantity and Price. The table is populated with data. We need to get the
+    TotalPrice which is Quantity multiplied by Price. Without doing any data updating
+    we can use Computed Column as shown below to achieve the results.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_31_1.png)
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_31_2.png)
+
+
+    The result is shown below:'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '|  | Id | Item | Quantity | Price | TotalPrice |
+
+    |---|---|---|---|---|---|
+
+    | ▶ | 1 | Item1 | 10 | 5 | 50 |
+
+    |  | 2 | Item2 | 10 | 8 | 80 |
+
+    | * | NULL | NULL | NULL | NULL | NULL |
+
+
+    The above result is achieved without doing any data updating.
+
+
+    # Summary
+
+
+    In this chapter we have explored the Visitor pattern. It allows us to be add more
+    functionality without doing much change in the structure. Keeping this pattern
+    in mind often helps in a better way of architecting.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# ## 8. Observer Pattern\n\nIn this chapter we can discuss about the Observer\
+    \ design pattern. This pattern is a widely used one.\n\n# ### Challenge\n\nYou\
+    \ are working on an application where there is a color to be selected by the user.\
+    \ Based on the color selection n number of forms need to be notified. One way\
+    \ of achieving this is iterate through all the forms available and notify them.\
+    \ This results in unwanted iterations and notifications.\n\nHow to provide a better\
+    \ solution?\n\n# ### Definition\n\n> GoF Definition: \"Define a one-to-many dependency\
+    \ between objects so that when one object changes state, all its dependents are\
+    \ notified and updated automatically\"\n\n# ### Implementation\n\nWe can use the\
+    \ Observer pattern for solving the above problem. Subject and Observers are the\
+    \ key terms of the pattern. Here Color acts as the subject.\n\nThe Observer pattern\
+    \ is to notify the interested observers about some change occurred. We can add\
+    \ more observers in runtime as well as remove them.\n\nExample: We have a form\
+    \ to select the color. For each color change we need to update the entire application.\
+    \ There will be observers listening to the color change event for updating themselves.\n\
+    \n# ### Subject and Observers\n\nThe two important key terms in the pattern are\
+    \ Subject and Observer.\n\nSubject is the object which holds the value and takes\
+    \ responsibility in notifying the observers when the value is changed. The subject\
+    \ could be a database change, property change or so.\n\nWe can conclude that the\
+    \ subject contains the following method implementations.\n\n```\npublic interface\
+    \ ISubject\n{\n    void Register(IObserver observer);\n    void Unregister(IObserver\
+    \ observer);\n\n    void Notify();\n}\n```\n\nThe Observer is the object listening\
+    \ to the subject's change. Basically it will be having its own updating/calculating\
+    \ routine that runs when get notified."
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "```\npublic interface IObserver\n{\n    void ColorChanged(Color newColor);\n\
+    }\n```\n\nIn the above example, we are using an observer interface which has a\
+    \ ColorChanged method. So the interested observers should implement this interface\
+    \ to get notified.\n\nThere will be only one Subject and multiple number of Observers.\n\
+    \n# Registering and Unregistering\n\nIn the above interface, the observer can\
+    \ use the Register() method to get notified about changes. Anytime, it can unregister\
+    \ about notifications using the Unregister() method.\n\n# Notifying\n\nThe Notify()\
+    \ method will take care of calling the listening observers.\n\n# Associations\n\
+    \nThe Subject and Observer objects will be having a one-to-many association.\n\
+    \n![](img/10a39e9a5b1ae55cb003d638eba7aaa0_34_0.png)\n\n# Using the Code\n\nThe\
+    \ associated code is having a main form, where the Subject would be a class named\
+    \ ColorSubject."
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Screen Shot of Application
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_36_0.png)
+
+
+    On running the associated project, we can see a color selector form, which acts
+    as the subject. All the other forms are observers listening to the ColorChanged
+    event.
+
+
+    # Note
+
+
+    The multicast event model in .Net can also be considered as an observer pattern.
+    Here the interested parties register a method with the subject (might be a button)
+    and whenever the button is clicked (an event) it invokes the registered observers
+    (subscribers)
+
+
+    # Summary
+
+
+    In this chapter we have seen what Observer pattern is and an example implementation.
+    The attachment contains the source code of the application we have discussed.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Code Explained
+
+
+    Following is the screen shot of the main class named Robot. The class contains
+    a property called Peripherals which can be used to configure the peripherals added:
+    like CPU as Intel, Monitor as Samsung etc.
+
+
+    After adding the peripherals, we can call the Create() method. It will iterate
+    through the Peripherals dictionary and calls the appropriate methods to integrate
+    the peripherals. This allows us to choose the peripherals at run time as well
+    as the sequence too.
+
+
+    If the Peripheral dictionary contains CPU then the AssembleCPU() method is invoked.
+
+
+    If the Peripheral dictionary contains Monitor then the AssembleMonitor() method
+    is invoked.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "```\n```csharp\npublic partial class Robot : UserControl\n{\n    /// <summary>\n\
+    \    /// Dictionary containing Peripheral and the option\n    /// </summary>\n\
+    \    public Dictionary<Peripheral, string> Peripherals = new Dictionary<Peripheral,\
+    \ string>();\n\n    /// <summary>\n    /// The core method used to create different\
+    \ representations\n    /// </summary>\n    public void Create()\n    {\n     \
+    \   while (true)\n        {\n            // Create new Computer\n            _computer\
+    \ = new Bitmap(Image.Computer);\n\n            foreach (Peripheral peripheral\
+    \ in Peripherals.Keys)\n            {\n                if (peripheral == Peripheral.Processor)\n\
+    \                    AssembleCPU(Peripherals[peripheral]);\n\n               \
+    \ if (peripheral == Peripheral.Monitor)\n                    AssembleMonitor(Peripherals[peripheral]);\n\
+    \n                if (peripheral == Peripheral.Speakers)\n                   \
+    \ AssembleSpeakers(Peripherals[peripheral]);\n            }\n\n            AddToStore();\n\
+    \        }\n    }\n}\n```\n```\n\nThe class Peripheral is an enumeration as following:\n\
+    \n```\n```csharp\npublic enum Peripheral\n{\n    Processor,\n    Monitor,\n  \
+    \  Speakers\n}\n```\n```\n\n# Summary\n\nIn this chapter we have seen the usage\
+    \ of Builder pattern. The attachment contains the source code of example we have\
+    \ discussed."
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# 10. Chain of Responsibility Pattern
+
+
+    Chain of Responsibility is one among the 23 Design Patterns by Gang of Four. It
+    is an interesting pattern and similar to Observer pattern. In this chapter we
+    are exploring the Chain of Responsibility pattern.
+
+
+    I am using the same Challenge and Solution style for explaining this pattern.
+
+
+    # Challenge
+
+
+    You are working on an application in which the **Logic** class generates various
+    messages. The messages are of two types.
+
+
+    +   - Normal Priority
+
+    +   - High Priority
+
+
+    The Normal Priority messages are to be processed by **Logger** class and High
+    Priority messages by **Emailer** class.
+
+
+    You have to make the design in such a way that the **Logic** class need not think
+    about right handler of the message. It will just send the message.
+
+
+    How the design will proceed?
+
+
+    # Definition
+
+
+    > GoF Definition: "Avoid coupling the sender of a request to its receiver by giving
+    more than one object a chance to handle the request. Chain the receiving objects
+    and pass the request along the chain until an object handles it"
+
+
+    # Control Flow
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_40_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# Implementation\n\nFollowing is the definition for Logic class:\n\n```\npublic\
+    \ class Logic\n{\n    public IReceiver Receiver;\n\n    public void CreateMessage(Message\
+    \ message)\n    {\n        if (Receiver != null)\n            Receiver.HandleMessage(message);\n\
+    \    }\n}\n```\n\nWe can see from the above code that the Logic class has a property\
+    \ of type IReceiver. On the CreateMessage method this Receiver is used to handle\
+    \ the message. So only one receiver is registered by the Logic class instance.\n\
+    \nFollowing are the definition of Message class and MessagePriority enumeration:\n\
+    \n```\npublic class Message\n{\n    public string Text;\n    public MessagePriority\
+    \ Priority;\n}\n```\n\n```\npublic enum MessagePriority\n{\n    Normal,\n    High\n\
+    }\n```\n\nFollowing are the Receiver Interface and Implementation classes:\n\n\
+    ```\npublic interface IReceiver\n{\n    bool HandleMessage(Message message);\n\
+    }\n```\n\n```\npublic class Logger : IReceiver\n{\n    private IReceiver _nextReceiver;\n\
+    \n    public Logger(IReceiver nextReceiver)\n    {\n        _nextReceiver = nextReceiver;\n\
+    \    }\n\n    public bool HandleMessage(Message message)\n    {\n        if (message.Priority\
+    \ == MessagePriority.Normal)\n        {\n            Trace.WriteLine(message.Text\
+    \ + \" : Logger processed it!\");\n            return true;\n        }\n     \
+    \   else\n        {\n            if (_nextReceiver != null)\n                _nextReceiver.HandleMessage(message);\n\
+    \        }\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "```\n```csharp\nreturn false;\n}\n}\n\npublic class Emailer : IReceiver\n{\n\
+    \    private IReceiver _nextReceiver;\n\n    public Emailer(IReceiver nextReceiver)\n\
+    \    {\n        _nextReceiver = nextReceiver;\n    }\n\n    public bool HandleMessage(Message\
+    \ message)\n    {\n        if (message.Priority == MessagePriority.High)\n   \
+    \     {\n            Trace.WriteLine(message.Text + \" : Emailer processed it!\"\
+    );\n            return true;\n        }\n        else\n        {\n           \
+    \ if (_nextReceiver != null)\n                _nextReceiver.HandleMessage(message);\n\
+    \        }\n\n        return false;\n    }\n}\n```\n```\n\nFrom the above code\
+    \ we can see that each receiver class checks the message priority and processes\
+    \ it. If the priority is not matching it is send to the next receiver in the chain.\n\
+    \nHere each receiver takes care of passing the unprocessed message. The next receiver\
+    \ is stored through the constructor of each receiver.\n\nThe chain will be executed\
+    \ until:\n\n+   - Message is processed\n+   - Receiver chain exhausted\n\n# Code\
+    \ Execution\n\nThe windows forms application attached can be used to test the\
+    \ control flow."
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '![](img/10a39e9a5b1ae55cb003d638eba7aaa0_43_0.png)
+
+
+    Here the chain is built as following:
+
+
+    +   - Logic class holds first receiver which is Logger
+
+    +   - Logger class holds the next receiver which is Emailer
+
+    +   - Emailer class have null receiver denoting end of chain
+
+
+    Following code depicts the above chain creation:
+
+
+    ```
+
+    Logic logic = new Logic();
+
+    logic.Receiver = new Logger(new Emailer(null));
+
+    ```
+
+
+    Note: Please note that the advantage of this pattern is decoupling of sender and
+    receiver. The sender does not think about the right receiver. Instead it will
+    pass the request and the appropriate receiver should process it. The above example
+    can be written using a list of receivers in the Logic class with a Boolean property
+    mentioning whether the message is processed or not.
+
+
+    # Comparing Observer and Chain of Responsibility
+
+
+    In the case of Observer pattern all the registered receivers will get the request.
+    Each of the receivers is interested in processing it. But in chain of responsibility
+    the request is passed until it is not processed.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# Observer
+
+
+    # Chain of Responsibility
+
+
+    All observers
+
+    handles message
+
+
+    Only one receiver
+
+    handles message
+
+
+    # Summary
+
+
+    In this chapter we have explored Chain of Responsibility pattern with a C# example.
+
+    The associated source code contains the example we discussed.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "# 11. Abstract Factory Pattern\n\nIn this chapter I would like to explain the\
+    \ Abstract Factory pattern. This pattern is essential for learning the Factory\
+    \ Method and Bridge patterns.\n\n# Challenge\n\nYou are working on an ORM (Object\
+    \ Relational Mapping) framework creation. The framework could be used in different\
+    \ databases like:\n\n+   - Sql Server\n+   - Oracle\n+   - MS Access\n+   - OleDb\n\
+    \nBased on the database type, you need to create related classes like:\n\n+  \
+    \ - SqlConnection, SqlCommand when Sql server\n+   - OracleConnection, OracleCommand\
+    \ when Oracle etc.\n\nHow to create a family of related objects without implementation\
+    \ of them?\n\n# Definition\n\nGoF Definition: \"Provide an interface for creating\
+    \ families of related or dependent objects without specifying their concrete classes\"\
+    \n\n# Implementation\n\nOur idea is to create an interface which contains all\
+    \ related objects like:\n\n```\npublic abstract class DbProviderFactory\n{\n \
+    \   public abstract DbConnection CreateConnection();\n    public abstract DbCommand\
+    \ CreateCommand();\n}\n```\n\nLuckily, ADO.NET already includes the same interface\
+    \ as Abstract Factory. The The definition is given below: (I have excluded some\
+    \ irrelevant methods from it)\n\n```\nnamespace System.Data.Common\n{\n    public\
+    \ abstract class DbProviderFactory\n    {\n        public virtual DbCommand CreateCommand();\n\
+    \        public virtual DbCommandBuilder CreateCommandBuilder();\n        public\
+    \ virtual DbConnection CreateConnection();\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '```
+
+    public virtual DbDataAdapter CreateDataAdapter();
+
+    public virtual DbParameter CreateParameter();
+
+    }
+
+    }
+
+    ```
+
+
+    From the above code we can see that the related classes are includes as a family
+    without going to the implementation details.
+
+
+    The abstract class DbProviderFactory contains related classes which are abstract:
+    DbCommand, DbConnection etc.
+
+
+    # Concrete Implementations
+
+
+    ADO.NET provides the following implementations of the above abstract class DbProviderFactory.
+
+
+    +   - `System.Data.SqlClient.SqlClientFactory`
+
+    +   - `System.Data.OleDb.OleDbFactory`
+
+
+    The above classes implements all abstract methods from the base class. Thus it
+    will be providing concrete implementations of DbConnection which is SqlConnection,
+    DbCommand which is SqlCommand etc.
+
+
+    Instantiating from the above classes, we can start using the concrete implementations
+    like following code.
+
+
+    ```
+
+    SqlClientFactory factory = SqlClientFactory.Instance;
+
+
+    DbConnection connection = factory.CreateConnection();
+
+    DbCommand command = factory.CreateCommand();
+
+
+    command.Connection = connection;
+
+    command.CommandText = "query here";
+
+    command.ExecuteNonQuery();
+
+    ```
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_46_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Summary
+
+
+    In this chapter we have seen the usage of Abstract Factory pattern through inbuilt
+    ADO.NET DbProviderFactory class. In the next chapter of Factory Method pattern
+    the above discussed code will be used. So I am not attaching any source code with
+    this chapter.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "# 12. Factory Method Pattern\n\nIn the previous chapter you might have read\
+    \ about Abstract Factory. It says about abstracting a class with related objects.\
+    \ In this chapter we are discussing on Factory Method pattern. I am using the\
+    \ same ADO.NET Provider Factory class as example. Let us see the challenge and\
+    \ evolve to the solution.\n\n# Challenge\n\nYou are working on a windows application.\
+    \ The application has 2 types of users based on the database license they have:\
+    \ Sql Server or Oracle.\n\nSo for each database operation you need to create the\
+    \ right database classes based on an enumeration DatabaseType.\n\n```\npublic\
+    \ void InsertRecord()\n{\n    if (AppContext.DatabaseType == DatabaseType.SqlServer)\n\
+    \    {\n        SqlConnection connection = new SqlConnection();\n        SqlCommand\
+    \ command = new SqlCommand();\n\n        command.Connection = connection;\n  \
+    \      command.ExecuteNonQuery();\n    }\n    else if (AppContext.DatabaseType\
+    \ == DatabaseType.Oracle)\n    {\n        OracleConnection connection = new OracleConnection();\n\
+    \        OracleCommand command = new OracleCommand();\n\n        command.Connection\
+    \ = connection;\n        command.ExecuteNonQuery();\n    }\n}\n```\n\nThe above\
+    \ code seems to be complex and needs repeating for each database operation spread\
+    \ throughout the application.\n\nHow to stop the repeating code and make things\
+    \ better?\n\n# Definition\n\nGoF Definition: \"Define an interface for creating\
+    \ an object, but let subclasses decide which class to instantiate. Factory method\
+    \ lets a class defer instantiation to subclasses\"\n\n# Implementation\n\nThe\
+    \ above problem can be resolved using Factory Method pattern. Here we provide\
+    \ an abstract class for defining the structure and associating all related objects\
+    \ (using Abstract Factory). Then the sub classes will be created deriving from\
+    \ this abstract class. The sub classes decide which classes to be instantiated."
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "The advantage is more quality and less code. Here we have to define an abstract\
+    \ class named DbProviderFactory. (already ADO.NET contains it)\n\n```\npublic\
+    \ abstract class DbProviderFactory\n{\n    public virtual DbCommand CreateCommand();\n\
+    \    public virtual DbCommandBuilder CreateCommandBuilder();\n    public virtual\
+    \ DbConnection CreateConnection();\n    public virtual DbDataAdapter CreateDataAdapter();\n\
+    \    public virtual DbParameter CreateParameter();\n}\n```\n\nThen from the above\
+    \ abstract class we can derive concrete classes.\n\n```\npublic class SqlClientFactory\
+    \ : DbProviderFactory\n{\n    public override DbConnection CreateConnection()\n\
+    \    {\n        return new SqlConnection();\n    }\n\n    public override DbCommand\
+    \ CreateCommand()\n    {\n        return new SqlCommand();\n    }\n}\n```\n\n\
+    You can see from the above code SqlConnection() and SqlCommand() objects are created\
+    \ and supplied for DbConnection and DbCommand types respectively. Here DbConnection\
+    \ and DbCommand are other abstract classes.\n\nSimilary the Oracle implementation\
+    \ follows:\n\n```\npublic class OracleClientFactory : DbProviderFactory\n{\n \
+    \   public override DbConnection CreateConnection()\n    {\n        return new\
+    \ OracleConnection();\n    }\n\n    public override DbCommand CreateCommand()\n\
+    \    {\n        return new OracleCommand();\n    }\n}\n```\n\n# Replacing the\
+    \ Original Code\n\nNow we are ready to replace our Insert() method code with the\
+    \ Factory Method classes. Here we are using an AppInit() code to create the factory\
+    \ which will be used throughout the application.\n\n```\npublic void AppInit()\n\
+    {\n    if (AppContext.DatabaseType == DatabaseType.SqlServer)\n        AppContext.DbProviderFactory\
+    \ = SqlClientFactory.Instance;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "```\nelse if (AppContext.DatabaseType == DatabaseType.Oracle)\n    AppContext.DbProviderFactory\
+    \ = OracleClientFactory.Instance;\n}\n\n// NewInsertRecord method\nprivate void\
+    \ NewInsertRecord()\n{\n    DbConnection connection = AppContext.DbProviderFactory.CreateConnection();\n\
+    \    DbCommand command = AppContext.DbProviderFactory.CreateCommand();\n\n   \
+    \ command.Connection = connection;\n    command.ExecuteNonQuery();\n}\n```\n\n\
+    From the above code you can see that using Factory Method the code is reduced\
+    \ considerably but at a cost of new classes. The pattern provides much flexibility\
+    \ on adding a new database. (if another customer with PostgreSQL arrives ☺)\n\n\
+    # Abstract and Concrete Derivation\n\nThe following image depicts the relation\
+    \ between the abstract and concrete classes we have discussed."
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '![](img/10a39e9a5b1ae55cb003d638eba7aaa0_51_0.png)
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_51_1.png)
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_51_2.png)
+
+
+    # Note
+
+
+    ADO.NET already includes the DbProviderFactory abstract class and concrete classes
+    like SqlClientFactory, OleDbFactory etc. Additionally, using an ORM like Entity
+    Framework automatically takes care of the database switching. The scenario mentioned
+    here is for learning purposes.
+
+
+    # Summary
+
+
+    In this method we have seen the Factory Method pattern. The example we discussed
+    is included with the attachment.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# 13. Flyweight Pattern
+
+
+    In this chapter we are discussing about Flyweight Design Pattern. It is one among
+    the 23 design patterns and provides an improved way of managing objects.
+
+
+    # Challenge
+
+
+    You are working on an Id Card Creation web application. The application has 1
+    lakh Student records for which Id Cards to be created.
+
+
+    Following is the StudentCard class that performs the id card generation. We need
+    to call the GenerateIdCard() method to get the Id Card image after assigning the
+    student Name, Address, Photo properties. Each card image generated is saved to
+    file system.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_52_0.png)
+
+
+    The problem is the 1 Lakh class instances created. How to reduce the number of
+    instances?
+
+
+    # Definition
+
+
+    GoF Definition: "Use sharing to support large numbers of fine-grained objects
+    efficiently"
+
+
+    # Implementation
+
+
+    Using Flyweight pattern we can solve the above problem. We can see from the above
+    problem that at a time only one instance is needed.
+
+
+    We can use only one instance of StudentCard class and share it inside the loop
+    to assign the properties and generate id card.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: 'The pattern is advisable on:
+
+
+    +   - To reduce the number of instances
+
+    +   - Sharing properties which are common
+
+
+    This was the old process:
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_53_0.png)
+
+
+    Here depending on the Student count, instances of StudentCard are created.
+
+
+    This will be the new process:
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_53_1.png)
+
+
+    Here only 1 instance of StudentCard is created.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Drawbacks
+
+
+    Although the Flyweight pattern solves many problems, I would like to list some
+    of the possible drawbacks of using it.
+
+
+    +   - More configuration code is needed to switch between properties
+
+    +   - Reduces performance in a multi-threaded environment if locks are used
+
+
+    # Summary
+
+
+    In this chapter we have explored Flyweight design pattern. The pattern helps us
+    in reducing system resources if correctly used. The associated source code contains
+    the example we have discussed. Please let me know your comments on the chapter.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# 14. Proxy Pattern
+
+
+    In this chapter we are going to discuss about Proxy design pattern. It is one
+    among the 23 design patterns by Gof. As usual we can start with the Challenge
+    and Solution style.
+
+
+    # Challenge
+
+
+    You are working on automating Excel COM objects. The business logic has to think
+    too much about instantiating COM, doing ground works before calling the actual
+    functionalities etc.
+
+
+    The same code could get replaced by DCOM tomorrow. So the Excel access code is
+    spread throughout your application. How to do a better design?
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_56_0.png)
+
+
+    # Definition
+
+
+    GoF Definition: "Provide a surrogate or placeholder for another object to control
+    access to it"
+
+
+    # Implementation
+
+
+    We can solve the above problem by using a Proxy pattern. As the definition says,
+    we will have to create a placeholder or wrapper around the original object to
+    control access to it. In this way we can make the following advantages:
+
+
+    +   - Talk to COM or DCOM Excel object by changing configuration in one place
+
+    +   - Give application a simple interface to talk with Excel COM/DCOM
+
+    +   - Feel application think like it is talking to a local object
+
+
+    # Application
+
+
+    Following is the application with data:'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "![](img/10a39e9a5b1ae55cb003d638eba7aaa0_57_0.png)\n\n# Old Code\n\nFollowing\
+    \ is the old code where application is forced to think too much about the Excel\
+    \ COM object and method of assigning values to the cells.\n\n```\n//Start Excel\
+    \ and get Application object.\nMicrosoft.Office.Interop.Excel.Application oXL\
+    \ = new Microsoft.Office.Interop.Excel.Application();\noXL.Visible = true;\n\n\
+    //Get a new workbook.\nMicrosoft.Office.Interop.Excel._Workbook oWB = (Microsoft.Office.Interop.Excel._Workbook)\
+    \ oXL.Workbooks.Add(Missing.Value);\nMicrosoft.Office.Interop.Excel._Worksheet\
+    \ oSheet = (Microsoft.Office.Interop.Excel._Worksheet)oWB.ActiveSheet;\n\n//Add\
+    \ table headers going cell by cell.\noSheet.Cells[1, 1] = \"Name\";\noSheet.Cells[1,\
+    \ 2] = \"Address\";\noSheet.Cells[1, 3] = \"Salary\";\n\n//Format A1:D1 as bold,\
+    \ vertical alignment = center.\noSheet.get_Range(\"A1\", \"C1\").Font.Bold = true;\n\
+    oSheet.get_Range(\"A1\", \"C1\").VerticalAlignment = Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignCenter;\n\
+    \nint i = 2;\nforeach (Employee employee in _list)\n{\n    string[] values = new\
+    \ string[3];\n    values[0] = employee.Name;\n    values[1] = employee.Address;\n\
+    \    values[2] = employee.Salary.ToString();\n```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "```\noSheet.get_Range(\"A\" + i.ToString(), \"C\" + i.ToString()).Value = values;\n\
+    \    i++;\n}\n\noXL.Visible = true;\noXL.UserControl = true;\n```\n\nThe problem\
+    \ with above code is too much Excel logic is mixed with the application logic.\
+    \ Now we can see the new code with proxy pattern implemented.\n\n# New Code with\
+    \ Proxy Pattern\n\n```\nExcelProxy proxy = new ExcelProxy();\nproxy.Save(_list);\n\
+    ```\n\nThe code is only 2 lines and the Excel COM object creation, cell value\
+    \ assigning etc are taken care by the ExcelProxy class.\n\n![](img/10a39e9a5b1ae55cb003d638eba7aaa0_58_0.png)\n\
+    \n# Application Execution\n\nOn executing the application we can see the results\
+    \ inside Microsoft Excel."
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '![](img/10a39e9a5b1ae55cb003d638eba7aaa0_59_0.png)
+
+
+    # Other Examples of Proxy Pattern
+
+
+    We can have many real world examples which implement the Proxy pattern. When we
+    add a WCF reference a Proxy is created. This class takes care of the connection
+    details, serialization etc.
+
+
+    # Summary
+
+
+    In this chapter we have seen the usage of Proxy design pattern along with an example.
+    The source code attached contains the example we have discussed.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "# 15. Facade Pattern\n\nIn this chapter I would like to explore the Façade\
+    \ design pattern. The actual pronunciation is fu’saad. The dictionary meaning\
+    \ of the word Façade is “A showy misrepresentation intended to conceal something\
+    \ unpleasant”\n\nNow let us enter the challenge..\n\n# Challenge\n\nYou are working\
+    \ on a database application. Frequently you need to execute UPDATE and DELETE\
+    \ SQL queries. Each time there is a need to create the SqlConnection and SqlCommand\
+    \ class, assign the connection to command and execute the query.\n\nThe series\
+    \ of activities looks like:\n\n```\nSqlConnection connection = new SqlConnection(\"\
+    connection string\");\nSqlCommand command = new SqlCommand();\ncommand.Connection\
+    \ = connection;\ncommand.CommandText = \"UPDATE Customer SET Processed=1\";\n\
+    command.ExecuteNonQuery();\n```\n\nYou need to repeat the same code wherever execute\
+    \ queries are required. How to make this code better?\n\n# Definition\n\nGoF Definition:\
+    \ \"Provide a unified interface to a set of interfaces in a system. Facade defines\
+    \ a higher-level interface that makes the subsystem easier to use\"\n\n# Implementation\n\
+    \nUsing Façade, we can improve the situation. We can find only the query is different\
+    \ in each case – the parameters like connection string is common for the entire\
+    \ application.\n\n```\nSQLFacade.ExecuteSQL(\"UPDATE query here..\");\n```\n\n\
+    After using the Façade the code will look like above.\nThe complicated code is\
+    \ being pulled to the background SQLFacade class.\n\n```\nnamespace FacadePattern\n\
+    {\n    public class SQLFacade\n    {\n        public static bool ExecuteSQL(string\
+    \ sql)\n        {\n            SqlConnection connection = new SqlConnection(\"\
+    connection string\");\n            SqlCommand command = new SqlCommand();\n  \
+    \          command.Connection = connection;\n            command.CommandText =\
+    \ sql;\n            command.ExecuteNonQuery();\n```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '```
+
+    return true;
+
+    }
+
+    }
+
+    ```
+
+
+    Façade pattern makes code better as depicted in the image below:
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_61_0.png)
+
+
+    # Summary
+
+
+    In this chapter we have seen how to use the Façade pattern to improve our code.
+    It is similar to the use of reusable functions and it pulls out the complications
+    and provides an easier interface for use. The associated code contains the classes
+    we have discussed.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '```
+
+    return false;
+
+    }
+
+    }
+
+    return false;
+
+    }
+
+    }
+
+    ```
+
+
+    In the AddJob() method we can see the new job is taken only if the JobState is
+    in Ready state. Here true will be returned by the method. If there is another
+    job running, then the new job will not be queued and false will be returned.
+
+
+    Thus the object Job changes the behavior based on the internal state.
+
+
+    # Application
+
+
+    The associated application contains the classes we discussed.
+
+    On executing the windows application and clicking the Assign Job button, you can
+
+    see the following screen:
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_63_0.png)
+
+
+    While a job is in process, we cannot add another job. If a try is made the response
+    is:
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_63_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# Summary
+
+
+    In this chapter we have seen about State Pattern. The attachment file contains
+    the source code of the application we have discussed.'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "# 17. Iterator Pattern\n\nIn this chapter we are going to discuss about the\
+    \ Iterator design pattern. Most of the Object Oriented Languages nowadays supports\
+    \ this pattern through their core language infrastructure.\n\n> Iterator Pattern\n\
+    > \n> Provide a way to access the elements of an aggregate object sequentially\
+    \ without exposing its underlying representation\n\n# Challenge\n\nYou are working\
+    \ on a Name printing application. You have to deal with a Bank class with the\
+    \ following properties.\n\n```\npublic class Bank\n{\n    public string ManagerName\n\
+    \    {\n        get;\n        set;\n    }\n\n    public string AccountantName\n\
+    \    {\n        get;\n        set;\n    }\n\n    public string CashierName\n \
+    \   {\n        get;\n        set;\n    }\n}\n```\n\nFor printing the name the\
+    \ Print() method is called as following:\n\n```\nPrint(_bank.Manager);\nPrint(_bank.Accountant);\n\
+    Print(_bank.Cashier);\n```\n\nNow there is an addition of Branch type Bank to\
+    \ the above Bank object. Now the situation has become more complex. How to do\
+    \ a better approach?"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "# Definition\n\nGoF Definition: \"Provide a way to access the elements of an\
+    \ aggregate object sequentially without exposing its underlying representation\"\
+    \n\n# Implementation\n\nWe can improve the above Challenge Situation using the\
+    \ Iterator pattern. Instead of calling Print() method each time, we can use an\
+    \ Iterator to get the names inside Bank Object.\n\nWe are introducing a new class\
+    \ named **BankIterator** which implements IEnumerable:\n\n```\npublic class BankIterator\
+    \ : IEnumerable\n{\n    private IList _list = new ArrayList();\n\n    public BankIterator(Bank\
+    \ bank)\n    {\n        _list.Add(bank.Manager);\n        _list.Add(bank.Accountant);\n\
+    \        _list.Add(bank.Cashier);\n    }\n\n    public IEnumerator GetEnumerator()\n\
+    \    {\n        return _list.GetEnumerator();\n    }\n}\n```\n\nThe class uses\
+    \ and ArrayList ito hold the Manager, Accountant, Cashier names. As it is inheriting\
+    \ IEnumerable it has to implement the GetEnumerator() method. Luckily we can send\
+    \ the list.GetEnumerator() for the same.\n\nThe new Print() method invocation\
+    \ looks like below:\n\n```\nBankIterator iterator = new BankIterator(_bank);\n\
+    foreach (string name in iterator)\n    Print(name);\n```\n\nThis improves the\
+    \ situation in the following ways:\n\n+   - Easier Names access through Iteration\n\
+    +   - More flexibility in introducing new Name properties in the Bank class\n\n\
+    Following is the snapshot of Class Diagrams:"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "![](img/10a39e9a5b1ae55cb003d638eba7aaa0_67_0.png)\n\n# Note\n\nFrom C# 2.0\
+    \ onwards the Iterator pattern is implemented using foreach. The foreach allows\
+    \ sequential accessing of the elements inside a collection. The IEnumerator interface\
+    \ is used to implement the Iterator pattern.\n\n```\npublic interface IEnumerator\n\
+    {\n    object Current { get; }\n    bool MoveNext();\n    void Reset();\n}\n```\n\
+    \nWhile executing the foreach, first the Reset() method is called to position\
+    \ to the first element of the collection. Then through each iteration the MoveNext()\
+    \ method is called. The Current property returns the current object from the collection.\
+    \ The IEnumerator interface implementation of array, List, HashSet etc. enables\
+    \ us to iterate over them using the same foreach loop.\n\n![](img/10a39e9a5b1ae55cb003d638eba7aaa0_67_1.png)\n\
+    \n# References\n\nhttp://msdn.microsoft.com/en-us/library/dscyy5s0(v=vs.80).aspx"
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Summary
+
+
+    In this chapter we have explored the Iterator pattern with an example in C#. The
+    pattern is already well implemented inside the language architecture of C#. We
+    can extend the pattern usage in our custom classes too. The examples we discussed
+    above are included in the source code attachment.'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# 18. Mediator Pattern
+
+
+    In this chapter I would like to take you through the advantage of using Mediator
+    Pattern. As always, Design Patterns if properly used gives us more flexibility
+    and manageability. Mediator Pattern is of no deviation from this property.
+
+
+    # Challenge
+
+
+    You are working on an Airline application managing flight validations. As you
+    might know before taking off the flight, it goes through a series of checks ensuring
+    the health of each component, the fuel level etc.
+
+
+    Our Flight class contains the following component classes
+
+
+    +   - Engine
+
+    +   - Wheels
+
+    +   - Cockpit
+
+    +   - Aviation
+
+
+    Each of the component class will be having a method named Start(). On invoking
+    the method, it will ensure that the current state of component is valid through
+    a method named IsReady(). If the IsReady() method returned true, the component
+    class checks the other component IsReady() method.
+
+
+    For example the Engine class ensures the Wheels and Aviation is in valid statue
+    by using the IsReady() method of Wheel and Aviation respectively. The Cockpit
+    in turn checks itself, Engine and the Aviation status. So there exists a coupling
+    between the classes and code duplications. The scenario will become worse on introducing
+    new components as classes.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_69_0.png)
+
+
+    How to make the code better?'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "# Definition\n\nGoF Definition: \"Define an object that encapsulates how a\
+    \ set of objects interact. Mediator promotes loose coupling by keeping objects\
+    \ from referring to each other explicitly, and it lets you vary their interaction\
+    \ independently\"\n\n# Implementation\n\nWe can improve the above situation by\
+    \ introducing the Mediator pattern. Through the introduction of Mediator the component\
+    \ classes won’t talk to each other. All the components communicate to a new Mediator\
+    \ class. The advantages are:\n\n+   - Loosely coupled components\n+   - Centralized\
+    \ Management\n+   - More Flexibility in changing code\n\nThe new approach will\
+    \ look like below:\n\n![](img/10a39e9a5b1ae55cb003d638eba7aaa0_70_0.png)\n\nHere\
+    \ the component parts will communicate with the Mediator class for providing the\
+    \ ready signal to proceed with.\n\n# Classes\n\nFollowing are the classes associated\
+    \ with the new implementation using Mediator Pattern.\n\n```\npublic class FlightMediator\n\
+    {\n    private Engine _engine;\n    private Aviation _aviation;\n    private Wheels\
+    \ _wheels;\n    private Cockpit _cockpit;\n\n    public FlightMediator(Engine\
+    \ engine, Aviation aviation, Wheels wheels, Cockpit cockpit)\n    {\n        _engine\
+    \ = engine;\n        _aviation = aviation;\n        _wheels = wheels;\n      \
+    \  _cockpit = cockpit;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "```\n```csharp\n}\n\npublic bool IsReady()\n{\n    return _engine.IsReady()\
+    \ && _aviation.IsReady() && _wheels.IsReady() &&\n           _cockpit.IsReady();\n\
+    }\n}\n\npublic class Engine\n{\n    public void Start()\n    {\n    }\n\n    public\
+    \ bool IsReady()\n    {\n        return true;\n    }\n}\n\npublic class Aviation\n\
+    {\n    private int _FuelLevel = 1000;\n\n    public bool IsReady()\n    {\n  \
+    \      return _FuelLevel > 5000; // Returns false as not enough fuel\n    }\n\
+    }\n\npublic class Wheels\n{\n    public bool IsReady()\n    {\n        return\
+    \ true;\n    }\n}\n\npublic class Cockpit\n{\n    public bool IsReady()\n    {\n\
+    \        return true;\n    }\n}\n```\n```\n\nPlease note that the Aviation class\
+    \ returns false for the IsReady() method. The FlightMediator constructor takes\
+    \ all the component classes as inputs. The IsReady() method checks all the associated\
+    \ component’s IsReady() method to ensure validations are right.\n\nOn running\
+    \ the Windows Forms application, you can see the following screen."
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '![](img/10a39e9a5b1ae55cb003d638eba7aaa0_72_0.png)
+
+
+    Clicking on the FlightMediator button you can see the color changing to red as
+    the status returned is false.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_72_1.png)
+
+
+    # Summary
+
+
+    In this chapter we have explore the Mediator pattern. The example is provided
+    in a simple problem scenario, but the real world problems will be much complicated.
+    For example a Wizard Page Framework where each page has to think about the previous
+    and next pages could be made better using the Mediator pattern. The associated
+    source code is attached with the chapter.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# 19. Memento Pattern
+
+
+    In this chapter I would like to experiment with the Memento pattern. Memento pattern
+    provides an Object Oriented way of saving the state of an object. The state called
+    as Memento can be used to restore the object later.
+
+
+    The English meaning of Memento is Reminder of Past Events.
+
+
+    # Challenge
+
+
+    You are working on a Drawing application which allows the user to draw lines on
+    a Canvas. The user should be able to Save the state on particular intervals so
+    any further mistakes could be undone. You need to provide a solution for the problem.
+
+
+    # Definition
+
+
+    GoF Definition: "Without violating encapsulation, capture and externalize an object’s
+    internal state so that the object can be restored to this state later"
+
+
+    # Implementation
+
+
+    The above problem can be solved using the Memento Pattern. This pattern as said
+    in the definition saves the internal state of the object for restoring later.
+    The object state is saved without violating Encapsulation.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_73_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: 'Following is the Drawing class definition:
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_74_0.png)
+
+
+    The AddLine() method allows to add line on the graphics. These information are
+    stored inside the _list object as state.
+
+
+    The CreateMemento() allows to get a copy of the internal state without violating
+    Encapsulation.
+
+
+    The RestoreMemento() allows to restore the state to the given memento.
+
+
+    Following is the Memento class definition:
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_74_1.png)
+
+
+    It contains the State property to hold the State of Drawing class.
+
+
+    # Executing the Application
+
+
+    You can try executing the attached application. After executing draw a series
+    of lines in the Canvas and use the Save button to save the memento.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'Now try to add some unwanted lines:
+
+
+    Use the Restore State to get the old valid state.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '![](img/10a39e9a5b1ae55cb003d638eba7aaa0_76_0.png)
+
+
+    So this concludes our application implementing Memento pattern.
+
+
+    # Comparing Command and Memento Patterns
+
+
+    The Command pattern also provides the Undo / Redo functionality by converting
+    actions to commands. The difference would be that the Command pattern stores each
+    action but the Memento pattern saves the state only on request. Additionally,
+    the Command pattern has Undo and Redo operations for each action, but the Memento
+    does not need that.
+
+
+    Depending on the scenario, Command / Memento pattern could be used.
+
+
+    # Summary
+
+
+    In this chapter we have explore the Memento pattern. The attached source code
+    contains the example we discussed.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# 20. Prototype Pattern
+
+
+    In this chapter I would like to explain the Prototype Pattern and C# support for
+    it. The prototype pattern provides an alternative to instantiating new objects
+    by copying the prototype of an existing one.
+
+
+    # Challenge
+
+
+    You are working on an application having setting stored in class Settings. The
+    properties of the class are assigned inside the constructor. It involves calling
+    the configuration file, security database, user profile database etc.
+
+
+    You need to pass the above instance to a component inside a library. The component
+    could play around with the properties so we need to send only another instance
+    of Settings. As the instance creation is expensive we need to create a copy of
+    the above instance.
+
+
+    What would be the best approach?
+
+
+    # Definition
+
+
+    GoF Definition: "Specify the kinds of objects to create using a prototypical instance,
+    and create new objects by copying this prototype"
+
+
+    # Solution
+
+
+    We can use the Prototype pattern to address this scenario. This pattern allows
+    us to create a new instance by prototyping an existing instance with required
+    properties.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_77_0.png)
+
+
+    Create new object and modify it. Create prototypes from modified object.
+
+
+    The System.object class includes new method named MemberwiseClone() which provides
+    a shallow copy of the current object. Shallow copy involves copying only'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "the value types. Coupled with ICloneable interface we can provide a Clone()\
+    \ method that invokes MemberwiseClone() for the Settings class.\n\n```\n```csharp\n\
+    public class Settings : ICloneable\n{\n    public Settings()\n    {\n        //\
+    \ Load ApplicationSettings from Configuration\n        // Load ThemeSettings from\
+    \ Database\n        // Load UserSettings from Database\n        Thread.Sleep(3000);\
+    \ // Simulate a delay for the above operations\n\n        ApplicationSettings\
+    \ = \"ApplicationSettings1\";\n        ThemeSettings = \"ThemeSettings1\";\n \
+    \       UserSettings = \"UserSettings1\";\n    }\n\n    public string ApplicationSettings\n\
+    \    {\n        get;\n        set;\n    }\n\n    public string ThemeSettings\n\
+    \    {\n        get;\n        set;\n    }\n\n    public string UserSettings\n\
+    \    {\n        get;\n        set;\n    }\n\n    public object Clone()\n    {\n\
+    \        return this.MemberwiseClone();\n    }\n\n    public override string ToString()\n\
+    \    {\n        return this.ApplicationSettings + \" \" +\n               this.ThemeSettings\
+    \ + \" \" +\n               this.UserSettings;\n    }\n}\n```\n```\n\n# Executing\
+    \ the Application\n\nNow we can try playing with the class instances. First we\
+    \ create an instance of Settings (which is a 3 second delay process). Later we\
+    \ take a clone of the Settings instance and modify the properties. We can see\
+    \ that the new instance was created using Clone() method.\n\n```\n```csharp\n\
+    static void Main(string[] args)\n{\n    Settings settings = new Settings();\n\
+    \    Settings settingsClone = (Settings)settings.Clone();\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '```
+
+    settingsClone.ApplicationSettings = "NewSettings"; // Change property
+
+    Console.WriteLine("INSTANCE 1: " + settings.ToString());
+
+    Console.WriteLine("INSTANCE 2: " + settingsClone.ToString());
+
+    Console.ReadKey(false);
+
+    }
+
+    ```
+
+
+    On executing the application we can see the following results.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_79_0.png)
+
+
+    We can see from the above code that:
+
+
+    +   1. Instance 1 was created using new keyword
+
+    +   2. Instance 2 was created using Clone() method
+
+    +   3. Changing of Instance 2 does not affect Instance 1
+
+
+    So this concludes our experiment with the Prototype pattern.
+
+
+    # References
+
+
+    http://sourcemaking.com/design_patterns/prototype
+
+
+    # Summary
+
+
+    In this chapter we have explored the Prototype pattern. The usage of Prototype
+    pattern can be summarized as:
+
+
+    +   - Faster instance creation with required properties
+
+    +   - The new keyword can be avoided in instance creation
+
+    +   - Provides an alternative to Abstract Factory pattern
+
+    +   - Runtime specification of instance properties'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# 21. Bridge Pattern
+
+
+    In this chapter we can explore the Bridge pattern which is commonly used in applications.
+
+
+    # Challenge
+
+
+    You are working on an abstract business class. The class needs to log information
+    to by writing to a file, email to user etc. We need to avoid tightly coupling
+    of the business class and logger as in future newer versions of logger might appear.
+
+
+    # Tightly Coupled Design
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_81_0.png)
+
+
+    How to achieve a decoupled solution?
+
+
+    # Definition
+
+
+    GoF Definition: "Decouple an abstraction from its implementation so that the two
+    can vary independently"
+
+
+    # Implementation
+
+
+    We can create an abstract class for representing the Logger. Let the abstract
+    business class hold reference to the new abstract Logger. In the runtime we can
+    specify the actual implementation instance of Logger class. (File writer or Emailer)
+    Following is the snapshot of the class diagram after using the Bridge Pattern:'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '![](img/10a39e9a5b1ae55cb003d638eba7aaa0_82_0.png)
+
+
+    Here the concrete Logger implementations derive from AbstractLogger class. The
+    concreate TransactionBL derives from AbstractBL class. The AbstractBL class is
+    holding reference to Logger (abstract Logger).
+
+
+    Using the Bridge Pattern as shown above, there is decoupling of the implementation
+    from its abstraction. It allows future extensibility to the Logger classes without
+    modifying the BL class.
+
+
+    # Code
+
+
+    Following is the code that invokes above Transaction and Logger classes.
+
+
+    ```
+
+    AbstractBL bl = new TransactionBL();
+
+    bl.Logger = new TextFileLogger();
+
+    bl.ProcessPayment();
+
+
+    bl.Logger = new EmailLogger();
+
+    bl.ProcessPayment();
+
+
+    Console.ReadKey(false);
+
+    ```
+
+
+    On running the application we can see the following output.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '![](img/10a39e9a5b1ae55cb003d638eba7aaa0_83_0.png)
+
+
+    Following is the coupling snapshot after using the Bridge Pattern.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_83_1.png)
+
+
+    # Note
+
+
+    We can see that this pattern is a simple implementation using an abstract class
+    and interface. The Bridge Pattern is having some similarity with Strategy Pattern
+    as both involve changing the implementation in the runtime. Here the class is
+    abstract when compared with Strategy pattern.
+
+
+    # Summary
+
+
+    In this chapter we have explored the Bridge design pattern. It provides convenient
+    way for separating the abstraction from implementation through a bridge of abstract
+    class or interface. The attached source code contains the example we discussed.'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# 22. Interpreter Pattern
+
+
+    In this chapter I would like to demonstrate the usage of Interpreter pattern.
+    This is not a widely used pattern but reveals a good way of programming. It says
+    about creating a language along with an interpreter for the language. The language
+    can be used to represent states, actions, loops etc. depending on the programming
+    requirement. Here we are using the pattern to resolve a persistence problem.
+
+
+    # Challenge
+
+
+    You are working on a Drawing application which allows creating lines and circles
+    on a canvas. The classes Line and Circle do the job for you. You need to communicate
+    the drawing with multiple users who have their own copy of the application. The
+    current persistence of drawing using serialization of the above classes is creating
+    large sized files and does not allow sending the message over a chat window. How
+    to provide a better solution for persistence with smaller size and easier communication?
+
+
+    # Definition
+
+
+    GoF Definition: "Given a language, define a representation for its grammar along
+    with an interpreter that uses the representation to interpret sentences in the
+    language"
+
+
+    # Implementation
+
+
+    We can use the Interpreter pattern to approach the problem. We need to construct
+    a language to include the commands and an interpreter to execute the actions.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_84_0.png)
+
+
+    Following are the classes involved for our drawing application:
+
+
+    +   - A Line Class
+
+    +   - A Circle Class'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "The body of the Interpreter Execute() method is given below:\n\n```\npublic\
+    \ void Execute(string commands, Graphics graphics)\n{\n    graphics.Clear(Color.FromArgb(237,\
+    \ 253, 200));\n\n    int i = 0;\n\n    foreach (string rawCommand in commands.Split(';'))\n\
+    \    {\n        string command = rawCommand.Replace(Environment.NewLine, string.Empty).Trim();\n\
+    \n        if (command.StartsWith(\"line\"))\n        {\n            i = 0;\n \
+    \           int x = 0, y = 0, width = 0, height = 0;\n\n            foreach (string\
+    \ argument in command.Split(','))\n            {\n                if (i == 1)\n\
+    \                    x = int.Parse(argument);\n                else if (i == 2)\n\
+    \                    y = int.Parse(argument);\n                else if (i == 3)\n\
+    \                    width = int.Parse(argument);\n                else if (i\
+    \ == 4)\n                    height = int.Parse(argument);\n\n               \
+    \ i++;\n            }\n\n            new Line(graphics).Draw(x, y, width, height);\n\
+    \        }\n        else if (command.StartsWith(\"circle\"))\n        {\n    \
+    \        i = 0;\n            int x = 0, y = 0, radius = 0;\n\n            foreach\
+    \ (string argument in command.Split(','))\n            {\n                if (i\
+    \ == 1)\n                    x = int.Parse(argument);\n                else if\
+    \ (i == 2)\n                    y = int.Parse(argument);\n                else\
+    \ if (i == 3)\n                    radius = int.Parse(argument);\n\n         \
+    \       i++;\n            }\n\n            new Circle(graphics).Draw(x, y, radius);\n\
+    \        }\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: 'Following is the class diagram:
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_87_0.png)
+
+
+    This concludes our application using the Interpreter Pattern. Now the actions
+    could be converted to a language for interpreting later.
+
+
+    # Comparison of Command Pattern and Interpreter Pattern
+
+
+    You can find some similarities between the Command and Interpreter patterns. The
+    command pattern says about converting the actions into command for logging or
+    undo purposes. Here the commands are objects but for the Interpreter pattern the
+    commands are sentences.
+
+
+    The Command pattern can be used for persisting objects by serializing the command
+    list and results in large sized files compared with Interpreter pattern. The Interpreter
+    pattern provides an easier approach in the runtime but comes at the cost of developing
+    and interpreter.
+
+
+    # Applications of Interpreter Pattern
+
+
+    You are creating your own Photoshop application. The objects drawn on the layer
+    can be converted to a series of commands. Later the entire drawing could be represented
+    using the command file which will be small in size compared to the entire canvas
+    serialized. You will get the advantage of sending the file to another person where
+    he/she can:
+
+
+    +   - Regenerate the Drawing
+
+    +   - View all the Draw Actions
+
+    +   - Modify the Draw Action Items
+
+    +   - Undo the last draw actions'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# References
+
+
+    http://www.dofactory.com/Patterns/PatternInterpreter.aspx#_self1
+
+
+    # Summary
+
+
+    In this chapter we have seen about the Interpreter pattern with a small application
+    using it. The above application shows only a simple usage for learning purpose
+    but in the real world scenarios the language may include loops, conditions etc.
+    The attachment contains the source code of application we have discussed.'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# 23. Composite Pattern
+
+
+    In this chapter we can explore the Composite Design Pattern. It provides a better
+    approach in addressing communication with individual and group of objects. As
+    usual we can start with the Challenge – Solution approach.
+
+
+    # Challenge
+
+
+    You are working on a distributed application containing Head Office and Branch
+    Offices. Each office will be having 2 Clock Controls which needed to be updated
+    globally during Daylight Saving times.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_89_0.png)
+
+
+    The above diagram shows the current structure. There will be only 1 Head Office
+    and multiple branches under it. The head office and each branch will be having
+    2 clock controls. The time changing process starts from the head office and in
+    the current approach, the head office has to remember all branches and all clocks
+    inside each branch. This is very tedious and will break when there is consolidation
+    of branches under one branch group.
+
+
+    How to provide a better solution?
+
+
+    # Definition
+
+
+    GoF Definition: "Compose objects into tree structures to represent part-whole
+    hierarchies. Composite lets clients treat individual objects and compositions
+    of objects uniformly"
+
+
+    # Implementation
+
+
+    We can use the Composite Design Pattern in the above scenario. Once our solution
+    is implemented the Head Office needs to think about only the Branches. The Branches
+    will think about their respective Clocks.'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "There are 2 classes in our solution: Office and Clock. The Office class can\
+    \ represent Head Office and Branches. The Clock class manages the clock control\
+    \ for changing time.\n\nWe need to introduce one interface which will be implemented\
+    \ by the Office and Clock classes.\n\n```\n```csharp\ninterface IComponent\n{\n\
+    \    void Add (IComponent notifier);\n    void SetTime(DateTime time);\n}\n```\n\
+    ```\n\nThe Add() method ensures adding a component of type IComponent. It can\
+    \ be used to add an Office or Clock instance.\n\nThe SetTime() method can be used\
+    \ to change the current time.\n\n# Class Implementations\n\nFollowing are the\
+    \ implementations of the Office and Clock classes:\n\n```\n```csharp\nclass Office\
+    \ : IComponent\n{\n    private IList<IComponent> _list = new List<IComponent>();\n\
+    \n    public void Add(IComponent notifier)\n    {\n        _list.Add(notifier);\n\
+    \    }\n\n    public void SetTime(DateTime time)\n    {\n        foreach (IComponent\
+    \ n in _list)\n            n.SetTime(time);\n    }\n}\n\nclass Clock : IComponent\n\
+    {\n    public ClockControl ClockControl;\n\n    public void Add(IComponent notifier)\n\
+    \    {\n        throw new ApplicationException(\"You cannot add IClock!\");\n\
+    \    }\n\n    public void SetTime(DateTime time)\n    {\n        ClockControl.CurrentTime\
+    \ = time;\n    }\n}\n```\n```\n\nPlease note that the SetTime() implementation\
+    \ of Office class takes care of informing all the added IComponent instances.\
+    \ Thus the Head Office can notify all the branches. The branches will notify all\
+    \ the clock instances."
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# Creating Instances
+
+
+    Following is the code of instance creation for Head Office and Branches.
+
+
+    ```
+
+    _headOffice = new Office();
+
+    _headOffice.Add(new Clock() { ClockControl = hForm.clock1 });
+
+    _headOffice.Add(new Clock() { ClockControl = hForm.clock2 });
+
+
+    Office branch1 = new Office();
+
+    branch1.Add(new Clock() { ClockControl = b1Form.clock1 });
+
+    branch1.Add(new Clock() { ClockControl = b1Form.clock2 });
+
+    _headOffice.Add(branch1);
+
+
+    Office branch2 = new Office();
+
+    branch2.Add(new Clock() { ClockControl = b2Form.clock1 });
+
+    branch2.Add(new Clock() { ClockControl = b2Form.clock2 });
+
+    _headOffice.Add(branch2);
+
+    ```
+
+
+    Please note that the branch instances are added to the head office.
+
+
+    # Running the Application
+
+
+    On clicking the Set Time button you can see all the clocks are reset to 10:00
+    AM.
+
+
+    ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_91_0.png)
+
+
+    Here the Head Office does not need to think about all the clock instances of branches.
+    Here the individual objects (clocks) and composite objects (branches) are treated
+    uniformly satisfying the pattern definition.
+
+
+    # Summary
+
+
+    In this chapter we have explored the Composite Pattern. It provides a centralized
+    approach in talking with individual and combined objects. The attachment contains
+    the example application including the clock control we have discussed.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# References
+
+
+    The ebook is compiled on information collected from Books, MSDN and other Online
+    Resources. It took almost 1 year to cover all the chapters and so some of the
+    reference links will be obsolete.
+
+
+    You can find more information on Design Patterns using the following links:
+
+
+    http://www.dofactory.com
+
+
+    http://www.oodesign.com
+
+
+    # Source Code
+
+
+    The source code for the ebook can be found over http://jeanpaulva.com.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
