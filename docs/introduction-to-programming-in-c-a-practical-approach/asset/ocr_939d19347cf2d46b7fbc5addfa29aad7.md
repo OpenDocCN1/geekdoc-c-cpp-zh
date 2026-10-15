@@ -1,0 +1,13 @@
+# About the Author
+
+My name is Enrique Vicente and I'm an IT Engineer.
+
+I already have many years of experience in developing programs in different areas of technology.
+
+I am an expert in industrial control systems and industrial plant automation.
+
+I dominate numerous programming languages such as C, C ++, C #, Visual Basic, SQL, JavaScript, PHP, etc.
+
+I am passionate about computer science and Information Technology in general and I would like to encourage many people to this passion.
+
+In my blog https://evginformatica.blogspot.com you can find online courses, tutorials, ebooks about programming.

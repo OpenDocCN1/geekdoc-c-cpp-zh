@@ -1,0 +1,1220 @@
+- pgno: 0
+  md: '# INTRODUCTION TO PROGRAMMING IN C
+
+
+    ![](img/e9a40527283d17f2243dedbe472072cc_0_0.png)
+
+
+    A PRACTICAL APPROACH
+
+
+    ENRIQUE VICENTE'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# INTRODUCTION TO
+
+    PROGRAMMING IN C
+
+
+    ![](img/e9a40527283d17f2243dedbe472072cc_1_0.png)
+
+
+    A PRACTICAL APPROACH'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Introduction to programming in C.
+
+
+    # A practical approach.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Enrique Vicente'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Index
+
+
+    +   - Introduction to programming in C. A practical approach.
+
+    +   - 1.- Presentation
+
+    +   - 2.- The C language
+
+    +   - 4.- Your first program in C
+
+    +   - 6.- Phases of elaboration of a program. Hello World
+
+    +   - 8.- Description of the part of the program
+
+    +   - 9.- Exercises
+
+    +   - 10.- Variables and types of variables
+
+    +   - 11.- Basic concepts .. memory bits and bytes
+
+    +   - 12.- Variables. Integer and real
+
+    +   - 13.- Mathematical operations
+
+    +   - 14.- Conversion of types
+
+    +   - 15.- Example. Calculation of prices with VAT
+
+    +   - 16.- Making decisions
+
+    +   - 17.- Logical comparisons
+
+    +   - 18.- Relational operators and logical operators
+
+    +   - 19.- Selecting options
+
+    +   - 20.- Example: Basic calculator
+
+    +   - 21.- Advanced topics. Loops
+
+    +   - 22.- Arrays
+
+    +   - 23.- Text strings
+
+    +   - 24.- Exercises for the student
+
+    +   - 25.- Variables and Pointers
+
+    +   - 26.- Dynamic memory
+
+    +   - 27.- Structured programming
+
+    +   - 28.- Data structures
+
+    +   - About the Author'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# 1.- Presentation
+
+
+    Hello, I''m Enrique Vicente and I''m going to introduce you to the course "**Introduction
+    to programming. A practical approach**".
+
+
+    This course is aimed to computer enthusiasts who want to enter the exciting world
+    of programming.
+
+
+    This course is not recommended to computer scientists with a high level of knowledge
+    because the concepts explained are introductory.
+
+
+    Students at the end of the course will have a vision of how to learn to program
+    in a language such as C, a versatile and portable language that will help them
+    in the future to program in other languages such as C ++, C # or Java.
+
+
+    They will also have the necessary concepts to understand what a computer program
+    is and what difficulties they may encounter when developing a program and how
+    to solve them.
+
+
+    This course is based on examples and exercises that we will follow step by step
+    to guide you in the world of programming.
+
+
+    # Examples and exercises
+
+
+    Students who are interested can obtain the course examples and additional exercises
+    can sign up to the class Google Classroom https://classroom.google.com/ with the
+    code lq5hhp
+
+
+    Sign up and we can continue with more advanced topics, ask questions or consultations
+    on the topics covered in the course.
+
+
+    I would appreciate that the students who have finished the course to write a review
+    giving their opinion and assessment of the course.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '**You can follow us on the blog** [https://evginformatica.blogspot.com](https://evginformatica.blogspot.com)
+    where you will find free courses, tutorials and discounts on upcoming Udemy courses.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 2.- The C language
+
+
+    C is the ideal language to begin in the world of programming.
+
+
+    It is a compact and very portable language since there are C compilers for many
+    of the platforms of nowadays (Windows, Linux, Mac ...) The C language is used
+    on many areas of programming real applications in the business world and is a
+    good start to start professionally.
+
+
+    Once this language is learned, it can serve as a basis for learning other languages
+    such as C ++, C # or Java with an object orientation philosophy.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 3.- Downloading and installation of the development environment
+
+
+    Once this short introduction is done, we will present the programming environment
+    that we will use throughout the course.
+
+
+    We will need to download from the internet the tool **Microsoft Visual Studio
+    Community 2017**.
+
+
+    We search in Google Visual Studio 2017 and download the Community version
+
+
+    This development environment has several versions: one free, professional and
+    business.
+
+
+    The differences lie in the use that will be give.
+
+
+    If we are going to start programming, we can do it with the Community version,
+    if we are going to use the tool at work, the professional version is recommended
+    since it provides more components and work tools.
+
+
+    The business version is mainly for team work and allows code sharing among several
+    programmers.
+
+
+    Visual Studio is a development tool based on projects that can be in different
+    languages.
+
+
+    To be able to execute our examples we will install the C/C ++ package for console
+
+
+    Once Visual Studio is installed, we must create project "Windows console application"
+    called courseC in the folder c:\
+
+
+    The development environment offer many options, create projects, compile debug
+    execute, .. we will see all that throughout the course.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'Note.
+
+    If you work with another operating system other than Windows, you can try running
+    the examples on https://repl.it where you can do tests in several languages, including
+    C.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# 4.- Your first program in C
+
+
+    In this section we will talk about concepts such as machine language, source language
+    and how to translate from one to the other.
+
+
+    We will learn the different phases that we must follow to make a computer program
+    and then we will make our first program.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# 5.- Interpreted and compiled languages
+
+
+    Any program written on a computer must be translated into the machine language.
+
+
+    The machine language is a language that depends on the type of CPU and the manufacturer
+    and there are numerous versions.
+
+
+    As the machine language is very complicated and variable depending on the platform
+    there are some languages (more similar to English) that indicate the sequence
+    of steps to follow (program). These languages are called source code languages
+    and are those used to define the programs of a computer.
+
+
+    Once code in source language, we must pass it through a translator that translates
+    it into machine language, which is what the computer really knows.
+
+
+    There are three types of translations depending on how the machine language is
+    generated from the source code.
+
+
+    # Interpreted languages
+
+
+    The translator reads the source program line by line, translates it and the computer
+    executes it.
+
+
+    With this option the development of a program is faster at the time of writing
+    but has the disadvantage that more errors occur and these are more difficult to
+    correct.
+
+
+    Examples of these types of languages are JavaScript or PHP.
+
+
+    # Compiled languages
+
+
+    After editing the program, this is translated in its entirety (compilation).
+
+
+    At this moment, the syntactic errors that can occur due to the structure of the'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'program are shown to the operator.
+
+
+    With this option, the development slows down because each time the program is
+    changed, it must be compiled, while the treatment of errors is simpler and easier
+    to debug.
+
+
+    Compiled language examples are C, C ++
+
+
+    # Mixed languages
+
+
+    These are languages that are compiled into an intermediate language and then interpreted
+    into machine language.
+
+
+    They have the same advantages as the compiled languages but are more portable
+    and can be run on machines with different operating systems.
+
+
+    Examples C # or Java'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "# 6.- Phases of elaboration of a program. Hello World\n\nNow we are going to\
+    \ make our first program in C\n\nOpen the VisualStudio and go to File - Open project\
+    \ - courseC\n\nCopy the following piece of code:\n\n```\n/* firstprogram.c */\n\
+    \n#include \"pch.h\"\n#include <stdio.h>\n\nint main ()\n{\n    printf (\"Hello\
+    \ world! \\n\");\n}\n```\n\nYes, we execute it, we will see a screen with the\
+    \ text Hello World ...\n\nThe phases that we will follow to make our programs\
+    \ are\n\n# Phase 1. Define the problem to be solved and elaborate an algorithm\
+    \ (steps to follow)\n\nIn this phase we must define clearly what we want make\
+    \ with our program, what inputs you will receive and what outputs you will produce.\n\
+    \nWe must also indicate in natural language (Spanish, English ...) what steps\
+    \ the program should follow to achieve the objective set.\n\nThese steps to follow\
+    \ are what we call the Algorithm of our program."
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Phase 2. Editing the program
+
+
+    Once we know what to do, we have to think about how to translate that functionality
+    into our chosen programming language, in this case C.
+
+
+    Then we will write our program in C in the editor of VIusual Studio.
+
+
+    You can edit the program with simple text editors such as Notepad but integrated
+    environments have multiple advantages such as indentation (which allows us to
+    better visualize our program) or associate colors to different functionalities
+    (to see at a glance the key words, types of data, etc)
+
+
+    # Phase 3. Compilation
+
+
+    Once the program has been edited, we compile it and see if syntactic errors occur.
+
+
+    Syntactic errors occur because the compiler does not understand some line that
+    we have introduced in the source language.
+
+
+    The compiler is responsible for translating the source code in C in machine language.
+
+
+    # Phase 4. Linking
+
+
+    If our project consists of several files or modules, in the linking process, external
+    references are grouped and resolved.
+
+
+    If our program uses external functionalities of the compiler or the operating
+    system at this time, references to external sources are added.
+
+
+    After the linking process, an executable file (.exe in Windows) is produced.
+
+
+    # Phase 5. Execution'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'In this phase we can execute the executable program and see if the results
+    match what we expected.
+
+
+    If we detect any error we must return to the edition and make the necessary changes.
+
+
+    In this phase, runtime errors may occur due to the fact that some variable takes
+    a value outside its limits or errors in the logic of the program.
+
+
+    # Phase 6. Debugging
+
+
+    In case of errors in runtime or the expected functionality is not done correctly,
+    we can debug the program in our programming environment.
+
+
+    Some useful tools are
+
+
+    +   . the option to execute the program step by step
+
+    +   . tell the program to stop the execution in a line of the given code.
+
+    +   . display of the value of the variables in real time.
+
+
+    # Phase 7. Testing and maintenance
+
+
+    The program must be tested in all possible cases, in case of detecting failures
+    we must go again to the editing phase
+
+
+    Once the program is working correctly it goes to the Exploitation phase where
+    it is executed in its real environment (pej on the client''s computer that requested
+    the program)
+
+
+    Then the program enters its maintenance phase, where the client will ask us for
+    new features or modify the program because some functionality is not to his liking.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# 7.- Modification of the program, comments and error control
+
+
+    We will modify our first program and we will see its effect, compile, link and
+    execute.
+
+
+    We can add comments to our program with /* */or with //
+
+
+    Everything written in a comment will be ignored by the compiler.
+
+
+    It is recommended to comment our programs for a better follow-up and subsequent
+    maintenance of the code.
+
+
+    We can put comments to the first example.
+
+
+    Now we remove the semicolon from the end of the printf and compile.
+
+
+    When compiling our program if it has syntactic errors, the IDE will show them
+    to us so we can solve them.
+
+
+    The program can not be run until all errors have been resolved.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# 8.- Description of the part of the program
+
+
+    . Comments
+
+
+    We can put comments to indicate the name of the program, its operation, what entrances
+    and exits will have, etc.
+
+
+    ```
+
+    /* firstprogram.c */
+
+    ```
+
+
+    . Preprocessing
+
+
+    ```
+
+    #include "pch.h"
+
+    #include <iostream>
+
+    ```
+
+
+    These lines tell the compiler where to find the definition of functions not defined
+    in this module.
+
+
+    Pch.h is the so-called precompiled header and is a precompiled version of the
+    external definitions and is used to make the compilation process faster.
+
+
+    . Function main
+
+
+    ```
+
+    int main ()
+
+    ```
+
+
+    Every program in C must include the main function that is the entry point for
+    our program.
+
+
+    . Keywords
+
+
+    Our C program will contain a series of reserved keywords of the language that
+    can not be used as names of other variables or functions.
+
+
+    . External functions printf and arguments
+
+
+    The printf function is an external function defined in the iostream module and
+    added'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# 11.- Basic concepts .. memory bits and bytes
+
+
+    Both the program and the data it uses are stored in the computer''s memory.
+
+
+    The memory of the computer is a sequence of "boxes" to store a value of 0 or a
+    value of 1. These "boxes" are the bits and is the minimum unit of information
+    that a computer can store.
+
+
+    To improve access to memory these bits can be grouped from 8 to 8 forming a byte.
+
+
+    The computer''s memory is expressed in multiples of one byte
+
+
+    1 kilobyte (or 1KB) is 1,024 bytes.
+
+    1 megabyte (or 1MB) is 1,024 kilobytes, which is 1,048,576 bytes.
+
+    1 gigabyte (or 1GB) is 1,024 megabytes, which is 1,073,741,841 bytes'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "# 12.- Variables. Integer and real\n\n# Variable\n\nA variable is a memory\
+    \ area of 1 or several bytes to which a name is associated so that it can be referenced\
+    \ in our program.\n\n# Whole variables\n\nAre those variables that store an integer\
+    \ without decimals.\nvariables are of type **int**\n\nIntegerPej are integers\
+    \ -10, 5, 23000\n\n# Example\n\n```\n/* using integers */\n#include <stdio.h>\n\
+    \nint main (void)\n{\n    /* declare the variable age as of integer type */\n\
+    \    int age ;\n\n    /* assignment of an integer value to the variable */\n \
+    \   age = 35;\n\n    /* show age by screen */\n    printf (\"My age is% d.\",\
+    \ age);\n    return 0;\n}\n```\n\n# Names of variables\n\nThe names we can give\
+    \ to variables is a combination of numbers and letters.\n\nVariables can not start\
+    \ with a number"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "Pej. Var1, age, name551nteger\n\n# Character variables\n\nAre those variables\
+    \ that store a character\nCharacters variables are of type **char**\n\npej\ncar\
+    \ = 'A';\n\n# Real Variables\n\nThese are variables that can store numbers with\
+    \ decimals.\nThe decimal point is expressed with. (not with, as in Spanish)\n\
+    Real variables are of type **float**\n\npej 2.9 34.89\n\n# Example\n\n```\n/*\
+    \ using real */\n#include <stdio.h>\n\nint main (void)\n{\n        /* declare\
+    \ variable as an integer value */\n        float myvariable;\n\n        /* assignment\
+    \ of a real value to the variable */\n        myvariable = 12.75;\n\n        /*\
+    \ display the variable by screen */\n        printf (\"My variable is% f.\", myvariable);\n\
+    \        return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# 13.- Mathematical operations
+
+
+    # Assignment
+
+
+    To assign a value to a variable we can use
+
+
+    ```
+
+    variable = value;
+
+    ```
+
+
+    # Operations +, -, *, /
+
+
+    pej
+
+
+    ```
+
+    sum = var1 + var2;
+
+    subtraction = value - 10;
+
+    product = 20 * 22;
+
+    division = 12.2/2.5;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# 14.- Conversion of types
+
+
+    # Implicit conversion
+
+
+    If in an arithmetic expression there is a real this is converted to a real value
+
+
+    ```
+
+    pej
+
+    float vreal;
+
+    int ventera;
+
+
+    ventera = 5;
+
+    vreal = ventera * 10.5;
+
+    ```
+
+
+    # Explicitly conversion
+
+
+    Sometimes for clarity in the code we can force conversion from one type to another
+
+
+    ```
+
+    pej
+
+    float vactual;
+
+    int ventera;
+
+
+    ventera = 5;
+
+    vreal = (float) ventera * 10.5;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "# 15.- Example. Calculation of prices with VAT\n\n```\n/* vat.c */\nint main\
+    \ (void)\n{\n    /* declare variables */\n    float price_less;\n    float price_with_vat;\n\
+    \    int vat;\n\n    /* assignment of values, request of data to the user */\n\
+    \    printf (\"Enter the price without VAT:\");\n    scanf_s (\"% f\", & price_less);\n\
+    \    printf (\"\\nEnter the vat to apply:\");\n    scanf_s (\"% d\", & vat);\n\
+    \n    price_with_iva = price_less * vat/100;\n\n    /* show data on screen */\n\
+    \    printf (\"\\nThe price with VAT is% .2f \\n\", price_with_vat);\n    return\
+    \ 0;\n}\n```\n\nFirst we declare the variables that we are going to use, price_less\
+    \ and price_with_vat as real and VAT as integer.\n\nThen we ask the user to enter\
+    \ the price values without VAT and VAT.\n\nTo request a data to the user we can\
+    \ use the function scanf_s or scanf depending on the compiler version.\n\nOnce\
+    \ we request the data, we calculate the price with VAT and show it on the screen."
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# # 16.- Making decisions
+
+
+    In this section we will discuss how we can make decisions to define the flow
+
+    of our program.
+
+
+    We will learn the different sentences in C to make choices depending on
+
+    conditions.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# 17.- Logical comparisons
+
+
+    In our programs we will have to make decisions about choosing between several
+    options, decide which code to execute depending on a comparison between values.
+
+
+    For this the C language provides us with several sentences to choose the execution
+    of some instructions or others depending on evaluations .
+
+
+    # The if statement
+
+
+    Used to evaluate expressions and if it is true to execute the next block of instructions.
+
+
+    E.g.\nSuppose we have to write on the screen if your age is less than or greater
+    than 20.
+
+
+    ```
+
+    int age\n\nage = 26;\nif (age <20)\n    printf ("age less than 20 ...");\n\nif
+    (age >= 20)\n    printf ("older age 20 ...");
+
+    ```
+
+
+    # The if - else statement
+
+
+    Same as the if statement but if the expression to evaluate is missing, the elseblock
+    is executed
+
+
+    Eg.\n\nAnother way to code the previous example is with the if-else statement'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "```\nint age\n\nage = 26;\nif (age <20)\n    printf (\"age less than 20 ...\"\
+    );\nelse\n    printf (\"older age 20 ...\");\n```\n\nYou can put several lines\
+    \ of code in the if or else enclosing it between { }\n\npej.\n\n```\nint age\n\
+    \nage = 26;\nif (age <20)\n{\n    printf (\"age less than 20 ...\");\n    printf\
+    \ (\"is young\");\n}\nelse\n{\n    printf (\"old age 20 ...\");\n    printf (\"\
+    is greater\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# 18.- Relational operators and logical operators\n\nThe relations operators\
+    \ that we can use in the logical expressions are:\n\n+   ===\n+   >\n+   <\n+\
+    \   >=\n+   <=\n+   !=\n\nWe can combine several expressions with the logical\
+    \ operators\n\n+   &&\n+   ||\n+   ! (not)\n\nEg.\n\nIf we want to show on screen\
+    \ if you are a teenager (age between 15 and 20) or if you are a minor (under 18\
+    \ years of age)\n\n```\nint age\n\nage = 26;\nif (age> 15 && age <20)\n{\n   \
+    \ printf (\"you are a teenager ...\");\n}\nif (! (age> 18))\n{\n    printf (\"\
+    you are a minor ...\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# 19.- Selecting options\n\nIf we are considering selecting an option of several\
+    \ possible, we can do it in two ways\n\n+   - with if-else blocks\n+   - with\
+    \ the switch\n\nEg.\nTo show on screen if you are 20.30 or 40 years old.\n\n```\n\
+    /* options */\n#include <stdio.h>\n\nint main (void)\n{\n    /* declare variables\
+    \ */\n    int age;\n\n    /* assignment of an integer value to the variable */\n\
+    \    age = 35;\n\n    /* select options with if-else */\n    printf (\"Age with\
+    \ if-else ... \\\\n\");\n    if (age == 20)\n        printf (\"I am 20 years old.\"\
+    );\n    else\n    if (age == 30)\n        printf (\"I am 30 years old.\");\n \
+    \   else\n    if (age == 40)\n        printf (\"I am 40 years old.\");\n    else\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "```\nprintf (\"Age indeterminate ...\");\n\n/* select options with switch */\n\
+    printf (\"\\nAge with switch ... \\n\");\nswitch (age)\n{\ncase 20:\n    printf\
+    \ (\"I am 20 years old.\");\n    break;\ncase 30:\n    printf (\"I am 30 years\
+    \ old.\");\n    break;\ncase 40:\n    printf (\"I am 40 years old.\");\n    break;\n\
+    default:\n    printf (\"Indeterminate age ....\");\n}\n\nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# 20.- Example: Basic calculator\n\n# Problem definition\n\nWrite a basic calculator.\n\
+    The user will enter the operation in the form x op y\nand the computer will show\
+    \ the result of the operation.\n\ne.g. 10.2 + 5.5 20.8-2.5\n\n# Definition of\
+    \ the algorithm\n\n+   · we must define two variables, number1 and number 2 and\
+    \ the operation to be performed (+, -, *,/)\n+   · the user will be asked for\
+    \ the numbers and the operation in x and p format\n+   · the program will calculate\
+    \ the result of the operation and display it on the screen\n\n```\n/* calculator\
+    \ */\n\n#include \"pch.h\"\n#include <stdio.h>\n\nint main (void)\n{\n    //operands\n\
+    \    float number1 = 0.0;\n    float number2 = 0.0;\n\n    /* operation +, -,\
+    \ *,/ */\n    char operation = 0;\n\n    printf (\"\\\\nEnter the operation ...\
+    \ \\\\n\");\n    scanf_s (\"% f\", & number1);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "```\n```c\nscanf_s (\"%c\", & operation, 1);\nscanf_s (\"%f\", & number2);\n\
+    \n/* calculate the result */\nswitch (operation)\n{\ncase '+':\n    printf (\"\
+    Result:% f \\\\n\", number1 + number2);\n    break;\n\ncase '-':\n    printf (\"\
+    Result:% f \\\\n\", number1 - number2);\n    break;\n\ncase '*':\n    printf (\"\
+    Result:% f \\\\n\", number1 * number2);\n    break;\n\ncase '/':\n    if (number2\
+    \ == 0)\n        printf (\"Division by zero. \\\\n\");\n    else\n        printf\
+    \ (\"Result:% f \\\\n\", number1/number2);\n    break;\n\ndefault:\n    printf\
+    \ (\"\\\\n \\\\nOperation not allowed ... \\\\n\");\n    break;\n}\n\nreturn 0;\n\
+    }\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "# 21.- Advanced topics. Loops\n\nIn the next section on how to implement repetitions\
+    \ in our code.\n\nWe will define what the arrays are and finally we will treat\
+    \ the text strings.\n\n# Loops\n\nSometimes we are faced with the situation of\
+    \ having to repeat an action a number of times or until a condition is met.\n\n\
+    In C the repetition of a series of actions is called Loop and can be of several\
+    \ types\n\n# Loop For\n\nIt is used to repeat a number of times an action (example\
+    \ loopfor.c)\n\nEg.\n\nShow screen numbers from 1 to 10\n\n```\n/* loopfor */\n\
+    \n#include <stdio.h>\n\nint main (void)\n{\n    int i;\n\n    for (i = 1; i <=\
+    \ 10; i = i + 1)\n    {\n        printf (\"\\nNumber% d\", i);\n    }\n\n    return\
+    \ 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "The for loop will execute the sentences within the block 10 times, first the\
+    \ counter i is initialized to one, if the condition i <= 10 is true, the block\
+    \ is executed and the count is increased, if not followed in the next instruction.\n\
+    \n# While loop\n\nUsed to repeat an action while a condition is met (example loopwhile.c)\n\
+    \nEg.\n\nDisplay the numbers from 1 to 10\n\n```\n```c\n/* loopwhile */\n\n#include\
+    \ <stdio.h>\n\nint main (void)\n{\n    int i;\n\n    i = 1;\n    while (i <= 10)\n\
+    \    {\n        printf (\"\\nNumber% d\", i);\n        i = i + 1;\n    }\n\n \
+    \   return 0;\n}\n```\n```\n\nThe while loop is similar to the for loop but is\
+    \ usually used when the condition does not depend on a counter but on an expression\
+    \ that is recalculated within the loop."
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "# 22.- Arrays\n\nAn array is a fixed number of elements of the same type.\n\
+    \nEg.\nInstead of defining 10 variables of the same type, an array of 10 numbers\
+    \ can be used.\n\nWe can define 5 numbers with\nint n1, n2, n3, n4, n5;\n\nor\
+    \ with an array\nint n [5];\n\nin this case the array dimension is 5 elements\
+    \ and we can access from position 0 to 4 with n [0], n [1], n [2], n [3] and n\
+    \ [4]\n\n# Example\n\nMake the arithmetic mean of the numbers from 100 to 200\n\
+    \n```\n/* arrays */\n/* calculate the arithmetic mean of the numbers from 100\
+    \ to 200 */\n\n#include <stdio.h>\n\nint main (void)\n{\n    int i;\n    int numbers\
+    \ [200];\n    float sum;\n    float mean;\n\n    /* fill array data */\n    for\
+    \ (i = 1; i <= 100; i = i + 1)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "```\n{\n    numbers [i] = 100 + i;\n}\n\n/* calculate the sum of all the numbers\
+    \ */\nsum = 0;\nfor (i = 1; i <= 100; i = i + 1)\n{\n    sum = sum + numbers [i];\n\
+    }\n\n/* calculate arithmetic mean */\nmean = sum/100;\n\nprintf (\"\\nThe mean\
+    \ of the numbers from 100 to 200 is:% f \\n\", mean);\n\nreturn 0;\n}\n```\n\n\
+    First we define the variables that we are going to use.\nThen the array is filled\
+    \ with the numbers from 100 to 200.\nIn the next loop the sum of the numbers from\
+    \ 100 to 200 is made.\nThe mean is calculated and is shown in the screen.\n\n\
+    If we look at the definition of the array numbers we see that it has a dimension\
+    \ of 200 when in fact only 100 are used. It\n\nIs usual to put the dimensions\
+    \ larger than what is going to be used at first because in C the limits of arrays\
+    \ are not checked and a typical error is to try to use an index out of range which\
+    \ causes unwanted effects."
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# 23.- Text strings\n\nA string is a sequence of characters.\n\nText strings\
+    \ in C are represented by character arrays.\n\nA string literal is a sequence\
+    \ of characters between \"\n\nEg. \" this is a phrase. \"\n\nDeclaration of a\
+    \ string\n\n```\nchar cad [20];\n```\n\n# String initialization\n\n```\nchar cad\
+    \ [] = \"this is a phrase\";\n```\n\nin this case the array cad has a dimension\
+    \ of 17, one character for each letter\nand a 0 at the end to indicate when the\
+    \ string ends.\n\n# Operations on Strings\n\nThere is a library with functions\
+    \ for string handling\n\n```\n#include <string.h>\n```\n\n+   - concatenate two\
+    \ strings\n+     `strcat(cad1, cad2);`\n+   \n+     copy cad2 at the end of cad1\n\
+    +   \n+     be careful with the size of cad1\n+   - number of characters of a\
+    \ string\n+     `strlen(cad);`\n+   - compare strings"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "strcmp (cad1, cad2)\n\n0 if cad1 = cad2\n<0 if cad1 < cad2\n> 0 if cad1 > cad2\n\
+    \n# Example\n\n```\n/* strings of text */\n#include <string.h>\n\nint main (void)\n\
+    {\n    /* show in display a string of characters */\n    printf (\"\\\\n This\
+    \ is a string of characters .. \\\\n\");\n\n    /* declare a string variable character\
+    \ */\n    char cad11 [20];\n\n    /* initialize string of characters */\n    char\
+    \ cad12 [20] = \"test string\";\n\n    /* or */\n    char cad13 [] = \"test string\"\
+    ;\n\n    /* functions of the compiler library */\n    char cad [50];\n    char\
+    \ cad1 [] = \"test string\";\n    char cad2 [] = \"another string more ...\";\n\
+    \n    printf (\"\\\\n cad1:%s \", cad1);\n    printf (\"\\\\n cad2:%s \", cad2);\n\
+    \    printf (\"\\\\n concatenated:%s \", strcat (cad1, cad2));\n\n    /* number\
+    \ of characters in a string */\n    int numcar;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "```\n```c\nnumcar = strlen (cad1);\nprintf (\"\\n cad1 has% d characters ...\"\
+    , numcar);\n\n/* comparison of strings */\nchar c1 [] = \"string_text\";\nchar\
+    \ c2 [] = \"string_text\";\n\nif (strcmp (c1, c2) == 0)\n    printf (\"\\nThe\
+    \ two strings are the same ..\");\n\nreturn 0;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "# 24.- Exercises for the student\n\nAdd the numbers from 1 to 100 using an\
+    \ array and show the result on the screen.\n\n```\n/* add numbers from 1 to 100\
+    \ */\n\n#include <stdio.h>\n\nint main (void)\n{\n    int i;\n    int numbers\
+    \ [200];\n    float sum;\n\n    /* fill array data */\n    for (i = 1; i <= 100;\
+    \ i = i + 1)\n    {\n        numbers [i] = i;\n    }\n\n    /* calculate the sum\
+    \ of all the numbers */\n    sum = 0;\n    for (i = 1; i <= 100; i = i + 1)\n\
+    \    {\n        sum = sum + numbers [i];\n    }\n\n    printf (\"\\nThe sum of\
+    \ the numbers from 1 to 100 is:% f \\n\", sum);\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "Display on the screen the multiplication table of 5\n\n```\n/* table of 5 */\n\
+    \n#include <stdio.h>\n\nint main (void)\n{\n    int i;\n    int numbers [20];\n\
+    \n    /* fill array data */\n    for (i = 1; i <= 10; i = i + 1)\n    {\n    \
+    \    numbers [i] = i;\n    }\n\n    /* table of 5 */\n    for (i = 1; i <= 10;\
+    \ i = i + 1)\n    {\n        printf (\"\\n5x% d =% d\", i, 5 * i);\n    }\n\n\
+    \    return 0;\n}\n```\n\nMake a program that draws a square with 10 by 10 asterisks\
+    \ on the screen.\n\n```\n/* square with asterisks */\n\n#include <stdio.h>\n\n\
+    int main (void)\n{\n```"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "```\nchar asterisks [] = \"**********\"\nchar medium [] = \"* *\"\n\n/* square\
+    \ 10x10 with asterisks */\nprintf (\"\\n% s\", asterisks);\nfor (i = 1; i <= 10;\
+    \ i = i + 1)\n{\n    printf (\"\\n% s\", medium);\n}\n\nprintf (\"\\n% s\", asterisks);\n\
+    \nreturn 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# 25.- Variables and Pointers
+
+
+    In this class we will see, perhaps, the most advanced functionality of the C language,
+    the pointers.
+
+
+    In C we can define variables of a particular type that store values that we can
+    access in our program
+
+
+    Eg..
+
+    int number = 2;
+
+
+    In our program we can access the variable "number" through its name.
+
+
+    The variables is a representation of a memory space that has a physical address.
+
+
+    Eg.
+
+    When we define the variable number, the compiler assigns it in memory address
+    12000.
+
+
+    In our program instead of accessing the variable by the memory address, we access
+    through its name and the compiler itself is in charge of mapping the name of the
+    variable with its physical memory address.
+
+
+    A pointer is a special type of variable that allows you to store the physical
+    address of another variable, so that we can access it through an indirection.
+
+
+    ```
+
+    pej
+
+    int number = 2;
+
+    int *number;
+
+
+    number = &number;
+
+    *number = 3;
+
+    ```
+
+
+    In this example number is a pointer that will point to an integer variable.
+
+    With the number assignment = &number, we are indicating that the pointer points
+    to the variable number.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: 'When assigning a value with *number = 3, we are indirectly modifying the variable
+    number to which the pointer points.
+
+
+    # Pointers are used
+
+
+    +   . to allocate dynamic memory at run time.
+
+    +   . pass parameters to functions by reference
+
+    +   . access to text strings
+
+    +   . indirectly access to a variable and be able to change it at runtime.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# 26.- Dynamic memory
+
+
+    In C we can reserve memory dynamically at run time.
+
+
+    In practice there are two types of memory: static memory managed by the compiler
+    and dynamic memory managed by the programmer.
+
+
+    When defining variables, the compiler assigns them the necessary space depending
+    on the type of the variable.
+
+
+    Depending on the scope where the variable is defined, the compiler allocates memory
+    in the stack for local variables and function parameters.
+
+
+    For global variables, the compiler allocates the memory of the variables in a
+    separate data segment.
+
+
+    The programmer can allocate memory dynamically at run time with the malloc function
+    to which the number of bytes of the memory to be reserved is passed.
+
+
+    The reserved memory is created in a data segment HEAP used only for dynamic memory.
+
+
+    The malloc function returns a pointer to the reserved memory area.
+
+
+    E.g.
+
+
+    ```
+
+    int *p = (int *) malloc (200);
+
+    ```
+
+
+    The malloc function reserves 200 bytes of memory and returns an untyped pointer
+    to the reserved zone.
+
+
+    An explicit casting is done to indicate that there are integers in the memory
+    area.
+
+
+    The pointer p points to the reserved area with malloc.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'The dynamic allocation of memory will allow us to manage quantities of data
+    at the moment the program is executed and not at the moment of compilation.
+
+
+    In the previous example, if the size of an integer is 2 bytes, memory will be
+    reserved for 100 integers.
+
+
+    The previous case can also be defined in the form
+
+
+    ```
+
+    int *p = (int *) malloc (100 * sizeof (int));
+
+    ```
+
+
+    It should be noted that the memory reserved with malloc is controlled by the programmer,
+    not the compiler, and it is he who must release it when he does not use it.
+
+
+    The free function must be used to free the dynamically allocated memory.
+
+
+    E.g.
+
+
+    ```
+
+    free (p);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# 6.1.2 立方根
+
+
+    知识点一 立方根的概念及性质
+
+
+    一般地，如果一个数的立方等于$a$，那么这个数叫做$a$的立方根或三次方根。
+
+
+    即：如果$x^3=a$，那么$x$叫做$a$的立方根。
+
+
+    求一个数的立方根的运算，叫做开立方。
+
+
+    开立方与立方互为逆运算。
+
+
+    | 数的名称 | 正数 | 负数 | 0 |
+
+    | --- | --- | --- | --- |
+
+    | 平方根 | 有两个互为相反数 | 没有平方根 | 0 |
+
+    | 立方根 | 有一个，是正数 | 有一个，是负数 | 0 |
+
+
+    说明：任何数都有立方根，且只有一个立方根。
+
+
+    知识点二 立方根的表示方法
+
+
+    一个数$a$的立方根，用符号“$\sqrt[3]{a}$”表示，读作“三次根号$a$”，其中$a$是被开方数，3是根指数。'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "A function can be defined in the form\n\n# Return name (parameters)\n\n**Return**\
+    \ is the value that will return the function and can be a data type (int, float\
+    \ ...) or **void** that is used to indicate that no value returns.\n\n**Name**\
+    \ is the identifier of the function\n\n**Parameters** is a separate list with\
+    \ commas of variables that we will pass to the function.\n\nEg.\nfloat CalculateVat\
+    \ (float price, float vat)\n\n# Parameter by value\n\nThe most common way to pass\
+    \ parameters to a function is to pass them by value.\n\nConstants or variables\
+    \ are passed that will not change value in the execution of the function.\n\n\
+    ```\nfloat CalculateVAT (float price, float vat)\n{\n    return price * vat/100;\n\
+    }\n\nint main()\n{\n    float vat;\n\n    vat = CalculateVAT(1000, 21);\n}\n```\n\
+    \n# Parameters by reference\n\nIf we want a parameter of a function to be modified\
+    \ within the function and return the modified value, the parameter can be used\
+    \ by reference."
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "In this case, instead of passing the value, a pointer is passed\n\nE.g\n\n\
+    ```\nfloat CalculateVAT (float price, float vat, float *pvp)\n{\n    float pvat;\n\
+    \n    pvat = price *  vat / 100;\n    * pvp = price + pvat;\n    return pvat;\n\
+    }\n\nInt main ()\n{\n    float vat, pvp\n\n    iva = CalculateVAT (1000, 21, &\
+    \ pvp);\n}\n```\n\nThis type of parameter pass is usually used when more than\
+    \ one value must be returned in the function."
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "# 28.- Data structures\n\nSometimes we have information regarding an entity\
+    \ that we want to have grouped.\n\nFor example, if we want to have data of age,\
+    \ weight, height ... on a person instead of have a variable for each attribute\
+    \ we could have it grouped in a data structure.\n\nIn C we can group variables\
+    \ in a struct\n\nExample\n\n```\nstruct person\n{\n    int age;\n    int weight;\n\
+    \    Int height;\n};\n```\n\nIn this way we can define variable of type person,\
+    \ pej\n\n```\nstruct person peter;\n```\n\nAnd access its attributes through the\
+    \ operator.\n\nE.g\n\n```\npeter.height = 175;\npeter.age = 38;\n```\n\n# Pointers\
+    \ to structures\n\nWe can define a pointer to a structure of the form\n\n```\n\
+    struct person *p;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Assign a pointer with the & symbol
+
+
+    ```
+
+    ```c
+
+    p = &peter;
+
+    ```
+
+    ```
+
+
+    Access the fields of the structure through the symbol ->
+
+
+    ```
+
+    ```c
+
+    p -> height = 180;
+
+    ```
+
+    ```
+
+
+    Pointers to structures are often used to pass a structure as a parameter by
+
+    reference.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# About the Author
+
+
+    My name is Enrique Vicente and I''m an IT Engineer.
+
+
+    I already have many years of experience in developing programs in different areas
+    of technology.
+
+
+    I am an expert in industrial control systems and industrial plant automation.
+
+
+    I dominate numerous programming languages such as C, C ++, C #, Visual Basic,
+    SQL, JavaScript, PHP, etc.
+
+
+    I am passionate about computer science and Information Technology in general and
+    I would like to encourage many people to this passion.
+
+
+    In my blog https://evginformatica.blogspot.com you can find online courses, tutorials,
+    ebooks about programming.'
+  merge: -1
+  img_proc: true

@@ -1,0 +1,356 @@
+
+strcmp (cad1, cad2)
+
+- 0 if cad1 = cad2
+- <0 if cad1 < cad2
+- >0 if cad1 > cad2
+
+## Example
+
+```c
+/* strings of text */
+#include <string.h>
+
+int main (void)
+{
+    /* show in display a string of characters */
+    printf ("\n This is a string of characters .. \n");
+
+    /* declare a string variable character */
+    char cad11 [20];
+
+    /* initialize string of characters */
+    char cad12 [20] = "test string";
+
+    /* or */
+    char cad13 [] = "test string";
+
+    /* functions of the compiler library */
+    char cad [50];
+    char cad1 [] = "test string";
+    char cad2 [] = "another string more ...";
+
+    printf ("\n cad1:%s ", cad1);
+    printf ("\n cad2:%s ", cad2);
+    printf ("\n concatenated:%s ", strcat (cad1, cad2));
+
+    /* number of characters in a string */
+    int numcar;
+
+    numcar = strlen (cad1);
+    printf ("\n cad1 has %d characters ...", numcar);
+
+    /* comparison of strings */
+    char c1 [] = "string_text";
+    char c2 [] = "string_text";
+
+    if (strcmp (c1, c2) == 0)
+        printf ("\nThe two strings are the same ..");
+
+    return 0;
+}
+```
+
+## 24.- Exercises for the student
+
+Add the numbers from 1 to 100 using an array and show the result on the screen.
+
+```c
+/* add numbers from 1 to 100 */
+
+#include <stdio.h>
+
+int main (void)
+{
+    int i;
+    int numbers [200];
+    float sum;
+
+    /* fill array data */
+    for (i = 1; i <= 100; i = i + 1)
+    {
+        numbers [i] = i;
+    }
+
+    /* calculate the sum of all the numbers */
+    sum = 0;
+    for (i = 1; i <= 100; i = i + 1)
+    {
+        sum = sum + numbers [i];
+    }
+
+    printf ("\nThe sum of the numbers from 1 to 100 is:%f \n", sum);
+
+    return 0;
+}
+```
+
+Display on the screen the multiplication table of 5
+
+```c
+/* table of 5 */
+
+#include <stdio.h>
+
+int main (void)
+{
+    int i;
+    int numbers [20];
+
+    /* fill array data */
+    for (i = 1; i <= 10; i = i + 1)
+    {
+        numbers [i] = i;
+    }
+
+    /* table of 5 */
+    for (i = 1; i <= 10; i = i + 1)
+    {
+        printf ("\n5x%d = %d", i, 5 * i);
+    }
+
+    return 0;
+}
+```
+
+Make a program that draws a square with 10 by 10 asterisks on the screen.
+
+```c
+/* square with asterisks */
+
+#include <stdio.h>
+
+int main (void)
+{
+    char asterisks [] = "**********";
+    char medium [] = "* *";
+
+    /* square 10x10 with asterisks */
+    printf ("\n%s", asterisks);
+    for (i = 1; i <= 10; i = i + 1)
+    {
+        printf ("\n%s", medium);
+    }
+
+    printf ("\n%s", asterisks);
+
+    return 0;
+}
+```
+
+## 25.- Variables and Pointers
+
+In this class we will see, perhaps, the most advanced functionality of the C language, the pointers.
+
+In C we can define variables of a particular type that store values that we can access in our program
+
+E.g.
+int number = 2;
+
+In our program we can access the variable "number" through its name.
+
+The variables is a representation of a memory space that has a physical address.
+
+E.g.
+When we define the variable number, the compiler assigns it in memory address 12000.
+
+In our program instead of accessing the variable by the memory address, we access through its name and the compiler itself is in charge of mapping the name of the variable with its physical memory address.
+
+A pointer is a special type of variable that allows you to store the physical address of another variable, so that we can access it through an indirection.
+
+E.g.
+```c
+int number = 2;
+int *number;
+
+number = &number;
+*number = 3;
+```
+
+In this example number is a pointer that will point to an integer variable.
+With the number assignment = &number, we are indicating that the pointer points to the variable number.
+
+When assigning a value with *number = 3, we are indirectly modifying the variable number to which the pointer points.
+
+## Pointers are used
+
+- to allocate dynamic memory at run time.
+- pass parameters to functions by reference
+- access to text strings
+- indirectly access to a variable and be able to change it at runtime.
+
+## 26.- Dynamic memory
+
+In C we can reserve memory dynamically at run time.
+
+In practice there are two types of memory: static memory managed by the compiler and dynamic memory managed by the programmer.
+
+When defining variables, the compiler assigns them the necessary space depending on the type of the variable.
+
+Depending on the scope where the variable is defined, the compiler allocates memory in the stack for local variables and function parameters.
+
+For global variables, the compiler allocates the memory of the variables in a separate data segment.
+
+The programmer can allocate memory dynamically at run time with the malloc function to which the number of bytes of the memory to be reserved is passed.
+
+The reserved memory is created in a data segment HEAP used only for dynamic memory.
+
+The malloc function returns a pointer to the reserved memory area.
+
+E.g.
+
+```c
+int *p = (int *) malloc (200);
+```
+
+The malloc function reserves 200 bytes of memory and returns an untyped pointer to the reserved zone.
+
+An explicit casting is done to indicate that there are integers in the memory area.
+
+The pointer p points to the reserved area with malloc.
+
+The dynamic allocation of memory will allow us to manage quantities of data at the moment the program is executed and not at the moment of compilation.
+
+In the previous example, if the size of an integer is 2 bytes, memory will be reserved for 100 integers.
+
+The previous case can also be defined in the form
+
+```c
+int *p = (int *) malloc (100 * sizeof (int));
+```
+
+It should be noted that the memory reserved with malloc is controlled by the programmer, not the compiler, and it is he who must release it when he does not use it.
+
+The free function must be used to free the dynamically allocated memory.
+
+E.g.
+
+```c
+free (p);
+```
+
+## 6.1.2 立方根
+
+### 知识点一 立方根的概念及性质
+
+一般地，如果一个数的立方等于$a$，那么这个数叫做$a$的立方根或三次方根。
+
+即：如果$x^3=a$，那么$x$叫做$a$的立方根。
+
+求一个数的立方根的运算，叫做开立方。
+
+开立方与立方互为逆运算。
+
+| 数的名称 | 正数 | 负数 | 0 |
+| --- | --- | --- | --- |
+| 平方根 | 有两个互为相反数 | 没有平方根 | 0 |
+| 立方根 | 有一个，是正数 | 有一个，是负数 | 0 |
+
+说明：任何数都有立方根，且只有一个立方根。
+
+### 知识点二 立方根的表示方法
+
+一个数$a$的立方根，用符号“$\sqrt[3]{a}$”表示，读作“三次根号$a$”，其中$a$是被开方数，3是根指数。
+
+A function can be defined in the form
+
+## Return name (parameters)
+
+**Return** is the value that will return the function and can be a data type (int, float ...) or **void** that is used to indicate that no value returns.
+
+**Name** is the identifier of the function
+
+**Parameters** is a separate list with commas of variables that we will pass to the function.
+
+E.g.
+float CalculateVat (float price, float vat)
+
+## Parameter by value
+
+The most common way to pass parameters to a function is to pass them by value.
+
+Constants or variables are passed that will not change value in the execution of the function.
+
+```c
+float CalculateVAT (float price, float vat)
+{
+    return price * vat/100;
+}
+
+int main()
+{
+    float vat;
+
+    vat = CalculateVAT(1000, 21);
+}
+```
+
+## Parameters by reference
+
+If we want a parameter of a function to be modified within the function and return the modified value, the parameter can be used by reference.
+
+In this case, instead of passing the value, a pointer is passed
+
+E.g
+
+```c
+float CalculateVAT (float price, float vat, float *pvp)
+{
+    float pvat;
+
+    pvat = price *  vat / 100;
+    * pvp = price + pvat;
+    return pvat;
+}
+
+int main ()
+{
+    float vat, pvp;
+
+    vat = CalculateVAT (1000, 21, &pvp);
+}
+```
+
+This type of parameter pass is usually used when more than one value must be returned in the function.
+
+## 28.- Data structures
+
+Sometimes we have information regarding an entity that we want to have grouped.
+
+For example, if we want to have data of age, weight, height ... on a person instead of have a variable for each attribute we could have it grouped in a data structure.
+
+In C we can group variables in a struct
+
+Example
+
+```c
+struct person
+{
+    int age;
+    int weight;
+    int height;
+};
+```
+
+In this way we can define variable of type person, E.g
+
+```c
+struct person peter;
+```
+
+And access its attributes through the operator.
+
+E.g
+
+```c
+peter.height = 175;
+peter.age = 38;
+```
+
+## Pointers to structures
+
+We can define a pointer to a structure of the form
+
+```c
+struct person *p;
+```
