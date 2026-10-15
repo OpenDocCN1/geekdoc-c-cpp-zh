@@ -1,0 +1,110 @@
+
+
+annealing by Yang and Wu [10] for maximizing the yield of the fed-batch reactor of Park and Ramirez [8] that we considered in Chapter 9 exhibited a highly fluctuating initial portion of the control policy, as is shown in Figure 14.1. The corresponding performance index of 32.68319 is within 0.01% of the optimum value of 32.68602. The optimal control policy is quite smooth, as is seen in Figure 14.2. It was shown by Luus [6] that even the control policy giving I = 32.68601 is quite oscillatory. Often, very high oscillations have minimal effect on the performance index [4]. However, the performance index is quite sensitive to the time of switching; it was shown by Luus and Hennessy [7] that a better value of the performance index, namely I = 32.68687, is obtained by using P = 45 stages rather than 80, because the switching times are very slightly different. As we saw in Chapter 9 by using flexible stage lengths, we can improve the value further to I = 32.6939 with only 20 time stages, because the switching times can be obtained very accurately by having stages of flexible length.
+
+Although there is very low sensitivity with respect to changes in control policy, the performance index is very sensitive to the choice of the final time, as was pointed out in [5], and illustrated in Chapter 9.
+
+![](img/06ae75163df4fdf5e1eec243d497d393_279_0.png)
+
+Figure 14.1: Control policy for the fed-batch reactor of Park and Ramirez [8], using 80 stages of equal length, obtained by accelerated simulated annealing by Yang and Wu [10]
+
+Recently, Tholudur and Ramirez [9] reported getting a highly oscillatory control policy with the use of IDP, and suggested using filtering to reduce such unwanted oscillations. As we will show, the oscillatory behavior is not present in the optimal control policy. Therefore, in this chapter we wish to consider their example to illustrate the low sensitivity and to show that the optimal control policy is indeed quite
+
+![](img/06ae75163df4fdf5e1eec243d497d393_280_0.png)
+
+Figure 14.2: Control policy for the fed-batch reactor of Park and Ramirez [8], using 80 stages of equal length, obtained by IDP
+
+smooth. This fed-batch reactor is interesting from the computational point of view, since there are two feed streams, and one would expect that to get a reasonably accurate answer a large number of time stages should be used. We will see that the low sensitivity allows us to use a small number of stages to get an accurate value for the profit function.
+
+## 14.2 Example: Lee–Ramirez bioreactor
+
+The bioreactor of Lee and Ramirez [3] was modified slightly by Tholudur and Ramirez [9] to give the following set of equations
+
+$$\frac{dx_1}{dt}=u_1+u_2 \tag{14.1}$$
+
+$$\frac{dx_2}{dt}=g_1x_2-\frac{u_1+u_2}{x_1}x_2 \tag{14.2}$$
+
+$$\frac{dx_3}{dt}=\frac{100u_1}{x_1}-\frac{u_1+u_2}{x_1}x_3-\frac{g_1}{0.51}x_2 \tag{14.3}$$
+
+$$\frac{dx_4}{dt}=R_{fp}x_2-\frac{u_1+u_2}{x_1}x_4 \tag{14.4}$$
+
+$$\frac{dx_5}{dt}=\frac{4u_2}{x_1}-\frac{u_1+u_2}{x_1}x_5 \tag{14.5}$$
+
+```
+\frac{dx_6}{dt} = -k_1 x_6 \tag{14.6}
+```
+
+```
+\frac{dx_7}{dt} = k_2(1 - x_7) \tag{14.7}
+```
+
+```
+\frac{dx_8}{dt} = u_2 \tag{14.8}
+```
+
+where
+
+```
+g_1 = \left(\frac{x_3}{14.35 + x_3(1 + x_3/111.5)}\right)[x_6 + \frac{0.22 x_7}{0.22 + x_5}] \tag{14.9}
+```
+
+```
+R_{fp} = \left(\frac{0.233 x_3}{14.35 + x_3(1 + x_3/111.5)}\right)\left(\frac{0.0005 + x_5}{0.022 + x_5}\right) \tag{14.10}
+```
+
+```
+k_1 = k_2 = \frac{0.09 x_5}{0.034 + x_5}. \tag{14.11}
+```
+
+The controls are bounded by
+
+```
+0 \le u_j \le 1, \quad j = 1,2. \tag{14.12}
+```
+
+The performance index to be maximized is the profitability of the process described by the performance index
+
+```
+I = x_1(t_f) x_4(t_f) - 5 x_8(t_f) \tag{14.13}
+```
+
+where the final time t_f is specified as 10 h.
+
+The initial state is
+
+```
+\mathbf{x}(0) = [\ 1\ \ 0.1\ \ 40\ \ 0\ \ 0\ \ 1\ \ 0\ \ 0\ ]^T. \tag{14.14}
+```
+
+The two control variables are the glucose feed rate u_1 and the inducer feed rate u_2. The state variables are the reactor volume x_1, the cell density x_2, the nutrient concentration x_3, the foreign protein concentration x_4, the inducer concentration x_5, the inducer shock factor x_6, the inducer recovery factor x_7, and the amount of inducer used x_8.
+
+### 14.2.1 Solution by IDP
+
+To solve this optimal control problem by iterative dynamic programming, we took initially P = 15 time stages of equal length, the initial control u_1^{(0)} = u_2^{(0)} = 0.0, initial region size r_1^{(0)} = r_2^{(0)} = 0.5, reduction factor γ = 0.95, N = 1 grid point, and used a multi-pass method with region restoration factor η = 0.90. We used 10 iterations in each pass, and allowed 100 passes. For integration, DVERK [1] with error tolerance of 10^{-7} was used. By taking 15 stages of constant length, convergence to I = 5.56773 with the use of R = 15 was systematic as is shown in Figure 14.3. Even with R = 7 we got good convergence rate, but R = 5 gave inadequate convergence rate with
+
+the parameters that were used. The computation time on a Pentium II/350 personal computer with $R = 15$ for 100 passes was 139 s. Thus, the computational effort is quite small.
+
+The resulting optimal control policy is given in Figure 14.4. By increasing the number of time stages, the performance index was increased, but very slightly, as is shown in Figures 14.5–14.7. The refined control policy with the use of $P = 100$ gives the profitability function $I = 5.56789$ which is only 0.003% better than $I = 5.56773$ obtained with the use of 15 stages. Therefore, this problem exhibits very low sensitivity, and an accurate optimal control policy is difficult to establish. Whether or not that small peak around $t = 8$h is included makes very little difference in the value of the performance index.
+
+![](img/06ae75163df4fdf5e1eec243d497d393_282_0.png)
+
+Figure 14.3: Convergence of IDP, showing the effect of the number of allowable values for control $R$ with $N = 1$ and $P = 15$ stages of equal length; the deviations are from $I = 5.56772556$
+
+![](img/06ae75163df4fdf5e1eec243d497d393_283_0.png)
+
+Figure 14.4: Optimal control policy with $P=15$ stages of equal length, giving $I=5.56773$
+
+![](img/06ae75163df4fdf5e1eec243d497d393_283_1.png)
+
+Figure 14.5: Optimal control policy with $P=25$ stages of equal length, giving $I=5.56778$
+
+## Chapter 15
+
+## Toward practical optimal control
+
+### 15.1 Introduction
+
+In establishing the optimal control of chemical reactors, the control variable used most frequently is the temperature of the reacting mixture. Although the optimal control policy, consisting of the temperature profile, is useful for understanding the reactor behavior, it does not lend itself to practical use, since the temperature can not be changed directly. As such, temperature is not a practical control variable. The temperature of the reactor can be changed by withdrawing heat, or adding heat by means of flowing coolant or heating fluid around the reactor. Then the flow rates of these streams become the real practical control variables which can be manipulated to maximize the appropriate performance criterion.
+
+Using flow rates to change the reactor temperature makes the optimal control determination much more difficult. When faced with the problem of determining the optimal flow rates of heating and cooling fluids, so that the yield of a desired product in a batch reactor is maximized, we encounter two additional differential equations to handle the heat balances for the reactor and the surrounding jacket. Furthermore, the problem is more difficult, since the constraints on the reactor temperature now become state constraints, which are more difficult to handle than simple constraints on the control. Such practical aspects of optimal control were considered by Luus and Okongwu [5], who showed that the speed of our present-day computers makes the on-line optimal control of chemical reactors now possible. Even if there is uncertainty in the heat transfer coefficient, the optimal control problem can be solved sufficiently fast to enable on-line application. To illustrate these ideas, we consider the oil shale pyrolysis problem that we considered in Chapter 9. This time, however, instead of simply determining the optimal temperature profile, we consider the problem of determining the optimal flow rates of coolant and heating fluid.
+

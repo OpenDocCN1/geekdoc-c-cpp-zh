@@ -1,0 +1,7 @@
+![](bbox=[0.28, 0.09, 0.66, 0.47])
+
+Figure 2.6: Convergence profile for the third order reduced model using N = 50 iterations per pass
+
+where again we want to preserve the steady-state gain. There are now 7 parameters to be determined. The initial values are again chosen from the dominant zeroes and poles of the original transfer function: x1 = 0.37923, x2 = 1.40900, x3 = 0.68093, x4 = 1.33333, x5 = 0.33333, x6 = 1.0, and x7 = 0.5. From the experience gained by the third order model reduction, we take a small number of random points per iteration ( R = 25), but a large number of passes. The convergence rate is very much dependent on the tolerance ε used as the minimum value for the initial region size to be used to prevent collapse of the particular region. As can be seen in Figures 2.7 and 2.8, the trend is similar whether 60 iterations are used per pass, or 40 iterations are used per pass.
+
+This leads us to use the scheme where the tolerance parameter ε = 10⁻⁵ is used for the first 2000 passes; it is then decreased to ε = 10⁻⁶ for the next 1000 passes, and decreased again for the last 1000 passes, as is shown in Figure 2.9. As is seen, convergence is obtained within 4000 passes with this adaptive choice of the tolerance parameter. The computation time on a Pentium/120 with R = 25 and N = 50 iterations per pass was 2077s, and very accurate results are obtained. The use of R = 200, with the use of adaptive method of specifying the tolerance parameter, yielded convergence to I_min = 0.00073136556 in 2929 passes. Computationally, however,

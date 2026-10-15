@@ -1,0 +1,5 @@
+![](bbox=[0.291, 0.096, 0.723, 0.491])
+
+Figure 15.3: Effect of the heat transfer term $UA$ on the performance index
+
+Several algorithms, to illustrate the procedure, are given in the Appendix D. There is no doubt that readers will be able to improve the convergence characteristics of the procedure for many classes of problems by developing more efficient algorithms. Just as with the LJ optimization procedure where a systematic procedure was developed to determine region sizes for the variables at the beginning of each pass [3, 4], such schemes can be introduced into IDP as well. In fact, by using such an adaptive region size determination in IDP, Mekarapiruk and Luus [6] showed that, for two typical chemical engineering optimal control problems, the convergence rate is increased and there is a factor of two improvement in the computational efficiency. There is much room for research, especially in the areas of handling state constraints and dealing with systems that exhibit discontinuities. Further developments in the improvement of algorithms used to apply IDP to very complex systems are continuing.
