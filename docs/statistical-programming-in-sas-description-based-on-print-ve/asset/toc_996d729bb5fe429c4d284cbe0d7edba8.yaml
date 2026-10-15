@@ -1,0 +1,1076 @@
+- - '##'
+  - Part 1
+- - '###'
+  - The Basics—Including Some Nuts and Bolts
+- - '####'
+  - Let’s Get Started—
+- - '#####'
+  - 1.1 Statistical Computing versus Programming versus Managing Data
+- - '#####'
+  - 1.2 Good Programming Practice
+- - '######'
+  - 1.2.2 Use meaningful variable names
+- - '######'
+  - 1.2.3 不要在程序语句中只使用大写字母（尽管适度使用是合理的）
+- - '######'
+  - 1.2.4 缩进自然在一起的程序语句
+- - '#####'
+  - 1.3 SAS 程序结构
+- - '######'
+  - 建议：在 PROC 步中显式命名要使用的 SAS 数据集。
+- - '######'
+  - 建议：在每个 DATA 步和 PROC 步后插入 RUN 语句。
+- - '#####'
+  - 1.4 什么是 SAS 数据集？
+- - '#####'
+  - 1.5 内部记录 SAS 程序
+- - '#####'
+  - 1.6 摘要
+- - '#####'
+  - 1.7 参考文献
+- - '#####'
+  - 1.8 练习
+- - '##'
+  - 读取、合并和管理数据以供后续分析
+- - '###'
+  - 2.1 数据集的临时与永久状态
+- - '####'
+  - Display 2.1 定义一个库并引用该库中的数据集
+- - '####'
+  - Display 2.2 产仔数浓度的五数概括
+- - '####'
+  - Display 2.3 生成临时数据集的示例代码
+- - '###'
+  - 2.2 将数据读入SAS数据集
+- - '####'
+  - 2.2.1 Reading data directly as part of a program—anyone for datalines?
+- - '#####'
+  - Display 2.4 Reading free-format data into SAS using a DATALINES statement
+- - '#####'
+  - Display 2.5 PROC PRINT of the misread subset of SMSA observations
+- - '#####'
+  - Display 2.6 Reading the SMSA data with a length declaration and code to allow
+    embedded blanks in the value of a character value
+- - '#####'
+  - Display 2.7 PROC PRINT output from the correctly read subset of the SMSA observations
+- - '####'
+  - 2.2.2 读取保存为文本的数据集 — INFILE 可以成为你的好帮手
+- - '#####'
+  - Display 2.8 使用 INFILE 语句将外部文本文件读入 SAS 数据集
+- - '#####'
+  - Display 2.9 使用 INFILE 语句的 SMSA 子集 PROC PRINT 输出
+- - '####'
+  - 2.2.3 有时变量位于特定列或采用特定格式
+- - '####'
+  - 2.2.4 读取逗号分隔值 — 使用逗号分隔符的文本文件
+- - '#####'
+  - Display 2.10 使用逗号作为变量值之间的分隔符读取输入数据
+- - '#####'
+  - Display 2.11 DASL-SMSA-commasep.csv 数据文件的第 17 到 25 个观测
+- - '#####'
+  - 2.2.5 直接读取 Excel 电子表格
+- - '#####'
+  - 按创建顺序排列的变量
+- - '#####'
+  - 2.2.6 读取 SPSS 数据文件——那个能干的小 SPSS 引擎
+- - '###'
+  - 2.3 写入文件或制作简单报告
+- - '####'
+  - 显示 2.16 使用带注释的 nitrofen 数据打印输出生成格式化的报告
+- - '####'
+  - 显示 2.17 由 PUT 语句创建的 nitrofen-put.txt 文件内容
+- - '####'
+  - 显示 2.18 创建包含 SAS 数据集内容的外部数据文件
+- - '####'
+  - 显示 2.19 使用 PUT 语句构建的三个数据文件的最初四行
+- - '####'
+  - 显示 2.20 生成包含 SAS 数据集的 *.csv 数据文件的替代方案
+- - '#####'
+  - Display 2.21 由 ODS CSV 和 PROC EXPORT 产生的 *.csv 文件
+- - '###'
+  - 2.4 拼接数据集合并添加观测值
+- - '####'
+  - Display 2.22 添加观测值或行——拼接数据集
+- - '####'
+  - Display 2.23 将五个单独的浓度特定数据集的观测值组合成单一的分析数据集
+- - '####'
+  - Display 2.24 由拼接五个浓度特定数据集形成的组合数据集
+- - '###'
+  - 2.5 合并数据集并添加变量
+- - '####'
+  - Display 2.25 添加变量和列——合并数据集
+- - '####'
+  - Display 2.26 使用 DATA 步编程合并
+- - '####'
+  - Display 2.27 合并后的 Common SMSA 数据集
+- - '####'
+  - Display 2.28 使用 DATA 步合并——指示观测值属于特定数据集的指示符（IN=）的定义
+- - '####'
+  - Display 2.28 *(continued)*
+- - '####'
+  - '*** comment 0'
+- - '####'
+  - '*** comment 1'
+- - '####'
+  - '*** comment 2'
+- - '####'
+  - '*** comment 3'
+- - '####'
+  - '*** comment 4'
+- - '####'
+  - '*** comment 5'
+- - '####'
+  - '*** comment 6'
+- - '####'
+  - Display 2.29 PROC PRINT 显示从合并两个具有部分共同观测值的数据集创建的数据集
+- - '####'
+  - '# city in either weather or demography data set or in both data sets'
+- - '####'
+  - Display 2.29 (continued)
+- - '####'
+  - '# city in both weather and demography data sets'
+- - '####'
+  - '# city in weather data set'
+- - '####'
+  - '# city in demography data set'
+- - '###'
+  - 2.6 使用 PROC SQL 进行数据库处理
+- - '####'
+  - Display 2.30 Running a simple query on a SAS data set containing the highest nitrofen
+    concentration data
+- - '####'
+  - Display 2.31 Result of the simple query with the total number of young produced
+    in the highest nitrofen concentration
+- - '####'
+  - Display 2.32 Concatenating data sets using UNION in PROC SQL
+- - '####'
+  - Display 2.32 (continued)
+- - '####'
+  - Display 2.33 Result of combining five nitrofen concentration tables into a single
+    table using PROC SQL
+- - '####'
+  - Display 2.34 An inner join of the three SMSA subset data sets using PROC SQL
+- - '####'
+  - Display 2.35 Data set produced by the inner join of the three SMSA subset data
+    sets
+- - '####'
+  - Display 2.36 (continued)
+- - '####'
+  - Display 2.37 Results from inner join, left outer join, right outer join, and full
+    outer join
+- - '#####'
+  - inner join
+- - '#####'
+  - left outer join with duplicate columns
+- - '####'
+  - Display 2.38 Table comparing merges of data sets using the DATA step with joins
+    of data sets using PROC SQL
+- - '####'
+  - Display 2.40 Data set constructed from joining all rows from two tables
+- - '###'
+  - 2.7 Summary
+- - '###'
+  - 2.8 References
+- - '###'
+  - 2.9 Exercises
+- - '###'
+  - 2.10 自学实验室探索
+- - '##'
+  - Using SAS Procedures
+- - '###'
+  - 3.1 SAS System Options
+- - '####'
+  - Display 3.6 使用 NOCENTER、NODATE、LS、PAGENO 和 FORMDLIM 选项输出
+- - '###'
+  - 3.2 可以修改大多数过程输出的语句
+- - '####'
+  - Display 3.7 带少量格式选项的代码
+- - '####'
+  - Display 3.8 使用少量格式选项打印数据的输出
+- - '###'
+  - 3.3 为变量值定义你自己的格式
+- - '####'
+  - Display 3.9 使用 PROC FORMAT 的用户定义格式
+- - '####'
+  - Display 3.10 Output produced by user-defined format
+- - '###'
+  - 3.4 Selecting or Stratifying an Analysis by Values of a Variable
+- - '####'
+  - Display 3.11 Printout of nitrofen data using animal ID as an identifier and sorted
+    by TOTAL within each CONC level
+- - '####'
+  - Display 3.12 Printout of data where total young is less than 10
+- - '###'
+  - 3.5 Displaying Data Set Properties and Observations
+- - '####'
+  - Display 3.13 Details of the nitro_tox data set generated and displayed by PROC
+    CONTENTS
+- - '####'
+  - Display 3.13 (continued)
+- - '###'
+  - 3.6 Using PROC PRINT to List the Observations in a Data Set
+- - '####'
+  - Display 3.14 Output produced by PROC PRINT
+- - '###'
+  - 3.7 Basic Graphical Displays
+- - '####'
+  - Display 3.15 使用 PROC SGPLOT 生成水平条形图
+- - '####'
+  - Display 3.16 显示平均幼崽数目的水平条形图，带两个标准差误差线
+- - '####'
+  - Display 3.17 按硝基酚浓度分组的个体观测点图
+- - '###'
+  - 3.8 使用散点图显示数值变量之间的关系
+- - '####'
+  - Display 3.18 生成三个散点图
+- - '####'
+  - Display 3.19 总幼崽数与硝基酚浓度的散点图，其中 CBROOD3 为分组变量
+- - '####'
+  - Display 3.20 各窝幼崽总数与硝基酚浓度的散点图
+- - '####'
+  - Display 3.21 各窝幼崽总数与硝基酚浓度的散点图，浓度已抖动
+- - '####'
+  - 3.8.1 比较多组之间响应的分布
+- - '#####'
+  - Display 3.22 不同硝基酚浓度下产生的幼崽的并排箱线图
+- - '###'
+  - 3.9 汇总分类变量
+- - '####'
+  - 显示 3.23 各硝酚浓度中的观测值数量
+- - '####'
+  - 显示 3.24 显示氮浓度与第三窝是否产生幼崽的列联表
+- - '####'
+  - 显示 3.24 （续）
+- - '###'
+  - 3.10 汇总数值变量
+- - '####'
+  - 显示 3.25 五种硝酚浓度条件下 50 个观测值的总幼崽数直方图
+- - '####'
+  - 显示 3.26 五种硝酚浓度条件下 50 个观测值的总幼崽数正态分位数图
+- - '####'
+  - 显示 3.27 使用 PROC SGPLOT 生成叠加密度的直方图
+- - '####'
+  - 显示 3.28 由 PROC SGPLOT 生成的叠加密度直方图
+- - '####'
+  - 显示 3.29 请求描述 SMSA 数据集中 1 月温度分布的单变量统计
+- - '####'
+  - 显示 3.30 描述 SMSA 数据集中 1 月温度的信息
+- - '####'
+  - 3.10.1 PROC MEANS 用于描述性统计
+- - '###'
+  - 3.11 选择简单随机样本
+- - '####'
+  - 显示 3.32 用于从包含 N=60 个城市的数据集中选择 N=6 个城市的简单随机样本的 SAS 程序
+- - '####'
+  - 显示 3.33 从包含 N=60 个城市的数据集中选择的 N=6 个城市的简单随机样本
+- - '###'
+  - 3.12 随机分配处理给观测值
+- - '####'
+  - 显示 3.34 创建 20 个实验单元（EUs）中四种处理的随机化
+- - '####'
+  - 显示 3.35 使用 PROC PLAN 将四种处理随机化到 20 个实验单元（EUs）
+- - '###'
+  - 3.13 摘要
+- - '###'
+  - 3.14 参考文献
+- - '###'
+  - 3.15 练习题
+- - '##'
+  - 复杂表格的构建与输出控制
+- - '###'
+  - 4.1 介绍 PROC TABULATE
+- - '####'
+  - Display 4.1 PROC TABULATE 与 nitrofen 数据
+- - '####'
+  - Display 4.2 暴露于 nitrofen 的 C. dubia 所产幼体数的浓度特异性五数概括
+- - '###'
+  - 4.2 从简单规格构建
+- - '####'
+  - 显示 4.3 用于硝基酚数据分析的草表代码
+- - '####'
+  - 显示 4.4 硝基酚数据分析的草表——未格式化且在浓度上汇总
+- - '####'
+  - 显示 4.5 硝基酚数据分析的第二次尝试——未格式化的表格条目和按每个浓度汇总的单独页面
+- - '#####'
+  - conc 80
+- - '#####'
+  - conc 310
+- - '###'
+  - 4.3 增强 PROC TABULATE 输出
+- - '####'
+  - 显示 4.6 针对人口密度不同四分位分别构建预期寿命、GNP 和识字百分比的数值统计汇总
+- - '####'
+  - 显示 4.7 国家数据集数值统计摘要的草案表
+- - '####'
+  - 显示 4.8 格式化并标记的国家数据集数值统计摘要表
+- - '###'
+  - 4.4 使用输出传送系统
+- - '####'
+  - 4.4.1 基本思想
+- - '####'
+  - 4.4.2 目的地——RTF、HTML、PDF 等！
+- - '#####'
+  - 显示 4.9 使用国家数据集说明三种不同的 ODS 目的地
+- - '#####'
+  - 显示 4.10 路由到 RTF 目标的数值统计摘要表
+- - '#####'
+  - 显示 4.11 路由到 PDF 目标的数值统计摘要表
+- - '#####'
+  - 显示 4.12 路由到 HTML 目标的数值统计摘要表
+- - '#####'
+  - 显示 4.13 构建包含框架、目录和三个 SAS 过程输出的网页
+- - '#####'
+  - 显示 4.14 浏览器中显示包含框架、目录以及三个 SAS 过程输出链接的网页
+- - '####'
+  - 4.4.3 生成的内容及如何选择
+- - '#####'
+  - 显示 4.15 生成回归数据集的程序
+- - '#####'
+  - 显示 4.16 回归数据集的打印输出
+- - '#####'
+  - 显示 4.17 在 ODS RTF 中包裹的 PROC REG 产生的四个输出表
+- - '######'
+  - 方差分析
+- - '######'
+  - 参数估计
+- - '#####'
+  - 显示 4.18 PROC REG 产生的 ODS 表
+- - '####'
+  - Display 4.19 PROC REG 输出，列出输出对象
+- - '####'
+  - Display 4.20 使用 ODS SELECT 选择 ParameterEstimates
+- - '####'
+  - 4.4.4 统计程序员应访问的另一个目标——OUTPUT
+- - '####'
+  - Display 4.21 生成一组回归数据、拟合模型并提取和绘制系数
+- - '####'
+  - Display 4.21 （续）
+- - '####'
+  - 显示 4.22 基于 2000 个模拟数据集的 b0 和 b1 的均值和标准差估计
+- - '####'
+  - 显示 4.23 基于 2000 个模拟数据集的估计 b0 和 b1 的图
+- - '###'
+  - 4.5 摘要
+- - '###'
+  - 4.6 参考文献
+- - '###'
+  - 4.7 练习
+- - '##'
+  - SAS 中的基本模型
+- - '###'
+  - 5.1 建模概述
+- - '###'
+  - 5.2 线性回归模型
+- - '####'
+  - 5.2.1 Motorboats and manatees—a look at simple linear regression
+- - '#####'
+  - Display 5.1 Linear regression to predict manatee deaths as a function of motorboats
+    registered
+- - '#####'
+  - Display 5.1 (continued)
+- - '#####'
+  - Display 5.2 Analysis of variance table and fit summary from fitting a line to
+    predict manatee deaths from registered motorboats
+- - '#####'
+  - Display 5.3 Parameter estimates from fitting a line to predict manatee deaths
+    from registered motorboats
+- - '####'
+  - 显示 5.4 残差分析，均值响应的置信区间和预测区间
+- - '####'
+  - 显示 5.5 散点图
+- - '####'
+  - 显示 5.5 （续）
+- - '####'
+  - 显示 5.7A 海牛死亡数与注册机动船数（以 1000 为单位）的散点图，叠加回归线和 LOESS 拟合
+- - '####'
+  - 显示 5.7C 具有预测线和置信及预测限的海牛死亡数散点图
+- - '####'
+  - 显示 5.7D 残差直方图，叠加正态密度
+- - '####'
+  - 显示 5.8 多元回归拟合幂模型
+- - '####'
+  - Display 5.8 *(continued)*
+- - '####'
+  - Display 5.9 数据集的打印输出
+- - '####'
+  - Display 5.9 (continued)
+- - '####'
+  - Display 5.10 与体重和脑重变量相关的极端观测值
+- - '####'
+  - Display 5.11 假设相同关系拟合异速生长回归模型以预测脑重
+- - '####'
+  - Display 5.12 假设不同截距拟合异速生长回归模型以预测脑重
+- - '####'
+  - Display 5.13 生成 log₁₀(脑重) 与 log₁₀(体重) 的散点图并显示不同拟合
+- - '####'
+  - Display 5.14 log₁₀(脑重) 与 log₁₀(体重) 的散点图，拟合来自公共截距和公共斜率模型
+- - '####'
+  - Display 5.15 散点图显示 log₁₀(脑重) 与 log₁₀(体重) 的关系，并拟合自不同截距和共同斜率模型
+- - '###'
+  - 5.3 ANOVA 模型——PROC GLM 用于单因素方差分析
+- - '####'
+  - 5.3.1 使用单因素方差分析模型比较不同包装条件下细菌生长
+- - '#####'
+  - Display 5.16 拟合单因素方差分析模型
+- - '#####'
+  - Display 5.17 不同包装条件下 log-细菌生长的并排箱线图
+- - '#####'
+  - Display 5.18B 细菌生长 ANOVA 模型拟合的残差直方图，叠加正态密度和核密度
+- - '#####'
+  - Display 5.19 ANOVA 模型结果的包装汇总
+- - '####'
+  - '**Display 5.20** ANOVA 表结果：比较不同包装的平均对数细菌生长'
+- - '####'
+  - Display 5.21 Tukey ANOVA 表结果，指定 CLDIFF
+- - '####'
+  - Display 5.22 Tukey ANOVA 表结果，指定 LINES
+- - '####'
+  - Display 5.23 通过 LSMEANS 进行成对比较（编辑后）
+- - '####'
+  - Display 5.23 （续）
+- - '###'
+  - 5.4 ANOVA 模型——PROC GLM 用于具有两个或多个因子的 ANOVA 模型
+- - '####'
+  - Display 5.24 2×2 实验的交互作用检验、主效应检验和均值计算
+- - '####'
+  - Display 5.25 从 PROC MEANS 输出以计算 2x2 实验的单元均值和边际均值
+- - '####'
+  - 因子 2
+- - '####'
+  - Display 5.26 来自 PROC GLM 的因子信息、ANOVA 表汇总和假设检验
+- - '####'
+  - Display 5.27 来自 PROC GLM 的 MEANS 和 LSMEANS 语句输出
+- - '####'
+  - Least Squares Means
+- - '###'
+  - 5.5 Summary
+- - '###'
+  - 5.6 References
+- - '###'
+  - 5.7 Exercises
+- - '##'
+  - Producing Statistical Graphics in SAS
+- - '###'
+  - 6.1 Graphics in SAS
+- - '###'
+  - 6.2 ODS Statistical Graphics
+- - '####'
+  - Display 6.1 Generating a cubic mean response data set and fitting a linear regression
+    model with ODS Graphics requested
+- - '####'
+  - Display 6.2A Fit diagnostics panel
+- - '####'
+  - Fit Diagnostics for response
+- - '####'
+  - Display 6.2B 残差与预测变量的散点图
+- - '####'
+  - Display 6.2C 带有置信区间和预测区间的拟合模型
+- - '####'
+  - Display 6.3 由 PROC REG 产生并由 ODS TRACE 列出的输出对象和图形
+- - '####'
+  - Display 6.4 由 PROC REG 产生的图形的部分列表
+- - '####'
+  - Display 6.5 截距和斜率的 DFBETAS 图
+- - '###'
+  - 6.3 使用 ODS Graphics Editor 修改图形
+- - '####'
+  - Display 6.6 使用 ODS Graphics Editor 制作自定义图
+- - '####'
+  - Display 6.7 使用 ODS Graphics Editor 自定义的图
+- - '###'
+  - 6.4 使用样式和模板进行图形绘制
+- - '####'
+  - 显示 6.8 比较残差直方图的不同的样式
+- - '####'
+  - 显示 6.10 Stat.REG.Graphics.ResidualHistogram 模板
+- - '####'
+  - 显示 6.11 对 Stat.REG.Graphics.ResidualHistogram 模板的修改
+- - '####'
+  - 显示 6.12 基于修改后模板的残差直方图
+- - '###'
+  - 6.5 统计图形——进入 SG 过程的领域
+- - '####'
+  - 显示6.13 使用PROC SGPLOT分析拟合线性回归模型的残差
+- - '####'
+  - 显示6.14 海牛死亡数与注册机动船数量的散点图，叠加线性回归拟合与LOESS拟合
+- - '####'
+  - 显示6.15 残差相对于注册机动船数量的图，带有LOESS平滑
+- - '####'
+  - 显示6.16 按窝次分组的幼体数量与浓度散点图（叠加LOESS平滑）
+- - '####'
+  - 显示6.17 幼体数量与浓度的散点图（叠加LOESS拟合）
+- - '####'
+  - 显示6.18 生成每种浓度下幼体数量的独立点图
+- - '####'
+  - 显示6.19 每种浓度下幼体数量的独立点图
+- - '####'
+  - 显示6.20 请求绘制窝次计数与浓度关系的散点图面板
+- - '####'
+  - 显示6.21 窝次计数与浓度的散点图（叠加LOESS平滑）
+- - '###'
+  - 6.6 案例研究：使用SG过程
+- - '####'
+  - 显示6.22 对SMSA数据进行格式化、添加标签并绘制图形探索
+- - '####'
+  - 显示6.22（续）
+- - '####'
+  - Display 6.22 (continued)
+- - '####'
+  - Display 6.23 Histogram of January temperatures
+- - '####'
+  - Display 6.24 Scatter plot of mortality versus education
+- - '####'
+  - Display 6.25 Scatter plots with mortality on the y-axis for comparison
+- - '####'
+  - Display 6.26 Scatter plot matrix and histograms of mortality, education, income,
+    and January temperature
+- - '####'
+  - Display 6.27 Scatter plot of mortality versus education conditional on January
+    temperatures
+- - '####'
+  - Display 6.28 Scatter plot of mortality versus education conditional on January
+    temperatures
+- - '####'
+  - Display 6.29 Scatter plot of mortality versus education paneled by quartiles of
+    January temperatures
+- - '###'
+  - 6.7 Summary
+- - '###'
+  - 6.8 References
+- - '###'
+  - 6.9 Exercises
+- - '##'
+  - Traditional SAS Graphics
+- - '###'
+  - 7.1 Traditional SAS Graphics
+- - '###'
+  - 7.2 Customizing Graphics
+- - '####'
+  - Display 7.1 Toss a digital coin–relative frequency of heads
+- - '####'
+  - Display 7.2 相对频率散点图
+- - '####'
+  - Display 7.3 投掷数字硬币——正面相对频率（更好的散点图）
+- - '####'
+  - Display 7.5 更好的、更具出版就绪性的正面相对频率散点图
+- - '###'
+  - 7.3 为什么您需要学习注释数据集
+- - '####'
+  - 显示 7.6 对说明抛硬币相对频率的图形进行注释
+- - '####'
+  - 显示 7.7 注释数据集的内容
+- - '####'
+  - 显示 7.8 带注释的硬币正面相对频率散点图
+- - '####'
+  - 显示 7.9 基于指数化对称 CI 构造 OR 的 CI
+- - '####'
+  - 显示 7.10 基于指数化对称 CI 构造 OR 的 CI 的概念步骤
+- - '###'
+  - 7.4 案例研究：比较响应分布
+- - '####'
+  - Display 7.11 生成总幼崽数与硝基酚浓度的散点图
+- - '####'
+  - Display 7.11 （续）
+- - '####'
+  - Display 7.12 总幼崽数与硝基酚浓度的散点图，叠加了浓度特异性均值响应的线段
+- - '####'
+  - Display 7.13 总幼崽数与硝基酚浓度的散点图，每个浓度上叠加了箱线图
+- - '###'
+  - 7.5 空间数据的描述性显示
+- - '####'
+  - Display 7.14 制作俄亥俄州各县 1990 年人口的色带地图
+- - '####'
+  - Display 7.15 俄亥俄州各县 1990 年人口地图
+- - '###'
+  - 7.6 总结
+- - '###'
+  - 7.7 参考文献
+- - '###'
+  - 7.8 练习
+- - '###'
+  - 7.9 附录：完整的俄亥俄州县人口数据集
+- - '##'
+  - Part 2
+- - '##'
+  - Doing More with Programming
+- - '##'
+  - Formatting Variables,
+- - '###'
+  - 8.1 Internal Representations and Output Displays
+- - '####'
+  - Display 8.1 使用隐式和显式格式读取字符型和数值型变量
+- - '####'
+  - Display 8.1 （续）
+- - '####'
+  - Display 8.2 读取字符型和数值型变量后的输出
+- - '####'
+  - Display 8.2 （续）
+- - '####'
+  - Display 8.3 显示数值格式的 DATA 步
+- - '####'
+  - Display 8.4 使用数值格式示例的 SAS 日志输出
+- - '#####'
+  - 8.1.1 定义你自己的格式和 informat
+- - '####'
+  - Display 8.6 (continued)
+- - '####'
+  - Display 8.7 Output from PROC MEANS
+- - '###'
+  - 8.2 Character, Numeric, Time, and Date Formats
+- - '####'
+  - 'Chapter 8: Formatting Variables, Recoding Variables, and Writing Programs 273'
+- - '####'
+  - Display 8.8 Formats for reading common date values into SAS
+- - '####'
+  - Display 8.9 Output from PROC PRINT
+- - '####'
+  - Display 8.10 Assigning date formats to numeric variables
+- - '####'
+  - Display 8.11 Output from PROC PRINT with dates appropriately formatted
+- - '####'
+  - Display 8.12 Various date formats
+- - '####'
+  - Display 8.12 (continued)
+- - '####'
+  - Display 8.13 SAS log displaying dates using different formats
+- - '####'
+  - Display 8.14 Time and date formats
+- - '####'
+  - Display 8.15 Time and date values in SAS
+- - '####'
+  - Display 8.16 将日期、时间和货币数据读入 SAS
+- - '####'
+  - Display 8.17 包含日期、时间和货币数据的 PROC PRINT 输出
+- - '###'
+  - 8.3 在 DATA 步中重新编码和转换变量
+- - '####'
+  - Display 8.18 在拟合多项式回归模型之前的数据转换
+- - '####'
+  - Display 8.19 来自多项式回归模型的输出
+- - '####'
+  - Display 8.20 为拟合方差分析模型定义不同条件的指示变量
+- - '####'
+  - Display 8.21 PROC PRINT 输出
+- - '####'
+  - Display 8.21 (continued)
+- - '#####'
+  - Display 8.22 定义识字类别的指示变量
+- - '#####'
+  - Display 8.23 不同指示变量的 PROC PRINT 输出
+- - '###'
+  - 8.4 任务执行的顺序
+- - '####'
+  - Display 8.24 运算顺序的测试代码
+- - '####'
+  - Display 8.25 运算顺序测试代码的输出
+- - '###'
+  - 8.5 数据集中保留什么、丢弃什么
+- - '####'
+  - Display 8.26 读取 nitrofen 数据并展开它
+- - '####'
+  - Display 8.27 来自 nitro 数据集前四个观测值的 PROC PRINT 输出
+- - '####'
+  - Display 8.28 来自 nitrofen_A 数据集前四个观测值的 PROC PRINT 输出
+- - '###'
+  - 8.6 关于编写程序的结构化思考
+- - '###'
+  - 8.7 案例研究 1：双样本 t 检验对异方差的鲁棒性是否足够？
+- - '####'
+  - Display 8.29 t 检验模拟的伪代码和注释
+- - '####'
+  - Display 8.30 指定 t 检验模拟的条件
+- - '####'
+  - 展示 8.31 向 t 检验模拟添加数据生成和检验统计量代码
+- - '####'
+  - 展示 8.32 确定 PROC TTEST 生成的输出对象
+- - '####'
+  - 展示 8.33 ODS TRACE 输出对象列表及 PROC TTEST 输出
+- - '####'
+  - 展示 8.34 显示由 ODS output 创建的数据集内容
+- - '####'
+  - 展示 8.35 由 ODS output 创建的数据集内容
+- - '####'
+  - 展示 8.36 t 检验模拟程序的 ODS output 版本
+- - '####'
+  - Display 8.36 (continued)
+- - '####'
+  - '8.7.1 Case Study 1: Is the Two-Sample t-Test Robust Enough for Heterogeneous
+    Variances? (Revisited Using More DATA Step Programming)'
+- - '#####'
+  - Display 8.37 Generating data as one record per simulated experiment
+- - '#####'
+  - Display 8.37 (continued)
+- - '#####'
+  - Display 8.38 Storing simulated data in arrays
+- - '#####'
+  - Display 8.39 Pseudocode and comments for the t-test simulation in a DATA step
+- - '#####'
+  - Display 8.40 DATA step programming
+- - '#####'
+  - Display 8.40 (continued)
+- - '###'
+  - 8.8 案例研究 2：蒙特卡洛积分估计积分
+- - '####'
+  - 显示 8.41 随机解的伪代码（蒙特卡洛积分）
+- - '####'
+  - 显示 8.43 生成蒙特卡洛估计 P(0<Z<1.645)
+- - '####'
+  - 显示 8.44 生成蒙特卡洛估计 P(0<Z<1.645) 的程序的图形部分
+- - '####'
+  - 显示 8.45 估计 P(0<Z<1.645) 的逐点 CI 与模拟点数之间的关系图
+- - '####'
+  - 显示 8.46 位于正态密度下方 (+) 或上方 (o) 的点图
+- - '###'
+  - 8.9 案例研究 3：基于简单百分位的自助法
+- - '####'
+  - 显示 8.47 构建基于百分位的自助 CI
+- - '####'
+  - 显示 8.48 构建总体均值的基于百分位的自助 CI
+- - '####'
+  - Display 8.48 (continued)
+- - '###'
+  - 8.10 丢弃你的统计分布表
+- - '####'
+  - Display 8.49 SAS 中的 CDF 函数
+- - '####'
+  - Display 8.50 PROC PRINT 输出的正态和二项式 CDF 函数
+- - '####'
+  - Display 8.51 PDF 和 PMF 函数
+- - '####'
+  - Display 8.52 PROC PRINT 输出的正态和二项式 PDF 函数
+- - '####'
+  - Display 8.53 比较标准正态密度与 t₄
+- - '####'
+  - Display 8.54 比较标准正态密度与 t₄ 的图
+- - '####'
+  - Display 8.57 生成 t4 与标准正态的 Q-Q 图
+- - '####'
+  - 显示 8.58 t4 与标准正态的 Q-Q 图
+- - '###'
+  - 8.11 使用随机数生成器生成变量
+- - '####'
+  - 显示 8.59 生成并显示三角随机偏差
+- - '####'
+  - 显示 8.60 1400 个随机三角偏差的直方图
+- - '####'
+  - 显示 8.61 模拟掷一对骰子
+- - '####'
+  - 显示 8.62 6000 次第一次骰子掷骰结果的频率
+- - '###'
+  - 8.12 总结
+- - '###'
+  - 8.13 参考文献
+- - '###'
+  - 8.14 练习
+- - '##'
+  - DATA 步编程
+- - '###'
+  - 9.1 用于存储值集合的存储箱
+- - '####'
+  - 9.1.1 在变量列表中定义值
+- - '#####'
+  - Display 9.1 使用数组转换温度尺度
+- - '####'
+  - 9.1.2 在变量列表中输入值
+- - '####'
+  - 9.1.3 重新编码数值变量的缺失值代码 “.”
+- - '#####'
+  - Display 9.2 重新编码数值变量中的缺失值
+- - '####'
+  - 9.1.4 重新编码所有数值和字符变量的缺失值
+- - '#####'
+  - Display 9.3 重新编码数值和字符变量中的缺失值
+- - '#####'
+  - Display 9.3 (continued)
+- - '####'
+  - 9.1.5 从单条记录创建多个观测值
+- - '#####'
+  - Display 9.4 将单条记录扩展为多条记录
+- - '###'
+  - 9.2 案例研究 1：空间随机性检验的蒙特卡洛 p 值
+- - '####'
+  - Display 9.5 计算用于检测聚集的蒙特卡洛 p 值
+- - '####'
+  - Display 9.5 （续）
+- - '####'
+  - Display 9.5 （续）
+- - '###'
+  - 9.3 在观测之间记住变量值
+- - '####'
+  - 9.3.1 为单个观测处理多个观测
+- - '#####'
+  - Display 9.6A 处理个体的多次观测
+- - '#####'
+  - Display 9.6A (continued)
+- - '#####'
+  - '**** Comment 1'
+- - '#####'
+  - '**** Comment 2'
+- - '#####'
+  - '**** Comment 3'
+- - '#####'
+  - '**** Comment 4'
+- - '#####'
+  - '**** Comment 5'
+- - '#####'
+  - Display 9.6B 不使用数组处理个体的多次观测
+- - '#####'
+  - Display 9.6B (continued)
+- - '###'
+  - 9.4 案例研究 2：两总体相等性的随机化检验
+- - '####'
+  - Display 9.7 PROC TTEST 的输出
+- - '####'
+  - Display 9.8 构造双总体均值相等性随机化检验
+- - '#####'
+  - Display 9.8 （续）
+- - '#####'
+  - Display 9.8 （续）
+- - '####'
+  - 346 SAS 统计编程
+- - '####'
+  - Display 9.9 双总体均值相等性随机化检验的输出
+- - '###'
+  - 9.7 练习
+- - '##'
+  - 宏编程
+- - '###'
+  - 10.1 什么是宏，为什么要使用宏？
+- - '###'
+  - 10.2 宏的动机：用数值积分计算 P(0<Z<1.645)
+- - '####'
+  - 显示 10.1 使用梯形法则估计 P(0<Z<1.645)
+- - '####'
+  - 显示 10.2 估计的 P(0<Z<1.645)
+- - '####'
+  - 梯形法则下 P(0<Z<1.645) 的面积估计
+- - '####'
+  - 显示 10.3 估计的 P(0<Z<1.645) 及函数值
+- - '####'
+  - 梯形法则的插值点
+- - '####'
+  - 显示 10.3 （续）
+- - '####'
+  - 显示 10.4 输出用于梯形法则的 [x,f(x)] 值
+- - '###'
+  - 10.3 处理宏
+- - '###'
+  - 10.4 宏变量、参数和函数
+- - '####'
+  - 显示 10.5 替换积分限和要评估的点数
+- - '####'
+  - 第 10 章：宏编程 359
+- - '####'
+  - 显示 10.5（续）
+- - '####'
+  - 显示 10.6 使用数值积分 P(-1.645<Z<1.645) 的 PROC PRINT 输出
+- - '####'
+  - 梯形法则面积估计 P(-1.645<Z<1.645)
+- - '####'
+  - 显示 10.7 写入文件 est.out 的输出
+- - '###'
+  - 10.5 条件执行、循环和宏
+- - '####'
+  - 显示 10.8 解析复杂的宏变量
+- - '####'
+  - 显示 10.9 调用宏的输出
+- - '####'
+  - 显示 10.10 构建标准正态密度曲线下面积的梯形法则估计
+- - '####'
+  - 显示 10.10 （续）
+- - '####'
+  - Display 10.11 Macro illustrating %GOTO
+- - '####'
+  - Display 10.12 NCHECK macro applied to three different arguments
+- - '###'
+  - 10.6 Debugging Macro Code and Programs
+- - '####'
+  - Display 10.13 Requesting the display of SAS automatic macro variables
+- - '####'
+  - Display 10.14 SAS log output produced by the SYMBOLGEN option
+- - '####'
+  - Display 10.14 (continued)
+- - '####'
+  - Display 10.15 SAS log output produced by the MPRINT option
+- - '#####'
+  - 显示 10.15 *(续)*
+- - '#####'
+  - 显示 10.16 由 MLOGIC 选项产生的 SAS 日志输出
+- - '###'
+  - 10.7 保存宏
+- - '###'
+  - 10.8 用于宏的函数和例程
+- - '####'
+  - 显示 10.17 使用日志结果说明宏函数
+- - '####'
+  - 显示 10.18 宏中的 SYMPUT 函数
+- - '####'
+  - Display 10.18 (continued)
+- - '####'
+  - Display 10.19A SGPLOT plots produced by the %threeregs macro
+- - '####'
+  - Display 10.19B SGPANEL plot produced by the %threeregs macro
+- - '###'
+  - '10.9 Bonus Material: Processing Multiple Data Sets'
+- - '####'
+  - Display 10.20 Constructing three data sets for later use
+- - '####'
+  - Display 10.21 Reading data set names and constructing macro variables
+- - '####'
+  - Display 10.22 Defining and running a macro program
+- - '####'
+  - Display 10.23 Printout of the combined data set (Edited)
+- - '####'
+  - 显示 10.23（续）
+- - '####'
+  - 显示 10.24 三个日期的图
+- - '###'
+  - 10.10 摘要
+- - '###'
+  - 10.11 参考文献
+- - '###'
+  - 10.12 练习
+- - '##'
+  - 使用矩阵和向量编程
+- - '###'
+  - 11.1 定义矩阵和下标
+- - '####'
+  - 显示 11.1 基本矩阵操作
+- - '####'
+  - 显示 11.1 （续）
+- - '####'
+  - 显示 11.2 基本矩阵操作输出
+- - '###'
+  - 11.2 使用对角矩阵和堆叠矩阵
+- - '####'
+  - 显示 11.3 汇总、提取、塑形和操作向量和矩阵
+- - '####'
+  - Display 11.3 （续）
+- - '####'
+  - Display 11.4 对向量和矩阵进行汇总、提取、塑形和操作的输出
+- - '###'
+  - 11.4 将数据集导入 SAS/IML 并将矩阵从 SAS/IML 导出到数据集
+- - '####'
+  - 11.4.1 从 SAS 数据集创建矩阵及反之亦然
+- - '#####'
+  - Display 11.7 读取名为 nitrofen 的 SAS 数据集
+- - '####'
+  - '试试看：在家重写代码，使用下标缩减运算符 : 和 ##。'
+- - '####'
+  - Display 11.8 由 SAS/IML 产生的数据集
+- - '###'
+  - 11.5 案例研究 1：使用蒙特卡洛积分估计 π
+- - '####'
+  - Display 11.9 使用 SAS/IML 通过蒙特卡洛积分估计 π（第一象限中的点）
+- - '###'
+  - 11.6 案例研究 2：二分根查找器
+- - '####'
+  - Display 11.10 使用二分法估计 √3
+- - '####'
+  - Display 11.11 二分法估计 √3 的迭代历史
+- - '####'
+  - Display 11.12 迭代历史的绘图
+- - '###'
+  - 11.7 案例研究 3：使用从 PROC PLAN 导入的矩阵进行随机化检验
+- - '####'
+  - Display 11.13 实现随机化检验的 SAS/IML 代码
+- - '###'
+  - 11.8 案例研究 4：SAS/IML 模块实现蒙特卡洛积分以估计 π
+- - '####'
+  - Display 11.14 使用蒙特卡洛积分估计 π 的 SAS/IML 模块
+- - '####'
+  - Display 11.14 （续）
+- - '####'
+  - Display 11.15：运行 SAS/IML 模块使用蒙特卡洛积分估计 π 的结果
+- - '#####'
+  - 11.8.1 存储和加载 SAS/IML 模块
+- - '####'
+  - Display 11.16 存储 SAS/IML 模块
+- - '####'
+  - Display 11.17 加载和使用 SAS/IML 模块
+- - '###'
+  - 11.9 介绍 SAS/IML Studio
+- - '####'
+  - 11.9.1 案例研究 1：SMSA 数据集的动态和交互式分析
+- - '#####'
+  - Display 11.18 使用 File→Open→File 创建链接数据表
+- - '#####'
+  - Display 11.19 从选择 Graph→Scatter plot 生成的选项对话框
+- - '#####'
+  - Display 11.20 使用 Fit Curves 选项叠加回归线
+- - '####'
+  - 414 Statistical Programming in SAS
+- - '#####'
+  - Display 11.21 左键选择与数据对象链接的点
+- - '#####'
+  - Display 11.22 使用选择矩形选择平均教育水平最高的城市
+- - '####'
+  - 11.9.2 案例研究 2：多链接图形窗口
+- - '#####'
+  - Display 11.23 创建一个数据对象、两个散点图和一个直方图
+- - '#####'
+  - Display 11.24 数据对象、两个散点图和一个直方图
+- - '####'
+  - 11.9.3 案例研究 3：SAS/IML 矩阵操作和调用 SAS/STAT 过程
+- - '#####'
+  - Display 11.25 导出数据对象、拟合回归、添加残差并生成绘图
+- - '#####'
+  - Display 11.26 数据表（左列）、残差与 Education 的散点图（右上列）和 PROC REG 输出（右下列）
+- - '####'
+  - 11.9.4 案例研究 4：使用 R 生成平均 AGE 的自助法 CI
+- - '#####'
+  - Display 11.27 调用 R 函数生成平均 AGE 的自助法 CI
+- - '#####'
+  - Display 11.28 调用 R 函数生成平均 AGE 的自助法 CI 的结果
+- - '#####'
+  - Display 11.29 自助法均值 AGE 的直方图
+- - '###'
+  - 11.10 总结
+- - '###'
+  - 11.11 参考文献
+- - '###'
+  - 11.12 练习
+- - '##'
+  - 索引
+- - '###'
+  - A
+- - '###'
+  - B
+- - '###'
+  - C
+- - '##'
+  - D
+- - '##'
+  - E
+- - '##'
+  - F
+- - '##'
+  - G
+- - '##'
+  - H
+- - '##'
+  - I
+- - '##'
+  - J
+- - '##'
+  - K
+- - '##'
+  - L
+- - '##'
+  - M
+- - '##'
+  - N
+- - '##'
+  - O
+- - '##'
+  - Q
+- - '##'
+  - R
+- - '##'
+  - command 398
+- - '##'
+  - 索引
+- - '##'
+  - W
+- - '##'
+  - X

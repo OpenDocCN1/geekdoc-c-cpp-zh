@@ -1,0 +1,1 @@
+6. **Multiple week project:** Investigate something of interest to you using the computational tools discussed. Example projects might include a simulation of the Type I error rates and power of a statistical test, coverage probabilities and CI widths for a CI estimation routine, or some large-scale data processing problem.

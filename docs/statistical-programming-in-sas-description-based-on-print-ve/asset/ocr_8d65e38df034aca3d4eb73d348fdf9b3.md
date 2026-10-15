@@ -1,0 +1,12 @@
+Many of these simple changes can be implemented with ODS Graphics and PROC SGPLOT. For example, items 1 and 2 can be addressed in the XAXIS and YAXIS statements in PROC SGPLOT using the LABEL option. You can create irregular intervals in PROC SGPLOT and PROC SGPANEL. In PROC GPLOT, to create irregular intervals, you need an annotate data set. (For more information, see page 13 in “Secrets of the SG Procedures,” at http://support.sas.com/resources/papers/proceedings09/324-2009.pdf. The MIN, MAX, VALUES, and VALUESHINT options in the PROC SGPLOT AXIS and SERIES statements might also be useful.)
+
+The AXIS statement enables you to specify tick mark values and labels. It enables you to rotate the axis label and much more. The following statement defines a restricted range for the relative frequencies (MIN=0.35, MAX=0.65), defines the spacing of the values (by 0.05), defines a more expansive label for the axis, and rotates that axis by 90 degrees.
+
+```
+axis1 order=0.35 to 0.65 by 0.05
+    label=(angle=90 "Estimated Pr(HEADS)");
+```
+
+The SYMBOL statement and AXIS statements are placed before the invocation of PROC GPLOT. The PLOT statement associated with PROC GPLOT identifies which axis in the plot (vertical axis=VAXIS or horizontal axis=HAXIS) is associated with each AXIS statement. The SYMBOL statement requests an interpolation between points—here, adjacent relative frequencies are connected with the JOIN option. Other interpolation options include options that are useful for displaying stock market data (HILOC for high-low-close data), for smoothing data (L1P, L3P, L5P, SM, and SPLINE), for displaying polynomial regression fits (RL, RQ, and RC with confidence intervals for mean responses CLM; or with prediction intervals for new responses CLI), for plotting means ±1, 2, or 3 standard deviations (STD), or for displaying step function patterns (STEP).
+
+The revisions to the previous scatter plot with axis, symbol, and label changes are provided in the code in Display 7.3. This code produces the new scatter plot in Display 7.4. This scatter plot is much better than its first incarnation. This is a common experience in producing statistical graphics. You will rarely, if ever, be satisfied with the first graphic that you produce. The norm is to iterate and tune a graphic until you are happy with the results.
