@@ -1,0 +1,273 @@
+
+```xml
+Tag="{Binding Path=Extension, Mode=OneTime}"
+LargeImageSource="{Binding Extension.Metadata.ImageUri,
+    Converter={StaticResource bitmapConverter},
+    Mode=OneTime}"
+Command="{Binding ActivateCommand}" />
+</DataTemplate>
+</RibbonGroup.ItemTemplate>
+</RibbonGroup>
+```
+
+[图 26.7](#) 显示了正在运行的应用程序，其中读取了来自计算器扩展的元数据——包括图像、标题和描述。通过 [图 26.8](#) 可以看到已激活的计算器扩展。
+
+![](img/3d365b72b289213a91ade7eb366b8f35_979_0.png)
+
+[图 26.7](#)
+
+![](img/3d365b72b289213a91ade7eb366b8f35_980_0.png)
+
+#### 图 26.8
+
+### Summary
+
+在本章中，你学习了 Microsoft Composition 的部分、导出、导入和容器。你学习了如何构建一个应用程序，使其完全独立于其部分，并动态加载可能来自不同程序集的部分。
+
+你看到了如何使用属性或约定来匹配导出和导入。使用约定允许使用无法更改源代码以添加属性的部分，并且还提供了基于 Composition 创建框架的选项，而无需框架用户为导入部分添加属性。
+
+你还学习了如何延迟加载部分，以便仅在需要时实例化它们。部分可以提供元数据，为客户端提供足够的信息来决定是否应实例化该部分。
+
+下一章将介绍 XML 和 JSON——两种可用于序列化对象以及用于读取和分析这些格式数据的格式。
+
+# 27 XML 和 JSON
+
+## 本章内容？
+
+- XML 标准
+- `XmlReader` 和 `XmlWriter`
+- `XmlDocument`
+- `XPathNavigator`
+- LINQ to XML
+- 使用 `System.Xml.Linq` 命名空间中的对象进行工作
+- 使用 LINQ 查询 XML 文档
+- 创建 JSON
+- 将对象转换为 JSON 以及从 JSON 转换回对象
+
+## 本章 Wrox.com 代码下载
+
+本章的 wrox.com 代码下载可在 [www.wrox.com/go/professionalcsharp6](http://www.wrox.com/go/professionalcsharp6) 的 Download Code 标签页找到。本章代码分为以下主要示例：
+
+- `XmlReaderAndWriter`
+- `XmlDocument`
+- `XPathNavigator`
+- `ObjectToXmlSerialization`
+- `ObjectToXmlSerializationWOAttributes`
+- `LinqToXmlSample`
+- `JsonSample`
+
+## 数据格式
+
+可扩展标记语言（XML）自 1996 年以来一直在信息技术中发挥着重要作用。该语言用于描述数据，并且与配置文件、源代码文档、使用 SOAP 的 Web 服务等一起使用。近年来，它在某些方面已被 JavaScript Object Notation（JSON）取代（例如配置文件和基于 REST 的 Web 服务的数据传输），因为该技术开销更小，并且可以轻松地从 JavaScript 使用。然而，JSON 并不能在所有使用 XML 的场景中完全取代 XML。这两种数据格式都可以用 .NET 应用程序使用，如本章所述。
+
+对于处理 XML，有不同的选项可用。您可以使用 `XmlDocument` 类读取完整文档并在文档对象模型（DOM）层次结构中导航，也可以使用 `XmlReader` 和 `XmlWriter`。使用 `XmlReader` 更复杂，但可以读取更大的文档。使用 `XmlDocument` 时，完整文档会加载到内存中。使用 `XmlReader` 时可以逐节点读取。
+
+另一种处理 XML 的方式是使用 `System.Xml.Serialization` 命名空间将 .NET 对象树序列化为 XML，并将 XML 数据反序列化回 .NET 对象。
+
+在查询和过滤 XML 内容时，您可以使用 XML 标准 XPath 或使用 LINQ to XML。这两种技术都在本章中介绍。LINQ to XML 还提供了一种轻松创建 XML 文档和片段的方式。
+
+> **NOTE** *如果您想了解更多关于 XML 的信息，Wrox 的 Professional XML（Wiley, 2007）是一个很好的起点。*
+
+讨论从 XML 标准的现状简要概述开始。
+
+## XML
+
+第一个 XML 示例使用文件 `books.xml` 作为数据源。您可以从 Wrox 网站（www.wrox.com）下载此文件和本章的其他代码示例。`books.xml` 文件是一个虚构书店的图书目录。它包含图书信息，如类型、作者姓名、价格和国际标准书号（ISBN）。
+
+`books.xml` 文件看起来如下：
+
+```
+<?xml version='1.0'?>
+<!-- This file represents a fragment of a book store inventory database -->
+<bookstore>
+    <book genre="autobiography" publicationdate="1991" ISBN="1-861003-11-0">
+        <title>The Autobiography of Benjamin Franklin</title>
+        <author>
+            <first-name>Benjamin</first-name>
+            <last-name>Franklin</last-name>
+        </author>
+        <price>8.99</price>
+    </book>
+    <book genre="novel" publicationdate="1967" ISBN="0-201-63361-2">
+        <title>The Confidence Man</title>
+        <author>
+            <first-name>Herman</first-name>
+            <last-name>Melville</last-name>
+        </author>
+        <price>11.99</price>
+    </book>
+</bookstore>
+```
+
+```
+<book genre="philosophy" publicationdate="1991" ISBN="1-861001-57-6">
+    <title>The Gorgias</title>
+    <author>
+        <name>Plato</name>
+    </author>
+    <price>9.99</price>
+</book>
+</bookstore>
+```
+
+让我们看看这个 XML 内容的各个部分。XML 文档应以 XML 声明开头，指定 XML 版本号：
+
+```
+<?xml version='1.0'?>
+```
+
+您可以在 XML 文档中标记外的任何位置放置注释。它们以 <!-- 开始，以 --> 结束：
+
+```
+<!-- This file represents a fragment of a book store inventory database -->
+```
+
+完整文档只能包含单个根元素（而 XML 片段可以包含多个元素）。对于 `books.xml` 文件，根元素是 `bookstore`：
+
+```
+<bookstore>
+    <!-- child elements here -->
+</bookstore>
+```
+
+XML 元素可以包含子元素。`author` 元素包含子元素 `first-name` 和 `last-name`。`first-name` 元素本身包含内部文本 `Benjamin`。`first-name` 是 `author` 的子元素，这也意味着 `author` 是 `first-name` 的父元素。`first-name` 和 `last-name` 是兄弟元素：
+
+```
+<author>
+    <first-name>Benjamin</first-name>
+    <last-name>Franklin</last-name>
+</author>
+```
+
+XML 元素也可以包含属性。`book` 元素包含属性 `genre`、`publicationdate` 和 `ISBN`。属性的值需要用引号括起来。
+
+```
+<book genre="novel" publicationdate="1967" ISBN="0-201-63361-2">
+</book>
+```
+
+> NOTE HTML5 规范不需要属性使用引号。HTML 不是 XML；HTML 语法更宽松，而 XML 严格。HTML 文档也可以使用 XHTML 编写，它使用 XML 语法。
+
+## .NET 中的 XML 标准支持
+
+万维网联盟（W3C）制定了一套赋予 XML 强大功能和潜力的标准。没有这些标准，XML 就不会对开发世界产生如此大的影响。W3C 网站（www.w3.org）是所有 XML 相关事物的宝贵资源。
+
+.NET Framework 支持以下 W3C 标准：
+
+- XML 1.0（www.w3.org/TR/REC-xml），包括 DTD 支持
+- XML 命名空间（www.w3.org/TR/REC-xml-names），流级和 DOM
+- XML 模式（www.w3.org/XML/Schema）
+- XPath 表达式（www.w3.org/TR/xpath）
+- XSLT 转换（www.w3.org/TR/xslt）
+- DOM Level 1 Core（www.w3.org/TR/REC-DOM-Level-1）
+- DOM Level 2 Core（www.w3.org/TR/DOM-Level-2-Core）
+- SOAP 1.2（www.w3.org/TR/SOAP）
+
+随着 W3C 更新推荐标准，以及 Microsoft 和社区更新 .NET Core，标准支持的级别会发生变化。因此，您需要确保自己了解标准以及提供的支持级别。
+
+## 在框架中处理 XML
+
+.NET Framework 为读写 XML 提供了许多不同的选项。您可以直接使用 DOM 树，使用 `XmlDocument` 和 `System.Xml` 命名空间以及 `System.Xml.XmlDocument` NuGet 包中的类进行工作。这对于适合内存的文件来说效果很好，也很容易实现。
+
+为了快速读写 XML，您可以使用 `XmlReader` 和 `XmlWriter` 类。这些类允许流式处理，使处理大型 XML 文件成为可能。这些类也在 `System.Xml` 命名空间中，但位于不同的 NuGet 包中：`System.Xml.ReaderWriter`。
+
+为了使用 XPath 标准导航和查询 XML，您可以使用 `XPathNavigator` 类。这是在 `System.Xml.XPath` 命名空间中定义的，位于 NuGet 包 `System.Xml.XmlDocument` 中。
+
+自 .NET 3.5 以来，.NET 提供了另一种查询 XML 的语法：LINQ。虽然 LINQ to XML 不支持 W3C DOM 标准，但它提供了在 XML 树中导航的更简单选项，并且也允许更轻松地创建 XML 文档或片段。这里需要的命名空间是 `System.Xml.Linq`，NuGet 包是 `System.Xml.XDocument`。
+
+> **NOTE** *LINQ 在第 13 章“语言集成查询”中介绍。LINQ 的特定实现 LINQ to XML 在本章中介绍。*
+
+要将 .NET 对象序列化为 XML 并反序列化，您可以使用 `XmlSerializer`。对于 .NET Core，这里需要的 NuGet 包是 `System.Xml.XmlSerializer`，命名空间为 `System.Xml.Serialization`。
+
+WCF 使用另一种 XML 序列化方法：数据契约序列化。虽然 `XmlSerializer` 允许您在属性和元素之间区分序列化，但使用 `DataContractSerializer` 序列化 XML 时这是不可能的。
+
+> **NOTE** *WCF 在第 44 章“Windows Communication Foundation”中介绍。*
+
+## JSON
+
+JavaScript Object Notation（JSON）近年来出现，因为它可以直接从 JavaScript 使用，并且与 XML 相比开销更小。JSON 由 IETF RFC 7159（`https://tools.ietf.org/html/rfc7159`）定义，以及 ECMA 标准 404（`http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf`）。
+
+用于发送 JSON 文档，有官方 MIME 类型 `"application/json"`。一些框架仍使用旧的、非官方的 MIME 类型 `"text/json"` 或 `"text/javascript"`。
+
+与之前的 XML 文件相同的内容在此使用 JSON 描述。元素数组包含在方括号中。在示例中，JSON 文件包含多个 `book` 对象。大括号定义对象或字典。键和值用冒号分隔。键需要加引号；值是字符串：
+
+```
+"book": {
+  "genre":"autobiography",
+  "publicationdate": 1991,
+  "ISBN":"1-861003-11-0",
+  "title":"The Autobiography of Benjamin Franklin"
+  "author": {
+    "first-name":"Benjamin",
+    "last-name":"Franklin"
+  },
+  "price": 8.99
+},
+"book": {
+  "genre":"novel",
+  "publicationdate": 1967,
+  "ISBN":"0-201-63361-2",
+  "title":"The Confidence Man"
+{
+
+  "author": {
+
+    "first-name":"Herman",
+
+    "last-name":"Melville"
+
+  },
+
+  "price": 11.99
+
+},
+
+"book": {
+
+  "genre":"philosophy",
+
+  "publicationdate": 1991,
+
+  "ISBN":"1-861001-57-6",
+
+  "title":"The Georgias",
+
+  "author": {
+
+    "name":"Plato",
+
+  },
+
+  "price": 9.99
+
+}
+```
+
+在 .NET 中，JSON 被用于许多不同的地方。当你创建新的 DNX 项目时，可以看到 JSON 被用作项目配置文件。它与 Web 项目一起使用，用于通过 ASP.NET Web API 将数据从客户端序列化并序列化到客户端（参见第 42 章“ASP.NET Web API。”），并用于诸如与 Microsoft Azure 提供的 NoSQL 数据库 DocumentDB 之类的数据存储。
+
+在使用 JSON 与 .NET 时，你有多种选择。其中一种 JSON 序列化器是 `DataContractJsonSerializer`。该类型派生自基类 `XmlObjectSerializer`，虽然它与 XML 并没有真正的关联。当数据契约序列化技术被发明时（这是在 .NET 3.0 中发生的），想法是今后所有序列化都是 XML（XML 的二进制格式也可用）。随着时间的推移，这一假设不再成立。JSON 被广泛使用。事实上，JSON 已被添加到层次结构中以支持数据契约序列化。然而，一个更快、更灵活的实现赢得了市场，现在由 Microsoft 支持并与许多 .NET 应用程序一起使用：Json.NET。因为这个库是与 .NET 应用程序一起使用最多的，所以本章对其进行了介绍。
+
+除了核心 JSON 标准之外，JSON 也在不断发展。XML 中已知的功能被添加到 JSON 中。让我们进入 JSON 改进的示例，并将其与 XML 功能进行比较。XML 架构定义（XSD）描述 XML 词汇表；截至本文撰写时，具有类似功能的 JSON Schema 仍在进行中。使用 WCF，XML 可以使用自定义二进制格式进行压缩。你也可以以比文本格式更紧凑的二进制形式序列化 JSON。JSON 的二进制版本由 BSON（Binary JSON）描述：http://bsonspec.org。跨网络发送 SOAP（一种 XML 格式）使用 Web 服务描述语言（WSDL）来描述服务。对于提供 JSON 数据的 REST 服务，也提供描述：Swagger（http://swagger.io）。
+
+**NOTE** *第 42 章介绍了 ASP.NET Web API 和 Swagger。*
+
+现在是时候进入 .NET Framework 类的具体使用。
+
+## 读取和写入流式 XML
+
+`XmlReader` 和 `XmlWriter` 类提供了一种快速读取和写入大型 XML 文档的方法。基于 `XmlReader` 的类提供了一个非常快速的、只向前、只读的光标，用于流式传输 XML 数据以供处理。因为它是一个流式模型，所以内存需求并不高。然而，你不具备 DOM 基于模型所提供的导航灵活性和读取或写入能力。基于 `XmlWriter` 的类生成符合 W3C XML 1.0（第 4 版）的 XML 文档。
+
+使用 `XmlReader` 和 `XmlWriter` 的示例代码使用了以下依赖项和命名空间：
+
+### 依赖项
+
+```
+NETStandard.Library
+System.Xml.ReaderWriter
+```
+
+### 命名空间
+
+```
+
+```
