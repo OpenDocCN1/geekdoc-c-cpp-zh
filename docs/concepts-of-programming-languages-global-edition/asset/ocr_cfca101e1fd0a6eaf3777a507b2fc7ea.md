@@ -1,0 +1,30 @@
++   43. In what way do overriding methods in C# syntactically differ from their counterparts in C++?
++   44. How can the parent version of an inherited method that is overridden in a subclass be called in that subclass in C#?
++   45. How does Ruby implement primitive types, such as those for integer and floating-point data?
++   46. How are getter methods defined in a Ruby class?
++   47. What access controls does Ruby support for instance variables?
++   48. What access controls does Ruby support for methods?
++   49. Are all Ruby subclasses subtypes?
++   50. Does Ruby support multiple inheritance?
++   51. What does reflection allow a program to do?
++   52. In the context of reflection, what is metadata?
++   53. What is introspection?
++   54. What is intercession?
++   55. What class in Java stores information about classes in a program?
++   56. For what is the Java name extension .class used?
++   57. What does the Java getMethods method do?
++   58. For what is the C# namespace System.Reflection.Emit used?
+
+# PROBLEM SET
+
++   1. What important part of support for object-oriented programming is missing in Java?
++   2. Explain the principle of abstraction.
++   3. Explain the problem associated with the reuse of abstract data types.
++   4. Compare method with subprogram.
++   5. Compare the class entity access controls of C++ and Java.
++   6. Compare the multiple inheritance of C++ with that provided by interfaces in Java.
++   7. What advantages does a derived class have over its base class?
++   8. Explain the two problems with object-oriented programming that are ameliorated by structure-oriented programming.
++   9. Describe the categories of changes that a subclass can make to its parent class.
++   10. Explain one advantage of inheritance.
++   11. Explain the advantages and disadvantages of having the friend function in object-oriented programming languages.

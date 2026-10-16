@@ -1,0 +1,77 @@
+
+- Gehani, N. (1983) Ada：高级导论。Prentice-Hall, Englewood Cliffs, NJ.
+- Gilman, L., 和 A. J. Rose. (1983) APL：交互式方法，第3版。John Wiley, New York.
+- Goldberg, A., 和 D. Robson. (1983) Smalltalk-80：语言及其实现。Addison-Wesley, Reading, MA.
+- Goldberg, A., 和 D. Robson. (1989) Smalltalk-80：语言。Addison-Wesley, Reading, MA.
+- Goodenough, J. B. (1975) “异常处理：问题与建议的记号。” Commun. ACM, 第18卷，第12期，第683–696页。
+- Goos, G., 和 J. Hartmanis (编) (1983) 编程语言 Ada 参考手册。American National Standards Institute. ANSI/MIL-STD-1815A–1983. Lecture Notes in Computer Science 155. Springer-Verlag, New York.
+- Gordon, M. (1979) 编程语言的指称描述：导论。Springer-Verlag, New York.
+- Graham, P. (1996) ANSI Common LISP. Prentice-Hall, Englewood Cliffs, NJ.
+- Gries, D. (1981) 编程科学。Springer-Verlag, New York.
+- Griswold, R. E., 和 M. T. Griswold. (1983) ICON 编程语言。Prentice-Hall, Englewood Cliffs, NJ.
+- Griswold, R. E., F. Poage, 和 I. P. Polonsky. (1971) SNOBOL 4 编程语言，第2版。Prentice-Hall, Englewood Cliffs, NJ.
+- Halstead, R. H., Jr. (1985) “Multilisp：一种并发符号计算语言。” ACM Transactions on Programming Languages and Systems, 第7卷，第4期，1985年10月，第501–538页。
+- Halvorson, M. (2013) Microsoft Visual Basic 2013 步步精通。Microsoft Press, Redmond, WA.
+- Hammond, P. (1983) APES：用户手册。计算系报告 82/9。Imperial College of Science and Technology, London.
+- Harbison, S. P. III, 和 G. L. Steele, Jr. (2002) C：参考手册，第5版。Prentice-Hall, Upper Saddle River, NJ.
+- Henderson, P. (1980) 函数式编程：应用与实现。Prentice-Hall, Englewood Cliffs, NJ.
+- Hoare, C. A. R. (1969) “计算机编程的公理化基础。” Commun. ACM, 第12卷，第10期，第576–580页。
+- Hoare, C. A. R. (1972) “数据表示的正确性证明。” Acta Informatica, 第1卷，第271–281页。
+- Hoare, C. A. R. (1973) “编程语言设计要点。” Proceedings ACM SIGACT/SIGPLAN Conference on Principles of Programming Languages. 另以技术报告 STAN-CS-73-403 出版，Stanford University Computer Science Department.
+- Hoare, C. A. R. (1974) “管程：一种操作系统结构化概念。” Commun. ACM, 第17卷，第10期，第549–557页。
+- Hoare, C. A. R. (1978) “通信顺序进程。” Commun. ACM, 第21卷，第8期，第666–677页。
+- Hoare, C. A. R. (1981) “皇帝的旧衣。” Commun. ACM, 第24卷，第2期，第75–83页。
+- Hoare, C. A. R., 和 N. Wirth. (1973) “编程语言 Pascal 的公理化定义。” Acta Informatica, 第2卷，第335–355页。
+- Hogger, C. J. (1984) 逻辑程序设计导论。Academic Press, London.
+- Hogger, C. J. (1991) 逻辑程序设计精要。Oxford Science Publications, Oxford, England.
+- Holt, R. C., G. S. Graham, E. D. Lazowska, 和 M. A. Scott. (1978) 结构化并发程序设计：操作系统应用。Addison-Wesley, Reading, MA.
+- Horn, A. (1951) “关于代数直并集上的真语句。” J. Symbolic Logic, 第16卷，第14–21页。
+- Hudak, P., 和 J. Fasel. (1992) “Haskell 入门。” ACM SIGPLAN Notices, 第27卷，第5期，1992年5月，第T1–T53页。
+- Hughes, J. (1989) “为什么函数式编程很重要。” The Computer Journal, 第32卷，第2期，第98–107页。
+- Huskey, H. K., R. Love, 和 N. Wirth. (1963) “BC NELIAC 的句法描述。” Commun. ACM, 第6卷，第7期，第367–375页。
+- IBM. (1954) “IBM 数学公式翻译系统 FORTRAN 初步报告与规范。” IBM Corporation, New York.
+- IBM. (1956) “IBM 704 EDPM 的 FORTRAN 自动编码系统程序员参考手册。” IBM Corporation, New York.
+- IBM. (1964) 新编程语言。IBM UK Laboratories, Hursley, England.
+- Ichbiah, J. D., J. C. Heliard, O. Roubine, J. G. P. Barnes, B. Krieg-Brueckner, 和 B. A. Wichmann. (1979) “B部分：Ada 编程语言设计原理。” ACM SIGPLAN Notices, 第14卷，第6期。
+- IEEE. (1985) “二进制浮点运算。” IEEE 标准 754, IEEE, New York.
+- Ierusalimschy, R. (2006) Lua 程序设计，第2版。Lua.org, Rio de Janeiro, Brazil.
+- INCITS/ISO/IEC. (1997) 1539-1-1997, 信息技术——编程语言——FORTRAN，第1部分：基础语言。American National Standards Institute, New York.
+- Ingerman, P. Z. (1967). “建议的 Panini-Backus 范式。” Commun. ACM, 第10卷，第3期，第137页。
+- ISO. (1982) ISO7185:1982, 编程语言 Pascal 规范。International Organization for Standardization, Geneva, Switzerland.
+- ISO. (1998) ISO/IEC 14882:1998, ISO/IEC 标准——信息技术——编程语言——C++。International Organization for Standardization, Geneva, Switzerland.
+- ISO. (1999) ISO/IEC 9899:1999, 编程语言 C。American National Standards Institute, New York.
+- ISO/IEC. (1996) 14977:1996, 信息技术——句法元语言——扩展 BNF。International Organization for Standardization, Geneva, Switzerland.
+- ISO/IEC. (2002) 1989:2002, 信息技术——编程语言——COBOL。American National Standards Institute, New York.
+- ISO/IEC. (2010) 1539-1, 信息技术——编程语言——Fortran。American National Standards Institute, New York.
+- ISO/IEC. (2014) 8652:2012(E), Ada 2012 参考手册。Springer-Verlag, New York.
+- Iverson, K. E. (1962) 一种编程语言。John Wiley, New York.
+- Jensen, K., 和 N. Wirth. (1974) Pascal 用户手册与报告。Springer-Verlag, Berlin.
+- Johnson, S. C. (1975) “Yacc——又一个编译器编译器。” Computing Science Report 32. AT&T Bell Laboratories, Murray Hill, NJ.
+- Jones, N. D. (编) (1980) 语义指导的编译器生成。Lecture Notes in Computer Science, 第94卷。Springer-Verlag, Heidelberg, FRG.
+- Kay, A. (1969) 反应式引擎。博士论文。University of Utah, 9月。
+- Kernighan, B. W., 和 D. M. Ritchie. (1978) C 程序设计语言。Prentice-Hall, Englewood Cliffs, NJ.
+- Knuth, D. E. (1965) “从左到右的语言翻译。” Information & Control, 第8卷，第6期，第607–639页。
+- Knuth, D. E. (1967) “ALGOL 60 中剩余的问题点。” Commun. ACM, 第10卷，第10期，第611–618页。
+- Knuth, D. E. (1968a) “上下文无关语言的语义。” Mathematical Systems Theory, 第2卷，第2期，第127–146页。
+- Knuth, D. E. (1968b) 计算机程序设计艺术，第I卷，第2版。Addison-Wesley, Reading, MA.
+- Knuth, D. E. (1974) “使用 GOTO 语句的结构化编程。” ACM Computing Surveys, 第6卷，第4期，第261–301页。
+- Knuth, D. E. (1981) 计算机程序设计艺术，第II卷，第2版。Addison-Wesley, Reading, MA.
+- Knuth, D. E., 和 L. T. Pardo. (1977) “编程语言的早期发展。” 出自《计算机科学与技术百科全书》，G. Holzman 和 A. Kent (编)。第7卷。Dekker, New York, 第419–493页。
+- Kochan, S. G. (2009) Objective-C 2.0 程序设计。Addison-Wesley, Upper Saddle River, NJ.
+- Kowalski, R. A. (1979) 问题求解的逻辑。Artificial Intelligence Series, 第7卷。Elsevier-North Holland, New York.
+- Laning, J. H., Jr., 和 N. Zierler. (1954) “为 Whirlwind I 翻译数学方程的程序。” Engineering memorandum E-364. Instrumentation Laboratory, Massachusetts Institute of Technology, Cambridge, MA.
+- Ledgard, H. (1984) 美国 Pascal 标准。Springer-Verlag, New York.
+- Ledgard, H. F., 和 M. Marcotty. (1975) “控制结构谱系。” Commun. ACM, 第18卷，第11期，第629–639页。
+- Lischner, R. (2000) Delphi 精髓。O’Reilly Media, Sebastopol, CA.
+- Liskov, B., R. L. Atkinson, T. Bloom, J. E. B. Moss, C. Schaffert, R. Scheifler, 和 A. Snyder. (1981) CLU 参考手册。Springer, New York.
+- Liskov, B., 和 A. Snyder. (1979) “CLU 中的异常处理。” IEEE Transactions on Software Engineering, 第SE-5卷，第6期，第546–558页。
+- Lomet, D. (1975) “使对已释放存储的引用失效的方案。” IBM Journal of Research and Development, 第19卷，第26–35页。
+- Lutz, M. (2013) 学习 Python，第5版。O’Reilly Media, Sebastopol, CA.
+- MacLaren, M. D. (1977) “PL/I 中的异常处理。” ACM SIGPLAN Notices, 第12卷，第3期，第101–104页。
+- Marcotty, M., H. F. Ledgard, 和 G. V. Bochmann. (1976) “形式定义集锦。” ACM Computing Surveys, 第8卷，第2期，第191–276页。
+- Mather, D. G., 和 S. V. Waite (编) (1971) BASIC, 第6版。University Press of New England, Hanover, NH.
+- McCarthy, J. (1960) “符号表达式的递归函数及其机器计算，第一部分。” Commun. ACM, 第3卷，第4期，第184–195页。
+- McCarthy, J., P. W. Abrahams, D. J. Edwards, T. P. Hart, 和 M. Levin. (1965) LISP 1.5 程序员手册，第2版。MIT Press, Cambridge, MA.
+- McCracken, D. (1961) FORTRAN 编程指南。John Wiley & Sons, Inc., New York.
+- McCracken, D. (1970) “APL 何去何从。” Datamation, 9月15日，第53–57页。
+- Metcalf, M., J. Reid, 和 M. Cohen. (2004) Fortran 95/2003 详解，第3版。Oxford University Press, Oxford, England.

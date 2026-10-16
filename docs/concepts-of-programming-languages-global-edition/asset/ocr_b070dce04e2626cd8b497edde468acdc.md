@@ -1,0 +1,36 @@
+Each val statement binds a name to an expression. As with Scheme, the names in the first part are like the named constants of imperative languages; once set, they cannot be changed.⁸ Consider the following let construct:
+
+```
+let
+    val  top = a + b
+    val bottom = c - d
+in
+    top / bottom
+end;
+```
+
+The general form of a let construct in F# is as follows:
+
+```
+let left_side = expression
+```
+
+The left_side of let can be a name or a tuple pattern (a sequence of names separated by commas).
+
+The scope of a name defined with let inside a function definition is from the end of the defining expression to the end of the function. The scope of let can be limited by indenting the following code, which creates a new local scope. Although any indentation will work, the convention is that the indentation is four spaces. Consider the following code:
+
+```
+let n1 =
+    let  n2 = 7
+    let  n3 = n2 + 3
+    n3;;
+let n4 = n3 + n1;;
+```
+
+The scope of n1 extends over all of the code. However, the scope of n2 and n3 ends when the indentation ends. So, the use of n3 in the last let causes an error. The last line of the let n1 scope is the value bound to n1; it could be any expression.
+
+Chapter 15 includes more details of the let constructs in Scheme, ML, Haskell, and F#.
+
+# 5.5.3 Declaration Order
+
+In C89, as well as in some other languages, all data declarations in a function except those in nested blocks must appear at the beginning of the function. However, some languages—for example, C99, C++, Java, JavaScript, and C#—allow variable declarations to appear anywhere a statement can appear in a program unit. Declarations may create scopes that are not associated with compound statements or subprograms. For example, in C99, C++, and Java, the scope of all local variables is from their declarations to the ends of the blocks in which those declarations appear.

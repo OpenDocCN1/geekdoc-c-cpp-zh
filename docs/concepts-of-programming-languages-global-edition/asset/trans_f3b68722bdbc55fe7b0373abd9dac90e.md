@@ -1,0 +1,263 @@
+
+
+- Wilson, P. R. (2005) “Uniprocessor Garbage Collection Techniques.” 可在 http://www.cs.utexas.edu/users/oops/papers.htm#bigsurv 获取。
+- Wirth, N. (1971) “The Programming Language Pascal.” Acta Informatica, 第 1 卷, 第 1 期, 第 35–63 页。
+- Wirth, N. (1973) Systematic Programming: An Introduction. Prentice-Hall, Englewood Cliffs, NJ。
+- Wirth, N. (1975) “On the Design of Programming Languages,” Information Processing 74 (Proceedings of IFIP Congress 74). North Holland, Amsterdam, 第 386–393 页。
+- Wirth, N. (1977) “Modula: A Language for Modular Multi-Programming,” Software—Practice and Experience, 第 7 卷, 第 3–35 页。
+- Wirth, N. (1985) Programming in Modula-2, 3e. Springer-Verlag, New York。
+- Wirth, N. (1988) “The Programming Language Oberon.” Software—Practice and Experience, 第 18 卷, 第 7 期, 第 671–690 页。
+- Wirth, N., and C. A. R. Hoare. (1966) “A Contribution to the Development of ALGOL.” Commun. ACM, 第 9 卷, 第 6 期, 第 413–431 页。
+- Wulf, W. A., D. B. Russell, and A. N. Habermann. (1971) “BLISS: A Language for Systems Programming.” Commun. ACM, 第 14 卷, 第 12 期, 第 780–790 页。
+- Zuse, K. (1972) “Der Plankalkül.” 手稿于 1945 年准备，发表于 Berichte der Gesellschaft für Mathematik und Datenverarbeitung, 第 63 号 (Bonn, 1972); 第 3 部分, 285 页。英文翻译除第 176–196 页外发表于第 106 号 (Bonn, 1976), 第 42–244 页。
+
+## Index
+
+### A
+
+- Absolute addressing
+    - manual, 225
+    - pointers and, 306
+    - problems with, 62, 64
+- Abstract cells, 226, 310
+- Abstract classes, 519, 522, 548, 552
+    - in C++, 537, 541
+    - in Java, 544–545
+- Abstract data types, 43, 260–261, 336, 515–517, 583, 594
+    - in Ada, 508
+    - in C#, 491–492
+    - in C++ 2005, 500
+    - in C++, 477–483, 496–498
+    - design issues for, 476–477
+    - floating-point as, 474
+    - in Java, 489–491
+    - in Java 5.0, 498–500
+    - language-defined, 261
+    - in Objective-C, 483–489
+    - object-oriented programming and, 376
+    - parameterized, 496–500
+    - in Ruby, 492–496
+    - for stacks, 482, 496, 505
+    - user-defined, 261, 474–475
+- Abstract methods, 519, 548
+    - in C#, 547
+    - of a Java abstract class, 545
+- Abstraction, 26, 39, 43, 149, 222, 381
+    - beginnings of data, 94–95
+    - benefits of, 43, 104, 249
+    - in BNF, 138
+    - concept, 472–473
+    - data, 43, 104, 390, 473–476
+    - process, 390, 473
+    - in Smalltalk, 108
+    - subprogram, 391
+- Accept clause body, 587
+- Accept clauses, 587–593, 595
+- Access
+    - deep, 461–463
+    - in nested subprograms, 401, 454
+    - in nonblocking synchronized, 603
+    - shallow, 463–465
+    - types, 299
+- ACM (Association for Computing Machinery), 75
+    - Communications of the ACM, 77, 658
+    - GAMM and, 75
+    - Grace Murray Hopper Award, 478, 528
+    - Turing Award of, 658
+- Activation record instance, 444, 446, 448–449, 450–454, 458, 461–462, 463, 681–682
+    - of static ancestors, 455–459
+- Activation records, 444
+    - local_offset of a variable in, 450
+    - in stack, 454
+- Active subprograms
+    - in referencing environments, 248
+    - in stack-dynamic local variables, 447
+- Actor tasks, 588, 604
+- Actual parameters, 227, 275, 304, 367, 394–396, 398, 404–405, 407–410, 416, 423, 442, 446, 448, 549–550, 668, 672, 679, 682, 695, 696, 701
+- Ada, 36, 57, 79, 98, 222, 235, 397, 401, 430, 436, 446, 453, 628
+    - 2005 version of, 106–107
+    - abstract data types in, 508
+    - assignment operator of, 344
+    - assignment statement, 275
+    - attribute grammar of, 154
+    - Boolean operator in, 37
+    - compilers, 39–40, 47
+    - concurrency in, 586–594
+    - declarations of constrained anonymous types, 315
+    - derived types, 314–315
+    - design process, 103–104
+    - evaluation of, 105–106
+    - exception handling in, 38
+    - exponentiation operator of, 328
+    - functions of, 421–422
+    - historical background of, 103
+    - implement monitors and monitors of, 584
+    - language overview of, 104–105
+    - packages in, 104, 594
+    - parentheses in, 275
+    - pass-by-value-result of, 419
+    - subrange types, 315
+    - subtypes of, 315, 318, 520
+    - tasks, 586, 594–595, 604, 609
+    - termination of selection construct, 36
+    - type equivalence, 314–316
+- Ada 83, 106, 414, 584
+- Ada 95, 106–107, 577
+    - constructing monitors, 584
+    - pointers of, 421
+- Addresses, 282, 299, 303–306, 318, 365, 404, 444–446, 450, 554, 714
+    - of array elements, 318
+    - in memory, 412
+    - offset of, 306
+    - for out-mode parameters, 404
+    - segment of, 306
+    - of variables, 225–226
+- Ad hoc binding, 418–419
+- Ad hoc polymorphism, 424
+- Adopting protocols, 541
+- Aho, Al, 116
+- AI (artificial intelligence), 30, 117, 722
+    - LISP in, 69–70, 72, 666, 687, 706
+    - in Perl, 117
+    - Project at MIT, 70, 666
+- ALGOL 58, 137
+    - design effort, 79
+    - overview of, 76
+    - report on, 77
+- ALGOL 60, 75, 81, 85–86, 91
+    - BNF in, 79
+    - design process, 77–78
+    - evaluation of, 78–80
+    - example of an, 79–80
+    - overview of, 78
+    - primary deficiency of, 95
+- ALGOL 68
+    - design process, 95
+    - evaluation of, 96–97
+    - language overview of, 96
+    - orthogonality in, 96
+- ALGOL Bulletin, 77
+- Aliases, 225–226, 302, 305, 405–406, 409, 417
+- Aliasing, 38–39, 225–226, 302, 405–406, 416–417, 421–422, 435
+- Allocation, 70, 93, 96, 231–233, 241, 261, 300–301, 307–308, 311, 320, 400, 445
+    - of objects, 522–523
+    - storage, 70, 93, 232, 241, 269–270, 276, 307
+- Ambiguous grammars, 142–143, 357
+- AND operator, 177, 179, 343
+    - and then Boolean operator, 37
+- Anonymous variables, 299
+- ANSI (American National Standards Institute), 82
+    - on C, 100
+    - Minimal BASIC standard, 86
+    - standardization of C++, 478, 526, 628
+- Antecedents, 168, 171, 717, 724–725
+- APES system, 744
+- APL (A Programming Language), 37, 45–46
+    - origins and characteristics of, 93–94
+- append operations, 734
+- Apple, 112
+- Apply-to-all functional forms, 683–684
+- Arithmetic expressions, 65, 82, 113, 141, 189, 356, 687, 745
+    - associativity in, 329–331
+    - characteristics of, 326–327
+    - coercions in, 337–338
+    - conditional, 332–333
+    - design issues for, 327
+    - grammar for, 199–200, 208, 212
+    - in Lisp, 332
+    - mixed-mode, 338
+    - operand evaluation order in, 333–335
+    - parentheses in, 331
+    - precedence in, 327–329
+    - in Prolog, 745
+    - purpose of, 327
+    - referential transparency in, 334–335
+    - in Ruby, 331–332
+    - side effects in, 333–335
+- Array types, 123, 315–316
+    - array initialization in, 278
+    - array operations in, 279–280
+    - design issues for, 274
+    - evaluation of, 281
+    - implementation of, 282–284
+    - indices and, 274–276
+    - jagged arrays in, 280
+    - rectangular arrays in, 280
+    - slices in, 280–281
+    - subscript bindings in, 276–278
+- Artificial intelligence (AI). See AI (artificial intelligence)
+- ASCII (American Standard Code for Information Interchange), 162, 265, 723
+- Assemblies, .NET, 503
+- Assertions, 174
+    - in axiomatic semantics, 167–168
+    - in Java, 638–639
+- Assignment statements, 35, 41–42, 44, 71, 160, 165, 174, 176, 242, 290–291, 303, 311
+    - ambiguous grammar for, 142
+    - attribute grammar for simple, 155
+    - in axiomatic semantics, 169–171
+    - compound assignment operators in, 344
+    - conditional targets and, 344
+    - in denotational semantics, 165
+    - as expressions, 346–347
+    - in functional programming languages, 347–348
+    - grammar for simple, 141–142
+    - mixed-mode, 348
+    - multiple, 347
+    - simple, 343–344
+    - unary assignment operators in, 345
+- Association for Computing Machinery (ACM). See ACM (Association for Computing Machinery)
+- Associative arrays
+    - definition, 285
+    - implementation of, 288–289
+    - structure and operations of, 285–288
+- Associativity, 151, 200, 205, 326
+    - of operators, 139, 146–147
+    - rules of operator evaluation order, 327, 329–331
+- Atomic propositions, 715–717, 719, 723–724, 732, 745
+- Atoms, 684
+    - Lisp, 71, 663–664
+    - predicate functions for symbolic, 675–676
+    - Prolog, 723, 740, 742
+- AT&T Bell Laboratories, 479
+- Attribute computation functions, 153
+- Attribute grammars, 152, 317
+    - basic concepts of, 153
+    - computing attribute values in, 156–157
+    - defined, 153–154
+    - evaluation of, 157–158
+    - examples of, 154–156
+    - intrinsic attributes in, 154
+    - static semantics and, 152–153
+- Attributes, 195, 222
+    - binding, 227–228
+    - defined, 153
+    - instance data as, 494, 562
+    - intrinsic, 154
+    - of variables, names, 223, 225
+- Automatic generalization, 429
+- Automatic programming, 63
+- awk scripting language, 116
+- Axiomatic semantics, 714
+    - assertions in, 167–168
+    - assignment statements in, 169–171
+    - evaluation of, 179
+    - logical pretest loops in, 173–176
+    - program proofs in, 176–179
+    - selection in, 172–173
+    - sequences in, 171–172
+    - weakest preconditions in, 168–169
+- Axioms, 168, 179, 715, 718
+
+### B
+
+- B, language, 99
+- Babbage, Charles, 61, 104, 390
+- Backtracking, 719, 728, 731, 733, 738–739, 745
+- Backus, John, 64–65
+    - BNF (Backus–Naur form). See BNF (Backus–Naur Form)
+    - Fortran by, 43, 65, 658
+    - FP (functional programming), 658–659
+    - speedcoding system by, 63
+- Backward chaining, 727
+- Base class, 516
+- base prefix, 547

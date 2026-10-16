@@ -1,0 +1,23 @@
+references must include the variable that references the inner class object. For example, suppose the outer class creates an instance of the inner class with the following statement:
+
+```
+myInner = this.new Inner();
+```
+
+Then, if the inner class defines a variable named sum, it can be referenced in the outer class as myInner.sum.
+
+An instance of a nested class can only exist within an instance of its nesting class. Nested classes can also be anonymous. Anonymous nested classes have complex syntax but are really only an abbreviated way to define a class that is used from just one location. An example of an anonymous nested class appears in Chapter 14.
+
+A local nested class is defined in a method of its nesting class. Local nested classes are never defined with an access specifier (private or public). Their scope is always limited to their nesting class. A method in a local nested class can access the variables defined in its nesting class and the final variables defined in the method in which the local nested class is defined. The members of a local nested class are visible only in the method in which the local nested class is defined.
+
+# 12.4.4.5 Evaluation
+
+Java’s design for supporting object-oriented programming is similar to that of C++, but it employs more consistent adherence to object-oriented principles. Java does not allow parentless classes and uses dynamic binding as the “normal” way to bind method calls to method definitions. This, of course, increases execution time slightly over languages in which many method bindings are static. At the time this design decision was made, however, most Java programs were interpreted, so interpretation time made the extra binding time insignificant. Access controls for the contents of a class definition are rather simple when compared with the jungle of access controls of C++, ranging from derivation controls to friend functions. Finally, Java uses interfaces to provide a form of support for multiple inheritance, which does not have all of the drawbacks of actual multiple inheritance.
+
+# 12.4.5 C#
+
+C#’s support for object-oriented programming is similar to that of Java.
+
+# 12.4.5.1 General Characteristics
+
+C# includes both classes and structs, with the classes being very similar to Java’s classes and the structs being somewhat less powerful constructs. One important difference is that structs are value types; that is, they are stack dynamic. This could cause the problem of object slicing, but this is prevented by the restriction that structs cannot be subclassed. More details of how C# structs differ from its classes appeared in Chapter 11.

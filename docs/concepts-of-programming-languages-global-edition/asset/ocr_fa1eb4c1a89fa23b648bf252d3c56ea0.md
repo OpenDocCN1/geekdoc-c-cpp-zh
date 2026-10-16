@@ -1,0 +1,33 @@
+```
+for (int row = 0; row < mat.length; row++) {
+    for (int col = 0; col < mat[row].length; col++) {
+        sum += mat[row][col];
+    } //** for (int row . .
+} //** for (int col . .
+return sum;
+}
+```
+
+Because each array has its own length value, in a matrix the rows can have different lengths.
+
+# 9.5.7 Design Considerations
+
+Two important considerations are involved in choosing parameter-passing methods: efficiency and whether one-way or two-way data transfer is needed.
+
+Contemporary software-engineering principles dictate that access by subprogram code to data outside the subprogram should be minimized. With this goal in mind, in-mode parameters should be used whenever no data are to be returned through parameters to the caller. Out-mode parameters should be used when no data are transferred to the called subprogram but the subprogram must transmit data back to the caller. Finally, inout-mode parameters should be used only when data must move in both directions between the caller and the called subprogram.
+
+There is a practical consideration that is in conflict with this principle. Sometimes it is justifiable to pass access paths for one-way parameter transmission. For example, when a large array is to be passed to a subprogram that does not modify it, a one-way method may be preferred. However, pass-by-value would require that the entire array be moved to a local storage area of the subprogram. This would be costly in both time and space. Because of this, large arrays are often passed by reference. This is precisely the reason why the Ada 83 definition allowed implementors to choose between the two methods for structured parameters. C++ constant reference parameters offer another solution. Another alternative approach would be to allow the user to choose between the methods.
+
+The choice of a parameter-passing method for functions is related to another design issue: functional side effects. This issue is discussed in Section 9.10.
+
+# 9.5.8 Examples of Parameter Passing
+
+Consider the following C function:
+
+```
+void swap1(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+```

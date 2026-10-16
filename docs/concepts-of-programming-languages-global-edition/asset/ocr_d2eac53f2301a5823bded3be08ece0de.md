@@ -1,0 +1,54 @@
+made visible by including it in a `global` declaration statement. Consider the following example:
+
+```
+```php
+$day = "Monday";
+$month = "January";
+
+function calendar() {
+    $day = "Tuesday";
+    global $month;
+    print "local day is $day ";
+    $gday = $GLOBALS['day'];
+    print "global day is $gday <br />";
+    print "global month is $month ";
+}
+
+calendar();
+```
+```
+
+Interpretation of this code produces the following:
+
+```
+```
+local day is Tuesday
+global day is Monday
+global month is January
+```
+```
+
+The global variables of JavaScript are very similar to those of PHP, except that there is no way to access a global variable in a function that has declared a local variable with the same name.
+
+The visibility rules for global variables in Python are unusual. Variables are not normally declared, as in PHP. They are implicitly declared when they appear as the targets of assignment statements. A global variable can be referenced in a function, but a global variable can be assigned in a function only if it has been declared to be global in the function. Consider the following examples:
+
+```
+```python
+day = "Monday"
+
+def tester():
+    print "The global day is:", day
+
+tester()
+```
+```
+
+The output of this script, because globals can be referenced directly in functions, is as follows:
+
+```
+```
+The global day is: Monday
+```
+```
+
+The following script attempts to assign a new value to the global day:

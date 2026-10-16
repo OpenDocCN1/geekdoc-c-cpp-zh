@@ -1,0 +1,31 @@
+Once again, the computed I can serve as P, and I passes the four requirements. Unlike our earlier example of finding a loop precondition, this one clearly is not a weakest precondition. Consider using the precondition {s > 1}. The logical statement
+
+```
+{s > 1} while s > 1 do s = s / 2 end {s = 1}
+```
+
+can easily be proven, and this precondition is significantly broader than the one computed earlier. The loop and precondition are satisfied for any positive value for s, not just powers of 2, as the process indicates. Because of the rule of consequence, using a precondition that is stronger than the weakest precondition does not invalidate a proof.
+
+Finding loop invariants is not always easy. It is helpful to understand the nature of these invariants. First, a loop invariant is a weakened version of the loop postcondition and also a precondition for the loop. So, I must be weak enough to be satisfied prior to the beginning of loop execution, but when combined with the loop exit condition, it must be strong enough to force the truth of the postcondition.
+
+Because of the difficulty of proving loop termination, that requirement is often ignored. If loop termination can be shown, the axiomatic description of the loop is called total correctness. If the other conditions can be met but termination is not guaranteed, it is called partial correctness.
+
+In more complex loops, finding a suitable loop invariant, even for partial correctness, requires a good deal of ingenuity. Because computing the precondition for a while loop depends on finding a loop invariant, proving the correctness of programs with while loops using axiomatic semantics can be difficult.
+
+# 3.5.3.7 Program Proofs
+
+This section provides validations for two simple programs. The first example of a correctness proof is for a very short program, consisting of a sequence of three assignment statements that interchange the values of two variables.
+
+```
+{x = A AND y = B}
+t = x;
+x = y;
+y = t;
+{x = B AND y = A}
+```
+
+Because the program consists entirely of assignment statements in a sequence, the assignment axiom and the inference rule for sequences can be used to prove its correctness. The first step is to use the assignment axiom on the last statement and the postcondition for the whole program. This yields the precondition
+
+```
+{x = B AND t = A}
+```

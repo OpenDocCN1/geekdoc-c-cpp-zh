@@ -1,0 +1,72 @@
+
+- Meyer, B. (1990)《编程语言理论导论》。Prentice-Hall，新泽西州恩格尔伍德克利夫斯。
+- Meyer, B. (1992)《Eiffel：语言》。Prentice-Hall，新泽西州恩格尔伍德克利夫斯。
+- Milner, R., R. Harper, and M. Tofte. (1997)《Standard ML的定义（修订版）》。MIT Press，马萨诸塞州剑桥。
+- Milos, D., U. Pleban, and G. Loegel. (1984)“编译器规范的直接实现。”第11届ACM SIGACT-SIGPLAN编程语言研讨会论文集（POPL '84），第196–202页。
+- Mitchell, J. G., W. Maybury, and R. Sweet. (1979)《Mesa语言手册》5.0版，CSL-79-3。Xerox研究中心，加利福尼亚州帕洛阿尔托。
+- Moss, C. (1994)《Prolog++：面向对象与逻辑编程的力量》。Addison-Wesley，马萨诸塞州雷丁。
+- Moto-oka, T. (1981)“对知识信息处理系统的挑战。”第五代计算系统国际会议论文集，日本信息处理开发中心，东京。North-Holland Publishing于1982年再版，阿姆斯特丹。
+- Naur, P. (编) (1960)“关于算法语言ALGOL 60的报告。”Commun. ACM，第3卷，第5期，第299–314页。
+- Newell, A., and H. A. Simon. (1956)“逻辑理论机——一个复杂的信息处理系统。”IRE Transactions on Information Theory，第IT-2卷，第3期，第61–79页。
+- Newell, A., and F. M. Tonge. (1960)“信息处理语言V简介。”Commun. ACM，第3卷，第4期，第205–211页。
+- Nilsson, N. J. (1971)《人工智能中的问题求解方法》。McGraw-Hill，纽约。
+- Ousterhout, J. K. (1994)《Tcl与Tk工具箱》。Addison-Wesley，马萨诸塞州雷丁。
+- Paepcke, A. (编) (1993)《面向对象编程：CLOS视角》。MIT Press，马萨诸塞州剑桥。
+- Pagan, F. G. (1981)《编程语言的形式化规范》。Prentice-Hall，新泽西州恩格尔伍德克利夫斯。
+- Papert, S. (1980)《头脑风暴：儿童、计算机与强大的思想》。Basic Books，纽约。
+- Perlis, A., and K. Samelson. (1958)“初步报告——国际代数语言。”Commun. ACM，第1卷，第12期，第8–22页。
+- Peyton Jones, S. L. (1987)《函数式编程语言的实现》。Prentice-Hall，新泽西州恩格尔伍德克利夫斯。
+- Pratt, T. W. (1984)《编程语言：设计与实现》（第二版）。Prentice-Hall，新泽西州恩格尔伍德克利夫斯。
+- Pratt, T. W., and M. V. Zelkowitz. (2001)《编程语言：设计与实现》（第四版）。Prentice-Hall，新泽西州恩格尔伍德克利夫斯。
+- Remington-Rand. (1952)“UNIVAC短代码。”未出版的油印笔记集。A. B. Tonik序，日期为1955年10月25日（1页）；J. R. Logan序，未注明日期但显然出自1952年（1页）；初步说明，1952年？（22页，其中第20–22页似乎是后来替换的）；短代码补充信息，主题一（7页）；附录#1、2、3、4（9页）。
+- Reppy, J. H. (1999)《ML中的并发编程》。Cambridge University Press，纽约。
+- Richards, M. (1969)“BCPL：用于编译器编写和系统编程的工具。”Proc. AFIPS SJCC，第34卷，第557–566页。
+- Robbins, A. (2005)《Unix宝典》（第四版）。O'Reilly Media，加利福尼亚州塞瓦斯托波尔。
+- Robinson, J. A. (1965)“基于消解原理的面向机器逻辑。”Journal of the ACM，第12卷，第23–41页。
+- Roussel, P. (1975)“PROLOG：参考与使用手册。”研究报告。法国吕米尼艾克斯-马赛大学人工智能研究组。
+- Rubin, F. (1987)“‘GOTO语句被认为有害’被认为有害”（致编辑的信）。Commun. ACM，第30卷，第3期，第195–196页。
+- Rutishauser, H. (1967)《ALGOL 60描述》。Springer-Verlag，纽约。
+- Sammet, J. E. (1969)《编程语言：历史与基础》。Prentice-Hall，新泽西州恩格尔伍德克利夫斯。
+- Sammet, J. E. (1976)“1974–75年编程语言列表。”Commun. ACM，第19卷，第12期，第655–669页。
+- Schneider, D. I. (1999)《使用Visual Basic 6.0进行编程导论》。Prentice-Hall，新泽西州恩格尔伍德克利夫斯。
+- Schorr, H., and W. Waite. (1967)“一种用于多种列表结构中垃圾回收的高效机器无关过程。”Commun. ACM，第10卷，第8期，第501–506页。
+- Scott, D. S., and C. Strachey. (1971)“走向计算机语言的数学语义。”载于《计算机与自动化研讨会论文集》，J. Fox（编）。Brooklyn理工学院出版社，纽约，第19–46页。
+- Scott, M. (2009)《编程语言实用学》（第三版）。Morgan Kaufmann，加利福尼亚州旧金山。
+- Sebesta, R. W. (1991)《VAX结构化汇编语言编程》（第二版）。Benjamin/Cummings，加利福尼亚州雷德伍德城。
+- Sergot, M. J. (1983)“一种用于逻辑编程的查询用户设施。”载于《集成交互式计算机系统》，P. Degano和E. Sandewall（编）。North-Holland Publishing，阿姆斯特丹。
+- Shaw, C. J. (1963)“JOVIAL规范。”Commun. ACM，第6卷，第12期，第721–736页。
+- Smith, J. B. (2006)《实用OCaml》。Apress，Springer-Verlag，纽约。
+- Sommerville, I. (2010)《软件工程》（第九版）。Addison-Wesley，马萨诸塞州雷丁。
+- Steele, G. L., Jr. (1990)《Common LISP：语言》（第二版）。Digital Press，马萨诸塞州伯灵顿。
+- Stoy, J. E. (1977)《指称语义：编程语言语义的Scott–Strachey方法》。MIT Press，马萨诸塞州剑桥。
+- Stroustrup, B. (1983)“向C语言添加类：语言演化的一次实践。”《软件——实践与经验》，第13卷，第139–161页。
+- Stroustrup, B. (1984)“C语言中的数据抽象。”AT&T贝尔实验室技术杂志，第63卷，第8期，第1701–1732页。
+- Stroustrup, B. (1986)《C++编程语言》。Addison-Wesley，马萨诸塞州雷丁。
+- Stroustrup, B. (1988)“什么是面向对象编程？”《IEEE软件》，1988年5月，第10–20页。
+- Stroustrup, B. (1991)《C++编程语言》（第二版）。Addison-Wesley，马萨诸塞州雷丁。
+- Stroustrup, B. (1994)《C++的设计与演化》。Addison-Wesley，马萨诸塞州雷丁。
+- Stroustrup, B. (1997)《C++编程语言》（第三版）。Addison-Wesley，马萨诸塞州雷丁。
+- Sussman, G. J., and G. L. Steele, Jr. (1975)“Scheme：扩展λ演算的解释器。”MIT人工智能实验室备忘录第349号（1975年12月）。
+- Suzuki, N. (1982)“指针‘旋转’分析。”Commun. ACM，第25卷，第5期，第330–335页。
+- Syme, D., A. Granicz, and A. Cisternino. (2010)《专家级F# 2.0》。Apress，Springer-Verlag，纽约。
+- Tatroe, K., P. MacIntyre, and R. Lerdorf. (2013)《PHP编程》（第三版）。O'Reilly Media，加利福尼亚州塞瓦斯托波尔。
+- Tanenbaum, A. S. (2005)《结构化计算机组成》（第五版）。Prentice-Hall，新泽西州恩格尔伍德克利夫斯。
+- Teitelbaum, T., and T. Reps. (1981)“康奈尔程序合成器：一种面向语法的编程环境。”Commun. ACM，第24卷，第9期，第563–573页。
+- Teitelman, W. (1975)《INTERLISP参考手册》。Xerox帕洛阿尔托研究中心，加利福尼亚州帕洛阿尔托。
+- Tenenbaum, A. M., Y. Langsam, and M. J. Augenstein. (1990)《使用C语言的数据结构》。Prentice-Hall，新泽西州恩格尔伍德克利夫斯。
+- Thomas, D., A. Hunt, and C. Fowler. (2013)《Ruby 1.9与2.0编程：程序员实用指南（Ruby的各个方面）》。The Pragmatic Bookshelf，北卡罗来纳州罗利。
+- Thompson, S. (1999)《Haskell：函数式编程技艺》（第二版）。Addison-Wesley，马萨诸塞州雷丁。
+- Turner, D. (1986)“Miranda概述。”《ACM SIGPLAN通讯》，第21卷，第12期，第158–166页。
+- Ullman, J. D. (1998)《ML编程基础》。ML97版。Prentice-Hall，新泽西州恩格尔伍德克利夫斯。
+- van Emden, M. H. (1980)“McDermott论Prolog：一则反驳。”SIGART通讯，第72号，8月，第19–20页。
+- van Wijngaarden, A., B. J. Mailloux, J. E. L. Peck, and C. H. A. Koster. (1969)“关于算法语言ALGOL 68的报告。”《数值数学》，第14卷，第2期，第79–218页。
+- Wadler, P. (1998)“为什么没有人使用函数式语言。”《ACM SIGPLAN通讯》，第33卷，第2期，1998年2月，第25–30页。
+- Warren, D. H. D., L. M. Pereira, and F. C. N. Pereira. (1979)“DEC System-10 Prolog用户指南。”临时论文第15号。苏格兰爱丁堡大学人工智能系。
+- Watt, D. A. (1979)“Pascal的一种扩展属性文法。”《ACM SIGPLAN通讯》，第14卷，第2期，第60–74页。
+- Wegner, P. (1972)“维也纳定义语言。”《ACM计算概览》，第4卷，第1期，第5–63页。
+- Weissman, C. (1967)《LISP 1.5入门》。Dickenson Press，加利福尼亚州贝尔蒙特。
+- Wexelblat, R. L. (编) (1981)《编程语言历史》。Academic Press，纽约。
+- Wheeler, D. J. (1950)“EDSAC的程序组织与初始命令。”伦敦皇家学会会刊A辑，第202卷，第573–589页。
+- Wilkes, M. V. (1952)“纯编程与应用编程。”载于ACM全国会议论文集，第2卷，多伦多，第121–124页。
+- Wilkes, M. V., D. J. Wheeler, and S. Gill. (1951)《为电子数字计算机编制程序，特别涉及EDSAC及子程序库的使用》。Addison-Wesley，马萨诸塞州雷丁。
+- Wilkes, M. V., D. J. Wheeler, and S. Gill. (1957)《电子数字计算机程序设计》（第二版）。Addison-Wesley，马萨诸塞州雷丁。

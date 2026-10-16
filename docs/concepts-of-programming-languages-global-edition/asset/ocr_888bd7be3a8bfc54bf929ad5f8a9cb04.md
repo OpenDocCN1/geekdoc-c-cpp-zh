@@ -1,0 +1,49 @@
+arrays). Both nonstrict semantics and function overloading are further discussed later in this section.
+
+The code in this section is written in version 1.4 of Haskell.
+
+Consider the following definition of the factorial function, which uses pattern matching on its parameters:
+
+```
+fact 0 = 1
+fact 1 = 1
+fact n = n * fact (n - 1)
+```
+
+Note the differences in syntax between this definition and its ML version in Section 15.7. First, there is no reserved word to introduce the function definition (fun in ML). Second, alternative definitions of functions (with different formal parameters) all have the same appearance.
+
+Using pattern matching, we can define a function for computing the nth Fibonacci number with the following:
+
+```
+fib 0 = 1
+fib 1 = 1
+fib (n + 2) = fib (n + 1) + fib n
+```
+
+Guards can be added to lines of a function definition to specify the circumstances under which the definition can be applied. For example,
+
+```
+fact n
+  | n == 0 = 1
+  | n == 1 = 1
+  | n > 1 = n * fact(n - 1)
+```
+
+This definition of factorial is more precise than the previous one, for it restricts the range of actual parameter values to those for which it works. This form of a function definition is called a conditional expression, after the mathematical expressions on which it is based.
+
+An otherwise can appear as the last condition in a conditional expression, with the obvious semantics. For example,
+
+```
+sub n
+  | n < 10    = 0
+  | n > 100   = 2
+  | otherwise = 1
+```
+
+Notice the similarity between the guards here and the guarded commands discussed in Chapter 8.
+
+Consider the following function definition, whose purpose is the same as the corresponding ML function in Section 15.7:
+
+```
+square x = x * x
+```

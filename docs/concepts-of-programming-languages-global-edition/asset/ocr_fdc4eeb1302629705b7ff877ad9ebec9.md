@@ -1,0 +1,17 @@
+list-processing instructions were included. Another factor that kept the IPL languages from becoming popular was their implementation on the obscure JOHNNIAC machine.
+
+The contributions of the IPL languages were in their list design and their demonstration that list processing was feasible and useful.
+
+IBM became interested in AI in the mid-1950s and chose theorem proving as a demonstration area. At the time, the Fortran project was still underway. The high cost of the Fortran I compiler convinced IBM that their list processing should be attached to Fortran, rather than in the form of a new language. Thus, the Fortran list processing language (FLPL) was designed and implemented as an extension to Fortran. FLPL was used to construct a theorem prover for plane geometry, which was then considered the easiest area for mechanical theorem proving.
+
+# 2.4.2 Lisp Design Process
+
+John McCarthy of MIT took a summer position at the IBM Information Research Department in 1958. His goal for the summer was to investigate symbolic computations and to develop a set of requirements for doing such computations. As a pilot example problem area, he chose differentiation of algebraic expressions. From this study came a list of language requirements. Among them were the control flow methods of mathematical functions: recursion and conditional expressions. The only available high-level language of the time, Fortran I, had neither of these.
+
+Another requirement that grew from the symbolic-differentiation investigation was the need for dynamically allocated linked lists and some kind of implicit deallocation of abandoned lists. McCarthy simply would not allow his elegant algorithm for differentiation to be cluttered with explicit deallocation statements.
+
+Because FLPL did not support recursion, conditional expressions, dynamic storage allocation, or implicit deallocation, it was clear to McCarthy that a new language was needed.
+
+When McCarthy returned to MIT in the fall of 1958, he and Marvin Minsky formed the MIT AI Project, with funding from the Research Laboratory for Electronics. The first important effort of the project was to produce a software system for list processing. It was to be used initially to implement a program proposed by McCarthy called the Advice Taker.³ This application became the impetus for the development of the list-processing language Lisp. The first version of Lisp is sometimes called “pure Lisp” because it is a purely functional language. In the following section, we describe the development of pure Lisp.
+
+3. Advice Taker represented information with sentences written in a formal language and used a logical inferencing process to decide what to do.

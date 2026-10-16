@@ -1,0 +1,49 @@
+activation record instance of the subprogram where the variable was declared as the base address, the EP is used.
+
+To illustrate the complete process of nonlocal accesses, consider the following skeletal JavaScript program:
+
+```
+function main() {
+    var x;
+    function bigsub() {
+        var a, b, c;
+        function sub1() {
+            var a, d;
+            ...
+            a = b + c; <-------------------------------------------1
+            ...
+        } // end of sub1
+        function sub2(x) {
+            var b, e;
+            function sub3() {
+                var c, e;
+                ...
+                sub1();
+                ...
+                e = b + a; <-------------------------------------------2
+            } // end of sub3
+            ...
+            sub3();
+            ...
+            a = d + e; <-------------------------------------------3
+        } // end of sub2
+        ...
+        sub2(7);
+        ...
+    } // end of bigsub
+    ...
+    bigsub();
+    ...
+} // end of main
+```
+
+The sequence of procedure calls is
+
+main calls bigsub
+bigsub calls sub2
+sub2 calls sub3
+sub3 calls sub1
+
+The stack situation when execution first arrives at point 1 in this program is shown in Figure 10.9.
+
+At position 1 in procedure sub1, the reference is to the local variable, a, not to the nonlocal variable a from bigsub. This reference to a has the chain_offset/local_offset pair (0, 3). The reference to b is to the nonlocal b from bigsub. It can be represented by the pair (1, 4). The local_offset is 4, because a 3 offset
