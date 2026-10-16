@@ -1,0 +1,121 @@
+
+
+![](img/2f042205c6c0e14747f198ed8f9c9f40_288_0.png)
+
+Figure 17.7 Log-normal PDF of software enhancements.
+
+## A Log-Normal PDF for Change Requests
+
+The process of “change requests” in a support project is a mixture; it is composed of assorted tasks, including bug fix, feature addition, and patchwork. A PDF of change requests is modeled with the following parameters:
+
+Shape σ = 1
+Scale β = 7
+
+The scale factor is set at the median of data. The shape factor is chosen by an iterative search for best fit. The log-normal PDF for change requests is plotted in Figure 17.8.
+
+However, this is merely curve fitting. This model does not benefit from the ideological context such as that present in the model for feature addition or design complexity. Despite this limitation, the model can still be used for forecasting.
+
+A better approach, beyond the scope of this book, would be to create a mixture model, combining inherent probabilistic characteristics of the components.
+
+> Bug fixes may be denoted by Weibull distribution, patchwork by beta distribution and feature addition by log-normal distribution.
+
+Mathematically combining the three would require a series of approximations and special analytical treatments, which would require a specialist’s knowledge. However, such a combination can also be achieved digitally by simulation.
+
+![](img/2f042205c6c0e14747f198ed8f9c9f40_289_0.png)
+
+## Figure 17.8 Log-normal PDF of change requests.
+
+## From Pareto to Log-Normal
+
+Pareto distribution is a power law and is known for its fat tail (see Chapter 16 for more details). Log-normal is a growth model and also has a limited-sized tail. One can switch to Pareto if bigger tails are needed. However, the similarity does not end in tails.
+
+> When examining income distribution data, Aitchison and Brown (1954) observe that for lower incomes a lognormal distribution appears a better fit, while for higher incomes a power law distribution appears better [4].
+
+Power law distributions and log-normal distributions are quite natural models and can be generated intuitively. They are also intrinsically connected.
+
+Power law and log-normal both have been applied to file size distributions in the Internet; they fare equally well. From a pragmatic point of view, it might be reasonable to use whichever distribution makes it easier to obtain results.
+
+## Some Properties of Log-Normal Distribution
+
+Some properties of log-normal distribution can come in handy while analyzing data. The following median-related formulas are given in NIST:
+
+```
+Mean = Median e^{σ²/2} (17.5)
+```
+
+```
+Variance = Median² e^{σ²} (e^{σ²} − 1)  (17.6)
+```
+
+The central tendencies are defined in terms of parameters as follows:
+
+```
+Mean = e^{(β + σ²/2)}  (17.7)
+```
+
+```
+Median = e^{β}  (17.8)
+```
+
+```
+Mode = e^{(β − σ²)}  (17.9)
+```
+
+We can see from the previous equations that the mean is always larger than the median. Similarly, the mode is the smallest.
+
+When β = 1, the log-normal distribution is called standard log-normal distribution.
+
+## Case Study—Analysis of Failure Interval
+
+Log-normal distribution is widely used in reliability studies. NIST presents several models for reliability analysis, and log-normal is one of them. The choice depends on interpretation of the famous bathtub curve. Initially, mechanical systems show infant mortality with a failure rate that increases till the system stabilizes. Then failure rate decreases and reaches a flat low level. When the failure rate is constant, the exponential distribution is enough.
+
+When the failure rate is changing, log-normal or Weibull or other models capable of handling change are required.
+
+Reliability Analysis Centre [5] illustrates an example of log-normal distribution with a scale of 10.3 and a shape of 1.0196 to represent infant mortality and speedy recovery, although Weibull is their favorite model for reliability analysis.
+
+> In mechanical systems reliability decreases with time whereas in software products reliability increases with usage, bug discovery and bug fixing.
+
+Failure mechanisms propagate and grow in physical systems; in software, they are located, confined, and eliminated. We need to bear this in mind while working on developing a probabilistic model for software reliability.
+
+Failure models also use theory of product and ensure relevance. For example, Varde [6] developed a log-normal model based on physics of failure involving electromigration. Varde, ardently supporting physics based reasoning and apparently reluctant to use of mindless statistical models, observed,
+
+> Nevertheless, statistics still forms the part of physics-of-failure approach. This is because prediction of time to failure is still modeled employing probability distribution. Traditionally log-normal failure distribution has been used to estimate failure time due to electromigration related failure.
+
+Varde used median time to fail as the scale parameter and standard deviation as the shape parameter, exactly as in NIST guidelines.
+
+We have studied failure times of software after release, the data made available by the Cyber Security and Information Systems Information Analysis Center CSIAC [7]. CSIAC is a Department of Defense (DoD) Information Analysis Center (IAC) sponsored by the Defense Technical Information Center (DTIC). The CSIAC is a consolidation of three predecessor IACs: the Data and Analysis Center for Software (DACS), the Information Assurance Technology IAC (IATAC) and the Modeling and Simulation IAC (MSIAC), with the addition of the Knowledge Management and Information Sharing technical area.
+
+The software reliability data set has 111 records of failure intervals. With time, the failure intervals grow, increasing software reliability. We consider time between failures (TBF) as the key indicator of a complex process involving usage and maintenance. Growth of TBF is expected with a smooth log-normal with a clear peak and a distinct tail (see Box 17.3 for an analogy for software TBF).
+
+However, the histogram of TBF, shown in Figure 17.9, reveals two peaks, belonging to two separate clusters, suggesting two growth processes. It could be that the second cluster could arise from a second release; it could also arise from a new pattern of usage recently introduced.
+
+We have fitted two log-normal curves to the clusters. The first has a scale of 15.5, Ln(median), and a shape of 0.8 (standard deviation of Ln(x)). The second has a scale of 16.4 and a shape of 0.1. The graphs are shown in Figure 17.10. This is a composite model.
+
+The second log-normal curve in Figure 17.10 resembles Gaussian, but still we prefer the log-normal equation because it is median based.
+
+![](img/2f042205c6c0e14747f198ed8f9c9f40_292_0.png)
+
+Figure 17.9 Histogram of TBF.
+
+![](img/2f042205c6c0e14747f198ed8f9c9f40_292_1.png)
+
+Figure 17.10 Log-normal PDF of TBF clusters.
+
+## BOX 17.3 ANALOGY—ACCELERATED LIFE TEST
+
+If we record time served by computer hardware before the first failure occurs, what we obtain is life data, and the distribution is called life distribution. Life data manifest log-normal distribution, both for machines and for humans. Log-normal distribution for machine failure is used to measure and improve reliability. Log-normal distribution for human life is used to calculate life insurance premiums. In both the cases, we estimate or “measure” life properties using log-normal distribution.
+
+In accelerated life tests of systems, extreme conditions are created, mimicking real-world scenarios, to stimulate failure events much earlier than normal. Moreover, the tests are stopped either after a certain time or after a certain number of failures occur. Tests are neither conducted indefinitely nor till all failures occur. Life data thus obtained are truncated or “censored.” The picture obtained is partial, but the full picture can be constructed by statistical analysis. One such attempt is to fit log-normal distribution to censored life data and see even the unseen part of the full story of failure probabilities. Accelerated life tests are faster and cheaper.
+
+Dube et al. [8] discussed the problem of applying log-normal distribution to censored life data, particularly parameter extraction. They analyze car failure data from Lawless [9] for this purpose. The Lawless data “shows the number of thousand miles at which different locomotive controls failed in a life test involving 96 controls. The test was terminated after 135,000 miles, by which time 37 failures had occurred.”
+
+Dube et al. took up and answered the question whether the data fit the log-normal distribution or not. They showed that “the data fits reasonably well.” Analogically, software is stressed by usage testing (e.g., user acceptance testing), triggering failure events. A record of failure times is called life data. Tests are not indefinitely conducted but terminated at some point of time, either after a certain number of defects have been found or after the lapse of certain time, depending on estimation and strategy of testing. Life data thus obtained can be fitted to log-normal.
+
+## Review Questions
+
+- 1. Compare normal distribution with log-normal distribution.
+- 2. Provide an example of the logarithmic scale used in practice.
+- 3. What is the formula for the mean of log-normal distribution with shape σ and scale β?
+- 4. What is the formula for the variance of log-normal distribution with shape σ and scale β?
+- 5. Who invented the log-normal distribution?
+

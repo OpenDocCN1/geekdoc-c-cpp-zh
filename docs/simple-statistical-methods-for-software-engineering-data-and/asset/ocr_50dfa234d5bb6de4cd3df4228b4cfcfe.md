@@ -1,0 +1,15 @@
+Occasionally, we also come across perfective maintenance where quality and performance of the software is improved. Perfective maintenance tasks are product and process improvement projects. IEEE standard defines perfective maintenance as “modification of a software product after delivery to improve performance or maintainability.” It is now widely believed that software reliability enhancement is a social responsibility; it makes life safer. To fulfill these social expectations, responsible maintenance organizations gather such metrics. These are product and process performance metrics. Such metrics have rather complex definitions and are often based on mathematical models.
+
+Corrective maintenance dominates the scenarios in some maintenance organizations. Some take up pure enhancements. In several other organizations, the three types coexist in a 3:1:1 ratio according to a study made by NC State University [2]. The ratio could be 1:3:1 in certain business contracts where the focus is on bug fixing. NC State University also mentions that corrective maintenance—the quick fixes—come in two styles: without document changes and with document changes in the 2:1 ratio.
+
+In huge system enhancement contracts, such as in aerospace, a large number (thousands) of change requests are clubbed into a development package, and it goes through a full development life cycle for many years. Multiple variants of the product are released periodically. This becomes more complex than regular green field development projects. Additional activities such as impact analysis and regression testing are included to ensure that system integrity is maintained. For these projects, the metric approaches suggested in Chapter 6 are relevant and may be followed.
+
+In maintenance projects, many data are collected by automated tools. However, the construction of metrics and models seems to be more difficult in maintenance projects than that in development projects. Maintenance tasks are shorter, and there is no time for manual data collection. Tool-collected data go into a database (“write-only” data base, Humphrey quipped) and is revisited by analysts who prepare reports for management and customers. Data, much less metrics, are not that visible to support teams.
+
+Extraction of metrics from the database is performed based on the purpose at hand. The purpose could be weekly management reports or occasional construction of performance models.
+
+Let us take a look at some typical maintenance metrics.
+
+# BOX 7.1 SHOULD MAINTENANCE TEAM MEASURE SOFTWARE RELIABILITY?
+
+Reliability is a product metric and is often considered as a development metric. However, the role of reliability assurance shifts with time, from the development team to the maintenance team. Under maintenance tasks, reliability can either grow or deteriorate. Many support teams do not measure reliability unless the contract demands such a metric. As software evolves during maintenance, entropy sets in and quality gradually diminishes.

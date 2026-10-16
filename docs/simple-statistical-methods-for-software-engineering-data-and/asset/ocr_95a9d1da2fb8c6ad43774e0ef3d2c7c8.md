@@ -1,0 +1,8 @@
+# LAWS OF
+PROBABILITY
+
+In Section III, we shall see some time-tested laws of statistics. However, the foundation lies in empirical patterns of evidential data because all these laws are inspired by patterns in evidential data.
+
+Chapter 10 on histogram establishes the rules of thumb of pattern extraction from data. Chapter 11 presents the binomial process, the binomial and related laws. Historically, a good deal of statistical concepts evolved around these laws, both to conceive them and to apply them. Chapter 12 presents the exponential law, the related Poisson process. Chapter 13 presents the bell curve, which has become a social law of universal status and great potential. Statistical thinking is governed by the bell curve. The uniform and triangular bounded distributions, presented in Chapters 14 and 15, represent another set of laws that help business decision making. The well-known Pareto law, along with some less known applications in open source software development, is presented in Chapter 16.
+
+These laws have resulted in several other laws and paradigms. They have cast permanent influence on several fields of science and engineering. They are also behind some of the most powerful knowledge systems and prediction models used in management. These laws are basic to the understanding of software engineering and management. They have inspired scientists, economists, and managers ever since their discovery. With time, the application and usage of these laws seem to increase exponentially.
