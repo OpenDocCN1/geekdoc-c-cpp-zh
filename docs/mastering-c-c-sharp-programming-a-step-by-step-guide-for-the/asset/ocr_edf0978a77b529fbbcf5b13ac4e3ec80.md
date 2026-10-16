@@ -1,0 +1,11 @@
+size of the number you may be storing. Most of the time, you will probably use int but this won’t always be the case.
+
+Next, note that each of these three int types also has an unsigned equivalent – ushort, uint, ulong. None of these require a sign and every value is assumed to be a positive value. This means that these types can store numbers that are twice as large as their signed equivalent and, although you can’t use negative numbers, you can go to 0.
+
+The type of byte is just one single byte and is also unsigned. You might think that this is quite limiting because it can only go up as far as 255. However, we also use this type for pushing raw bytes that have no meaning, at least as far as the computer is concerned. For example, this could be the contents of a file or an image, data that is being transmitted across networks, which could integers, or any other type of information. Whatever it is, the program doesn’t really care about it at the moment.
+
+Next, we have the float, decimal, and double types. These store what is known as real numbers in the math world but, in computer programming terms, they are floating point numbers. All the other types we talked about can store a number of 7 but not 4.5. A fractional number is one that has a decimal point and it must be stored in a variable that has a floating point type. For smaller numbers that don’t need much accuracy, you can use the float type. For larger numbers that need more accuracy, there’s the double type. The decimal type has a much smaller range than these two but has far more accuracy. Depending on your requirements, you will need to make a choice between them. If, for example, you are going to develop a game, you won’t see the decimal type very often – float and double are used a whole lot more.
+
+For text, we have the char and string types. The char type stores one single character or letter while the string type stores a sequence of letters, symbols, and numbers.
+
+Lastly, we use the bool type for logic. You will be seeing quite a lot of this in the guide as this is the type we use for determining if

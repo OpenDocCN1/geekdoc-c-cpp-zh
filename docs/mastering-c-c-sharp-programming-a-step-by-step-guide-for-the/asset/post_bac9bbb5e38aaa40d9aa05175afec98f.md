@@ -1,0 +1,294 @@
+
+additional logic to make sure that the score is a valid value, i.e. isn’t negative.
+
+This is how that would look:
+
+```
+public int GetScore()
+{
+    return score;
+}
+
+public void SetScore(int score)
+{
+    this.score = score;
+    if(this.score < 0)
+    {
+        this.score = 0;
+    }
+}
+```
+
+This is common in programming but one of the most frustrating things is having to keep typing SetScore(). In fact, it would be very tempting to set score as public rather than private; all you would need to do then is type score = and the value. That’s a convenient way of doing things but there is a problem with it. Now that your instance variable is public, anyone can access it and modify it any way they want.
+
+Properties are the way to solve this. Let’s look at how to create them.
+
+## Creating Properties
+
+Properties are nothing more than a simple way of creating get and set methods that are easy to read. Rather than using two methods as we did in the last example, we would do this:
+
+```
+public int Score
+{
+    get
+    {
+        return score;
+    }
+    set
+    {
+        score = value;
+        if (score < 0)
+        {
+            score = 0;
+        }
+    }
+}
+```
+
+Now we have a property called score. It is public, which means anyone can use it – you can set it to private if you want. We’ve also stated what type the property is, in our case, it’s an int and then we named it.
+
+Next, the get and set keywords are used to indicate what happens when anyone attempts to read or set the property value. Inside the curly braces, you see code that is pretty much the same as what was in our GetScore() and SetScore(int) methods but there is a difference.
+
+The normal SetScore() method lets us pass in and set a variable value; with a property, we make use of another keyword, value instead and this will take on whatever value is being set when the property is called.
+
+Now, when we call our property, we can do it like this:
+
+```
+Player player = new Player("Player");
+int currentScore = player.Score;
+player.Score = 50;
+```
+
+If you tried to read what’s in the Score property, whatever is inside the property’s get block would be executed and the value returned. If you tried to assign the Score property with a value, whatever is in the set property will be executed. In our case, the value keyword in the set block would be assigned a value of 50.
+
+Properties make it easier to get and set variables because they can also do the validation work when a user attempts to set something, all without messing up the readability of the code.
+
+It is worth knowing that properties really aren’t anything more than “syntactic sugar” and all C# does is turns them into methods that do exactly the same thing.
+
+There is one more thing to talk about here to clear things up. It isn’t necessary to have your properties belong to any specific instance variable. In the code above, that is exactly what we have done, but you don’t need to do that.
+
+Here’s an example that doesn’t have the property belong to an instance variable:
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Properties
+{
+    class Time
+{
+    private int seconds;
+
+    public int Seconds
+    {
+        get
+        {
+            return seconds;
+        }
+        set
+        {
+            seconds = value;
+        }
+    }
+
+    public int Minutes
+    {
+        get
+        {
+            return seconds / 60;
+        }
+    }
+}
+```
+
+What we have here is an instance variable named seconds and, with it, a property named Seconds. Just a note - it is very common to use
+
+```
+score = value;
+}
+}
+```
+
+Here, anyone can use the getter but the setter can only be accessed from within the class it is in.
+
+## Auto-Implemented Properties
+
+You will also find yourself creating quite a lot that looks like this:
+
+```
+private int score;
+```
+
+```
+public int Score
+{
+    get
+    {
+        return score;
+    }
+    set
+    {
+        score = value;
+    }
+}
+```
+
+With C# v3.0, a new feature was introduced which allows the ability to make auto-implemented properties that do the same things. Instead of using that code above and that includes our private instance variable called score, you would just do this:
+
+```
+public int Score { get; set; }
+```
+
+Behind the scene, a default instance variable is created along with the basic code for get and set. What you won’t have is access to the
+
+instance variable marked private because it simply doesn’t exist. It is, however, an easy way of creating a simple property.
+
+## Setting Properties at Object Creation
+
+When we talk about properties, we should also take something else into account. Let’s take our Player class where we have instance variables for the name of the player, the score, and how many lives are left. Let’s assume that we want to create a property for each one and these will be called, respectively, Name, Score, LivesLeft.
+
+When a new Player object is created, the syntax below could be used to assign values to each property at the time the object is created:
+
+```
+Player player = new Player("Jekyll") { Score = 100, LivesLeft = 5 };
+```
+
+This means we don’t have to do this:
+
+```
+Player player = new Player("Jekyll");
+```
+
+```
+player.Score = 100;
+```
+
+```
+player.LivesLeft = 5;
+```
+
+Instead, it can all go neatly on one line.
+
+## Quick Primer
+
+- Properties give us an easy and quick way of creating our getters and setters for the instance variables.
+- You can use something like the code below to create a property:
+
+```
+public int Score
+{
+    get
+    {
+        return score;
+    }
+}
+```
+
+```
+set
+{
+    score = value;
+    if (score < 0)
+    {
+        score = 0;
+    }
+}
+```
+
+- You won’t need both a getter and a setter for all properties.
+- You can set different access modifiers for the getters and setters.
+- You can create auto-implemented properties to define simple properties that have default behavior very quickly (`public int Score { get; set; }`)
+
+## What's Next?
+
+That pretty much covers everything important that you need to know about properties. Next, we’ll look at something that is much like a class in appearance but has very different implementation – the struct.
+
+## Structs
+
+Now that you understand classes, we can look at a construct that is very similar – the struct. This word comes from C/C++ and is from the word ‘structured’. A struct is representing a record or a set of data that has been structured – in C language, this marked the beginning of OOP and lead to classes in C++.
+
+Structs are much like classes and you could be forgiven, at first glance, for mistaking one for another. However, there are some significant differences. To really understand structs, it is worth going back over the section on the Stack and Heap and on passing references by value – if you need a brush-up, now is the time to do it.
+
+## Creating a struct
+
+This is much like creating a class and the code below will define a struct and a class that is identical and does the exact same thing:
+
+```
+struct TimeStruct
+{
+    private int seconds;
+
+    public int Seconds
+    {
+        get
+        {
+            return seconds;
+        }
+        set
+        {
+            seconds = value;
+        }
+    }
+}
+}
+
+public int CalculateMinutes()
+{
+    return seconds / 60;
+}
+}
+
+class TimeClass
+{
+    private int seconds;
+
+    public int Seconds
+    {
+        get
+        {
+            return seconds;
+        }
+        set
+        {
+            seconds = value;
+        }
+    }
+
+    public int CalculateMinutes()
+```
+
+```
+{
+    return seconds / 60;
+}
+}
+```
+
+As you can see, they are fairly similar and we have used the same code in both of them – the only difference is in the keywords – struct to create the struct and class to create the class.
+
+## What's the Difference?
+
+As they are much the same, no doubt you are asking yourself what the real differences are.
+
+The first difference is that, where we have a constructor inside a class, we don’t need to assign all the data in the class for it to take a value. For example, our TimeClass in the above example might contain a constructor looking similar to this:
+
+```
+public TimeClass()
+{
+    // We don’t need to put anything here; the instance variables will simply be initialized
+    // to their default values which, in many cases, will be 0.
+}
+```
+
+Where the struct is concerned, on the other hand, all instance variables must be assigned a value:
+
+```
+public TimeStruct() // This part broken. See below.
+{
+    seconds = 0; // This is required, or the program will not compile.
+}
+```
+
+Another major difference is that there is no way of creating a constructor without parameters for the struct.

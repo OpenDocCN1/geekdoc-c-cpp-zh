@@ -1,0 +1,1 @@
+As far as value types are concerned, any changes made do NOT affect the original variable.
