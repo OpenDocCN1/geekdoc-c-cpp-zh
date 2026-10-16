@@ -1,0 +1,190 @@
+
+
+## Results
+
+![](img/9d3e4d8fa063e50a0c9985e34cf9d6e8_190_0.png)
+
+| # | Variable | Type | Len | Format | Label |
+|---:|---|---|---:|---|---|
+| 3 | MANUNUM | Num | 8 |  | Manufacturer Number |
+| 5 | PRODCOST | Num | 8 | DOLLAR9.2 | Product Cost |
+| 2 | PRODNAME | Char | 25 |  | Product Name |
+| 1 | PRODNUM | Num | 8 |  | Product Number |
+| 4 | PRODTYPE | Char | 15 |  | Product Type |
+
+与之前一样，为了节省存储空间，你可以在 DATA 步中使用 LENGTH 语句来覆盖数值列默认的 8 字节列定义。
+
+## DATA Step Code
+
+```
+DATA PRODUCTS;
+    LENGTH PRODNUM MANUNUM 3.
+           PRODCOST 5.;
+    SET PRODUCTS (DROP=PRODNUM MANUNUM PRODCOST);
+    LABEL PRODNUM = 'Product Number'
+          MANUNUM = 'Manufacturer Number'
+          PRODCOST = 'Product Cost';
+    FORMAT PRODCOST DOLLAR9.2;
+RUN;
+```
+
+## Results
+
+## The CONTENTS Procedure
+
+|  | Alphabetic List of Variables and Attributes |  |  |  |  |
+|---|---|---|---|---|---|
+| # | Variable | Type | Len | Format | Label |
+| 2 | MANUNUM | Num | 3 |  | Manufacturer Number |
+| 3 | PRODCOST | Num | 5 | DOLLAR9.2 | Product Cost |
+| 4 | PRODNAME | Char | 25 |  | Product Name |
+| 1 | PRODNUM | Num | 3 |  | Product Number |
+| 5 | PRODTYPE | Char | 15 |  | Product Type |
+
+## Creating a Table Using the LIKE Clause
+
+在 CREATE TABLE 语句中引用现有表是创建新表的一种有效方法。事实上，这可以节省大量时间，因为它避免了像列定义列表那样逐个定义每一列。LIKE 子句（在 CREATE TABLE 语句中）会触发将现有表的结构复制到新表，同时减去使用 KEEP= 或 DROP= 数据集（表）选项删除的列。它将列名和属性从现有表结构复制到新表结构。使用此方法会创建一个空表（不含行）。为了说明这种创建新表的方法，将使用 LIKE 子句创建一个名为 HOT_PRODUCTS 的表。
+
+## SQL Code
+
+```
+PROC SQL;
+    CREATE TABLE HOT_PRODUCTS
+        LIKE PRODUCTS;
+QUIT;
+```
+
+## SAS Log Results
+
+```
+PROC SQL;
+    CREATE TABLE HOT_PRODUCTS
+        LIKE PRODUCTS;
+NOTE: Table HOT_PRODUCTS created, with 0 rows and 5 columns.
+QUIT;
+NOTE: PROCEDURE SQL used:
+      real time          0.00 seconds
+```
+
+由于执行了 CREATE TABLE 语句和 LIKE 子句，新表包含零行数据，但确实包含了所有列定义，而没有来自现有表和/或视图的任何数据行。这意味着只有元数据（描述数据的 data）被复制到新表。被复制的特定定义包括：列名、数据类型、长度、精度、标签、informat、格式等。
+
+下一个示例说明了如何通过仅选择你感兴趣的列来创建新表。此方法不受 SQL ANSI 标准支持。假设你想要来自 PRODUCTS 表的三个列（PRODNAME、PRODTYPE 和 PRODCOST）。以下代码说明了如何使用 KEEP= 数据集（表）选项来实现这一点。
+
+注意：数据集也可以称为表。
+
+## SQL Code
+
+```
+PROC SQL;
+    CREATE TABLE HOT_PRODUCTS (KEEP=PRODNAME PRODTYPE PRODCOST)
+    LIKE PRODUCTS;
+QUIT;
+```
+
+## SAS Log Results
+
+```
+PROC SQL;
+    CREATE TABLE HOT_PRODUCTS (KEEP=PRODNAME PRODTYPE PRODCOST)
+    LIKE PRODUCTS;
+NOTE: Table HOT_PRODUCTS created, with 0 rows and 3 columns.
+QUIT;
+NOTE: PROCEDURE SQL used:
+real time          0.00 seconds
+```
+
+## Deriving a Table and Data from an Existing Table
+
+从现有表派生新表是从现有表创建表的最流行和最有效的方法。此方法使用查询表达式，结果存储在新表中，而不是作为 SAS 输出显示。此方法不仅存储列名及其属性，还存储满足查询表达式的数据行。下一个示例说明了如何使用查询表达式创建新表。
+
+## SQL Code
+
+```
+PROC SQL;
+    CREATE TABLE HOT_PRODUCTS AS
+    SELECT *
+    FROM PRODUCTS;
+QUIT;
+```
+
+## SAS Log Results
+
+```
+PROC SQL;
+    CREATE TABLE HOT_PRODUCTS AS
+        SELECT *
+        FROM PRODUCTS;
+NOTE: Table WORK.HOT_PRODUCTS created, with 10 rows and 5 columns.
+QUIT;
+NOTE: PROCEDURE SQL used:
+    real time          0.00 seconds
+```
+
+你可能会注意到，在检查前一个示例中的 SAS 日志后，SELECT 语句从现有表（PRODUCTS）中提取了所有行并将其复制到新表（HOT_PRODUCTS）。在没有 WHERE 子句的情况下，结果表（HOT_PRODUCTS）包含与父表 PRODUCTS 相同数量的行。
+
+因此，CREATE TABLE 语句的强大之处在于其能够从现有表创建新表。在此定义中经常被忽视的是 CREATE TABLE 语句能够形成父表子集的能力。更常见的是，新表代表其父表的子集。因此，这种创建表的方法是最强大且使用最广泛的。假设你想要创建一个名为 HOT_PRODUCTS 的表，其中包含“Software”和“Phones”产品类型的子集。以下查询表达式将实现此目的。
+
+## SQL Code
+
+```
+PROC SQL;
+    CREATE TABLE HOT_PRODUCTS AS
+        SELECT *
+        FROM PRODUCTS
+            WHERE UPCASE(PRODTYPE) IN ("SOFTWARE", "PHONE");
+QUIT;
+```
+
+## SAS Log Results
+
+```
+PROC SQL;
+    CREATE TABLE HOT_PRODUCTS AS
+        SELECT *
+        FROM PRODUCTS
+            WHERE UPCASE(PRODTYPE) IN ("SOFTWARE", "PHONE");
+NOTE: Table WORK.HOT_PRODUCTS created, with 7 rows and 5 columns.
+QUIT;
+NOTE: PROCEDURE SQL used:
+      real time          0.38 seconds
+```
+
+让我们再看一个例子。假设你想要创建另一个名为 NOT_SO_HOT_PRODUCTS 的表，其中包含除“Software”和“Phones”产品类型之外的所有内容的子集。以下查询表达式将实现此目的。
+
+## SQL Code
+
+```
+PROC SQL;
+    CREATE TABLE NOT_SO_HOT_PRODUCTS AS
+        SELECT *
+            FROM PRODUCTS
+                WHERE UPCASE(PRODTYPE) NOT IN ("SOFTWARE", "PHONE");
+QUIT;
+```
+
+## SAS Log Results
+
+```
+PROC SQL;
+    CREATE TABLE NOT_SO_HOT_PRODUCTS AS
+        SELECT *
+            FROM sql.PRODUCTS
+                WHERE UPCASE(PRODTYPE) NOT IN ("SOFTWARE", "PHONE");
+NOTE: Table NOT_SO_HOT_PRODUCTS created, with 3 rows and 5 columns.
+QUIT;
+NOTE: PROCEDURE SQL used:
+        real time          1.20 seconds
+```
+
+## Populating Tables
+
+创建表后，可以向其中填充数据。除非新创建的表被定义为现有表的子集或其内容保持静态，否则最终可能需要添加一个或多个数据行。SQL 标准提供了 INSERT INTO 语句作为添加数据行的工具。事实上，INSERT INTO 语句根本不会插入数据行。它只是将每一行添加到表的末尾。
+
+本节中的示例查看了多种填充表的方法。随着新数据行被添加到目标表或在目标表中被更改，后台必须保持许多事情受控，包括执行或提交对表的任何永久更改的需求。此重要步骤检查每个写操作是否存在错误，如果发生一个或多个错误，则为 SAS 提供完全回滚或撤消自上次提交以来更改的能力。例如，在允许行插入进入分配了完整性约束的表之前，它首先被标记为未提交，然后根据分配的完整性约束进行验证，如果没有违规，则行插入被提交到表中。以下行插入方法将被说明：
+
+- 使用 SET 子句向表添加数据
+- 向行的所有列添加数据
+- 向行的部分列添加数据
+- 使用 SELECT 查询添加数据
+- 使用 Microsoft Excel 批量加载数据
+

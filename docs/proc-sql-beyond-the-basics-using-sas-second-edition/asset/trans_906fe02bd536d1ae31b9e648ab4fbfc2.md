@@ -1,0 +1,186 @@
+
+一个包含双向连接（two-way join）的复杂查询被构建并保存为视图，以简化其他用户的使用。
+
+## SQL 代码
+
+```
+PROC SQL;
+    CREATE VIEW PROD_MANF_VIEW AS
+        SELECT DISTINCT SUM(prodcost) FORMAT=DOLLAR10.2,
+               M.manunum,
+               M.manuname
+          FROM PRODUCTS AS P, MANUFACTURERS AS M
+         WHERE P.manunum = M.manunum AND
+               M.manuname = 'KPL Enterprises';
+QUIT;
+```
+
+## SAS 日志结果
+
+```
+PROC SQL;
+    CREATE VIEW PROD_MANF_VIEW AS
+        SELECT DISTINCT SUM(prodcost) FORMAT=DOLLAR10.2,
+               M.manunum,
+               M.manuname
+          FROM PRODUCTS AS P, MANUFACTURERS AS M
+         WHERE P.manunum = M.manunum AND
+               M.manuname = 'KPL Enterprises';
+NOTE: SQL view WORK.PROD_MANF_VIEW has been defined.
+QUIT;
+NOTE: PROCEDURE SQL used:
+real time          0.00 seconds
+```
+
+在下一个示例中，PROD_MANF_VIEW 在 SELECT 查询中被直接引用。由于该视图的 SELECT 语句对产品成本（PRODCOST）列使用了汇总函数，但没有包含 GROUP BY 子句，因此 SAS 日志中会出现注释“The query requires remerging summary statistics back with the original data.”。这种情况会导致先计算总和，然后将计算结果与正在处理的表中的每一行重新合并。
+
+## SQL 代码
+
+```
+PROC SQL;
+    SELECT *
+      FROM PROD_MANF_VIEW;
+QUIT;
+```
+
+## SAS 日志结果
+
+```
+PROC SQL;
+    SELECT *
+        FROM PROD_MANF_VIEW;
+NOTE: The query requires remerging summary statistics back with the original data.
+QUIT;
+NOTE: PROCEDURE SQL used:
+      real time            0.05 seconds
+```
+
+## 结果
+
+|  | 制造商编号 | 制造商名称 |
+|---|---|---|
+| $1,296.00 | 500 | KPL Enterprises |
+
+## 嵌套视图
+
+视图的一个重要特性是它们可以基于其他视图。这称为嵌套。一个视图可以访问来自另一个视图的数据。实际上，可以定义的视图层数没有限制。因此，视图可以成为程序员检索信息的一种非常方便且灵活的方式。尽管可嵌套的视图数量几乎不受限制，但程序员应当谨慎，避免将视图嵌套得过深。这可能会导致与性能和维护相关的问题，特别是当视图构建了很多层的时候。
+
+为了了解视图如何基于其他视图，将创建两个视图——一个视图引用 PRODUCTS 表，另一个视图引用 INVOICE 表。在第一个示例中，WORKSTATION_PRODUCTS_VIEW 仅包含与工作站相关的产品，并且排除了制造商编号。该视图产生如下所示的结果。
+
+## SQL 代码
+
+```
+PROC SQL;
+    CREATE VIEW WORKSTATION_PRODUCTS_VIEW AS
+        SELECT PRODNUM, PRODNAME, PRODTYPE, PRODCOST
+            FROM PRODUCTS
+                WHERE UPCASE(PRODTYPE)="WORKSTATION";
+QUIT;
+```
+
+## 结果
+
+|  | 产品编号 | 产品名称 | 产品类型 | 产品成本 |
+|---|---|---|---|---|
+| 1 | 1110 | Dream Machine | Workstation | $3,200.00 |
+| 2 | 1200 | Business Machine | Workstation | $3,300.00 |
+
+在下一个示例中，INVOICE_1K_VIEW 包含发票价格大于或等于 $1,000.00 的行，并排除了制造商编号。从 SAS 窗口环境访问时，该视图呈现如下所示的结果。
+
+## SQL 代码
+
+```
+PROC SQL;
+    CREATE VIEW INVOICE_1K_VIEW AS
+        SELECT INVNUM, CUSTNUM, PRODNUM, INVQTY, INVPRICE
+        FROM INVOICE
+            WHERE INVPRICE >= 1000.00;
+QUIT;
+```
+
+## 结果
+
+|  | 发票编号 | 客户编号 | 产品编号 | 发票数量 - 已售单位 | 发票单价 |
+|---|---|---|---|---|---|
+| 1 | 1001 | 201 | 5001 | 5 | $1,495.00 |
+| 2 | 1002 | 1301 | 6001 | 2 | $1,598.00 |
+| 3 | 1004 | 501 | 1110 | 3 | $9,600.00 |
+| 4 | 1007 | 401 | 1200 | 7 | $23,100.00 |
+
+下一个示例演示了如何从 WORKSTATION_PRODUCTS_VIEW 和 INVOICE_1K_VIEW 视图的连接中创建视图。生成的视图嵌套了两层。从 SAS 窗口环境访问时，该视图呈现如下所示的结果。
+
+## SQL 代码
+
+```
+PROC SQL;
+    CREATE VIEW JOINED_VIEW AS
+        SELECT V1.PRODNUM, V1.PRODNAME,
+            V2.CUSTNUM, V2.INVQTY, V2.INVPRICE
+        FROM WORKSTATION_PRODUCTS_VIEW  V1,
+            INVOICE_1K_VIEW  V2
+            WHERE V1.PRODNUM = V2.PRODNUM;
+QUIT;
+```
+
+## 结果
+
+|  | 产品编号 | 产品名称 | 客户编号 | 发票数量 - 已售单位 | 发票单价 |
+|---|---|---|---|---|---|
+| 1 | 1110 | Dream Machine | 501 | 3 | $9,600.00 |
+| 2 | 1200 | Business Machine | 401 | 7 | $23,100.00 |
+
+在下一个示例中，为了查找最大发票金额，在前一个视图之上再嵌套第三层视图。在下一个示例中，构建了一个视图，该视图使用 MAX 汇总函数计算发票价格（INVPRICE）与发票数量（INVQTY）的乘积，从而从 JOINED_VIEW 视图中查找最大发票金额。
+
+从 SAS 窗口环境访问时，该视图产生如下所示的结果。
+
+## SQL 代码
+
+```
+PROC SQL;
+    CREATE VIEW LARGEST_AMOUNT_VIEW AS
+        SELECT MAX(INVPRICE*INVQTY) AS Maximum_Price
+            FORMAT=DOLLAR12.2
+            LABEL="Largest Invoice Amount"
+        FROM JOINED_VIEW;
+QUIT;
+```
+
+## 结果
+
+|  | 最大发票金额 |
+|---|---|
+| 1 | $161,700.00 |
+
+## 可更新视图
+
+一旦从一个物理表创建了视图，就可以使用该视图来修改单个基础表的数据。本质上，当视图被更新时，更改会通过视图传递到底层基表。以这种方式设计的视图称为可更新视图，可以对构造该视图的单个表执行 INSERT、UPDATE 和 DELETE 操作。
+
+由于视图依赖于从基表获取数据，并且自身没有物理存在，因此在构建可更新视图时应格外小心。尽管可更新视图在修改表中的行时很有用，但它们确实有一些程序员和用户应该注意的限制。
+
+- 可更新视图只能关联一个基表。这意味着基础表不能用于连接操作或任何集合运算符。由于可更新视图的每一行仅与基础表中的一行相关联，任何涉及两个或多个表的操作都将产生错误，并导致更新操作无法执行。
+- 可更新视图不能包含子查询。子查询是一种复杂查询，由包含在另一条语句中的 SELECT 语句组成。这违反了可更新视图的规则，因此是不允许的。
+- 可更新视图可以使用视图的列别名更新列，但不能包含 DISTINCT 关键字，也不能包含任何聚合（汇总）函数、计算列或派生列。由于这些列是由表达式生成的，因此它们是不允许的。
+- 可更新视图可以包含 WHERE 子句，但不能包含其他子句，例如 ORDER BY、GROUP BY 或 HAVING。
+
+在接下来的部分中，将考察三种类型的可更新视图：
+
+- 插入一行或多行数据的视图
+- 更新现有数据行的视图
+- 从单个基础表中删除一行或多行数据的视图
+
+## 插入新数据行
+
+您可以使用 INSERT INTO 语句在视图中添加或插入新数据行。假设您有一个仅包含软件产品的视图，名为 SOFTWARE_PRODUCTS_VIEW。用于创建此视图的 PROC SQL 代码由一个带有 WHERE 子句的 SELECT 语句组成。视图中定义了四列：产品编号、产品名称、产品类型和产品成本，顺序如上。从 SAS 窗口环境访问时，该视图产生如下所示的结果。
+
+## SQL 代码
+
+```
+PROC SQL;
+    CREATE VIEW SOFTWARE_PRODUCTS_VIEW AS
+        SELECT prodnum, prodname, prodtype, prodcost
+            FORMAT=DOLLAR8.2
+        FROM PRODUCTS
+            WHERE UPCASE(PRODTYPE) IN ('SOFTWARE');
+QUIT;
+```
+
