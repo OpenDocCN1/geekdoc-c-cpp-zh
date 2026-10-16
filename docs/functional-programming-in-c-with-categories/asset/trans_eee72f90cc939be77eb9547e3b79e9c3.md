@@ -1,0 +1,295 @@
+
+
+## 4.11.3 Either Functor 示例
+
+由于 Either 是一个在 Left 子类型中柯里化值的 Maybe，我们可以创建一个将 Maybe 转换为 Either 的方法。
+
+![](img/d73681d801b4b826e0b2a293897bbba4_144_0.png)
+
+下面的方法是从 Maybe<T> 到 Either<TLeft,T> 的自然变换
+
+```
+public static Either<TLeft, T> ToEither<TLeft, T>(this Maybe<T> @source,TLeft defaultLeft)
+{
+    return @source.MatchWith<Either<TLeft, T>>((
+        none: () => new Left<TLeft, T>(defaultLeft),
+        some: (v) => new Right<TLeft, T>(v)
+    ));
+}
+```
+
+我们对 maybe 进行模式匹配，在 None 的情况下返回一个带有默认值 的 Left。例如，对于 Client 仓库示例，如果我们找不到给定 id 的客户端，我们可以返回比单纯的 None 更具体的内容：
+
+```
+public class MockClientRepository
+{
+    ...
+    public Either<string, Client> GetById(int id) =>
+        clients.FirstOrNone(x => x.Id == id)
+            .ToEither("No client Found");
+}
+```
+
+计算的后续部分是通常的
+
+```
+public class Controller
+{
+```
+
+```
+MockClientRepository clients = new MockClientRepository();
+public string GetClientNameById(int clientId) =>
+    clients
+    .GetById(clientId)
+    .Map(client => client.Name)
+    .MatchWith((
+        left: (e) => "error:" + e,
+        right: (name) => name
+    ));
+}
+```
+
+left 情况现在如果匹配到错误 e 将会是 "No client Found"
+
+Run This: .Net Fiddle
+
+Run This: ASP.NET MVC Fiddle
+
+## 4.11.4 C# 8. 模式匹配对 language-ext Either 的支持
+
+language-ext 从现在开始提供了一个标准的 Either 类型，我们将在我们的代码示例中使用这个 Either 而不是自定义的 Either。Map 和 Match 方法基本相同。
+
+与 Option 类似，language-ext 库中的 Either 实现不允许直接在 Either<> 上使用 switch，但它公开了 Either<>.Case 属性让我们可以进行切换：
+
+```
+public string GetAssignedEmployeeNameById(int clientId) =>
+    clients
+        .GetById(clientId)
+        .Map(client => client.EmployeeId)
+        .Bind(employees.GetById)
+        .Case switch
+    {
+        LeftCase<string, Employee>(var error) => error,
+        RightCase<string, Employee>(var employee) => employee.Name,
+        _ => throw new NotImplementedException(),
+    };
+```
+
+我们现在返回一个 Option<Client>
+
+我们必须匹配的两个子类型是 LeftCase<> 和 RightCase<> 。
+
+## 4.11.5 使用 Either 进行异常处理
+
+正如我们所见，如果我们丢弃 left 侧传递的值，Either 可以简化为 maybe。**Either 的左侧代表一个有问题的路径，其中 Error 被保留并且不参与任何其他计算；它只是传递错误信息。** 让我们将 try/catch 重构为其 Either 等价物。我们将从这个 try-catch 块开始：
+
+```
+double finalPrice;
+try
+{
+    var discount = 0.1;
+    finalPrice = 10 - discount * 10;
+}
+catch (Exception e)
+{
+    Console.WriteLine(e);
+    throw;
+}
+```
+
+我们可以提取 try catch 的轮廓并注入 try... 和 catch 的两个片段，使用委托 [这是 **模板方法设计模式** 的函数式风格版本 ]。
+
+所以我们可以像下面这样以更通用的方式重写它。
+
+```
+public class Try<T>
+{
+    public T Result { get; set; }
+    public Try(Func<T> @try, Action<Exception> exeptionHandler)
+    {
+        try
+        {
+            Result = @try();
+        }
+        catch (Exception e)
+        {
+            exeptionHandler(e);
+        }
+    }
+}
+```
+
+并像这样使用它：
+
+```
+var tryResult =new Try<double>(( ) =>
+{
+    var discount = 0.1;
+    finalPrice = 10 - discount * 10;
+```
+
+```
+return finalPrice = 10 - discount * 10;
+},
+e => Console.WriteLine(e);
+```
+
+最后，我们返回一个 Either：
+
+```
+public class Try<T>
+{
+    public Either<Exception, T> Result { get; set; }
+    public Try(Func<T> @try)
+    {
+        try
+        {
+            Result = new Right<Exception, T>(@try());
+        }
+        catch (Exception e)
+        {
+            Result = new Left<Exception, T>(e);
+        }
+    }
+}
+```
+
+我们可以通过暴露结果来使用它
+
+```
+new Try<double>((() =>
+{
+    var discount = 0.1;
+    finalPrice = 10 - discount * 10;
+    return finalPrice = 10 - discount * 10;
+}))
+.Result
+.MatchWith(
+pattern: (
+    Right: v => Console.WriteLine(v),
+    Left: v => Console.WriteLine("Either Error :" + v)
+));
+```
+
+或者我们也可以再创建一个名为 Try Functor 的 Functor，只需隐藏结果并暴露 Map 和 MatchWith。这里是我的快速实现：
+
+```
+public class Try<T>
+{
+    private Either<Exception, T> Result { get; set; }
+    public Try(Func<T> @try)
+    {
+```
+
+```
+try
+{
+    Result = new Right<Exception, T>(@try());
+}
+catch (Exception e)
+{
+    Result = new Left<Exception, T>(e);
+}
+}
+```
+
+```
+public void MatchWith((Action<T> Right, Action<Exception> Left) pattern) =>
+    Result.MatchWith(pattern);
+```
+
+```
+public Try<T1> Map<T1>(Func<T, T1> f) => new Try<T1>(() =>
+Result.MatchWith<T1>(pattern: (
+    Right: x => f(x),
+    Left: e => throw e))
+);
+```
+
+我们也可以推迟执行，直到而不是立即尝试运行 Func<T> @try Right<Exception, T>(@try())。
+
+现在我们有了 Try，我们可以修改一些代表延迟计算的 functors，如 Lazy、IO 和 Reader，以安全地执行包含的计算并产生一个 Either：
+
+```
+public static Try<T> ToTry<T>(this Lazy<T> @this) => new Try<T>(() => @this.Value);
+```
+
+Run This: .Net Fiddle
+
+Language-Ext
+Try<T>
+
+库中有一个 Try<T> 的显式实现，你可以在这里找到
+
+## 4.12 显式组合 Functor
+
+**Functors 在组合下是封闭的。** 术语 **封闭** 意味着如果我们有两个 functors 并将它们组合，结果结构也是一个 functor。这意味着我们应该能够为组合构造一个良好的 Map 方法，**仅使用组合 functors 的 Map 方法** 而无需其他任何东西。
+
+例如对于 Task 中的一个 id `new Id<Task<int>>(Task<int>.Run(() => 4))` 我们可以用这个扩展方法定义组合的整体 map：
+
+```
+public static Id<Task<T1>> Map<T, T1>(this Id<Task<T>> @this, Func<T, T1> f)
+    => @this.Map(t => t.Map(f));
+```
+
+很容易理解其工作原理。你首先使用第一个 functor 的 map 将函数传递进去，然后使用内部（第二个）functor 的 map 再次映射结果值。
+
+**这适用于所有 functors。** 问题是使用 C# 我们无法编写有效的 Generic Functor 组合类型。这是因为我们无法将“Functor”种类表示为泛型。例如，如果我们能写一个接口就好了
+
+```
+public interface IFunctor<T>
+{
+    IFunctor<T1> Map<T1>(Func<T, T1> f);
+}
+```
+
+来抽象 Functor 的概念，然后也许可以写下如下内容来抽象所有 Functor 组合
+
+```
+public static F<G<T1>> Map<T, T1>(this F<G<T>> @this, Func<T, T1> f)
+where F:IFunctor<G>
+where G:IFunctor<T>
+=> @this.Map(t => t.Map(f));
+```
+
+不幸的是，C# 类型系统没有那么富有表现力。你可以尝试自己实现类似的东西来看看为什么这是不可能的。这是因为 C# 不支持 **高阶多态** 你可以在 dotnet github 仓库上关注一些讨论。Scala 和 Haskell 相反支持高阶类型。
+
+问题是如果你想使用 Functors 的特定组合进行组合，你将不得不为其提供自己的扩展
+
+```
+public static Task<Id<T1>> Map<T, T1>(this Task<Id<T>> @this, Func<T, T1> f)
+    => @this.Map(t => t.Map(f));
+```
+
+这对于所有组合来说都是完全相同的 `@this.Map(t => t.Map(f))` 除了类型。
+
+![](img/d73681d801b4b826e0b2a293897bbba4_150_0.png)
+
+我们现在可以重新审视 Maybe 部分中的仓库示例，其中我们有一个返回 maybe 数组的仓库异步操作：
+
+```
+var result = new MockClientRepository()
+    .GetById(1)
+    .Map(client => client.Map(v => $"Answer - {v.Name}"))
+    .ToEitherTask();
+```
+
+```
+result = new MockClientRepository()
+    .GetById(1)
+    .MapT(v => $"Answer - {v.Name}")
+    .ToEitherTask();
+```
+
+其中 **MapT** 现在被定义为：
+
+```
+public static Task<Maybe<T1>> MapT<T, T1>(this Task<Maybe<T>> @this, Func<T, T1> f)
+    => @this.Map(t => t.Map(f));
+```
+
+## 4.13 组合 Task 和 Option – Task<Option<T>>
+
+我们首先展示了一些 Option 和 Either 类型的简单示例用法。但正如我们在 Contoso 应用程序示例章节中将会看到的，在现实生活情况下，复合 functors 自然会出现。例如 Task 中的一个 Option `Task<Option<Client>>` 或 task 中的一个 Either `Task<Either<string,Client>>`。在本节中，我们将修改 Option 示例以包含异步。例如，当我们从 EntityFramework、MondoDb 等访问数据库，或等待 HttpClient GET 请求时。
+

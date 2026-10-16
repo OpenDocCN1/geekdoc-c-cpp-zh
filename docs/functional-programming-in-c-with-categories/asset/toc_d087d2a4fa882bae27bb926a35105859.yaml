@@ -1,0 +1,446 @@
+- - '##'
+  - 1 语言函数式支持
+- - '###'
+  - 1.1 纯函数和副作用
+- - '###'
+  - 1.2 Evolution of Delegates in C#
+- - '####'
+  - Delegates
+- - '####'
+  - C#3.0 lambda expression
+- - '###'
+  - 1.3 Built-in .NET Delegates
+- - '####'
+  - Action<T>
+- - '####'
+  - Func<T>
+- - '####'
+  - Predicate<T>
+- - '####'
+  - Summary Table
+- - '####'
+  - 'Remember :'
+- - '###'
+  - 1.4 Essential Typed Lambda calculus and C#
+- - '####'
+  - Terms
+- - '##'
+  - 丘奇编码
+- - '###'
+  - 类型
+- - '###'
+  - 引入与消去规则
+- - '####'
+  - 引入规则
+- - '####'
+  - 消去规则
+- - '###'
+  - 计算规则
+- - '###'
+  - 可选内容
+- - '###'
+  - 柯里-霍华德对应
+- - '###'
+  - η-reduction / expansion - Point Free notation
+- - '###'
+  - 1.5 Higher-order functions
+- - '###'
+  - Strategy design pattern
+- - '###'
+  - 1.6 Simple Function Composition
+- - '###'
+  - 类型理论
+- - '###'
+  - 居留类型
+- - '###'
+  - 终结操作
+- - '###'
+  - 1.7 回调
+- - '###'
+  - Continuations
+- - '###'
+  - 1.8 Named parameters and Tuples
+- - '####'
+  - Tuples
+- - '####'
+  - 1.8.1 Lambda expressions and tuples
+- - '#####'
+  - Tuples in Func delegates
+- - '#####'
+  - Func delegates in Tuples
+- - '###'
+  - 1.9 Extension Methods
+- - '###'
+  - 1.10 使用 static 指令
+- - '###'
+  - 1.11 自定义数据结构的 LINQ 支持
+- - '###'
+  - 1.12 柯里化与部分应用
+- - '####'
+  - 部分应用
+- - '###'
+  - 编程代数
+- - '###'
+  - '**范畴** C'
+- - '###'
+  - 类型的**范畴**
+- - '###'
+  - 2.2 幺半群
+- - '####'
+  - 2.2.1 折叠幺半群
+- - '###'
+  - 2.3 折叠幺半群展示
+- - '##'
+  - 折叠委托 Func<,>
+- - '##'
+  - 折叠回调
+- - '###'
+  - 折叠任务
+- - '###'
+  - 2.4 函数组合作为幺半群
+- - '####'
+  - 附注：
+- - '###'
+  - 2.5 组合幺半群
+- - '###'
+  - 这种组合的机制非常容易理解：
+- - '###'
+  - 2.6 组合设计模式——函数式视角
+- - '###'
+  - 2.7 装饰器设计模式——函数式视角
+- - '###'
+  - 元组记法
+- - '###'
+  - 2.8 谓词幺半群组合
+- - '####'
+  - 范畴论：逆变类型
+- - '###'
+  - 2.9 规范模式——函数式视角
+- - '###'
+  - 单子同态
+- - '##'
+  - 3 代数数据类型
+- - '###'
+  - 3.2 可选的一个
+- - '####'
+  - 3.2.1 带乘积类型的 Lambda 演算 可选
+- - '#####'
+  - 类型
+- - '#####'
+  - 引入消除规则
+- - '#####'
+  - 计算规则
+- - '#####'
+  - β-归约
+- - '#####'
+  - η-归约
+- - '#####'
+  - 递归子
+- - '#####'
+  - Curry-Howard 对应
+- - '###'
+  - 3.3 余积（又称并集）
+- - '###'
+  - 类型论
+- - '####'
+  - 里氏替换原则
+- - '####'
+  - 3.3.1 带余积类型的 Lambda 演算
+- - '#####'
+  - 类型
+- - '#####'
+  - 引入/消去规则
+- - '#####'
+  - 引入
+- - '#####'
+  - 消去
+- - '#####'
+  - 计算规则
+- - '#####'
+  - 递归子
+- - '#####'
+  - 与面向对象多态的联系
+- - '#####'
+  - Curry-Howard 对应
+- - '###'
+  - 3.4 扩展联合类型
+- - '####'
+  - 3.4.2 使用 MatchWith 重写联合类型的 方法
+- - '####'
+  - 3.4.3 C# 8.0 模式匹配特性
+- - '####'
+  - 3.5 递归简介
+- - '####'
+  - 柯里化版本
+- - '####'
+  - 终止
+- - '####'
+  - 使用列表作为计数器
+- - '####'
+  - 3.5.1 再次 Lambda 演算 - Gödel 的 System T 可选
+- - '###'
+  - 3.6 Recursive Algebraic Types
+- - '###'
+  - 3.7 Practical Structural Induction
+- - '####'
+  - 'Base Case:'
+- - '####'
+  - 'Inductive Hypothesis:'
+- - '#####'
+  - 3.7.1 Rewriting Map with MatchWith
+- - '####'
+  - 3.7.2 关于符号表示的价值
+- - '####'
+  - 3.7.3 为 List<T> 添加模式匹配扩展
+- - '###'
+  - 3.8 重组列表
+- - '###'
+  - 3.9 传递更多参数
+- - '###'
+  - 3.10 返回更多项
+- - '###'
+  - 3.11 过滤
+- - '###'
+  - 3.12 在有序列表中插入项
+- - '###'
+  - Peano numerals
+- - '###'
+  - List
+- - '###'
+  - Tree
+- - '###'
+  - Sidenote
+- - '###'
+  - Functors
+- - '###'
+  - The Idea
+- - '##'
+  - 4 Functors
+- - '###'
+  - 4.1 The Identity Functor
+- - '###'
+  - 4.2 Commutative Diagrams
+- - '###'
+  - Products of Red, Blue
+- - '###'
+  - 4.3 The Functor Laws
+- - '###'
+  - 4.4 Pattern Matching
+- - '###'
+  - 模式匹配于组合
+- - '###'
+  - 使用 C# 8.0 模式匹配
+- - '###'
+  - 模式匹配于继承
+- - '###'
+  - 使用 C# 8.0 模式匹配
+- - '###'
+  - 4.5 Id<T> Functor 即时创建
+- - '####'
+  - 4.5.1 其他同构
+- - '###'
+  - 'SideNote:'
+- - '###'
+  - 4.5.2 基本函子机制
+- - '###'
+  - 4.6 将 Task<T> 扩展为函子
+- - '###'
+  - 4.7 IO 函子，一个惰性 Id 函子
+- - '####'
+  - 4.7.1 Func<T> 委托作为函子
+- - '####'
+  - 4.7.2 IO 函子
+- - '###'
+  - 4.8 Reader 函子
+- - '###'
+  - 4.9 LINQ 原生查询语法：函子支持
+- - '###'
+  - 约定：Map 和 Select
+- - '###'
+  - 4.10 Maybe 函子（又名 Option<T>）
+- - '####'
+  - 4.10.1 处理 null
+- - '####'
+  - 4.10.2 空对象设计模式
+- - '####'
+  - 4.10.3 函数式的等价物 —— Maybe 作为函子
+- - '#####'
+  - 4.10.3.1 使用 C# 8 模式匹配
+- - '###'
+  - 4.10.4 Maybe Functor 示例
+- - '###'
+  - 4.10.5 Maybe in Language-ext / Option
+- - '###'
+  - 4.10.6 Maybe Functor 示例 With language-ext Option
+- - '###'
+  - 4.10.7 C# 8. pattern matching Support for Option
+- - '###'
+  - 4.10.8 Folding Maybe
+- - '###'
+  - 4.10.9 Using the Linq syntax
+- - '###'
+  - 4.11 Either Functor
+- - '####'
+  - 4.11.1 Pattern matching for Either <T>
+- - '####'
+  - 4.11.2 Using C# 8.0 pattern matching
+- - '###'
+  - 4.11.3 Either Functor 示例
+- - '###'
+  - 4.11.4 C# 8. 模式匹配对 language-ext Either 的支持
+- - '###'
+  - 4.11.5 使用 Either 进行异常处理
+- - '###'
+  - 4.12 显式组合 Functor
+- - '###'
+  - 4.13 组合 Task 和 Option – Task<Option<T>>
+- - '###'
+  - 附注：
+- - '###'
+  - 4.14 组合 Task 和 Option – OptionAsync<T>
+- - '###'
+  - 4.15 组合 Task 和 Either – Task<Either<,>>
+- - '###'
+  - 4.16 组合 Task 和 Either – EitherAsync<>
+- - '###'
+  - 4.17 Functors from Algebraic Data Types
+- - '###'
+  - C# 8.0 Pattern Matching
+- - '###'
+  - 4.18 Applicative Functors
+- - '###'
+  - 4.19 Reader Applicative Functor optional
+- - '###'
+  - 'Conventions: Bind and SelectMany'
+- - '##'
+  - 5.1 范畴论中的 Monad 可选
+- - '###'
+  - Category Theory
+- - '###'
+  - Endofunctor
+- - '##'
+  - 5.2 List Monad
+- - '##'
+  - 5.3 Identity Monad
+- - '####'
+  - 5.3.1 Identity Monad 的 Optional Monad 定律
+- - '##'
+  - 5.4 Maybe Monad
+- - '###'
+  - 5.4.1 使用 language-ext Option
+- - '###'
+  - 5.4.2 使用 Option 单子的 LINQ 语法
+- - '###'
+  - 5.5.1 使用 Either 单子进行异常处理
+- - '###'
+  - 5.5.2 使用 language-ext 的 Either<>
+- - '###'
+  - 5.5.3 使用 Either 单子的 LINQ 语法
+- - '###'
+  - 5.5.4 使用 Either 进行验证
+- - '###'
+  - 5.6 Validation 单子
+- - '###'
+  - 5.6.1 使用 Validation.Apply 收集验证
+- - '###'
+  - 5.7 Task<T> 作为 Monad
+- - '###'
+  - 5.8 Task 与 Option Monad 组合 - Task<Option<>>
+- - '###'
+  - 5.9 Task 与 Option Monad 组合 - OptionAsync<>
+- - '###'
+  - 5.10 Task - Either 单子组合 -Task<Either<,>>
+- - '###'
+  - 5.11 Task - Either 单子组合 -EitherAsync<>
+- - '###'
+  - Traversables
+- - '##'
+  - 6 Catamorphisms Again
+- - '###'
+  - 6.1 F-代数的简要提及
+- - '###'
+  - 6.2 Catamorphisms
+- - '###'
+  - C# 8.0 模式匹配
+- - '###'
+  - 6.3 初始代数（可选）
+- - '####'
+  - 6.3.1 F-代数同态
+- - '###'
+  - 范畴论
+- - '###'
+  - 自然数系统
+- - '###'
+  - 6.4 树的递归折叠
+- - '###'
+  - C# 8.0 模式匹配
+- - '###'
+  - 6.5 结合访问者设计模式的递归折叠
+- - '###'
+  - 类型论
+- - '###'
+  - 基础函子与不动点
+- - '###'
+  - 6.5.2 简要提及 Anamorphisms（可选）
+- - '###'
+  - 6.5.5 简要提及 Hylomorphisms（混合态射）
+- - '###'
+  - 6.5.6 Hylomorphism 示例：归并排序
+- - '####'
+  - 2) 在保持顺序的同时折叠树
+- - '###'
+  - 6.6 Fold 与 Cata 的关系
+- - '##'
+  - 7 Traversable（可遍历）
+- - '###'
+  - 7.1 Traversable 代数数据结构
+- - '###'
+  - 7.3.1 标准 Catamorphism 实现
+- - '###'
+  - C# 8.0 模式匹配
+- - '###'
+  - 7.3.2 Reader applicative 实现
+- - '###'
+  - 7.3.3 面向对象解释器模式实现
+- - '###'
+  - 7.4 显式组合 Traversables
+- - '###'
+  - 7.5 Foldable
+- - '####'
+  - 7.5.1 FoldMap
+- - '###'
+  - 7.5.2 显式组合 Foldables
+- - '###'
+  - .NET 中的整洁架构
+- - '##'
+  - 8 一个整洁的函数式架构示例
+- - '###'
+  - 8.1 下载和设置项目
+- - '####'
+  - 8.1.1 使用 .NET core 的整洁架构
+- - '###'
+  - 8.2 一个函数式应用程序架构
+- - '###'
+  - 8.3 使用 .NET core 和 language-ext 的 Contoso 整洁架构
+- - '###'
+  - 8.4 Web Api
+- - '###'
+  - 8.5 领域模型
+- - '###'
+  - VS Contoso 解决方案
+- - '###'
+  - Code First
+- - '####'
+  - 8.5.1 仓储
+- - '###'
+  - 8.6 CQRS
+- - '###'
+  - 8.7 CQRS 与 MediatR
+- - '####'
+  - 8.7.1 使用中介者的命令模式
+- - '####'
+  - 8.7.2 查询工作流
+- - '###'
+  - 8.7.3 命令工作流
+- - '###'
+  - 联系

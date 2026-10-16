@@ -1,0 +1,273 @@
+
+
+```
+public Task<Option<Employee>> GetAssignedEmployeeNameById1(int clientId)
+    => clients
+        .GetByIdAsync(clientId)
+        .Map(client => client.EmployeeId)
+        .Bind(employees.GetByIdAsync)
+        .ToOption();
+```
+
+使用 .ToOption()。 .ToOption() 是从 OptionAsync<> 到 Task<Option<> > 的逆向转换
+
+我们也可以在 Controller 内部提前进行 case 分析并返回一个 Task<string>
+
+```
+public Task<string> GetAssignedEmployeeNameById2(int clientId)
+    => clients
+        .GetByIdAsync(clientId)
+        .Map(client => client.EmployeeId)
+        .Bind(employees.GetByIdAsync)
+        .ToOption()
+        .Map(e => e.Case
+switch
+{
+    SomeCase<Employee>(var client) => client.Name,
+    NoneCase<Employee> { } => "No Client Found",
+    _ => throw new NotImplementedException()
+});
+```
+
+或者使用 LINQ 语法：
+
+```
+public Task<string> GetAssignedEmployeeNameById3(int clientId)
+    => (from c in clients.GetByIdAsync(clientId)
+        from e in employees.GetByIdAsync(c.EmployeeId)
+        select e)
+        .ToOption()
+        .Map(e => e.Case
+switch
+{
+    SomeCase<Employee>(var client) => client.Name,
+    NoneCase<Employee> { } => "No Client Found",
+    _ => throw new NotImplementedException()
+});
+```
+
+## 5.10 Task - Either 单子组合 -Task<Either<,>>
+
+最后，Task 和 Either 作为单子的组合。希望这些最后的部分不会让人感到意外。同样，我们修改 Repository 使其返回一个 Task<Either<>>
+
+```
+public class MockClientRepository
+{
+    public Task<Either<string, Client>> GetByIdAsync(int id)
+    {
+        Task<Either<string, Client>> eitherClientTask =
+            System.Threading.Tasks.Task.Run(() =>
+            {
+                System.Threading.Thread.Sleep(1000);
+                Option<Client> maybeClient =
+                    clients.SingleOrDefault(x => x.Id == id);
+                return maybeClient.ToEither("no Client Found"); ;
+            });
+        return eitherClientTask;
+    }
+}
+```
+
+```
+public class MockEmployeeRepository
+{
+    public Task<Either<string, Employee>> GetByIdAsync(int id)
+    {
+        Task<Either<string, Employee>> eitherEmployeeTask =
+            System.Threading.Tasks.Task.Run(() =>
+            {
+                System.Threading.Thread.Sleep(1000);
+                Option<Employee> maybeEmployee =
+                    employees.SingleOrDefault(x => x.Id == id);
+                return maybeEmployee.ToEither("no Employee Found"); ;
+            });
+        return eitherEmployeeTask;
+    }
+}
+```
+
+使用 MapT 和 BindT 的组合是直接的：
+
+```
+public class Controller
+{
+    MockEmployeeRepository employees = new MockEmployeeRepository();
+    MockClientRepository clients = new MockClientRepository();
+    public Task<Either<string, Employee>> GetAssignedEmployeeNameById(int clientId)
+        => clients
+            .GetByIdAsync(clientId)
+            .MapT(client => client.EmployeeId)
+            .BindT(employees.GetByIdAsync);
+}
+```
+
+或者使用提前的 case 分析返回一个 Task<string>
+
+```
+public Task<string> GetAssignedEmployeeNameById1(int clientId) =>
+    (from c in clients.GetByIdAsync(clientId)
+    from e in employees.GetByIdAsync(c.EmployeeId)
+    select e).Map(e => e.Case switch
+    {
+        LeftCase<string, Employee>(var error) => error,
+        RightCase<string, Employee>(var employee) => employee.Name,
+        _ => throw new NotImplementedException(),
+    });
+```
+
+SideNote：case 位于 map.Map(e => e.Case switch...) 内部，因为对于 Task<Either<string, Employee>> 这种组合的 Match 没有单子变换器支持。这就引出了真正的单子变换器 EitherAsync<string, Client>，它拥有自己的 Bind 和 Match 方法。
+
+## 5.11 Task - Either 单子组合 -EitherAsync<>
+
+使用 .ToAsync() 我们可以将任何 Task<Either<string, Client>> 转换为 EitherAsync<string, Client>。
+
+现在我们可以拥有具有以下方法的仓库：
+
+```
+EitherAsync<string, Client> GetByIdAsync(int id)
+```
+
+以及
+
+```
+EitherAsync<string, Employee> GetByIdAsync(int id)
+```
+
+我们可以将它们组合起来：
+
+```
+public class Controller
+{
+    MockEmployeeRepository employees = new MockEmployeeRepository();
+    MockClientRepository clients = new MockClientRepository();
+
+    public EitherAsync<string, Employee> GetAssignedEmployeeNameById1(int clientId)
+        => clients
+            .GetById(clientId)
+            .Map(client => client.EmployeeId)
+            .Bind(employees.GetById);
+}
+```
+
+并像这样使用它：
+
+```
+var employeeName = await new Controller().GetAssignedEmployeeNameById(1)
+    .Case switch
+{
+    LeftCase<string, Employee>(var error) => error,
+    RightCase<string, Employee>(var employee) => employee.Name,
+    _ => throw new NotImplementedException(),
+};
+```
+
+另一种变体可以是：
+
+```
+public async Task<string> GetAssignedEmployeeNameById2(int clientId)
+    => await clients
+        .GetById(clientId)
+        .Map(client => client.EmployeeId)
+        .Bind(employees.GetById).Case switch
+{
+    LeftCase<string, Employee>(var error) => error,
+    RightCase<string, Employee>(var employee) => employee.Name,
+};
+```
+
+我们也可以使用 .ToEither() 将 EitherAsync<string, Employee> 转换为 Task<Either<string, Employee>>，例如一种变体可以是这样：
+
+```
+public Task<string> GetAssignedEmployeeNameById2(int clientId) =>
+    (from c in clients.GetById(clientId)
+     from e in employees.GetById(c.EmployeeId)
+     select e)
+        .ToEither()
+        .Map(e =>
+        e.Case switch
+{
+    LeftCase<string, Employee>(var error) => error,
+    RightCase<string, Employee>(var employee) => employee.Name,
+});
+```
+
+![](img/d73681d801b4b826e0b2a293897bbba4_190_0.png)
+
+## Traversables
+
+可选章节
+
+## 6 Catamorphisms Again
+
+本章是关于折叠、分解、各种结构，它全部是关于以优雅且一致的方式从数据结构中获取值。我们将遵循的路径将涉及范畴论中的许多概念，如 catamorphism 概念（源自希腊语：κατά "向下" 和 μορφή "形式、形状"），其对偶 anamorphism（源自希腊语：ανά "向上" 和形状），以及它们的组合 hylomorphism（源自希腊语：ὕλη hyle "物质" 和形状），并且可能是本书中最困难的部分。随意跳过你不喜欢或不感兴趣的任何部分，也许在以后再回访。
+
+### 6.1 F-代数的简要提及
+
+如果 F 是一个函子，那么 F-代数是一个对 (A, α)，其中 A 称为载体类型，α 是一个函数 F(A) → A 称为结构映射。F-代数是一种从 F(A) 中获取 A 的方法。它是一种求值。
+
+对于我们的 Peano 数字函子，一个载体类型为整数的代数是这样的
+
+```
+public abstract class Numeral { }
+```
+
+```
+public class Succ : Numeral
+{
+    public Numeral Rest { get; set; }
+    public Succ(Numeral rest)
+    {
+        this.Rest = rest;
+    }
+}
+```
+
+```
+public class Zero : Numeral { }
+```
+
+```
+(Func<int> Zero, Func<int, int> Succ) algebraInt = (
+    Zero: () => 0,
+    Succ: (n) => n + 1
+);
+```
+
+这被称为结构映射，但当我们说代数时，我们指的是这个函数
+
+这个代数告诉我们如何将 Numeral 表达式 *解释* 为整数。这个代数是 *预期解释*（也称为 *标准模型*，该术语由 Abraham Robinson 于 1960 年引入），因为它给出了表达式的预期“含义”，在这种情况下是用形式语言表示数字¹。尽管如此，基于此函子我们可以有许多代数。以下是一些例子：
+
+下面的代数不需要进一步解释。
+
+```
+(Func<string> Zero, Func<string, string> Succ) algebraString = (
+  Zero: () => $"Zero( )",
+  Succ: (Rest) => $"Add one -({Rest })"
+);
+```
+
+问题在于我们还不能将代数应用于像 Succ(Succ(Succ( Succ(Zero())))) 这样的表达式。例如。代数仅用于评估表达式的“一个步骤”或“层”。我们必须以某种方式将代数向下推，进行求值，然后组合结果。**catamorphism 正是这个过程。**
+
+范畴论
+F-代数
+
+如果 C 是一个范畴，且 F : C → C 是 C 的一个自函子，那么 F-代数是一个对 (A, α)，其中 A 是 C 的一个对象，α 是一个态射 F(A) → A，a 通常称为结构映射。
+
+### 6.2 Catamorphisms
+
+现在我们将为 Numeral 联合类型定义一个 Cata 方法，它将接受一个代数并评估 Numeral。这里的实现是特设的——专门针对 Numeral 结构。
+
+```
+T1 Cata<T1>(this Numeral @this, (Func<T1> Zero, Func<T1, T1> Succ) algebra)
+  =>@this.MatchWith<T1>(pattern: (
+    Zero: () => algebra.Zero(),
+    Succ: (Rest) => algebra.Succ(Rest.Cata<T1>(algebra))
+  ));
+```
+
+> 将代数传递给 Rest
+
+> 使用代数进行求值
+
+¹ Lectures on Semantics: The initial algebra and final coalgebra perspectives
+

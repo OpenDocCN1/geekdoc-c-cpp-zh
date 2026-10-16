@@ -1,0 +1,1 @@
+Map also]You can try some and use other monoids to fold. For example, with the help of the *Array monoid we can flatten* everything into a List.
