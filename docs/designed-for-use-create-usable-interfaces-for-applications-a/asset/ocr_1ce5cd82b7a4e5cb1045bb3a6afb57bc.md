@@ -1,0 +1,3 @@
+A lot of people have allowed me to use their Twitter pictures, names, and tweets in this book's pictures. Their Twitter handles are, in alphabetical order: 7WP, aidanhornsby, AlphabUX, CoryCalifornia, design-dare, fetjuel, gauravmishr, ienjoy, jonbell, larryv, lorentey, louije, maxs-teenbergen, neave, oliverw, shawnblanc, thibautsailly, timeboxed, and workjon. Thank you!
+
+And finally, I want to thank *Damaris Kiefer*. She shot some of the pictures in this book and also appears in a few.

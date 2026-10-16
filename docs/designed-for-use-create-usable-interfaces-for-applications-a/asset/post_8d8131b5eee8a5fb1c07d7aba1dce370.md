@@ -1,0 +1,107 @@
+
+with the product, which is entirely possible because it's not finished yet, just move on to the next task. If for any reason this is not possible, I'm in the next room, so you can always come over if there is any kind of problem.
+
+Besides minimizing the influence of moderators, unmoderated tests are less stressful for testers, because there is nobody sitting next to them, constantly looking over their shoulder.
+
+## Free-Form Tests
+
+In a free-form test, there are no tasks. The goal is to see what people do if they don’t already know what they are supposed to do. Just introduce the tester to the test, let him have at your product, and see what happens. I do recommend observing the test, either in person or from another room, in order to intervene when the tester gets bored or stuck. If that happens, suggest some tasks, and move to a task-based test.
+
+## Should You Encourage Talking?
+
+It’s a good idea to tell people that they are free to talk during the test if they want to, but you should take care not to force the issue. Some people just don’t like to talk, and constantly encouraging them to speak their mind will make them uncomfortable or distract them (especially if they have to speak in a non-native language, as is sometimes the case when testing with people from different cultural backgrounds). Avoid screening testers for people who like to talk; you don’t want to test your product only with extraverts.
+
+Although it is often useful to hear what’s on people’s minds, it’s not required information. In most cases, the problems your testers find are quite obvious even without knowing what’s going through their heads.
+
+In my experience, people tend to offer opinions when they are encouraged to speak. Your main job is to pay attention to what people are doing, not what they are saying. If people are getting sidetracked and start offering their opinions rather than doing a task, just gently remind them of what you need them to do. Say something like this: “What are you looking for right now?” to get them back on track.
+
+## Should I Record Tests?
+
+If you’re doing a moderated test, you don’t have to record the test, since you can see what the tester is doing and take notes during the test. But even if you don’t have to, should you record?
+
+I usually don’t go back to watch recordings if I have them. But making recordings is easy and cheap to do, and from time to time, they can be extremely useful. If you can easily do it, record tests. But if that’s not possible, don’t worry about it.
+
+For Macs, I recommend Silverback, a screen-recording application that is specifically geared toward usability tests.¹ It’s also possible to do simple screen recordings using QuickTime Player by selecting File→New Screen Recording.
+
+For Windows PCs, TechSmith offers a number of different solutions.²
+
+For Linux, use something like xvidcap.³
+
+## What Should You Do with the Results?
+
+You need to list the problems you’ve found. Prioritize them. Fix the most important ones. Test again. Don’t worry if it’s impossible to fix all problems; if a problem is important and you haven’t fixed it, it will eventually reappear in a future test.
+
+If more than one person is observing the test, do a Post-it post-mortem. Have everybody write their ten most important issues on Post-it notes. Stick them on a wall, placing duplicate issues next to each other. Pretty quickly, it’ll be clear which problems get more “votes” and should be fixed sooner.
+
+Don’t write reports unless it’s really necessary, because they often create more work than simply fixing the problems would. Usually, no one reads these reports anyway. Instead, identify the most pressing issues, and make sure these get fixed.
+
+## Takeaway Points
+
+- Do one test with one (different!) user each week. This makes it easy to schedule testers, and you can iterate quickly.
+- Use one of the test types explained in this chapter, or combine them. It’s often a good idea to let users play around with your
+product on their own, see how they do with it, and then move to a task-based test.
+- Always end tests on a positive note.
+- Use common sense when evaluating test results. Find the most pressing issues, fix them, and test again.
+- If you are unsure about how widespread a problem is, simply postpone its resolution; since you will do another test soon, the problem will come up again at some point if it is important.
+
+1. Find out more at http://silverbackapp.com.
+2. You can find TechSmith’s products at http://techsmith.com, where they also offer Mac apps.
+3. You can find xvidcap at http://xvidcap.sourceforge.net.
+
+## Further Reading
+
+If you're ready to learn more, I recommend that you start with Steve Krug's *Rocket Surgery Made Easy* [Kru09].
+
+## Chapter 30
+
+## Remote Testing
+
+![](img/4c2ca26a2dc8a63bcb4d64fdf789fcc0_256_0.png)
+
+## What’s the Technique?
+
+Doing traditional, in-person usability tests requires you to either go to a tester or have a tester visit you. Scheduling and meeting people usually involves quite a bit of work—so much work, in fact, that it gets put off way too often.
+
+Fortunately, you don’t have to physically meet with people to do usability tests. Instead, you can do remote tests. This chapter explains how to do that.
+
+## Why Is This a Good Idea?
+
+Testing remotely is often easier than testing in person, since it gets around some of the harder parts of usability testing, such as finding willing testers who live nearby and scheduling them to show up for a test. Being free of these problems means you can test more often, which helps you identify and fix more usability problems.
+
+## Are There Any Prerequisites?
+
+Yes. You should read the previous two chapters before reading this one.
+
+## Skype Can Do Screen Sharing?
+
+Yes. But Skype’s screen-sharing feature is a bit hidden. To activate it on a Mac, first start a video call. Then, in the video window, click the button with the “square and arrow” icon, select Share Screen, and select the screen you want to share.
+
+![](img/4c2ca26a2dc8a63bcb4d64fdf789fcc0_257_0.png)
+
+On Windows, start a video call, and then select “Show entire screen” from the pop-up that appears when you click the “two rectangles” icon.
+
+![](img/4c2ca26a2dc8a63bcb4d64fdf789fcc0_257_1.png)
+
+Since the tester has to share his screen, you will have to walk him through this somewhat complex task if you use Skype.
+
+### 30.1 Moderated Remote Testing
+
+Let’s say you want to run a usability test, but you can’t find any testers who live nearby. Or you want to test with a more diverse group of testers, so it may make sense to test with people who live in different places. Or you want to recruit testers on your website, so they might be from all over the place. Or maybe you just want to simplify testing even more and avoid that whole meeting-in-person thing.
+
+You can do this using screen-sharing apps such as Skype, iChat, or Copilot.¹ Instead of meeting your testers physically, you meet them online.
+
+1. At https://www.copilot.com.
+
+## Recruiting
+
+When you do a traditional usability test, first you have to recruit testers, and then you have to schedule a date for the test. So, recruiting often happens days or weeks before the test. With remote testing, you don’t have to schedule a physical meeting, so you don’t need to recruit as far in advance of the test.
+
+Remote testing offers another way of recruiting that isn’t possible with a traditional usability test: “live recruiting.” Just put a note on your website that you’re looking for people to help you test a new application or website, with a link to a recruiting page.
+
+![](img/4c2ca26a2dc8a63bcb4d64fdf789fcc0_258_0.png)
+
+To increase the number of respondents, you can offer participants some kind of reward—a small Amazon gift certificate, for example.
+
+People who click the link should get a form where they can enter their contact info (perhaps their email address, Skype name, or phone number, depending on how you run the test) and any other information you need in order to screen people for the test. In their book Remote Research [BT10], Nate Bolt and Tony Tulathimutte recommend using this form to weed out potentially poor testers who have visited your site specifically to participate in a test. (This problem occurs only if you offer rewards to participants.) They suggest asking a question like “Why did you come to the site today?” They write:
+
+> This question not only helps determine whether a user’s motives for coming to the site match the goals of the study, but also helps to root out fakers. (...) Most authentic visitors will have a good specific reason for being there, and by asking open-ended questions, you can usually get a strong intuitive feel for authentic visitors. We almost always begin our screeners with the simple question “Why did you come to
