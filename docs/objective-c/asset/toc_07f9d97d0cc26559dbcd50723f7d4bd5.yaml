@@ -1,0 +1,1552 @@
+- - '##'
+  - '1'
+- - '###'
+  - 本部分内容
+- - '###'
+  - 介绍 Objective-C
+- - '###'
+  - 本章内容
+- - '##'
+  - 使用 Xcode 进行开发
+- - '##'
+  - 开始一个项目
+- - '###'
+  - 图 1.1
+- - '###'
+  - 图 1.2
+- - '##'
+  - 图1.3
+- - '###'
+  - 探索项目中的文件
+- - '###'
+  - Objective-C 简介
+- - '##'
+  - 注意
+- - '###'
+  - 添加源文件
+- - '##'
+  - 注意
+- - '##'
+  - 图1.5
+- - '##'
+  - 图1.6
+- - '###'
+  - 主 Xcode 窗口
+- - '##'
+  - 图1.7
+- - '##'
+  - 图1.8
+- - '###'
+  - 理解编译过程
+- - '###'
+  - 编写代码
+- - '##'
+  - 清单1.2
+- - '##'
+  - 实现文件
+- - '##'
+  - 注意
+- - '###'
+  - 将源代码转换为编译代码，再将编译代码转换为可执行文件
+- - '###'
+  - 探索应用程序包
+- - '####'
+  - 注意
+- - '####'
+  - 应用程序包的内容
+- - '###'
+  - 使用构建设置
+- - '###'
+  - Figure 1.9
+- - '###'
+  - Project settings
+- - '##'
+  - NOTE
+- - '###'
+  - Figure 1.10
+- - '###'
+  - Target versus project settings
+- - '###'
+  - Figure 1.11
+- - '###'
+  - Build Configurations
+- - '###'
+  - Listing 1.4
+- - '###'
+  - A Program with a memory leak
+- - '###'
+  - 图 1.13
+- - '###'
+  - 图 1.14
+- - '###'
+  - 清单 1.5
+- - '###'
+  - 正确的代码
+- - '###'
+  - 理解 Objective-C 运行时
+- - '##'
+  - 摘要
+- - '##'
+  - 理解基本语法
+- - '###'
+  - 清单 2.1
+- - '###'
+  - 你的第一个程序
+- - '###'
+  - 本章内容
+- - '##'
+  - 注意
+- - '####'
+  - 图 2.1
+- - '###'
+  - 使用语句和表达式
+- - '###'
+  - 声明变量
+- - '####'
+  - 清单 2.2 一个包含变量的程序
+- - '####'
+  - 清单 2.3 将 argc 作为变量使用
+- - '####'
+  - 清单 2.4 不同的栈
+- - '####'
+  - 清单 2.5 在堆上分配内存
+- - '###'
+  - 使用注释
+- - '###'
+  - 探索标量类型
+- - '####'
+  - 表 2.1 常用的标量类型
+- - '####'
+  - 表2.1（续）
+- - '####'
+  - 清单2.6：声明标量变量
+- - '####'
+  - 注意
+- - '###'
+  - 使用特殊的变量修饰符
+- - '####'
+  - 清单2.7：使用static
+- - '####'
+  - 清单2.8：使用const关键字
+- - '###'
+  - 理解结构体
+- - '####'
+  - 清单2.9：声明结构体
+- - '####'
+  - 清单2.10：声明结构体实例
+- - '####'
+  - 清单2.11：复合结构体
+- - '####'
+  - 清单2.12：使用点结构体
+- - '###'
+  - 使用typedef
+- - '###'
+  - Listing 2.13
+- - '####'
+  - Working with point structures and typedefs
+- - '###'
+  - Using enum
+- - '###'
+  - Listing 2.14
+- - '####'
+  - Creating an enum
+- - '###'
+  - Listing 2.15
+- - '####'
+  - Using an enum
+- - '###'
+  - Listing 2.16
+- - '####'
+  - Assigning values to the enum options
+- - '###'
+  - Listing 2.17
+- - '####'
+  - Using typedef with an enum
+- - '###'
+  - Understanding pointers
+- - '###'
+  - Listing 2.18
+- - '####'
+  - Declaring pointers
+- - '###'
+  - Figure 2.2
+- - '###'
+  - Listing 2.19
+- - '####'
+  - Dereferencing pointers
+- - '###'
+  - Figure 2.3
+- - '##'
+  - NOTE
+- - '###'
+  - 使用运算符
+- - '####'
+  - Listing 2.21
+- - '####'
+  - Working with operators
+- - '###'
+  - 三元运算符
+- - '###'
+  - 使用函数
+- - '####'
+  - 理解函数
+- - '####'
+  - Listing 2.22
+- - '####'
+  - Calculating a factorial
+- - '####'
+  - Listing 2.22 (continued)
+- - '####'
+  - Listing 2.23
+- - '####'
+  - Extracting the calculation to a function
+- - '####'
+  - Listing 2.24
+- - '####'
+  - Demonstrating use of the function
+- - '###'
+  - Listing 2.26
+- - '####'
+  - Working with pointers
+- - '###'
+  - Understanding implementation versus interface
+- - '###'
+  - Listing 2.27
+- - '####'
+  - Function declaration
+- - '###'
+  - Listing 2.28
+- - '####'
+  - Function definition
+- - '###'
+  - Listing 2.29
+- - '####'
+  - Calling the function
+- - '###'
+  - Linking with implementation files
+- - '###'
+  - Figure 2.6
+- - '###'
+  - Figure 2.7 The target check box
+- - '##'
+  - Controlling Program Flow
+- - '###'
+  - 使用条件语句
+- - '####'
+  - 使用 if-else
+- - '####'
+  - 使用三元条件运算符
+- - '####'
+  - 使用 switch 语句
+- - '####'
+  - 在条件语句之间进行选择
+- - '###'
+  - 使用循环
+- - '###'
+  - 使用 for
+- - '####'
+  - 传统 for 循环
+- - '####'
+  - 清单 2.35
+- - '#####'
+  - 一个 for 循环
+- - '####'
+  - 清单 2.36
+- - '#####'
+  - continue 语句
+- - '####'
+  - 使用 for 进行快速枚举
+- - '####'
+  - 清单 2.37
+- - '#####'
+  - 带快速枚举的 for 循环
+- - '###'
+  - 使用 while
+- - '####'
+  - 清单 2.38
+- - '#####'
+  - While 循环
+- - '####'
+  - 清单 2.39
+- - '#####'
+  - 旧式枚举
+- - '###'
+  - 使用 do
+- - '####'
+  - 清单 2.40
+- - '#####'
+  - do-while 循环
+- - '###'
+  - 学以致用
+- - '####'
+  - Listing 2.41
+- - '####'
+  - Calculator.m
+- - '####'
+  - NOTE
+- - '####'
+  - Listing 2.42
+- - '####'
+  - MathOperations.m
+- - '####'
+  - Listing 2.43
+- - '####'
+  - MathOperations.h
+- - '##'
+  - Summary
+- - '##'
+  - Adding Objects
+- - '###'
+  - In This Chapter
+- - '###'
+  - Understanding Objects
+- - '##'
+  - NOTE
+- - '###'
+  - Understanding inheritance
+- - '###'
+  - Figure 3.2
+- - '###'
+  - Using polymorphism
+- - '###'
+  - 使用 id 数据类型
+- - '###'
+  - 创建类
+- - '####'
+  - 使用类文件
+- - '####'
+  - 编写对象方法
+- - '####'
+  - 处理特殊对象方法
+- - '###'
+  - Listing 3.6
+- - '####'
+  - 一个示例展示不同的初始化器调用指定初始化器
+- - '###'
+  - Listing 3.7
+- - '####'
+  - 一个展示 dealloc 方法的示例
+- - '##'
+  - CAUTION
+- - '###'
+  - Writing class methods
+- - '##'
+  - NOTE
+- - '##'
+  - CROSS-REFERENCE
+- - '###'
+  - Listing 3.8
+- - '####'
+  - 一个类方法声明
+- - '###'
+  - Listing 3.9
+- - '####'
+  - 一个类方法定义
+- - '###'
+  - Declaring objects
+- - '###'
+  - Listing 3.10
+- - '####'
+  - 创建类的实例
+- - '###'
+  - Introducing Objective-C
+- - '####'
+  - Making calls on objects
+- - '####'
+  - 'Listing 3.11: Objective-C 中的“私有”方法'
+- - '###'
+  - 使用属性
+- - '####'
+  - 理解状态与行为之间的差异
+- - '####'
+  - 使用属性声明对象状态
+- - '####'
+  - 'Listing 3.12: 员工类接口'
+- - '####'
+  - 'Table 3.1: 属性属性'
+- - '##'
+  - 上例 3.13：Employee 类实现
+- - '###'
+  - 理解合成属性访问器
+- - '###'
+  - 使用 nonatomic 属性
+- - '####'
+  - 上例 3.14：一个原子访问器
+- - '####'
+  - 上例 3.15：一个 nonatomic 访问器
+- - '###'
+  - 使用 assign、retain 和 copy 属性
+- - '####'
+  - 上例 3.16：一个简单的 assign 风格 setter
+- - '####'
+  - 上例 3.17：一个 retain 风格 setter
+- - '####'
+  - 上例 3.18：一个 copy 风格 setter
+- - '###'
+  - 使用不同数据成员名称的属性
+- - '####'
+  - 上例 3.19：为属性指定访问器名称
+- - '###'
+  - 使用点语法
+- - '####'
+  - 上例 3.20：使用传统访问器和点语法访问属性
+- - '###'
+  - 应用对象
+- - '###'
+  - 创建 employee 类
+- - '####'
+  - 上例 3.21：Employee 类接口
+- - '##'
+  - Listing 3.21 (continued)
+- - '###'
+  - Listing 3.22
+- - '####'
+  - The employee class implementation file
+- - '##'
+  - Listing 3.22 (continued)
+- - '###'
+  - Creating the manager class
+- - '###'
+  - Listing 3.23
+- - '####'
+  - The Manager class interface
+- - '###'
+  - Listing 3.24
+- - '####'
+  - Manager implementation file
+- - '##'
+  - Listing 3.24 (continued)
+- - '###'
+  - Tying the classes together in the HR main
+- - '###'
+  - Listing 3.25
+- - '##'
+  - 上例 3.25（续）
+- - '##'
+  - 4 了解 Objective-C 内存管理
+- - '###'
+  - 使用引用计数
+- - '###'
+  - 上例 4.1
+- - '####'
+  - 一个对象的标准分配
+- - '###'
+  - 上例 4.2
+- - '####'
+  - 保留一个对象
+- - '###'
+  - 上例 4.3
+- - '####'
+  - 分配并释放一个对象。
+- - '###'
+  - 上例 4.4
+- - '####'
+  - 一个内存泄漏
+- - '###'
+  - 上例 4.5
+- - '####'
+  - 未保留对象
+- - '###'
+  - 注意
+- - '###'
+  - 学习内存管理规则
+- - '###'
+  - 警告
+- - '###'
+  - 使用 autorelease
+- - '##'
+  - 本章内容
+- - '###'
+  - Understanding memory from inside the object
+- - '####'
+  - Writing initializers
+- - '###'
+  - 使用垃圾收集
+- - '###'
+  - 理解垃圾收集器
+- - '###'
+  - 引入 Objective-C
+- - '##'
+  - Listing 4.15
+- - '###'
+  - 在 Foundation 应用中使用垃圾收集器
+- - '###'
+  - 理解引用类型
+- - '##'
+  - Listing 4.16
+- - '###'
+  - 定义弱引用
+- - '###'
+  - 为垃圾收集配置你的项目
+- - '##'
+  - Figure 4.1
+- - '###'
+  - 在垃圾收集项目中使用框架
+- - '###'
+  - 探索关键垃圾收集器模式
+- - '###'
+  - 管理有限资源
+- - '###'
+  - Listing 4.17
+- - '####'
+  - A typical file wrapper class
+- - '###'
+  - Listing 4.18
+- - '####'
+  - A garbage collectible file wrapper
+- - '###'
+  - Writing foundation applications with garbage collection
+- - '###'
+  - Listing 4.19
+- - '####'
+  - Commandline Foundation application main function
+- - '###'
+  - Working with objects in nib files
+- - '####'
+  - NOTE
+- - '###'
+  - Forcing garbage collection
+- - '####'
+  - NOTE
+- - '###'
+  - Working with void pointers and garbage collection
+- - '###'
+  - Listing 4.20
+- - '####'
+  - Retaining opaque pointers for use with a callback
+- - '##'
+  - Listing 4.20 (continued)
+- - '###'
+  - 使用垃圾收集器的面向对象接口
+- - '###'
+  - 理解为你的项目使用何种内存管理模型
+- - '##'
+  - Summary
+- - '##'
+  - Exploring Deeper Features
+- - '##'
+  - In This Part
+- - '##'
+  - Working with Blocks
+- - '###'
+  - Understanding Blocks
+- - '####'
+  - Listing 5.1
+- - '##'
+  - An example block in Ruby
+- - '###'
+  - In This Chapter
+- - '###'
+  - 声明代码块
+- - '####'
+  - 代码清单 5.2
+- - '#####'
+  - Objective-C 中的一个简单代码块
+- - '####'
+  - 代码清单 5.3
+- - '#####'
+  - 不同类型的代码块定义
+- - '####'
+  - 注意
+- - '###'
+  - 使用代码块
+- - '####'
+  - 代码清单 5.4
+- - '#####'
+  - 声明一个以代码块为参数的函数
+- - '####'
+  - 代码清单 5.5
+- - '#####'
+  - 一个使用代码块的函数
+- - '####'
+  - 代码清单 5.6
+- - '#####'
+  - 将代码块传递给对象方法
+- - '##'
+  - 清单 5.6（续）
+- - '###'
+  - 理解重要的 block 作用域
+- - '###'
+  - 清单 5.7
+- - '####'
+  - 一个访问其定义所在栈中变量的 block
+- - '###'
+  - 管理 block 内存
+- - '###'
+  - 清单 5.8
+- - '####'
+  - 在成员变量中存储 block 的对象
+- - '##'
+  - 清单 5.8（续）
+- - '###'
+  - 使用 typedef 让 block 更易读
+- - '###'
+  - 清单 5.9
+- - '####'
+  - 使用 `typedef` 的相同代码
+- - '###'
+  - 在线程中使用 block
+- - '###'
+  - 使用 Grand Central Dispatch
+- - '###'
+  - 使用 GCD 函数在线程中调度代码块
+- - '##'
+  - 注意
+- - '####'
+  - 清单5.10
+- - '####'
+  - 将一个块派发到全局并发队列
+- - '###'
+  - 使用常见的块设计模式
+- - '###'
+  - 使用代码块实现映射操作
+- - '####'
+  - 表5.1
+- - '###'
+  - 将块应用于极易并行化的任务
+- - '###'
+  - 创建项目
+- - '####'
+  - 清单5.13
+- - '####'
+  - 质数计算器的主源文件
+- - '####'
+  - 清单5.14
+- - '####'
+  - PrimeFinder的接口文件
+- - '####'
+  - 清单5.14（续）
+- - '####'
+  - 清单5.15
+- - '####'
+  - PrimeFinder的实现文件
+- - '###'
+  - 使用 blocks 与数组过滤素数
+- - '####'
+  - NOTE
+- - '###'
+  - 清单 5.16
+- - '####'
+  - 过滤版本 PrimeFinder 的接口文件
+- - '###'
+  - 清单 5.17
+- - '####'
+  - PrimeFinder 过滤版本的实现文件
+- - '####'
+  - 清单 5.17（续）
+- - '###'
+  - 使用 Grand Central Dispatch
+- - '##'
+  - 注意
+- - '###'
+  - 清单 5.18
+- - '##'
+  - GCD 版 PrimeFinder 的实现文件
+- - '##'
+  - 小结
+- - '##'
+  - 使用键值编码与键值观察
+- - '###'
+  - 使用键值编码访问对象属性
+- - '###'
+  - 清单 6.1
+- - '##'
+  - 清单 6.1（续）
+- - '###'
+  - 清单 6.2
+- - '###'
+  - 使用 KVC 访问器访问类的属性
+- - '###'
+  - 清单 6.3
+- - '###'
+  - 不使用 KVC 序列化表
+- - '###'
+  - 清单6.3
+- - '###'
+  - 清单6.4
+- - '####'
+  - 使用KVC的序列化方法
+- - '###'
+  - 使用键路径
+- - '###'
+  - 清单6.5
+- - '####'
+  - 有效与无效的键路径
+- - '###'
+  - 清单6.6
+- - '####'
+  - 在键路径中使用函数
+- - '###'
+  - 编写符合KVC的访问器
+- - '###'
+  - 清单6.7
+- - '####'
+  - 包含成员变量的类定义
+- - '##'
+  - 清单6.7（续）
+- - '###'
+  - 使用 KVC 操作数组
+- - '####'
+  - Listing 6.8
+- - '####'
+  - 类 Foo 与类 Bar 之间存在一对一的关系
+- - '####'
+  - Listing 6.9
+- - '####'
+  - 从类 Foo 到多个类 Bar 实例的一对多关系
+- - '####'
+  - NOTE
+- - '###'
+  - 使用索引访问器
+- - '####'
+  - Listing 6.10
+- - '####'
+  - 不可变一对多索引访问器的实现
+- - '####'
+  - Listing 6.11
+- - '####'
+  - 使用索引集合实现可变一对多关系
+- - '###'
+  - 使用无序访问器
+- - '####'
+  - Listing 6.12
+- - '####'
+  - 不可变无序集合的访问器。
+- - '##'
+  - Listing 6.13
+- - '####'
+  - Implementing mutable accessors for an unordered one-to-many relationship
+- - '###'
+  - Using KVC with structures and scalars
+- - '###'
+  - Searching objects for attributes
+- - '###'
+  - Observing Changes to KVC-Compliant Values
+- - '###'
+  - Listing 6.14
+- - '####'
+  - Adding an observer
+- - '##'
+  - NOTE
+- - '###'
+  - 为 KVO 定义回调
+- - '####'
+  - 清单 6.15
+- - '####'
+  - KVO 回调方法的一个示例实现。
+- - '####'
+  - 表 6.3
+- - '###'
+  - 移除观察者
+- - '####'
+  - 清单 6.16
+- - '###'
+  - 实现手动通知
+- - '####'
+  - 清单 6.17
+- - '####'
+  - 重写 `+automaticallyNotifiesObserversForKey:`
+- - '####'
+  - 清单 6.18
+- - '####'
+  - 实现手动通知
+- - '###'
+  - 了解使用 KVO 的风险
+- - '####'
+  - 清单 6.19
+- - '####'
+  - 在 `dealloc` 方法中使用访问器来释放成员变量
+- - '###'
+  - 应用键值观察
+- - '####'
+  - Listing 6.21
+- - '####'
+  - Listing 6.21 (continued)
+- - '####'
+  - Listing 6.22
+- - '##'
+  - 摘要
+- - '##'
+  - 使用协议
+- - '###'
+  - 优先使用组合而非继承
+- - '###'
+  - 本章内容
+- - '###'
+  - Figure 7.1
+- - '###'
+  - Figure 7.2
+- - '###'
+  - Understanding why you don’t need (or want) multiple inheritance
+- - '###'
+  - Figure 7.3
+- - '###'
+  - Understanding how protocols solve the problem
+- - '###'
+  - Figure 7.4
+- - '###'
+  - Documenting an expected interface for others to implement
+- - '###'
+  - Implementing Protocols in Your Objects
+- - '###'
+  - Declaring a protocol
+- - '##'
+  - Listing 7.1
+- - '##'
+  - 示例协议声明
+- - '##'
+  - NOTE
+- - '##'
+  - Listing 7.2
+- - '##'
+  - NetworkClient 扩展 IOClient 协议
+- - '###'
+  - Declaring that a class implements a protocol
+- - '##'
+  - Listing 7.3
+- - '##'
+  - 实现 NetworkClient 协议的类
+- - '##'
+  - Listing 7.4
+- - '##'
+  - 实现多个协议的类
+- - '##'
+  - NOTE
+- - '###'
+  - Declaring an object that must implement a protocol
+- - '##'
+  - 声明实现特定协议的变量
+- - '##'
+  - NOTE
+- - '###'
+  - Exploring formal and informal protocols
+- - '###'
+  - Determining if an object implements optional methods
+- - '##'
+  - 在运行时确定对象是否遵守 NetworkClient 协议。
+- - '##'
+  - NOTE
+- - '###'
+  - Listing 7.7
+- - '##'
+  - 测试以确定对象是否实现可选方法
+- - '###'
+  - Avoiding Circular Protocol Dependencies
+- - '###'
+  - Listing 7.8
+- - '##'
+  - 一个要求另一个协议的协议
+- - '###'
+  - Listing 7.9
+- - '##'
+  - 需要 Foo 协议的 Bar 协议
+- - '###'
+  - Listing 7.10
+- - '##'
+  - Bar 协议的修正版本
+- - '###'
+  - Exploring examples of protocol use
+- - '###'
+  - Listing 7.11
+- - '##'
+  - 一个使用 NSURLConnection 并实现 NSURLConnection 委托协议方法的类
+- - '###'
+  - Extending Existing Class Capabilities
+- - '###'
+  - Working with Third-Party Frameworks and Classes
+- - '###'
+  - Working with Categories
+- - '###'
+  - 声明分类
+- - '###'
+  - 实现分类方法
+- - '###'
+  - 使用分类拆分功能
+- - '###'
+  - 扩展类方法
+- - '##'
+  - Listing 8.4
+- - '##'
+  - Listing 8.5 (continued)
+- - '###'
+  - 探索分类的限制
+- - '###'
+  - 使用匿名分类扩展类
+- - '####'
+  - 将变量与现有类关联
+- - '####'
+  - 表8.1
+- - '####'
+  - 清单8.8
+- - '####'
+  - 一个排序键类别
+- - '####'
+  - 小结
+- - '###'
+  - 编写宏
+- - '###'
+  - Listing 9.1
+- - '####'
+  - Some preprocessor directives or macros
+- - '###'
+  - Understanding how macros work
+- - '###'
+  - Listing 9.2
+- - '####'
+  - Code that uses a string to access an item from NSUserDefaults
+- - '###'
+  - Listing 9.3
+- - '####'
+  - Using a macro
+- - '####'
+  - Listing 9.3 (continued)
+- - '###'
+  - Listing 9.4
+- - '####'
+  - Optional compilation based on a macro
+- - '###'
+  - Listing 9.5
+- - '####'
+  - An example of some macros which will give different values than you might expect
+- - '####'
+  - Listing 9.5 (continued)
+- - '###'
+  - Listing 9.6
+- - '####'
+  - Program with macros expanded
+- - '###'
+  - Defining Macros
+- - '##'
+  - NOTE
+- - '###'
+  - Defining constants
+- - '####'
+  - Listing 9.7
+- - '####'
+  - 'Defining constants with #define'
+- - '###'
+  - Passing constants by compilation
+- - '####'
+  - Listing 9.8
+- - '####'
+  - Conditional compilation based on build settings
+- - '###'
+  - Using variables in macros
+- - '####'
+  - Listing 9.9
+- - '####'
+  - A macro for printing the value of a variable
+- - '####'
+  - Figure 9.1
+- - '###'
+  - Using stringification
+- - '###'
+  - Listing 9.10
+- - '##'
+  - 打印变量值的宏
+- - '###'
+  - Listing 9.11
+- - '##'
+  - 使用宏打印变量的值
+- - '###'
+  - Listing 9.12
+- - '##'
+  - 展开后的代码
+- - '##'
+  - NOTE
+- - '###'
+  - Handling conditional switching
+- - '###'
+  - Using built-in macros
+- - '##'
+  - Summary
+- - '###'
+  - Handling Errors
+- - '####'
+  - Classifying Errors
+- - '###'
+  - Understanding how to interrupt program flow
+- - '###'
+  - 使用不同的错误处理机制
+- - '####'
+  - 使用返回码
+- - '####'
+  - 使用异常
+- - '##'
+  - 清单 10.4
+- - '####'
+  - 针对不同类型的错误抛出自定义异常
+- - '##'
+  - 清单 10.4（续）
+- - '##'
+  - 警告
+- - '##'
+  - 清单 10.5
+- - '####'
+  - 在main函数中处理异常
+- - '##'
+  - 清单 10.6
+- - '####'
+  - 捕获不同类型的异常
+- - '##'
+  - 注意
+- - '##'
+  - 注意
+- - '###'
+  - 使用NSError
+- - '##'
+  - 清单 10.7
+- - '####'
+  - 使用NSError的文件包装器类
+- - '###'
+  - 创建 NSError 对象
+- - '####'
+  - 清单 10.8
+- - '####'
+  - 将 NSError 对象分配给传入的 NSError 间接引用
+- - '###'
+  - 理解 NSError userInfo 字典
+- - '####'
+  - 表 10.1
+- - '###'
+  - 使用恢复尝试器
+- - '####'
+  - 清单 10.9
+- - '####'
+  - 恢复尝试器回调函数
+- - '###'
+  - 在方法中使用 NSError
+- - '####'
+  - 清单 10.10
+- - '####'
+  - 使用 NSError 的方法
+- - '##'
+  - CAUTION
+- - '##'
+  - Summary
+- - '##'
+  - Using the Foundation Framework
+- - '##'
+  - In This Part
+- - '##'
+  - 11 Understanding How the Frameworks Fit Together
+- - '###'
+  - Understanding the Foundation Framework
+- - '###'
+  - 11 In This Chapter
+- - '###'
+  - Table 11.1
+- - '###'
+  - Exploring other frameworks
+- - '###'
+  - 在项目中使用框架
+- - '####'
+  - 添加框架
+- - '####'
+  - 包含头文件
+- - '####'
+  - 考虑垃圾回收
+- - '####'
+  - 小结
+- - '###'
+  - 使用字符串
+- - '####'
+  - 理解字符串声明语法
+- - '####'
+  - 清单 12.1
+- - '####'
+  - Objective-C NSString 快捷语法
+- - '####'
+  - 本章内容
+- - '####'
+  - 清单 12.2
+- - '####'
+  - 检查字符串常量相等性
+- - '####'
+  - 表 12.1 NSString 和 NSMutableString 工厂方法
+- - '##'
+  - NOTE
+- - '###'
+  - 使用格式字符串
+- - '###'
+  - Listing 12.3
+- - '####'
+  - The format string in NSLog
+- - '###'
+  - Listing 12.4
+- - '####'
+  - Using format strings
+- - '##'
+  - NOTE
+- - '###'
+  - Working with Other NSString Methods
+- - '###'
+  - Listing 12.5
+- - '####'
+  - Appending a formatted string
+- - '###'
+  - Listing 12.6
+- - '####'
+  - Splitting a string into its components
+- - '###'
+  - 使用 NSString 类别
+- - '##'
+  - 摘要
+- - '###'
+  - 13 处理集合
+- - '####'
+  - 清单 13.1
+- - '####'
+  - 创建新的 NSArray
+- - '####'
+  - 清单 13.2
+- - '####'
+  - 按顺序访问数组的元素
+- - '####'
+  - 清单 13.3
+- - '####'
+  - 访问单个元素。
+- - '####'
+  - 清单 13.4
+- - '####'
+  - 访问元素组
+- - '###'
+  - 使用字典
+- - '####'
+  - 清单 13.5
+- - '####'
+  - 创建 NSDictionary 实例
+- - '###'
+  - Listing 13.6
+- - '####'
+  - Accessing an individual elements of an NSDictionary
+- - '###'
+  - Listing 13.7
+- - '####'
+  - 'Using the method -objectsForKeys:notFoundMarker:'
+- - '###'
+  - Listing 13.8
+- - '####'
+  - Enumerating over the keys and objects in NSDictionary
+- - '###'
+  - Working with sets
+- - '###'
+  - Listing 13.9
+- - '####'
+  - Creating an NSSet
+- - '###'
+  - Listing 13.10
+- - '####'
+  - Operations on an NSSet
+- - '###'
+  - Understanding mutability
+- - '###'
+  - Listing 13.11
+- - '####'
+  - Manipulating the elements of an NSMutableArray
+- - '##'
+  - 注意
+- - '##'
+  - 代码清单 13.12
+- - '##'
+  - 操作 NSMutableDictionary 的元素
+- - '###'
+  - 理解集合与内存管理
+- - '##'
+  - 代码清单 13.13
+- - '##'
+  - 从 NSMutableArray 中移除对象时出现的错误
+- - '##'
+  - 代码清单 13.14
+- - '##'
+  - 正确移除你希望继续使用的对象的方式
+- - '###'
+  - 使用专用集合
+- - '##'
+  - 代码清单 13.15
+- - '##'
+  - 用于存储 C 字符串的 NSPointerArray
+- - '###'
+  - 枚举
+- - '##'
+  - 代码清单 13.16
+- - '##'
+  - 使用快速枚举遍历集合
+- - '##'
+  - 代码清单 13.17
+- - '##'
+  - 使用 NSEnumerator 枚举集合
+- - '##'
+  - 代码清单 13.18
+- - '##'
+  - 枚举器技巧
+- - '##'
+  - Listing 13.18 (continued)
+- - '###'
+  - Sending Messages to Elements
+- - '###'
+  - Listing 13.19
+- - '####'
+  - Making all objects of a collection perform some action
+- - '###'
+  - Sorting and Filtering
+- - '###'
+  - Listing 13.20
+- - '####'
+  - 'Sorting an array of employees using -sortUsingDescriptors:'
+- - '###'
+  - Listing 13.21
+- - '####'
+  - Sorting an array using a function
+- - '###'
+  - Listing 13.22
+- - '####'
+  - 'Sorting the employee array using -sortUsingSelector:'
+- - '####'
+  - NOTE
+- - '###'
+  - Listing 13.23
+- - '####'
+  - Filtering an array
+- - '###'
+  - Using Blocks with Collections
+- - '###'
+  - Listing 13.24
+- - '####'
+  - Performing a map operation on the elements of an NSArray
+- - '##'
+  - Summary
+- - '##'
+  - Using NSValue, NSNumber, and NSData
+- - '##'
+  - In This Chapter
+- - '###'
+  - Using NSValue and NSNumber
+- - '###'
+  - Wrapping arbitrary datatypes with NSValue
+- - '####'
+  - Listing 14.1
+- - '####'
+  - Creating an NSValue for an arbitrary structure
+- - '####'
+  - Listing 14.2
+- - '####'
+  - Storing pointers to dynamic data in NSValue
+- - '###'
+  - Wrapping numbers with NSNumber
+- - '####'
+  - Listing 14.3
+- - '####'
+  - Creating NSNumbers
+- - '###'
+  - Doing arithmetic with NSDecimalNumber
+- - '####'
+  - NOTE
+- - '####'
+  - Listing 14.4
+- - '####'
+  - Giving a flat $5000 bonus to all employees
+- - '##'
+  - 使用 NSData 和 NSMutableData
+- - '###'
+  - 创建 NSData 对象
+- - '####'
+  - Listing 14.5
+- - '####'
+  - 创建一个 NSData 对象
+- - '###'
+  - 访问 NSData 对象中的原始字节
+- - '####'
+  - Listing 14.6
+- - '####'
+  - 修改游戏存档文件的原始字节
+- - '##'
+  - Summary
+- - '##'
+  - 处理时间和日期
+- - '##'
+  - In This Chapter
+- - '###'
+  - 构造日期
+- - '####'
+  - 清单 15.1 构造一个 NSDate 对象
+- - '###'
+  - 使用时间间隔
+- - '####'
+  - 清单 15.2 使用时间间隔创建日期
+- - '###'
+  - 比较日期
+- - '####'
+  - 清单 15.3 计算不同日期之间的时间间隔
+- - '####'
+  - 清单 15.4 比较日期
+- - '###'
+  - 使用 NSCalendar
+- - '####'
+  - 清单 15.5 使用 NSDateComponents 和 NSCalendar 构造 NSDate
+- - '####'
+  - 清单 15.6 使用相对日期
+- - '####'
+  - 清单 15.7 在日历之间转换日期
+- - '###'
+  - 使用时区
+- - '####'
+  - 清单 15.8 创建 NSTimeZone 对象
+- - '###'
+  - 使用 NSDateFormatter
+- - '###'
+  - Listing 15.9
+- - '####'
+  - Formatting the date for short numerical format
+- - '###'
+  - Listing 15.10
+- - '####'
+  - Converting a natural language string into an NSDate object
+- - '##'
+  - Summary
+- - '##'
+  - IV
+- - '###'
+  - Exploring
+- - '###'
+  - Advanced Topics
+- - '##'
+  - In This Part
+- - '##'
+  - Multiprocessing with Threads
+- - '##'
+  - In This Chapter
+- - '###'
+  - Synchronizing Code
+- - '###'
+  - Using Locks
+- - '###'
+  - Listing 16.1
+- - '####'
+  - Creating an instance of an NSLock
+- - '###'
+  - Listing 16.2
+- - '##'
+  - 使用 @synchronize 关键字
+- - '###'
+  - Listing 16.3
+- - '####'
+  - 使用 @synchronized
+- - '###'
+  - Listing 16.4
+- - '####'
+  - 使用 self 作为要同步的变量。
+- - '##'
+  - NOTE
+- - '###'
+  - 理解原子性
+- - '###'
+  - 使用 NSThread
+- - '###'
+  - 创建线程
+- - '###'
+  - Listing 16.5
+- - '####'
+  - 创建新线程
+- - '###'
+  - 操作正在运行的线程
+- - '####'
+  - Listing 16.6
+- - '####'
+  - 一个典型的后台线程运行循环
+- - '####'
+  - Listing 16.8
+- - '####'
+  - 从后台线程更新 GUI 元素
+- - '###'
+  - 使用 perform selector 跨线程
+- - '###'
+  - 使用 NSOperation 和 NSOperationQueue
+- - '##'
+  - CROSS-REFERENCE
+- - '##'
+  - NOTE
+- - '###'
+  - 创建操作
+- - '####'
+  - Listing 16.9
+- - '####'
+  - 一个自定义 NSOperation 子类
+- - '###'
+  - 将操作添加到队列
+- - '####'
+  - Listing 16.10
+- - '####'
+  - 将操作添加到队列
+- - '###'
+  - 操作队列参数的操纵
+- - '###'
+  - 使用其他类型的操作
+- - '####'
+  - Listing 16.11
+- - '####'
+  - 使用 NSInvocationOperation
+- - '####'
+  - Listing 16.12
+- - '####'
+  - 使用 NSBlockOperation
+- - '##'
+  - CAUTION
+- - '##'
+  - Summary
+- - '##'
+  - Objective-C 设计模式
+- - '###'
+  - 识别解决方案中的模式
+- - '##'
+  - In This Chapter
+- - '###'
+  - 在 Objective-C 中描述设计模式
+- - '###'
+  - 使用单例
+- - '####'
+  - 问题
+- - '####'
+  - 解决方案
+- - '####'
+  - 清单 17.1
+- - '#####'
+  - 全局实例定义
+- - '####'
+  - 清单 17.2
+- - '#####'
+  - 单例工厂方法
+- - '####'
+  - 清单 17.3
+- - '#####'
+  - 初始化全局实例
+- - '####'
+  - 清单 17.4
+- - '#####'
+  - '实现 -copyWithZone:'
+- - '####'
+  - 清单 17.5
+- - '#####'
+  - 实现内存管理方法
+- - '####'
+  - NOTE
+- - '####'
+  - 讨论
+- - '####'
+  - 清单 17.6
+- - '#####'
+  - 单例的作弊版本
+- - '###'
+  - 委托责任
+- - '####'
+  - 问题
+- - '####'
+  - 解决方案
+- - '####'
+  - 清单 17.8
+- - '###'
+  - 调用委托方法
+- - '####'
+  - 讨论
+- - '###'
+  - 通知对象状态变化
+- - '####'
+  - 问题
+- - '####'
+  - 解决方案
+- - '####'
+  - 清单 17.9
+- - '###'
+  - 发布通知
+- - '####'
+  - 清单 17.10
+- - '###'
+  - 注册为观察者
+- - '##'
+  - Listing 17.11
+- - '###'
+  - 'Implementation of the -stuffChanged: method'
+- - '####'
+  - NOTE
+- - '##'
+  - Listing 17.12
+- - '###'
+  - Removing yourself as an observer.
+- - '####'
+  - Discussion
+- - '####'
+  - NOTE
+- - '##'
+  - Summary
+- - '##'
+  - Reading and Writing Data with NSCoder
+- - '###'
+  - Implementing the NSCoding Protocol in Your Objects
+- - '###'
+  - Encoding objects
+- - '###'
+  - Listing 18.1
+- - '####'
+  - 'A simple -encodeWithCoder: implementation'
+- - '##'
+  - NOTE
+- - '###'
+  - Encoding basic types
+- - '###'
+  - Listing 18.2
+- - '##'
+  - Listing 18.2 (continued)
+- - '###'
+  - Working with object graphs
+- - '###'
+  - Using other types of data
+- - '###'
+  - Listing 18.3
+- - '##'
+  - Encoding a malloc’ed memory block in your NSCoder
+- - '###'
+  - Decoding objects
+- - '###'
+  - Listing 18.4
+- - '##'
+  - 'An example of -initWithCoder:'
+- - '##'
+  - CAUTION
+- - '###'
+  - Using NSArchiver and NSUnarchiver
+- - '###'
+  - Listing 18.5
+- - '##'
+  - Writing data to disk
+- - '##'
+  - 代码清单 18.6
+- - '###'
+  - 从磁盘读取数据
+- - '###'
+  - 使用归档文件格式与遗留数据
+- - '##'
+  - 小结
+- - '##'
+  - 在其他平台上使用 Objective-C
+- - '###'
+  - 本章内容
+- - '###'
+  - 使用 GNUstep
+- - '###'
+  - 使用 Cocotron
+- - '###'
+  - 展望未来
+- - '##'
+  - 摘要
+- - '##'
+  - 索引
+- - '###'
+  - 特殊字符和数字
+- - '##'
+  - 索引
+- - '##'
+  - P
+- - '###'
+  - 开发者们，这本书正该放在你的书桌上！
+- - '###'
+  - 获取Apple开发的最新信息

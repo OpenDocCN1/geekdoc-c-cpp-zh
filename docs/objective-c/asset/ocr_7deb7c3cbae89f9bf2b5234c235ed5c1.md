@@ -1,0 +1,3 @@
+# Summary
+
+In this chapter I have introduced you to some of the unique and powerful tools that Objective-C provides you for building object-oriented designs from small reusable components. The approaches shown may seem unusual, or even magical, if you are coming to the language from a language that is less dynamic, such as C++ or Java. But the power of Objective-C comes from the fact that these kinds of meta-programming tools are available as part of the language itself and fully supported in the language frameworks. Working with a language that is so expressive, so powerful, and so dynamic is a wonderful experience.

@@ -1,0 +1,3 @@
+# Summary
+
+Object serialization in Objective-C is easy to use and powerful. You can use it for saving your application state to disk or you can use it to send data over a network connection to another process. In this chapter I’ve shown you how to make your objects compatible with the NSCoding protocol, and also how to read and write your object graphs to disk using the NSKeyedArchiver and NSKeyedUnarchiver classes. Together, these will give you the tools needed to leverage serialization in Objective-C.

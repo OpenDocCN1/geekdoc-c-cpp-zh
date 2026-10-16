@@ -1,0 +1,189 @@
+
+
+## Listing 9.1
+
+### Some preprocessor directives or macros
+
+```
+#define FOO 1
+#ifdef BAR
+#endif
+#define BAZ(X, Y) NSLog(@"%s - %s", (X), (Y));
+#import <Foundation/Foundation.h>
+```
+
+Each of these items is a preprocessor directive. The #define is defining a constant called FOO with a value of 1. The #ifdef and #endif are defining a conditional block of code that will only be compiled if BAR has been defined. #define BAZ(X, Y) NSLog(@"%s - %s", (X), (Y)); is a preprocessor function, which takes parameters and logs them. Finally, the #import directive, which you have seen before, loads the given header file and puts its source code inline into this source file.
+
+These directives are expanded during the compilation process, not at runtime. Therefore, the things they do impact the source code before it’s actually compiled. In some ways, you can think of preprocessor macros as a means for writing programs that manipulate your source code when it’s compiling.
+
+## Understanding how macros work
+
+This idea of manipulating your source code while it’s being compiled is an interesting concept. Take a look at Listing 9.2. In this code, there is a particular string constant, @"MY_IMPORTANT_DATA", which is used over and over again to access items from NSUserDefaults.
+
+## Listing 9.2
+
+### Code that uses a string to access an item from NSUserDefaults
+
+```
+#import <Foundation/Foundation.h>
+
+int main (int argc, const char * argv[])
+{
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+
+NSString *someValue = @"foobar";
+[[NSUserDefaults standardUserDefaults] setObject:someValue forKey:@"MY_IMPORTANT_DATA"];
+
+// do stuff...
+
+NSString *theValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"MY_IMPORTANT_DATA"];
+
+[pool drain];
+return 0;
+}
+```
+
+The biggest problem with this code is that I’m using a constant string for the key in this code, you open yourself up to syntax errors that won’t be caught by the compiler. If you make a mistake in typing the string, the compiler will not be able to tell that it was a mistake and instead will allow it to go all the way to when your application is running. This makes for bugs that are difficult to track down.
+
+It would be nice if you could create some kind of macro that the compiler will expand to your string but which it can check for syntax errors when it goes to compile. This is exactly the kind of thing for which macros are made. Listing 9.3 shows the same code, written using a macro instead of the string.
+
+## Listing 9.3
+
+### Using a macro
+
+```
+#import <Foundation/Foundation.h>
+
+#define THE_KEY @"MY_IMPORTANT_DATA"
+
+int main (int argc, const char * argv[])
+{
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+
+    NSString *someValue = @"foobar";
+```
+
+### Listing 9.3 (continued)
+
+```
+[[NSUserDefaults standardUserDefaults] setObject:someValue forKey:THE_KEY];
+
+// do stuff...
+
+NSString *theValue = [[NSUserDefaults standardUserDefaults] stringForKey:THE_KEY];
+
+[pool drain];
+return 0;
+}
+```
+
+As you can see, at the top of this new source listing we are defining a macro called THE_KEY. This macro is being defined to be @"MY_IMPORTANT_DATA". Everywhere in the subsequent code where the words THE_KEY are located will be replaced with the string @"MY_IMPORTANT_DATA" when the program is compiled. This will happen transparently as part of the compilation process but the end result is that this code, when compiled, will actually wind up being exactly the same as the listing that we saw previously. The only difference is that when you are writing the source code you can take advantage of Xcode’s built-in code completion, and the compiler will detect if you have any instances of THE_KEY that were typed incorrectly. For example, if you accidentally wrote THE_KEY instead of THE_KEY, the compiler can check for that condition and issue an error.
+
+Listing 9.4 shows another example where the program is taking different actions depending on whether the given macro value (DEBUGGING) is defined.
+
+## Listing 9.4
+
+### Optional compilation based on a macro
+
+```
+#import <Foundation/Foundation.h>
+
+#define DEBUGGING 1
+
+int main (int argc, const char * argv[])
+{
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+#ifdef DEBUGGING
+```
+
+```
+NSLog(@"Debugging stuff...");
+#else
+    NSLog(@"Not debugging");
+#endif
+
+    [pool drain];
+    return 0;
+}
+```
+
+In this case, the code inside the main block is checking to see if a value has been set or the DEBUGGING macro. If this macro has been defined, in other words if it has any value at all, then it prints out the “Debugging stuff...” message. If the DEBUGGING macro has not been defined, then it prints out “Not debugging.” This is really powerful because by using it, you can have certain code compile only when you are running in a debugging environment. For example, you might use this to cause your application to connect to a development server instead of your production server while you are testing.
+
+One of the cool aspects of using macros in this way is that there are also flags that you can use as part of your compiler settings to cause these macros to be defined or undefined based strictly on your build settings. In other words, you can configure your build settings so that when you build your target for your debug environment you get this macro defined, and when you’re building for release to your customers you do not. Again, remember that all of this expansion is actually happening at compile time. In addition to that, keep in mind that the expansion is happening in your source code at the location where you place the macro. This is difficult to explain, but easier with an example. Take a look at Listing 9.5.
+
+## Listing 9.5
+
+### An example of some macros which will give different values than you might expect
+
+```
+#import <Foundation/Foundation.h>
+
+#define LOG_LINE NSLog(@"%s:%ld", __FILE__, __LINE__);
+
+int main (int argc, const char * argv[])
+{
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+
+    LOG_LINE
+```
+
+### Listing 9.5 (continued)
+
+```
+NSLog(@"%@s %@s", __DATE__, __TIME__);
+LOG_LINE
+
+[pool drain];
+return 0;
+}
+```
+
+In this code, I first defined a macro called LOG_LINE. This macro, when it is expanded in your code, turns into NSLog(@"%s:%ld", __FILE__, __LINE__);. This causes your program, when it runs, to log the filename and line number where the LOG_LINE macro has been placed. The built-in macros __FILE__ and __LINE__ are provided by the compiler itself, and expand to the current source file name and the current line number. When you run this program notice that the line number changes between the two different calls to LOG_LINE. This is only possible because of this in-line expansion capability that macros have. Another illustration of this is shown by looking at the output of the line in between the LOG_LINE calls. The built-in macros __DATE__ and __TIME__ expand to the date and time that the preprocessor was run to compile this program. In other words, this is the date and time that your program was compiled. If you compile the program once and then run it multiple times, you'll find that the date and time shown here do not change on subsequent launches. This is because the date and time that are being expanded in your source code are effectively being hardcoded by the expansion of these macros in your code.
+
+Listing 9.6 shows what this code might look like after the preprocessor expansion has already taken place.
+
+## Listing 9.6
+
+### Program with macros expanded
+
+```
+#import <Foundation/Foundation.h>
+
+int main (int argc, const char * argv[])
+{
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+
+    NSLog(@"Code/Macros/Macros.m:9");
+    NSLog(@"%@s %@s", "May 18 2010", "16:00:03");
+    NSLog(@"Code/Macros/Macros.m:11");
+```
+
+```
+[pool drain];
+return 0;
+}
+```
+
+Literally speaking, this is exactly what the preprocessor is doing. It takes your macros and expands them into whatever they are defined to be right inside your code.
+
+You might notice that these particular macros are using double underscores at the beginning and end of the macro name. This is a standard that is reserved specifically for compiler-provided macros and not something that you should do in your code. You can use these macros — just don’t use the double underscores in your own macro names.
+
+## Defining Macros
+
+You begin a macro definition with the # symbol followed by the preprocessor directive and then any parameters to the directive such as the name of the macro and so on. Table 9.1 shows a listing of the most commonly used preprocessor directives.
+
+| Directive | Purpose |
+|---|---|
+| #define | Used to define new macros such as constants and functions. |
+| #ifdef | Begins an optional compilation block. If the parameter for the preprocessor directive is defined to be anything (even zero), then the code following the #ifdef up until a terminating #endif, #else, or #elif will be compiled and included in the application. If the parameter is not defined and an #else or #elsif block is provided, then the #else or #elsif block will be evaluated and if appropriate compiled and included in the application. |
+| #undef | Removes a previously defined macro. |
+| #import | Reads and includes another source file in this file. Guards against including the file multiple times automatically. |
+| #include | Reads and includes another source file in this file. Does not prevent including a file multiple times. |
+| #pragma | Special macro used for configuring the compiler and for annotations in the IDE. |
+| #warning | Generates a compiler warning. Used to flag issues to the developer. |
+| #error | Generates a compiler error. |
+| #if | Begins a conditional compilation block similar to #ifdef, but relies on an expression (such as X > 10) which must evaluate to true in order to be considered true. |
+| #else | Used after an #if or #ifdef to provide a conditional block to be compiled if the statement is false. |
+| #elif | Used after an #if or #ifdef to provide an additional conditional block with an additional control statement to determine if it should be compiled. |
+| #endif | Terminates an #if, #ifdef, #else, or #elif block. |
+

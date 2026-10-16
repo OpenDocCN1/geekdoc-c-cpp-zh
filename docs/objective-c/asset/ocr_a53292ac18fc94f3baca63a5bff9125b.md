@@ -1,0 +1,5 @@
+If you run this version of the program, you should see a substantial improvement in performance. On my computer, it shaves about 45 to 50 percent off the runtime involved in calculating the prime numbers. Your mileage will vary, of course.
+
+# Summary
+
+In this chapter, I introduced you to a powerful new tool in the Objective-C toolbox. Code blocks are incredibly useful in that they give you the ability to encapsulate small anonymous chunks of code and pass those chunks of code around as if they were objects. This gives you the ability to create generic methods that can be retooled with different functionality by simply passing new types of blocks to them as arguments. Additionally, blocks make working with Grand Central Dispatch incredibly simple because they provide you with the ability to express chunks of functionality and then send that functionality into a queue to be executed.
