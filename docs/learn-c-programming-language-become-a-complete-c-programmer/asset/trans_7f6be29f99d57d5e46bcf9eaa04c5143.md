@@ -1,0 +1,193 @@
+
+
+void f(int n)
+// n should be in [1:max)
+{
+Assert::dynamic<Assert::level(2),Assert::Error>(
+(n<=0 || max<n), Assert::compose(__FILE__,__LINE__,"range problem"); // ...
+}
+```
+
+The __FILE__ and __LINE__ are macros that expand at their point of appearance in the source code (§12.6.2). I can’t hide them from the user’s view by placing them inside the implementation of Assert where they belong.
+
+Assert::Error is the default exception, so we need not mention it explicitly. Similarly, if we are willing to use the default assertion level, we don’t need to mention the level explicitly:
+
+```
+void f(int n)
+// n should be in [1:max)
+{
+Assert::dynamic((n<=0 || max<n),Assert::compose(__FILE__,__LINE__,"range problem"); // ...
+}
+```
+
+I do not recommend obsessing about the amount of text needed to express an assertion, but by using a namespace directive (§14.2.3) and the default message, we can get to a minimum:
+
+```
+void f(int n)
+// n should be in [1:max)
+{
+dynamic(n<=0||max<n);
+// ...
+}
+```
+
+It is possible to control the testing done and the response to testing through build options (e.g., controlling conditional compilation) and/or through options in the program code. That way, you can have a debug version of a system that tests extensively and enters the debugger and a production version that does hardly any testing.
+
+I personally favor leaving at least some tests in the final (shipping) version of a program. For example, with Assert the obvious convention is that assertions marked as level zero will always be checked. We never find the last bug in a large program under continuous development and maintenance. Also, even if all else works perfectly, having a few “sanity checks” left to deal with hardware failures can be wise.
+
+Only the builder of the final complete system can decide whether a failure is acceptable or not. The writer of a library or reusable component usually does not have the luxury of terminating unconditionally. I interpret that to mean that for general library code, reporting an error – preferably by throwing an exception – is essential.
+
+As usual, destructors should not throw, so don’t use a throwing Assert() in a destructor.
+
+## 13.5 Throwing and Catching Exceptions
+
+This section presents exceptions from a language-technical point of view.
+
+### 13.5.1 Throwing Exceptions
+
+We can **throw** an exception of any type that can be copied or moved. For example:
+
+```
+class No_copy {
+No_copy(const No_copy&) = delete; // prohibit copying (§17.6.4)
+};
+class My_error {
+// ...
+};
+void f(int n)
+{
+switch (n) {
+case 0: throw My_error{}; case 1: throw No_copy{}; case 2: throw My_error; }
+}
+// OK
+// error : can’t copy a No_copy
+// error : My_error is a type, rather than an object
+```
+
+The exception object caught (§13.5.2) is in principle a copy of the one thrown (though an optimizer is allowed to minimize copying); that is, a **throw x;** initializes a temporary variable of **x**’s type with **x**. This temporary may be further copied several times before it is caught: the exception is passed (back) from called function to calling function until a suitable handler is found. The type of the exception is used to select a handler in the **catch**-clause of some **try**-block. The data in the exception object – if any – is typically used to produce error messages or to help recovery. The process of passing the exception “up the stack” from the point of throw to a handler is called *stack unwinding*. In each scope exited, the destructors are invoked so that every fully constructed object is properly destroyed. For example:
+
+```
+void f()
+{
+string name {"Byron"}; try {
+string s = "in"; g();
+}
+catch (My_error) { // ...
+}
+}
+```
+
+```
+void g() {
+string s = "excess"; {
+string s = "or"; h();
+}
+}
+```
+
+```
+```cpp
+void h() {
+  string s = “not”;
+  throw My_error{};
+  string s2 = “at all”;
+}
+```
+```
+
+After the throw in **h()**, all the **strings** that were constructed are destroyed in the reverse order of their construction: **“not”**, **“or”**, **“excess”**, **“in”**, but not **“at all”**, which the thread of control never reached, and not **“Byron”**, which was unaffected.
+
+# Section 13.5.1 Throwing Exceptions 365
+
+Because an exception is potentially copied several times before it is caught, we don’t usually put huge amounts of data in it. Exceptions containing a few words are very common. The semantics of exception propagation are those of initialization, so objects of types with move semantics (e.g., **strings**) are not expensive to throw. Some of the most common exceptions carry no information; the name of the type is sufficient to report the error. For example:
+
+```
+```cpp
+struct Some_error { };
+
+void fct() {
+  // ...
+  if (something_wrong)
+    throw Some_error{};
+}
+```
+```
+
+There is a small standard-library hierarchy of exception types (§13.5.2) that can be used either directly or as base classes. For example:
+
+```
+```cpp
+struct My_error2 : std::runtime_error {
+  const char* what() const noexcept { return “My_error2”; }
+};
+```
+```
+
+The standard-library exception classes, such as **runtime_error** and **out_of_range**, take a string argument as a constructor argument and have a virtual function **what()** that will regurgitate that string. For example:
+
+```
+```cpp
+void g(int n) // throws some exception
+{
+  if (n) throw std::runtime_error{“I give up!”}; else
+  throw My_error2{}; }
+void f(int n) // see what exception g() throws {
+  try { void g(n);
+  }
+  catch (std::exception& e) { cerr << e.what() << ‘\n’; }
+}
+```
+```
+
+### 13.5.1.1 **noexcept** Functions
+
+Some functions don’t throw exceptions and some really shouldn’t. To indicate that, we can declare such a function **noexcept**. For example:
+
+```
+```cpp
+double compute(double) noexcept; // may not throw an exception
+```
+```
+
+Now no exception will come out of **compute()**.
+
+Declaring a function **noexcept** can be most valuable for a programmer reasoning about a program and for a compiler optimizing a program. The programmer need not worry about providing **try**-clauses (for dealing with failures in a **noexcept** function) and an optimizer need not worry about control paths from exception handling.
+
+However, **noexcept** is not completely checked by the compiler and linker. What happens if the programmer “lied” so that a **noexcept** function deliberately or accidentally threw an exception that wasn’t caught before leaving the **noexcept** function? Consider:
+
+```
+double compute(double x) noexcept;
+{
+string s = “Courtney and Anya”;
+vector<double> tmp(10);
+// ...
+}
+```
+
+The **vector** constructor may fail to acquire memory for its ten **double**s and throw a **std::bad_alloc**. In that case, the program terminates. It terminates unconditionally by invoking **std::terminate()** (§30.4.1.3). It does not invoke destructors from calling functions. It is implementation-defined whether destructors from scopes between the **throw** and the **noexcept** (e.g., for **s** in **compute()**) are invoked. The program is just about to terminate, so we should not depend on any object anyway. By adding a **noexcept** specifier, we indicate that our code was not written to cope with a **throw**.
+
+### 13.5.1.2 The **noexcept** Operator
+
+It is possible to declare a function to be conditionally **noexcept**. For example:
+
+```
+template<typename T>
+void my_fct(T& x) noexcept(Is_pod<T>());
+```
+
+The **noexcept(Is_pod<T>())** means that **My_fct** may not throw if the predicate **Is_pod<T>()** is **true** but may throw if it is **false**. I may want to write this if **my_fct()** copies its argument. I know that copying a POD does not throw, whereas other types (e.g., a **string** or a **vector**) may.
+
+The predicate in a **noexcept()** specification must be a constant expression. Plain **noexcept** means **noexcept(true)**.
+
+The standard library provides many type predicates that can be useful for expressing the conditions under which a function may throw an exception (§35.4).
+
+What if the predicate we want to use isn’t easily expressed using type predicates only? For example, what if the critical operation that may or may not throw is a function call **f(x)**? The **noexcept()** operator takes an expression as its argument and returns **true** if the compiler “knows” that it cannot throw and **false** otherwise. For example:
+
+```
+template<typename T>
+void call_f(vector<T>& v) noexcept(noexcept(f[v[0]]))
+{
+for (auto x : v) f(x);
+}
+```
+
