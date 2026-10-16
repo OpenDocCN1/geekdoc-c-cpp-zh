@@ -1,0 +1,13 @@
+**NOTE** Although most chapters in this book are based on the new .NET Framework stack—.NET Core 1.0—this chapter requires the full framework. The client-side part of WCF is available with .NET Core, but the server side requires the full .NET Framework. With these samples, .NET 4.6 is used. Where possible, I make use of .NET Core. The libraries used for defining the contracts and doing data access are built using .NET Core.
+
+You can get the following from WCF:
+
++   - **Hosting for components and services**—Just as you can use custom hosts with .NET Remoting and Web Service Enhancements (WSE), you can host a WCF service in the ASP.NET runtime, a Windows service, a COM+ process, or a WPF application for peer-to-peer computing.
++   - **Declarative behavior**—Instead of the requirement to derive from a base class (this requirement exists with .NET Remoting and Enterprise Services), attributes can be used to define the services. This is similar to web services developed with ASP.NET.
++   - **Communication channels**—Although .NET Remoting is flexible for changing the communication channel, WCF is a good alternative because it offers the same flexibility. WCF offers multiple channels to communicate using HTTP, TCP, or an IPC channel. Custom channels using different transport protocols can be created as well.
++   - **Security infrastructure**—For implementing platform-independent web services, you must use a standardized security environment. The proposed standards are implemented with WSE 3.0, and this continues with WCF.
++   - **Extensibility**—.NET Remoting has a rich extensibility story. It is not only possible to create custom channels, formatters, and proxies but also to inject functionality inside the message flow on the client and on the server. WCF offers similar extensibilities; however, here the extensions are created by using SOAP headers.
+
+The final goal is to send and receive messages between a client and a service across processes or different systems, across a local network, or across the Internet. This should be done, if required, in a platform-independent way and as fast as possible. From a distant view, the service offers an endpoint that is described by a contract, a binding, and an address. The contract defines the operations offered by the service; binding gives information about the protocol and encoding; and the address is the location of the service. The client needs a compatible endpoint to access the service.
+
+Figure 44.1 shows the components that participate with a WCF communication.

@@ -1,0 +1,130 @@
+
+
+> **注意** 使用该服务时，还可以通过设置 `EnableQuery` 特性的 `AllowedQueryOptions` 来限制查询选项。还可以使用 `AllowedLogicalOperators` 和 `AllowedArithmeticOperators` 属性限制逻辑和算术运算符。
+
+## 小结
+
+本章描述了现已随 ASP.NET MVC 一起提供的 ASP.NET Web API 的特性。借助 `HttpClient` 类，该技术提供了一种简单的方法来创建可从任何客户端（无论是 JavaScript 还是 .NET 客户端）调用的服务。既可以返回 JSON，也可以返回 XML。
+
+依赖注入已在本书的多个章节中使用，特别是在第31章“使用 XAML 应用的模式”中。在本章中，您已经看到了通过使用 Entity Framework，用基于字典的存储库替换基于内存的存储库是多么容易。
+
+本章还向您介绍了 OData，利用它可以轻松地使用资源标识符引用树中的数据。
+
+下一章继续介绍 Web 技术，并介绍发布和订阅技术，如 WebHooks 和 SignalR。
+
+## 第43章：WebHooks 与 SignalR
+
+### 本章内容
+
+- SignalR 概述
+- 创建 SignalR 集线器
+- 使用 HTML 和 JavaScript 创建 SignalR 客户端
+- 创建 SignalR .NET 客户端
+- 在 SignalR 中使用组
+- WebHooks 概述
+- 为 GitHub 和 Dropbox 创建 WebHook 接收器
+
+### 本章 Wrox.com 代码下载
+
+本章的 wrox.com 代码下载可在 www.wrox.com/go/professionalscharp6 的 Download Code 选项卡中找到。本章代码分为以下主要示例：
+
+- 使用 SignalR 的聊天服务器
+- 使用 SignalR 的 WPF 聊天客户端
+- SaaS WebHooks 接收器示例
+
+## 概述
+
+使用 .NET，您可以使用事件来获取通知。您可以向事件注册事件处理程序方法，也称为订阅事件，一旦事件从其他地方触发，您的方法就会被调用。事件不能用于 Web 应用程序。
+
+前面的章节已经涵盖了很多关于 Web 应用程序和 Web 服务的内容。这些应用程序和服务的共同点是请求总是由客户端应用程序发起。客户端发出 HTTP 请求并接收响应。
+
+如果服务器有一些消息要告诉客户端呢？没有类似可以订阅的事件，或者有吗？通过您目前看到的 Web 技术，这个问题可以通过客户端轮询新信息来解决。客户端必须向服务器发出请求，以询问是否有新信息可用。根据定义的请求间隔，这种通信方式要么导致网络上出现高负载的请求，而这些请求只是得到“没有新信息可用”的结果，要么客户端错过实际信息，并在请求新信息时收到已经旧的信息。
+
+如果客户端本身是一个 Web 应用程序，则通信方向可以反转，服务器可以向客户端发送消息。这就是 WebHooks 的工作方式。
+
+对于防火墙后面的客户端，使用 HTTP 协议，服务器无法发起与客户端的连接。连接总是需要从客户端发起。由于 HTTP 连接是无状态的，并且客户端通常无法连接到除 80 端口以外的其他端口，因此 WebSockets 可以提供帮助。WebSockets 通过 HTTP 请求发起，但会升级为 WebSocket 连接，该连接保持打开状态。使用 WebSockets 协议，一旦服务器有新信息，服务器就可以通过打开的连接将信息发送给客户端。
+
+> **注意** *从较低层 API 调用使用 WebSockets 在第25章“网络”中讨论。*
+
+SignalR 是一种 ASP.NET Web 技术，它提供了对 WebSockets 的简单抽象。使用 SignalR 比使用套接字接口编程要容易得多。此外，如果客户端不支持 WebSocket API，SignalR 会自动切换到轮询机制，而无需您更改程序。
+
+> **注意** *在撰写本文时，SignalR for ASP.NET Core 1.0 尚不可用。因此本章展示了如何将 SignalR 2 与 ASP.NET 4.6 和 ASP.NET Web API 2 结合使用。请查看 [http://www.github.com/ProfessionalCSharp](http://www.github.com/ProfessionalCSharp) 以获取更多有关 SignalR 3 for ASP.NET Core 1.0 的示例，这些示例将在 SignalR 3 可用后提供。*
+
+WebHooks 是一种由许多 SaaS（软件即服务）提供商提供的技术。您可以向此类提供商注册，向服务提供商提供公共 Web API，这样一旦有新信息可用，服务提供商就可以回调。
+
+本章将介绍 SignalR 和 WebHooks。由于这两种技术相辅相成，因此也可以组合使用。
+
+## SignalR 的架构
+
+SignalR 由多个 NuGet 包组成，可用于服务器端和客户端。
+
+| NuGet 包 | 描述 |
+|---|---|
+| `Microsoft.AspNet.SignalR` | 该包引用其他包用于服务端实现。 |
+| `Microsoft.AspNet.SignalR.Core` | 这是 SignalR 的核心包。该包包含 `Hub` 类。 |
+| `Microsoft.AspNet.SignalR.SystemWeb` | 该 NuGet 包包含用于 ASP.NET 4.x 定义路由的扩展。 |
+| `Microsoft.AspNet.SignalR.JavaScript` | 该 NuGet 包包含用于 SignalR 客户端的 JavaScript 库。 |
+| `Microsoft.AspNet.SignalR.Client` | 该 NuGet 包包含用于 .NET 客户端的类型。`HubProxy` 用于连接到 `Hub`。 |
+
+使用 SignalR，服务器定义了一个集线器，客户端连接到该集线器（参见[图43.1](#figure-43-1)）。集线器保持与每个客户端的连接。使用集线器，您可以向每个已连接的客户端发送消息。您可以向所有客户端发送消息，也可以选择特定客户端或客户端组发送消息。
+
+![](img/3d365b72b289213a91ade7eb366b8f35_1665_0.png)
+
+图43.1
+
+## 使用 SignalR 的简单聊天
+
+第一个 SignalR 示例应用程序是一个聊天应用程序，使用 SignalR 可以轻松创建。通过此应用程序，可以启动多个客户端通过 SignalR 集线器相互通信。当其中一个客户端应用程序发送消息时，所有连接的客户端都会依次收到此消息。
+
+服务器应用程序使用 ASP.NET 4.6 编写；其中一个客户端使用 HTML 和 JavaScript 创建，另一个客户端应用程序是使用 WPF 作为用户界面的 .NET 应用程序。
+
+### 创建集线器
+
+如前所述，SignalR 不支持 ASP.NET Core——至少在撰写本文时是这样。因此，您需要创建一个新的 ASP.NET Web 应用程序，选择 Empty ASP.NET 4.6 模板，并将其命名为 ChatServer。创建项目后，添加一个新项并选择 SignalR Hub 类（参见图43.2）。添加此项还会添加服务器端所需的 NuGet 包。
+
+![](img/3d365b72b289213a91ade7eb366b8f35_1666_0.png)
+
+图43.2
+
+为了定义 SignalR 的 URL，您可以创建一个 OWIN Startup 类（使用 OWIN Startup Class 项模板），并在 Configuration 方法中添加对 MapSignalR 的调用。MapSignalR 方法将 SignalR URI 定义为指向 SignalR 集线器的请求路径（代码文件 ChatServer/Startup.cs）：
+
+```
+using Microsoft.Owin;
+using Owin;
+
+[assembly: OwinStartup(typeof(ChatServer.Startup))]
+
+namespace ChatServer
+{
+    public class Startup
+    {
+        public void Configuration(IAppBuilder app)
+        {
+            app.MapSignalR();
+        }
+    }
+}
+```
+
+SignalR 的主要功能是在集线器中定义的。集线器由客户端间接调用，反过来客户端也被调用。ChatHub 类继承自基类 Hub 以获得所需的集线器功能。Send 方法被定义为由客户端应用程序调用，以向其他客户端发送消息。您可以使用任何方法名称和任意数量的参数。客户端代码只需要匹配方法名称和参数即可。要向客户端发送消息，可以使用 Hub 类的 Clients 属性。Clients 属性返回一个 `IHubCallerConnectionContext<dynamic>`，它允许向特定客户端或所有已连接的客户端发送消息。示例代码使用 All 属性对所有已连接的客户端调用 BroadcastMessage 方法。All 属性（以 Hub 类作为基类）返回一个动态对象。这样，您可以使用任意数量的参数调用任何您喜欢的方法名称；客户端代码只需要匹配即可（代码文件 ChatServer/ChatHub.cs）：
+
+```
+public class ChatHub : Hub
+{
+    public void Send(string name, string message)
+    {
+        Clients.All.BroadcastMessage(name, message);
+    }
+}
+```
+
+> **注意** 动态类型在第16章“反射、元数据和动态编程”中解释。
+
+> **注意** 除了在集线器实现中使用动态类型，您也可以定义自己的接口，其中包含在客户端调用的方法。本章后面的“连接分组”部分将展示如何实现这一点，届时会添加分组功能。
+
+### 使用 HTML 和 JavaScript 创建客户端
+
+借助 SignalR JavaScript 库，您可以轻松创建 HTML/JavaScript 客户端来使用 SignalR 集线器。客户端代码连接到 SignalR 集线器，调用 Send 方法，并添加一个处理器来接收 BroadcastMessage 方法。
+
+对于用户界面，定义了两个简单的输入元素，用于输入要发送的名称和消息，一个按钮用于调用 Send 方法，以及一个无序列表，用于显示所有收到的消息（代码文件 ChatServer/ChatWindow.html）：
+

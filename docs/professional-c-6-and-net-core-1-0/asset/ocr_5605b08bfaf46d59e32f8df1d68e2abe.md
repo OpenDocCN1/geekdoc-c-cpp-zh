@@ -1,0 +1,11 @@
+developer. Using ASP.NET Web Forms, it’s not necessary to know HTML and JavaScript. Instead you use server-side controls with C# code. The server-side controls themselves return HTML and JavaScript. This programming model is similar to the old Windows Forms programming model. With ASP.NET MVC, developers need to know HTML and JavaScript. ASP.NET MVC is based on the Model-View-Controller (MVC) pattern, which makes unit testing easy. Because ASP.NET Web Forms and ASP.NET MVC are based on very different architecture patterns, it can be a huge undertaking to migrate ASP.NET Web Forms applications to ASP.NET MVC. Before taking on this task, you should create a checklist of the advantages and the disadvantages of keeping the old technology with your solution and compare this with the advantages and disadvantages of going to the new technology. You will still be able to work with ASP.NET Web Forms for many years to come.
+
+> **NOTE** *My website at http://www.cninnoation.com was originally created with ASP.NET Web Forms. I’ve converted this website with an early version of ASP.NET MVC to this new technology stack. Because my original site already made use of a lot of separate components to abstract the database and service code, it was not really a huge undertaking and was done very fast. I was able to use the database and service code directly from ASP.NET MVC. On the other hand, if I had used Web Forms controls to access the database instead of using my own controls, it would have been a lot more work.*
+
+> **NOTE** *This book does not cover the legacy technology ASP.NET Web Forms. ASP.NET MVC 5 is also not covered. This book has a focus on new technologies; consequently with regard to web applications, the material is based on ASP.NET 5 and ASP.NET MVC 6. These technologies should be used for new web applications. In case you need to maintain older applications, you should read older editions of this book, such as Professional C# 5.0 and .NET 4.5.1, which covers ASP.NET 4.5, ASP.NET Web Forms 4.5, and ASP.NET MVC 5.*
+
+This chapter covers the foundation of ASP.NET Core 1.0, and Chapter 41 explains using ASP.NET MVC 6, a framework that is built on top of ASP.NET Core 1.0.
+
+# Web Technologies
+
+Before getting into the foundations of ASP.NET later in this chapter, this section describes core web technologies that are important to know

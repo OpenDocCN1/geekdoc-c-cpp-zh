@@ -1,0 +1,5 @@
+# About the Technical Editor
+
+**ISTVÁN NOVÁK** is an associate and the chief technology consultant with SoftwArt, a small Hungarian IT consulting company. He works as a software architect and community evangelist. In the last 25 years, he has participated in more than 50 enterprise software development projects. In 2002, he coauthored the first Hungarian book about .NET development. In 2007, he was awarded the Microsoft Most Valuable Professional (MVP) title, and in 2011 he became a Microsoft Regional Director. István coauthored *Visual Studio 2010 and .NET 4 Six-in-One* (Wiley, 2010) and *Beginning Windows 8 Application Development* (Wiley, 2012), and he authored *Beginning Visual Studio LightSwitch Development* (Wiley, 2011). István holds master’s degree from the Technical University of Budapest, Hungary and also has a doctoral degree in software technology. He lives in Dunakeszi, Hungary, with his wife and two daughters. He is a passionate scuba diver. You may have a good chance of meeting him underwater in the Red Sea, any season of the year.
+
+![](bbox=[0.425, 0.428, 0.576, 0.531])

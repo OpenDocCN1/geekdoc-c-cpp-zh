@@ -1,0 +1,9 @@
+keyword. Behind the scenes, it’s the Monitor type that allows setting timeouts, which is not possible with the lock keyword. For synchronization between processes, the Mutex object offers similar functionality. With the Semaphore object you’ve seen a synchronization object with a count—a number of tasks are allowed to run concurrently. To inform others on information that is ready, different kinds of event objects have been discussed, such as the AutoResetEvent, ManualResetEvent, and CountdownEvent. A simple way to have multiple readers and one writer is offered by the ReaderWriterLock. The Barrier type offers a more complex scenario where multiple tasks can run concurrently until a synchronization point is reached. As soon as all tasks reach this point, all can continue concurrently to meet at the next synchronization point.
+
+Here are some final guidelines regarding threading:
+
++   - Try to keep synchronization requirements to a minimum. Synchronization is complex and blocks threads. You can avoid it if you try to avoid sharing state. Of course, this is not always possible.
++   - Static members of a class should be thread-safe. Usually, this is the case with classes in the .NET Framework.
++   - Instance state does not need to be thread-safe. For best performance, synchronization is best used outside the class where it is needed, and not with every member of the class. Instance members of .NET Framework classes usually are not thread-safe. In the MSDN library, you can find this information documented for every class of the .NET Framework in the “Thread Safety” section.
+
+The next chapter gives information on another core .NET topic: files and streams.

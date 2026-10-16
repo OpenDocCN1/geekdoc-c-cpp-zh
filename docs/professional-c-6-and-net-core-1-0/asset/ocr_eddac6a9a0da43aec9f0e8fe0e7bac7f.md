@@ -1,0 +1,14 @@
+> **NOTE** *In Windows, the objects that contain files and that are used to organize the file system are termed folders. For example, in the path `C:\My Documents\ReadMe .txt`, `ReadMe.txt` is a file and `My Documents` is a folder. “Folder” is a very Windows-specific term. On virtually every other operating system, the term “directory” is used in place of “folder,” and in accordance with Microsoft’s goal to design .NET as a platform-independent technology, the corresponding .NET base classes are called `Directory` and `DirectoryInfo`. However, due to the potential for confusion with LDAP directories and because this is a Windows book, I’m sticking to the term “folder” in this discussion.*
+
+Notice in the previous list that two classes are used to work with folders and two classes are for working with files. Which one of these classes you use depends largely on how many operations you need to access that folder or file:
+
++   - `Directory` and `File` contain only static methods and are never instantiated. You use these classes by supplying the path to the appropriate file system object whenever you call a member method. If you want to do only one operation on a folder or file, using these classes is more efficient because it saves the overhead of creating a .NET object.
++   - `DirectoryInfo` and `FileInfo` implement roughly the same public methods as `Directory` and `File`, as well as some public properties and constructors, but they are stateful and the members of these classes are not static. You need to instantiate these classes before each instance is associated with a particular folder or file. This means that these classes are more efficient if you are performing multiple operations using the same object. That’s because they read in the authentication and other information for the appropriate file system object on construction, and then they do not need to read that information again, no matter how many methods and so on you call against each object (class instance). In comparison, the corresponding stateless classes need to check the details of the file or folder again with every method you call.
+
+# Checking Drive Information
+
+Before working with files and folders, let’s check the drives of the system. You use the `DriveInfo` class, which can perform a scan of a system to provide a list of available drives and then dig in deeper to provide a large amount of detail about any of the drives.
+
+To demonstrate using the `DriveInfo` class, the following example creates a simple Console application that lists information of all the available drives on a computer.
+
+The sample code for DriveInformation makes use of the following
