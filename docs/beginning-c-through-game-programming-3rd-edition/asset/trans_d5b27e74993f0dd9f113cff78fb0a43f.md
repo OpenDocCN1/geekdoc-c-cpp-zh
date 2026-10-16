@@ -1,0 +1,351 @@
+
+
+```cpp
+protected:
+    string m_Name;
+};
+```
+
+```cpp
+GenericPlayer::GenericPlayer(const string& name):
+    m_Name(name)
+{}
+```
+
+```cpp
+GenericPlayer::~GenericPlayer()
+{}
+```
+
+```cpp
+bool GenericPlayer::IsBusted() const
+{
+    return (GetTotal() > 21);
+}
+```
+
+```cpp
+void GenericPlayer::Bust() const
+{
+    cout << m_Name << " busts.\n";
+}
+```
+
+我将重载的 operator<<( ) 函数设为该类的友元，以便在屏幕上显示 GenericPlayer 对象。它接受一个 GenericPlayer 对象的引用，这意味着它也接受 Player 或 House 对象的引用。
+
+构造函数接受一个 string 对象作为通用玩家的名字。析构函数自动为虚函数，因为它从 Hand 继承了这一特性。
+
+IsHitting() 成员函数表示通用玩家是否想要另一张牌。由于这个成员函数对通用玩家来说没有实际意义，我将其设为纯虚函数。因此，GenericPlayer 成为一个抽象类。这也意味着 Player 和 House 都需要实现各自版本的该成员函数。
+
+IsBusted() 成员函数表示通用玩家是否已经爆牌。因为玩家和庄家爆牌的方式相同——总点数大于 21——所以我把定义放在这个类中。
+
+Bust() 成员函数宣布通用玩家爆牌。因为玩家和庄家爆牌的宣布方式相同，所以我把这个成员函数的定义放在这个类中。
+
+## Player 类
+
+Player 类代表人类玩家。它派生自 GenericPlayer。
+
+```cpp
+class Player : public GenericPlayer
+{
+public:
+	Player(const string& name = "");
+	virtual ~Player();
+
+	virtual bool IsHitting() const;
+
+	//announces that the player wins
+	void Win() const;
+
+	//announces that the player loses
+	void Lose() const;
+
+	//announces that the player pushes
+	void Push() const;
+};
+```
+
+```cpp
+Player::Player(const string& name):
+	GenericPlayer(name)
+{}
+```
+
+```cpp
+Player::~Player()
+{}
+```
+
+```cpp
+bool Player::IsHitting() const
+{
+	cout << m_Name << ", do you want a hit? (Y/N): ";
+	char response;
+	cin >> response;
+	return (response == 'y' || response == 'Y');
+}
+```
+
+```cpp
+void Player::Win() const
+{
+	cout << m_Name << " wins.\n";
+}
+```
+
+```cpp
+void Player::Lose() const
+{
+    cout << m_Name << " loses.\n";
+}
+```
+
+```cpp
+void Player::Push() const
+{
+    cout << m_Name << " pushes.\n";
+}
+```
+
+该类实现了从 GenericPlayer 继承的 IsHitting() 成员函数。因此，Player 不是抽象类。该类通过询问人类是否继续要牌来实现该成员函数。如果人类在问题后输入 y 或 Y，该成员函数返回 true，表示玩家继续要牌。如果人类输入其他字符，该成员函数返回 false，表示玩家不再要牌。
+
+Win()、Lose() 和 Push() 成员函数分别简单地宣布玩家获胜、失败或平局。
+
+## House 类
+
+House 类代表庄家。它派生自 GenericPlayer。
+
+```cpp
+class House : public GenericPlayer
+{
+public:
+    House(const string& name = "House");
+
+    virtual ~House();
+
+    //indicates whether house is hitting - will always hit on 16 or less
+    virtual bool IsHitting() const;
+
+    //flips over first card
+    void FlipFirstCard();
+};
+```
+
+```cpp
+public:
+    Deck();
+    virtual ~Deck();
+    //create a standard deck of 52 cards
+    void Populate();
+    //shuffle cards
+    void Shuffle();
+    //deal one card to a hand
+    void Deal(Hand& aHand);
+    //give additional cards to a generic player
+    void AdditionalCards(GenericPlayer& aGenericPlayer);
+};
+```
+
+```cpp
+Deck::Deck()
+{
+    m_Cards.reserve(52);
+    Populate();
+}
+```
+
+```cpp
+Deck::~Deck()
+{}
+```
+
+```cpp
+void Deck::Populate()
+{
+    Clear();
+    //create standard deck
+    for (int s = Card::CLUBS; s <= Card::SPADES; ++s)
+    {
+        for (int r = Card::ACE; r <= Card::KING; ++r)
+        {
+            Add(new Card(static_cast<Card::rank>(r),
+                        static_cast<Card::suit>(s)));
+        }
+    }
+}
+```
+
+```cpp
+void Deck::Shuffle()
+{
+    random_shuffle(m_Cards.begin(), m_Cards.end());
+}
+```
+
+```cpp
+void Deck::Deal(Hand& aHand)
+{
+    if (!m_Cards.empty())
+    {
+        aHand.Add(m_Cards.back());
+        m_Cards.pop_back();
+    }
+    else
+    {
+        cout << "Out of cards. Unable to deal.";
+    }
+}
+```
+
+```cpp
+void Deck::AdditionalCards(GenericPlayer& aGenericPlayer)
+{
+    cout << endl;
+    //continue to deal a card as long as generic player isn't busted and
+    //wants another hit
+    while (!aGenericPlayer.IsBusted() && aGenericPlayer.IsHitting())
+    {
+        Deal(aGenericPlayer);
+        cout << aGenericPlayer << endl;
+
+        if (aGenericPlayer.IsBusted())
+        {
+            aGenericPlayer.Bust();
+        }
+    }
+}
+```
+
+## 提示
+
+*类型转换*是将一种类型的值转换为另一种类型的值的方法。进行类型转换的一种方式是使用 `static_cast`。你可以在 `<` 和 `>` 之间指定你想要的新类型，然后在括号内给出你想从中获取新值的原始值，从而使用 `static_cast` 从另一种类型的值返回新类型的值。下面是一个返回 double 值 5.0 的示例。
+
+```cpp
+static_cast<double>(5);
+```
+
+Populate() 创建一副标准的 52 张牌。该成员函数遍历 Card::suit 和 Card::rank 值的所有可能组合。它使用 static_cast 将 int 循环变量转换为 Card 中定义的适当枚举类型。
+
+Shuffle() 对牌堆中的牌进行洗牌。它使用标准模板库中的 random_shuffle() 随机重新排列 m_Cards 中的指针。这就是我包含 <algorithm> 头文件的原因。
+
+Deal() 从牌堆中发一张牌给一手牌。它通过对象的 Add() 成员函数，将 m_Cards 末尾的指针副本添加到该对象。然后，它移除 m_Cards 末尾的指针，从而有效地转移这张牌。Deal() 的强大之处在于它接受一个 Hand 对象的引用，这意味着它可以同样良好地处理 Player 或 House 对象。而且通过多态性的魔力，Deal() 无需知道确切的对象类型就能调用对象的 Add() 成员函数。
+
+AdditionalCards() 向通用玩家发额外的牌，直到该通用玩家停止要牌或爆牌。该成员函数接受一个 GenericPlayer 对象的引用，因此你可以向其传递 Player 或 House 对象。同样，通过多态性的魔力，AdditionalCards() 无需知道它处理的是 Player 对象还是 House 对象。它可以在不知道对象类型的情况下调用对象的 IsBusted() 和 IsHitting() 成员函数，并且将执行正确的代码。
+
+## Game 类
+
+Game 类代表一局二十一点游戏。
+
+```cpp
+class Game
+{
+public:
+    Game(const vector<string>& names);
+
+    ~Game();
+
+    //plays the game of blackjack
+    void Play();
+```
+
+```cpp
+private:
+    Deck m_Deck;
+    House m_House;
+    vector<Player> m_Players;
+};
+```
+
+```cpp
+Game::Game(const vector<string>& names)
+{
+    //create a vector of players from a vector of names
+    vector<string>::const_iterator pName;
+    for (pName = names.begin(); pName != names.end(); ++pName)
+    {
+        m_Players.push_back(Player(*pName));
+    }
+
+    //seed the random number generator
+    srand(static_cast<unsigned int>(time(0)));
+    m_Deck.Populate();
+    m_Deck.Shuffle();
+}
+```
+
+```cpp
+Game::~Game()
+{}
+```
+
+```cpp
+void Game::Play()
+{
+    //deal initial 2 cards to everyone
+    vector<Player>::iterator pPlayer;
+    for (int i = 0; i < 2; ++i)
+    {
+        for (pPlayer = m_Players.begin(); pPlayer != m_Players.end();
+            ++pPlayer)
+        {
+            m_Deck.Deal(*pPlayer);
+        }
+        m_Deck.Deal(m_House);
+    }
+
+    //hide house's first card
+    m_House.FlipFirstCard();
+```
+
+```cpp
+//display everyone's hand
+for (pPlayer = m_Players.begin(); pPlayer != m_Players.end(); ++pPlayer)
+{
+	cout << *pPlayer << endl;
+}
+cout << m_House << endl;
+//deal additional cards to players
+for (pPlayer = m_Players.begin(); pPlayer != m_Players.end(); ++pPlayer)
+{
+	m_Deck.AdditionalCards(*pPlayer);
+}
+//reveal house's first card
+m_House.FlipFirstCard();
+cout << endl << m_House;
+//deal additional cards to house
+m_Deck.AdditionalCards(m_House);
+if (m_House.IsBusted())
+{
+	//everyone still playing wins
+	for (pPlayer = m_Players.begin(); pPlayer != m_Players.end(); ++pPlayer)
+	{
+		if ( !(pPlayer->IsBusted()) )
+		{
+			pPlayer->Win();
+		}
+	}
+}
+else
+{
+	//compare each player still playing to house
+	for (pPlayer = m_Players.begin(); pPlayer != m_Players.end(); ++pPlayer)
+	{
+		if ( !(pPlayer->IsBusted()) )
+		{
+			if (pPlayer->GetTotal() > m_House.GetTotal())
+			{
+				pPlayer->Win();
+			}
+			else if (pPlayer->GetTotal() < m_House.GetTotal())
+			{
+				pPlayer->Lose();
+			}
+			else
+			{
+				pPlayer->Push();
+			}
+		}
+	}
+}
+```
+

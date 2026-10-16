@@ -1,0 +1,27 @@
+Q: Do all games use the game loop?
+
+A: The game loop is just a way of looking at a typical game’s flow of events. And just because this paradigm fits a particular game, that doesn’t necessarily mean that the game is implemented with a loop around the bulk of its code.
+
+# DISCUSSION QUESTIONS
+
++   1. What kinds of things would be difficult to program without loops?
++   2. What are the advantages and disadvantages of the `switch` statement versus a series of `if` statements?
++   3. When might you omit a `break` statement from the end of a `case` in a `switch` statement?
++   4. When should you use a `while` loop over a `do` loop?
++   5. Describe your favorite game in terms of the game loop. Is the game loop a good fit?
+
+# EXERCISES
+
++   1. Rewrite the Menu Chooser program from this chapter using an enumeration to represent difficulty levels. The variable `choice` will still be of type `int`.
++   2. What’s wrong with the following loop?
+
+```
+int x = 0;
+while (x)
+{
+    ++x;
+    cout << x << endl;
+}
+```
+
++   3. Write a new version of the Guess My Number program in which the player and the computer switch roles. That is, the player picks a number and the computer must guess what it is.

@@ -1,0 +1,11 @@
+8. The program reaches the inner loop, which starts from the beginning once again, by declaring and initializing j to 0. The program goes through the process I described in Steps 2 through 7, displaying the second row of the grid. This process continues until all five rows have been displayed.
+
+Again, the important thing to remember is that the inner loop is executed in full for each iteration of the outer loop.
+
+# UNDERSTANDING OBJECTS
+
+So far you’ve seen how to store individual pieces of information in variables and how to manipulate those variables using operators and functions. But most of the things you want to represent in games—such as, say, an alien spacecraft—are objects. They’re encapsulated, cohesive things that combine qualities (such as an energy level) and abilities (for example, firing weapons). Often it makes no sense to talk about the individual qualities and abilities in isolation from each other.
+
+Fortunately, most modern programming languages let you work with software objects (often just called objects) that combine data and functions. A data element of an object is called a data member, while a function of an object is called a member function. As a concrete example, think about that alien spacecraft. An alien spacecraft object might be of a new type called Spacecraft, defined by a game programmer, and might have a data member for its energy level and a member function to fire its weapons. In practice, an object’s energy level might be stored in its data member energy as an int, and its ability to fire its weapons might be defined in a member function called fireWeapons().
+
+Every object of the same type has the same basic structure, so each object will have the same set of data members and member functions. However, as an individual, each object will have its own values for its data members. If you had a squadron of five alien spacecrafts, each would have its own energy level. One might have an energy level of 75, while another might have a level of only 10, and so on. Even if two crafts have the same energy level, each would belong to a unique spacecraft. Each craft could also fire its own weapons with a call to its member function, fireWeapons(). Figure 3.2 illustrates the concept of an alien spacecraft.

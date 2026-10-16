@@ -1,0 +1,193 @@
+
+
+返回一个引用被移除元素之后的元素迭代器。在这种情况下，我没有将返回的迭代器赋值给变量。
+
+## Trap
+
+> 在 vector 上调用 erase() 成员函数会使所有引用移除点之后元素的迭代器失效，因为移除点之后的所有元素都会向上移动一位。
+
+接下来我展示 vector 的内容以证明移除操作成功。
+
+## USING ALGORITHMS
+
+STL 定义了一组算法，允许你通过迭代器操作容器中的元素。算法存在于诸如搜索、随机化和排序等常见任务中。这些算法是你内置的灵活且高效的武器库。通过使用它们，你可以将以常见方式操作容器元素这种繁琐的任务交给 STL，这样你就可以专注于编写游戏。这些算法的强大之处在于它们是通用的——同一个算法可以与不同容器类型的元素一起工作。
+
+## Introducing the High Scores Program
+
+High Scores 程序创建一个高分 vector。它使用 STL 算法来搜索、洗牌和排序分数。图 4.5 说明了该程序。
+
+![](img/34f09be0ed6217c465debc4490197d4f_153_0.png)
+
+Figure 4.5
+STL algorithms search, shuffle, and sort elements of a vector of high scores.
+
+你可以从 Course Technology 网站 (www.courseptr.com/downloads) 下载此程序的代码。该程序位于 Chapter 4 文件夹中；文件名是 high_scores.cpp。
+
+```
+// High Scores
+// Demonstrates algorithms
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+int main()
+{
+    vector<int>::const_iterator iter;
+
+    cout << "Creating a list of scores.";
+    vector<int> scores;
+    scores.push_back(1500);
+    scores.push_back(3500);
+    scores.push_back(7500);
+
+    cout << "\nHigh Scores:\n";
+    for (iter = scores.begin(); iter != scores.end(); ++iter)
+    {
+        cout << *iter << endl;
+    }
+
+    cout << "\nFinding a score.";
+    int score;
+    cout << "\nEnter a score to find: ";
+    cin >> score;
+    iter = find(scores.begin(), scores.end(), score);
+    if (iter != scores.end())
+{
+    cout << "Score found.\n";
+}
+else
+{
+    cout << "Score not found.\n";
+}
+
+cout << "\nRandomizing scores.";
+srand(static_cast<unsigned int>(time(0)));
+random_shuffle(scores.begin(), scores.end());
+cout << "\nHigh Scores:\n";
+for (iter = scores.begin(); iter != scores.end(); ++iter)
+{
+    cout << *iter << endl;
+}
+
+cout << "\nSorting scores.";
+sort(scores.begin(), scores.end());
+cout << "\nHigh Scores:\n";
+for (iter = scores.begin(); iter != scores.end(); ++iter)
+{
+    cout << *iter << endl;
+}
+
+return 0;
+}
+```
+
+## Preparing to Use Algorithms
+
+为了我能使用 STL 算法，我包含了它们的定义文件。
+
+```
+#include <algorithm>
+```
+
+如你所知，所有 STL 组件都位于 std 命名空间中。通过使用以下代码（我通常这样做），我可以在不使用 std:: 前缀的情况下引用算法。
+
+```
+using namespace std;
+```
+
+## Using the find() Algorithm
+
+在我显示 vector scores 的内容之后，我从用户那里获取一个要查找的值并将其存储在变量 score 中。然后我使用 find() 算法在 vector 中搜索该值：
+
+```
+iter = find(scores.begin(), scores.end(), score);
+```
+
+find() STL 算法在容器元素的指定范围内搜索一个值。它返回引用第一个匹配元素的迭代器。如果未找到匹配项，它返回指向范围末尾的迭代器。你必须传递起始点作为迭代器、结束点作为迭代器，以及要查找的值。算法从起始迭代器搜索到但不包括结束迭代器。在这种情况下，我将 scores.begin() 和 scores.end() 作为第一个和第二个参数传递以搜索整个 vector。我将 score 作为第三个参数传递以搜索用户输入的值。
+
+接下来我检查值 score 是否被找到：
+
+```
+if (iter != scores.end())
+{
+    cout << "Score found.\n";
+}
+else
+{
+    cout << "Score not found.\n";
+}
+```
+
+记住，iter 将引用 vector 中 score 的第一次出现，如果该值被找到。因此，只要 iter 不等于 scores.end()，我就知道 score 被找到了并显示一条消息。否则，iter 将等于 scores.end()，我知道 score 未被找到。
+
+## Using the random_shuffle() Algorithm
+
+接下来我准备使用 random_shuffle() 算法对分数进行随机化。就像生成单个随机数时一样，我在调用 random_shuffle() 之前为随机数生成器设置种子，这样每次运行程序时分数的顺序可能不同。
+
+```
+srand(static_cast<unsigned int>(time(0)));
+```
+
+然后我以随机方式重新排序分数。
+
+```
+random_shuffle(scores.begin(), scores.end());
+```
+
+random_shuffle() 算法随机化序列的元素。你必须提供序列的起始和结束点的迭代器。在这种情况下，我传递了 scores.begin() 和 scores.end() 返回的迭代器。这两个迭代器表示我想要洗牌 scores 中的所有元素。结果是，scores 包含相同的分数，但顺序是随机的。
+
+然后我显示分数以证明随机化有效。
+
+## Trick
+
+虽然你可能不想随机化高分列表，但 random_shuffle() 对于游戏来说是一个有价值的算法。你可以用它做各种事情，从洗牌一副牌到混合玩家在游戏关卡中会遇到的敌人的顺序。
+
+## Using the sort() Algorithm
+
+接下来我对分数进行排序。
+
+```
+sort(scores.begin(), scores.end());
+```
+
+sort() 算法按升序对序列的元素进行排序。你必须提供要排序的序列的起始和结束点的迭代器。在这种特定情况下，我传递了 scores.begin() 和 scores.end() 返回的迭代器。这两个迭代器表示我想要对 scores 中的所有元素进行排序。结果是，scores 包含所有按升序排列的分数。
+
+最后，我显示分数以证明排序有效。
+
+## Trick
+
+STL 算法的一个非常酷的属性是它们可以与 STL 之外定义的容器一起工作。这些容器只需要满足某些要求。例如，即使 string 对象不是 STL 的一部分，你也可以在它们上使用适当的 STL 算法。以下代码片段演示了这一点：
+
+```
+string word = "High Scores";
+random_shuffle(word.begin(), word.end());
+```
+
+前面的代码随机洗牌 word 中的字符。如你所见，string 对象同时具有 begin() 和 end() 成员函数，分别返回指向第一个字符和最后一个字符之后位置的迭代器。这就是 STL 算法能与字符串一起工作的原因之一——因为它们就是这样设计的。
+
+## UNDERSTANDING VECTOR PERFORMANCE
+
+像所有 STL 容器一样，vector 为游戏程序员提供了处理信息的高级方法，但这种复杂性可能会带来性能成本。而如果有一件事游戏程序员痴迷，那就是性能。但别担心，vector 和其他 STL 容器是极其高效的。事实上，它们已经在已发布的 PC 和主机游戏中被使用过。然而，这些容器有其优势和劣势；游戏程序员需要了解各种容器类型的性能特征，以便他能为任务选择合适的容器。
+
+## Examining Vector Growth
+
+虽然 vector 在需要时动态增长，但每个 vector 都有特定的大小。当向 vector 添加新元素使 vector 超出其当前大小时，计算机重新分配内存，甚至可能将所有 vector 元素复制到这块新占用的内存空间中。这可能会导致性能下降。
+
+关于程序性能最重要的是要记住是否需要关心。例如，vector 内存重新分配可能不会发生在程序的性能关键部分。在这种情况下，你可以安全地忽略重新分配的成本。此外，对于小型 vector，重新分配成本可能微不足道，因此再次可以安全地忽略它。然而，如果你需要更大程度地控制这些内存重新分配发生的时机，你可以做到。
+
+## Using the capacity() Member Function
+
+capacity() vector 成员函数返回 vector 的容量——换句话说，vector 在程序必须为其重新分配更多内存之前可以容纳的元素数量。vector 的容量与它的大小（vector 当前持有的元素数量）不是同一回事。以下代码片段有助于强调这一点：
+
+```
+cout << "Creating a 10 element vector to hold scores.\n";
+vector<int> scores(10, 0); //initialize all 10 elements to 0
+cout << "Vector size is:" << scores.size() << endl;
+cout << "Vector capacity is:" << scores.capacity() << endl;
+```
+

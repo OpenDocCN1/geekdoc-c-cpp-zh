@@ -1,0 +1,18 @@
+Back in testAssignment0p(), I prove that the assignment worked by calling crit1.Greet() and crit2.Greet(). crit1 displays the message I'm crit2 and I'm 9 years old. &m_pName: 73F2ED48003AF644 while crit2 displays the message I'm crit2 and I'm 9 years old. &m_pName: 73F2ED48003AF634. The first part of each message, I'm crit2 and I'm 9 years old., is the same and shows that the copying of values worked. The second part of each message is different and shows that each object points to different chunks of memory on the heap, which demonstrates that I avoided shallow copies and have truly independent objects after the assignment.
+
+In the last test of the overloaded assignment operator, I demonstrate what happens when you assign an object to itself. That's what I do next in the function with the following lines:
+
+```
+Critter crit3("crit", 11);
+crit3 = crit3;
+```
+
+The preceding assignment statement, crit3 = crit3;, calls the assignment operator member function—operator=()—for crit3. The if statement checks to see whether crit3 is being assigned to itself. Because it is, the member function simply returns a reference to the object through return *this. You should follow this logic in your own overloaded assignment operator because of potential problems that can arise from only one object being involved in an assignment.
+
+# Hint
+
+When you have a class with a data member that points to memory on the heap, you should consider overloading the assignment operator for the class.
+
+# INTRODUCING THE GAME LOBBY PROGRAM
+
+The Game Lobby program simulates a game lobby—a waiting area for players, usually in an online game. The program doesn't actually involve an online component. It creates a single line in which players can wait. The user of the program runs the simulation and has four choices. He can add a person to the lobby, remove a person from the lobby (the first person in line is the first to leave), clear out the lobby, or quit the simulation. Figure 9.11 shows the program in action.

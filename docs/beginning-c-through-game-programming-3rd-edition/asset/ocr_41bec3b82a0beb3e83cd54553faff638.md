@@ -1,0 +1,26 @@
+structures. Although they are not official containers, they look and feel just like them. Table 4.1 lists the container types offered by the STL.
+
+Table 4.1 STL Containers
+
+| Container | Type | Description |
+|---|---|---|
+| deque | Sequential | Double-ended queue |
+| list | Sequential | Linear list |
+| map | Associative | Collection of key/value pairs in which each key is associated with exactly one value |
+| multimap | Associative | Collection of key/value pairs in which each key may be associated with more than one value |
+| multiset | Associative | Collection in which each element is not necessarily unique |
+| priority_queue | Adaptor | Priority queue |
+| queue | Adaptor | Queue |
+| set | Associative | Collection in which each element is unique |
+| stack | Adaptor | Stack |
+| vector | Sequential | Dynamic array |
+
+# PLANNING YOUR PROGRAMS
+
+So far, all the programs you’ve seen have been pretty simple. The idea of formally planning any of them on paper probably seems like overkill. It’s not—planning your programs (even the small ones) will almost always result in time (and frustration) saved.
+
+Programming is a lot like construction. Imagine a contractor building a house for you without a blueprint. Yikes! You might end up with a house that has 12 bathrooms, no windows, and a front door on the second floor. Plus, it probably would cost you 10 times the estimated price. Programming is the same way. Without a plan, you’ll likely struggle through the process and waste time. You might even end up with a program that doesn’t quite work.
+
+# Using Pseudocode
+
+Many programmers sketch out their programs using pseudocode—a language that falls somewhere between English and a formal programming language. Anyone who understands English should be able to follow pseudocode. Here’s

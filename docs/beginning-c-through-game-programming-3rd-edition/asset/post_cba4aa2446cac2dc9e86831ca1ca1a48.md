@@ -1,0 +1,377 @@
+
+## Index
+
+### H
+
+- has-a relationships, 290
+- header file, 8
+- heap
+  - data members and, 303–315
+  - declaring and defining copy constructors, 309–313
+  - declaring and defining destructors, 308–309
+  - declaring to values on heap, 307–308
+  - Heap Data Member program, 303–307
+  - overloading assignment operator, 313–315
+  - memory, 296, 325
+- Heap Data Member program, 303–307
+- Heap program, 297–299
+- Hero's Inventory program, 96–98
+  - version 2.0, 117–119
+  - version 3.0, 123–125
+- hide_global() function, 169
+- hiding
+  - global variables, 169
+  - variables, 185
+- high parameter, askNumber() function, 173
+- High Scores program, 131–133
+- House class, BlackJack, 357, 360, 369–370
+- House m_House member, BlackJack Game class, 360
+- humanMove() function, Tic-Tac-Toe game, 213
+- humanPiece() function, Tic-Tac-Toe game, 209–210
+
+### I
+
+- IDE (Integrated Development Environment), 3–4
+- identifier, 20, 31
+- if statements, 39–45
+  - defining variables inside, 166
+  - with else clauses, 48–51
+    - creating sequence of, 50–51
+    - Score Rater 3.0 program, 49–50
+  - nesting, 44–45
+  - relational operators, 44
+  - Score Rater program, 41–42
+  - true and false values
+    - interpreting, 43
+    - testing, 42–43
+- increment operator (++), 27–28
+- indexing
+  - arrays, 99–100
+  - multidimensional arrays, 105–106
+  - string objects, 93
+  - vectors, 121
+- infinite loop, 58, 78–79
+- inheritance, 331–346, 356–380
+  - base class member functions, 340–346
+    - calling, 345–346
+    - calling base class constructors, 343–344
+    - declaring virtual, 344
+    - Overriding Boss program, 341–343
+    - overriding virtual, 344–345
+  - Blackjack game, 356–379
+    - Card class, 361–363
+    - Deck class, 370–373
+    - designing classes, 356–360
+    - Game class, 373–376
+    - GenericPlayer class, 366–367
+    - Hand class, 363–366
+    - House class, 369–370
+    - main() function, 376–377
+    - overloading the operator() function, 377–379
+    - planning game logic, 360–361
+    - Player class, 368–369
+  - controlling access under, 337–340
+    - access modifiers, 339–340
+    - Simple Boss 2.0 program, 338–339
+  - deriving from base classes, 335–336
+  - inherited members, 337
+  - instantiating objects from derived classes, 336–337
+  - overloaded assignment operators and copy constructors, 346–347
+  - Simple Boss program, 333–335
+- initialization statement, for loop, 82
+- initializer list, 99
+- initializing
+  - constant pointer, 231
+  - pointers, 227, 250
+  - references, 189
+  - static data members, 272
+  - variables, 22
+- inlining functions, 177–180, 268, 282
+  - calling inlined functions, 179–180
+  - specifying functions for, 179
+  - Taking Damage program, 177–179
+- inner loop, 86–87
+- insert() vector member function, 130
+- instances, class, 259
+- instantiating objects, 259, 263
+- instructions() function
+  - Mad Lib game, 154
+  - Tic-Tac-Toe game, 208
+- Instructions program, 152–153
+- int type, 18, 19tbl, 112
+- int argument, 175
+- int GetTotal() const member, BlackJack Hand class, 359
+- int GetValue() member, BlackJack Card class, 359
+- integer division, 14–15
+- integer variables, 21
+- integer wrap around, 26, 28–29
+- integers, 14, 78
+- Integrated Development Environment (IDE), 3–4
+- intOnHeap() function, 300
+- Inventory Displayer program, 195–196
+- Inventory Pointer program, 239–240
+- iostream file, 8–9, 36
+- isLegal() function, Tic-Tac-Toe game, 212–213
+- ISO standard, 5
+- iterating through string objects, 93–94
+- iterators, 123–131
+  - accessing member functions of vector element, 129–130
+  - changing value of vector element, 128–129
+  - declaring, 125–126
+  - defined, 116, 146
+  - erase() vector member function, 130–131
+  - Hero's Inventory 3.0 program, 123–125
+  - insert() vector member function, 130
+  - looping through vector, 126–128
+    - altering an iterator, 128
+    - calling begin() vector member function, 127
+    - calling end() vector member function, 127–128
+    - dereferencing an iterator, 128
+  - vector member functions and, 147
+- iterators through vector, 126–128
+  - altering an iterator, 128
+  - calling begin() vector member function, 127
+  - calling end() vector member function, 127–128
+  - dereferencing an iterator, 128
+
+### K
+
+- keywords, 20, 391–392
+
+### L
+
+- late binding, 351
+- length() member function, 92
+- less than (<) operator, 40tbl
+- less than or equal to (<=) operator, 40tbl
+- link errors, 4
+- linked list, 318–319
+- list STL container, 139
+- literals, 37
+- Lobby class, Game Lobby program, 318–320
+- Lobby::AddPlayer() member function, Game Lobby program, 320–322
+- Lobby::Clear() member function, Game Lobby program, 322–323
+- Lobby::RemovePlayer() member function, Game Lobby program, 322
+- local variables, 163, 185
+- logical errors, 4
+- logical operators, 61–68
+  - Designers Network Program, 62–65
+  - NOT operator, 66–67
+  - AND operator, 65
+  - OR operator, 66
+  - order of operations, 67–68
+- long double type, 19tbl
+- long int type, 19tbl
+- long modifier, 18
+- loop body, 56
+- looping
+  - break statement
+    - exiting loop, 60
+    - Finicky Counter program, 58–60
+  - continue statement
+    - jumping back to top of loop, 61
+    - understanding when to use, 61
+    - while (true) loop, 60
+  - do loops, 56–58
+    - overview, 57–58
+    - Play Again 2.0 program, 56–57
+  - while loops, 54–56
+    - overview, 55–56
+    - Play Again program, 54–55
+- Lost Fortune game, 32–35
+  - getting information from player, 33–34
+  - setting up, 32–33
+  - telling story, 34–35
+- low parameter, askNumber() function, 173
+
+### M
+
+- Mad Lib game, 180–183
+  - askNumber() function, 182
+  - askText() function, 182
+  - main() function, 181–182
+  - setting up, 181
+  - tellStory() function, 183
+- main() function, 8, 181–182
+  - Blackjack game, 376–377
+  - creating string objects, 91
+  - Critter Caretaker game, 280–281
+  - declaring vectors, 119
+  - defined, 35
+  - Game Lobby program, 324–325
+  - initializing variables and constants, 143
+  - looping, 55
+  - returning value from, 10
+  - Tic-Tac-Toe game, 207–208
+- map STL container, 139
+- member access levels, class, 264–269
+  - defining accessor member functions, 267–268
+  - defining constant member functions, 268–269
+  - private, 267
+  - Private Critter program, 264–266
+  - public, 266
+- member access operator, 230
+- member functions, 87, 110
+  - See also names of specific member functions
+  - calling, 260
+  - declaring, 258
+  - defining, 258–259, 282
+  - inlining, 282
+- member initializers, 263, 282
+- member selection operator (.), 88, 259
+- member-wise copying, 309, 326
+- memory, 24, 224, 248
+- memory leak, 301–303, 326
+- Menu Chooser program, 52–53
+- modifiers, type, 18–19
+- modulus operator (%), 15, 72
+- multidimensional arrays, 103–106, 111
+  - creating, 105
+  - indexing, 105–106
+  - Tic-Tac-Toe Board program, 103–105
+- multimap STL container, 139
+- multiple inheritance, 380
+- multiplication (*) operator, 14
+- multiset STL container, 139
+- mutable data members, 284
+
+### N
+
+- namespace, 9. See also std namespace
+- naming convention, 258
+- naming variables, 20–21
+- nested scopes, 165–166, 185
+- nesting
+  - if statements, 44–45
+  - for loops, 86–87
+- new operator, 299–300, 325
+- New Project dialog box, 384fig
+- newline (\n), 23
+- \n (newline), 23
+- nodes, linked list, 319
+- non-constant reference, 219
+- non-inlined function, calling, 179
+- non-virtual member functions, overriding, 344, 351
+- non-zero value, 43, 77
+- NOT (!) operator, 61tbl, 66–67, 77
+- not equal to (!=) operator, 40tbl
+- null character, 101
+- null pointers, 227–228, 249, 251
+
+### O
+
+- object data members, 290–291
+- object file, 2
+- object-oriented programming. See OOP
+- objects
+  - See also string objects
+  - altering through returning pointers, 243–244
+  - defined, 283
+  - instantiating, 259
+  - overview, 87–89
+- OOP (object-oriented programming), 2, 255, 281, 283
+  - inheritance, 331–333
+  - polymorphism, 347
+- operator overloading, 92, 112–113, 295–296, 325
+- operator precedence, 389–390
+- operator() member function
+  - Blackjack game, 377–379
+  - Game Lobby program, 323–324
+- operators. See specific operators
+- opponent() function, Tic-Tac-Toe game, 210
+- OR (||) operator, 61tbl, 66
+- order of operands
+  - arithmetic operators, 15
+  - logical operators, 67–68
+- outer loop, 86–87
+- out-of-scope
+  - objects, 201, 241
+  - variables, 164, 185
+- output operator (<<), 9
+- output stream, 8
+- overloading
+  - assignment operator, 313–315
+  - functions, 174–177
+    - calling, 177
+    - creating, 176
+    - Triple program, 174–176
+  - operators, 92, 112–113, 295–296, 325
+  - versus overriding, 345
+- overriding
+  - base class member functions, 379
+  - default arguments, 174
+  - non-virtual member function, 344, 351
+- Overriding Boss program, 341–343
+
+### P
+
+- pAPointer pointer, 226
+- parameters, 153
+  - versus arguments, 184
+  - assigning default arguments, 173–174
+  - functions, 158–160
+- parentheses
+  - dereferencing iterators, 129
+  - order of operations, 15, 67
+- passing pointers, 234–238
+  - constant pointer, 237–238
+  - Swap Pointer Version program, 234–236
+    - by value, 236–237
+- passing references
+  - to alter arguments, 191–194
+    - passing by reference, 194
+    - passing by value, 193–194
+    - Swap program, 191–193
+  - constant references, 197–198
+  - Inventory Displayer program, 195–196
+  - pitfalls, 196–197
+- PassTime() member function, Critter class, 278
+- Peek() global function, 295
+- planning programs, 139–141
+  - pseudocode, 139–140
+  - stepwise refinement, 140–141
+- Play Again 2.0 program, 56–57
+- Play Again program, 54–55
+- Play() member function, Critter class, 280
+- Player class
+  - BlackJack game, 357, 359, 368–369
+  - Game Lobby program, 316–318
+- pointers, 223–250
+  - arrays and, 244–248
+    - Array Passer program, 244–246
+    - constant pointer, 246–247
+    - passing and returning, 247–248
+  - assigning addresses to, 227–228
+  - constants and, 231–234
+  - dangling, 301, 325
+  - declaring, 226–227
+  - declaring data member, 307
+  - defined, 248
+  - dereferencing, 228–229
+  - initializing, 227
+  - passing, 234–238
+    - constant pointer, 237–238
+    - Swap Pointer Version program, 234–236
+      - by value, 236–237
+  - Pointing Program, 224–226
+  - reassigning, 227
+  - returning, 238–244
+  - Tic-Tac-Toe 2.0 game, 248
+  - using with objects, 230–231
+- Pointing program, 224–226
+- Polymorphic Bad Guy program, 347–350
+- polymorphism, 347–380
+  - abstract classes, 352–356
+    - Abstract Creature program, 352–354
+    - declaring pure virtual functions, 354–355
+    - deriving classes from, 355–356
+  - Blackjack game, 356–379
+    - Card class, 361–363
+    - Deck class, 370–373
+    - designing classes, 356–360
+    - Game class, 373–376
+    - GenericPlayer class, 366–367
+    - Hand class, 363–366
+    - House class, 369–370
+    - main() function, 376–377
+    - overloading the operator() function, 377–379

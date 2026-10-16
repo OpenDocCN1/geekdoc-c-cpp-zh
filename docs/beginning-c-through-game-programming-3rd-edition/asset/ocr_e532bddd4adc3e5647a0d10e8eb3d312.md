@@ -1,0 +1,33 @@
+# Using the continue Statement to Jump Back to the Top of a Loop
+
+Just before count is displayed, I included the lines:
+
+```
+//skip the number 5
+if (count == 5)
+{
+    continue;
+}
+```
+
+The continue statement means “jump back to the top of the loop.” At the top of the loop, the while expression is tested and the loop is entered again if it’s true. So when count is equal to 5, the program does not get to the cout << count << endl; statement. Instead, it goes right back to the top of the loop. As a result, 5 is skipped and never displayed.
+
+# Understanding When to Use break and continue
+
+You can use break and continue in any loop you create; they aren’t just for while (true) loops. But you should use them sparingly. Both break and continue can make it harder for programmers to see the flow of a loop.
+
+# USING LOGICAL OPERATORS
+
+So far you’ve seen pretty simple expressions evaluated for their truth or falsity. However, you can combine simpler expressions with logical operators to create more complex expressions. Table 2.2 lists the logical operators.
+
+Table 2.2 Logical Operators
+
+Operator | Description | Sample Expression
+---|---|---
+! | Logical NOT | !expression
+&& | Logical AND | expression1 && expression2
+|| | Logical OR | expression1 || expression2
+
+# Introducing the Designers Network Program
+
+The Designers Network program simulates a computer network in which only a select group of game designers are members. Like real-world computer systems,

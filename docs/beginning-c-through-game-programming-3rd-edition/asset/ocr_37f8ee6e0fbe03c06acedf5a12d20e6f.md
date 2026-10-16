@@ -1,0 +1,15 @@
+tools. A popular (and free) IDE for Windows is Microsoft’s Visual C++ Express Edition. You can find out more about this IDE (and download a copy) at http://www.microsoft.com/express/.
+
+# Dealing with Errors
+
+When I described the process for creating an executable from C++ source, I left out one minor detail—errors. If to err is human, then programmers are the most human of us. Even the best programmers write code that generates errors the first (or fifth) time through. Programmers must fix the errors and start the entire process over. Here are the basic types of errors you’ll run into as you program in C++:
+
++   - **Compile errors.** These occur during code compilation. As a result, an object file is not produced. These can be *syntax errors*, meaning that the compiler doesn’t understand something. They’re often caused by something as simple as a typo. Compilers can issue warnings, too. Although you usually don’t have to heed the warnings, you should treat them as errors, fix them, and recompile.
+
++   - **Link errors.** These occur during the linking process and may indicate that something the program references externally can’t be found. These errors are usually solved by adjusting the offending reference and starting the compile/link process again.
+
++   - **Run-time errors.** These occur when the executable is run. If the program does something illegal, it can crash abruptly. But a more subtle form of run-time error, a *logical error*, can make the program simply behave in unintended ways. If you’ve ever played a game where a character walked on air (that is, a character who shouldn’t be able to walk on air), then you’ve seen a logical error in action.
+
+# Real World
+
+Like other software creators, game companies work hard to produce bug-free products. Their last line of defense is the quality assurance personnel (the game testers). Game testers play games for a living, but their jobs are not as fun as you might think. Testers must play the same parts of a game over and over—perhaps hundreds of times—trying the unexpected and meticulously recording any anomalies. On top of monotonous work, the pay ain’t great either. But being a tester is a terrific way to get into a game company on the proverbial bottom rung.

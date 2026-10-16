@@ -1,0 +1,25 @@
+In main(), I call a function that tests the overloaded assignment operator for this class.
+
+```
+testAssignmentOp();
+```
+
+The testAssignmentOp() creates two objects and assigns one to the other.
+
+```
+Critter crit1("crit1", 7);
+Critter crit2("crit2", 9);
+crit1 = crit2;
+```
+
+The preceding assignment statement, crit1 = crit2;, calls the assignment operator member function—operator=()—for crit1. In the operator=() function, c is a constant reference to crit2. The goal of the member function is to assign the values of all of the data members of crit2 to crit1 while making sure each Critter object has its own chunks of memory on the heap for any pointer data members.
+
+After operator=() displays a message that the overloaded assignment operator has been called, it uses the this pointer. What’s the this pointer? It’s a pointer that all non-static member functions automatically have, which points to the object that was used to call the function. In this case, this points to crit1, the object being assigned to.
+
+The next line, if (this != &c), checks to see whether the address of crit1 is not equal to the address of crit2—that is, it tests if the object isn’t being assigned to itself. Because it’s not, the block associated with the if statement executes.
+
+Inside the if block, delete m_pName; frees the memory on the heap that crit1’s m_pName data member pointed to. The line m_pName = new string(*(c.m_pName)); allocates a new chunk of memory on the heap, gets a copy of the string pointed to by the m_pName data member of crit2, copies the string object to the new heap memory, and points the m_pName data member of crit1 to this memory. You should follow this logic for all data members that point to memory on the heap.
+
+The last line in the block, m_Age = c.m_Age; simply copies the value of the crit2’s m_Age to crit1’s m_Age data member. You should follow this simple member-wise copying for all data members that are not pointers to memory on the heap.
+
+Finally, the member function returns a copy of the new crit1 by returning *this. You should do the same for any overloaded assignment operator member function you write.

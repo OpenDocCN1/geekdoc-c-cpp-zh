@@ -1,0 +1,20 @@
+```
+for (int j = 0; j < COLUMNS; ++j)
+{
+    cout << board[i][j];
+}
+
+cout << endl;
+}
+```
+
+By using a pair of nested for loops, I move through the two-dimensional array and display the character elements as I go, forming a tic-tac-toe board.
+
+# INTRODUCING WORD JUMBLE
+
+Word Jumble is a puzzle game in which the computer creates a version of a word where the letters are in random order. The player has to guess the word to win the game. If the player is stuck, he or she can ask for a hint. Figure 3.6 shows the game.
+
+![](bbox=[0.115, 0.515, 0.865, 0.81])
+
+Figure 3.6
+Hmm...the word looks "jumbled."
