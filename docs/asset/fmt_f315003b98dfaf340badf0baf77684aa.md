@@ -1,0 +1,508 @@
+
+    float y;                    // imaginary part
+
+public:
+
+    complex() { }              // constructor 1
+
+    complex(float real, float imag)  // constructor 2
+
+    { x = real; y = imag; }
+
+    complex operator+(complex);
+
+    void display(void);
+
+};
+
+complex complex :: operator+(complex c)
+
+{
+
+    complex temp;               // temporary
+
+    temp.x = x + c.x;           // these are
+
+    temp.y = y + c.y;           // float additions
+
+    return(temp);
+
+}
+
+void complex :: display(void)
+
+{
+
+    cout << x << " + j" << y << "\n";
+
+}
+
+}
+
+int main()
+
+{
+
+    complex C1, C2, C3;          // invokes constructor 1
+
+    C1 = complex(2.5, 3.5);      // invokes constructor 2
+
+    C2 = complex(1.6, 2.7);
+
+    C3 = C1 + C2;
+
+    cout << "C1 = "; C1.display();
+
+    cout << "C2 = "; C2.display();
+
+    cout << "C3 = "; C3.display();
+
+    return 0;
+
+}
+
+### PROGRAM 7.2
+
+The output of Program 7.2 would be:
+
+```
+C1 = 2.5 + j3.5
+
+C2 = 1.6 + j2.7
+
+C3 = 4.1 + j6.2
+```
+
+**note**
+
+> Let us have a close look at the function `operator+()` and see how the operator overloading is implemented.
+
+```
+complex complex :: operator+(complex c)
+
+{
+
+    complex temp;
+
+    temp.x = x + c.x;
+
+    temp.y = y + c.y;
+
+    return(temp);
+
+}
+```
+
+We should note the following features of this function:
+
+1. It receives only one `complex` type argument explicitly.
+2. It returns a `complex` type value.
+3. It is a member function of `complex`.
+
+The function is expected to add two `complex` values and return a `complex` value as the result but receives only one value as argument. Where does the other value come from? Now let us look at the statement that invokes this function:
+
+```
+C3 = C1 + C2;          // invokes operator+() function
+```
+
+我们知道，成员函数只能由同一个类的对象调用。在这里，对象 `C1` 负责调用该函数，而 `C2` 作为参数传递给该函数。上述调用语句等价于：
+
+```
+C3 = C1.operator+(C2);    // usual function call syntax
+```
+
+因此，在 `operator+()` 函数中，`C1` 的数据成员被直接访问，而 `C2`（作为参数传入）的数据成员则通过点运算符访问。这样，该函数可以访问这两个对象。例如，在语句
+
+```
+temp.x = x + c.x;
+```
+
+中，`c.x` 引用对象 `C2`，`x` 引用对象 `C1`。`temp.x` 是 `temp` 的实部，`temp` 是专门为保存 `C1` 和 `C2` 的相加结果而创建的对象。该函数返回 `complex` 类型的 `temp`，以便将其赋值给 `C3`。图 7.1 显示了其实现方式。
+
+通常，在重载二元运算符时，左操作数用于调用运算符函数，右操作数作为参数传递。
+
+![](img/58ab8f034e2127e80560390a921c2523_183_0.png)
+
+图 7.1 ⇔ 重载 `+` 运算符的实现
+
+我们可以用下面的语句替换整个函数体，从而避免创建 `temp` 对象：
+
+```
+return complex((x+c.x),(y+c.y));    // invokes constructor 2
+```
+
+当我们使用带有参数列表的类名时，这意味着什么？当编译器遇到这样的语句时，它会调用一个合适的构造函数，初始化一个无名对象，并返回其内容以复制到另一个对象中。这种对象称为临时对象，一旦其内容被赋值给另一个对象，它就会超出作用域。使用*临时对象*可以使代码更简短、更高效、更易读。
+
+## 7.5 使用友元重载二元运算符
+
+如前所述，友元函数可以代替成员函数来重载二元运算符，唯一的区别在于：友元函数需要显式传递两个参数，而成员函数只需要一个。
+
+上一节讨论的复数程序可以使用友元运算符函数进行修改，如下所示：
+
+1. 将成员函数声明替换为友元函数声明。
+
+   ```
+   friend complex operator+(complex, complex);
+   ```
+
+2. 按如下方式重新定义运算符函数：
+
+   ```
+   complex operator+(complex a, complex b)
+   {
+       return complex((a.x+b.x),(a.y+b.y));
+   }
+   ```
+
+在这种情况下，语句
+
+```
+C3 = C1 + C2;
+```
+
+等价于
+
+```
+C3 = operator+(C1, C2);
+```
+
+在大多数情况下，使用友元函数或成员函数会得到相同的结果。那么为什么还要提供另一种方式呢？有些情况下，我们更愿意使用友元函数而不是成员函数。例如，考虑需要对二元运算符使用两种不同类型操作数的情况：一个是对象，另一个是内置类型数据，如下所示：
+
+```
+A = B + 2;  (or A = B + 2;)
+```
+
+其中 `A` 和 `B` 是同一个类的对象。这对成员函数是可行的，但下面的语句将无法工作：
+
+```
+A = 2 + B; (or A = 2 * B)
+```
+
+这是因为负责调用成员函数的左操作数必须是同一个类的对象。然而，友元函数允许这两种方式。这是如何做到的呢？
+
+不妨回想一下，调用友元函数时并不需要使用对象，但可以将对象作为参数传递。因此，我们可以使用友元函数，以内置类型数据作为左操作数，以对象作为右操作数。程序 7.3 使用向量的标量乘法说明了这一点，还演示了如何重载输入运算符 `>>` 和输出运算符 `<<`。
+
+### 使用友元重载运算符
+
+```
+#include <iostream.h>
+
+const size = 3;
+
+class vector
+
+{
+
+    int v[size];
+
+public:
+
+    vector();                         // constructs null vector
+
+    vector(int *x);                   // constructs vector from array
+
+    friend vector operator *(int a, vector b);      // friend 1
+
+    friend vector operator *(vector b, int a);      // friend 2
+
+    friend istream & operator >> (istream &, vector &);
+
+    friend ostream & operator << (ostream &, vector &);
+
+};
+
+vector :: vector()
+
+{
+
+    for(int i=0; i<size; i++)
+
+        v[i] = 0;
+
+}
+
+vector :: vector(int *x)
+
+{
+
+    for(int i=0; i<size; i++)
+
+        v[i] = x[i];
+
+}
+
+vector operator *(int a, vector b)
+
+{
+
+    vector c;
+
+    for(int i=0; i < size; i++)
+
+        c.v[i] = a * b.v[i];
+
+    return c;
+
+}
+
+vector operator *(vector b, int a)
+
+{
+
+    vector c;
+
+    for(int i=0; i<size; i++)
+
+        c.v[i] = b.v[i] * a;
+
+    return c;
+
+}
+
+istream & operator >> (istream &din, vector &b)
+
+{
+
+    for(int i=0; i<size; i++)
+
+        din >> b.v[i];
+
+    return(din);
+
+}
+
+ostream & operator << (ostream &dout, vector &b)
+
+{
+
+    dout << "(" << b.v [0];
+
+    for(int i=1; i<size; i++)
+
+        dout << ", " << b.v[i];
+
+    dout << ")";
+
+    return(dout);
+
+}
+
+int x[size] = {2,4,6};
+
+int main()
+
+{
+
+    vector m;            // invokes constructor 1
+
+    vector n = x;        // invokes constructor 2
+
+    cout << "Enter elements of vector m " << "\n";
+
+    cin >> m;            // invokes operator>>() function
+
+    cout << "\n";
+
+    cout << "m = " << m << "\n";        // invokes operator <<()
+
+    vector p, q;
+
+    p = 2 * m;                // invokes friend 1
+
+    q = n * 2;                // invokes friend 2
+
+    cout << "\n";
+
+    cout << "p = " << p << "\n";        // invokes operator<<()
+
+    cout << "q = " << q << "\n";
+
+    return 0;
+
+}
+```
+
+程序 7.3
+
+程序 7.3 的输出如下所示：
+
+```
+Enter elements of vector m
+
+5 10 15
+
+m = (5, 10, 15)
+
+p = (10, 20, 30)
+
+q = (4, 8, 12)
+```
+
+该程序将运算符 `*` 重载了两次，也就是对运算符函数 `operator*()` 本身进行了重载。在这两种情况下，函数都被显式传入两个参数，并像任何其他重载函数一样，根据其参数类型被调用。这使我们能够使用两种标量乘法形式，例如：
+
+```
+p = 2 * m;        // equivalent to p = operator*(2,m);
+
+q = n * 2;        // equivalent to q = operator*(n,2);
+```
+
+该程序及其输出在很大程度上不言自明。第一个构造函数
+
+```
+vector();
+```
+
+构造一个所有元素均为 `0` 的向量。因此
+
+```
+vector m;
+```
+
+创建一个向量 `m`，并将其所有元素初始化为 `0`。第二个构造函数
+
+```
+vector(int &x);
+
+int x[3] = {2, 4, 6};
+
+vector n = x;
+```
+
+将 `n` 创建为分量为 `2、4、6` 的向量。
+
+注意：我们在输入和输出语句中使用了像 `m` 和 `n` 这样的 `vector` 变量，就像使用简单变量一样。这之所以可行，是因为使用以下函数重载了运算符 `>>` 和 `<<`：
+
+```
+friend istream & operator>>(istream &, vector &);
+
+friend ostream & operator<<(ostream &, vector &);
+```
+
+`istream` 和 `ostream` 是定义在 `iostream.h` 文件中的类，该文件已包含在程序中。
+
+## 7.6 使用运算符操作字符串
+
+ANSI C 使用字符数组、指针和字符串函数实现字符串。C 语言没有用于操作字符串的运算符。C 语言中字符串操作的主要缺点之一就是：每当需要复制字符串时，程序员必须先确定其长度，再分配所需的内存。
+
+虽然 C++ 也存在这些限制，但它允许我们创建自己的运算符定义，可以用与十进制数非常相似的方式操作字符串。（最近，ANSI C++ 委员会在 C++ 类库中新增了一个名为 `string` 的类，支持各种字符串操作。使用 `string` 类进行字符串操作将在第 15 章讨论。）
+
+例如，我们将能够使用如下语句：
+
+```
+string3 = string1 + string2;
+
+if(string1 >= string2) string = string1;
+```
+
+可以将字符串定义为类对象，然后像内置类型一样对其进行操作。由于字符串的大小差异很大，我们使用 `new` 为每个字符串分配内存，并使用一个指针变量指向字符串数组。因此，我们必须创建能够保存这两项信息的 `string` 对象，即长度和位置，它们对字符串操作是必需的。一个典型的 `string` 类如下所示：
+
+```
+class string
+
+{
+
+    char *p;        // pointer to string
+
+    int len;        // length of string
+
+public:
+
+    .....        // member functions
+
+    .....        // to initialize and
+
+    .....        // manipulate strings
+
+};
+```
+
+我们将考虑一个示例来说明重载运算符在字符串上的应用。程序7.4所示的示例重载了 `+` 和 `<=` 两个运算符，仅用于说明如何实现它们。该方法还可以扩展到其他运算符。
+
+### 字符串上的数学运算
+
+```
+#include <string.h>
+
+#include <iostream.h>
+
+class string
+
+{
+
+    char *p;
+
+    int len;
+
+public:
+
+    string() {len = 0; p = 0;}                // create null string
+
+    string(const char * s);                  // create string from arrays
+
+    string(const string & s);                // copy constructor
+
+    ~ string(){delete p;}                    // destructor
+
+    // + operator
+
+    friend string operator+(const string &s, const string &t);
+
+    // <= operator
+
+    friend int operator<=(const string &s, const string &t);
+
+    friend void show(const string s);
+
+};
+
+string :: string(const char *s)
+
+{
+
+    len = strlen(s);
+
+    p   = new char[len+1];
+
+    strcpy(p,s);
+
+}
+
+string :: string(const string & s)
+
+{
+
+    len = s.len;
+
+    p   = new char[len+1];
+
+    strcpy(p,s.p);
+
+}
+
+// overloading + operator
+
+string operator+(const string &s, const string &t)
+
+{
+
+    string temp;
+
+    temp.len = s.len + t.len;
+
+    temp.p = new char[temp.len+1];
+
+    strcpy(temp.p,s.p);
+
+    strcat(temp.p,t.p);
+
+    return(temp);
+
+}
+
+// overloading <= operator
+
+int operator<=(const string &s, const string &t)
+
+{
+
+    int m = strlen(s.p);
