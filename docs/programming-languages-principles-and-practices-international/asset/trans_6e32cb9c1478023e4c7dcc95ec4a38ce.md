@@ -1,0 +1,158 @@
+
+
+或者，另一种做法是，可以将异常处理过程作为参数传递给过程：
+
+```
+enum ErrorKind {OutOfInput, BadChar, Normal};
+typedef void (*ErrorProc)(ErrorKind);
+...
+unsigned value;
+...
+void handler (ErrorKind error)
+{
+...
+}
+...
+unsigned getNumber (ErrorProc handle)
+{ unsigned result;
+  int ch = fgetc(input);
+  if (ch == EOF) handle(OutOfInput);
+  else if (! isdigit(ch)) handle(BadChar);
+  /* continue to compute */
+  ...
+  return result;
+}
+...
+...
+value = getNumber (handler);
+```
+
+显式的异常测试使得程序更难编写，因为程序员必须预先测试所有可能的异常情况。我们希望通过预先声明异常并指定程序在发生异常时应做什么来使此任务更容易。在设计这种程序行为时，我们必须考虑以下问题：
+
+*异常。* 语言中预定义了哪些异常？它们可以被禁用吗？可以创建用户定义的异常吗？它们的范围是什么？
+*异常处理器。* 它们是如何定义的？它们的范围是什么？预定义异常提供了哪些默认处理器？它们可以被替换吗？
+*控制。* 控制如何传递给处理器？处理器执行后控制传递到哪里？错误处理器执行后运行时环境会保留什么？
+
+我们将依次讨论这些主题，并以 C++、Ada 和 ML 中的示例进行说明。
+
+## 9.5.1 异常
+
+通常，程序中异常的发生由一个数据对象表示，该对象可以是预定义的或用户定义的。毫不奇怪，在函数式语言中，这个数据对象是某种类型的值，而在结构化或面向对象的语言中，它是某种结构化类型变量或对象。通常，异常值或对象的类型是预定义的，异常本身则在特殊声明中给出，该声明创建适当类型的值或变量。例如，在 ML 或 Ada 中，异常使用保留字 exception 声明：
+
+```
+exception Trouble; (* a user-defined exception *)
+exception Big_Trouble; (* another user-defined exception *)
+```
+
+不寻常的是，在 C++ 中没有特殊的异常类型，因此也没有保留字来声明它们。相反，任何结构化类型（struct 或 class）都可用于表示异常：⁷
+
+```
+struct Trouble {} trouble;
+struct Big_Trouble {} big_trouble;
+```
+
+现在，这些声明如所示是最小的，因为它们只提供了表示异常发生的简单值或对象。通常，我们还希望附加一些额外信息到这些异常，例如错误消息（字符串）以及可能导致异常的数据或程序状态的摘要（例如导致无效计算的数值，或意外的输入字符）。很容易看出如何在 C++ 中做到这一点。我们只需向定义的数据结构添加数据成员：
+
+```
+struct Trouble{
+    string error_message;
+    int wrong_value;
+} trouble;
+```
+
+在 ML 中也可以这样做：
+
+```
+exception Trouble of string * int;
+```
+
+不寻常的是，在 Ada 中不能直接这样做。异常对象是常量，不包含数据。⁸
+
+上述异常声明通常遵循语言中其他声明的相同作用域规则。因此，在 Ada、ML 和 C++ 中，异常声明遵循词法或静态作用域规则。由于异常发生在运行时，并且如您将在下面看到的，可能导致执行退出特定异常声明的作用域，因此可能发生异常在被处理时无法按名称引用。处理器的设计必须考虑到这一点。通常，人们希望通过在程序中全局声明用户定义的异常来最大程度地减少由此引起的问题。在某些情况下，局部异常也有意义，以避免创建大量多余的全局异常。请注意，当异常中包含数据时，我们希望将异常类型声明与异常对象/值声明分开，因为通常同一异常类型的不同实例可能同时存在且数据不同，因此对象/值必须在异常发生时创建。只要异常类型本身是全局的，就不会产生作用域问题，如您将在下面看到。因此，上述 C++ 声明（它同时定义了变量和类型）应修改为仅声明类型：
+
+```
+struct Trouble{
+    string error_message;
+    int wrong_value;
+} ; // declare exception object later
+```
+
+> ⁷由于我们要到第 11 章才讨论 C++ 的面向对象特性，因此在本节中我们编写的 C++ 代码尽可能接近 C，即使有些不合习惯。
+
+> ⁸Ada95 确实添加了库 Ada.Exceptions，其中包含传递异常信息的机制，但它不如直接向异常对象本身添加数据那样简洁。
+
+大多数语言还提供一些预定义的异常值或类型。例如，在 Ada 中有以下预定义异常：
+
+- Constraint_Error: 由超出子范围或数组的边界引起；也由算术溢出和除零引起。
+- Program_Error: 这包括在声明的动态处理期间发生的错误。
+- Storage_Error: 这是由动态内存分配失败引起。
+- Tasking_Error: 这发生在并发控制期间。
+
+在 ML 中有许多类似的预定义异常，例如 Div（除以 0）、Overflow（算术）、Size（内存分配）和 Subscript（数组下标越界）；还存在一些与 ML 中特定程序结构相关的预定义异常，大致对应于 Ada 的 Program_Error。还有一个预定义值构造子 Fail of string，它允许程序构造包含错误消息的异常值，而无需定义新的异常类型。
+
+在 C++ 中，遵循惯例，语言本身没有预定义的异常类型或异常。然而，许多标准库模块提供异常和异常机制。其中一些标准异常是：
+
+- bad_alloc: new 调用失败。
+- bad_cast: dynamic_cast 失败（参见第 5 章）。
+- out_of_range: 由库容器的受检下标操作引起（通常的下标操作未受检）。
+- overflow_error, underflow_error, range_error: 由数学库函数和少数其他函数引起。
+
+我们也在下面提到了另一个标准异常 bad_exception，它在处理 C++ 中的异常时可能很有用。
+
+## 9.5.2 异常处理器
+
+在 C++ 中，异常处理器与 try-catch 块相关联，try-catch 块可以在任何语句出现的地方出现。C++ try-catch 块的草图出现在图 9.10 中。
+
+```
+(1)  try
+(2)  { // to perform some processing
+(3)    ...
+(4)  }
+(5)  catch (Trouble t)
+(6)  { // handle the trouble, if possible
+```
+
+图 9.10 一个 C++ try-catch 块（续）
+
+```
+```cpp
+(7)   displayMessage(t.error_message);
+(8)   ...
+(9)   }
+(10)  catch (Big_Trouble b)
+(11)  { // handle big trouble, if possible
+(12)  ...
+(13)  }
+(14)  catch (...) // actually three dots here, not an ellipsis!
+(15)  { // handle any remaining uncaught exceptions
+(16)  }
+```
+```
+
+**图 9.10** 一个 C++ try-catch 块
+
+这里，保留字 *try* 之后需要一个复合语句（图 9.10 第 2 行和第 4 行的大括号），并且可以在初始 *try* 块之后跟随任意数量的 *catch* 块。每个 *catch* 块也需要一个复合语句，并写成单个参数的函数，其类型是异常类型（可以是任何类或结构类型）。异常参数可以被查询以检索适当的异常信息，如图 9.10 第 7 行所示。请注意图 9.10 中最后的捕获所有 catch 块，它捕获任何剩余的异常，如第 14 行括号内的三个点所示。
+
+C++ 中 try-catch 块的语法其实是过度设计，因为 catch 块本可以与任何语句或块相关联。事实上，在 Ada 和 ML 中正是如此。例如，在 Ada 中，保留字 *exception* 被重新用于引入处理器。处理器可以出现在任何块的末尾，如图 9.11 所示，其中包含与图 9.10 的 C++ 代码对应的 Ada 代码。请注意图 9.11 中异常列表（第 5–13 行）的语法与 Ada case 语句的相似性。
+
+```
+```ada
+(1)   begin
+(2)   -- try to perform some processing
+(3)   ...
+(4)   exception
+(5)       when Trouble =>
+(6)           --handle trouble, if possible
+(7)           displayMessage("trouble here!");
+(8)           ...
+(9)       when Big_Trouble =>
+(10)          -- handle big trouble, if possible
+(11)          ...
+(12)      when others =>
+(13)          -- handle any remaining uncaught exceptions
+(14)  end;
+```
+```
+
+**图 9.11** 与图 9.9 对应的 Ada try-catch 块
+

@@ -1,0 +1,380 @@
+
+## A
+- absolute values, 14
+- abstract classes, 151, 158, 170
+- abstract data type. See ADT (abstract data type)
+- abstractions, 6, 8–14, 144
+- abstract machine, 547
+- abstract syntax, 216, 546
+- abstract syntax trees, 213–216
+- access chaining, 468
+- access links, 467–468
+- accessor methods, 165
+- Access-type Lifetime Rule, 470, 472
+- access types, 299, 351
+- activated, 448
+- activation, 12, 292, 404
+- procedures, 459–472
+- activation records, 292, 445, 448–449, 460, 462, 464, 471
+- actual parameters, 13, 403, 450
+- Ada, 7
+- Access-type Lifetime Rule, 472
+- access types, 299, 351
+- aliases and subtypes rule, 357
+- arrays, 342–343
+- assignment operator (:=), 147
+- automatic garbage collection, 309
+- blocks, 262, 402
+- BNFs (Backus-Naur forms), 204
+- bounded buffer as task, 619–620
+- bounded buffer problem, 613–615
+- Cartesian products, 335
+- case statement, 415–416
+- casts, 365–366
+- composite types, 351
+- constant declaration, 302
+- constrained parameterization, 529
+- dangling references, 307, 472
+- definitions, 257
+- dynamic allocation, 289
+- entry/accept mechanism, 617
+- enumerated types, 332–333
+- erroneous programs, 458
+- exception handlers, 428, 429
+- exceptions, 426, 427, 470
+- explicit conversions, 365
+- explicitly parameterized functions, 380
+- explicitly parameterized polymorphic functions, 381–382
+- floating-point operations, 327
+- for-loop, 419
+- function overloading, 284–285
+- functions, 446
+- generic packages, 194, 512–514
+- generic unit, 380
+- heap allocation, 295–296
+- identifiers, 205, 236
+- implicit conversions, 364, 365
+- index set, 340
+- instance variables, 195–196
+- integer types, 351
+- lexical addresses, 262
+- library I/O functions, 515
+- limited private type, 528
+- multidimensional arrays, 343–344
+- named scopes, 279
+- name equivalence, 356–357
+- nested procedures, 465–466
+- numeric types, 351
+- operator overloading, 285–287, 364
+- operators, 31
+- overloading, 194, 282
+- packages, 10, 193, 263, 380, 509–515, 529
+- package specification, 380–381, 510, 511
+- parallel matrix multiplication, 621–622
+- parameter communication, 458
+- parse trees, 313
+- pointers, 346, 511
+- procedures, 12–13, 446
+- real types, 351
+- reserved words, 236
+- scalar types, 351
+- scope, 265–267
+- short-circuit Boolean operators, 407
+- static allocation, 289
+- statically typed, 39
+- subranges, 333–334, 362–363
+- subtypes, 339
+- symbolic constant, 432
+- symbol table, 280
+- syntax analysis, 313
+- task rendezvous, 616–621
+- tasks, 414, 594, 611–612
+- termination points, 418
+- try-catch block, 428
+- type checking, 360
+- type system, 331
+- variable declarations, 268
+- variant record, 337
+- while-loop, 417
+- Ada 95, 608
+- Access-type Lifetime Rule, 470
+- "address-of" operator, 299
+- concurrency and monitors, 611–615
+- data types, 299
+- function parameters and types, 345
+- object-oriented mechanisms, 193
+- procedures creating another procedure, 471–472
+- protected objects, 612
+- Ada 83 and rendezvous, 616
+- ad hoc polymorphism, 194
+- ADT (abstract data type), 10, 492
+- algebraic specification, 494–498
+- complex data type, 494
+- implementations, 497
+- mathematics, 532–536
+- mechanisms, 143, 498–500, 524–532
+- model for specification, 532
+- modules, 500–502
+- object-oriented programming, 493
+- semaphores, 605
+- signatures, 494, 533
+- sorts, 532–533
+- syntactic specification, 494
+- algebraic notation, 6
+- algebraic specification, 493
+- constants, 496
+- semantics, 535
+- sort-signature terminology, 533
+- algebras, 558
+- Algol 60, 7, 142, 181
+- blocks, 262, 308, 402
+- goals, 26
+- pass by name, 410, 455
+- stack-based environment, 308
+- structural equivalence, 343
+- structured control, 402
+- syntax, 204
+- Algol 68
+- blocks, 402
+- bracketing keywords, 413
+- orthogonality, 32–33
+- structural equivalence, 343
+- ALGOL (ALGOrithmic Language), 6–7, 26, 262
+- Algol-like language, 309, 332
+- ALGOrithmic Language. See ALGOL (ALGOrithmic Language)
+- algorithmic logic and Horn clauses, 129–130
+- algorithms and logic programming systems, 126
+- aliases, 454
+- for argument, 452
+- assignment by sharing, 306
+- data types, 355
+- pointer variables, 304–306
+- semantics, 303–306
+- side effects, 305
+- allocation, 197, 289–297
+- alpha-conversion, 93
+- ambiguity, 216–220
+- ambiguous call, 283
+- ambiguous grammars, 217–218
+- American National Standards Institute. See ANSI (American National Standards Institute)
+- Amoeba, 38
+- and-parallelism, 622, 624–625
+- and special form, 77
+- Annotated Reference Manual. See ARM (Annotated Reference Manual) (Ellis and Stroustrup)
+- anonymous functions, 74, 83
+- anonymous pointer type, 366
+- anonymous types, 330, 354
+- anonymous union, 339
+- ANSI (American National Standards Institute), 16
+- API (application programming interface), 10
+- APL and dynamic scoping, 277
+- appending lists, 120
+- append operation, 59, 60, 119
+- application frameworks, 143–144
+- application of expressions, 90–91
+- applicative order evaluation, 53, 404, 409
+- approximation, 573
+- arguments, 13, 403
+- procedures, 445
+- thunks, 456
+- arithmetic and Prolog, 117–118
+- arithmetic operators in ML (MetaLanguage), 66
+- ARM (Annotated Reference Manual) (Ellis and Stroustrup), 37
+- Armstrong, Joe, 626
+- array-based queue class, 160
+- array constructor, 330
+- array data structure, 7
+- arrays, 9, 330, 340–345
+  - component type, 340
+  - functional languages, 344
+  - index type, 340
+  - length, 341
+  - multidimensional, 343–344
+  - printing contents, 149–150
+  - unconstrained, 342
+- array types, 340–345, 384
+- assemblers, 5, 18
+- assembly language, 4–6
+- assignment
+  - denotational semantics, 561–563
+  - Java, 300
+  - operational semantics, 551–553
+  - programming languages, 299
+  - return value, 32
+- assignment by cloning, 299
+- assignment by sharing, 299–300, 306
+- assignment compatibility, 361
+- assignment statements, 298
+  - axiomatic semantics, 569–570
+- associativity, 216–220
+- asynchronous exceptions, 424
+- atomically, 604
+- atoms, 50, 51
+- AT&T Bell Labs, 181
+- attribute functions, 367
+- attributes, 257–260
+- automatic allocation, 294, 296
+- automatic conversions, 284
+- automatic deduction systems, 104
+- automatic garbage collection, 473
+- automatic memory management, 473–475
+- automatic theorem provers, 104
+- axiomatic semantics, 17, 104, 543, 565–571
+  - assignment statements, 569–570
+  - axiomatic specification, 567
+  - distributivity of conjunction or disjunction, 568
+  - if statements, 570
+  - law of monotonicity, 568
+  - law of the excluded miracle, 568
+  - predicate transformer, 567
+  - proofs of program correctness, 571–574
+  - sample language, 569–571
+  - statement-lists, 569
+  - weakest assertion or precondition, 567
+  - while statements, 571
+  - wp predicate transformer, 568–569
+- axiomatic specification, 567
+- axioms, 105, 107, 494–495
+  - equality, 495, 534
+  - error axioms, 496
+  - quotient algebra, 533
+- axiom systems, 534–535
+
+## B
+- backing store, 172–173
+- backtracking in Curry, 132–133
+- backtracks, 120–123
+- Backus, John, 6, 204
+- Backus-Naur forms. See BNFs (Backus-Naur forms)
+- base classes, 181
+- BASIC and goto statements, 420
+- basic types, 350
+- BCPL and abstractions, 35
+- begin special form, 57
+- behaviors, 145
+- beta-abstraction, 92
+- beta-conversion, 92
+- beta-reductions, 92, 94
+- binary arithmetic operators, 66
+- binary messages, 147
+- binary operator, 403
+- binary search trees, 60, 73, 347
+- binding list, 54
+- bindings, 257–260
+  - scope, 263–265
+- binding times, 258–259
+- Bison, 224, 233
+- blocked, 583
+- blocks, 148–149, 260–269
+  - activated, 448
+  - allocating and deallocating space for, 291–292
+- block-structured languages, 447–448
+  - functions, 444
+  - linked lists, 473–474
+  - procedures, 444
+  - reference counting, 475–476
+  - scope rules, 265–266
+  - stack frame, 448
+  - symbol table, 269
+- block structure, 262
+- block-structured languages
+  - activations of procedure blocks, 462
+  - blocks, 447–448
+  - garbage collection, 308
+  - global variables, 289
+  - lexical scope, 292
+  - local variables, 289
+  - scope, 62
+  - stack-based runtime environment, 469
+- block variables, 148
+- BNF grammar function-definition, 221
+- BNF-like form grammars, 233
+- BNF notation, 209, 221
+- BNF rules
+  - abstract syntax, 216
+  - recursive set equations, 348
+  - semantics, 543
+- BNFs (Backus-Naur forms), 204, 208–213, 221, 257
+- body, 109, 445
+- Boole, George, 104
+- Boolean expressions, 77, 406–407
+- bottom-up algorithm, 233
+- bottom-up parsers, 224, 233
+- bounded buffer class, 605–606
+- bounded buffer problem, 588, 613–615
+- bound identifier, 570
+- bound occurrence, 91–92
+- bound variables, 63
+- box-and-circle diagram, 297, 304–305
+- box and pointer notation, 58–59
+- bracketing keywords, 413
+- branch instructions, 11
+- Brinch-Hansen, Per, 608
+- Brooks, Fred, 27
+- built-in arithmetic functions, 69
+- built-in collections in imperative languages, 157
+- built-in operators, overloading, 287
+- Burstall, Rod, 65
+- busy-wait, 608
+- byte code, 18
+
+## C
+- C, 263
+  - address of operator (&), 298, 307
+  - ADT (abstract data types), 502–506
+  - anonymous pointer type, 366
+  - arrays, 340–341, 347, 452
+  - attributes, 257
+  - basic types, 350
+  - blocks, 402
+  - BNFs (Backus-Naur forms), 204, 221
+  - Boolean operators, 407
+  - Cartesian products, 335
+  - casts, 365–366
+  - compilers and static type checking, 359
+  - compound statements, 261
+  - constants, 302
+  - dangling references, 306–307
+  - data allocation strategy, 348
+  - data types, 277, 328
+  - declaration before use rule, 264
+  - declarations, 261
+  - definitions, 257, 260
+  - derived types, 350
+  - disambiguating rule, 412
+  - do-while statement, 417
+  - dynamic allocation, 289
+  - end of line token, 206
+  - enumerated types, 332–333
+  - explicit conversions, 365
+  - expressions, 52, 53, 444
+  - flexibility, 36
+  - floating-point division, 330
+  - floating types, 350
+  - for-loop, 418
+  - functions, 31, 163, 293, 344–345, 446
+  - function variable, 303
+  - garbage, 307–308
+  - global procedures, 472
+  - global variables, 268
+  - if statements, 16–17
+  - implicit conversions, 366
+  - implicitly or explicitly binding, 260
+  - implicit types, 361
+  - incomplete type, 261
+  - index set, 340
+  - instance variables, 195–196
+  - integer calculator based on grammar, 227–230
+  - integer division, 330
+  - integral types, 350
+  - load-time constants, 302
+  - member declarations, 262–263
+  - memory leaks, 34
+  - multidimensional arrays, 343–344
+  - naming types, 330
+  - numeric types, 350
+  - overlapping types, 362
+  - parametric polymorphism, 506
+  - parsing, 236
+  - pass by reference, 453
+  - pass by value, 452

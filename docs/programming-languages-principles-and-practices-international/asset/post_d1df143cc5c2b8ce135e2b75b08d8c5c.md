@@ -1,0 +1,395 @@
+
+- execution, 116–117
+- functions, 116
+- Horn clauses, 115, 129
+- infinite loops, 122, 124, 127, 129
+- interpreters, 116–117
+- lists, 116, 119
+- logical variables, 134, 626
+- loops, 122–126
+- notation, 116
+- or-parallelism, 623–624
+- parallelism, 624–625
+- pattern-directed invocation, 120
+- pattern matching, 116
+- predicates, 116
+- repetitive searches, 122–123
+- resolution, 115, 121
+- search strategy, 121–122
+- shorten clauses, 120
+- sorting lists, 132
+- sorting program, 130
+- standard predicates, 116
+- subgoals, 121
+- unification algorithm, 118–121, 127
+- uninstantiated variables, 119
+- variables, 116
+- Prolog programs
+  - append list operation, 119
+  - control information, 129–131
+  - definite clause grammars, 110
+  - execution, 116–117
+  - reverse list operation, 119
+- promise to evaluate arguments, 78
+- proofs of program correctness, 571–574
+- propagating the exception, 430
+- properties, 145
+- protected objects, 612
+- prototypes, 260, 445, 502–503
+- proved, 105
+- pseudoparallelism, 583
+- public members, 181
+- pure functional program, 48
+- pure lambda calculus, 91
+- pure polymorphism, 372
+- pure virtual declaration, 187–188
+- pure virtual functions, 188–189
+- PVM (Python virtual machine), 39–40
+- Python
+  - application-specific libraries, 39
+  - automatic garbage collection, 34
+  - byte code, 18
+  - data types, 38
+  - dictionary, 38
+  - doc, 10
+  - dynamic typing vs. static typing, 39–40
+  - extensibility, 34, 38–39
+  - functions, 31
+  - general-purpose scripting language, 38–40
+  - importance, 26
+  - indentation, 205
+  - interactivity, 39
+  - machine-independent byte code, 39
+  - modules, 10, 263
+  - objects, 32
+  - platforms, 39
+  - portability, 39
+  - predefined identifiers, 205
+  - predefined operators, 31
+  - primitive operations and data types, 38
+  - reference semantics, 300
+  - reference types, 32
+  - regularity, 38–39
+  - scripts, 39
+  - semantically safe, 33–34
+  - shorthand notation, 10
+  - simplicity, 38–39
+  - static type-checking, 33
+  - syntax, 29–30, 38
+  - type checking, 40
+  - typeless variables, 29
+  - untyped languages, 331
+  - variable declarations, 33
+  - variable names, 261
+  - virtual machine, 38
+- Python virtual machine. See PVM (Python virtual machine)
+
+### Q
+- Qlisp and-parallelism in let-bindings, 624
+- quantifiers, 106
+- queries, 108
+- Queue data type, 505
+- queues
+  - linked lists, 170–172
+  - linked nodes, 160–162
+- QUICKSORT algorithm, 27
+- quote keyword, 53
+- quotient algebra, 533
+
+### R
+- race condition, 585
+- raised, 423
+- range, 47
+- raw collections, 169
+- readability, 327
+- real numbers, 326–327
+- real types, 351
+- receive process, 627
+- receiver object, 162
+- receivers, 145, 149
+- reclamation of storage, 475–476
+- recognizer, 224, 232
+- records, 335
+- record structure, 335–336
+- recursion, 56–57, 131
+  - functional programming, 48–49
+- recursive data types, 73
+- recursive declarations, 268
+- recursive-descent parser, 227
+- recursive-descent parsing, 110, 225–227, 241
+- recursive functions, 8, 55, 74, 347
+- recursive routines, 29
+- recursive subroutines, 29
+- recursive types, 346–349
+- reduced, 224
+- reduction machine, 547
+- reduction rules, 548
+  - control, 553–554
+  - environments, 551–553
+  - integer arithmetic expressions, 548–551
+  - lambda calculus, 90
+- reductions and transitivity rule, 550
+- reference counting, 472, 475–476
+- references, 163, 346, 361
+- reference semantics, 32, 147–148, 166, 299
+- reference types, 32, 166, 169, 350–351
+  - collections, 169
+  - equality operator (==), 167
+  - reference semantics, 32
+- referential transparency, 49, 409
+- regular expressions, 206
+- regularity, 30–33, 38–39
+- reinterprets, 366
+- reliability, 30, 33, 327
+- Remote Method Invocation. See RMI (Remote Method Invocation)
+- Remote Procedure Call. See RPC (Remote Procedure Call)
+- remove ambiguities, 327
+- rendezvous, 616–621
+- repeated inheritance, 191
+- reserved words, 205, 236
+- resolution, 115, 121
+  - Horn clauses, 111–112
+- resumption model, 431
+- returned values, 446
+- return-statement, 446
+- reusability, 10
+- reusable code, 15
+- reverse list operation, 119
+- reverse operation, 59
+- rev function, 70
+- right associative, 218–219
+- right-associative operators, 221
+- right-recursive rule, 219, 227
+- RMI (Remote Method Invocation), 616
+- robustness, 424
+- row-major form, 344
+- RPC (Remote Procedure Call), 616
+- Ruby, 20, 331
+- runtime binding, 155
+- runtime environments, 13, 39
+  - dynamic scoping, 277
+  - language design, 308
+- r-value, 298, 361
+
+### S
+- safe union mechanism, 338
+- same-fringe problem, 80–81
+- sample language, 543–547
+  - abstract syntax, 546
+  - axiomatic semantics, 569–571
+  - empty environments, 545
+  - environments, 544–545
+  - loops, 546
+  - proofs of program correctness, 571–574
+  - semantics of arithmetic expressions, 544
+  - statements, 545
+  - type nomenclature, 349–351
+- save queue, 630
+- scalar types, 163, 351
+- scanner generator, 235
+- scanners, 210
+  - getToken procedure, 225
+  - token categories, 235–236
+- Scheme, 28, 50
+  - ad hoc stream constructions, 80
+  - applicative order evaluation, 53, 77
+  - atoms, 50, 51
+  - binding list, 54
+  - box and pointer notation, 58–59
+  - data structures, 57–60
+- Smalltalk-76, 145
+- Smalltalk-80, 142, 145
+- Smalltalk/V, 145, 146
+- SML97, 65
+- SML (Standard ML), 65
+- SNOBOL, 26, 277
+- software reuse, 143–144
+- sorting, 532–533
+  - free algebra of terms, 533–534
+  - lists, 132
+  - procedure, 129–130
+- source program, 18
+- spaghetti code, 421
+- special forms, 52
+- specializes, 374
+- special symbols, 205
+- specifications, 110–111, 445, 543
+- spin, 608
+- spin-locks, 608
+- SPMD programming (single program multiple data), 591
+- stack-based allocation, 294
+- stack-based environment, 462–471
+- stack-based languages, 404
+- stack frame, 448
+- stack unwinding, 431
+- Standard ML. See SML (Standard ML)
+- Standard Template Library. See STL (Standard Template Library)
+- start symbol, 209–211
+- starvation, 608
+- state, 260
+- statement-level parallelism, 593
+- statements, 402, 444
+  - conditional, 410–416
+  - sample language, 545
+  - single-entry, single-exit, 402
+- statically typed languages, 360, 367
+- static binding, 175–176, 186–191
+  - binding times, 258
+  - data types, 277
+- static constants, 301–302
+- static environment, 289, 449
+- static expressions, 390, 432–433, 435–436
+- static link, 467
+- static scope, 62–63, 273
+- static semantic analysis, 259, 390
+- static type checking, 33, 181, 327, 359
+- static types, 327
+- static typing, 39, 65–76
+- STL (Standard Template Library), 37
+- stop and copy, 476
+- storage class, 296
+- storage semantics, 49, 300
+- store, 260
+- streams, 80, 85
+- strict evaluation, 404, 626
+- strict functions, 94
+- strings, 57
+  - iterators, 158
+  - predefined identifiers, 236
+  - reading and writing, 71
+  - reserved words, 236
+- strongly typed language, 327, 331
+  - type checking parameters, 459
+  - unsafe program, 331
+- Stroustrup, Bjarne, 27, 36, 181
+- Stroustrup, Bjarne, 35–38
+- structs, 278–279
+- structural equivalence, 352–355
+- structural operational semantics, 548
+- structure construction, 335
+- structured abstractions, 8–9
+- structured control, 402
+  - abstractions, 11–14
+  - constructs, 402
+  - statements, 7
+- structured language exceptions, 425
+- structure member operation, 335
+- structures, 343, 515–518
+- subexpressions, 405
+- subroutines, 12, 446, 459–460
+- subset types, 339
+- substitution, 92
+- substitution rule, 409
+- subtype polymorphism, 194, 372
+- subtypes, 339
+- successor, 332
+- Sun Microsystems, 162
+- suspend operations, 609–610
+- Swing Toolkit, 10, 144
+- switch-statements, 414–416
+- symbolic, 301
+- symbolic constants, 432–435
+- symbolic information processing, 53, 63–64
+- symbolic logic, 15
+- symbols, 53, 63, 269
+- symbol table, 259, 269–281, 309–311
+  - block declarations, 269
+  - compiler, 273
+  - declarations, 269, 273
+  - dynamically managed, 273–274
+  - dynamic scope, 274–277
+  - overloaded functions, 282–283
+  - scope, 279–281
+  - static declarations, 273
+  - structure, 269–273
+  - type names, 313
+- synchronized methods, 609
+- synchronized objects, 609–610
+- synchronizing processes, 604
+- synchronous exceptions, 424
+- syntactic domains, 556–558
+- syntactic specification, 494
+- syntactic sugar, 10, 417
+- syntax, 16–17, 204
+  - abstract syntax, 216
+  - analysis, 259, 313
+  - concrete syntax, 216
+  - parameter modes, 479
+  - static expressions, 432–433
+  - structure, 213
+  - syntax-directed semantics, 214
+  - vs. lexics vs semantics, 235–236
+- syntax analyzer, 237–246
+- syntax diagrams, 204, 220–224
+  - EBNF rules, 243–244
+  - recursive-descent parser, 227
+- syntax-directed semantics, 214
+- syntax trees, 216–218
+- type checker, 368–370
+
+### T
+- tags, 336
+- tail operator. See tl (tail) operator
+- tail recursive, 56, 60
+- target language, 18
+- target program, 18
+- task entries, 616
+- tasks, 14, 263, 594, 611–612
+  - entries, 616–617
+  - master, 619
+  - parallel matrix multiplication, 619
+  - rendezvous, 616–621
+  - semaphore type, 619
+- template classes, 184–186
+- templates, 194, 378–379, 506
+- terminals, 210, 215–216
+- termination model, 431
+- terms, 106–107
+- ternary operator, 408
+- TestAndSet machine instruction, 607–608
+- theorems, 107–108
+- threads, 14, 584, 588, 595–604
+  - bounded buffer problem, 601–604
+  - consumer, 601
+  - daemons, 596
+  - defining, 596
+  - destroying, 597
+  - fork-join parallelism, 597
+  - interrupting, 597
+  - producer, 601
+  - running, 596
+  - sharing memory or resources, 597–598
+  - waiting for conditions and resuming execution, 599–600
+- thrown, 423
+- thunks, 456
+- TinyAda
+  - assignment statements, 383
+  - component references, 389–390
+  - data types, 313
+  - declarations, 239, 386–388
+  - EBNF grammar, 237–239
+  - expressions, 239, 388–389
+  - grammar rules, 243
+  - identifiers, 309, 310–312, 312–315, 382–385
+  - name equivalence, 383, 385
+  - nested scopes, 310
+  - parameter modes, 390, 479–481
+  - parser, 242–243, 383
+  - procedure calls, 389–390
+  - procedure declaration, 239, 311
+  - recursive rules, 239
+  - scope, 309–312
+  - semantic qualifiers, 237–239
+  - statements, 239
+  - static expressions, 390, 432–436
+  - static semantic analysis, 309–315, 390
+  - symbolic constants, 432, 433–435
+  - symbol table, 309–311
+  - syntax analyzer, 237–246
+  - TEST program, 239–240
+  - tokens, 240
+  - type checking, 382–390
+  - type descriptors, 383–386
+  - type equivalence, 383
+- tl (tail) operator, 67–68
+- token delimiters, 205

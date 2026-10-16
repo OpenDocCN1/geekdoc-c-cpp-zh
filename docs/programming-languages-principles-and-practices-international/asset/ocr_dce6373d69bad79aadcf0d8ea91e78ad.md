@@ -1,0 +1,15 @@
+a package is not associated directly with a data type (or the data type, such as double, is built-in or defined elsewhere). Thus, such a package does not fit the format of an ADT mechanism as described in Section 11.2.1.
+
+Similarly, as shown in Figure 11.3, a programming language compiler is a large program that is typically split into separate pieces corresponding to the phases described in Chapter 1.
+
+![](bbox=[0.27, 0.24, 0.72, 0.31])
+
+Figure 11.3 Parts of a programming language compiler
+
+We would certainly wish to apply the principles of encapsulation and information hiding to each of the code pieces in this diagram. Here also, there is no special data type that can be associated directly with each phase. Instead, these examples demonstrate the need for an encapsulation mechanism that is viewed more generally as a provider of services, and that is given by the concept of a module:
+
+> DEFINITION: A module is a program unit with a public interface and a private implementation; all services that are available from a module are described in its public interface and are exported to other modules, and all services that are needed by a module must be imported from other modules.
+
+As providers of services, modules can export any mix of data types, procedures, variables, and constants. Also, because modules have explicit (public) interfaces and separate (private) implementations, they are ideal mechanisms to provide separate compilation and library facilities within a software development environment. Indeed, many languages, such as Ada and Java, tie the structure of modules to separate compilation issues (although the relationship is kept loose enough to allow for variation from system to system). Typically in a compiler-based system, the interface for each module in a library or program is kept in textual form, while the implementation may only be provided as object code and is only needed at the link step to produce a running program.
+
+Thus, modules are an essential tool in program decomposition, complexity control, and the creation of libraries for code sharing and reuse. Additionally, modules assist in the control of name proliferation: large programs have large numbers of names, and mechanisms to control access to these names, as well as preventing name clashes, are an essential requirement of a modern programming language. Nested scopes are only the first step in such name control, and modules typically provide additional scope features that make the task of name control more manageable. Indeed, one view of a module is that its main purpose is to provide controlled scopes, exporting only those names that its interface requires and keeping hidden all others. At the same time, even the exported names should be qualified by the module name to avoid accidental name clashes when the same name is used by two different modules. Typically, this is done by using the same dot notation used for structures, so that feature y from module X has the name X.y when imported into client code. (Note that the ML abstype mechanism discussed previously does not have this essential name control feature.)

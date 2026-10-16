@@ -1,0 +1,19 @@
+referenced in an appropriate context. In this section, we develop and partially implement a design for type checking in the parser. As before, this will involve adding new information to the symbol table when an identifier is declared, and looking up that information to enforce semantic restrictions when the identifier is referenced.
+
+# 8.10.1 Type Compatibility, Type Equivalence, and Type Descriptors
+
+For a statically typed language like TinyAda, the parser must check the type of any identifier when it is referenced. Many of these checks occur when the identifier is an operand in an expression. For example, in the TinyAda expression X + 1, the variable X must be of type INTEGER or a subrange type of INTEGER, whereas in the expression not (A or B), the variables A and B must be of type BOOLEAN. The types of identifiers allowed in operands of expressions, thus, must be the types required by the operators. Moreover, because operands can also be any expressions, each expression also must have a type. For example, the subexpression A or B in the expression not (A or B) must be of type BOOLEAN.
+
+Another contextual factor that restricts the types of identifiers and expressions is their placement in assignment statements or as actual parameters to a procedure call. The name on the left side of an assignment statement must be type-compatible with the expression on its right. The expression or name passed as an actual parameter to a procedure call must be type-compatible with the corresponding formal parameter in the procedure’s declaration.
+
+Finally, the types of certain elements of declarations are also restricted. For example, the index types of array type definitions must be the ordinal types BOOLEAN or CHAR or a subrange of INTEGER.
+
+TinyAda uses a loose form of name equivalence to determine whether or not two identifiers (or expressions) are type-compatible. In the cases of arrays and enumerations, this means that two identifiers are type-compatible if and only if they were declared using the same type name in their declarations. In the case of the built-in types INTEGER, CHAR, and BOOLEAN and their programmer-defined subrange types, two identifiers are type-compatible if and only if their supertypes are name-equivalent. For example, the supertype of the type name INDEX in the following declaration is INTEGER:
+
+```
+type INDEX is range 1 .. 10;
+```
+
+The supertype of INTEGER is itself; therefore, a variable of type INDEX is type-compatible with a variable of type INTEGER, because their supertypes are the same. From these basic facts about type compatibility and type equivalence, the rules for type checking in the TinyAda parser can be derived.
+
+The primary data structure used to represent type attributes is called a type descriptor. A type descriptor for a given type is entered into the symbol table when the corresponding type name is introduced. This happens at program startup for the built-in type names BOOLEAN, CHAR, and INTEGER, and later when new type declarations are encountered. When identifier references or expressions are encountered and their types are checked, the parser either compares the type descriptors of two operands or compares a given type descriptor against an expected descriptor. When strict name equivalence is required (for arrays or enumerations), the two type descriptors must be the exact same object. Otherwise (for the built-in ordinal types and their subranges), the two type descriptors must have the exact same supertype descriptor. These rules lead naturally to the implementation of several type-checking methods that appear later in this section.
