@@ -1,0 +1,7 @@
+![](bbox=[0.141, 0.107, 0.866, 0.461])
+
+**FIGURE 1.2** *(See color insert following p. 94)* An example color image (top) and range image (bottom) from our database. For purposes of illustration, the range image is shown by displaying depth as shades of gray. Notice that dark regions in the color image tend to lie in shadow, and that shadowed regions are more likely to lie slightly farther from the observer than the brightly lit outer surfaces of the rock pile. This example image from our database had an especially strong correlation between closeness and brightness.
+
+source of illumination comes from above, and outside of any tree, the outermost leaves of a tree or bush are typically the most illuminated. Deeper into the tree, the foliage is more likely to be shadowed by neighboring leaves, and so nearer pixels tend to be brighter. This same effect can cause a correlation between nearness and brightness in any scene with complex surface concavities and interiors. Because the light source is typically positioned outside of these concavities, the interiors of these concavities tend to be in shadow and more dimly lit than the object’s exterior. At the same time, these concavities will be farther away from the viewer than the object’s exterior. Piles of objects (such as Figure 1.2) and folds in clothing and fabric are other good examples of this phenomenon.
+
+To test our hypothesis, we divided the database into urban scenes (such as building facades and statues) and rural scenes (trees and rocky terrain).

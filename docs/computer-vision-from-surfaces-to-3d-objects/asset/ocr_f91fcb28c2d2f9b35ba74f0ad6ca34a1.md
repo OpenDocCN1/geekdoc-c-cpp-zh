@@ -1,0 +1,5 @@
+In fact, robust differential activations are observed in cortical areas in lateral cortex, as illustrated in Figure 9.10. The interpretations are that both _y_ and _z_ stereomotion are processed separately from depth structure, per se; that frontoparallel stereomotion is processed similarly to lateral luminance-based motion in hMT+ but also activates a second ventral site; and that _z_-axis stereomotion is encoded at a different level in the processing hierarchy (Likova and Tyler, 2007) that also includes the ventral site.
+
+The implications of the processing sequence for surface interpolation and stereomotion may be captured in a flow diagram (Figure 9.11). Local disparity is known to be processed in V1, although not probed by the experiments of Figure 9.10, because local disparity activation was equated in all three comparisons. The disparity signals must reach the dorsal region for _depth interpolation_ of the surface structure in the static disparity image.
+
+![](bbox=[0.0473, 0.1267, 0.9414, 0.5556])

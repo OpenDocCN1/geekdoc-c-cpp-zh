@@ -1,0 +1,1 @@
+FIGURE 9.4 Stereograms showing examples of the sampled Gaussian profiles used in the Likova and Tyler (2003) experiment, defined by (a) luminance alone, (b) disparity alone, and (c) a combination of luminance and disparity. The pairs of panels should be free-fused to obtain the stereoscopic effect. (Reprinted with permission.)

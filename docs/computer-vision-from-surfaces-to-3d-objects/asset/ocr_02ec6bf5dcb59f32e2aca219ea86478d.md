@@ -1,0 +1,13 @@
+2003; Tang et al., 2005) and has shown impressive empirical results on a number of other problems (Frey and Dueck, 2007; Kschischang and Frey, 1998). Initially, the reasons behind the success of belief propagation were only understood for those cases where the underlying graphical model did not contain loops. The many empirical successes on graphical models that did contain loops were largely unexplained. However, recent discoveries have provided a solid theoretical justification for “loopy” belief propagation by showing that when belief propagation converges, it computes a minima of a measure used in statistical physics known as the Bethe free energy (Yedidia et al., 2000). The Bethe free energy is based on a principled approximation of the KL-divergence between a graphical model and a set of marginals and has been instrumental in studying the behaviors of large systems of interacting particles, such as spin glasses. The connection to Bethe free energy had an additional benefit in that it inspired the development of algorithms that minimize the Bethe free energy directly, resulting in variants of belief propagation that guarantee convergence (Heske[s] et al., 2003; Yuille, 2002), improve performance (Yedidia et al., 2000, 2003), or in some cases, guarantee that belief propagation computes the *globally* optimal MAP point of a distribution (Weiss and Freeman, 2007).
+
+Belief propagation estimates the marginals $b_i(x_i)=\sum_{\mathbf{X}\setminus x_i}P(\mathbf{X})$ by iteratively computing *messages* along each edge of the graph according to the following equations:
+
+```
+$$m_{i\to f}^{t+1}(x_i)=\prod_{g\in\mathcal{N}(i)\setminus f}m_{g\to i}^{t}(x_i) \tag{1.9}$$
+
+$$m_{f\to i}^{t+1}(x_i)=\sum_{\tilde{\mathbf{x}}_{\mathcal{N}(f)\setminus i}}\phi_f(\tilde{\mathbf{x}}_{\mathcal{N}(f)})\prod_{j\in\mathcal{N}(f)\setminus i}m_{j\to f}^{t}(x_j) \tag{1.10}$$
+
+$$b_i(x_i)\propto\prod_{g\in\mathcal{N}(i)}m_{g\to i}^{t}(x_i) \tag{1.11}$$
+```
+
+where $f$ and $g$ are factor nodes, $i$ and $j$ are variable nodes, and $\mathcal{N}(i)$ is the set of neighbors of node $i$ (Heskes, 2004). Here, $b_i(x_i)$ is the estimated marginal of variable $i$. Note that the expected value of $\bar{X}$ or equivalently, the minimum mean-squared error (MMSE) point estimate, can be computed by finding the mean of each marginal. If the most likely value of $\bar{X}$ is desired, also known as the maximum *a posteriori* (MAP) point estimate, then the integrals of Equation (1.10) are replaced by suprema. This is known as *max-product belief propagation*.

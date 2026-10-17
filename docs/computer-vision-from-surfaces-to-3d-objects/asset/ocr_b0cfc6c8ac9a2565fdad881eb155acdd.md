@@ -1,0 +1,5 @@
+![](bbox=[0.202, 0.3715, 0.7935, 0.561])
+
+foreground and which is background. The border between a gray and a brown region could be either the contour of a gray object on one side or the contour of a brown object on the other side. Discontinuity of depth, on the other hand, is a perfect cue because it tells which side is in front. Cells that respond to edges in random-dot stereograms are usually (75%) selective for the polarity of the edge (depth ordering of surfaces). An example is cell 3 in Figure 8.4, which responded to the far-near edge in the random-dot stereogram (left-hand edge of square) but not to the near-far edge (right-hand edge of square).
+
+Gestalt psychologists made the surprising observation that the visual system assigns borders also in the absence of unequivocal cues such as disparity in a random-dot stereogram. In Figure 8.5a, the white region

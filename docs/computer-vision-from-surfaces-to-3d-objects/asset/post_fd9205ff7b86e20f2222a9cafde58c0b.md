@@ -1,0 +1,59 @@
+
+- Sullivan J, Blake A, Isard M, MacCormick J (2001) Bayesian object localisation in images. *Int J Comput Vision* 44:111–135.
+- Sun J, Shum HY, Zheng NN (2002) Stereo matching using belief propagation. In *Computer Vision: ECCV, Lecture Notes in Computer Science*, Heyden A, Sparr G, Nielsen M, Johansen P (eds). 2351:510–524.
+- Sun J, Zheng NN, Shum HY (2003) Stereo matching using belief propagation. *IEEE Trans Pattern Anal Mach Intell (PAMI)* 25:787–800.
+- Surdick RT, Davis ET, King RA, Hodges LF (1997) The perception of distance in simulated visual displays: A comparison of the effectiveness and accuracy of multiple depth cues across viewing distances. *Presence: Teleoperators Virtual Env* 6:513–531.
+- Taira M, Tsutsui KI, Jiang M, Yara K, Sakata H (2000) Parietal neurons represent surface orientation from the gradient of binocular disparity. *J Neurophysiol* 83:3140–3146.
+- Tanaka H, Uka T, Yoshiyama K, Kato M, Fujita I (2001) Processing of shape defined by disparity in monkey inferior temporal cortex. *J Neurophysiol* 85:735–744.
+- Tang KL, Tang CK, Wong TT (2005) Dense photometric stereo using tensorial belief propagation. In *IEEE Conf Comput Vision Patt Recogn (CVPR)* 21:132–139.
+- Tarr MJ, Kriegman DJ (2001) What defines a view? *Vision Res* 41:1981–2004.
+- Taylor IL, Sumner FC (1945) Actual brightness and distance of individual colors when their apparent distance is held constant. *J Psychol* 19:79–85.
+- Thompson WB, Pong TC (1990) Detecting moving objects. *Int J Comput Vision* 4:39–57.
+- Thurston WP (1980) *Geometry and Topology of Three-Manifolds*. Princeton University Lecture Notes. Princeton University Press: Princeton, NJ.
+- Thurston WP (1985) The finite Riemann mapping theorem. Talk at *An International Symposium at Purdue University on the Occasion of the Proof of the Bieberbach Conjecture*, March, 1985.
+- Todd JT, Bressan P (1990) The perception of 3-dimensional affine structure from minimal apparent motion sequences. *Percept Psychophys* 48:419–430.
+- Todd JT, Chen L, Norman JF (1998) On the relative salience of Euclidean, affine and topological structure for 3D form discrimination. *Perception* 27:273–282.
+- Todd JT, Norman JF (1995) The visual discrimination of relative surface orientation. *Perception* 24:855–866.
+- Todd JT, Norman JF, Koenderink JJ, Kappers AML (1997) Effects of texture, illumination and surface reflectance on stereoscopic shape perception. *Perception* 26:806–822.
+- Todd JT, Reichel FD (1989) Ordinal structure in the visual perception and cognition of smoothly curved surfaces. *Psych Rev* 96:643–657.
+- Toet A, Koenderink JJ (1988) Differential spatial displacement discrimination thresholds for Gabor patches. *Vision Res* 28:133–143.
+- Tola E, Lepetit V, Fua P (2008) A fast local descriptor for dense matching. In *Proc Comput Vision Patt Recogn (CVPR)* 28:1–8.
+- Tyler CW, Kontsevich LL (1995) Mechanisms of stereoscopic processing: Stereo attention and surface perception in depth reconstruction. *Perception* 24:127–153.
+- Tyler CW, Likova LT, Kontsevich LL, Wade AR (2006) The specificity of cortical area KO to depth structure. *NeuroImage* 30:228–238.
+- Ullman S (1976) Filling in the gaps: The shape of subjective contours and a model for their generation. *Biol Cybernet* 25:1–6.
+- van Ee R, Adams WJ, Mamassian P (2003) Bayesian modeling of cue interaction: Bistability in stereoscopic slant perception. *J Opt Soc Am A* 20:1398–1406.
+- van Hateren JH, van der Schaaf A (1998) Independent component filters of natural images compared with simple cells in primary visual cortex. *Proc Roy Soc B* 265:359–366.
+- Van Oostende S, Sunaert S, Van Hecke P, Marchal G, Orban GA (1997) The kinetic occipital (KO) region in man: An fMRI study. *Cereb Cortex* 7:690–701.
+- Veksler O (2008) Star shape prior for graph-cut image segmentation. In *Eur Conf Comput Vision (ECCV)* 10:454–467.
+- Vetter T, Poggio T (1994) Symmetric 3D objects are an easy case for 2D object recognition. *Spat Vision* 8:443–453.
+- Vetter T, Poggio T, Bülthoff HH (1994) The importance of symmetry and virtual views in three-dimensional object recognition. *Curr Biol* 4:18–23.
+- von der Heydt R, Friedman HS, Zhou H (2003) Searching for the neural mechanisms of color filling-in. In: *Filling-in: From Perceptual Completion to Cortical Reorganization*. Pessoa L, De Weerd P (eds). Oxford University Press: Oxford, 106–127.
+- von der Heydt R, Zhou H, Friedman HS (2000) Representation of stereoscopic edges in monkey visual cortex. *Vision Res* 40:1955–1967.
+- Wallach H, O'Connell DN (1953) The kinetic depth effect. *J Exp Psychol* 45:205–217.
+- Wallach H, Zuckerman C (1963) The constancy of stereoscopic depth. *Amer J Psychol* 76:404–412.
+- Wallschlaeger C, Busic-Snyder C (1992) *Basic Visual Concepts and Principles for Artists, Architects, and Designers*. McGraw Hill: Boston.
+- Walther D, Koch C (2006) Modeling attention to salient proto-objects. *Neural Networks* 19:1395–1407.
+- Waltz D (1975) Generating semantic descriptions from drawings of scenes with shadows. In *The Psychology of Computer Vision*, Winston PH (ed), McGraw-Hill: New York, 19–91.
+- Weber J, Malik J (1997) Rigid body segmentation and shape description from dense optical flow under weak perspective. *IEEE Trans Patt Anal Mach Intell (PAMI)* 19:139–143.
+- Weiss Y (1997a) Interpreting images by propagating Bayesian beliefs. In *Adv Neur Inf Proc Syst (NIPS)* 9:908–915.
+- Weiss Y (1997b) Smoothness in layers: Motion segmentation using nonparametric mixture estimation. *IEEE Conf Comput Vision Patt Recogn (CVPR)* 13:520–526.
+- Weiss Y, Freeman WT (2001) On the optimality of solutions of the max-product belief propagation algorithm in arbitrary graphs. IEEE Trans Inf Theory, Special Issue on Codes on Graphs and Iterative Algorithms 47:723–735.
+- Weiss Y, Freeman WT (2007) What makes a good model of natural images? In CVPR 2007: Proceedings of the 2007 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. Minneapolis, MN: IEEE Computer Society.
+- Weintraub SH (2007) Differential Forms: A Complement to Vector Calculus. Academic Press: New York.
+- Wertheimer M (1923) Untersuchungen zur Lehre von der Gestalt II [Laws of organization in perceptual forms]. Psychol Forsch 4:301–350.
+- Wertheimer M (1923/1938) Principles of perceptual organization. In Readings in Perception, Beardslee DC, Wertheimer M (eds), D. Van Nostrand: New York, 115–135.
+- White R, Forsyth D (2006) Combining cues: Shape from shading and texture. In Proc Comput Vision Patt Recogn (CVPR) 22:1809–1816.
+- Wiles CS, Brady M (1995) Closing the loop on multiple motions. In Proc Int Conf Comput Vision (ICCV) 5:308–313.
+- Williams LR, Jacobs DW (1997a) Local parallel computation of stochastic completion fields. Neural Comput 9:859–881.
+- Williams LR, Jacobs DW (1997b) Stochastic completion fields: a neural model of illusory contour shape and salience. Neural Comput 9:837–858.
+- Winston PH (1975) Learning structural descriptions. In The Psychology of Computer Vision, Winston PH (ed), McGraw-Hill: New York, 157–200.
+- Woodford OJ, Reid ID, Torr PHS, Fitzgibbon AW (2006) Fields of experts for image-based rendering. In Proceedings of the 17th British Machine Vision Conference, Edinburgh 3:1109–1118.
+- Woodford OJ, Torr PHS, Reid ID, Fitzgibbon AW (2008) Global stereo reconstruction under second order smoothness priors. In IEEE Proc Comput Vision Patt Recogn (CVPR) 24:2115–2128.
+- Wright M, Ledgeway T (2004) Interaction between luminance gratings and disparity gratings. Spatial Vision 17:51–74.
+- Xu C, Prince JL (1998) Snakes, shapes, and gradient vector flow. IEEE Trans Image Processing 7:359–369.
+- Yamabe H (1960) The Yamabe problem. Osaka Math J 12:21–37.
+- Yang Z, Purves D (2003) Image/source statistics of surfaces in natural scenes. Network 14:371–390.
+- Yarbus AL (1967) Eye Movements and Vision. Plenum Press: NY.
+- Yedidia JS, Freeman WT, Weiss Y (2000) Generalized belief propagation. In Adv Neur Inf Proc Syst (NIPS) 12:689–695.
+- Yedidia JS, Freeman WT, Weiss Y (2001) Understanding belief propagation and its generalizations. MERL Cambridge Research Tech Report TR 2001–2016.
+- Yedidia JS, Freeman WT, Weiss Y (2003) Understanding belief propagation and its generalizations. In Lakemeyer G, Nebel B (eds), Exploring Artificial Intelligence in the New Millennium. Morgan Kaufmann: San Francisco, 239–269.

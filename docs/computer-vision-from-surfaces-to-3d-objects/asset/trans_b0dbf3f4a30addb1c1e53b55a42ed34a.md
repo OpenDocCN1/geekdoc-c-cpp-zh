@@ -1,0 +1,59 @@
+
+- Sullivan J, Blake A, Isard M, MacCormick J (2001) 贝叶斯物体在图像中的定位。*Int J Comput Vision* 44:111–135.
+- Sun J, Shum HY, Zheng NN (2002) 利用贝尔传播进行立体匹配。在 *Computer Vision: ECCV, Lecture Notes in Computer Science*, Heyden A, Sparr G, Nielsen M, Johansen P (eds). 2351:510–524.
+- Sun J, Zheng NN, Shum HY (2003) 利用贝尔传播进行立体匹配。*IEEE Trans Pattern Anal Mach Intell (PAMI)* 25:787–800.
+- Surdick RT, Davis ET, King RA, Hodges LF (1997) 通过多种视觉线索在不同观看距离下对距离感知的认识及准确性。 *Presence: Teleoperators Virtual Env* 6:513–531.
+- Taira M, Tsutsui KI, Jiang M, Yara K, Sakata H (2000) 梭状回皮层神经元通过双眼视差的梯度来表示表面方向。*J Neurophysiol* 83:3140–3146.
+- Tanaka H, Uka T, Yoshiyama K, Kato M, Fujita I (2001) 梭状回皮层中处理由立体差异定义的形状。*J Neurophysiol* 85:735–744.
+- Tang KL, Tang CK, Wong TT (2005) 利用张量贝尔传播进行密集立体视觉。*IEEE Conf Comput Vision Patt Recogn (CVPR)* 21:132–139.
+- Tarr MJ, Kriegman DJ (2001) 视觉中“视角”定义是什么。*Vision Res* 41:1981–2004.
+- Taylor IL, Sumner FC (1945) 当视距固定时，个体色彩的实际亮度和距离。*J Psychol* 19:79–85.
+- Thompson WB, Pong TC (1990) 检测移动物体。*Int J Comput Vision* 4:39–57.
+- Thurston WP (1980) *几何与三维多态体的拓扑学*。普林斯顿大学讲义笔记。普林斯顿大学出版社：普林斯顿，新泽西。
+- Thurston WP (1985) 有限黎曼映射定理。在 *An International Symposium at Purdue University on the Occasion of the Proof of the Bieberbach Conjecture*，3月，1985年。
+- Todd JT, Bressan P (1990) 从最小视差序列中感知三维仿射结构。*Percept Psychophys* 48:419–430.
+- Todd JT, Chen L, Norman JF (1998) 关于欧几里得、仿射和拓扑结构在三维形式辨识中的相对显著性。*Perception* 27:273–282.
+- Todd JT, Norman JF (1995) 视觉上对表面方向的相对辨识。*Perception* 24:855–866.
+- Todd JT, Norman JF, Koenderink JJ, Kappers AML (1997) 纹理、照明和表面反射对立体形状感知的影响。*Perception* 26:806–822.
+- Todd JT, Reichel FD (1989) 平滑曲面的视觉感知与认知中的序结构。*Psych Rev* 96:643–657.
+- Toet A, Koenderink JJ (1988) 对Gabor斑块的微小空间位移辨识阈值。*Vision Res* 28:133–143.
+- Tola E, Lepetit V, Fua P (2008) 快速局部描述符用于密集匹配。在 *Proc Comput Vision Patt Recogn (CVPR)* 28:1–8.
+- Tyler CW, Kontsevich LL (1995) 立体处理机制：立体注意力与深度重建中的表面感知。*Perception* 24:127–153.
+- Tyler CW, Likova LT, Kontsevich LL, Wade AR (2006) 皮层区域KO对深度结构的特异性。*NeuroImage* 30:228–238.
+- Ullman S (1976) 填补空白：主观轮廓的形状及其生成模型。*Biol Cybernet* 25:1–6.
+- van Ee R, Adams WJ, Mamassian P (2003) 贝叶斯模型中线索交互作用：立体倾斜感知的双稳现象。*J Opt Soc Am A* 20:1398–1406.
+- van Hateren JH, van der Schaaf A (1998) 自然图像的独立成分滤波器与初级视皮层简单细胞的比较。*Proc Roy Soc B* 265:359–366.
+- Van Oostende S, Sunaert S, Van Hecke P, Marchal G, Orban GA (1997) 人体中的运动后区（KO）的特性：一项fMRI研究。*Cereb Cortex* 7:690–701.
+- Veksler O (2008) 图-切割图像分割的星形先验。*Eur Conf Comput Vision (ECCV)* 10:454–467.
+- Vetter T, Poggio T (1994) 对称三维物体是二维物体识别的容易情况。*Spat Vision* 8:443–453.
+- Vetter T, Poggio T, Bülthoff HH (1994) 对称性和虚拟视图在三维物体识别中的重要性。*Curr Biol* 4:18–23.
+- von der Heydt R, Friedman HS, Zhou H (2003) 寻找色彩填充的神经机制。在 *Filling-in: From Perceptual Completion to Cortical Reorganization*。Pessoa L, De Weerd P (eds)。牛津大学出版社：牛津，106–127。
+- von der Heydt R, Zhou H, Friedman HS (2000) 猴视皮层中立体边缘的表示。*Vision Res* 40:1955–1967.
+- Wallach H, O'Connell DN (1953) 运动深度效应。*J Exp Psychol* 45:205–217.
+- Wallach H, Zuckerman C (1963) 立体深度的不变性。*Amer J Psychol* 76:404–412.
+- Wallschlaeger C, Busic-Snyder C (1992) *艺术家、建筑师和设计师的基础视觉概念与原则*。McGraw Hill：波士顿。
+- Walther D, Koch C (2006) 模型显著原型物体的注意力。*Neural Networks* 19:1395–1407.
+- Waltz D (1975) 从带阴影场景的绘图中生成语义描述。*The Psychology of Computer Vision*, Winston PH (ed), McGraw-Hill: New York, 19–91.
+- Weber J, Malik J (1997) 在弱透视下，通过稠密光流进行刚体分割和形状描述。*IEEE Trans Patt Anal Mach Intell (PAMI)* 19:139–143.
+- Weiss Y (1997a) 通过传播贝叶斯信念来解释图像。*Adv Neur Inf Proc Syst (NIPS)* 9:908–915.
+- Weiss Y (1997b) 层间平滑性：利用非参数混合估计进行运动分割。*IEEE Conf Comput Vision Patt Recogn (CVPR)* 13:520–526.
+- Weiss Y, Freeman WT (2001) 在任意图上，max-product信念传播算法的最优解的可行性。*IEEE Trans Inf Theory, Special Issue on Codes on Graphs and Iterative Algorithms* 47:723–735.
+- Weiss Y, Freeman WT (2007) 自然图像的好模型是什么？在 CVPR 2007: Proceedings of the 2007 IEEE Computer Society Conference on Computer Vision and Pattern Recognition。Minneapolis, MN: IEEE Computer Society。
+- Weintraub SH (2007) 微分形式：向量微积分的补充。Academic Press：纽约。
+- Wertheimer M (1923) 研究感知形态的组织法 II [感知形态的组织法则]。Psychol Forsch 4:301–350.
+- Wertheimer M (1923/1938) 感知组织的原则。在 Readings in Perception, Beardslee DC, Wertheimer M (eds), D. Van Nostrand: New York, 115–135.
+- White R, Forsyth D (2006) 结合线索：从阴影和纹理到形状。*Proc Comput Vision Patt Recogn (CVPR)* 22:1809–1816.
+- Wiles CS, Brady M (1995) 关闭多重运动的循环。*Proc Int Conf Comput Vision (ICCV)* 5:308–313.
+- Williams LR, Jacobs DW (1997a) 概率完成场的局部并行计算。*Neural Comput* 9:859–881.
+- Williams LR, Jacobs DW (1997b) 概率完成场：幻觉轮廓形状和显著性的神经模型。*Neural Comput* 9:837–858.
+- Winston PH (1975) 学习结构描述。*The Psychology of Computer Vision*, Winston PH (ed), McGraw-Hill: New York, 157–200.
+- Woodford OJ, Reid ID, Torr PHS, Fitzgibbon AW (2006) 专家场域用于基于图像的渲染。*In Proceedings of the 17th British Machine Vision Conference, Edinburgh* 3:1109–1118.
+- Woodford OJ, Torr PHS, Reid ID, Fitzgibbon AW (2008) 在二阶平滑先验下进行全局立体重建。*IEEE Proc Comput Vision Patt Recogn (CVPR)* 24:2115–2128.
+- Wright M, Ledgeway T (2004) 亮度条纹与位移条纹之间的相互作用。*Spatial Vision* 17:51–74.
+- Xu C, Prince JL (1998) 蛇形、形状和梯度向量流。*IEEE Trans Image Processing* 7:359–369.
+- Yamabe H (1960) 亚姆贝问题。*Osaka Math J* 12:21–37.
+- Yang Z, Purves D (2003) 自然场景中表面的图像/来源统计。*Network* 14:371–390.
+- Yarbus AL (1967) 眼动与视觉。*Plenum Press: NY.*
+- Yedidia JS, Freeman WT, Weiss Y (2000) 一般化贝尔传播。*Adv Neur Inf Proc Syst (NIPS)* 12:689–695.
+- Yedidia JS, Freeman WT, Weiss Y (2001) 理解贝尔传播及其一般化。*MERL Cambridge Research Tech Report TR 2001–2016.*
+- Yedidia JS, Freeman WT, Weiss Y (2003) 理解贝尔传播及其一般化。在 Lakemeyer G, Nebel B (eds), Exploring Artificial Intelligence in the New Millennium。Morgan Kaufmann: San Francisco, 239–269.

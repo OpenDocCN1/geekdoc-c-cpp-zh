@@ -1,0 +1,7 @@
+The output of this model is an image of activations at pixel locations along interpolation paths. These activations appear at locations in images where people report perceiving illusory contours.
+
+A more recent model (Kalar et al., 2010), generalizes the framework proposed in the model of Heitger et al. (1998) to interpolate both illusory and occluded contours. This model, which is a neural implementation of contour relatability and the identity hypothesis (that illusory and occluded objects share a common underlying interpolation mechanism), generates images of illusory and occluded contours consistent with human perception in a wide variety of contexts (e.g., Figure 10.12).
+
+There is, however, an important shortcoming of models of this type. The inputs to these models are _images_ where pixel values represent luminance. The outputs of the models are images of illusory and occluded (and real) contours. That is, these models take images that represent luminance at each pixel location and return images that represent illusory and occluded interpolation _activity_ at each pixel location. There is nothing in the outputs to indicate that different pixels are connected to each other, that they form part of a contour, and so on. Nothing describes the areas that form a complete object, much less provides a description of its shape. In this sense, such models can be easily misinterpreted, as the observer viewing the outputs provides all of these additional descriptions.
+
+![](bbox=[0.16, 0.5325, 0.7795, 0.6835])
