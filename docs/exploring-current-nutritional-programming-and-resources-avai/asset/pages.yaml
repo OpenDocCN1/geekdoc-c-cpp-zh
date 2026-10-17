@@ -1,0 +1,2479 @@
+- pgno: 0
+  md: '# Exploring current nutritional programming and resources available to people
+    living with HIV in Canada: a scoping review
+
+
+    Jessica Mannette¹ · Yingying Zhang¹ · Melissa Rothfus²˒³ · Chelsey Purdy¹ · Winta
+    Tesfatsion¹ · Mary Lynch⁴ · Barbara Hamilton-Hinch⁵ · Patricia L. Williams¹˒⁶˒⁷
+    · Phillip Joy¹ · Shannan Grant¹˒⁸˒⁹
+
+
+    ¹Department of Applied Human Nutrition, Mount Saint Vincent University, Halifax,
+    NS, Canada, ²WK Kellogg Health Sciences Library, Dalhousie University, Halifax,
+    NS, Canada, ³Aligning Health Needs and Evidence for Transformative Change (AH-NET-C):
+    A JBI Centre of Excellence, Dalhousie University, Halifax, NS, Canada, ⁴Department
+    of Anesthesia, Pain Management and Perioperative Medicine, Dalhousie University,
+    Halifax, NS, Canada, ⁵School of Health and Human Performance, Dalhousie University,
+    Halifax, NS, Canada, ⁶Food Action Research Centre (FoodARC), Mount Saint Vincent
+    University, Halifax, NS, Canada, ⁷Healthy Populations Institute, Dalhousie University,
+    Halifax, NS, Canada, ⁸Department of Obstetrics and Gynecology, IWK Health Centre,
+    Halifax, NS, Canada, and ⁹Departments Pediatrics, Obstetrics and Gynaecology,
+    Dalhousie University, Halifax, NS, Canada
+
+
+    # ABSTRACT
+
+
+    **Objective:** The objective of this scoping review was to map the current literature
+    and resources available on nutrition and food programming for people living with
+    HIV in Canada. This review is phase 1 of a 4-phase project, called FoodNOW (Food
+    to eNhance Our Wellness), a community-based nutritional needs assessment of people
+    living with HIV in Nova Scotia, Canada.
+
+
+    **Introduction:** People living with HIV may experience nutritional challenges,
+    including nutritional deficiencies associated with the virus, food insecurity,
+    and nutrition-drug interactions. Nutritional programming is often required for
+    optimal care for people living with HIV. The literature, however, has not been
+    sufficiently mapped to create a comprehensive picture of available programming.
+    This review has informed the development of subsequent study phases, and will
+    contribute towards shaping and planning food programs, as well as evaluating the
+    need for subsequent systematic reviews.
+
+
+    **Inclusion criteria:** This review considered literature focused on nutrition
+    and food programming and resources in Canada for people living with HIV. People
+    living with HIV of any age, sex, race, gender identity, or sexual orientation,
+    as well as pregnant and lactating people, were included as the population of interest.
+
+
+    **Methods:** The databases searched were MEDLINE (Ovid), CINAHL (EBSCO), Academic
+    Search Premier (EBSCO), Social Services Abstracts (ProQuest), and Scopus. Sources
+    of gray literature searched included government and organization websites, and
+    Google searches. The database search was conducted in July 2021, and the gray
+    literature searches were conducted in August and October 2021. Searches were limited
+    to evidence published or translated in English. Two independent reviewers conducted
+    title and abstract screening, and potentially relevant results were retrieved
+    in full. Full-text screening and data extraction was conducted by 2 independent
+    reviewers using a data extraction tool designed specifically for the scoping review
+    objectives and research inclusion criteria, and any conflicts were resolved through
+    discussion. Results are presented in both tabular and diagrammatic formats, with
+    a narrative summary.
+
+
+    **Results:** A total of 581 results were screened (published and gray literature).
+    A total of 64 results were included in the review. The 6 reasons for exclusion
+    at full-text review were i) not nutrition and food programming (n = 83), ii) not
+    Canadian (n = 37), iii) duplicates (n = 22), iv) not focused on people living
+    with HIV (n = 6), v) conference abstract (n = 1), and vi) not in English (n =
+    1). A total of 76 resources were located, as some of the 64 included
+
+
+    *Correspondence:* Jessica Mannette, jessica.mannette@msvu.ca
+
+
+    This is an open access article distributed under the terms of the Creative Commons
+    Attribution-Non Commercial-No Derivatives License 4.0 (CCBY-NC-ND), where it is
+    permissible to download and share the work provided it is properly cited. The
+    work cannot be changed in any way or used commercially without permission from
+    the journal.
+
+
+    *The authors declare no conflict of interest.*
+
+
+    DOI: 10.11124/JBIES-22-00168'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'sources offered more than 1 resource. The 76 resources were organized into
+    6 categories: i) charitable food provision (n = 21; 27.6%), ii) financial aid
+    (n = 14; 18.4%), iii) nutrition care (n = 12; 15.8%), iv) providing access to
+    secondary sources (n = 10; 13.2%), v) food and nutrition expertise (n = 10; 13.2%),
+    and vi) population health promotion (n = 9; 11.8%). Recommendations for future
+    research and programming are discussed.
+
+
+    **Conclusions:** This scoping review demonstrates that current programming relies
+    heavily on charitable food provision services for people living with HIV and that
+    there is an unequal distribution of resources across Canada. Program expansion
+    to target diverse populations with more equal distribution across Canada may improve
+    overall health outcomes for people living with HIV. Future research is needed
+    to evaluate the effectiveness of available programming and the needs of end users
+    (people living with HIV and their supports). FoodNOW will build on these findings
+    to further explore and address the needs of people living with HIV.
+
+
+    **Review registration:** Open Science Framework https://osf.io/97x3r
+
+
+    **Keywords:** AIDS; HIV; food programming; food provision; nutrition programming
+
+
+    *JBI Evid Synth* 2023; 21(10):2022–2081.
+
+
+    # Introduction
+
+
+    Human immunodeficiency virus (HIV) attacks the body’s immune system, deteriorating
+    and weakening it, and increasing the risk of a person acquiring life-threatening
+    infections and diseases (eg, cancer). If left untreated, HIV can progress into
+    acquired immunodeficiency syndrome (AIDS) and result in death. There were an estimated
+    62,050 Canadians living with HIV by the end of 2018. In 2019, the number of positive
+    HIV cases identified in Canada was slightly lower than 2018; however, this decrease
+    was not as great as in other countries. For instance, positive HIV cases identified
+    among gay, bisexual, and men who have sex with men (gbMSM) have declined by 47%
+    in the United Kingdom since 2014, whereas the cases among the same population
+    in Canada have decreased by 26% over the past 10 years, providing rationale for
+    a Canadian-focused scoping review.
+
+
+    A cornerstone of HIV treatment is medical nutrition therapy (MNT), which has been
+    highlighted by Dietitians of Canada and the American Dietetic Association (now
+    named the Academy of Nutrition and Dietetics) in their reports. Through nutrition
+    assessment and co-developed support, the nutrition care process and MNT aim to
+    prevent and manage the signs, symptoms, and progression of HIV. MNT assessment
+    includes nutrition-related problems, causes, and significance; medical, physical,
+    social, economic, and dietary history; pharmacotherapy; and recognition/integration
+    of social determinants of health. While a referral to a registered dietitian is
+    part of the treatment stage of the cascade of care for individuals upon HIV diagnosis,
+    there is no guarantee they will have access to subsequent nutrition care in their
+    own communities.
+
+
+    HIV has had “a significant impact on domestic and global health, social, political,
+    and economic outcomes.” There were 2122 new cases of HIV reported in Canada in
+    2019. Additionally, Dietitians of Canada and the Academy of Nutrition and Dietetics
+    reported that virus cases are highest among those who have and continue to experience
+    barriers in accessing medical care: 30% (n = 626) were immigrants, and 56% (n
+    = 1193) were gbMSM, while approximately 25% (n = 531) of new cases were among
+    Indigenous populations. Important to note, Indigenous peoples made up 5% (n =
+    1,807,250) of the total population (approximately 37 million) in Canada in 2021.
+
+
+    A widely accepted definition of *food insecurity*, from Anderson is “limited or
+    uncertain availability of nutritionally adequate and safe foods or limited or
+    uncertain ability to acquire acceptable foods in socially acceptable ways.” In
+    high-income, high-resource settings such as Canada and the United States, 49%
+    to 71% (30,404 to 41,055 of 65,050) of people living with HIV (PLWH) experience
+    food insecurity, largely due to socioeconomic status. Moreover, PLWH may experience
+    a range of nutrient deficiencies, including anemias, antioxidant depletion, or
+    protein-energy malnutrition, due to their pathology alone, directly impacting
+    nutritional status and adequacy and, thus, their food security. For instance,
+    sufficient caloric, micronutrient, and protein intake is key to managing symptoms'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'of nutrition-related immune dysfunctions in this population and is patient-
+    or case-specific.¹ Translated into practice, this can equate to higher caloric
+    and nutrient needs, which may not be achievable with limited income or food access.
+
+
+    An individual’s overall health and well-being are impacted by economic and social
+    intersections, otherwise known as social determinants of health.⁹ PLWH may experience
+    multiple prejudices simultaneously, such as race, gender, sexual orientation,
+    and socioeconomic status, which create complex systems of oppression and privilege.
+    Using an intersectional¹⁰ lens when conducting HIV research has proved beneficial
+    in understanding PLWH and their challenges in accessing care.¹¹,¹² As such, an
+    intersectional approach to HIV prevention and management would greatly benefit
+    food programming research and planning towards inclusivity while considering the
+    multiple social identities to which PLWH are often connected.
+
+
+    In attempts to meet nutritional needs of PLWH in Canada, there are different types
+    of nutrition and food programming. For example, food banks and meal programs provide
+    emergency food supply for those in need,⁹,¹³–¹⁷ named in this review as *charitable
+    food provision*. MNT and other dietitian services, such as community-based cooking
+    classes, aim to treat nutrient deficiencies, maintain lean body mass, improve
+    quality and length of life, manage symptoms, facilitate medication therapy and
+    avoid food–drug interactions, and address complications.¹,⁴ Community-based cooking
+    classes have also been shown to improve health and life skills and increase the
+    likelihood of participation in nutrition and food programming.⁹,¹³
+
+
+    Charitable food provision services were originally created to serve as an emergency
+    food service for those in immediate need.¹⁸,¹⁹ Despite this, food banks and soup
+    kitchens are commonly used as a longstanding response to address food insecurity,
+    despite low intervention efficacy.¹⁹ Much research has been conducted to highlight
+    why providing food in this way does not address the root cause of food insecurity.¹³,¹⁸–²²
+    For example, although there are more than 50 free and low-cost food centers operating
+    in the Downtown Eastside of Vancouver, British Columbia, there continue to be
+    high rates of food insecurity reported among residents in this area.¹⁹ Research
+    has shown that only 20% to 30% of people experiencing food insecurity utilize
+    charitable food
+
+
+    provisions, such as food banks and meal programs, due to their stigmatizing nature,
+    inadequacy to meet people’s real needs, and many other limitations and negative
+    consequences.²² Further, Miewald *et al.* and others highlight the importance
+    of considering the intersection(s) of HIV, poverty, and gender, and how this may
+    affect an individual’s experience in gaining proper food and nutrition by creating
+    more challenges to navigate.¹³,¹⁸,¹⁹
+
+
+    The federal government in Canada distributes health care funding to provinces
+    and territories with the aim of meeting the specific needs and priorities of each
+    region. This model of federal funding and provincial or territorial service provision
+    makes up the Canadian publicly funded health care system.²³ For Indigenous populations,
+    the Non-Insured Health Benefits Program offers coverage for medically necessary
+    goods and services.²⁴ As a result of each province having individualized funding
+    and programming, Canada does not have a national plan for MNT or community-based
+    nutrition for PLWH,²⁵,²⁶ despite there being evidence-based agreement on MNT for
+    patients with chronic disease, including HIV.²⁶,²⁷ A coordinated and comprehensive
+    approach would be beneficial towards ensuring efficient and effective sharing
+    of knowledge and resources.²⁶,²⁷ To optimize results, organizations that work
+    with targeted populations, including women and children, aging populations, and
+    gbMSM, may attempt to offer specialized programming that best suits their needs.
+    Resources often differ from region to region and, thus, tailored responses that
+    correspond with intersecting local geographical, social, and political contexts
+    are common, and frequently necessary, to address local needs.²⁸
+
+
+    In addition to the programming itself, health care workers and service providers
+    meant to deliver programming for PLWH require specific supports to be able to
+    provide the best care possible. Consequently, the Global Health Workforce Alliance
+    (2010) conducted a review on the state of health care services for PLWH in which
+    they offered recommendations, including improved support for health care workers
+    and service workers in primary care.²⁹ The supports identified included resources,
+    flexibility, interprofessional education opportunities, and quality communication.
+    Several peer-reviewed original works, within and beyond Canada, have identified
+    similar findings.
+
+
+    A preliminary search of MEDLINE, the Cochrane Database of Systematic Reviews,
+    PROSPERO, and'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/8203ec9d73e5fc99da4150af520dc6ba_5_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'on specific questions or issues. As an evidence-informed method, the DM is
+    used to gather input, feedback, and opinion on questionnaires, reports, and educational
+    tools. This method relies on individuals considered to have knowledge on the topic
+    (ie, people with lived experience). The expert group aims to reach a consensus
+    on a complex and multifaceted topic. In this case, the DM provided a framework
+    to guide consultation and subsequent decision-making (eg, how the review will
+    inform subsequent surveying). Contributors to the consultation had the opportunity
+    to highlight additional references and provide valuable insights about problems
+    and ideas that the scoping review alone had not identified. A DM flow chart is
+    provided in Appendix II, adapted from Green.
+
+
+    A list of 13 experts was generated from existing FoodNOW steering and advisory
+    committees, as well as colleagues of the research team from relevant fields (ie,
+    nutrition, health care providers), who were then invited to participate in the
+    DM process. Eight experts agreed to participate as panelists, and the DM was employed
+    by a trained facilitator to a group that included registered dietitians (n = 2),
+    service providers (n = 4), a medical advisor (n = 1), and a dietitian candidate
+    (n = 1). Panelists were invited to share feedback in the form of typed responses
+    collected via email or prerecorded video. The scoping review manuscript was provided
+    2 weeks in advance of the first feedback submission deadline (round 1). The panelists
+    were asked to offer feedback on the practical application of the findings and
+    to identify any reservations about materials included and/or excluded. Informed
+    by Hemmings et al. and Williams and Webb, the facilitator collated the feedback
+    into an anonymous summary report and circulated it back to the DM panelists for
+    review 1 week in advance of the round 2 feedback submission deadline. The facilitator
+    then integrated all final additional feedback into the review.
+
+
+    # Data analysis and presentation
+
+
+    The results of this review are presented in tables and figures, and accompanied
+    by a narrative summary that describes how the results relate to the review objective
+    and question. The focus of this review was the broad concept of nutrition and
+    food programming available to PLWH, and as such, we reported a broad range of
+    programming types.
+
+
+    # Results
+
+
+    # Study inclusion
+
+
+    A search of the peer-reviewed literature conducted on July 14, 2021, yielded 696
+    results from 5 databases. Gray literature searches conducted on August 24, October
+    5, and October 15, 2021 (see Appendix I), yielded another 143 results (see Appendix
+    IV). A total of 839 results were recorded. For purposes of this study, identified
+    articles (peer-reviewed) and evidence (gray literature) are referred to as results,
+    and individual programming and resources available to PLWH or AIDS are referred
+    to as programming and resources.
+
+
+    After duplicates were removed from the published literature, 439 results remained
+    for title and abstract screening. Of these, 366 results did not match the research
+    inclusion criteria, and 2 results were unable to be retrieved, leaving 213 results
+    for full-text-review (71 published and 143 gray literature results). After full-text
+    screening, 64 results were included in the review (17 published and 47 gray literature
+    results). See Figure 1 for the complete search results and study selection and
+    inclusion process. The 6 reasons for exclusion after full-text screening were
+    i) not nutrition and food programming (n = 83), ii) not Canadian context (n =
+    37), iii) duplicates (n = 22), iv) not focused on PLWH (n = 6), v) conference
+    abstract (n = 1), and vi) not in English (n = 1). See Appendix II for the list
+    of excluded results. Duplicates identified among the published literature during
+    the full-text review were due to multiple records published on the same resource/service
+    organization. As the objective of the review was to identify the number of resources
+    available in Canada, only 1 record per resource/service organization was eligible
+    to be included in the scoping review.
+
+
+    # Characteristics of included studies
+
+
+    Details of the 64 results included in the scoping review are provided in Appendix
+    IV. Study characteristics were recorded as they relate to the research objectives
+    and include full citations. The included results were published between 1993 and
+    2021. Four results had no date available. Per decade, the years of publication
+    of the remaining 60 results were found to be distributed as such: 1990–1999 (n
+    = 4; 6.7%), 2000–2009 (n = 5; 8.3%), 2010–2019 (n = 24; 40%), and 2020–2021 (n
+    = 27; 45%). As outlined in the inclusion criteria, the item of data/evidence had
+    to be based in Canada and describe/discuss nutrition'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/8203ec9d73e5fc99da4150af520dc6ba_7_0.png)
+
+
+    # **Figure 2: Chart of location(s) of identified targeted nutrition and food programming
+    and resources available (n = 25) to people living with HIV in Canada, by city**
+
+
+    and food programming or resources for PLWH. The following types of data/evidence
+    were included: service provider websites (n = 30; 46.9%), provincial and territorial
+    government websites (n = 13; 20.3%), qualitative research studies (including cohort
+    and participatory research studies; n = 6; 9.4%), narrative reviews and summaries
+    (n = 6; 9.4%), health services websites (including health clinics; n = 4; 6.3%),
+    non-randomized experimental studies (n = 2; 3.1%), cross-sectional studies (n
+    = 2; 3.1%), and a needs assessment paper (n = 1; 1.6%). We have organized the
+    findings based on the objectives of this scoping review: i) population: PLWH,
+    ii) context: Canada, and iii) concept: available nutrition and food programming.
+
+
+    focused on women and/or children (n = 6; 8.7%); PLWH who use drugs (n = 3; 4.3%);
+    transgender, non-binary, and gender-diverse PLWH (n = 3; 4.3%); PLWH on antiretroviral
+    therapy (n = 3; 4.3%); African, Caribbean, and Black PLWH (n = 2; 2.9%); Indigenous
+    PLWH (n = 2; 2.9%); gbMSM (n = 2; 2.9%); low-income PLWH (n = 1; 1.4%), French-speaking
+    PLWH (n = 1; 1.4%); sex workers (n = 1; 1.4%); and PLWH who have been marginalized
+    (n = 1; 1.4%).
+
+
+    # *Review findings*
+
+
+    # **Population**
+
+
+    Most results for available nutrition and food programming targeted the general
+    population of PLWH in Canada. Of the 64 results included in the review, some offered
+    specific programming for more than 1 population, for a total of 69 targeted programming
+    resources. Of these 69 results, 44 (63.8%) were broadly focused on PLWH, rather
+    than breaking programming down to target specific diverse populations. Some programming
+    identified in the review did target specific populations that would have distinct
+    needs compared to the general population of PLWH (see Figure 2 for resources offering
+    targeted programming per Canadian city). The programming and resources identified
+    from these results were
+
+
+    # **Context**
+
+
+    All results included in the review were based in Canada, per the research inclusion
+    criteria. Of the 64 results identified, 18 (28.1%) were published in British Columbia;
+    14 (21.9%) in Ontario; 10 (15.6%) were Canada-wide non-provincial/territory specific;
+    7 (10.9%) in Nova Scotia; 3 (4.7%) in Alberta; 3 (4.7%) in Saskatchewan; 2 (3.1%)
+    in Manitoba; and 1 (1.6%) each in Quebec, New Brunswick, Prince Edward Island,
+    Newfoundland and Labrador, Yukon, Northwest Territories, and Nunavut. For context,
+    the 2019 provincial and territorial diagnosis rates of HIV per 100,000 people
+    were as follows: Saskatchewan, n = 16.9; Manitoba, n = 8.8; Quebec, n = 7.4; Alberta,
+    n = 5.8; Ontario, n = 4.7; British Columbia, n = 3.5; the Atlantic provinces,
+    n = 3.0; and the Northwest Territories, n = 1.7.²
+
+
+    # **Concept**
+
+
+    A total of 76 resources were located, as some of the 64 results included in the
+    review offered more than'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '1 resource (see Figure 3 for distribution of resources per province and territory).
+    We have classified these 76 resources as charitable food provision (eg, food banks,
+    soup kitchens, grocery vouchers; n = 21; 27.6%); financial aid (ie, provincial
+    government subsidies; n = 14; 18.4%); nutrition care (eg, dietitian services including
+    the nutrition care process and MNT; n = 12; 15.8%); providing access to secondary
+    sources (ie, websites that do not offer nutrition and food programming but offer
+    links to different websites that do; n = 10; 13.2%); food and nutrition expertise
+    (eg, nutrient and diet guidelines from professionals, books, PDFs, and workshops
+    offered by organizations; n = 10; 13.2%); and population health promotion (eg,
+    cooking classes and general healthy eating tips focused on community inclusion
+    and sociability; n = 9; 11.8%). Through searching the website links provided by
+    these resources, we discovered an additional 69 secondary sources of food and
+    nutrition programming, 10 of which had already been captured through initial searches
+    (primary results). Thus, a total of 135 resources for nutrition and food programming
+    for PLWH were located across Canada.
+
+
+    # Gaps in known services and areas for future research
+
+
+    The results show a lack of peer-reviewed literature on the topic of available
+    nutrition and food programming for PLWH in Canada, as most results were from gray
+    literature (n = 47/64; 73.4%). This highlights the importance of engaging with
+    scoping reviews, because systematic scoping reviews are considered by many policymakers
+    to offer the strongest evidence.⁴⁵ Moreover, policymakers, such as public health
+    departments and federal governments, most often look to peer-reviewed literature
+    and original research when gathering policy-relevant evidence.⁴⁵ For any interventions
+    to be made at a policy level, more peer-reviewed research on this topic is needed.
+    The results from the gray literature indicate that while there is no standard
+    approach to providing nutrition and food programming to PLWH by programs offered
+    across Canada by an array of organizations, there are similarities among the provincial
+    approaches and supports offered. Four areas were identified as areas for future
+    research on the topic of known services: i) limited targeted programming, ii)
+    geographical distribution of resources, iii) type of resources offered, and iv)
+    resource/program effectiveness as it relates to individual experience.
+
+
+    First, a limited amount of identified programming was designed for diverse subpopulations.
+    For example, many women and children; Indigenous people; transgender and gender-diverse
+    people; and Black, African, and Caribbean people have different needs to be addressed.
+    Cisgender and transgender women living with HIV, for instance, need trauma-informed
+    and gender-safe spaces to access food services.¹⁷ Black, African, and Caribbean
+    people, such as the clients of the Black Coalition for AIDS Prevention (Black
+    CAP), require programming that considers social barriers such as racism, homophobia,
+    and poverty.⁴⁶ Despite this difference in needs, only 36% of results offered targeted
+    programming. This leaves many people who have been marginalized without
+
+
+    ![](img/8203ec9d73e5fc99da4150af520dc6ba_8_0.png)
+
+
+    **Figure 3: Chart of identified nutrition and food programming and resources available
+    (n = 76) to people living with HIV in Canada, by province and territory**'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'the specific resources they need. For example, 3% of resources identified in
+    this review were targeted towards Indigenous people, despite this population accounting
+    for almost 25% of new HIV cases in 2019.³ Black CAP in Toronto is an example of
+    a targeted resource. Their programming is focused on providing basic food items
+    that are culturally specific for low-income Black, African, and Caribbean households
+    in Toronto.⁴⁶ Also found in Toronto, the Ontario Aboriginal HIV/AIDS Strategy
+    (OAHAS) provides assistance in accessing food and shelter for urban-based First
+    Nations, Inuit, Metis, and non-status community groups/organizations/agencies,
+    schools, and individuals in Ontario.⁴⁷ OAHAS performs outreach in streets, neighborhoods,
+    events, powwows, agencies, in-reach in correctional facilities, hospitals, medical
+    centers, and schools. This also demonstrates that most of the targeted programming
+    is offered in large cities.
+
+
+    Second, large cities, such as Vancouver (n = 11/18; 61% of the results from British
+    Columbia) and Toronto (n = 7/14; 50% of the results from Ontario), were identified
+    as home to most of their provinces’ resources (see Figures 2 and 3), leading to
+    speculation that there are not as many resources offered in rural areas. Collectively,
+    the programming identified in these regions covered a wide range of needs for
+    PLWH, offering different resources for targeted population groups. The resources
+    found were mostly provided by nonprofit organizations, private (for-profit) clinics,
+    and provincial governments. For example, in British Columbia, we identified 18
+    results that include programming from all 6 categories, whereas in Manitoba we
+    identified 2 results that covered 3 of the 6 categories, which were charitable
+    food provision, nutrition care, and financial aid. The Manitoba HIV Program, operated
+    by Nine Circles Community Health Centre (a nonprofit organization), 7th Street
+    Access Centre (a provincially operated health clinic), and the Winnipeg Health
+    Sciences Centre (a provincial hospital), offers both charitable food provision
+    and nutrition care.⁴⁸ While there were not many resources identified in Manitoba,
+    organizations such as Nine Circles offer multiple types of programming (eg, emergency
+    food supply, nutrition education with a dietitian) that may be able to target
+    PLWH with different needs.⁴⁸ There do remain, however, many regions that do not
+    have any services available to them. Having fewer resources to reach large, highly
+    impacted populations
+
+
+    can leave programming stretched and potentially unable to meet demand.
+
+
+    Third, the most common type of nutrition and food programming identified was charitable
+    food provision services. This included supports such as food banks, grocery vouchers,
+    and soup kitchens, which accounted for 27.6% (21/76) of all nutrition and food
+    services identified. These supports do not appear to be different for PLWH than
+    for the general population; however, certain food provision services are reserved
+    for PLWH. Many of the organizations identified offer charitable food provision
+    as their only nutrition-related resource available for PLWH. For example, ACT
+    (formerly the AIDS Committee of Toronto) offers hot lunches to PLWH twice per
+    week⁴⁹ and the HIV/AIDS Resources and Community Health offers monthly $10 grocery
+    store gift cards to PLWH.⁵⁰ For many PLWH, charitable food provision services
+    may be the only nutritional support they are receiving to manage their symptoms
+    and medication side effects.²¹ Future research would benefit from exploring long-term
+    solutions; however, charitable food services are needed in the interim, not as
+    a solution, but to meet immediate needs. The second-most common type of support
+    identified was financial aid (14/76; 18.4%), as each province and territory has
+    its own form of governmental financial aid for PLWH under employment support and
+    income assistance if the individual qualifies (ie, referral from a dietitian).
+    The amount provided to each individual can consist of allowances for basic food,
+    diet supplements, and caloric intake/special diet. The third-most common type
+    of support identified was nutrition care (12/76; 15.8%). Nutrition care included
+    resources such as access to dietitian services for diet supplement referrals and
+    MNT process, which has proven beneficial for PLWH.¹ Secondary sources (ie, organization
+    websites that do not offer nutrition and food resources but provide a list/website
+    links of others that do) were tied for fourth-most common support identified (10/76;
+    13.2%). Secondary sources, however, may be less helpful to those in search of
+    nutrition and food support. As a significant number of resources found were from
+    service-provider websites offering links to secondary sources, this indicates
+    a lack of available support, as some of the secondary sources provide further
+    links to tertiary sources, making it challenging to find a tangible resource that
+    provides nutrition or foods programming. The other fourth-most'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'common type of resource (10/76; 13.2%) was food and nutrition expertise, which
+    included items such as PDFs that offered nutritional guidelines and recommendations
+    for PLWH (eg, energy expenditure, micronutrients, dietary supplements). The least-common
+    resource identified was population health promotion (9/76; 11.8%), which paired
+    the social aspect of sharing food together and learning food skills, such as offering
+    cooking classes or community dinners.
+
+
+    Lastly, the top supports offered in Canada point to a single overarching research
+    need: researchers and organizations for nutrition and food programming across
+    Canada do not appear to be asking/interacting directly with PLWH on what they
+    need as individuals to succeed. This finding is indicated by the needs of PLWH
+    consistently being unmet through the currently available programming as demonstrated
+    by the continued high rates of food insecurity, poverty, homelessness, and injection
+    drug use. The implications of not aligning programs with the feedback of PLWH
+    are that, firstly, PLWH are often food insecure, which is positively related to
+    poverty (ie, income disparity); second, they may also be receiving suboptimal
+    nutritional care; and, third, current resources may be wasted, as they are not
+    allocated to the pivotal places that would maximize benefits. As such, current
+    programming would benefit from considering the lived experiences of PLWH to be
+    most effective.
+
+
+    # Discussion
+
+
+    For this scoping review, we mapped the current literature and resources available
+    on nutrition and food programming for PLWH in Canada. To this end, we recorded
+    what types of nutrition and food resources were offered in locations across Canada.
+    We then mapped these resources according to the 7 Partnership for Dietetic Education
+    and Practice (PDEP) competencies that dietitians must demonstrate before becoming
+    a registered dietitian and entering the practice.⁵¹ The 7 competencies are i)
+    food and nutrition expertise, ii) professionalism and ethics, iii) communication
+    and collaboration, iv) management and leadership, v) nutrition care, vi) population
+    health promotion, and vii) food provision. We found that 3 of the 6 types of resources
+    identified in this review reflected the competencies. These were i) food and nutrition
+    expertise (eg, nutrient and diet guidelines from professionals; education through
+    books, PDFs, and workshops offered by organizations), ii) nutrition care (eg,
+    dietitian services including the nutrition care process and MNT), and iii) population
+    health promotion (eg, cooking classes and general healthy eating tips focused
+    on community inclusion and sociability). The 3 types of resources that did not
+    fit within the PDEP competencies were i) charitable food provision (eg, food banks,
+    soup kitchens, grocery vouchers), ii) financial aid (ie, provincial government
+    subsidies), and iii) providing access to secondary sources (ie, websites that
+    do not offer nutrition and food programming but offer links to different websites
+    that do). As some resources fit within the PDEP competencies and some did not,
+    this helps us to understand what falls beyond the scope of dietitians and highlights
+    the need to train those delivering these services to PLWH.
+
+
+    Most resources identified in this review were charitable food provision services;
+    therefore, it appears that long-term approaches/solutions to ensuring PLWH in
+    Canada obtain adequate nutrition are needed. While we have noted that charitable
+    food provision is a necessary service, it is not sustainable long-term. It may
+    be challenging to maintain adequate nutrition for individuals who access charitable
+    food provision services as their only source of nutrition to manage their HIV
+    conditions. Food banks and meal programs are shown to support daily needs as emergency
+    food supply for those in need.⁴,⁹,¹³–¹⁶ They are not shown, however, to provide
+    adequate long-term nutrition and food security support for individuals and families,
+    especially for PLWH with complex nutrition needs.¹³,¹⁹ Tarasuk and Eakin²⁰ report
+    that charitable food provision services may operate with a dissociation between
+    food assistance and client need, resulting in food assistance becoming a symbolic
+    gesture rather than solely providing food aid. Additionally, charitable food provision
+    may be damaging and counterproductive for those in need, as it can decrease income
+    supports for individuals, leading them further into poverty.²⁰ More recent work
+    by Tarasuk et al.²¹ echoes the same sentiment, stating that charitable food provision
+    services are not able to address or assist the root causes of food insecurity,
+    such as income disparity and homelessness.
+
+
+    This scoping review identified a need in available programming in that the majority
+    of food programming offered (charitable food provision) is not meeting the complex
+    nutritional needs of PLWH in'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'Canada.⁴,¹³,¹⁹ Many charitable food provision programs do not have adequate
+    supply to address these specific needs, such as fresh fruits and vegetables,¹⁷,¹⁹
+    or to address the food insecurity that 49% to 71% of PLWH face.⁸,⁹ Miewald et
+    al., among others, have reported that for PLWH, “food insecurity has been linked
+    to lower CD4 counts, reduced drug adherence (i.e., ART [antiretroviral therapy])
+    and effectiveness, poor viral suppression (viral suppression being the primary
+    goal of HIV treatment), and increased risk of mortality.”³¹⁹(p.511–2)
+
+
+    Additionally, it is evident from the review that distribution of the resources
+    across Canada appears to be unequal in both quantity and type of resource offered,
+    as most of the results identified were services offered in provinces with high
+    populations or larger cities (see Figures 2 and 3). This could indicate that provinces
+    and territories with smaller and more remote populations may be left with little
+    to no resources. Further, PLWH who also belong to populations that have been marginalized,
+    (eg, Black, Indigenous, or person of color; low-income; sexual minorities such
+    as transgender, non-binary, or gender-diverse people) may have more difficulty
+    finding programming that is specific to their needs and cultural healing practices,
+    especially if they reside in less-populated areas of Canada (see Figure 3). For
+    instance, Nova Scotia has the highest population of gender-diverse people (of
+    those aged 15 to 34 years) among the Canadian provinces,⁵² but as outlined in
+    Figure 2, we did not identify current nutrition and food programming in Nova Scotia
+    that is specifically targeted for this population. PLWH may also have additional
+    chronic conditions or disability considerations, especially as they get older.
+
+
+    In their study on food access for women living with HIV in Vancouver, Sernick
+    et al.¹⁷ highlighted the barriers that some populations face in finding appropriate
+    nutrition services including immigrant, Indigenous, women, and transgender PLWH.
+    Despite the majority of identified resources targeting the general PLWH population,
+    there were some programs identified targeted towards a more specific population
+    (eg, women and children, transgender, non-binary, gender-diverse people), which
+    are better tailored to their needs. Black CAP⁴⁶ and OAHAS⁴⁷ mentioned previously
+    are examples that offer programming for specific populations. These organizations
+    demonstrate that specialized care for different population groups is warranted.
+
+
+    More specialized resources that offer an intersectional approach to nutrition
+    and food programming could be beneficial for these population groups in providing
+    adequate nutritional support and safe spaces.¹²,¹⁷ For example, Sernick et al.¹⁷
+    found that peoples’ safety based on gender (ie, gender identity safety) was a
+    main concern for those accessing food banks at the cis and trans women-focused
+    centers, which was a main source of food for their study population. Sernick et
+    al.¹⁷ demonstrated why it is important for individual experience and accounts
+    from PLWH to be a part of the dialogue in research towards nutrition and food
+    programming in Canada. Without consulting end users, research on which programming
+    should be developed may miss key learnings and opportunities for improving programming.
+
+
+    We found that the number of results identified increased throughout the years,
+    with 40% of results published between 2010 and 2019, and 45% of results between
+    2020 and 2021 alone. As many of our results came from service provider websites,
+    this large percentage of results from 2020–2021 could be explained by the number
+    of service organization websites identified in the review that update their website
+    information each year, resulting in a large number of sources identified for the
+    year 2021. With 85% of review results published between 2010 and 2021, this signifies
+    that the results reported are relatively up-to-date and, thus, an accurate depiction
+    of the currently available programming.
+
+
+    # Strengths of the review
+
+
+    There are several strengths to be noted in the creation of this scoping review.
+    First, we have a dynamic research team with backgrounds including, but not limited
+    to, dietetics, applied human nutrition, nursing, anthropology, 2SLGBTQIA+ nutrition
+    and health, and Black, Indigenous, or person of color studies. This multitude
+    of perspectives provided the review with a degree of depth that may not have been
+    accessible had the research team been limited to 1 field of study. Community consultation
+    through the DJM technique also provided this review with an additional layer of
+    feedback that came from community members and service providers who work with
+    PLWH, allowing the review to report more thoroughly on available food and nutrition
+    resources for PLWH in Canada. The time and care put into this review from the
+    research team and community'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'forefront of the conversation surrounding available nutrition and food resources
+    in Canada. This extends beyond research and into practice. Counseling and communications
+    that are inclusive and recognize the diversity of this patient population and
+    their needs are key.
+
+
+    Dissemination of the review results have been and will continue to be formative
+    (eg, community meetings, consultation) and summative. Results were used to build
+    the subsequent 3 FoodNOW project phases, which have been disseminated via traditional
+    academic routes, including conferences, manuscripts, and reports. Innovative approaches,
+    such as infographics and short videos, depending on audience (eg, funders, academics,
+    government, PLWH, service providers), may also be employed. For instance, we have
+    presented preliminary findings in the context of integrated knowledge translation
+    (iKT) through a poster presentation at the KT Canada Scientific Meeting in spring
+    2022.⁵³ We have also presented a needs assessment summary of the findings in the
+    form of a poster and oral presentation at the KT Scientific Meeting in spring
+    2023.⁵⁴ Sharing the learnings from this project and plans on how the data will
+    be used/implemented with PLWH and other community members remains one of the key
+    priorities towards our iKT objectives.
+
+
+    # Acknowledgments
+
+
+    Our steering committee and advisory committee for their contributions. Mount Saint
+    Vincent University’s Shelia A. Brown Centre for Applied Research, Food Action
+    Research Centre (FoodARC), the Department of Applied Human Nutrition, and Dalhousie
+    University’s WK Kellogg Health Sciences Library for providing invaluable resources
+    and support during this study. AIDS Coalition of Nova Scotia, Healing Our Nations,
+    prideHealth, Community-Based Research Centre, and the Nova Scotia Advisory Commission
+    on AIDS for their partnership and guidance throughout this project. The participants
+    in the community consultation for this review through the application of the DM.
+
+
+    Erna-Snelgrove Clarke, JBI trainer for Queen’s University, Faculty of Health Sciences,
+    JBI Comprehensive Systematic Review Training Program, for training SG, MR, JM,
+    and YZ. Peter Stilwell, McGill University, for his input on the protocol and search
+    strategy.
+
+
+    # Funding
+
+
+    Funding to conduct this review was provided by Research Nova Scotia under the
+    New Health Investigator Grant/Award Number: RNS-NHIG-2020-1378, and Mount Saint
+    Vincent University Committee on Research and Publications’ (CP) CN Research Internship
+    (YZ). The funders did not have any input into the conduct or findings of the review.
+
+
+    # Author contributions
+
+
+    SG led the writing of this manuscript. JM and YZ wrote the manuscript and co-developed
+    the search strategy. MR and SG oversaw the scoping review training of JM and YZ.
+    All authors provided feedback on the review.
+
+
+    # References
+
+
+    +   1. Fields-Gardner C, Fergusson P. Position of the American Dietetic Association
+    and Dietitians of Canada: nutrition intervention in the care of persons with human
+    immunodeficiency virus infection. J Am Diet Assoc 2004;104(9):1425–41.
+
+    +   2. Challacombe L. The epidemiology of HIV in Canada [internet]. Canadian AIDS
+    Treatment Information Exchange (CATIE); 2021 [cited 2021 Jun 30]. Available from:
+    https://www.catie.ca/the-epidemiology-of-hiv-in-canada.
+
+    +   3. Haddad N, Robert A, Weeks A, Popovic N, Siu W, Archibald C. HIV in Canada—surveillance
+    report, 2018. Can Commun Dis Rep 2019;45(12):304–12.
+
+    +   4. Raymond J, Morrow K. Krause and Mahan’s food and the nutrition care process,
+    15th ed. Elsevier; 2021.
+
+    +   5. HIV.gov. HIV care continuum [internet]. HIV.gov; 2022 [cited 2022 Nov 16].
+    Available from: https://www.hiv.gov/federal-response/policies-issues/hiv-aids-care-continuum.
+
+    +   6. Statistics Canada. Indigenous population continues to grow and is much
+    younger than the non-Indigenous population, although the pace of growth has slowed
+    [internet]. Statistics Canada; 2022 [cited 2022 Nov 10]. Available from: https://www150.statcan.gc.ca/n1/daily-quotidien/220921/dq220921a-eng.htm.
+
+    +   7. Anderson SA, editor. Core indicators of nutritional state for difficult-to-sample
+    populations. J Nutr 1990;120(Suppl 11):1555–598.
+
+    +   8. Bekele T, Globerman J, Watson J, Jose-Boebridge M, Kennedy R, Hambly K,
+    et al. Prevalence and predictors of food insecurity among people with HIV affiliated
+    with AIDS service organizations in Ontario, Canada. AIDS Care 2018;30(5):663–71.
+
+    +   9. Slater J, Qadar Z, Bewza J. Review of food and nutrition services provided
+    by community-based organizations serving people with HIV in Canada. Can J Diet
+    Pract Res 2015;76(2):97–9.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '10. Crenshaw K. On intersectionality: essential writings. The New Press; 2017.
+
+
+    11. Nova Scotia Advisory Commission on AIDS, Collective Wisdom Solutions. Nova
+    Scotia Advisory Commission on AIDS. Review of Nova Scotia Strategy on HIV/AIDS:
+    looking back and moving forward full report [internet]. Nova Scotia Canada; 2014.
+    Available from: https://novascotia.ca/aids/documents/Review-of-Nova-Scotia-Strategy-on-HIV-AIDS-Full-Report.pdf.
+
+
+    12. Giliauskas D, Gogolishvili D. Rapid response service. Nutrition and HIV [internet].
+    The Ontario HIV Treatment Network 2018. Available from: https://www.ohtn.ca/?s=Rapid+response+service.+Nutrition+and+HIV+
+
+
+    13. Miewald C, McCann E, Temenos C, McIntosh A. “I do my best to eat while I’m
+    using”: mapping the foodscapes of people living with HIV/AIDS who use drugs. Soc
+    Sci Med 2019;226:96–103.
+
+
+    14. Miewald C, McCann E, McIntosh A, Temenos C. Food as harm reduction: barriers,
+    strategies, and opportunities at the intersection of nutrition and drug-related
+    harm. Crit Public Health 2018;28(5):586–95.
+
+
+    15. O’Brien N, Palmer AK, Zhang W, Michelow W, Shen A, Roth E, et al. Social–structural
+    factors associated with supportive service use among a cohort of HIV-positive
+    individuals on antiretroviral therapy. AIDS Care 2013;25(8):937–47.
+
+
+    16. Collins A, Parashar S, Hogg R, Fernando S, Worthington C, McDougall P, et
+    al. Integrated HIV care and service engagement among people living with HIV who
+    use drugs in a setting with a community-wide treatment-as a prevention initiative:
+    a qualitative study in Vancouver, Canada. J Int AIDS Soc 2017;20:21407.
+
+
+    17. Sernick A, Shannon K, Ranville F, Arora K, Magagula P, Shoveller J, et al.
+    In the midst of plenty: experiences of food insecurity amongst women living with
+    HIV in Vancouver, Canada. Health Soc Care Community 2022;30(1):e138–47.
+
+
+    18. Roncarlo F, Adam C, Bisset S, Potvin L. Traditional and alternative community
+    food security interventions in Montréal, Québec: different practices, different
+    people. J Community Health 2014;40(2):199–207.
+
+
+    19. Miewald C, Ibanez-Carrasco F, Turner S. Negotiating the local food environment:
+    the lived experience of food access for low-income people living with HIV/AIDS.
+    J Hunger Environ Nutr 2010;5(4):510–25.
+
+
+    20. Tarasuk V, Eakin JM. Charitable food assistance as symbolic gesture: an ethnographic
+    study of food banks in Ontario. Soc Sci Med 2003;56(7):1505–15.
+
+
+    21. Tarasuk V, Mitchell A, Tarasuk V, Mitchell A. Household food insecurity in
+    Canada, 2017-18 [internet]. Toronto: research to identify policy options to reduce
+    food insecurity (PROOF). PROOF; 2020. Available from: https://proof.utoronto.ca/resource/household-food-insecurity-in-canada-2017-2018/.
+
+
+    22. Tarasuk V, Fafard St. Germain A, Loopstra R. The relationship between food
+    banks and food insecurity: insights from Canada. Int J Volunt Nonprofit Org 2019;31:841–52.
+
+
+    23. Academy of Nutrition and Dietetics. The nutrition care process (NCP) [internet].
+    Electronic nutrition care process terminology. eNCPT; 2022 [cited 2021 Jul 15].
+    Available from: https://www.ncpro.org/nutrition-care-process.
+
+
+    24. Government of Canada. About the Non-Insured Health Benefits program [internet].
+    Government of Canada; 2021 [cited 2021 Oct 4]. Available from: https://www.sac-isc.gc.ca/eng/1576790320164/1576790364553.
+
+
+    25. Government of Canada. Canada’s health care system [internet]. Government of
+    Canada; n.d. [cited 2021 Sep 28]. Available from: https://www.canada.ca/en/health-canada/services/health-care-system/reports-publications/health-care-system/canada.html.
+
+
+    26. Mckay F, Lippi K, Dunn M. Investigating responses to food insecurity among
+    HIV positive people in resource rich settings: a systematic review. J Community
+    Health 2017;42(5):1062–8.
+
+
+    27. Fielden S, Anema A, Fergusson P, Muldoon K, Grede N, De Pee S. Measuring food
+    and nutrition security: tools and considerations for use among people living with
+    HIV. AIDS Behav 2014;18(S5):490–504.
+
+
+    28. Holmes K, Bertozzi B, Bloom B, Prabhat J. Major infectious diseases Disease
+    control priorities, 3rd ed. Vol 6. Washington, DC: World Bank; 2017.
+
+
+    29. Technical Working Group on Human Resources for Health (HRH) and Universal
+    Access (UA) Global Health Workforce Alliance (GHWA). Will we achieve universal
+    access to HIV/AIDS services with the health workforce we have? A snapshot from
+    five countries [internet]. Global Health Workforce Alliance; 2010 [cited 2021
+    Sep 28]. Formerly available from: https://www.who.int/workforcealliance/about/taskforces/access/universalaccesslitrev_en.pdf?ua=1.
+
+
+    30. Israel B, Coombe C, Cheezum R, Schulz A, McGranaghan R, Lichtenstein R, et
+    al. Community-based participatory research: a capacity-building approach for policy
+    advocacy aimed at eliminating health disparities. Am J Public Health 2010;100(11):2094–102.
+
+
+    31. Activating Change Together for Community Food Security: Knowledge Mobilization
+    Working Group. Knowledge mobilization in participatory action research: a synthesis
+    of the literature [internet]. FoodARC Mount Saint Vincent University; 2014 [cited
+    2021 Nov 9]. Available from: https://foodarc.ca/wp-content/uploads/2014/09/ACT-for-CFS-Knowledge-Mobilization-in-PAR-Jan-2014.pdf.
+
+
+    32. Graham I, Logan J, Harrison M, Straus S, Tetroe J, Caswell W, et al. Lost
+    in knowledge translation: time for a map? J Contin Educ Health Prof 2006;26(1):13–24.
+
+
+    33. Peters MDJ, Godfrey C, McInerney P, Munn Z, Tricco A, Khalil H. Chapter 11:
+    Scoping Reviews. In: Aromataris E, Munn Z, editors. JBI Manual for Evidence Synthesis.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '+   34. Peters MDJ, Marnie C, Tricco A, Pollock D, Munn Z, Alexander L, *et
+    al.* Updated methodological guidance for the conduct of scoping reviews. JBI Evid
+    Synth 2020;18(10):2119–26.
+
+    +   35. Tricco A, Lillie E, Zarin W, O’Brien K, Colquhoun H, Levac D, *et al.*
+    PRISMA extension for Scoping Reviews (PRISMA-ScR): checklist and explanation.
+    Ann Intern Med 2018;169(7):467–73.
+
+    +   36. Mannette J, Zhang Y, Rothfus M, Purdy C, Tesfatsion W, Lynch M, *et al.*
+    Exploring current nutritional programming and resources available to people living
+    with HIV/AIDs in Canada: a scoping review protocol. JBI Evid Synth 2022;20(11):2781–9.
+
+    +   37. Page M, McKenzie J, Bossuyt P, Boutron I, Hoffmann T, Mulrow C, *et al.*
+    The PRISMA 2020 statement: an updated guideline for reporting systematic reviews.
+    BMJ 2021;372:n71.
+
+    +   38. Arksey H, O’Malley L. Scoping studies: towards a methodological framework.
+    Int J Soc Res Methodol 2005;8(1):19–32.
+
+    +   39. Pollock D, Alexander L, Munn Z, Peters MDJ, Khalil H, Godfrey CM, *et
+    al.* Moving from consultation to co-creation with knowledge users in scoping reviews:
+    guidance from the JBI Scoping Review Methodology Group. JBI Evid Synth 2022;20(4):969–79.
+
+    +   40. Joseph R, Joseph C. Working effectively with indigenous peoples, 4th ed.
+    Indigenous Relations Press; 2017.
+
+    +   41. Mckenna H. The Delphi technique: a worthwhile research approach for nursing?
+    J Adv Nurs 1994;19(6):1221–5.
+
+    +   42. Green R. The Delphi technique in educational research. SAGE Open 2014;4(2).
+
+    +   43. Hemming J, Lordly D, Granville T, Corby L, Thirsk J. Developing an interview
+    guide to evaluate practice-based evidence in nutrition: use of the Delphi technique.
+    Can J Diet Pract Res 2011;72(4):186–90.
+
+    +   44. Williams P, Webb C. The Delphi technique: an adaptive research tool. Br
+    J Occup Ther 1994;61(4):153–6.
+
+    +   45. Brownson R, Chriqui J, Stamatakis K. Understanding evidence-based public
+    health policy. Am J Public Health 2009;99(9):1576–83.
+
+
+    +   46. Black Coalition for AIDS Prevention (Black CAP). The AYA project [internet].
+    Black CAP; 2021 [cited 2021 Aug 24]. Available from: https://blackcap.ca/programs-services/the-aya-project/.
+
+    +   47. Ontario Aboriginal HIV/AIDS Strategy (OAHAS). Outreach and support services
+    [internet]. OAHAS; 2019 [cited 2021 Aug 24]. Available from: https://www.oahas.org/outreach-support-services.html.
+
+    +   48. Manitoba HIV Program: Nine Circles Community Health Centre. Manitoba HIV
+    Program [internet]. Nine Circles Community Health Clinic; 2021 [cited 2021 Aug
+    24]. Available from: https://mbhiv.ca/.
+
+    +   49. AIDS Committee of Toronto (ACT). HIV [internet]. ACT; 2021 [cited 2021
+    Aug 24]. Available from: https://www.actoronto.org/health-information/hiv?resourceID=84.
+
+    +   50. HIV/AIDS Resources and Community Health (ARCH). Overview of support services
+    [internet]. ARCH; 2021 [cited 2021 Aug 24]. Available from: https://archguelph.ca/.
+
+    +   51. Partnership for Dietetic Education and Practice (PDEP). Integrated competencies
+    for dietetic education and practice (ICDEP) [internet]. The Alliance of Canadian
+    Regulatory Bodies, Dietitians of Canada and Canadian academic and practicum dietetic
+    education programs; 2020 [cited 2021 Nov 9]. Available from: https://www.pdep.ca/library/PDEP-Policies/Integrated-Competencies-For-Dietetic-Education-And.aspx.
+
+    +   52. Statistics Canada. Chart 4: Nova Scotia has the highest gender diversity
+    among people aged 15 to 34 among the provinces [internet]. Statistics Canada;
+    2022 [cited 2022 Nov 14]. Available from: https://www150.statcan.gc.ca/n1/daily-quotidien/2024/27/cg-b004-eng.htm.
+
+    +   53. Mannette J, Zhang Y, Rothfus M, Purdy C, Lynch M, Hamilton-Hinch B, *et
+    al.* The FoodNOW Project: exploring current nutritional programming and resources
+    available to people living with HIV/AIDS in Canada. KT Canada Scientific Meeting;
+    2022.
+
+    +   54. Grant S, Mannette J, Acholonu GC, Clarke A, Purdy C, Zhang Y, *et al.*
+    Nutrition and foods programs available to people living with HIV/AIDs in Nova
+    Scotia need MORE from us NOW: FoodNOW End-of-Grant Needs Assessment Summary. KT
+    Canada Scientific Meeting; 2023.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# Appendix I: Search strategy\n\n*CINAHL (EBSCO)*  \nDate searched: July 14,\
+    \ 2021\n\n|  | Search | Results retrieved |\n|---:|---|---:|\n| 1 | (MH “Human\
+    \ Immunodeficiency Virus”) OR (MH “HIV Education”) OR (MH “HIV-Positive Persons+”)\
+    \ | 23,987 |\n| 2 | TI (“human immunodeficiency virus” OR “HIV”) OR AB (“human\
+    \ immunodeficiency virus” OR “HIV”) | 98,009 |\n| 3 | (MH “Acquired Immunodeficiency\
+    \ Syndrome”) | 17,195 |\n| 4 | TI (“Acquired Immunodeficiency Syndrome” OR “AIDS”)\
+    \ OR AB (“Acquired Immunodeficiency Syndrome” OR “AIDS”) | 46,939 |\n| 5 | (MH\
+    \ “Food Assistance”) | 1,489 |\n| 6 | (MH “Food Security”) | 3,629 |\n| 7 | (MH\
+    \ “Nutrition”) | 29,177 |\n| 8 | (MH “Food Habits”) | 14,576 |\n| 9 | (MH “Diet”)\
+    \ | 58,747 |\n| 10 | (MH “Education”) OR (MH “Patient Education”) | 78,446 |\n\
+    | 11 | (MH “Teaching”) OR (MH “Seminars and Workshops”) | 26,457 |\n| 12 | (MH\
+    \ “Pamphlets”) | 3,513 |\n| 13 | (MH “Webinars”) | 1,416 |\n| 14 | (MH “Information\
+    \ Resources”) | 80,628 |\n| 15 | TI ((food OR nutrit* OR nutrient* OR eat* OR\
+    \ diet* OR grocer* OR meal* OR breakfast* OR lunch* OR dinner* OR supper* OR snack*)\
+    \ N5 (servic* OR educat* OR teach* OR learn* OR program* OR pamphlet* OR brochure*\
+    \ OR website* OR handout* OR instruct* OR session* OR class* OR info* OR workshop*\
+    \ OR discuss* OR poster* OR conversat* OR meet* OR webinar* OR module* OR seminar*\
+    \ OR tutor* OR advis* OR advice OR advice OR guid* OR initiative* OR scheme* OR\
+    \ strateg* OR plan* OR project* OR presentation* OR counsel* OR direct* OR instruct*\
+    \ OR suggest* OR recommend* OR help* OR resource* OR intervention*)) OR AB ((food\
+    \ OR nutrit* OR nutrient* OR eat* OR diet* OR grocer* OR meal* OR breakfast* OR\
+    \ lunch* OR dinner* OR supper* OR snack*) N5 (servic* OR educat* OR teach* OR\
+    \ learn* OR program* OR pamphlet* OR brochure* OR website* OR handout* OR instruct*\
+    \ OR session* OR class* OR info* OR workshop* OR discuss* OR poster* OR conversat*\
+    \ OR meet* OR webinar* OR module* OR seminar* OR tutor* OR advis* OR advice OR\
+    \ guid* OR initiative* OR scheme* OR strateg* OR plan* OR project* OR presentation*\
+    \ OR counsel* OR direct* OR instruct* OR suggest* OR recommend* OR help* OR resource*\
+    \ OR intervention*)) | 91,181 |\n| 16 | (MH “Nutrition Services+”) OR (MH “Nutrition\
+    \ Education”) | 12,114 |\n| 17 | (MH “Canada+”) | 106,068 |\n| 18 | TX (Canada\
+    \ OR Canadian* OR Newfoundland* OR Labrador* OR “Nova Scotia*“ OR “New Brunswick*“\
+    \ OR “Prince Edward Island*“ OR “PEI” OR Quebec* OR Ontari* OR Manitoba* OR Saskatchewan\
+    \ OR Alberta* OR “British Columbia*“ OR “BC” OR Yukon OR “Northwest Territories”\
+    \ OR “NWT” OR Nunavut) | 546,164 |\n| 19 | 1 OR 2 OR 3 OR 4 | 128,881 |\n| 20\
+    \ | 5 OR 6 OR 7 OR 8 OR 9 | 96,853 |\n| 21 | 10 OR 11 OR 12 OR 13 OR 14 | 184,316\
+    \ |\n| 22 | 20 AND 21 | 3,872 |\n| 23 | 15 OR 16 OR 22 | 99,321 |"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '|  | Search | Results retrieved |
+
+    |---|---|---|
+
+    | 24 | 17 OR 18 | 546,164 |
+
+    | 25 | 19 AND 23 AND 24 | 128 |
+
+
+    # MEDLINE (Ovid)
+
+
+    Date searched: July 14, 2021
+
+
+    |  | Search | Results retrieved |
+
+    |---|---|---|
+
+    | 1 | exp HIV/ | 102,232 |
+
+    | 2 | exp HIV Infections/ | 293,942 |
+
+    | 3 | (Human Immunodeficiency Virus or “HIV” or Acquired Immunodeficiency Syndrome
+    or “AIDS”).ab,kf,kw,ti. | 427,815 |
+
+    | 4 | Food Security/ | 148 |
+
+    | 5 | Food Assistance/ | 1351 |
+
+    | 6 | Diet/ or Diet, Healthy/ | 172,961 |
+
+    | 7 | education/ or teaching/ | 70,154 |
+
+    | 8 | Patient Education as Topic/ | 87,067 |
+
+    | 9 | pamphlets/ or teaching materials/ | 10,090 |
+
+    | 10 | ((food or nutrit* or nutrient* or eat* or diet* or grocer* or meal* or
+    breakfast* or lunch* or dinner* or supper* or snack*) adj6 (servic* or educat*
+    or teach* or learn* or program* or pamphlet* or brochure* or website* or handout*
+    or instruct* or session* or class* or Info* or workshop* or discuss* or poster*
+    or conversat* or meet* or webinar* or module* or seminar* or tutor* or advis*
+    or advice or advice or guid* or initiative* or scheme* or strateg* or plan* or
+    project* or presentation* or counsel* or direct* or instruct* or suggest* or recommend*
+    or help* or resource* or intervention*)).ab,kf,kw,ti. | 237,902 |
+
+    | 11 | exp Nutrition Therapy/ | 105,780 |
+
+    | 12 | exp Canada/ | 166,900 |
+
+    | 13 | (Canada or Canadian* or Newfoundland* or Labrador* or “Nova Scotia*” or
+    “New Brunswick*” or “Prince Edward Island*” or “PEI” or Quebec* or Ontario* or
+    Manitoba* or Saskatchewan or Alberta* or “British Columbia*” or “BC” or Yukon
+    or “Northwest Territories” or “NWT” or Nunavut).ab,ja,jw,kf,kw,npl,ti. | 434,612
+    |
+
+    | 14 | 1 or 2 or 3 | 464,639 |
+
+    | 15 | 4 or 5 or 6 | 174,065 |
+
+    | 16 | 7 or 8 or 9 | 161,844 |
+
+    | 17 | 15 and 16 | 1496 |
+
+    | 18 | 10 or 11 or 17 | 325,585 |
+
+    | 19 | 12 or 13 | 477,462 |
+
+    | 20 | 14 and 18 and 19 | 75 |'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "*Academic Search Premier (EBSCO)*  \nDate searched: July 14, 2021\n\n|  | Search\
+    \ | Results retrieved |\n|---:|---|---:|\n| 1 | DE “HIV infections” OR DE “AIDS”\
+    \ OR DE “HIV” | 113,780 |\n| 2 | TI ((“human immunodeficiency virus” OR “HIV”\
+    \ OR “Acquired Immunodeficiency Syndrome” OR “AIDS”) OR AB (“human immunodeficiency\
+    \ virus” OR “HIV” OR “Acquired Immunodeficiency Syndrome” OR “AIDS”)) | 247,440\
+    \ |\n| 3 | (((DE “FOOD banks”) AND (DE “FOOD relief” OR DE “FOOD stamps” OR DE\
+    \ “SOUP kitchens”) OR (DE “FOOD security”)) AND (DE “NUTRITION” OR DE “DIET” OR\
+    \ DE “FOOD habits” OR DE “HUNGER”)) | 1,390 |\n| 4 | (((((DE “EDUCATION” OR DE\
+    \ “HEALTH education”) AND (DE “TEACHING aids” OR DE “EDUCATIONAL resources” OR\
+    \ DE “HEALTH education aids & devices” OR DE “MEDIA programs (Education)” OR DE\
+    \ “PRINT materials”) OR (DE “PATIENT education”)) OR (DE “PAMPHLETS”)) OR (DE\
+    \ “WEBINARS”)) OR DE “ADULT education workshops”) | 38,590 |\n| 5 | TI (((food\
+    \ OR nutrit* OR nutrient* OR eat* OR diet* OR grocer* OR meal* OR breakfast* OR\
+    \ lunch* OR dinner* OR supper* OR snack*) N5 (servic* OR educat* OR teach* OR\
+    \ learn* OR program* OR pamphlet* OR brochure* OR website* OR handout* OR instruct*\
+    \ OR session* OR class* OR workshop* OR discuss* OR poster* OR conversat* OR meet*\
+    \ OR webinar* OR module* OR seminar* OR tutor* OR advis* OR advice OR adviser\
+    \ OR guid* OR initiative* OR scheme* OR strateg* OR plan* OR project* OR presentation*\
+    \ OR counsel* OR direct* OR instruct* OR suggest* OR recommend* OR help* OR resource*\
+    \ OR intervention*)) OR AB (((food OR nutrit* OR nutrient* OR eat* OR diet* OR\
+    \ grocer* OR meal* OR breakfast* OR lunch* OR dinner* OR supper* OR snack*) N5\
+    \ (servic* OR educat* OR teach* OR learn* OR program* OR pamphlet* OR brochure*\
+    \ OR website* OR handout* OR instruct* OR session* OR class* OR workshop* OR discuss*\
+    \ OR poster* OR conversat* OR meet* OR webinar* OR module* OR seminar* OR tutor*\
+    \ OR advis* OR advice OR adviser OR guid* OR initiative* OR scheme* OR strateg*\
+    \ OR plan* OR project* OR presentation* OR counsel* OR direct* OR instruct* OR\
+    \ suggest* OR recommend* OR help* OR resource* OR intervention*))) | 277,296 |\n\
+    | 6 | DE “NUTRITION services” | 500 |\n| 7 | DE “CANADIAN provinces” | 623 |\n\
+    | 8 | TX (Canada OR Canadian* OR Newfoundland* OR Labrador* OR “Nova Scotia*”\
+    \ OR “New Brunswick*” OR “Prince Edward Island*” OR “PEI” OR Quebec* OR Ontario*\
+    \ OR Manitoba* OR Saskatchewan OR Alberta* OR “British Columbia*” OR “BC” OR Yukon\
+    \ OR “Northwest Territories” OR “NWT” OR Nunavut) | 2,433,126 |\n| 9 | 1 OR 2\
+    \ | 260,461 |\n| 10 | 3 AND 4 | 6 |\n| 11 | 5 OR 6 OR 10 | 277,460 |\n| 12 | 7\
+    \ OR 8 | 2,433,126 |\n| 13 | 9 AND 11 AND 12 | 210 |"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Scopus
+
+
+    Date searched: July 14, 2021
+
+
+    | Search | Results retrieved |
+
+    |---|---|
+
+    | (TITLE-ABS (“human immunodeficiency virus” OR “HIV” OR “Acquired Immunodeficiency
+    Syndrome” OR “AIDS”) AND TITLE-ABS (((food OR nutrit* OR nutrient* OR eat* OR
+    diet* OR grocer* OR meal* OR breakfast* OR lunch* OR dinner* OR supper* OR snack*)
+    W/5 (servic* OR educat* OR teach* OR learn* OR program* OR pamphlet* OR brochure*
+    OR website* OR handout* OR instruct* OR session* OR class* OR info* OR workshop*
+    OR discuss* OR poster* OR conversat* OR meet* OR webinar* OR module* OR seminar*
+    OR tutor* OR advis* OR advice OR advice OR guid* OR initiative* OR scheme* OR
+    strateg* OR plan* OR project* OR presentation* OR counsel* OR direct* OR instruct*
+    OR suggest* OR recommend* OR help* OR resource* OR intervention*)) AND AFFIL (canada
+    OR canadian* OR newfoundland* OR labrador* OR “Nova Scotia*” OR “New Brunswick*”
+    OR “Prince Edward Island*” OR “PEI” OR quebec* OR ontari* OR manitoba* OR saskatchewan
+    OR alberta* OR “British Columbia*” OR “BC” OR yukon OR “Northwest Territories”
+    OR “NWT” OR nunavut) OR TITLE-ABS (canada OR canadian* OR newfoundland* OR labrador*
+    OR “Nova Scotia*” OR “New Brunswick*” OR “Prince Edward Island*” OR “PEI” OR quebec*
+    OR ontari* OR manitoba* OR saskatchewan OR alberta* OR “British Columbia*” OR
+    “BC” OR yukon OR “Northwest Territories” OR “NWT” OR nunavut)) | 223 |
+
+
+    # Social Services Abstracts (ProQuest)
+
+
+    Date searched: July 14, 2021
+
+
+    |  | Search | Results retrieved |
+
+    |---:|---|---:|
+
+    | 1 | MAINSUBJECT.EXACT.EXPLODE(“Acquired Immune Deficiency Syndrome” OR ab(“human
+    immunodeficiency virus” OR “HIV” OR “Acquired Immunodeficiency Syndrome” OR “AIDS”)
+    OR ti(“human immunodeficiency virus” OR “HIV” OR “Acquired Immunodeficiency Syndrome”
+    OR “AIDS”)) | 23,878 |
+
+    | 2 | (MAINSUBJECT.EXACT(“Diet”) OR MAINSUBJECT.EXACT(“Hunger”) OR MAINSUBJECT.EXACT(“Nutrition”)
+    OR MAINSUBJECT.EXACT(“Food”) AND MAINSUBJECT.EXACT(“Teaching”) OR MAINSUBJECT.EXACT(“Learning”)
+    OR MAINSUBJECT.EXACT(“Knowledge”) OR MAINSUBJECT.EXACT(“Education”)) | 90 |
+
+    | 3 | ti((food OR nutrit* OR nutrient* OR eat* OR diet* OR grocer* OR meal* OR
+    breakfast* OR lunch* OR dinner* OR supper* OR snack*) AND (servic* OR educat*
+    OR teach* OR learn* OR program* OR pamphlet* OR brochure* OR website* OR handout*
+    OR instruct* OR session* OR class* OR info* OR workshop* OR discuss* OR poster*
+    OR conversat* OR meet* OR webinar* OR module* OR seminar* OR tutor* OR advis*
+    OR advice OR advice OR guid* OR initiative* OR scheme* OR strateg* OR plan* OR
+    project* OR presentation* OR counsel* OR direct* OR instruct* OR suggest* OR recommend*
+    OR help* OR resource* OR intervention*)) OR ab((food OR nutrit* OR nutrient* OR
+    eat* OR diet* OR grocer* OR meal* OR breakfast* OR lunch* OR dinner* OR supper*
+    OR snack*) AND (servic* OR educat* OR teach* OR learn* OR program* OR pamphlet*
+    OR brochure* OR website* OR handout* OR instruct* OR session* OR class* OR info*
+    OR workshop* OR discuss* OR poster* OR conversat* OR meet* OR webinar* OR module*
+    OR seminar* OR tutor* OR advis* OR advice OR advice OR guid* OR initiative* OR
+    scheme* OR strateg* OR plan* OR project* OR presentation* OR counsel* OR direct*
+    OR instruct* OR suggest* OR recommend* OR help* OR resource* OR intervention*))
+    | 6786 |
+
+    | 4 | Canada OR Canadian* OR Newfoundland* OR Labrador* OR “Nova Scotia*” OR “New
+    Brunswick*” OR “Prince Edward Island*” OR “PEI” OR Quebec** OR Ontari* OR Manitoba*
+    OR Saskatchewan OR Alberta* OR “British Columbia*” OR “BC” OR Yukon OR “Northwest
+    Territories” OR “NWT” OR Nunavut | 36,101 |
+
+    | 5 | 2 OR 3 | 6799 |
+
+    | 6 | 1 AND 4 AND 5 | 60 |'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '| Date | Gray literature database name & URL | Search strategy(s)/ words searched
+    including (if applicable) how items were selected. | # of items retrieved/search
+    results | # of items included in review |
+
+    |---|---|---|---|---|
+
+    | August 24, 2021 | Google.com (Advanced search) | **Boolean phrase used for search:**
+    “(Human Immunodeficiency Virus)” OR (“HIV”) OR (“Acquired Immunodeficiency Syndrome”)
+    OR (“AIDS”) OR (“people living with HIV”) OR (“Food Assistance”) OR (“Food Programming”)
+    OR (“Food Security”) OR (“Nutrition”) OR (“Food Habits”) OR (“Diet”) OR (“Workshops”)
+    OR (“Education”)<br>**Region selected:** Canada<br>**Retrieval strategy:** Imported
+    all results listed on first 12 pages of results<br>**Selection:** All results
+    retrieved in the search were reviewed for relevance by 2 reviewers | 143 retrieved
+    and screened | 29 |
+
+    | October 5, 2021 | Google.com | **Search term used:** “Nova Scotia HIV/AIDS special
+    diet allowance”<br>**Retrieval strategy:** Hand search to capture missed results
+    from Nova Scotia. Websites searched:<br>https://novascotia.ca<br>https://nshealthh.ca/<br>https://steppingstones.ca/<br>https://nechc.com<br>https://nhnsociety.ca<br>**Selection:**
+    All results retrieved in the search were reviewed for relevance by 2 reviewers
+    | 6 screened | 6 |
+
+    | October 15, 2021 | Google.com | **Search term used:** “[province/territory]
+    income assistance special diet allowance”<br>**Retrieval strategy:** Hand search
+    to capture results from provincial government websites. Websites searched:<br>www.gov.nl.ca<br>www.princeedwardisland.ca<br>www2.gnb.ca<br>https://www.quebec.ca/<br>www.mcss.gov.on.ca<br>www.gov.mb.ca<br>www.saskdisc.ca<br>www.humanservices.alberta.ca<br>www2.gov.bc.ca<br>www.ece.gov.nt.ca<br>www.gov.nu.ca<br>https://laws.yukon.ca/cms/<br>**Selection:**
+    All results retrieved in the search were reviewed for relevance by 2 reviewers
+    | 12 screened | 12 |'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# Appendix II: Papers ineligible following full-text review\n\n+   1. Almeida\
+    \ L, Segurado A, Duran A, Jaime P. Impact of a nutritional counseling program\
+    \ on prevention of HAART-related metabolic and morphologic abnormalities. AIDS\
+    \ Care. 2011;23(6):755-63.\n+   \n+   *Reason for exclusion:* Not within the Canadian\
+    \ context\n+   \n+   2. Anema A, Fielden SJ, Castleman T, Grede N, Heap A, Bloem\
+    \ M. Food security in the context of HIV: towards harmonized definitions and indicators.\
+    \ AIDS Behav. 2014;18(Suppl 5):476-89.\n+   \n+   *Reason for exclusion:* Not\
+    \ within the Canadian context\n+   \n+   3. Anon. Abstracts of the Canadian Society\
+    \ for Clinical Nutrition’s 7th Annual Scientific Meeting: the road to excellence\
+    \ in Canadian Nutrition. Appl Physiol Nutr Metabol. 2008;33(3):603-40.\n+   \n\
+    +   *Reason for exclusion:* Not focused on people living with HIV (PLWH) population\n\
+    +   \n+   4. Apple. Apple expands partnership with RED to combat HIV/AIDS and\
+    \ COVID-19 [internet]. Apple Newsroom; 2020 [cited 2021 Aug 24]. Available from:\
+    \ https://www.apple.com/ca/newsroom/2020/12/apple-expands-partnership-with-red-to-combat-hiv-aids-and-covid-19/.\n\
+    +   \n+   *Reason for exclusion:* Not focused on nutrition and food programming\n\
+    +   \n+   5. AVI Health and Community Services. HIV/AIDS [internet]. AVI Health\
+    \ and Community Services; 2021 [cited 2021 Aug 24]. Available from: http://avi.org.\n\
+    +   \n+   *Reason for exclusion:* Duplicate\n+   \n+   6. Balfour L, Spaans JN,\
+    \ Fergusson D, Huff H, Mills EJ, La Porte, et al. Micronutrient deficiency and\
+    \ treatment adherence in a randomized controlled trial of micronutrient supplementation\
+    \ in ART-naïve persons with HIV. PLoS ONE. 2014;9(1):e85607.\n+   \n+   *Reason\
+    \ for exclusion:* Not focused on nutrition and food programming\n+   \n+   7.\
+    \ BC Centre for Disease Control. Human Immunodeficiency Virus (HIV) [internet].\
+    \ BCCDC; 2021 [cited 2021 Aug 24]. Available from: http://www.bccdc.ca/health-professionals/clinical-resources/case-definitions/human-immunodeficiency-virus-(hiv).\n\
+    +   \n+   *Reason for exclusion:* Not focused on nutrition and food programming\n\
+    +   \n+   8. BC Centre for Excellence in HIV/AIDS. About us [internet]. BC Centre\
+    \ for Excellence in HIV/AIDS; 2009 [cited 2021 Aug 24]. Available from: http://bccef.ca/about-us.\n\
+    +   \n+   *Reason for exclusion:* Not focused on nutrition and food programming\n\
+    +   \n+   9. Bergeron-Oliver A, Jones AM. Stigma still surrounds HIV-AIDS, despite\
+    \ effective treatment options [internet]. CTV News; 2019 [cited 2021 Aug 24].\
+    \ Available from: https://www.ctvnews.ca/health/stigma-still-surrounds-hiv-aids-despite-effective-treatment-options-1.4710834.\n\
+    +   \n+   *Reason for exclusion:* Not focused on nutrition and food programming\n\
+    +   \n+   10. Boklaschuk S. Usask professor publishes first full-length ethnography\
+    \ on family life and HIV/AIDS in Canada [internet]. University of Saskatchewan;\
+    \ 2021 [cited 2021 Aug 24]. Available from: https://news.usask.ca/articles/colleges/2021/usask-professor-publishes-first-full-length-ethnography-on-family-life-and-hivaids-in-canada.php.\n\
+    +   \n+   *Reason for exclusion:* Not focused on nutrition and food programming\n\
+    +   \n+   11. Boneya DJ, Ahmed AA, Yalew AW. The effect of gender on food insecurity\
+    \ among HIV-infected people receiving anti-retroviral therapy: a systematic review\
+    \ and meta-analysis. PLoS One. 2019;14(01):1-15.\n+   \n+   *Reason for exclusion:*\
+    \ Not within the Canadian context"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '12. Butterworth RF, Gaudreau C, Vincelette J, Bourgault AM, Lamothe F, Nutini
+    AM. Thiamine deficiency and wernicke’s encephalopathy in AIDS. Metabol Brain Dis.
+    1991;6(4):207-12.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    13. Canada Helps. Donate to AIDS/HIV Charities and Foundations [internet]. Canada
+    Helps; 2021 [cited 2021 Aug 24]. Available from: https://www.canadahelps.org/en/explore/charities/category/health/sub-category/aids-hiv/
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    14. Canadian Aboriginal AIDS Network (CAAN). Ending HIV in Canada together: we’re
+    ready! [internet]. CAAN; 2021 [cited 2021 Aug 24]. Available from: https://caan.ca/events-and-workshops-calendar/ending-hiv-in-canada-together-were-ready/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    15. Canadian Association for HIV Research. CAHR 2022 [internet]. CAHR; 2021 [cited
+    2021 Aug 24]. Available from: https://www.cahr-acrv.ca/conference/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    16. Canadian Association of Social Workers. Social work practice in HIV/AIDS [internet].
+    CASW; 2011 [cited 2021 Aug 24]. Available from: https://www.casw-acts.ca/en/social-work-practice-hivaids.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    17. Canadian Association of University Teachers. Human immunodeficiency virus
+    (HIV)/acquired immunodeficiency syndrome (AIDS) [internet]. CAUT; 2011 [revised
+    2021; cited 2021 Aug 24]. Available from: https://www.caut.ca/about-us/caut-policy/lists/caut-policy-statements/policy-statement-on-human-immunodeficiency-virus-%28hiv%29-acquired-immunodeficiency-syndrome-%28aids%29.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    18. Canadian Blood Services. Backgrounder: donor testing - human immunodeficiency
+    virus (HIV) [internet]. Canadian Blood Services; 2021 [cited 2021 Aug 24]. Available
+    from: https://www.blood.ca/en/about-us/media/hiv/backgrounder-donor-testing-human-immunodeficiency-virus-hiv.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    19. Canadian Cancer Society. Human immunodeficiency virus (HIV) [internet]. Canadian
+    Cancer Society; 2021 [cited 2021 Aug 24]. Available from: https://www.cancer.ca/en/prevention-and-screening/reduce-cancer-risk/make-informed-decisions/get-vaccinated/human-immunodeficiency-virus-hiv/?region=sk.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    20. Canadian Centre for Occupational Health and Safety. HIV/AIDS in the workplace:
+    OSH answers [internet]. Government of Canada; 2021 [cited 2021 Aug 24]. Available
+    from: https://www.ccohs.ca/oshanswers/diseases/aids/aids.html.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    21. Canadian Foundation for AIDS Research. History of HIV/AIDS [internet]. CANFAR;
+    2021 [cited 2021 Aug 24]. Available from: https://canfar.com/awareness/about-hiv-aids/history-of-hiv-aids/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    22. Canadian HIV and Viral Hepatitis Pharmacists Network. Overview [internet].
+    CHAP; 2017 [cited 2021 Aug 24]. Available from: https://hivclinic.ca/chap/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '57. Government of Ontario. HIV and AIDS [internet]. Government of Ontario,
+    Ministry of Health and Long-Term Care; 2021 [cited 2021 Aug 24]. Available from:
+    https://www.health.gov.on.ca/en/pro/programs/hivaids/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    58. Government of Ontario. HIV/AIDS tests and treatment [internet]. Government
+    of Ontario; n.d. [cited 2021 Aug 24]. Available from: https://www.ontario.ca/page/hivaids-tests-and-treatment.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    59. Government of Quebec. HIV/AIDS. Government of Quebec; n.d. [cited 2021 Aug
+    24]. Available from: https://www.itss.gouv.qc.ca/hiv-aids.html.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    60. Government of Saskatchewan. HIV testing, treatment and support [internet].
+    Government of Saskatchewan; n.d. [cited 2021 Aug 24]. Available from: https://www.saskatchewan.ca/residents/health/diseases-and-conditions/human-immunodeficiency-virus-hiv/hiv-testing.
+
+
+    *Reason for exclusion:* Duplicate
+
+
+    61. Groupe Proxim. HIV AIDS [internet]. Groupe Proxim; n.d. [cited 2021 Aug 24].
+    Available from: https://www.groupeproxim.ca/en/article/hiv-aids.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    62. Haregu TN, Setswe G, Elliott J, Oldenburg B. National responses to HIV/AIDS
+    and non-communicable diseases in developing countries: analysis of strategic parallels
+    and differences [internet]. Longwoods; 2014 [cited 2021 Aug 24]. Available from:
+    https://www.longwoods.com/content/24033/national-responses-to-hiv-aids-and-non-communicable-diseases-in-developing-countries-analysis-of-st.
+
+
+    *Reason for exclusion:* Not within the Canadian context
+
+
+    63. Haregu TN, Setswe G, Elliott J, Oldenburg B. National responses to HIV/AIDS
+    and non-communicable diseases in developing countries: analysis of strategic parallels
+    and differences. J Public Health Res. 2014;3(1):99.
+
+
+    *Reason for exclusion:* Duplicate
+
+
+    64. Hatsu I, Hadee E, Campa A. Food security status is related to mental health
+    quality of life among persons living with HIV. AIDS Behav. 2017;21(3):745–53.
+
+
+    *Reason for exclusion:* Not within the Canadian context
+
+
+    65. Healing Our Nation. HIV/AIDS [internet]. HON; n.d. [cited 2021 Aug 24]. Available
+    from: https://hon93.ca/hiv-aids/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    66. Health Research BC. British Columbia Centre for Excellence in HIV/AIDS [internet].
+    Health Research BC; 2021 [cited 2021 Aug 24]. Available from: https://www.msfhr.org/1/partner/bc-centre-for-excellence-in-hiv-aids.
+
+
+    *Reason for exclusion:* Duplicate
+
+
+    67. Health Sciences North. HAVEN [internet]. Health Sciences North; 2021 [cited
+    2021 Aug 24]. Available from: https://hsnsudbury.ca/en/Services-and-Specialties/HAVEN.
+
+
+    *Reason for exclusion:* Duplicate'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '116. Queen’s University. HIV/AIDS [internet]. Queen’s University; n.d. [cited
+    2021 Aug 24]. Available from: https://www.queensjournal.ca/tags/hivaids/. [No
+    longer available]
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    117. Regional HIV/AIDS Connection. Get the facts about HIV/AIDS and hepatitis
+    C [internet]. Regional HIV/AIDS Connection; n.d [cited 2021 Aug 24]. Available
+    from: https://www.hivaidsconnection.ca/get-facts-about-hivaids-and-hepatitis-c.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    118. Saskatchewan Prevention Institute. HIV/AIDS [internet]. Saskatchewan Prevention
+    Institute; n.d. [cited 2021 Aug 24]. Available from: https://skprevention.ca/sexual-health/hiv-aids/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    119. Saskatoon Tribal Council. SHARP – Saskatoon HIV / AIDS Reduction (in harm)
+    Program [internet]. STC; n.d. [cited 2021 Aug 24]. Available from: https://www.stc.sk.ca/programs-services/health/stc-health-centre-services/sharp-saskatoon-hiv-aids-reduction-in-harm-program/.
+    [No longer available]
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    120. Saudny-Unterberg H, Gary-Donald K. RD intervention improved nutritional status.
+    J Am Dietetic Assoc. 1995;95(4):412.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    121. Schulich School of Medicine and Dentistry. World AIDS Day: top 5 myths about
+    HIV/AIDS [internet]. Schulich School of Medicine and Dentistry; n.d. [cited 2021
+    Aug 24]. Available from: https://www.schulich.uwo.ca/about/news/2017/december/world_aids_day_top_5_myths_about_hivaids.html.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    122. Seek and Treat for Optimal Prevention (STOP). About us [internet]. STOP;
+    n.d. [cited 2021 Aug 24]. Available from: https://stophivaids.ca/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    123. Segal-Isaacson CJ, Tobin JN, Weiss SM, Brondolo E, Vaughn A, Wang C, et al.
+    Improving dietary habits in disadvantaged women with HIV/AIDS: The SMART/EST women’s
+    project. AIDS Behav. 2006;10(6):659-70.
+
+
+    *Reason for exclusion:* Not within the Canadian context
+
+
+    124. Sex and U. HIV [internet]. Sex & U; 2021 [cited 2021 Aug 24]. Available from:
+    https://www.sexandu.ca/stis/hiv/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    125. Sexual Health Ontario. HIV and AIDS [internet]. Sexual Health Ontario; 2021
+    [cited 2021 Aug 24]. Available from: https://sexualhealthontario.ca/en/hiv-aids.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '127. Simcoe Muskoka Health Stats. HIV/AIDS [internet]. Simcoe Muskoka Health
+    Stats; 2021 [cited 2021 Aug 24]. Available from: https://www.simcoemuskokahealthstats.org/topics/infectious-diseases/a-h/hiv-aids.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    128. Simcoe Muskoka Health. Acquired immunodeficiency syndrome (AIDS/HIV) [internet].
+    Simcoe Muskoka Health; 2017 [cited 2021 Aug 24]. Available from: https://www.simcoemuskokahealth.org/JFY/HPPortal/PCPCategories/InfectiousDiseases/Disease-of-Public-Health-Significance/Acquired-Immunodeficiency-Syndrome-(AIDS-HIV).
+
+
+    *Reason for exclusion:* Duplicate
+
+
+    129. Singer A, Weiser SD, Mccoy SI. Dose food insecurity undermine adherence to
+    antiretroviral therapy? A systematic review. AIDS Behav. 2015;19(5):1510-26.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    130. Singhal N, Austin J. A clinical review of micronutrients in HIV infection.
+    J Int Assoc Phys AIDS Care. 2002;1(2):63-75.
+
+
+    *Reason for exclusion:* Not within Canadian context
+
+
+    131. Smithson SL, Snider JJ, Krentz HB, Gill MJ. Initiatives implemented to improve
+    the utilization of nutrition services by HIV-infected patients followed at a regional
+    HIV center. J Am Dietetic Assoc Suppl. 2007;107:A33.
+
+
+    *Reason for exclusion:* Conference abstract
+
+
+    132. Stradling C, Yen-Fu C, Russell T, Connock M, Thomas G, Taheri S. The effects
+    of dietary intervention on HIV dyslipidaemia: a systematic review and meta-analysis.
+    PLoS ONE. 2012;7(6):e38121.
+
+
+    *Reason for exclusion:* Not within Canadian context
+
+
+    133. Strike C, Rudzinski K, Patterson J, Millson M. Frequent food insecurity among
+    injection drug users: correlates and concerns. BMC Public Health. 2012;12(1):1058.
+
+
+    *Reason for exclusion:* Not focused on PLWH or AIDS population
+
+
+    134. The Communication Initiative Network. HIV/AIDS [internet]. The Communication
+    Initiative Network; n.d. [cited 2021 Aug 24]. Available from: https://www.comminit.com/hiv-aids/category/sites/global/hiv-aids.
+
+
+    *Reason for exclusion:* Not within the Canadian context
+
+
+    135. The Conversation. Articles on HIV/AIDS [internet]. The Conversation; 2021
+    [cited 2021 Aug 24]. Available from: https://theconversation.com/ca/topics/hiv-aids-11623.
+
+
+    *Reason for exclusion:* Not within the Canadian context
+
+
+    136. The Windsor-Essex County Health Unit. HIV (AIDS) [internet]. The Windsor-Essex
+    County Health Unit; 2021 [cited 2021 Aug 24]. Available from: https://www.wechu.org/sexual-health/hiv-aids.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    137. Thomas A. CRACKCast E132 – HIV Infection and AIDS [internet]. 2017 [cited
+    2021 Aug 24]. (CRACKCast). Available from: https://canadiem.org/crackcast-episode-132-hiv-aids/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '139. Trellis HIV and Community Care. Get involved with Trellis HIV and Community
+    Care [internet]. Trellis HIV and Community Care; 2021 [cited 2021 Aug 24]. Available
+    from: https://hars.ca/get-involved/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    140. UNICEF Canada. HIV and AIDS [internet]. UNICEF Canada; n.d. [cited 2021 Aug
+    24]. Available from: https://www.unicef.ca/en/blog/tags/hiv-aids.
+
+
+    *Reason for exclusion:* Not within the Canadian context
+
+
+    141. University of Manitoba. New project to look at ethics behind epidemiological
+    tools to curb HIV transmissions [internet]. University of Manitoba; n.d. [cited
+    2021 Aug 24]. Available from: https://news.umanitoba.ca/new-project-to-look-at-ethics-behind-epidemiological-tools-to-curb-hiv-transmissions/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    142. Weiler AM, Hergesheimer C, Brisbois B, Wittman H, Yassi A, Spiegel JM. Food
+    sovereignty, food security and health equity: a meta-narrative mapping exercise.
+    Health Policy Planning. 2015;30(8):1078-92.
+
+
+    *Reason for exclusion:* Not focused on PLWH population
+
+
+    143. Where to. Positive Haven – Surrey HIV/AIDS Centre – HIV 411 [internet]. Where
+    to; n.d. [cited 2021 Aug 24]. Available from: https://whereto.catie.ca/listing/positive-haven-surrey-hivaids-centre.
+
+
+    *Reason for exclusion:* Duplicate
+
+
+    144. White M, Conner KL. In utero HIV exposure and the early nutritional environment
+    influence infant neurodevelopment: findings from an evidenced review and meta-analysis.
+    Nutrients. 2020;12(1):1-28.
+
+
+    *Reason for exclusion:* Not within Canadian context
+
+
+    145. Wing RR, Becofsky K, Wing EJ, McCaffery J, Boudreau M, Whitney E, et al.
+    Behavioral and cardiovascular weight loss program for people living with HIV.
+    AIDS Behav. 2020;24(2):1032-41.
+
+
+    *Reason for exclusion:* Not within Canadian context
+
+
+    146. Winick M, Andrassy RJ, Armstrong D, Bryan MA, Chandra RK, Kotler DP, et al.
+    Guidelines for nutrition support in AIDS; task force on nutrition support in AIDS.
+    Gastroenterol Nurs. 1989;12(1):28-36.
+
+
+    *Reason for exclusion:* Not within Canadian context
+
+
+    147. Women and HIV/AIDS Initiative (WHAI). Welcome to WHAI [internet]. WHAI Toronto;
+    2020 [cited 2021 Aug 24]. Available from: https://whai.ca/.
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    148. Women’s College Hospital. Women’s Health Matters - HIV/AIDS [internet]. Women’s
+    College Hospital; n.d. [cited 2021 Aug 24]. Available from: https://www.womenshealthmatters.ca/health-centres/sexual-health/infections-and-safer-sex/infections/hiv-aids.
+    [No longer available]
+
+
+    *Reason for exclusion:* Not focused on nutrition and food programming
+
+
+    149. World Health Organization. World health assembly adopts landmark strategies
+    on diet and physical activity, and reproductive health. Bull World Health Org.
+    2004;82(4):478.
+
+
+    *Reason for exclusion:* Not within Canadian context
+
+
+    150. Young H, Borrel A, Holland D, Salama P. Public nutrition in complex emergencies.
+    Lancet. 2004;364(9884):1899-909.
+
+
+    *Reason for exclusion:* Not within Canadian context'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Appendix III: Delphi method process
+
+
+    | Facilitator | Step 1 → | Experts | Step 2 → ← Step 3 → Step 4 → ← Step 5 → Step
+    6 → | Facilitator | Step 7 → | Final report |
+
+    |---|---|---|---|---|---|---|
+
+    | **Provides summary** of scoping review for panelists 1 week prior to meeting
+    |  | **Comment on their perception** of practical application of the findings,
+    and the materials included and/or excluded |  | **Collates** the feedback into
+    an anonymous summary report and circulates back to experts for review *Several
+    cycles may be needed |  | **Facilitator** produces report on experts’ responses
+    noting outliers\n*The responses and feedback will help fine tune the dissemination
+    plan |
+
+
+    Adapted from Green.⁴²'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Appendix IV: Characteristics of included sources
+
+
+    | Citation | Context | Concept | Population | Phenomena of interest (concept details)
+    | Item source design | Item aim | Organization/initiative (if applicable) |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 1. Fields-Gardner C, Ayoob KT. Position of Dietitians of Canada and the American
+    Dietetic Association: nutrition intervention in the care of persons with human
+    immunodeficiency virus infection. Can J Diet Pract Res. 2000;61:77–87. | Canada
+    and USA | Nutrition care | PLWH | MNT and nutrition-related education should be
+    components of the total health care provided to PLWH. | Narrative review | To
+    illustrate the position of Dietitians of Canada and the American Dietetic Association
+    on MNT for PLWH | Dietitians of Canada and the American Dietetic Association |
+
+    | 2. Fields-Gardner C, Ferguson P. Position of the American Dietetic Association
+    and Dietitians of Canada: nutrition intervention in the care of persons with human
+    immunodeficiency virus infection. J Am Diet Assoc. 2004;104(9):1425–41. | Canada
+    and USA | Nutrition care | PLWH | MNT can increase quality of life, assist in
+    symptom management, support medication therapy, and improve resistance against
+    infections and complications. Advocating for food and nutrition security, and
+    nutrition education for health care services for PLWH. | Narrative review | To
+    illustrate the position of Dietitians of Canada and the American Dietetic Association
+    on food security and nutrition education for PLWH | Dietitians of Canada and the
+    American Dietetic Association |
+
+    | 3. Fields-Gardner, C. Position of the Canadian Dietetic Association and the
+    American Dietetic Association: nutrition intervention in the care of persons with
+    human immunodeficiency virus infection. J Can Diet Assoc. 1994;55(3):129–35. |
+    Canada and USA | Nutrition care | PLWH | MNT helps with early assessment and treatment
+    of nutrient deficiencies, maintenance, and restoration of lean body mass and also
+    supports for activities of daily living and quality of life for PLWH. | Narrative
+    review | To illustrate the position of the Canadian Dietetic Association (currently
+    known as Dietitians of Canada) and the American Dietetic Association on MNT for
+    PLWH | Dietitians of Canada and the American Dietetic Association |
+
+    | 4. Kent H. Family-friendly HIV and AIDS care the goal at Vancouver’s Oak Tree
+    Clinic. Can Med Assoc J. 1996;154(9):1407–9. | Vancouver, British Columbia, Canada
+    | Nutrition care | PLWH, including women and children | Dietitian services available
+    to women and children living with HIV or AIDS that improve their quality of life.
+    | Narrative summary | To investigate services offered by Vancouver’s Oak Tree
+    Clinic | Oak Tree Clinic |'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 11. Rachlis A, Gill J, Baril J, LeBlanc R, Trottier B, Macleod J, et al. Effectiveness
+    of step-wise intervention plan for managing nelfinavir-associated diarrhea: a
+    pilot study. HIV Clin Trials. 2005;6(4):203-12. | Canada | Food and nutrition
+    expertise | PLWH on ART, including those with nelfinavir-induced diarrhea | Step-wise
+    approach (includes dietary supplement of psyllium, calcium carbonate and loperamide)
+    resulted in statistically and clinically significant reductions in frequency of
+    bowel movements and improvements in stool consistency. | Non-randomized experimental
+    study | To evaluate the effectiveness of a step-wise diarrhea management strategy
+    for nelfinavir-associated diarrhea for PLWH | N/A |
+
+    | 12. Collins AB, Parashar S, Hogg RS, Fernando S, Worthington C, McDougall P,
+    et al. Integrated HIV care and service engagement among people living with HIV
+    who use drugs in a setting with a community-wide treatment as a prevention initiative:
+    a qualitative study in Vancouver, Canada. J Int AIDS Soc. 2017;20(1):1-10. | Vancouver,
+    British Columbia, Canada | i) Charitable food provision; and ii) promotion health
+    promotion | PLWH who use drugs | TasP (treatment as prevention) is an initiative
+    to expand HIV testing, provide no-cost highly active antiretroviral therapy, and
+    link PLWH with HIV and AIDS care. One aspect of this integrated care model is
+    providing clients with nutrient-dense meals as part of the food service. It was
+    the most commonly accessed service by all participants. These low-barrier and
+    integrated services can mitigate social-structural barriers to retention in HIV
+    care and support treatment as prevention initiatives, as well as address health
+    inequities for structurally vulnerable populations who use drugs. | Qualitative
+    cohort study | To investigate engagement with, and impacts of, an integrated HIV
+    care services model tailored to the needs of PLWH who use drugs | Dr. Peters Centre
+    |
+
+    | 13. Renouf LS, Sheps S, Hubley A, Pick N, Johansen D, Tyndall MW. The role of
+    diet in predicting iron deficiency anemia in HIV-positive women. Can J Diet Pract
+    Res. 2012;73(3):128-33. | Vancouver, British Columbia, Canada | Food and nutrition
+    expertise | PLWH, including women | Regular use of a multivitamin supplement with
+    iron, supportive nutrition programming, and routine screening is recommended in
+    preventing and managing iron deficiency anemia in women with HIV. | Cross-sectional
+    study | To assess the association between medical, social, and nutritional factors
+    and iron deficiency anemia in adult women living with HIV/AIDS in the greater
+    Vancouver area | N/A |'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 14. Sernick A, Shannon K, Ranville F, Arora K, Magagula P, Shoveller J, et al.
+    In the midst of plenty: experiences of food insecurity amongst women living with
+    HIV in Vancouver, Canada. Health Soc Care Community. 2022;30(1):e138-47. | Vancouver,
+    British Columbia, Canada | Charitable food provision | PLWH, including i) cisgender
+    women; and ii) transgender women | Food services may help support food security;
+    however, they have restrictive hours and limited nutritious offerings, which demonstrate
+    the need for increasing personal financial means by increasing social assistance,
+    disability payments, unemployment insurance or a guaranteed livable income. Some
+    supportive housing settings offer meal preparation programs. “The main cis and
+    trans women–focused HIV support service in our setting, which had been providing
+    women-specific supports for WLWH [women living with HIV] in downtown Vancouver
+    for over 25 years including a lunch and grocery program, closed in April of 2017
+    due to loss of funding.”(p.6) | Qualitative research | To understand the impacts
+    of food insecurity among cisgender and transgender women living with HIV in high-income
+    countries | SHAWNA (Sexual Health and HIV/AIDS: Women’s Longitudinal Needs Assessment)
+    study; Unnamed programs in the city |
+
+    | 15. Sharkey SJ. An assessment of the need for dietitian in an out-patient HIV
+    clinic. J Can Diet Assoc. 1993;54(4):202-7. | Calgary, Alberta, Canada | Nutrition
+    care | PLWH, including i) gbMSM; and ii) women | Dietitian services for PLWH at
+    the center were offered. Other services included “group presentations, leaflet
+    and educational aid development or professional development, e.g., staff meetings,
+    in-service training, com-piling statistics and clinic operations including clerical
+    duties and liaison with colleagues.”(p.205) Results suggested all PLWH would benefit
+    from nutrition counseling. | Needs assessment | To assess the need for a dietitian
+    in the HIV clinic | Southern Alberta Clinic |'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | *(Continued)* | | | | | | | |
+
+    | 16. Slater J, Qadar Z, Bewza J. Review of food and nutrition services provided
+    by community-based organizations serving people with HIV in Canada. Can J Diet
+    Pract Res. 2015;76(2):97-9. | Canada | i) Charitable food provision; ii) population
+    health promotion; and iii) nutrition care | PLWH | The majority of organizations
+    had programs directed at improving access to food for clients, such as providing
+    food through meals and food banks, offering community kitchens, cooking classes,
+    food vouchers, gardens, and distributing food through street vans. Almost half
+    of the organizations provided nutrition counseling services by registered dietitians
+    or nurses, as well as referrals to other food and nutrition services. Some organizations
+    provided bulk food purchasing programs and catering services. However, the organizations
+    have limited capacity and infrastructure to deliver food and nutrition programming
+    due to resource constraints. | Cross-sectional study | To assess the status of
+    food and nutrition programming in community-based HIV organizations in Canada
+    | Unnamed programs<br>Locations:<br>Ontario = 30<br>Prairies = 14<br>Quebec =
+    11<br>British Columbia = 10<br>Atlantic = 8 |
+
+    | 17. Turner MJ, Angel JB, Woodend AK, Giguere P. The efficacy of calcium carbonate
+    in the treatment of protease inhibitor-induced persistent diarrhea in HIV-infected
+    patients. HIV Clin Trials. 2004;5(1):19-24. | Ottawa, Ontario, Canada | Food and
+    nutrition expertise | PLWH on ART, including those with protease inhibitor-induced
+    persistent diarrhea | Calcium carbonate is effective in reducing protease-inhibitor-induced
+    persistent diarrhea in HIV patients. | Non-randomized experimental study | To
+    evaluate the efficacy of calcium carbonate in the treatment of protease inhibitor-induced
+    persistent diarrhea in HIV-infected patients | N/A |'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '| (Continued) | | | | | | | |
+
+    |---|---|---|---|---|---|---|---|
+
+    | Citation | Context | Concept | Population | Phenomena of interest (concept details)
+    | Item source design | Item aim | Organization/initiative (if applicable) |
+
+    |  |  |  |  |  |  |  | Resource Network, The AIDS Network, The Teresa Group, Toronto
+    People With AIDS Foundation, Women’s Health In Women’s Hands<br>Community meals:
+    Africans in Partnership Against AIDS, AIDS Committee of Cambridge, Kitchener,
+    and Waterloo Region, AIDS Committee of London, AIDS Committee of Ottawa |
+
+    | 20. AIDS Vancouver. Supplementary Grocery Program [internet]. AIDS Vancouver;
+    2021 [cited 2021 Aug 24]. Available from: https://www.aidsvancouver.org/ | Vancouver,
+    British Columbia, Canada | i) Charitable food provision; and ii) population health
+    promotion | PLWH | The AIDS Vancouver Supplementary Grocery Program provides PLWH
+    in Vancouver with healthy groceries and aims to promote nutritional health. Provides
+    a “safe and respectful space.”(para.2) Grocery pickups are available during organization
+    opening hours and includes “women only” timeslots. Provides documents from Dietitians
+    of Canada on “Eating for Increasing your Energy: Eating Guidelines for Increasing
+    Your Energy and Protein Intake” and “Healthy Eating Tips: Added Sugars; Healthy
+    Eating Tips.” Also offers a list of food-access resources for “Eating Well During
+    Pandemic,” compiled by a dietitian. | Service provider website | To provide community-based
+    services to PLWH in Vancouver, including the Supplementary Grocery Program | AIDS
+    Vancouver |'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 21. HIV/AIDS Resources and Community Health (ARCH). Overview of Support Services
+    [internet]. ARCH; 2021 [cited 2021 Aug 24]. Available from: https://archguelph.ca/
+    | Guelph, Ontario, Canada | Charitable food provision | PLWH, including supports
+    for transgender health care | Service to link individuals with food insecurity
+    with food banks in the area. Also offers $10 gift cards to grocery stores (available
+    once per month). Special events throughout the year include summer barbecue and
+    catered holiday party. | Service provider website | To offer services to PLWH
+    through empowerment and capacity building. “ARCH provides accessible, culturally
+    responsive, and holistic support services and programs.” (para. 3) | HIV/AIDS
+    Resources and Community Health |
+
+    | 22. Black Coalition for AIDS Prevention (Black CAP). The AYA Project [internet].
+    Black CAP; 2021 [cited 2021 Aug 24]. Available from: https://blackcap.ca/programs-services/the-aya-project/
+    | Toronto, Ontario, Canada | Charitable food provision | African, Caribbean and
+    Black PLWH | Provides basic food items that are culturally specific (family and
+    individual packages available) that should last for 2 weeks. | Service provider
+    website | To provide support to Toronto’s African, Caribbean, and Black communities
+    who are living with HIV/AIDS | Black Coalition for AIDS Prevention (Black CAP)
+    |
+
+    | 23. Bruce House. Outreach & Support (REST Program) [internet]. Bruce House;
+    2021 [cited 2021 Aug 24]. Available from: https://brucehouse.ca/programs/supportive-services/
+    | Ottawa, Ontario, Canada | i) Charitable food provision; and ii) population health
+    promotion | PLWH | Food bank/pantry, communal cooking lessons, community dinners,
+    grocery gift cards (charitable food provisions): REST Program (outreach and support):
+    provides services and supports to people living with HIV, improving their health
+    and life skills and increasing their participation in the community. This program
+    provides support with their daily needs, short- and long-term goals, and in the
+    event of episodic crisis. This includes items such as transportation for groceries,
+    gift cards for grocery stores, monthly community kitchen and dinner socials. Community
+    Kitchen: Clients prepare a meal as a group, learning nutrition and cooking skills
+    with plenty of leftovers to take home. | Service provider website | Bruce House
+    clients have the opportunity to attend a variety of complementary programs designed
+    to decrease social isolation, improve life skills, and improve overall health
+    and wellness. | Bruce House |'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 25. Canadian AIDS Treatment Information Exchange (CATIE). A Practical Guide
+    to Nutrition for People Living with HIV [internet]. CATIE; 2007 [reprinted 2012,
+    cited 2021 Aug 24]. Available from: https://sagecollection.ca/wp-content/uploads/2013/12/a-practical-guide-to-nutrition-english_0.pdf.
+    Formerly available from: https://www.catie.ca/en/practical-guides/nutrition |
+    Canada | i) Food and nutrition expertise; and ii) population health promotion
+    | PLWH | Describes tips for healthy eating and promotes nutrition education. Healthy
+    eating and cooking, vitamins, supplements, as well as nutritional recommendations—vitamins/minerals
+    to treat certain issues. | Service provider website; online book | To investigate
+    nutritional guidelines for PLWH; provide a resource for PLWH in nutrition education
+    | CATIE |
+
+    | 26. Central East Healthline. HIV/AIDS-Central East [internet]. Central East
+    Healthline; 2021 [cited 2021 Aug 24]. Available from: https://www.centraleasthealthline.ca/listservices.aspx?id=10263
+    | Toronto area, Ontario, Canada | Links to secondary sources (charitable food
+    provision and nutrition care) | PLWH | Positive Care Clinic: Dietitian pharmacist
+    support, provides individual assessment and follow-up care, nutrition and medication
+    counseling. PARN—Your Community AIDS Resource Network: On-site food bank cupboard
+    for people who access PARN services, and dietitian pharmacist. | Health services
+    website | Directory for HIV/AIDS services, some of which offer food services |
+    Central East Healthline. Secondary sources: Positive Care Clinic, PARN—Your Community
+    AIDS Resource Network |
+
+    |  |  |  |  |  |  |  | Yellowhead Society, Turning Point Society of Central Alberta,
+    Shining Mountains Living Community Services, AIDS Programs South Saskatchewan,
+    Carmichael Outreach, Prairie Harm Reduction, OUTSaskatoon Inc., Persons Living
+    with AIDS Network of Saskatchewan, Nine Circles Community Health Centre; Quebec:
+    Bureau Régional d’Action sida (Outaouais), AIDS Community Care Montréal, Coalition
+    sida des sourds du Québec |'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 27. Centre Francophone du Grand Toronto. HIV/AIDS Program [internet]. Centre
+    Francophone du Grand Toronto; 2020 [cited 2021 Aug 24]. Available from: https://www.centrefranco.org/programme-vih-sida
+    | Toronto, Ontario, Canada | Charitable food provision | PLWH who are French speaking
+    | Provides an array of services, including an HIV/AIDS program. Does not specifically
+    list nutrition/food services for PLWH, but emergency food aid is offered to all
+    clients of the center. | Service provider website | The center contributes to
+    the well-being of the Francophone community and offers a community and multidisciplinary
+    approach. The center offers a variety of services (health, employment, family)
+    to the entire Francophone community in Toronto and the surrounding area, thus
+    meeting its diverse needs. | Centre Francophone du Grand Toronto |
+
+    | 28. Fraser Health. HIV counselling and supports [internet]. Fraser Health; 2021
+    [cited 2021 Aug 24]. Available from: https://www.fraserhealth.ca/health-topics-a-to-z/sexual-health/hiv/hiv-counselling-and-supports
+    | Vancouver, British Columbia, Canada | Links to secondary sources (charitable
+    food provision and nutrition care) | PLWH | CATIE: Includes food/nutrition education;
+    AIDS Vancouver: Food support; Lookout Housing & Health Society: Food bank; SARA
+    for Women HIV support services: Food bank (food hampers); Oak Tree Clinic—HIV
+    care for women and families: Dietitian services | Service provider website | Fraser
+    Health provides counselling and support to PLWH. “Services include specialized
+    HIV care, medication management, nutrition guidance, counselling, testing for
+    other infections and referrals to community resources.” (para. 4) | Fraser Health
+    Secondary sources: CATIE, AIDS Vancouver, Lookout Housing & Health Society, SARA
+    for Women HIV Support Services, Oak Tree Clinic—HIV care for women and families
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 29. Government of Saskatchewan. HIV Testing, Treatment and Support [internet].
+    Saskatchewan: Government of Saskatchewan; 2019 [cited 2021 Aug 24]. Available
+    from: https://www.saskatchewan.ca/residents/health/diseases-and-conditions/human-immunodeficiency-virus-hiv/hiv-testing
+    | Saskatchewan, Canada | Links to secondary sources (charitable food provision)
+    | PLWH | Persons Living with AIDS Network of Saskatchewan Inc.: provides free
+    daily lunches | Health services website: government | To provide information on
+    testing, treatment, counseling, and directory to services organizations | Government
+    of Saskatchewan. Secondary source: Persons Living with AIDS Network of Saskatchewan
+    Inc. |
+
+    | 30. Health Sciences North. Welcome to the HAVEN Program [internet]. Health Sciences
+    North; 2013 [cited 2021 Aug 24]. Available from: https://www.hsnsudbury.ca/portalen/haven
+    | Sudbury, Ontario, Canada | Nutrition care | PLWH, including pregnant women |
+    The HAVEN Program: diet and nutrition counseling | Service provider website |
+    To provide a range of services to PLWH and those who have been affected by HIV/AIDS
+    (partner/family member etc.) | Health Sciences North |
+
+    | 31. Island Health. HIV & AIDS [internet]. Island Health; 2021 [cited 2021 Aug
+    24]. Available from: https://www.islandhealth.ca/learn-about-health/hiv-aids/hiv-aids
+    | Victoria, British Columbia, Canada | Links to secondary sources | PLWH | CATIE’s
+    guide for people living with HIV | Service provider website | To deliver health
+    services for residents, clients, and patients | Island Health. Secondary source:
+    CATIE |
+
+    | 32. Island Sexual Health Community Healthcare Centre. HIV symptoms, prevention
+    and treatment [internet]. Island Sexual Health Community Healthcare Centre; 2021
+    [cited 2021 Aug 24]. Available from: https://www.islandsexualhealth.org/infections/hiv-aids/
+    | Victoria, British Columbia, Canada | Links to secondary sources (link to website
+    that offers more secondary sources) | PLWH | HealthLink BC: secondary source links;
+    CATIE: nutrition education; AIDS Vancouver: charitable food provision; AVI: secondary
+    source links; Island Health Authority: charitable food provision (grocery vouchers);
+    Oak Tree Clinic: dietitian services; Fraser Health Authority: secondary source
+    links; North Health Authority: secondary source links | Service provider website
+    | To provide information on HIV/AIDS symptoms, treatment, protection. Directory
+    to HIV/AIDS services in British Columbia | Island Sexual Health Community Healthcare
+    Centre. Secondary sources: HealthLink BC, CATIE, AIDS Vancouver, AVI, Island Health
+    Authority, Oak Tree Clinic, Fraser Health Authority, North Health Authority |'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | **33. Healthwise Staff.** HIV (Human Immunodeficiency Virus) Infection [internet].
+    My Health Alberta; 2021 [cited 2021 Aug 24]. Available from: https://myhealth.alberta.ca/Health/pages/conditions.aspx?hwid=hw191097&lang=en-ca#hw191097-sec
+    | Alberta, Canada | Food and nutrition expertise | PLWH | Promotes a heart healthy
+    diet. “Eating a nutritious, balanced diet is an important part of treating HIV.
+    Good nutrition can help your immune system stay strong, which in turn may help
+    your body fight HIV. Knowing the best way to nourish your body will help keep
+    it strong and allow your HIV medicines to work effectively.”(para.¹) Also offers
+    information on how to handle food properly to avoid getting a foodborne illness.
+    | Health service website: government | To provide information on what HIV and
+    AIDS is, how it effects the body, causes and treatment, supports, nutritional
+    recommendations, medications | My Health Alberta |
+
+    | **34. Manitoba HIV Program: Nine Circles Community Health Centre.** Manitoba
+    HIV Program [internet]. Winnipeg: Nine Circles Community Health Clinic; 2021 [cited
+    2021 Aug 24]. Available from: https://ninecircles.ca/programs-services/clinic-services/
+    | Manitoba, Canada | i) Charitable food provision; and ii) nutrition care | PLWH
+    | Food bank: Charitable food provisions for PLWH. Dietitian services to offer
+    nutrition education are available for PLWH in individual and group sessions. “The
+    group sessions include topics such as living well with HIV, diabetes management
+    and eating healthy for your heart.”(para.⁵) | Service provider website | To provide
+    supportive and non-judgmental care and treatment, encouraging clients to be active
+    in their own care by being informed and asking questions | Manitoba HIV Program:
+    Nine Circles Community Health Centre |
+
+    | **35. Northern Health. HIV and hepatitis C** [internet]. Northern Health; 2021
+    [cited 2021 Aug 24]. Available from: https://www.northernhealth.ca/health-information/hiv-and-hepatitis-c
+    | Prince George, British Columbia, Canada | Food and nutrition expertise | PLWH
+    | Adding calories and protein to your diet (PDF): Alberta Health Services; Easy
+    to chew diet (PDF): Alberta Health Services; Healthy eating for chronic hepatitis
+    (PDF): HealthLink BC; Healthy living: CATIE; Healthy snacks for adults (PDF):
+    HealthLink BC; HIV: Why healthy eating matters: HealthLink BC; Managing nausea
+    and vomiting (PDF): Alberta Health Services; Safe food handling for immunocompromised
+    individuals (PDF): Health Canada | Service provider website | “Find out everything
+    you need to know about HIV and HCV [hepatitis C]. Discover where to get tested
+    in your community, what treatment options are and where to find support services.”(para.²)
+    | Northern Health |'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 36. Ontario Aboriginal HIV/AIDS Strategy (OAHAS). Outreach and support services
+    [internet]. OHAIS; 2019 [cited 2021 Aug 24]. Available from: https://www.oahas.org/outreach-support-services.html
+    | Toronto, Ontario, Canada | i) Charitable food provision (assistance); and ii)
+    link to secondary sources | Indigenous PLWH, including urban-based First Nations,
+    Inuit, Metis, and non-status community groups/organizations/agencies, schools
+    and individuals in Ontario | Support services: Assistance in accessing food, clothing,
+    and shelter. Secondary source: CATIE website link | Service provider website |
+    OAHAS conducts outreach in the streets, neighborhoods, events, powwows, agencies,
+    in-reach in correctional facilities, hospitals, medical centers, schools, and
+    more, including food support under “support services.” | Ontario Aboriginal HIV/AIDS
+    Strategy. Secondary source: CATIE |
+
+    | 37. Giliauskas, Danielle. Nutrition and HIV [internet]. Toronto: The Ontario
+    HIV Treatment Network Rapid Response Service; 2018 [cited 2021 Aug 24]. Available
+    from: https://www.ohtn.on.ca/rapid-response-nutrition-and-hiv/ | Toronto, Ontario,
+    Canada | Food and nutrition expertise | PLWH | Nutritional recommendations, including
+    energy expenditure, micronutrients, macronutrients, metabolism of glucose and
+    lipids, probiotics, and dietary supplements | Service provider website; report
+    | This review presents nutritional information for people living with HIV, includes
+    guidelines from various international organizations, and synthesizes research
+    evidence from reviews and studies. Additionally, a variety of health challenges
+    associated with HIV and ART are explored in the context of nutritional intervention.
+    | The Ontario HIV Treatment Network Rapid Response Service |
+
+    | 38. The Persons Living With AIDS Network of Saskatchewan. HIV Support Services
+    [internet]. PLWA Network of Saskatchewan; 2021 [cited 2021 Aug 24]. | Saskatoon,
+    Saskatchewan, Canada | i) Charitable food provision; and ii) nutrition care |
+    Indigenous PLWH | Free daily lunches, hot meals for group sessions, multivitamin
+    programs | Service provider website | The Network “provides support, care and
+    education services for persons living with ...” | The Persons Living With AIDS
+    Network of Saskatchewan |'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | Available from: https://www.aidsnetworksaskatoon.ca/services.html |  |  |  |  |  |
+    HIV/AIDS. Special attention is given to fostering positive attitudes and hope
+    for individuals and their families. |  |
+
+    | **39.** Lookout Housing + Health Society. Djaef Mahler Food Bank [internet].
+    Lookout Housing + Health Society; 2017 [cited 201 Aug 24]. Available at: https://lookoutsociety.ca/project/djaef-mahler-food-bank/
+    | New Westminster, British Columbia, Canada | Charitable food provision | PLWH
+    | “The Djaef Mahler Food Bank is a high-protein food bank that supports individuals
+    and families living with HIV and/or Hep C.” | Service provider website | A peer-driven
+    support lounge for members who are HIV-positive. Services include advocacy, education,
+    treatment information, a resource library, housing worker, nutrition intake and
+    assessment, support groups, social activities, and an HIV high-protein food bank
+    (Djaef Mahler Grocery) | Lookout Housing + Health Society |
+
+    | **40.** Simcoe Muskoka District Health Unit. Acquired Immunodeficiency syndrome
+    (AIDS/HIV) [Internet]. Simcoe Muskoka District Health Unit; 2017 [cited 2021 Aug
+    24]. Available at: https://www.simcoemuskokahealth.org/JFY/HPPortal/PCPCategories/InfectiousDiseases/Disease-of-Public-Health-Significance/Acquired-Immunodeficiency-Syndrome-(AIDS-HIV)
+    | Simcoe Muskoka, Ontario, Canada | Links to secondary sources | PLWH | Provides
+    links for:<br>• Public Health Agency of Canada: Canadian guidelines on sexually
+    transmitted infections, evergreen edition<br>• CATIE: Canada’s source for HIV
+    and hepatitis C information<br>• Canadian AIDS Society publication: HIV transmission:
+    factors that affect biological risk (2013)<br>• AMMI Canada: the use of early
+    ART in HIV-infected Persons | Service provider website | To offer information
+    about HIV including virus description, diagnosis, treatment; to provide links
+    to service organizations in Canada | Simcoe Muskoka District Health Unit<br>Secondary
+    sources:<br>Public Health Agency of Canada, CATIE, Canadian AIDS Society publication,
+    Association of Medical Microbiology and Infectious Disease Canada, Muskoka HealthSTATS
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 44. AVI Health and Community Services. Our services/ Comox Valley [internet].
+    AVI Health and Community Services; 2021 [cited 2021 Aug 24]. Available from: https://avi.org/our-services/comox-valley
+    | British Columbia, Canada | Population health promotion | PLWH | Comox Valley
+    location provides “non-judgmental education and support for nutrition.” | Service
+    provider website | The mission of AVI “is to promote health, dignity, and well-being
+    for all people affected by HIV, HCV (hepatitis C), and substance use by delivering
+    sex-positive and harm reduction based education, prevention, and support service.”
+    | AVI Health and Community Services |
+
+    | 45. AIDS Coalition of Nova Scotia (ACNS). Newsletter Winter 2020. ACNS; 2020
+    [cited 2021 Aug 24]. [No longer available online] | Halifax, Nova Scotia, Canada
+    | Population health promotion | PLWH | Cooking and recipe education. Affordable
+    Eats program offers free cooking sessions. Article also notifies that ACNS will
+    be providing free copies of *Affordable Eats* cookbook to those who are interested.
+    Recipes include healthy and price-friendly options, and ingredient pricing is
+    listed for budget planning. | Service provider website: newsletter article | To
+    provide updates on ACNS activities and connected resources, including “Affordable”
+    Eats project | AIDS Coalition of Nova Scotia |'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | **46. Nova Scotia Advisory Commission on AIDS (The Commission).** *Information
+    for Persons Living with HIV/AIDS about Income Assistance in Nova Scotia* [internet].
+    The Commission; 2013 [cited 2021 Oct 5]. Available from: https://novascotia.ca/aids/documents/Income-Assistance-Information-for-Persons-Living-with-HIV-AIDS.pdf
+    | Nova Scotia, Canada | Financial aid (provincial government) | PLWH | Income
+    assistance allowance: $225<br>Special dietary allowance: $150<br>Special dietary
+    or nutritional needs allowance: Special diets that qualify for the extra amount
+    include:<br>• modified fat diet, such as low-fat diet or low-cholesterol diet<br>•
+    low-salt diet<br>• nutrition supplements, such as Ensure, Boost, and Pediasure<br>•
+    calorie supplement<br>• diabetic, dialysis, or gluten-free diet<br>• maternal
+    nutritional allowance for pregnant women and women with children under the age
+    of 1 | Service provider website: information booklet (PDF) | “The need for this
+    booklet emerged from research for the report *Income Support and HIV/AIDS: The
+    Experiences of Persons Living with HIV/AIDS in Nova Scotia* (2007) prepared for
+    the NS Advisory Commission on AIDS by Carolyn Marshall, Marshall Consulting. The
+    factsheet explains benefits under the ESIA program to which people living with
+    HIV/AIDS may be entitled based on their medical or disability status.” | Government
+    of Nova Scotia |
+
+    | **47. QEII Health Sciences Centre (QEII).** *Patient and Family Guide: HIV Clinic*
+    [internet]. QEII; 2021 [cited 2021 Oct 5]. Available from: http://www.nshealth.ca/sites/nshealth.ca/files/patientinformation/0430.pdf
+    | Halifax, Nova Scotia, Canada | Nutrition care | PLWH | Dietitian services for
+    PLWH. Dietitians can help clients fill out forms to apply for special diet allowance,
+    and social assistance. | Health services website: information pamphlet | To provide
+    an overview of services offered to PLWH at the QEII HIV Clinic | QEII Halifax
+    Infirmary: HIV Clinic |
+
+    | **48. Stepping Stone.** *Community Drop-In* [internet]. Stepping Stone; 2021
+    [cited 2021 Oct 5]. Available from: https://steppingstones.ca/community-drop-in/
+    | Dartmouth, Nova Scotia, Canada | i) Charitable food provision; and ii) food
+    and nutrition expertise | PLWH, including sex workers and those at risk of entering
+    the sex trade or being sex trafficked | The organization offers snacks, a daily
+    food delivery by Feed Nova Scotia, and a monthly food order. A street outreach
+    program is also in operation which gives out snacks. Services include availability
+    for PLWH. Food and nutrition education: “The aim of the Health Bodies, Healthy
+    Lives program is to increase program users’ | Service provider website | To provide
+    information on available resources and programming offered, as well as information
+    on sex work and sex trafficking | Stepping Stone |'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | *(Continued)* | | | | | | | |
+
+    | | | | | awareness, knowledge, access and skill around nutrition and healthy,
+    affordable food choices. The program is designed to encourage program users to
+    engage with food in meaningful ways at both an individual and community level.
+    The activities and opportunities offered include:<br>- How to shop healthy<br>-
+    How to cook healthy<br>- Nutrition workshops & collective kitchens<br>- Information
+    on growing, harvesting and preserving food.⁽ᵖᵃʳᵃ.⁶⁾ | | | |
+
+    | 49. North End Community Health Centre (NECHC). Nutrition Services [internet].
+    NECHC; 2020 [cited 2021 Oct 5]. Available from: https://nechc.com/services/nutrition-services/
+    | Halifax, Nova Scotia, Canada | Nutrition care | PLWH, including populations
+    who have been marginalized | Dietitian services available for PLWH. | Service
+    provider website | To provide information on available resources and services
+    offered | North End Community Health Centre (NECHC) |
+
+    | 50. Northern Healthy Connections Society (NHCS). Services [internet]. NHCS;
+    2021 [cited 2021 Oct 5]. Available from: https://nhcsociety.ca/services/ | Truro,
+    Nova Scotia, Canada | Charitable food provision | PLWH | The support coordinator
+    can provide information on food banks and soup kitchens/church suppers. | Service
+    provider website | To provide information on available resources and services
+    offered | Northern Healthy Connections Society (NHCS) |
+
+    | 51. Government of Nova Scotia. Employment Support and Income Assistance [internet].
+    Government of Nova Scotia; 2016 [cited 2021 Oct 5]. Available from: https://novascotia.ca/coms/employment/index.html
+    | Nova Scotia, Canada | Financial aid (provincial government) | PLWH | Special
+    diet rates: HIV/AIDS (high protein, high calorie diet):<br>3000 calories $66<br>3250
+    calories $88<br>3500 calories $101<br>Oral nutritional supplements (such as, but
+    not limited to, Ensure, Boost, Essentials, Advera, Pediasure): Actual costs up
+    to $150 per month. A time frame for a | Provincial government website (PDF) |
+    To provide information on available resources and services offered | Government
+    of Nova Scotia |'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 57. Government of Manitoba. Section 18 - Basic Assistance Rates and Specific
+    Item Guidelines [internet]. Government of Manitoba; n.d. [cited 2021 Oct 15].
+    Available from: https://www.gov.mb.ca/fs/eia_manual/18.html#1842 | Manitoba, Canada
+    | Financial aid (provincial government) | PLWH | Special diet: If a medical practitioner
+    has prescribed a special diet for a person, the applicable allowance for basic
+    necessities under Table 1, 2, or 3 may be exceeded by an amount approved by the
+    minister (basic IA is $195–$274.80). Depending on what diet the registered dietitian
+    prescribes, individuals could be eligible for:
+
+
+    - high calorie/high protein $136.93
+
+    - chronic conditions $81.63
+
+
+    For participants living in northern and remote communities, and receiving the
+    northern allowance, the special diet rates should be increased by:
+
+
+    - 40% in Thompson, Flin Flon or The Pas, or within a 16 km radius
+
+    - 55% in remote areas that have all-weather road, rail, or water travel access
+
+    - 105% in remote areas that do not have all-weather road, rail, or water travel
+    access.
+
+
+    *Form for health care providers (support) to fill out: https://professionals.wrha.mb.ca/old/extranet/nutrition/files/Forms-InstructionsforEIA.pdf
+    | Provincial government website | To provide information on available resources
+    and services offered | Government of Manitoba |'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | **58. Government of Saskatchewan.** Saskatchewan Assured Income for Disability
+    (SAID): DISC GUIDEBOOK [internet]. Government of Saskatchewan; 2017 [cited 2021
+    Oct 15]. Available from: https://www.aussiervices.ca/auto/uploads/2020/04/DISC-SAID-Guidebook-April-2020.pdf
+    | Saskatchewan, Canada | Financial aid (provincial government) | PLWH | Rates
+    for special diets: “HIV or AIDS (to include food supplements) ** You can choose
+    between the $140.00 OR to have your ensure/boost paid in full.” (p.21) Medical
+    Taxi: Medical Taxis can be issued by your worker in an emergency situation or
+    in a situation where you cannot find other transportation for a medical appointment.
+    (no specific amount listed). | Provincial government website (PDF) | To provide
+    information on available resources and services offered | Government of Saskatchewan
+    |
+
+    | **59. Government of Alberta. Income and Employment Supports Policy Manual [internet].
+    Government of Alberta; 2020 [cited 2021 Oct 15]. Available from: http://www.humanservices.alberta.ca/AWOnline/AISH/8899.html
+    | Alberta, Canada | Financial aid (provincial government) | PLWH | Special diet
+    allowance for HIV/AIDS: $37 per month (may only receive one special diet rate
+    at a time when on the HIV/AIDS rate, ie, cannot be combined with high-calorie,
+    high-protein diet rate) | Provincial government website | To provide information
+    on available resources and services offered | Government of Alberta |
+
+    | **60. Government of British Columbia.** Health Supplements & Programs Rate Table
+    [internet]. Government of British Columbia; 2017 [cited 2021 Oct 15]. Available
+    from: https://www2.gov.bc.ca/gov/content/governments/policies-for-government/bcea-policy-and-procedure-manual/bc-employment-and-assistance-rate-tables/health-supplements-and-programs-rate-table
+    | British Columbia, Canada | Financial aid (provincial government) | PLWH | •
+    Diet supplements: high-protein diet: $40 per calendar month, plus $30 towards
+    the purchase of a blender<br>• Nutritional supplement: dietary items: up to $165
+    per calendar month<br>• Vitamins and minerals: up to $40 per calendar month<br>•
+    Medical transportation supplement: travel allowance related to vehicle transportation:
+    $0.20 per km<br>• Allowance for exceptional cases where circumstances warrant
+    a meal allowance: $4 per meal | Provincial government website | To provide information
+    on available resources and services offered | Government of British Columbia |'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '| Citation | Context | Concept | Population | Phenomena of interest (concept
+    details) | Item source design | Item aim | Organization/initiative (if applicable)
+    |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 61. Government of Northwest Territories. Income Assistance Handbook [internet].
+    Government of Northwest Territories; 2019 [cited 2021 Oct 15]. https://www.ece.gov.nt.ca/sites/ece/files/resources/income_assistance_handbook_-_aug_2019.pdf
+    | Northwest Territories, Canada | Financial aid (provincial government) | PLWH
+    | No specific rates for food allowance were found. Food allowance is included
+    under “basic needs,” but no mention of “special diet” (or similar) were found.
+    | Provincial government website (PDF handbook) | To provide information on available
+    resources and services offered | Government of Northwest Territories |
+
+    | 62. Government of Nunavut. Income Assistance (IA) [internet]. Government of
+    Nunavut; n.d. [cited 2021 Oct 15]. Available from: https://www.gov.nu.ca/family-services/programs-services/income-assistance-ia
+    | Nunavut, Canada | Financial aid (provincial government) | PLWH | Food allowance
+    available but no specific allowance amount was found. | Provincial government
+    website | To provide information on available resources and services offered |
+    Government of Nunavut |
+
+    | 63. Government of Yukon. Social Assistance Act [internet]. Government of Yukon;
+    2012 [cited 2021 Oct 15]. Available from: https://laws.yukon.ca/cms/images/LEGISLATION/regs/oic2012_083.pdf
+    | Yukon, Canada | Financial aid (provincial government) | PLWH | $232 basic food
+    allowance per month per individual + additional $32 per month for special food
+    allowance | Provincial government website (PDF) | To provide information on available
+    resources and services offered | Government of Yukon |
+
+    | 64. Vancouver Coastal Health. HIV AIDS Services & Testing [internet]. Vancouver
+    Coastal Health; 2020 [cited 2021 Aug 24]. Available from: http://www.vch.ca/locations-services/results?res_id=1348
+    | British Columbia, Canada | Food and nutrition expertise | PLWH | HIV care and
+    treatment, including primary care, intensive case management, antiretroviral medication
+    management, nutrition counseling, and referrals to HIV/AIDS support organizations
+    and specialists | Service provider website | To provide HIV/AIDS testing, prevention,
+    care, treatment, and community support to people who live in the geographic area
+    served by Vancouver Coastal Health | Vancouver Coastal Health |
+
+
+    AIDS, acquired immunodeficiency syndrome; ART, antiretroviral therapy; AVI, AVI
+    Health and Community Services; CATIE, Canadian AIDS Treatment Information Exchange;
+    HIV, human immunodeficiency virus; gbMSM, gay, bisexual, and men who have sex
+    with men; MNT, medical nutrition therapy; N/A, not applicable; PLWH, people living
+    with HIV.'
+  merge: -1
+  img_proc: true
