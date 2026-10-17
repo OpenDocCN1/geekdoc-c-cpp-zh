@@ -1,0 +1,152 @@
+
+## Bibliography
+
+- [1]. R.P. Agarwal, *Difference Equations and Inequalities: Second Edition, Revised and Expanded*, Marcel Dekker, New York, 2000.
+- [2]. R.P. Agarwal and D. O’Regan, *An Introduction to Ordinary Differential Equations*, Springer–Verlag, New York, 2008.
+- [3]. A. Albert, *Regression and the Moore–Penrose Pseudoinverse*, Academic Press, New York, 1972.
+- [4]. A. Ben–Israel and T.N.E. Greville, *Generalized Inverses: Theory and Applications*, Wiley, New York, 1974.
+- [5]. G. Birkhoff and T.C. Bartee, *Modern Applied Algebra*, McGraw–Hill, New York, 1970.
+- [6]. G. Birkhoff and S. Mac Lane, *A Survey of Modern Algebra*, Macmillan, New York, 1977.
+- [7]. C.T. Chen, *Introduction to Linear System Theory*, Holt, Rinehart and Winston, Inc., New York, 1970.
+- [8]. F.R. Gantmacher, *Applications of the Theory of Matrices*, Interscience, New York, 1959.
+- [9]. P.R. Halmos, *Finite–Dimensional Vector Spaces*, Van Nostrand, New York, 1958.
+- [10]. K. Hoffman and R. Kunze, *Linear Algebra*, 2nd ed., Prentice–Hall, Englewood, N.J., 1971.
+- [11]. A.S. Householder, *The Theory of Matrices in Numerical Analysis*, Blaisdell, New York, 1964.
+- [12]. P. Lancaster, *Theory of Matrices*, Academic Press, New York, 1969.
+- [13]. C.L. Lawson and R.J. Hanson, *Solving Least Squares Problems*, Prentice–Hall, Englewood, N.J., 1974.
+- [14]. S.J. Leon, *Linear Algebra with Applications*, Macmillan, New York, 1980.
+- [15]. M.Z. Nashed, *Generalized Inverses and Applications*, Academic Press, New York, 1976.
+- [16]. B. Noble, *Applied Linear Algebra*, 2nd edition, Prentice–Hall, Englewood, N.J., 1977.
+- [17]. B.N. Parlett, *The Symmetric Eigenvalue Problem*, Prentice–Hall, Englewood, N.J., 1980.
+- [18]. G. Strang, *Linear Algebra and its Applications*, 2nd edition, Academic Press, New York, 1976.
+- [19]. R.M. Thrall and L. Tornheim, *Vector Spaces and Matrices*, Wiley, New York, 1957.
+- [20]. R.A. Usmani, *Applied Linear Algebra*, Taylor & Francis, New York, 1986.
+
+## Index
+
+- Cramer's rule 51
+- cross product 121
+- determinant 23
+- diagonal elements of a matrix 12
+- diagonal matrix 12
+- diagonalizable 155, 157
+- diagonally dominant matrix 215
+- direct sum 79
+- directed graph 214
+- discrete Putzer's algorithm 177
+- distance function 152
+- dominant eigenvalue 143
+- dot product 116
+- doubly stochastic matrix 20
+- dual basis 127
+- dual space 127
+- echelon form of a matrix 46, 47
+- echelon linear system 46
+- echelon matrix 44
+- eigenspace 137
+- eigenvalue 135
+- eigenvector 135, 142
+- elementary column operations 45
+- elementary matrix 45
+- elementary row operations 44
+- elements of a matrix 11
+- error function 183
+- Euclidean n–space 116
+- Fibonacci matrix 39
+- Fibonacci numbers 39
+- field 1
+- field of scalars 1
+- finite dimension 76
+- Fourier coefficients 119
+- Fourier expansion 118
+- free variables 53
+- full row (column) rank 206
+- fundamental matrix solution 172
+- fundamental set of solutions 172
+- Gauss elimination method 52
+- Gauss–Jordan elimination method 56
+- generalized inverse of a matrix 205
+- generalized theorem of Pythagoras ........ 151
+- generated subspace ........ 6
+- geometric multiplicity ........ 139
+- Gram–Schmidt orthogonalization process ........ 119
+- Hermitian matrix ........ 19
+- Hermitian transpose of a matrix ........ 19
+- Hilbert space ........ 123
+- homogeneous system ........ 43
+- Householder matrix ........ 37
+- hyperplane ........ 118
+- idempotent matrix ........ 39
+- identity map ........ 98
+- identity matrix of order *n* ........ 12
+- inconsistent system ........ 43
+- indefinite matrix ........ 191
+- indefinite quadratic form ........ 191
+- infinite dimension ........ 77
+- initial value problem ........ 171, 176
+- inner product ........ 115
+- inverse of a matrix ........ 31
+- inversion ........ 24
+- invertible linear mapping ........ 103
+- invertible matrix ........ 31
+- irreducible matrix ........ 213
+- isomorphic spaces ........ 98
+- kernel ........ 43
+- kernel of a linear mapping ........ 99
+- Lagrange’s identity ........ 150
+- Laplace expansion ........ 24
+- LDU factorization ........ 62
+- leading principal submatrices ........ 198
+- least squares approximate solution ........ 183
+- left inverse ........ 91
+- Legendre polynomials ........ 123
+- length ........ 145
+- line segment ........ 104
+- linear combination ........ 5
+- linear functional ........ 127
+- linear mapping ........ 97
+- linear operator ........ 97
+- linear transformation ........ 97
+- linearly dependent set of vectors ........ 67, 69
+- linearly independent set of vectors — 67, 69
+- Lipschitz function — 150
+- lower triangular matrix — 13
+- LU factorization — 61
+- matrices conformable for multiplication — 14
+- matrix — 11
+- matrix of the inner product — 121
+- maximal linearly independent set — 76
+- Minkowski inequality — 146
+- minor of (n−1)th order — 23
+- minor of pth order — 23
+- monotone matrix — 216
+- Moore–Penrose inverse — 205
+- natural mapping — 129
+- negative definite matrix — 191
+- negative definite quadratic form — 191
+- negative semidefinite quadratic form — 191
+- nilpotent matrix — 39
+- nonhomogeneous linear system — 43
+- nonnegative (positive) matrix — 215
+- nonsingular linear mapping — 100
+- nonsingular matrix — 31
+- nontrivial solutions of a system — 43
+- norm — 145
+- normal equations — 183
+- normal matrix — 19
+- normed linear space — 145
+- null space of a linear mapping — 99
+- null space of a matrix — 43
+- nullity of a linear mapping — 99
+- off-diagonal elements of a matrix — 12
+- ordered basis — 83
+- orthogonal basis — 118
+- orthogonal complement — 117
+- orthogonal matrix — 36
+- orthogonal projection — 120
+- orthogonal subset — 117
+- orthogonal vectors — 117
+- orthogonally diagonalizable — 158
+- orthonormal subset — 117
+- orthonormalization — 117
+- outer product — 121

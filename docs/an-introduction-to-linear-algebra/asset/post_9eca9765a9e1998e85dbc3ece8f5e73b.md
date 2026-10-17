@@ -1,0 +1,99 @@
+
+provide necessary and sufficient conditions. Next, for a symmetric matrix we revisit $LU$-factorization, and give conditions for a unique factorization $LDL^t$, where $L$ is a lower triangular matrix with all diagonal elements 1, and $D$ is a diagonal matrix with all positive elements. We also discuss Cholesky’s decomposition $L_cL_c^t$ where $L_c = LD^{1/2}$, and for its computation provide Cholesky’s algorithm. This is followed by Sylvester’s criterion, which gives easily verifiable necessary and sufficient conditions for a symmetric matrix to be positive definite. We conclude this chapter with a polar decomposition. In **Chapter 24**, we introduce the concept of pseudo/generalized (Moore–Penrose) inverse which is applicable to all $m \times n$ matrices. As an illustration we apply Moore–Penrose inverse to least squares solutions of linear equations. Finally, in **Chapter 25**, we briefly discuss irreducible, nonnegative, diagonally dominant, monotone, and Toeplitz matrices. We state 11 theorems which, from the practical point of view, are of immense value. These types of matrices arise in several diverse fields, and hence have attracted considerable attention in recent years.
+
+In this book, there are 148 examples that explain each concept and demonstrate the importance of every result. Two types of 254 problems are also included, those that illustrate the general theory and others designed to fill out text material. The problems form an integral part of the book, and every reader is urged to attempt most, if not all of them. For the convenience of the reader, we have provided answers or hints to all the problems.
+
+In writing a book of this nature, no originality can be claimed, only a humble attempt has been made to present the subject as simply, clearly, and accurately as possible. The illustrative examples are usually very simple, keeping in mind an average student.
+
+It is earnestly hoped that **An Introduction to Linear Algebra** will serve an inquisitive reader as a starting point in this rich, vast, and ever-expanding field of knowledge.
+
+We would like to express our appreciation to our students and Ms. Aastha Sharma at CRC (New Delhi) for her support and cooperation.
+
+Ravi P. Agarwal
+Cristina Flaut
+
+# Chapter 1
+
+# Linear Vector Spaces
+
+A vector space (or linear space) consists of four things {F, V, +, s.m.}, where F is a field of scalars, V is the set of vectors, and + and s.m. are binary operations on the set V called vector addition and scalar multiplication, respectively. In this chapter we shall define each term axiomatically and provide several examples.
+
+**Fields.** A *field* is a set of scalars, denoted by F, in which two binary operations, addition (+) and multiplication (·), are defined so that the following axioms hold:
+
+- A1. *Closure property of addition:* If a, b ∈ F, then a + b ∈ F.
+- A2. *Commutative property of addition:* If a, b ∈ F, then a + b = b + a.
+- A3. *Associative property of addition:* If a, b, c ∈ F, then (a + b) + c = a + (b + c).
+- A4. *Additive identity:* There exists a zero element, denoted by 0, in F such that for all a ∈ F, a + 0 = 0 + a = a.
+- A5. *Additive inverse:* For each a ∈ F, there is a unique element (−a) ∈ F such that a + (−a) = (−a) + a = 0.
+- A6. *Closure property of multiplication:* If a, b ∈ F, then a · b ∈ F.
+- A7. *Commutative property of multiplication:* If a, b ∈ F, then a · b = b · a.
+- A8. *Associative property of multiplication:* If a, b, c ∈ F, then (a · b) · c = a · (b · c).
+- A9. *Multiplicative identity:* There exists a unit element, denoted by 1, in F such that for all a ∈ F, a · 1 = 1 · a = a.
+- A10. *Multiplicative inverse:* For each a ∈ F, a ≠ 0, there is a unique element a⁻¹ ∈ F such that a · a⁻¹ = a⁻¹a = 1.
+- A11. *Left distributivity:* If a, b, c ∈ F, then a · (b + c) = a · b + a · c.
+- A12. *Right distributivity:* If a, b, c ∈ F, then (a + b) · c = a · c + b · c.
+
+**Example 1.1.** The set of rational numbers Q, the set of real numbers R, and the set of complex numbers C, with the usual definitions of addition and multiplication, are fields. The set of natural numbers N = {1, 2, ···}, and the set of all integers Z = {···, −2, −1, 0, 1, 2, ···} are not fields.
+
+Let F and F₁ be fields and F₁ ⊆ F, then F₁ is called a *subfield* of F. Thus, Q is a subfield of R, and R is a subfield of C.
+
+# Vector spaces.
+
+A vector space $V$ over a field $F$ denoted as $(V,F)$ is a nonempty set of elements called vectors together with two binary operations, addition of vectors and multiplication of vectors by scalars, so that the following axioms hold:
+
+- B1. *Closure property of addition:* If $u,v\in V$, then $u+v\in V$.
+- B2. *Commutative property of addition:* If $u,v\in V$, then $u+v=v+u$.
+- B3. *Associativity property of addition:* If $u,v,w\in V$, then $(u+v)+w=u+(v+w)$.
+- B4. *Additive identity:* There exists a zero vector, denoted by $0$, in $V$ such that for all $u\in V$, $u+0=0+u=u$.
+- B5. *Additive inverse:* For each $u\in V$, there exists a vector $v\in V$ such that $u+v=v+u=0$. Such a vector $v$ is usually written as $-u$.
+- B6. *Closure property of multiplication:* If $u\in V$ and $a\in F$, then the product $a\cdot u=au\in V$.
+- B7. If $u,v\in V$ and $a\in F$, then $a(u+v)=au+av$.
+- B8. If $u\in V$ and $a,b\in F$, then $(a+b)u=au+bu$.
+- B9. If $u\in V$ and $a,b\in F$, then $ab(u)=a(bu)$.
+- B10. *Multiplication of a vector by a unit scalar:* If $u\in V$ and $1\in F$, then $1u=u$.
+
+In what follows, the subtraction of the vector $v$ from $u$ will be written as $u-v$, and by this we mean $u+(-v)$, or $u+(-1)v$. The spaces $(V,\mathbb{R})$ and $(V,\mathbb{C})$ will be called real and *complex vector spaces*, respectively.
+
+# Example 1.2 (The $n$-tuple space).
+
+Let $F$ be a given field. We consider the set $V$ of all ordered $n$-tuples
+
+![](img/049a5f7ee46d1463ca7feb5fdb0d0a78_14_0.png)
+
+of scalars (known as *components*) $a_i\in F$. If
+
+![](img/049a5f7ee46d1463ca7feb5fdb0d0a78_14_1.png)
+
+is in $V$, the addition of $u$ and $v$ is defined by
+
+![](img/049a5f7ee46d1463ca7feb5fdb0d0a78_14_2.png)
+
+and the product of a scalar $c\in F$ and vector $u\in V$ is defined by
+
+$$cu=\begin{pmatrix}ca_1\\\vdots\\ca_n\end{pmatrix}.$$
+
+It is to be remembered that $u=v$, if and only if their corresponding components are equal, i.e., $a_i=b_i$, $i=1,\cdots,n$. With this definition of addition and scalar multiplication it is easy to verify all the axioms B1–B10, and hence this $(V,F)$ is a vector space. In particular, if
+
+$$w=\begin{pmatrix}c_1\\\vdots\\c_n\end{pmatrix}$$
+
+is in $V$, then the $i$-th component of $(u+v)+w$ is $(a_i+b_i)+c_i$, which in view of A3 is the same as $a_i+(b_i+c_i)$, and this is the same as the $i$-th component of $u+(v+w)$, i.e., B3 holds. If $F=R$, then $V$ is denoted as $R^n$, which for $n=2$ and $3$ reduces respectively to the two and three dimensional usual vector spaces. Similarly, if $F=C$, then $V$ is written as $C^n$.
+
+# Example 1.3 (The space of polynomials).
+
+Let $F$ be a given field. We consider the set $\mathcal{P}_n$, $n\geq 1$ of all polynomials of degree *at most* $n-1$, i.e.,
+
+$$\mathcal{P}_n=\left\{a_0+a_1x+\cdots+a_{n-1}x^{n-1}=\sum_{i=0}^{n-1}a_ix^i:a_i\in F,\quad x\in R\right\}.$$
+
+If $u=\sum_{i=0}^{n-1}a_ix^i$, $v=\sum_{i=0}^{n-1}b_ix^i\in\mathcal{P}_n$, then the addition of vectors $u$ and $v$ is defined by
+
+$$u+v=\sum_{i=0}^{n-1}a_ix^i+\sum_{i=0}^{n-1}b_ix^i=\sum_{i=0}^{n-1}(a_i+b_i)x^i,$$
+
+and the product of a scalar $c\in F$ and vector $u\in\mathcal{P}_n$ is defined by
+
+$$cu=c\sum_{i=0}^{n-1}a_ix^i=\sum_{i=0}^{n-1}(ca_i)x^i.$$
+
+This $(\mathcal{P}_n,F)$ is a vector space. We remark that the set of all polynomials of degree exactly $n-1$ is not a vector space. In fact, if we choose $b_{n-1}=-a_{n-1}$, then $u+v$ is a polynomial of degree $n-2$.
+
+# Example 1.4 (The space of functions).
+
+Let $F$ be a given field, and $X\subseteq F$. We consider the set $V$ of all functions from the set $X$ to $F$. The sum of two vectors $f,g\in V$ is defined by $(f+g)$, i.e., $(f+g)(x)=f(x)+g(x)$, $x\in X$,

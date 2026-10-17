@@ -1,0 +1,112 @@
+
+
+## Chapter 2
+
+## Matrices
+
+Matrices occur in many branches of applied mathematics and social sciences, such as algebraic and differential equations, mechanics, theory of electrical circuits, nuclear physics, aerodynamics, and astronomy. It is, therefore, necessary for every young scientist and engineer to learn the elements of matrix algebra.
+
+A system of $m \times n$ elements from a field $F$ arranged in a rectangular formation along $m$ rows and $n$ columns and bounded by the brackets $(\ \ )$ is called an $m \times n$ matrix. Usually, a matrix is written by a single capital letter. Thus,
+
+![](img/049a5f7ee46d1463ca7feb5fdb0d0a78_23_0.png)
+
+is an $m \times n$ matrix. In short, we often write $A=(a_{ij})$, where it is understood that the suffix $i=1,\ldots,m$, and $j=1,\ldots,n$, and $ij$ indicates the $i$-th row and the $j$-th column. The numbers $(A)_{ij}=a_{ij}$ are called the elements of the matrix $A$. For example, the following matrices $A$ and $B$ are of order $2\times3$ and $3\times2$,
+
+![](img/049a5f7ee46d1463ca7feb5fdb0d0a78_23_1.png)
+
+A matrix having a single row, i.e., $m=1$, is called a *row matrix* or a *row vector*, e.g., $(2\ \ 3\ \ 5\ \ 7)$.
+
+A matrix having a single column, i.e., $n=1$, is called a *column matrix* or a *column vector*, e.g.,
+
+![](img/049a5f7ee46d1463ca7feb5fdb0d0a78_23_2.png)
+
+Thus the columns of the matrix $A$ can be viewed as vertical $m$-tuples (see Example 1.2), and the rows as horizontal $n$-tuples. Hence, if we let
+
+\(a^j = \left( \begin{array}{ c } a_{1j} \\ \vdots \\ a_{mj} \\ \end{array} \right), \quad j = 1, 2, \cdots, n\)
+
+then the above matrix \(A\) can be written as
+
+\(A = (a^1, a^2, \cdots, a^n).\)
+
+A matrix having \(n\) rows and \(n\) columns is called a _square matrix_ of order \(n\), e.g.,
+
+\(A = \left( \begin{array}{ c c c } 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \\ \end{array} \right)\) (2.1)
+
+is a square matrix of order 3.
+
+For a square matrix \(A\) of order \(n\), the elements \(a_{ii}\), \(i = 1, \cdots, n\), lying on the _leading_ or _principal diagonal_ are called the _diagonal elements_ of \(A\), whereas the remaining elements are called the _off-diagonal elements_. Thus for the matrix \(A\) in (2.1) the diagonal elements are 1, 3, 5.
+
+A square matrix all of whose elements except those in the principal diagonal are zero, i.e., \(a_{ij} = 0\), \(|i - j| \geq 1\) is called a _diagonal matrix_, e.g.,
+
+\(A = \left( \begin{array}{ c c c } 7 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 1 \\ \end{array} \right).\)
+
+A diagonal matrix of order \(n\) that has unity for all its diagonal elements, i.e., \(a_{ii} = 1\), is called a _unit_ or _identity matrix_ of order \(n\) and is denoted by \(I_n\) or simply by \(I\). For example, identity matrix of order 3 is
+
+\(I_3 = \left( \begin{array}{ c c c } 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \\ \end{array} \right),\)
+
+and of \(n\)th order \(I_n = (e^1, e^2, \cdots, e^n)\).
+
+If all the elements of a matrix are zero, i.e., \(a_{ij} = 0\), it is called a _null_ or _zero matrix_ and is denoted by 0, e.g.,
+
+\(0 = \left( \begin{array}{ c c c } 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \\ \end{array} \right).\)
+
+A square matrix \(A = (a_{ij})\) is called _symmetric_ when \(a_{ij} = a_{ji}\). If \(a_{ij} = -a_{ji}\), so that all the principal diagonal elements are zero, then the matrix is called a _skew-symmetric matrix_. Examples of symmetric and skew-symmetric matrices are respectively
+
+\(\left(\begin{array}{ c c c } a & h & g \\ h & b & f \\ g & f & c \end{array}\right)\text{and}\left(\begin{array}{ c c c } 0 & h & -g \\ -h & 0 & f \\ g & -f & 0 \end{array}\right).\)
+
+An \(m \times n\) matrix is called _upper triangular_ if \(a_{ij} = 0\), \(i > j\) and _lower triangular_ if \(a_{ij} = 0\), \(j > i\). In particular, a square matrix all of whose elements below the principal diagonal are zero is called an _upper triangular matrix_, and a square matrix all of whose elements above the principal diagonal are zero is called a _lower triangular matrix_. Thus,
+
+\(\left(\begin{array}{ c c c } a & h & g \\ 0 & b & f \\ 0 & 0 & c \end{array}\right)\text{and}\left(\begin{array}{ c c c } a & 0 & 0 \\ h & b & 0 \\ g & f & c \end{array}\right)\)
+
+are upper and lower triangular matrices, respectively. Clearly, a square matrix is diagonal if and only if it is both upper and lower triangular.
+
+Two matrices \(A = (a_{ij})\) and \(B = (b_{ij})\) are said to be _equal_ if and only if they are of the same order, and \(a_{ij} = b_{ij}\) for all \(i\) and \(j\).
+
+If \(A\) and \(B\) are two matrices of the same order, then their sum \(A + B\) is defined as the matrix each element of which is the sum of the corresponding elements of \(A\) and \(B\). Thus,
+
+\(\left(\begin{array}{ c c c } a_1 & b_1 \\ a_2 & b_2 \\ a_3 & b_3 \end{array}\right)+\left(\begin{array}{ c c c } c_1 & d_1 \\ c_2 & d_2 \\ c_3 & d_3 \end{array}\right)=\left(\begin{array}{ c c c } a_1 + c_1 & b_1 + d_1 \\ a_2 + c_2 & b_2 + d_2 \\ a_3 + c_3 & b_3 + d_3 \end{array}\right).\)
+
+Similarly, \(A - B\) is defined as a matrix whose elements are obtained by subtracting the elements of \(B\) from the corresponding elements of \(A\). Thus,
+
+\(\left(\begin{array}{ c c c } a_1 & b_1 \\ a_2 & b_2 \end{array}\right)-\left(\begin{array}{ c c c } c_1 & d_1 \\ c_2 & d_2 \end{array}\right)=\left(\begin{array}{ c c c } a_1 - c_1 & b_1 - d_1 \\ a_2 - c_2 & b_2 - d_2 \end{array}\right).\)
+
+The addition of matrices satisfies the following properties:
+
+- \(A + B = B + A\), _commutative law_
+- \(A + (B + C) = (A + B) + C\), _associative law_
+- \(A + 0 = 0 + A = A\),
+- \(A + (-A) = (-A) + A = 0\).
+
+The product of a matrix \(A\) by a scalar \(k \in F\) is a matrix whose every element is \(k\) times the corresponding element of \(A\). Thus,
+
+\(k\left(\begin{array}{ c c c } a_1 & b_1 & c_1 \\ a_2 & b_2 & c_2 \end{array}\right)=\left(\begin{array}{ c c c } ka_1 & kb_1 & kc_1 \\ ka_2 & kb_2 & kc_2 \end{array}\right).\)
+
+For such products, the following properties hold:
+
+1. \( (k_1 + k_2)A = k_1A + k_2A, \ k_1, k_2 \in F \)
+2. \( k_1(k_2A) = (k_1k_2)A \)
+3. \( k(A + B) = kA + kB, \text{distributive law} \)
+4. \( (-1)A = -A \)
+5. \( 0A = 0 \)
+6. \( k0 = 0 \).
+
+In what follows we shall denote by \( M^{m \times n} \) the set of all \( m \times n \) matrices whose elements belong to a certain field \( F \), i.e.,
+\( M^{m \times n} = \{ A = (a_{ij}) : a_{ij} \in F, \ i = 1, \cdots, m, \ n = 1, 2, \cdots, n \} \).
+
+It is clear that with the above definition of addition and scalar multiplication, \( (M^{m \times n}, F) \) is a vector space. The set of all \( m \times n \) matrices with real (complex) elements will be represented by \( R^{m \times n} \) (\( C^{m \times n} \)).
+
+Two matrices can be multiplied only when the number of columns in the first matrix is equal to the number of rows in the second matrix. Such matrices are said to be *conformable* for multiplication. Thus, if \( A \) and \( B \) are \( n \times m \) and \( m \times p \) matrices
+
+\( A = \begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1m} \\ a_{21} & a_{22} & \cdots & a_{2m} \\ \cdots & \cdots & \cdots & \cdots \\ a_{n1} & a_{n2} & \cdots & a_{nm} \end{pmatrix} \quad \text{and} \quad B = \begin{pmatrix} b_{11} & b_{12} & \cdots & b_{1p} \\ b_{21} & b_{22} & \cdots & b_{2p} \\ \cdots & \cdots & \cdots & \cdots \\ a_{m1} & a_{m2} & \cdots & a_{mp} \end{pmatrix} \).
+
+then \( A \times B \), or simply \( AB \) is a new matrix of order \( n \times p \),
+\( AB = \begin{pmatrix} c_{11} & c_{12} & \cdots & c_{1p} \\ c_{21} & c_{22} & \cdots & c_{2p} \\ \cdots & \cdots & \cdots & \cdots \\ c_{n1} & c_{n2} & \cdots & c_{np} \end{pmatrix} \),
+
+where
+\( c_{ij} = a_{i1}b_{1j} + \cdots + a_{im}b_{mj} = \sum_{k=1}^{m} a_{ik}b_{kj} \).
+
+Thus, in particular
+\( \begin{pmatrix} a_1 & b_1 & c_1 \\ a_2 & b_2 & c_2 \\ a_3 & b_3 & c_3 \end{pmatrix} \times \begin{pmatrix} d_1 & e_1 \\ d_2 & e_2 \\ d_3 & e_3 \end{pmatrix} = \begin{pmatrix} a_1d_1 + b_1d_2 + c_1d_3 & a_1e_1 + b_1e_2 + c_1e_3 \\ a_2d_1 + b_2d_2 + c_2d_3 & a_2e_1 + b_2e_2 + c_2e_3 \\ a_3d_1 + b_3d_2 + c_3d_3 & a_3e_1 + b_3e_2 + c_3e_3 \end{pmatrix} \).
+
+In the product \( AB \) the matrix \( A \) is said to be *post-multiplied* by \( B \), and the matrix \( B \) is said to be *pre-multiplied* by \( A \). It is possible that \( AB \) is defined,
+
