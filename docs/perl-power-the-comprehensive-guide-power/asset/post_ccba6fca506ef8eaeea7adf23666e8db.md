@@ -1,0 +1,179 @@
+
+## Figure 5.10 Specifiers and flags allow you to create table columns.
+
+![](img/fd17b6cf7ddc9bc7e6f1529936c3ac84_138_0.png)
+
+numbers that must possess a uniform number of characters. Appending a plus sign to a number is at times handy, also.
+
+```
+#Listing05_10
+# Variations
+$PlRadiusOfEarth = 6357; #kilometers
+$NL = "\n";
+#1. #Prefixing a minus sign aligns the field to the left.
+# No minus sign renders right justification.
+printf ("%-1s %-10s %1s", "1|", "="x10, "|1");
+print $NL;
+#2. Append a period after the field width specifier and
+# define the number of visible decimal places
+# The field width is 9; the decimal places is 3
+printf ("|%9.3f|", 123.1234567);
+print $NL;
+#3. Prefix a plus sign to show the sign
+printf "%-20s %+15.2f","Polar radius of earth (km)", $PlRadiusOfEarth;
+```
+
+Figure 5.11 illustrates the output of Listing05_10.
+
+## Creating a Table
+
+![](img/fd17b6cf7ddc9bc7e6f1529936c3ac84_139_0.png)
+
+**Figure 5.11**  
+Some variations on formatting can come in handy.
+
+## Investigating ASCII Conversions
+
+Figure 5.12 provides a truncated version of a table displaying ASCII codes. ASCII stands for American Standard Code for Information Interchange, and you can find such tables on the Internet (www.lookuptables.com, for example). The ASCII code for a given character is its numerical representation. As Figure 5.12 indicates, 060 represents the less than (<) character, while 062 represents the greater than (>) character.
+
+| Decimal | Octal | Hex | Char | Decimal | Octal | Hex | Char |
+|---|---|---|---|---|---|---|---|
+| 035 | 043 | 023 | # | 035 | 043 | 023 | # |
+| 036 | 044 | 024 | $ | 036 | 044 | 024 | $ |
+| 037 | 045 | 025 | % | 037 | 045 | 025 | % |
+| 038 | 046 | 026 | & | 038 | 046 | 026 | & |
+| 048 | 060 | 030 | 0 | 048 | 060 | 030 | 0 |
+| 049 | 061 | 031 | 1 | 049 | 061 | 031 | 1 |
+| 050 | 062 | 032 | 2 | 050 | 062 | 032 | 2 |
+| 060 | 074 | 03C | < | 060 | 074 | 03C | < |
+| 062 | 076 | 03E | > | 062 | 076 | 03E | > |
+| 063 | 077 | 03F | ? | 063 | 077 | 03F | ? |
+| 064 | 100 | 040 | @ | 064 | 100 | 040 | @ |
+| 065 | 101 | 041 | A | 065 | 101 | 041 | A |
+| 066 | 102 | 042 | B | 066 | 102 | 042 | B |
+| 067 | 103 | 043 | C | 067 | 103 | 043 | C |
+| 068 | 130 | 048 | X | 068 | 130 | 048 | X |
+| 069 | 131 | 049 | Y | 069 | 131 | 049 | Y |
+| 090 | 132 | 05A | Z | 090 | 132 | 05A | Z |
+| 097 | 141 | 061 | a | 097 | 141 | 061 | a |
+| 098 | 142 | 062 | b | 098 | 142 | 062 | b |
+| 099 | 143 | 063 | c | 099 | 143 | 063 | c |
+| 120 | 170 | 078 | x | 120 | 170 | 078 | x |
+| 121 | 171 | 079 | y | 121 | 171 | 079 | y |
+| 122 | 172 | 07A | z | 122 | 172 | 07A | z |
+| 123 | 173 | 07B | { | 123 | 173 | 07B | { |
+| 124 | 174 | 07C | \| | 124 | 174 | 07C | \| |
+| 125 | 175 | 07D | } | 125 | 175 | 07D | } |
+
+**Figure 5.12**  
+A table of ASCII values allows you to see the numeric face of characters.
+
+Listing05_11 provides examples of some of the operations you can perform to manipulate data using the ASCII designations.
+
+```
+#Listing05_11
+#convert ASCII, hexadecimal, and octal values
+```
+
+## CHAPTER 5 Scalars and Formatting
+
+```
+$NL = "\n ";
+#Decimal Octal Hex Character
+#60 074 03C <
+062 076 03E >
+# 1. Print the character that a given ASCII value designates
+printf("$NL The character for %d is %c", 60, 60);
+printf("$NL The character for %d is %c", 62, 62);
+#2 Use hex() to return the decimal value of a hexadecimal
+printf($NL x 2 . "An ASCII value of %d renders an %c", 60, 60);
+print ("$NL Hex: 03C");
+#convert to decimal
+$HEXA = hex("03C");
+printf("$NL The character is %c", $HEXA);
+#3 Use oct() to return the decimal value of an octal
+printf($NL x 2 . "An ASCII value of %d renders an %c", 60, 60);
+print ("$NL Octal: 074");
+#convert to decimal
+$OCTA = oct("074");
+printf("$NL The character is %c", $OCTA);
+#4 Use ord() to extract the ASCII value from a character
+print ($NL x 2 . "$NL For \'\<\' ord() returns " . ord('\<'));
+printf("$NL The number for \'%s\' is %d", 'c', ord('\<'));
+```
+
+At comment #1 in Listing05_11, you employ the `printf()` function to display a literal number and to convert a number using the `c` specifier to a character. At the start of the program, columns from an ASCII table allow you to view a few numerical values of characters. When you use the `c` specifier (`%c`), you convert an integer value to a character. You can convert numbers between 0 and 255 using this approach. As Figure 5.13 illustrates, Listing05_11 converts 60 to `<` and 62 to `>`.
+
+The lines trailing comments #2 and #3 venture into exploring hexadecimal and octal values. To employ such values, you use the `hex()` and `oct()` functions. Both of these functions return decimal values.
+
+In the code affiliated with comment #4, you make use of the `ord()` function to convert a character to a number. This is the reverse of the action you perform with the `c` specifier.
+
+## CHAPTER 5 Scalars and Formatting
+
+After defining the values of two identifiers at the start of Listing05_12, you then proceed at comment #2 to set up two scalars to hold formatting strings for use as arguments in the `printf()` function. This approach to formatting substantially reduces the complexity of arguments and provides a particularly effective approach to escaping the need to repeatedly code and debug formatting tags and specifiers. If you assign the specifiers as characters (using single quotes), the `sprintf()` and other functions can read them without errors.
+
+Following the creation of the formatting scalars in the lines trailing comment #3, you create two rows for a table using the `sprintf()` function. When you create these rows, you assign the resulting strings to scalars ($RowA and $RowB). This work completed, you then use the `join()` function (explained in Chapter 4) to create a single scalar ($AstroTable) that contains the information for rows. When you employ the `join()` function, the first argument delimits the table you create using the $\NL identifier, which stores a new line escape sequence. This work accomplished, you call the `print()` function to print the table. The scalar $AstroTable is the sole argument. Figure 5.14 illustrates the output of Listing05_12.
+
+![](img/fd17b6cf7ddc9bc7e6f1529936c3ac84_142_0.png)
+
+**Figure 5.14**  
+Use of the `sprintf()` function allows you to create the rows of a table in a componential manner.
+
+## Reworking the Table
+
+When you use the `sprintf()` function in conjunction with formatting identifiers and concatenation, calling the `join()` function allows you to create a table that features a great deal of formatting detail and yet requires a minimum of redundant detail work—far less, in any event, than has been necessary in some of the previous coding efforts shown in this book. Listing05_13 represents a number of such labor-saving devices.
+
+```
+#Listing05_13
+#1 Define the data for the table
+$P1RadiusOfEarth = 6357;
+$PROEText = "Polar radius of earth (km)";
+$EqRadiusOfEarth = 6378;
+$EROEText = "Equatorial radius of earth (km)";
+$EarthToMoon = 3.84401e6;
+$EtMText = "Distance from Earth to Moon(km)";
+$EarthToSun = 149597870.7;
+$EtSText = "Distance from Earth to Sun (km)";
+```
+
+## Using sprint()
+
+```
+$AgeOfSolarSystem = 4.6e9;
+$AoSSText = "Age of the solar system (years)";
+$AgeOfKnownUniverse = 16.5 * (10 ** 9);
+$AoKUIText = "Age of the known universe (years)";
+$SpeedOfLight = 299792458; #meters per second
+$SoLMSText = "Speed of light m/s";
+$KmspeedOfLight = $SpeedOfLight/1000;
+$SoLKSText = "Speed of light km/s";
+$RatioOfSStoKU = $AgeOfKnownUniverse/$AgeOfSolarSystem;
+$REtoUText = "Ratio of earth to universe age";
+
+#2 Define the formatting elements for the table
+$NL = "\n ";
+$DC = "="; #character for top and bottom lines of table
+$SC = "-"; #character to divide rows of table
+
+$TW = 55; #Table width
+$COLAW = '%-40s'; #Col A Width
+$COLBW = '%15'; #Col B Width
+$PREC2 = '.2'; #Decimal Precision
+
+#Define table lines
+$DL = sprintf( "$COLAW", $NL . $DC x $TW); #top and bottom lines
+$SL = sprintf( "%s", $NL . $SC x $TW); #row division lines
+
+#Define column title and headings
+$TableTitleText = 'Astronomical Data Table';
+$COLAHEAD = "Item";
+$COLBHEAD = "Measurement";
+
+#columns Col A Co B Prec type and
+$COLSTRSTR = $COLAW . $COLBW . 's'; #format column string
+$COLSTRF = $COLAW . $COLBW . $PREC2 . 'f'; #format column float
+$COLSTRE = $COLAW . $COLBW . $PREC2 . 'e'; #format column scientific notation
+
+#Title
+$TableTitle = sprintf( "%s", $DC x int(($TW - length($TableTitleText))/2) .
+```

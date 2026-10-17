@@ -1,0 +1,10 @@
+When you use a hash, an array, and a scalar as arguments to the `printItems()` function in Listing13_01, they are all merged into one large array. The items in the hash (`%Cereals`) lose their key-value identity. The items in the arrays (`@Vegetables`, `@Fruits`) merge into one massive array. The lone scalar (`$ExtraVegetable`) is likewise tossed in, and when you see the list Figure 13.1 shows, you have lost track of the initial groupings the hash, arrays, and scalar provided. How do you retrieve these items in the same form that you submitted them? You use references to make this possible.
+
+What you do when you pass arguments to functions extends to building complex bodies of data that involve putting hashes inside arrays or arrays inside hashes. In each instance, you need a convenient way to maintain the identity of your data. At the same time, you can use references to make it so that you can store and retrieve data without having to use explicit names for it. The same power that allows you to maintain the identity of data as you pass it to functions allows you to maintain the identity of data when you store it in complex forms in arrays or hashes. How references allow you to accomplish this work becomes the topic of later topics in this chapter (see, for example, “Anonymous Hash References as Data Containers”).
+
+The term “reference” applies to the process of referring one thing to another. When applied to data, a reference identifies a place in the memory of your computer. When you work with Perl, the reference identifies a place in memory that stores the values you create for your programs. This place in memory is characterized by a table. The table can relate your values to all the data types that Perl supports and allows you to perform operations such as accessing an array element as a scalar or working back and forth between numbers and strings. Figure 13.2 provides a crude representation of a reference table.
+
+![](bbox=[0.076, 0.58, 0.715, 0.789])
+
+**Figure 13.2**  
+A reference allows you to access values more immediately than is otherwise possible.

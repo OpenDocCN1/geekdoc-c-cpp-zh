@@ -1,0 +1,148 @@
+
+
+# PERL POWER! The Comprehensive Guide
+
+By John P. Flynt
+
+TEAM LinG
+
+# PERL POWER!
+The Comprehensive Guide
+
+John P. Flynt, Ph.D.
+
+THOMSON
+COURSE TECHNOLOGY
+Professional ■ Technical ■ Reference
+
+TEAM LinG
+
+© 2006 Thomson Course Technology, a division of Thomson Learning Inc. All rights reserved. No part of this book may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying, recording, or by any information storage or retrieval system without written permission from Thomson Course Technology PTR, except for the inclusion of brief quotations in a review.
+
+The Thomson Course Technology PTR logo and related trade dress are trademarks of Thomson Course Technology, a division of Thomson Learning Inc., and may not be used without written permission.
+
+All trademarks are the property of their respective owners.
+
+_Important:_ Thomson Course Technology PTR cannot provide software support. Please contact the appropriate software manufacturer's technical support line or Web site for assistance.
+
+Thomson Course Technology PTR and the author have attempted throughout this book to distinguish proprietary trademarks from descriptive terms by following the capitalization style used by the manufacturer.
+
+Information contained in this book has been obtained by Thomson Course Technology PTR from sources believed to be reliable. However, because of the possibility of human or mechanical error by our sources, Thomson Course Technology PTR, or others, the Publisher does not guarantee the accuracy, adequacy, or completeness of any information and is not responsible for any errors or omissions or the results obtained from use of such information. Readers should be particularly aware of the fact that the Internet is an ever-changing entity. Some facts may have changed since this book went to press.
+
+Educational facilities, companies, and organizations interested in multiple copies or licensing of this book should contact the Publisher for quantity discount information. Training manuals, CD-ROMs, and portions of this book are also available individually or can be tailored for specific needs.
+
+ISBN: 1-59863-161-6
+Library of Congress Catalog Card Number: 2006920362
+Printed in the United States of America
+06 07 08 09 10 PH 10 9 8 7 6 5 4 3 2 1
+
+THOMSON
+COURSE TECHNOLOGY
+Professional ■ Technical ■ Reference
+Thomson Course Technology PTR, a division of Thomson Learning Inc.
+25 Thomson Place
+Boston, MA 02210
+http://www.courseptr.com
+
+Publisher and General Manager, Thomson Course Technology PTR:
+Stacy L. Hiquet
+Associate Director of Marketing:
+Sarah O'Donnell
+Manager of Editorial Services:
+Heather Talbot
+Marketing Manager:
+Mark Hughes
+Senior Acquisitions Editor:
+Todd Jensen
+Marketing Coordinator:
+Jordan Casey
+Project Editor:
+Jenny Davidson
+Technical Reviewer:
+Robert Johnson
+PTR Editorial Services Coordinator:
+Elizabeth Furbish
+Interior Layout Tech:
+Digital Publishing Solutions
+Cover Designer:
+Mike Tanamachi
+Indexer:
+Kelly D. Henthorne
+Proofreader:
+Gene Redding
+
+TEAM LinG
+
+This book is dedicated to its readers.
+
+## Acknowledgments
+
+Thanks to Adrian Flynt, who developed some of the art for the book. To Brent Jones for being a helpful friend. To Rob Johnson for reading the manuscript for its technical content. To Stacy Hiquet for the referral. To Todd Jensen for making the writing of the book possible. To Jenny Davidson for watching over the schedule and making it happen. To Emi Smith for allowing me to work on books simultaneously. To Kevin Claver for perspectives.
+
+As always, thank you Marcia for your faith, trust, guidance, and support. Amy, thank you for everything.
+
+## About the Author
+
+**John P. Flynt, Ph.D.,** works in the software development industry, has taught at colleges and universities, and has authored courses and curricula for several college-level game development programs. His academic background includes work in information technology, the social sciences, and the humanities. Among his works are _In the Mind of a Game_, _Simulation and Event Modeling for Game Developers_ (with co-author Ben Vinson), and _Software Engineering for Game Developers_. John lives in the foothills near Boulder, Colorado.
+
+## TABLE OF Contents
+
+- CHAPTER 1 Perl Basics ..... 1
+- Having Fun ..... 1
+- Power and Perl ..... 2
+- The Community ..... 4
+- The Other End of the Galaxy ..... 5
+- Derivations ..... 5
+- Getting It ..... 6
+- Perl Scalars, Arrays, Hashes, Handles ..... 8
+- Source Books ..... 9
+
+- CHAPTER 2 Getting Started ..... 11
+- Accessing and Installing Perl ..... 11
+- First Time Installation ..... 14
+- Testing Your ActivePerl Installation ..... 16
+- Perl Files ..... 18
+- Getting Started with an Editor ..... 20
+- Obtaining the DzSoft Perl Editor ..... 22
+- First View of the Perl Editor ..... 25
+- HTML Output ..... 26
+- Text Output and the DOS Window ..... 27
+- Saving Files ..... 28
+- Conclusion ..... 29
+
+- CHAPTER 3 Scalars and Strings ..... 31
+- Preliminary Work ..... 31
+
+- The print() Function .................................................................................... 32
+- Fundamental Programming Syntax .................................................................... 34
+- Scalars and Strings ........................................................................................... 39
+- Making Scalars ................................................................................................... 40
+- Scalars as Stored and Printed ............................................................................. 43
+- Strings and More Strings .................................................................................... 44
+- Concatenation and Printing Scalars ...................................................................... 45
+- Multiplying String Output ................................................................................... 47
+- Relational Operators for Strings .......................................................................... 48
+- Evaluating Relationships ...................................................................................... 49
+- Testing with Scalars ............................................................................................. 50
+- Increment Operations on Strings .......................................................................... 53
+- The q() and qq() Functions ................................................................................. 54
+- Blocks ................................................................................................................... 55
+- Blocks and print ................................................................................................... 55
+- Blocks and Variables ............................................................................................ 56
+- Conclusion ............................................................................................................. 57
+
+- CHAPTER 4 Print Functions ................................................................................. 59
+- How Functions Work ............................................................................................ 59
+- Basic Call and Return Operations .......................................................................... 59
+- Variations on Call and Return ............................................................................... 60
+- Changing the Cases of Strings .............................................................................. 62
+- Case with First Characters .................................................................................... 62
+- Case with Entire Strings ........................................................................................ 63
+- Obtaining the Length of a String ........................................................................... 64
+- Hidden Characters and Strings .............................................................................. 65
+- Hidden Characters in Strings ................................................................................. 66
+- Eliminating Characters ........................................................................................... 68
+- Command Line Interactions ................................................................................... 72
+- Indexes of Characters ............................................................................................ 74
+- An Algorithm for Searching ................................................................................... 75
+
