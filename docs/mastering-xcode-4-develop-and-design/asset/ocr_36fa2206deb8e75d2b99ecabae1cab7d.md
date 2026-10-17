@@ -1,0 +1,5 @@
+# THE EASY WAY
+
+The easy way (for your Xcode projects) is to choose the Profile action from within Xcode. You're already familiar with the Run, Test, and Archive actions. You can trigger the Profile action by choosing Product > Profile from the main menu; or by clicking and holding the Run button and then choosing Profile from its menu; or by pressing Command+I. Of course, you must have a project or workspace open and it must build successfully (just as when performing the Run action).
+
+Assuming your project builds successfully, Instruments will launch and prompt you for a template for your new trace document, just as you saw in Figure 20.1. Once you choose your template, Instruments will launch your application, attach to it, and begin recording the trace. You'll see this in action in the examples in the next section.

@@ -1,0 +1,3 @@
+You scratched the surface of Xcode’s debugging and analysis capabilities in Chapter 9 by looking at the most common features developers are likely to use. In this chapter, you’ll explore another powerful feature—the static analyzer—and then delve deeper into the Debug navigator. After that, you’ll take a close look at the debugger console and some of its useful command-line interface tricks. You’ll round out the tour by learning how to debug iOS applications on the device or by using the iOS Simulator.
+
+![](bbox=[0.62, 0.12, 1.0, 0.42])
