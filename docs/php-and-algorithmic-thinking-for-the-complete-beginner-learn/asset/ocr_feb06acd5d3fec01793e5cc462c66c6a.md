@@ -1,0 +1,35 @@
+# Review Questions in “Getting Started with PHP”
+
+Answer the following questions.
+
++   1. What is an algorithm?
++   2. Give the algorithm for making a cup of coffee.
++   3. What are the five properties of algorithms?
++   4. Can an algorithm execute forever?
++   5. What is a computer program?
++   6. What are the three parties involved in an algorithm?
++   7. What are the three stages that make up a computer program?
++   8. Can a computer program be made up of two stages?
++   9. What is a flowchart?
++   10. Can a flowchart be entered into a computer as is?
++   11. What are the basic symbols that flowcharts use?
++   12. What is meant by the term “reserved words”?
++   13. What is structured programming?
++   14. What are the three fundamental control structures of structured programming?
++   15. Give an example of each control structure using flowcharts.
++   16. Can a programmer write PHP scripts in a text editor?
++   17. What is a syntax error? Give one example.
++   18. What is a logic error? Give one example.
++   19. What type of error is caused by a misspelled keyword, a missing punctuation character, or the incorrect use of an operator?
++   20. Why should a programmer add comments in his or her code?
++   21. Why should a programmer write user-friendly programs/scripts?
++   22. What does the acronym POLA stand for?
++   23. What is a variable?
++   24. How many variables can exist on the left side of the left arrow in flowcharts?
++   25. In which part of a computer are the values of the variables stored?
++   26. What is a constant?
++   27. How can constants be used to help programmers?
++   28. Why should a computer program avoid division and multiplication operations whenever possible?
++   29. What are the four fundamental types of variables and constants in PHP?
++   30. What does the phrase “declare a variable” mean?
++   31. How do you declare a variable in PHP? Give an example.

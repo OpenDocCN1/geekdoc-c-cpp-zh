@@ -1,0 +1,1 @@
+12. Write a PHP script that prompts the user to enter three temperature values measured at three different points in New York, and then displays the message “Heat Wave” if the average value is greater than 60 degrees Fahrenheit.
