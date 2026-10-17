@@ -1,0 +1,13 @@
+The numbers which they can deal with range from −32,768 to +32,768. An int requires 2 bytes of memory by most computers. char The char data type holds individual characters or alphabets and they require only 1 byte of memory. Most compilers permit a range of 0 to 255 regarding the char data type. float A float data type is involved in restoring floating point numbers or to put it simply, it is used to store numbers with decimal point (e.g., 67.25).
+
+The float desires 4 bytes for storage and has a fractional precision of 6 digits. double A double data type is also used for the restoration of floating point numbers. The difference lies in the precision and storage space. Double offers a greater precision, of about 15 digits and compilers require 8 bytes to store a double. The ranges within which the float can be represented are 2.2E-308 and 2.2E+308 respectively.
+
+# 2.2. QUALIFIERS USED WITH BASIC DATA TYPES
+
+You are aware of what the basic data types are. To simplify, qualifiers can be thought of as steroids to the basic data types, that is to say they are power boosters. The efficiency of the data types can be augmented by the use of these qualifiers, which expand the horizon of the basic data types, making it more flexible and adaptable to get into various situations with preciseness and accuracy.
+
+The qualifiers tagged to the data types are LONG, SHORT, SIGNED, and UNSIGNED. To make any data type a qualifier, the name of the qualifier has to be tagged before the data type. long As the name suggests, the qualifier long extends the range of the data type to which it is prefixed. It can be applied to only the int and double data types and it expands the spectrum of range from a maximum of 2,147,483,647 to −2,147,483,647. A long int requires memory that is more than an ordinary int and therefore takes 4 bytes for storage.
+
+To make an integer a long qualifier just add the word long before it. Short This qualifier is most interesting, because if an ordinary int has the same memory value as that of long, i.e., 4 bytes a short will have 2 bytes, but if an int has memory of 2 bytes a short will have the same memory, i.e., 2 bytes. Signed by using a signed data qualifier that data type can accommodate both positive and negative numbers. When a variable is signed it has the same positive and negative ranges as a regular int.
+
+By default, an int is a signed data type. Unsigned The qualifier unsigned is tagged mostly to int and it also has the same memory requirement as that

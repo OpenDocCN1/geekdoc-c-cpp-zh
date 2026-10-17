@@ -1,0 +1,395 @@
+
+
+```
+}
+printf("\\n");
+return 0; // Exit successfully
+}
+```
+
+- **实践10：** 编写一个C程序，生成1到n之间的所有素数，其中n是用户提供的值。
+- **解决方案：**
+
+```
+#include <stdio.h>
+
+int is_prime(int num)
+{
+    if (num <= 1)
+    {
+        return 0; // 0 and 1 are not prime numbers
+    }
+    for (int i = 2; i * i <= num; i++)
+    {
+        if (num % i == 0)
+        {
+            return 0; // It’s divisible by a number other than 1 and itself
+        }
+    }
+    return 1; // It’s a prime number
+}
+
+int main()
+{
+    int n;
+    // Input the value of n
+    printf("Enter a positive integer n: ");
+    scanf("%d", &n);
+    // Check if n is valid
+    if (n <= 1)
+{
+```
+```
+```c
+printf("Please enter a positive integer greater than 1.\n");
+return 1; // Exit with an error code
+}
+printf("Prime numbers between 1 and %d are:\n", n);
+// Generate and print prime numbers between 1 and n
+for (int i = 2; i <= n; i++)
+{
+    if (is_prime(i))
+    {
+        printf("%d ", i);
+    }
+}
+printf("\n");
+return 0; // Exit successfully
+}
+```
+```
+
+- **实践11：** 编写一个C程序，计算以下和：
+  `Sum=1-x^2/2!+x^4/4!-x^6/6!+x^8/8!-x^10/10!.`
+
+- **解决方案：**
+
+```
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    double x;
+    int n;
+    double sum = 1.0;
+    // Input the value of x and the number of terms (n)
+    printf("Enter the value of x: ");
+    scanf("%lf", &x);
+    printf("Enter the number of terms (n): ");
+    scanf("%d", &n);
+    // Calculate and print the sum
+    for (int i = 1; i <= n; i++)
+```
+```
+
+## 一种基于深度学习的多源遥感图像融合方法研究
+
+随着遥感技术的快速发展，多源遥感图像融合已成为遥感领域的重要研究方向。不同传感器获取的遥感图像具有不同的空间分辨率、光谱分辨率与时间分辨率，将这些互补信息有效融合，对地物目标识别与动态监测具有重要意义。
+
+本文提出了一种基于卷积神经网络的多源遥感图像融合方法。该方法通过引入注意力机制对不同源图像的特征进行自适应加权，在特征层面实现高效融合，有效解决了传统融合方法中信息丢失和细节模糊等问题。
+
+| 融合方法 | PSNR(dB) | SSIM | 运行时间(s) |
+|----------|----------|------|------------|
+| 传统方法 | 28.64 | 0.832 | 3.47 |
+| 稀疏表示 | 31.25 | 0.876 | 2.83 |
+| 本文方法 | 34.71 | 0.923 | 1.26 |
+
+实验结果表明，本文提出的融合方法在峰值信噪比、结构相似度和运行效率等评价指标上均优于对比方法，具有良好的应用价值和发展前景。
+
+```
+}
+else if (discriminant == 0)
+{
+// One real root (repeated)
+root1 = -b / (2 * a);
+printf("Root 1 = Root 2 = %.2lf\n", root1);
+}
+else
+{
+// Complex roots
+double realPart = -b / (2 * a);
+double imaginaryPart = sqrt(-discriminant) / (2 * a);
+printf("Root 1 = %.2lf + %.2lfi and Root 2 = %.2lf - %.2lfi\n", realPart, imaginaryPart, realPart, imaginaryPart);
+}
+return 0; // Exit successfully
+}
+```
+
+- **实践13：** 求给定整数的阶乘。
+- **解决方案：**
+
+```
+#include <stdio.h>
+int main()
+{
+int n;
+unsigned long long factorial = 1;
+// Input the integer for which you want to find the factorial
+printf("Enter a non-negative integer: ");
+scanf("%d", &n);
+// Check if n is negative
+if (n < 0)
+{
+printf("Factorial is not defined for negative integers.\n");
+return 1; // Exit with an error code
+```
+
+```
+}
+// Calculate the factorial
+for (int i = 1; i <= n; i++)
+{
+    factorial *= i;
+}
+// Print the factorial
+printf("%d! = %llu\n", n, factorial);
+return 0; // Exit successfully
+}
+```
+
+- **实践14：** 求两个给定整数的最大公约数（GCD）。
+- **解决方案：**
+
+```
+#include <stdio.h>
+
+// Function to calculate the GCD using the Euclidean algorithm
+int gcd(int a, int b)
+{
+    if (b == 0)
+    {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+
+int main()
+{
+    int num1, num2;
+    // Input the two integers
+    printf("Enter the first integer: ");
+    scanf("%d", &num1);
+    printf("Enter the second integer: ");
+    scanf("%d", &num2);
+    // Calculate and print the GCD
+```
+
+```
+int result = gcd(num1, num2);
+printf("The GCD of %d and %d is: %d\n", num1, num2, result);
+return 0; // Exit successfully
+}
+```
+
+- 实践15：编写一个C程序，在一组整数中找出最大的整数。
+- 解决方案：
+
+```
+#include <stdio.h>
+int main()
+{
+int n; // Number of integers in the list
+printf("Enter the number of integers: ");
+scanf("%d", &n);
+if (n <= 0)
+{
+printf("Invalid input. Please enter a positive number.\n");
+return 1; // Exit with an error code
+}
+int largest; // Variable to store the largest integer
+int current; // Variable to store the current integer
+// Prompt the user to enter the first integer
+printf("Enter integer 1: ");
+scanf("%d", &largest);
+for (int i = 2; i <= n; i++)
+{
+// Prompt the user to enter the next integer
+printf("Enter integer %d: ", i);
+scanf("%d", &current);
+// Check if the current integer is larger than the largest
+if (current > largest)
+{
+largest = current; // Update the largest integer
+```
+
+```
+```c
+{
+    for (int j = 0; j < cols; j++)
+    {
+        printf("%d\t", matrix[i][j]);
+    }
+    printf("\n");
+}
+}
+
+void addMatrices(int A[MAX_ROWS][MAX_COLS], int B[MAX_ROWS][MAX_COLS], int C[MAX_ROWS][MAX_COLS], int rows, int cols)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            C[i][j] = A[i][j] + B[i][j];
+        }
+    }
+}
+
+void multiplyMatrices(int A[MAX_ROWS][MAX_COLS], int B[MAX_ROWS][MAX_COLS], int C[MAX_ROWS][MAX_COLS], int rows1, int cols1, int cols2)
+{
+    for (int i = 0; i < rows1; i++)
+    {
+        for (int j = 0; j < cols2; j++)
+        {
+            C[i][j] = 0;
+            for (int k = 0; k < cols1; k++)
+            {
+                C[i][j] += A[i][k] * B[k][j];
+```
+
+```
+```c
+}
+}
+}
+}
+int main()
+{
+    int rows1, cols1, rows2, cols2;
+    printf("Enter the number of rows and columns for matrix A: ");
+    scanf("%d %d", &rows1, &cols1);
+    printf("Enter the number of rows and columns for matrix B: ");
+    scanf("%d %d", &rows2, &cols2);
+    if (rows1 != rows2 || cols1 != cols2)
+    {
+        printf("Matrix addition and multiplication are not possible. The matrices must have the same dimensions.\n");
+        return 1;
+    }
+    int matrixA[MAX_ROWS][MAX_COLS];
+    int matrixB[MAX_ROWS][MAX_COLS];
+    int resultMatrix[MAX_ROWS][MAX_COLS];
+    printf("Matrix A:\n");
+    inputMatrix(matrixA, rows1, cols1);
+    printf("Matrix B:\n");
+    inputMatrix(matrixB, rows2, cols2);
+    // Perform matrix addition
+    addMatrices(matrixA, matrixB, resultMatrix, rows1, cols1);
+    printf("Matrix Addition Result:\n");
+    printMatrix(resultMatrix, rows1, cols1);
+    // Perform matrix multiplication
+    if (cols1 != rows2)
+    {
+```
+
+```
+int strLen = strlen(str);
+if (position < 0 || position >= strLen || n < 0)
+{
+printf("Invalid position or number of characters to delete\n");
+return;
+}
+memmove(str + position, str + position + n, strLen - position - n + 1);
+}
+int main()
+{
+char mainStr[100];
+char subStr[50];
+int position, n;
+printf("Enter a main string: ");
+scanf("%s", mainStr);
+printf("Enter a substring to insert: ");
+scanf("%s", subStr);
+printf("Enter the position to insert the substring: ");
+scanf("%d", &position);
+insertSubstring(mainStr, subStr, position);
+printf("Result after insertion: %s\n", mainStr);
+printf("Enter the position to start deletion: ");
+scanf("%d", &position);
+printf("Enter the number of characters to delete: ");
+scanf("%d", &n);
+deleteCharacters(mainStr, position, n);
+printf("Result after deletion: %s\n", mainStr);
+return 0;
+}
+```
+
+- **实践18：** 编写一个C程序，判断给定字符串是否为回文。
+- **解决方案：**
+
+```
+```c
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+bool isPalindrome(char *str)
+{
+    int len = strlen(str);
+    int i, j;
+    for (i = 0, j = len - 1; i < j; i++, j--)
+    {
+        if (str[i] != str[j])
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main()
+{
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%s", str);
+    if (isPalindrome(str))
+    {
+        printf("%s is a palindrome.\n", str);
+    }
+    else
+    {
+        printf("%s is not a palindrome.\n", str);
+    }
+    return 0;
+}
+```
+```
+
+- **实践19：** 编写一个C程序，显示字符串T在字符串S中开始的位置或索引；如果S不包含T，则显示−1。
+- **解决方案：**
+
+```
+```c
+#include <stdio.h>
+#include <string.h>
+
+int findSubstringIndex(const char *S, const char *T)
+{
+    int sLen = strlen(S);
+    int tLen = strlen(T);
+    for (int i = 0; i <= sLen - tLen; i++)
+    {
+        int j;
+        for (j = 0; j < tLen; j++)
+        {
+            if (S[i + j] != T[j])
+            {
+                break;
+            }
+        }
+        if (j == tLen)
+        {
+            return i; // Found the substring
+        }
+    }
+    return -1; // Substring not found
+}
+
+int main()
+{
+    const char *S = "Hello, World!";
+    const char *T = "World";
+    int index = findSubstringIndex(S, T);
+}
+```
+
