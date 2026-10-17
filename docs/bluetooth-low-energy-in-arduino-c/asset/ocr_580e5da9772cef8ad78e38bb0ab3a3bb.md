@@ -1,0 +1,32 @@
+```
+BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
+
+ble.init(onBluetoothInitialized);
+
+// wait for Bluetooth Radio to be initialized
+
+while (ble.hasInitialized() == false);
+while (1) {
+
+    // save power when possible
+
+    ble.waitForEvent();
+
+}
+}
+
+void blinkHeartbeat(void) {
+
+/* Do blinky on LED1 to indicate system aliveness. */
+
+statusLed = !statusLed;
+}
+
+void onBluetoothInitialized(
+    BLE::InitializationCompleteCallbackContext *params)
+{
+
+BLE&   ble = params->ble;
+
+ble_error_t error = params->error;
+```

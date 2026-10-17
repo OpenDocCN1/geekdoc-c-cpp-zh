@@ -1,0 +1,155 @@
+- - '#'
+  - 第1节
+- - '##'
+  - 本书使用的约定
+- - '#'
+  - 第 3 章
+- - '#'
+  - 综合应用
+- - '##'
+  - 示例 6-1：sketches/ble_characteristics/ble_characteristics.c
+- - '##'
+  - 示例代码
+- - '##'
+  - 从外设读取数据
+- - '##'
+  - 外设
+- - '##'
+  - 中心设备
+- - '###'
+  - 外设编程
+- - '###'
+  - 整合全部内容
+- - '##'
+  - 示例 7–1. ble_send_data/main.c
+- - '##'
+  - 示例代码
+- - '#'
+  - 向外设写入数据
+- - '###'
+  - 示例 8-1. ble_receive_data/main.c
+- - '###'
+  - 图 8-2. 串口输出
+- - '###'
+  - 示例代码
+- - '###'
+  - 图 9-1. 外设向已连接的中心设备通知特征值变化的过程
+- - '##'
+  - 编程外设
+- - '###'
+  - Figure 9-2. Serial Output
+- - '###'
+  - Example code
+- - '###'
+  - Figure 10-1. The process of using notifications to handle flow control on a multi-packet
+    data transfer
+- - '###'
+  - Programming the Peripheral
+- - '###'
+  - 图 10-2. 串行监视器输出
+- - '###'
+  - 示例代码
+- - '#'
+  - 第 11 章
+- - '#'
+  - 项目：iBeacon
+- - '##'
+  - 测距
+- - '###'
+  - 图 11-2. 房间内中央设备与 iBeacon 的位置示例
+- - '##'
+  - 对 Peripheral 进行编程
+- - '##'
+  - 整合所有内容
+- - '##'
+  - 示例代码
+- - '##'
+  - 项目：Echo 客户端与服务器
+- - '###'
+  - 对外围设备编程
+- - '###'
+  - 整合所有内容
+- - '##'
+  - /** State **/
+- - '##'
+  - /** Functions **/
+- - '###'
+  - Figure 13-4. Serial Output
+- - '###'
+  - Example code
+- - '#'
+  - 'Project: Remote Control LED'
+- - '###'
+  - Figure 14-1. How a Remote Control LED works
+- - '##'
+  - Sending Commands to Peripheral
+- - '###'
+  - Figure 13-2. Packet structure for commands
+- - '###'
+  - Table 13-1. Footer Values
+- - '###'
+  - Table 13-2. Command Values
+- - '###'
+  - Figure 13-3. Packet structure for responses
+- - '##'
+  - Putting It All Together
+- - '##'
+  - Example code
+- - '##'
+  - 'Appendix I: Bluetooth Properties'
+- - '##'
+  - 'Appendix II: UUID Format'
+- - '##'
+  - 'Appendix III: Minimal Recommended GATT'
+- - '##'
+  - 附录 VI：GATT 描述符
+- - '###'
+  - 表 VI-1. 保留的 GATT 描述符
+- - '##'
+  - 附录 VII：公司标识符
+- - '###'
+  - 表 VII-1. 公司标识符
+- - '##'
+  - 术语表
+- - '##'
+  - 关于作者
+- - '##'
+  - 关于本书
+- - '##'
+  - 技能水平
+- - '##'
+  - 本系列其他图书
+- - '###'
+  - Android Java中的低功耗蓝牙编程
+- - '###'
+  - iOS Swift中的低功耗蓝牙编程
+- - '###'
+  - 面向nRF微控制器的C++低功耗蓝牙编程
+- - '##'
+  - 特征
+- - '##'
+  - 描述符
+- - '##'
+  - E0
+- - '##'
+  - 通用访问配置文件（GAP）
+- - '##'
+  - iBeacon
+- - '##'
+  - 小端序
+- - '##'
+  - 通知
+- - '##'
+  - 外围设备
+- - '##'
+  - 读取
+- - '##'
+  - 扫描
+- - '##'
+  - 扫描响应
+- - '##'
+  - 服务
+- - '##'
+  - 写入
+- - '##'
+  - Android

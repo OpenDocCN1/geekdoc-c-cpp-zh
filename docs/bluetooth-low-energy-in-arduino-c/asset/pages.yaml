@@ -1,0 +1,5216 @@
+- pgno: 0
+  md: 'TURN YOUR NRF51822 / NRF52832 INTO A
+
+
+    SENSOR ● REMOTE CONTROL ● BEACON ● TRANSMITTER
+
+
+    USING
+
+
+    # Bluetooth Low Energy
+
+
+    IN C++ FOR NRFx
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_0_0.png)
+
+
+    Tony Gaitatzis
+
+
+    2017'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Bluetooth Low Energy in Arduino 101
+
+
+    1st Edition
+
+
+    Tony Gaitatzis
+
+
+    BackupBrain Publishing, 2017
+
+
+    ISBN: 978-1-7751280-2-1
+
+
+    backupbrain.co'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # Bluetooth Low Energy in Arduino 101
+
+
+    by Tony Gaitatzis
+
+
+    Copyright © 2015 All Rights Reserved
+
+
+    All rights reserved. This book or any portion thereof may not be reproduced or
+    used in any manner whatsoever without the express written permission of the publisher
+    except for the use of brief quotations in a book review. For permission requests,
+    write to the publisher, addressed “Bluetooth Android Book Reprint Request,” at
+    the address below.
+
+
+    [backupbrain@gmail.com](mailto:backupbrain@gmail.com)
+
+
+    This book contains code samples available under the MIT License, printed below:
+
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of
+    this software and associated documentation files (the "Software"), to deal in
+    the Software without restriction, including without limitation the rights to use,
+    copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+    Software, and to permit persons to whom the Software is furnished to do so, subject
+    to the following conditions:
+
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+    INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+    PARTICULAR PURPOSE AND NONINFRINGMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: (this page intentionally left blank)
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Dedication
+
+
+    To Ivy, for hanging around
+
+
+    and Andrew, for hosting'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: (this page intentionally left blank)
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Preface
+
+
+    Thank you for buying this book. I’m excited to have written it and more excited
+    that you are reading it.
+
+
+    I started with Bluetooth Low Energy in 2011 while making portable brain imaging
+    technology. Later, while working on a friend’s wearable electronics startup, I
+    ended up working behind teh scenes on the TV show America’s Greatest Makers in
+    the Spring of 2016.
+
+
+    Coming from a web programming background, I found the mechanics and nomenclature
+    of BLE confusing and cryptic. A er immersing myself in it for a period of time
+    I acclimated to the di erences and began to appreciate the power behind this low-power
+    technology.
+
+
+    Unlike other wireless technologies, BLE can be powered from a coin cell battery
+    for months at a time - perfect for a wearable or Internet of Things (IoT) project!
+    Because of its low power and short data transmissions, it is great for transmitting
+    bite size information, but not great for streaming data such as sound or video.
+
+
+    Good luck and enjoy!'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Section 1
+
+
+    # Conventions Used in this Book
+
+
+    Every developer has their own coding conventions. I personally believe that well-written
+    code is self-explanatory. Moreover, consistent and organized coding conventions
+    let developers step into each other’s code much more easily, enabling them to
+    reliably predict how the author has likely organized and implemented a feature,
+    thereby making it easier to learn, collaborate, fix bugs and perform upgrades.
+
+
+    The coding conventions I used in this book is as follows:
+
+
+    Inline comments are as follows:
+
+
+    ```
+
+    ```cpp
+
+    // inline comments
+
+    ```
+
+    ```
+
+
+    Multiline comments follow the Doxygen standard:
+
+
+    ```
+
+    ```cpp
+
+    /**
+
+
+    * This is a multiline comment
+
+
+    * It features more than one line of comment
+
+
+    * @parameter usage discription
+
+
+    * @return type
+
+
+    */
+
+    ```
+
+    ```
+
+
+    Constants and variables are written in camel case:'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '```
+
+    static const int constantName = 1;
+
+    ```
+
+
+    ```
+
+    int normalVariable = 1;
+
+    ```
+
+
+    Function declarations are in Camel Case. In cases where there is not enough space
+    for the whole function, parameters are written on another line:
+
+
+    ```
+
+    void shortFunction() {
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    void superLongFunctionName(
+
+    ```
+
+
+    ```
+
+    int parameterOne,
+
+    ```
+
+
+    ```
+
+    int parameterTwo)
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    ...
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    Long lines will be broken with a backslash ( \ ) and the next line will be indented:
+
+
+    ```
+
+    static const char[] someReallyLongVariableNameWillBeBroken = \
+
+    ```
+
+
+    ```
+
+    "onto the next line";
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Introduction
+
+
+    In this book you will learn the basics of how to program Central and Peripheral
+    devices that communicate over Bluetooth Low Energy using Java on Android. These
+    tutorials will culminate in three projects:
+
+
+    +   A Beacon and Scanner
+
+
+    +   A Echo Server and Client
+
+
+    +   A Remote Controlled Device
+
+
+    Through the course of the book you will learn important concepts that relate to:
+
+
+    +   How Bluetooth Low Energy works,
+
+
+    +   How data is sent and received
+
+
+    +   Common paradigms for handling data
+
+
+    This book is an excellent read for anyone familiar with Android programming, who
+    wants to build an Internet of Things device or a tool that communicates with a
+    Bluetooth device.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Overview
+
+
+    Bluetooth Low Energy (BLE) is a digital radio protocol. Very simply, it works
+    by transmitting radio signals from one computer to another.
+
+
+    Bluetooth supports a hub-and-spoke model of connectivity. One device acts as a
+    hub, or “Central” in Bluetooth terminology. Other devices act as “Peripherals.”
+
+
+    A Central may hold several simultaneous connections with a number of peripherals,
+    but a peripheral may only hold one connection at a time (Figure 1-1). Hence the
+    names Central and Peripheral.
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_11_0.png)
+
+
+    Figure 1-1. Bluetooth network topology
+
+
+    For example, your smartphone acts as a Central. It may connect to a Bluetooth
+    speaker, lamp, smartwatch, and fitness tracker. Your fitness tracker and speaker,
+    both Peripherals, can only be connected to one smartphone at a time.
+
+
+    The Central has two modes: scanning and connected. The Peripheral has'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'two modes: advertising and connected. The Peripheral must be advertising for
+    the Central to see it.
+
+
+    # Advertising
+
+
+    A Peripheral advertises by advertising its device name and other information on
+    one radio frequency, then on another in a process known as frequency hopping.
+    In doing so, it reduces radio interference created from reflected signals or other
+    devices.
+
+
+    # Scanning
+
+
+    Similarly, the Central listens for a server’s advertisement first on one radio
+    frequency, then on another until it discovers an advertisement from a Peripheral.
+    The process is not unlike that of trying to find a good show to watch on TV.
+
+
+    The time between radio frequency hops of the scanning Central happens at a different
+    speed than the frequency hops of the advertising Peripheral. That way the scan
+    and advertisement will eventually overlap so that the two can connect.
+
+
+    Each device has a unique media access control address (MAC address) that identifies
+    it on the network. Peripherals advertise this MAC address along with other information
+    about the Peripheral’s settings.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Connecting
+
+
+    A Central may connect to a Peripheral after the Central has seen the Peripheral’s
+    advertisement. The connection involves some kind of handshaking which is handled
+    by the devices at the hardware or firmware level.
+
+
+    While connected, the Peripheral may not connect to any other device.
+
+
+    # Disconnecting
+
+
+    A Central may disconnect from a Peripheral at any time. The Peripheral is aware
+    of the disconnection.
+
+
+    # Communication
+
+
+    A Central may send and request data to a Peripheral through something called a
+    “Characteristic.” Characteristics are provided by the Peripheral for the Central
+    to access. A Characteristic may have one or more properties, for example READ
+    or WRITE. Each Characteristic belongs to a Service, which is like a container
+    for Characteristics. This paradigm is called the Bluetooth Generic Attribute Profile
+    (GATT).
+
+
+    The GATT paradigm is laid out as follows (Figure 1-2).'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_14_0.png)
+
+
+    # Figure 1-2. Example GATT Structure
+
+
+    To transmit or request data from a Characteristic, a Central must first connect
+    to the Characteristic’s Service.
+
+
+    For example, a heart rate monitor might have the following GATT profile, allowing
+    a Central to read the beats per minute, name, and battery life of the server (Figure
+    1-3).'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_15_0.png)
+
+
+    # Figure 1-3. Example GATT structure for a heart monitor
+
+
+    In order to retrieve the battery life of the Characteristic, the Central must
+    be connected also to the Peripheral’s “Device Info” Service.
+
+
+    Because a Characteristic is provided by a Peripheral, the terminology refers to
+    what can be done to the Characteristic. A “write” occurs when data is sent to
+    the Characteristic and a “read” occurs when data is downloaded from the Characteristic.
+
+
+    To reiterate, a Characteristic is a field that can be written to or read from.
+    A Service is a container that may hold one or more Characteristics. GATT is the
+    layout of these Services and Characteristics. Characteristic can be written to
+    or read from.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Byte Order
+
+
+    Bluetooth orders data in both Big-Endian and Little-Endian depending on the context.
+
+
+    During advertisement, data is transmitted in Big Endian, with the most significant
+    bytes of a number at the end (Figure 1-4).
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_16_0.png)
+
+
+    Figure 1-4. Big Endian byte order
+
+
+    Data transfers inside the GATT however are transmitted in Little Endian, with
+    the least significant byte at the end (Figure 1-5).
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_16_1.png)
+
+
+    Figure 1-5. Little Endian byte order'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# # Permissions
+
+
+    A Characteristic grants certain Permissions of the Central. These permissions
+    include the ability to read and write data on the Characteristic, and to subscribe
+    to Notifications.
+
+
+    # # Descriptors
+
+
+    Descriptors describe the configuration of a Characteristic. The only one that
+    has been specified so far is the “Notification” flag, which lets a Central subscribe
+    to Notifications.
+
+
+    # # UUIDs
+
+
+    A UUID, or Universally Unique Identifier is a very long identifier that is likely
+    to be unique, no matter when the UUID was created or who created it.
+
+
+    BLE uses UUIDs to label Services and Characteristics so that Services and Characteristics
+    can be identified accurately even when switching devices or when several Characteristics
+    share the same name.
+
+
+    For example, if a Peripheral has two “Temperature” Characteristics - one for Celsius
+    and the other in Fahrenheit, UUIDs allow for the right data to be communicated.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'UUIDs are usually 128-bit strings and look like this:
+
+
+    ca06ea56-9f42-4fc3-8b75-e31212c97123
+
+
+    But since BLE has very limited data transmission, 16-bit UUIDs are also supported
+    and can look like this:
+
+
+    0x1815
+
+
+    Each Characteristic and each Service is identified by its own UUID. Certain UUIDs
+    are reserved for specific purposes.
+
+
+    For example, UUID 0x180F is reserved for Services that contain battery reporting
+    Characteristics.
+
+
+    Similarly, Characteristics have reserved UUIDs in the Bluetooth Specification.
+
+
+    For example, UUID 0x2A19 is reserved for Characteristics that report battery levels.
+
+
+    A list of UUIDs reserved for specific Services can be found in *Appendix IV: Reserved
+    GATT Services.*
+
+
+    A list of UUIDs reserved for specific Characteristics can be in *Appendix V: Reserved
+    GATT Characteristics.*
+
+
+    If you are unsure what UUIDs to use for a project, you are safe to choose an unassigned
+    service (e.g. 0x180C) for a Service and generic Characteristic (0x2A56).
+
+
+    Although the possibility of two generated UUIDs being the same are extremely low,
+    programmers are free to arbitrarily define UUIDs which'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'may already exist. So long as the UUIDs defining the Services and Characteristics
+    do not overlap in the a single GATT Profile, there is no issue in using UUIDs
+    that exist in other contexts.
+
+
+    # Bluetooth Hardware
+
+
+    All Bluetooth devices feature at least a processor and an antenna (Figure 1-6).
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_19_0.png)
+
+
+    Figure 1-6. Parts of a Bluetooth device
+
+
+    The antenna transmits and receives radio signals. The processor responds to changes
+    from the antenna and controls the antenna’s tuning, the advertisement message,
+    scanning, and data transmission of the BLE device.
+
+
+    # Power and Range'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'BLE has 20x2 Mhz channels, with a maximum 10 mW transmission power, 20 byte
+    packet size, and 1 Mbit/s speed.
+
+
+    As with any radio signal, the quality of the signal drops dramatically with distance,
+    as shown below (Figure 1-7).
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_20_0.png)
+
+
+    # Figure 1-7. Distance versus Bluetooth Signal Strength
+
+
+    This signal quality is correlated the Received Signal Strength Indicator (RSSI).
+
+
+    If the RSSI is known when the Peripheral and Central are 1 meter apart (A), as
+    well as the RSSI at the current distance (R) and the radio propagation constant
+    (n). The distance between the Central and the Peripheral in meters (d) can be
+    approximated with this equation:
+
+
+    d≈10^(A−R)/(10n)
+
+
+    The radio propagation constant depends on the environment, but it is typically
+    somewhere between 2.7 in a poor environment and 4.3 in an ideal environment.
+
+
+    Take for example a device with an RSSI of 75 at one meter, a current RSSI reading
+    35, with a propagation constant of 3.5:'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'd≈1075-3510×3.5
+
+
+    d≈104035
+
+
+    d≈14
+
+
+    Therefore the distance between the Peripheral and Central is approximately 14
+    meters.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Introducing nRFx
+
+
+    The nRF51822, nRF52833 and related chips are fast, versatile chips that have excellent
+    support for Bluetooth Low Energy and an amazing battery life.
+
+
+    As an embedded device, they can be designed to work as a connected device that
+    does everything from home automation, to distributed weather monitoring, to wearable
+    electronics.
+
+
+    This book will teach how to build a Bluetooth Low Energy Peripheral using the
+    nRF chip. These chips are incredible versatile. The Bluetooth and other features
+    available for the nRF exceed the scope of this book.
+
+
+    Although the examples in this book are trivial, the potential applications of
+    this technology are profound. This is the technology that almost all wearable
+    and Internet of Things (IoT) technologies employ at some level from configuration
+    to data reporting.
+
+
+    # nRF Setup
+
+
+    There are many ways to program the nRF chip, depending on the model and APIs purchased.
+
+
+    This book teaches how to use the ARM mbed platform, an online C++ compiler that
+    supports nRF and other embedded chipsets. It is a free'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'platform with open source APIs and excellent documentation.
+
+
+    # # nRFx Microcontrollers
+
+
+    The nRF Bluetooth Low Energy microcontrollers are fast, powerful processors with
+    excellent battery life.
+
+
+    It is programmable with the C and C++ programming languages. It features input
+    and output pins that can be connected to a variety of sensors, motors, and other
+    devices.
+
+
+    There are many development boards that employ the nRF chips, made by a variety
+    of manufacturers. Custom boards can be developed with it as well.
+
+
+    # # mbed IDE
+
+
+    The mbed IDE looks like a typical coding environment with a file list, text editor,
+    and compiler output (Figure 2-1)'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_24_0.png)
+
+
+    # Figure 2-1. mbed IDE
+
+
+    To use the mbed platform, sign up for a developer account at [http://developer.mbed.org](http://developer.mbed.org)
+    The mbed programming environment is available under the “Compiler” menu (Figure
+    2-2).'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_26_0.png)
+
+
+    Figure 2-3. mbed Empty Workspace
+
+
+    # Installing a Development Platform
+
+
+    So that mbed knows how to compile for the development board you have, install
+    the board support by clicking the button at the top right corner. When there are
+    no supported boards installed, this button reads “No device selected.” Clicking
+    this button will open a dialog that lists supported devices (Figure 2-4).'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Figure 2-4. Adding supported devices
+
+
+    Click the “Add Platform” button at the bottom left to open a new tab of potential
+    devices to support (Figure 2-5)
+
+
+    # You haven''t selected any platform yet
+
+
+    Pick one from the list below and click the "Select Platform" button to select
+    it.
+
+
+    Description
+
+
+    Pinout
+
+
+    N/A
+
+
+    More Info
+
+
+    Your registered platforms
+
+
+    Add Platform
+
+
+    Select Platform'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Boards
+
+
+    # Filter
+
+
+    # mbed Enabled
+
+
+    # mbed OS support
+
+
+    # Target vendor
+
+
+    # Platform vendor
+
+
+    # Figure 2-5. Supported nRF Platforms
+
+
+    Search for the name of the device you are developing on. Click on the device to
+    open the details and click “Add to your mbed compiler.” The page will reload with
+    a message that reads “The Platform is now added
+
+
+    # mbed LPC1768
+
+
+    +   - Cortex-M3, 96MHz
+
+    +   - 512KB Flash, 32KB RAM
+
+
+    # mbed LPC11U24
+
+
+    +   - Cortex-M0, 48MHz
+
+    +   - 32KB Flash, 8KB RAM
+
+
+    # FRDM-KL25Z
+
+
+    +   - Cortex-M0+
+
+    +   - 128KB Flash, 16KB RAM
+
+    +   - USB OTG
+
+
+    # NXP LPC800-MAX
+
+
+    +   - Cortex-M0+
+
+    +   - 16KB Flash, 4KB RAM
+
+
+    # EA LPC4088 QuickStart Board
+
+
+    +   - Cortex-M4, 120MHz
+
+    +   - 512KB Flash, 96KB SRAM
+
+
+    # Seeeduino-Arch
+
+
+    +   - Cortex-M0, 48MHz
+
+    +   - 32KB Flash, 8KB RAM'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'to your account.” Close this tab to reveal the IDE again.
+
+
+    To configure the IDE to compile to this device, close the platform selector and
+    open it again by clicking the “no device selected” button again. Select the newly
+    installed platform from the registered platforms list on the bottom, and click
+    the “Select Platform” button to activate this platform (Figure 2-6).
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_29_0.png)
+
+
+    Figure 2-6. Select Platform
+
+
+    # Creating a new Project'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'To create a new project, click the "New" button. A "Create new program" dialog
+    will pop up, where you can set the program''s name, the program template if one
+    exists, and the compiler platform, if you have more than one development target.
+    (Figure 2-7)
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_30_0.png)
+
+
+    # Figure 2-7. New Project Dialog
+
+
+    Next, import the required Bluetooth and platform libraries so that Bluetooth APIs
+    can be used. Click the "Import" button. A dialog will open. Search for "ble" to
+    find the required libraries: BLE_API and nRF51822. (Figure 2-8)'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_31_0.png)
+
+
+    # Figure 2-8. Import required libraries
+
+
+    These libraries will will be imported into the new project. From here, the project
+    can be programmed and compiled. (Figure 2-9)'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# CHAPTER 3
+
+
+    # # Bootstrapping
+
+
+    The first thing to do in any software project is to become familiar with the environment.
+
+
+    Because we are working with Bluetooth, it’s important to learn how to initialize
+    the Bluetooth radio and report what the program is doing.
+
+
+    Both the Central and Peripheral talk to the computer over USB when being programmed.
+    That allows you to report errors and status messages to the computer when the
+    programs are running (Figure 3-1).
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_34_0.png)
+
+
+    **Figure 3-1. Programming configuration**
+
+
+    # ## Programming the Peripheral
+
+
+    It is useful to print out what nRF is thinking to make debugging easier, so this
+    chapter will teach how to print data from the the nRF to the'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: 'computer being programmed on.
+
+
+    # ## Turning on Bluetooth
+
+
+    In order to use the Bluetooth features of the nRF chip, certain C header files
+    must be included.
+
+
+    On the mbed platform, those are mbed.h and ble/BLE.h:
+
+
+    ```
+
+    ```c
+
+    #include "mbed.h"
+
+
+    #include "ble/BLE.h"
+
+    ```
+
+    ```
+
+
+    # ## Debugging
+
+
+    It is useful to print out what nRF is thinking to help debugging later. This can
+    be done by instantiating a Serial object and printing text to that Serial object.
+
+
+    ```
+
+    ```cpp
+
+    Serial serial(USBTX, USBRX); // initialize the Serial object
+
+
+    serial.baud(9600); // set the baud rate
+
+
+    serial.printf("Hello World\r\n"); // print text
+
+    ```
+
+    ```
+
+
+    There are many ways read what the nRF is printing, depending on the software and
+    platform available. On Mac OS and Linux, a program called screen can be used:'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '```
+
+    $ screen /dev/tty.usbmodemXXXX 9600
+
+    ```
+
+
+    When using screen, make sure the baud rate (in this case 9600) matches the baud
+    rate on the nRF Serial object, and that the device name is the one created for
+    the available nRF device.
+
+
+    The serial connection to the nRF must be closed when trying to upload programs
+    onto the nRF. A screen session can be closed by issuing the following key sequence:
+
+
+    Ctrl+a, k, y
+
+
+    # Putting it all together
+
+
+    In your nRF IDE create a new project titled ble_serial, and type the following
+    code:
+
+
+    # Example 3-1. ble_serial/main.c
+
+
+    ```
+
+    #include "mbed.h"
+
+
+    #include "ble/BLE.h"
+
+
+    /** User interface I/O **/
+
+
+    // instantiate USB Serial
+
+
+    Serial serial(USBTX, USBRX);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\n// Status LED\n\nDigitalOut statusLed(LED1, 0);\n\n// Timer for blinking\
+    \ the statusLed\n\nTicker ticker;\n\n/** Functions **/\n\n/**\n* visually signal\
+    \ that program has not crashed\n*/\n\nvoid blinkHeartbeat(void);\n\n/**\n* Main\
+    \ program and loop\n*/\n\nint main(void) {\n    serial.baud(9600);\n    serial.printf(\"\
+    Hello World\\r\\n\");\n    ticker.attach(blinkHeartbeat, 1);\n    while (1) {\n\
+    \        serial.printf(\".\");\n        wait(1);\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "```\n```c\nvoid blinkHeartbeat(void) {\n\n    /* Do blinky on LED1 to indicate\
+    \ system aliveness. */\n\n    statusLed = !statusLed;\n}\n```\n```\n\nRun this\
+    \ program by uploading the compiled hex code onto the nRF chip. The procedure\
+    \ for this can vary greatly depending on the serial interface to the nRF, but\
+    \ on many USB-enabled nRF platforms, it is as easy as dragging and dropping the\
+    \ code into the MBED disk. (Figure 3-2).\n\n**Figure 3-2. Upload program to the\
+    \ nRF chip**\n\nWhen it is done uploading, create a serial connection to the nRF\
+    \ to read what it prints out. This can be done using the Terminal or CMD application.\
+    \ The actual command will vary depending on your platform. Here is an example\
+    \ from Mac OS X (Figure 3-3):\n\n```\n```shell\n$ screen /dev/tty.usbmodem1412\
+    \ 9600\n```\n```\n\n**Figure 3-3. Creating a serial connection to the nRF on Mac\
+    \ OS X**\n\nThe resulting sketch will print “Hello World” in the Serial Monitor,\
+    \ like"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: 'this (Figure 3-4):
+
+
+    Hello World
+
+
+    ......
+
+
+    # Figure 3-4. Serial Output
+
+
+    To stop the serial connection, type Ctrl+a then k, then y
+
+
+    # Example code
+
+
+    The code for this chapter is available online
+
+    at: [https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter03](https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter03)'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# # Scanning and Advertising
+
+
+    The first step to any Bluetooth Low Energy interaction is for the Peripheral to
+    make the Central aware of its existence, through a process called Advertising.
+
+
+    During the Advertising process, a peripheral Advertises while a Central Scans.
+
+
+    Bluetooth devices discover each other when they are tuned to the same radio frequency,
+    also known as a Channel. There are three channels dedicated to device discovery
+    in Bluetooth Low Energy:
+
+
+    # Table 4-1. Bluetooth Low Energy Discovery Radio Channels
+
+
+    | Channel | Radio Frequency |
+
+    |---|---|
+
+    | 37 | 2402 Mhz |
+
+    | 39 | 2426 Mhz |
+
+    | 39 | 2480 Mhz |
+
+
+    The peripheral will advertise its name and other data over one channel and then
+    another. This is called frequency hopping (Figure 4-1).'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_42_0.png)
+
+
+    # Figure 4-2. Scan finds Advertise
+
+
+    Scanning settings vary wildly, for example scanning every 10ms for 100ms, or scanning
+    for 1 second for 10 seconds.
+
+
+    Typically when a Central discovers advertising Peripheral, the Central requests
+    a Scan Response from the Peripheral. In some cases, the Scan Response contains
+    useful data. For example, iBeacons use Scan Response data to inform Centrals of
+    each iBeacon’s location without the Central needing to connect and download more
+    data.
+
+
+    The first step to any Bluetooth Low Energy interaction is for the Peripheral to
+    make the Central aware of its existence, through a process called Advertising.
+
+
+    Advertising reports the server name and other information one channel'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "at a time until there are no more channels and the server repeats the process\
+    \ again at the first channel.\n\nThe Peripheral may start or stop advertising\
+    \ at any time.\n\n# Programming the Peripheral\n\nThere are several things you\
+    \ need to advertise over Bluetooth Low Energy. First, you must include BLE support:\n\
+    \n```\n```cpp\n#include \"mbed.h\"\n\n#include \"ble/BLE.h\"\n```\n```\n\nA BLE\
+    \ object must be created\n\n```\n```cpp\n// Broadcast name\n\nconst static char\
+    \ BROADCAST_NAME[] = \"MyDevice\";\n```\n```\n\n```\n```cpp\nint main(void) {\n\
+    \n    // initialized Bluetooth Radio\n\n    BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);\n\
+    \n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "Some things happen internally on the chip from here before it is possible to\
+    \ set the Advertising name and other parameters. A callback is required to handle\
+    \ the transition:\n\n```\nint main(void) {\n    ...\n    ble.init(onBluetoothInitialized);\n\
+    }\n```\n\nThe resulting callback will need to set the Advertised name and other\
+    \ parameters, such as the advertising interval and discoverability of the Bluetooth\
+    \ Peripheral:\n\n```\nvoid onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext\
+    \ *params)\n{\n    BLE& ble = params->ble;\n    ble_error_t error = params->error;\n\
+    \    // quit if there's a problem\n    if(error != BLE_ERROR_NONE) {\n       \
+    \ return;\n    }\n    // Ensure that it is the default instance of BLE\n    if(ble.getInstanceID()\
+    \ != BLE::DEFAULT_INSTANCE) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "```\n```cpp\nreturn;\n}\n\nserial.printf(\"Describing Peripheral...\");\n\n\
+    // advertising parameters\nble.gap().accumulateAdvertisingPayload(\n\n  // Device\
+    \ is Peripheral only\n  GapAdvertisingData::BR_EDR_NOT_SUPPORTED |\n\n  // always\
+    \ discoverable\n  GapAdvertisingData::LE_GENERAL_DISCOVERABLE\n);\n\n// broadcast\
+    \ name\nble.gap().accumulateAdvertisingPayload(\n\n  GapAdvertisingData::COMPLETE_LOCAL_NAME,\n\
+    \  (uint8_t *)BROADCAST_NAME,\n  sizeof(BROADCAST_NAME)\n);\n\n// allow connections\n\
+    ble.gap().setAdvertisingType(\n\n  GapAdvertisingParams::ADV_NON_CONNECTABLE_UNDIRECTED\n\
+    );\n\n// advertise every 1000ms\nble.gap().setAdvertisingInterval(1000); // 1000ms\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "```\n```c\n// begin advertising\n\nble.gap().startAdvertising();\n\nserial.printf(\"\
+    \ done\\r\\n\");\n}\n```\n```\n\nTo save power, it is possible to put the Bluetooth\
+    \ radio to sleep between Bluetooth operations:\n\n```\n```c\nint main(void) {\n\
+    \n    ...\n\n    // wait for Bluetooth Radio to be initialized\n\n    while (ble.hasInitialized()\
+    \ == false);\n\n    while (1) {\n\n        // save power when possible\n\n   \
+    \     ble.waitForEvent();\n    }\n}\n```\n```\n\n# # Putting it All Together"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "```\n/**\n* visually signal that program has not crashed\n*/\n\nvoid blinkHeartbeat(void);\n\
+    \n/**\n* Callback triggered when the ble initialization process has finished\n\
+    *\n* @param[in] params Information about the initialized Peripheral\n*/\n\nvoid\
+    \ onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext *params\n\
+    );\n\n/**\n* Main program and loop\n*/\n\nint main(void) {\n    serial.baud(9600);\n\
+    \n    serial.printf(\"Starting Peripheral\\r\\n\");\n\n    ticker.attach(blinkHeartbeat,\
+    \ 1); // Blink status led every 1 second\n\n    // initialized Bluetooth Radio\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "```\nBLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);\n\nble.init(onBluetoothInitialized);\n\
+    \n// wait for Bluetooth Radio to be initialized\n\nwhile (ble.hasInitialized()\
+    \ == false);\nwhile (1) {\n    // save power when possible\n    ble.waitForEvent();\n\
+    }\n}\n\nvoid blinkHeartbeat(void) {\n    /* Do blinky on LED1 to indicate system\
+    \ aliveness. */\n    statusLed = !statusLed;\n}\n\nvoid onBluetoothInitialized(\n\
+    \    BLE::InitializationCompleteCallbackContext *params)\n{\n    BLE&   ble =\
+    \ params->ble;\n    ble_error_t error = params->error;\n    // quit if there's\
+    \ a problem\n```"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "```\n```cpp\nif(error != BLE_ERROR_NONE) {\n    return;\n}\n\n// Ensure that\
+    \ it is the default instance of BLE\nif(ble.getInstanceID() != BLE::DEFAULT_INSTANCE)\
+    \ {\n    return;\n}\n\nserial.printf(\"Describing Peripheral...\");\n\n// advertising\
+    \ parameters\nble.gap().accumulateAdvertisingPayload(\n    // Device is Peripheral\
+    \ only\n    GapAdvertisingData::BREDR_NOT_SUPPORTED |\n    // always discoverable\n\
+    \    GapAdvertisingData::LE_GENERAL_DISCOVERABLE\n);\n\n// broadcast name\nble.gap().accumulateAdvertisingPayload(\n\
+    \    GapAdvertisingData::COMPLETE_LOCAL_NAME,\n    (uint8_t *)BROADCAST_NAME,\n\
+    \    sizeof(BROADCAST_NAME)\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "```\n```cpp\n);\n\n// allow connections\n\nble.gap().setAdvertisingType(\n\n\
+    \  GapAdvertisingParams::ADV_NON_CONNECTABLE_UNDIRECTED\n\n);\n\n// advertise\
+    \ every 1000ms\n\nble.gap().setAdvertisingInterval(1000); // 1000ms\n\n// begin\
+    \ advertising\n\nble.gap().startAdvertising();\n\n\nserial.printf(\" done\\r\\\
+    n\");\n\n}\n```\n```\n\nThis sketch will create a Peripheral that advertises as\
+    \ “MyDevice.”\nNearby Centrals will see this Peripheral when scanning.\n\n# #\
+    \ Example code\n\nThe code for this chapter is available online\nat: [https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter04](https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter04)"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Connecting and Disconnecting
+
+
+    Each Bluetooth Device has a unique Media Access Control (MAC) address, a 48-bit
+    identifier value written like this
+
+
+    ```
+
+    00:A0:C9:14:C8:3A
+
+    ```
+
+
+    Devices advertise data on the network with the intended recipient''s MAC address
+    attached so that recipient devices can filter data packets that are intended for
+    them.
+
+
+    Part of what a Peripheral does while Advertising is to make its MAC address known.
+
+
+    Once a Central knows the MAC address of a Peripheral, the central can attempt
+    to connect. This must be done before data can be passed between the Central and
+    Peripheral. A Central may hold several simultaneous connections with a number
+    of peripherals, but a peripheral may only hold one connection at a time. Hence
+    the names Central and Peripheral (Figure 5-1).'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_53_0.png)
+
+
+    Figure 5-1. Bluetooth network topology
+
+
+    There are 37 data channels ranging from 2404 MHz to 2478 MHz.
+
+
+    Once the connection is established, the Central and Peripheral negotiate which
+    of these channels to begin communicating over.
+
+
+    Because the Peripheral can only hold one connection at a time, it must disconnect
+    from the Central before a new connection can be made.
+
+
+    The connection and disconnection process works like this (Figure 5-2).'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Peripheral
+
+
+    # Central
+
+
+    Request Connection
+
+
+    Connection Established
+
+
+    Request Disconnection
+
+
+    Disconnection Granted'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "The onConnection callback allows the Peripheral to react to incoming connections.\n\
+    \n```\nvoid onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext\
+    \ *params)\n{\n    ...\n\n    ble.gap().onConnection(onCentralConnected);\n\n\
+    \    ...\n}\n\nvoid onCentralConnected(const Gap::DisconnectionCallbackParams_t\
+    \ *params) {\n    serial.printf(\"Central connected\\\\r\\\\n\");\n}\n```\n\n\
+    # Putting It All Together\n\nCreate a new sketch and save it as ble_connect.\n\
+    \nThis sketch will advertise as well as manage a connection to a Central. When\
+    \ a Central connects, the Peripheral will print the Central’s MAC"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'address into the Serial Monitor.
+
+
+    # Example 5-1. ble_connect/main.c
+
+
+    ```
+
+    ```c
+
+    #include "mbed.h"
+
+
+    #include "ble/BLE.h"
+
+
+    /** User interface I/O */
+
+
+    // instantiate USB Serial
+
+    Serial serial(USBTX, USBRX);
+
+
+    // Status LED
+
+    DigitalOut statusLed(LED1, 0);
+
+
+    // Timer for blinking the statusLed
+
+    Ticker ticker;
+
+
+    /** Bluetooth Peripheral Properties **/
+
+
+    // Broadcast name
+
+    const static char BROADCAST_NAME[] = "MyDevice";
+
+
+    /** Functions **/
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "```\n```cpp\n/**\n * visually signal that program has not crashed\n */\n\n\
+    void blinkHeartbeat(void);\n```\n```\n\n```\n```cpp\n/**\n * Callback triggered\
+    \ when the ble initialization process has finished\n *\n * @param[in] params Information\
+    \ about the initialized Peripheral\n */\n\nvoid onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext\
+    \ *params\n);\n```\n```\n\n```\n```cpp\n/**\n * Callback handler when a Central\
+    \ has disconnected\n *\n * @param[i] params Information about the connection\n\
+    \ */\n\nvoid onCentralDisconnected(\n    const Gap::DisconnectionCallbackParams_t\
+    \ *params\n);\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "```\n```cpp\n/**\n * Main program and loop\n */\n\nint main(void) {\n\n   \
+    \ serial.baud(9600);\n\n    serial.printf(\"Starting Peripheral\\r\\n\");\n\n\
+    \    ticker.attach(blinkHeartbeat, 1); // Blink status led every 1 second\n\n\
+    \    // initialized Bluetooth Radio\n    BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);\n\
+    \n    ble.init(onBluetoothInitialized);\n\n    // wait for Bluetooth Radio to\
+    \ be initialized\n    while (ble.hasInitialized() == false);\n\n    while (1)\
+    \ {\n\n        // save power when possible\n        ble.waitForEvent();\n    }\n\
+    \n}\n\nvoid blinkHeartbeat(void) {\n\n    /* Do blinky on LED1 to indicate system\
+    \ aliveness. */\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "```\nstatusLed = !statusLed;\n}\n\nvoid onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext\
+    \ *params)\n{\n    BLE& ble = params->ble;\n    ble_error_t error = params->error;\n\
+    \    // quit if there's a problem\n    if(error != BLE_ERROR_NONE) {\n       \
+    \ return;\n    }\n    // Ensure that it is the default instance of BLE\n    if(ble.getInstanceID()\
+    \ != BLE::DEFAULT_INSTANCE) {\n        return;\n    }\n    serial.printf(\"Describing\
+    \ Peripheral...\");\n    // process disconnections with a callback\n    ble.gap().onDisconnection(onCentralDisconnected);\n\
+    \    // advertising parametirs\n```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "```\n```cpp\nble.gap().accumulateAdvertisingPayload(\n\n  // Device is Peripheral\
+    \ only\n\n  GapAdvertisingData::BR_EDR_NOT_SUPPORTED |\n\n  // always discoverable\n\
+    \n  GapAdvertisingData::LE_GENERAL_DISCOVERABLE);\n\n// broadcast name\nble.gap().accumulateAdvertisingPayload(\n\
+    \n  GapAdvertisingData::COMPLETE_LOCAL_NAME,\n\n  (uint8_t *)BROADCAST_NAME,\n\
+    \n  sizeof(BROADCAST_NAME)\n\n);\n\n// allow connections\nble.gap().setAdvertisingType(\n\
+    \n  GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED\n\n);\n\n// advertise every\
+    \ 1000ms\nble.gap().setAdvertisingInterval(1000); // 1000ms\n\n// begin advertising\n\
+    ble.gap().startAdvertising();\n\nserial.printf(\" done\\\\r\\\\n\");\n}\n```\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "```\nvoid onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)\n\
+    {\n    BLE::Instance().gap().startAdvertising();\n    serial.printf(\"Central\
+    \ disconnected\\r\\n\");\n}\n```\n\nThe output from the Serial monitor should\
+    \ resemble this when a Central connects, then disconnects from the Peripheral\
+    \ (Figure 5-3).\n\nCentral connected: 45:b5:7d:96:01:2f\n\nCentral disconnected\n\
+    \n# Figure 3-4. Serial Output\n\nYour Peripheral can now handle connections and\
+    \ disconnections. You can modify the callback functions turn on an LED, print\
+    \ something to screen, or anything else.\n\n# Example code\n\nThe code for this\
+    \ chapter is available online at: https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter05"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# Services and Characteristics
+
+
+    Before data can be transmitted back and forth between a Central and Peripheral,
+    the Peripheral must host a GATT Profile. That is, the Peripheral must have Services
+    and Characteristics.
+
+
+    # Identifying Services and Characteristics
+
+
+    Each Service and Characteristic is identified by a Universally Unique Identifier
+    (UUID). The UUID follows the pattern 0000XXXX-0000-1000-8000-00805f9b34fb, so
+    that a 32-bit UUID 00002a56-0000-1000-8000-00805f9b34fb can be represented as
+    0x2a56.
+
+
+    Some UUIDs are reserved for specific use. For instance any Characteristic with
+    the 16-bit UUID 0x2a35 (or the 32-bit UUID 00002a35-0000-1000-8000-00805f9b34fb)
+    is implied to be a blood pressure reading.
+
+
+    For a list of reserved Service UUIDs, see *Appendix IV: Reserved GATT Services*.
+
+
+    For a list of reserved Characteristic UUIDs, see *Appendix V: Reserved GATT Characteristics*.'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# Generic Attribute Profile
+
+
+    Services and Characteristics describe a tree of data access points on the peripheral.
+    The tree of Services and Characteristics is known as the Generic Attribute (GATT)
+    Profile. It may be useful to think of the GATT as being similar to a folder and
+    file tree (Figure 6-1).
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_64_0.png)
+
+
+    **Figure 6-1. GATT Profile filesystem metaphor**'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_65_0.png)
+
+
+    **Figure 6-2. GATT Profile**
+
+
+    Characteristics act as channels that can be communicated on, and Services act
+    as containers for Characteristics. A top level Service is called a Primary service,
+    and a Service that is within another Service is called a Secondary Service.
+
+
+    Characteristics have a maximum value length of 20 bytes and have internal settings
+    called Descriptors that can be modified. Descriptors are identified with UUIDs
+    One important Descriptor that will be talked'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: 'about later is the Client Characteristic Configuration (0x2902), which allows
+    a connected Central to subscribe to change notifications from that Characteristic.
+
+
+    For a list of reserved Descriptors, see *Appendix V: GATT Descriptors*.
+
+
+    # Table 6-1. Characteristic Permissions
+
+
+    | Descriptor | Description |
+
+    |---|---|
+
+    | Read | Central can read this Characteristic, Peripheral can set the value. |
+
+    | Write | Central can write to this Characteristic, Peripheral will be notified
+    when the Characteristic value changes and Central will be notified when the write
+    operation has occurred. |
+
+    | Write without Response | Central can write to this Characteristic. Peripheral
+    will be notified when the Characteristic value changes but the Central will not
+    be notified that the write operation occurred. |
+
+    | Notify | Central will be notified when Peripheral changes the value. |
+
+
+    Because the GATT Profile is hosted on the Peripheral, the terms used to describe
+    a Characteristic’s permissions are relative to how the Peripheral accesses that
+    Characteristic. Therefore, when a Central uploads data to'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: 'the Peripheral, the Peripheral can “read” from the Characteristic. The Peripheral
+    “writes” new data to the Characteristic, and can “notify” the Central that the
+    data is altered.
+
+
+    # Data Length and Speed
+
+
+    It is worth noting that Bluetooth Low Energy has a maximum data packet size of
+    20 bytes, with a 1 Mbit/s speed.
+
+
+    # Programming the Peripheral
+
+
+    The Generic Attribute Profile is defined by setting the UUID and permissions of
+    the Peripheral’s Services and Characteristics.
+
+
+    Characteristics can be configured with the following permissions ([Table 6-2](#table-6-2)):
+
+
+    # Table 6-2. BLECharacteristic Permissions
+
+
+    | Value |
+
+    |---|
+
+    | BLE_GATT_CHAR_PROPERTIES_READ |'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_68_0.png)
+
+
+    Characteristics have a maximum length of 20 bytes. Since 16 bit and 8-bit data
+    types are easy to pass around in C++, we will be using uint16_t (unsigned 16-bit
+    integer) and uint8_t (unsigned 8-bit integer) values in the examples. Any data
+    type including custom byte buffers can be transmitted and assembled over BLE.
+
+
+    Define a Service with UUID 180c (an unregistered generic UUID):
+
+
+    ```
+
+    ```cpp
+
+    BLEService service("180C");
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: 'or
+
+
+    ```
+
+    BLEService service("0000180C-000-1000-8000-00805f9-b34fb");
+
+    ```
+
+
+    The first method lets the Peripheral automatically generate most of the UUID,
+    and the second method forces the Peripheral to use a particular UUID. The first
+    method is simpler but less precise. The second method is precise and useful for
+    projects where there is a need to share the UUID with outside people or APIs.
+
+
+    Certain UUIDs are unavailable for use. If a bad UUID is chosen, the Peripheral
+    may crash without warning.
+
+
+    There are several types of Characteristic available in nRF51822, depending on
+    the type of data you need to transmit. Arrays, Integers, Floats, Booleans, and
+    other data types have their own Characteristic constructors.
+
+
+    For instance, this 2-byte long Characteristic with UUID 1801 can be read by a
+    Central and can notify the Central of changes:
+
+
+    ```
+
+    static char readValue[2] = {0};
+
+    ```
+
+
+    ```
+
+    ReadOnlyArrayGattCharacteristic
+
+    <uint8_t, sizeof(readValue)> readCharacteristic(
+
+    "1801",
+
+    (uint8_t *)readValue,
+
+    GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ | \
+
+    GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'This 8-byte long Characteristic with UUID 2A56 (Digital Characteristic) can
+    be written to by the Central:
+
+
+    ```
+
+    static char writeValue[8] = {0};
+
+    ```
+
+
+    ```
+
+    WriteOnlyArrayGattCharacteristic
+
+    <uint8_t, sizeof(writeValue)>writeCharacteristic(
+
+    writeCharacteristicUuid,
+
+    (uint8_t *)writeValue,
+
+    GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_WRITE);
+
+    ```
+
+
+    Here are some examples of various data type specific Characteristics that can
+    be created:
+
+
+    ```
+
+    int properties = BLERead | BLEWrite | BLENotify;
+
+    ```
+
+
+    ```
+
+    ReadWriteBooleanCharacteristic booleanCharacteristic(
+
+    UUID,
+
+    properties,
+
+    maxLen
+
+    );
+
+    ```
+
+
+    ```
+
+    ReadWriteIntegerCharacteristic integerDataCharacteristicName(
+
+    UUID,
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "```\nproperties,\nmaxLen\n);\n\nBLEUnsignedIntCharacteristic yourCharacteristicName(\n\
+    \    UUID,\n    properties,\n    maxLen\n);\n\nBLELongCharacteristic yourCharacteristicName(\n\
+    \    UUID,\n    properties,\n    maxLen\n);\n\nBLEUnsignedLongCharacteristic yourCharacteristicName(\n\
+    \    UUID,\n    properties,\n    maxLen\n);\n\nBLEFloatCharacteristic yourCharacteristicName(UUID,\
+    \ properties, maxLen);\n```\n\nThe Services and Characteristics are added to the\
+    \ GATT Profile via the BLEPeripheral. By adding the two Characteristics after\
+    \ the Service, they"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "```\nare assumed to be part of the same Service. This must happen before blePeripheral.begin().\n\
+    ...\nBLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);\n...\n// Set up custom service\n\
+    static const uint16_t customServiceUuid = 0x180C;\nGattCharacteristic *characteristics[]\
+    \ = {\n    &readCharacteristic, &writeCharacteristic\n};\nGattService customService(\n\
+    \    customServiceUuid,\n    characteristics,\n    sizeof(characteristics) / sizeof(GattCharacteristic\
+    \ *)\n);\nble.addService(customService);\n...\nble.gap().startAdvertising();\n\
+    ...\n```"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# Putting It All Together
+
+
+    Create a new sketch named ble_characteristics and copy the following code.
+
+
+    # Example 6-1. sketches/ble_characteristics/ble_characteristics.c
+
+
+    ```
+
+    #include "mbed.h"
+
+
+    #include "ble/BLE.h"
+
+
+    /** User interface I/O **/
+
+
+    // instantiate USB Serial
+
+
+    Serial serial(USBTX, USBRX);
+
+
+    // Status LED
+
+
+    DigitalOut statusLed(LED1, 0);
+
+
+    // Timer for blinking the statusLed
+
+
+    Ticker ticker;
+
+
+    /** Bluetooth Peripheral Properties **/
+
+
+    // Broadcast name
+
+
+    const static char BROADCAST_NAME[] = "MyDevice";
+
+
+    // Device Information UUID
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '```
+
+    static const uint16_t deviceInformationServiceUuid = 0x180a;
+
+    ```
+
+
+    ```
+
+    // Battery Level UUID
+
+    ```
+
+
+    ```
+
+    static const uint16_t batteryLevelServiceUuid = 0x180f;
+
+    ```
+
+
+    ```
+
+    // array of all Service UUIDs
+
+    ```
+
+
+    ```
+
+    static const uint16_t uuid16_list[] = { customServiceUuid };
+
+    ```
+
+
+    ```
+
+    // Number of bytes in Characteristic
+
+    ```
+
+
+    ```
+
+    static const uint8_t characteristicLength = 20;
+
+    ```
+
+
+    ```
+
+    // Device Name Characteristic UUID
+
+    ```
+
+
+    ```
+
+    static const uint16_t deviceNameCharacteristicUuid = 0x2a00;
+
+    ```
+
+
+    ```
+
+    // Modul Number Characteristic UUID
+
+    ```
+
+
+    ```
+
+    static const uint16_t modelNumberCharacteristicUuid = 0x2a24;
+
+    ```
+
+
+    ```
+
+    // Serial Number Characteristic UUID
+
+    ```
+
+
+    ```
+
+    static const uint16_t serialNumberCharacteristicUuid = 0x2a04;
+
+    ```
+
+
+    ```
+
+    // Battery Level Characteristic UUID
+
+    ```
+
+
+    ```
+
+    static const uint16_t batteryLevelCharacteristicUuid = 0x2a19;
+
+    ```
+
+
+    ```
+
+    // model and serial numbers
+
+    ```
+
+
+    ```
+
+    static const char* modelNumber = "1AB2";
+
+    ```
+
+
+    ```
+
+    static const char* serialNumber = "1234";
+
+    ```
+
+
+    ```
+
+    int batteryLevel = 100;
+
+    ```
+
+
+    ```
+
+    /** Functions **/
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "```\n/**\n * visually signal that program has not crashed\n */\n\nvoid blinkHeartbeat(void);\n\
+    \n/**\n * Callback triggered when the ble initialization process has finished\n\
+    \ *\n * @param[in] params Information about the initialized Peripheral\n */\n\n\
+    void onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext *params\n\
+    );\n\n/**\n * Callback handler when a Central has disconnected\n *\n * @param[i]\
+    \ params Information about the connection\n */\n\nvoid onCentralDisconnected(\n\
+    \    const Gap::DisconnectionCallbackParams_t *params\n```"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "```\n```cpp\n/** Build Service and Characteristic Relationships */\n\n// Create\
+    \ a read/write/notify Characteristic\nstatic uint8_t deviceNameCharacteristicValue[characteristicLength]\
+    \ = \\\\\n    BROADCAST_NAME;\n\nReadOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)>\
+    \ \\\\\n    deviceNameCharacteristic(\n        deviceNameCharacteristicUuid,\n\
+    \        characteristicValue);\n\nstatic uint8_t modelNumberCharacteristicValue[characteristicLength]\
+    \ = \\\\\n    modelNumber;\n\nReadOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)>\
+    \ \\\\\n    modelNumberCharacteristic(\n        modelNumberCharacteristicUuid,\n\
+    \        characteristicValue);\n\nstatic uint8_t serialNumberCharacteristicValue[characteristicLength]\
+    \ = \\\\\n    serialNumber;\n\nReadOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)>\
+    \ \\\\\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "```\ncharacteristicValue,\n\nGattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ\
+    \ | \\\\\n\nGattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY\n\n);\n```\n\n\
+    ```\nGattCharacteristic *batteryLevelCharacteristics[] = {\n\n  &batteryLevelCharacteristic\n\
+    \n}\n\nGattService batteryLevelService(\n\n  batteryLevelServiceUuid,\n\n  batteryLevelCharacteristics,\n\
+    \n  sizeof(batteryLevelCharacteristics) / sizeof(GattCharacteristic *)\n\n);\n\
+    ```\n\n```\n/**\n\n * Main program and loop\n\n */\n\nint main(void) {\n\n  serial.baud(9600);\n\
+    \n  serial.printf(\"Starting Peripheral\\\\r\\\\n\");\n\n  ticker.attach(blinkHeartbeat,\
+    \ 1); // Blink status led every 1 second\n\n  // initialized Bluetooth Radio\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "```\nBLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);\n\nble.init(onBluetoothInitialized);\n\
+    \n// wait for Bluetooth Radio to be initialized\n\nwhile (ble.hasInitialized()\
+    \ == false);\nwhile (1) {\n\n    // save power when possible\n\n    ble.waitForEvent();\n\
+    \n}\n}\n\nvoid blinkHeartbeat(void) {\n\n/* Do blinky on LED1 to indicate system\
+    \ aliveness. */\n\nstatusLed = !statusLed;\n}\n\nvoid onBluetoothInitialized(\n\
+    \    BLE::InitializationCompleteCallbackContext *params)\n{\n\nBLE&   ble = params->ble;\n\
+    \nble_error_t error = params->error;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "```\n// quit if there's a problem\nif(error != BLE_ERROR_NONE) {\n    return;\n\
+    }\n\n// Ensure that it is the default instance of BLE\nif(ble.getInstanceID()\
+    \ != BLE::DEFAULT_INSTANCE) {\n    return;\n}\n\nserial.printf(\"Describing Peripheral...\"\
+    );\n\n// attach Services\nble.addService(customService);\n\n// process disconnections\
+    \ with a callback\nble.gap().onDisconnection(onCentralDisconnected);\n\n// advertising\
+    \ parametirs\nble.gap().accumulateAdvertisingPayload(\n    // Device is Peripheral\
+    \ only\n    GapAdvertisingData::BREDR_NOT_SUPPORTED |\n    // always discoverable\n\
+    \    GapAdvertisingData::LE_GENERAL_DISCOVERABLE);\n\n// broadcast name\nble.gap().accumulateAdvertisingPayload(\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: "```\nGapAdvertisingData::COMPLETE_LOCAL_NAME,\n    (uint8_t *)BROADCAST_NAME,\
+    \ sizeof(BROADCAST_NAME)\n);\n\n// advertise services\n\nble.gap().accumulateAdvertisingPayload(\n\
+    \    GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS,\n    (uint8_t *)uuid16_list,\
+    \ sizeof(uuid16_list)\n);\n\n// allow connections\n\nble.gap().setAdvertisingType(\n\
+    \    GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED);\n\n// advertise every\
+    \ 1000ms\n\nble.gap().setAdvertisingInterval(1000); // 1000ms\n\n\n// set the\
+    \ GATT values\n\nble.gattServer().write(\n    deviceNameCharacteristic.getValueHandle(),\n\
+    \    BROADCAST_NAME,\n    characteristicLength\n);\n\nble.gattServer().write(\n\
+    \    modelNumberCharacteristic.getValueHandle(),\n```"
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "```\nmodelNumber,\ncharacteristicLength\n);\n\nble.gattServer().write(\n  \
+    \  serialNumber.getValueHandle(),\n    serialNumber,\n    characteristicLength\n\
+    );\n\nble.gattServer().write(\n    batteryLevelCharateristics.getValueHandle(),\n\
+    \    batteryLevel,\n    characteristicLength\n);\n\n// begin advertising\n\nble.gap().startAdvertising();\n\
+    \nserial.printf(\" done\\r\\n\");\n}\n\nvoid onCentralDisconnected(const Gap::DisconnectionCallbackParams_t\
+    \ *params)\n{\n    BLE::Instance().gap().startAdvertising();\n    serial.printf(\"\
+    Central disconnected\\r\\n\");\n```"
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: 'When run, this sketch will create a Peripheral that advertises as “MyDevice”
+    and will have a GATT profile featuring a single Characteristic with read and write
+    permissions (Figure 6-2).
+
+
+    +   Device Information Service: 000180a-000-1000-8000-00805f9-b34fb
+
+    +     Device Name Charateristic: 0002a00-000-1000-8000-00805f9-b34fb
+
+    +     Model Number Charateristic: 0002a24-000-1000-8000-00805f9-b34fb
+
+    +     Serial Number Charateristic: 0002a04-000-1000-8000-00805f9-b34fb
+
+    +   Device Information Service: 000180a-000-1000-8000-00805f9-b34fb
+
+    +   Battery Level Service: 000180f-000-1000-8000-00805f9-b34fb
+
+    +     Battery Level Charateristic: 0002a19-000-1000-8000-00805f9-b34fb
+
+    +   Service: 000180c-000-1000-8000-00805f9-b34fb
+
+    +     Charateristic: 0002a56-000-1000-8000-00805f9-b34fb
+
+
+    Figure 6-2. GATT Profile hosted on the nRF
+
+
+    # Example code
+
+
+    The code for this chapter is available online
+
+    at: https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter06'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# Reading Data from a Peripheral
+
+
+    The real value of Bluetooth Low Energy is the ability to transmit data wirelessly.
+
+
+    Bluetooth Peripherals are passive, so they don’t push data to a connected Central.
+    Instead, Centrals make a request to read data from a Characteristic. This can
+    only happen if the Characteristic enables the Read Attribute.
+
+
+    This is called, “Reading a value from a Characteristic.”
+
+
+    Therefore, if a Peripheral changes the value of a Characteristic, then later a
+    Central downloads data from the Peripheral, the process looks like this (Figure
+    7-1):'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_85_0.png)
+
+
+    # Peripheral
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_85_1.png)
+
+
+    # Central
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_85_2.png)
+
+
+    Set Characteristic Value
+
+
+    Read data
+
+
+    Respond with data'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: 'Figure 7-1. The process of a Central reading data from a Peripheral
+
+
+    A Central can read a Characteristic repeatedly, regardless if Characteristic’s
+    value has changed.
+
+
+    # Programming the Peripheral
+
+
+    Transmitting data is fairly easy over BLE. It requires that a Peripheral has a
+    Characteristic that is readable from the Central.
+
+
+    Create a Service and a Characteristic with read properties up to 20-bytes long.
+    For example, a 16-byte read-only Characteristic:
+
+
+    ```
+
+    // create a 16-byte long Characteristic value, initialize with zeroes
+
+    static uint8_t characteristicValue[16] = {0};
+
+
+    // create a Read only Characteristic
+
+    ReadOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)> \
+
+    characteristic(
+
+    "2A56", // UUID 2a56
+
+    characteristicValue // use the Characteristic value
+
+    );
+
+    ```
+
+
+    Each Service and Characteristic must be uniquely identifiable with a UUID.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "With that, the data in Characteristic can be set locally so a connected Central\
+    \ can read from it.\n\n```\nchar* outputString* = \"Hello World\";\n\nint stringLength\
+    \ = 12;\n\nble.gattServer().write(\n\n    characteristic.getValueHandle(),\n\n\
+    \    outputString,\n\n    stringLength\n\n);\n```\n\n# Putting It All Together\n\
+    \nCreate a new sketch called ble_send_data and copy the following code into the\
+    \ new sketch.\n\nThis sketch sets the value of the Characteristic to a random\
+    \ string every 5 seconds.\n\n# Example 7–1. ble_send_data/main.c\n\n```\n#include\
+    \ \"mbed.h\"\n\n#include \"ble/BLE.h\"\n\n/** User interface I/O */\n```"
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '```
+
+    // instantiate USB Serial
+
+
+    Serial serial(USBTX, USBRX);
+
+
+    // Status LED
+
+
+    DigitalOut statusLed(LED1, 0);
+
+
+    // Timer for blinking the statusLed
+
+
+    Ticker ticker;
+
+
+    /** Bluetooth Peripheral Properties **/
+
+
+    // Broadcast name
+
+
+    const static char BROADCAST_NAME[] = "MyDevice";
+
+
+    // Service UUID
+
+
+    static const uint16_t customServiceUuid = 0x180C;
+
+
+    // array of all Service UUIDs
+
+
+    static const uint16_t uuid16_list[] = { customServiceUuid };
+
+
+    // Number of bytes in Characteristic
+
+
+    static const uint8_t characteristicLength = 20;
+
+
+    // Characteristic UUID
+
+
+    static const uint16_t characteristicUuid = 0x2A56;
+
+
+    /** State **/
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: "```\n// Storage for written Characteristic value\n\nchar bleCharacteristicValue[characteristicLength];\n\
+    \nuint16_t bleCharacteristicValueLength = 0;\n\n/** Functions **/\n\n/**\n* create\
+    \ a random string\n*/\n\nstatic const char alphanum[] = \"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\"\
+    ;\n\nvoid writeRandomStringToCharacteristic();\n\n/**\n* Callback triggered when\
+    \ the ble initialization process has finished\n*\n* @param[in] params Information\
+    \ about the initialized Peripheral\n*/\n\nvoid onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext\
+    \ *params\n);\n\n/**\n```"
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "```\n* Callback handler when a Central has disconnected\n*\n* @param[i] params\
+    \ Information about the connection\n*/\n\nvoid onCentralDisconnected(\n    const\
+    \ Gap::DisconnectionCallbackParams_t *params\n);\n\n/** Build Service and Characteristic\
+    \ Relationships **/\n\n// Create a read/write/notify Characteristic\n\nstatic\
+    \ uint8_t characteristicValue[characteristicLength] = {0};\nReadOnlyArrayGattCharacteristic<uint8_t,\
+    \ sizeof(characteristicValue)>\\\n    characteristic(\n    characteristicUuid,\n\
+    \    characteristicValue);\n\n// Bind Characteristics to Services\n\nGattCharacteristic\
+    \ *characteristics[] = {&characteristic};\n\nGattService customService(\n    customServiceUuid,\n\
+    \    characteristics,\n```"
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "```\n```cpp\nsizeof(characteristics) / sizeof(GattCharacteristic *)\n\n);\n\
+    \n/**\n * Main program and loop\n */\n\nint main(void) {\n\n    serial.baud(9600);\n\
+    \n    serial.printf(\"Starting Peripheral\\\\r\\\\n\");\n\n    // write random\
+    \ text every 5 seconds\n    ticker.attach(writeRandomStringToCharacteristic, 5);\n\
+    \n    // initialized Bluetooth Radio\n    BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);\n\
+    \    ble.init(onBluetoothInitialized);\n\n    // wait for Bluetooth Radio to be\
+    \ initialized\n    while (ble.hasInitialized() == false);\n\n    while (1) {\n\
+    \n        // save power when possible\n        ble.waitForEvent();\n    }\n\n\
+    }\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "```\nvoid writeRandomStringToCharacteristic() {\n    statusLed = !statusLed;\n\
+    \    static const uint16_t stringLength = rand() % characteristicLength;\n   \
+    \ uint8_t outputString[stringLength];\n    for (int i=0; i < stringLength-1; i++)\
+    \ {\n        outputString[i] = alphanum[rand() % alphanumLength];\n    }\n   \
+    \ outputString[stringLength-1] = '\\0';\n    BLE::Instance(\n        BLE::DEFAULT_INSTANCE).gattServer().write(\n\
+    \            characteristic.getValueHandle(), outputString, stringLength);\n}\n\
+    \nvoid onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext\
+    \ *params)\n{\n    BLE& ble = params->ble;\n    ble_error_t error = params->error;\n\
+    \    // quit if there's a problem\n    if(error != BLE_ERROR_NONE) {\n       \
+    \ return;\n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "```\n// Ensure that it is the default instance of BLE\nif(ble.getInstanceID()\
+    \ != BLE::DEFAULT_INSTANCE) {\n    return;\n}\n\nserial.printf(\"Describing Peripheral...\"\
+    );\n\n// attach Services\nble.addService(customService);\n\n// process disconnections\
+    \ with a callback\nble.gap().onDisconnection(onCentralDisconnected);\n\n// advertising\
+    \ parametirs\nble.gap().accumulateAdvertisingPayload(\n    // Device is Peripheral\
+    \ only\n    GapAdvertisingData::BREDR_NOT_SUPPORTED |\n    // always discoverable\n\
+    \    GapAdvertisingData::LE_GENERAL_DISCOVERABLE);\n\n// broadcast name\n```"
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "```\nble.gap().accumulateAdvertisingPayload(\n    GapAdvertisingData::COMPLETE_LOCAL_NAME,\n\
+    \    (uint8_t *)BROADCAST_NAME,\n    sizeof(BROADCAST_NAME)\n);\n\n// advertise\
+    \ services\n\nble.gap().accumulateAdvertisingPayload(\n    GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS,\n\
+    \    (uint8_t *)uuid16_list,\n    sizeof(uuid16_list)\n);\n\n// allow connections\n\
+    \nble.gap().setAdvertisingType(\n    GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED\n\
+    );\n\n// advertise every 1000ms\n\nble.gap().setAdvertisingInterval(1000); //\
+    \ 1000ms\n\n// begin advertising\n\nble.gap().startAdvertising();\n\nserial.printf(\"\
+    \ done\\r\\n\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "```\nvoid onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)\n\
+    {\n    BLE::Instance().gap().startAdvertising();\n    serial.printf(\"Central\
+    \ disconnected\\r\\n\");\n}\n```\n\nWhen the sketch is run, the Serial Monitor\
+    \ output should resemble this (Figure 7-2):\n\nSetting characteristic to: RY0G5WSWG5YTh\n\
+    \nSetting characteristic to: HFVTh\n\nSetting characteristic to: 88L9J25245ZUh\n\
+    \nSetting characteristic to: A6D7SZZFYQ8Sh\n\nFigure 7-2. Serial Output\n\n# Example\
+    \ code\n\nThe code for this chapter is available online at: https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter07"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# Write Data to a Peripheral
+
+
+    Data is sent from the Central to a Peripheral when the Central writes a value
+    in a Characteristic hosted on the Peripheral, presuming that Characteristic has
+    write permissions.
+
+
+    The process looks like this (Figure 8-1).'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: 'Peripheral
+
+
+    Central
+
+
+    Write data
+
+
+    Figure 8-1. The process of a Central writing data to a Peripheral
+
+
+    # Programming the Peripheral
+
+
+    To allow the Peripheral to receive data from a Central, it must have a'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "Characteristic that gives permission to be written.\n\nFor example, this 8-byte\
+    \ characteristic supports “write” operations:\n\n```\n// Create a read/write/notify\
+    \ Characteristic\nstatic const uint8_t characteristicLength = 8;\nstatic uint8_t\
+    \ characteristicValue[characteristicLength] = {0};\nWriteOnlyArrayGattCharacteristic<uint8_t,\
+    \ sizeof(characteristicValue)> \\\ncharacteristic(\n    \"2A56\",\n    characteristicValue\n\
+    );\n```\n\nThe Characteristic must have a callback to describe how to process\
+    \ incoming data. The callback parameters identifies characteristic that was written\
+    \ to and the details of the transmission, including the length and the value that\
+    \ was written.\n\nThe callback is handled in an interrupt, outside normal operation.\
+    \ It is a good practice not to implement a lot of functionality inside the callback.\
+    \ A best practice is to set a boolean flag, then look for that flag inside the\
+    \ main loop.\n\n```\n// flag when Central has written to a Characteristic\nbool\
+    \ bleDataWritten = false; // true if data ha\n// Storage for written Characteristic\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: "```\n// values been written to the characteristic\nchar bleCharacteristicValue[characteristicLength];\n\
+    \n/**\n* This callback processes incoming writes to a Characteristic.\n*\n* @param[in]\
+    \ params\n*   Information about the characterisitc being updated.\n*/\nvoid onBleCharacteristicWritten(const\
+    \ GattWriteCallbackParams *params) {\n    // if the local Characteristic has been\
+    \ written to\n    if(params->handle == characteristic.getValueHandle()) {\n  \
+    \      bleDataWritten = true;\n        bleCharacteristicValueLength = params->len;\n\
+    \        // copy the new value into a placeholder for later use.\n        // it's\
+    \ best not to do much in this function as it is an interrupt\n        strncpy(bleCharacteristicValue,\
+    \ (char*) params->data, params->len);\n    }\n}\n```\n\nThe callback must be bound\
+    \ to the GATT Server like this:"
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "```\n```cpp\nvoid onBluetoothInitialized(\n\n    BLE::InitializationCompleteCallbackContext\
+    \ *params)\n\n{\n\n    ...\n\n    ble.gattServer().onDataWritten(onBleCharacteristicWritten);\n\
+    \n    ...\n\n}\n```\n```\n\nWhen outside the interrupt it is possible to extract\
+    \ the incoming 8-bit data value and print it to Serial from the main loop:\n\n\
+    ```\n```cpp\nint main(void) {\n\n    ...\n\n    while (1) {\n\n        // when\
+    \ a Central has written to a local Characteristic,\n\n        // handle the change\
+    \ here\n\n        if (bleDataWritten) {\n\n            bleDataWritten = false;\
+    \ // ensure only happens once\n\n            serial.printf(\n\n              \
+    \  \"Data written to characteristic: %s\\r\\n\",\n\n                bleCharacteristicValue\n\
+    \n            );\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '```
+
+    }
+
+    ...
+
+    }
+
+    }
+
+    ```
+
+
+    # Putting It All Together
+
+
+    Create a new sketch named ble_receive_data with the following code.
+
+
+    # Example 8-1. ble_receive_data/main.c
+
+
+    ```
+
+    #include "mbed.h"
+
+
+    #include "ble/BLE.h"
+
+
+    /** User interface I/O **/
+
+
+    // instantiate USB Serial
+
+
+    Serial serial(USBTX, USBRX);
+
+
+    // Status LED
+
+
+    DigitalOut statusLed(LED1, 0);
+
+
+    // Timer for blinking the statusLed
+
+
+    Ticker ticker;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '```
+
+    /** Bluetooth Peripheral Properties */
+
+
+    // Broadcast name
+
+
+    const static char BROADCAST_NAME[] = "MyDevice";
+
+
+    // Service UUID
+
+
+    static const uint16_t customServiceUuid = 0x180C;
+
+
+    // array of all Service UUIDs
+
+
+    static const uint16_t uuid16_list[] = { customServiceUuid };
+
+
+    // Number of bytes in Characteristic
+
+
+    static const uint8_t characteristicLength = 20;
+
+
+    // Characteristic UUID
+
+
+    static const uint16_t characteristicUuid = 0x2A56;
+
+
+    /** State */
+
+
+    // flag when Central has written to a Characteristic
+
+
+    // true if data has been written to the characteristic
+
+
+    bool bleDataWritten = false;
+
+
+    // Storage for written Characteristic value
+
+
+    char bleCharacteristicValue[characteristicLength];
+
+
+    uint16_t bleCharacteristicValueLength = 0;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "```\n/** Functions **/\n\n/**\n* visually signal that program has not crashed\n\
+    */\n\nvoid blinkHeartbeat(void);\n\n/**\n* Callback triggered when the ble initialization\
+    \ process has finished\n*\n* @param[in] params Information about the initialized\
+    \ Peripheral\n*/\n\nvoid onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext\
+    \ *params\n);\n\n/**\n* This callback processes incoming writes to a Characteristic.\n\
+    *\n* @param[in] params\n*   Information about the characterisitc being updated.\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "```\nvoid onBleCharacteristicWritten(const GattWriteCallbackParams *params);\n\
+    ```\n\n```\n/**\n * Callback handler when a Central has disconnected\n *\n * @param[i]\
+    \ params Information about the connection\n */\nvoid onCentralDisconnected(\n\
+    \    const Gap::DisconnectionCallbackParams_t *params\n);\n```\n\n```\n/** Build\
+    \ Service and Characteristic Relationships **/\n```\n\n```\n// Create a read/write/notify\
+    \ Characteristic\nstatic uint8_t characteristicValue[characteristicLength] = {0};\n\
+    WriteOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)> \\\n  \
+    \  characteristic(\n        characteristicUuid,\n        characteristicValue);\n\
+    ```\n\n```\n// Bind Characteristics to Services\n```"
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: "```\nbleDataWritten = false; // ensure only happens once\n\nserial.printf(\n\
+    \    \"Data written to characteristic: %s\\r\\n\",\n    bleCharacteristicValue\n\
+    );\n}\n\n// save power when possible\nble.waitForEvent();\n}\n}\n\nvoid blinkHeartbeat(void)\
+    \ {\n    /* Do blinky on LED1 to indicate system aliveness. */\n    statusLed\
+    \ = !statusLed;\n}\n\nvoid onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext\
+    \ *params)\n{\n    BLE& ble = params->ble;\n    ble_error_t error = params->error;\n\
+    \    // quit if there's a problem\n```"
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: "```\nif(error != BLE_ERROR_NONE) {\n    return;\n}\n\n// Ensure that it is\
+    \ the default instance of BLE\n\nif(ble.getInstanceID() != BLE::DEFAULT_INSTANCE)\
+    \ {\n    return;\n}\n\nserial.printf(\"Describing Peripheral...\");\n\n// attach\
+    \ Services\n\nble.addService(customService);\n\n\n// if a Central writes tho a\
+    \ Characteristic,\n// handle event with a callback\n\nble.gattServer().onDataWritten(onBleCharacteristicWritten);\n\
+    \n\n// process disconnections with a callback\n\nble.gap().onDisconnection(onCentralDisconnected);\n\
+    \n\n// advertising parametirs\n\nble.gap().accumulateAdvertisingPayload(\n   \
+    \ // Device is Peripheral only\n    GapAdvertisingData::BREDR_NOT_SUPPORTED |\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "```\n```cpp\n// always discoverable\nGapAdvertisingData::LE_GENERAL_DISCOVERABLE);\n\
+    \n// broadcast name\nble.gap().accumulateAdvertisingPayload(\n    GapAdvertisingData::COMPLETE_LOCAL_NAME,\n\
+    \    (uint8_t *)BROADCAST_NAME,\n    sizeof(BROADCAST_NAME)\n);\n\n// advertise\
+    \ services\nble.gap().accumulateAdvertisingPayload(\n    GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS,\n\
+    \    (uint8_t *)uuid16_list,\n    sizeof(uuid16_list)\n);\n\n// allow connections\n\
+    ble.gap().setAdvertisingType(\n    GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED\n\
+    );\n\n// advertise every 1000ms\nble.gap().setAdvertisingInterval(1000); // 1000ms\n\
+    \n// begin advertising\nble.gap().startAdvertising();\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: "```\n```cpp\nserial.printf(\" done\\\\r\\\\n\");\n\n}\n\nvoid onBleCharacteristicWritten(const\
+    \ GattWriteCallbackParams *params) {\n\n  // if the local Characteristic has been\
+    \ written to\n\n  if (params->handle == characteristic.getValueHandle()) {\n\n\
+    \    bleDataWritten = true;\n\n    bleCharacteristicValueLength = params->len;\n\
+    \n    // copy the new value into a placeholder for later use.\n\n    // it's best\
+    \ not to do much in this function as it is an interrupt\n\n    strncpy(bleCharacteristicValue,\
+    \ (char*) params->data, params->len);\n\n  }\n\n}\n\nvoid onCentralDisconnected(const\
+    \ Gap::DisconnectionCallbackParams_t *params)\n{\n\n  BLE::Instance().gap().startAdvertising();\n\
+    \n  serial.printf(\"Central disconnected\\\\r\\\\n\");\n\n}\n```\n```\n\nThe output\
+    \ from the Serial monitor when a connected Central writes data looks like this\
+    \ (Figure 8-2):\n\n5 bytes sent to characteristic 2A56: hello\n\n5 bytes sent\
+    \ to characteristic 2A56: world"
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '16 bytes sent to characteristic 2A56: Bluetooth works!
+
+
+    # Figure 8-2. Serial Output
+
+
+    # Example code
+
+
+    The code for this chapter is available online
+
+    at: https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter08'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '# Using Notifications
+
+
+    Being able to read from the Central has limited value if the Central does not
+    know when new data is available.
+
+
+    Notifications solve this problem. A Characteristic can issue a notification when
+    it’s value has changed. A Central that subscribes to these notifications will
+    know when the Characteristic’s value has changed, but not what that new value
+    is. The Central can then read the latest data from the Characteristic.
+
+
+    The whole process looks something like this (Figure 9-1).'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: 'Peripheral
+
+
+    Central
+
+
+    Subscribe to notifications
+
+
+    Set Characteristic Value
+
+
+    Send Notification
+
+
+    Unsubscribe from Notifications'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: 'Figure 9-1. The process of a Peripheral notifying a connected Central of changes
+    to a Characteristic
+
+
+    # Programming the Peripheral
+
+
+    Let’s see how to implement this in code. Often, battery life is at a premium on
+    Bluetooth Peripherals. For this reason, it is useful to notify a connected Central
+    when a Characteristic’s value has changed, but not send the new data to the Central.
+    Waking up the Bluetooth radio to send one byte consumes less battery than sending
+    20 or more bytes.
+
+
+    Notifications can be enabled in a Characteristic by setting the BLENotify flag.
+
+
+    For example, this Characteristic supports both read access and notifications.
+
+
+    ```
+
+    // initialize the Characteristic value
+
+    static uint8_t characteristicValue[characteristicLength] = {0};
+
+
+    // create a Read only Characteristic with read and Notify properties
+
+    ReadOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)> \
+
+    characteristic(
+
+
+    characteristicUuid,
+
+
+    characteristicValue,
+
+
+    GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ | \
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: "```\nGattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY);\n```\n\nWhen the\
+    \ value of the Characteristic is changed, a notification will be automatically\
+    \ sent to the connected Central.\n\n```\nchar* outputString = \"Hello World\"\
+    ;\n\nint stringLength = 12;\n\nble.gattServer().write(\n    characteristic.getValueHandle(),\n\
+    \    outputString,\n    stringLength\n);\n```\n\n# Putting It All Together\n\n\
+    Create a new sketch named ble_notifications with the following code.\n\nExample\
+    \ 9-1. ble_notifications/main.c\n\n```\n#include \"mbed.h\"\n\n#include \"ble/BLE.h\"\
+    \n\n/** User interface I/O **/\n```"
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '```
+
+    // instantiate USB Serial
+
+
+    Serial serial(USBTX, USBRX);
+
+
+    // Status LED
+
+
+    DigitalOut statusLed(LED1, 0);
+
+
+    // Timer for blinking the statusLed
+
+
+    Ticker ticker;
+
+
+    /** Bluetooth Peripheral Properties **/
+
+
+    // Broadcast name
+
+
+    const static char BROADCAST_NAME[] = "MyDevice";
+
+
+    // Service UUID
+
+
+    static const uint16_t customServiceUuid = 0x180C;
+
+
+    // array of all Service UUIDs
+
+
+    static const uint16_t uuid16_list[] = { customServiceUuid };
+
+
+    // Number of bytes in Characteristic
+
+
+    static const uint8_t characteristicLength = 20;
+
+
+    // Characteristic UUID
+
+
+    static const uint16_t characteristicUuid = 0x2A56;
+
+
+    /** State **/
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: "```\n// Storage for written Characteristic value\n\nchar bleCharacteristicValue[characteristicLength];\n\
+    \nuint16_t bleCharacteristicValueLength = 0;\n\n/** Functions **/\n\n/**\n * create\
+    \ a random string\n */\n\nstatic const char alphanum[] = \"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\"\
+    ;\n\nvoid writeRandomStringToCharacteristic();\n\n/**\n * Callback triggered when\
+    \ the ble initialization process has finished\n *\n * @param[in] params Information\
+    \ about the initialized Peripheral\n */\n\nvoid onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext\
+    \ *params\n);\n\n/**\n```"
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: "```\n* Callback handler when a Central has disconnected\n*\n* @param[i] params\
+    \ Information about the connection\n*/\n\nvoid onCentralDisconnected(\n    const\
+    \ Gap::DisconnectionCallbackParams_t *params\n);\n\n/** Build Service and Characteristic\
+    \ Relationships **/\n\n// Create a read/write/notify Characteristic\n\nstatic\
+    \ uint8_t characteristicValue[characteristicLength] = {0};\nReadOnlyArrayGattCharacteristic<uint8_t,\
+    \ sizeof(characteristicValue)> \\\n    characteristic(\n    characteristicUuid,\n\
+    \    characteristicValue,\n    GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ\
+    \ \\\n        GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY);\n// Bind Characteristics\
+    \ to Services\n\nGattCharacteristic *characteristics[] = {&characteristic};\n\n\
+    GattService customService(\n    customServiceUuid, characteristics,\n```"
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "```\nvoid writeRandomStringToCharacteristic() {\n    statusLed = !statusLed;\n\
+    \    static const uint16_t stringLength = rand() % characteristicLength;\n   \
+    \ uint8_t outputString[stringLength];\n    for (int i=0; i < stringLength-1; i++)\
+    \ {\n        outputString[i] = alphanum[rand() % alphanumLength];\n    }\n   \
+    \ outputString[stringLength-1] = '\\0';\n    BLE::Instance(BLE::DEFAULT_INSTANCE).gattServer().write(\n\
+    \        characteristic.getValueHandle(),\n        outputString,\n        stringLength\n\
+    \    );\n}\n\nvoid onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext\
+    \ *params)\n{\n    BLE& ble = params->ble;\n    ble_error_t error = params->error;\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "```\n// quit if there's a problem\nif(error != BLE_ERROR_NONE) {\n    return;\n\
+    }\n\n// Ensure that it is the default instance of BLE\nif(ble.getInstanceID()\
+    \ != BLE::DEFAULT_INSTANCE) {\n    return;\n}\n\nserial.printf(\"Describing Peripheral...\"\
+    );\n\n// attach Services\nble.addService(customService);\n\n// process disconnections\
+    \ with a callback\nble.gap().onDisconnection(onCentralDisconnected);\n\n// advertising\
+    \ parametirs\nble.gap().accumulateAdvertisingPayload(\n    // Device is Peripheral\
+    \ only\n    GapAdvertisingData::BREDR_NOT_SUPPORTED |\n    // always discoverable\n\
+    \    GapAdvertisingData::LE_GENERAL_DISCOVERABLE);\n\n// broadcast name\nble.gap().accumulateAdvertisingPayload(\n\
+    \    GapAdvertisingData::COMPLETE_LOCAL_NAME,\n```"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: "```\n```cpp\n(uint8_t *)BROADCAST_NAME,\n\nsizeof(BROADCAST_NAME)\n\n);\n\n\
+    // advertise services\n\nble.gap().accumulateAdvertisingPayload(\n\n  GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS,\n\
+    \n  (uint8_t *)uuid16_list,\n\n  sizeof(uuid16_list)\n\n);\n\n// allow connections\n\
+    \nble.gap().setAdvertisingType(\n\n  GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED\n\
+    \n);\n\n// advertise every 1000ms\n\nble.gap().setAdvertisingInterval(1000); //\
+    \ 1000ms\n\n// begin advertising\n\nble.gap().startAdvertising();\n\nserial.printf(\"\
+    \ done\\r\\n\");\n}\n\nvoid onCentralDisconnected(const Gap::DisconnectionCallbackParams_t\
+    \ *params)\n{\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '```
+
+    BLE::Instance().gap().startAdvertising();
+
+
+    serial.printf("Central disconnected\\r\\n");
+
+
+    }
+
+    ```
+
+
+    When the sketch is run, the output of the Serial Monitor will resemble this ([Figure
+    9-2](#)):
+
+
+    Setting characteristic to: FMZAp
+
+
+    Setting characteristic to: GGORPFNU7KYJCNJKp
+
+
+    Setting characteristic to: G665p
+
+
+    # Figure 9-2. Serial Output
+
+
+    # Example code
+
+
+    The code for this chapter is available online
+
+    at: [https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter09](https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter09)'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# # Streaming Data
+
+
+    The maximum packet size you can send over Bluetooth Low Energy is 20 bytes. More
+    data can be sent by dividing a message into packets of 20 bytes or smaller, and
+    sending them one at a time
+
+
+    These packets can be sent at a certain speed.
+
+
+    Bluetooth Low Energy transmits at 1 Mb/s. Between the data transmission time and
+    the time it may take for a Peripheral to process incoming data, there is a time
+    delay between when one packet is sent and when the next one is ready to be sent.
+
+
+    To send several packets of data, a queue/notification system must be employed,
+    which alerts the Central when the Peripheral is ready to receive the next packet.
+
+
+    There are many ways to do this. One way is to set up a Characteristic with read,
+    write, and notify permissions, and to flag the Characteristic as “ready” after
+    a write has been processed by the Peripheral. This sends a notification to the
+    Central, which sends the next packet. That way, only one Characteristic is required
+    for a single data transmission.
+
+
+    This process can be visualized like this ([Figure 10-1](#figure-10-1)).'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_124_0.png)
+
+
+    # Peripheral
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_124_1.png)
+
+
+    # Central
+
+
+    Subscribe to notifications
+
+
+    Send Data
+
+
+    Loop
+
+
+    Set Characteristic to "ready"
+
+
+    Send Notification
+
+
+    Send Data
+
+
+    Unsubscribe from Notifications'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: "# Figure 10-1. The process of using notifications to handle flow control on\
+    \ a multi-packed data transfer\n\n# Programming the Peripheral\n\nThis method\
+    \ of implementing a queueing Characteristic requires a Characteristic that supports\
+    \ read, write, and notify permissions.\n\nIn this example, a 16-bit long Characteristic:\n\
+    \n```\n...\n\nBLECharacteristic characteristic(\n\n  \"2803\",\n\n  BLERead |\
+    \ BLENotify | BLEWrite, // read, write, notify\n\n  16\n\n); \n\n...\n```\n\n\
+    When this Characteristic is written to and the data is processed, the Characteristic’s\
+    \ value will be switched to a flow control message; in this example, “ready.”\n\
+    \nBecause onCharacteristicWritten is handled like an interrupt, it is a best practice\
+    \ to avoid processing the data inside that function. Instead, it’s"
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: "better to set a flag and process the data in the main loop.\n\n```\n```cpp\n\
+    ...\n\nstatic const char* bleFlowControlMessage = \"ready\";\n\nstatic const int\
+    \ bleFlowControlMessageLength = 5;\n\nbool bleDataWritten = false; // true if\
+    \ data has been received\n\nchar bleCharacteristicValue[16] = {0};\n\nint bleCharacteristicValueLength;\n\
+    \nchar bleCharacteristicUUID[32];\n\nvoid onCharacteristicWritten(\n\n  BLECentral&\
+    \ central,\n\n  BLECharacteristic &characteristic) {\n\n  bleDataWritten = true;\
+    \ // alert that data has been written\n\n  bleCharacteristicUUID = characteristic.uuid();\n\
+    \n  bleCharacteristicValueLength = characteristic.valueLength();\n\n`\n\n// Since\
+    \ we are playing with strings, use strcpy\n\nstrcpy(bleCharacteristicValue, (char*)\
+    \ characteristic.value());\n\n}\n\n// setup\n\nvoid loop() {\n\nif (bleDataWritten)\
+    \ { // has data been written?\n\n  bleDataWritten = false; // clear the flag\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: "```\n```cpp\nchar uuid[32];\n\n};\n\nBleTransmission bleTransmissionData;\n\
+    \nbool bleDataWritten = false; // true if data has been received\n\nBLEService\
+    \ service(\"180C\");\n\nBLECharacteristic characteristic(\n\n  \"2A56\",\n\n \
+    \ BLERRead | BLENotify | BLEWrite, // read, write, notify\n\n  characteristicTransmissionLength\n\
+    \n);\n\nBLEPeripheral blePeripheral;\n\nbool bleCharacteristicSubscribed = false;\
+    \ // true when a client subscribes\n\n// When data is sent from the client, it\
+    \ is processed here inside a callback\n\n// it is best to handle the result of\
+    \ this inside the main loop\n\nvoid onBleCharacteristicWritten(BLECentral& central,\n\
+    \n  BLECharacteristic &characteristic) {\n\n  bleDataWritten = true;\n\n  bleTransmissionData.uuid\
+    \ = characteristic.uuid();\n\n  bleTransmissionData.length = characteristic.valueLength();\n\
+    \n  // Since we are playing with strings, we must use strncpy\n\n  strncpy(bleTransmissionData.data,\n\
+    \n    (char*) characteristic.value(), characteristic.valueLength());\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: "```\n}\n\nvoid setBleCharacteristicValue(char* output, int length) {\n    characteristic.setValue((const\
+    \ unsigned char*) output, length);\n}\n\nvoid setup() {\n    Serial.begin(9600);\
+    \ // open a Serial connection\n    while (!Serial); // wait for Serial console\
+    \ to open\n    blePeripheral.setLocalName(bluetoothDeviceName);\n    blePeripheral.setAdvertisedServiceUuid(service.uuid());\n\
+    \    blePeripheral.addAttribute(service);\n    blePeripheral.addAttribute(characteristic);\n\
+    \    // trigger onBleCharacteristicWritten when data is sent to the characteristic\n\
+    \    characteristic.setEventHandler(\n        BLEWritten,\n        onBleCharacteristicWritten\n\
+    \    );\n    blePeripheral.begin();\n}\nvoid loop() {\n    // if the bleDataWritten\
+    \ flag has been set, print out the incoming data\n    if (bleDataWritten) {\n\
+    \        bleDataWritten = false; // ensure only happens once\n```"
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: "```\nSerial.print(bleTransmissionData.length);\n\nSerial.print(\" bytes sent\
+    \ to characteristic \");\n\nSerial.print(bleTransmissionData.uuid);\n\nSerial.print(\"\
+    : \");\n\nSerial.println(bleTransmissionData.data);\n\n// send out flow control\
+    \ message\n\nsetBleCharacteristicValue((char*) bleReadReceiptMessage,\n    bleReadReceiptMessageLength);\n\
+    }\n}\n```\n\nWhen the sketch is run, the Peripheral prints incoming data into\
+    \ the Serial Monitor, then notifies the connected Central that it is ready to\
+    \ receive more data (Figure 10-2).\n\n16 bytes sent to characteristic 2A56: this\
+    \ is a super\n\nReady for more data\n\n16 bytes sent to characteristic 2A56: long\
+    \ message\n\nReady for more data\n\n# Figure 10-2. Serial Monitor Output"
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '# Example code
+
+
+    The code for this chapter is available online
+
+    at: https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter10'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '# CHAPTER 11
+
+
+    # # Project: iBeacon
+
+
+    Beacons can be used for range finding or spacial awareness. iBeacons are a special
+    type of Beacon that is widely supported by the industry. It supports certain data
+    that identifies the iBeacons to makes range finding and spacial awareness easier
+    across platforms.
+
+
+    Due to the nature of how radio signals diminish in intensity with distance, Bluetooth
+    Peripherals can be used both for range finding and spacial awareness.
+
+
+    # ## Range Finding
+
+
+    Bluetooth signals can be used to approximate the distance between a Peripheral
+    and a Central because the radio signal quality drops off in a predictable way
+    with distance. The diagram below shows how the signal might drop as distance increases
+    (Figure 11-1).'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: 'when both the distance from and location of nearby iBeacons are known (Figure
+    11-2).
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_134_0.png)
+
+
+    # Figure 11-2. Example Central and iBeacon positions in a room
+
+
+    This is a pretty math-intensive process, but it’s all based on the Pythagorus
+    Theorem. By calculating the shape of the triangles made from the relative positions
+    of all the iBeacons and the Central, one can determine the location of the Central
+    (Figure 11-3).'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: "read. The discovered iBeacons' Major and Minor numbers are looked up to learn\
+    \ that the user is in a specific room on a specific floor in the museum. Relevant\
+    \ content is accessed from the museum's API and loaded in the smartphone app.\n\
+    \n# Programming the Peripheral\n\nEach iBeacon uses a UUID plus Major and Minor\
+    \ numbers for identification.\n\niBeacons belonging to the same organizational\
+    \ unit also share the same UUID. For instance all iBeacons belonging to a grocery\
+    \ store chain.\n\n```\n// Beacon UUID - use the same UUID for a group of Beacons\n\
+    ```\n\n```\nstatic const uint8_t UUID[] = {\n\n    0xE2, 0x0A, 0x39, 0xF4, 0x73,\
+    \ 0xF5, 0x4B, 0xC4,\n\n    0xA1, 0x2F, 0x17, 0xD1, 0xAD, 0x07, 0xA9, 0x61\n};\n\
+    ```\n\nMajor numbers are typically used to identify iBeacons sharing the same\
+    \ purpose typically have the same Major number, ones that identify each grocery\
+    \ store in that chain.\n\n```\n// Major Number identifies the iBeacon\n```\n\n\
+    ```\nstatic const uint16_t MAJOR_NUMBER = 1122;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: 'The Minor numbers are typically unique between Major numbers, so that a user
+    can track their movement around the grocery store using the iBeacon minor numbers
+    for identification.
+
+
+    ```
+
+    // Minor number identifies the iBeacon
+
+    ```
+
+
+    ```
+
+    static const uint16_t MINOR_NUMBER = 3344;
+
+    ```
+
+
+    The transmission power is important in both in setting the range of the iBeacon
+    and in allowing the Central to determine how close it is to an iBeacon
+
+
+    ```
+
+    // radio transmission power
+
+    ```
+
+
+    ```
+
+    // 0xC8 = 200, 2''s compliment is 256-200 = (-56dB)
+
+    ```
+
+
+    ```
+
+    static const uint16_t TRANSMISSION_POWER = 0xC8;
+
+    ```
+
+
+    # Putting It All Together
+
+
+    The following sketch creates a Beacon Peripheral that stores its reference RSSI
+    and x and y distances from some point in Characteristics. Implementing this is
+    very easy; you’ve already done most of the work in the last few chapters.
+
+
+    Create a new sketch named ble_security and copy the following code.
+
+
+    Example 11-1. sketches/ble_beacon/ble_beacon.c'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: "```\n```cpp\n#include \"mbed.h\"\n```\n```\n\n```\n```cpp\n#include \"ble/services/iBeacon.h\"\
+    \n```\n```\n\n```\n```cpp\n/** User interface I/O **/\n```\n```\n\n```\n```cpp\n\
+    // instantiate USB Serial\n```\n```\n\n```\n```cpp\nSerial serial(USBTX, USBRX);\n\
+    ```\n```\n\n```\n```cpp\n// Status LED\n```\n```\n\n```\n```cpp\nDigitalOut statusLed(LED1,\
+    \ 0);\n```\n```\n\n```\n```cpp\n// Timer for blinking the statusLed\n```\n```\n\
+    \n```\n```cpp\nTicker ticker;\n```\n```\n\n```\n```cpp\n/** Bluetooth Peripheral\
+    \ Properties **/\n```\n```\n\n```\n```cpp\n// Bluetooth Peripheral Singleton\n\
+    ```\n```\n\n```\n```cpp\n// Beacon UUID - use the same UUID for a group of Beacons\n\
+    ```\n```\n\n```\n```cpp\nstatic const uint8_t UUID[] = {0xE2, 0x0A, 0x39, 0xF4,\
+    \ 0x73, 0xF5, 0x4B, 0xC4,\n                                0xA1, 0x2F, 0x17, 0xD1,\
+    \ 0xAD, 0x07, 0xA9, 0x61};\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: "```\n// Major Number and Minor number identify the Beacon\n\nstatic const uint16_t\
+    \ MAJOR_NUMBER = 1122;\n\nstatic const uint16_t MINOR_NUMBER = 3344;\n\n// radio\
+    \ transmission power\n\n// 0xC8 = 200, 2's compliment is 256-200 = (-56dB)\n\n\
+    static const uint16_t TRANSMISSION_POWER = 0xC8;\n\n/** Functions **/\n\n/**\n\
+    * visually signal that program has not crashed\n*/\n\nvoid blinkHeartbeat(void);\n\
+    \n/**\n* Callback triggered when the ble initialization process has finished\n\
+    *\n* @param[in] params Information about the initialized Peripheral\n*/\n\nvoid\
+    \ onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext *params\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: "```\n```cpp\n/**\n * Main program and loop\n */\n\nint main(void) {\n\n   \
+    \ serial.baud(9600);\n\n    serial.printf(\"Starting iBeacon\\r\\n\");\n\n   \
+    \ ticker.attach(blinkHeartbeat, 1); // Blink LED every 1 seconds\n\n    // initialized\
+    \ Bluetooth Radio\n\n    BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);\n\n\
+    \    ble.init(onBluetoothInitialized);\n\n    // wait for Bluetooth Radio to be\
+    \ initialized\n\n    while (ble.hasInitialized() == false);\n\n    while (1) {\n\
+    \n        // put radio to sleep in between broadcasts\n\n        ble.waitForEvent();\n\
+    \    }\n\n}\n```\n```\n\n```\n```cpp\nvoid blinkHeartbeat(void) {\n\n    /* Do\
+    \ blinky on LED1 to indicate system aliveness. */\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: "```\nstatusLed = !statusLed;\n}\n\nvoid onBluetoothInitialized(\n    BLE::InitializationCompleteCallbackContext\
+    \ *params)\n{\n    BLE &ble      = params->ble;\n    ble_error_t error = params->error;\n\
+    \    if(error != BLE_ERROR_NONE) {\n        return;\n    }\n    // create beacon\
+    \ with these properties\n    iBeacon *ibeacon = new iBeacon(\n        ble, UUID,\
+    \ MAJOR_NUMBER, MINOR_NUMBER, TRANSMISSION_POWER);\n    // begin broadcast\n \
+    \   ble.gap().setAdvertisingInterval(1000); // 1000ms\n    ble.gap().startAdvertising();\n\
+    }\n```\n\nWhen the Beacon sketch is run, the Serial Monitor output looks like\
+    \ this (Figure 11-2):\n\nSetting device name to: MyBeacon"
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: 'Starting Bluetooth Advertise
+
+
+    # Figure 11-2. Serial Output
+
+
+    # Example code
+
+
+    The code for this chapter is available online
+
+    at: https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter11'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: '# Project: Echo Client and Server
+
+
+    An Echo Server is the “Hello World” of network programming. It has the minimum
+    features required to transmit, store, and respond to data on a network - the core
+    features required for any network application.
+
+
+    And yet it must support all the features you’ve learned so far in this book -
+    advertising, reads, writes, notifications, segmented data transfer, and encryption.
+    It’s a sophisticated program.
+
+
+    The Echo Server works like this (Figure 11-1):'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: 'the Central acts as a client.
+
+
+    This project is based heavily on code seen up until Chapter 10, so there shouldn’t
+    be any surprises.
+
+
+    # # Programming the Peripheral
+
+
+    This project is relatively simple since the Central and Peripheral both speak
+    in their native language, binary. As a result, fewer steps are needed to process
+    the data than with text.
+
+
+    There must be two Characteristics: one for writing commands and one for reading
+    responses, under the Automation IO Service (0x1815). The response Characteristic
+    will support notifications:
+
+
+    ```
+
+    ```cpp
+
+    // Automation IO Service UUID
+
+
+    static const uint16_t customServiceUuid = 0x1815;
+
+
+    // Number of bytes in Characteristic
+
+
+    static const uint8_t characteristicLength = 2;
+
+
+    // Write commands to this Characteristic
+
+    uint16_t commandCharacteristicUuid = 0x2A56;
+
+
+    // Respond to connected Central from this Characteristic
+
+    uint16_t responseCharacteristicUuid = 0x2A57;
+
+
+    static char commandValue[characteristicLength] = {0};
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: "```\n```cpp\nWriteOnlyArrayGattCharacteristic<uint8_t, sizeof(commandValue)>\
+    \ \\\\\n    commandCharacteristic(\n        commandCharacteristicUuid,\n     \
+    \   (uint8_t *)commandValue,\n        GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_WRITE);\n\
+    \nstatic char responseValue[characteristicLength] = {0};\nReadOnlyArrayGattCharacteristic<uint8_t,\
+    \ sizeof(responseValue)> \\\\\n    responseCharacteristic(\n        responseCharacteristicUuid,\n\
+    \        (uint8_t *)responseValue,\n        GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ\
+    \ | \\\\\n        GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY\n    );\n\
+    \n// Set up custom service\nGattCharacteristic *characteristics[] = {\n    &commandCharacteristic,\n\
+    \    &responseCharacteristic\n};\n\nGattService customService(\n    customServiceUuid,\
+    \ characteristics,\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: "```\nsizeof(characteristics) / sizeof(GattCharacteristic *)\n);\n```\n\nThe\
+    \ command Characteristic needs to be able to access data written by the Central,\
+    \ like this:\n\n```\n// true if data has been written to the characteristic\n\n\
+    bool bleDataWritten = false;\n\n// incoming command\n\nuint8_t bleCommandValue[characteristicLength]\
+    \ = {0};\n\nconst char* uuid;\n```\n\n```\nvoid onDataWrittenCallback(const GattWriteCallbackParams\
+    \ *params) {\n    serial.printf(\"command written\");\n    if (params->handle\
+    \ == commandCharacteristic.getValueHandle()) {\n        bleDataWritten = true;\n\
+    \        memcpy(\n            bleCommandValue,\n            (char*) params->data,\n\
+    \            sizeof(bleCommandValue) * params->len\n        );\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: 'Message types must be defined as being footers, commands, and responses:
+
+
+    ```
+
+    /** Commands **/
+
+
+    static const uint8_t bleCommandFooterPosition = 1;
+
+
+    static const uint8_t bleCommandDataPosition = 0;
+
+
+    static const uint8_t bleCommandFooter = 1;
+
+
+    static const uint8_t bleCommandLedOn = 1;
+
+
+    static const uint8_t bleCommandLedOff = 2;
+
+    ```
+
+
+    ```
+
+    /** Response **/
+
+
+    static const uint8_t bleResponseFooterPosition = 1;
+
+
+    static const uint8_t bleResponseDataPosition = 0;
+
+
+    static const uint8_t bleResponseErrorFooter = 0;
+
+
+    static const uint8_t bleResponseConfirmationFooter = 1;
+
+
+    static const uint8_t bleResponseLedError = 0;
+
+
+    static const uint8_t bleResponseLedOn = 1;
+
+
+    static const uint8_t bleResponseLedOff = 2;
+
+    ```
+
+
+    This program has two commands: one to turn the LED on and one to'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: "turn the LED off.\n\n```\nstatic const unsigned int ledOn = 1;\n```\n\n```\n\
+    static const unsigned int ledOff = 2;\n```\n\nResponses to the Central must represent\
+    \ the state of the LED.\n\n```\nvoid sendBleCommandResponse(int ledState) {\n\
+    \    byte confirmation[characteristicTransmissionLength] = {0x0};\n    confirmation[bleResponseDataPosition]\
+    \ = (byte)ledState;\n    confirmation[bleResponseFooterPosition] = \\\n      \
+    \  (byte)bleResponseConfirmationFooter;\n    responseCharacteristic.setValue(\n\
+    \        (const unsigned char*) confirmation,\n        characteristicTransmissionLength\n\
+    \    );\n}\n```\n\nOnce a command has been received, the Peripheral needs to change\
+    \ the LED state, then notify the Central that the command has been processed.\n\
+    \n```\nDigitalOut statusLed(LED1, 0);\n```\n\n```\nint main(void) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: "```\nwhile (1) {\n    if (bleDataWritten) {\n        bleDataWritten = false;\
+    \ // ensure only happens once\n        if (bleCommandValue[bleCommandFooterPosition]\
+    \ == \\\n            bleCommandFooter)\n        {\n            serial.printf(\"\
+    command in footer\\r\\n\");\n            switch (bleCommandValue[bleCommandDataPosition])\
+    \ {\n                case bleCommandLedOn:\n                    statusLed.write(0);\n\
+    \                    sendBleResponse(bleResponseLedOn);\n                    break;\n\
+    \                case bleCommandLedOff:\n                    statusLed.write(1);\n\
+    \                    sendBleResponse(bleResponseLedOff);\n                   \
+    \ break;\n                default:\n                    // handle unknown condition\n\
+    \                    serial.printf(\"Unknown command\\r\\n\");\n            }\n\
+    \        }\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: "A response confirming the state of the LED to the Central is sent like this:\n\
+    \n```\n```cpp\nvoid sendBleResponse(uint8_t ledState) {\n\n    uint8_t responseValue[characteristicLength];\n\
+    \n    responseValue[bleResponseFooterPosition] = \\\n        bleResponseConfirmationFooter;\n\
+    \n    responseValue[bleResponseDataPosition] = ledState;\n\n    BLE::Instance(BLE::DEFAULT_INSTANCE).gattServer().write(\n\
+    \n        responseCharacteristic.getValueHandle(),\n\n        (const uint8_t *)responseValue,\n\
+    \n        characteristicLength);\n}\n```\n```\n\n# # Putting It All Together"
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: 'The following sketch will create a Peripheral that can receive pre-programmed
+    commands to turn the onboard LED on and off.
+
+
+    Create a new project called `led_remote`, and copy the following code:
+
+
+    # **Example 13-1. sketches/led_remote/led_remote.c**
+
+
+    ```
+
+    ```c
+
+    #include "mbed.h"
+
+
+    #include "ble/BLE.h"
+
+
+    /** User interface I/O **/
+
+
+    // instantiate USB Serial
+
+    Serial serial(USBTX, USBRX);
+
+
+    // Status LED
+
+    DigitalOut statusLed(LED1, 0);
+
+
+    /** Bluetooth Peripheral Properties **/
+
+
+    // Broadcast name
+
+    const static char BROADCAST_NAME[] = "RemoteLed";
+
+
+    // Automation IO Service UUID
+
+    static const uint16_t customServiceUuid = 0x1815;
+
+
+    // array of all Service UUIDs
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '```
+
+    static const uint16_t uuid16_list[] = { customServiceUuid };
+
+
+    // Number of bytes in Characteristic
+
+
+    static const uint8_t characteristicLength = 2;
+
+
+    // Write commands to this Characteristic
+
+
+    uint16_t commandCharacteristicUuid = 0x2A56;
+
+
+    // Respond to connected Central from this Characteristic
+
+
+    uint16_t responseCharacteristicUuid = 0x2A57;
+
+
+    /** Commands **/
+
+
+    static const uint8_t bleCommandFooterPosition = 1;
+
+
+    static const uint8_t bleCommandDataPosition = 0;
+
+
+    static const uint8_t bleCommandFooter = 1;
+
+
+    static const uint8_t bleCommandLedOn = 1;
+
+
+    static const uint8_t bleCommandLedOff = 2;
+
+
+    /** Response **/
+
+
+    static const uint8_t bleResponseFooterPosition = 1;
+
+
+    static const uint8_t bleResponseDataPosition = 0;
+
+
+    static const uint8_t bleResponseErrorFooter = 0;
+
+
+    static const uint8_t bleResponseConfirmationFooter = 1;
+
+
+    static const uint8_t bleResponseLedError = 0;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: "```\nstatic const uint8_t bleResponseLedOn = 1;\n```\n\n```\nstatic const uint8_t\
+    \ bleResponseLedOff = 2;\n```\n\n# /** State **/\n\n```\n// flag when Central\
+    \ has written to a Characteristic\n```\n\n```\n// true if data has been written\
+    \ to the characteristic\n```\n\n```\nbool bleDataWritten = false;\n```\n\n```\n\
+    // incoming command\n```\n\n```\nuint8_t bleCommandValue[characteristicLength]\
+    \ = {0};\n```\n\n# /** Functions **/\n\n```\n/**\n * Callback triggered when the\
+    \ ble initialization process has finished\n *\n * @param[in] params Information\
+    \ about the initialized Peripheral\n */\n```\n\n```\nvoid onBluetoothInitialized(\n\
+    \    BLE::InitializationCompleteCallbackContext *params\n);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '```
+
+    /**
+
+    * This callback allows the LEDService to receive
+
+    * updates to the ledState Characteristic.
+
+    *
+
+    * @param[in] params
+
+    *   Information about the characterisitc being updated.
+
+    */
+
+    void onDataWrittenCallback(const GattWriteCallbackParams *params);
+
+
+    /**
+
+    * Notify connected Central of changed LED state
+
+    *
+
+    * @param[in] ledState
+
+    *   The LED state
+
+    */
+
+    void sendBleResponse(uint8_t ledState);
+
+
+    /**
+
+    * Callback handler when a Central has disconnected
+
+    *
+
+    * @param[i] params Information about the connection
+
+    */
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: "```\nvoid onCentralDisconnected(\n    const Gap::DisconnectionCallbackParams_t\
+    \ *params\n);\n\n/** Build Service and Characteristic Relationships **/\n// Set\
+    \ Up custom Characteristics\n\nstatic char commandValue[characteristicLength]\
+    \ = {0};\n\nWriteOnlyArrayGattCharacteristic<uint8_t, sizeof(commandValue)> \\\
+    \n    commandCharacteristic(\n    commandCharacteristicUuid,\n    (uint8_t *)commandValue,\n\
+    \    GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_WRITE);\n\nstatic char responseValue[characteristicLength]\
+    \ = {0};\n\nReadOnlyArrayGattCharacteristic<uint8_t, sizeof(responseValue)> \\\
+    \n    responseCharacteristic(\n    responseCharacteristicUuid,\n    (uint8_t *)responseValue,\n\
+    \    GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ|\\\n    GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY\n\
+    );\n```"
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: "```\n```cpp\n// Set up custom service\n\nGattCharacteristic *characteristics[]\
+    \ = {\n\n  &commandCharacteristic,\n\n  &responseCharacteristic\n\n};\n\nGattService\
+    \ customService(\n\n    customServiceUuid,\n\n    characteristics,\n\n    sizeof(characteristics)\
+    \ / sizeof(GattCharacteristic *)\n\n);\n\n/**\n * Main program and loop\n */\n\
+    int main(void) {\n\n  serial.baud(9600);\n\n  serial.printf(\"Starting LedRemote\\\
+    r\\n\");\n\n  // initialized Bluetooth Radio\n  BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);\n\
+    \n  ble.init(onBluetoothInitialized);\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: "```\n```cpp\n// wait for Bluetooth Radio to be initialized\n\nwhile (ble.hasInitialized()\
+    \ == false);\n\nwhile (1) {\n    if (bleDataWritten) {\n        bleDataWritten\
+    \ = false; // ensure only happens once\n\n        // do something with the bleCharacteristicValue\n\
+    \        serial.printf(\"responding to command\\r\\n\");\n\n        for (int i=0;\
+    \ i<characteristicLength; i++) {\n            serial.printf(\"0x%x \", bleCommandValue[i]);\n\
+    \        }\n\n        serial.printf(\"\\r\\n\");\n\n        if (bleCommandValue[bleCommandFooterPosition]\
+    \ == \\\n            bleCommandFooter)\n        {\n            serial.printf(\"\
+    command in footer\\r\\n\");\n\n            switch (bleCommandValue[bleCommandDataPosition])\
+    \ {\n                case bleCommandLedOn:\n                    serial.printf(\"\
+    Led on\\r\\n\");\n                    statusLed.write(0);\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: "```\n// quit if there's a problem\nif(error != BLE_ERROR_NONE) {\n    return;\n\
+    }\n\n// Ensure that it is the default instance of BLE\nif(ble.getInstanceID()\
+    \ != BLE::DEFAULT_INSTANCE) {\n    return;\n}\n\nserial.printf(\"Describing Peripheral...\"\
+    );\n\n// attach Services\nble.addService(customService);\n\n// if a Central writes\
+    \ tho a Characteristic,\n// handle event with a callback\nble.gattServer().onDataWritten(onBleCharacteristicWritten);\n\
+    \n// process disconnections with a callback\nble.gap().onDisconnection(onCentralDisconnected);\n\
+    \n// advertising parametirs\nble.gap().accumulateAdvertisingPayload(\n    // Device\
+    \ is Peripheral only\n    GapAdvertisingData::BREDR_NOT_SUPPORTED |\n    // always\
+    \ discoverable\n```"
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: "```\nGapAdvertisingData::LE_GENERAL_DISCOVERABLE);\n\n// broadcast name\n\n\
+    ble.gap().accumulateAdvertisingPayload(\n\n  GapAdvertisingData::COMPLETE_LOCAL_NAME,\n\
+    \  (uint8_t *)BROADCAST_NAME,\n  sizeof(BROADCAST_NAME)\n);\n\n// advertise services\n\
+    \nble.gap().accumulateAdvertisingPayload(\n\n  GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS,\n\
+    \  (uint8_t *)uuid16_list, sizeof(uuid16_list)\n);\n\n// allow connections\n\n\
+    ble.gap().setAdvertisingType(\n\n  GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED\n\
+    );\n\n// advertise every 1000ms\n\nble.gap().setAdvertisingInterval(1000); //\
+    \ 1000ms\n\n// begin advertising\n\nble.gap().startAdvertising();\n\nserial.printf(\"\
+    \ done\\r\\n\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: "```\n```cpp\nvoid onDataWrittenCallback(const GattWriteCallbackParams *params)\
+    \ {\n\n    serial.printf(\"command written\");\n\n    if(params->handle == commandCharacteristic.getValueHandle())\
+    \ {\n\n        bleDataWritten = true;\n\n        memcpy(\n\n            bleCommandValue,\n\
+    \n            (char*) params->data,\n\n            sizeof(bleCommandValue) * params->len\n\
+    \n        );\n\n    }\n\n}\n\n\nvoid sendBleResponse(uint8_t ledState) {\n\n \
+    \   serial.printf(\"writing response\\r\\n\");\n\n    uint8_t responseValue[characteristicLength];\n\
+    \n    responseValue[bleResponseFooterPosition] = \\\\\n\n        bleResponseConfirmationFooter;\n\
+    \n    responseValue[bleResponseDataPosition] = ledState;\n\n    BLE::Instance(BLE::DEFAULT_INSTANCE).gattServer().write(\n\
+    \n        responseCharacteristic.getValueHandle(),\n\n        (const uint8_t*)responseValue,\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: "```\ncharacteristicLength);\n\n}\n\nvoid onCentralDisconnected(const Gap::DisconnectionCallbackParams_t\
+    \ *params)\n{\n    BLE::Instance().gap().startAdvertising();\n\n    serial.printf(\"\
+    Central disconnected\\r\\n\");\n}\n```\n\nThe resulting Peripheral turns an LED\
+    \ on and off when instructed, and reports that it’s processed the command.\n\n\
+    When the Central sends the “Light On” command, the Serial Monitor should resemble\
+    \ this ([Figure 13-4](#figure-13-4)):\n\n```\nStarting LedRemote\n\nresponding\
+    \ to command\n\n0x01 0x01\n\nLED on\n```\n\n# Figure 13-4. Serial Output\n\nYour\
+    \ nRF should respond lighting an LED connected to the board."
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: '# Example code
+
+
+    The code for this chapter is available online
+
+    at: https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter13'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '# Project: Remote Control LED
+
+
+    So far, this book has worked a lot with text data rather than binary data, because
+    it’s easy to text without using specialized tools such as oscilloscopes or logic
+    analyzers.
+
+
+    Most real-world projects transmit binary instead of text. Binary is much more
+    efficient in transmitting information.
+
+
+    Because binary data it is the language of computers, it is easier to work with
+    than text. There is no need to worry about character sets, null characters, or
+    cut-off words.
+
+
+    This project will show how to remotely control an LED on a Peripheral using software
+    on a Central.
+
+
+    The LED Remote works like this (Figure 13-1).'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: 'Peripheral
+
+
+    Central
+
+
+    Send Command
+
+
+    Command
+
+
+    [on]
+
+
+    Turn LED on
+
+
+    [off]
+
+
+    Turn LED off
+
+
+    Send confirmation'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: '# Figure 14-1. How a Remote Control LED works
+
+
+    In all the other examples, text was being sent between Central and Peripheral.
+
+
+    In order for the Central and Peripheral to understand each other, they need shared
+    language between them. In this case, a data packet format.
+
+
+    # Sending Commands to Peripheral
+
+
+    When the Central sends a message, it should be able to specify if it is sending
+    a command or an error. We can do this in two bytes, like this (Figure 13-2).
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_167_0.png)
+
+
+    # Figure 13-2. Packet structure for commands
+
+
+    The Peripheral reads the footer byte of the incoming message to determine the
+    type of message, i.e., an error or a command. For example, define the message
+    types as:
+
+
+    # Table 13-1. Footer Values
+
+
+    |  |  |  |
+
+    |---|---|---|'
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '| Name | Value | Description |
+
+    |---|---:|---|
+
+    | `bleResponseError` | 0 | The Central is sending a error |
+
+    | `bleResponseConfirmation` | 1 | The Central is sending a confirmation |
+
+    | `bleResponseCommand` | 2 | The Central is sending a command |
+
+
+    The Peripheral reads the first byte to determine the type of error or command.
+    For example, define the commands as:
+
+
+    # Table 13-2. Command Values
+
+
+    | Name | Value | Description |
+
+    |---|---:|---|
+
+    | `bleCommandLedOff` | 1 | Turn off the Peripheral’s LED |
+
+    | `bleCommandLedOn` | 2 | Turn on the Peripheral’s LED |
+
+
+    The Peripheral then responds to the Central with a status message regarding the
+    success or failure to execute the command. This can also be expressed as two bytes
+    (Figure 13-3).
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_168_0.png)
+
+
+    # Figure 13-3. Packet structure for responses'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: "This program has two commands: one to turn the LED on and one to turn the LED\
+    \ off.\n\n```\nstatic const unsigned int ledOn = 1;\n\nstatic const unsigned int\
+    \ ledOff = 2;\n```\n\nResponses to the Central must represent the state of the\
+    \ LED.\n\n```\nvoid sendBleCommandResponse(int ledState) {\n  byte confirmation[characteristicTransmissionLength]\
+    \ = {0x0};\n  confirmation[bleResponseDataPosition] = (byte)ledState;\n  confirmation[bleResponseFooterPosition]\
+    \ = \\\n    (byte)bleResponseConfirmationFooter;\n  responseCharacteristic.setValue(\n\
+    \    (const unsigned char*) confirmation,\n    characteristicTransmissionLength\n\
+    \  );\n}\n```\n\nOnce a command has been received, the Peripheral needs to change\
+    \ the LED state, then notify the Central that the command has been processed.\n\
+    \n```\nvoid loop() {\n  if (bleCommandReceived) {\n    bleCommandReceived = false;\
+    \ // ensures only executed once\n```"
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: "```\n```cpp\n// incoming command is one byte\n\nunsigned int command = bleMessage[bleMessageDataPosition];\n\
+    \nif(command == bleCommandLedOn) {\n\n  Serial.println(\"Turning LED on\");\n\n\
+    \  ledState = HIGH;\n\n  sendBleCommandResponse(ledState);\n\n} else {\n\n  Serial.println(\"\
+    Turning LED off\");\n\n  ledState = LOW;\n\n  sendBleCommandResponse(ledState);\n\
+    \n}\n\ndigitalWrite(ledPin, ledState);\n\n}\n\n}\n```\n```\n\n# Putting It All\
+    \ Together\n\nThe following sketch will create a Peripheral that can receive pre-programmed\
+    \ commands to turn the onboard LED on and off.\n\nCreate a new project called\
+    \ led_remote, and copy the following code:\n\n**Example 12-1. sketches/led_remote/led_remote.ino**"
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: '```
+
+    ```cpp
+
+    #include "CurieBle.h"
+
+
+    static const char* bluetoothDeviceName = "LedRemote";
+
+
+    static const int characteristicTransmissionLength = 2;
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```cpp
+
+    // Commands
+
+
+    static const uint8_t bleCommandFooterPosition = 1;
+
+
+    static const uint8_t bleCommandDataPosition = 0;
+
+
+    static const uint8_t bleCommandFooter = 1;
+
+
+    static const uint8_t bleCommandLedOn = 1;
+
+
+    static const uint8_t bleCommandLedOff = 2;
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```cpp
+
+    // Responses
+
+
+    static const uint8_t bleResponseFooterPosition = 1;
+
+
+    static const uint8_t bleResponseDataPosition = 0;
+
+
+    static const uint8_t bleResponseErrorFooter = 0;
+
+
+    static const uint8_t bleResponseConfirmationFooter = 1;
+
+
+    static const uint8_t bleResponseLedError = 0;
+
+
+    static const uint8_t bleResponseLedOn = 1;
+
+
+    static const uint8_t bleResponseLedOff = 2;
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```cpp
+
+    // Peripheral Properties
+
+
+    static const byte ledPin = 13;
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: "```\n```cpp\nstatic const unsigned int ledError = 0;\n\nstatic const unsigned\
+    \ int ledOn = 1;\n\nstatic const unsigned int ledOff = 2;\n\nint ledState = ledOff;\n\
+    \n// internal state\n\nchar bleMessage[characteristicTransmissionLength];\n\n\
+    const char* uuid;\n\nbool bleCommandReceived = false;\n\nBLEService service(\"\
+    180C\");\n\nBLECharacteristic commandCharacteristic(\n\n  \"2A56\",\n  BLEWrite,\n\
+    \  characteristicTransmissionLength\n);\n\nBLECharacteristic responseCharacteristic(\n\
+    \n  \"2A57\",\n  BLERead | BLENotify,\n  characteristicTransmissionLength\n);\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: "```\n// Central connected. Print MAC address\nvoid onCentralConnected(BLECentral&\
+    \ central) {\n    Serial.print(\"Central connected: \");\n    Serial.println(central.address());\n\
+    }\n\n// Central disconnected\nvoid onCentralDisconnected(BLECentral& central)\
+    \ {\n    Serial.println(\"Central disconnected\");\n}\n\nvoid setup() {\n    Serial.begin(9600);\n\
+    \    while (!Serial) {} // wait for Serial to connect\n    digitalWrite(ledPin,\
+    \ LOW); // start with LED off\n    blePeripheral.setLocalName(bluetoothDeviceName);\n\
+    \    \n    // attach callback when central connects\n    blePeripheral.setEventHandler(\n\
+    \        BLEConnected,\n```"
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: "```\nonCentralConnected\n);\n\n// attach callback when centlal disconnects\n\
+    \nblePeripheral.setEventHandler(\n    BLEDisconnected,\n    onCentralDisconnected\n\
+    );\n\nblePeripheral.setAdvertisedServiceUuid(service.uuid());\n\nblePeripheral.addAttribute(service);\n\
+    \nblePeripheral.addAttribute(commandCharacteristic);\n\nblePeripheral.addAttribute(responseCharacteristic);\n\
+    \ncommandCharacteristic.setEventHandler(\n    BLEWritten,\n    onCharacteristicWritten\n\
+    );\n\nSerial.print(\"Starting \");\n\nSerial.println(bluetoothDeviceName);\n\n\
+    blePeripheral.begin();\n}\n\nvoid loop() {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: "```\nif(bleCommandReceived) {\n\n    bleCommandReceived = false; // ensures\
+    \ only executed once\n\n    // incoming command is one byte\n\n    unsigned int\
+    \ command = bleMessage[bleCommandDataPosition];\n\n    if(command == bleCommandLedOn)\
+    \ {\n\n    Serial.println(\"Turning LED on\");\n\n    ledState = HIGH;\n\n   \
+    \ sendBleCommandResponse(ledState);\n\n    } else {\n\n    Serial.println(\"Turning\
+    \ LED off\");\n\n    ledState = LOW;\n\n    sendBleCommandResponse(ledState);\n\
+    \n    }\n\n    digitalWrite(ledPin, ledState);\n}\n}\n```\n\nThe resulting Peripheral\
+    \ turns an LED on and off when instructed, and reports that it’s processed the\
+    \ command.\n\nWhen the Central sends the “Light On” command, the Serial Monitor\
+    \ should resemble this (Figure 12-4):"
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: '# # Example code
+
+
+    The code for this chapter is available online at: [https://github.com/BluetoothLowEnergyInArduino101/Chapter12](https://github.com/BluetoothLowEnergyInArduino101/Chapter12)'
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: '# # Appendix I: Bluetooth Properties
+
+
+    For reference, the following are properties of the Bluetooth Low Energy network
+    and hardware.
+
+
+    | Property | Value |
+
+    |---|---|
+
+    | **Range** | 100 m (330 ft) |
+
+    | **Data Rate** | 1M bit/s |
+
+    | **Application Throughput** | 0.27 Mbit/s |
+
+    | **Security** | 128-bit AES with Counter Mode CBC-MAC and application layer user
+    data encryption (BEWARE: this encryption has vulnerabilities) |
+
+    | **Robustness** | Adaptive Frequency Hopping, Layer Acknowledgement, 24-bit CRC,
+    32-bit Message Integrity Check |
+
+    | **Range** | 100 m (330 ft) |
+
+    | **Data Rate** | 1M bit/s |
+
+    | **Application Throughput** | 0.27 Mbit/s |'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: '| 项目 | 内容 |
+
+    |---|---|
+
+    | Security | 128-bit AES with Counter Mode CBC-MAC and application layer user
+    defined (BEWARE: this encryption has vulnerabilities) |
+
+    | Peak Current Consumption | < 15 mA |
+
+    | Byte-Order in Broadcast | Big Endian (most significant bit at ... ) |
+
+    | Range | 100 m (330 ft) |
+
+    | Data Rate | 1M bit/s |
+
+    | Application Throughput | 0.27 Mbit/s |
+
+    | Security | 128-bit AES with Counter Mode CBC-MAC and application layer user
+    defined (BEWARE: this encryption has vulnerabilities) |'
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: '# Appendix II: UUID Format
+
+
+    Bluetooth Low Energy has tight space requirements. Therefore it is preferred to
+    transmit 16-bit UUIDs instead of 32-bit UUIDs. UUIDs can be converted between
+    16-bit and 32-bit with the standard Bluetooth Low Energy UUID format:
+
+
+    Table II-1. 16-bit to 32-bit UUID Conversion Standard
+
+
+    | UUID Format | uuid16 | Resulting uuid32 |
+
+    |---|---|---|
+
+    | 00000000-0000-1000-8000-00805f9b34fb | 0x2A56 | 00002A56-0000-1000-8000-00805f9b34
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: '# # Appendix III: Minimal Recommended GATT
+
+
+    As a best practice, it is good to host a standard set of Services and Characteristics
+    in a Peripheral''s GATT Profile. These Characteristics allow connected Centrals
+    to get the make and model number of the device, and the battery level if the Peripheral
+    is battery-powered:
+
+
+    # Table III-1. Minimal GATT Profile
+
+
+    | GATT Type | Name | Data Type | UUID |
+
+    |---|---|---|---|
+
+    | Service | Device Information Service |  | 0x180A |
+
+    | Characteristic | Device Name | char array | 0x2A00 |
+
+    | Characteristic | Model Number | char array | 0x2A24 |
+
+    | Characteristic | Serial Number | char array | 0x2A25 |
+
+    | Service | Battery Level |  | 0x180F |
+
+    | Characteristic | Battery Level | integer | 0x2A19 |'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: '| Service | UUID | Name |
+
+    |---|---|---|
+
+    | Service | 0x180F | org.bluetooth.service.battery_service |
+
+    | Blood Pressure | 0x1810 | org.bluetooth.service.blood_pressure |
+
+    | Body Composition | 0x181B | org.bluetooth.service.body_composition |
+
+    | Bond Management | 0x181E | org.bluetooth.service.bond_management |
+
+    | Continuous Glucose Monitoring | 0x181F | org.bluetooth.service.continuous_glucose_monitoring
+    |
+
+    | Current Time Service | 0x1805 | org.bluetooth.service.current_time |
+
+    | Cycling Power | 0x1818 | org.bluetooth.service.cycling_power |
+
+    | Cycling Speed and Cadence | 0x1816 | org.bluetooth.service.cycling_speed_and_cadence
+    |
+
+    | Device Information | 0x180A | org.bluetooth.service.device_information |
+
+    | Environmental Sensing | 0x181A | org.bluetooth.service.environmental_sensing
+    |
+
+    | Generic Access | 0x1800 | org.bluetooth.service.generic_access |
+
+    | Generic |  |  |'
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: '| Attribute | UUID | Service UUID |
+
+    |---|---|---|
+
+    | Attribute | 0x1801 | org.bluetooth.service.generic_attribute |
+
+    | Glucose | 0x1808 | org.bluetooth.service.glucose |
+
+    | Health Thermometer | 0x1809 | org.bluetooth.service.health_thermometer |
+
+    | Heart Rate | 0x180D | org.bluetooth.service.heart_rate |
+
+    | HTTP Proxy | 0x1823 | org.bluetooth.service.http_proxy |
+
+    | Human Interface Device | 0x1812 | org.bluetooth.service.human_interface_device
+    |
+
+    | Immediate Alert | 0x1802 | org.bluetooth.service.immediate_alert |
+
+    | Indoor Positioning | 0x1821 | org.bluetooth.service.indoor_positioning |
+
+    | Internet Protocol Support | 0x1820 | org.bluetooth.service.internet_protocol_support
+    |
+
+    | Link Loss | 0x1803 | org.bluetooth.service.link_loss |
+
+    | Location and Navigation | 0x1819 | org.bluetooth.service.location_and_navigation
+    |
+
+    | Next DST Change Service | 0x1807 | org.bluetooth.service.next_dst_change_service
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: '| Object | UUID | Bluetooth SIG assigned number |
+
+    |---|---|---|
+
+    | Object Transfer | 0x1825 | org.bluetooth.service.object_transfer |
+
+    | Phone Alert Status Service | 0x180E | org.bluetooth.service.phone_alert_status
+    |
+
+    | Pulse Oximeter | 0x1822 | org.bluetooth.service.pulse_oximeter |
+
+    | Reference Time Update Service | 0x1806 | org.bluetooth.service.reference_time_update
+    |
+
+    | Running Speed and Cadence | 0x1814 | org.bluetooth.service.running_speed_and_cadence
+    |
+
+    | Scan Parameters | 0x1813 | org.bluetooth.service.scan_parameters |
+
+    | Transport Discovery | 0x1824 | org.bluetooth.service.transport_discovery |
+
+    | Tx Power | 0x1804 | org.bluetooth.service.tx_power |
+
+    | User Data | 0x181C | org.bluetooth.service.user_data |
+
+    | Weight Scale | 0x181D | org.bluetooth.service.weight_scale |
+
+
+    **Source:** Bluetooth SIG: GATT Services
+
+
+    Retrieved from https://www.bluetooth.com/specifications/gatt/services'
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: '| Apparent Wind Direction | 0x2A73 | org.bluetooth.characteristic.apparen |
+
+    | Apparent Wind Speed | 0x2A72 | org.bluetooth.characteristic.apparen |
+
+    | Appearance | 0x2A01 | org.bluetooth.characteristic.gap.app |
+
+    | Barometric Pressure Trend | 0x2AA3 | org.bluetooth.characteristic.barome |
+
+    | Battery Level | 0x2A19 | org.bluetooth.characteristic.battery_ |
+
+    | Blood Pressure Feature | 0x2A49 | org.bluetooth.characteristic.blood_ |
+
+    | Blood Pressure Measurement | 0x2A35 | org.bluetooth.characteristic.blood_ |
+
+    | Body Composition Feature | 0x2A9B | org.bluetooth.characteristic.body_c |
+
+    | Body Composition Measurement | 0x2A9C | org.bluetooth.characteristic.body_c
+    |
+
+    | Body Sensor |  |  |'
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: '| 名称 | UUID | 描述 |
+
+    |---|---|---|
+
+    | Run Time |  |  |
+
+    | CGM Session Start Time | 0x2AAA | org.bluetooth.characteristic.cgm_session_start_time
+    |
+
+    | CGM Specific Ops Control Point | 0x2AAC | org.bluetooth.characteristic.cgm_specific_ops_control_point
+    |
+
+    | CGM Status | 0x2AA9 | org.bluetooth.characteristic.cgm_status |
+
+    | CSC Feature | 0x2A5C | org.bluetooth.characteristic.csc_feature |
+
+    | CSC Measurement | 0x2A5B | org.bluetooth.characteristic.csc_measurement |
+
+    | Current Time | 0x2A2B | org.bluetooth.characteristic.current_time |
+
+    | Cycling Power Control Point | 0x2A66 | org.bluetooth.characteristic.cycling_power_control_point
+    |
+
+    | Cycling Power Feature | 0x2A65 | org.bluetooth.characteristic.cycling_power_feature
+    |
+
+    | Cycling Power Measurement | 0x2A63 | org.bluetooth.characteristic.cycling_power_measurement
+    |
+
+    | Cycling Power Vector | 0x2A64 | org.bluetooth.characteristic.cycling_power_vector
+    |
+
+    | Database Change Increment | 0x2A99 | org.bluetooth.characteristic.database_change_increment
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: '| Name | UUID | Description |
+
+    |---|---|---|
+
+    | Date of Birth | 0x2A85 | org.bluetooth.characteristic.date_of_birth |
+
+    | Date of Threshold Assessment | 0x2A86 | org.bluetooth.characteristic.date_of_threshold_assessment
+    |
+
+    | Date Time | 0x2A08 | org.bluetooth.characteristic.date_time |
+
+    | Day Date Time | 0x2A0A | org.bluetooth.characteristic.day_date_time |
+
+    | Day of Week | 0x2A09 | org.bluetooth.characteristic.day_of_week |
+
+    | Descriptor Value Changed | 0x2A7D | org.bluetooth.characteristic.descriptor_value_changed
+    |
+
+    | Device Name | 0x2A00 | org.bluetooth.characteristic.gap.device_name |
+
+    | Dew Point | 0x2A7B | org.bluetooth.characteristic.dew_point |
+
+    | Digital | 0x2A56 | org.bluetooth.characteristic.digital |
+
+    | DST Offset | 0x2A0D | org.bluetooth.characteristic.dst_offset |
+
+    | Elevation | 0x2A6C | org.bluetooth.characteristic.elevation |
+
+    | Email Address | 0x2A87 | org.bluetooth.characteristic.email_address |
+
+    | Exact Time 256 | 0x2A0C | org.bluetooth.characteristic.exact_time_256 |
+
+    | Fat Burn Heart Rate | 0x2A88 | org.bluetooth.characteristic.fat_burn_heart_rate
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: '| 名称 | UUID | 特征标识符 |
+
+    |---|---|---|
+
+    | HTTP Status Code | 0x2AB8 | org.bluetooth.characteristic.http_status_code |
+
+    | HTTPS Security | 0x2ABB | org.bluetooth.characteristic.https_security |
+
+    | Humidity | 0x2A6F | org.bluetooth.characteristic.humidity |
+
+    | IEEE 11073-20601 Regulatory Certification Data List | 0x2A2A | org.bluetooth.characteristic.ieee_11073-20601_regulatory_certification_data_list
+    |
+
+    | Indoor Positioning Configuration | 0x2AAD | org.bluetooth.characteristic.indoor_positioning_configuration
+    |
+
+    | Intermediate Cuff Pressure | 0x2A36 | org.bluetooth.characteristic.intermediate_cuff_pressure
+    |
+
+    | Intermediate Temperature | 0x2A1E | org.bluetooth.characteristic.intermediate_temperature
+    |
+
+    | Irradiance | 0x2A77 | org.bluetooth.characteristic.irradiance |
+
+    | Language | 0x2AA2 | org.bluetooth.characteristic.language |
+
+    | Last Name | 0x2A90 | org.bluetooth.characteristic.last_name |
+
+    | Latitude | 0x2AAE | org.bluetooth.characteristic.latitude |
+
+    | LN Control | 0x2A6B | org.bluetooth.characteristic.ln_control |'
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: '| Name | UUID | Description |
+
+    |---|---|---|
+
+    | Recommended Heart Rate | 0x2A91 | org.bluetooth.characteristic.maximum... |
+
+    | Measurement Interval | 0x2A21 | org.bluetooth.characteristic.measur... |
+
+    | Model Number String | 0x2A24 | org.bluetooth.characteristic.model_... |
+
+    | Navigation | 0x2A68 | org.bluetooth.characteristic.navigat... |
+
+    | New Alert | 0x2A46 | org.bluetooth.characteristic.new_al... |
+
+    | Object Action Control Point | 0x2AC5 | org.bluetooth.characteristic.object_...
+    |
+
+    | Object Changed | 0x2AC8 | org.bluetooth.characteristic.object_... |
+
+    | Object First-Created | 0x2AC1 | org.bluetooth.characteristic.object_... |
+
+    | Object ID | 0x2AC3 | org.bluetooth.characteristic.object_... |
+
+    | Object Last-Modified | 0x2AC2 | org.bluetooth.characteristic.object_... |
+
+    | Object List Control Point | 0x2AC6 | org.bluetooth.characteristic.object_...
+    |
+
+    | Object List Filter | 0x2AC7 | org.bluetooth.characteristic.object_... |'
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: '| Object Name | 0x2ABE | org.bluetooth.characteristic.object_ |
+
+    | Object Properties | 0x2AC4 | org.bluetooth.characteristic.object_ |
+
+    | Object Size | 0x2AC0 | org.bluetooth.characteristic.object_ |
+
+    | Object Type | 0x2ABF | org.bluetooth.characteristic.object_ |
+
+    | OTS Feature | 0x2ABD | org.bluetooth.characteristic.ots_fea |
+
+    | Peripheral Preferred Connection Parameters | 0x2A04 | org.bluetooth.characteristic.gap.per
+    |
+
+    | Peripheral Privacy Flag | 0x2A02 | org.bluetooth.characteristic.gap.per |
+
+    | PLX Continuous Measurement | 0x2A5F | org.bluetooth.characteristic.plx_con |
+
+    | PLX Features | 0x2A60 | org.bluetooth.characteristic.plxfea |
+
+    | PLX Spot-Check Measurement | 0x2A5E | org.bluetooth.characteristic.plx_spc |
+
+    | PnP ID | 0x2A50 | org.bluetooth.characteristic.pnp_id |
+
+    | Pollen Concentration | 0x2A75 | org.bluetooth.characteristic.pollen_ |'
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: '| RSC Feature | 0x2A54 | org.bluetooth.characteristic.rsc_fea |
+
+    | RSC Measurement | 0x2A53 | org.bluetooth.characteristic.rsc_me |
+
+    | SC Control Point | 0x2A55 | org.bluetooth.characteristic.sc_cont |
+
+    | Scan Interval Window | 0x2A4F | org.bluetooth.characteristic.scan_ir |
+
+    | Scan Refresh | 0x2A31 | org.bluetooth.characteristic.scan_re |
+
+    | Sensor Location | 0x2A5D | org.blueooth.characteristic.sensor_l |
+
+    | Serial Number String | 0x2A25 | org.bluetooth.characteristic.serial_1 |
+
+    | Service Changed | 0x2A05 | org.bluetooth.characteristic.gatt.ser |
+
+    | Software Revision String | 0x2A28 | org.bluetooth.characteristic.softwar |
+
+    | Sport Type for Aerobic and Anaerobic Thresholds | 0x2A93 | org.bluetooth.characteristic.sport_t
+    |
+
+    | Supported |  |  |'
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: '| Name | UUID | Description |
+
+    |---|---|---|
+
+    | New Alert Category | 0x2A47 | org.bluetooth.characteristic.supported_new_alert_category
+    |
+
+    | Supported Unread Alert Category | 0x2A48 | org.bluetooth.characteristic.supported_unread_alert_category
+    |
+
+    | System ID | 0x2A23 | org.bluetooth.characteristic.system_id |
+
+    | TDS Control Point | 0x2ABC | org.bluetooth.characteristic.tds_control_point
+    |
+
+    | Temperature | 0x2A6E | org.bluetooth.characteristic.temperature |
+
+    | Temperature Measurement | 0x2A1C | org.bluetooth.characteristic.temperature_measurement
+    |
+
+    | Temperature Type | 0x2A1D | org.bluetooth.characteristic.temperature_type |
+
+    | Three Zone Heart Rate Limits | 0x2A94 | org.bluetooth.characteristic.three_zone_heart_rate_limits
+    |
+
+    | Time Accuracy | 0x2A12 | org.bluetooth.characteristic.time_accuracy |
+
+    | Time Source | 0x2A13 | org.bluetooth.characteristic.time_source |
+
+    | Time Update Control Point | 0x2A16 | org.bluetooth.characteristic.time_update_control_point
+    |
+
+    | Time Update State | 0x2A17 | org.bluetooth.characteristic.time_update_state
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: '| Name | UUID | Characteristic |
+
+    |---|---|---|
+
+    | Time with DST | 0x2A11 | org.bluetooth.characteristic.time_with_dst |
+
+    | Time Zone | 0x2A0E | org.bluetooth.characteristic.time_zone |
+
+    | True Wind Direction | 0x2A71 | org.bluetooth.characteristic.true_wind_direction
+    |
+
+    | True Wind Speed | 0x2A70 | org.bluetooth.characteristic.true_wind_speed |
+
+    | Two Zone Heart Rate Limit | 0x2A95 | org.bluetooth.characteristic.two_zone_heart_rate_limit
+    |
+
+    | Tx Power Level | 0x2A07 | org.bluetooth.characteristic.tx_power_level |
+
+    | Uncertainty | 0x2AB4 | org.bluetooth.characteristic.uncertainty |
+
+    | Unread Alert Status | 0x2A45 | org.bluetooth.characteristic.unread_alert_status
+    |
+
+    | URI | 0x2AB6 | org.bluetooth.characteristic.uri |
+
+    | User Control Point | 0x2A9F | org.bluetooth.characteristic.user_control_point
+    |
+
+    | User Index | 0x2A9A | org.bluetooth.characteristic.user_index |
+
+    | UV Index | 0x2A76 | org.bluetooth.characteristic.uv_index |
+
+    | VO2 Max | 0x2A96 | org.bluetooth.characteristic.vo2_max |'
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: '| Waist Circumference | 0x2A97 | org.bluetooth.characteristic.waist_c |
+
+    | Weight | 0x2A98 | org.bluetooth.characteristic.weight |
+
+    | Weight Measurement | 0x2A9D | org.bluetooth.characteristic.weight_ |
+
+    | Weight Scale Feature | 0x2A9E | org.bluetooth.characteristic.weight_ |
+
+    | Wind Chill | 0x2A79 | org.bluetooth.characteristic.wind_c |
+
+
+    **Source**: Bluetooth SIG: GATT Characteristics
+
+    Retrieved from https://www.bluetooth.com/specifications/gatt/characteristics'
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: '# # Appendix VI: GATT Descriptors
+
+
+    The following GATT Descriptor UUIDs have been reserved for specific uses.
+
+
+    GATT Descriptors describe features within a Characteristic that can be altered,
+    for instance, the Client Characteristic Configuration (0x2902) which can be flagged
+    to allow a connected Central to subscribe to notifications on a Characteristic.
+
+
+    # Table VI-1. Reserved GATT Descriptors
+
+
+    | Specification Name | UUID | Specification |
+
+    |---|---|---|
+
+    | Characteristic Aggregate Format | 0x2905 | org.bluetooth.descriptor.gatt.characteristic
+    |
+
+    | Characteristic Extended Properties | 0x2900 | org.bluetooth.descriptor.gatt.characteristic
+    |
+
+    | Characteristic Presentation Format | 0x2904 | org.bluetooth.descriptor.gatt.characteristic
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: '| Characteristic User Description | 0x2901 | org.bluetooth.descriptor.gatt.characteristic...
+    |
+
+    |---|---|---|
+
+    | Client Characteristic Configuration | 0x2902 | org.bluetooth.descriptor.gatt.client_configuration...
+    |
+
+    | Environmental Sensing Configuration | 0x290B | org.bluetooth.descriptor.es_configuration...
+    |
+
+    | Environmental Sensing Measurement | 0x290C | org.bluetooth.descriptor.es_measurement...
+    |
+
+    | Environmental Sensing Trigger Setting | 0x290D | org.bluetooth.descriptor.es_trigger_setting...
+    |
+
+    | External Report Reference | 0x2907 | org.bluetooth.descriptor.external_report_reference...
+    |
+
+    | Number of Digitals | 0x2909 | org.bluetooth.descriptor.number_of_digitals...
+    |
+
+    | Report Reference | 0x2908 | org.bluetooth.descriptor.report_reference... |'
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: '| Characteristic | UUID | Descriptor |
+
+    |---|---|---|
+
+    | Server Characteristic Configuration | 0x2903 | org.bluetooth.descriptor.gatt.server_...
+    |
+
+    | Time Trigger Setting | 0x290E | org.bluetooth.descriptor.time_trigger... |
+
+    | Valid Range | 0x2906 | org.bluetooth.descriptor.valid_range |
+
+    | Value Trigger Setting | 0x290A | org.bluetooth.descriptor.value_trigger... |
+
+
+    Source: Bluetooth SIG: GATT Descriptors Retrieved from https://www.bluetooth.com/specifications/gatt/descriptors'
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: '# Appendix VII: Company Identifiers
+
+
+    The following companies have specific Manufacturer Identifiers, which identify
+    Bluetooth devices in the Generic Access Profile (GAP). Peripherals with no specific
+    manufacturer use ID 65535 (0xffff). All other IDs are reserved, even if not yet
+    assigned.
+
+
+    This is a non-exhaustive list of companies. A full list and updated can be found
+    on the Bluetooth SIG website.
+
+
+    Table VII-1. Company Identifiers
+
+
+    | Decimal | Hexadecimal | Company |
+
+    |---|---|---|
+
+    | 0 | 0x0000 | Ericsson Technology Licensin |
+
+    | 1 | 0x0001 | Nokia Mobile Phones |
+
+    | 2 | 0x0002 | Intel Corp. |
+
+    | 3 | 0x0003 | IBM Corp. |
+
+    | 4 | 0x0004 | Toshiba Corp. |'
+  merge: -1
+  img_proc: true
+- pgno: 212
+  md: '| 编号 | 十六进制编号 | 公司名称 |
+
+    |---:|---|---|
+
+    | 5 | 0x0005 | 3Com |
+
+    | 6 | 0x0006 | Microsoft |
+
+    | 7 | 0x0007 | Lucent |
+
+    | 8 | 0x0008 | Motorola |
+
+    | 13 | 0x000D | Texas Instruments Inc. |
+
+    | 19 | 0x0013 | Atmel Corporation |
+
+    | 29 | 0x001D | Qualcomm |
+
+    | 36 | 0x0024 | Alcatel |
+
+    | 37 | 0x0025 | NXP Semiconductors (formerly Philips Semiconductors) |
+
+    | 60 | 0x003C | BlackBerry Limited (formerly Research In Motion) |
+
+    | 76 | 0x004C | Apple, Inc. |
+
+    | 86 | 0x0056 | Sony Ericsson Mobile Communications |
+
+    | 89 | 0x0059 | Nordic Semiconductor ASA |
+
+    | 92 | 0x005C | Belkin International, Inc. |'
+  merge: -1
+  img_proc: true
+- pgno: 213
+  md: '| 数值 | 代码 | 公司名称 |
+
+    |---:|---|---|
+
+    | 93 | 0x005D | Realtek Semiconductor Corporation |
+
+    | 101 | 0x0065 | Hewlett-Packard Company |
+
+    | 104 | 0x0068 | General Motors |
+
+    | 117 | 0x0075 | Samsung Electronics Co. Ltd |
+
+    | 120 | 0x0078 | Nike, Inc. |
+
+    | 135 | 0x0087 | Garmin International, Inc. |
+
+    | 138 | 0x008A | Jawbone |
+
+    | 184 | 0x00B8 | Qualcomm Innovation Center, Inc. (QuIC) |
+
+    | 215 | 0x00D7 | Qualcomm Technologies, Inc. |
+
+    | 216 | 0x00D8 | Qualcomm Connected Experiences |
+
+    | 220 | 0x00DC | Procter & Gamble |
+
+    | 224 | 0x00E0 | Google |
+
+    | 359 | 0x0167 | Bayer HealthCare |
+
+    | 367 | 0x016F | Podo Labs, Inc |'
+  merge: -1
+  img_proc: true
+- pgno: 214
+  md: '| ID | Hex | Company |
+
+    |---:|---|---|
+
+    | 369 | 0x0171 | Amazon Fulfillment Service |
+
+    | 387 | 0x0183 | Walt Disney |
+
+    | 398 | 0x018E | Fitbit, Inc. |
+
+    | 425 | 0x01A9 | Canon Inc. |
+
+    | 427 | 0x01AB | Facebook, Inc. |
+
+    | 474 | 0x01DA | Logitech International SA |
+
+    | 558 | 0x022E | Siemens AG |
+
+    | 605 | 0x025D | Lexmark International Inc. |
+
+    | 637 | 0x027D | HUAWEI Technologies Co., Ltd. |
+
+    | 720 | 0x02D0 | 3M |
+
+    | 876 | 0x036C | Zipcar |
+
+    | 897 | 0x0381 | Sharp Corporation |
+
+    | 921 | 0x0399 | Nikon Corporation |
+
+    | 1117 | 0x045D | Boston Scientific Corporation |
+
+    | 65535 | 0xFFFF | No Device ID |
+
+
+    **Source:** Bluetooth SIG: Company Identifiers Retrieved from [https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers)'
+  merge: -1
+  img_proc: true
+- pgno: 215
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 216
+  md: '# # Glossary
+
+
+    The following is a list of Bluetooth Low Energy terms and their meanings.
+
+
+    **Android** - An open-source operating system used for smartphones and tablet
+    computers
+
+
+    **Arduino** - An open source computer hardware and software company, project,
+    and user community that designs and manufactures single-board microcontrollers
+    and microcontroller kits for building digital devices and interactive objects
+    that can sense and control objects in the physical world.
+
+
+    **Attribute** - An unit of a GATT Profile which can be accessed by a Central,
+    such as a Service or a Characteristic.
+
+
+    **Beacon** - A Bluetooth Low Energy Peripheral which continually Broadcasts so
+    that Centrals can discern their location from information gleaned from the properties
+    of the broadcast.
+
+
+    **Bluetooth Low Energy (BLE)** - A low power, short range wireless protocol used
+    on micro electronics.
+
+
+    **Broadcast** - A feature of Bluetooth Low Energy where a Peripheral outputs a
+    name and other specific data about itself'
+  merge: -1
+  img_proc: true
+- pgno: 217
+  md: '**Central** - A Bluetooth Low Energy device that can connect to several Peripherals.
+
+
+    **Channel** - A finely-tuned radio frequency used for Broadcasting or data transmission.
+
+
+    **Characteristic** - A port or data endpoint where data can be read or written.
+
+
+    **Descriptor** - A feature of a Characteristic that allows for some sort of data
+    interaction, such as Read, Write, or Notify.
+
+
+    **E0** - The encryption algorithm built into Bluetooth Low Energy.
+
+
+    **Generic Attribute (GATT) Profile** - A list of Services and Characteristics
+    which are unique to a Peripheral and describe how data is served from the Peripheral.
+    GATT profiles are hosted by a Peripheral
+
+
+    **iBeacon** - An Apple compatible Beacon which allows a Central to download a
+    specific packet of data to inform the Central of its absolute location and other
+    properties.
+
+
+    **Intel® Curie™ Module** - The Intel® module that powers the Arduino 101 and contains
+    the Bluetooth chipset.
+
+
+    **Notify** - An operation where a Peripheral alerts a Central of a change in data.
+
+
+    **Peripheral** - A Bluetooth Low Energy device that can connect to a single Central.
+    Peripherals host a Generic Attribute (GATT) profile.
+
+
+    **Read** - An operation where a Central downloads data from a'
+  merge: -1
+  img_proc: true
+- pgno: 218
+  md: '# Characteristic.
+
+
+    **Scan** - The process of a Central searching for Broadcasting Peripherals.
+
+
+    **Scan Response** - A feature of Bluetooth Low Energy which allows Centrals to
+    download a small packet of data without connecting.
+
+
+    **Service** - A container structure used to organize data endpoints. Services
+    are hosted by a Peripheral.
+
+
+    **Universally Unique Identifier (UUID)** - A long, randomly generated alphanumeric
+    string that is unique regardless of where it’s used. UUIDs are designed to avoid
+    name collisions that may happen when countless programs are interacting with each
+    other.
+
+
+    **Write** - An operation where a Central alters data on a Characteristic.'
+  merge: -1
+  img_proc: true
+- pgno: 219
+  md: '# # About the Author
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_219_0.png)
+
+
+    Tony’s infinite curiosity compels him to want to open up and learn about everything
+    he touches, and his excitement compels him to share what he learns with others.
+
+
+    He has two true passions: branding and inventing.
+
+
+    His passion for branding led him to start a company that did branding and marketing
+    in 4 countries for firms such as Apple, Intel, and Sony BMG. He loves weaving
+    the elements of design, writing, product, and strategy into an essential truth
+    that defines a company.'
+  merge: -1
+  img_proc: true
+- pgno: 220
+  md: 'His passion for inventing led him to start a company that uses brain imaging
+    to quantify meditation and to predict seizures, a company acquired $1.5m in funding
+    and was incubated in San Francisco where he currently resides.
+
+
+    Those same passions have led him on some adventures as well, including living
+    in a Greek monastery with orthodox monks and to tagging along with a gypsy in
+    Spain to learn to play flamenco guitar.'
+  merge: -1
+  img_proc: true
+- pgno: 221
+  md: '# About this Book
+
+
+    This book is a practical guide to programming Bluetooth Low Energy for Android
+    phones and Tablets
+
+
+    In this book, you will learn the basics of how to program an Android device to
+    communicate with any Central or Peripheral device over Bluetooth Low Energy. Each
+    chapter of the book builds on the previous one, culminating in three projects:
+
+
+    +   A Beacon and Scanner
+
+
+    +   An Echo Server and Client
+
+
+    +   A Remote Controlled Device
+
+
+    Through the course of the book you will learn important concepts that relate to:
+
+
+    +   How Bluetooth Low Energy works
+
+
+    +   How data is sent and received
+
+
+    +   Common paradigms for handling data
+
+
+    # Skill Level'
+  merge: -1
+  img_proc: true
+- pgno: 222
+  md: This book is excellent for anyone who has basic or advanced knowledge of Java
+    programming on Android.
+  merge: -1
+  img_proc: true
+- pgno: 223
+  md: '# Other Books in this Series
+
+
+    If you are interested in programming other Bluetooth Low Energy Devices, please
+    check out the other books in this series or visit [bluetoothlowenergybooks.com](http://bluetoothlowenergybooks.com):
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_223_0.png)
+
+
+    # Bluetooth Low Energy Programming in Android Java
+
+
+    Tony Gaitatzis, 2017
+
+
+    ISBN: 978-1-7751280-1-4'
+  merge: -1
+  img_proc: true
+- pgno: 224
+  md: '![](img/d7b9d81704fe6839dbdc99a45736bfb5_224_0.png)
+
+
+    # # Bluetooth Low Energy Programming in iOS Swift
+
+
+    Tony Gaitatzis, 2017
+
+
+    ISBN: 978-1-7751280-0-7
+
+
+    ![](img/d7b9d81704fe6839dbdc99a45736bfb5_224_1.png)
+
+
+    # # Bluetooth Low Energy Programming in C++ for nRF Microcontrollers
+
+
+    Tony Gaitatzis, 2017
+
+
+    ISBN: 978-1-7751280-3-8'
+  merge: -1
+  img_proc: true
+- pgno: 225
+  md: (this page intentionally left blank)
+  merge: -1
+  img_proc: true
+- pgno: 226
+  md: '# Advertise
+
+
+    A feature of Bluetooth Low Energy where a Peripheral outputs a name and other
+    specific data about itself
+
+
+    # Attribute
+
+
+    A unit of a GATT Profile which can be accessed by a Central, such as a Service
+    or a Characteristic.
+
+
+    # Beacon
+
+
+    A Bluetooth Low Energy Peripheral which continually Advertises so that Centrals
+    can discern their location from information gleaned from the properties of the
+    advertise.
+
+
+    # Big-endian
+
+
+    A mechanism for storing numbers in binary, where the most significant value of
+    the number is stored first, typically represented towards the right of the screen.
+
+
+    # Bluetooth Low Energy (BLE)
+
+
+    A low-power, short-range wireless protocol for use with micro electronics.
+
+
+    # Central
+
+
+    A Bluetooth Low Energy device that can connect to several Peripherals.
+
+
+    # Channel
+
+
+    A finely-tuned radio frequency used for Advertising or data transmission.
+
+
+    # Characteristic
+
+
+    A port or data endpoint where data can be read or written.
+
+
+    # Descriptor
+
+
+    A feature of a Characteristic that allows for some sort of data interaction, such
+    as Read, Write, or Notify.
+
+
+    # E0
+
+
+    The encryption algorithm built into Bluetooth Low Energy.
+
+
+    # Generic Access Profile (GAP)
+
+
+    Identifying information about a Peripheral that identifies the Peripheral by name,
+    service listing, connectability, or other custom data. This data is accessible
+    after connection and is stored in big-endian format.
+
+
+    # iBeacon
+
+
+    An Apple-compatible Beacon which allows a Central to download a specific packet
+    of data to inform the Central of its absolute location and other properties.
+
+
+    # Little-Endian
+
+
+    A mechanism for storing numbers in binary, where the the least significant values
+    of the number are store first, typically represented towards the right of the
+    screen.
+
+
+    # Notify
+
+
+    An operation where a Peripheral alerts a Central of a change in data.
+
+
+    # Peripheral'
+  merge: -1
+  img_proc: true
+- pgno: 227
+  md: 'A Bluetooth Low Energy device that can connect to a single Central. Peripherals
+    host a Generic Attribute (GATT) profile.
+
+
+    # Read
+
+
+    An operation where a Central downloads data from a Characteristic.
+
+
+    # Scan
+
+
+    The process of a Central searching for Advertising Peripherals.
+
+
+    # Scan Response
+
+
+    A feature of Bluetooth Low Energy which allows Centrals to download a small packet
+    of data without connecting.
+
+
+    # Service
+
+
+    A container structure used to organize data endpoints. Services are hosted by
+    a Peripheral.
+
+
+    # Universally Unique Identifier (UUID)
+
+
+    A long, randomly generated alphanumeric sting that is unique regardless of where
+    it’s used. UUIDs are designed to avoid name collisions that may happen when countless
+    programs are interacting with each other.
+
+
+    # Write
+
+
+    An operation where a Central alters data on a Characteristic.
+
+
+    # Android
+
+
+    An open-source operating system used for smartphones and tablet computers'
+  merge: -1
+  img_proc: true
+- pgno: 228
+  md: '# Advertise
+
+
+    A feature of Bluetooth Low Energy where a Peripheral outputs a name and other
+    specific data about itself'
+  merge: -1
+  img_proc: true
+- pgno: 229
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 230
+  md: '# Beacon
+
+
+    A Bluetooth Low Energy Peripheral which continually Advertises so that Centrals
+    can discern their location from information gleaned from the properties of the
+    advertise.'
+  merge: -1
+  img_proc: true
+- pgno: 231
+  md: '# Big-endian
+
+
+    A mechanism for storing numbers in binary, where the most significant value of
+    the number is stored first, typically represented towards the right of the screen.'
+  merge: -1
+  img_proc: true
+- pgno: 232
+  md: '# Bluetooth Low Energy (BLE)
+
+
+    A low-power, short-range wireless protocol for use with micro electronics.'
+  merge: -1
+  img_proc: true
+- pgno: 233
+  md: '# Central
+
+
+    A Bluetooth Low Energy device that can connect to several\nPeripherals.'
+  merge: -1
+  img_proc: true
+- pgno: 234
+  md: '# Channel
+
+
+    A finely-tuned radio frequency used for Advertising or data transmission.'
+  merge: -1
+  img_proc: true
+- pgno: 235
+  md: '# Characteristic
+
+
+    A port or data endpoint where data can be read or written.'
+  merge: -1
+  img_proc: true
+- pgno: 236
+  md: '# Descriptor
+
+
+    A feature of a Characteristic that allows for some sort of data interaction, such
+    as Read, Write, or Notify.'
+  merge: -1
+  img_proc: true
+- pgno: 237
+  md: '# E0
+
+
+    The encryption algorithm built into Bluetooth Low Energy.'
+  merge: -1
+  img_proc: true
+- pgno: 238
+  md: '# Generic Access Profile (GAP)
+
+
+    Identifying information about a Peripheral that identifies the Peripheral by name,
+    service listing, connectability, or other custom data. This data is accessible
+    after connection and is stored in big-endian format.'
+  merge: -1
+  img_proc: true
+- pgno: 239
+  md: '# iBeacon
+
+
+    An Apple-compatible Beacon which allows a Central to download a specific packet
+    of data to inform the Central of its absolute location and other properties.'
+  merge: -1
+  img_proc: true
+- pgno: 240
+  md: '# Little-Endian
+
+
+    A mechanism for storing numbers in binary, where the the least significant values
+    of the number are store first, typically represented towards the right of the
+    screen.'
+  merge: -1
+  img_proc: true
+- pgno: 241
+  md: '# Notify
+
+
+    An operation where a Peripheral alerts a Central of a change in data.'
+  merge: -1
+  img_proc: true
+- pgno: 242
+  md: '# Peripheral
+
+
+    A Bluetooth Low Energy device that can connect to a single Central. Peripherals
+    host a Generic Attribute (GATT) profile.'
+  merge: -1
+  img_proc: true
+- pgno: 243
+  md: '# Read
+
+
+    An operation where a Central downloads data from a Characteristic.'
+  merge: -1
+  img_proc: true
+- pgno: 244
+  md: '# Scan
+
+
+    The process of a Central searching for Advertising Peripherals.'
+  merge: -1
+  img_proc: true
+- pgno: 245
+  md: '# Scan Response
+
+
+    A feature of Bluetooth Low Energy which allows Centrals to
+
+    download a small packet of data without connecting.'
+  merge: -1
+  img_proc: true
+- pgno: 246
+  md: '# Service
+
+
+    A container structure used to organize data endpoints. Services are hosted by
+    a Peripheral.'
+  merge: -1
+  img_proc: true
+- pgno: 247
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 248
+  md: '# Write
+
+
+    An operation where a Central alters data on a Characteristic.'
+  merge: -1
+  img_proc: true
+- pgno: 249
+  md: '# Android
+
+
+    An open-source operating system used for smartphones and tablet
+
+    computers'
+  merge: -1
+  img_proc: true
