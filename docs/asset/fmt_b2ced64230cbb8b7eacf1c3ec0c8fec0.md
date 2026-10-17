@@ -1,0 +1,271 @@
+
+对于客户端来说，控制器是同步实现还是异步实现并不重要。对于这两种实现，客户端都会创建相同的 HTTP 请求。
+
+### 创建 .NET 客户端
+
+使用浏览器调用服务是处理测试的一种简单方式。客户端更通常使用 JavaScript——这正是 JSON 的优势所在——以及 .NET 客户端。在本书中，将创建一个控制台应用程序（包）项目来调用服务。
+
+`BookServiceClientApp` 的示例代码使用了以下依赖项和命名空间：
+
+#### 依赖项
+
+- `NETStandard.Library`
+- `Newtonsoft.Json`
+- `System.Net.Http`
+- `System.Xml.XDocument`
+
+#### 命名空间
+
+- `Newtonsoft.Json`
+- `System`
+- `System.Collections.Generic`
+- `System.Linq`
+- `System.Xml.Linq`
+- `System.Net.Http`
+- `System.Net.Http.Headers`
+- `System.Text`
+- `System.Threading.Tasks`
+- `static System.Console`
+
+#### 发送 GET 请求
+
+对于发送 HTTP 请求，使用 `HttpClient` 类。这个类在第 25 章“网络”中介绍。在本章中，这个类用于发送不同类型的 HTTP 请求。要使用 `HttpClient` 类，需要添加 NuGet 包 `System.Net.Http` 并打开命名空间 `System.Net.Http`。要将 JSON 数据转换为 .NET 类型，需要添加 NuGet 包 `Newtonsoft.Json`。
+
+> 注意：JSON 序列化和使用 Json.NET 将在第 27 章“XML 和 JSON”中讨论。
+
+在示例项目中，创建了泛型类 `HttpClientHelper`，以便为不同数据类型提供一种实现。构造函数期望服务的基地址（代码文件 `BookServiceClientApp/HttpClientHelper.cs`）：
+
+```
+public abstract class HttpClientHelper<T>
+    where T : class
+{
+    private Uri _baseAddress;
+
+    public HttpClientHelper(string baseAddress)
+    {
+        if (baseAddress == null)
+            throw new ArgumentNullException(nameof(baseAddress));
+
+        _baseAddress = new Uri(baseAddress);
+    }
+
+    // etc.
+}
+```
+
+方法 `GetInternalAsync` 发出 GET 请求以接收项目列表。此方法调用 `HttpClient` 的 `GetAsync` 方法来发送 GET 请求。`HttpResponseMessage` 包含收到的信息。响应的状态代码被写入控制台以显示结果。如果服务器返回错误，`GetAsync` 方法不会抛出异常。异常会从 `EnsureSuccessStatusCode` 方法抛出，该方法通过返回的 `HttpResponseMessage` 实例调用。如果 HTTP 状态代码是错误类型，此方法会抛出异常。响应的主体包含返回的 JSON 数据。此 JSON 信息作为字符串读取并返回（代码文件 `BookServiceClientApp/HttpClientHelper.cs`）：
+
+```
+private async Task<string> GetInternalAsync(string requestUri)
+{
+    using (var client = new HttpClient())
+    {
+        client.BaseAddress = _baseAddress;
+        HttpResponseMessage resp = await client.GetAsync(requestUri);
+        WriteLine($"status from GET {resp.StatusCode}");
+        resp.EnsureSuccessStatusCode();
+        return await resp.Content.ReadAsStringAsync();
+    }
+}
+```
+
+服务器控制器定义了两种使用 GET 请求的方法：一种返回所有章节，另一种只返回单个章节，但需要 URI 中的章节标识符。`GetAllAsync` 方法调用 `GetInternalAsync` 方法将返回的 JSON 信息转换为集合，而 `GetAsync` 方法将结果转换为单个项。这些方法声明为 `virtual`，以允许派生类重写它们（代码文件 `BookServiceClientApp/HttpClientHelper.cs`）：
+
+```
+public async virtual Task<IEnumerable<T>> GetAllAsync(string requestUri)
+{
+    string json = await GetInternalAsync(requestUri);
+    return JsonConvert.DeserializeObject<IEnumerable<T>>(json);
+}
+
+public async virtual Task<T> GetAsync(string requestUri)
+{
+    string json = await GetInternalAsync(requestUri);
+    return JsonConvert.DeserializeObject<T>(json);
+}
+```
+
+客户端代码中没有使用泛型 `HttpClientHelper` 类，而是使用 `BookChapterClient` 类进行了特化。此类继承自 `HttpClientHelper`，并为泛型参数传递 `BookChapter`。该类还重写了基类的 `GetAllAsync` 方法，使返回的章节按章节号排序（代码文件 `BookServiceClientApp/BookChapterClient.cs`）：
+
+```
+public class BookChapterClient : HttpClientHelper<BookChapter>
+{
+    public BookChapterClient(string baseAddress)
+        : base(baseAddress) { }
+
+    public override async Task<IEnumerable<BookChapter>> GetAllAsync(string requestUri)
+    {
+        IEnumerable<BookChapter> chapters = await base.GetAllAsync(requestUri);
+        return chapters.OrderBy(c => c.Number);
+    }
+}
+```
+
+`BookChapter` 类包含通过 JSON 内容接收的属性（代码文件 `BookServiceClientApp/BookChapter.cs`）：
+
+```
+public class BookChapter
+{
+    public Guid Id { get; set; }
+    public int Number { get; set; }
+    public string Title { get; set; }
+    public int Pages { get; set; }
+}
+```
+
+客户端应用程序的 `Main` 方法调用不同的方法来展示 GET、POST、PUT 和 DELETE 请求（代码文件 `BookServiceClientApp/Program.cs`）：
+
+```
+static void Main()
+{
+    WriteLine("Client app, wait for service");
+    ReadLine();
+    ReadChaptersAsync().Wait();
+    ReadChapterAsync().Wait();
+    ReadNotExistingChapterAsync().Wait();
+    ReadXmlAsync().Wait();
+    AddChapterAsync().Wait();
+    UpdateChapterAsync().Wait();
+    RemoveChapterAsync().Wait();
+    ReadLine();
+}
+```
+
+方法 `ReadChaptersAsync` 调用 `BookChapterClient` 的 `GetAllAsync` 方法以检索所有章节，并在控制台上显示章节标题（代码文件 `BookServiceClientApp/Program.cs`）：
+
+```
+private static async Task ReadChaptersAsync()
+{
+    WriteLine(nameof(ReadChaptersAsync));
+    var client = new BookChapterClient(Addresses.BaseAddress);
+    IEnumerable<BookChapter> chapters =
+        await client.GetAllAsync(Addresses.BooksApi);
+    foreach (BookChapter chapter in chapters)
+    {
+        WriteLine(chapter.Title);
+    }
+
+    WriteLine();
+}
+```
+
+当你运行应用程序（同时启动服务和客户端应用）时，`ReadChaptersAsync` 方法显示 OK 状态代码和章节标题：
+
+```
+ReadChaptersAsync
+status from GET OK
+Application Architectures
+Core C#
+Objects and Types
+Inheritance
+Managed and Unmanaged Resources
+Generics
+```
+
+方法 `ReadChapterAsync` 展示了检索单个章节的 GET 请求。为此，章节的标识符被添加到 URI 字符串中（代码文件 `BookServiceClientApp/Program.cs`）：
+
+```
+private static async Task ReadChapterAsync()
+{
+    WriteLine(nameof(ReadChapterAsync));
+    var client = new BookChapterClient(Addresses.BaseAddress);
+    var chapters = await client.GetAllAsync(Addresses.BooksApi);
+    Guid id = chapters.First().Id;
+    BookChapter chapter = await client.GetAsync(Addresses.BooksApi + id);
+    WriteLine($"{chapter.Number} {chapter.Title}");
+    WriteLine();
+}
+```
+
+`ReadChapterAsync` 方法的结果如下所示。它显示两次 OK 状态，因为第一次该方法在发送单个章节请求之前检索所有章节：
+
+```
+ReadChapterAsync
+status from GET OK
+status from GET OK
+1 Application Architectures
+```
+
+如果 GET 请求使用了不存在的章节标识符会怎样？如何处理这一点在方法 `ReadNotExistingChapterAsync` 中展示。调用 `GetAsync` 方法与之前的代码片段类似，但 URI 中添加了一个不存在的标识符。记住，在 `HttpClientHelper` 类的实现中，`HttpClient` 类的 `GetAsync` 方法不会抛出异常。但是，`EnsureSuccessStatusCode` 会抛出异常。此异常被 catch 到 `HttpRequestException` 类型捕获。这里还使用了异常过滤器，仅处理异常代码 404（未找到）（代码文件 `BookServiceClientApp/Program.cs`）：
+
+```
+private static async Task ReadNotExistingChapterAsync()
+{
+    WriteLine(nameof(ReadNotExistingChapterAsync));
+    string requestedIdentifier = Guid.NewGuid().ToString();
+    try
+    {
+        var client = new BookChapterClient(Addresses.BaseAddress);
+        BookChapter chapter = await client.GetAsync(
+            Addresses.BooksApi + requestedIdentifier.ToString());
+        WriteLine($"{chapter.Number} {chapter.Title}");
+    }
+    catch (HttpRequestException ex) when (ex.Message.Contains("404"))
+    {
+        WriteLine($"book chapter with the identifier {requestedIdentifier} not found");
+    }
+
+    WriteLine();
+}
+```
+
+> 注意：处理异常和使用异常过滤器将在第 14 章“错误和异常”中讨论。
+
+该方法的结果显示了来自服务的 `NotFound` 结果：
+
+```
+ReadNotExistingChapterAsync
+status from GET NotFound
+book chapter with the identifier d38ea0c5-64c9-4251-90f1-e21c07d6937a not found
+```
+
+#### 从服务接收 XML
+
+在“更改响应格式”一节中，XML 格式被添加到服务中。对于除了 JSON 之外还支持返回 XML 的服务，可以通过添加接受头值来显式请求 XML 内容，以接受 `application/xml` 内容。
+
+下面的代码片段展示了如何做到这一点。这里，指定了 `application/xml` 的 `MediaTypeWithQualityHeaderValue` 被添加到 `Accept` 头集合中。然后，使用 `XElement` 类将结果解析为 XML（代码文件 `BookServiceClientApp/BookChapterClient.cs`）：
+
+```
+public async Task<XElement> GetAllXmlAsync(string requestUri)
+{
+    using (var client = new HttpClient())
+    {
+        client.BaseAddress = _baseAddress;
+        client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/xml"));
+        HttpResponseMessage resp = await client.GetAsync(requestUri);
+        WriteLine($"status from GET {resp.StatusCode}");
+        resp.EnsureSuccessStatusCode();
+        string xml = await resp.Content.ReadAsStringAsync();
+        XElement chapters = XElement.Parse(xml);
+
+        return chapters;
+    }
+}
+```
+
+> 注意：`XElement` 类和 XML 序列化将在第 27 章讨论。
+
+在 `Program` 类中，调用 `GetAllXmlAsync` 方法直接将 XML 结果写入控制台（代码文件 `BookServiceClientApp/Program.cs`）：
+
+```
+private static async Task ReadXmlAsync()
+{
+    WriteLine(nameof(ReadXmlAsync));
+    var client = new BookChapterClient(Addresses.BaseAddress);
+    XElement chapters = await client.GetAllXmlAsync(Addresses.BooksApi);
+    WriteLine(chapters);
+    WriteLine();
+}
+```
+
+运行此方法时，可以看到服务现在返回的是 XML：
+
+```
+ReadXmlAsync
+status from GET OK
+<ArrayOfBookChapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BookChapter>
+    <Id>1439c261-2722-4e73-a328-010e82866511</Id>
+```
